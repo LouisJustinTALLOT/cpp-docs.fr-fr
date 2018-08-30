@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338647"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204003"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog, classe
 Vous permet d’implémenter des boîtes de dialogue Rechercher/Remplacer de chaîne standard dans votre application.  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  Une fois un `CFindReplaceDialog` objet a été construit, vous devez appeler la [créer](#create) fonction membre pour créer et afficher la boîte de dialogue.  
   
- Utilisez le [m_fr](#m_fr) structure pour initialiser la boîte de dialogue avant d’appeler `Create`. Le `m_fr` structure est de type [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
+ Utilisez le [m_fr](#m_fr) structure pour initialiser la boîte de dialogue avant d’appeler `Create`. Le `m_fr` structure est de type [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
   
- Dans l’ordre de la fenêtre parente à être informé des demandes de recherche/remplacement, vous devez utiliser le Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) de fonction et utiliser le [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro de table des messages dans le cadre de votre fenêtre qui gère ce message enregistré.  
+ Dans l’ordre de la fenêtre parente à être informé des demandes de recherche/remplacement, vous devez utiliser le Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) de fonction et utiliser le [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro de table des messages dans le cadre de votre fenêtre qui gère ce message enregistré.  
   
  Vous pouvez déterminer si l’utilisateur a décidé de mettre fin à la boîte de dialogue avec le `IsTerminating` fonction membre.  
   
@@ -165,7 +165,7 @@ virtual BOOL Create(
  Pointeur vers la chaîne de remplacement par défaut lorsque la boîte de dialogue s’affiche. Si NULL, la boîte de dialogue ne contient pas une chaîne de remplacement par défaut.  
   
  *dwFlags*  
- Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue, combinées à l’aide de l’opérateur OR au niveau du bit. La valeur par défaut est FR_DOWN, qui spécifie que la recherche doit continuer vers le bas. Consultez le [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) structure dans le SDK Windows pour plus d’informations sur ces indicateurs.  
+ Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les paramètres de la boîte de dialogue, combinées à l’aide de l’opérateur OR au niveau du bit. La valeur par défaut est FR_DOWN, qui spécifie que la recherche doit continuer vers le bas. Consultez le [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea) structure dans le SDK Windows pour plus d’informations sur ces indicateurs.  
   
  *pParentWnd*  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue. Il s’agit de la fenêtre qui reçoit le message spécial qui indique qu’une action de recherche/remplacement est demandée. Si NULL, la fenêtre principale de l’application est utilisée.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  Différent de zéro si l’objet de boîte de dialogue a été créé avec succès ; sinon 0.  
   
 ### <a name="remarks"></a>Notes  
- Dans l’ordre de la fenêtre parente à être informé des demandes de recherche/remplacement, vous devez utiliser le Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) dont la valeur renvoyée est un message unique à l’instance de l’application de fonction. Votre fenêtre frame doit avoir une entrée de mappage de message qui déclare la fonction de rappel ( `OnFindReplace` dans l’exemple qui suit) qui gère ce message enregistré. Le fragment de code suivant est un exemple de procédure à suivre pour une classe de fenêtre frame nommée `CMyRichEditView`:  
+ Dans l’ordre de la fenêtre parente à être informé des demandes de recherche/remplacement, vous devez utiliser le Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) dont la valeur renvoyée est un message unique à l’instance de l’application de fonction. Votre fenêtre frame doit avoir une entrée de mappage de message qui déclare la fonction de rappel ( `OnFindReplace` dans l’exemple qui suit) qui gère ce message enregistré. Le fragment de code suivant est un exemple de procédure à suivre pour une classe de fenêtre frame nommée `CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Notes  
- `m_fr` est une structure de type [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Ses membres stockent les caractéristiques de l’objet de la boîte de dialogue. Après avoir construit un `CFindReplaceDialog` de l’objet, vous pouvez utiliser `m_fr` pour modifier des valeurs différentes dans la boîte de dialogue.  
+ `m_fr` est une structure de type [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Ses membres stockent les caractéristiques de l’objet de la boîte de dialogue. Après avoir construit un `CFindReplaceDialog` de l’objet, vous pouvez utiliser `m_fr` pour modifier des valeurs différentes dans la boîte de dialogue.  
   
  Pour plus d’informations sur cette structure, consultez le `FINDREPLACE` structure dans le SDK Windows.  
   

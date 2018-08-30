@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd815f1af5a6eced06eae99316b2ee137fa398c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404936"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209359"
 ---
 # <a name="overview-of-declarators"></a>Vue d'ensemble des déclarateurs
 Les déclarateurs sont les composants d'une déclaration qui spécifient les noms des objets ou des fonctions. Les déclarateurs spécifient également si l'objet nommé est un objet, un pointeur, une référence ou un tableau.  Les déclarateurs ne spécifient pas le type de base, mais ils modifient les informations de type dans le type de base pour spécifier les types dérivés, tels que des pointeurs, des références et des tableaux.  Appliqué aux fonctions, le déclarateur utilise le spécificateur de type pour spécifier complètement le type de retour d'une fonction comme étant un objet, un pointeur ou une référence. (Spécificateurs, présentés dans [déclarations et définitions](declarations-and-definitions-cpp.md), transmettre des propriétés telles que la classe de type et de stockage. Modificateurs, décrits dans cette section et dans [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md), modifient les déclarateurs.) La figure ci-dessous illustre une déclaration complète de `MyFunction` et répertorie les composants de la déclaration.  
@@ -53,7 +53,7 @@ const char *pch, ch;
   
  **Déclarateurs de pointeurs, références et des tableaux**  
   
- Les opérateurs de pointeur insérés devant le nom font de l'objet un pointeur ou une référence.  Le **\*** opérateur déclare le nom en tant que pointeur ; la **&** opérateur déclare comme une référence.  
+ Les opérateurs de pointeur insérés devant le nom font de l'objet un pointeur ou une référence.  Le <strong>\*</strong> opérateur déclare le nom en tant que pointeur ; la **&** opérateur déclare comme une référence.  
   
 ```cpp 
 int *i; // declarator is *i  

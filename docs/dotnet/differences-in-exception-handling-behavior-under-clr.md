@@ -1,5 +1,5 @@
 ---
-title: Les différences de comportement sous - CLR de la gestion des exceptions | Documents Microsoft
+title: Différences de comportement dans - CLR de la gestion des exceptions | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f54678de9f98f68f797cd247232a8e3786ff0112
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df2f04e89175855db36790f22e8fd718288603b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111830"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217430"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Différences du comportement de gestion des exceptions dans /CLR
-[Concepts de base dans l’utilisation des Exceptions](../dotnet/basic-concepts-in-using-managed-exceptions.md) présente la gestion des exceptions dans les applications managées. Dans cette rubrique, les différences du comportement standard de la gestion des exceptions et des restrictions sont décrites en détail. Pour plus d’informations, consultez [la fonction _set_se_translator](../c-runtime-library/reference/set-se-translator.md).  
+[Concepts de base dans l’utilisation des Exceptions](../dotnet/basic-concepts-in-using-managed-exceptions.md) aborde la gestion des exceptions dans les applications managées. Dans cette rubrique, les différences du comportement standard de gestion des exceptions et certaines restrictions sont décrites en détail. Pour plus d’informations, consultez [la fonction _set_se_translator](../c-runtime-library/reference/set-se-translator.md).  
   
 ##  <a name="vcconjumpingoutofafinallyblock"></a> Saut hors d’un bloc Finally  
- Dans le code C/C++ natif, le saut hors d’un __**enfin** bloc à l’aide de la gestion structurée des exceptions (SEH) est autorisée bien qu’il génère un avertissement.  Sous [/CLR](../build/reference/clr-common-language-runtime-compilation.md), saut hors d’un **enfin** bloc provoque une erreur :  
+ Dans le code C/C++ natif, saut hors d’un __**enfin** bloc à l’aide de la gestion structurée des exceptions (SEH) est autorisée bien qu’il génère un avertissement.  Sous [/CLR](../build/reference/clr-common-language-runtime-compilation.md), saut hors un **enfin** bloc provoque une erreur :  
   
 ```  
 // clr_exception_handling_4.cpp  
@@ -40,10 +40,10 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Le déclenchement d’Exceptions dans un filtre d’Exception  
- Lorsqu’une exception est levée pendant le traitement d’une [filtre d’exception](../cpp/writing-an-exception-filter.md) dans du code géré, l’exception est interceptée et traitée comme si le filtre retourne 0.  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Déclenchement d’Exceptions dans un filtre d’Exception  
+ Lorsqu’une exception est levée pendant le traitement d’un [filtre d’exception](../cpp/writing-an-exception-filter.md) dans du code géré, l’exception est interceptée et traitée comme si le filtre retourne 0.  
   
- Ce comportement diffère du comportement dans le code natif où une exception imbriquée est déclenchée, le **ExceptionRecord** champ dans le **EXCEPTION_RECORD** structure (tel que retourné par [ GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) est définie et la **ExceptionFlags** champ définit le bit 0 x 10. L’exemple suivant illustre cette différence de comportement :  
+ Ce comportement diffère du comportement en code natif où une exception imbriquée est déclenchée, le **ExceptionRecord** champ dans le **EXCEPTION_RECORD** structure (tel que retourné par [ GetExceptionInformation](/windows/desktop/Debug/getexceptioninformation)) est définie et le **ExceptionFlags** champ définit le bit 0 x 10. L’exemple suivant illustre cette différence de comportement :  
   
 ```  
 // clr_exception_handling_5.cpp  
@@ -104,9 +104,9 @@ We should execute this handler if compiled to native
 ```  
   
 ##  <a name="vccondisassociatedrethrows"></a> Levées dissociées  
- **/ CLR** ne prend pas en charge la nouvelle levée d’une exception en dehors d’un gestionnaire catch (appelée dissociée). Exceptions de ce type sont traitées comme une rethrow C++ standard. Si dissociée est rencontrée lors d’une exception managée active, l’exception est encapsulée comme une exception C++ et puis de nouveau levée. Exceptions de ce type ne peuvent être interceptées en tant qu’exception de type [System::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx).  
+ **/ CLR** ne prend pas en charge la nouvelle levée d’une exception en dehors d’un gestionnaire catch (appelée dissociée). Les exceptions de ce type sont traitées comme une rethrow C++ standard. Si dissociée se produite lorsqu’il existe une exception managée active, l’exception est encapsulée comme une exception C++ et puis levée de nouveau. Exceptions de ce type ne peuvent être interceptées en tant qu’exception de type [System::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx).  
   
- L’exemple suivant montre une exception managée levée de nouveau en tant qu’une exception C++ :  
+ L’exemple suivant montre une exception managée est levée de nouveau en tant qu’une exception C++ :  
   
 ```  
 // clr_exception_handling_6.cpp  
@@ -195,7 +195,7 @@ Counter=-3
 ```  
   
 ##  <a name="vcconthe_set_se_translatorfunction"></a> La fonction _set_se_translator  
- La fonction de traduction, définie par un appel à `_set_se_translator`, affecte uniquement les captures en code non managé. L’exemple suivant illustre cette limitation :  
+ La fonction de traduction, défini par un appel à `_set_se_translator`, affecte uniquement les captures en code non managé. L’exemple suivant illustre cette limitation :  
   
 ```  
 // clr_exception_handling_8.cpp  

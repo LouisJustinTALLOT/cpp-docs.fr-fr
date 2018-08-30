@@ -52,12 +52,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7b1771b065d7a0acc4db73eb188884086ff3b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 959f39df33c2cdcd40a71a801ca715ab7c0eccf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414166"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213644"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
@@ -101,18 +101,18 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_vscprintf** renvoie le nombre de caractères qui est générée si la chaîne pointée par la liste d’arguments a été imprimé ou envoyé vers un fichier ou les codes de la mémoire tampon à l’aide de la mise en forme spécifiée. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf** effectue la même fonction pour les caractères larges.
+**_vscprintf** retourne le nombre de caractères qui seraient générés si la chaîne pointée par la liste d’arguments a été imprimé ou envoyé vers un fichier ou les codes de la mémoire tampon à l’aide de la mise en forme spécifiée. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf** effectue la même fonction pour les caractères larges.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 Si *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Chaque *argument* (le cas échéant) est convertie en fonction de la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que la *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md).
+Chaque *argument* (le cas échéant) est converti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a les mêmes forme et fonction que le *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 > [!IMPORTANT]
-> Garantir que si *format* est une chaîne définie par l’utilisateur, il se termine par null et le nombre et le type de paramètres. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Garantir que si *format* est une chaîne définie par l’utilisateur, il se termine par null et a le nombre correct et le type de paramètres. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -121,7 +121,7 @@ Chaque *argument* (le cas échéant) est convertie en fonction de la spécificat
 |**_vsctprintf**|**_vscprintf**|**_vscprintf**|**_vscwprintf**|
 |**_vsctprintf_l**|**_vscprintf_l**|**_vscprintf_l**|**_vscwprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

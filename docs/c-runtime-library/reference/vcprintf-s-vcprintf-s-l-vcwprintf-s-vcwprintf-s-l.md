@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628e942ae77449f4dcd809d519da8696cd9fec6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39f169c18554aa91e3f66a3e30a62a801c9d345d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415765"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208986"
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
@@ -107,16 +107,16 @@ Pour plus d’informations, consultez [Syntaxe de spécification de format : fo
 
 Nombre de caractères écrits ou valeur négative si une erreur de sortie se produit.
 
-Comme les versions moins sécurisées de ces fonctions, si *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). En outre, contrairement aux moins sécurisées versions de ces fonctions, si *format* ne spécifie pas un format valide, une exception de paramètre non valide est générée. Si l’exécution est autorisée à se poursuivre, ces fonctions retournent un code d’erreur et un ensemble **errno** pour ce code d’erreur. Le code d’erreur par défaut est **EINVAL** si une valeur plus précise ne s’applique pas.
+Comme les versions moins sécurisées de ces fonctions, si *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). En outre, contrairement aux versions moins sécurisées de ces fonctions, si *format* ne spécifie pas un format valide, une exception de paramètre non valide est générée. Si l’exécution est autorisée à se poursuivre, ces fonctions retournent un code d’erreur et un ensemble **errno** à ce code d’erreur. Le code d’erreur par défaut est **EINVAL** si une valeur plus spécifique ne s’applique pas.
 
 ## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans la console. **_vcwprintf_s** est la version à caractères larges de **_vcprintf_s**. Elle prend une chaîne de caractères larges comme argument.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, à ceci près qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels.
 
 > [!IMPORTANT]
-> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -125,7 +125,7 @@ Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu
 |**_vtcprintf_s**|**_vcprintf_s**|**_vcprintf_s**|**_vcwprintf_s**|
 |**_vtcprintf_s_l**|**_vcprintf_s_l**|**_vcprintf_s_l**|**_vcwprintf_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

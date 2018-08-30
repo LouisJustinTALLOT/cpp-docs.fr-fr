@@ -1,5 +1,5 @@
 ---
-title: Erreur d’exécution C R6025 | Documents Microsoft
+title: Erreur Runtime C R6025 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abdbdbf918462dfb83eff07190c32af1f1b3d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302024"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220630"
 ---
-# <a name="c-runtime-error-r6025"></a>Erreur d’exécution C R6025
+# <a name="c-runtime-error-r6025"></a>Erreur Runtime C R6025
 appel de fonction virtuelle pure  
   
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. La raison la plus courante de cette erreur est un bogue dans l’application ou d’une installation endommagée.  
+>  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. La raison la plus courante de cette erreur est un bogue dans l’application ou une installation endommagée.  
 >   
 >  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :  
 >   
 >  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.  
-> -   Vérifiez **mise à jour Windows** dans les **le panneau de configuration** pour les mises à jour logicielles.  
-> -   Recherchez une version mise à jour de l’application. Si le problème persiste, contactez le fournisseur de l’application.  
+> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.  
+> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.  
   
  **Informations pour les programmeurs**  
   
  Aucun objet n’a été instancié pour gérer l’appel de fonction virtuelle pure.  
   
- Cette erreur est due en appelant une fonction virtuelle dans une classe de base abstraite via un pointeur qui est créé par un cast vers le type de la classe dérivée, mais est en fait un pointeur vers la classe de base. Cela peut se produire lors de la conversion d’un **void\***  vers un pointeur vers une classe lorsque le **void\***  a été créé pendant la construction de la classe de base.  
+ Cette erreur est due en appelant une fonction virtuelle dans une classe de base abstraite via un pointeur qui est créé par un cast vers le type de la classe dérivée, mais est en fait un pointeur vers la classe de base. Cela peut se produire lors de la conversion à partir d’un **void** <strong>\*</strong> vers un pointeur vers une classe lors de la **void** <strong>\*</strong> a été créé pendant la construction de la classe de base.  
   
- Pour plus d’informations, consultez la [prise en charge Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) site Web.
+ Pour plus d’informations, consultez le [prise en charge Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) site Web.

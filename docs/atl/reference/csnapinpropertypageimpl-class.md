@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56a57d3fe0eb1a016af9eee8539cd7f57a12ddf5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd7f2c708dd3cfe63e40b62912a775fcc120c4ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880558"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223049"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Csnapinpropertypageimpl, classe
 Cette classe fournit des méthodes pour implémenter un objet de page de propriétés de composant logiciel enfichable.  
@@ -146,7 +146,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>Notes  
  Utilisez cette structure pour initialiser l’apparence d’une page de propriétés après sa construction.  
   
- Pour plus d’informations sur cette structure, y compris une liste de ses membres, consultez [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) dans le SDK Windows.  
+ Pour plus d’informations sur cette structure, y compris une liste de ses membres, consultez [PROPSHEETPAGE](https://msdn.microsoft.com/library/aa815151) dans le SDK Windows.  
   
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  Cette fonction membre est appelée lorsque l’utilisateur clique sur le **OK** ou **appliquer maintenant** bouton.  

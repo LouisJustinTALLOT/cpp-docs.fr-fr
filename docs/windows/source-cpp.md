@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 921510a548f638f06953f95abe79f825e57e179b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ccd5f5220a49ddb63554b4c3b96533a3066d4d4b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586856"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214591"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -43,7 +43,7 @@ Une ou plusieurs interfaces que vous spécifiez lorsque vous appliquez la source
 
 ## <a name="remarks"></a>Notes
 
-Le **source** attribut C++ a les mêmes fonctionnalités que le [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) attribut MIDL.
+Le **source** attribut C++ a les mêmes fonctionnalités que le [source](/windows/desktop/Midl/source) attribut MIDL.
 
 Vous pouvez utiliser la [par défaut](../windows/default-cpp.md) attribut pour spécifier l’interface source par défaut pour un objet.
 

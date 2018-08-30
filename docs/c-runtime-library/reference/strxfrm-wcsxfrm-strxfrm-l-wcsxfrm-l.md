@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 96f459c8360969146f8cf76a48c9141000066745
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451717"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214291"
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -99,15 +99,15 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne la longueur de la chaîne transformée, sans compter le caractère null de fin. Si la valeur de retour est supérieure ou égale à *nombre*, le contenu de *strDest* est imprévisible. En cas d’erreur, chaque fonction définit **errno** et retourne **INT_MAX**. Un caractère non valide, **errno** a la valeur **EILSEQ**.
+Retourne la longueur de la chaîne transformée, sans compter le caractère null de fin. Si la valeur de retour est supérieure ou égale à *nombre*, le contenu de *strDest* est imprévisible. En cas d’erreur, chaque fonction définit **errno** et retourne **INT_MAX**. Pour un caractère non valide, **errno** a la valeur **EILSEQ**.
 
 ## <a name="remarks"></a>Notes
 
-Le **strxfrm** fonction transforme la chaîne pointée par *strSource* dans un nouveau format assemblé qui est stocké dans *strDest*. Pas plus de *nombre* caractères, y compris le caractère null, sont transformés et placés dans la chaîne résultante. La transformation s’effectue à l’aide de paramètres régionaux **LC_COLLATE** paramètre de catégorie. Pour plus d’informations sur **LC_COLLATE**, consultez [setlocale](setlocale-wsetlocale.md). **strxfrm** utilise les paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux ; **_strxfrm_l** est identique, sauf qu’elle utilise les paramètres régionaux passé au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le **strxfrm** fonction transforme la chaîne pointée par *strSource* dans un nouveau format assemblé qui est stocké dans *strDest*. Pas plus de *nombre* caractères, y compris le caractère null, sont transformés et placés dans la chaîne résultante. La transformation est effectuée à l’aide de paramètres régionaux **LC_COLLATE** paramètre de catégorie. Pour plus d’informations sur **LC_COLLATE**, consultez [setlocale](setlocale-wsetlocale.md). **strxfrm** utilise les paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux ; **_strxfrm_l** est identique, sauf qu’elle utilise les paramètres régionaux passé au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Après la transformation, un appel à **strcmp** avec les deux chaînes transformées génère des résultats identiques à ceux d’un appel à **strcoll** appliqué aux deux chaînes d’origine. Comme avec **strcoll** et **stricoll**, **strxfrm** gère automatiquement les chaînes de caractères multioctets selon le cas.
+Après la transformation, un appel à **strcmp** avec les deux chaînes transformées génère des résultats identiques à ceux d’un appel à **strcoll** appliqué aux deux chaînes d’origine. Comme avec **strcoll** et **stricoll**, **strxfrm** gère automatiquement les chaînes de caractères multioctets comme il convient.
 
-**wcsxfrm** est une version à caractères larges de **strxfrm**; les arguments de chaîne de **wcsxfrm** sont des pointeurs à caractères larges. Pour **wcsxfrm**, après la transformation de chaîne, un appel à **wcscmp** avec les deux chaînes transformées génère des résultats identiques à ceux d’un appel à **wcscoll** appliquée à la deux chaînes d’origine. **wcsxfrm** et **strxfrm** comportent de façon identique. **wcsxfrm** utilise les paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux ; **_wcsxfrm_l** utilise les paramètres régionaux passé au lieu des paramètres régionaux actuels.
+**wcsxfrm** est une version à caractères larges de **strxfrm**; les arguments de chaîne de **wcsxfrm** sont des pointeurs de caractères larges. Pour **wcsxfrm**, après la transformation de chaîne, un appel à **wcscmp** avec les deux chaînes transformées génère des résultats identiques à ceux d’un appel à **wcscoll** appliqué à la deux chaînes d’origine. **wcsxfrm** et **strxfrm** se comportent de façon identique dans le cas contraire. **wcsxfrm** utilise les paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux ; **_wcsxfrm_l** utilise les paramètres régionaux passé au lieu des paramètres régionaux actuels.
 
 Ces fonctions valident leurs paramètres. Si *strSource* est un pointeur null, ou *strDest* est un **NULL** pointeur (sauf si le nombre est égal à zéro), ou si *nombre* est supérieur à **INT_MAX**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourner **INT_MAX**.
 
@@ -118,24 +118,24 @@ Ces fonctions valident leurs paramètres. Si *strSource* est un pointeur null, o
 |**_tcsxfrm**|**strxfrm**|**strxfrm**|**wcsxfrm**|
 |**_tcsxfrm_l**|**_strxfrm_l**|**_strxfrm_l**|**_wcsxfrm_l**|
 
-Dans les paramètres régionaux "C", l'ordre des caractères dans le jeu de caractères (jeu de caractères ASCII) est le même que l'ordre lexicographique des caractères. Toutefois, dans d'autres paramètres régionaux, l'ordre des caractères dans le jeu de caractères peut différer de l'ordre des caractères lexicographiques. Par exemple, dans certains paramètres régionaux européens, le caractère « a » (valeur 0 x 61) précède le caractère ' &\#x00E4 ;' (valeur 0xE4) dans le jeu de caractères, mais le caractère « ä » précède le caractère 'a' lexicographique.
+Dans les paramètres régionaux "C", l'ordre des caractères dans le jeu de caractères (jeu de caractères ASCII) est le même que l'ordre lexicographique des caractères. Toutefois, dans d'autres paramètres régionaux, l'ordre des caractères dans le jeu de caractères peut différer de l'ordre des caractères lexicographiques. Par exemple, dans certains paramètres régionaux européens, le caractère « a » (valeur 0 x 61) précède le caractère ' &\#x00E4 ;' (valeur 0xE4) dans le jeu de caractères, mais le caractère « ä » précède le caractère 'a' point de vue lexicographique.
 
 Dans les paramètres régionaux pour lesquels le jeu de caractères et l’ordre lexicographique des caractères diffèrent, utilisez **strxfrm** sur les chaînes d’origine, puis **strcmp** sur les chaînes résultantes pour produire une chaîne lexicographique comparaison selon les paramètres régionaux actuels **LC_COLLATE** paramètre de catégorie. Par conséquent, pour comparer deux chaînes lexicographiquement dans les paramètres régionaux ci-dessus, utilisez **strxfrm** sur les chaînes d’origine, puis **strcmp** sur les chaînes résultantes. Vous pouvez également utiliser **strcoll** plutôt que **strcmp** sur les chaînes d’origine.
 
-**strxfrm** est essentiellement un wrapper autour de [LCMapString](http://msdn.microsoft.com/library/windows/desktop/dd318700) avec **LCMAP_SORTKEY**.
+**strxfrm** est essentiellement un wrapper autour de [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa) avec **LCMAP_SORTKEY**.
 
 La valeur de l’expression suivante est la taille du tableau nécessaire pour contenir le **strxfrm** transformation de la chaîne source :
 
 `1 + strxfrm( NULL, string, 0 )`
 
-Dans les paramètres régionaux « C » uniquement, **strxfrm** est équivalente à la suivante :
+Dans les paramètres régionaux « C » uniquement, **strxfrm** équivaut à ce qui suit :
 
 ```C
 strncpy( _string1, _string2, _count );
 return( strlen( _string1 ) );
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

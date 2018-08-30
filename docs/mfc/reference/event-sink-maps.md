@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336603"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212041"
 ---
 # <a name="event-sink-maps"></a>Tables de récepteurs d'événements
 Lorsqu’un contrôle OLE incorporé déclenche un événement, le conteneur du contrôle reçoit l’événement à l’aide d’un mécanisme, appelé « table d’événements récepteur, « fournie par MFC. Cette table de récepteur d’événements désigne les fonctions du gestionnaire pour chaque événement spécifique, ainsi que les paramètres de ces événements. Pour plus d’informations sur les tables de récepteurs d’événements, consultez l’article [conteneurs de contrôles ActiveX](../../mfc/activex-control-containers.md).  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  L’ID de dispatch de la propriété impliquée dans la notification.  
   
  *pfnRequest*  
- Pointeur vers une fonction membre qui gère la `OnRequestEdit` notification pour cette propriété. Cette fonction doit avoir une valeur Booléenne en type de retour et un **BOOL\***  paramètre. Cette fonction doit définir le paramètre sur TRUE pour que la propriété à modifier et FALSE pour interdire. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  
+ Pointeur vers une fonction membre qui gère la `OnRequestEdit` notification pour cette propriété. Cette fonction doit avoir une valeur Booléenne en type de retour et un **BOOL** <strong>\*</strong> paramètre. Cette fonction doit définir le paramètre sur TRUE pour que la propriété à modifier et FALSE pour interdire. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  
   
  *pfnChanged*  
  Pointeur vers une fonction membre qui gère la `OnChanged` notification pour cette propriété. La fonction doit avoir une valeur Booléenne de type de retour et un paramètre UINT. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  
@@ -259,10 +259,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  L’ID de dispatch de la propriété impliquée dans la notification.  
   
  *pfnRequest*  
- Pointeur vers une fonction membre qui gère la `OnRequestEdit` notification pour cette propriété. Cette fonction doit avoir un type de retour de BOOL et UINT et **BOOL\***  paramètres. La fonction doit définir le paramètre sur TRUE pour que la propriété à modifier et FALSE pour interdire. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  
+ Pointeur vers une fonction membre qui gère la `OnRequestEdit` notification pour cette propriété. Cette fonction doit avoir un `BOOL` type de retour et `UINT` et `BOOL*` paramètres. La fonction doit définir le paramètre sur TRUE pour que la propriété à modifier et FALSE pour interdire. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  
   
  *pfnChanged*  
- Pointeur vers une fonction membre qui gère la `OnChanged` notification pour cette propriété. La fonction doit avoir une valeur Booléenne de type de retour et un paramètre UINT. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  
+ Pointeur vers une fonction membre qui gère la `OnChanged` notification pour cette propriété. La fonction doit avoir un `BOOL` type de retour et un `UINT` paramètre. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  
   
 ### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
@@ -284,7 +284,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  L’ID de dispatch de la propriété impliquée dans la notification.  
   
  *pfnRequest*  
- Pointeur vers une fonction membre qui gère la `OnRequestEdit` notification pour cette propriété. Cette fonction doit avoir une valeur Booléenne en type de retour et un **BOOL\***  paramètre. Cette fonction doit définir le paramètre sur TRUE pour que la propriété à modifier et FALSE pour interdire. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  
+ Pointeur vers une fonction membre qui gère la `OnRequestEdit` notification pour cette propriété. Cette fonction doit avoir une valeur Booléenne en type de retour et un **BOOL** <strong>\*</strong> paramètre. Cette fonction doit définir le paramètre sur TRUE pour que la propriété à modifier et FALSE pour interdire. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  
   
  *pfnChanged*  
  Pointeur vers une fonction membre qui gère la `OnChanged` notification pour cette propriété. La fonction doit avoir une valeur Booléenne de type de retour et aucun paramètre. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.  

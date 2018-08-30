@@ -1,5 +1,5 @@
 ---
-title: Contrôles (MFC) | Documents Microsoft
+title: Contrôles (MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd841b6bc3c55ed58db101c6226bbc24819b248f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1226584d52d9f09b34e9dae8d00095fc923396fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353676"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206873"
 ---
 # <a name="controls-mfc"></a>Contrôles (MFC)
 Les contrôles sont des objets avec lesquels les utilisateurs peuvent interagir pour entrer ou manipuler des données. Ils apparaissent généralement dans des boîtes de dialogue ou des barres d’outils. Cette série de rubriques traite de trois principaux types de contrôles :  
@@ -54,7 +54,7 @@ Les contrôles sont des objets avec lesquels les utilisateurs peuvent interagir 
   
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Contrôles communs Windows et classes MFC  
   
-|Contrôle|Classe MFC|Description|Nouveauté dans Windows 95|  
+|Contrôle|Classe MFC|Description|Nouveautés de Windows 95|  
 |-------------|---------------|-----------------|------------------------|  
 |[animation](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Affiche les frames successives d’un clip vidéo AVI|Oui|  
 |bouton|[CButton](../mfc/reference/cbutton-class.md)|Boutons de commande qui déclenchent une action ; également utilisé pour les cases à cocher, cases d’option et zones de groupe|Non|  
@@ -81,7 +81,7 @@ Les contrôles sont des objets avec lesquels les utilisateurs peuvent interagir 
 |[astuce](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Petite fenêtre contextuelle qui décrit la fonction d’un bouton de barre d’outils ou autre outil|Oui|  
 |[arborescence](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Fenêtre qui affiche une liste hiérarchique d’éléments|Oui|  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
+### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur  
   
 -   Un contrôle spécifique : consultez le tableau [Contrôles communs Windows et classes MFC](#_core_windows_common_controls_and_mfc_classes) dans cette rubrique pour obtenir des liens vers tous les contrôles  
   
@@ -107,7 +107,7 @@ Les contrôles sont des objets avec lesquels les utilisateurs peuvent interagir 
   
 -   [Exemples](../mfc/common-control-sample-list.md)  
   
- Pour plus d’informations sur les contrôles communs Windows dans le SDK Windows, consultez [contrôles communs](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Pour plus d’informations sur les contrôles communs Windows dans le SDK Windows, consultez [contrôles communs](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)   

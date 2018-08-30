@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaaad259fa0c864a72feaff3222f683563c8ca91
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1b9dc87340d567f876d91abc4d8ebfa1d6353cad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852313"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209985"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Principes de base des objets ATL COM
 L’illustration suivante représente la relation entre les classes et interfaces qui permettent de définir un objet COM ATL.  
@@ -40,7 +40,7 @@ L’illustration suivante représente la relation entre les classes et interface
   
  Étant donné que le client n’a pas à passer par l’objet externe pour interagir avec l’objet interne, les objets agrégées sont généralement plus efficaces. En outre, l’objet externe ne devra pas connaître les fonctionnalités de l’objet agrégée, étant donné que l’interface de l’objet agrégé est directement disponible pour le client. Toutefois, tous les objets ne peuvent être agrégées. Pour un objet à agréger, elle doit être conçu avec une agrégation à l’esprit.  
   
- ATL implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) en deux phases :  
+ ATL implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) en deux phases :  
   
 -   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), ou [CComPolyObject](../atl/reference/ccompolyobject-class.md) implémente le `IUnknown` méthodes.  
   

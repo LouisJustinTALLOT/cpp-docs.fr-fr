@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849689"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221130"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Encapsule les fonctions API Windows, fournissant une interface orientée objet que vous utilisez pour accéder au Registre.  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>Notes  
  Si *bCheminAdmin* est définie sur TRUE, le `m_hKey` variable de membre est définie sur **HKEY_LOCAL_MACHINE**. Si vous définissez *bCheminAdmin* sur FALSE, `m_hKey` a la valeur **HKEY_CURRENT_USER**.  
   
- L’accès de sécurité varie selon le *bReadOnly* paramètre. Si *bReadonly* est FALSE, l’accès de sécurité est défini sur **KEY_ALL_ACCESS**. Si *bReadyOnly* a la valeur TRUE, l’accès de sécurité est défini sur une combinaison de **KEY_QUERY_VALUE, KEY_NOTIFY** et **KEY_ENUMERATE_SUB_KEYS**. Pour plus d’informations sur l’accès de sécurité ainsi que le Registre, consultez [sécurité de clé de Registre et les droits d’accès](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ L’accès de sécurité varie selon le *bReadOnly* paramètre. Si *bReadonly* est FALSE, l’accès de sécurité est défini sur **KEY_ALL_ACCESS**. Si *bReadyOnly* a la valeur TRUE, l’accès de sécurité est défini sur une combinaison de **KEY_QUERY_VALUE, KEY_NOTIFY** et **KEY_ENUMERATE_SUB_KEYS**. Pour plus d’informations sur l’accès de sécurité ainsi que le Registre, consultez [sécurité de clé de Registre et les droits d’accès](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
   
  Le destructeur de `CSettingsStore` libère `m_hKey` automatiquement.  
   

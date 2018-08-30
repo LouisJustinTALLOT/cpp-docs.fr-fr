@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cf41a5d827bd3834cffdd7d229d01d4a4889c9b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 396043d78ae1b93f7089d1518c26e982d0ad3974
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610000"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205110"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -36,7 +36,7 @@ Utilisé pour l’optimisation du code Visual Basic.
 
 ## <a name="remarks"></a>Notes
 
-Le **defaultcollelem** attribut C++ a les mêmes fonctionnalités que le [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) attribut MIDL.
+Le **defaultcollelem** attribut C++ a les mêmes fonctionnalités que le [defaultcollelem](/windows/desktop/Midl/defaultcollelem) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

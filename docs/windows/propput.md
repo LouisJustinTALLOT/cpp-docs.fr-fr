@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4e67da1e77882f6bc2e7fd7b5df57b9f0fa97c0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f6adf0f2eaf61c3a280c8ca248cffea2f05bda6f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612273"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213167"
 ---
 # <a name="propput"></a>propput
 
@@ -36,7 +36,7 @@ Spécifie une fonction de définition de propriété.
 
 ## <a name="remarks"></a>Notes
 
-Le **propput** attribut C++ a les mêmes fonctionnalités que le [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) attribut MIDL.
+Le **propput** attribut C++ a les mêmes fonctionnalités que le [propput](/windows/desktop/Midl/propput) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

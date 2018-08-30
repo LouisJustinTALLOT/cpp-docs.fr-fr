@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e39b0b1ac94a759c4a8b30fce8c634ed49be4ff9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848335"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209477"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 Le nom de la fonction identifiée par le troisième paramètre de la macro NOTIFY_HANDLER dans votre table des messages.  
@@ -43,7 +43,7 @@ Le nom de la fonction identifiée par le troisième paramètre de la macro NOTIF
  L’identificateur du contrôle qui envoie le message.  
   
  *pnmh*  
- Adresse d’un [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) structure qui contient le code de notification et des informations supplémentaires. Pour certains messages de notification, ce paramètre pointe vers une plus grande structure qui a le `NMHDR` structure en tant que son premier membre.  
+ Adresse d’un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) structure qui contient le code de notification et des informations supplémentaires. Pour certains messages de notification, ce paramètre pointe vers une plus grande structure qui a le `NMHDR` structure en tant que son premier membre.  
   
  *bHandled*  
  Les jeux de mappage de message *bHandled* sur TRUE avant *NotifyHandler* est appelée. Si *NotifyHandler* ne gère pas entièrement le message, il doit définir *bHandled* à **FALSE** pour indiquer le message nécessite un traitement supplémentaire.  
@@ -57,5 +57,5 @@ Le nom de la fonction identifiée par le troisième paramètre de la macro NOTIF
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une fenêtre](../atl/implementing-a-window.md)   
  [Tables des messages](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+ [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884361"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209323"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook, classe
 Utilisez cette classe pour envoyer des rapports de débogage à un canal nommé.  
@@ -61,7 +61,7 @@ class CDebugReportHook
 ## <a name="remarks"></a>Notes  
  Créez une instance de cette classe dans les versions debug de vos services ou applications d’envoyer des rapports de débogage à un canal nommé. Rapports de débogage sont générés en appelant [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) ou à l’aide d’un wrapper pour cette fonction comme le [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) et [ATLASSERT ;](debugging-and-error-reporting-macros.md#atlassert) macros.  
   
- Utilisation de cette classe vous permet de déboguer interactivement les composants qui s’exécutent non-interactif [stations de fenêtre](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
+ Utilisation de cette classe vous permet de déboguer interactivement les composants qui s’exécutent non-interactif [stations de fenêtre](/windows/desktop/winstation/window-stations).  
   
  Notez que les rapports de débogage sont envoyés en utilisant le contexte de sécurité sous-jacente du thread. L’emprunt d’identité est temporairement désactivé afin que les rapports de débogage peuvent être affichés dans les situations où l’emprunt d’identité des utilisateurs de faibles privilèges est en cours, comme dans les applications web.  
   

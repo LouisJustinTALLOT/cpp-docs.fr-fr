@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1900 | Documents Microsoft
+title: Erreur irrécupérable C1900 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da7cdd5601785f43748ec87d3219f43728536855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2211b4243ddf44194959a263fd90ec1a615ea0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220279"
 ---
 # <a name="fatal-error-c1900"></a>Erreur irrécupérable C1900
-Incompatibilité IL de 'outil1' version 'numéro1' et 'outil2' version 'numéro2'  
-  
- Les outils exécutés dans différentes passes du compilateur ne correspondent pas. ***number1*** et ***number2*** font référence aux dates sur les fichiers. Par exemple, dans la passe 1, le compilateur frontal s'exécute (c1.dll), alors que dans la passe 2, c'est le compilateur principal (c2.dll). Les dates doivent correspondre dans les fichiers.  
-  
- Pour résoudre ce problème, assurez-vous que toutes les mises à jour ont été appliquées à Visual Studio. Si le problème persiste, utilisez **programmes et fonctionnalités** dans le panneau de configuration Windows pour réparer ou réinstaller Visual Studio.
+
+> Incompatibilité de il entre '*tool1*'version'*number1*'et'*tool2*'version'*number2*'
+
+Les outils exécutés dans différentes passes du compilateur ne correspondent pas. *number1* et *number2* font référence aux dates sur les fichiers. Par exemple, dans la passe 1, le compilateur frontal s'exécute (c1.dll), alors que dans la passe 2, c'est le compilateur principal (c2.dll). Les dates doivent correspondre dans les fichiers.
+
+Pour résoudre ce problème, assurez-vous que toutes les mises à jour ont été appliquées à Visual Studio. Si le problème persiste, utilisez **programmes et fonctionnalités** dans le panneau de configuration Windows pour réparer ou réinstaller Visual Studio.

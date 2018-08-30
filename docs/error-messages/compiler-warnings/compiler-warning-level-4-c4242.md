@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4242 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4242 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befe02b363c17a670d3b33632ffa50ed8a7cb1f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 623183e5ee54c995d624f47461c724ee8f4befae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294480"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217396"
 ---
 # <a name="compiler-warning-level-4-c4242"></a>Avertissement du compilateur (niveau 4) C4242
 'identificateur' : conversion de 'type1' en 'type2', perte possible de données  
@@ -30,7 +30,7 @@ ms.locfileid: "33294480"
   
  Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
   
- Pour plus d’informations sur l’erreur C4242, consultez [les erreurs courantes du compilateur](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
+ Pour plus d’informations sur l’erreur C4242, consultez [erreurs de compilateur communes](/windows/desktop/WinProg64/common-compiler-errors).  
   
  L’exemple suivant génère l’erreur C4242 :  
   

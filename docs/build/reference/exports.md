@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e6607016e2661817de04fce505bc921a3a25320a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42573168"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219491"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -69,7 +69,7 @@ Pour rechercher les noms décorés produits par le compilateur, utilisez le [DUM
   
 Vous pouvez utiliser*ordinale* pour spécifier qu’un nombre et non le nom de fonction, passe dans la table d’exportation de la DLL. De nombreuses DLL Windows exportent des ordinaux pour prendre en charge du code hérité. Il était courant d'utiliser des ordinaux dans le code Windows 16 bits, car cela peut aider à réduire la taille d'une DLL. Nous ne conseillons pas l'exportation de fonctions par ordinal à moins que vos clients de DLL en aient besoin pour une prise en charge héritée. Comme le fichier .LIB contiendra le mappage entre l'ordinal et la fonction, vous pouvez utiliser le nom de fonction comme vous le feriez normalement dans les projets qui utilisent la DLL.  
   
-En utilisant le mot clé `NONAME` facultatif, vous pouvez exporter par ordinal uniquement et réduire la taille de la table d'exportation dans la DLL résultante. Toutefois, si vous souhaitez utiliser [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) sur la DLL, vous devez connaître l’ordinal, car le nom ne sera pas valid.  
+En utilisant le mot clé `NONAME` facultatif, vous pouvez exporter par ordinal uniquement et réduire la taille de la table d'exportation dans la DLL résultante. Toutefois, si vous souhaitez utiliser [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) sur la DLL, vous devez connaître l’ordinal, car le nom ne sera pas valid.  
   
 Le mot clé facultatif `PRIVATE` empêche *nom d’entrée* d’être inclus dans la bibliothèque d’importation générée par LINK. Il n'affecte pas l'exportation dans l'image également générée par LINK.  
   

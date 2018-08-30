@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03251c9f0442ffa3cda6b00b6528e424e1fe9007
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0e2271093237fbfdbc7f5e0492b1db220c469d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415632"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210359"
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
@@ -107,16 +107,16 @@ Nombre de caractères écrits ou valeur négative en cas d'erreur de sortie. Si 
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions prend un pointeur vers une liste d’arguments et utilise ensuite la **_putch** afin de mettre en forme et écrire les données spécifiées dans la console. (**_vcwprintf_p** utilise **_putwch** au lieu de **_putch**. **_vcwprintf_p** est la version à caractères larges de **_vcprintf_p**. Elle prend une chaîne de caractères larges comme argument.)
+Chacune de ces fonctions prend un pointeur désignant une liste d’arguments et utilise ensuite le **_putch** fonction permettant de mettre en forme et écrire les données fournies dans la console. (**_vcwprintf_p** utilise **_putwch** au lieu de **_putch**. **_vcwprintf_p** est la version à caractères larges de **_vcprintf_p**. Elle prend une chaîne de caractères larges comme argument.)
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, à ceci près qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels.
 
 Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. La spécification de format prend en charge les paramètres positionnels, ce qui vous permet de spécifier l’ordre dans lequel les arguments sont utilisés dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 Ces fonctions ne traduisent par les caractères de saut de ligne en combinaisons retour chariot-saut de ligne au moment de leur sortie.
 
 > [!IMPORTANT]
-> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 Ces fonctions valident le pointeur d'entrée et la chaîne de format. Si *format* ou *argument* est **NULL**, ou si la chaîne de format contient des caractères de mise en forme non valides, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
@@ -127,7 +127,7 @@ Ces fonctions valident le pointeur d'entrée et la chaîne de format. Si *format
 |**_vtcprintf_p**|**_vcprintf_p**|**_vcprintf_p**|**_vcwprintf_p**|
 |**_vtcprintf_p_l**|**_vcprintf_p_l**|**_vcprintf_p_l**|**_vcwprintf_p_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

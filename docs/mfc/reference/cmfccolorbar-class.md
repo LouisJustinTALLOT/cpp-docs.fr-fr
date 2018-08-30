@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3da308e92554bd573e9efccdd47aa6e6fd71e26a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 08d7edc11584f7a7c6d2b218d9bfbbcf8d3020a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850233"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212102"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar, classe
 Le `CMFCColorBar` classe représente une barre de contrôle d’ancrage qui peut sélectionner des couleurs dans un document ou une application.  
@@ -161,11 +161,11 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_BoxSize`|Un [CSize](../../atl-mfc-shared/reference/csize-class.md) objet qui spécifie la taille d’une cellule dans une grille de la barre de couleurs.|  
 |`m_bShowDocColorsWhenDocked`|Valeur booléenne qui indique s’il faut afficher les couleurs de document lors de la barre de couleurs est ancrée. Pour plus d’informations, consultez [CMFCColorBar::SetDocumentColors](#setdocumentcolors).|  
 |`m_bStdColorDlg`|Valeur booléenne qui indique s’il faut afficher la boîte de dialogue de couleur système standard ou le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue. Pour plus d’informations, consultez [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
-|`m_ColorAutomatic`|Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) qui stocke la couleur automatique en cours. Pour plus d’informations, consultez [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
+|`m_ColorAutomatic`|Un [COLORREF](/windows/desktop/gdi/colorref) qui stocke la couleur automatique en cours. Pour plus d’informations, consultez [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
 |`m_ColorNames`|Un [CMap](../../mfc/reference/cmap-class.md) objet qui associe un ensemble de RVB des couleurs avec leurs noms.|  
-|`m_colors`|Un [CArray](../../mfc/reference/carray-class.md) de [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeurs contenant les couleurs qui sont affichés dans le contrôle de barre de couleur.|  
-|`m_ColorSelected`|Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur représentant la couleur actuellement sélectionnée par l’utilisateur à partir du contrôle de barre de couleurs.|  
-|`m_lstDocColors`|Un [CList](../../mfc/reference/clist-class.md) de [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeurs contenant les couleurs qui sont actuellement utilisés dans un document.|  
+|`m_colors`|Un [CArray](../../mfc/reference/carray-class.md) de [COLORREF](/windows/desktop/gdi/colorref) valeurs contenant les couleurs qui sont affichés dans le contrôle de barre de couleur.|  
+|`m_ColorSelected`|Un [COLORREF](/windows/desktop/gdi/colorref) valeur représentant la couleur actuellement sélectionnée par l’utilisateur à partir du contrôle de barre de couleurs.|  
+|`m_lstDocColors`|Un [CList](../../mfc/reference/clist-class.md) de [COLORREF](/windows/desktop/gdi/colorref) valeurs contenant les couleurs qui sont actuellement utilisés dans un document.|  
 |`m_nCommandID`|Entier non signé représentant l’ID de commande d’un bouton de couleur.|  
 |`m_nHorzMargin`|Entier qui est la marge horizontale entre les boutons de couleur dans une grille de couleurs.|  
 |`m_nHorzOffset`|Entier qui est le décalage horizontal au centre du bouton de couleur. Cette valeur est significative si le bouton affiche du texte ou une image en plus d’une couleur.|  

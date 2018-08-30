@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70be45d1a7221590912ea71b38d3aa4404197df1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4df3f6f72ec7a83186cc3d96b2dda837bdd1cfff
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599126"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207994"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -41,7 +41,7 @@ La valeur par défaut pour le paramètre.
 
 ## <a name="remarks"></a>Notes
 
-Le **defaultvalue** attribut C++ a les mêmes fonctionnalités que le [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) attribut MIDL.
+Le **defaultvalue** attribut C++ a les mêmes fonctionnalités que le [defaultvalue](/windows/desktop/Midl/defaultvalue) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

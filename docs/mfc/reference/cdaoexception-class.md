@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcabd0659e98d25cbe28ce233b89dccc3585d61
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 15719f93fbcfde8e6684373f99c924132af9d288
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215438"
 ---
 # <a name="cdaoexception-class"></a>CDaoException, classe
 Représente une condition d'exception résultant des classes de base de données MFC basées sur des objets d'accès aux données (DAO).  
@@ -201,7 +201,7 @@ void GetErrorInfo(int nIndex);
 ### <a name="remarks"></a>Notes  
  Il s’agit d’un code d’OLE. Vous devrez rarement utiliser cette valeur, car, dans presque tous les cas, les informations d’erreur plus spécifiques MFC ou DAO sont disponibles dans l’autre `CDaoException` membres de données.  
   
- Pour plus d’informations sur SCODE, consultez la rubrique [Structure of OLE Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms690088) dans le SDK Windows. Le type de données SCODE correspond au type de données HRESULT.  
+ Pour plus d’informations sur SCODE, consultez la rubrique [Structure of OLE Error Codes](/windows/desktop/com/structure-of-com-error-codes) dans le SDK Windows. Le type de données SCODE correspond au type de données HRESULT.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CException (classe)](../../mfc/reference/cexception-class.md)   

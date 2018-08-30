@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 49681f240d6cee257e48c2cf1c5d2479b3678135
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848913"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208368"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (classe)
 Une classe de contexte de périphérique dérivée de [CDC](../../mfc/reference/cdc-class.md).  
@@ -61,7 +61,7 @@ class CPaintDC : public CDC
 ## <a name="remarks"></a>Notes  
  Il effectue une [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) au moment de la construction et [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) au moment de la destruction.  
   
- Un `CPaintDC` objet peut uniquement être utilisé lors de la réponse à une [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) du message, généralement dans votre `OnPaint` fonction membre de gestionnaire de messages.  
+ Un `CPaintDC` objet peut uniquement être utilisé lors de la réponse à une [WM_PAINT](/windows/desktop/gdi/wm-paint) du message, généralement dans votre `OnPaint` fonction membre de gestionnaire de messages.  
   
  Pour plus d’informations sur l’utilisation de `CPaintDC`, consultez [contextes de périphérique](../../mfc/device-contexts.md).  
   
@@ -87,7 +87,7 @@ explicit CPaintDC(CWnd* pWnd);
  Pointe vers le `CWnd` objet vers lequel le `CPaintDC` objet appartient.  
   
 ### <a name="remarks"></a>Notes  
- Une exception (de type `CResourceException`) est levée si le Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) appeler échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué tous ses contextes de périphérique disponible. Votre application est en concurrence pour les contextes d’affichage courants cinq disponibles à un moment donné sous Windows.  
+ Une exception (de type `CResourceException`) est levée si le Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) appeler échoue. Un contexte de périphérique n’est peut-être pas disponible si Windows a déjà alloué tous ses contextes de périphérique disponible. Votre application est en concurrence pour les contextes d’affichage courants cinq disponibles à un moment donné sous Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  

@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23c4836d178c64590536a809ac5fe6cbbdf8380
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fec8a41a1c9d1a9d01952a0a72829d2122e0e40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216975"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
@@ -103,7 +103,7 @@ La taille en octets de la *mbstr* mémoire tampon.
 Pointe vers la chaîne de caractères larges à convertir.
 
 *count*<br/>
-Le nombre maximal d’octets à stocker dans le *mbstr* tampon, ne pas y compris le caractère null de fin, ou [_TRUNCATE](../../c-runtime-library/truncate.md).
+Le nombre maximal d’octets à stocker dans le *mbstr* mémoire tampon, non compris le caractère null de fin, ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
@@ -122,32 +122,32 @@ Si l’une de ces conditions se présente, l’exception de paramètre non valid
 
 ## <a name="remarks"></a>Notes
 
-Le **wcstombs_s** fonction convertit une chaîne de caractères larges pointés par *wcstr* en caractères multioctets stockés dans la mémoire tampon vers laquelle pointée *mbstr*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
+Le **wcstombs_s** fonction convertit une chaîne de caractères larges vers laquelle pointé *wcstr* en caractères multioctets stockés dans la mémoire tampon vers laquelle pointée *mbstr*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
 
 - Un caractère large null est rencontré
 
 - Un caractère large qui ne peut pas être converti est rencontré
 
-- Le nombre d’octets stockés dans le *mbstr* est égale à la mémoire tampon *nombre*.
+- Le nombre d’octets stockés dans le *mbstr* mettre en mémoire tampon est égale à *nombre*.
 
 La chaîne de destination est toujours terminée par null (même en cas d'erreur).
 
-Si *nombre* est la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), puis **wcstombs_s** convertit la majeure partie de la chaîne en tenir dans la mémoire tampon de destination, tout en laissant la place pour une valeur null marque de fin. Si la chaîne est tronquée, la valeur de retour est **STRUNCATE**, et la conversion est considérée comme réussie.
+Si *nombre* est la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), puis **wcstombs_s** convertit autant de caractères de la chaîne en tenir dans la mémoire tampon de destination, tout en laissant la place pour une valeur null marque de fin. Si la chaîne est tronquée, la valeur de retour est **STRUNCATE**, et la conversion est considérée comme réussie.
 
-Si **wcstombs_s** convertit correctement la chaîne source, elle place la taille en octets de la chaîne convertie, y compris la marque de fin null, en  *&#42;pReturnValue* (fourni  *pReturnValue* n’est pas **NULL**). Cela se produit même si le *mbstr* argument est **NULL** et fournit un moyen de déterminer la taille de la mémoire tampon requise. Notez que si *mbstr* est **NULL**, *nombre* est ignoré.
+Si **wcstombs_s** convertit correctement la chaîne source, elle place la taille en octets de la chaîne convertie, y compris le terminateur null, en  *&#42;pReturnValue* (fourni  *pReturnValue* n’est pas **NULL**). Cela se produit même si le *mbstr* argument est **NULL** et fournit un moyen pour déterminer la taille de mémoire tampon requise. Notez que si *mbstr* est **NULL**, *nombre* est ignoré.
 
-Si **wcstombs_s** rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet, il affecte la valeur 0  *&#42;pReturnValue*, définit la mémoire tampon de destination à une chaîne vide, définit **errno**  à **EILSEQ**et retourne **EILSEQ**.
+Si **wcstombs_s** rencontre un caractère large qu’elle ne peut pas convertir en un caractère multioctet, elle affecte la valeur 0  *&#42;pReturnValue*, définit la mémoire tampon de destination à une chaîne vide, affecte **errno**  à **EILSEQ**et retourne **EILSEQ**.
 
 Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comportement de **wcstombs_s** n’est pas défini.
 
 > [!IMPORTANT]
-> Vérifiez que *wcstr* et *mbstr* ne se chevauchent pas et que *nombre* reflète fidèlement le nombre de caractères larges à convertir.
+> Vérifiez que *wcstr* et *mbstr* ne se chevauchent pas et qui *nombre* reflète fidèlement le nombre de caractères larges à convertir.
 
-**wcstombs_s** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; **_wcstombs_s_l** est identique à **wcstombs** sauf qu’elle utilise les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**wcstombs_s** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; **_wcstombs_s_l** est identique à **wcstombs** sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -208,4 +208,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

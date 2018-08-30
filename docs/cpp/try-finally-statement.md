@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464858"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215529"
 ---
 # <a name="try-finally-statement"></a>try-finally, instruction
 **Section spécifique à Microsoft**  
@@ -90,7 +90,7 @@ Fin de l'ordre d'exécution du gestionnaire
 ## <a name="abnormal-termination"></a>Arrêt anormal  
  Quitter un **try-finally** à l’aide de l’instruction la [longjmp](../c-runtime-library/reference/longjmp.md) moment de l’exécution est considérée comme un arrêt anormal. Il n’est pas conforme de sauter dans une **__try** instruction mais conforme d’en sortir d’une. Tous les **__finally** instructions actives entre le point de départ (arrêt normal de la **__try** bloc) et la destination (le **__except** qui bloquent gère l’exception) doit être exécuté. Cela s'appelle un déroulement local.  
   
- Si un **essayez** bloc est terminé prématurément pour une raison quelconque, y compris un saut hors du bloc, le système exécute associé **enfin** bloc dans le cadre du processus de déroulement de la pile. Dans ce cas, le [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) fonction renvoie **true** si elle est appelée depuis le **enfin** bloquer ; sinon, elle retourne **false**.  
+ Si un **essayez** bloc est terminé prématurément pour une raison quelconque, y compris un saut hors du bloc, le système exécute associé **enfin** bloc dans le cadre du processus de déroulement de la pile. Dans ce cas, le [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) fonction renvoie **true** si elle est appelée depuis le **enfin** bloquer ; sinon, elle retourne **false**.  
   
  Le Gestionnaire de terminaisons n’est pas appelé si un processus est tué au milieu de l’exécution un **try-finally** instruction.  
   
@@ -100,4 +100,4 @@ Fin de l'ordre d'exécution du gestionnaire
  [Écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)   
  [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
  [Mots clés](../cpp/keywords-cpp.md)   
- [Syntaxe du Gestionnaire de terminaisons](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [Syntaxe du Gestionnaire de terminaisons](/windows/desktop/Debug/termination-handler-syntax)

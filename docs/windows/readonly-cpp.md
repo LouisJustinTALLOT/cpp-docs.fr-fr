@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc70734867b0b6b7c1d9ebc5e66c45893cf1db1e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 93a7adbca8c659a757e0e8fbb05b8fb926b237d2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602089"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210308"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -36,7 +36,7 @@ Interdit l’assignation à un membre de données.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut C++ **readonly** a les mêmes fonctionnalités que l’attribut MIDL [readonly](http://msdn.microsoft.com/library/windows/desktop/aa367152) .
+Le **readonly** attribut C++ a les mêmes fonctionnalités que le [readonly](/windows/desktop/Midl/readonly) attribut MIDL.
 
 Si vous souhaitez interdire la modification d’un paramètre de méthode, utilisez l’attribut [in](../windows/in-cpp.md) .
 

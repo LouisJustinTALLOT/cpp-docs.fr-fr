@@ -1,5 +1,5 @@
 ---
-title: Traitement des Messages de Notification dans un contrôle Rebar | Documents Microsoft
+title: Traitement des Messages de Notification dans un contrôle Rebar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1d42d129ab7b7d2e98ae1126b8f32f68b1f356
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dce09e84e9a2b5262d05847746f819a122ec36c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931825"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208973"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Traitement des messages de notification dans un contrôle rebar
-Dans la classe parente du contrôle rebar, créez un `OnChildNotify` fonction de gestionnaire avec une instruction switch pour n’importe quel contrôle rebar (`CReBarCtrl`) vous souhaitez gérer les messages de notification. Notifications sont envoyées à la fenêtre parente lorsque l’utilisateur fait glisser des objets sur le contrôle rebar, modifications de la disposition des bandes, supprime des bandes du contrôle rebar et ainsi de suite.  
+Dans la classe parente du contrôle rebar, créez un `OnChildNotify` fonction gestionnaire avec une instruction switch pour n’importe quel contrôle rebar (`CReBarCtrl`) des messages de notification que vous souhaitez gérer. Notifications sont envoyées vers la fenêtre parente lorsque l’utilisateur fait glisser des objets sur le contrôle rebar, modifications de bandes, supprime la disposition des bandes à partir du contrôle rebar et ainsi de suite.  
   
  Les messages de notification suivants peuvent être envoyés par l’objet de contrôle rebar :  
   
@@ -41,13 +41,13 @@ Dans la classe parente du contrôle rebar, créez un `OnChildNotify` fonction de
   
 -   RBN_ENDDRAG envoyé par un contrôle rebar lorsque l’utilisateur arrête de faire glisser une bande.  
   
--   RBN_GETOBJECT envoyé par un contrôle rebar (créé avec le style RBS_REGISTERDROP) lorsqu’un objet est déplacé sur une bande dans le contrôle.  
+-   RBN_GETOBJECT envoyé par un contrôle rebar (créé avec le style RBS_REGISTERDROP) lorsqu’un objet est glissé sur une bande dans le contrôle.  
   
 -   RBN_HEIGHTCHANGE envoyé par un contrôle rebar lorsque sa hauteur a été modifiée.  
   
 -   RBN_LAYOUTCHANGED envoyé par un contrôle rebar lorsque l’utilisateur modifie la disposition des bandes du contrôle.  
   
- Pour plus d’informations sur ces notifications, consultez [référence de contrôle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774375) dans le Kit de développement logiciel Windows.  
+ Pour plus d’informations sur ces notifications, consultez [référence de contrôle Rebar](https://msdn.microsoft.com/library/windows/desktop/bb774375) dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de CReBarCtrl](../mfc/using-crebarctrl.md)   

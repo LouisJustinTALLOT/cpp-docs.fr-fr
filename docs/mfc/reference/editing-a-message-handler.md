@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f82245e8e2fa338ed4abca0b97c53d653427cce
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 046ce538dafe90b172096eb37bf2309f8c75db1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027870"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206249"
 ---
 # <a name="editing-a-message-handler"></a>Modification d'un gestionnaire de messages
 Une fois que vous avez défini un gestionnaire de messages, vous pouvez atteindre la définition de la fonction membre pour ajouter ou modifier le code.  
   
  Pour accéder à une définition de fonction membre à partir de la [éditeur de boîte de dialogue](../../windows/dialog-editor.md), double-cliquez sur un contrôle pour lequel un gestionnaire est déjà défini. Vous accédez alors au fichier dans lequel le Gestionnaire de messages du contrôle sélectionné est défini.  
   
- Pour accéder à une définition de fonction membre à partir de [affichage de classes](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), double-cliquez sur le nom de fonction dans l’affichage de classes.  
+ Pour accéder à une définition de fonction membre à partir de [affichage de classes](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), double-cliquez sur le nom de fonction dans l’affichage de classes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage des Messages à des fonctions](../../mfc/reference/mapping-messages-to-functions.md)   

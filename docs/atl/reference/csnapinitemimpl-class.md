@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77f92e2a0a5ea65fce361c19ae52745932f58deb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2b120ab308e8d46ac4c874681d62bbeaaa86588
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884928"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205542"
 ---
 # <a name="csnapinitemimpl-class"></a>Csnapinitemimpl, classe
 Cette classe fournit des méthodes pour implémenter un objet de nœud de composant logiciel enfichable.  
@@ -110,7 +110,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  **En-tête :** atlsnap.h  
   
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
- Cette méthode implémente la fonction Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
+ Cette méthode implémente la fonction Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).  
   
 ```
 AddMenuItems(  
@@ -146,7 +146,7 @@ AddMenuItems(
 - Objet de données de CCT_UNINITIALIZED a un type non valide.  
   
 ##  <a name="command"></a>  CSnapInItemImpl::Command  
- Cette méthode implémente la fonction Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
+ Cette méthode implémente la fonction Win32 [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842).  
   
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 - Objet de données de CCT_UNINITIALIZED a un type non valide.  
   
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
- Cette méthode implémente la fonction Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
+ Cette méthode implémente la fonction Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).  
   
 ```
 CreatePropertyPages(  
@@ -280,7 +280,7 @@ SCOPEDATAITEM m_scopeDataItem;
 ```  
   
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
- Le [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) structure de l’objet de données du composant logiciel enfichable.  
+ Le [RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165) structure de l’objet de données du composant logiciel enfichable.  
   
 ```
 RESULTDATAITEM m_resultDataItem;

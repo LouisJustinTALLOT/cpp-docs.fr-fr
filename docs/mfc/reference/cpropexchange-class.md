@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f431ab86762e50f91571a85f0fc60e41d8d711
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f8b63de74a044a55362c2ebafc814fcf0136434d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849628"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216840"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange, classe
 Prend en charge l'implémentation de la persistance de vos contrôles OLE.  
@@ -131,7 +131,7 @@ virtual BOOL ExchangeFontProp(
  Une référence à un [CFontHolder](../../mfc/reference/cfontholder-class.md) objet qui contient la propriété de police.  
   
  *pFontDesc*  
- Un pointeur vers un [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) structure contenant les valeurs pour l’initialisation de l’état par défaut de la propriété de police lorsque *pFontDispAmbient* a la valeur NULL.  
+ Un pointeur vers un [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc) structure contenant les valeurs pour l’initialisation de l’état par défaut de la propriété de police lorsque *pFontDispAmbient* a la valeur NULL.  
   
  *pFontDispAmbient*  
  Un pointeur vers le `IFontDisp` interface d’une police à utiliser pour l’initialisation de l’état par défaut de la propriété de police.  

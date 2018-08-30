@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfc0b62fd3008ae18ae82703bfb896d56dba1de
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337367"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208883"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 Lorsque vous écrivez une application, vous créez un seul [CWinApp](../../mfc/reference/cwinapp-class.md)-objet dérivé. Dans certains cas, vous souhaitez obtenir des informations sur cet objet à partir en dehors de la `CWinApp`-objet dérivé. Ou bien, vous devrez peut-être accéder à d’autres objets globaux « Manager ».
@@ -96,7 +96,7 @@ CWinThread* AfxBeginThread(
  Paramètre à passer à la fonction de contrôle comme indiqué dans le paramètre de la déclaration de fonction dans *pfnThreadProc*.  
   
  *nPriority*  
- La priorité voulue du thread. Pour une liste complète et une description des priorités disponibles, consultez [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) dans le SDK Windows.  
+ La priorité voulue du thread. Pour une liste complète et une description des priorités disponibles, consultez [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) dans le SDK Windows.  
   
  *nStackSize*  
  Spécifie la taille en octets de la pile pour le nouveau thread. Si 0, la taille de pile par défaut est la même taille de pile du thread parent.  
@@ -109,7 +109,7 @@ CWinThread* AfxBeginThread(
 - **0** démarrer le thread immédiatement après sa création.  
   
  *lpSecurityAttrs*  
- Pointe vers un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie les attributs de sécurité pour le thread. Si NULL, les mêmes attributs de sécurité que le thread de création seront utilisés. Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
+ Pointe vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie les attributs de sécurité pour le thread. Si NULL, les mêmes attributs de sécurité que le thread de création seront utilisés. Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers l’objet thread nouvellement créé, ou NULL si une défaillance se produit.  
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  *Caractère*  
  Un pointeur vers une chaîne contenant l’ID de ressource.    
  *lpszType*  
- Pointeur vers le type de ressource. Pour obtenir la liste des types de ressources, consultez [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) dans le SDK Windows.  
+ Pointeur vers le type de ressource. Pour obtenir la liste des types de ressources, consultez [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) dans le SDK Windows.  
    
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers le module qui contient la ressource.  
@@ -506,7 +506,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  Si la fonction réussit, la valeur de retour est un handle du module. Si la fonction échoue, la valeur de retour est NULL.  
   
 ### <a name="remarks"></a>Notes  
- Elle retourne un handle qui peut être utilisé dans [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) pour obtenir l’adresse d’une fonction DLL. `AfxLoadLibrary` peut également être utilisé pour mapper d’autres modules exécutables.  
+ Elle retourne un handle qui peut être utilisé dans [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) pour obtenir l’adresse d’une fonction DLL. `AfxLoadLibrary` peut également être utilisé pour mapper d’autres modules exécutables.  
   
  Chaque processus conserve un décompte de références pour chaque module de bibliothèque chargée. Ce nombre de références est incrémenté chaque fois `AfxLoadLibrary` est appelée et est décrémenté à chaque fois `AfxFreeLibrary` est appelée. Lorsque le décompte de références atteint zéro, le module n’est pas mappé à partir de l’espace d’adressage du processus appelant et le handle n’est plus valide.  
   
@@ -559,7 +559,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
   
 ### <a name="parameters"></a>Paramètres  
  *lpWndClass*  
- Pointeur vers un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure contenant des informations sur la classe de fenêtre à inscrire. Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
+ Pointeur vers un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) structure contenant des informations sur la classe de fenêtre à inscrire. Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la classe est inscrite avec succès ; Sinon, FALSE.  
@@ -588,7 +588,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 ### <a name="parameters"></a>Paramètres  
  *nClassStyle*  
- Spécifie le style de classe Windows ou une combinaison de styles, créée à l’aide de l’opération de bits OR ( **&#124;**) opérateur, pour la classe de fenêtre. Pour obtenir la liste des styles de classe, consultez le [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure dans le SDK Windows. Si NULL, les valeurs par défaut seront définies comme suit :  
+ Spécifie le style de classe Windows ou une combinaison de styles, créée à l’aide de l’opération de bits OR ( **&#124;**) opérateur, pour la classe de fenêtre. Pour obtenir la liste des styles de classe, consultez le [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) structure dans le SDK Windows. Si NULL, les valeurs par défaut seront définies comme suit :  
   
 -   Définit le style de la souris sur CS_DBLCLKS, qui envoie des messages à la procédure de fenêtre de double lorsque l’utilisateur double-clique sur la souris.  
   
@@ -602,7 +602,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  Spécifie un handle pour la ressource curseur à installer dans chaque fenêtre créée à partir de la classe de fenêtre. Si vous utilisez la valeur par défaut de **0**, vous obtiendrez le curseur IDC_ARROW standard.  
   
  *hbrBackground*  
- Spécifie un handle de la ressource pinceau à installer dans chaque fenêtre créée à partir de la classe de fenêtre. Si vous utilisez la valeur par défaut de **0**, vous aurez un pinceau d’arrière-plan NULL et que votre fenêtre sera, par défaut, effacera pas son arrière-plan lors du traitement [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055).  
+ Spécifie un handle de la ressource pinceau à installer dans chaque fenêtre créée à partir de la classe de fenêtre. Si vous utilisez la valeur par défaut de **0**, vous aurez un pinceau d’arrière-plan NULL et que votre fenêtre sera, par défaut, effacera pas son arrière-plan lors du traitement [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd).  
   
  *hIcon*  
  Spécifie un handle de la ressource icône à installer dans chaque fenêtre créée à partir de la classe de fenêtre. Si vous utilisez la valeur par défaut de **0**, vous obtiendrez l’icône du logo Windows standard, drapeau.  

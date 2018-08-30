@@ -62,12 +62,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738a69ad0acd1af3b400b56f0f759414b9e28578
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: e5166ef52f88e714d1168fe25a1ec29dd5360205
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451600"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210503"
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -168,29 +168,29 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **vsnprintf** fonction retourne le nombre de caractères écrits, sans compter le caractère null de fin. Si la taille de mémoire tampon spécifiée par *nombre* n’est pas suffisamment grande pour contenir la sortie spécifiée par *format* et *argptr*, la valeur de retour de  **vsnprintf** est le nombre de caractères écrits, sans compter le caractère null, si *nombre* était assez important. Si la valeur de retour est supérieure à *nombre* - 1, la sortie a été tronquée. La valeur de retour -1 indique qu’une erreur de codage s’est produite.
+Le **vsnprintf** fonction retourne le nombre de caractères écrits, sans compter le caractère null de fin. Si la taille de mémoire tampon spécifiée par *nombre* n’est pas suffisamment grande pour contenir la sortie spécifiée par *format* et *argptr*, la valeur de retour de  **vsnprintf** est le nombre de caractères qui seraient écrits, sans compter le caractère null, si *nombre* était assez important. Si la valeur de retour est supérieure à *nombre* - 1, la sortie a été tronquée. La valeur de retour -1 indique qu’une erreur de codage s’est produite.
 
 Les deux **_vsnprintf** et **_vsnwprintf** fonctions retournent le nombre de caractères écrits si le nombre de caractères à écrire est inférieur ou égal à *nombre*; si le nombre de caractères à écrire est supérieur à *nombre*, ces fonctions retournent -1 indiquant que la sortie a été tronquée.
 
-La valeur retournée par toutes ces fonctions n’inclut pas le caractère null de fin, qu’il soit écrit ou pas. Lorsque *nombre* est égal à zéro, la valeur retournée est le nombre de caractères que les fonctions écririez pas, y compris toute marque de fin null. Vous pouvez utiliser ce résultat pour allouer un espace de mémoire tampon suffisant pour la chaîne et son caractère null de fin et rappeler ensuite la fonction pour remplir la mémoire tampon.
+La valeur retournée par toutes ces fonctions n’inclut pas le caractère null de fin, qu’il soit écrit ou pas. Lorsque *nombre* est égal à zéro, la valeur retournée est le nombre de caractères que les fonctions écriraient, sans y compris tout caractère null de fin. Vous pouvez utiliser ce résultat pour allouer un espace de mémoire tampon suffisant pour la chaîne et son caractère null de fin et rappeler ensuite la fonction pour remplir la mémoire tampon.
 
-Si *format* est **NULL**, ou si *tampon* est **NULL** et *nombre* n’est pas égal à zéro, ces fonctions. appeler le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si *format* est **NULL**, ou si *tampon* est **NULL** et *nombre* n’est pas égal à zéro, ces fonctions appeler le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions prend un pointeur vers une liste d’arguments, met en forme les données et écrit jusqu'à *nombre* caractères dans la mémoire vers laquelle pointe *tampon*. Le **vsnprintf** fonction écrit toujours une marque de fin null, même si elle tronque le résultat. Lorsque vous utilisez **_vsnprintf** et **_vsnwprintf**, la mémoire tampon s’est terminée par null uniquement si l’espace est à la fin (autrement dit, si le nombre de caractères à écrire est inférieur à *nombre*).
+Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis met en forme les données et écrit jusqu'à *nombre* caractères dans la mémoire vers laquelle pointe *tampon*. Le **vsnprintf** fonction écrit toujours une marque de fin null, même si elle tronque le résultat. Lorsque vous utilisez **_vsnprintf** et **_vsnwprintf**, la mémoire tampon sera être terminée par null uniquement si l’espace à la fin (autrement dit, si le nombre de caractères à écrire est inférieur à *nombre*).
 
 > [!IMPORTANT]
-> Pour empêcher certains types de risques de sécurité, assurez-vous que *format* n’est pas une chaîne définie par l’utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Pour empêcher certains types de risques de sécurité, vérifiez que *format* n’est pas une chaîne définie par l’utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Afin de garantir que l’espace pour le caractère null lors de l’appel **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** et **_vsnwprintf_l**, vérifiez que *nombre* est strictement inférieur à la longueur du tampon et initialisez la mémoire tampon NULL avant d’appeler la fonction.
+> Pour vous assurer qu’il y place pour le caractère null lors de l’appel **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** et **_vsnwprintf_l**, vérifiez que *nombre* est strictement inférieur à la longueur du tampon et initialisez la mémoire tampon NULL avant d’appeler la fonction.
 >
 > Étant donné que **vsnprintf** écrit toujours le caractère null, le *nombre* paramètre peut être égal à la taille de la mémoire tampon.
 
-Depuis le composant UCRT dans Visual Studio 2015 et Windows 10, **vsnprintf** n’est plus identique à **_vsnprintf**. Le **vsnprintf** (fonction) est conforme à la norme C99 ; **_vnsprintf** est conservé pour la compatibilité descendante avec l’ancien code de Visual Studio.
+Depuis le composant UCRT dans Visual Studio 2015 et Windows 10, **vsnprintf** n’est plus identique à **_vsnprintf**. Le **vsnprintf** (fonction) est conforme à la norme C99 ; **_vnsprintf** est conservé pour la compatibilité descendante avec le code de Visual Studio plus ancien.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -201,14 +201,14 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
 |**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------------|-------------------------------|
 |**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> ou \<cstdio>|
 |**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> ou \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> ou \<cwchar>|
 
-Le **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** et **_vsnwprintf_l** fonctions sont spécifiques de Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Le **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** et **_vsnwprintf_l** fonctions sont propres à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -250,7 +250,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-Le comportement change si vous utilisez à la place vsnprintf avec des paramètres à chaîne étroite. Le *nombre* paramètre peut être la taille totale de la mémoire tampon et la valeur de retour est le nombre de caractères qui aurait été écrite si *nombre* est suffisamment grande :
+Le comportement change si vous utilisez à la place vsnprintf avec des paramètres à chaîne étroite. Le *nombre* paramètre peut être la taille totale de la mémoire tampon et la valeur de retour est le nombre de caractères qui auraient été écrits si *nombre* était suffisante :
 
 ## <a name="example"></a>Exemple
 

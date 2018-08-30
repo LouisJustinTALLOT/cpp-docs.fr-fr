@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d782246f44148805f9acc8d912b0fbf554227f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5644f99e15685f8f1784cc40886709b05a9a06bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595726"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221282"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -43,7 +43,7 @@ ID de contexte de la rubrique d’aide. Consultez [aide HTML : aide contextuell
 
 ## <a name="remarks"></a>Notes
 
-Le **helpcontext** attribut C++ a les mêmes fonctionnalités que le [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) attribut MIDL.
+Le **helpcontext** attribut C++ a les mêmes fonctionnalités que le [helpcontext](/windows/desktop/Midl/helpcontext) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

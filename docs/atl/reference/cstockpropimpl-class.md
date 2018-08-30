@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b00d66c8d3842c03cc58e389bc308bc9515369b3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a3625667ccdbff85291d82ea519815bfc30c600f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219808"
 ---
 # <a name="cstockpropimpl-class"></a>Cstockpropimpl, classe
 Cette classe fournit des méthodes pour prendre en charge les valeurs de propriétés stock.  
@@ -502,7 +502,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
   
 ### <a name="parameters"></a>Paramètres  
  *ppPicture*  
- Variable qui reçoit un pointeur vers les propriétés de l’image. Consultez [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) pour plus d’informations.  
+ Variable qui reçoit un pointeur vers les propriétés de l’image. Consultez [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
@@ -869,7 +869,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Paramètres  
  *pPicture*  
- Pointeur vers les propriétés de l’image. Consultez [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) pour plus d’informations.  
+ Pointeur vers les propriétés de l’image. Consultez [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  
@@ -990,7 +990,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Paramètres  
  *pPicture*  
- Pointeur vers les propriétés de l’image. Consultez [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) pour plus d’informations.  
+ Pointeur vers les propriétés de l’image. Consultez [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.  

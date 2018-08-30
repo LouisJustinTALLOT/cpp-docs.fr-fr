@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc392454a6c5b152411fe8f6a7d0c12457389794
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541002"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212219"
 ---
 # <a name="preprocessor-directives"></a>Directives de préprocesseur
 
 Directives de préprocesseur, telles que `#define` et `#ifdef`, sont généralement utilisés pour rendre les programmes sources faciles à modifier et à compiler dans différents environnements d’exécution. Les directives contenues dans le fichier source indiquent au préprocesseur d'exécuter des actions spécifiques. Par exemple, le préprocesseur peut remplacer des jetons dans le texte, insérer le contenu d'autres fichiers dans le fichier source ou supprimer la compilation d'une partie du fichier en supprimant des sections de texte. Les lignes de préprocesseur sont reconnues et exécutées avant l'expansion macro. Par conséquent, si une macro se développe en quelque chose qui ressemble à une commande de préprocesseur, cette commande n’est pas reconnue par le préprocesseur.
 
-Les déclarations de préprocesseur utilisent le même jeu de caractères que les instructions de fichier source, sauf que les séquences d'échappement ne sont pas prises en charge. Le jeu de caractères utilisé dans les instructions de préprocesseur est identique à la [jeu de caractères d’exécution](http://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Le préprocesseur reconnaît aussi les valeurs de caractères négatives.
+Les déclarations de préprocesseur utilisent le même jeu de caractères que les instructions de fichier source, sauf que les séquences d'échappement ne sont pas prises en charge. Le jeu de caractères utilisé dans les instructions de préprocesseur est identique à la [jeu de caractères d’exécution](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Le préprocesseur reconnaît aussi les valeurs de caractères négatives.
 
 Le préprocesseur reconnaît les directives suivantes :
 
@@ -37,7 +37,7 @@ Le préprocesseur reconnaît les directives suivantes :
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-Le signe dièse (**#**) doit être le premier caractère d’un espace blanc sur la ligne contenant la directive ; les espaces blancs peuvent apparaître entre le signe dièse et la première lettre de la directive. Certaines directives incluent des arguments ou des valeurs. N’importe quel texte qui suit une directive (sauf un argument ou une valeur qui fait partie de la directive) doit être précédé par le délimiteur de commentaire sur une ligne (**//**) ou compris entre des délimiteurs de commentaire ( __/ \*\*/__).   Les lignes contenant des directives de préprocesseur peuvent être poursuivies en faisant immédiatement précéder le marqueur de fin de ligne avec une barre oblique inverse (**\\**).
+Le signe dièse (**#**) doit être le premier caractère d’un espace blanc sur la ligne contenant la directive ; les espaces blancs peuvent apparaître entre le signe dièse et la première lettre de la directive. Certaines directives incluent des arguments ou des valeurs. N’importe quel texte qui suit une directive (sauf un argument ou une valeur qui fait partie de la directive) doit être précédé par le délimiteur de commentaire sur une ligne (**//**) ou compris entre des délimiteurs de commentaire ( __/ \*\*/__). Les lignes contenant des directives de préprocesseur peuvent être poursuivies en faisant immédiatement précéder le marqueur de fin de ligne avec une barre oblique inverse (**\\**).
 
 Les directives de préprocesseur peuvent apparaître n'importe où dans un fichier source, mais elles s'appliquent uniquement au reste du fichier source.
 

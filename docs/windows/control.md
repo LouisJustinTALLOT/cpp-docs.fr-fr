@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18a53f75f783f5843e3bdf603d21dbacf6746e2b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 06261ba87806bd5eada0d7daaa955b8ec395f3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591779"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222844"
 ---
 # <a name="control"></a>contrôle
 
@@ -36,7 +36,7 @@ Spécifie que le type défini par l’utilisateur est un contrôle.
 
 ## <a name="remarks"></a>Notes
 
-Le **contrôle** attribut implique la [coclasse](../windows/coclass.md) attribut. Le **contrôle** attribut C++ a les mêmes fonctionnalités que le [contrôle](http://msdn.microsoft.com/library/windows/desktop/aa366764) attribut MIDL.
+Le **contrôle** attribut implique la [coclasse](../windows/coclass.md) attribut. Le **contrôle** attribut C++ a les mêmes fonctionnalités que le [contrôle](/windows/desktop/Midl/control) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

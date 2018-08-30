@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b09bbb831218c073b590233c572d5a5453659ed
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595330"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222924"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (extensions du composant C++)
 
@@ -46,7 +46,7 @@ expression
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-**safe_cast** vous permet de modifier le type d’une expression spécifiée. Dans les situations où vous vous attendez une variable ou un paramètre soit convertible en un certain type, vous pouvez utiliser **safe_cast** sans un **try-catch** bloc pour détecter les erreurs de programmation pendant le développement. Pour plus d’informations, consultez [Casting (C++ / c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
+**safe_cast** vous permet de modifier le type d’une expression spécifiée. Dans les situations où vous vous attendez une variable ou un paramètre soit convertible en un certain type, vous pouvez utiliser **safe_cast** sans un **try-catch** bloc pour détecter les erreurs de programmation pendant le développement. Pour plus d’informations, consultez [Casting (C++ / c++ / CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
 
 ### <a name="syntax"></a>Syntaxe
 

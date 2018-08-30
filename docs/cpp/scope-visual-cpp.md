@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6194addc8ae950cf5cdcb8b7946ab4f5f6c042
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460708"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220088"
 ---
 # <a name="scope-c"></a>Portée (C++)
 
@@ -41,7 +41,7 @@ Il existe six types de portée :
 
 - **Portée locale** un nom déclaré dans une fonction ou une expression lambda, y compris les noms de paramètre, ont une portée locale. Elles sont souvent appelées « variables locales ». Elles ne sont visibles à partir de leur point de déclaration jusqu'à la fin du corps du lambda ou fonction. Portée locale est un type de portée de bloc, qui est abordée plus loin dans cet article.
 
-- **Portée de classe** noms de membres de classe ont une portée de classe, qui étend tout au long de la définition de classe, quel que soit le point de déclaration. Accessibilité des membres de classe est plus contrôlé par le **public**, **privé**, et **protégé** mots clés. Membres publics ou protégés sont accessibles uniquement en utilisant les opérateurs de sélection de membre (**.** ou **->**) ou des opérateurs de pointeur vers membre (**.\***  ou **-> \***).
+- **Portée de classe** noms de membres de classe ont une portée de classe, qui étend tout au long de la définition de classe, quel que soit le point de déclaration. Accessibilité des membres de classe est plus contrôlé par le **public**, **privé**, et **protégé** mots clés. Membres publics ou protégés sont accessibles uniquement en utilisant les opérateurs de sélection de membre (**.** ou **->**) ou des opérateurs de pointeur vers membre (**.** <strong>\*</strong> ou **->** <strong>\*</strong>).
 
 - **Portée de l’instruction** noms déclarés dans un **pour**, **si**, **tandis que**, ou **basculer** instruction sont visibles jusqu'à la fin de la bloc d’instructions.
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > La réutilisation des noms d'identificateur, comme l'indique cet exemple, est considérée comme un style de programmation médiocre.
 
- Pour plus d’informations sur les pointeurs, consultez [Types dérivés](http://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Pour plus d’informations sur la déclaration et initialisation des objets de classe, consultez [Classes, Structures et Unions](../cpp/classes-and-structs-cpp.md). Pour plus d’informations sur l’utilisation de la **nouveau** et **supprimer** opérateurs de magasin gratuit, consultez [nouveau et supprimer des opérateurs](new-and-delete-operators.md).
+ Pour plus d’informations sur les pointeurs, consultez [Types dérivés](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Pour plus d’informations sur la déclaration et initialisation des objets de classe, consultez [Classes, Structures et Unions](../cpp/classes-and-structs-cpp.md). Pour plus d’informations sur l’utilisation de la **nouveau** et **supprimer** opérateurs de magasin gratuit, consultez [nouveau et supprimer des opérateurs](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Masquage des noms avec portée globale
 

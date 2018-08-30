@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9403ed1a4ba82a1e60c42ed0e57e975e73d1dd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d4e2b1fe58ab7ea408438b703b9fe803996fa791
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883786"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219036"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl, classe
 Cette classe fournit des méthodes autorisant un objet communiquer avec son site.  
@@ -60,7 +60,7 @@ template <class T>
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Gère le site `IUnknown` pointeur.|  
   
 ## <a name="remarks"></a>Notes  
- Le [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) interface permet à un objet communiquer avec son site. Classe `IObjectWithSiteImpl` fournit une implémentation par défaut de cette interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
+ Le [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) interface permet à un objet communiquer avec son site. Classe `IObjectWithSiteImpl` fournit une implémentation par défaut de cette interface et implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
   
  `IObjectWithSiteImpl` Spécifie les deux méthodes. Le client appelle d’abord `SetSite`, en passant le site `IUnknown` pointeur. Ce pointeur est stocké dans l’objet et peuvent être récupéré ultérieurement via un appel à `GetSite`.  
   
@@ -86,7 +86,7 @@ STDMETHOD(GetSite)(
 ### <a name="remarks"></a>Notes  
  Si le site prend en charge cette interface, le pointeur est retourné par le biais de `ppvSite`. Sinon, `ppvSite` est définie sur NULL.  
   
- Consultez [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) dans le Kit de développement logiciel Windows.  
+ Consultez [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  Gère le site `IUnknown` pointeur.  
@@ -120,7 +120,7 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) dans le Kit de développement logiciel Windows.  
+ Consultez [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

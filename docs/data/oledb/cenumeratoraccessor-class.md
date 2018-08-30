@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573340"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215609"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor, classe
 Utilisé par [CEnumerator](../../data/oledb/cenumerator-class.md) accéder aux données à partir de l’ensemble de lignes d’énumérateur.  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|Une variable qui indique si la ligne décrit une source de données ou d’un énumérateur.|  
 |[m_szDescription](#szdescription)|Description de la source de données ou de l’énumérateur.|  
 |[m_szName](#szname)|Le nom de la source de données ou de l’énumérateur.|  
-|[m_szParseName](#szparsename)|Chaîne à passer au [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) pour obtenir un moniker de la source de données ou d’un énumérateur.|  
+|[m_szParseName](#szparsename)|Chaîne à passer au [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) pour obtenir un moniker de la source de données ou d’un énumérateur.|  
   
 ## <a name="remarks"></a>Notes  
  Cet ensemble de lignes se compose des sources de données et des énumérateurs visibles à partir de l’énumérateur en cours.  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  Consultez [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) dans le *de référence du programmeur OLE DB* pour plus d’informations.  
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
-Chaîne à passer au [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) pour obtenir un moniker de la source de données ou d’un énumérateur.  
+Chaîne à passer au [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) pour obtenir un moniker de la source de données ou d’un énumérateur.  
   
 ### <a name="syntax"></a>Syntaxe  
   

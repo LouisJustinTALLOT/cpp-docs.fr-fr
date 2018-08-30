@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1fa026ecb0b25c17a793c31c3f64dcd0186f0e1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 92c3ece3ddef00161a769c0c45a4d31712d6f691
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208759"
 ---
 # <a name="options-atl-control-wizard"></a>Options, Assistant contrôle ATL
 Insérer « Résultats de la recherche « résumé ici.  
@@ -78,7 +78,7 @@ Insérer « Résultats de la recherche « résumé ici.
   
 -   **Custom**: crée une interface qui expose des méthodes directement par le biais d’un VTBL.  
   
-     Si vous sélectionnez **personnalisé**, vous pouvez spécifier que le contrôle est **Automation compatible**. Si vous sélectionnez **Automation compatible**, l’Assistant ajoute les [oleautomation](../../windows/oleautomation.md) attribut à l’interface dans le fichier IDL, et l’interface peut être marshalée par le marshaleur universel dans oleaut32.dll. Consultez [détails Marshaling](http://msdn.microsoft.com/library/windows/desktop/ms692621) dans le SDK Windows pour plus d’informations.  
+     Si vous sélectionnez **personnalisé**, vous pouvez spécifier que le contrôle est **Automation compatible**. Si vous sélectionnez **Automation compatible**, l’Assistant ajoute les [oleautomation](../../windows/oleautomation.md) attribut à l’interface dans le fichier IDL, et l’interface peut être marshalée par le marshaleur universel dans oleaut32.dll. Consultez [détails Marshaling](/windows/desktop/com/marshaling-details) dans le SDK Windows pour plus d’informations.  
   
      En outre, si vous sélectionnez **Automation compatible**, puis tous les paramètres pour toutes les méthodes dans le contrôle doivent être de type VARIANT compatible.  
   
@@ -87,7 +87,7 @@ Insérer « Résultats de la recherche « résumé ici.
   
 -   **Points de connexion**: Active les points de connexion pour votre objet en faisant dériver la classe de l’objet [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) et ce qui lui permet d’exposer une interface source.  
   
--   **Une licence**: ajoute la prise en charge pour le contrôle pour [licences](http://msdn.microsoft.com/library/windows/desktop/ms690543). Contrôles sous licence ne peuvent être hébergés que si l’ordinateur client possède la licence appropriée.  
+-   **Une licence**: ajoute la prise en charge pour le contrôle pour [licences](/windows/desktop/com/licensing). Contrôles sous licence ne peuvent être hébergés que si l’ordinateur client possède la licence appropriée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Assistant Contrôle ATL](../../atl/reference/atl-control-wizard.md)

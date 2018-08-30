@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b1a4d3d44f7ce18486feab4096673970857a0907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849914"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214975"
 ---
 # <a name="cscrollview-class"></a>CScrollView, classe
 Un [CView](../../mfc/reference/cview-class.md) avec les possibilités de défilement.  
@@ -86,9 +86,9 @@ class CScrollView : public CView
   
 -   Fait défiler automatiquement en réponse aux messages à partir du clavier, une souris sans défilement ou la roulette.  
   
- Pour faire défiler automatiquement en réponse aux messages à partir du clavier, ajoutez un message WM_KEYDOWN et de test pour VK_DOWN, VK_PREV et appeler [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ Pour faire défiler automatiquement en réponse aux messages à partir du clavier, ajoutez un message WM_KEYDOWN et de test pour VK_DOWN, VK_PREV et appeler [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos).  
   
- Vous pouvez gérer la roulette de défilement vous-même en substituant le message mappé [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) et [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) fonctions membres. Comme pour les `CScrollView`, ces fonctions membres prennent en charge le comportement recommandé pour [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), le message de rotation de roulette.  
+ Vous pouvez gérer la roulette de défilement vous-même en substituant le message mappé [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) et [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) fonctions membres. Comme pour les `CScrollView`, ces fonctions membres prennent en charge le comportement recommandé pour [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), le message de rotation de roulette.  
   
  Pour tirer parti du défilement automatique, dérivez votre classe de vue de `CScrollView` au lieu d’à partir de `CView`. Lorsque la vue est tout d’abord créée, si vous souhaitez calculer la taille de la vue à défilement selon la taille du document, appel le `SetScrollSizes` fonction membre à partir de votre substitution de soit [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) ou [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Vous devez écrire votre propre code pour interroger la taille du document. Pour obtenir un exemple, consultez le [exemple Scribble](../../visual-cpp-samples.md).)  
   

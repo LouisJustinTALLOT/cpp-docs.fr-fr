@@ -58,19 +58,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c92c43a820bc1c8694689c9d99a47b0c46b484e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451587"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209447"
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Obtient la longueur d'une chaîne en utilisant les paramètres régionaux actifs ou des paramètres régionaux spécifiés. Il existe des versions plus sécurisées de ces fonctions. Consultez [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen**, **_mbslen_l**, **_mbstrlen**, et **_mbstrlen_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen**, et **_mbstrlen_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -107,13 +107,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne le nombre de caractères dans *str*, à l’exclusion de la valeur null de Terminal Server. Aucune valeur de retour n’est réservée pour indiquer une erreur, à l’exception de **_mbstrlen** et **_mbstrlen_l**, qui retournent `((size_t)(-1))` si la chaîne contient un caractère multioctet non valide.
+Chacune de ces fonctions retourne le nombre de caractères dans *str*, à l’exclusion de la valeur null terminal. Aucune valeur de retour n’est réservée pour indiquer une erreur, à l’exception de **_mbstrlen** et **_mbstrlen_l**, qui retournent `((size_t)(-1))` si la chaîne contient un caractère multioctet non valide.
 
 ## <a name="remarks"></a>Notes
 
-**strlen** interprète la chaîne comme une chaîne de caractères à un octet, de sorte que sa valeur de retour est toujours égal au nombre d’octets, même si la chaîne contient des caractères multioctets. **wcslen** est une version à caractères larges de **strlen**; l’argument de **wcslen** est une chaîne de caractères larges et le nombre de caractères est en caractères larges (sur deux octets). **wcslen** et **strlen** comportent de façon identique.
+**strlen** interprète la chaîne comme une chaîne de caractères à un octet, donc sa valeur de retour est toujours égal au nombre d’octets, même si la chaîne contient des caractères multioctets. **wcslen** est une version à caractères larges de **strlen**; l’argument de **wcslen** est une chaîne de caractères larges et le nombre de caractères est en caractères larges (deux octets). **wcslen** et **strlen** se comportent de façon identique dans le cas contraire.
 
-**Remarque relative à la sécurité** Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Remarque relative à la sécurité** Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -123,11 +123,11 @@ Chacune de ces fonctions retourne le nombre de caractères dans *str*, à l’ex
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen** et **_mbslen_l** retourner le nombre de caractères multioctets dans une chaîne de caractères multioctets, mais ils ne testent pas pour la validité des caractères multioctets. **_mbstrlen** et **_mbstrlen_l** tester la validité des caractères multioctets et reconnaissent les séquences de caractères multioctets. Si la chaîne passée à **_mbstrlen** ou **_mbstrlen_l** contient un caractère multioctet non valide pour la page de codes, la fonction retourne -1 et les jeux de **errno** à **EILSEQ**.
+**_mbslen** et **_mbslen_l** retourner le nombre de caractères multioctets dans une chaîne de caractères multioctets mais ils ne testent pas pour la validité des caractères multioctets. **_mbstrlen** et **_mbstrlen_l** tester la validité des caractères multioctets et reconnaissent les séquences de caractères multioctets. Si la chaîne passée à **_mbstrlen** ou **_mbstrlen_l** contient un caractère multioctet non valide pour la page de codes, la fonction retourne -1 et les jeux **errno** à **EILSEQ**.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da945addb975404a5ea6d1805a8f0abf5d5b9eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49dd74c679e451a658828fcacb55146e3f8d5d17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412903"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200292"
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
@@ -100,18 +100,18 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_vscprintf_p** renvoie le nombre de caractères qui est générée si la chaîne pointée par la liste d’arguments a été imprimé ou envoyé vers un fichier ou les codes de la mémoire tampon à l’aide de la mise en forme spécifiée. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf_p** effectue la même fonction pour les caractères larges.
+**_vscprintf_p** retourne le nombre de caractères qui seraient générés si la chaîne pointée par la liste d’arguments a été imprimé ou envoyé vers un fichier ou les codes de la mémoire tampon à l’aide de la mise en forme spécifiée. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf_p** effectue la même fonction pour les caractères larges.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions diffèrent **_vscprintf** et **_vscwprintf** uniquement car ils prennent en charge la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Ces fonctions se distinguent des **_vscprintf** et **_vscwprintf** uniquement car ils prennent en charge la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 Si *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
 > [!IMPORTANT]
-> Garantir que si *format* est une chaîne définie par l’utilisateur, il se termine par null et le nombre et le type de paramètres. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Garantir que si *format* est une chaîne définie par l’utilisateur, il se termine par null et a le nombre correct et le type de paramètres. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -120,7 +120,7 @@ Si *format* est un pointeur null, le Gestionnaire de paramètre non valide est a
 |**_vsctprintf_p**|**_vscprintf_p**|**_vscprintf_p**|**_vscwprintf_p**|
 |**_vsctprintf_p_l**|**_vscprintf_p_l**|**_vscprintf_p_l**|**_vscwprintf_p_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

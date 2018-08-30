@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bb157fb5c39dff7f4e06926ddd17ed38d7a5174a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027743"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218631"
 ---
 # <a name="map-class"></a>map, classe
 
@@ -123,15 +123,19 @@ class map;
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé* type de données clé à stocker dans la carte.
+*Key*<br/>
+ Type de données clé à stocker dans la classe map.
 
-*Type* type de données de l’élément à stocker dans le mappage.
+*Type*<br/>
+ Type de données d'élément à stocker dans la classe map.
 
-*Caractéristiques* le type qui fournit un objet de fonction qui peut comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif dans le mappage. Cet argument est facultatif et le prédicat binaire `less<Key>` est la valeur par défaut.
+*Caractéristiques*<br/>
+ Type qui fournit un objet de fonction pouvant comparer deux valeurs d'éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe map. Cet argument est facultatif et le prédicat binaire `less<Key>` est la valeur par défaut.
 
 Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat std::less<> qui n’a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers).
 
-*Allocateur* le type qui représente l’objet allocateur stocké qui contient des informations sur l’allocation et la désallocation de mémoire de la carte. Cet argument est facultatif et sa valeur par défaut est `allocator<pair<const Key, Type> >`.
+*Allocateur*<br/>
+ Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe map. Cet argument est facultatif et sa valeur par défaut est `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Notes
 
@@ -572,7 +576,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé des éléments à mettre en correspondance à partir de la carte.
+*key*<br/>
+ Valeur de clé des éléments à mettre en correspondance à partir de la classe map.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1035,7 +1040,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé d’argument à comparer avec la clé de tri d’un élément à partir de la carte en cours de recherche.
+*key*<br/>
+ Valeur de clé d’argument à comparer à la clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1121,13 +1127,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* Position de l’élément à supprimer.
+*Where*<br/>
+ Position de l’élément à supprimer.
 
-*Première* Position du premier élément à supprimer.
+*Premier*<br/>
+ Position du premier élément à supprimer.
 
-*Dernière* Position juste après le dernier élément à supprimer.
+*Dernière*<br/>
+ Position juste après le dernier élément à supprimer.
 
-*Clé* la valeur de clé des éléments à supprimer.
+*Key*<br/>
+ Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1229,7 +1239,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé qui doit correspondre à la clé de tri d’un élément à partir de la carte en cours de recherche.
+*key*<br/>
+ Valeur de clé qui doit correspondre à la clé de tri d'un élément du mappage dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1561,11 +1572,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le `iterator` défini par la classe map pointe vers les éléments qui sont des objets de [value_type](#value_type), qui est de type `pair` * \< * **constKey**, * *Type *** >*, dont le premier membre est la clé à l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
+L’itérateur défini par la classe map pointe vers les éléments qui sont des objets de [value_type](#value_type), qui est de type `pair<const Key, Type>`, dont le premier membre est la clé à l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
 
-Pour déréférencer un **itérateur** `Iter` pointant vers un élément dans un mappage, utilisez le `->` opérateur.
+Pour déréférencer l’itérateur *Iter* pointant vers un élément dans un mappage, utilisez le `->` opérateur.
 
-Pour accéder à la valeur de la clé de l’élément, utilisez `Iter` -> **first**, ce qui équivaut à (\* `Iter`). **first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `Iter` -> **second**, ce qui équivaut à (\* `Iter`). **second**.
+Pour accéder à la valeur de la clé pour l’élément, utilisez `Iter->first`, ce qui équivaut à `(*Iter).first`. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `Iter->second`, ce qui équivaut à `(*Iter).second`.
 
 ### <a name="example"></a>Exemple
 
@@ -1587,7 +1598,7 @@ Retourne l’objet de fonction utilisé par une classe map pour ordonner ses él
 
 L’objet stocké définit la fonction membre
 
-**bool operator**( **constKey&**`left`, **const Key&**`right`);
+`bool operator(const Key& left, const Key& right);`
 
 qui retourne **true** si `left` précède et n’est pas égal à `right` dans l’ordre de tri.
 
@@ -1690,7 +1701,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé d’argument à comparer avec la clé de tri d’un élément à partir de la carte en cours de recherche.
+*key*<br/>
+ Valeur de clé d’argument à comparer à la clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2402,9 +2414,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Un type `reverse_iterator` ne peut pas changer la valeur d’un élément. Il sert à itérer la classe map dans l’ordre inverse.
 
-Le `reverse_iterator` défini par la classe map pointe vers les éléments qui sont des objets de [value_type](#value_type), qui est de type `pair` * \< * **constKey**, * *Type *** >*, dont le premier membre est la clé à l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
+Le `reverse_iterator` défini par la classe map pointe vers les éléments qui sont des objets de [value_type](#value_type), qui est de type `pair<const Key, Type>`, dont le premier membre est la clé à l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
 
-Pour déréférencer un `reverse_iterator` `rIter` pointant vers un élément dans un mappage, utilisez le `->` opérateur.
+Pour déréférencer un `reverse_iterator` *rIter* pointant vers un élément dans un mappage, utilisez le `->` opérateur.
 
 Pour accéder à la valeur de la clé de l’élément, utilisez `rIter` -> **first**, ce qui équivaut à (\* `rIter`). **first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `rIter` -> **second**, ce qui équivaut à (\* `rIter`). **first**.
 
@@ -2479,7 +2491,8 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* argument map qui fournit les éléments à échanger avec la carte cible.
+*right*<br/>
+ Argument map qui fournit les éléments à échanger avec la classe map cible.
 
 ### <a name="remarks"></a>Notes
 
@@ -2549,7 +2562,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé d’argument à comparer avec la valeur de clé de tri d’un élément à partir de la carte en cours de recherche.
+*key*<br/>
+ Valeur de clé d’argument à comparer à la valeur de clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2738,7 +2752,7 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<carte > membres](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<carte > membres](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Conteneurs](../cpp/containers-modern-cpp.md)<br/>
 [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

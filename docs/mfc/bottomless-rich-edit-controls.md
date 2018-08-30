@@ -1,5 +1,5 @@
 ---
-title: Contrôles RichEdit | Documents Microsoft
+title: Contrôles RichEdit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2b08f6c04d345b4ae3ab32c6d0f17a1d8a4647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e3115000b7b45d9b48a1ac0d274eb32c11f4d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343309"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218877"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Contrôles RichEdit sans marge inférieure
-Votre application peut redimensionner un contrôle RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) en fonction des besoins afin qu’il soit toujours la même taille que son contenu. Un contrôle RichEdit prend en charge cette fonctionnalité dite de « sans fin » en envoyant à sa fenêtre parente un [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) message de notification chaque fois que la taille de son contenu change.  
+Votre application peut redimensionner un contrôle RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) en fonction des besoins afin qu’elle soit toujours la même taille que son contenu. Un contrôle RichEdit prend en charge cette fonctionnalité dite de « infinie » en envoyant sa fenêtre parente un [EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize) message de notification chaque fois que la taille de son contenu change.  
   
- Lors du traitement de la **EN_REQUESTRESIZE** message de notification, une application doit redimensionner le contrôle aux dimensions spécifié [REQRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787950) structure. Une application peut également déplacer une information à proximité du contrôle pour prendre en charge la modification du contrôle de la hauteur. Pour redimensionner le contrôle, vous pouvez utiliser la `CWnd` fonction [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
+ Lors du traitement de la **EN_REQUESTRESIZE** message de notification, une application doit être redimensionné le contrôle sur les dimensions de spécifié [REQRESIZE](/windows/desktop/api/richedit/ns-richedit-_reqresize) structure. Une application peut également déplacer toutes les informations près du contrôle pour prendre en charge la modification du contrôle de la hauteur. Pour redimensionner le contrôle, vous pouvez utiliser la `CWnd` fonction [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
   
  Vous pouvez forcer un contrôle RichEdit pour envoyer un **EN_REQUESTRESIZE** message de notification à l’aide de la [fonction membre RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) fonction membre. Ce message peut être utile dans les [OnSize](../mfc/reference/cwnd-class.md#onsize) gestionnaire.  
   
- Pour recevoir des **EN_REQUESTRESIZE** messages de notification, vous devez activer la notification à l’aide de la `SetEventMask` fonction membre.  
+ Pour recevoir des **EN_REQUESTRESIZE** des messages de notification, vous devez activer la notification à l’aide de la `SetEventMask` fonction membre.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de CRichEditCtrl](../mfc/using-cricheditctrl.md)   

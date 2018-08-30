@@ -1,5 +1,5 @@
 ---
-title: Défilement, organisation, tri et recherche dans les contrôles de liste | Documents Microsoft
+title: Défilement, organisation, tri et recherche dans les contrôles de liste | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f9ff7afa5440e0d0b83240b1248c33ab0d385e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 073a11b8b798e9b94164a79af2340b0ad133d957
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379188"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197820"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Défilement, organisation, tri et recherche dans les contrôles de liste
-Contrôles de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)) permettent le défilement par défaut. Pour plus d’informations, consultez [Position de défilement](http://msdn.microsoft.com/library/windows/desktop/bb774736) dans le Kit de développement et le [défilement](../mfc/reference/clistctrl-class.md#scroll) fonction membre.  
+Contrôles de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)) permettent le défilement par défaut. Pour plus d’informations, consultez [Position de défilement](/windows/desktop/Controls/using-list-view-controls) dans le SDK Windows et le [défilement](../mfc/reference/clistctrl-class.md#scroll) fonction membre.  
   
- Vous pouvez appeler `CListCtrl` des fonctions membres pour organiser les éléments de liste dans le contrôle, les trier ou rechercher des éléments particuliers. Pour plus d’informations, consultez [organisation, tri et recherche](http://msdn.microsoft.com/library/windows/desktop/bb774736) dans le Kit de développement et le [CListCtrl](../mfc/reference/clistctrl-class.md) membres [disposition](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , et [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
+ Vous pouvez appeler `CListCtrl` des fonctions membres pour organiser les éléments de liste dans le contrôle, trier ou rechercher des éléments particuliers. Pour plus d’informations, consultez [organisation, tri et recherche](https://msdn.microsoft.com/library/windows/desktop/bb774736) dans le SDK Windows et le [CListCtrl](../mfc/reference/clistctrl-class.md) membres [organiser](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , et [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de CListCtrl](../mfc/using-clistctrl.md)   

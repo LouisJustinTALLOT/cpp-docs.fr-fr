@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddb085fee2459abd4cdef8a400f291bea4f6313b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6addc369de344b40a616b2ee1efbe840e98cc6d4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401842"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199538"
 ---
 # <a name="memccpy"></a>_memccpy
 
@@ -70,15 +70,15 @@ Nombre de caractères.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si le caractère *c* est copiée, **_memccpy** retourne un pointeur vers le caractère dans *dest* qui suit immédiatement le caractère. Si *c* n’est pas copié, il retourne **NULL**.
+Si le caractère *c* est copié, **_memccpy** retourne un pointeur vers le caractère dans *dest* qui suit immédiatement le caractère. Si *c* n’est pas copié, elle retourne **NULL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_memccpy** fonction copie les caractères 0 ou plus de *src* à *dest*, un arrêt lorsque le caractère *c* a été copié ou lorsque *nombre* caractères ont été copiés, selon ce qui se produit en premier.
+Le **_memccpy** fonction copie 0 ou plusieurs caractères de *src* à *dest*, et s’arrête dès le caractère *c* a été copié ou lorsque *nombre* caractères ont été copiés, le premier prévalant.
 
-**Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

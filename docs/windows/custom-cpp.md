@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb5a3ebbf3ecf1454745d507fc2f2b6f792768ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600419"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220359"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -49,7 +49,7 @@ Une valeur qui peut être placée dans un variant.
 
 Le **personnalisé** attribut C++ entraînera des informations d’être placées dans la bibliothèque de types. Vous devez un outil qui lit la valeur personnalisée à partir de la bibliothèque de types.
 
-Le **personnalisé** attribut a les mêmes fonctionnalités que le [personnalisé](http://msdn.microsoft.com/library/windows/desktop/aa366766) attribut MIDL.
+Le **personnalisé** attribut a les mêmes fonctionnalités que le [personnalisé](/windows/desktop/Midl/custom) attribut MIDL.
 
 ## <a name="requirements"></a>Configuration requise
 

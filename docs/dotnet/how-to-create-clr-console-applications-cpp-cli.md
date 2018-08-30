@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer des Applications Console CLR (C + c++ / CLI) | Documents Microsoft'
+title: 'Comment : créer des Applications Console CLR (C++ / c++ / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132568"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211155"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Comment : créer des applications console CLR (C++/CLI)
 Vous pouvez utiliser le modèle Application console pour créer un projet d’application console qui a déjà les références et les fichiers principaux d’un projet.  
@@ -32,7 +32,7 @@ Vous pouvez utiliser le modèle Application console pour créer un projet d’ap
   
 -   Références à ces espaces de noms .NET Framework :  
   
-    -   [System](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx): contient des classes fondamentales et des classes de base qui définissent des valeurs et des types de données de référence, des événements et des gestionnaires d’événements, des interfaces, des attributs et des exceptions de traitement couramment utilisés.  
+    -   [Système](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx): contient des classes fondamentales et des classes de base qui définissent généralement utilisé des valeurs et types de données de référence, événements et gestionnaires d’événements, interfaces, attributs et des exceptions de traitement.  
   
     -   mscorlib  : DLL de l’assembly qui prend en charge le développement .NET Framework.  
   

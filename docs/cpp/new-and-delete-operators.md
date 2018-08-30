@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3a1470c544e624de4ef9fb570859dca9b282edde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406661"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208064"
 ---
 # <a name="new-and-delete-operators"></a>Opérateurs new et delete
 
@@ -55,7 +55,7 @@ Les deux portées des **opérateur new** fonctions sont décrites dans le tablea
 |**:: opérateur new**|Global|  
 |*nom de la classe* **:: opérateur new**|Classe|  
   
- Le premier argument de **opérateur new** doit être de type `size_t` (un type défini dans \<stddef.h >), et le type de retour est toujours **void \*** .  
+ Le premier argument de **opérateur new** doit être de type `size_t` (un type défini dans \<stddef.h >), et le type de retour est toujours **void** <strong>\*</strong>.  
   
  Global **opérateur new** fonction est appelée lorsque le **nouveau** opérateur est utilisé pour allouer des objets de types intégrés, définis par l’utilisateur de type de classe des objets qui ne contiennent pas **opérateur new** fonctions et des tableaux de n’importe quel type. Lorsque le **nouveau** opérateur est utilisé pour allouer des objets d’un type de classe où un **opérateur new** est défini, de cette classe **opérateur new** est appelée.  
   

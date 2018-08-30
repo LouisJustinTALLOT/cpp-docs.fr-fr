@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 447f843bcc8f07d76084d1db68890237474ce200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462116"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222150"
 ---
 # <a name="writing-an-exception-filter"></a>Écriture d'un filtre d'exception
 Vous pouvez gérer une exception en accédant au niveau du gestionnaire d'exceptions ou en reprenant l'exécution. Au lieu d’utiliser le code de gestionnaire d’exception à gérer l’exception et passer, vous pouvez utiliser *filtre* pour éliminer le problème et puis, en retournant -1, reprendre le flux normal sans nettoyer la pile.  
   
 > [!NOTE]
->  Certaines exceptions ne peuvent pas être continuées. Si *filtre* prend la valeur-1 pour cette exception, le système déclenche une exception. Lorsque vous appelez [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552), vous déterminez si l’exception va continuer.  
+>  Certaines exceptions ne peuvent pas être continuées. Si *filtre* prend la valeur-1 pour cette exception, le système déclenche une exception. Lorsque vous appelez [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552), vous déterminez si l’exception va continuer.  
   
  Par exemple, le code suivant utilise un appel de fonction dans le *filtre* expression : cette fonction traite le problème, puis retourne -1 pour reprendre le flux de contrôle normal :  
   
@@ -56,7 +56,7 @@ int Eval_Exception ( int n_except ) {
   
  Il est judicieux d’utiliser un appel de fonction dans le *filtre* expression chaque fois que *filtre* doit effectuer des opérations complexes. L'évaluation de l'expression provoque l'exécution de la fonction, dans ce cas, `Eval_Exception`.  
   
- Notez l’utilisation de [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) pour déterminer l’exception. Vous devez appeler cette fonction à l'intérieur du filtre lui-même. `Eval_Exception` Impossible d’appeler `GetExceptionCode`, mais elle doit avoir le code d’exception lui est passé.  
+ Notez l’utilisation de [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) pour déterminer l’exception. Vous devez appeler cette fonction à l'intérieur du filtre lui-même. `Eval_Exception` Impossible d’appeler `GetExceptionCode`, mais elle doit avoir le code d’exception lui est passé.  
   
  Ce gestionnaire passe le contrôle à un autre gestionnaire sauf si l'exception est un dépassement d'entier ou de virgule flottante. Si tel est le cas, le gestionnaire appelle une fonction (`ResetVars` n'est qu'un exemple, pas une fonction API) pour réinitialiser des variables globales. *Instruction-block-2*, qui dans cet exemple est vide, peut jamais être exécuté car `Eval_Exception` ne retourne jamais EXCEPTION_EXECUTE_HANDLER (1).  
   

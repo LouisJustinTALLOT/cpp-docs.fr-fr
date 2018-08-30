@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572377"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204421"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -108,8 +108,8 @@ Le tableau suivant répertorie les options disponibles pour le mode de rapport o
 
 |Mode de rapport|Fichier de rapport|**_CrtDbgReport**, **_CrtDbgReportW** comportement|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|Non applicable|Écrit un message à l’aide de l’API Windows [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx).|
-|**_CRTDBG_MODE_WNDW**|Non applicable|Appelle l’API Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) pour créer une boîte de message et afficher le message avec des boutons **Abandonner**, **Réessayer** et **Ignorer**. Si un utilisateur clique sur **abandonner**, **_CrtDbgReport** ou **_CrtDbgReport** abandonne immédiatement l’opération. Si un utilisateur clique sur **Réessayer**, la valeur 1 est retournée. Si un utilisateur clique sur **ignorer**, l’exécution se poursuit et **_CrtDbgReport** et **_CrtDbgReportW** retournent 0. Notez que le fait de cliquer sur **Ignorer** alors qu’il existe une condition d’erreur entraîne souvent un « comportement indéfini ».|
+|**_CRTDBG_MODE_DEBUG**|Non applicable|Écrit un message à l’aide de l’API Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx).|
+|**_CRTDBG_MODE_WNDW**|Non applicable|Appelle l’API Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) pour créer une boîte de message et afficher le message avec des boutons **Abandonner**, **Réessayer** et **Ignorer**. Si un utilisateur clique sur **abandonner**, **_CrtDbgReport** ou **_CrtDbgReport** abandonne immédiatement l’opération. Si un utilisateur clique sur **Réessayer**, la valeur 1 est retournée. Si un utilisateur clique sur **ignorer**, l’exécution se poursuit et **_CrtDbgReport** et **_CrtDbgReportW** retournent 0. Notez que le fait de cliquer sur **Ignorer** alors qu’il existe une condition d’erreur entraîne souvent un « comportement indéfini ».|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|Écrit un message fourni par l’utilisateur **gérer**, à l’aide de la Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API et ne vérifie pas la validité du handle de fichier ; l’application est chargée d’ouvrir le fichier de rapport et de passage d’un fichier valid handle.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Écrit un message **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Écrit un message **stdout**.|

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c7df60fc023710139c8975486428fd7cd7cfd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027123"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199262"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Procédure pas à pas : placement de contrôles dans les barres d'outils
 Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient un contrôle Windows. Dans MFC, un bouton de barre d’outils doit être un [cmfctoolbarbutton, classe](../mfc/reference/cmfctoolbarbutton-class.md)-classe dérivée, par exemple [cmfctoolbarcomboboxbutton, classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [cmfctoolbareditboxbutton, classe](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Cmfcdropdowntoolbarbutton, classe](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [cmfctoolbarmenubutton, classe](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -65,7 +65,7 @@ Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient
   
 2.  Créer une nouvelle classe, `CFindComboBox`, dérivée de [CComboBox (classe)](../mfc/reference/ccombobox-class.md).  
   
-3.  Dans la classe `CFindComboBox`, substituez la méthode virtuelle `PreTranslateMessage`. Cette méthode permet à la zone de liste déroulante traiter les [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) message. Si l'utilisateur appuie sur la touche Échap (`VK_ESCAPE`), retournez le focus sur la fenêtre frame principale. Si l’utilisateur appuie sur la touche entrée (`VK_ENTER`), publier, dans la fenêtre frame principale, un message WM_COMMAND contenant le `ID_EDIT_FIND_COMBO` ID de commande.  
+3.  Dans la classe `CFindComboBox`, substituez la méthode virtuelle `PreTranslateMessage`. Cette méthode permet à la zone de liste déroulante traiter les [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) message. Si l'utilisateur appuie sur la touche Échap (`VK_ESCAPE`), retournez le focus sur la fenêtre frame principale. Si l’utilisateur appuie sur la touche entrée (`VK_ENTER`), publier, dans la fenêtre frame principale, un message WM_COMMAND contenant le `ID_EDIT_FIND_COMBO` ID de commande.  
   
 4.  Créer une classe pour le **trouver** bouton de zone de liste déroulante, dérivée de [cmfctoolbarcomboboxbutton, classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). Dans cet exemple, cela est nommé `CFindComboButton`.  
   
@@ -73,7 +73,7 @@ Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient
   
     1.  Passez `ID_EDIT_FIND_COMBO` en tant qu'ID de commande.  
   
-    2.  Utilisez [CCommandManager::GetCmdImage](http://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) avec `ID_EDIT_FIND` pour obtenir l’index d’image.  
+    2.  Utilisez [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) avec `ID_EDIT_FIND` pour obtenir l’index d’image.  
   
     3.  Pour obtenir la liste de styles de zone de liste déroulante disponibles, consultez [Styles de zone de liste déroulante](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

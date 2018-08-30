@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3657e7076bf67a5a3870d7d127cc150f976ecde
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6fcfffcd9508876399b30238cac0b4f65c92c733
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883656"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206499"
 ---
 # <a name="object-status-macros"></a>Macros d’état d’objet
 Cette macro définit des indicateurs qui appartiennent à des contrôles ActiveX.  
@@ -43,7 +43,7 @@ DECLARE_OLEMISC_STATUS( miscstatus )
  Indicateurs OLEMISC tout applicables.  
   
 ### <a name="remarks"></a>Notes  
- Cette macro est utilisée pour définir les indicateurs OLEMISC pour un contrôle ActiveX. Reportez-vous à [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) pour plus d’informations.  
+ Cette macro est utilisée pour définir les indicateurs OLEMISC pour un contrôle ActiveX. Reportez-vous à [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) pour plus d’informations.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  

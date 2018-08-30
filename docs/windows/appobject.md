@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d9f8cab758728be6683a008ea18ad8448668605
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8de7bbfb2f00f5e1a909a83a5399e2d564747962
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583606"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213993"
 ---
 # <a name="appobject"></a>appobject
 
@@ -36,7 +36,7 @@ Identifie la coclasse comme un objet de l’application, qui est associé à une
 
 ## <a name="remarks"></a>Notes
 
-Le **appobject** attribut C++ a les mêmes fonctionnalités que le [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) attribut MIDL.
+Le **appobject** attribut C++ a les mêmes fonctionnalités que le [appobject](/windows/desktop/Midl/appobject) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

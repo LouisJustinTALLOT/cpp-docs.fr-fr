@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65bed61f864bc5515c2639be6afe5984702ae29
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901086"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200144"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (classe)
 
@@ -117,13 +117,13 @@ class CPropertySheet : public CWnd
 
 |Nom|Description|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|Le Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) structure. Fournit l’accès aux paramètres de feuille de propriétés de base.|
+|[CPropertySheet::m_psh](#m_psh)|Le Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) structure. Fournit l’accès aux paramètres de feuille de propriétés de base.|
 
 ## <a name="remarks"></a>Notes
 
 Une feuille de propriétés se compose d’un `CPropertySheet` objet et un ou plusieurs [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objets. L’infrastructure affiche une feuille de propriétés sous la forme d’une fenêtre avec un ensemble d’index de l’onglet et une zone qui contient la page actuellement sélectionnée. L’utilisateur navigue vers une page spécifique à l’aide de l’onglet approprié.
 
-`CPropertySheet` prend en charge le texte développé [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) structure introduite dans Windows 98 et Windows NT 2000. La structure contient des indicateurs supplémentaires et les membres qui prennent en charge à l’aide d’une image bitmap d’arrière-plan de « filigrane ».
+`CPropertySheet` prend en charge le texte développé [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) structure introduite dans Windows 98 et Windows NT 2000. La structure contient des indicateurs supplémentaires et les membres qui prennent en charge à l’aide d’une image bitmap d’arrière-plan de « filigrane ».
 
 Pour afficher ces nouvelles images automatiquement dans votre objet de feuille de propriétés, passer des valeurs valides pour les images bitmap et palette dans l’appel à [CPropertySheet::Construct](#construct) ou [CPropertySheet::CPropertySheet](#cpropertysheet).
 
@@ -601,7 +601,7 @@ Par exemple, appelez cette fonction membre si vous souhaitez ajouter des images 
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-Une structure dont les membres stockent les caractéristiques de [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).
+Une structure dont les membres stockent les caractéristiques de [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2).
 
 ### <a name="remarks"></a>Notes
 
@@ -624,13 +624,13 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*  
-Pointe vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou [CRect](../../atl-mfc-shared/reference/crect-class.md) coordonne d’objet qui contient la boîte de dialogue à convertir.
+Pointe vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou [CRect](../../atl-mfc-shared/reference/crect-class.md) coordonne d’objet qui contient la boîte de dialogue à convertir.
 
 ### <a name="remarks"></a>Notes
 
 Unités de boîte de dialogue sont exprimées dans l’unité de base de la boîte de dialogue actuel dérivée de la largeur moyenne et la hauteur des caractères de la police utilisée pour le texte de la boîte de dialogue. Une unité horizontale correspond à un quart de l’unité de la largeur de la base de la boîte de dialogue et une unité verticale est un huitième de l’unité de base de hauteur de la boîte de dialogue.
 
-Le [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) (fonction) Windows retourne des informations sur la taille de la police système, mais vous pouvez spécifier une autre police pour chaque feuille de propriétés si vous utilisez le style DS_SETFONT dans le fichier de définition de ressource. Le [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) fonction Windows, décrite dans le SDK Windows, utilise la police appropriée pour cette boîte de dialogue.
+Le [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) (fonction) Windows retourne des informations sur la taille de la police système, mais vous pouvez spécifier une autre police pour chaque feuille de propriétés si vous utilisez le style DS_SETFONT dans le fichier de définition de ressource. Le [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) fonction Windows, décrite dans le SDK Windows, utilise la police appropriée pour cette boîte de dialogue.
 
 Le `MapDialogRect` fonction membre remplace les unités de boîte de dialogue dans *lpRect* avec écran unités (pixels) afin que le rectangle peut être utilisé pour créer une boîte de dialogue ou positionner un contrôle dans une zone.
 
@@ -683,9 +683,9 @@ Nbouton : identifie du bouton. Ce paramètre peut être une des valeurs suivant
 
 ### <a name="remarks"></a>Notes
 
-Consultez [PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597) pour plus d’informations sur le message Pressbutton du Kit de développement logiciel Windows.
+Consultez [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) pour plus d’informations sur le message Pressbutton du Kit de développement logiciel Windows.
 
-Un appel à `PressButton` n’envoie pas le [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) notification à partir d’une page de propriétés à l’infrastructure. Pour envoyer cette notification, appelez [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Un appel à `PressButton` n’envoie pas le [PSN_APPLY](/windows/desktop/Controls/psn-apply) notification à partir d’une page de propriétés à l’infrastructure. Pour envoyer cette notification, appelez [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Exemple
 

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed609de9d36b602bf525a9643534cf5d1d55a8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963032"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214164"
 ---
 # <a name="deque-class"></a>deque, classe
 
@@ -118,9 +118,11 @@ class deque
 
 ### <a name="parameters"></a>Paramètres
 
-*Type* type de données de l’élément à stocker dans la deque.
+*Type*<br/>
+ Type de données de l'élément à stocker dans la file d'attente à deux extrémités.
 
-*Allocateur* le type qui représente l’objet allocateur stocké qui encapsule des informations détaillées sur la deque allocation et désallocation de mémoire. Cet argument est facultatif et la valeur par défaut est **allocateur\<Type > ***.*
+*Allocateur*<br/>
+ Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la file d'attente à deux extrémités. Cet argument est facultatif et la valeur par défaut est **allocateur\<Type >**.
 
 ## <a name="remarks"></a>Notes
 
@@ -243,15 +245,20 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Paramètres
 
-*Première* Position du premier élément dans la plage d’éléments à copier à partir de l’argument deque.
+*Premier*<br/>
+ Position du premier élément de la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
 
-*Dernière* Position du premier élément au-delà de la plage d’éléments à copier à partir de l’argument deque.
+*Dernière*<br/>
+ Position du premier élément après la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
 
-*Nombre de* le nombre de copies d’un élément inséré dans la deque.
+*Nombre*<br/>
+ Nombre de copies d’un élément inséré dans la file d’attente à deux extrémités.
 
-*Val* la valeur de l’élément inséré dans la deque.
+*Val*<br/>
+ Valeur de l’élément inséré dans la file d’attente à deux extrémités.
 
-*IList* initializer_list inséré dans la deque.
+*IList*<br/>
+ Initializer_list inséré dans la file d’attente à deux extrémités.
 
 ### <a name="remarks"></a>Notes
 
@@ -325,7 +332,8 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*POS* l’indice (ou numéro de position) de l’élément à référencer dans la deque.
+*points de vente*<br/>
+ Indice (ou numéro de position) de l’élément à référencer dans la file d’attente à deux extrémités.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1337,11 +1345,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE* position de l’élément à supprimer de la deque.
+*_WHERE*<br/>
+ Position de l’élément à supprimer de la file d’attente à deux extrémités.
 
-*première* Position du premier élément supprimé la deque.
+*first*<br/>
+ Position du premier élément supprimé de la file d’attente à deux extrémités.
 
-*dernière* Position juste après le dernier élément supprimé à partir de la deque.
+*last*<br/>
+ Position juste après le dernier élément supprimé de la file d’attente à deux extrémités.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1591,7 +1602,8 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*POS* la position de l’élément deque à référencer.
+*points de vente*<br/>
+ Position de l’élément de file d’attente à deux extrémités à référencer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2086,9 +2098,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Newsize* la nouvelle taille de la deque.
+*_Newsize*<br/>
+ Nouvelle taille de la file d’attente à deux extrémités.
 
-*Val* la valeur des nouveaux éléments à ajouter à la deque si la nouvelle taille est plus grande que la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
+*Val*<br/>
+ Valeur des nouveaux éléments à ajouter à la file d’attente à deux extrémités si la nouvelle taille est supérieure à la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
 
 ### <a name="remarks"></a>Notes
 
@@ -2263,9 +2277,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* la deque qui fournit les éléments à échanger, ou la deque dont les éléments doivent être échangés avec ceux de la deque `left`.
+*right*<br/>
+ File d’attente à deux extrémités qui fournit les éléments à échanger ou file d’attente à deux extrémités dont les éléments doivent être échangés avec ceux de la file d’attente à deux extrémités `left`.
 
-*gauche* un deque dont les éléments doivent être échangés avec ceux de la deque *droit*.
+*left*<br/>
+ Un deque dont les éléments doivent être échangés avec ceux de la deque *droit*.
 
 ### <a name="example"></a>Exemple
 

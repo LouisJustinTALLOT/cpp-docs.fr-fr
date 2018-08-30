@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852979"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208864"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Cmfcpropertygridfontproperty, classe
 Le `CMFCPropertyGridFileProperty` classe prend en charge un élément de contrôle de liste de propriétés qui ouvre une boîte de dialogue de sélection de police.  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  Une structure de police logique qui spécifie les attributs de la police.  
   
  [in] *dwFontDialogFlags*  
- Styles sont appliqués à la boîte de dialogue de police qui s’affiche lorsque vous cliquez sur le bouton de liste déroulante de valeur de propriété. La valeur par défaut est la combinaison au niveau du bit (ou) de CF_EFFECTS et CF_SCREENFONTS. Pour plus d’informations, consultez le *indicateurs* paramètre de la [CHOOSEFONT Structure](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Styles sont appliqués à la boîte de dialogue de police qui s’affiche lorsque vous cliquez sur le bouton de liste déroulante de valeur de propriété. La valeur par défaut est la combinaison au niveau du bit (ou) de CF_EFFECTS et CF_SCREENFONTS. Pour plus d’informations, consultez le *indicateurs* paramètre de la [CHOOSEFONT Structure](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
  [in] *lpszDescr*  
  Description de la propriété de police. La valeur par défaut est NULL.  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure qui décrit la police sélectionnée.  
+ Un pointeur vers un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure qui décrit la police sélectionnée.  
   
 ### <a name="remarks"></a>Notes  
   

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf101fdb0e93ef206ae61c29b636c973fa58a825
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593975"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211702"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
 
@@ -63,7 +63,7 @@ Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour d�
 Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour vous abonner à et gérer les événements d’un objet Windows Runtime.
 
 [Procédure pas à pas : création d’une application UWP à l’aide de WRL et Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
-Découvrez comment créer une application UWP qui utilise [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).
+Découvrez comment créer une application UWP qui utilise [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 [Comment : créer un composant COM classique](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
 Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant COM de base et une méthode simple pour vous inscrire et utiliser le composant COM à partir d’une application de bureau.

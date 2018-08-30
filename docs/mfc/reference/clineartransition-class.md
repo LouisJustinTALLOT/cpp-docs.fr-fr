@@ -1,5 +1,5 @@
 ---
-title: CLinearTransition, classe | Documents Microsoft
+title: CLinearTransition, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 64b53cafc60e556ac142cdaf1f56608e5ab3de70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040884"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211739"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition, classe
 Encapsule une transition linéaire.  
@@ -62,7 +62,7 @@ class CLinearTransition : public CBaseTransition;
 |[CLinearTransition::m_duration](#m_duration)|La durée de la transition.|  
   
 ## <a name="remarks"></a>Notes  
- Pendant une transition linéaire, la valeur de la variable d’animation passe linéairement à partir de sa valeur initiale à une valeur finale spécifiée. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
+ Pendant une transition linéaire, la valeur de la variable de l’animation passe linéairement à partir de sa valeur initiale à une valeur finale spécifiée. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,7 +84,7 @@ CLinearTransition(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *Durée*  
+ *durée*  
  La durée de la transition.  
   
  *dblFinalValue*  
@@ -101,7 +101,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Paramètres  
 *pLibrary*  
- Un pointeur vers un [interface IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), qui définit une bibliothèque de transitions standards.  
+ Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  

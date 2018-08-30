@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00265d3ce0f8ea867021500777d93991d245be47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204811"
 ---
 # <a name="atl-collections-and-enumerators"></a>Collections et énumérateurs ATL
 Un `collection` est un objet COM qui fournit une interface qui autorise l’accès à un groupe d’éléments de données (données brutes ou autres objets). Une interface qui suit les normes pour fournir l’accès à un groupe d’objets est appelé un *interface de collection*.  
@@ -31,7 +31,7 @@ Un `collection` est un objet COM qui fournit une interface qui autorise l’acc�
   
  Un `enumerator` est un objet COM qui fournit une interface pour itérer au sein des éléments dans une collection. Interfaces d’énumérateur fournissent un accès série aux éléments d’une collection par le biais de quatre méthodes : `Next`, `Skip`, `Reset`, et `Clone`.  
   
- Vous pouvez en savoir plus sur les interfaces d’énumérateur en lecture sur le type (mais entièrement imaginaire) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interface.  
+ Vous pouvez en savoir plus sur les interfaces d’énumérateur par lecture de contenu de référence comme [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) interface.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Collections ATL et classes d’énumérateurs](../atl/atl-collection-and-enumerator-classes.md)  

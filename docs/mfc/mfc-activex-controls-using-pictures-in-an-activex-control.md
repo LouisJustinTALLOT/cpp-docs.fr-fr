@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : Utilisation d’images dans un contrôle ActiveX | Documents Microsoft'
+title: 'Contrôles ActiveX MFC : Utilisation d’images dans un contrôle ActiveX | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ebe0c28f1f2d6ee2eab81d9de2af3c033ecd484a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930646"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199672"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation d'images dans un contrôle ActiveX
 Cet article décrit le type Picture courant et explique comment l’implémenter dans votre contrôle ActiveX. Les rubriques traitées ici sont les suivantes :  
@@ -71,11 +71,11 @@ Cet article décrit le type Picture courant et explique comment l’implémenter
      Ces modifications sont apportées à plusieurs fonctions qui sont responsables du dessin de votre contrôle ActiveX.  
   
 ##  <a name="_core_additions_to_your_control_project"></a> Ajouts à votre projet de contrôle  
- Pour ajouter l’ID de page de propriétés pour la page de propriétés Picture standard, insérez la ligne suivante après la macro BEGIN_PROPPAGEIDS dans le fichier d’implémentation (. CPP) :  
+ Pour ajouter l’ID de page de propriétés pour la page de propriétés Picture standard, insérez la ligne suivante après la macro BEGIN_PROPPAGEIDS dans le fichier d’implémentation (. (CPP) :  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- Vous devez également incrémenter le paramètre du nombre de la macro BEGIN_PROPPAGEIDS d’une unité. La ligne suivante le montre :  
+ Vous devez également incrémenter le paramètre count de votre BEGIN_PROPPAGEIDS (macro) d’une unité. La ligne suivante le montre :  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -83,7 +83,7 @@ Cet article décrit le type Picture courant et explique comment l’implémenter
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- Il n’est pas nécessaire de nommer le membre de données *m_pic*; n’importe quel nom fera l’affaire.  
+ Il n’est pas nécessaire de nommer le membre de données *m_pic*; n’importe quel nom peut convenir.  
   
  Ensuite, ajoutez une propriété personnalisée qui prend en charge un type Picture :  
   
@@ -99,7 +99,7 @@ Cet article décrit le type Picture courant et explique comment l’implémenter
   
 5.  Dans la zone **Nom de la propriété** , tapez le nom de la propriété. À titre d’exemple, `ControlPicture` est utilisé dans cette procédure.  
   
-6.  Dans le **Type de propriété** boîte, sélectionnez **IPictureDisp\***  pour le type de propriété.  
+6.  Dans le **Type de propriété** boîte, sélectionnez **IPictureDisp** <strong>\*</strong> pour le type de propriété.  
   
 7.  Pour **Type d’implémentation**, cliquez sur **Méthodes Get/Set**.  
   
@@ -154,6 +154,6 @@ Cet article décrit le type Picture courant et explique comment l’implémenter
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Contrôles ActiveX MFC : Utilisation de polices](../mfc/mfc-activex-controls-using-fonts.md)   
+ [Contrôles ActiveX MFC : Utilisation des polices](../mfc/mfc-activex-controls-using-fonts.md)   
  [Contrôles ActiveX MFC : pages de propriétés](../mfc/mfc-activex-controls-property-pages.md)
 

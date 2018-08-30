@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d1b32fe880a278bc2b737148a90afa5bd2ad6e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592080"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211095"
 ---
 # <a name="working-with-resource-files"></a>Utilisation des fichiers de ressources
 
 > [!WARNING]
-> Cette section concerne les applications de bureau Windows écrites en C++. Pour plus d’informations sur les ressources dans les applications de plateforme Windows universelle écrites en C++, consultez [définition des ressources d’application](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Cette section concerne les applications de bureau Windows écrites en C++. Pour plus d’informations sur les ressources dans les applications de plateforme Windows universelle écrites en C++, consultez [définition des ressources d’application](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Pour plus d’informations sur l’ajout de ressources à C++ / c++ / projets de l’interface CLI, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.
 
@@ -53,7 +53,7 @@ Décrit les éditeurs de ressources fournis dans Visual Studio, les types de res
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Fournit des liens vers la documentation Visual C++.
 
-[Présentation de Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+[Présentation de Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
 Décrit l'ensemble des outils de développement qui utilisent le même environnement de développement intégré (IDE), ce qui leur permet de partager des outils et facilite la création de solutions combinant plusieurs langages.
 
 [Nous contacter](/visualstudio/ide/talk-to-us)  
@@ -62,4 +62,4 @@ Propose des liens vers des informations sur l'utilisation de l'ensemble de docum
 ## <a name="see-also"></a>Voir aussi
 
 [Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md)  
-[Menus et autres ressources](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menus et autres ressources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f278ffd3d3210f899e86787d0872180df2d91d98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852300"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222857"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer, classe
 Agit comme un conteneur de contrôles pour les contrôles ActiveX.  
@@ -149,7 +149,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_siteMap](#m_sitemap)|Le plan du site.|  
   
 ## <a name="remarks"></a>Notes  
- Pour cela, la prise en charge d’un ou plusieurs sites de contrôle ActiveX (implémentée par `COleControlSite`). `COleControlContainer` implémente entièrement le [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) et [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) interfaces, pour permettre les contrôles ActiveX de relation contenant-contenus répondre à leurs compétences en tant qu’éléments de la place.  
+ Pour cela, la prise en charge d’un ou plusieurs sites de contrôle ActiveX (implémentée par `COleControlSite`). `COleControlContainer` implémente entièrement le [IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe) et [IOleContainer](/windows/desktop/api/oleidl/nn-oleidl-iolecontainer) interfaces, pour permettre les contrôles ActiveX de relation contenant-contenus répondre à leurs compétences en tant qu’éléments de la place.  
   
  En général, cette classe est utilisée conjointement avec `COccManager` et `COleControlSite` pour implémenter un conteneur de contrôle ActiveX personnalisé, avec des sites personnalisés pour un ou plusieurs contrôles ActiveX.  
   
@@ -449,7 +449,7 @@ virtual UINT GetDlgItemInt(
  Pointeur vers une variable booléenne qui reçoit une valeur de réussite/échec (fonction) (la valeur TRUE indique la réussite, FALSE indique un échec).  
   
  *bSigned*  
- Spécifie si la fonction doit examiner le texte pour un signe moins au début et à retourner une valeur entière signée, s’il en trouve. Si le *bSigned* paramètre a la valeur TRUE, en spécifiant que la valeur à récupérer est une valeur entière signée, convertir la valeur de retour pour une **int** type. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Spécifie si la fonction doit examiner le texte pour un signe moins au début et à retourner une valeur entière signée, s’il en trouve. Si le *bSigned* paramètre a la valeur TRUE, en spécifiant que la valeur à récupérer est une valeur entière signée, convertir la valeur de retour pour une **int** type. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si réussie, la variable vers laquelle pointe *lpTrans* est définie sur TRUE, et la valeur de retour est la valeur traduite du texte du contrôle.  
@@ -486,7 +486,7 @@ virtual int GetDlgItemText(
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour Spécifie le nombre de caractères copiés vers la mémoire tampon, non compris le caractère null de fin.  
   
- Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir les informations d’erreur étendues, appelez [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  Détermine si le conteneur gère les messages WM_SETFOCUS.  

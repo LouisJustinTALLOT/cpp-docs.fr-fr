@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538887"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208556"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar, classe
 Le `CMFCToolBar` ressemble à [CToolBar (classe)](../../mfc/reference/ctoolbar-class.md), mais prend également en charge pour les fonctionnalités de l’interface utilisateur. Celles-ci incluent les barres d'outils à deux dimensions, les barres d'outils avec images interactives, les grandes icônes, les boutons pager, les barres d'outils verrouillées, les contrôles rebar, le texte sous les images, les images d'arrière-plan et les barres d'outils avec onglets. La classe `CMFCToolBar` contient également une prise en charge intégrée de la personnalisation des barres d'outils et des menus par l'utilisateur, du glisser-déplacer entre les barres d'outils et les menus, des boutons de zone de liste modifiable, des boutons de zone d'édition, des sélecteurs de couleurs et des boutons de regroupement.
@@ -916,7 +916,7 @@ virtual BOOL Create(
  Pointeur vers la fenêtre parente de la barre d’outils.  
   
  [in] *dwStyle*  
- Le style de la barre d’outils. Consultez [contrôle de barre d’outils et les Styles de boutons](http://msdn.microsoft.com/library/windows/desktop/bb760439) dans le SDK Windows pour obtenir la liste des styles.  
+ Le style de la barre d’outils. Consultez [contrôle de barre d’outils et les Styles de boutons](/windows/desktop/Controls/toolbar-control-and-button-styles) dans le SDK Windows pour obtenir la liste des styles.  
   
  [in] *nID*  
  L’ID de la fenêtre enfant de la barre d’outils.  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  Styles supplémentaires pour la création de l’objet de barre de contrôle incorporé.  
   
  [in] *dwStyle*  
- Le style de la barre d’outils. Consultez [contrôle de barre d’outils et les Styles de boutons](http://msdn.microsoft.com/library/windows/desktop/bb760439) pour obtenir la liste des styles appropriés.  
+ Le style de la barre d’outils. Consultez [contrôle de barre d’outils et les Styles de boutons](/windows/desktop/Controls/toolbar-control-and-button-styles) pour obtenir la liste des styles appropriés.  
   
  [in] *rcBorders*  
  Un `CRect` objet qui spécifie la largeur des bordures de la fenêtre de barre d’outils.  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur représentant la couleur actuelle du texte mis en surbrillance.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valeur représentant la couleur actuelle du texte mis en surbrillance.  
   
 ### <a name="remarks"></a>Notes  
  Appelez [CMFCToolBar::SetHotTextColor](#sethottextcolor) pour définir une nouvelle couleur de texte pour les boutons de barre d’outils en surbrillance.  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  TRUE si la barre d’outils et son frère sont placés sur la même ligne ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Le [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) méthode appelle cette méthode pour déterminer comment afficher le **personnaliser** menu contextuel. Si cette méthode retourne la valeur TRUE, l’infrastructure affiche le **afficher les boutons sur une ligne** bouton. Sinon, l’infrastructure affiche le **afficher les boutons sur deux lignes** bouton.  
+ Le [CMFCCustomizeButton::CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) méthode appelle cette méthode pour déterminer comment afficher le **personnaliser** menu contextuel. Si cette méthode retourne la valeur TRUE, l’infrastructure affiche le **afficher les boutons sur une ligne** bouton. Sinon, l’infrastructure affiche le **afficher les boutons sur deux lignes** bouton.  
   
  En règle générale, vous n'avez pas à utiliser cette méthode. Pour activer la **afficher les boutons sur une ligne** ou **afficher les boutons sur deux lignes** , appelez [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   

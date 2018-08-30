@@ -1,5 +1,5 @@
 ---
-title: Initialisation d’assemblys mixtes | Documents Microsoft
+title: Initialisation d’assemblys mixtes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 389246b6b002204260170fb44680c2756cd7aa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137889"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204540"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Initialisation d'assemblys mixtes
 
-Les développeurs Windows doivent toujours être prudents de verrouillage du chargeur lors de l’exécution de code pendant `DllMain`. Toutefois, il existe de certaines considérations supplémentaires entrent en jeu lors du traitement de C + c++ / les assemblys clr en mode mixte.
+Les développeurs Windows doivent toujours être prudents de verrouillage du chargeur lors de l’exécution de code pendant `DllMain`. Toutefois, il existe d’autres considérations entrent en jeu lors du traitement de C++ / c++ / clr des assemblys en mode mixte.
 
-Le code situé dans [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) ne doit pas accéder au CLR. Cela signifie que `DllMain` ne doit pas appeler de fonctions managées, directement ou indirectement ; qu’aucun code managé ne doit être déclaré ou implémenté dans `DllMain`; et qu’aucun garbage collection ou chargement de bibliothèque automatique ne doit avoir lieu dans `DllMain`.
+Le code situé dans [DllMain](/windows/desktop/Dlls/dllmain) ne doit pas accéder au CLR. Cela signifie que `DllMain` ne doit pas appeler de fonctions managées, directement ou indirectement ; qu’aucun code managé ne doit être déclaré ou implémenté dans `DllMain`; et qu’aucun garbage collection ou chargement de bibliothèque automatique ne doit avoir lieu dans `DllMain`.
   
 ## <a name="causes-of-loader-lock"></a>Causes du verrouillage du chargeur
 
@@ -52,7 +52,7 @@ Le non-déterminisme a été entièrement supprimé du processus de chargement d
 
 - L’initialisation non managée et managée est exécutée en deux étapes distinctes. L’initialisation non managée a lieu en premier (par le biais de DllMain), suivie de l’initialisation managée, par l’intermédiaire d’une construction prise en charge par .NET et appelée *.cctor*. Cette dernière opération est complètement transparente pour l’utilisateur, sauf si **/Zl** ou **/NODEFAULTLIB** est utilisé. Pour plus d’informations, consultez[/NODEFAULTLIB (Ignore Libraries)](../build/reference/nodefaultlib-ignore-libraries.md) et [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) .
 
-Le verrouillage du chargeur peut encore se produire, mais il est désormais détecté et se produit de façon déterministe. Si `DllMain` contient des instructions MSIL, le compilateur génère l’avertissement [l’avertissement du compilateur (niveau 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md). En outre, le CRT ou le CLR tente de détecter et de signaler les tentatives d’exécution du MSIL pendant le verrouillage du chargeur. La détection du CRT se traduit par le diagnostic du runtime C Run-Time Error R6033.
+Le verrouillage du chargeur peut encore se produire, mais il est désormais détecté et se produit de façon déterministe. Si `DllMain` contient des instructions MSIL, le compilateur génère l’avertissement [Avertissement du compilateur (niveau 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md). En outre, le CRT ou le CLR tente de détecter et de signaler les tentatives d’exécution du MSIL pendant le verrouillage du chargeur. La détection du CRT se traduit par le diagnostic du runtime C Run-Time Error R6033.
 
 Le reste de ce document décrit les autres scénarios dans lesquels des instructions MSIL peuvent s’exécuter pendant le verrouillage du chargeur, les solutions au problème dans chacun de ces scénarios et les techniques de débogage.
 
@@ -97,7 +97,7 @@ Il existe de nombreuses méthodes permettant de résoudre l’interblocage provo
 
 ### <a name="user-supplied-functions-affecting-startup"></a>Fonctions fournies par l’utilisateur affectant le démarrage
 
-Il existe plusieurs fonctions fournies par l’utilisateur dont dépendent les bibliothèques pour l’initialisation au démarrage. Par exemple, lors de la surcharge globale d’opérateurs en C++ telles que la `new` et `delete` opérateurs, les versions fournies par l’utilisateur sont utilisées partout, y compris dans l’initialisation de la bibliothèque Standard C++ et la destruction. Bibliothèque C++ Standard et les initialiseurs statiques fournis par l’utilisateur appelle en conséquence, les versions fournies par l’utilisateur de ces opérateurs.
+Il existe plusieurs fonctions fournies par l’utilisateur dont dépendent les bibliothèques pour l’initialisation au démarrage. Par exemple, lors de la surcharge globale d’opérateurs en C++ comme le `new` et `delete` opérateurs, les versions fournies par l’utilisateur sont utilisées partout, y compris dans l’initialisation de la bibliothèque Standard C++ et la destruction. Par conséquent, bibliothèque Standard C++ et les initialiseurs statiques fournis par l’utilisateur appellent toutes les versions fournies par l’utilisateur de ces opérateurs.
 
 Si les versions fournies par l’utilisateur sont compilées en langage MSIL, ces initialiseurs tentent alors d’exécuter des instructions MSIL pendant que le verrouillage du chargeur est maintenu. Fourni par l’utilisateur `malloc` a les mêmes conséquences. Pour résoudre ce problème, n’importe laquelle de ces surcharges ou définitions fournies par l’utilisateur doit être implémentée sous la forme de code natif à l’aide de la directive #pragma `unmanaged` .
 
@@ -123,9 +123,9 @@ Dans certains cas, il est difficile de détecter la source des interblocages. Le
 
 Dans des cas spécifiques, les implémentations de fonctions à l’intérieur des fichiers d’en-tête peuvent compliquer le diagnostic. Les fonctions inline et le code du modèle exigent que les fonctions soient spécifiées dans un fichier d’en-tête.  Le langage C++ spécifie la règle de définition unique, qui force toutes les implémentations de fonctions ayant le même nom à être sémantiquement équivalentes. L’éditeur de liens C++ n’a pas besoin de faire de considérations spéciales quand il fusionne des fichiers objets qui ont des implémentations en double d’une fonction donnée.
 
-Avant Visual Studio 2005, l’éditeur de liens choisit simplement la plus importante de ces définitions sémantiquement équivalentes, pour prendre en charge des scénarios et des déclarations anticipées lorsque différentes options d’optimisation sont utilisées pour les fichiers sources différents. Cela crée un problème pour les DLL natives/.NET mixtes.
+Avant Visual Studio 2005, l’éditeur de liens choisit simplement la plus importante de ces définitions sémantiquement équivalentes, pour prendre en charge les déclarations anticipées et des scénarios lorsque différentes options d’optimisation sont utilisées pour les fichiers sources différents. Cela crée un problème pour les DLL natives/.NET mixtes.
 
-Étant donné que le même en-tête peut être inclus à la fois par fichier C++ avec **/CLR** activé et désactivé, ou un #include encapsulés dans #pragma `unmanaged` bloc, il est possible d’avoir à la fois versions MSIL et natives des fonctions qui fournissent implémentations dans les en-têtes. Les implémentations MSIL et natives ont des sémantiques différentes en ce qui concerne l’initialisation pendant le verrouillage du chargeur, ce qui viole en pratique la règle de définition unique. Quand l’éditeur de liens choisit l’implémentation la plus importante, il peut donc choisir la version MSIL d’une fonction, même si elle a été compilée explicitement ailleurs en code natif à l’aide de la directive #pragma unmanaged. Pour faire en sorte qu’une version MSIL d’un modèle ou d’une fonction inline ne soit jamais appelée pendant le verrouillage du chargeur, chaque définition de chaque fonction de ce genre appelée pendant le verrouillage du chargeur doit être modifiée à l’aide de la directive #pragma `unmanaged` . Si le fichier d’en-tête provient d’un tiers, le moyen le plus simple pour y parvenir consiste à exécuter les méthodes Push et Pop sur la directive #pragma unmanaged autour de la directive #include pour le fichier d’en-tête incriminé (Consultez [managé, non managé](../preprocessor/managed-unmanaged.md) pour obtenir un exemple.) Toutefois, cette stratégie ne fonctionne pas pour les en-têtes qui contiennent un autre code qui doit appeler directement des API .NET.
+Étant donné que le même en-tête peut être inclus à la fois par fichier C++ avec **/CLR** activé et désactivé, ou un #include peut être encapsulée dans #pragma `unmanaged` bloc, il est possible d’avoir les versions MSIL et natives des fonctions qui fournissent implémentations dans les en-têtes. Les implémentations MSIL et natives ont des sémantiques différentes en ce qui concerne l’initialisation pendant le verrouillage du chargeur, ce qui viole en pratique la règle de définition unique. Quand l’éditeur de liens choisit l’implémentation la plus importante, il peut donc choisir la version MSIL d’une fonction, même si elle a été compilée explicitement ailleurs en code natif à l’aide de la directive #pragma unmanaged. Pour faire en sorte qu’une version MSIL d’un modèle ou d’une fonction inline ne soit jamais appelée pendant le verrouillage du chargeur, chaque définition de chaque fonction de ce genre appelée pendant le verrouillage du chargeur doit être modifiée à l’aide de la directive #pragma `unmanaged` . Si le fichier d’en-tête provient d’un tiers, le moyen le plus simple pour y parvenir consiste à exécuter les méthodes Push et Pop sur la directive #pragma unmanaged autour de la directive #include pour le fichier d’en-tête incriminé (Consultez [managed, unmanaged](../preprocessor/managed-unmanaged.md) pour obtenir un exemple.) Toutefois, cette stratégie ne fonctionne pas pour les en-têtes qui contiennent un autre code qui doit appeler directement des API .NET.
 
 À titre de commodité pour les utilisateurs confrontés au verrouillage du chargeur, l’éditeur de liens choisit l’implémentation native par rapport à l’implémentation managée en cas de présentation des deux implémentations. Cela évite les problèmes précités. Toutefois, il y a deux exceptions à cette règle dans cette version en raison de deux problèmes non résolus avec le compilateur :
 
@@ -163,25 +163,25 @@ Pour identifier la fonction MSIL spécifique qui a été appelée pendant le ver
 
    Cette opération peut être effectuée de deux façons. Premièrement, les fichiers PDB de mscoree.dll et mscorwks.dll peuvent être ajoutés au chemin de recherche de symboles. Pour ce faire, ouvrez la boîte de dialogue des options du chemin de recherche de symboles. (À partir de la **outils** menu, choisissez **Options**. Dans le volet gauche de la **Options** boîte de dialogue, ouvrez le **débogage** nœud et choisissez **symboles**.) Ajoutez le chemin aux fichiers PDB de mscoree.dll et mscorwks.dll à la liste de recherche. Ces PDB sont installés dans %VSINSTALLDIR%\SDK\v2.0\symbols. Cliquez sur **OK**.
 
-   Deuxièmement, les fichiers PDB de mscoree.dll et mscorwks.dll peuvent être téléchargés à partir du serveur de symboles Microsoft. Pour configurer le serveur de symboles, ouvrez la boîte de dialogue des options du chemin de recherche de symboles. (À partir de la **outils** menu, choisissez **Options**. Dans le volet gauche de la **Options** boîte de dialogue, ouvrez le **débogage** nœud et choisissez **symboles**.) Ajoutez le chemin de recherche à la liste de recherche : http://msdl.microsoft.com/download/symbols. Ajoutez un répertoire de cache de symboles à la zone de texte du cache du serveur de symboles. Cliquez sur **OK**.
+   Deuxièmement, les fichiers PDB de mscoree.dll et mscorwks.dll peuvent être téléchargés à partir du serveur de symboles Microsoft. Pour configurer le serveur de symboles, ouvrez la boîte de dialogue des options du chemin de recherche de symboles. (À partir de la **outils** menu, choisissez **Options**. Dans le volet gauche de la **Options** boîte de dialogue, ouvrez le **débogage** nœud et choisissez **symboles**.) Ajouter le chemin de recherche à la liste de recherche : http://msdl.microsoft.com/download/symbols. Ajoutez un répertoire de cache de symboles à la zone de texte du cache du serveur de symboles. Cliquez sur **OK**.
 
 1. Définissez le mode du débogueur en mode natif uniquement.
 
-   Pour ce faire, ouvrez le **propriétés** grille pour le projet de démarrage dans la solution. Sélectionnez **propriétés de Configuration** > **débogage**. Définir le **le Type de débogueur** à **en mode natif uniquement**.
+   Pour ce faire, ouvrez le **propriétés** grille pour le projet de démarrage dans la solution. Sélectionnez **propriétés de Configuration** > **débogage**. Définir le **Type de débogueur** à **natif uniquement**.
 
 1. Démarrez le débogueur (F5).
   
-1. Lorsque le **/CLR** diagnostic est généré, choisissez **réessayer** , puis **arrêter**.
+1. Lorsque le **/CLR** diagnostic est généré, choisissez **de nouvelle tentative** , puis **rompre**.
   
-1. Ouvrez la fenêtre Pile des appels. (Dans la barre de menus, choisissez **déboguer** > **Windows** > **pile des appels**.) Incriminé `DllMain` ou initialiseur statique est identifié avec une flèche verte. Si la fonction incriminée n’est pas identifiée, vous devez effectuer les étapes suivantes pour la rechercher.
+1. Ouvrez la fenêtre Pile des appels. (Dans la barre de menus, choisissez **déboguer** > **Windows** > **pile des appels**.) Incriminé `DllMain` ou de l’initialiseur statique est identifié avec une flèche verte. Si la fonction incriminée n’est pas identifiée, vous devez effectuer les étapes suivantes pour la rechercher.
 
-1. Ouvrez le **exécution** fenêtre (dans la barre de menus, choisissez **déboguer** > **Windows** > **immédiat**.)
+1. Ouvrez le **immédiat** fenêtre (dans la barre de menus, choisissez **déboguer** > **Windows** > **immédiat**.)
 
-1. Tapez .load sos.dll dans la **exécution** fenêtre pour charger le service de débogage SOS.
+1. Tapez .load sos.dll dans le **immédiat** fenêtre pour charger le service de débogage SOS.
   
-1. Type ! dumpstack dans la **exécution** fenêtre pour obtenir une liste complète des interne **/CLR** pile.
+1. Type ! dumpstack dans la **immédiat** fenêtre pour obtenir une liste complète des interne **/CLR** pile.
 
-1. Recherchez la première instance (la plus proche du bas de la pile) de _CorDllMain (si `DllMain` l’origine du problème) ou de _VTableBootstrapThunkInitHelperStub ou GetTargetForVTableEntry (si un initialiseur statique provoque le problème). L’entrée de la pile juste en dessous de cet appel est l’appel de la fonction MSIL implémentée qui a tenté de s’exécuter pendant le verrouillage du chargeur.
+1. Recherchez la première instance (la plus proche du bas de la pile) de _CorDllMain (si `DllMain` provoque le problème) ou de _VTableBootstrapThunkInitHelperStub ou GetTargetForVTableEntry (si un initialiseur statique provoque le problème). L’entrée de la pile juste en dessous de cet appel est l’appel de la fonction MSIL implémentée qui a tenté de s’exécuter pendant le verrouillage du chargeur.
 
 1. Accédez au fichier source et numéro_ligne identifiés à l’étape précédente, puis corrigez le problème à l’aide de scénarios et des solutions décrites dans la section scénarios.
 
@@ -222,7 +222,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved) {
 }
 ```
 
-Cet exemple illustre des problèmes lors de l’initialisation d’assemblys mixtes :
+Cet exemple illustre les problèmes dans l’initialisation d’assemblys mixtes :
 
 ```cpp
 // initializing_mixed_assemblies_2.cpp

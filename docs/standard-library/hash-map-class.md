@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713bf95a53a22b098803d08b4a2a4fd9c8a6cf2d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954929"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211590"
 ---
 # <a name="hashmap-class"></a>hash_map, classe
 
@@ -124,13 +124,17 @@ class hash_map
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé* type de données clé à stocker dans le hash_map.
+*Key*<br/>
+ Type de données de la clé à stocker dans l'objet hash_map.
 
-*Type* type de données de l’élément à stocker dans le hash_map.
+*Type*<br/>
+ Type de données de l'élément à stocker dans l'objet hash_map.
 
-*Caractéristiques* type qui inclut les deux objets de fonction, une de comparaison de classe capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif et une fonction de hachage qui est un prédicat unaire qui mappe les valeurs de clé des éléments non signé entiers de type `size_t`. Cet argument est facultatif et le prédicat hash_compare<`Key`, less<`Key`> > est la valeur par défaut.
+*Caractéristiques*<br/>
+ Type qui inclut les deux objets de fonction, une de comparaison de classes capable de comparer deux valeurs d'éléments comme clés de tri pour déterminer leur ordre relatif, et une fonction de hachage qui est un prédicat unaire qui mappe les valeurs de clé des éléments à des entiers non signés de type `size_t`. Cet argument est facultatif et le prédicat hash_compare<`Key`, less<`Key`> > est la valeur par défaut.
 
-*Allocateur* le type qui représente l’objet allocateur stocké qui contient des informations sur l’allocation et la désallocation de mémoire du hash_map. Cet argument est facultatif et la valeur par défaut est allocator<pair <const `Key`, `Type`>>.
+*Allocateur*<br/>
+ Type qui représente l'objet allocateur stocké qui encapsule des informations détaillées sur l'allocation et la désallocation de mémoire de la classe hash_map. Cet argument est facultatif et la valeur par défaut est allocator<pair <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Notes
 
@@ -523,11 +527,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Un type `const_iterator` ne peut pas être utilisé pour changer la valeur d'un élément.
 
-Le `const_iterator` défini par hash_map pointe vers des éléments qui sont des objets de [value_type](#value_type), qui est de type `pair` *\< ***const Key, Type*** >*, dont le premier membre est la clé à l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
+Le `const_iterator` défini par hash_map pointe vers des éléments qui sont des objets de [value_type](#value_type), qui est de type `pair< const Key, Type >`, dont le premier membre est la clé à l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
 
 Pour déréférencer un `const_iterator` `cIter` pointant vers un élément dans un hash_map, utilisez le `->` opérateur.
 
-Pour accéder à la valeur de la clé de l’élément, utilisez `cIter` **-> first**, ce qui équivaut à (\* `cIter`) **.first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `cIter` **-> second**, ce qui équivaut à (\* `cIter`) **.second**.
+Pour accéder à la valeur de la clé pour l’élément, utilisez `cIter->first`, ce qui équivaut à `(*cIter).first`. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `cIter->second`, ce qui équivaut à `(*cIter).second`.
 
 ### <a name="example"></a>Exemple
 
@@ -644,7 +648,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé des éléments à mettre en correspondance du hash_map.
+*key*<br/>
+ Valeur de clé des éléments à mettre en correspondance à partir du hash_map.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1135,7 +1140,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé d’argument à comparer avec la clé de tri d’un élément du hash_map recherché.
+*key*<br/>
+ Valeur de clé d’argument à comparer à la clé de tri d’un élément du hash_map dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1223,13 +1229,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE* position de l’élément à supprimer du hash_map.
+*_WHERE*<br/>
+ Position de l'élément à supprimer du hash_map.
 
-*première* Position du premier élément supprimé du hash_map.
+*first*<br/>
+ Position du premier élément supprimé du hash_map.
 
-*dernière* Position juste après le dernier élément supprimé du hash_map.
+*last*<br/>
+ Position juste après le dernier élément supprimé du hash_map.
 
-*clé* la valeur de clé des éléments à supprimer du hash_map.
+*key*<br/>
+ Valeur de clé des éléments à supprimer du hash_map.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1341,7 +1351,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé qui doit correspondre à la clé de tri d’un élément du hash_map recherché.
+*key*<br/>
+ Valeur de clé qui doit correspondre à la clé de tri d’un élément du hash_map dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1881,7 +1892,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé d’argument à comparer avec la clé de tri d’un élément du hash_map recherché.
+*key*<br/>
+ Valeur de clé d’argument à comparer à la clé de tri d’un élément du hash_map dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2519,7 +2531,8 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* argument hash_map qui fournit les éléments à échanger avec le hash_map cible.
+*right*<br/>
+ Argument hash_map qui fournit les éléments à échanger avec le hash_map cible.
 
 ### <a name="remarks"></a>Notes
 
@@ -2594,7 +2607,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*clé* la valeur de clé d’argument à comparer avec la valeur de clé de tri d’un élément du hash_map recherché.
+*key*<br/>
+ Valeur de clé d’argument à comparer à la valeur de clé de tri d’un élément du hash_map dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2737,7 +2751,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>Notes
 
-`value_type` est déclaré comme étant `pair`  *\< * **const**[key_type](#key_type), [mapped_type](#mapped_type)*> * et non `pair`  **\<key_type, mapped_type >** , car les clés d’un conteneur associatif ne peuvent pas être modifiées à l’aide d’un itérateur non constant ou une référence.
+`value_type` est déclaré comme étant `pair<const key_type, mapped_type>` et non `pair<key_type, mapped_type>` , car les clés d’un conteneur associatif ne peuvent pas être modifiées à l’aide d’un itérateur non constant ou une référence.
 
 ### <a name="example"></a>Exemple
 

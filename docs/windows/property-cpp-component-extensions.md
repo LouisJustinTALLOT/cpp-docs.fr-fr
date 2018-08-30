@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a48cb013ceb7e3269721cdef3c2f8982d98a0112
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212810"
 ---
 # <a name="property--c-component-extensions"></a>propriété  (extensions du composant C++)
 
@@ -96,7 +96,7 @@ Corps de la méthode de propriété de l’accesseur set ou get. Le *property_bo
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-Pour plus d’informations, consultez [propriétés (C++ / c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Pour plus d’informations, consultez [propriétés (C++ / c++ / CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
 
 ### <a name="requirements"></a>Configuration requise
 

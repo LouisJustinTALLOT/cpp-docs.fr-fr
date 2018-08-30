@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e137f0f41c94473d47985ceb848eeef7c7c9ca08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208514"
 ---
 # <a name="pointers-to-members"></a>Pointeurs vers membres
 Les déclarations de pointeurs vers des membres sont des cas spéciaux de déclarations de pointeur.  Elles sont déclarées à l'aide de la séquence suivante :  
@@ -45,7 +45,7 @@ Les déclarations de pointeurs vers des membres sont des cas spéciaux de décla
   - Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).  
 1. Nom qualifié de la classe contenant les membres vers lesquels pointer.  
   - Opérateur ::.  
-  - Le **\*** opérateur.  
+  - Le <strong>\*</strong> opérateur.  
   - Facultatif **const** et/ou **volatile** spécificateurs.  
   - Identificateur nommant le pointeur vers le membre.  
   
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- La différence entre la **.\***  et **-> \*** opérateurs (les opérateurs de pointeur vers membre) est que le **.\***  opérateur sélectionne des membres étant donné un objet ou une référence d’objet, tandis que le **-> \*** opérateur sélectionne des membres via un pointeur. (Pour plus d’informations sur ces opérateurs, consultez [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ La différence entre la **.** <strong>\*</strong> et **->** <strong>\*</strong> opérateurs (les opérateurs de pointeur vers membre) est que le **.** <strong>\*</strong> opérateur sélectionne des membres étant donné un objet ou une référence d’objet, tandis que le **->** <strong>\*</strong> opérateur Sélectionne les membres via un pointeur. (Pour plus d’informations sur ces opérateurs, consultez [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  Le résultat des opérateurs pointeur vers membre est le type du membre, dans ce cas, `char *`.  
   
@@ -123,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>Restrictions sur les pointeurs vers des membres  
- L'adresse d'un membre statique n'est pas un pointeur vers un membre. C'est un pointeur normal vers l'instance du membre statique. Étant donné que seule une instance d’un membre statique existe pour tous les objets d’une classe donnée, l’ordinaire d’adresse **(&)** et déréférencer **(\*)** opérateurs peuvent être utilisés.  
+ L'adresse d'un membre statique n'est pas un pointeur vers un membre. C'est un pointeur normal vers l'instance du membre statique. Étant donné que seule une instance d’un membre statique existe pour tous les objets d’une classe donnée, l’ordinaire d’adresse (**&**) et déréférencer (<strong>\*</strong>) opérateurs peuvent être utilisés.  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>Pointeurs vers des membres et des fonctions virtuelles  
  L'appel d'une fonction virtuelle via une fonction pointeur vers membre fonctionne comme si la fonction avait été appelée directement. La fonction correcte est recherchée dans la v-table et appelée.  

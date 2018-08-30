@@ -1,5 +1,5 @@
 ---
-title: Exemples de contrôle header | Documents Microsoft
+title: Exemples de contrôle header | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20cdf22a91f7c144c2bbdb96d6789ca45778994
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0b48dc1aa1f2e966836bba8d04227f7c74d5abd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342759"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208112"
 ---
 # <a name="header-control-examples"></a>Exemples de contrôle Header
-Pour obtenir des exemples de contrôles d’en-tête, consultez le [contrôles Header](http://msdn.microsoft.com/library/windows/desktop/bb775238) dans le Kit de développement logiciel Windows.  
+Pour obtenir des exemples de contrôles d’en-tête, consultez le [contrôles Header](/windows/desktop/Controls/header-controls) dans le SDK Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)   

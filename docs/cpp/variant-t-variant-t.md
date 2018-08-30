@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95b0931438afe8ff151d3c9f6c4727013df79478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464160"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209340"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Section spécifique à Microsoft**  
@@ -210,7 +210,7 @@ _variant_t(
   
 -   **_variant_t (VARIANT &***varSrc***)** construit un `_variant_t` objet à partir d’une copie de la `VARIANT` objet.     Le type variant est conservé.  
   
--   **_variant_t (VARIANT\****pVarSrc***)** construit un `_variant_t` objet à partir d’une copie de la `VARIANT` objet.     Le type variant est conservé.  
+-   **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** construit un `_variant_t` objet à partir d’une copie de la `VARIANT` objet.     Le type variant est conservé.  
   
 -   **_variant_t (_variant_t &***var_t_Src***)** construit un `_variant_t` objet à partir d’un autre `_variant_t` objet.     Le type variant est conservé.  
   
@@ -228,15 +228,15 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** construit un `_variant_t` objet de type VT_BSTR à partir d’un `_bstr_t` objet.     Un nouvel objet `BSTR` est alloué.  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** construit un `_variant_t` objet de type VT_BSTR à partir d’une chaîne Unicode.   Un nouvel objet `BSTR` est alloué.  
+-   **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc***)** construit un `_variant_t` objet de type VT_BSTR à partir d’une chaîne Unicode.   Un nouvel objet `BSTR` est alloué.  
   
--   **_variant_t (char\***`strSrc`**)** construit un `_variant_t` objet de type VT_BSTR à partir d’une chaîne.     Un nouvel objet `BSTR` est alloué.  
+-   **_variant_t (char**<strong>\*</strong>`strSrc`**)** construit un `_variant_t` objet de type VT_BSTR à partir d’une chaîne.     Un nouvel objet `BSTR` est alloué.  
   
 -   **_variant_t (bool**`bSrc`**)** construit un `_variant_t` objet de type VT_BOOL à partir d’un **bool** valeur.      
   
--   **_variant_t (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** construit un `_variant_t` objet de type VT_UNKNOWN à partir d’un pointeur d’interface COM .       Si `fAddRef` est **true**, puis `AddRef` est appelée sur le pointeur d’interface fourni pour faire correspondre l’appel à `Release` qui se produit lorsque le `_variant_t` objet est détruit. Il vous incombe d’appeler `Release` sur le pointeur d’interface fourni. Si `fAddRef` est **false**, ce constructeur prend possession du pointeur d’interface fourni ; n’appelez pas `Release` sur le pointeur d’interface fourni.  
+-   **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef`**= true)** construit un `_variant_t` objet de type VT_UNKNOWN à partir d’un pointeur d’interface COM.       Si `fAddRef` est **true**, puis `AddRef` est appelée sur le pointeur d’interface fourni pour faire correspondre l’appel à `Release` qui se produit lorsque le `_variant_t` objet est détruit. Il vous incombe d’appeler `Release` sur le pointeur d’interface fourni. Si `fAddRef` est **false**, ce constructeur prend possession du pointeur d’interface fourni ; n’appelez pas `Release` sur le pointeur d’interface fourni.  
   
--   **_variant_t (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** construit un `_variant_t` objet de type VT_DISPATCH à partir d’une interface COM pointeur.       Si `fAddRef` est **true**, puis `AddRef` est appelée sur le pointeur d’interface fourni pour faire correspondre l’appel à `Release` qui se produit lorsque le `_variant_t` objet est détruit. Il vous incombe d’appeler `Release` sur le pointeur d’interface fourni. Si `fAddRef` est **false**, ce constructeur prend possession du pointeur d’interface fourni ; n’appelez pas `Release` sur le pointeur d’interface fourni.  
+-   **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef`**= true)** construit un `_variant_t` objet de Tapez VT_DISPATCH à partir d’un pointeur d’interface COM.       Si `fAddRef` est **true**, puis `AddRef` est appelée sur le pointeur d’interface fourni pour faire correspondre l’appel à `Release` qui se produit lorsque le `_variant_t` objet est détruit. Il vous incombe d’appeler `Release` sur le pointeur d’interface fourni. Si `fAddRef` est **false**, ce constructeur prend possession du pointeur d’interface fourni ; n’appelez pas `Release` sur le pointeur d’interface fourni.  
   
 -   **_variant_t (DECIMAL &**`decSrc`**)** construit un `_variant_t` objet de type VT_DECIMAL à partir d’un `DECIMAL` valeur.      
   

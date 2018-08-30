@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604277"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206715"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
@@ -58,7 +58,7 @@ Pour plus d’informations sur l’ensemble de ces concepts, consultez [Guide de
 
 ##  <a name="BK_Native"></a> Applications de bureau et serveur
 
-Pour connaître les principes de base de la création d’applications clientes Windows pour le bureau, consultez [Developing Windows Applications in C++](http://msdn.microsoft.com/vstudio//hh304489) (Développement d’applications Windows utilisant C++) et [Introduction to Windows Programming in C++](http://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)(Introduction à la programmation Windows en C++).
+Pour découvrir les principes fondamentaux de création d’applications clientes de Windows pour le bureau, consultez [développement d’Applications Windows en C++](https://msdn.microsoft.com/vstudio//hh304489) et [Introduction à la programmation de Windows en C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
 
 Sur Windows 10, vous pouvez utiliser Visual C++ pour créer de nombreux types de programmes de bureau :
 

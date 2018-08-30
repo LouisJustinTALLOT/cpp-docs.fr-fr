@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3da35d2134daa20faf53336902ba6612f4b9904
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 663f8f3921788e64b26a57e95537ab44c757ea17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612101"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211418"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procédure pas à pas : suppression de travail d'un thread d'interface utilisateur
 Ce document montre comment utiliser le Runtime d’accès concurrentiel pour déplacer le travail effectué par le thread d’interface utilisateur (IU) dans une application Microsoft Foundation Classes (MFC) à un thread de travail. Ce document montre également comment améliorer les performances d’une longue opération de dessin.  
@@ -40,7 +40,7 @@ Ce document montre comment utiliser le Runtime d’accès concurrentiel pour dé
   
 -   [Annulation dans la bibliothèque de modèles parallèles](cancellation-in-the-ppl.md)  
   
- Nous vous recommandons également de comprendre les principes fondamentaux du développement d’applications MFC et GDI + avant de commencer cette procédure pas à pas. Pour plus d’informations à propos de MFC, consultez [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md). Pour plus d’informations sur GDI +, consultez [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
+ Nous vous recommandons également de comprendre les principes fondamentaux du développement d’applications MFC et GDI + avant de commencer cette procédure pas à pas. Pour plus d’informations à propos de MFC, consultez [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md). Pour plus d’informations sur GDI +, consultez [GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798).  
   
 ##  <a name="top"></a> Sections  
  Cette procédure pas à pas contient les sections suivantes :  

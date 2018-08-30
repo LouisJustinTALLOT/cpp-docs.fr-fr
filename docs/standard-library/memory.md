@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fe930ba0616e27b06aee863285638613f7e31d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b90a96816855e08610d0f63f3ab5c237d564453
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858927"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217947"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -85,7 +85,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Cette classe de modèle décrit un objet qui gère l’allocation et la libération de stockage pour des tableaux d’objets de type **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Décrit un objet qui détermine toutes les informations qui sont requises par un conteneur activé par allocateur.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|Cette classe de modèle décrit un objet qui stocke un pointeur dans un objet alloué de type **Type \*** qui garantit que l’objet vers lequel il pointe est supprimé quand son auto_ptr englobant est détruit.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|La classe de modèle décrit un objet qui stocke un pointeur vers un objet alloué du type **Type** <strong>\*</strong> qui garantit que l’objet vers lequel il pointe est supprimé lorsque son auto_ptr englobant Obtient détruit.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Signale une exception weak_ptr incorrecte.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Aide à générer un `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Fournit les informations requises par un objet de la classe de modèle `allocator_traits` pour décrire un allocateur avec le type pointeur `Ptr`.|

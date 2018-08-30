@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 873527b76e9194fb4b38ee2f5598cf07028e0449
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6a98c9016281a67211a41d1c63fcb9886a0b3c35
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591509"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222508"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -40,7 +40,7 @@ Quand l’attribut C++ **dispinterface** précède une interface, il fait en sor
 
 Une interface de dispatch dérivent de `IDispatch`, sauf si vous spécifiez une classe de base. Vous devez spécifier un [id](../windows/id.md) pour les membres d’une interface de dispatch.
 
-L’exemple d’utilisation de [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) dans la documentation MIDL :
+L’exemple d’utilisation [dispinterface](/windows/desktop/Midl/dispinterface) dans la documentation MIDL :
 
 ```cpp
 dispinterface helloPro

@@ -55,19 +55,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5b714d8b78ecfc28db9f6e69308777ed53be7987
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451795"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210871"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
 Recherche le prochain jeton dans une chaîne en utilisant les paramètres régionaux actifs ou les paramètres régionaux spécifiés qui ont été transmis. Il existe des versions plus sécurisées de ces fonctions. Consultez [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
 
 > [!IMPORTANT]
-> **_mbstok** et **_mbstok_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok** et **_mbstok_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -93,7 +93,7 @@ unsigned char *_mbstok(
 
 ### <a name="parameters"></a>Paramètres
 
-*%{strToken/}*<br/>
+*strToken*<br/>
 Chaîne contenant le ou les jetons.
 
 *strDelimit*<br/>
@@ -104,16 +104,16 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers le jeton suivant trouvé dans *%{strToken/}*. Elles retournent **NULL** lorsque ne figurent pas plus de jetons. Chaque appel modifie *%{strToken/}* en remplaçant un caractère null pour le premier délimiteur qui se produit après le jeton retourné.
+Retourne un pointeur vers le prochain jeton trouvé dans *strToken*. Elles retournent **NULL** lorsque plus aucun jeton ne se trouvent. Chaque appel modifie *strToken* en remplaçant un caractère null pour le premier délimiteur qui se produit après le jeton retourné.
 
 ## <a name="remarks"></a>Notes
 
-Le **strtok** fonction recherche le jeton suivant dans *%{strToken/}*. Le jeu de caractères dans *strDelimit* spécifie des délimiteurs possibles du jeton doit être trouvé dans *%{strToken/}* lors de l’appel en cours. **wcstok** et **_mbstok** sont des versions à caractères larges et caractères multioctets de **strtok**. Les arguments et la valeur de retour de **wcstok** sont des caractères larges chaînes ; ceux de **_mbstok** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+Le **strtok** fonction recherche le prochain jeton dans *strToken*. Le jeu de caractères dans *strDelimit* spécifie les délimiteurs possibles du jeton doit être recherché dans *strToken* sur l’appel en cours. **wcstok** et **_mbstok** sont des versions à caractères larges et à caractères multioctets de **strtok**. Les arguments et la valeur de retour de **wcstok** sont des caractères larges chaînes ; ceux de **_mbstok** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 > [!IMPORTANT]
-> Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Le premier appel à **strtok**, la fonction ignore les délimiteurs de début et retourne un pointeur vers le premier jeton dans *%{strToken/}*, le jeton avec un caractère null de fin d’exécution. Plus de jetons peuvent être classées en dehors de la suite de *%{strToken/}* par une série d’appels à **strtok**. Chaque appel à **strtok** modifie *%{strToken/}* en insérant un caractère null après la **jeton** retourné par cet appel. Pour lire le jeton suivant à partir de *%{strToken/}*, appelez **strtok** avec un **NULL** la valeur pour le *%{strToken/}* argument. Le **NULL** *%{strToken/}* argument causes **strtok** pour rechercher le jeton suivant dans le texte modifié *%{strToken/}*. Le *strDelimit* argument peut prendre toute valeur d’un appel à l’autre afin que l’ensemble de délimiteurs peut varier.
+Sur le premier appel à **strtok**, la fonction ignore les délimiteurs de début et retourne un pointeur désignant le premier jeton dans *strToken*, le jeton par un caractère null de fin d’exécution. Plus de jetons peuvent être tirés de la suite de *strToken* par une série d’appels à **strtok**. Chaque appel à **strtok** modifie *strToken* en insérant un caractère null après la **jeton** retourné par cet appel. Pour lire le prochain jeton à partir de *strToken*, appelez **strtok** avec un **NULL** valeur pour le *strToken* argument. Le **NULL** *strToken* argument causes **strtok** pour rechercher le prochain jeton dans le texte modifié *strToken*. Le *strDelimit* argument peut prendre n’importe quelle valeur à partir d’un seul appel à l’autre afin que l’ensemble de délimiteurs peut varier.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -127,7 +127,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |**_tcstok**|**strtok**|**_mbstok**|**wcstok**|
 |**_tcstok**|**_strtok_l**|**_mbstok_l**|**_wcstok_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

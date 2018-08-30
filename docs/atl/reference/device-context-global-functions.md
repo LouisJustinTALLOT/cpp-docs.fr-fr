@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d45468674d274c5f20b5533d782390cf2a6cec6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8944ecdb4f9996800264986a7a687df6020b0591
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881394"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209931"
 ---
 # <a name="device-context-global-functions"></a>Fonctions globales de contexte de périphérique
 Cette fonction crée un contexte de périphérique pour un appareil donné.  
@@ -29,7 +29,7 @@ Cette fonction crée un contexte de périphérique pour un appareil donné.
 |[AtlCreateTargetDC](#atlcreatetargetdc)|Crée un contexte de périphérique.|  
   
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
- Crée un contexte de périphérique pour le périphérique spécifié dans le [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) structure.  
+ Crée un contexte de périphérique pour le périphérique spécifié dans le [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) structure.  
   
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);

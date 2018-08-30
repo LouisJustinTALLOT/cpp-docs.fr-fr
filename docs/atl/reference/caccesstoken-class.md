@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ae5547e2cc650c65b4a67d9734f00cf88b76c8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 69d25b87c03216b151a29c7688e61fcc278d0dd7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885612"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199167"
 ---
 # <a name="caccesstoken-class"></a>Caccesstoken, classe
 Cette classe est un wrapper pour un jeton d’accès.  
@@ -140,9 +140,9 @@ class CAccessToken
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Appelez cette méthode pour définir le groupe principal de le `CAccessToken` objet.|  
   
 ## <a name="remarks"></a>Notes  
- Un [jeton d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374909) est un objet qui décrit le contexte de sécurité d’un processus ou un thread et est alloué à chaque utilisateur connecté à un système Windows.  
+ Un [jeton d’accès](/windows/desktop/SecAuthZ/access-tokens) est un objet qui décrit le contexte de sécurité d’un processus ou un thread et est alloué à chaque utilisateur connecté à un système Windows.  
   
- Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le SDK Windows.  
+ Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.  
   
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
@@ -212,13 +212,13 @@ bool CreateImpersonationToken(
  Pointeur vers le nouveau `CAccessToken` objet.  
   
  *Sil*  
- Spécifie un [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) type énuméré qui fournit le niveau d’emprunt d’identité du nouveau jeton.  
+ Spécifie un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) type énuméré qui fournit le niveau d’emprunt d’identité du nouveau jeton.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- `CreateImpersonationToken` appels [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) pour créer un nouveau jeton d’emprunt d’identité.  
+ `CreateImpersonationToken` appels [DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616) pour créer un nouveau jeton d’emprunt d’identité.  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  Appelez cette méthode pour créer un jeton principal.  
@@ -235,16 +235,16 @@ bool CreatePrimaryToken(
  Pointeur vers le nouveau `CAccessToken` objet.  
   
  *dwDesiredAccess*  
- Spécifie les droits d’accès demandé pour le nouveau jeton. La valeur par défaut, MAXIMUM_ALLOWED, demande tous les droits d’accès qui sont valides pour l’appelant. Consultez [droits d’accès et des masques d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374902) plus on droits d’accès.  
+ Spécifie les droits d’accès demandé pour le nouveau jeton. La valeur par défaut, MAXIMUM_ALLOWED, demande tous les droits d’accès qui sont valides pour l’appelant. Consultez [droits d’accès et des masques d’accès](/windows/desktop/SecAuthZ/access-rights-and-access-masks) plus on droits d’accès.  
   
  *pTokenAttributes*  
- Pointeur vers un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau jeton et détermine si les processus enfants peuvent hériter du jeton. Si *pTokenAttributes* est NULL, le jeton Obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.  
+ Pointeur vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau jeton et détermine si les processus enfants peuvent hériter du jeton. Si *pTokenAttributes* est NULL, le jeton Obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- `CreatePrimaryToken` appels [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) pour créer un nouveau jeton principal.  
+ `CreatePrimaryToken` appels [DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617) pour créer un nouveau jeton principal.  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  Appelez cette méthode pour créer un nouveau processus en cours d’exécution dans le contexte de sécurité de l’utilisateur représenté par le `CAccessToken` objet.  
@@ -271,22 +271,22 @@ bool CreateProcessAsUser(
  Pointeur vers une chaîne se terminant par null qui spécifie la ligne de commande à exécuter.  
   
  *pProcessInformation*  
- Pointeur vers un [PROCESS_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/ms684873) structure qui reçoit les informations d’identification sur le nouveau processus.  
+ Pointeur vers un [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information) structure qui reçoit les informations d’identification sur le nouveau processus.  
   
  *pStartupInfo*  
- Pointeur vers un [STARTUPINFO](http://msdn.microsoft.com/library/windows/desktop/ms686331) structure qui spécifie la manière dont la fenêtre principale du nouveau processus doit apparaître.  
+ Pointeur vers un [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) structure qui spécifie la manière dont la fenêtre principale du nouveau processus doit apparaître.  
   
  *dwCreationFlags*  
- Spécifie des indicateurs supplémentaires qui contrôlent la classe de priorité et de la création du processus. Consultez la fonction Win32 [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429) pour obtenir la liste d’indicateurs.  
+ Spécifie des indicateurs supplémentaires qui contrôlent la classe de priorité et de la création du processus. Consultez la fonction Win32 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) pour obtenir la liste d’indicateurs.  
   
  *bLoadProfile*  
- Si la valeur est TRUE, le profil utilisateur est chargé avec [LoadUserProfile](http://msdn.microsoft.com/library/windows/desktop/bb762281).  
+ Si la valeur est TRUE, le profil utilisateur est chargé avec [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).  
   
  *pProcessAttributes*  
- Pointeur vers un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau processus et détermine si les processus enfants peuvent hériter le handle retourné. Si *pProcessAttributes* est NULL, le processus obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.  
+ Pointeur vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau processus et détermine si les processus enfants peuvent hériter le handle retourné. Si *pProcessAttributes* est NULL, le processus obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.  
   
  *pThreadAttributes*  
- Pointeur vers un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau thread et détermine si les processus enfants peuvent hériter le handle retourné. Si *pThreadAttributes* est NULL, le thread obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.  
+ Pointeur vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau thread et détermine si les processus enfants peuvent hériter le handle retourné. Si *pThreadAttributes* est NULL, le thread obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.  
   
  *case bHériter*  
  Indique si le nouveau processus hérite des handles du processus appelant. Si la valeur est TRUE, chaque handle ouvert peut être hérité dans le processus appelant est héritée par le nouveau processus. Handles hérités ont les mêmes privilèges d’accès et la valeur en tant que les handles d’origine.  
@@ -298,7 +298,7 @@ bool CreateProcessAsUser(
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- `CreateProcessAsUser` utilise le `CreateProcessAsUser` fonction Win32 pour créer un nouveau processus qui s’exécute dans le contexte de sécurité de l’utilisateur représenté par le `CAccessToken` objet. Consultez la description de la [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429) fonction pour obtenir une présentation complète des paramètres requis.  
+ `CreateProcessAsUser` utilise le `CreateProcessAsUser` fonction Win32 pour créer un nouveau processus qui s’exécute dans le contexte de sécurité de l’utilisateur représenté par le `CAccessToken` objet. Consultez la description de la [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) fonction pour obtenir une présentation complète des paramètres requis.  
   
  Pour que cette méthode réussisse, le `CAccessToken` objet doit contenir AssignPrimaryToken (sauf s’il s’agit d’un jeton restreint) et les privilèges de IncreaseQuota.  
   
@@ -330,7 +330,7 @@ bool CreateRestrictedToken(
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- `CreateRestrictedToken` utilise le [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) fonction Win32 pour créer un nouveau `CAccessToken` objet, avec des restrictions.  
+ `CreateRestrictedToken` utilise le [CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) fonction Win32 pour créer un nouveau `CAccessToken` objet, avec des restrictions.  
   
 > [!IMPORTANT]
 >  Lorsque vous utilisez `CreateRestrictedToken`, vérifiez les éléments suivants : le jeton existant est valide (et non entré par l’utilisateur) et *SidsToDisable* et *PrivilegesToDelete* sont valides (et non entré par l’utilisateur). Si la méthode retourne FALSE, refuser les fonctionnalités.  
@@ -486,7 +486,7 @@ bool GetImpersonationLevel(
   
 ### <a name="parameters"></a>Paramètres  
  *pImpersonationLevel*  
- Pointeur vers un [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) type d’énumération qui recevront les informations au niveau d’emprunt d’identité.  
+ Pointeur vers un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) type d’énumération qui recevront les informations au niveau d’emprunt d’identité.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
@@ -500,7 +500,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>Paramètres  
  *pluid*  
- Pointeur vers un [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) qui reçoit l’ID de Session d’ouverture de session.  
+ Pointeur vers un [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) qui reçoit l’ID de Session d’ouverture de session.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
@@ -591,7 +591,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appelle le [OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) fonction Win32.  
+ Appelle le [OpenProcessToken](https://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) fonction Win32.  
   
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile  
  Appelez cette méthode pour obtenir le handle pointant vers le profil utilisateur associé à la `CAccessToken` objet.  
@@ -612,7 +612,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
   
 ### <a name="parameters"></a>Paramètres  
  *pSource*  
- Pointeur vers un [TOKEN_SOURCE](http://msdn.microsoft.com/library/windows/desktop/aa379631) structure.  
+ Pointeur vers un [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
@@ -626,7 +626,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
   
 ### <a name="parameters"></a>Paramètres  
  *pStatistics*  
- Pointeur vers un [TOKEN_STATISTICS](http://msdn.microsoft.com/library/windows/desktop/aa379632) structure.  
+ Pointeur vers un [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
@@ -679,7 +679,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>Paramètres  
  *pluid*  
- Pointeur vers un [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) qui recevra le jeton ID.  
+ Pointeur vers un [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) qui recevra le jeton ID.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
@@ -693,7 +693,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
   
 ### <a name="parameters"></a>Paramètres  
  *PTapez*  
- Adresse de la [TOKEN_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379633) variable qui, en cas de réussite, reçoit le type du jeton.  
+ Adresse de la [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) variable qui, en cas de réussite, reçoit le type du jeton.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
@@ -805,16 +805,16 @@ bool LogonUser(
  Pointeur vers une chaîne se terminant par null qui spécifie le mot de passe en texte clair pour le compte d’utilisateur spécifié par *pszUserName*.  
   
  *dwLogonType*  
- Spécifie le type d’opération d’ouverture de session à effectuer. Consultez [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) pour plus d’informations.  
+ Spécifie le type d’opération d’ouverture de session à effectuer. Consultez [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) pour plus d’informations.  
   
  *dwLogonProvider*  
- Spécifie le fournisseur d’ouverture de session. Consultez [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) pour plus d’informations.  
+ Spécifie le fournisseur d’ouverture de session. Consultez [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- L’accès au jeton résultant de l’ouverture de session sera associé le `CAccessToken`. Pour que cette méthode réussisse, le `CAccessToken` objet détenir des privilèges SE_TCB_NAME, identifiant le détenteur du cadre de l’ordinateur approuvé base. Consultez [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) pour plus d’informations sur les privilèges requis.  
+ L’accès au jeton résultant de l’ouverture de session sera associé le `CAccessToken`. Pour que cette méthode réussisse, le `CAccessToken` objet détenir des privilèges SE_TCB_NAME, identifiant le détenteur du cadre de l’ordinateur approuvé base. Consultez [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) pour plus d’informations sur les privilèges requis.  
   
 ##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken  
  Appelez cette méthode à partir d’un serveur COM traite un appel à partir d’un client pour initialiser le `CAccessToken` avec le jeton d’accès à partir du client COM.  
@@ -834,7 +834,7 @@ bool OpenCOMClientToken(
  Si la valeur est TRUE, le thread actuel emprunte l’identité du client COM appelant si cet appel se termine correctement. Si la valeur est FALSE, le jeton d’accès doit être ouvert, mais le thread n’aura pas un jeton d’emprunt d’identité à l’issue de cet appel.  
   
  *bOpenAsSelf*  
- Indique si la vérification d’accès doit être effectuée par rapport au contexte de sécurité de l’appel de thread la [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) (méthode) ou par rapport au contexte de sécurité du processus pour le thread appelant.  
+ Indique si la vérification d’accès doit être effectuée par rapport au contexte de sécurité de l’appel de thread la [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) (méthode) ou par rapport au contexte de sécurité du processus pour le thread appelant.  
   
  Si ce paramètre est FALSE, la vérification d’accès est effectuée à l’aide du contexte de sécurité pour le thread appelant. Si le thread emprunte un client, ce contexte de sécurité peut être celui d’un processus client. Si ce paramètre est TRUE, la vérification d’accès est effectuée à l’aide du contexte de sécurité du processus pour le thread appelant.  
   
@@ -866,7 +866,7 @@ bool OpenNamedPipeClientToken(
  Si la valeur est TRUE, le thread actuel emprunte l’identité du client appelant de canal si cet appel se termine correctement. Si la valeur est FALSE, le jeton d’accès doit être ouvert, mais le thread n’aura pas un jeton d’emprunt d’identité à l’issue de cet appel.  
   
  *bOpenAsSelf*  
- Indique si la vérification d’accès doit être effectuée par rapport au contexte de sécurité de l’appel de thread la [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) (méthode) ou par rapport au contexte de sécurité du processus pour le thread appelant.  
+ Indique si la vérification d’accès doit être effectuée par rapport au contexte de sécurité de l’appel de thread la [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) (méthode) ou par rapport au contexte de sécurité du processus pour le thread appelant.  
   
  Si ce paramètre est FALSE, la vérification d’accès est effectuée à l’aide du contexte de sécurité pour le thread appelant. Si le thread emprunte un client, ce contexte de sécurité peut être celui d’un processus client. Si ce paramètre est TRUE, la vérification d’accès est effectuée à l’aide du contexte de sécurité du processus pour le thread appelant.  
   
@@ -898,7 +898,7 @@ bool OpenRPCClientToken(
  Si la valeur est TRUE, le thread actuel emprunte l’identité du client RPC si cet appel se termine correctement. Si la valeur est FALSE, le jeton d’accès doit être ouvert, mais le thread n’aura pas un jeton d’emprunt d’identité à l’issue de cet appel.  
   
  *bOpenAsSelf*  
- Indique si la vérification d’accès doit être effectuée par rapport au contexte de sécurité de l’appel de thread la [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) (méthode) ou par rapport au contexte de sécurité du processus pour le thread appelant.  
+ Indique si la vérification d’accès doit être effectuée par rapport au contexte de sécurité de l’appel de thread la [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) (méthode) ou par rapport au contexte de sécurité du processus pour le thread appelant.  
   
  Si ce paramètre est FALSE, la vérification d’accès est effectuée à l’aide du contexte de sécurité pour le thread appelant. Si le thread emprunte un client, ce contexte de sécurité peut être celui d’un processus client. Si ce paramètre est TRUE, la vérification d’accès est effectuée à l’aide du contexte de sécurité du processus pour le thread appelant.  
   
@@ -927,12 +927,12 @@ bool OpenThreadToken(
  Si la valeur est TRUE, le thread sera conservé au niveau d’emprunt d’identité demandé une fois que cette méthode se termine. Si la valeur est FALSE, le thread reviendra à son niveau d’emprunt d’identité d’origine.  
   
  *bOpenAsSelf*  
- Indique si la vérification d’accès doit être effectuée par rapport au contexte de sécurité de l’appel de thread la [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) (méthode) ou par rapport au contexte de sécurité du processus pour le thread appelant.  
+ Indique si la vérification d’accès doit être effectuée par rapport au contexte de sécurité de l’appel de thread la [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) (méthode) ou par rapport au contexte de sécurité du processus pour le thread appelant.  
   
  Si ce paramètre est FALSE, la vérification d’accès est effectuée à l’aide du contexte de sécurité pour le thread appelant. Si le thread emprunte un client, ce contexte de sécurité peut être celui d’un processus client. Si ce paramètre est TRUE, la vérification d’accès est effectuée à l’aide du contexte de sécurité du processus pour le thread appelant.  
   
  *Sil*  
- Spécifie un [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) type énuméré qui fournit le niveau d’emprunt d’identité du jeton.  
+ Spécifie un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) type énuméré qui fournit le niveau d’emprunt d’identité du jeton.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
@@ -953,7 +953,7 @@ bool PrivilegeCheck(
   
 ### <a name="parameters"></a>Paramètres  
  *RequiredPrivileges*  
- Pointeur vers un [PRIVILEGE_SET](http://msdn.microsoft.com/library/windows/desktop/aa379307) structure.  
+ Pointeur vers un [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set) structure.  
   
  *pbResult*  
  Pointeur vers une valeur de la méthode définit pour indiquer si tout ou partie du privilège spécifié sont activés dans le `CAccessToken` objet.  
@@ -962,7 +962,7 @@ bool PrivilegeCheck(
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Lorsque `PrivilegeCheck` retourne, le `Attributes` membre de chaque [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263) structure est définie à SE_PRIVILEGE_USED_FOR_ACCESS si le privilège correspondant est activé. Cette méthode appelle la [PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) fonction Win32.  
+ Lorsque `PrivilegeCheck` retourne, le `Attributes` membre de chaque [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) structure est définie à SE_PRIVILEGE_USED_FOR_ACCESS si le privilège correspondant est activé. Cette méthode appelle la [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) fonction Win32.  
   
 ##  <a name="revert"></a>  CAccessToken::Revert  
  Appelez cette méthode pour arrêter un thread à l’aide d’un jeton d’emprunt d’identité.  
@@ -1034,5 +1034,5 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple ATLSecurity](../../visual-cpp-samples.md)   
- [Jetons d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [Jetons d’accès](/windows/desktop/SecAuthZ/access-tokens)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

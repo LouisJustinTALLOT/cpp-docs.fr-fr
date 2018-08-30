@@ -1,7 +1,7 @@
 ---
-title: PRJ0020 d’erreur de Build de projet | Documents Microsoft
+title: Erreur de génération PRJ0020 de projet | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7ad1b3952da6282c0b9179b9fcc3dbab89cc54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d5f87dd50f52acb482a471708d1d20cc9853e02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317672"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214055"
 ---
 # <a name="project-build-error-prj0020"></a>Erreur de génération de projet PRJ0020
-Outil 'outil', propriété 'propriété' contient un nom de fichier non valide 'fichier'.  
-  
- Le nom de fichier ***fichier***, spécifié dans la propriété, ***propriété***, pour l’outil, ***outil***, n’est pas valide.  
-  
- Vous avez peut-être utilisé une macro inconnue ou non valide.  
-  
- Consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md) pour plus d’informations sur l’accès aux propriétés de votre projet.
+
+> Outil '*outil*', propriété '*propriété*'contient le nom de fichier non valide'*fichier*».
+
+Le nom de fichier *fichier*, spécifié dans la propriété *propriété* pour l’outil *outil*, n’est pas valide.
+
+Vous avez peut-être utilisé une macro non valide ou inconnue.
+
+Consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md) pour plus d’informations sur l’accès aux propriétés de votre projet.

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f8021bdc16dcfb2c4d1aa69936f27cfe7ac1df
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09e209a7b3e81ac232d2c0441a84e55ded8faecf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212855"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Ccommultithreadmodelnocs, classe
 `CComMultiThreadModelNoCS` Fournit des méthodes de thread-safe pour incrémenter et décrémenter la valeur d’une variable, sans verrouillage de la section critique ou de fonctionnalités de déverrouillage.  
@@ -117,7 +117,7 @@ typedef CComFakeCriticalSection CriticalSection;
  Consultez [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement  
- Cette fonction statique appelle la fonction Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), qui décrémente la valeur de la variable vers laquelle pointe *p*.  
+ Cette fonction statique appelle la fonction Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), qui décrémente la valeur de la variable vers laquelle pointe *p*.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -134,7 +134,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
  **InterlockedDecrement** empêche que plusieurs threads simultanément à l’aide de cette variable.  
   
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment  
- Cette fonction statique appelle la fonction Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), ce qui incrémente la valeur de la variable vers laquelle pointée *p*.  
+ Cette fonction statique appelle la fonction Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), ce qui incrémente la valeur de la variable vers laquelle pointée *p*.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();
