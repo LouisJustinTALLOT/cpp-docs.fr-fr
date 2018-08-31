@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148db60c7a3b1ae3f71269feec8024f6ff22a118
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c80bad11a13c454d8b4025e5cc0745514696a0f7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839058"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578442"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>Résoudre vos dépendances aux éléments internes de bibliothèque
 
@@ -34,9 +34,9 @@ La fonction de hachage interne `std::_Hash_seq(const unsigned char *, size_t)`, 
   
 Pour supprimer cette dépendance, vous avez deux possibilités.  
 
--   Si votre objectif est de placer une séquence `const char *` dans un conteneur non ordonné à l’aide de la même machine de code de hachage que `basic_string`, vous pouvez le faire à l’aide de la surcharge de modèle `std::hash` qui prend un `std::string_view`, ce qui retourne le code de hachage sous une forme portable. Il est possible qu’à l’avenir le code de bibliothèque de chaîne s’appuie ou non sur l’utilisation d’une fonction de hachage FNV-1a, ceci est donc la meilleure façon d’éviter la dépendance à un algorithme de hachage particulier. 
+- Si votre objectif est de placer une séquence `const char *` dans un conteneur non ordonné à l’aide de la même machine de code de hachage que `basic_string`, vous pouvez le faire à l’aide de la surcharge de modèle `std::hash` qui prend un `std::string_view`, ce qui retourne le code de hachage sous une forme portable. Il est possible qu’à l’avenir le code de bibliothèque de chaîne s’appuie ou non sur l’utilisation d’une fonction de hachage FNV-1a, ceci est donc la meilleure façon d’éviter la dépendance à un algorithme de hachage particulier. 
   
--   Si votre objectif est de générer un algorithme de hachage FNV-1a par rapport à une mémoire arbitraire, ce code est mis à disposition sur GitHub, dans le dépôt [VCSamples]( https://github.com/Microsoft/vcsamples) du fichier d’en-tête autonome [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), sous une [licence MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Nous avons également inclus un exemplaire de ce code ici, à toutes fins utiles. Vous pouvez copier ce code dans un fichier d’en-tête, ajouter l’en-tête à n’importe quel code affecté, puis rechercher et remplacer `_Hash_seq` par `fnv1a_hash_bytes`. Vous obtenez un comportement identique à l’implémentation interne dans `_Hash_seq`. 
+- Si votre objectif est de générer un algorithme de hachage FNV-1a par rapport à une mémoire arbitraire, ce code est mis à disposition sur GitHub, dans le dépôt [VCSamples]( https://github.com/Microsoft/vcsamples) du fichier d’en-tête autonome [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), sous une [licence MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Nous avons également inclus un exemplaire de ce code ici, à toutes fins utiles. Vous pouvez copier ce code dans un fichier d’en-tête, ajouter l’en-tête à n’importe quel code affecté, puis rechercher et remplacer `_Hash_seq` par `fnv1a_hash_bytes`. Vous obtenez un comportement identique à l’implémentation interne dans `_Hash_seq`. 
 
 ```cpp  
 /*

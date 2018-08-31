@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3600e5541c095b3879fe60404c9a5994c2a91088
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330295"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578446"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Préparation d'un ordinateur de test pour lancer un exécutable de débogage
 Pour préparer un ordinateur à tester la version debug d'une application développée en Visual C++, vous devez déployer les versions debug des DLL de la bibliothèque Visual C++ dont l'application dépend. Pour identifier les DLL qui doivent être déployées, suivez les étapes dans [Fonctionnement des dépendances d’une application Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). En général, les versions debug des DLL de la bibliothèque Visual C++ ont un nom qui se termine par "d" ; par exemple, la version debug de msvcr100.dll se nomme msvcr100d.dll.  
@@ -43,5 +43,5 @@ Pour préparer un ordinateur à tester la version debug d'une application dével
 ## <a name="see-also"></a>Voir aussi  
  
  [Déploiement dans Visual C++](../ide/deployment-in-visual-cpp.md)   
- [Options de ligne de commande de Windows Installer](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
+ [Options de ligne de commande de Windows Installer](/windows/desktop/Msi/command-line-options)   
  [Exemples de déploiement](../ide/deployment-examples.md) [Débogage distant](/visualstudio/debugger/remote-debugging.md)
