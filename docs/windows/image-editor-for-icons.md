@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63ab877506c0b38563868374312c8f63bc28333e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b4f038dea14aedc4016746297ac99aedd57445eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583530"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215839"
 ---
 # <a name="image-editor-for-icons"></a>Éditeur d'images pour les icônes
 
@@ -68,4 +68,4 @@ Aucun.
 ## <a name="see-also"></a>Voir aussi
 
 [Éditeurs de ressources](../windows/resource-editors.md)  
-[Icônes](http://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)
+[Icônes](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
-ms.translationtype: HT
+ms.openlocfilehash: 1bd8abd7971c112f0d9e872df73b431c78259981
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131943"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205420"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading : Arrêt des Threads dans MFC
 Deux situations normales provoquent un arrêt du thread : la fonction de contrôle se ferme ou le thread n’est pas autorisé à s’exécuter jusqu'à la fin. Si un traitement de texte utilise un thread pour l’impression en arrière-plan, la fonction de contrôle s’arrêtera normalement si l’impression se termine avec succès. Si l’utilisateur souhaite annuler l’impression, toutefois, le thread d’impression en arrière-plan doit être arrêté avant terme. Cette rubrique explique comment implémenter chaque situation et comment obtenir le code de sortie d’un thread qui se termine.  
@@ -43,7 +43,7 @@ Deux situations normales provoquent un arrêt du thread : la fonction de contr�
  
 Pour un thread de travail, l’arrêt du thread normal est simple : quittez la fonction de contrôle et de retourner une valeur qui indique la raison de l’arrêt. Vous pouvez utiliser la [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) fonction ou un **retourner** instruction. En règle générale, 0 signifie l’achèvement réussi, mais vous revient.  
   
-Pour un thread d’interface utilisateur, le processus est tout aussi simple : dans le thread d’interface utilisateur, appelez [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) dans le SDK Windows. Le seul paramètre qui `PostQuitMessage` accepte est le code de sortie du thread. Comme pour les threads de travail, 0 signifie généralement un achèvement réussi.  
+Pour un thread d’interface utilisateur, le processus est tout aussi simple : dans le thread d’interface utilisateur, appelez [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) dans le SDK Windows. Le seul paramètre qui `PostQuitMessage` accepte est le code de sortie du thread. Comme pour les threads de travail, 0 signifie généralement un achèvement réussi.  
   
 ##  <a name="_core_premature_thread_termination"></a> Arrêt d’exécution prématuré d’un Thread  
  
@@ -53,7 +53,7 @@ Fin prématurée d’un thread est presque aussi simple : appelez [AfxEndThread
   
 ##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> La récupération du Code de sortie d’un Thread  
  
-Pour obtenir le code de sortie de travail ou le thread d’interface utilisateur, appelez le [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) (fonction). Pour plus d’informations sur cette fonction, consultez le Kit de développement Windows. Cette fonction prend le handle du thread (stocké dans le `m_hThread` membre de données de `CWinThread` objets) et l’adresse d’un DWORD.  
+Pour obtenir le code de sortie de travail ou le thread d’interface utilisateur, appelez le [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) (fonction). Pour plus d’informations sur cette fonction, consultez le Kit de développement Windows. Cette fonction prend le handle du thread (stocké dans le `m_hThread` membre de données de `CWinThread` objets) et l’adresse d’un DWORD.  
   
 Si le thread est toujours actif, `GetExitCodeThread` place STILL_ACTIVE dans l’adresse DWORD fournie ; sinon, le code de sortie est placé dans cette adresse.  
   
@@ -70,4 +70,4 @@ Soit la méthode vous permet de savoir pourquoi un `CWinThread` objet s’est ar
 [Multithreading à l’aide de C++ et MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
-[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)

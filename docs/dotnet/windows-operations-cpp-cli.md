@@ -54,12 +54,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 10ddc04471c749aad217780e9a27494783f1e9b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609347"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195631"
 ---
 # <a name="windows-operations-ccli"></a>Opérations Windows (C++/CLI)
 Illustre différentes tâches spécifiques à Windows en utilisant le SDK Windows.  
@@ -499,7 +499,7 @@ int main()
 ```  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez utiliser le .NET Framework pour accéder au Registre avec le <xref:Microsoft.Win32.Registry> et [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) classes, qui sont tous deux définis dans le <xref:Microsoft.Win32> espace de noms. Le **Registre** classe est un conteneur pour les instances statiques de la <xref:Microsoft.Win32.RegistryKey> classe. Chaque instance représente un nœud de Registre racine. Les instances sont <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, et <xref:Microsoft.Win32.Registry.Users>.  
+ Vous pouvez utiliser le .NET Framework pour accéder au Registre avec le <xref:Microsoft.Win32.Registry> et [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) classes, qui sont tous deux définis dans le <xref:Microsoft.Win32> espace de noms. Le **Registre** classe est un conteneur pour les instances statiques de la <xref:Microsoft.Win32.RegistryKey> classe. Chaque instance représente un nœud de Registre racine. Les instances sont <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, et <xref:Microsoft.Win32.Registry.Users>.  
 
 ## <a name="related-sections"></a>Rubriques connexes  
  <xref:System.Environment>  
@@ -507,4 +507,4 @@ int main()
 ## <a name="see-also"></a>Voir aussi  
  [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
- [Introduction à la surveillance des performances](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35) 
+ [Introduction à la surveillance des performances](https://msdn.microsoft.com/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35) 

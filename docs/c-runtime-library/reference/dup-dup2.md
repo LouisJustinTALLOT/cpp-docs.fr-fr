@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad477dc09ce6c8bee2d69e479f8e1615639cb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 820172e1e6ab4ad007c89b2b40f03512134f0f0d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399801"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215951"
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 
@@ -66,28 +66,28 @@ Un descripteur de fichier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_dup** retourne un nouveau descripteur de fichier. **_dup2** renvoie la valeur 0 pour indiquer une réussite. Si une erreur se produit, chaque fonction retourne -1 et les jeux de **errno** à **EBADF** si le descripteur de fichier n’est pas valide ou à **EMFILE** si plus aucun descripteur de fichier n’est disponibles. En cas de descripteur de fichier non valide, la fonction appelle également le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+**_dup** retourne un nouveau descripteur de fichier. **_dup2** retourne 0 pour indiquer la réussite. Si une erreur se produit, chaque fonction retourne -1 et les jeux **errno** à **EBADF** si le descripteur de fichier n’est pas valide ou à **EMFILE** si aucun autre descripteur de fichier est disponible. En cas de descripteur de fichier non valide, la fonction appelle également le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_dup** et **_dup2** fonctions associer un second descripteur de fichier à un fichier ouvert. Ces fonctions peuvent être utilisées pour associer un descripteur de fichier prédéfinie, telle que celle pour **stdout**, avec un autre fichier. Les opérations sur le fichier peuvent être effectuées à l’aide de l’un des descripteurs de fichier. Le type d’accès autorisé pour le fichier n’est pas affecté par la création d’un descripteur. **_dup** retourne le descripteur de fichier disponible suivant pour le fichier donné. **_dup2** force *FD2 Répartiteurs* pour faire référence au même fichier en tant que *fd1*. Si *FD2 Répartiteurs* est associé avec un fichier ouvert au moment de l’appel, ce fichier est fermé.
+Le **_dup** et **_dup2** fonctions associer un second descripteur de fichier à un fichier ouvert. Ces fonctions peuvent être utilisées pour associer un descripteur de fichier prédéfini, tel que celui pour **stdout**, avec un autre fichier. Les opérations sur le fichier peuvent être effectuées à l’aide de l’un des descripteurs de fichier. Le type d’accès autorisé pour le fichier n’est pas affecté par la création d’un descripteur. **_dup** retourne le descripteur de fichier disponible suivant pour le fichier donné. **_dup2** force *FD2 Répartiteurs* pour faire référence au même fichier en tant que *fd1*. Si *FD2 Répartiteurs* est associé avec un fichier ouvert au moment de l’appel, ce fichier est fermé.
 
-Les deux **_dup** et **_dup2** accepter des descripteurs de fichiers en tant que paramètres. Pour passer d’un flux de données (**fichier \*** ) sur l’une de ces fonctions, utilisez [_fileno](fileno.md). Le **fileno** routine retourne le descripteur de fichier actuellement associé au flux donné. L’exemple suivant montre comment associer **stderr** (défini comme **fichier \***  dans Stdio.h) avec un descripteur de fichier :
+Les deux **_dup** et **_dup2** accepter les descripteurs de fichier en tant que paramètres. Pour passer un flux (`FILE *`) à une de ces fonctions, utilisez [_fileno](fileno.md). Le **fileno** routine retourne le descripteur de fichier actuellement associé le flux donné. L’exemple suivant montre comment associer **stderr** (défini comme `FILE *` dans Stdio.h) avec un descripteur de fichier :
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

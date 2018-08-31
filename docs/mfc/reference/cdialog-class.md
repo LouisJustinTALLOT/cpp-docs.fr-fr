@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339408"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217331"
 ---
 # <a name="cdialog-class"></a>CDialog (classe)
 La classe de base utilisée pour afficher des boîtes de dialogue sur l’écran.  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  Pour créer une boîte de dialogue modale, construisez un objet sur la pile à l’aide du constructeur pour votre classe dérivée de boîte de dialogue, puis appelez `DoModal` pour créer la fenêtre de la boîte de dialogue et ses contrôles. Si vous souhaitez créer une boîte de dialogue non modale, appelez `Create` dans le constructeur de votre classe de boîte de dialogue.  
   
- Vous pouvez également créer un modèle en mémoire en utilisant un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) structure de données comme décrit dans le SDK Windows. Après avoir construit un `CDialog` de l’objet, appelez [CreateIndirect](#createindirect) pour créer un non modal boîte de dialogue ou appel [InitModalIndirect](#initmodalindirect) et [DoModal](#domodal) pour créer une fenêtre modale boîte de dialogue.  
+ Vous pouvez également créer un modèle en mémoire en utilisant un [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) structure de données comme décrit dans le SDK Windows. Après avoir construit un `CDialog` de l’objet, appelez [CreateIndirect](#createindirect) pour créer un non modal boîte de dialogue ou appel [InitModalIndirect](#initmodalindirect) et [DoModal](#domodal) pour créer une fenêtre modale boîte de dialogue.  
   
  Le mappage de données exchange et la validation est écrit dans une substitution de `CWnd::DoDataExchange` qui est ajouté à votre nouvelle classe de boîte de dialogue. Consultez le [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) fonction membre dans `CWnd` pour plus d’informations sur la fonctionnalité d’échange et validation.  
   
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  Le `Create` fonction membre retourne immédiatement après avoir créé la boîte de dialogue.  
   
- Utiliser le style WS_VISIBLE dans le modèle de boîte de dialogue si la boîte de dialogue doit s’afficher lors de la création de la fenêtre parente. Sinon, vous devez appeler `ShowWindow`. Pour davantage les styles de boîte de dialogue et leur application, consultez le [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) structure dans le SDK Windows et [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) dans le *référence MFC*.  
+ Utiliser le style WS_VISIBLE dans le modèle de boîte de dialogue si la boîte de dialogue doit s’afficher lors de la création de la fenêtre parente. Sinon, vous devez appeler `ShowWindow`. Pour davantage les styles de boîte de dialogue et leur application, consultez le [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) structure dans le SDK Windows et [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) dans le *référence MFC*.  
   
  Utilisez le `CWnd::DestroyWindow` fonction pour détruire une boîte de dialogue créée par le `Create` (fonction).  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>Paramètres  
  *lpDialogTemplate*  
- Pointe vers la mémoire qui contient un modèle de boîte de dialogue permet de créer la boîte de dialogue. Ce modèle est sous la forme d’un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informations de structure et de contrôle, comme décrit dans le SDK Windows.  
+ Pointe vers la mémoire qui contient un modèle de boîte de dialogue permet de créer la boîte de dialogue. Ce modèle est sous la forme d’un [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) informations de structure et de contrôle, comme décrit dans le SDK Windows.  
   
  *pParentWnd*  
  Pointe vers l’objet de fenêtre parent de l’objet de la boîte de dialogue (de type [CWnd](../../mfc/reference/cwnd-class.md)). Si sa valeur est NULL, la boîte de dialogue fenêtre l’objet parent est définie dans la fenêtre principale de l’application.  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>Notes  
  Le `CreateIndirect` fonction membre retourne immédiatement après avoir créé la boîte de dialogue.  
   
- Utiliser le style WS_VISIBLE dans le modèle de boîte de dialogue si la boîte de dialogue doit s’afficher lors de la création de la fenêtre parente. Sinon, vous devez appeler `ShowWindow` pour qu’elle apparaisse. Pour plus d’informations sur la façon dont vous pouvez spécifier les autres styles de boîte de dialogue dans le modèle, consultez la [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) structure dans le SDK Windows.  
+ Utiliser le style WS_VISIBLE dans le modèle de boîte de dialogue si la boîte de dialogue doit s’afficher lors de la création de la fenêtre parente. Sinon, vous devez appeler `ShowWindow` pour qu’elle apparaisse. Pour plus d’informations sur la façon dont vous pouvez spécifier les autres styles de boîte de dialogue dans le modèle, consultez la [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) structure dans le SDK Windows.  
   
  Utilisez le `CWnd::DestroyWindow` fonction pour détruire une boîte de dialogue créée par le `CreateIndirect` (fonction).  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un **int** valeur qui spécifie la valeur de la *%nrésultat* paramètre qui a été transmis à la [CDialog::EndDialog](#enddialog) fonction membre, ce qui est utilisée pour fermer la boîte de dialogue. La valeur de retour est -1 si la fonction Impossible de créer la boîte de dialogue, ou IDABORT si une autre erreur s’est produite, auquel cas la fenêtre de sortie contiendra des informations d’erreur à partir de [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Un **int** valeur qui spécifie la valeur de la *%nrésultat* paramètre qui a été transmis à la [CDialog::EndDialog](#enddialog) fonction membre, ce qui est utilisée pour fermer la boîte de dialogue. La valeur de retour est -1 si la fonction Impossible de créer la boîte de dialogue, ou IDABORT si une autre erreur s’est produite, auquel cas la fenêtre de sortie contiendra des informations d’erreur à partir de [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction membre gère toutes les interactions avec l’utilisateur pendant que la boîte de dialogue est active. C’est ce qui rend la boîte de dialogue modale ; Autrement dit, l’utilisateur ne peut pas interagir avec d’autres fenêtres jusqu'à ce que la boîte de dialogue est fermée.  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>Paramètres  
  *lpDialogTemplate*  
- Pointe vers la mémoire qui contient un modèle de boîte de dialogue permet de créer la boîte de dialogue. Ce modèle est sous la forme d’un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informations de structure et de contrôle, comme décrit dans le SDK Windows.  
+ Pointe vers la mémoire qui contient un modèle de boîte de dialogue permet de créer la boîte de dialogue. Ce modèle est sous la forme d’un [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) informations de structure et de contrôle, comme décrit dans le SDK Windows.  
   
  *hDialogTemplate*  
  Contient un handle de mémoire globale qui contient un modèle de boîte de dialogue. Ce modèle est sous la forme d’un `DLGTEMPLATE` structure et les données pour chaque contrôle dans la boîte de dialogue.  

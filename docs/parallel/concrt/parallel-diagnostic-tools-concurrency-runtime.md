@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538469"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217344"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Outils de diagnostic parallèles (runtime d'accès concurrentiel)
 Visual Studio fournit une prise en charge complète des applications de débogage et de profilage multithread.  
@@ -31,7 +31,7 @@ Visual Studio fournit une prise en charge complète des applications de débogag
  Les outils de profilage fournissent trois vues de données qui affichent des informations graphiques, tabulaires et numériques sur la façon dont une application multithread interagit avec elle-même et avec d’autres programmes. Les vues vous permettent d’identifier rapidement les zones posant problème et de naviguer à partir de points sur les affichages graphiques pour les piles d’appels, appellent sites et le code source. Pour plus d’informations, consultez [Visualiseur concurrentiel](/visualstudio/profiling/concurrency-visualizer).  
   
 ## <a name="event-tracing"></a>Suivi d’événements  
- Le Runtime d’accès concurrentiel utilise [suivi d’événements pour Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW) pour informer les outils d’instrumentation, tels que les profileurs, lorsque certains événements se produisent. Ces événements incluent un planificateur est activé ou désactivé, lorsqu’un contexte commence, se termine, bloque, débloque ou cède, et lorsqu’un algorithme parallèle commence ou se termine.  
+ Le Runtime d’accès concurrentiel utilise [suivi d’événements pour Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) pour informer les outils d’instrumentation, tels que les profileurs, lorsque certains événements se produisent. Ces événements incluent un planificateur est activé ou désactivé, lorsqu’un contexte commence, se termine, bloque, débloque ou cède, et lorsqu’un algorithme parallèle commence ou se termine.  
   
  Des outils tels que le [visualiseur concurrentiel](/visualstudio/profiling/concurrency-visualizer) utilisent cette fonctionnalité ; par conséquent, en général pas avoir à travailler directement avec ces événements. Toutefois, ces événements sont utiles lorsque vous développez un profileur personnalisé ou lorsque vous utilisez comme outils de suivi d’événements [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   

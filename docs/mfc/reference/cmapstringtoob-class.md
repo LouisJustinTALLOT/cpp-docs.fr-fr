@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbeecff722ba25d28ba38a60d3b577ce108b61d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a6eea9b6005498c6c42017731db7ea706af96726
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337354"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216988"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb (classe)
 Classe de collection de dictionnaires qui mappe des objets `CString` uniques à des pointeurs `CObject` .  
@@ -322,8 +322,8 @@ UINT HashKey(LPCTSTR key) const;
   
 |Classe|Fonction membre|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT HashKey (void\***  `key` **) const ;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT HashKey (void\***  `key` **) const ;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT HashKey (void** <strong>\*</strong> `key` **) const ;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT HashKey (void** <strong>\*</strong> `key` **) const ;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT HashKey (LPCTSTR** `key` **) const ;**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT HashKey (LPCTSTR** `key` **) const ;**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey (WORD** `key` **) const ;**|  
@@ -410,8 +410,8 @@ BOOL Lookup(
   
 |Classe|Fonction membre|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Recherche de BOOL (void\***  `key` **, void\* &**  `rValue` **) const ;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Recherche de BOOL (void\***  `key` **, WORD &** `rValue` **) const ;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Recherche de BOOL (void** <strong>\*</strong> `key` **, void\* &**  `rValue` **) const ;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Recherche de BOOL (void** <strong>\*</strong> `key` **, WORD &** `rValue` **) const ;**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Recherche de BOOL (LPCTSTR** `key` **, void\* &**  `rValue` **) const ;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Recherche de BOOL (LPCTSTR** `key` **, CString &** `rValue` **) const ;**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Recherche de BOOL (mot** `key` **, CObject\* &**  `rValue` **) const ;**|  
@@ -470,12 +470,12 @@ CObject*& operator[ ](lpctstr key);
   
 |Classe|Fonction membre|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void\*& operator [] (void\***  `key`  **\);**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**[] WORD &, opérateur (void\***  `key`  **\);**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& operator [] (lpctstr** `key`  **\);**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**[] CString &, opérateur (lpctstr** `key`  **\);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& operator [] (word** `key`  **\);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& operator [] (word** `key`  **\);**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|<strong>void\*& opérateur\[] (void \*</strong>  `key`  **\);**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**MOT &, opérateur\[] (void** <strong>\*</strong> `key`  **\);**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& opérateur\[] (lpctstr** `key`  **\);**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString & opérateur\[] (lpctstr** `key`  **\);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& opérateur\[] (word** `key`  **\);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& opérateur\[] (word** `key`  **\);**|  
   
 ### <a name="example"></a>Exemple  
  Consultez [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pour obtenir la liste de la `CAge` classe utilisée dans tous les exemples de collection.  
@@ -539,8 +539,8 @@ BOOL RemoveKey(LPCTSTR key);
   
 |Classe|Fonction membre|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL RemoveKey (void\***  `key` **) ;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL RemoveKey (void\***  `key` **) ;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL RemoveKey (void** <strong>\*</strong> `key` **) ;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL RemoveKey (void** <strong>\*</strong> `key` **) ;**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **) ;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **) ;**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey (WORD** `key` **) ;**|  
@@ -584,12 +584,12 @@ void SetAt(
   
 |Classe|Fonction membre|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt (void\***  `key` **, void\***  `newValue` **) ;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt (void\***  `key` **, WORD** `newValue` **) ;**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt (LPCTSTR** `key` **, void\***  `newValue` **) ;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, void** <strong>\*</strong> `newValue` **) ;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, WORD** `newValue` **) ;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt (LPCTSTR** `key` **, void** <strong>\*</strong> `newValue` **) ;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt( LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt (WORD** `key` **, CObject\***  `newValue` **) ;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (WORD** `key` **, void\***  `newValue` **) ;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt (WORD** `key` **, CObject** <strong>\*</strong> `newValue` **) ;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (WORD** `key` **, void** <strong>\*</strong> `newValue` **) ;**|  
   
 ### <a name="example"></a>Exemple  
  Consultez [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pour obtenir la liste de la `CAge` classe utilisée dans tous les exemples de collection.  

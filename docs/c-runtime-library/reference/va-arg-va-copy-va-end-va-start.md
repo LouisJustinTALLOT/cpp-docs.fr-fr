@@ -47,12 +47,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f634e713bcf87aa6d97ed4e49595e4c0f8b72ab3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33c8dbfe55008c084daf8f6b9f4700f13281012
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417231"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195427"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -90,7 +90,7 @@ Type d’argument à récupérer.
 Pointeur désignant la liste d’arguments.
 
 *dest*<br/>
-Pointeur vers la liste d’arguments d’être initialisées à partir *src*
+Pointeur vers la liste d’arguments à initialiser à partir de *src*
 
 *src*<br/>
 Pointeur vers la liste initialisée d’arguments à copier vers *dest*.
@@ -104,19 +104,19 @@ Paramètre qui précède le premier argument facultatif.
 
 ## <a name="remarks"></a>Notes
 
-Le **va_arg**, **va_copy**, **va_end**, et **va_start** macros fournissent un moyen pratique d’accéder aux arguments à une fonction lors de la fonction prend un nombre variable d’arguments. Il existe deux versions de ces macros : les macros définies dans STDARG.H, qui sont conformes à la norme ISO C99, et les macros définies dans VARARGS.H qui, bien que dépréciées, sont conservées pour des besoins de compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89.
+Le **va_arg**, **va_copy**, **va_end**, et **va_start** macros fournissent un moyen portable d’accéder aux arguments à une fonction lors de la fonction accepte un nombre variable d’arguments. Il existe deux versions de ces macros : les macros définies dans STDARG.H, qui sont conformes à la norme ISO C99, et les macros définies dans VARARGS.H qui, bien que dépréciées, sont conservées pour des besoins de compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89.
 
 Ces macros considèrent que la fonction accepte un nombre fixe d’arguments obligatoires, suivi d’un nombre variable d’arguments facultatifs. Les arguments obligatoires sont déclarés à la fonction en tant que paramètres ordinaires et sont accessibles via les noms des paramètres. Les arguments facultatifs sont accessibles via les macros contenues dans STDARG.H (ou dans VARARGS.H pour le code qui a été écrit avant la norme ANSI C89). Ils définissent le pointeur désignant le premier argument facultatif de la liste d’arguments, récupère les arguments de la liste et réinitialise le pointeur dès que le traitement de l’argument est terminé.
 
 Les macros standard C, définies dans STDARG.H, sont utilisées comme suit :
 
-- **va_start** définit *arg_ptr* pour le premier argument facultatif dans la liste d’arguments est passé à la fonction. L’argument *arg_ptr* doit avoir la **va_list** type. L’argument *prev_param* est le nom du paramètre obligatoire qui précède immédiatement le premier argument facultatif dans la liste d’arguments. Si *prev_param* est déclarée avec la classe de stockage register, comportement de la macro n’est pas défini. **va_start** doit être utilisée avant **va_arg** est utilisé pour la première fois.
+- **va_start** définit *arg_ptr* pour le premier argument facultatif dans la liste d’arguments est passé à la fonction. L’argument *arg_ptr* doit avoir le **va_list** type. L’argument *prev_param* est le nom du paramètre obligatoire qui précède immédiatement le premier argument facultatif dans la liste d’arguments. Si *prev_param* est déclarée avec la classe de stockage register, le comportement de la macro n’est pas défini. **va_start** doit être utilisée avant **va_arg** est utilisé pour la première fois.
 
-- **va_arg** récupère une valeur de *type* à partir de l’emplacement qui est fourni par *arg_ptr*et est incrémentée *arg_ptr* pour pointer vers l’argument suivant dans la liste par à l’aide de la taille de *type* pour déterminer où l’argument suivant démarre. **va_arg** peut être utilisée n’importe quel nombre de fois dans la fonction pour récupérer les arguments de la liste.
+- **va_arg** récupère une valeur de *type* à partir de l’emplacement indiqué par *arg_ptr*et incrémente *arg_ptr* pour pointer vers l’argument suivant dans la liste par à l’aide de la taille de *type* pour déterminer où commence à l’argument suivant. **va_arg** peut être utilisée n’importe quel nombre de fois dans la fonction pour récupérer les arguments de la liste.
 
-- **va_copy** effectue une copie d’une liste d’arguments dans son état actuel. Le *src* paramètre doit déjà être initialisé avec **va_start**; il peut avoir été mis à jour avec **va_arg** appelle, mais ne doit pas avoir été réinitialisé avec **va_end** . L’argument suivant est récupérée par **va_arg** de *dest* est le même que l’argument suivant est extrait de *src*.
+- **va_copy** effectue une copie d’une liste d’arguments dans son état actuel. Le *src* paramètre doit déjà être initialisé avec **va_start**; il peut avoir été mis à jour avec **va_arg** appelle, mais ne doit pas avoir été réinitialisé avec **va_end** . L’argument suivant est extrait par **va_arg** de *dest* est identique à l’argument suivant est extrait de *src*.
 
-- Une fois que tous les arguments ont été récupérées, **va_end** réinitialise le pointeur vers **NULL**. **va_end** doit être appelée pour chaque liste d’arguments qui est initialisée avec **va_start** ou **va_copy** avant le retour de la fonction.
+- Une fois que tous les arguments ont été récupérées, **va_end** réinitialise le pointeur vers **NULL**. **va_end** doit être appelée sur chaque liste d’arguments qui est initialisé avec **va_start** ou **va_copy** avant le retour de la fonction.
 
 > [!NOTE]
 > Les macros contenues dans VARARGS.H sont obsolètes et sont conservées uniquement pour assurer une compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89. Dans tous les autres cas, utilisez les macros contenues dans STDARGS.H.
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-Notez que **testit** attend que son deuxième paramètre peut être un **int** ou un **char\***. Les arguments passés sont 0xffffffff (un **non signé** **int**, et non un **int**) et **NULL** (en fait une **int**, et non un **char\***). Quand le programme est compilé pour du code natif, il génère cette sortie :
+Notez que **testit** nécessite que son deuxième paramètre soit une **int** ou un **char**<strong>\*</strong>. Arguments transmis sont 0xffffffff (un **non signé** **int**, et non un **int**) et **NULL** (en réalité un **int**, et non un **char**<strong>\*</strong>). Quand le programme est compilé pour du code natif, il génère cette sortie :
 
 ```Output
 -1
@@ -161,7 +161,7 @@ Notez que **testit** attend que son deuxième paramètre peut être un **int** o
 (null)
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<stdio.h> et \<stdarg.h>
 

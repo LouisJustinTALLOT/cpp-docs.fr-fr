@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e4d51687f1f005ad6c6e655e243275508d1529
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bebc146994e440d4dbfbd0bd3a5e29f597140d8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849770"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216328"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem, classe
 Implémente la relation contenant-contenu de document actif.  
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
  Identificateur de la commande à exécuter. Doit se trouver dans le groupe identifié par *pguidCmdGroup*.  
   
  *nCmdExecOpt*  
- Spécifie les options de commande en cours d’exécution. Par défaut, défini pour exécuter la commande sans solliciter l’utilisateur. Consultez [admises](http://msdn.microsoft.com/library/windows/desktop/ms683930) pour obtenir la liste de valeurs.  
+ Spécifie les options de commande en cours d’exécution. Par défaut, défini pour exécuter la commande sans solliciter l’utilisateur. Consultez [admises](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) pour obtenir la liste de valeurs.  
   
  *pguidCmdGroup*  
  Identificateur unique du groupe de commandes. Par défaut, NULL, ce qui spécifie le groupe standard. La commande passée dans *nCmdID* doit appartenir au groupe.  
@@ -172,7 +172,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le [IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455) interface de la vue actuellement active. S’il n’existe aucune vue actuelle, elle retourne NULL.  
+ Un pointeur vers le [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) interface de la vue actuellement active. S’il n’existe aucune vue actuelle, elle retourne NULL.  
   
 ### <a name="remarks"></a>Notes  
  Le décompte de références sur retourné `IOleDocumentView` pointeur n’est pas incrémenté avant d’être retournée par cette fonction.  
@@ -255,19 +255,19 @@ HRESULT QueryCommand(
  identificateur de la commande en cours d’interrogation.  
   
  *pdwStatus*  
- Pointeur vers les indicateurs retournés suite à la requête. Pour obtenir la liste des valeurs possibles, consultez [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
+ Pointeur vers les indicateurs retournés suite à la requête. Pour obtenir la liste des valeurs possibles, consultez [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).  
   
  *pCmdText*  
- Pointeur vers un [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) structure dans laquelle retourner des informations de nom et l’état d’une seule commande. Peut être NULL pour indiquer que l’appelant ne pas besoin de ces informations.  
+ Pointeur vers un [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext) structure dans laquelle retourner des informations de nom et l’état d’une seule commande. Peut être NULL pour indiquer que l’appelant ne pas besoin de ces informations.  
   
  *pguidCmdGroup*  
  Identificateur unique du groupe de commandes ; peut être NULL pour spécifier le groupe standard.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pour obtenir une liste complète des valeurs de retour, consultez [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) dans le SDK Windows.  
+ Pour obtenir une liste complète des valeurs de retour, consultez [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre émule la fonctionnalité de la [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) (méthode), comme décrit dans le SDK Windows.  
+ Cette fonction membre émule la fonctionnalité de la [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) (méthode), comme décrit dans le SDK Windows.  
   
 ##  <a name="release"></a>  COleDocObjectItem::Release  
  Libère la connexion à un élément lié de OLE et la ferme si elle a été ouverte. Ne détruit pas l’élément client.  
