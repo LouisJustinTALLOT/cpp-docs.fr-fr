@@ -63,12 +63,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1da7c4102f15bf4a9c8ec583cf39e621d6872cb0
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451522"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578250"
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec, fonctions
 Chaque fonction dans cette famille charge et exécute un nouveau processus :  
@@ -90,7 +90,7 @@ Chaque fonction dans cette famille charge et exécute un nouveau processus :
 |`v`|`argv`, un tableau de pointeurs vers des arguments de ligne de commande, est passé à `_exec`. Utilisée généralement quand le nombre de paramètres du nouveau processus est variable.|  
   
 ## <a name="remarks"></a>Notes  
- Chaque fonction `_exec` charge et exécute un nouveau processus. Toutes les fonctions `_exec` utilisent la même fonction de système d’exploitation ([CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx)). Les fonctions `_exec` gèrent automatiquement des arguments de chaîne de caractères multioctets de façon appropriée, en identifiant des séquences de caractères multioctets selon la page de codes multioctets actuellement utilisée. Les fonctions `_wexec` sont des versions à caractères larges des fonctions `_exec`. Les fonctions `_wexec` se comportent de la même façon que leurs équivalents de famille `_exec`, sauf qu'elles ne gèrent pas les chaînes de caractères multioctets.  
+ Chaque fonction `_exec` charge et exécute un nouveau processus. Toutes les fonctions `_exec` utilisent la même fonction de système d’exploitation ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). Les fonctions `_exec` gèrent automatiquement des arguments de chaîne de caractères multioctets de façon appropriée, en identifiant des séquences de caractères multioctets selon la page de codes multioctets actuellement utilisée. Les fonctions `_wexec` sont des versions à caractères larges des fonctions `_exec`. Les fonctions `_wexec` se comportent de la même façon que leurs équivalents de famille `_exec`, sauf qu'elles ne gèrent pas les chaînes de caractères multioctets.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -113,7 +113,7 @@ Chaque fonction dans cette famille charge et exécute un nouveau processus :
 >  Les espaces incorporés dans les chaînes peuvent provoquer un comportement inattendu ; par exemple, le passage à `_exec` de la chaîne `"hi there"` a comme conséquence que le nouveau processus obtient deux arguments, `"hi"` et `"there"`. Si l'objectif était que le nouveau processus ouvre un fichier nommé « hi there », le processus échoue. Vous pouvez éviter cela en plaçant la chaîne `"\"hi there\""` entre guillemets.  
   
 > [!IMPORTANT]
->  Ne passez pas d'entrée utilisateur à `_exec` sans vérifier explicitement son contenu. `_exec` entraîne un appel à [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.  
+>  Ne passez pas d'entrée utilisateur à `_exec` sans vérifier explicitement son contenu. `_exec` entraîne un appel à [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.  
   
  Les fonctions `_exec` valident leurs paramètres. Si les paramètres attendus sont des pointeurs Null ou des chaînes vides, ou sont omis, les fonctions `_exec` appellent le gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent -1. Aucun nouveau processus n'est exécuté.  
   
