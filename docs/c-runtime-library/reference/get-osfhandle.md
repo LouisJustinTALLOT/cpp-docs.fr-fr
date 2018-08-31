@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88cf46d6352f0f58a91f4e5571006090ec693c42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569847"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215696"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -61,11 +61,11 @@ Descripteur de fichier existant.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un handle de fichier du système d’exploitation si *fd* n’est valide. Sinon, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **INVALID_HANDLE_VALUE** (-1) et définit **errno** à **EBADF**, indiquant un handle de fichier non valide. Pour éviter un avertissement du compilateur lorsque le résultat est utilisé dans les routines qui attendent un descripteur de fichier Win32, effectuez un cast en un **gérer** type.
+Retourne un handle de fichier du système d’exploitation si *fd* est valide. Sinon, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **INVALID_HANDLE_VALUE** (-1) et définit **errno** à **EBADF**, indiquant un handle de fichier non valide. Pour éviter un avertissement du compilateur lorsque le résultat est utilisé dans les routines qui attendent un descripteur de fichier Win32, effectuer un cast en un **gérer** type.
 
 ## <a name="remarks"></a>Notes
 
-Pour fermer un fichier descripteur de fichier dont le système d’exploitation (OS) est obtenu en **_get_osfhandle**, appelez [_close](close.md) sur le descripteur de fichier *fd*. N’appelez pas **CloseHandle** sur la valeur de retour de cette fonction. Le handle de fichier du système d’exploitation sous-jacent est détenu par le *fd* descripteur de fichier et est fermé lorsque [_close](close.md) est appelée sur *fd*. Si le descripteur de fichier est détenu par un **fichier \***  flux, puis en appelant [fclose](fclose-fcloseall.md) sur qui **fichier \***  flux ferme à la fois le descripteur de fichier et le handle de fichier du système d’exploitation sous-jacent. Dans ce cas, n’appelez pas [_close](close.md) sur le descripteur de fichier.
+Pour fermer un fichier dont handle de fichier du système d’exploitation (se) est obtenu en **_get_osfhandle**, appelez [_close](close.md) sur le descripteur de fichier *fd*. N’appelez pas **CloseHandle** sur la valeur de retour de cette fonction. Le handle de fichier du système d’exploitation sous-jacent est détenu par le *fd* descripteur de fichier et est fermé lorsque [_close](close.md) est appelée sur *fd*. Si le descripteur de fichier est détenu par un `FILE *` flux, puis en appelant [fclose](fclose-fcloseall.md) sur qui `FILE *` flux ferme le descripteur de fichier et le handle de fichier du système d’exploitation sous-jacent. Dans ce cas, n’appelez pas [_close](close.md) sur le descripteur de fichier.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541749"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217039"
 ---
 # <a name="coleipframewndex-class"></a>Coleipframewndex, classe
 La classe `COleIPFrameWndEx` implémente un conteneur OLE qui prend en charge MFC. Vous devez dériver la classe de fenêtres frames sur place pour votre application depuis la classe `COleIPFrameWndEx` , au lieu de la dériver de la classe [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.   
@@ -929,7 +929,7 @@ virtual void WinHelp(
  Spécifie les données en fonction des besoins pour le type d’aide spécifié par *nCmd*.  
   
  [in] *nCmd*  
- Spécifie le type d’aide demandée. Pour obtenir la liste de valeurs possibles et comment elles affectent le *dwData* paramètre, consultez le [fonction WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) dans le SDK Windows.  
+ Spécifie le type d’aide demandée. Pour obtenir la liste de valeurs possibles et comment elles affectent le *dwData* paramètre, consultez le [fonction WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
   

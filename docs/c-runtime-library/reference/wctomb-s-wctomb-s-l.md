@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c5bdc05f903c1313d4844be8d5fc4fa619505670
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450906"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195117"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -101,13 +101,13 @@ Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de 
 
 ## <a name="remarks"></a>Notes
 
-Le **wctomb_s** fonction convertit son *wchar* l’argument de caractère multioctet correspondant et stocke le résultat à *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme.
+Le **wctomb_s** fonction convertit son *wchar* l’argument de caractère multioctet correspondant et stocke le résultat au niveau *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme.
 
-Si **wctomb_s** convertit le caractère large à un caractère multioctet, il place le nombre d’octets (ce qui n’est jamais supérieur **MB_CUR_MAX**) dans le caractère large dans l’entier vers lequel pointé *pRetValue*. Si *wchar* est le caractère null de caractères larges (L '\0'), **wctomb_s** remplit *pRetValue* avec 1. Si le pointeur de la cible *mbchar* est **NULL**, **wctomb_s** affecte la valeur 0 *pRetValue*. Si la conversion n’est pas possible dans les paramètres régionaux, **wctomb_s** place -1 dans *pRetValue*.
+Si **wctomb_s** convertit le caractère large en caractère multioctet, elle place le nombre d’octets (qui n’est jamais supérieure à **MB_CUR_MAX**) dans le caractère large dans l’entier désigné par *pRetValue*. Si *wchar* est le caractère null de caractères larges (L '\0'), **wctomb_s** remplit *pRetValue* avec 1. Si le pointeur cible *mbchar* est **NULL**, **wctomb_s** affecte la valeur 0 *pRetValue*. Si la conversion n’est pas possible dans les paramètres régionaux actuels, **wctomb_s** place -1 dans *pRetValue*.
 
-**wctomb_s** utilise les paramètres régionaux actuels pour plus d’informations dépendant des paramètres régionaux ; **_wctomb_s_l** est identique, sauf qu’elle utilise les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**wctomb_s** utilise les paramètres régionaux actuels pour plus d’informations dépendantes des paramètres régionaux ; **_wctomb_s_l** est identique, sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -152,4 +152,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

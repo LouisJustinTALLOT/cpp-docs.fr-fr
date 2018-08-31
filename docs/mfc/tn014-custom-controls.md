@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7ab10a6c0c53bd9aba87ddea594e689b3142b4c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 67dab7c8e280f8fbbdcc66beef031d1e9430ac1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027259"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215806"
 ---
 # <a name="tn014-custom-controls"></a>TN014 : contrôles personnalisés
 
@@ -122,7 +122,7 @@ L'exemple le plus typique d'un bouton de dessin automatique est un bouton bitmap
 
 Occasionnellement, vous souhaiterez modifier la fonctionnalité d'objet qui existe déjà. Les exemples précédents requièrent que vous personnalisiez les contrôles avant qu'ils soient créés. Le sous-classement dynamique permet de personnaliser un contrôle qui a déjà été créé.
 
-Le sous-classement est le terme Windows pour remplacer le [WndProc](http://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) d’une fenêtre avec un texte personnalisé `WndProc` et appeler l’ancien `WndProc` pour les fonctionnalités par défaut.
+Le sous-classement est le terme Windows pour remplacer le [WndProc](https://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) d’une fenêtre avec un texte personnalisé `WndProc` et appeler l’ancien `WndProc` pour les fonctionnalités par défaut.
 
 Cela ne doit pas être confondu avec la dérivation de classe C++. Pour une clarification, les termes du contrat de C++ *classe de base* et *classe dérivée* sont analogues aux *superclasse* et *sous-classe* dans le Windows modèle d’objet. La dérivation C++ MFC et le sous-classement Windows sont fonctionnellement similaires, à moins que C++ ne prenne pas en charge le sous-classement dynamique.
 

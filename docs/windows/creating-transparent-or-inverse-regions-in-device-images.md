@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5ed2a88e8963bae06e33835f3982d8651445929
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b5bc95e75cc9a58dd6f01b8a4ca537709941f6bf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599518"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215938"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Création de régions transparentes ou inversées dans des images de périphérique (Éditeur d'images pour les icônes)
 
@@ -44,7 +44,7 @@ Dans le [Éditeur d’images](../windows/image-editor-for-icons.md), l’image d
 Les couleurs de l’écran et inverse que vous appliquez aux icônes et curseurs mettre en forme et la couleur de l’image dérivée ou désignent des régions inversées. Les couleurs indiquent les parties de l’image qui possèdent ces attributs. Vous pouvez modifier les couleurs qui représentent les attributs de couleur de l’écran et couleur inversée lors de la modification. Ces modifications n’affectent pas l’apparence de l’icône ou le curseur dans votre application.
 
 > [!NOTE]
-> Les boîtes de dialogue et les commandes de menu qui s’affichent peuvent être différentes de celles décrites dans l’**aide**, en fonction de vos paramètres actifs ou de l’édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Les boîtes de dialogue et les commandes de menu qui s’affichent peuvent être différentes de celles décrites dans l’**aide**, en fonction de vos paramètres actifs ou de l’édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ### <a name="to-create-transparent-or-inverse-regions"></a>Pour créer des régions transparentes ou inversées
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f3113cf4176c3f582a210e89e732d5e0d92b62d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c39a91fb01f8a67c9e6eb2e5189cf1b81ba4bd51
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882830"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195210"
 ---
 # <a name="cglobalheap-class"></a>Cglobalheap, classe
 Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) en utilisant les fonctions de tas global Win32.  
@@ -55,7 +55,7 @@ class CGlobalHeap : public IAtlMemMgr
  `CGlobalHeap` implémente les fonctions d’allocation de mémoire en utilisant les fonctions de tas global Win32.  
   
 > [!NOTE]
->  Les fonctions de tas global sont plus lentes que les autres fonctions de gestion de mémoire et ne fournissent pas autant de fonctionnalités. Par conséquent, les nouvelles applications doivent utiliser le [fonctions de tas](http://msdn.microsoft.com/library/windows/desktop/aa366711). Elles sont disponibles dans le [CWin32Heap](../../atl/reference/cwin32heap-class.md) classe. Fonctions globales sont toujours utilisées par DDE et les fonctions de Presse-papiers.  
+>  Les fonctions de tas global sont plus lentes que les autres fonctions de gestion de mémoire et ne fournissent pas autant de fonctionnalités. Par conséquent, les nouvelles applications doivent utiliser le [fonctions de tas](/windows/desktop/Memory/heap-functions). Elles sont disponibles dans le [CWin32Heap](../../atl/reference/cwin32heap-class.md) classe. Fonctions globales sont toujours utilisées par DDE et les fonctions de Presse-papiers.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Notes  
  Appelez [CGlobalHeap::Free](#free) ou [CGlobalHeap::Reallocate](#reallocate) pour libérer la mémoire allouée par cette méthode.  
   
- Implémenté à l’aide [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) avec un paramètre d’indicateur de GMEM_FIXED.  
+ Implémenté à l’aide [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) avec un paramètre d’indicateur de GMEM_FIXED.  
   
 ##  <a name="free"></a>  CGlobalHeap::Free  
  Appelez cette méthode pour libérer un bloc de mémoire allouée par ce gestionnaire de mémoire.  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire. NULL est une valeur valide et ne fait rien.  
   
 ### <a name="remarks"></a>Notes  
- Implémenté à l’aide [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
+ Implémenté à l’aide [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree).  
   
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  Appelez cette méthode pour obtenir la taille d’un bloc de mémoire allouée par ce gestionnaire de mémoire allouée.  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  Retourne la taille de bloc de mémoire alloué en octets.  
   
 ### <a name="remarks"></a>Notes  
- Implémenté à l’aide [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
+ Implémenté à l’aide [GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize).  
   
 ##  <a name="reallocate"></a>  CGlobalHeap::Reallocate  
  Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>Notes  
  Appelez [CGlobalHeap::Free](#free) pour libérer la mémoire allouée par cette méthode.  
   
- Implémenté à l’aide [GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
+ Implémenté à l’aide [GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   

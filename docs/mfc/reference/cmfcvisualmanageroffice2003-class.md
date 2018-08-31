@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540226"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217087"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003, classe
 `CMFCVisualManagerOffice2003` Donne à une application une apparence Microsoft Office 2003.  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|L’infrastructure appelle cette méthode lorsqu’il dessine une mise en surbrillance rapide-menu bouton Personnaliser. (Substitue `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|L’infrastructure appelle cette méthode lorsqu’il dessine une commande de menu en surbrillance. (Substitue `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|L’infrastructure appelle cette fonction lorsque les couleurs système changent. (Substitue `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Spécifie si le Gestionnaire visuel doit utiliser des couleurs de thème de Windows XP natifs ou couleurs obtenues à partir de [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Spécifie si le Gestionnaire visuel doit utiliser des couleurs de thème de Windows XP natifs ou couleurs obtenues à partir de [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Spécifie que le thème global de Windows XP doit être utilisé.|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Spécifie si le Gestionnaire visuel utilise un thème global.|  
   
@@ -451,10 +451,10 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="parameters"></a>Paramètres  
  [in] *clrBaseGroupBackground*  
- Référence à un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) pour définir la couleur d’arrière-plan.  
+ Référence à un [COLORREF](/windows/desktop/gdi/colorref) pour définir la couleur d’arrière-plan.  
   
  [in] *clrBaseGroupBorder*  
- Référence à un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) pour définir la couleur de bordure.  
+ Référence à un [COLORREF](/windows/desktop/gdi/colorref) pour définir la couleur de bordure.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -466,7 +466,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) qui contient la couleur de ton de la mise en surbrillance.  
+ Retourne un [COLORREF](/windows/desktop/gdi/colorref) qui contient la couleur de ton de la mise en surbrillance.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -491,7 +491,7 @@ virtual void GetTabFrameColors(
  Pointeur vers la fenêtre à onglets dans lequel le frame Dessine un onglet.  
   
  [out] *clrDark*  
- Une référence à un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre où cette méthode stocke la couleur de la bordure sombre d’un onglet.  
+ Une référence à un [COLORREF](/windows/desktop/gdi/colorref) paramètre où cette méthode stocke la couleur de la bordure sombre d’un onglet.  
   
  [out] *clrBlack*  
  Une référence à un paramètre COLORREF où cette méthode stocke la couleur de la bordure de la fenêtre de l’onglet. La couleur par défaut pour la bordure est noire.  
@@ -536,7 +536,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) qui contient la couleur si désactivé.  
+ Retourne un [COLORREF](/windows/desktop/gdi/colorref) qui contient la couleur si désactivé.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1095,7 +1095,7 @@ virtual COLORREF OnDrawPaneCaption(
  Un rectangle qui spécifie les limites des boutons de légende.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur du texte de la légende.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur du texte de la légende.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1208,7 +1208,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Pointeur vers une barre de légende. Le Gestionnaire visuel dessine cela [cmfcribboncontextcaption, classe](../../mfc/reference/cmfcribboncontextcaption-class.md).  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) paramètre qui indique la couleur du texte sur la barre de légende.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la couleur du texte sur la barre de légende.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour personnaliser l’apparence de la barre de légende pour une catégorie de ruban.  
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  L’infrastructure appelle cette méthode dans le cadre du traitement du message WM_SYSCOLORCHANGE. Substituez cette méthode dans un gestionnaire visuel dérivée si vous souhaitez exécuter du code personnalisé lorsque les couleurs changent dans votre application.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Spécifie si le Gestionnaire visuel doit utiliser des couleurs de thème de Windows XP natifs ou couleurs obtenues à partir de [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Spécifie si le Gestionnaire visuel doit utiliser des couleurs de thème de Windows XP natifs ou couleurs obtenues à partir de [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

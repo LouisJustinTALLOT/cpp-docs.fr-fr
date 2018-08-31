@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b05b7f9cab2cf1f4244de7b0694e2069e87e4b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b9fe1bcce5290d7e977dc423f146bb3a5b66d484
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545757"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216082"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap, classe
 La classe `concurrent_unordered_multimap` est un conteneur d'accès concurrentiel sécurisé qui contrôle une séquence à longueur variable d'éléments de type `std::pair<const K, _Element_type>`. La séquence est représentée d'une manière à permettre les opérations d'ajout d'accès concurrentiel sécurisé, d'accès à un élément, d'accès à un itérateur et de traversée d'itérateur.  
@@ -305,7 +305,7 @@ std::pair<const_iterator,
  La valeur de clé à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [paire](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) où le premier élément est un itérateur au début et le deuxième élément est un itérateur à la fin de la plage.  
+ Un [paire](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) où le premier élément est un itérateur au début et le deuxième élément est un itérateur à la fin de la plage.  
   
 ### <a name="remarks"></a>Notes  
  Il est possible pour les insertions simultanées provoquer des clés supplémentaires à insérer après l’itérateur de début et avant l’itérateur de fin.  
