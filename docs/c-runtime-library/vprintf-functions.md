@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127cf8683d4d2627bdc19bef4a9ddfa93e3d7387
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418378"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216932"
 ---
 # <a name="vprintf-functions"></a>Fonctions vprintf
 Chacune de ces fonctions `vprintf` prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans une destination particulière. Les fonctions diffèrent dans la validation des paramètres effectuée, l’utilisation de chaînes à caractères larges ou sur un octet, la destination de sortie et la prise en charge de la spécification de l’ordre dans lequel les paramètres sont utilisés dans la chaîne de format.  
@@ -89,7 +89,7 @@ Chacune de ces fonctions `vprintf` prend un pointeur désignant une liste d’ar
  Pour **vsprintf**, `vswprintf`, `_vsnprintf` et `_vsnwprintf`, si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
   
 > [!IMPORTANT]
->  Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795). Si vous utilisez les versions sécurisées de ces fonctions (avec le suffixe **_s** ou **_p**), une chaîne de format de fournie par l’utilisateur risque de déclencher une exception de paramètre non valide si la chaîne fournie par l’utilisateur contient des caractères de mise en forme non valides.  
+>  Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns). Si vous utilisez les versions sécurisées de ces fonctions (avec le suffixe **_s** ou **_p**), une chaîne de format de fournie par l’utilisateur risque de déclencher une exception de paramètre non valide si la chaîne fournie par l’utilisateur contient des caractères de mise en forme non valides.  
   
 ## <a name="see-also"></a>Voir aussi  
  [E/S de flux](../c-runtime-library/stream-i-o.md)   

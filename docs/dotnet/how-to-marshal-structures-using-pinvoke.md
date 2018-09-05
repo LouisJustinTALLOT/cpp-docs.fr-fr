@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219882"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689508"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Comment : marshaler des structures à l’aide de PInvoke
 Ce document explique comment les fonctions natives qui acceptent les structures de style C peuvent être appelées à partir de fonctions managées par à l’aide de P/Invoke. Bien que nous vous recommandons d’utiliser les fonctionnalités d’interopérabilité C++ au lieu de P/Invoke, car P/Invoke offre peu une erreur de génération de rapports n’est pas de type sécurisé et peut être fastidieux à implémenter, si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option. Sinon, consultez les documents suivants :  
@@ -34,7 +34,7 @@ Ce document explique comment les fonctions natives qui acceptent les structures 
   
  Par défaut, les structures natives et managées sont disposés différemment en mémoire, pour réussir le passage de structures entre la limite managée/nécessite des étapes supplémentaires pour conserver l’intégrité des données.  
   
- Ce document explique les étapes requises pour définir des équivalents managés de structures natives et comment les structures qui en résulte peuvent être passés aux fonctions non managées. Ce document part du principe que simple structures : ceux qui ne contiennent pas de chaînes ou pointeurs, sont utilisés. Pour plus d’informations sur l’interopérabilité non blittable, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke ne peut pas avoir de types non blittables comme valeur de retour. Types blittables ont la même représentation dans le code managé et non managé. Pour plus d’informations, consultez [Types blittables et Non blittables](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ Ce document explique les étapes requises pour définir des équivalents managés de structures natives et comment les structures qui en résulte peuvent être passés aux fonctions non managées. Ce document part du principe que simple structures : ceux qui ne contiennent pas de chaînes ou pointeurs, sont utilisés. Pour plus d’informations sur l’interopérabilité non blittable, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke ne peut pas avoir de types non blittables comme valeur de retour. Types blittables ont la même représentation dans le code managé et non managé. Pour plus d’informations, consultez [Types blittables et Non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types).  
   
  Marshaling simple, des structures blittables entre la limite managée/nécessite tout d’abord que les versions managées de chaque structure native soit définie. Ces structures peuvent avoir n’importe quel nom juridique ; Il n’existe aucune relation entre la version native et managée des deux structures autre que leur mise en page de données. Par conséquent, il est essentiel que la version gérée contienne des champs qui sont la même taille et dans le même ordre que la version native. (Il n’existe aucun mécanisme pour garantir que les versions managées et natives de la structure sont équivalentes, donc les incompatibilités ne deviendra apparentes jusqu'à l’exécution. Il est la responsabilité du programmeur pour garantir que les deux structures ont la même disposition de données).  
   

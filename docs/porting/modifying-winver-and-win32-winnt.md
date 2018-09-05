@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4007f8b07b78618f4fdd8031d0f6dab5f1c12916
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6593168e87f8a0dde1dd996aeadf2d225adbbe72
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912639"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194177"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modification de WINVER et _WIN32_WINNT
 
@@ -59,11 +59,11 @@ Ceci permet de cibler le système d'exploitation Windows 10. Ces valeurs sont r�
 Si vous ne voyez pas toutes ces versions de Windows dans votre copie de SDKDDKVer.h, vous utilisez probablement une ancienne version du SDK Windows. Par défaut, les projets Win32 dans Visual Studio 2017 utilisent le SDK Windows 10.   
   
 > [!NOTE]
->  Il n'est pas certain que les valeurs fonctionnent si vous incluez des en-têtes MFC internes dans votre application.  
+> Il n'est pas certain que les valeurs fonctionnent si vous incluez des en-têtes MFC internes dans votre application.  
   
-Vous pouvez également définir cette macro à l'aide de l'option de compilateur **/D** . Pour plus d'informations, consultez [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
+Vous pouvez également définir cette macro à l'aide de l'option de compilateur `/D`. Pour plus d'informations, consultez [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
-Pour plus d’informations sur les significations de ces macros, consultez [Utilisation des en-têtes Windows](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
+Pour plus d’informations sur les significations de ces macros, consultez [Utilisation des en-têtes Windows](/windows/desktop/WinProg/using-the-windows-headers).  
   
 ## <a name="see-also"></a>Voir aussi  
 

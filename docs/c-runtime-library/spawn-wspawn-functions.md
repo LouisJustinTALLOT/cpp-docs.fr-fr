@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0e5a71faae381bc17b92d6b23047b9632913c2fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451769"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201261"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn, fonctions
 Chacune des fonctions `_spawn` crée et exécute un nouveau processus :  
@@ -134,7 +134,7 @@ Chacune des fonctions `_spawn` crée et exécute un nouveau processus :
 >  Les espaces incorporés dans les chaînes peuvent provoquer un comportement inattendu ; par exemple, le passage à `_spawn` de la chaîne `"hi there"` a comme conséquence que le nouveau processus obtient deux arguments, `"hi"` et `"there"`. Si l'objectif était que le nouveau processus ouvre un fichier nommé « hi there », le processus échoue. Vous pouvez éviter cela en plaçant la chaîne `"\"hi there\""` entre guillemets.  
   
 > [!IMPORTANT]
->  Ne passez pas d'entrée utilisateur à `_spawn` sans vérifier explicitement son contenu. `_spawn` entraîne un appel à [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.  
+>  Ne passez pas d'entrée utilisateur à `_spawn` sans vérifier explicitement son contenu. `_spawn` entraîne un appel à [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.  
   
  Vous pouvez passer des pointeurs d'arguments en tant qu'arguments distincts (dans `_spawnl`, `_spawnle`, `_spawnlp` et `_spawnlpe`) ou en tant que tableau de pointeurs (dans `_spawnv`, `_spawnve`, `_spawnvp` et `_spawnvpe`). Vous devez passer au moins un argument, `arg0` ou `argv`[0], au processus engendré. Par convention, cet argument correspond au nom du programme tel que vous le taperiez sur la ligne de commande. Une valeur différente ne produit pas d'erreur.  
   
@@ -154,7 +154,7 @@ Chacune des fonctions `_spawn` crée et exécute un nouveau processus :
 ## <a name="redirecting-output"></a>Redirection de la sortie  
  Si vous appelez `_spawn` à partir d'une DLL ou d'une application GUI et souhaitez rediriger la sortie vers un canal, deux options sont possibles :  
   
--   Utilisez l’API Win32 pour créer un canal, appelez [AllocConsole](http://msdn.microsoft.com/library/windows/desktop/ms681944), définissez les valeurs de handle dans la structure de démarrage, puis appelez [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425).  
+-   Utilisez l’API Win32 pour créer un canal, appelez [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944), définissez les valeurs de handle dans la structure de démarrage, puis appelez [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).  
   
 -   Appelez [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md), ce qui crée un canal et appelle l’application à l’aide de **cmd.exe /c** (ou **command.exe /c**).  
   

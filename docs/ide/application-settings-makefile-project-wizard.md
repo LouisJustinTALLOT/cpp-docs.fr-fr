@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07459cd4971ea6aec95b632e5c03618248cca401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330737"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677326"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Paramètres de l'application, Assistant Projet Makefile
 Fournissez les informations pour le projet. Les options que vous spécifiez s’affichent dans la [page de propriétés](../ide/working-with-project-properties.md) du projet. Une fois que vous avez créé le projet, vous pouvez afficher et modifier chacune des options suivantes dans la page **Nmake** de la page de propriétés du projet.  
@@ -44,4 +44,4 @@ Fournissez les informations pour le projet. Les options que vous spécifiez s’
  [Types de projets Visual C++](../ide/visual-cpp-project-types.md)   
  [Création de projets de bureau à l’aide des Assistants Application](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Pages de propriétés](../ide/property-pages-visual-cpp.md)   
- [Déploiement d’applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ 

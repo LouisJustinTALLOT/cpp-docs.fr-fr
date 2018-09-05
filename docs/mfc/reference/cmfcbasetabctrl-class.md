@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198566"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693924"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implémente les fonctionnalités de base pour les fenêtres à onglets.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Recalcule la disposition interne d'une fenêtre à onglets.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Supprime tous les onglets de la fenêtre à onglets.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Supprime un onglet d'une fenêtre à onglets.|  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Spécifie la nouvelle couleur d’arrière-plan.  
   
 ### <a name="remarks"></a>Notes  
- Le framework Obtient la couleur d’arrière-plan par défaut des onglets actifs à partir de la [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)(méthode).  
+ Le framework Obtient la couleur d’arrière-plan par défaut des onglets actifs à partir de la [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)(méthode).  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Définit la couleur du texte des onglets actifs.  
@@ -1858,7 +1858,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
  Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui spécifie la nouvelle couleur de texte.  
   
 ### <a name="remarks"></a>Notes  
- Par défaut, le framework Obtient la couleur du texte à partir de [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Remplacer cette couleur par défaut en utilisant le `SetActiveTabTextColor` (méthode).  
+ Par défaut, le framework Obtient la couleur du texte à partir de [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Remplacer cette couleur par défaut en utilisant le `SetActiveTabTextColor` (méthode).  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Définit les couleurs du contrôle onglet qui utilise l’infrastructure en mode couleur automatique.  

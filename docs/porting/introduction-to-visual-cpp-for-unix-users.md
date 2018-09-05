@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f05d7d3d3d3fd6b40a5477b7765b89409747d3ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5789e353a6e15d4da3f5754d9d4d91821359d14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845864"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578248"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduction à Visual C++ pour les utilisateurs UNIX
 
@@ -37,7 +37,7 @@ Utilisez l’environnement de développement intégré (IDE) de Visual Studio po
   
 ## <a name="debugging-your-code"></a>Débogage de votre code  
 
-Si vous utilisez la ligne de commande et exécutez vos applications sur votre station de travail de développement, vous verrez qu'une boîte de dialogue permettant d'exécuter le débogueur [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] s'affiche quand votre code rencontre une violation d'accès mémoire, une exception non gérée ou d'autres erreurs irrécupérables. Si vous cliquez sur **OK**, l’environnement de développement Visual Studio se lance et le débogueur s’ouvre au point de défaillance. Il est possible de déboguer vos applications de cette façon et, dans ce cas, votre code source ne sera disponible que si vous avez effectué la compilation avec le commutateur [/Z7, /Zi, /ZI (format des informations de débogage)](../build/reference/z7-zi-zi-debug-information-format.md). Pour plus d’informations, consultez [Débogage du code natif](/visualstudio/debugger/debugging-native-code) et [Utilisation de l’IDE de Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+Si vous utilisez la ligne de commande et exécutez vos applications sur votre station de travail de développement, vous pouvez voir qu’une boîte de dialogue permettant d’exécuter le débogueur Visual Studio s’affiche quand votre code rencontre une violation d’accès mémoire, une exception non prise en charge ou d’autres erreurs irrécupérables. Si vous cliquez sur **OK**, l’environnement de développement Visual Studio se lance et le débogueur s’ouvre au point de défaillance. Il est possible de déboguer vos applications de cette façon et, dans ce cas, votre code source ne sera disponible que si vous avez effectué la compilation avec le commutateur [/Z7, /Zi, /ZI (format des informations de débogage)](../build/reference/z7-zi-zi-debug-information-format.md). Pour plus d’informations, consultez [Débogage du code natif](/visualstudio/debugger/debugging-native-code) et [Utilisation de l’IDE de Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ## <a name="using-the-development-environment"></a>Utilisation de l'environnement de développement  
 
@@ -47,7 +47,7 @@ Les applications composées de plusieurs bibliothèques et fichiers exécutables
   
 ## <a name="importing-your-existing-code"></a>Importation de votre code existant 
  
-Vous pouvez utiliser le compilateur C++ pour générer du code existant qui est configuré pour être compilé avec ou sans makefile, et le placer dans un projet [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Pour plus d’informations, consultez [Guide pratique pour créer un projet C++ à partir d’un code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+Vous pouvez utiliser le compilateur C++ pour générer du code existant configuré pour être compilé avec ou sans makefile, et le placer dans un projet Visual Studio. Pour plus d’informations, consultez [Guide pratique pour créer un projet C++ à partir d’un code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Création d'un projet  
 
@@ -61,13 +61,13 @@ Quand vous créez un projet, vous devez lui attribuer un nom. Par défaut, le no
 
 Le compilateur Microsoft Visual C++ implémente plusieurs extensions du langage de programmation C++ standard pour prendre en charge la programmation sur les systèmes d’exploitation Windows. Ces extensions servent à spécifier des attributs de classe de stockage, des conventions d'appel de fonction et des fonctions d'adressage, entre autres choses. Pour obtenir une liste complète de toutes les extensions C++ prises en charge, consultez [Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
-Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à l’aide de l’option **/Za** du compilateur. Cette option est recommandée si vous souhaitez écrire du code devant s'exécuter sur plusieurs plateformes. Pour plus d’informations sur l’option **/Za** du compilateur, consultez [/Za, /Ze (désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md). Pour plus d’informations sur la conformité du compilateur C++, consultez [Conformité du langage Visual C++](../visual-cpp-language-conformance.md) et [Comportement non standard](../cpp/nonstandard-behavior.md).  
+Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à l'aide de l'option `/Za` du compilateur. Cette option est recommandée si vous souhaitez écrire du code devant s'exécuter sur plusieurs plateformes. Pour plus d’informations sur l’option de compilateur `/Za`, consultez [/Za, /Ze (désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md). Pour plus d’informations sur la conformité du compilateur C++, consultez [Conformité du langage Visual C++](../visual-cpp-language-conformance.md) et [Comportement non standard](../cpp/nonstandard-behavior.md).  
   
 ## <a name="precompiled-headers"></a>En-têtes précompilés  
 
 Les compilateurs Microsoft C et C++ offrent des options pour la précompilation du code en C ou C++, y compris du code incorporé. Grâce à cela, vous pouvez compiler un corps de code stable, stocker l'état compilé du code dans un fichier et, lors des compilations suivantes, combiner le code précompilé avec du code qui est toujours en cours de développement. Les compilations ultérieures sont plus rapides, car le code stable n'a pas besoin d'être recompilé.  
   
-Par défaut, tout code précompilé est spécifié dans les fichiers **stdafx.h** et **stdafx.cpp**. L’Assistant **Nouveau projet** créera automatiquement ces fichiers, sauf si vous désélectionnez l’option **En-tête précompilé**. Pour plus d’informations, consultez [Création de fichiers d’en-têtes précompilés](../build/reference/creating-precompiled-header-files.md).  
+Par défaut, le code précompilé est spécifié dans les fichiers stdafx.h et stdafx.cpp. L’Assistant **Nouveau projet** créera automatiquement ces fichiers, sauf si vous désélectionnez l’option **En-tête précompilé**. Pour plus d’informations, consultez [Création de fichiers d’en-têtes précompilés](../build/reference/creating-precompiled-header-files.md).  
   
 ## <a name="related-sections"></a>Rubriques connexes  
 

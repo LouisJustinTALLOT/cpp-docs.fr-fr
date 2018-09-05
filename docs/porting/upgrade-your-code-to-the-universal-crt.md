@@ -8,12 +8,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2057f3dc8abc3f661010300671b67ad5c37a87d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1091a28448aa6531aa909117e0284e19bbcc7cd8
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850598"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578443"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Mettre à niveau votre code vers le CRT universel
 
@@ -35,7 +35,7 @@ Les DLL UCRT commerciales et de débogage se trouvent dans des emplacements dist
 
 La bibliothèque de prise en charge du runtime spécifique au compilateur C et C++, **vcruntime**, contient le code nécessaire pour prendre en charge le démarrage du programme et les fonctionnalités telles que la gestion des exceptions et les intrinsèques. La bibliothèque et ses fichiers d’en-tête se trouvent toujours dans le dossier spécifique à la version Microsoft Visual Studio dans le répertoire Program Files ou Program files (x86). Dans Visual Studio 2017, les en-têtes se trouvent sous Microsoft Visual Studio\\2017\\_édition_\\VC\\Tools\\MSVC\\_version_bib_\\include, tandis que les bibliothèques de liens se trouvent sous Microsoft Visual Studio\\2017\\_édition_\\VC\\Tools\\MSVC\\_version_bib_\\lib\\_architecture_, où _édition_ est l’édition de Visual Studio installée, _version_bib_ la version des bibliothèques et _architecture_ l’architecture du processeur. Des bibliothèques de liens pour OneCore et Store sont également présentes dans le dossier des bibliothèques. Les versions commerciale et de débogage de la bibliothèque statique sont libvcruntime.lib et libvcruntimed.lib. Les bibliothèques stub commerciale et de débogage de liens dynamiques sont vcruntime.lib et vcruntimed.lib, respectivement.  
   
-Quand vous mettez à jour vos projets Visual C++, si vous avez défini la propriété **Éditeur de liens** **Ignorer toutes les bibliothèques par défaut** du projet sur **Oui** ou que vous utilisez l’option /NODEFAULTLIB de l’éditeur de liens sur la ligne de commande, vous devez mettre à jour votre liste de bibliothèques pour inclure les nouvelles bibliothèques refactorisées. Remplacez l’ancienne bibliothèque CRT, par exemple, libcmt.lib, libcmtd.lib, msvcrt.lib ou msvcrtd.lib, par les bibliothèques refactorisées équivalentes. Pour plus d’informations sur les bibliothèques spécifiques à utiliser, consultez [Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md).  
+Quand vous mettez à jour vos projets Visual C++, si vous avez affecté à la propriété **Éditeur de liens** **Ignorer toutes les bibliothèques par défaut** du projet la valeur **Oui**, ou si vous utilisez l’option `/NODEFAULTLIB` de l’éditeur de liens sur la ligne de commande, vous devez mettre à jour votre liste de bibliothèques pour inclure les nouvelles bibliothèques refactorisées. Remplacez l’ancienne bibliothèque CRT, par exemple, libcmt.lib, libcmtd.lib, msvcrt.lib ou msvcrtd.lib, par les bibliothèques refactorisées équivalentes. Pour plus d’informations sur les bibliothèques spécifiques à utiliser, consultez [Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md).  
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Déploiement et redistribution du CRT universel
   

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52284db986ec642724f97aae75a9af004339b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392469"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200961"
 ---
 # <a name="process-and-environment-control"></a>Contrôle de processus et d'environnement
 
@@ -56,7 +56,7 @@ Utilisez les routines de contrôle de processus pour démarrer, arrêter et gér
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Appeler des fonctions inscrites par **atexit** et **_onexit**, vider toutes les mémoires tampons, fermer tous les fichiers ouverts et terminer le processus|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Terminer le processus immédiatement sans appeler **atexit** ou **_onexit**, ou vider les mémoires tampons|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Obtenir la valeur de la variable d’environnement|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Obtenir un numéro d’identification de processus|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Obtenir un numéro d’identification de processus|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Restaurer l’environnement de pile enregistré, l’utiliser pour exécuter un **goto** non local|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Planifier des routines à exécuter à l’arrêt du programme ; utiliser pour la compatibilité avec Microsoft C/C++ version 7.0 et antérieures|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Attendre un nouveau processeur de commandes et fermer le flux du canal associé|

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c33d22f30275c9d6581d6c1cd97de4ffe68bc08
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d5983795dbb5711452db2f59b07cb6aa8b22a8c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418339"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200203"
 ---
 # <a name="time-management"></a>Gestion du temps
 
@@ -39,7 +39,7 @@ Utilisez ces fonctions pour obtenir l’heure actuelle, et la convertir, la rég
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Convertit une heure du type **struct tm** en chaîne de caractères. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|
 |[horloge](../c-runtime-library/reference/clock.md)|Renvoie le temps horloge écoulé pour le processus.|
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Convertit une heure de type **time_t**, **__time32_t** ou **__time64_t** en chaîne de caractères. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|
-|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcule la différence entre deux heures.|[System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|
+|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcule la différence entre deux heures.|[System::DateTime::Subtract](https://msdn.microsoft.com/library/system.datetime.subtract.aspx)|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Stocke l’heure système actuelle dans une variable de type **struct _timeb** ou **struct __timeb64**. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|Définit l’heure de modification du fichier ouvert.|
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Convertit une heure de type **time_t** en **struct tm**, ou de type **__time64_t** en **struct tm**. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|

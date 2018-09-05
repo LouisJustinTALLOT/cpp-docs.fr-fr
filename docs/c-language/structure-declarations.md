@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391898"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207268"
 ---
 # <a name="structure-declarations"></a>Déclarations de structure
 Une déclaration de structure désigne un type et spécifie une séquence de valeurs variables (appelées membres ou champs de la structure) qui peuvent avoir des types. Un identificateur facultatif, appelé balise indique le nom du type de structure et peut être utilisé dans les références suivantes au type structure. Une variable de ce type structure contient la séquence entière définie par ce type. Les structures en C sont semblables aux types appelés enregistrements dans d'autres langages.  
@@ -163,7 +163,7 @@ struct somestruct
   
  Le compilateur autorise un tableau non dimensionné ou un tableau de taille zéro comme dernier membre d'une structure. Cela peut être utile si la taille d'un tableau fixe diffère lorsqu'elle est utilisée dans différentes situations. La déclaration de cette structure ressemble à ceci :  
   
- `struct` *identifier***{** *set-of-declarations* *type array-name***[ ];};**  
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
  Les tableaux non dimensionnés peuvent apparaître uniquement comme dernier membre d'une structure. Les structures contenant des déclarations de tableau non dimensionné peuvent être imbriquées dans d'autres structures tant qu'aucun autre membre n'est déclaré dans une structure englobante. Les tableaux de ces structures ne sont pas autorisés. L'opérateur `sizeof`, une fois appliqué à une variable de ce type ou au type lui-même, suppose 0 pour la taille du tableau.  
   

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0960e94acdbe660474efbeeddd0f72fa4f0606f6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ea2039cd9fa1c5071da143f557406d028f464d7e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34257060"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676706"
 ---
 # <a name="deployment-concepts"></a>Concepts relatifs au déploiement
 
@@ -61,4 +61,4 @@ Pour obtenir des exemples de déploiement et des suggestions de résolution des 
 
 - [Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [Fonctionnement des dépendances d’une application Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)
-- [Déploiement de Windows Installer](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)
+

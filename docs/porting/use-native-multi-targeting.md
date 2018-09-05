@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2df0bee37a0bcf0e8162fa692be79bd57b16b3cf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846423"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578261"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
 
@@ -28,13 +28,13 @@ En règle générale, nous vous recommandons de mettre à jour vos projets quand
 
 Heureusement, vous pouvez utiliser Visual Studio 2017 et Visual Studio 2015 pour générer des projets qui ciblent les bibliothèques et les ensembles d’outils du compilateur plus anciens. Vous n’êtes pas obligé de mettre à niveau un projet Visual Studio 2010, Visual Studio 2012, Visual Studio 2013 ou Visual Studio 2015 pour tirer parti des nouvelles fonctionnalités de l’IDE :
 
- - Nouvelles fonctionnalités de refactorisation C++ et fonctionnalités expérimentales pour l’édition
- - Nouvelles fenêtre de débogage Outils de diagnostics et fenêtre Liste d’erreurs
- - Fenêtre de gestion des points d’arrêt et des exceptions revisitée, nouveaux conseils sur les performances
- - Nouveaux outils de navigation et de recherche de code
- - Nouvelles corrections rapides C++ et les extensions Productivity Power Tools
+  - Nouvelles fonctionnalités de refactorisation C++ et fonctionnalités expérimentales pour l’édition
+  - Nouvelles fenêtre de débogage Outils de diagnostics et fenêtre Liste d’erreurs
+  - Fenêtre de gestion des points d’arrêt et des exceptions revisitée, nouveaux conseils sur les performances
+  - Nouveaux outils de navigation et de recherche de code
+  - Nouvelles corrections rapides C++ et les extensions Productivity Power Tools
 
-Vous pouvez également cibler des projets Visual Studio 2008, mais vous ne pouvez pas les utiliser en l’état. Pour plus d’informations, consultez la section Instructions pour Visual Studio 2008.
+Vous pouvez également cibler des projets Visual Studio 2008, mais vous ne pouvez pas les utiliser en l’état. Pour plus d’informations, consultez la section **Instructions pour Visual Studio 2008**.
 
 Les dernières versions de Visual Studio prennent en charge le multiciblage natif et les allers-retours des projets. Grâce au multiciblage natif, la dernière version de l’IDE peut effectuer une génération à l’aide des ensembles d’outils installés par les versions antérieures de Visual Studio. Grâce à la procédure d’aller-retour, la dernière version de l’IDE peut charger les projets créés par une version précédente de l’IDE sans y apporter de modifications. Si vous installez la dernière version de Visual Studio côte à côte avec votre version existante, vous pouvez utiliser la nouvelle version de l’IDE avec le compilateur et les outils de la version existante pour générer vos projets. Les autres membres de votre équipe peuvent continuer à utiliser les projets dans la version antérieure de Visual Studio.
 
@@ -54,13 +54,13 @@ Si vous choisissez de ne pas effectuer de mise à niveau, Visual Studio n’appo
 
 ## <a name="instructions-for-visual-studio-2008"></a>Instructions pour Visual Studio 2008  
   
-Visual Studio 2008 avait son propre système de génération dédié pour C++ appelé VCBuild. À partir de Visual Studio 2010, les projets Visual C++ ont été modifiés pour utiliser MSBuild. Cela signifie que vous devez passer par une étape de mise à jour pour générer vos projets Visual Studio 2008 dans la dernière version de Visual Studio. Votre projet mis à jour génère toujours des fichiers binaires qui sont entièrement compatibles avec les fichiers binaires créés à l’aide de l’IDE de Visual Studio 2008.
+Visual Studio 2008 avait son propre système de build dédié pour C++ appelé **VCBuild**. Depuis Visual Studio 2010, les projets Visual C++ ont été changés pour utiliser **MSBuild**. Cela signifie que vous devez passer par une étape de mise à jour pour générer vos projets Visual Studio 2008 dans la dernière version de Visual Studio. Votre projet mis à jour génère toujours des fichiers binaires qui sont entièrement compatibles avec les fichiers binaires créés à l’aide de l’IDE de Visual Studio 2008.
 
-Tout d’abord, outre la version actuelle de Visual Studio, vous devez installer Visual Studio 2010 sur le même ordinateur que Visual Studio 2008. Seul Visual Studio 2010 installe les scripts MSBuild qui sont requis pour cibler les projets Visual Studio 2008. 
+Tout d’abord, outre la version actuelle de Visual Studio, vous devez installer Visual Studio 2010 sur le même ordinateur que Visual Studio 2008. Seul Visual Studio 2010 installe les scripts **MSBuild** nécessaires au ciblage des projets Visual Studio 2008. 
 
 Ensuite, vous devez mettre à jour vos projets et solution Visual Studio 2008 vers la version actuelle de Visual Studio. Nous vous recommandons de créer une sauvegarde de vos projets et de vos fichiers solution avant d’effectuer la mise à niveau. Pour démarrer le processus de mise à niveau, ouvrez la solution dans la version actuelle de Visual Studio. Quand vous obtenez l’invite de mise à niveau, passez en revue les informations présentées, puis choisissez **OK** pour démarrer la mise à niveau. Si la solution comporte plusieurs projets, vous devez mettre à jour L’Assistant crée les fichiers projet .vcxproj côté à côte avec les fichiers .vcproj existants. Tant que vous avez également une copie du fichier .sln d’origine, la mise à niveau n’a aucun autre impact sur vos projets Visual Studio 2008 existants.
 
-Une fois la mise à niveau terminée, si le rapport de journal contient des erreurs ou des avertissements pour l’un de vos projets, examinez-les attentivement. La conversion depuis VCBuild vers MSBuild peut entraîner des problèmes. Veillez à comprendre et à implémenter toutes les actions répertoriées dans le rapport. Pour plus d’informations sur le rapport de journal de mise à niveau et sur les problèmes qui peuvent se produire pendant la conversion depuis VCBuild vers MSBuild, consultez ce billet de blog consacré au [multiciblage natif C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/).
+Une fois la mise à niveau terminée, si le rapport de journal contient des erreurs ou des avertissements pour l’un de vos projets, examinez-les attentivement. La conversion de **VCBuild** vers **MSBuild** peut entraîner des problèmes. Veillez à comprendre et à implémenter toutes les actions répertoriées dans le rapport. Pour plus d’informations sur le rapport de journal de mise à niveau et sur les problèmes qui peuvent se produire durant la conversion de **VCBuild** vers **MSBuild**, consultez ce billet de blog consacré au [multiciblage natif C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/).
 
 Une fois que la mise à niveau du projet est terminée et que vous avez résolu les problèmes éventuellement signalés dans le fichier journal, votre solution cible réellement le dernier ensemble d’outils. En guise d’étape finale, modifiez les propriétés de chaque projet dans la solution pour utiliser l’ensemble d’outils de Visual Studio 2008. Une fois la solution chargée dans la version actuelle de Visual Studio, pour chaque projet dans la solution, ouvrez la boîte de dialogue **Pages de propriétés** liée au projet : cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **Propriétés**. Dans la boîte de dialogue **Pages de propriétés**, définissez la valeur de la liste déroulante **Configuration** sur **Toutes les configurations**. Dans **Propriétés de configuration**, sélectionnez **Général**, puis définissez **Ensemble d’outils de plateforme** sur **Visual Studio 2008 (v90)**.
 
@@ -72,12 +72,12 @@ Peut-être que vous avez un ancien projet Visual C++ que vous ne pouvez pas ou n
 
 Voici quelques-uns des téléchargements Visual Studio dont vous pouvez avoir besoin :
 
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 pour Windows Desktop avec Update 5](https://www.microsoft.com/en-us/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 pour Windows Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Update 5](https://www.microsoft.com/en-us/download/details.aspx?id=34673)  
+  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
+  - [Microsoft Visual Studio Express 2013 pour Windows Desktop avec Update 5](https://www.microsoft.com/download/details.aspx?id=48131)  
+  - [Microsoft Visual Studio Express 2012 pour Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
+  - [Visual Studio 2012 Update 5](https://www.microsoft.com/download/details.aspx?id=34673)  
   - [Microsoft Visual C++ 2010 Express (programme d’installation web)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/en-us/download/details.aspx?id=23691)  
+  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
   - [Microsoft Visual C++ 2008 Express avec SP1 (programme d’installation web)](https://go.microsoft.com/?linkid=7729279)  
 
 Quand ces produits sont installés, la liste déroulante de propriétés **Ensemble d’outils de plateforme** dans la boîte de dialogue **Pages de propriétés** est automatiquement mise à jour pour afficher les ensembles d’outils disponibles. Vous pouvez maintenant utiliser la dernière version de Visual Studio pour générer des projets compatibles avec ces versions antérieures de l’ensemble d’outils sans avoir à convertir ou mettre à niveau les projets.

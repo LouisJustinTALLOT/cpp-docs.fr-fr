@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e6578486ada758482b270cd5505338e2acf3eb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841900"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578281"
 ---
 # <a name="floating-point-migration-issues"></a>Problèmes de migration de virgule flottante  
   
@@ -33,7 +33,7 @@ Quand les fonctions mathématiques ont été déplacées vers la bibliothèque C
   
 De nombreuses fonctions de bibliothèque mathématique à virgule flottante ont des implémentations différentes pour des architectures de processeur différentes. Par exemple, l’implémentation de la bibliothèque CRT x86 32 bits peut être différente de celle de la bibliothèque CRT x64 64 bits. De plus, certaines fonctions peuvent avoir plusieurs implémentations pour une architecture de processeur donnée. L’implémentation la plus efficace est sélectionnée de façon dynamique au moment de l’exécution selon les jeux d’instructions pris en charge par le processeur. Par exemple, dans la bibliothèque CRT x86 32 bits, certaines fonctions ont à la fois une implémentation x87 et une implémentation SSE2. Lors d’une exécution sur un processeur qui prend en charge SSE2, l’implémentation SSE2 plus rapide est utilisée. Lors d’une exécution sur un processeur qui ne prend pas en charge SSE2, l’implémentation x87 plus lente est utilisée. Vous pouvez voir cela pendant la migration de code ancien, car l’option par défaut de l’architecture du compilateur x86 a été remplacée par [/arch:SSE2](../build/reference/arch-x86.md) dans Visual Studio 2012. Étant donné que les différentes implémentations des fonctions de bibliothèque mathématique peuvent utiliser des instructions de processeur différentes et des algorithmes différents pour produire leurs résultats, les fonctions peuvent produire des résultats différents selon les plateformes. Dans la plupart des cas, les résultats se situent à +/-1 ULP (Unit in the Last Place, unité en dernière position) du résultat correctement arrondi, mais les résultats réels peuvent varier selon les processeurs.  
   
-Les améliorations apportées à l’exactitude de la génération du code dans différents modes de virgule flottante dans Visual Studio peuvent également affecter les résultats des opérations à virgule flottante quand un ancien code est comparé à un nouveau code, même si vous utilisez les mêmes indicateurs de compilateur. Par exemple, le code généré par Visual Studio 2010 quand [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (valeur par défaut) ou **/fp:strict** était spécifié n’a peut-être pas correctement propagé des valeurs intermédiaires NaN (non numériques) dans les expressions. Ainsi, certaines expressions qui donnaient un résultat numérique dans les compilateurs plus anciens peuvent maintenant produire un résultat NaN correct. Les différences que vous constatez peuvent également être liées au fait que les optimisations de code activées pour **/fp:fast** tirent désormais parti d’un nombre accru de fonctionnalités de processeur. Ces optimisations peuvent utiliser moins d’instructions, mais peuvent avoir un impact sur les résultats générés, car certaines opérations intermédiaires auparavant visibles ont été supprimées.  
+Les améliorations apportées à l’exactitude de la génération du code dans différents modes de virgule flottante dans Visual Studio peuvent également affecter les résultats des opérations à virgule flottante quand un ancien code est comparé à un nouveau code, même si vous utilisez les mêmes indicateurs de compilateur. Par exemple, le code généré par Visual Studio 2010 quand [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (valeur par défaut) ou `/fp:strict` a été spécifié, n’a peut-être pas correctement propagé les valeurs intermédiaires NaN (non numériques) dans les expressions. Ainsi, certaines expressions qui donnaient un résultat numérique dans les compilateurs plus anciens peuvent maintenant produire un résultat NaN correct. Les différences que vous constatez peuvent également être liées au fait que les optimisations de code activées pour `/fp:fast` tirent désormais parti d’un plus grand nombre de fonctionnalités de processeur. Ces optimisations peuvent utiliser moins d’instructions, mais peuvent avoir un impact sur les résultats générés, car certaines opérations intermédiaires auparavant visibles ont été supprimées.  
   
 ## <a name="how-to-get-identical-results"></a>Comment obtenir des résultats identiques  
   

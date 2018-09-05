@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9d4e90ace469614d6d422e0b75445eae5696bc26
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339772"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681600"
 ---
 # <a name="add-class-dialog-box"></a>Ajouter une classe, boîte de dialogue
 La boîte de dialogue **Ajouter une classe** contient des modèles qui vous permettent de :  
@@ -32,7 +32,7 @@ La boîte de dialogue **Ajouter une classe** contient des modèles qui vous perm
   
 -   Créer automatiquement votre classe en ajoutant les fichiers appropriés et le code source à votre projet.  
   
- Vous pouvez accéder à la boîte de dialogue **Ajouter une classe** à partir du menu **Projet**, de **l’Explorateur de solutions** ou de l’[Affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Vous pouvez accéder à la boîte de dialogue **Ajouter une classe** à partir du menu **Projet**, de **l’Explorateur de solutions** ou de l’[Affichage de classes](/visualstudio/ide/viewing-the-structure-of-code).  
   
 > [!NOTE]
 >  Quand vous essayez d’ajouter une classe qui ne convient pas à votre projet actuel, vous recevez un message d’erreur. Cliquez sur **OK** pour revenir à la boîte de dialogue **Ajouter une classe** .  

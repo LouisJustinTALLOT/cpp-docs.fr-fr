@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e121cf9738910b105f5bb1933592e67d334f8937
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327578"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685324"
 ---
 # <a name="adding-a-property-visual-c"></a>Ajout d'une propriété locale (Visual C++)
 Vous pouvez utiliser [l’Assistant Ajout de propriété](../ide/names-add-property-wizard.md) pour ajouter une propriété à une interface de votre projet.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Pour ajouter une propriété à votre objet  
   
-1.  Dans [l’affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), cliquez avec le bouton droit sur le nom de l’interface à laquelle vous souhaitez ajouter la propriété.  
+1.  Dans [l’affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), cliquez avec le bouton droit sur le nom de l’interface à laquelle vous souhaitez ajouter la propriété.  
   
     > [!NOTE]
     >  Vous pouvez également ajouter des propriétés aux dispinterfaces qui, tant que le projet n’est pas attribué, sont imbriquées dans le nœud de la bibliothèque.  
@@ -49,5 +49,5 @@ Vous pouvez utiliser [l’Assistant Ajout de propriété](../ide/names-add-prope
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une interface COM](../ide/creating-a-com-interface-visual-cpp.md)   
  [Modification d’une interface COM](../ide/editing-a-com-interface.md)   
- [COM (Component Object Model)](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [Pointeurs d’interface et interfaces](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [COM (Component Object Model)](/windows/desktop/com/the-component-object-model)   
+ [Pointeurs d’interface et interfaces](/windows/desktop/com/interface-pointers-and-interfaces)

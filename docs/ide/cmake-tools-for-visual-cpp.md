@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238563"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900665"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projets CMake dans Visual C++
 
@@ -221,6 +221,8 @@ Pour spécifier un générateur Visual Studio, ouvrez CMakeSettings.json à part
 1. **variables** : contient une paire nom-valeur de variables CMake qui sont passées sous la forme **-D**_name_**=**_value_ à CMake. Si vos instructions de génération de projet CMake spécifient l’ajout des variables directement dans le fichier de cache CMake, nous vous recommandons de les ajouter ici à la place.
 1. **cmakeCommandArgs** : Spécifie tous les commutateurs supplémentaires que vous voulez passer à CMake.exe.
 1. **configurationType** : Définit le type de configuration de génération du générateur sélectionné. Les valeurs actuellement prises en charge sont « Debug », « MinSizeRel », « Release » et « RelWithDebInfo ».
+1. **ctestCommandArgs** : spécifie les commutateurs supplémentaires à passer à CTest durant l’exécution des tests.
+1. **buildCommandArgs** : spécifie les commutateurs supplémentaires à passer au système de build sous-jacent. Par exemple, si vous passez -v quand vous utilisez le générateur Ninja, cela oblige Ninja à sortir des lignes de commande.
 
 ### <a name="environment-variables"></a>Variables d’environnement
 

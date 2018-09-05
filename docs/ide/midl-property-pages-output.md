@@ -22,29 +22,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 927ab1004336787131c8f92c247512d1c66caf69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325771"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212754"
 ---
 # <a name="midl-property-pages-output"></a>Pages de propriétés MIDL : Sortie
 La page de propriétés **Sortie** du dossier **MIDL** spécifie les options du compilateur MIDL suivantes :  
   
--   Répertoire de sortie ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
+-   Répertoire de sortie ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
--   Fichier d’en-tête ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
+-   Fichier d’en-tête ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))  
   
--   Fichier de données DLL ([/dlldata](http://msdn.microsoft.com/library/windows/desktop/aa367322))  
+-   Fichier de données DLL ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))  
   
--   Fichier IID ([/iid](http://msdn.microsoft.com/library/windows/desktop/aa367329))  
+-   Fichier IID ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))  
   
--   Fichier proxy ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
+-   Fichier proxy ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   Génération d’une bibliothèque de types ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   Génération d’une bibliothèque de types ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
--   Bibliothèque de types ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
+-   Bibliothèque de types ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
  Pour plus d’informations sur l’accès à la page de propriétés **Sortie** dans le dossier **MIDL**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f9dfa441fd98a91b15478eadc10eaa39a08687
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dac300f08a9b02ce6e9f4aec66618350b46af952
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328849"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692198"
 ---
 # <a name="web-references-property-page"></a>Références web, page de propriétés
-La page de propriétés **Références web** spécifie la manière dont la classe proxy de service web XML est générée. Une classe proxy de service web XML est générée si vous ajoutez une référence web à votre projet. Pour plus d’informations, consultez [Ajouter une référence web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5).  
+La page de propriétés **Références web** spécifie la manière dont la classe proxy de service web XML est générée. Une classe proxy de service web XML est générée si vous ajoutez une référence web à votre projet.  
   
  La page de propriétés **Références web** contient les propriétés suivantes :  
   

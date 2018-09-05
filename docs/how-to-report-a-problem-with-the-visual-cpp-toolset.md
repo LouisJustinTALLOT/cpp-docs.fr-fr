@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
+ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322366"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42583927"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Guide pratique pour signaler un problème avec la documentation ou l’ensemble d’outils Visual C++
 
@@ -335,7 +335,7 @@ Une *reproduction de lien* est le contenu généré par l’éditeur de liens d�
 
 1. Entrez **mkdir linkrepro** pour créer un répertoire dédié à la reproduction de lien.
 
-1. Entrez la commande **set link\_repro=linkrepro** pour définir la variable d’environnement **link\_repro** sur le répertoire que vous venez de créer.
+1. Entrez la commande **set link\_repro=linkrepro** pour définir la variable d’environnement **link\_repro** sur le répertoire que vous venez de créer. Si votre build s’exécute à partir d’un autre répertoire, comme cela est souvent le cas pour les projets plus complexes, affectez plutôt le chemin complet du répertoire linkrepro à **link\_repro**.
 
 1. Pour générer le projet de reproduction dans Visual Studio, dans la fenêtre de la console de l’invite de commandes développeur, entrez la commande **devenv**. Cela garantit que la valeur de la variable d’environnement **link\_repro** est visible dans Visual Studio. Pour générer le projet sur la ligne de commande, utilisez les arguments de ligne de commande capturés au-dessus pour dupliquer la build de reproduction.
 

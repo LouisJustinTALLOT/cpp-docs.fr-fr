@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c43619fcb1d684d7e0d2d6645b7a5feaac61e472
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340539"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195193"
 ---
 # <a name="implement-interface-wizard"></a>Assistant Implémentation d'interface
 Cet Assistant implémente une interface pour un objet COM. Les implémentations de nombreuses interfaces sont incluses dans les bibliothèques COM disponibles avec Visual Studio et Windows. Une implémentation d’interface est associée à un objet quand une instance de cet objet est créée, et elle fournit les services qu’offre l’objet.  
   
- Pour en savoir plus sur les interfaces et les implémentations, consultez [Interfaces et implémentations d’interface](http://msdn.microsoft.com/library/windows/desktop/ms694356) dans le SDK Windows.  
+ Pour en savoir plus sur les interfaces et les implémentations, consultez [Interfaces et implémentations d’interface](/windows/desktop/com/interfaces-and-interface-implementations) dans le SDK Windows.  
   
  **Implémenter une interface à partir de**  
  Spécifie l’emplacement de la bibliothèque de types à partir de laquelle est créée l’interface.  
