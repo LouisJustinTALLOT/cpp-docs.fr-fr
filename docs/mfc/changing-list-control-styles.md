@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676765"
 ---
 # <a name="changing-list-control-styles"></a>Modification des styles de contrôle de liste
 Vous pouvez modifier le style d’un contrôle de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)) à tout moment après l’avoir créée. En modifiant le style de fenêtre, vous modifiez le type d’affichage, que le contrôle utilise. Par exemple, pour émuler l’Explorateur, vous pouvez fournir des éléments de menu ou des boutons de barre d’outils pour basculer le contrôle entre différents affichages : affichage de l’icône, vue de liste et ainsi de suite.  
   
- Par exemple, lorsque l’utilisateur sélectionne l’élément de menu, vous pouvez effectuer un appel à [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) pour récupérer le style actuel du contrôle, puis appelez [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) pour réinitialiser le style. Pour plus d’informations, consultez [à l’aide des contrôles List View](/windows/desktop/Controls/using-list-view-controls) dans le SDK Windows.  
+ Par exemple, lorsque l’utilisateur sélectionne l’élément de menu, vous pouvez effectuer un appel à [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) pour récupérer le style actuel du contrôle, puis appelez [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) pour réinitialiser le style. Pour plus d’informations, consultez [à l’aide des contrôles List View](/windows/desktop/Controls/using-list-view-controls) dans le SDK Windows.  
   
  Styles disponibles sont répertoriés dans [créer](../mfc/reference/clistctrl-class.md#create). Les styles **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, et **LVS_REPORT** désigner les affichages de contrôle de liste de quatre.  
   

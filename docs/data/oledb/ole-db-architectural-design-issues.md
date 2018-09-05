@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b080945309732bec06c63eb665bbf6dd5f4acb5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2b0a5c568a774d0aed05d702454664e653989401
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340561"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676834"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Questions relatives à la conception architecturale d'OLE DB
 Vous devez envisager les problèmes suivants avant de commencer votre application OLE DB :  
@@ -39,15 +39,9 @@ Vous devez envisager les problèmes suivants avant de commencer votre applicatio
  **Avez-vous un code plus ancien à l’aide d’une autre technologie d’accès aux données (ADO, ODBC ou DAO) ?**  
  Étant donné les combinaisons possibles des technologies (par exemple, à l’aide de composants d’ADO avec des composants OLE DB et la migration de code ODBC vers OLE DB), couvrant toutes les situations n’entre pas dans la portée de la documentation de Visual C++. Toutefois, de nombreux articles couvrant différents scénarios sont disponibles sur les sites Web de Microsoft à l’adresse suivante :  
   
--   [Aide et support Microsoft](http://go.microsoft.com/fwlink/p/?linkid=148218)  
+-   [Aide et support Microsoft](https://support.microsoft.com/)  
   
--   [Vue d’ensemble des articles techniques sur Microsoft Data Access](http://go.microsoft.com/fwlink/p/?linkid=148217)  
-  
--   [Centre de solutions de Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=148215)  
-  
--   [Rechercher dans Microsoft.com](http://search.microsoft.com/)  
-  
- Lorsque vous effectuez une recherche, entrez une combinaison de mots clés qui convient le mieux à votre scénario. par exemple : Si vous utilisiez des objets ADO avec un fournisseur OLE DB, essayez une recherche booléenne avec **ADO et « OLE DB »**. Si vous voulez migrer un code DAO plus ancien vers ODBC, sélectionnez « tous les mots » et spécifiez des chaînes telles que **DAO migration**.  
+-   [Vue d’ensemble des articles techniques sur Microsoft Data Access](https://msdn.microsoft.com/en-us/library/ms810811.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB](../../data/oledb/ole-db-programming.md)   

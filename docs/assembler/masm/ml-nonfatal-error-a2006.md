@@ -1,7 +1,7 @@
 ---
-title: Erreur ML non fatale A2006 | Documents Microsoft
+title: ML erreur non fatale A2006 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d2f7df00d1c0658ee8301fbde1efe2522b52fc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f287c6ab46c6af71ba6dc0032f332ce3cc489454
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054853"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677403"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Erreur ML non fatale A2006
-**symbole non défini : identificateur**  
-  
- Un utilisateur a tenté d’utiliser un symbole n’a été défini.  
-  
- Une des opérations suivantes peut-être se sont produites :  
-  
--   Un symbole n’a pas été défini.  
-  
--   Un champ n’est pas un membre de la structure spécifiée.  
-  
--   Un symbole a été défini dans un fichier include qui n’a pas été inclus.  
-  
--   Un symbole externe a été utilisé sans un [EXTERN](../../assembler/masm/extern-masm.md) ou [EXTERNDEF](../../assembler/masm/externdef.md) la directive.  
-  
--   Un nom de symbole a été mal orthographié.  
-  
--   Une étiquette de codes locale a été référencée en dehors de son étendue.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**symbole non défini : identificateur**
+
+Une tentative a tenté d’utiliser un symbole qui n’était pas défini.
+
+Parmi les options suivantes peut-être se sont produites :
+
+- Un symbole n’est pas défini.
+
+- Un champ n’était pas un membre de la structure spécifiée.
+
+- Un symbole a été défini dans un fichier include qui n’était pas inclus.
+
+- Un symbole externe a été utilisé sans un [EXTERN](../../assembler/masm/extern-masm.md) ou [EXTERNDEF](../../assembler/masm/externdef.md) directive.
+
+- Un nom de symbole a été mal orthographié.
+
+- Une étiquette de code local a été référencée en dehors de son étendue.
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>

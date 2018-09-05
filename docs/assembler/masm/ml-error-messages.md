@@ -1,7 +1,7 @@
 ---
-title: Messages d’erreur ML | Documents Microsoft
+title: Messages d’erreur ML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,48 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc2ae6388ad11a411850d03de421d2f6820fc03
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 836daf438fa5a7f4c797b5b15ffab89720a7af98
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675963"
 ---
 # <a name="ml-error-messages"></a>Messages d'erreur ML
-Les messages d’erreur générés par les composants MASM se répartissent en trois catégories :  
-  
--   **Erreurs irrécupérables.** Celles-ci indiquent un problème grave qui empêche l’utilitaire à partir de la fin de son processus normal.  
-  
--   **Erreurs récupérables.** L’utilitaire peut terminer son processus. Dans ce cas, son résultat n’est pas susceptible d’être celle qui que vous intéresse.  
-  
--   **Avertissements.** Ces messages indiquent les conditions qui peuvent vous empêcher d’obtenir les résultats souhaités.  
-  
- Tous les messages d’erreur prennent la forme suivante :  
-  
-```  
-  
-Utility: Filename (Line) : [Error_type} (Code): Message_text  
-```  
-  
- où :  
-  
- `Utility`  
- Le programme qui a envoyé le message d’erreur.  
-  
- *Nom de fichier*  
- Le fichier qui contient la condition de la génération d’erreur.  
-  
- *Line*  
- La ligne approximative où se trouve la condition d’erreur.  
-  
- *Error_type*  
- Irrécupérable erreur, erreur ou avertissement.  
-  
- *Code*  
- Le code d’erreur unique 5 ou 6 chiffres.  
-  
- `Message_text`  
- Description courte et générale de la condition d’erreur.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+
+Les messages d’erreur générés par les composants MASM se répartissent en trois catégories :
+
+- **Erreurs irrécupérables.** Ces erreurs indiquent un problème grave qui empêche l’utilitaire à partir de la fin de son processus normal.
+
+- **Erreurs non fatales.** L’utilitaire peut terminer son processus. Le cas échéant, son résultat n’est pas susceptible d’être celle qui que vous intéresse.
+
+- **Avertissements.** Ces messages indiquent les conditions qui peuvent vous empêcher d’obtenir les résultats souhaités.
+
+Tous les messages d’erreur prennent la forme suivante :
+
+> *Utilitaire*: *Filename* (*ligne*) : {*Error_type*} (*Code*) : *Message_text*
+
+où :
+
+*Utilitaire*<br/>
+Le programme qui a envoyé le message d’erreur.
+
+*Nom de fichier*<br/>
+Le fichier qui contient la condition de la génération d’erreur.
+
+*Line*<br/>
+La ligne approximative où la condition d’erreur existe.
+
+*Error_type*<br/>
+Irrécupérable erreur, erreur ou avertissement.
+
+*Code*<br/>
+Le code d’erreur unique 5 ou 6 chiffres.
+
+*Message_text*<br/>
+Une description courte et générale de la condition d’erreur.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
