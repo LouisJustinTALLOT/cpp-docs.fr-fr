@@ -1,7 +1,7 @@
 ---
 title: Chaînes relatives aux noms, aux langues, au pays et à la région | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f28262a1402d81bd5dcd0933f943b420a37f044
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
+ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606733"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578533"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Chaînes relatives aux noms, aux langues, au pays et à la région
 
@@ -44,9 +44,9 @@ La forme *language*[*_country_region*[.*code_page*]] est stockée dans les param
 
 La page de codes est la page de codes ANSI/OEM qui est associée aux paramètres régionaux. La page de codes est déterminée pour vous lorsque vous spécifiez des paramètres régionaux seulement par langage ou par langage et pays/région. La valeur spéciale `.ACP` spécifie la page de codes ANSI pour le pays/la région. La valeur spéciale `.OCP` spécifie la page de codes OEM pour le pays/la région. Par exemple, si vous spécifiez `"Greek_Greece.ACP"` comme paramètres régionaux, les paramètres régionaux sont stockés comme `Greek_Greece.1253` (page de codes ANSI pour le grec), et si vous spécifiez `"Greek_Greece.OCP"` comme paramètres régionaux, ils sont stockés comme `Greek_Greece.737` (page de codes OEM pour le grec). Pour plus d’informations sur les pages de code, consultez [Code Pages](../c-runtime-library/code-pages.md). Pour obtenir la liste des pages de codes prises en charge sur Windows, consultez la rubrique [Code Page Identifiers](/windows/desktop/Intl/code-page-identifiers).
 
-Si vous utilisez uniquement la page de codes pour spécifier les paramètres régionaux, la langue par défaut et le pays/la région du système sont utilisés. Par exemple, si vous spécifiez `".1254"` (turc ANSI) comme paramètres régionaux sur un système configuré pour l’anglais (États-Unis), les paramètres régionaux stockés sont `English_United States.1254`. Nous déconseillons cette forme, car elle peut aboutir à un comportement incohérent.
+Si vous utilisez uniquement la page de codes pour spécifier les paramètres régionaux, la langue par défaut et le pays/la région de l’utilisateur signalés par [GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename) sont employés. Par exemple, si vous spécifiez `".1254"` (turc ANSI) en tant que paramètres régionaux pour un utilisateur configuré pour l’anglais (États-Unis), les paramètres régionaux stockés sont `English_United States.1254`. Nous déconseillons cette forme, car elle peut aboutir à un comportement incohérent.
 
-Une valeur d’argument *locale* de `C` spécifie l'environnement de conformation minimal ANSI pour la conversion en C. Les paramètres régionaux `C` supposent que chaque type de données `char` est 1 octet et que sa valeur est toujours inférieure à 256. Si *locale* pointe vers une chaîne vide, les paramètres régionaux sont donnés par l'environnement défini lors de l'implémentation.
+Une valeur d’argument *locale* de `C` spécifie l'environnement de conformation minimal ANSI pour la conversion en C. Les paramètres régionaux `C` supposent que chaque type de données **char** équivaut à 1 octet, et que sa valeur est toujours inférieure à 256. Si *locale* pointe vers une chaîne vide, les paramètres régionaux sont donnés par l'environnement défini lors de l'implémentation.
 
 Spécifiez toutes les catégories de paramètres régionaux en même temps pour les fonctions `setlocale` et `_wsetlocale` à l'aide de la catégorie `LC_ALL` . Les catégories peuvent toutes être définies aux mêmes paramètres régionaux, ou vous pouvez définir chaque catégorie individuellement en utilisant un argument de paramètres régionaux qui se présente comme suit :
 

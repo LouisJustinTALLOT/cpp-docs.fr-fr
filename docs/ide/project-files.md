@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327227"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578614"
 ---
 # <a name="project-files"></a>Fichiers projet
 Un fichier projet Visual C++ est un fichier XML dont l’extension de nom de fichier est .vcxproj et qui contient des informations nécessaires à la génération d’un projet Visual C++.  
   
 ## <a name="example"></a>Exemple  
- L’exemple de fichier .vcxproj suivant a été produit en spécifiant une **Application console Win32** dans la boîte de dialogue **Nouveau projet**. Pour traiter un fichier projet, utilisez l’outil msbuild.exe au niveau de la ligne de commande ou la commande **Générer** dans l’[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Cet exemple ne peut pas être traité, car les fichiers sources et les fichiers d’en-tête requis n’ont pas été fournis.) Pour plus d’informations sur les éléments XML d’un fichier projet, consultez [Informations de référence sur le schéma de fichier projet](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ L’exemple de fichier .vcxproj suivant a été produit en spécifiant une **Application console Win32** dans la boîte de dialogue **Nouveau projet**. Pour traiter un fichier projet, utilisez l’outil msbuild.exe sur la ligne de commande, ou la commande **Générer** dans l’IDE. (Cet exemple ne peut pas être traité, car les fichiers sources et les fichiers d’en-tête requis n’ont pas été fournis.) Pour plus d’informations sur les éléments XML d’un fichier projet, consultez [Informations de référence sur le schéma de fichier projet](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
