@@ -9,16 +9,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131718"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680537"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Nouveautés de Visual C++ dans Visual Studio 2017
 
-Visual Studio 2017 comprend un grand nombre de mises à jour et de correctifs de l’environnement Visual C++. Nous avons résolu plus de 250 bogues et problèmes signalés dans le compilateur et les outils, beaucoup d’entre eux ayant été soumis par des clients via les options [Signaler un problème](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) et [Faire une suggestion](https://visualstudio.uservoice.com/) sous **Envoyer des commentaires** . Merci d’avoir signalé ces bogues. Pour plus d’informations sur les nouveautés de l’ensemble de Visual Studio, visitez le site [Nouveautés de Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=834481).
+Visual Studio 2017 comprend un grand nombre de mises à jour et de correctifs de l’environnement Visual C++. Nous avons résolu plus de 250 bogues et problèmes signalés dans le compilateur et les outils, beaucoup d’entre eux ayant été soumis par des clients via les options [Signaler un problème](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) et [Faire une suggestion](https://visualstudio.uservoice.com/) sous **Envoyer des commentaires** . Merci d’avoir signalé ces bogues. Pour plus d’informations sur les nouveautés de l’ensemble de Visual Studio, visitez le site [Nouveautés de Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio).
 
 <!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 

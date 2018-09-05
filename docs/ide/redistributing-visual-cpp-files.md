@@ -18,19 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e67ad87f1dce47f3d02dcbe907285cf0513a8ce9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 09d65a19ecf573cc11d71fe49cdb40c1a748aafa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337546"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681915"
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribution des fichiers Visual C++
 
 > [!NOTE]
 > Vous voulez télécharger un des fichiers Runtime Visual C++ ? Accédez au site web de [Microsoft](http://www.microsoft.com/) et entrez **Visual C++ Redistributable** dans la zone de recherche. Téléchargez et installez le package redistribuable correspondant à l’architecture de votre ordinateur (par exemple, x64 si vous exécutez Windows 64 bits) et à la version de Visual C++ dont vous avez besoin (par exemple, 2015).
 
-Lorsque vous déployez une application, vous devez également déployer les fichiers qui sont requis pour sa prise en charge. Si l'un de ces fichiers est fourni par Microsoft, vérifiez si vous êtes autorisé à le redistribuer. Pour passer en revue les termes du contrat de licence de Visual Studio, consultez le lien des termes du contrat de licence dans la boîte de dialogue À propos de Microsoft Visual Studio dans l’IDE, ou téléchargez le fichier [Termes du contrat de licence logiciel Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=831114). Pour voir la « liste REDIST » référencée dans la section « Code distribuable » des Termes du contrat de licence logiciel Microsoft pour certaines éditions de Visual Studio, consultez [Code redistribuable pour Microsoft Visual Studio 2017 et pour le SDK Microsoft Visual Studio 2017 (inclut les utilitaires et les fichiers BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098) ou, pour Visual Studio 2015, consultez [Code distribuable pour Microsoft Visual Studio 2015 et pour le SDK Microsoft Visual Studio 2015](http://go.microsoft.com/fwlink/p/?LinkId=523763). Pour plus d’informations sur les fichiers redistribuables, consultez [Détermination des DLL à redistribuer](../ide/determining-which-dlls-to-redistribute.md) et [Exemples de déploiement](../ide/deployment-examples.md).
+Lorsque vous déployez une application, vous devez également déployer les fichiers qui sont requis pour sa prise en charge. Si l'un de ces fichiers est fourni par Microsoft, vérifiez si vous êtes autorisé à le redistribuer. Pour passer en revue les termes du contrat de licence de Visual Studio, consultez le lien des termes du contrat de licence dans la boîte de dialogue À propos de Microsoft Visual Studio dans l’IDE, ou téléchargez le fichier [Termes du contrat de licence logiciel Microsoft](https://visualstudio.microsoft.com/license-terms/mlt687465/). Pour voir la « liste REDIST » référencée dans la section « Code distribuable » des Termes du contrat de licence logiciel Microsoft pour certaines éditions de Visual Studio, consultez [Code redistribuable pour Microsoft Visual Studio 2017 et pour le SDK Microsoft Visual Studio 2017 (inclut les utilitaires et les fichiers BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) ou, pour Visual Studio 2015, consultez [Code distribuable pour Microsoft Visual Studio 2015 et pour le SDK Microsoft Visual Studio 2015](/visualstudio/productinfo/2015-redistribution-vs). Pour plus d’informations sur les fichiers redistribuables, consultez [Détermination des DLL à redistribuer](../ide/determining-which-dlls-to-redistribute.md) et [Exemples de déploiement](../ide/deployment-examples.md).
 
 Pour déployer des fichiers redistribuables Visual C++, vous pouvez utiliser les packages redistribuables Visual C++ (VCRedist\_x86.exe, VCRedist\_x64.exe ou VCRedist\_arm.exe) inclus dans Visual Studio. Dans Visual Studio 2017, ces fichiers sont disponibles dans le dossier Program Files[ (x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_, où _edition_ est l’édition de Visual Studio installée et _lib-version_ est la version des bibliothèques à redistribuer. Dans Visual Studio 2015, ces fichiers sont disponibles dans votre répertoire d’installation de Visual Studio sous Program Files [(x86)]\Microsoft Visual Studio *version*\VC\redist\\*locale*\\. Vous pouvez aussi utiliser des modules de fusion redistribuables (fichiers .msm) qui, dans Visual Studio 2017, sont disponibles dans le dossier Program Files [(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_\\MergeModules\\. Dans Visual Studio 2015, ces fichiers sont disponibles dans Program Files [(x 86)]\Common Files\Merge Modules\\. Vous pouvez aussi installer directement les DLL Visual C++ redistribuables dans le *dossier local de l’application*, qui contient votre fichier d’application exécutable. Pour des raisons liées à la maintenance, il est déconseillé d'utiliser cet emplacement d'installation.
 
@@ -52,7 +52,6 @@ Pour résoudre ce genre d’erreur, vérifiez que le programme d’installation 
 |-----------|-----------------|
 |[Redistribution à l’aide de modules de fusion](../ide/redistributing-components-by-using-merge-modules.md)|Décrit comment utiliser les modules de fusion redistribuables Visual C++ pour installer les bibliothèques Runtime Visual C++ sous forme de DLL partagées dans le dossier %windir%\system32\.|
 |[Redistribution de contrôles ActiveX Visual C++](../ide/redistributing-visual-cpp-activex-controls.md)|Décrit comment redistribuer une application qui utilise les contrôles ActiveX.|
-|[Redistribution de fichiers de prise en charge de base de données](../ide/redistributing-database-support-files.md)|Explique comment redistribuer des fichiers de prise en charge pour les objets d'accès aux données (DAO) et les technologies de bases de données se trouvant dans le Kit de développement Microsoft Data Access SDK.|
 |[Redistribution de la bibliothèque MFC](../ide/redistributing-the-mfc-library.md)|Décrit comment redistribuer une application qui utilise MFC.|
 |[Redistribution d’une application ATL](../ide/redistributing-an-atl-application.md)|Décrit comment redistribuer une application qui utilise ATL. Depuis Visual Studio 2012, aucune bibliothèque redistribuable pour ATL n'est requise.|
 |[Exemples de déploiement](../ide/deployment-examples.md)|Fournit des liens vers des exemples qui illustrent le déploiement d'applications Visual C++.|
