@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220088"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679695"
 ---
 # <a name="scope-c"></a>Portée (C++)
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > La réutilisation des noms d'identificateur, comme l'indique cet exemple, est considérée comme un style de programmation médiocre.
 
- Pour plus d’informations sur les pointeurs, consultez [Types dérivés](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Pour plus d’informations sur la déclaration et initialisation des objets de classe, consultez [Classes, Structures et Unions](../cpp/classes-and-structs-cpp.md). Pour plus d’informations sur l’utilisation de la **nouveau** et **supprimer** opérateurs de magasin gratuit, consultez [nouveau et supprimer des opérateurs](new-and-delete-operators.md).
+Pour plus d’informations sur la déclaration et initialisation des objets de classe, consultez [Classes, Structures et Unions](../cpp/classes-and-structs-cpp.md). Pour plus d’informations sur l’utilisation de la **nouveau** et **supprimer** opérateurs de magasin gratuit, consultez [nouveau et supprimer des opérateurs](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Masquage des noms avec portée globale
 

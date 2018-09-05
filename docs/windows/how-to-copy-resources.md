@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2abd889584ce39627153d6eac59db9240367ba20
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 20abc194f1286e47477c4510f9ceef6250b9b3f7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214389"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687217"
 ---
 # <a name="how-to-copy-resources"></a>Comment : copier des ressources
 
@@ -37,7 +37,7 @@ Vous pouvez copier des ressources à partir d’un fichier vers un autre sans le
 Vous pouvez facilement copier les ressources à partir d’une ressource existante ou d’un fichier exécutable à votre fichier de ressources actuel. Pour ce faire, vous ouvrez les deux fichiers contenant des ressources en même temps et faire glisser des éléments à partir d’un fichier vers un autre, ou copiez et collez entre les deux fichiers. Cette méthode fonctionne pour les fichiers de script (.rc) de ressources et les fichiers de ressources (.rct) de modèle, ainsi que les fichiers exécutables (.exe).
 
 > [!NOTE]
-> Visual C++ inclut des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, consultez [CLIPART : ressources communes](https://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
+> Visual C++ inclut des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, consultez [CLIPART : ressources communes](https://github.com/Microsoft/VCSamples).
 
 Vous pouvez utiliser la méthode glisser-déplacer entre les fichiers .rc qui sont ouverts [en dehors du projet](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 

@@ -1,7 +1,7 @@
 ---
-title: Erreur ML non fatale A2119 | Documents Microsoft
+title: ML erreur non fatale A2119 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ea8bc44a44447e84601167d58d5434dc37aade
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c1034c91f6eebd240c746c881284bed2baf5e618
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057446"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686897"
 ---
 # <a name="ml-nonfatal-error-a2119"></a>Erreur ML non fatale A2119
-**type de langage doit être spécifié.**  
-  
- Une définition de procédure ou un prototype n’a pas reçu un type de langage.  
-  
- Un type de langage doit être déclaré dans chaque définition de procédure ou un prototype si un type de la langue par défaut n’est pas spécifié. Un type de la langue par défaut est défini à l’aide du [. MODÈLE](../../assembler/masm/dot-model.md) directive, **OPTION LANG**, ou les options de ligne de commande ML **/Gc** ou **/Gd**.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**type de langage doit être spécifié**
+
+Une définition de procédure ou le prototype a été donné pas un type de langage.
+
+Un type de langage doit être déclaré dans chaque définition de procédure ou un prototype si un type de langage par défaut n’est pas spécifié. Un type de langage par défaut est défini à l’aide du [. MODÈLE](../../assembler/masm/dot-model.md) directive, **OPTION LANG**, ou les options de ligne de commande ML **/Gc** ou **/Gd**.
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>

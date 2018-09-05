@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214150"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680608"
 ---
 # <a name="cmfccolordialog-class"></a>Cmfccolordialog, classe
 Le `CMFCColorDialog` classe représente une boîte de dialogue de sélection de couleur.  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Retourne la couleur sélectionnée en cours.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Retourne la palette de la couleur.|  
-|`CMFCColorDialog::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. Pour la syntaxe et plus d’informations, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitue `CDialogEx::PreTranslateMessage`.)|  
+|`CMFCColorDialog::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. Pour la syntaxe et plus d’informations, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitue `CDialogEx::PreTranslateMessage`.)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Dérive une palette de la palette système.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Définit la couleur sélectionnée en cours.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Définit la couleur plus équivalent à une valeur RVB spécifiée.|  

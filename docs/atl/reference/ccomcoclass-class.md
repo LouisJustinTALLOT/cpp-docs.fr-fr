@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 475a4f4d5f39f7fdfa569441fb2cb0fc72b745a0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204341"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677880"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass, classe
 Cette classe fournit des méthodes pour créer des instances d’une classe et obtenir ses propriétés.  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Statique) Substituez pour retourner la description de l’objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CComCoClass` Fournit des méthodes pour la récupération CLSID d’un objet, la définition des informations d’erreur et la création d’instances de la classe. N’importe quelle classe inscrite dans le [mappage d’objets](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) doit être dérivé `CComCoClass`.  
+ `CComCoClass` Fournit des méthodes pour la récupération CLSID d’un objet, la définition des informations d’erreur et la création d’instances de la classe. Toute classe qui inscrit le mappage d’objets doit être dérivé `CComCoClass`.  
   
  `CComCoClass` définit également le modèle par défaut classe factory et d’agrégation pour votre objet. `CComCoClass` utilise les deux macros suivantes :  
   

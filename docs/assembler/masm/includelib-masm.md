@@ -1,7 +1,7 @@
 ---
-title: INCLUDELIB (MASM) | Documents Microsoft
+title: INCLUDELIB (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69b241723c7c2c7bb0eb5c87835f3c3463ec664
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: aabceb1e30013052184ca4654df1fa5b19fd1412
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050995"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687600"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
-Informe l’éditeur de liens le module actuel doit être lié à *libraryname*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-INCLUDELIB libraryname  
-```  
-  
-## <a name="remarks"></a>Notes  
- Le *libraryname* doit figurer entre crochets pointus si elle inclut une barre oblique inverse, un point-virgule, une plus grande-que le symbole, moins-que symbole, guillemet-apostrophe ou guillemet double.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Indique à l’éditeur de liens le module actuel doit être lié avec *nom_bibliothèque*.
+
+## <a name="syntax"></a>Syntaxe
+
+> INCLUDELIB nom_bibliothèque
+
+## <a name="remarks"></a>Notes
+
+Le *nom_bibliothèque* doit être entre crochets si elle inclut une barre oblique inverse, point-virgule, une plus grande-que le symbole, moins-que symbole, guillemet-apostrophe ou guillemet double.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

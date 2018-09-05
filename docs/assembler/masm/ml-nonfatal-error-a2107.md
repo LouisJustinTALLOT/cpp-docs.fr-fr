@@ -1,7 +1,7 @@
 ---
-title: Erreur ML non fatale A2107 | Documents Microsoft
+title: ML erreur non fatale A2107 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0aa38e50c9cd1756865c1369357980a497edf7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0c121f45a2d5074d985ff3f81f3e8289d6e4d757
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053959"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683602"
 ---
 # <a name="ml-nonfatal-error-a2107"></a>Erreur ML non fatale A2107
-**ne peut pas avoir de saut lointain implicite ou appel à proximité d’étiquette**  
-  
- Une tentative a été effectuée pour rendre implicite présent accéder ou de l’appel à une étiquette near dans un autre segment.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**ne peut pas avoir de saut lointain implicite ou appel à une valeur proche étiquette**
+
+Une tentative a été effectuée pour rendre implicite à présent accéder ou l’appel à une étiquette proche dans un autre segment.
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>

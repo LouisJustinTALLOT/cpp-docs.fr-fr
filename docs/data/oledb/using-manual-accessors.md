@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c732bcf45f2dfbd4927366670aed6bfbdcfb4721
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213826"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679985"
 ---
 # <a name="using-manual-accessors"></a>Utilisation des accesseurs manuels
 Il existe quatre opérations lors du traitement d’une commande inconnue :  
@@ -53,7 +53,7 @@ Il existe quatre opérations lors du traitement d’une commande inconnue :
   
 6.  Appelez `GetNextResult` pour déterminer si plusieurs ensembles de lignes sont disponibles. Répétez les étapes 2 à 5.  
   
- Pour obtenir un exemple d’accesseur manuel, consultez `CDBListView::CallProcedure` dans le [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) exemple.  
+ Pour obtenir un exemple d’accesseur manuel, consultez `CDBListView::CallProcedure` dans le [DBVIEWER](https://github.com/Microsoft/VCSamples) exemple.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation des accesseurs](../../data/oledb/using-accessors.md)

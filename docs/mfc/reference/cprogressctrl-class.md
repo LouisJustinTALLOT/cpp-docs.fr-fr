@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196188"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690150"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de barre de progression Windows.  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Paramètres  
  *dwStyle*  
- Spécifie le style du contrôle de barre de progression. Appliquer n’importe quelle combinaison de stylesdescribed de fenêtre dans [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows, en plus de la barre des styles de contrôle, au contrôle de progression suivante :  
+ Spécifie le style du contrôle de barre de progression. Appliquer n’importe quelle combinaison de stylesdescribed de fenêtre dans [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows, en plus de la barre des styles de contrôle, au contrôle de progression suivante :  
   
 - PBS_VERTICAL affiche verticalement les informations de progression, de haut en bas. Sans cet indicateur, le contrôle de barre de progression s’affiche horizontalement, de gauche à droite.  
   
@@ -181,10 +181,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwExStyle*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.  
   
  *dwStyle*  
- Spécifie le style du contrôle de barre de progression. Appliquer n’importe quelle combinaison de styles de fenêtre décrit dans [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows.  
+ Spécifie le style du contrôle de barre de progression. Appliquer n’importe quelle combinaison de styles de fenêtre décrit dans [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows.  
   
  *Rect*  
  Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.  

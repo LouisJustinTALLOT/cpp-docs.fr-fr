@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ba0930d0d1441801d18152a5ece4ace70f70425
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 90b66cf87610409e171cad25d891b0ca99ecd9a2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207335"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689945"
 ---
 # <a name="creating-an-mfc-application"></a>Création d'une application MFC
 Une application MFC est une application exécutable pour Windows qui se base sur la bibliothèque MFC (Microsoft Foundation Class). L'utilisation de l'Assistant Application MFC constitue le moyen le plus facile pour créer une application MFC.  
@@ -59,8 +59,7 @@ Une application MFC est une application exécutable pour Windows qui se base sur
  Une fois votre projet créé, vous pouvez afficher les fichiers créés dans **l’Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour les projets Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Préparation du débogage : Des Applications Visual C++ Windows](https://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Pages de propriétés](../../ide/property-pages-visual-cpp.md)   
- [Déploiement d’applications](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

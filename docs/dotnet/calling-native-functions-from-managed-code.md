@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a220f0dc2c979676ad2e28fd504ef80e0925f74d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195686"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678448"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Appel à des fonctions natives à partir de code managé
 Le common language runtime fournit des Services d’appel de plateforme, ou PInvoke, qui permet au code managé appelle des fonctions de style C dans les bibliothèques dynamiques liées (DLL) natives. Les même marshaling de données sont utilisées que pour l’interopérabilité COM avec le runtime et pour le « It Just Works », mécanisme IJW.  
@@ -35,8 +35,6 @@ Le common language runtime fournit des Services d’appel de plateforme, ou PInv
 -   [Utilisation d’un PInvoke explicite en C++ (attribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
 -   [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
-  
--   [Présentation détaillée de l’appel de code non managé](https://msdn.microsoft.com/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  Les exemples de cette section illustrent simplement comment `PInvoke` peut être utilisé. `PInvoke` peut simplifier le marshaling de données personnalisées parce que vous fournissez des informations de marshaling façon déclarative dans les attributs au lieu d’écrire le code de marshaling procédural.  
   

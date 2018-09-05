@@ -1,7 +1,7 @@
 ---
-title: . ERRNDEF | Documents Microsoft
+title: . ERRNDEF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d64f5464812e1316217f7b2990adf62189c04e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: df3ff7289d2fd988780320c0cb6cc44684df5721
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055880"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680227"
 ---
 # <a name="errndef"></a>.ERRNDEF
-Génère une erreur si *nom* n’a pas été défini.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.ERRNDEF name [[, message]]  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Génère une erreur si *nom* n’a pas été défini.
+
+## <a name="syntax"></a>Syntaxe
+
+> . Nom ERRNDEF [[, message]]
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

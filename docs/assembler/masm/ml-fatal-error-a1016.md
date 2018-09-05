@@ -1,7 +1,7 @@
 ---
-title: Erreur ML irrécupérable A1016 | Documents Microsoft
+title: Erreur ML irrécupérable A1016 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a597f738d00e73c28141f1c1d9dc8c463110bdb9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 056e4f96c42e1a100b2aab623cba31f709f270a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053641"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683783"
 ---
 # <a name="ml-fatal-error-a1016"></a>Erreur ML irrécupérable A1016
-**Erreur interne assembleur**  
-  
- Le pilote MASM, appelé ML.exe, a généré une erreur système.  
-  
- Notez les circonstances de l’erreur et signalez-la à Microsoft Corporation. Services de Support technique est disponible à l’adresse [ http://support.microsoft.com/ ](http://support.microsoft.com/).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**Erreur de l’assembleur interne**
+
+Le pilote MASM, appelé ML.exe, généré une erreur système.
+
+Notez les circonstances de l’erreur et signalez-la à Microsoft Corporation. Services de Support technique est disponible à l’adresse [ http://support.microsoft.com/ ](http://support.microsoft.com/).
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>

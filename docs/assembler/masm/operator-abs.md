@@ -1,7 +1,7 @@
 ---
-title: ABS, opérateur | Documents Microsoft
+title: ABS, opérateur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,23 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ae5532ea52e3e3b8935739e4412afc289263f20
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: af44b6924941605d262dc4d0f70e2ed8b3b67ad8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052571"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684075"
 ---
 # <a name="operator-abs"></a>ABS, opérateur
-Consultez le [EXTERNDEF](../../assembler/masm/externdef.md) la directive.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-ABS  
-  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+
+Consultez le [EXTERNDEF](../../assembler/masm/externdef.md) directive.
+
+## <a name="syntax"></a>Syntaxe
+
+> ABS
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30906b3851357942873e3926151d5a195161a6e5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a4e9e33ace99cded551abbb43bc9ada1c6c625eb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205181"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693701"
 ---
 # <a name="using-cobject"></a>Utilisation de CObject
 [CObject](../mfc/reference/cobject-class.md) est la classe de base racine pour la plupart de la MFC Microsoft Foundation Class Library (). Le `CObject` classe contient de nombreuses fonctionnalités utiles que vous souhaitez incorporer dans vos propres objets, y compris la prise en charge de la sérialisation, les informations de classe d’exécution et sortie de diagnostic d’objet. Si vous dérivez votre classe de `CObject`, votre classe peut exploiter ces `CObject` fonctionnalités.  
@@ -42,7 +42,7 @@ ms.locfileid: "43205181"
   
 -   [Vider les données de l’objet pour faciliter le diagnostic](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\))  
   
--   Valider l’état interne de l’objet (consultez [MFC ASSERT_VALID et CObject::AssertValid](https://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
+-   Valider l’état interne de l’objet (consultez [MFC ASSERT_VALID et CObject::AssertValid](reference/diagnostic-services.md#assert_valid))  
   
 -   [Que la classe se sérialiser vers le stockage persistant](../mfc/serialization-in-mfc.md)  
   

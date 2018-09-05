@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208556"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689230"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar, classe
 Le `CMFCToolBar` ressemble à [CToolBar (classe)](../../mfc/reference/ctoolbar-class.md), mais prend également en charge pour les fonctionnalités de l’interface utilisateur. Celles-ci incluent les barres d'outils à deux dimensions, les barres d'outils avec images interactives, les grandes icônes, les boutons pager, les barres d'outils verrouillées, les contrôles rebar, le texte sous les images, les images d'arrière-plan et les barres d'outils avec onglets. La classe `CMFCToolBar` contient également une prise en charge intégrée de la personnalisation des barres d'outils et des menus par l'utilisateur, du glisser-déplacer entre les barres d'outils et les menus, des boutons de zone de liste modifiable, des boutons de zone d'édition, des sélecteurs de couleurs et des boutons de regroupement.
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  TRUE si la barre d’outils et son frère sont placés sur la même ligne ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
- Le [CMFCCustomizeButton::CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) méthode appelle cette méthode pour déterminer comment afficher le **personnaliser** menu contextuel. Si cette méthode retourne la valeur TRUE, l’infrastructure affiche le **afficher les boutons sur une ligne** bouton. Sinon, l’infrastructure affiche le **afficher les boutons sur deux lignes** bouton.  
+ Le [CMFCCustomizeButton::CreatePopupMenu](internal-classes.md) méthode appelle cette méthode pour déterminer comment afficher le **personnaliser** menu contextuel. Si cette méthode retourne la valeur TRUE, l’infrastructure affiche le **afficher les boutons sur une ligne** bouton. Sinon, l’infrastructure affiche le **afficher les boutons sur deux lignes** bouton.  
   
  En règle générale, vous n'avez pas à utiliser cette méthode. Pour activer la **afficher les boutons sur une ligne** ou **afficher les boutons sur deux lignes** , appelez [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   

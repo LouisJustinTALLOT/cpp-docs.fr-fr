@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1e3d9d3d08ef0386a1ab85e0e5b6860f5d504cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195665"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681279"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Comment : appeler des DLL natives à partir du code managé à l'aide de PInvoke
 Les fonctions qui sont implémentées dans des DLL non managées peuvent être appelées à partir du code managé à l’aide de la fonctionnalité Platform Invoke (P/Invoke). Si le code source pour la DLL n’est pas disponible, P/Invoke est la seule option pour l’interopérabilité. Toutefois, contrairement à d’autres langages .NET, Visual C++ fournit une alternative à P/Invoke. Pour plus d’informations, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple de code suivant utilise Win32 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) fonction pour récupérer la résolution actuelle de l’écran en pixels.  
+ L’exemple de code suivant utilise Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) fonction pour récupérer la résolution actuelle de l’écran en pixels.  
   
  Pour les fonctions qui utilisent uniquement des types intrinsèques comme arguments et valeurs de retour, aucun travail supplémentaire n’est nécessaire. Autres types de données, telles que les pointeurs de fonction, les tableaux et les structures, requièrent des attributs supplémentaires pour garantir le marshaling de données appropriées.  
   

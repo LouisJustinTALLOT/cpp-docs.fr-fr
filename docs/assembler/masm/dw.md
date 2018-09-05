@@ -1,7 +1,7 @@
 ---
-title: ENTREPÔT DE DONNÉES | Documents Microsoft
+title: DW | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e0127ccec8aaac43955087ee4a4b0e8fdbcad5
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 15457e99ecaa312ad5e442203c8b058c8fda3bf0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051993"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681890"
 ---
 # <a name="dw"></a>DW
-Alloue et éventuellement Initialise un mot (2 octets) de stockage pour chaque `initializer`. Peut également être utilisé comme un spécificateur de type n’importe où un type est autorisé. `DW` est un synonyme de [WORD](../../assembler/masm/word.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-[[name]] DW initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence des directives](../../assembler/masm/directives-reference.md)   
- [SWORD](../../assembler/masm/sword.md)
+
+Alloue et initialise éventuellement un mot (2 octets) de stockage pour chaque `initializer`. Peut également être utilisé comme un spécificateur de type n’importe où un type est autorisé. `DW` est un synonyme de [WORD](../../assembler/masm/word.md).
+
+## <a name="syntax"></a>Syntaxe
+
+> [[nom]] Initialiseur de l’entrepôt de données [[, initialiseur]]...
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[SWORD](../../assembler/masm/sword.md)<br/>

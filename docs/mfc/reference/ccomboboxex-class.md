@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd480e7b1ffb0923e33361c545bca68202ec3f4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201524"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687714"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (classe)
 Étend le contrôle de zone de liste déroulante en fournissant la prise en charge des listes d'images.  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwExStyle*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.  
   
  *dwStyle*  
  Style du contrôle de zone de liste déroulante. Consultez [créer](#create) pour obtenir la liste des styles.  
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet contenant les images précédemment utilisées par le `CComboBoxEx` contrôle. NULL si aucune liste d’images a été défini précédemment.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre implémente les fonctionnalités du message [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), comme décrit dans le SDK Windows. Si vous modifiez la hauteur du contrôle d’édition par défaut, appelez la fonction Win32 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) pour redimensionner votre contrôle après avoir appelé `SetImageList`, ou il ne s’affiche correctement.  
+ Cette fonction membre implémente les fonctionnalités du message [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), comme décrit dans le SDK Windows. Si vous modifiez la hauteur du contrôle d’édition par défaut, appelez la fonction Win32 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) pour redimensionner votre contrôle après avoir appelé `SetImageList`, ou il ne s’affiche correctement.  
   
  Le `CImageList` objet désigné par la valeur de retour est un objet temporaire et est détruit pendant la durée de traitement d’inactivité suivante.  
   

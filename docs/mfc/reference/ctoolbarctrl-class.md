@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196588"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686083"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de barre d'outils Windows.  
@@ -622,7 +622,7 @@ virtual BOOL Create(
   
 - WS_DISABLED rarement  
   
- Consultez [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows pour une description des styles de fenêtre.  
+ Consultez [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows pour une description des styles de fenêtre.  
   
  Si vous le souhaitez, appliquer une combinaison de [des styles de contrôle courants](/windows/desktop/Controls/common-control-styles), comme décrit dans le SDK Windows.  
   
@@ -646,7 +646,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwExStyle*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.  
   
  *dwStyle*  
  Spécifie le style du contrôle de barre d’outils. Barres d’outils doivent toujours avoir le style WS_CHILD. En outre, vous pouvez spécifier n’importe quelle combinaison des styles de barre d’outils et des styles de fenêtre comme décrit dans la **remarques** section de [créer](#create).  

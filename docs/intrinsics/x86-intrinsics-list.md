@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cdd0c5d8e89d41e24bf980093f5994c1c9fc495
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed65ff0e608740ae5747ec9cd708c119d79a3829
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209272"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685710"
 ---
 # <a name="x86-intrinsics-list"></a>Liste d'intrinsèques x86
 
@@ -31,13 +31,13 @@ Pour plus d'informations sur les intrinsèques, consultez ces ressources, en fon
 
 - [Guide des fonctions intrinsèques Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/). Utilisez la zone de recherche pour rechercher des fonctions intrinsèques spécifiques.
 
-- [Manuels de développement logiciel Intel 64 et IA-32 Architectures](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Manuels de développement logiciel Intel 64 et IA-32 Architectures](https://software.intel.com/articles/intel-sdm)
 
-- [Référence de programmation des Extensions du jeu d’instructions d’Architecture Intel](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Référence de programmation des Extensions du jeu d’instructions d’Architecture Intel](https://software.intel.com/isa-extensions)
 
-- [Présentation d’Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Présentation d’Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [AMD Developer Guides, des manuels et des Documents ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [AMD Developer Guides, des manuels et des Documents ISA](https://developer.amd.com/resources/developer-guides-manuals/)
 
 Le tableau suivant répertorie les fonctions intrinsèques disponibles sur les processeurs x86. La colonne Technologie indique la prise en charge du jeu d'instructions requise. Utilisez l'intrinsèque [__cpuid](../intrinsics/cpuid-cpuidex.md) pour déterminer la prise en charge du jeu d'instructions au moment de l'exécution. Si deux entrées figurent sur une ligne, elles représentent différents points d’entrée pour le même intrinsèque. [1] indique que l'intrinsèque est disponible uniquement sur les processeurs AMD. [2] indique que l'intrinsèque est disponible uniquement sur les processeurs Intel. [3] indique que le prototype est une macro. L’en-tête nécessaire pour le prototype de fonction est répertorié dans la colonne En-tête. L’en-tête intrin.h inclut à la fois immintrin.h et ammintrin.h par souci de simplicité.
 

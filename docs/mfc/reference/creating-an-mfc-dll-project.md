@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa06417b93012c7d564a45c4e58f03edf1e2a39
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43b1f15715f83adb75f51151d86d781378e6fa86
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215676"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691465"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Création d'un projet DLL MFC
 Une DLL MFC est un fichier binaire qui agit comme une bibliothèque partagée de fonctions pouvant être utilisé simultanément par plusieurs applications. Pour créer un projet DLL MFC, le plus simple consiste à utiliser l’Assistant DLL MFC.  
   
 > [!NOTE]
->  L’apparence des fonctionnalités dans l’IDE peut dépendre de vos paramètres actifs ou votre édition et peut-être différer de celles décrites dans l’aide. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  L’apparence des fonctionnalités dans l’IDE peut dépendre de vos paramètres actifs ou votre édition et peut-être différer de celles décrites dans l’aide. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Pour créer un projet de DLL MFC à l’aide de l’Assistant DLL MFC  
   
@@ -51,5 +51,5 @@ Une DLL MFC est un fichier binaire qui agit comme une bibliothèque partagée de
  [Types de projets Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
  [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Pages de propriétés](../../ide/property-pages-visual-cpp.md)   
- [Déploiement d’applications](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

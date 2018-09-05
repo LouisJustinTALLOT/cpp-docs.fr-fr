@@ -1,7 +1,7 @@
 ---
-title: MMWORD | Documents Microsoft
+title: MMWORD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97b1e58116d633519b1a780928e05862ac1771d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7314c6d0861195e312c7f72481d2e195e041965d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054778"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679232"
 ---
 # <a name="mmword"></a>MMWORD
-Utilisé pour les opérandes de multimédias 64 bits avec des instructions MMX et SSE (XMM).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-MMWORD  
-```  
-  
-## <a name="remarks"></a>Notes  
- `MMWORD` est un type.  Avant de MMWORD ajouté à MASM, une fonctionnalité équivalente pourrait avoir été obtenue avec :  
-  
-```  
-mov mm0, qword ptr [ebx]  
-```  
-  
- Alors que les deux instructions fonctionnent sur les opérandes de 64 bits, `QWORD` est de type pour les entiers non signés 64 bits et `MMWORD` est le type de valeur multimédia 64 bits.  
-  
- `MMWORD` est destiné à représenter le même type que [__m64](../../cpp/m64.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-movq     mm0, mmword ptr [ebx]  
+
+Utilisé pour les opérandes multimédias de 64 bits avec des instructions MMX et SSE (XMM).
+
+## <a name="syntax"></a>Syntaxe
+
+> MMWORD
+
+## <a name="remarks"></a>Notes
+
+`MMWORD` est un type.  Avant MMWORD ajouté à MASM, une fonctionnalité équivalente pourrait avoir été obtenue avec :
+
+```asm
+    mov mm0, qword ptr [ebx]
+```
+
+Bien que les deux instructions fonctionnent sur les opérandes de 64 bits, `QWORD` est de type pour les entiers non signés 64 bits et `MMWORD` est le type d’une valeur de multimédia 64 bits.
+
+`MMWORD` est destiné à représenter le même type que [__m64](../../cpp/m64.md).
+
+## <a name="example"></a>Exemple
+
+```asm
+    movq     mm0, mmword ptr [ebx]
 ```

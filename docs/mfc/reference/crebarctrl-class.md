@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656a19b6cddfb7e8353bb0eabf8975c733129a52
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207908"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693878"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 Encapsule les fonctionnalités d'un contrôle rebar, qui est un conteneur de fenêtre enfant.  
@@ -293,7 +293,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwExStyle*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.  
   
  *dwStyle*  
  Spécifie la combinaison de styles de contrôle rebar appliqué au contrôle. Pour obtenir la liste des styles pris en charge, consultez [Styles de contrôle Rebar](/windows/desktop/Controls/rebar-control-styles) dans le SDK Windows.  

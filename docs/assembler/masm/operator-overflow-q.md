@@ -1,7 +1,7 @@
 ---
 title: OVERFLOW?, opérateur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aee81eb229fa54b20b6ea9b50685cabf688ac68
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7fe21109db3c03b50c2dec824572628a6f86a733
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054957"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679003"
 ---
 # <a name="operator-overflow"></a>OVERFLOW?, opérateur
-État de l’indicateur de dépassement de capacité. Utilisé uniquement dans [. IF](../../assembler/masm/dot-if.md), [. Alors que](../../assembler/masm/dot-while.md), ou [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md) bloque et évaluées au moment de l’exécution, pas au moment de l’assembly.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-OVERFLOW?  
-  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+
+État de l’indicateur de dépassement de capacité. Utilisé uniquement dans [. IF](../../assembler/masm/dot-if.md), [. Bien que](../../assembler/masm/dot-while.md), ou [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md) bloque et évaluée au moment de l’exécution, pas au moment de l’assembly.
+
+## <a name="syntax"></a>Syntaxe
+
+> DÉPASSEMENT DE CAPACITÉ ?
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>

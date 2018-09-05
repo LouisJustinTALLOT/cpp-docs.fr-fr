@@ -1,7 +1,7 @@
 ---
-title: MACRO | Documents Microsoft
+title: MACRO | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b7469314bc1b65f960df1ca582acb6dbb4624e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d957935c9ca91d2d09a093350c8d23a848e58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054443"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688866"
 ---
 # <a name="macro"></a>MACRO
-Marque un bloc macro appelé *nom* et établit *paramètre* des espaces réservés pour les arguments passés lorsque la macro est appelée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   name MACRO [[parameter [[:REQ | :=default | :VARARG]]]]...  
-statements  
-ENDM [[value]]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Une fonction de la macro retourne *valeur* à l’instruction appelante.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Marque un bloc macro appelé *nom* et établit *paramètre* des espaces réservés pour les arguments transmis lorsque la macro est appelée.
+
+## <a name="syntax"></a>Syntaxe
+
+> *nom* MACRO [[*paramètre* [[ : no | : =*par défaut* | : VARARG]]]]...<br/>
+> *Instructions*<br/>
+> ENDM [[*valeur*]]
+
+## <a name="remarks"></a>Notes
+
+Retourne une fonction de la macro *valeur* à l’instruction appelante.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

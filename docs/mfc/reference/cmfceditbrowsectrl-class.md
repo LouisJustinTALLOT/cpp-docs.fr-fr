@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9799021942cbb8a505cc993ff97f5f42e6d0f20f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222366"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693970"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl, classe
 Le `CMFCEditBrowseCtrl` classe prend en charge le contrôle de navigation d’édition, qui est une zone de texte modifiable contenant éventuellement un bouton Parcourir. Lorsque l’utilisateur clique sur le bouton Parcourir, le contrôle effectue une action personnalisée ou affiche une boîte de dialogue standard qui contient un explorateur de fichiers ou de dossiers.  
@@ -74,7 +74,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Redessine le contrôle de navigation d’édition actuel.|  
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Appelé par l’infrastructure pour dessiner le bouton Parcourir.|  
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Appelé par le framework lorsqu’un nom de fichier non conforme a été entré dans le contrôle d’édition.|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. Pour la syntaxe et plus d’informations, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. Pour la syntaxe et plus d’informations, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Définit une image personnalisée pour le bouton Parcourir.|  
   
 ## <a name="remarks"></a>Notes  

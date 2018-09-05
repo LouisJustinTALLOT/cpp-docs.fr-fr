@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f12ff4f0f109ac97f9e9e2e4f8d800455159a10b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fd04350df17b6d2dfed65526d0f7681c314f07f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682618"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 **Section spécifique à Microsoft**  
@@ -54,7 +54,7 @@ int __vmx_vmptrld(
 ## <a name="remarks"></a>Notes  
  Le pointeur de la VMCS est une adresse physique 64 bits.  
   
- Le `__vmx_vmptrld` fonction est équivalente à la `VMPTRLD` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ Le `__vmx_vmptrld` fonction est équivalente à la `VMPTRLD` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) site.  
   
 ## <a name="requirements"></a>Configuration requise  
   

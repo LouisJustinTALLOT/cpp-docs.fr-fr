@@ -1,7 +1,7 @@
 ---
-title: . IF | Documents Microsoft
+title: . IF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ab0e2fc510b4be8c5a9a8c0c3d0fb1c4347f0b9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f7bd5ba5821b4dcfb2d088e31816f50540445018
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053114"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691542"
 ---
 # <a name="if"></a>.IF
-Génère du code qui teste `condition1` (par exemple, AX 7 >) et exécute la *instructions* si cette condition est vraie.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   .IF condition1   
-statements  
-[[.ELSEIF condition2   
-   statements]]  
-[[.ELSE  
-   statements]]  
-.ENDIF  
-```  
-  
-## <a name="remarks"></a>Notes  
- Si un [. AUTRE](../../assembler/masm/dot-else.md) suit, ses instructions est exécutées si la condition d’origine a la valeur false. Notez que les conditions sont évaluées au moment de l’exécution.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Génère du code qui teste `condition1` (par exemple, AX > 7) et exécute la *instructions* si cette condition est vraie.
+
+## <a name="syntax"></a>Syntaxe
+
+> . IF condition1<br/>
+> instructions<br/>
+> [[. ELSEIF condition2<br/>
+> instructions]]<br/>
+> [[. ELSE<br/>
+> instructions]]<br/>
+> .ENDIF
+
+## <a name="remarks"></a>Notes
+
+Si un [. AUTRE](../../assembler/masm/dot-else.md) suit, ses instructions est exécutées si la condition d’origine a la valeur false. Notez que les conditions sont évaluées au moment de l’exécution.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

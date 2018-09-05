@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213660"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678096"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement, classe
 Le `CMFCRibbonBaseElement` est la classe de base pour tous les éléments que vous pouvez ajouter à un [barre du ruban](../../mfc/reference/cmfcribbonbar-class.md). Parmi les exemples d'éléments de ruban figurent les boutons de ruban, les cases à cocher de ruban et les zones de listes déroulantes de ruban.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Un pointeur vers la fenêtre parente de l’élément de ruban si la méthode a réussi ; Sinon, NULL.  
   
 ### <a name="remarks"></a>Notes  
- La fenêtre parente d’un élément de ruban est un [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ou un [CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ La fenêtre parente d’un élément de ruban est un [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ou un [CMFCRibbonPanelMenuBar](internal-classes.md).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Récupère un pointeur vers l’élément de ruban si actuellement, l’utilisateur appuie dessus.  

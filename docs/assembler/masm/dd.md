@@ -1,7 +1,7 @@
 ---
-title: JJ | Documents Microsoft
+title: JJ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff556b6ba25743df05073b56b57611346d316cb4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f8095700d3e1f54b4909c779563d8d67337dc326
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050673"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692659"
 ---
 # <a name="dd"></a>DD
-Alloue et initialise éventuellement un mot double (4 octets) de stockage pour chaque `initializer`. `DD` est un synonyme de [DWORD](../../assembler/masm/dword.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-[[name]] DD initializer [[, initializer]]...  
-```  
-  
-## <a name="remarks"></a>Notes  
- Peut également être utilisé comme un spécificateur de type n’importe où un type est autorisé.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Alloue et initialise éventuellement un mot double (4 octets) de stockage pour chaque `initializer`. `DD` est un synonyme de [DWORD](../../assembler/masm/dword.md).
+
+## <a name="syntax"></a>Syntaxe
+
+> [[nom]] Initialiseur de jj [[, initialiseur]]...
+
+## <a name="remarks"></a>Notes
+
+Peut également être utilisé comme un spécificateur de type n’importe où un type est autorisé.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

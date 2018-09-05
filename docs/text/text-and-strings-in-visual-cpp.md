@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9133965a9009421c28f64c1f4157b4a6a6d6b3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 16411db184b568051484554548cdfcc6119002f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223293"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688074"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texte et chaînes en Visual C++
 Un aspect important du développement d’applications pour les marchés internationaux est la représentation adéquate des jeux de caractères local. Le jeu de caractères ASCII définit les caractères dans la plage 0 x 00 à 0x7F. Voici les autres jeux de caractères, principalement européens, qui définissent les caractères dans la plage 0 x 00 à 0x7F de façon identique au jeu de caractères ASCII et également définir un étendue jeu de caractères à partir de 0 x 80 à 0xFF. Par conséquent, un ensemble de 8 bits, en caractères sur un octet (SBCS) est suffisant pour représenter le jeu de caractères ASCII, ainsi que les jeux de caractères de nombreuses langues européennes. Toutefois, certains jeux de caractères non européens, tels que les Kanji japonais, comprennent plus de caractères qu’un schéma de codage d’un octet peut représenter et nécessitent donc le jeu de caractères multioctets (MBCS) encodage.  
@@ -64,7 +64,7 @@ Un aspect important du développement d’applications pour les marchés interna
  [Internationalisation](../c-runtime-library/internationalization.md)  
  Décrit la prise en charge internationale dans la bibliothèque Runtime C.  
   
- [Exemples internationaux](https://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [Exemples internationaux](https://github.com/Microsoft/VCSamples)  
  Fournit des liens vers des exemples illustrant l’internationalisation dans Visual C++.  
   
  [Chaînes de langue et de pays/région](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

@@ -1,7 +1,7 @@
 ---
-title: Erreur ML irrécupérable A1008 | Documents Microsoft
+title: Erreur ML irrécupérable A1008 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b312e03740059866bfbf447f962538c499eb46
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5ec709823856e17c90d4af2a06262b30c966f39c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053811"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691936"
 ---
 # <a name="ml-fatal-error-a1008"></a>Erreur ML irrécupérable A1008
-**imbrication de macro non appariées**  
-  
- Une macro n’est pas terminée avant la fin du fichier ou la directive fin [ENDM](../../assembler/masm/endm.md) a été trouvé en dehors d’un bloc de macro.  
-  
- Une des causes de cette erreur est l’omission du point avant [. RÉPÉTEZ les](../../assembler/masm/dot-repeat.md) ou [. Alors que](../../assembler/masm/dot-while.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**imbrication de macro sans correspondance**
+
+Une macro n’est pas terminée avant la fin du fichier ou la directive fin [ENDM](../../assembler/masm/endm.md) a été trouvé en dehors d’un bloc de macro.
+
+Une des causes de cette erreur est l’omission du point avant [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md) ou [. Bien que](../../assembler/masm/dot-while.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>

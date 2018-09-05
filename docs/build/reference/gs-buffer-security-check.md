@@ -1,5 +1,5 @@
 ---
-title: -GS (vérification de sécurité de mémoire tampon) | Documents Microsoft
+title: -GS (vérification de sécurité de mémoires tampons) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,16 +24,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa1204a6959121b3f6280433c0414f81c038548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fdb08515d20a4de00ea35373670887e48b835e28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379482"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678390"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (vérification de la sécurité des mémoires tampons)  
   
-Détecte des dépassements de mémoire tampon qui remplacent l’adresse de retour d’une fonction, adresse du Gestionnaire d’exceptions ou certains types de paramètres. À l’origine d’un dépassement de mémoire tampon est une technique utilisée par les pirates pour exploiter le code qui n’applique pas les restrictions de taille de mémoire tampon.  
+Détecte des dépassements de mémoire tampon qui remplacent l’adresse de retour d’une fonction, adresse du Gestionnaire d’exception ou certains types de paramètres. À l’origine d’un dépassement de mémoire tampon est une technique utilisée par les pirates pour exploiter le code qui n’applique pas les restrictions de taille de mémoire tampon.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,15 +43,15 @@ Détecte des dépassements de mémoire tampon qui remplacent l’adresse de reto
   
 ## <a name="remarks"></a>Notes  
   
-**/GS** est activé par défaut. Si vous pensez que votre application sans risque pour la sécurité, utilisez **/GS-**. Pour plus d’informations sur **/GS**, consultez [du compilateur sécurité Contrôles approfondis de](http://go.microsoft.com/fwlink/p/?linkid=7260). Pour plus d’informations sur la détection de dépassement de mémoire tampon de suppression, consultez [safebuffers](../../cpp/safebuffers.md).  
+**/GS** est activée par défaut. Si vous pensez que votre application de n’avoir aucun risque pour la sécurité, utilisez **/GS-**. Pour plus d’informations sur la détection de dépassement de mémoire tampon de suppression, consultez [safebuffers](../../cpp/safebuffers.md).  
   
 ## <a name="security-checks"></a>Vérifications de sécurité  
   
-Sur les fonctions que le compilateur reconnaît comme soumis à des problèmes de dépassement de mémoire tampon, le compilateur alloue de l’espace sur la pile avant l’adresse de retour. Sur l’entrée de la fonction, l’espace alloué est chargée avec un *cookie de sécurité* qui est calculée une fois au moment du chargement du module. Sur la sortie de la fonction et pendant le déroulement de frame sur les systèmes d’exploitation 64 bits, une fonction d’assistance est appelée pour vous assurer que la valeur du cookie est toujours la même. Une autre valeur indique qu’un remplacement de la pile peut se sont produites. Si une valeur différente est détectée, le processus est terminé.  
+Sur les fonctions que le compilateur reconnaît comme sujets à des problèmes de dépassement de mémoire tampon, le compilateur alloue de l’espace sur la pile avant l’adresse de retour. À l’entrée de fonction, l’espace alloué est chargé avec un *cookie de sécurité* qui est calculée une fois au moment du chargement du module. Sur la sortie de la fonction et pendant le déroulement de frame sur les systèmes d’exploitation 64 bits, une fonction d’assistance est appelée pour vous assurer que la valeur du cookie est toujours la même. Une autre valeur indique qu’un remplacement de la pile peut se sont produites. Si une valeur différente est détectée, le processus est terminé.  
   
 ## <a name="gs-buffers"></a>Mémoires tampon GS  
   
-Une vérification de sécurité de dépassement de mémoire tampon est effectuée sur un *mémoire tampon GS*. Une mémoire tampon GS peut être une de ces :  
+Une vérification de sécurité de dépassement de mémoire tampon est effectuée sur un *mémoire tampon GS*. Une mémoire tampon GS peut être une d’elles :  
   
 -   Un tableau qui est supérieure à 4 octets, a plus de deux éléments et a un type d’élément qui n’est pas un type pointeur.  
   
@@ -70,7 +70,7 @@ struct { int a; int b; int c; int d; } myStruct;
 struct { int a; char buf[20]; };  
 ```  
   
-Toutefois, les instructions suivantes ne déclarent pas les mémoires tampon GS. Les deux premières déclarations contiennent des éléments de type pointeur. Les troisième et quatrième instructions déclarent des tableaux dont la taille est trop petite. La cinquième instruction déclare une structure dont la taille sur x86 plateforme n’est pas plus de 8 octets.  
+Toutefois, les instructions suivantes ne déclarent pas les mémoires tampon GS. Les deux premières déclarations contiennent des éléments de type pointeur. Les troisième et quatrième instructions déclarent des tableaux dont la taille est trop petite. La cinquième instruction déclare une structure dont la taille sur un x86 plateforme n’est pas plus de 8 octets.  
   
 ```cpp  
 char *pBuf[20];  
@@ -82,7 +82,7 @@ struct { int a; int b; };
   
 ## <a name="initialize-the-security-cookie"></a>Initialiser le Cookie de sécurité  
   
-Le **/GS** option du compilateur nécessite l’initialisation du cookie de sécurité avant l’exécution de n’importe quelle fonction qui utilise le cookie. Le cookie de sécurité doit être initialisé immédiatement sur ENTRÉE pour un EXE ou DLL. Cela s’effectue automatiquement si vous utilisez les points d’entrée par défaut VCRuntime : mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, ou _DllMainCRTStartup. Si vous utilisez un autre point d’entrée, vous devez initialiser manuellement le cookie de sécurité en appelant [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).  
+Le **/GS** option du compilateur nécessite que le cookie de sécurité soit initialisée avant l’exécution de n’importe quelle fonction qui utilise le cookie. Le cookie de sécurité doit être initialisé immédiatement sur ENTRÉE pour un EXE ou DLL. Cette opération est automatique si vous utilisez les points d’entrée par défaut VCRuntime : mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, ou _DllMainCRTStartup. Si vous utilisez un autre point d’entrée, vous devez initialiser manuellement le cookie de sécurité en appelant [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).  
   
 ## <a name="what-is-protected"></a>Ce qui est protégé  
   
@@ -94,15 +94,15 @@ Le **/GS** option du compilateur protège les éléments suivants :
   
 -   Paramètres de fonction vulnérables.  
   
-Sur toutes les plateformes, **/GS** essaie de détecter les saturations de mémoire tampon dans l’adresse de retour. Dépassements de mémoire tampon sont plus facilement exploitées sur les plateformes, telles que x86 et x64, qui utilisent des conventions d’appel qui stockent l’adresse de retour d’un appel de fonction sur la pile.  
+Sur toutes les plateformes, **/GS** essaie de détecter les saturations de mémoire tampon dans l’adresse de retour. Dépassements de mémoire tampon sont plus facilement exploitées sur les plateformes telles que x86 et x64, qui utilisent des conventions d’appel qui stockent l’adresse de retour d’un appel de fonction sur la pile.  
   
-Sur x86, si une fonction utilise un gestionnaire d’exceptions, le compilateur injecte un cookie de sécurité pour protéger l’adresse du Gestionnaire d’exception. Le cookie est vérifié pendant le déroulement de frame.  
+Sur x86, si une fonction utilise un gestionnaire d’exceptions, le compilateur injecte un cookie de sécurité pour protéger l’adresse du Gestionnaire d’exceptions. Le cookie est vérifié pendant le déroulement de frame.  
   
-**/GS** protège *paramètres vulnérables* qui sont passés à une fonction. Un paramètre vulnérable est un pointeur, une référence C++, une-structure C (type POD C++) qui contient un pointeur ou une mémoire tampon GS.  
+**/GS** protège *paramètres vulnérables* qui sont passés dans une fonction. Un paramètre vulnérable est un pointeur, une référence C++, une C-structure (type POD C++) qui contient un pointeur ou une mémoire tampon GS.  
   
-Un paramètre vulnérable est alloué avant le cookie et les variables locales. Un dépassement de mémoire tampon peut remplacer ces paramètres. Et le code de la fonction qui utilise ces paramètres peut provoquer une attaque avant que la fonction retourne et la vérification de sécurité est effectuée. Pour réduire ce risque, le compilateur effectue une copie des paramètres vulnérables pendant le prologue de fonction et les place sous la zone de stockage pour les mémoires tampons.  
+Un paramètre vulnérable est alloué avant le cookie et les variables locales. Un dépassement de mémoire tampon peut remplacer ces paramètres. Et code de la fonction qui utilise ces paramètres peut provoquer une attaque avant que la fonction retourne et la vérification de sécurité est effectuée. Pour limiter ce risque, le compilateur effectue une copie des paramètres vulnérables pendant le prologue de fonction et les place sous la zone de stockage pour les mémoires tampons.  
   
-Le compilateur ne fait pas de copies des paramètres vulnérables dans les situations suivantes :  
+Le compilateur ne fait pas de copies de paramètres vulnérables dans les situations suivantes :  
   
 -   Fonctions qui ne contiennent pas d’une mémoire tampon GS.  
   
@@ -110,29 +110,29 @@ Le compilateur ne fait pas de copies des paramètres vulnérables dans les situa
   
 -   Fonctions qui ont une liste d’arguments variable (...).  
   
--   Les fonctions qui sont marquées avec [naked](../../cpp/naked-cpp.md).  
+-   Fonctions qui sont marquées avec [naked](../../cpp/naked-cpp.md).  
   
 -   Fonctions qui contiennent le code assembleur inline dans la première instruction.  
   
--   Un paramètre est utilisé uniquement avec des méthodes qui sont moins susceptibles d’être exploitable dans le cas d’un dépassement de mémoire tampon.  
+-   Un paramètre est utilisé uniquement dans les méthodes qui sont moins susceptibles d’être exploitable en cas d’un dépassement de mémoire tampon.  
   
 ## <a name="what-is-not-protected"></a>Ce qui n’est pas protégé.  
   
 Le **/GS** option du compilateur ne protège pas contre toutes les attaques de sécurité de dépassement de mémoire tampon. Par exemple, si vous avez une mémoire tampon et un vtable dans un objet, un dépassement de mémoire tampon peut endommager le vtable.  
   
-Même si vous utilisez **/GS**, essayez toujours d’écrire du code sécurisé qui ne possède aucuns dépassements de mémoire tampon.  
+Même si vous utilisez **/GS**, essayez toujours d’écrire du code sécurisé qui n’a aucun dépassements de mémoire tampon.  
   
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Pour définir cette option de compilateur dans Visual Studio  
   
-1.  Dans **l’Explorateur de solutions**, cliquez sur le projet, puis sur **propriétés**.  
+1.  Dans **l’Explorateur de solutions**, cliquez sur le projet, puis cliquez sur **propriétés**.  
   
-     Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
+     Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
 2.  Dans le **Pages de propriétés** boîte de dialogue, cliquez sur le **C/C++** dossier.  
   
 3.  Cliquez sur le **génération de Code** page de propriétés.  
   
-4.  Modifier la **vérification de la mémoire tampon de sécurité** propriété.  
+4.  Modifier le **Buffer Security Check** propriété.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
@@ -140,7 +140,7 @@ Même si vous utilisez **/GS**, essayez toujours d’écrire du code sécurisé 
   
 ## <a name="example"></a>Exemple  
   
-Cet exemple contre les dépassements de mémoire tampon. Cela provoque l’échec lors de l’exécution de l’application.  
+Cet exemple les saturations de mémoire tampon. Cela entraîne l’échec lors de l’exécution de l’application.  
   
 ```C  
 // compile with: /c /W1  

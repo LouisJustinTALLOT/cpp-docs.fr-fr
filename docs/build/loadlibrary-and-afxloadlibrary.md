@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571398"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687933"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary et AfxLoadLibrary
 
-Traite l’appel [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (ou [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) pour une liaison explicite à une DLL. Si la fonction réussit, il mappe la DLL spécifiée dans l’espace d’adressage du processus appelant et retourne un handle vers la DLL qui peut être utilisée avec d’autres fonctions pour une liaison explicite, par exemple, `GetProcAddress` et `FreeLibrary`.
+Traite l’appel [LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) ou [LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(ou [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) pour une liaison explicite à une DLL. Si la fonction réussit, il mappe la DLL spécifiée dans l’espace d’adressage du processus appelant et retourne un handle vers la DLL qui peut être utilisée avec d’autres fonctions pour une liaison explicite, par exemple, `GetProcAddress` et `FreeLibrary`.
 
 `LoadLibrary` tente de localiser la DLL à l’aide de la séquence de recherche qui est utilisée pour la liaison implicite. Si le système ne trouve pas la DLL ou si la fonction de point d’entrée retourne FALSE, `LoadLibrary` renvoie la valeur NULL. Si l’appel à `LoadLibrary` spécifie un module DLL qui est déjà mappé dans l’espace d’adressage du processus appelant, la fonction retourne un handle de la DLL et incrémente le décompte de références du module.
 
@@ -59,5 +59,3 @@ Si Windows ne peut pas charger la DLL, le processus peut tenter de récupérer �
 ## <a name="see-also"></a>Voir aussi
 
 - [DLL dans Visual C++](../build/dlls-in-visual-cpp.md)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

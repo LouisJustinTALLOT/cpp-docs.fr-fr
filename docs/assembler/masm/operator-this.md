@@ -1,7 +1,7 @@
 ---
-title: THIS, opérateur | Documents Microsoft
+title: THIS, opérateur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37304563b1a986b81eec05778c420a002e75fa9f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ae20d8f2abc7740d1716155f626c6a69316ca3fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057121"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692571"
 ---
 # <a name="operator-this"></a>THIS, opérateur
-Retourne un opérande de spécifié `type` dont les valeurs offset et du segment sont égales à la valeur de compteur d’emplacement actuel.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-THIS type  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+
+Retourne un opérande de spécifié `type` dont les valeurs offset et segment sont égaux à la valeur du compteur emplacement actuel.
+
+## <a name="syntax"></a>Syntaxe
+
+> Ce type
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>

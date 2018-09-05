@@ -1,7 +1,7 @@
 ---
-title: imagerel, opérateur | Documents Microsoft
+title: imagerel, opérateur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,26 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4c22c1e12ff2850c61cb1b0aea7fe89eca5ca4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3293f78151ae9bc5a8de47c4083d3e896027815c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055110"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691406"
 ---
 # <a name="operator-imagerel"></a>IMAGEREL, opérateur
-Retourne le décalage relatif d’image de `expression`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-IMAGEREL expression  
-```  
-  
-## <a name="remarks"></a>Notes  
- La valeur résultante est communément appelée un RVA ou l’adresse virtuelle Relative.  
-  
- IMAGEREL est disponible uniquement avec l’émission d’objet COFF.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+
+Retourne le décalage relatif d’image de `expression`.
+
+## <a name="syntax"></a>Syntaxe
+
+> Expression de IMAGEREL
+
+## <a name="remarks"></a>Notes
+
+La valeur résultante est souvent appelée un RVA ou l’adresse virtuelle Relative.
+
+IMAGEREL est disponible uniquement avec l’émission d’objet COFF.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>

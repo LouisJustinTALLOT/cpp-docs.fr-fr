@@ -1,7 +1,7 @@
 ---
-title: POUR (MASM) | Documents Microsoft
+title: POUR (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca67b886a0fd134b4d861a516b6726dae156c3b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd349a38b1de317a01f07fdcf1ba1915f6d32a42
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051941"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681113"
 ---
 # <a name="for-masm"></a>FOR (MASM)
-Marque un bloc qui est répété une fois pour chaque `argument`, avec en cours `argument` en remplaçant `parameter` à chaque répétition.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   FOR   
-   parameter [[:REQ | :=default]] , <argument [[, argument]]...>  
-statements  
-ENDM  
-```  
-  
-## <a name="remarks"></a>Notes  
- Identique à [IRP](../../assembler/masm/irp.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Marque un bloc qui est répété une fois pour chaque *argument*, avec en cours *argument* en remplaçant *paramètre* à chaque répétition.
+
+## <a name="syntax"></a>Syntaxe
+
+> POUR *paramètre* [[ : no | : =*par défaut*]], \< *argument* [[, *argument*]]... ><br/>
+> *Instructions*<br/>
+> ENDM
+
+## <a name="remarks"></a>Notes
+
+Identique à [IRP](../../assembler/masm/irp.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3650482cca0e974a229e303ae20ebdb455aae02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218681"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683750"
 ---
 # <a name="cbasepane-class"></a>Cbasepane, classe
 Classe de base pour tous les volets dans MFC.  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` n’utilisez pas cette méthode.|  
 |`CBasePane::OnUpdateCmdUI`|Utilisé en interne.|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|Retourne le volet qui contient le point donné.|  
-|`CBasePane::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CBasePane::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` n’utilisez pas cette méthode.|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Annule l’inscription d’un volet et le supprime de la liste dans le Gestionnaire d’ancrage.|  
 |[CBasePane::SaveState](#savestate)|Enregistre l'état du volet dans le Registre.|  

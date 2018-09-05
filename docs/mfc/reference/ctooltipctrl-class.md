@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1225ab62dfd64a991ba5ff680e86b62e7d48f8ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200072"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684805"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 Encapsule les fonctionnalités d'un « contrôle info-bulle », une petite fenêtre contextuelle qui affiche une ligne de texte unique qui décrit le rôle d'un outil dans une application.  
@@ -309,7 +309,7 @@ virtual BOOL CreateEx(
  Spécifie le style de l’outil du contrôle. Consultez le **remarques** section de [créer](#create) pour plus d’informations.  
   
  *dwStyleEx*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite sinon 0.  

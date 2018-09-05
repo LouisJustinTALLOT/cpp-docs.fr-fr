@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db05d1b19a67fc54a148d407fd90992a6d37c4c6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25ec172fb38fb3b200086c5f9317ccd8e5e54281
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213585"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691478"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -45,7 +45,7 @@ Incluez l’en-tête standard iostreams \<streambuf> pour définir la classe de 
 
 |Classe|Description|
 |-|-|
-|[basic_streambuf, classe](https://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|La classe de modèle décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission des éléments depuis et vers une représentation spécifique d'un flux.|
+|[basic_streambuf, classe](basic-streambuf-class.md)|La classe de modèle décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission des éléments depuis et vers une représentation spécifique d'un flux.|
 
 ## <a name="see-also"></a>Voir aussi
 

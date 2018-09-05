@@ -1,7 +1,7 @@
 ---
-title: OWORD | Documents Microsoft
+title: OWORD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2244266311649b0405a31edc9ec01b1e3dbaa183
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: eeab88ec8594eb09d829c2867c7d238045b508a6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053241"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687497"
 ---
 # <a name="oword"></a>OWORD
-Utilisé comme un spécificateur de type lorsqu’un type de données de 16 octets est requis.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-OWORD  
-  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Utilisé comme un spécificateur de type quand un type de données de 16 octets est nécessaire.
+
+## <a name="syntax"></a>Syntaxe
+
+> OWORD
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

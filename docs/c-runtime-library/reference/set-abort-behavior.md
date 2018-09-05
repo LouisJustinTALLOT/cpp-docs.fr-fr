@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb308e527cc955d91af0b12547d52aa5e6316af5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 299801cc4276118fc73a4be625a3df8cc84d58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407273"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692932"
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Spécifie l’action à entreprendre quand un programme s’arrête anormalement.
 
 > [!NOTE]
-> N’utilisez pas le [abandonner](abort.md) fonction pour arrêter une application Microsoft Store, à l’exception de test ou de scénarios de débogage. Méthodes de programmation ou l’interface utilisateur pour fermer une application de magasin ne sont pas autorisées en fonction de la [des stratégies Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Pour plus d’informations, consultez [cycle de vie des applications UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> N’utilisez pas le [abandonner](abort.md) (fonction) pour arrêter une application Microsoft Store, à l’exception de test ou de scénarios de débogage. Méthodes de programmation ou l’interface utilisateur pour fermer une application de Store ne sont pas autorisées en fonction de la [les stratégies de Microsoft Store](/legal/windows/agreements/store-policies). Pour plus d’informations, consultez [cycle de vie des applications UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,7 +61,7 @@ unsigned int _set_abort_behavior(
 *flags*<br/>
 Nouvelle valeur de la [abandonner](abort.md) indicateurs.
 
-*masque*<br/>
+*Masque*<br/>
 Masque pour le [abandonner](abort.md) indicateurs de bits à définir.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -70,9 +70,9 @@ Ancienne valeur des indicateurs.
 
 ## <a name="remarks"></a>Notes
 
-Il existe deux [abandonner](abort.md) indicateurs : **_WRITE_ABORT_MSG** et **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** détermine si un message texte utile est imprimé lorsqu’un programme est terminé anormalement. Le message indique que l’application a appelé la [abandonner](abort.md) (fonction). Le comportement par défaut consiste à imprimer le message. **_CALL_REPORTFAULT**, si définie, spécifie qu’un incident Dr. Watson est généré et signalé quand [abandonner](abort.md) est appelée. Par défaut, le signalement de vidage sur incident est activé dans les builds non DEBUG.
+Il existe deux [abandonner](abort.md) indicateurs : **_WRITE_ABORT_MSG** et **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** détermine si un message texte utile est imprimé quand un programme s’arrête anormalement. Le message indique que l’application a appelé la [abandonner](abort.md) (fonction). Le comportement par défaut consiste à imprimer le message. **_CALL_REPORTFAULT**, si définie, spécifie qu’un vidage sur incident de Watson est généré et signalé quand [abandonner](abort.md) est appelée. Par défaut, le signalement de vidage sur incident est activé dans les builds non DEBUG.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

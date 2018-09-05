@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e3f7d59dd86aa15833134223854eb9ed01f6679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b80ae92671b2ee78cd2f48e9a35958c89232e4e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216573"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683039"
 ---
 # <a name="hstringreference-class"></a>HStringReference, classe
 
@@ -34,7 +34,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>Notes
 
-La durée de vie de la mémoire tampon de stockage dans le nouveau HSTRING n’est pas gérée par le Runtime de Windows. L’appelant alloue une chaîne source sur le frame de pile pour éviter une allocation de tas et d’éliminer le risque d’une fuite de mémoire. En outre, l’appelant doit s’assurer que la chaîne source reste inchangée pendant la durée de vie du HSTRING attaché. Pour plus d’informations, consultez [WindowsCreateStringReference fonction](https://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).
+La durée de vie de la mémoire tampon de stockage dans le nouveau HSTRING n’est pas gérée par le Runtime de Windows. L’appelant alloue une chaîne source sur le frame de pile pour éviter une allocation de tas et d’éliminer le risque d’une fuite de mémoire. En outre, l’appelant doit s’assurer que la chaîne source reste inchangée pendant la durée de vie du HSTRING attaché. Pour plus d’informations, consultez [WindowsCreateStringReference fonction](/windows/desktop/api/winstring/nf-winstring-windowscreatestringreference).
 
 ## <a name="members"></a>Membres
 

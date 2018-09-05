@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5a5e4d7bda9fe14362696d44137273cc020c7f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203128"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686184"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Mise à niveau d'un contrôle ActiveX
 Contrôles ActiveX existant (anciennement contrôles OLE) peut être utilisé sur Internet sans modification. Toutefois, vous souhaiterez modifier des contrôles afin d’améliorer leurs performances. Lorsque vous utilisez votre contrôle sur une page Web, il existe des considérations supplémentaires. Le fichier .ocx et tous les fichiers de prise en charge doivent se trouver sur l’ordinateur cible ou être téléchargés sur Internet. Cela rend la taille du code et un aspect important de temps de téléchargement. Téléchargements peuvent être empaquetés dans un fichier .cab signé. Vous pouvez marquer votre contrôle comme sûrs pour l’écriture de scripts et l’initialisation.  
@@ -89,7 +89,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  Le fichier cab vers lequel pointe `CODEBASE` doit contenir le fichier .ocx pour votre contrôle ActiveX et un fichier .inf pour contrôler son installation. Vous créez le fichier CAB en spécifiant le nom de votre fichier de contrôle et un fichier .inf. N’incluez pas les DLL dépendantes qui existent déjà sur le système dans le fichier CAB. Par exemple, les DLL MFC sont empaquetées dans un fichier CAB distinct et référencés par le fichier .inf du contrôle.  
   
- Pour plus d’informations sur la création d’un fichier CAB, consultez [création d’un fichier CAB](https://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
+ Pour plus d’informations sur la création d’un fichier CAB, consultez [création d’un fichier CAB](/windows/desktop/devnotes/cabinet-api-functions).  
   
 ### <a name="the-inf-file"></a>Le fichier INF  
  L’exemple suivant, spindial.inf, répertorie les fichiers de prise en charge et les informations de version nécessitent pour le Spindial MFC contrôler. Notez que l’emplacement pour les DLL MFC est un site Web de Microsoft. Le fichier mfc42.cab est fourni et signé par Microsoft.  
@@ -221,7 +221,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> Signature du Code  
  Signature de code est conçue pour identifier la source de code, et pour garantir que le code n’a pas changé depuis qu’il a été signé. En fonction des paramètres de sécurité du navigateur, les utilisateurs peuvent être avertis avant le téléchargement du code. Les utilisateurs peuvent choisir d’approuver certains propriétaires de certificat ou les entreprises, dans lequel cas le code signé par ceux approuvé seront téléchargés sans avertissement. Code est signé numériquement pour éviter toute falsification.  
   
- Assurez-vous que votre code final est signé afin que votre contrôle peut être téléchargé automatiquement sans afficher les messages d’avertissement de niveau de confiance. Pour plus d’informations sur la façon de signer le code, consultez la documentation sur Authenticode dans le SDK ActiveX et consultez [signature d’un fichier CAB](https://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
+ Assurez-vous que votre code final est signé afin que votre contrôle peut être téléchargé automatiquement sans afficher les messages d’avertissement de niveau de confiance. Pour plus d’informations sur la façon de signer le code, consultez la documentation sur Authenticode dans le SDK ActiveX et consultez [signature d’un fichier CAB](/windows/desktop/devnotes/cabinet-api-functions).  
   
  En fonction de l’approbation et navigateur au niveau paramètres de sécurité, un certificat peut être affiché pour identifier la personne ou société signataire. Si le niveau de sécurité est none, ou si le propriétaire du certificat du contrôle signé est approuvé, un certificat ne sera pas affiché. Consultez [niveaux de sécurité du navigateur Internet Explorer et de contrôler le comportement](#_core_internet_explorer_browser_safety_levels_and_control_behavior) pour plus d’informations sur la façon dont le paramètre de sécurité du navigateur déterminera si votre contrôle est téléchargé et un certificat est affiché.  
   

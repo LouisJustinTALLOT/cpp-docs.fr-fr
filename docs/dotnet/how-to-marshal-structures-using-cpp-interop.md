@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e135dd1cbfc3aeb164449a1f09e6c1cdf6287582
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bbf85f8da0477de2483ee2ce4b981d832421da95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215118"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680900"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Comment : marshaler des structures à l’aide de l’interopérabilité C++
 Cette rubrique illustre une facette de l’interopérabilité de Visual C++. Pour plus d’informations, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -32,7 +32,7 @@ Cette rubrique illustre une facette de l’interopérabilité de Visual C++. Pou
  Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais ces fonctions interagissent de la même manière, si elles sont définies dans des fichiers distincts. Fichiers contenant uniquement des fonctions non managées ne doivent pas être compilé avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre le passage d’une structure d’une fonction managée à une fonction non managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient les types de données intrinsèques simples uniquement (consultez [Types blittables et Non blittables](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez [Comment : marshaler Embedded pointeurs à l’aide de C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ L’exemple suivant illustre le passage d’une structure d’une fonction managée à une fonction non managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient les types de données intrinsèques simples uniquement (consultez [Types blittables et Non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez [Comment : marshaler Embedded pointeurs à l’aide de C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre le passage d’une structure à partir d’une fonction non managée à une fonction managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient les types de données intrinsèques simples uniquement (consultez [Types blittables et Non blittables](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez [Comment : marshaler Embedded pointeurs à l’aide de C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ L’exemple suivant illustre le passage d’une structure à partir d’une fonction non managée à une fonction managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient les types de données intrinsèques simples uniquement (consultez [Types blittables et Non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez [Comment : marshaler Embedded pointeurs à l’aide de C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  

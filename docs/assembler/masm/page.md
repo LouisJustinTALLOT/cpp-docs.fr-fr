@@ -1,7 +1,7 @@
 ---
-title: PAGE | Documents Microsoft
+title: PAGE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 994a542b543fd58fa970c373243f18403b167c1d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: cc2057a850d050795ec605eca8e31b69a0086169
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057990"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692478"
 ---
 # <a name="page"></a>PAGE
-La première directive définit la ligne *longueur* et caractère *largeur* de la liste de programme. Si aucun argument n’est fourni, génère un saut de page. La deuxième directive incrémente le numéro de section et réinitialise le numéro de page à 1.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      PAGE [[[[length]], width]]  
-PAGE +  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+La première directive définit la ligne *longueur* et caractère *largeur* de l’annonce du programme. Si aucun argument n’est fourni, génère un saut de page. La deuxième directive incrémente le numéro de section et rétablit le numéro de page 1.
+
+## <a name="syntax"></a>Syntaxe
+
+> PAGE [[*longueur*]] [[, *largeur*]]<br/><br/>
+> PAGE +
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

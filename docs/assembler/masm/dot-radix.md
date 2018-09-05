@@ -1,7 +1,7 @@
 ---
-title: . RADIX | Documents Microsoft
+title: . RADIX | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dba4fcfd3d589727cc4fc76ec9dd6a2890ae983
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 95617e9d99b2f07c8aadde94e0b1a74614d34efd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056660"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685643"
 ---
 # <a name="radix"></a>.RADIX
-Définit la base par défaut, comprise entre 2 et 16, et la valeur de *expression*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.RADIX expression  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Définit la base par défaut, comprise entre 2 et 16, et la valeur de *expression*.
+
+## <a name="syntax"></a>Syntaxe
+
+> . Expression de base
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c4acddaeac8e63ecd09860ffc9c56c97b212506
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0a4e8c47ea924fc098458219946f440f093339c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219726"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681735"
 ---
 # <a name="single-inheritance"></a>Héritage simple
 Dans « l'héritage unique », une forme courante d'héritage, les classes possèdent une seule classe de base. Considérons la relation illustrée à la figure ci-dessous.  
@@ -63,7 +63,7 @@ Exemple de graphique acyclique dirigé
  Dans le diagramme ci-dessus, appelé « graphique acyclique dirigé », certaines classes sont des classes de base pour plusieurs classes dérivées. Toutefois, l'inverse n'est pas vrai : il existe une seule classe de base directe pour chaque classe dérivée. Le graphique de la figure représente une structure « d'héritage unique ».  
   
 > [!NOTE]
->  Les graphiques acycliques dirigés ne sont pas propres à l'héritage unique. Ils sont également utilisés pour représenter des cas d'héritage multiple. Cette rubrique est couverte dans [l’héritage Multiple](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Les graphiques acycliques dirigés ne sont pas propres à l'héritage unique. Ils sont également utilisés pour représenter des cas d'héritage multiple.  
   
  Dans un héritage, la classe dérivée contient les membres de la classe de base, ainsi que tous les nouveaux membres que vous ajoutez. Par conséquent, une classe dérivée peut faire référence à des membres de la classe de base (à moins que ces membres soient redéfinis dans la classe dérivée). L'opérateur de résolution de portée (`::`) peut être utilisé pour faire référence à des membres de classes de base directes ou indirectes, lorsque ces membres ont été redéfinis dans la classe dérivée. Considérez cet exemple :  
   

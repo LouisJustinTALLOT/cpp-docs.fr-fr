@@ -1,5 +1,5 @@
 ---
-title: -Qvec-report (niveau de Reporting Vectoriseur automatique) | Documents Microsoft
+title: -Qvec-report (niveau de rapport du Vectoriseur automatique) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddbb68c20ade9f66215d3a60f2db7ea545409a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85f9d1c63f41b28982018bbe4507ff6bf87158fb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377481"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685851"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (Niveau de rapport du vectoriseur automatique)
 Active la fonctionnalité de création de rapports du compilateur [Vectoriseur](../../parallel/auto-parallelization-and-auto-vectorization.md) et spécifie le niveau des messages d’information pour la sortie pendant la compilation.  
@@ -30,12 +30,12 @@ Active la fonctionnalité de création de rapports du compilateur [Vectoriseur](
   
 ## <a name="remarks"></a>Notes  
  **/ Qvec-report : 1**  
- Génère un message d’information pour les boucles sont vectorisée.  
+ Génère un message d’information pour les boucles qui sont vectorisées.  
   
  **/ Qvec-report : 2**  
- Génère un message d’information pour les boucles sont vectorisées et pour les boucles non vectorisées, ainsi que d’un code de raison.  
+ Génère un message d’information pour les boucles qui sont vectorisées et pour les boucles non vectorisées, ainsi que d’un code de raison.  
   
- Pour plus d’informations sur les codes motifs et les messages, consultez [Messages du Vectoriseur et du PARALLÉLISEUR](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+ Pour plus d’informations sur les codes motif et les messages, consultez [Messages du Vectoriseur et du PARALLÉLISEUR](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
 ### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>Pour définir l’option de compilateur /Qvec-report dans Visual Studio  
   
@@ -53,4 +53,4 @@ Active la fonctionnalité de création de rapports du compilateur [Vectoriseur](
  [/Q (opérations de bas niveau), options](../../build/reference/q-options-low-level-operations.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
- [Programmation parallèle en Code natif](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Programmation parallèle en Code natif](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

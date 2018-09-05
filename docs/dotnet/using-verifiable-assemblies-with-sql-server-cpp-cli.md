@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dfe64e627fd3ca37ab1e1d2d820cafaf3a6a4258
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 65a3c4da1664e34e40e0961655c130f320efb17b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199963"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690701"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilisation d'assemblys vérifiables avec SQL Server (C++/CLI)
-Les procédures stockées étendues, empaquetés en tant que bibliothèques de liens dynamiques (DLL), fournissent un moyen d’étendre les fonctionnalités de SQL Server via les fonctions développées avec Visual C++. Les procédures stockées étendues sont implémentées en tant que fonctions au sein de la DLL. Outre les fonctions, procédures stockées étendues peuvent également définir [types définis par l’utilisateur](../cpp/classes-and-structs-cpp.md) et [fonctions d’agrégation](https://msdn.microsoft.com/de255454-f45e-4281-81f9-bc61893ac5da) (telles que SUM ou AVG).  
+Les procédures stockées étendues, empaquetés en tant que bibliothèques de liens dynamiques (DLL), fournissent un moyen d’étendre les fonctionnalités de SQL Server via les fonctions développées avec Visual C++. Les procédures stockées étendues sont implémentées en tant que fonctions au sein de la DLL. Outre les fonctions, procédures stockées étendues peuvent également définir [types définis par l’utilisateur](../cpp/classes-and-structs-cpp.md) et agréger des fonctions (telles que SUM ou AVG).  
   
  Lorsqu’un client exécute une procédure stockée étendue, SQL Server recherche la DLL associée à la procédure stockée étendue et charge la DLL. SQL Server appelle la procédure stockée étendue demandée et s’exécute sous un contexte de sécurité spécifié. La procédure stockée étendue, résultat de passes définit et retourne les paramètres sur le serveur.  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 258d8f10238db58be26743694943ae3bd6abc20e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199262"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693573"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Procédure pas à pas : placement de contrôles dans les barres d'outils
 Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient un contrôle Windows. Dans MFC, un bouton de barre d’outils doit être un [cmfctoolbarbutton, classe](../mfc/reference/cmfctoolbarbutton-class.md)-classe dérivée, par exemple [cmfctoolbarcomboboxbutton, classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [cmfctoolbareditboxbutton, classe](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Cmfcdropdowntoolbarbutton, classe](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [cmfctoolbarmenubutton, classe](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -73,7 +73,7 @@ Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient
   
     1.  Passez `ID_EDIT_FIND_COMBO` en tant qu'ID de commande.  
   
-    2.  Utilisez [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) avec `ID_EDIT_FIND` pour obtenir l’index d’image.  
+    2.  Utilisez [CCommandManager::GetCmdImage](reference/internal-classes.md) avec `ID_EDIT_FIND` pour obtenir l’index d’image.  
   
     3.  Pour obtenir la liste de styles de zone de liste déroulante disponibles, consultez [Styles de zone de liste déroulante](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

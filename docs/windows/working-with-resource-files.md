@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0cbc2e88bc123b4de82ca69a41a17a41729bb4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691190"
 ---
 # <a name="working-with-resource-files"></a>Utilisation des fichiers de ressources
 
 > [!WARNING]
-> Cette section concerne les applications de bureau Windows écrites en C++. Pour plus d’informations sur les ressources dans les applications de plateforme Windows universelle écrites en C++, consultez [définition des ressources d’application](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Cette section concerne les applications de bureau Windows écrites en C++. Pour plus d’informations sur les ressources dans les applications de plateforme Windows universelle écrites en C++, consultez [définition des ressources d’application](/windows/uwp/app-resources/).
 >
 > Pour plus d’informations sur l’ajout de ressources à C++ / c++ / projets de l’interface CLI, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.
 
@@ -52,9 +52,6 @@ Décrit les éditeurs de ressources fournis dans Visual Studio, les types de res
 
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Fournit des liens vers la documentation Visual C++.
-
-[Présentation de Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
-Décrit l'ensemble des outils de développement qui utilisent le même environnement de développement intégré (IDE), ce qui leur permet de partager des outils et facilite la création de solutions combinant plusieurs langages.
 
 [Nous contacter](/visualstudio/ide/talk-to-us)  
 Propose des liens vers des informations sur l'utilisation de l'ensemble de documentation, sur la sollicitation du support technique et sur l'emploi de fonctionnalités d'accessibilité.

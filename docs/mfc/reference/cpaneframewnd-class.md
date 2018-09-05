@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214989"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682854"
 ---
 # <a name="cpaneframewnd-class"></a>Cpaneframewnd, classe
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Appelé par l'infrastructure quand un volet de la fenêtre mini-frame est masqué ou affiché.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Retourne un volet s'il contient un point fourni par l'utilisateur à l'intérieur d'une fenêtre mini-frame.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Redessine toutes les fenêtres mini-frame.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Appelé par l'infrastructure pour supprimer les volets non valides.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Supprime un volet de la fenêtre mini-frame.|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  La hauteur, en pixels, de la fenêtre mini-frame.  
   
 ### <a name="remarks"></a>Notes  
- Appelez cette méthode pour déterminer la hauteur d’une fenêtre mini-frame. Par défaut, la hauteur est définie à SM_CYSMCAPTION. Pour plus d’informations, consultez [GetSystemMetrics fonction](https://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Appelez cette méthode pour déterminer la hauteur d’une fenêtre mini-frame. Par défaut, la hauteur est définie à SM_CYSMCAPTION. Pour plus d’informations, consultez [GetSystemMetrics fonction](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Calcule le rectangle englobant d'une légende de fenêtre mini-frame.  

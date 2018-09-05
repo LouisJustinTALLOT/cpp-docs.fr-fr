@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bd20852f1dfd278d4ae58cc6c67d6047579cd08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215355"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693190"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de curseur Windows.  
@@ -241,7 +241,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwExStyle*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.  
   
  *dwStyle*  
  Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](/windows/desktop/Controls/trackbar-control-styles), comme décrit dans le Kit de développement logiciel Windows, au contrôle.  

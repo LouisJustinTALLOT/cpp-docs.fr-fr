@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88e44100e20ce40b343a82c7caed66387ca1bcd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207921"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681038"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -128,7 +128,8 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 
 |Name|Description|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) qui détermine le comportement si un fichier de destination existe déjà.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) qui détermine le comportement si un fichier de destination existe déjà.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) qui détermine le comportement si un fichier de destination existe déjà.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Énumération pour les types de fichiers.|
 |[Perms](../standard-library/filesystem-enumerations.md#perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|

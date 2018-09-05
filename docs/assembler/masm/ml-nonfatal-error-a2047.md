@@ -1,7 +1,7 @@
 ---
-title: Erreur ML non fatale A2047 | Documents Microsoft
+title: ML erreur non fatale A2047 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95d01abf57eb58dadc4f46369b3613abfd5c49b1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b2dae687e4ac60157e8c929bedc5e1941160848c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054895"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688102"
 ---
 # <a name="ml-nonfatal-error-a2047"></a>Erreur ML non fatale A2047
-**chaîne vide (nulle)**  
-  
- Une chaîne est composé d’une paire de délimitation de guillemets et aucun caractère dans.  
-  
- Pour une chaîne soit valide, il doit contenir entre 1 et 255 caractères.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**chaîne vide (nulle)**
+
+Une chaîne est composé d’une paire de délimitation de guillemets et aucun caractère dans.
+
+Une chaîne être valide, il doit contenir 1 et 255 caractères.
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>

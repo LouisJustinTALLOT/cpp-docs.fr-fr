@@ -1,7 +1,7 @@
 ---
-title: Erreur ML non fatale A2038 | Documents Microsoft
+title: ML erreur non fatale A2038 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae76352325e098cb4951982d0aa778fa0b0e0d0d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 92de20e9eb2c9a5666758ecc1e11901e75e67556
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054430"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680308"
 ---
 # <a name="ml-nonfatal-error-a2038"></a>Erreur ML non fatale A2038
-**opérande manquant pour l’opérateur de macro**  
-  
- L’assembleur trouvée à la fin de la liste de paramètres d’une macro immédiatement après le [!](../../assembler/masm/operator-logical-not-masm-run-time.md) ou [ % ](../../assembler/masm/operator-percent.md) opérateur.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**opérande manquant pour l’opérateur de macro**
+
+L’assembleur trouvé à la fin de la liste des paramètres d’une macro immédiatement après le [!](../../assembler/masm/operator-logical-not-masm-run-time.md) ou [ % ](../../assembler/masm/operator-percent.md) opérateur.
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76167793f7252540dbe9feedbb2d83678ebdcacb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336505"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688384"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange, classe
 Prend en charge les routines d'échange de champs d'enregistrements (RFX) et d'échange de champs d'enregistrements en bloc (RFX en bloc) utilisées par les classes de base de données.  
@@ -117,7 +117,7 @@ void SetFieldType(UINT nFieldType);
 |Valeur du paramètre SetFieldType|Type de membre de données de paramètre|  
 |----------------------------------|-----------------------------------|  
 |`CFieldExchange::inputParam`|Paramètre d’entrée. Une valeur qui est passée dans le jeu d’enregistrements requête ou procédure stockée.|  
-|'' ieldExchange::param **`ame as **CFieldExchange::inputParam`.|  
+|`CFieldExchange::param` | Identique à `CFieldExchange::inputParam`.|  
 |`CFieldExchange::outputParam`|Paramètre de sortie. Valeur de retour de procédure stockée du jeu d’enregistrements.|  
 |`CFieldExchange::inoutParam`|Paramètre d’entrée/sortie. Une valeur qui est passée et retournée à partir de la procédure stockée du jeu d’enregistrements.|  
   

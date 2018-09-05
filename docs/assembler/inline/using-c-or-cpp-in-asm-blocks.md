@@ -1,7 +1,7 @@
 ---
-title: À l’aide de C ou C++ dans les blocs __asm | Documents Microsoft
+title: À l’aide de C ou C++ dans les blocs __asm | Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ed46cdf44ccacee806dd03bf7eacca26eec32d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 14b91a7925089f6a6ab747a9fd6a5813f9a14693
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37120942"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687097"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Utilisation de C ou C++ dans les blocs __asm
 
@@ -49,7 +49,7 @@ Un bloc `__asm` peut utiliser les éléments de langage suivants :
 
 - Noms de types (partout où un type MASM est autorisé)
 
-- `typedef` généralement utilisées avec des opérateurs tels que les noms **PTR** et **TYPE** ou pour spécifier les membres de structure ou union
+- `typedef` noms, généralement utilisés avec des opérateurs tels que **PTR** et **TYPE** ou pour spécifier les membres de structure ou union
 
 Dans un bloc `__asm`, vous pouvez spécifier des constantes entières avec la notation C ou la notation de base de l'assembleur (0x100 et 100h sont équivalents, par exemple). Cela vous permet de définir (avec `#define`) une constante en C puis de l'utiliser dans C ou C++ et dans des parties d'assembly du programme. Vous pouvez également spécifier des constantes au format octal en les faisant précéder d'un 0. Par exemple, 0777 spécifie une constante octale.
 
@@ -57,7 +57,7 @@ Dans un bloc `__asm`, vous pouvez spécifier des constantes entières avec la no
 
 - [Utilisation d’opérateurs dans les blocs __asm](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [À l’aide de C ou C++ symboles les blocs __asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [À l’aide de C ou C++ symboles blocs __asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [Accès aux données C ou C++ dans les blocs __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 
@@ -67,4 +67,4 @@ Dans un bloc `__asm`, vous pouvez spécifier des constantes entières avec la no
 
 ## <a name="see-also"></a>Voir aussi
 
-[Assembleur inline](../../assembler/inline/inline-assembler.md)
+[Assembleur inline](../../assembler/inline/inline-assembler.md)<br/>

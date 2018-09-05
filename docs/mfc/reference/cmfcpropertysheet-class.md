@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e08ca5e8fcf78215edd80ae053c5576b6bc95f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a9e4d2bc62ffadb59565ba64e28311cd1283cb5d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207476"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691434"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet, classe
 La classe `CMFCPropertySheet` prend en charge une feuille de propriétés où chaque page de propriétés est représentée par un onglet de page, un bouton de barre d'outils, un nœud de contrôle d'arborescence ou un élément de liste.  
@@ -93,7 +93,7 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Appelé par l'infrastructure pour dessiner un en-tête de page de propriétés personnalisé.|  
 |`CMFCPropertySheet::OnInitDialog`|Gère la [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) message. (Substitue [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Appelé par l’infrastructure pour supprimer une page de propriétés d’un contrôle d’arborescence.|  
-|`CMFCPropertySheet::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows. (Substitue `CPropertySheet::PreTranslateMessage`.)|  
+|`CMFCPropertySheet::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. (Substitue `CPropertySheet::PreTranslateMessage`.)|  
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Supprime un nœud du contrôle d’arborescence.|  
 |[CMFCPropertySheet::RemovePage](#removepage)|Supprime une page de propriétés de la feuille de propriétés.|  
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Spécifie la liste des images utilisées dans le contrôle de navigation du volet Outlook.|  

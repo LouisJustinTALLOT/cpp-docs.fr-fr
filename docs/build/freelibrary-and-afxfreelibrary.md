@@ -1,5 +1,5 @@
 ---
-title: FreeLibrary et AfxFreeLibrary | Documents Microsoft
+title: FreeLibrary et AfxFreeLibrary | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e1bf5f1a05438ddf89af86c9b0d12e7885b901
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 063c858253c12cfedbf252a124029b8cbc16a691
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367509"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680961"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary et AfxFreeLibrary
-Processus de liaison explicite avec un appel DLL le [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) fonctionner lorsque le module DLL n’est plus nécessaire. Cette fonction décrémente le nombre de module référence et, si le décompte de références est égal à zéro, annule le mappage à partir de l’espace d’adressage du processus.  
+Processus de liaison explicite à une DLL appellent la [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx) fonctionner lorsque le module DLL n’est plus nécessaire. Cette fonction décrémente le nombre de module référence et, si le décompte de références est égal à zéro, annule son mappage à partir de l’espace d’adressage du processus.  
   
  Dans une application MFC, utilisez [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) au lieu de `FreeLibrary` pour décharger une DLL d’extension MFC. L’interface (prototype de fonction) pour `AfxFreeLibrary` est identique à `FreeLibrary`.  
   
@@ -48,6 +48,6 @@ Processus de liaison explicite avec un appel DLL le [FreeLibrary](http://go.micr
 -   [GetProcAddress](../build/getprocaddress.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [DLL en Visual C++](../build/dlls-in-visual-cpp.md)   
- [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
+ [DLL dans Visual C++](../build/dlls-in-visual-cpp.md)   
+ [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)   
  [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

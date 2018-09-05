@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7f83175e2bf3fe1e69ef02192749916e566edd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215251"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686455"
 ---
 # <a name="cmfctaskspane-class"></a>Cmfctaskspane, classe
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|Indique si le volet des tâches effectue un retour automatique à la ligne dans les étiquettes.|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|Indique si le volet des tâches effectue un retour automatique à la ligne dans les tâches.|  
-|[CMFCTasksPane::LoadState](#loadstate)|(Substitue [CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CMFCTasksPane::LoadState](#loadstate)|(Substitue [CDockablePane::LoadState](cdockablepane-class.md#loadstate).)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|Appelé par l’infrastructure quand l’utilisateur clique sur un élément dans le volet des tâches.|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,17 +293,17 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|Appelé par l'infrastructure quand l'utilisateur clique sur le bouton de navigation Accueil.|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(Substitue [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Substitue [CDockablePane::OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Substitue [CDockablePane::PreTranslateMessage](https://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Substitue [CDockablePane::OnUpdateCmdUI](cdockablepane-class.md).)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Substitue [CDockablePane::PreTranslateMessage](cdockablepane-class.md).)|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(Substitue [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|Supprime tous les groupes sur la page spécifiée.|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|Supprime toutes les pages du volet des tâches à l’exception de la (première) page par défaut.|  
 |[CMFCTasksPane::RemoveAllTasks](#removealltasks)|Supprime toutes les tâches du groupe.|  
 |[CMFCTasksPane::RemoveGroup](#removegroup)|Supprime un groupe.|  
-|[CMFCTasksPane::RemovePage](#removepage)|Supprime une page spécifiée du volet des tâches.|  
+|[CMFCTasksPane::RemovePage](#removepage)|Supprime une page spécifiée du volet des tâches.|
 |[CMFCTasksPane::RemoveTask](#removetask)|Supprime une tâche d’un groupe de tâches.|  
-|[CMFCTasksPane::SaveState](#savestate)|(Substitue [CDockablePane::SaveState](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
-|[CMFCTasksPane::Serialize](#serialize)|(Substitue [CDockablePane::Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|[CMFCTasksPane::SaveState](#savestate)|(Substitue [CDockablePane::SaveState](cdockablepane-class.md).)|  
+|[CMFCTasksPane::Serialize](#serialize)|(Substitue [CDockablePane::Serialize]().)|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Active une page spécifiée dans le volet des tâches.|  
 |[CMFCTasksPane::SetCaption](#setcaption)|Définit le nom de légende d’un volet de tâches.|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Définit la hauteur d'une légende de groupe.|  
@@ -318,7 +318,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::SetTaskName](#settaskname)|Définit le nom d’une tâche.|  
 |[CMFCTasksPane::SetTasksIconHorzOffset](#settasksiconhorzoffset)||  
 |[CMFCTasksPane::SetTasksIconVertOffset](#settasksiconvertoffset)||  
-|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|Définit la couleur du texte d’une tâche.|  
+|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|Définit la couleur du texte d’une tâche.| 
 |[CMFCTasksPane::SetTasksHorzOffset](#settaskshorzoffset)|Définit le décalage horizontal des tâches entre les bords gauche et droit de leurs groupes parents.|  
 |[CMFCTasksPane::SetVertMargin](#setvertmargin)|Définit l’espacement vertical entre un volet de tâches et les bords de la zone cliente.|  
 |[CMFCTasksPane::SetWindowHeight](#setwindowheight)|Définit la hauteur d'une fenêtre.|  

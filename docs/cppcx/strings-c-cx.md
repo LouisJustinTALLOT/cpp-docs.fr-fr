@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c75c8821a04c0270a79800e77cd4b57bf49c00
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e427d6469df3a3b82f25a26a0f9ce70642b8514c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202346"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679550"
 ---
 # <a name="strings-ccx"></a>Chaînes (C++/CX)
 Texte dans le Windows Runtime est représenté en C / c++ / CX par le [classe Platform::String](../cppcx/platform-string-class.md). Utilisez le `Platform::String Class` lorsque vous passez des chaînes dans les deux sens aux méthodes dans des classes Windows Runtime, ou lorsque vous interagissez avec d’autres composants Windows Runtime dans la limite (ABI) de l’interface binaire d’application. La `Platform::String Class` fournit des méthodes pour plusieurs opérations de chaînes courantes mais elle n'est pas conçue pour être une classe de chaîne complète. Dans votre module C++, utilisez les types de chaînes C++ standard tels que [wstring](../standard-library/basic-string-class.md) pour tout traitement de texte significatif, puis convertissez le résultat final en [Platform::String^](../cppcx/platform-string-class.md) avant de le passer vers ou à partir d'une interface publique. Il est facile et efficace de convertir entre `wstring` ou `wchar_t*` et `Platform::String`.  
@@ -75,5 +75,3 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Types intégrés](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)

@@ -1,5 +1,5 @@
 ---
-title: /NXCOMPAT (Compatible avec la prévention de l’exécution des données) | Documents Microsoft
+title: /NXCOMPAT (Compatible avec la prévention de l’exécution de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb4f8a91545a196bc92fdc0ec44e89a7d5680185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f6e2c3f1c297493b2af72f280ac5eabcb6f17ce
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374802"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690317"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatible avec la prévention de l'exécution des données)
 
@@ -34,21 +34,21 @@ Indique qu’un fichier exécutable est compatible avec la fonctionnalité de pr
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, **/NXCOMPAT** sur.
+Par défaut, **/NXCOMPAT** se trouve sur.
 
-**Sa** peut être utilisé pour spécifier explicitement un fichier exécutable comme étant incompatible avec la prévention de l’exécution des données.
+**Sa** peut être utilisé pour spécifier explicitement un fichier exécutable est incompatible avec la prévention de l’exécution des données.
 
 Pour plus d’informations sur la prévention de l’exécution des données, consultez les articles suivants :
 
-- [Une description détaillée de la fonctionnalité de prévention de l’exécution des données (PED)](http://go.microsoft.com/fwlink/p/?linkid=157771)
+- [Une description détaillée de la fonctionnalité de prévention de l’exécution des données (PED)](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [Prévention de l’exécution des données](http://go.microsoft.com/fwlink/p/?linkid=157770)
+- [Prévention de l’exécution des données](/windows/desktop/Memory/data-execution-prevention)
 
-- [Prévention de l’exécution des données (Windows Embedded)](http://go.microsoft.com/fwlink/p/?linkid=157768)
+- [Prévention de l’exécution des données (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Pour définir cette option d'éditeur de liens dans Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
 1. Choisissez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
 

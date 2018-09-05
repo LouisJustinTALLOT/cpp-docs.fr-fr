@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412010f7e8599ab9a97ea5a4e5cab55fca6051a0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690432"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane, classe
 Étend les fonctionnalités de [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) pour prendre en charge la création de fenêtres à onglet.  
@@ -128,7 +128,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|Recalcule les informations de disposition pour le volet. (Substitue [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CBaseTabbedPane::RemovePane](#removepane)|Supprime un volet dans le volet à onglets.|  
 |`CBaseTabbedPane::SaveSiblingBarIDs`|Utilisé en interne pendant la sérialisation.|  
-|`CBaseTabbedPane::Serialize`|(Substitue [CDockablePane::Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::Serialize`|(Substitue [CDockablePane::Serialize](cdockablepane-class.md).)|  
 |`CBaseTabbedPane::SerializeTabWindow`|Utilisé en interne pendant la sérialisation.|  
 |[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Détermine si la barre de contrôle à onglets est détruite automatiquement.|  
 |[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Affiche ou masque le volet d’ancrage affiché entre et mode de masquage automatique. (Substitue [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  

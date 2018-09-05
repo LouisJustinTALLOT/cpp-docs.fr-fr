@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679462"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implémente un volet qui peut être ancré dans un site d'ancrage ou être inclus dans un volet à onglets.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Spécifie si les onglets sont situés en haut ou bas du volet.|  
 |[CDockablePane::IsTracked](#istracked)|Spécifie si un volet est déplacé par l’utilisateur.|  
 |[CDockablePane::IsVisible](#isvisible)|Détermine si le volet actif est visible.|  
-|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Utilisé en interne.|  
+|[CDockablePane::LoadState](#loadstate)|Utilisé en interne.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Appelé par le framework lorsque le parent d’un volet a changé. (Substitue [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Appelé par le framework lorsqu’une barre d’ancrage flottante s’ancre sur une fenêtre frame.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Appelé par le framework lorsque le parent du volet est va être modifiée. (Substitue [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  Si le volet ancrable est en mode de masquage automatique et `IsHideInAutoHideMode` renvoie TRUE, l’état de visibilité dépend de l’état de visibilité de la barre d’outils de masquage automatique associées.  
   
  Si le volet ancrable n’est pas en mode de masquage automatique, l’état de visibilité est déterminée par le [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) (méthode).  
-  
+
+## ##  <a name="loadstate"></a>  CDockablePane::LoadState  
+Uniquement réservé à un usage interne. Pour plus d’informations, consultez le code source situé dans le dossier VC\atlmfc\src\mfc de votre installation Visual Studio.
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  Spécifie si l’animation de masquage automatique du volet ancrable est désactivée.  
   
