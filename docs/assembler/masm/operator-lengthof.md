@@ -1,7 +1,7 @@
 ---
-title: lengthof, opérateur | Documents Microsoft
+title: lengthof, opérateur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be32d102d41cccf4c4bc2ac239b4c140151e7c95
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 553a64730f63db54944cfa01662cd455ac3a081e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052848"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676183"
 ---
 # <a name="operator-lengthof"></a>LENGTHOF, opérateur
-Retourne le nombre d’objets de données dans *variable*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-LENGTHOF variable  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+
+Retourne le nombre d’objets de données dans *variable*.
+
+## <a name="syntax"></a>Syntaxe
+
+> Variable LENGTHOF
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>

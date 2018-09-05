@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e85fc8207e9700f35b59bfaba62dcd699ee37dd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195029"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676922"
 ---
 # <a name="summary-of-scope-rules"></a>Résumé des règles de portée
 L'utilisation d'un nom doit être non équivoque dans sa portée (jusqu'au point où la surcharge est déterminée). Si le nom indique une fonction, celle-ci doit être non équivoque en ce qui concerne le nombre et le type de paramètres. Si le nom n’est pas ambigu, [accès au membre](../cpp/member-access-control-cpp.md) les règles sont appliquées.  
   
 ## <a name="constructor-initializers"></a>Initialiseurs de constructeur  
- Initialiseurs de constructeur (décrit dans [initialisation des Bases et membres](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) sont évalués dans la portée du bloc extérieur du constructeur pour lequel elles sont spécifiées. Par conséquent, ils peuvent utiliser les noms de paramètres du constructeur.  
+ [Initialiseurs de constructeur](constructors-cpp.md#member_init_list) sont évalués dans la portée du bloc extérieur du constructeur pour lequel elles sont spécifiées. Par conséquent, ils peuvent utiliser les noms de paramètres du constructeur.  
   
 ## <a name="global-names"></a>Noms globaux  
  Un nom d'objet, de fonction ou d'énumérateur est global s'il est placé en dehors de toute fonction ou classe ou préfixé par l'opérateur de portée unaire globale (`::`), et s'il n'est pas utilisé conjointement avec l'un des opérateurs binaires suivants :  

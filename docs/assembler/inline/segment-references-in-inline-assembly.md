@@ -1,7 +1,7 @@
 ---
-title: Segment de références dans l’Assembly Inline | Documents Microsoft
+title: Segmenter des références dans l’Assembly Inline | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,18 +19,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7add95852f751ed29dad8e0ba9577abd55fabaf
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 792dda60407928aaf4a7d3fec2a61c0018b8b35a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051474"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676387"
 ---
 # <a name="segment-references-in-inline-assembly"></a>Références de segment dans l'assembly inline
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- Vous devez faire référence aux segments par registre plutôt que par nom (le nom de segment `_TEXT` n'est pas valide, par exemple). Les substitutions de segments doivent utiliser le registre explicitement, comme dans ES:[BX].  
-  
- **FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation du langage assembleur dans les blocs __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Section spécifique à Microsoft**
+
+Vous devez faire référence aux segments par registre plutôt que par nom (le nom de segment `_TEXT` n'est pas valide, par exemple). Les substitutions de segments doivent utiliser le registre explicitement, comme dans ES:[BX].
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation du langage assembleur dans les blocs __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

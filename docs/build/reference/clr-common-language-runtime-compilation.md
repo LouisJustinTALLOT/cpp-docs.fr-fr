@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff46958afea8825f29941d9f3cbead20c533c76c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606861"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676983"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilation pour le Common Language Runtime)
 Permet aux applications et aux composants d’utiliser les fonctionnalités du Common Language Runtime (CLR).  
@@ -68,9 +68,7 @@ Permet aux applications et aux composants d’utiliser les fonctionnalités du C
  Avant Visual C++ 2005, **/clr:noAssembly** nécessitait l’option **/LD**. **/LD** est désormais implicite quand vous spécifiez **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Permet à une application Visual C++ à exécuter sur la version 1 du CLR. Si vous utilisez **initialAppDomain**, vous pouvez voir certains des problèmes qui sont abordées dans [bogue : exception AppDomainUnloaded lors de l’utilisation d’extensions managées pour les composants Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) sur Microsoft Site Web de prise en charge.  
-  
- Une application compilée en utilisant **initialAppDomain** ne doit pas être utilisée par une application qui utilise ASP.NET car elle n’est pas prise en charge dans la version 1 du CLR.  
+ Permet à une application Visual C++ à exécuter sur la version 1 du CLR.  Une application compilée en utilisant **initialAppDomain** ne doit pas être utilisée par une application qui utilise ASP.NET car elle n’est pas prise en charge dans la version 1 du CLR.  
   
  **/clr:nostdlib**  
  Indique au compilateur d'ignorer le répertoire \clr par défaut. Le compilateur produit des erreurs si vous incluez plusieurs versions d'une DLL telle que System.dll. Cette option vous permet de spécifier l'infrastructure spécifique à utiliser pendant la compilation.  

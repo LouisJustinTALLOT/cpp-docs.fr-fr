@@ -1,7 +1,7 @@
 ---
-title: Erreur ML non fatale A2206 | Documents Microsoft
+title: ML erreur non fatale A2206 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a00733bb82c2c81a44f0e7c0dc86286987dac23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 10edbe68ca7f0093cdeb6a9ca5a02cde07f556e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676346"
 ---
 # <a name="ml-nonfatal-error-a2206"></a>Erreur ML non fatale A2206
-**opérateur manquant dans l’expression**  
-  
- Une expression ne peut pas être évaluée, car il manque un opérateur. Ce message d’erreur peut également être un effet secondaire d’une erreur de programme précédent.  
-  
- La ligne suivante génère cette erreur :  
-  
-```  
-value1 = ( 1 + 2 ) 3  
-  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**opérateur manquant dans l’expression**
+
+Une expression ne peut pas être évaluée, car il manque un opérateur. Ce message d’erreur peut également être un effet secondaire d’une erreur de programme précédent.
+
+La ligne suivante génère cette erreur :
+
+```asm
+value1 = ( 1 + 2 ) 3
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>
