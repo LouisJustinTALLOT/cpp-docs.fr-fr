@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207758"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197958"
 ---
 # <a name="midl-property-pages-advanced"></a>Pages de propriétés MIDL : Avancé
 La page de propriétés **Avancé** du dossier **MIDL** spécifie les options du compilateur MIDL suivantes :  
   
--   Activation de la vérification d’erreurs ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Activation de la vérification d’erreurs ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Vérification des allocations ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Vérification des allocations ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Vérification des limites ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Vérification des limites ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Vérification de la plage Enum ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Vérification de la plage Enum ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Vérification des pointeurs de référence ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Vérification des pointeurs de référence ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Vérification des données stub ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Vérification des données stub ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Validation des paramètres ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
+-   Validation des paramètres ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
--   Alignement des membres de la structure ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   Alignement des membres de la structure ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Redirection de la sortie ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Redirection de la sortie ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   Options de préprocesseur C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   Options de préprocesseur C ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   Définitions de préprocesseur non définies ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   Définitions de préprocesseur non définies ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \* /robust peut être utilisé uniquement lors de la génération sur un ordinateur Windows 2000 ou ultérieur. Si vous générez un projet ATL et souhaitez utiliser /robust, modifiez cette ligne dans le fichier dlldatax.c :  
   

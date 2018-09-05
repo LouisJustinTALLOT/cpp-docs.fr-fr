@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0219c5eecda84f27411ee0dca9cc43a1b5c9148e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a5ec2cf7984940421726dd0197dff4cf6d5ea0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390604"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200357"
 ---
 # <a name="declarators-and-variable-declarations"></a>Déclarateurs et déclarations de variable
 Le reste de cette section décrit la forme et la signification des déclarations pour les types de variable répertoriés dans cette liste. Plus particulièrement, les sections restantes expliquent comment déclarer les éléments suivants :  
@@ -35,7 +35,7 @@ Le reste de cette section décrit la forme et la signification des déclarations
 |[Structures](../c-language/structure-declarations.md)|Variables composées d’une collection de valeurs qui peuvent avoir des types différents|  
 |[Unions](../c-language/union-declarations.md)|Variables composées de plusieurs valeurs de types différents qui occupent le même espace de stockage|  
   
- Un déclarateur est la partie d'une déclaration qui spécifie le nom qui doit être introduit dans le programme. Il peut inclure des modificateurs tels que **\*** (pointeur vers), et n’importe quel mot clé de convention d’appel Microsoft.  
+ Un déclarateur est la partie d'une déclaration qui spécifie le nom qui doit être introduit dans le programme. Il peut inclure des modificateurs tels que <strong>\*</strong> (pointeur vers), et n’importe quel mot clé de convention d’appel Microsoft.  
   
  **Section spécifique à Microsoft**  
   
@@ -63,8 +63,8 @@ __declspec(thread) char *var;
  &nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  
   
  *pointer* :  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
   
  *type-qualifier-list* :  
  &nbsp;&nbsp;*type-qualifier*  
@@ -73,7 +73,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 >  Consultez la syntaxe des *déclarations* dans la section [Vue d’ensemble des déclarations](../c-language/overview-of-declarations.md) ou [Résumé de syntaxe du langage C](../c-language/c-language-syntax-summary.md) pour la syntaxe qui référence un *déclarateur*.  
   
- Lorsqu'un déclarateur se compose d'un identificateur non modifié, l'élément déclaré a un type de base. Si un astérisque (**\***) apparaît à gauche d’un identificateur, le type est remplacé par un type pointeur. Si l’identificateur est suivi de crochets (**[ ]**), le type est remplacé par un type tableau. Si l'identificateur est suivi de parenthèses, le type est remplacé par un type fonction. Pour plus d’informations sur l’interprétation de la priorité dans les déclarations, consultez [Interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md).  
+ Lorsqu'un déclarateur se compose d'un identificateur non modifié, l'élément déclaré a un type de base. Si un astérisque (<strong>\*</strong>) apparaît à gauche d’un identificateur, le type est remplacé par un type pointeur. Si l’identificateur est suivi de crochets (**[ ]**), le type est remplacé par un type tableau. Si l'identificateur est suivi de parenthèses, le type est remplacé par un type fonction. Pour plus d’informations sur l’interprétation de la priorité dans les déclarations, consultez [Interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md).  
   
  Chaque déclarateur déclare au moins un identificateur. Un déclarateur doit contenir un spécificateur de type afin que la déclaration soit complète. Le spécificateur de type indique le type des éléments d’un type tableau, le type d’objet adressé par un type pointeur ou le type de retour d’une fonction.  
   

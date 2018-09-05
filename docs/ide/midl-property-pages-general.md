@@ -25,35 +25,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eae97f795898c97bfb371637fc52a27c9e39039d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329980"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204687"
 ---
 # <a name="midl-property-pages-general"></a>Pages de propriétés MIDL : Général
 La page de propriétés **Général** du dossier **MIDL** spécifie les options du compilateur MIDL suivantes :  
   
--   Définitions de préprocesseur [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   Définitions de préprocesseur [(/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   Autres répertoires Include ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   Autres répertoires Include ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   Chemin d’accès Include standard ignoré ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   Chemin d’accès Include standard ignoré ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   Compatible MkTypLib ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
+-   Compatible MkTypLib ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   Niveau d’avertissement ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
+-   Niveau d’avertissement ([/W](https://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   Avertissement comme erreur ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
+-   Avertissement comme erreur ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   Suppression de la bannière de démarrage ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   Suppression de la bannière de démarrage ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   Type de caractère MIDL ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   Type de caractère MIDL ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   Environnement cible ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
+-   Environnement cible ([/env](https://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   Génération de proxies sans stub ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   Génération de proxies sans stub ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
  Pour plus d’informations sur l’accès à la page de propriétés **Général** dans le dossier **MIDL**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   

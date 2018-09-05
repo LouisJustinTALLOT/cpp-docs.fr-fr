@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9fc0bc1789e4fc4f11b9d0becfda656a42d0ec95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336015"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214194"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Types de fichiers créés pour les projets Visual C++
 Cette rubrique décrit tous les types de fichiers associés aux projets Visual C++ pour les applications de bureau classiques. Les fichiers réellement inclus dans votre projet varient en fonction du type de projet et des options que vous sélectionnez quand vous utilisez un Assistant.  
@@ -73,7 +73,7 @@ Cette rubrique décrit tous les types de fichiers associés aux projets Visual C
 |.HxC|Projet|Fichier projet d'aide.|  
 |.ico|Ressource|Fichier graphique de bitmap d'icône.|  
 |.idb|Compilation|Fichier d'état contenant des informations de dépendance entre les fichiers sources et les définitions de classe, qui peuvent être utilisés par le compilateur durant la régénération minimale et la compilation incrémentielle. Utilisez l'option de compilateur [/Fd](../build/reference/fd-program-database-file-name.md) pour spécifier le nom du fichier .idb. Pour plus d'informations, consultez [/Gm (Activer la régénération minimale)](../build/reference/gm-enable-minimal-rebuild.md) .|  
-|.idl|Compilation|Fichier de langage de définition d'interface. Pour plus d’informations, consultez [Fichier IDL (Interface Definition Language)](http://msdn.microsoft.com/library/windows/desktop/aa378712) dans le SDK Windows.|  
+|.idl|Compilation|Fichier de langage de définition d'interface. Pour plus d’informations, consultez [Fichier IDL (Interface Definition Language)](https://msdn.microsoft.com/library/windows/desktop/aa378712) dans le SDK Windows.|  
 |.ilk|Liaison|Fichier de liaison incrémentielle. Pour plus d'informations, consultez [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) .|  
 |.map|Liaison|Fichier texte contenant des informations sur l'éditeur de liens. Utilisez l'option de compilateur [/Fm](../build/reference/fm-name-mapfile.md) pour nommer le fichier .map. Pour plus d'informations, consultez [/MAP](../build/reference/map-generate-mapfile.md) .|  
 |.mfcribbon-ms|Ressource|Fichier de ressources contenant le code XML qui définit boutons, contrôles et attributs du ruban. Pour plus d'informations, consultez [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
@@ -81,7 +81,7 @@ Cette rubrique décrit tous les types de fichiers associés aux projets Visual C
 |.pch|Débogage|Fichier d'en-tête précompilé.|  
 |.rc, .rc2|Ressource|[Fichiers de script de ressources](../windows/working-with-resource-files.md) pour générer des ressources.|  
 |.sbr|Compilation|Fichier intermédiaire d'explorateur de source. Fichier d'entrée de [BSCMAKE](../build/reference/bscmake-options.md).|  
-|.sln|Solution|Fichier [solution](http://msdn.microsoft.com/en-us/a45c299d-69f5-4b67-879d-1383417df0a7) .|  
+|.sln|Solution|Fichier [solution](https://msdn.microsoft.com/a45c299d-69f5-4b67-879d-1383417df0a7).|  
 |.suo|Solution|Fichier d'options de solution.|  
 |.txt|Ressource|Fichier texte, généralement le fichier « Lisez-moi ».|  
 |.vap|Projet|Fichier projet Visual Studio Analyzer.|  

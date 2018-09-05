@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ad6ef6ffaa6341e62b09920ab95d50c5720428c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340500"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195864"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Génération de projets C++ dans Visual Studio
 Dans l'environnement de développement intégré (IDE) de Visual Studio, il existe plusieurs façons de générer une solution complète ou un seul projet dans cette solution. Vous pouvez également modifier les paramètres de build et spécifier des étapes de génération personnalisées pour rendre plus efficace votre processus de développement.  
@@ -50,7 +50,7 @@ Dans l'environnement de développement intégré (IDE) de Visual Studio, il exis
   
  Quand vous générez une application Visual C++ dans Visual Studio, vous pouvez modifier un grand nombre de paramètres de la build dans la boîte de dialogue Pages de propriétés du projet. Pour plus d’informations sur la définition des propriétés de projet, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
- Pour un exemple d’utilisation de l’IDE afin de créer, générer et déboguer un projet C++, consultez [Procédure pas à pas : explorer l’IDE Visual Studio avec C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Pour un exemple d’utilisation de l’IDE afin de générer un projet C++/CLR, consultez [Procédure pas à pas : compilation d’un programme C++ qui cible le CLR dans Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Pour un exemple d’utilisation de l’IDE afin de créer une application Windows Runtime, consultez [Créer votre première application Windows Runtime en C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
+ Pour un exemple d’utilisation de l’IDE afin de créer, générer et déboguer un projet C++, consultez [Procédure pas à pas : explorer l’IDE Visual Studio avec C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Pour un exemple d’utilisation de l’IDE afin de générer un projet C++/CLR, consultez [Procédure pas à pas : compilation d’un programme C++ qui cible le CLR dans Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Pour un exemple d’utilisation de l’IDE afin de créer une application Windows Runtime, consultez [Créer votre première application Windows Runtime en C++](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
   
  Pour en savoir plus sur la manière de générer, modifier les paramètres de build et spécifier des étapes de génération personnalisées, reportez-vous aux articles suivants.  
   

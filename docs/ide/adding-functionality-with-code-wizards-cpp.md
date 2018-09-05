@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337039"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213134"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Ajout de fonctionnalités à l’aide des Assistants Code (C++)
 Après avoir créé un projet, vous pouvez changer ses fonctionnalités ou en ajouter d’autres. Parmi les tâches que vous pouvez effectuer, citons la création de classes, l’ajout de nouvelles fonctions et variables membres, ou encore l’ajout de méthodes et de propriétés Automation. Les Assistants Code sont conçus pour vous permettre d’effectuer toutes ces tâches.  
@@ -56,7 +56,7 @@ Après avoir créé un projet, vous pouvez changer ses fonctionnalités ou en aj
   
 -   Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur un dossier, puis cliquez sur **Ajouter** dans le menu contextuel pour ajouter des dossiers, éléments, classes, ressources, références web et fichiers, nouveaux ou existants, au projet.  
   
--   Dans la [fenêtre Affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), cliquez avec le bouton droit sur le nœud approprié, puis cliquez sur **Ajouter** dans le menu contextuel pour ajouter des fonctions, variables, classes, propriétés, méthodes, événements, interfaces, points de connexion ou autres éléments de code à votre projet.  
+-   Dans la [fenêtre Affichage de classes](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), cliquez avec le bouton droit sur le nœud approprié, puis cliquez sur **Ajouter** dans le menu contextuel pour ajouter des fonctions, variables, classes, propriétés, méthodes, événements, interfaces, points de connexion ou autres éléments de code à votre projet.  
   
     > [!NOTE]
     >  Visual Studio ne fournit aucun Assistant permettant d’ajouter une interface à un projet. Vous pouvez ajouter une interface à un projet ATL ou [ajouter la prise en charge ATL à votre projet MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) en ajoutant un objet simple à l’aide de [l’Assistant Objet simple ATL](../atl/reference/atl-simple-object-wizard.md). Vous pouvez également ouvrir le fichier .idl du projet et créer l’interface en tapant :  

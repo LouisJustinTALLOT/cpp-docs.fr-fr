@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1f8fae2d8af1b7121290bfbd42b2668afc50034c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325381"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217251"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 La balise \<param> doit être utilisée dans le commentaire de la déclaration d’une méthode pour décrire l’un des paramètres de la méthode.  
@@ -42,7 +42,7 @@ La balise \<param> doit être utilisée dans le commentaire de la déclaration d
  Description du paramètre.  
   
 ## <a name="remarks"></a>Notes  
- Le texte de la balise \<param> s’affiche dans IntelliSense, dans [l’Explorateur d’objets](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) et dans le rapport web de commentaire de code.  
+ Le texte de la balise \<param> s’affiche dans IntelliSense, dans [l’Explorateur d’objets](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) et dans le rapport web de commentaire de code.  
   
  Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   

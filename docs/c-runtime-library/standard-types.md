@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a502ae93b43320fb3a8f43b36b5bc4ef43c23dd2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217002"
 ---
 # <a name="standard-types"></a>Types standard
 La bibliothèque Runtime Microsoft définit les types et typedefs standard suivants.  
@@ -211,7 +211,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 |Structures `div_t`, `ldiv_t` et `lldiv_t`|Stockent les valeurs retournées par [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) et [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivement.|STDLIB.H|  
 |Entier `errno_t`|Utilisé pour un type de résultat ou un paramètre de fonction qui traite les codes d'erreur de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|  
 |Structure `_exception`|Stocke les informations sur l'erreur pour [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|  
-|`_EXCEPTION_POINTERS`|Contient un enregistrement d'exception. Pour plus d'informations, consultez [EXCEPTION_POINTERS](http://msdn.microsoft.com/library/windows/desktop/ms679331).|FPIEEE.H|  
+|`_EXCEPTION_POINTERS`|Contient un enregistrement d'exception. Pour plus d'informations, consultez [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers).|FPIEEE.H|  
 |Structure `FILE`|Stocke les informations sur l'état actuel du flux ; utilisé dans toutes les opérations d'E/S de flux.|STDIO.H|  
 |Structures `_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t`, `__wfinddata64i32_t`|Stockent les informations d'attribut de fichier retournées par [_findfirst, _wfindfirst, and related functions](../c-runtime-library/reference/findfirst-functions.md) and [_findnext, _wfindnext et les fonctions liées](../c-runtime-library/reference/findnext-functions.md). Pour plus d'informations sur les membres de structures, consultez [Fonctions _find, _wfind](../c-runtime-library/filename-search-functions.md).|IO.H, WCHAR.H|  
 |Structure `_FPIEEE_RECORD`|Contient des informations concernant l'exception à virgule flottante IEEE ; passé au gestionnaire d'interruptions défini par l'utilisateur par [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md).|FPIEEE.H|  

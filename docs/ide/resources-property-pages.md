@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4bc63eede971bed0b726c633f0ef7d52793f39ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322872"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219466"
 ---
 # <a name="resources-property-pages"></a>pages de propriétés Ressources
-Pour plus d’informations sur l’utilisation du compilateur de ressources, consultez [Utilisation de RC (ligne de commande RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055).  
+Pour plus d’informations sur l’utilisation du compilateur de ressources, consultez [Utilisation de RC (ligne de commande RC)](https://msdn.microsoft.com/library/windows/desktop/aa381055).  
   
  Pour plus d’informations sur l’accès aux pages de propriétés **Ressources**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   

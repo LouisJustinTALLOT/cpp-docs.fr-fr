@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 793adf38da33808371a0df71f671c3e29da75326
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b676e35dcf98ef7ae1f41e4a91922d689bd40409
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322404"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202137"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>Ajout d'une classe à partir d'un contrôle ActiveX (Visual C++)
 Utilisez cet Assistant pour créer une classe MFC à partir d’une interface dans un contrôle ActiveX disponible. Vous pouvez ajouter une classe MFC à une [application MFC](../mfc/reference/creating-an-mfc-application.md), une [DLL MFC](../mfc/reference/creating-an-mfc-dll-project.md) ou un [contrôle ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md).  
@@ -32,7 +32,7 @@ Utilisez cet Assistant pour créer une classe MFC à partir d’une interface da
   
 ### <a name="to-add-an-mfc-class-from-an-activex-control"></a>Pour ajouter une classe MFC à partir d’un contrôle ActiveX  
   
-1.  Dans **l’Explorateur de solutions** ou dans [l’affichage de classes](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), cliquez avec le bouton droit sur le nom du projet auquel vous souhaitez ajouter la classe du contrôle ActiveX.  
+1.  Dans **l’Explorateur de solutions** ou dans [l’affichage de classes](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), cliquez avec le bouton droit sur le nom du projet auquel vous souhaitez ajouter la classe du contrôle ActiveX.  
   
 2.  Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une classe**.  
   

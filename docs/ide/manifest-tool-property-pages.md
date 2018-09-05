@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16a5033a2656cea3f1cecea1e5b97f4ad9c117ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222205"
 ---
 # <a name="manifest-tool-property-pages"></a>Pages de propriétés de l'outil Manifeste
 Utilisez les pages de propriétés de **l’outil Manifeste** pour définir les options de génération de mt.exe.  
   
- Pour plus d’informations sur l’outil Manifeste, consultez [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Pour plus d’informations sur l’outil Manifeste, consultez [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
  [Général, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet>](../ide/general-manifest-tool-configuration-properties.md)  
   

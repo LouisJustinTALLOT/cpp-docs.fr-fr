@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e85ec0dfc011aab4d2b3ac835bbe71782b055000
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332323"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213531"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Déploiement de ClickOnce pour les applications Visual C++
-Visual Studio propose deux technologies différentes pour déployer les applications Windows : le déploiement ClickOnce ou le déploiement [Windows Installer](http://msdn.microsoft.com/library/cc185688).  
+Visual Studio propose deux technologies différentes pour déployer les applications Windows : le déploiement ClickOnce ou le déploiement [Windows Installer](/windows/desktop/Msi/windows-installer-portal).  
   
 ## <a name="clickonce-deployment-in-c"></a>Déploiement ClickOnce en C++  
  L’environnement de développement Visual C++ ne prend pas directement en charge le déploiement de projets Visual C++ avec ClickOnce, mais les outils pour l’utiliser sont disponibles.  
@@ -53,7 +53,7 @@ Visual Studio propose deux technologies différentes pour déployer les applicat
  [Makecert.exe (outil de la création du certificat)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Déploiement d’applications, de services et de composants](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Déploiement de Windows Installer](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
+ [Déploiement de Windows Installer](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Création de packages de programme d’amorçage](/visualstudio/deployment/creating-bootstrapper-packages)   
  [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   

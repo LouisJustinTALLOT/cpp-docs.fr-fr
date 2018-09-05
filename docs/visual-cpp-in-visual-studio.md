@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d4005479c1808ba2d396dfe8807f8a415f9322
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: eb826c89106358c338230d46dc8743e1ee4d60f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200450"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ dans Visual Studio
 
@@ -144,7 +144,7 @@ Algorithmes asynchrones et parallèles qui s’exécutent sur le processeur.
 [C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Algorithmes massivement parallèles qui s’exécutent sur le GPU.
 
-[Bibliothèque de modèles Windows Runtime (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
+[Bibliothèque de modèles Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
 Applications et composants de plateforme Windows universelle (UWP).
 
 [Programmation .NET avec C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>

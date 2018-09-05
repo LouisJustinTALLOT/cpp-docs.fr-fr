@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332765"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211210"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implémentation d'une interface (Visual C++)
 Pour implémenter une interface, vous devez avoir créé un projet, comme une application COM ATL ou une application MFC avec prise en charge ATL. Vous pouvez utiliser [l’Assistant Projet ATL](../atl/reference/atl-project-wizard.md) pour créer une application ATL ou [ajouter un objet ATL à votre application MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) pour implémenter la prise en charge ATL dans une application MFC.  
@@ -46,7 +46,7 @@ Pour implémenter une interface, vous devez avoir créé un projet, comme une ap
 4.  Dans Affichage de classes, développez les nœuds Bases et Interfaces pour voir l’interface que vous avez implémentée, puis développez le nœud de l’interface pour voir ses propriétés, méthodes et événements disponibles.  
   
     > [!NOTE]
-    >  Vous pouvez également utiliser [l’Explorateur d’objets](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) pour examiner les membres de l’interface.  
+    >  Vous pouvez également utiliser [l’Explorateur d’objets](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) pour examiner les membres de l’interface.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une interface COM](../ide/creating-a-com-interface-visual-cpp.md)   

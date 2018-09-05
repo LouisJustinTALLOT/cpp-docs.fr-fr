@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8003997d82c59d42813d7852e6c3fadb8f12fb26
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386262"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208906"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Expressions L-Value et R-Value
 Les expressions qui font référence à des emplacements de mémoire sont appelées expressions « l-value ». Une l-value représente la valeur « localisateur » d’une zone de stockage, ou une valeur « gauche », ce qui implique qu’elle peut apparaître à gauche du signe égal à (**=**). Les l-values sont souvent des identificateurs.  
@@ -39,7 +39,7 @@ Les expressions qui font référence à des emplacements de mémoire sont appel�
   
 -   Une expression de sélection de membres (**->** ou **.**)  
   
--   Une expression indirection-unaire (**\***) qui ne fait pas référence à un tableau  
+-   Une expression indirection-unaire (<strong>\*</strong>) qui ne fait pas référence à un tableau  
   
 -   Une expression l-value entre parenthèses  
   

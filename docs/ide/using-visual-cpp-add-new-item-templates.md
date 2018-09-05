@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332814"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197901"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilisation de modèles Ajouter un nouvel élément de Visual C++
 Vous pouvez facilement ajouter des éléments qui sont communs aux projets Visual C++ à l’aide de la commande **Ajouter un nouvel élément**. Quand vous utilisez la commande **Ajouter un nouvel élément**, la boîte de dialogue `Add New Item` s’affiche avec une liste de modèles d’élément, qui ajoutent les fichiers appropriés à votre projet.  
@@ -44,7 +44,7 @@ Vous pouvez facilement ajouter des éléments qui sont communs aux projets Visua
 |Fichier d’en-tête (.h)|Crée un fichier d’en-tête C++.|  
 |Page HTML (.htm)|Crée un fichier HTML vide.|  
 |Fichier icône (.ico)|Crée un fichier icône Win32.|  
-|Classe Installer|Ajoute une classe qui hérite de la [classe Installer](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) avec des fonctionnalités CLR.|  
+|Classe Installer|Ajoute une classe qui hérite de la [classe Installer](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) avec des fonctionnalités CLR.|  
 |Fichier MIDL (.idl)|Crée un fichier IDL (Interface Definition Language).|  
 |Fichier de définition de module (.def)|Crée un fichier de définition d’exportation de DLL.|  
 |Feuille de propriétés (.props)|Crée un fichier de feuille de propriétés Visual C++.|  

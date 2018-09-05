@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d95b6d2a69b4b40c4464136dd33a8c5231185f5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d816d932ce518e006e5537075fe4ac7782362ad4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206982"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Redistribution des composants à l’aide de modules de fusion
-Visual Studio inclut des [modules de fusion](http://msdn.microsoft.com/library/aa367434) pour chaque composant Visual C++ autorisé à être redistribué avec une application. Lorsqu’un module de fusion est compilé dans un fichier d’installation de Windows Installer, il permet le déploiement de certaines DLL sur des ordinateurs comportant une plateforme spécifique. Dans votre fichier d’installation, indiquez que les modules de fusion sont des composants requis pour votre application. Lors de l’installation de Visual Studio, les modules de fusion sont installés dans \Program Files\Common Files\Merge Modules\\. (Seules les versions non Debug des DLL Visual C++ peuvent être redistribuées.) Pour plus d’informations et un lien vers une liste des modules de fusion autorisés à la redistribution, consultez [Redistribution des fichiers Visual C++](../ide/redistributing-visual-cpp-files.md).  
+Visual Studio inclut des [modules de fusion](/windows/desktop/Msi/about-merge-modules) pour chaque composant Visual C++ autorisé à être redistribué avec une application. Lorsqu’un module de fusion est compilé dans un fichier d’installation de Windows Installer, il permet le déploiement de certaines DLL sur des ordinateurs comportant une plateforme spécifique. Dans votre fichier d’installation, indiquez que les modules de fusion sont des composants requis pour votre application. Lors de l’installation de Visual Studio, les modules de fusion sont installés dans \Program Files\Common Files\Merge Modules\\. (Seules les versions non Debug des DLL Visual C++ peuvent être redistribuées.) Pour plus d’informations et un lien vers une liste des modules de fusion autorisés à la redistribution, consultez [Redistribution des fichiers Visual C++](../ide/redistributing-visual-cpp-files.md).  
   
  Vous pouvez utiliser des modules de fusion pour permettre l’installation des DLL redistribuables Visual C++ dans le dossier %SYSTEMROOT%\system32\. (Visual Studio lui-même utilise cette technique.) Toutefois, l’installation dans ce dossier échouera à moins que l’utilisateur chargé de l’installation possède des droits d’administrateur.  
   

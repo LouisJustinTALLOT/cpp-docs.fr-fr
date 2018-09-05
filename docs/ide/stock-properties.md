@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4a9b2aa4389d693cfc6734a29f3a744e955ca3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335432"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213791"
 ---
 # <a name="stock-properties"></a>Propriétés stock
 Si vous ajoutez une propriété à une dispinterface MFC à l’aide de [l’Assistant Ajout de propriété](../ide/idl-attributes-add-property-wizard.md), vous pouvez choisir une propriété stock dans la liste **Nom de la propriété** de la page [Noms](../ide/names-add-property-wizard.md) de l’Assistant. Ces propriétés sont les suivantes :  
@@ -35,7 +35,7 @@ Si vous ajoutez une propriété à une dispinterface MFC à l’aide de [l’Ass
 |**Police**|Retourne ou définit la police ambiante du contrôle. Null si le contrôle n’a pas de police.|  
 |`ForeColor`|Retourne ou définit la propriété `ForeColor` ambiante du contrôle.|  
 |**hWnd**|Retourne ou définit la propriété **hWnd** du contrôle. **hWnd** n’a pas de type d’implémentation **Variable membre**.|  
-|**ReadyState**|Retourne ou définit la propriété **ReadyState** du contrôle. Un contrôle peut être non initialisé, initialisé, en cours de chargement, interactif ou complet. Pour plus d’informations, consultez [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) dans le *kit SDK Internet*.|  
+|**ReadyState**|Retourne ou définit la propriété **ReadyState** du contrôle. Un contrôle peut être non initialisé, initialisé, en cours de chargement, interactif ou complet. Pour plus d’informations, consultez [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) dans le *kit SDK Internet*.|  
 |**Text**|Retourne ou définit le texte présent dans un contrôle. **Text** n’a pas de type d’implémentation **Variable membre**.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 20a20002397e285680927fe519e4eac7b68cc343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323613"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216560"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Exécution d'une application C++ /clr sur une version antérieure du runtime
 Sauf indication contraire, une application C++ .NET Framework est générée pour s’exécuter sur la version du Common Language Runtime (CLR) que le compilateur utilise pour générer l’application. Toutefois, il est possible d’exécuter une application .exe qui est créée pour une version du runtime sur n’importe quelle autre version qui fournit la fonctionnalité requise.  
@@ -37,7 +37,7 @@ Sauf indication contraire, une application C++ .NET Framework est générée pou
   
  Si vous spécifiez plusieurs versions du runtime et que l’application s’exécute sur un ordinateur sur lequel plusieurs versions du runtime sont installées, l’application utilise la première version spécifiée dans le fichier de configuration.  
   
- Pour plus d’informations, consultez [Guide pratique pour configurer une application pour cibler une version du .NET Framework](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
+ Pour plus d’informations, consultez [Guide pratique pour configurer une application pour cibler une version du .NET Framework](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
   
  Pour une exécution sur la version 1.0 ou 1.1 du CLR, une application générée par le compilateur Visual C++ doit être compilée avec [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
   
