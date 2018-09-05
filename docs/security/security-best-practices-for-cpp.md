@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6cb76b2802b1f582621e3e0bacb565a974894d75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610051"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693343"
 ---
 # <a name="security-best-practices-for-c"></a>Meilleures pratiques de sécurité pour C++
 
@@ -78,7 +78,8 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
 -   Sécurité  
   
 ## <a name="windows-application-verifier"></a>Windows Application Verifier  
- Application Verifier (AppVerifier) peut vous aider à identifier les problèmes éventuels de compatibilité, de stabilité et de sécurité des applications.  
+ Le [Application Verifier (AppVerifier)](/windows-hardware/drivers/debugger/application-verifier
+) peut vous aider à identifier les problèmes de compatibilité, de stabilité et de sécurité potentiels d’application.  
   
  AppVerifier surveille la manière dont une application utilise le système d'exploitation. Il surveille le système de fichiers, le Registre, la mémoire et les API pendant l'exécution de l'application et recommande des correctifs du code source pour les problèmes qu'il découvre.  
   
@@ -89,8 +90,6 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
 -   Rechercher dans une application des problèmes liés à la mémoire.  
 
 -   Identifier des problèmes potentiels de sécurité dans une application.  
-  
- AppVerifier fait partie de l’Application Compatibility Toolkit est disponible à partir de la [compatibilité des applications](http://go.microsoft.com/fwlink/p/?linkid=91277) sur le site web TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Comptes utilisateur Windows  

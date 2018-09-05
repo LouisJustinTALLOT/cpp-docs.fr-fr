@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202853"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678007"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite, classe
 Prend en charge les interfaces de contrôle côté client personnalisées.  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Les styles à ajouter des styles de fenêtre actuelle.  
   
  *nIndicateurs*  
- Positionnement des indicateurs de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) fonction dans le SDK Windows.  
+ Positionnement des indicateurs de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) fonction dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les styles sont modifiés, sinon zéro.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Notes  
  Stock du contrôle propriété Enabled est modifié pour correspondre au paramètre de WS_DISABLED. Propriétés de Style de bordure du contrôle stock seront modifiée pour correspondre au paramètre demandé pour WS_BORDER. Tous les autres styles sont appliqués directement à un handle de fenêtre du contrôle, s’il en existe.  
   
- Modifie les styles de fenêtre du contrôle. Styles pour être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération OR au niveau du bit ( &#124; ) opérateur. Consultez le [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) fonction dans le SDK Windows pour plus d’informations sur les styles de fenêtre disponibles.  
+ Modifie les styles de fenêtre du contrôle. Styles pour être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération OR au niveau du bit ( &#124; ) opérateur. Consultez le [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) fonction dans le SDK Windows pour plus d’informations sur les styles de fenêtre disponibles.  
   
  Si *nIndicateurs* est différent de zéro, `ModifyStyle` appelle la fonction Win32 `SetWindowPos`, puis le redessine la fenêtre en combinant *nIndicateurs* avec les indicateurs de quatre suivants :  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Les styles étendus à ajouter des styles de fenêtre actuelle.  
   
  *nIndicateurs*  
- Positionnement des indicateurs de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) fonction dans le SDK Windows.  
+ Positionnement des indicateurs de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) fonction dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les styles sont modifiés, sinon zéro.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Notes  
  Stock du contrôle propriété Appearance sera modifiée pour correspondre au paramètre de WS_EX_CLIENTEDGE. Tous les autres styles de fenêtre étendus sont appliqués directement à un handle de fenêtre du contrôle, s’il en existe.  
   
- Modifie la fenêtre styles de l’objet de site de contrôle étendus. Styles pour être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération OR au niveau du bit ( &#124; ) opérateur. Consultez le [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) fonction dans le SDK Windows pour plus d’informations sur les styles de fenêtre disponibles.  
+ Modifie la fenêtre styles de l’objet de site de contrôle étendus. Styles pour être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération OR au niveau du bit ( &#124; ) opérateur. Consultez le [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) fonction dans le SDK Windows pour plus d’informations sur les styles de fenêtre disponibles.  
   
  Si *nIndicateurs* est différent de zéro, `ModifyStyleEx` appelle la fonction Win32 `SetWindowPos`, puis le redessine la fenêtre en combinant *nIndicateurs* avec les indicateurs de quatre suivants :  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  La nouvelle hauteur de la fenêtre.  
   
  *nIndicateurs*  
- Spécifie la fenêtre de dimensionnement et de positionnement des indicateurs. Pour connaître les valeurs possibles, consultez la section Notes pour [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) dans le SDK Windows.  
+ Spécifie la fenêtre de dimensionnement et de positionnement des indicateurs. Pour connaître les valeurs possibles, consultez la section Notes pour [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) dans le SDK Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite, sinon, zéro.  

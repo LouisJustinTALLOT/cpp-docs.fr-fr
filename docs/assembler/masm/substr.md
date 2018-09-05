@@ -1,7 +1,7 @@
 ---
-title: SUBSTR | Documents Microsoft
+title: SUBSTR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dec1d1b1de47aa645147419a8bf96ad870cc21b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8ecd5a56b00ae663eeaacbedbdbefdecab36438f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056614"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687367"
 ---
 # <a name="substr"></a>SUBSTR
-Retourne une sous-chaîne de *textitem*, en commençant à *position*. Le *textitem* peut être une chaîne littérale, une constante précédée d’un `%`, ou la chaîne retournée par une fonction de la macro.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-name SUBSTR textitem, position [[, length]]  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Retourne une sous-chaîne de *textitem*, en commençant à *position*. Le *textitem* peut être une chaîne littérale, une constante précédée par un `%`, ou la chaîne retournée par une fonction de la macro.
+
+## <a name="syntax"></a>Syntaxe
+
+> Nommez SUBSTR textitem, position [[, longueur]]
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

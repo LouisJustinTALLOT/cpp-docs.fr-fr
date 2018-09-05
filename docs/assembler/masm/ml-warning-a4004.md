@@ -1,7 +1,7 @@
 ---
-title: Avertissement ML A4004 | Documents Microsoft
+title: Avertissement ML A4004 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08f6866f2fbc71ab57d4fb54633169c9b506b1c8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c318b2f4845b327d9388a9921526a1a17e0fcfa9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054388"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693023"
 ---
 # <a name="ml-warning-a4004"></a>Avertissement ML A4004
-**ne peut pas supposer une CS**  
-  
- Une tentative a été effectuée à supposer une valeur pour le registre CS. CS est toujours défini sur le segment actuel ou le groupe.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**ne peut pas supposer le CS**
+
+Une tentative a été effectuée de supposer une valeur pour le registre CS. CS est toujours défini sur le segment actuel ou le groupe.
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>

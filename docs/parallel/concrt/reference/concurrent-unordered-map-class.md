@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d31203069fe6916c485586fdfb62ee48559727
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6fddd90eaa6259cd2552dddbeafb405d90580ac
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195886"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684350"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map, classe
 La classe `concurrent_unordered_map` est un conteneur d'accès concurrentiel sécurisé qui contrôle une séquence à longueur variable d'éléments de type `std::pair<const K, _Element_type>`. La séquence est représentée d'une manière à permettre les opérations d'ajout d'accès concurrentiel sécurisé, d'accès à un élément, d'accès à un itérateur et de traversée d'itérateur.  
@@ -328,7 +328,7 @@ std::pair<const_iterator,
  La valeur de clé à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un [paire](https://msdn.microsoft.com/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) où le premier élément est un itérateur au début et le deuxième élément est un itérateur à la fin de la plage.  
+ Un [paire](../../../standard-library/pair-structure.md) où le premier élément est un itérateur au début et le deuxième élément est un itérateur à la fin de la plage.  
   
 ### <a name="remarks"></a>Notes  
  Il est possible pour les insertions simultanées provoquer des clés supplémentaires à insérer après l’itérateur de début et avant l’itérateur de fin.  

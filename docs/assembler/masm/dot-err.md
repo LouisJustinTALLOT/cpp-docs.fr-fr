@@ -1,7 +1,7 @@
 ---
-title: . ERR | Documents Microsoft
+title: . ERR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e333fe05ba57f9c6c16426ee7b124e5b45247b51
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e6160a55eb1d774ce09fb3c2ed689901b55bff1b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052250"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693865"
 ---
 # <a name="err"></a>.ERR
-Génère une erreur.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.ERR [[message]]  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Génère une erreur.
+
+## <a name="syntax"></a>Syntaxe
+
+> . ERR [[message]]
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

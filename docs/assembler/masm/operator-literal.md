@@ -1,7 +1,7 @@
 ---
-title: opérateur &lt; &gt; | Documents Microsoft
+title: opérateur &lt; &gt; | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,25 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 454eada609ba615398cb2ff992f2a78b0f2104de
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c85f411ee782349eff9e802e3f010b222aaa888a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054583"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679943"
 ---
-# <a name="operator-ltgt"></a>(opérateur) &lt;&gt;
-Traite *texte* comme un seul élément littéral.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-<  
-text  
->  
-  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+# <a name="operator-ltgt"></a>Opérateur &lt;&gt;
+
+Traite *texte* comme un seul élément littéral.
+
+## <a name="syntax"></a>Syntaxe
+
+> \<*Texte*>
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>

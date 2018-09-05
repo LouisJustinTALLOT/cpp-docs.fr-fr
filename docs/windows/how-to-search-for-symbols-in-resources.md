@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f105f41c465d2750d372a8794a9ab66fa13db466
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cefedc4b1517b242eef62192e8d03a60097700c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215980"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683170"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>Comment : rechercher des symboles dans les ressources
 
@@ -29,10 +29,10 @@ ms.locfileid: "43215980"
 
 1. À partir de la **modifier** menu, choisissez **rechercher un symbole**.
 
-2. Dans le [boîte de dialogue Rechercher un symbole](https://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96), dans le **rechercher** zone, sélectionnez une chaîne de recherche précédente à partir de la liste déroulante ou tapez la touche accélérateur à rechercher (par exemple, ID_ACCEL1).
+2. Dans le [boîte de dialogue Rechercher un symbole](/visualstudio/ide/go-to), dans le **rechercher** zone, sélectionnez une chaîne de recherche précédente à partir de la liste déroulante ou tapez la touche accélérateur à rechercher (par exemple, ID_ACCEL1).
 
    > [!TIP]
-   > À utiliser [expressions régulières](/visualstudio/ide/using-regular-expressions-in-visual-studio) pour votre recherche, vous devez utiliser le [rechercher dans les fichiers, commande](/visualstudio/ide/reference/find-command) à partir de la **modifier** menu au lieu du **rechercher un symbole**commande. Pour activer les expressions régulières, vous devez disposer le **utilisation : les Expressions régulières** case cochée dans la [boîte de dialogue Rechercher](https://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600). Vous pouvez ensuite cliquer sur le bouton de flèche droite à droite de la **rechercher** à cocher pour afficher une liste des expressions régulières de recherche. Lorsque vous sélectionnez une expression à partir de cette liste, elle se substitue le texte de recherche dans les **rechercher** boîte.
+   > À utiliser [expressions régulières](/visualstudio/ide/using-regular-expressions-in-visual-studio) pour votre recherche, vous devez utiliser le [rechercher dans les fichiers, commande](/visualstudio/ide/reference/find-command) à partir de la **modifier** menu au lieu du **rechercher un symbole**commande. Pour activer les expressions régulières, vous devez disposer le **utilisation : les Expressions régulières** case cochée dans la [boîte de dialogue Rechercher](/visualstudio/ide/finding-and-replacing-text). Vous pouvez ensuite cliquer sur le bouton de flèche droite à droite de la **rechercher** à cocher pour afficher une liste des expressions régulières de recherche. Lorsque vous sélectionnez une expression à partir de cette liste, elle se substitue le texte de recherche dans les **rechercher** boîte.
 
 3. Sélectionnez un de la **trouver** options.
 

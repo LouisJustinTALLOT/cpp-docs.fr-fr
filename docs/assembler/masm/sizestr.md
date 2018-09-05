@@ -1,7 +1,7 @@
 ---
-title: SIZESTR | Documents Microsoft
+title: SIZESTR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9330164a5f942359088e73b34903f9d02982f8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e829512e4d7d4fbae442b3726579578c0109fc19
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057352"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679360"
 ---
 # <a name="sizestr"></a>SIZESTR
-Recherche de la taille d’un élément de texte.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-name SIZESTR textitem  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Recherche la taille d’un élément de texte.
+
+## <a name="syntax"></a>Syntaxe
+
+> nom SIZESTR textitem
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

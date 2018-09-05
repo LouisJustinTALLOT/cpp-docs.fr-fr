@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211760"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692446"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003 : mappage des handles Windows à des objets
 Cette note décrit la bibliothèque MFC routines qui prennent en charge le mappage Windows handles vers des objets C++ de l’objet.  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Cela crée une entrée dans l’association de carte permanente *myWnd* et *hWnd*. Appel `CWnd::FromHandle(hWnd)` renvoie un pointeur vers *myWnd*. Lorsque *myWnd* est supprimé, le destructeur automatiquement détruira *hWnd* en appelant le Windows [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) (fonction). Si ce n’est pas souhaité, *hWnd* doit être détaché de *myWnd* avant *myWnd* est détruit (normalement, lorsque vous quittez la portée à laquelle *myWnd*a été défini). Le `Detach` méthode pour cela.  
+ Cela crée une entrée dans l’association de carte permanente *myWnd* et *hWnd*. Appel `CWnd::FromHandle(hWnd)` renvoie un pointeur vers *myWnd*. Lorsque *myWnd* est supprimé, le destructeur automatiquement détruira *hWnd* en appelant le Windows [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) (fonction). Si ce n’est pas souhaité, *hWnd* doit être détaché de *myWnd* avant *myWnd* est détruit (normalement, lorsque vous quittez la portée à laquelle *myWnd*a été défini). Le `Detach` méthode pour cela.  
   
 ```  
 myWnd.Detach();

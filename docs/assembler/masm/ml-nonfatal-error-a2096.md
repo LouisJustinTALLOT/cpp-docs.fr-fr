@@ -1,7 +1,7 @@
 ---
-title: Erreur ML non fatale A2096 | Documents Microsoft
+title: ML erreur non fatale A2096 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e5d07afa864c9f6f4214de953aa9e03fe0e7e4f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 82f4ef76dca10b1208a931bc3e1cc09d82a639d2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053670"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679596"
 ---
 # <a name="ml-nonfatal-error-a2096"></a>Erreur ML non fatale A2096
-**segment, groupe ou un Registre de segment attendu**  
-  
- Un segment ou un groupe était attendu mais n’a été trouvé.  
-  
- Une des conditions suivantes s’est produite :  
-  
--   L’opérande de gauche spécifiée avec le segment remplacent l’opérateur (**:**) n’était pas un segment historique (CS, DS, SS, ES, FS ou GS), nom du groupe, nom du segment ou expression de segment.  
-  
--   Le [SUPPOSÉ](../../assembler/masm/assume.md) la directive a été attribuée à un Registre de segment sans une adresse valide de segment, Registre de segment, groupe ou spéciale **plat** groupe.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)
+
+**segment, groupe ou un Registre de segment attendu**
+
+Un segment ou un groupe était attendu mais n’a été trouvé.
+
+Parmi les options suivantes s’est produite :
+
+- L’opérande gauche est spécifié avec le segment de substituer l’opérateur (**:**) n’était pas un segment register (CS, DS, SS, ES, FS ou GS), nom du groupe, nom de segment ou expression de segment.
+
+- Le [ASSUME](../../assembler/masm/assume.md) directive ont été fournie à un Registre de segment sans une adresse valide de segment, Registre de segment, groupe ou spéciale **plat** groupe.
+
+## <a name="see-also"></a>Voir aussi
+
+[Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)<br/>

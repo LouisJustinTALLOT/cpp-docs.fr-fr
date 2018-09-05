@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3768056a240bb8ad647287b4ca2b60f8e7ede484
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218667"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681383"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Dépannage d'applications isolées C/C++ et d'assemblys côte à côte
 Le chargement d'une application C/C++ peut échouer si les bibliothèques dépendantes sont introuvables. Cet article décrit les raisons les plus courantes de l'échec du chargement d'une application C/C++, et suggère une procédure de résolution des problèmes.  
@@ -46,7 +46,7 @@ Le chargement d'une application C/C++ peut échouer si les bibliothèques dépen
   
 3.  Si votre application dépend d'assemblys côte à côte et qu'un manifeste n'est pas présent, vous devez vous assurer que l'éditeur de liens génère un manifeste pour votre projet. Activez l’option de l’éditeur de liens **générer manifeste** dans le **propriétés du projet** boîte de dialogue pour le projet.  
   
-4.  Si le manifeste est incorporé dans le fichier binaire, assurez-vous que l'ID de RT_MANIFEST est correct pour ce type de fichier binaire. Pour plus d’informations sur l’ID de ressource à utiliser, consultez [utilisation d’assemblys côte à côte en tant que ressource (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Si le manifeste est dans un fichier distinct, ouvrez-le dans un éditeur XML ou un éditeur de texte. Pour plus d’informations sur les manifestes et les règles de déploiement, consultez [manifestes](https://msdn.microsoft.com/library/aa375365).  
+4.  Si le manifeste est incorporé dans le fichier binaire, assurez-vous que l'ID de RT_MANIFEST est correct pour ce type de fichier binaire. Pour plus d’informations sur l’ID de ressource à utiliser, consultez [utilisation d’assemblys côte à côte en tant que ressource (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Si le manifeste est dans un fichier distinct, ouvrez-le dans un éditeur XML ou un éditeur de texte. Pour plus d’informations sur les manifestes et les règles de déploiement, consultez [manifestes](https://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
     >  Si un manifeste incorporé et un fichier manifeste distinct sont tous les deux présents, le chargeur du système d'exploitation utilise le manifeste incorporé et ignore le fichier distinct. Toutefois, Windows XP fonctionne de manière inverse : le fichier manifeste distinct est utilisé et le manifeste incorporé est ignoré.  

@@ -1,7 +1,7 @@
 ---
-title: shr, opérateur | Documents Microsoft
+title: shr, opérateur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d152f05dd2558235799ef3cf172e54143b6491ae
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d6d9523059b441aa219ac6586c8c1980c0786a9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055337"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679616"
 ---
 # <a name="operator-shr"></a>SHR, opérateur
-Retourne le résultat du décalage de bits de *expression* droit *nombre* nombre de bits.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-expression SHR count  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+
+Retourne le résultat du décalage de bits de *expression* droit *nombre* nombre de bits.
+
+## <a name="syntax"></a>Syntaxe
+
+> nombre SHR d’expression
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>

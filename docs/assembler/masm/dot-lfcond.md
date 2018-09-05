@@ -1,7 +1,7 @@
 ---
-title: . LFCOND | Documents Microsoft
+title: . LFCOND | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1fa2b8896dd3e6b08d6ab3a99bc0905001e699b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b470daf012f7e14da958ecb1207d1ff08238ef62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051847"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692719"
 ---
 # <a name="lfcond"></a>.LFCOND
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.LFCOND  
-  
-```  
-  
-## <a name="remarks"></a>Notes  
- Consultez [. LISTESI](../../assembler/masm/dot-listif.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+## <a name="syntax"></a>Syntaxe
+
+> .LFCOND
+
+## <a name="remarks"></a>Notes
+
+Consultez [. LISTESI](../../assembler/masm/dot-listif.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

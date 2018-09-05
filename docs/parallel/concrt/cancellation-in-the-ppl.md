@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221753"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690447"
 ---
 # <a name="cancellation-in-the-ppl"></a>Annulation dans la bibliothèque de modèles parallèles
 Ce document explique le rôle de l’annulation dans la bibliothèque de modèles parallèles (PPL), comment annuler un travail parallèle et comment déterminer quand le travail parallèle est annulé.  
@@ -150,7 +150,7 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Jetons d’annulation et composition de la tâche  
 
- Le [concurrence :: HYPERLINK "https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx» when_all](reference/concurrency-namespace-functions.md#when_all) et [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) fonctions peuvent vous aider à composer plusieurs tâches pour implémenter des modèles courants. Cette section décrit la manière dont ces fonctions utilisent des jetons d'annulation.  
+ Le [concurrency::when_all](reference/concurrency-namespace-functions.md#when_all) et [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) fonctions peuvent vous aider à composer plusieurs tâches pour implémenter des modèles courants. Cette section décrit la manière dont ces fonctions utilisent des jetons d'annulation.  
   
  Quand vous fournissez un jeton d'annulation à la fonction `when_all` et `when_any`, cette fonction s'annule uniquement quand ce jeton d'annulation est annulé ou quand une des tâches participantes se termine dans un état annulé ou lève une exception.  
   

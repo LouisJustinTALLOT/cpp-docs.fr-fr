@@ -1,7 +1,7 @@
 ---
-title: FORC | Documents Microsoft
+title: FICHI | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e804083069243c333d3ac87dc701ada13afd739f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f4a16af6b8af984c887402669469e4ba9ea5ab28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054469"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685048"
 ---
 # <a name="forc"></a>FORC
-Marque un bloc qui est répété une fois pour chaque caractère dans `string`, avec le caractère actuel en remplaçant `parameter` à chaque répétition.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   FORC  
-parameter, <string> statements  
-ENDM  
-```  
-  
-## <a name="remarks"></a>Notes  
- Identique à [IRPC](../../assembler/masm/irpc.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Marque un bloc qui est répété une fois pour chaque caractère dans *chaîne*, avec le caractère actuel en remplaçant *paramètre* à chaque répétition.
+
+## <a name="syntax"></a>Syntaxe
+
+> FICHI *paramètre*, \< *chaîne*><br/>
+> *Instructions*<br/>
+> ENDM
+
+## <a name="remarks"></a>Notes
+
+Identique à [IRPC](../../assembler/masm/irpc.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

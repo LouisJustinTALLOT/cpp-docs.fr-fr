@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209431"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680193"
 ---
 # <a name="tiledindex-class"></a>tiled_index, classe
 Fournit un index dans un [tiled_extent](tiled-extent-class.md) objet. Cette classe possède des propriétés pour accéder aux éléments par rapport à l’origine de la vignette local et par rapport à l’origine globale. Pour plus d’informations sur les espaces en mosaïque, consultez [à l’aide de vignettes](../../../parallel/amp/using-tiles.md).  
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[Barrier (constante)](#tiled_index__barrier)|Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente une barrière de la mosaïque de threads actuelle.|  
 |||  
-|[global (constante)](#tiled_index__global)|Stocke un [index](index-class.md) objet d’index de rang 1, 2 ou 3 qui représente l’élément global dans un [grille](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objet.|  
+|[global (constante)](#tiled_index__global)|Stocke un [index](index-class.md) objet de rang 1, 2 ou 3 qui représente l’index global dans un objet de grille.|  
 |[Constante locale](#tiled_index__local)|Stocke un `index` objet d’index de rang 1, 2 ou 3 qui représente le rapport dans la mosaïque actuelle d’un [tiled_extent](tiled-extent-class.md) objet.|  
 |[rang (constante)](#tiled_index__rank)|Stocke le rang de le `tiled_index` objet.|  
 |[Tile (constante)](#tiled_index__tile)|Stocke un `index` objet de rang 1, 2 ou 3 qui représente les coordonnées de la mosaïque actuelle d’un `tiled_extent` objet.|  

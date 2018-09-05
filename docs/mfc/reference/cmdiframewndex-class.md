@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216286"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678812"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx, classe
 Étend les fonctionnalités de [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), une fenêtre de frame Windows Document Interface MDI (Multiple).  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Appelée par l’infrastructure quand un menu avec une barre détachable est activé.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Appelé par l’infrastructure pour mettre à jour le menu de frame. (Substitue `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Retourne le volet d’ancrage qui contient le point spécifié.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) des fonctions de Windows.  (Substitue `CMDIFrameWnd::PreTranslateMessage`.)|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows.  (Substitue `CMDIFrameWnd::PreTranslateMessage`.)|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Appelé par l’infrastructure pour recalculer la disposition de la fenêtre frame. (Substitue [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Annule l’inscription d’un volet et le supprime à partir du Gestionnaire d’ancrage.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Enregistre la disposition actuelle de groupes avec onglet MDI et la liste des documents précédemment ouverts.|  

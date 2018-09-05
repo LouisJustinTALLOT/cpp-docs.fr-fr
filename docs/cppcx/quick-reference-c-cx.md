@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608331"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692586"
 ---
 # <a name="quick-reference-ccx"></a>Aide-mémoire (C++/CX)
-Le Runtime Windows prend en charge les applications Universal Windows Platform (UWP) qui s’exécutent uniquement dans un environnement de système d’exploitation fiable, utilisent les fonctions autorisées, les types de données et les appareils et sont distribuées via le Microsoft Store. C++ / c++ / CX simplifient l’écriture d’applications pour l’exécution de Windows. Cet article est une référence rapide ; Pour obtenir une documentation plus complète, consultez [système de Type](../cppcx/type-system-c-cx.md) et [Extensions du composant pour les plateformes Runtime](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+Le Runtime Windows prend en charge les applications Universal Windows Platform (UWP) qui s’exécutent uniquement dans un environnement de système d’exploitation fiable, utilisent les fonctions autorisées, les types de données et les appareils et sont distribuées via le Microsoft Store. C++ / c++ / CX simplifient l’écriture d’applications pour l’exécution de Windows. Cet article est une référence rapide ; Pour obtenir une documentation plus complète, consultez [système de Type](../cppcx/type-system-c-cx.md).  
   
  Lorsque vous générez sur la ligne de commande, utilisez le **/ZW** option du compilateur pour générer une application UWP ou un composant Windows Runtime. Pour accéder aux déclarations de Windows Runtime, qui sont définies dans les fichiers de métadonnées (.winmd) Windows Runtime, spécifiez la `#using` directive ou **/FU** option du compilateur. Lorsque vous créez un projet pour une application UWP, Visual Studio par défaut définit ces options et ajoute des références à toutes les bibliothèques Windows Runtime.  
   

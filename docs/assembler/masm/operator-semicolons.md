@@ -1,7 +1,7 @@
 ---
-title: opérateur ; | Documents Microsoft
+title: opérateur ; | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,24 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6231a2068c5a89877c89ceefebfa56e3d582503b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 278fcd625fb972b74009a4384fd540d0585f47a6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058018"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679709"
 ---
 # <a name="operator-"></a>;;, opérateur
-Traite *texte* comme un commentaire dans une macro qui s’affiche uniquement dans la définition de macro. La liste n’affiche pas *texte* où la macro est développée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-;;  
-text  
-  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+
+Traite *texte* sous forme de commentaire dans une macro qui s’affiche uniquement dans la définition de macro. La liste n’affiche pas *texte* où la macro est développée.
+
+## <a name="syntax"></a>Syntaxe
+
+> ;; *texte*
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>

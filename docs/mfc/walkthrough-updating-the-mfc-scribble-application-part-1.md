@@ -19,16 +19,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cec86d276732bd7273d0f5585de5093f0cd01f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540645"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685543"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1)
 
-Cette procédure pas à pas montre comment modifier une application MFC existante à utiliser l’interface utilisateur ruban. Visual Studio prend en charge le ruban d’Office 2007 et le ruban Windows Scenic de Windows 7. Pour plus d’informations sur l’interface utilisateur ruban, consultez [rubans](http://go.microsoft.com/fwlink/p/?linkid=129233) sur le site Web MSDN.
+Cette procédure pas à pas montre comment modifier une application MFC existante à utiliser l’interface utilisateur ruban. Visual Studio prend en charge le ruban d’Office 2007 et le ruban Windows Scenic de Windows 7. Pour plus d’informations sur l’interface utilisateur ruban, consultez [rubans](/windows/desktop/uxguide/cmd-ribbons).
 
 Cette procédure pas à pas modifie l’exemple Scribble des MFC 1.0 classic qui vous permet d’utiliser la souris pour créer des dessins de ligne. Cette partie de la procédure pas à pas montre comment modifier l’exemple Scribble afin qu’il affiche une barre de ruban. [Partie 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) ajoute plus de boutons à la barre du ruban.
 

@@ -17,21 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23266ca4b4d32146ed8627c6ce3ab1cc878d59cd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c313a72a3c76b65476659e463076d61383dd43a5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600650"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682081"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Répercussions du contrôle de compte utilisateur sur votre application
 Le contrôle de compte d’utilisateur (UAC) est une fonctionnalité de Windows Vista dans laquelle les comptes d’utilisateurs ont des privilèges limités. Vous pouvez rechercher des informations détaillées concernant le contrôle de compte d'utilisateur sur les sites Web suivants :  
   
--   [Guide étape par étape contrôle de compte utilisateur Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
-  
--   [Pratiques recommandées et directives pour des Applications dans un environnement de moindre privilège](http://go.microsoft.com/fwlink/p/?linkid=82444)  
-  
--   [Comprendre et configurer le contrôle de compte d’utilisateur dans Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
+-   [Pratiques recommandées et directives pour des Applications dans un environnement de moindre privilège](/windows/desktop/uxguide/winenv-uac)  
   
 ## <a name="building-projects-after-enabling-uac"></a>Génération de projets après l'activation du contrôle de compte d'utilisateur  
  Si vous générez un projet Visual C++ sur Windows Vista avec le contrôle de compte d'utilisateur désactivé et que vous activez ultérieurement le contrôle de compte d'utilisateur, vous devez nettoyer et régénérer le projet pour qu'il fonctionne correctement.  

@@ -1,7 +1,7 @@
 ---
-title: low32, opérateur | Documents Microsoft
+title: low32, opérateur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b079237508ca61ff3e7bc48e1d9b01a60e660a9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 81779243c61e304989abf60517dc2dd26d297b61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057401"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693546"
 ---
 # <a name="operator-low32"></a>LOW32, opérateur
-Retourne les 32 bits de poids faibles de *expression*. Expressions MASM sont des valeurs 64 bits.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-LOW32 expression  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)
+
+Retourne les 32 bits de poids faibles de *expression*. Expressions MASM sont des valeurs 64 bits.
+
+## <a name="syntax"></a>Syntaxe
+
+> LOW32 expression
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)<br/>

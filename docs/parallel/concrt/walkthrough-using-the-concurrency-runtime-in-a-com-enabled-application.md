@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ed404bcbbdd62c051b0f93e2607d1278bfbf0204
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220227"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691833"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Procédure pas à pas : utilisation du runtime d'accès concurrentiel routage dans une application COM
 Ce document montre comment utiliser le Runtime d’accès concurrentiel dans une application qui utilise le composant COM (Object Model).  
@@ -36,7 +36,7 @@ Ce document montre comment utiliser le Runtime d’accès concurrentiel dans une
   
 - [Gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- Pour plus d’informations sur COM, consultez [composant COM (Object Model)](https://msdn.microsoft.com/library/windows/desktop/ms680573).  
+ Pour plus d’informations sur COM, consultez [composant COM (Object Model)](/windows/desktop/com/component-object-model--com--portal).  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>La gestion de la durée de vie de la bibliothèque COM.  
  Bien que l’utilisation de COM avec le Runtime d’accès concurrentiel suit les mêmes principes que tout autre mécanisme d’accès concurrentiel, les instructions suivantes peuvent vous aider à utiliser ces bibliothèques ensemble efficacement.  

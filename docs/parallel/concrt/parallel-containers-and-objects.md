@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8256a6d49166b5a002a400892f0808706c66eba9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0e0bade8cc233b438f98c3b73b04bf644bb37cbf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212460"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692287"
 ---
 # <a name="parallel-containers-and-objects"></a>Conteneurs et objets parallèles
 La bibliothèque de modèles parallèles (PPL) inclut plusieurs conteneurs et objets qui fournissent l’accès thread-safe à leurs éléments.  
@@ -186,14 +186,14 @@ La bibliothèque de modèles parallèles (PPL) inclut plusieurs conteneurs et ob
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|[operator++](https://msdn.microsoft.com/4cfdd07e-927a-42f8-aaa0-d6881687f413)|Avance à l’élément suivant dans la file d’attente. Cet opérateur est surchargé pour fournir une sémantique incrément préliminaire et postérieures à l’incrémentation.|  
-|[operator*](https://msdn.microsoft.com/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|Récupère une référence à l’élément actuel.|  
-|[operator->](https://msdn.microsoft.com/41fa393d-ae1e-4a38-bb4b-19e8df709ca9)|Récupère un pointeur vers l’élément actuel.|  
+|`operator++`|Avance à l’élément suivant dans la file d’attente. Cet opérateur est surchargé pour fournir une sémantique incrément préliminaire et postérieures à l’incrémentation.|  
+|`operator*`|Récupère une référence à l’élément actuel.|  
+|`operator->`|Récupère un pointeur vers l’élément actuel.|  
   
  [[Haut](#top)]  
   
 ##  <a name="unordered_map"></a> concurrent_unordered_map, classe  
- Le [HYPERLINK « file:///C :\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default \\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622 » concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) classe est un classe de conteneur associatif qui, tout comme le [std::unordered_map](../../standard-library/unordered-map-class.md) class, contrôle une séquence de longueur variable constituée d’éléments de type [std::pair\<const Key, Ty >](../../standard-library/pair-structure.md). Considérez une carte non ordonnée en tant que dictionnaire que vous pouvez ajouter une paire clé / valeur à ou rechercher une valeur par clé. Cette classe est utile lorsque vous avez plusieurs threads ou tâches qui doivent accéder à un conteneur partagé, insérer ou mettre à jour simultanément.  
+ Le [concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) classe est une classe de conteneur associatif qui, tout comme le [std::unordered_map](../../standard-library/unordered-map-class.md) class, contrôle une séquence de longueur variable constituée d’éléments de type [std::pair\<const Key, Ty >](../../standard-library/pair-structure.md). Considérez une carte non ordonnée en tant que dictionnaire que vous pouvez ajouter une paire clé / valeur à ou rechercher une valeur par clé. Cette classe est utile lorsque vous avez plusieurs threads ou tâches qui doivent accéder à un conteneur partagé, insérer ou mettre à jour simultanément.  
   
  L’exemple suivant montre la structure de base pour l’utilisation de `concurrent_unordered_map`. Cet exemple insère des touches de caractère dans la plage ['a', ' i']. Étant donné que l’ordre des opérations est indéterminé, la valeur finale pour chaque clé est également indéterminée. Toutefois, il est déconseillé d’effectuer des insertions en parallèle.  
   

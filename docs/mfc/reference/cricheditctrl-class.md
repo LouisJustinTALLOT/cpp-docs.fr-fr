@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2847bf32a51a63e39d80839fed1b46fac18f29dc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ad17396a9c82532d46ea04f88b637828fe6f460
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215789"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678495"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (classe)
 Fournit les fonctionnalités du contrôle d'édition enrichi.  
@@ -443,7 +443,7 @@ virtual BOOL Create(
   
 - WS_TABSTOP pour inclure le contrôle d’édition dans l’ordre de tabulation.  
   
- Pour plus d’informations sur les styles de fenêtre, consultez [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows.  
+ Pour plus d’informations sur les styles de fenêtre, consultez [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
@@ -462,7 +462,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Paramètres  
  *dwExStyle*  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows.  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le *dwExStyle* paramètre pour [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.  
   
  *dwStyle*  
  Spécifie le style du contrôle d’édition. Appliquer une combinaison des styles de fenêtre répertoriées dans le **remarques** section de [créer](#create) et [modifier les styles de contrôle](/windows/desktop/Controls/edit-control-styles), comme décrit dans le SDK Windows.  

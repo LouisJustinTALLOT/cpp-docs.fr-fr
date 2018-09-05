@@ -1,7 +1,7 @@
 ---
-title: Fonctions d’appel C dans l’Assembly Inline | Documents Microsoft
+title: Fonctions d’appel C dans l’Assembly Inline | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,54 +19,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f6d03ba77c7a4cdb3478a1bfe8729019dea002
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a080c05aee58a2e6ffae17d14e99c66922aa1f17
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049516"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686685"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Appel des fonctions C dans l'assembly inline
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- Un bloc `__asm` peut appeler des fonctions C, y compris des routines de bibliothèques C. L'exemple suivant appelle la routine de bibliothèque `printf` :  
-  
-```  
-// InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp  
-// processor: x86  
-#include <stdio.h>  
-  
-char format[] = "%s %s\n";  
-char hello[] = "Hello";  
-char world[] = "world";  
-int main( void )  
-{  
-   __asm  
-   {  
-      mov  eax, offset world  
-      push eax  
-      mov  eax, offset hello  
-      push eax  
-      mov  eax, offset format  
-      push eax  
-      call printf  
-      //clean up the stack so that main can exit cleanly  
-      //use the unused register ebx to do the cleanup  
-      pop  ebx  
-      pop  ebx  
-      pop  ebx  
-   }  
-}  
-```  
-  
- Les arguments de fonction étant passés sur la pile, il vous suffit d'effectuer un push des arguments nécessaires (pointeurs de chaîne, dans l'exemple précédent) avant d'appeler la fonction. Les arguments font l'objet d'un push dans l'ordre inverse ; ils sont donc dépilés dans l'ordre souhaité. Pour émuler l'instruction C  
-  
-```  
-printf( format, hello, world );  
-```  
-  
- l'exemple envoie les pointeurs vers `world`, `hello` et `format`, dans cet ordre-là, puis appelle `printf`.  
-  
- **FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [Assembleur inline](../../assembler/inline/inline-assembler.md)
+
+**Section spécifique à Microsoft**
+
+Un bloc `__asm` peut appeler des fonctions C, y compris des routines de bibliothèques C. L'exemple suivant appelle la routine de bibliothèque `printf` :
+
+```cpp
+// InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
+// processor: x86
+#include <stdio.h>
+
+char format[] = "%s %s\n";
+char hello[] = "Hello";
+char world[] = "world";
+int main( void )
+{
+   __asm
+   {
+      mov  eax, offset world
+      push eax
+      mov  eax, offset hello
+      push eax
+      mov  eax, offset format
+      push eax
+      call printf
+      //clean up the stack so that main can exit cleanly
+      //use the unused register ebx to do the cleanup
+      pop  ebx
+      pop  ebx
+      pop  ebx
+   }
+}
+```
+
+Les arguments de fonction étant passés sur la pile, il vous suffit d'effectuer un push des arguments nécessaires (pointeurs de chaîne, dans l'exemple précédent) avant d'appeler la fonction. Les arguments font l'objet d'un push dans l'ordre inverse ; ils sont donc dépilés dans l'ordre souhaité. Pour émuler l'instruction C
+
+```cpp
+printf( format, hello, world );
+```
+
+l'exemple envoie les pointeurs vers `world`, `hello` et `format`, dans cet ordre-là, puis appelle `printf`.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[Assembleur inline](../../assembler/inline/inline-assembler.md)<br/>

@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061bfc2f083061d352fa7f93bb572456a5a23451
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a63caaa23fa59356a5904740cf03b8c36a909930
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218370"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688570"
 ---
 # <a name="atl-text-encoding-functions"></a>Fonctions de codage de texte ATL
 Ces fonctions prennent en charge l’encodage et décodage de texte.
@@ -451,7 +451,7 @@ inline BOOL QPDecode(
  Pointeur vers une variable qui contient la longueur en octets de *szDest*. Si la fonction réussit, la variable reçoit le nombre d’octets écrits dans la mémoire tampon. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon.  
   
  [in] *dwFlags*  
- Indicateurs décrivant la façon dont la conversion doit être effectuée. Consultez [ATLSMTP_QPENCODE indicateurs](https://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4).  
+ Indicateurs ATLSMTP_QPENCODE décrivant comment la conversion doit être effectuée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  

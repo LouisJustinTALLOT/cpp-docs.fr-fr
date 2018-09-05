@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fed2cad9c96b20313617ef57e4373de16712aa34
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2e374ad9c0024b602c07ea91e53d45c9bf0742f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218850"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692462"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -142,7 +142,7 @@ Propriétés de type
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Teste si le type peut être assigné par copie et si l’assignation est connue comme ne levant pas d’exception.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Teste si le type peut être assigné par déplacement et si l’assignation est connue comme ne levant pas d’exception.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Teste si le type est destructible et si le destructeur est connu comme ne levant pas d’exception.|
-|[has_virtual_destructor](https://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Teste si le type a un destructeur virtuel.|
+|`has_virtual_destructor`|Teste si le type a un destructeur virtuel.|
 
 Requêtes de propriétés de type
 

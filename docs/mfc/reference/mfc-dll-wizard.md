@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b352d3f99ccee103f7f08e54fb96634bad4a32a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c66ca089a54f00148cf683612e529f1cd0505445
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216485"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685404"
 ---
 # <a name="mfc-dll-wizard"></a>DLL MFC (Assistant)
 Lorsque vous utilisez l’Assistant DLL MFC pour créer un projet DLL MFC, vous obtenez une application de démarrage pour travailler avec des fonctionnalités intégrées qui, lorsque compilées, implémentent les fonctionnalités de base d’un [DLL](../../build/dlls-in-visual-cpp.md). Le programme de démarrage MFC inclut des fichiers sources (.cpp) C++, les fichiers de ressources (.rc) et un fichier projet (.vcxproj). Le code généré dans ces fichiers de démarrage est basé sur la bibliothèque MFC. Pour plus d’informations, consultez les détails du fichier Readme.txt généré pour votre projet dans Visual Studio, et [Classes et fonctions générées par l’Assistant DLL MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,6 @@ Lorsque vous utilisez l’Assistant DLL MFC pour créer un projet DLL MFC, vous 
  [Création et gestion de projets Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Pages de propriétés](../../ide/property-pages-visual-cpp.md)   
  [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md)   
- [Déploiement d’Applications](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Ajout d’une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)   
  [Implémentation d’une interface](../../ide/implementing-an-interface-visual-cpp.md)   

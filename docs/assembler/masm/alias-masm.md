@@ -1,7 +1,7 @@
 ---
-title: ALIAS (MASM) | Documents Microsoft
+title: ALIAS (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,34 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b14e1c41a448d0cb7014dabc50a42305249938f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c6a977d35040d8ca25cd3bd4ae4def233092b37a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049165"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691060"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
-Le **ALIAS** directive crée un autre nom pour une fonction.  Cela vous permet de créer plusieurs noms pour une fonction, ou créer des bibliothèques qui permettent de l’éditeur de liens (LINK.exe) pour mapper une fonction ancienne vers une nouvelle fonction.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-ALIAS  <  
-alias  
-> = <  
-actual-name  
->  
-  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `actual-name`  
- Le nom réel de la fonction ou la procédure.  Les crochets sont requis.  
-  
- `alias`  
- Le nom de remplacement ou l’alias.  Les crochets sont requis.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Le **ALIAS** directive crée un autre nom pour une fonction.  Cela vous permet de créer plusieurs noms pour une fonction, ou créer des bibliothèques qui permettent de l’éditeur de liens (LINK.exe) pour mapper une ancienne fonction vers une nouvelle fonction.
+
+## <a name="syntax"></a>Syntaxe
+
+> ALIAS \< *alias*> = \< *nom réel*>
+
+#### <a name="parameters"></a>Paramètres
+
+*nom réel*<br/>
+Le nom réel de la fonction ou de la procédure.  Les crochets sont nécessaires.
+
+*alias*<br/>
+Le nom de remplacement ou l’alias.  Les crochets sont nécessaires.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

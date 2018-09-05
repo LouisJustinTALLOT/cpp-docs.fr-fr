@@ -1,7 +1,7 @@
 ---
-title: EXTERN (MASM) | Documents Microsoft
+title: EXTERN (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7528ea78270e4976ed3b926e83fe4f9977148498
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0a9008e8c1153c0a9b06530b14e661436f7e62a9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054027"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693668"
 ---
 # <a name="extern-masm"></a>EXTERN (MASM)
-Définit une ou plusieurs variables externes, des étiquettes ou des symboles appelés *nom* dont le type est `type`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   EXTERN [[langtype]] name [[(altid)]] :  
-type [[, [[langtype]] name [[(altid)]] :type]]...  
-```  
-  
-## <a name="remarks"></a>Notes  
- Le `type` peut être [ABS](../../assembler/masm/operator-abs.md), qui importe *nom* en tant que constante. Identique à [EXTRN](../../assembler/masm/extrn.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Définit une ou plusieurs variables externes, des étiquettes ou des symboles appelés *nom* dont le type est *type*.
+
+## <a name="syntax"></a>Syntaxe
+
+> EXTERN [[*langtype*]] *nom* [[(*altid*)]] : *type* [[, [[*langtype*]]  *nom* [[(*altid*)]] : *type*]]...
+
+## <a name="remarks"></a>Notes
+
+Le *type* peut être [ABS](../../assembler/masm/operator-abs.md), qui importe *nom* en tant que constante. Identique à [EXTRN](../../assembler/masm/extrn.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

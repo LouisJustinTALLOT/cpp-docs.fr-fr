@@ -1,7 +1,7 @@
 ---
-title: EXITM | Documents Microsoft
+title: EXITM | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 046e4a6eea3e34f028fc00dceefbaf9668d2dd2b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 33d6d4eccab3ecc4d02e821606fd721b6e1ba6ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051964"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686522"
 ---
 # <a name="exitm"></a>EXITM
-Met fin à l’expansion du bloc de répétition ou une macro en cours et commence l’assembly de l’instruction suivante en dehors du bloc.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-EXITM [[textitem]]   
-```  
-  
-## <a name="remarks"></a>Notes  
- Dans une fonction de la macro, *textitem* est la valeur retournée.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Met fin à l’expansion du bloc de répétition ou une macro en cours et commence l’assembly de l’instruction suivante en dehors du bloc.
+
+## <a name="syntax"></a>Syntaxe
+
+> EXITM [[textitem]]
+
+## <a name="remarks"></a>Notes
+
+Dans une fonction de la macro, *textitem* est la valeur retournée.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

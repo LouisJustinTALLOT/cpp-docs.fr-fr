@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 48a337ab82045543035c2612c707d8c47186ed2d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c7fe0665db01d1a2cd7a1da10b495ba86bc17469
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195450"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690860"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Différences de programmation entre Windows Forms et MFC
 Les rubriques de [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) décrivent la prise en charge MFC pour Windows Forms. Si vous n’êtes pas familiarisé avec .NET Framework ou de la programmation MFC, cette rubrique fournit des informations générales sur les différences de programmation entre les deux.  
@@ -65,5 +65,4 @@ Les rubriques de [à l’aide d’un contrôle d’utilisateur Windows Form dans
      MFC dispose d’une commande de mise à jour. Par conséquent, le document ou la vue active est responsable de l’état des éléments de l’interface utilisateur (par exemple, l’activation ou la désactivation d’un bouton de menu élément ou l’outil et états vérifiés). Windows Forms n’a aucun équivalent d’un mécanisme de mise à jour de commande.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Procédures pas à pas relatives aux Windows Forms](https://msdn.microsoft.com/fd44d13d-4733-416f-aefc-32592e59e5d9)
+ [Utilisation d’un contrôle utilisateur Windows Form dans MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   

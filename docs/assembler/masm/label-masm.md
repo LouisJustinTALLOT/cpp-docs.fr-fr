@@ -1,7 +1,7 @@
 ---
-title: ÉTIQUETTE (MASM) | Documents Microsoft
+title: ÉTIQUETTE (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4189d1ae5cf79d0ecf8cc07fa940e754fe314a6d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d7fe6e6b2297cac689ed5f179b3e299488dd99cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054066"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690588"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
-Crée une nouvelle étiquette en affectant la valeur de compteur à l’emplacement actuelle et la donnée `type` à *nom*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      name LABEL type  
-name LABEL [[NEAR | FAR | PROC]] PTR [[type]]   
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Crée une nouvelle étiquette, affectez la valeur de compteur de l’emplacement actuelle et la donnée *type* à *nom*.
+
+## <a name="syntax"></a>Syntaxe
+
+> *nom* étiquette *type*
+
+> *nom* étiquette [[NEAR | PRÉSENT | PTR de PROC]] [[*type*]]
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df69423e635a76d82ad8a2539c6fd92054f24964
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219381"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677667"
 ---
 # <a name="c-amp-overview"></a>Présentation de C++ AMP
 C++ Accelerated Massive (C++ AMP Parallelism) accélère l’exécution du code C++ en tirant parti du matériel parallèle de données comme une unité de traitement graphique (GPU) sur une carte graphique discrète. À l’aide de C++ AMP, vous pouvez coder les algorithmes multidimensionnels de données afin que l’exécution peut être accélérée à l’aide de parallélisme sur du matériel hétérogène. Le modèle de programmation C++ AMP comprend des tableaux multidimensionnels, l’indexation, le transfert mémoire, la mosaïque et une bibliothèque de fonctions mathématiques. Vous pouvez utiliser des extensions de langage C++ AMP pour contrôler comment les données sont déplacées de l’unité centrale vers le GPU et inversement, afin que vous pouvez améliorer les performances.  
@@ -464,7 +464,7 @@ C++ AMP inclut une bibliothèque de graphiques qui est conçue pour la programma
   
 - [writeonly_texture_view, classe](../../parallel/amp/reference/writeonly-texture-view-class.md): fournit l’accès en écriture seule à une texture.  
   
-- [Bibliothèque de vecteurs de court](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f): définit un ensemble de types de vecteurs courts de longueur 2, 3 et 4 sont basés sur **int**, `uint`, **float**, **double**, [norm](../../parallel/amp/reference/norm-class.md), ou [unorm](../../parallel/amp/reference/unorm-class.md).  
+- Bibliothèque de vecteurs courts : Définit un ensemble de types de vecteurs courts de longueur 2, 3 et 4 sont basés sur **int**, `uint`, **float**, **double**, [norm ](../../parallel/amp/reference/norm-class.md), ou [unorm](../../parallel/amp/reference/unorm-class.md).  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>Applications Universal Windows Platform (UWP)  
  
@@ -496,7 +496,7 @@ Le visualiseur concurrentiel prend en charge pour l’analyse des performances d
   
 - [Canaux (vue Threads)](/visualstudio/profiling/channels-threads-view)  
   
-- [Analyse du Code C++ AMP avec le visualiseur concurrentiel](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
+- [Analyse du Code C++ AMP avec le visualiseur concurrentiel](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)  
   
 ## <a name="performance-recommendations"></a>Recommandations relatives aux performances  
  

@@ -1,7 +1,7 @@
 ---
-title: PUSHCONTEXT | Documents Microsoft
+title: PUSHCONTEXT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c16d0de0848a9ceb61330498b12a9a4322e6604
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16a76f80f72ab2d7f1ec0cfc86c102249330bf16
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056377"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677426"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
-Enregistre tout ou partie des actuel `context`: Registre de segment suppose, base, les indicateurs de liste et cref ou les valeurs de processeur/coprocesseur. Le `context` peut être **suppose que**, `RADIX`, **liste**, **processeur**, ou **tous les**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-PUSHCONTEXT context  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Enregistre tout ou partie des cours `context`: Registre de segment part du principe que la base, les indicateurs de liste et cref ou les valeurs de processeur/coprocesseur. Le `context` peut être **suppose que**, `RADIX`, **RÉPERTORIANT**, **processeur**, ou **tous les**.
+
+## <a name="syntax"></a>Syntaxe
+
+> Contexte PUSHCONTEXT
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

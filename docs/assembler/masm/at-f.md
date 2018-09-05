@@ -1,7 +1,7 @@
 ---
-title: '@F | Documents Microsoft'
+title: '@F | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b68c0bdcbcc27d50793c900b2074e76c44c3bd7f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4638fae45286b1fd4d4725b6c126954010693ce5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049360"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683435"
 ---
 # <a name="f"></a>@F
-L’emplacement de la prochaine [@@ :](../../assembler/masm/at-at.md) étiquette.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-@F  
-  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)
+
+L’emplacement de la prochaine [@@ :](../../assembler/masm/at-at.md) étiquette.
+
+## <a name="syntax"></a>Syntaxe
+
+> @F
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)<br/>

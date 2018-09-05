@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 299ade4aa557a40331fb983f645aa2764c3bf9d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462386"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679770"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Déclarateur de référence rvalue : &amp;&amp;
 Contient une référence à une expression rvalue.  
@@ -60,7 +60,7 @@ int main()
   
  Avant Visual C++ 2010, chaque appel à **opérateur +** alloue et retourne un nouveau temporaire `string` objet (une rvalue). **operator +** Impossible d’ajouter une chaîne à l’autre, car il ne sait pas si les chaînes sources sont des lvalues ou rvalues. Si les chaînes sources sont toutes les deux des lvalues, elles peuvent être référencées ailleurs dans le programme et ne doivent donc pas être modifiées. À l’aide des références rvalue, **opérateur +** peut être modifiée pour accepter des rvalues, qui ne peut pas être référencées ailleurs dans le programme. Par conséquent, **opérateur +** peuvent maintenant ajouter une chaîne à un autre. Cela peut réduire considérablement le nombre d'allocations dynamiques de la mémoire que la classe `string` doit exécuter. Pour plus d’informations sur la `string` de classe, consultez [basic_string, classe](../standard-library/basic-string-class.md).  
   
- La sémantique de déplacement est également utile lorsque le compilateur ne peut pas utiliser l'optimisation de la valeur de retour (RVO) ou l'optimisation de la valeur de retour nommée (NRVO). Dans ces cas-là, le compilateur appelle le constructeur de déplacement si le type le définit. Pour plus d’informations sur l’optimisation de valeur de retour nommée, consultez [l’optimisation de la valeur de retour nommée dans Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
+ La sémantique de déplacement est également utile lorsque le compilateur ne peut pas utiliser l'optimisation de la valeur de retour (RVO) ou l'optimisation de la valeur de retour nommée (NRVO). Dans ces cas-là, le compilateur appelle le constructeur de déplacement si le type le définit. Pour plus d’informations sur l’optimisation de valeur de retour nommée, consultez [l’optimisation de la valeur de retour nommée dans Visual C++ 2005](https://msdn.microsoft.com/en-us/library/ms364057.aspx).  
   
  Pour mieux comprendre la sémantique de déplacement, prenez comme exemple l'insertion d'un élément dans un objet `vector`. Si la capacité de l'objet `vector` est dépassée, l'objet `vector` doit réallouer de la mémoire pour ses éléments puis copier chaque élément vers un autre emplacement de mémoire pour libérer de l'espace pour l'élément inséré. Lorsqu’une opération d’insertion copie un élément, elle crée un nouvel élément, appelle le constructeur de copie pour copier les données de l’élément précédent dans le nouvel élément, puis détruit l’élément précédent. La sémantique de déplacement vous permet de déplacer directement des objets sans qu'il soit nécessaire d'exécuter des opérations d'allocation de mémoire et de copie coûteuses.  
   

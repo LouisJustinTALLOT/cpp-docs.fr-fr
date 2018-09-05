@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b28736e4e9c4b4f327f80a97b5b7ed3b6d1c7c40
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219434"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686270"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Ajout, modification ou suppression de contrôles
 
 À l’aide de la **boîte de dialogue** éditeur, vous pouvez ajouter, redimensionner, modifier et supprimer des contrôles dans les boîtes de dialogue. Vous pouvez également modifier les propriétés d’un contrôle, telles que son ID, ou s’il est visible initialement en cours d’exécution.
 
-Vous pouvez utiliser le menu contextuel dans le **boîte de dialogue** éditeur permet d’ajouter rapidement inscrit les contrôles ActiveX à une boîte de dialogue, et vous pouvez ajouter des contrôles ActiveX les **boîte à outils** pour un accès rapide (pour plus d’informations, consultez [Personnaliser la boîte de dialogue de boîte à outils](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).
+Vous pouvez utiliser le menu contextuel dans le **boîte de dialogue** éditeur permet d’ajouter rapidement inscrit les contrôles ActiveX à une boîte de dialogue, et vous pouvez ajouter des contrôles ActiveX les **boîte à outils** pour un accès rapide (pour plus d’informations, consultez [Boîte à outils](/visualstudio/ide/reference/toolbox)).
 
 - [Ajouter un contrôle à une boîte de dialogue](adding-a-control-to-a-dialog-box.md)
 

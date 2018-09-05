@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b8cb328ec69d5c322538a073fac5fc1761aed
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212986"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683676"
 ---
 # <a name="clr-integration-ccx"></a>Intégration CLR (C++/CX)
 Certains types de Runtime de Windows reçoivent un traitement spécial en C / c++ / CX et les langues qui sont basées sur le common language runtime (CLR). Cet article décrit comment plusieurs types dans un langage sont mappés à un autre langage. Par exemple, le CLR mappe Windows.Foundation.IVector à System.Collections.IList, Windows.Foundation.IMap à System.Collections.IDictionary, et ainsi de suite. De même, C++ / c++ / CX mappe spécialement des types tels que Platform::Delegate et Platform::String.  
@@ -22,7 +22,7 @@ Certains types de Runtime de Windows reçoivent un traitement spécial en C / c+
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>Mappage de l’exécution de Windows à C++ / c++ / CX  
  Lorsque C++ / c++ / CX lit un fichier de métadonnées (.winmd) Windows, le compilateur mappe automatiquement les types et les espaces de noms communs Windows Runtime C + c++ / CX espaces de noms et types. Par exemple, le type Windows Runtime numérique `UInt32` est automatiquement mappé à `default::uint32`.  
   
- C++ / c++ / CX mappe plusieurs autres types Windows Runtime pour le **plateforme** espace de noms. Par exemple, le **Windows::Foundation** handle HSTRING, qui représente une chaîne de texte Unicode en lecture seule, est mappé à C++ / c++ / CX `Platform::String` classe. Lorsqu’une opération Windows Runtime retourne une erreur HRESULT, il est mappé à un C + c++ / CX `Platform::Exception`. Pour plus d’informations, consultez [Types intégrés](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C++ / c++ / CX mappe plusieurs autres types Windows Runtime pour le **plateforme** espace de noms. Par exemple, le **Windows::Foundation** handle HSTRING, qui représente une chaîne de texte Unicode en lecture seule, est mappé à C++ / c++ / CX `Platform::String` classe. Lorsqu’une opération Windows Runtime retourne une erreur HRESULT, il est mappé à un C + c++ / CX `Platform::Exception`.   
   
  C++ / c++ / CX mappe également certains types dans les espaces de noms Windows Runtime pour améliorer les fonctionnalités du type. Pour ces types, C++ / c++ / CX fournit des constructeurs d’assistance et des méthodes qui sont spécifiques à C++ et ne sont pas disponibles dans le fichier du type .winmd standard.  
   

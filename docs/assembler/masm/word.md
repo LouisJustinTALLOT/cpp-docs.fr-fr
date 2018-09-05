@@ -1,7 +1,7 @@
 ---
-title: WORD | Documents Microsoft
+title: WORD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ce8ed64d8cbb9e840c3457cfb621297e9474607
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 50cb0f9748d5c6d1bdae07b5671c79c6794a371c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057888"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687758"
 ---
 # <a name="word"></a>WORD
-Alloue et éventuellement Initialise un mot (2 octets) de stockage pour chaque `initializer`. Peut également être utilisé comme un spécificateur de type n’importe où un type est autorisé.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-[[name]] WORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence des directives](../../assembler/masm/directives-reference.md)   
- [MOT DE PASSE](../../assembler/masm/sword.md)   
- [DW](../../assembler/masm/dw.md)
+
+Alloue et initialise éventuellement un mot (2 octets) de stockage pour chaque `initializer`. Peut également être utilisé comme un spécificateur de type n’importe où un type est autorisé.
+
+## <a name="syntax"></a>Syntaxe
+
+> [[*nom*]] WORD *initialiseur* [[, *initialiseur*]]...
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
+[SWORD](../../assembler/masm/sword.md)<br/>
+[DW](../../assembler/masm/dw.md)<br/>

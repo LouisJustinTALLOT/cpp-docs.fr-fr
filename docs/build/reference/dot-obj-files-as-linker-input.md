@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbc1d7fc7f74121c37c9e80a538ec60f2265701
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219560"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691749"
 ---
 # <a name="obj-files-as-linker-input"></a>Fichiers .obj en tant qu'entrée de l'Éditeur de liens
 
@@ -38,7 +38,7 @@ Microsoft fournit une description complète du format de fichier objet commun. P
 
 À compter de Visual Studio 2005, le compilateur Microsoft Visual C++ prend en charge les caractères Unicode dans les identificateurs, comme défini par la norme ISO/IEC normes C et C++. Les versions précédentes du compilateur pris en charge uniquement des caractères ASCII dans les identificateurs. Pour prendre en charge Unicode dans les noms de fonctions, des classes et des variables statiques, le compilateur et l’éditeur de liens utilisent l’encodage Unicode UTF-8 pour les symboles COFF dans les fichiers .obj. L’encodage UTF-8 est la compatibilité ascendante avec l’encodage ASCII utilisé par les versions antérieures de Visual Studio.
 
-Pour plus d’informations sur le compilateur et l’éditeur de liens, consultez [prise en charge Unicode dans le compilateur et l’éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Pour plus d’informations sur la norme Unicode, consultez le [Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123) organisation.
+Pour plus d’informations sur le compilateur et l’éditeur de liens, consultez [prise en charge Unicode dans le compilateur et l’éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Pour plus d’informations sur la norme Unicode, consultez le [Unicode](http://www.unicode.org/) organisation.
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -46,5 +46,5 @@ Pour plus d’informations sur le compilateur et l’éditeur de liens, consulte
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)  
 [Prise en charge pour Unicode](../../text/support-for-unicode.md)  
 [Prise en charge Unicode dans le compilateur et l’éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Norme Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123)  
+[Norme Unicode](http://www.unicode.org/)  
 [Format PE](/windows/desktop/Debug/pe-format)  

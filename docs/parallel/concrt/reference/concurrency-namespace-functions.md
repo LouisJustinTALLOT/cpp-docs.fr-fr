@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1535ccda7b53a4fe87c496e2749e382413e32d0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219577"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677786"
 ---
 # <a name="concurrency-namespace-functions"></a>fonctions d’espace de noms d’accès concurrentiel
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  Interface `IResourceManager`.  
   
 ### <a name="remarks"></a>Notes  
- Plusieurs appels suivants à cette méthode retourne la même instance du Gestionnaire de ressources. Chaque appel à la méthode incrémente une référence de compter sur le Gestionnaire de ressources et doit être mise en correspondance avec un appel à la [IResourceManager::Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522) méthode lorsque votre planificateur a terminé communique avec le Gestionnaire de ressources.  
+ Plusieurs appels suivants à cette méthode retourne la même instance du Gestionnaire de ressources. Chaque appel à la méthode incrémente une référence de compter sur le Gestionnaire de ressources et doit être mise en correspondance avec un appel à la [IResourceManager::Release](iresourcemanager-structure.md) méthode lorsque votre planificateur a terminé communique avec le Gestionnaire de ressources.  
   
  [unsupported_os](unsupported-os-class.md) est levée si le système d’exploitation n’est pas pris en charge par le Runtime d’accès concurrentiel.  
   
 ##  <a name="create_task"></a>  create_task  
- Crée une bibliothèque de modèles parallèles [tâche](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) objet. `create_task` peut être utilisé partout où vous auriez utilisé un constructeur de tâche. Il est fourni principalement pour des raisons pratiques, car il permet d'utiliser le mot clé `auto` pendant la création de tâches.  
+ Crée une bibliothèque de modèles parallèles [tâche](task-class.md) objet. `create_task` peut être utilisé partout où vous auriez utilisé un constructeur de tâche. Il est fourni principalement pour des raisons pratiques, car il permet d'utiliser le mot clé `auto` pendant la création de tâches.  
   
 ```
 template<typename T>

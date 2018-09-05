@@ -1,7 +1,7 @@
 ---
-title: INCLURE (MASM) | Documents Microsoft
+title: INCLURE (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 346f076e63df7b02928b5abf49def827229bb289
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 26752dc25c30fa22a523a5c224192d2023c0b135
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054596"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685585"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
-Insère le code à partir du fichier source donné par source *nom de fichier* dans le fichier source actuel au cours de l’assembly.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-INCLUDE filename  
-```  
-  
-## <a name="remarks"></a>Notes  
- Le *nom de fichier* doit figurer entre crochets pointus si elle inclut une barre oblique inverse, un point-virgule, une plus grande-que le symbole, moins-que symbole, guillemet-apostrophe ou guillemet double.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Insertions code source à partir du fichier de source donné en *nom de fichier* dans le fichier source actuel au cours de l’assembly.
+
+## <a name="syntax"></a>Syntaxe
+
+> Nom de fichier INCLUDE
+
+## <a name="remarks"></a>Notes
+
+Le *filename* doit être entre crochets si elle inclut une barre oblique inverse, point-virgule, une plus grande-que le symbole, moins-que symbole, guillemet-apostrophe ou guillemet double.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

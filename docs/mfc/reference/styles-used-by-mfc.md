@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 043a046209d5e52439ed61165557cc6596db48e8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199919"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689319"
 ---
 # <a name="styles-used-by-mfc"></a>Styles utilisés par MFC  
   
@@ -219,7 +219,7 @@ Utilisez les indicateurs de style suivante pour spécifier le comportement et l�
   
 ## <a name="button-styles"></a> Styles de boutons  
   
-Appliquent des styles de boutons à [CButton, classe](../../mfc/reference/cbutton-class.md) objets, tels que des cases d’option, cases à cocher et boutons de commande. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CButton::Create](../../mfc/reference/cbutton-class.md#create). Pour plus d’informations sur les styles de bouton dans Windows, consultez [Styles de boutons (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
+Appliquent des styles de boutons à [CButton, classe](../../mfc/reference/cbutton-class.md) objets, tels que des cases d’option, cases à cocher et boutons de commande. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CButton::Create](../../mfc/reference/cbutton-class.md#create). Pour plus d’informations sur les styles de bouton dans Windows, consultez [Styles de boutons (Windows)](/windows/desktop/Controls/button-styles).  
   
 ### <a name="button-types"></a>Types de bouton  
   
@@ -288,7 +288,7 @@ Le tableau suivant répertorie les options supplémentaires que vous pouvez util
   
 ## <a name="combo-box-styles"></a>  Styles de zone de liste déroulante  
   
-Les styles de zone de liste modifiable suivants sont disponibles dans MFC. Pour plus d’informations sur les styles de zone de liste déroulante dans Windows, consultez [Styles de zone de liste déroulante (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
+Les styles de zone de liste modifiable suivants sont disponibles dans MFC. Pour plus d’informations sur les styles de zone de liste déroulante dans Windows, consultez [Styles de zone de liste déroulante (Windows)](/windows/desktop/Controls/combo-box-styles).  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -308,7 +308,7 @@ Les styles de zone de liste modifiable suivants sont disponibles dans MFC. Pour 
   
 ## <a name="edit-styles"></a>  Modifier les styles  
   
-Modifier les styles s’appliquent à [classe CEdit](../../mfc/reference/cedit-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CEdit::Create](../../mfc/reference/cedit-class.md#create). Pour plus d’informations sur les styles de contrôle edit dans Windows, consultez [modifier les Styles du contrôle (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Modifier les styles s’appliquent à [classe CEdit](../../mfc/reference/cedit-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CEdit::Create](../../mfc/reference/cedit-class.md#create). Pour plus d’informations sur les styles de contrôle edit dans Windows, consultez [modifier les Styles du contrôle (Windows)](/windows/desktop/Controls/edit-control-styles).  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -339,7 +339,7 @@ Appliquent des styles de fenêtre frame à [CFrameWnd, classe](../../mfc/referen
   
 ## <a name="list-box-styles"></a> Styles de zone de liste  
   
-Appliquent des styles de zone de liste à [CListBox (classe)](../../mfc/reference/clistbox-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Pour plus d’informations sur les styles de zone de liste dans Windows, consultez [Styles de zone de liste (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
+Appliquent des styles de zone de liste à [CListBox (classe)](../../mfc/reference/clistbox-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Pour plus d’informations sur les styles de zone de liste dans Windows, consultez [Styles de zone de liste (Windows)](/windows/desktop/Controls/list-box-styles).  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ Appliquent des styles de zone de liste à [CListBox (classe)](../../mfc/referenc
   
 ##<a name="message-box-styles"></a>  Styles de zone de message  
   
-Appliquent des styles de zone de message à [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) éléments. Spécifiez une combinaison de styles dans le *%nLes* paramètre de `AfxMessageBox`. Pour plus d’informations sur les styles de zone de message dans Windows, consultez [MessageBox (fonction) (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
+Appliquent des styles de zone de message à [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) éléments. Spécifiez une combinaison de styles dans le *%nLes* paramètre de `AfxMessageBox`. Pour plus d’informations sur les styles de zone de message dans Windows, consultez [MessageBox (fonction) (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).  
   
 Les styles de boîte de message suivants sont disponibles.  
   
@@ -403,7 +403,7 @@ Les styles de boîte de message suivants sont disponibles.
   
 ## <a name="scroll-bar-styles"></a> Styles de barre de défilement  
   
-Styles de barre de défilement s’appliquent à [CScrollBar, classe](../../mfc/reference/cscrollbar-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Pour plus d’informations sur les styles de contrôle dans Windows de la barre de défilement, consultez [Styles de contrôle de barre de défilement (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Styles de barre de défilement s’appliquent à [CScrollBar, classe](../../mfc/reference/cscrollbar-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Pour plus d’informations sur les styles de contrôle dans Windows de la barre de défilement, consultez [Styles de contrôle de barre de défilement (Windows)](/windows/desktop/Controls/scroll-bar-control-styles).  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Styles de barre de défilement s’appliquent à [CScrollBar, classe](../../mfc/
   
 ## <a name="static-styles"></a> Styles statiques  
   
-Styles statiques s’appliquent à [cstatic, classe](../../mfc/reference/cstatic-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Pour plus d’informations sur les styles de contrôle statique dans Windows, consultez [Styles de contrôle statique (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Styles statiques s’appliquent à [cstatic, classe](../../mfc/reference/cstatic-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Pour plus d’informations sur les styles de contrôle statique dans Windows, consultez [Styles de contrôle statique (Windows)](/windows/desktop/Controls/static-control-styles).  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -488,7 +488,7 @@ Appliquent des styles de fenêtre à [classe CWnd](../../mfc/reference/cwnd-clas
   
 ## <a name="extended-window-styles"></a> Styles de fenêtre étendus  
   
-Appliquent des styles de fenêtre étendus à [classe CWnd](../../mfc/reference/cwnd-class.md) objets. Spécifiez une combinaison de styles dans le *dwExStyle* paramètre de [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Pour plus d’informations sur les styles de fenêtre étendus dans Windows, consultez [Styles de fenêtre étendus (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
+Appliquent des styles de fenêtre étendus à [classe CWnd](../../mfc/reference/cwnd-class.md) objets. Spécifiez une combinaison de styles dans le *dwExStyle* paramètre de [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Pour plus d’informations sur les styles de fenêtre étendus dans Windows, consultez [Styles de fenêtre étendus (Windows)](/windows/desktop/winmsg/extended-window-styles).  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -524,14 +524,14 @@ Appliquent des styles de fenêtre étendus à [classe CWnd](../../mfc/reference/
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
-[Styles de boutons (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
-[Styles de zone de liste déroulante (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Modifier les Styles de contrôle (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[Styles (Windows) de la zone de liste](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
-[MessageBox (fonction) (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[Styles de contrôle de barre de défilement (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Styles de contrôle statique (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)  
+[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)  
+[Styles de boutons (Windows)](/windows/desktop/Controls/button-styles)  
+[Styles de zone de liste déroulante (Windows)](/windows/desktop/Controls/combo-box-styles)  
+[Modifier les Styles de contrôle (Windows)](/windows/desktop/Controls/edit-control-styles)  
+[Styles (Windows) de la zone de liste](/windows/desktop/Controls/list-box-styles) 
+[MessageBox (fonction) (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox) 
+[Styles de contrôle de barre de défilement (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)  
+[Styles de contrôle statique (Windows)](/windows/desktop/Controls/static-control-styles)  
 [Styles de fenêtre (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-[Styles de fenêtre étendus (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
+[Styles de fenêtre étendus (Windows)](/windows/desktop/winmsg/extended-window-styles)  

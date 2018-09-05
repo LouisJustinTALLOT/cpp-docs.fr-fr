@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebbb33a4f17f5b4d458c4add4d59040d698dd4b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 58eb907841abf63d77817e106ee339ad6c49bd7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222192"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681201"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilisation des objets accelerator et accelerator_view
 Vous pouvez utiliser la [accelerator](../../parallel/amp/reference/accelerator-class.md) et [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) pour spécifier le périphérique ou l’émulateur pour exécuter votre code C++ AMP sur les classes. Un système peut avoir plusieurs périphériques ou émulateurs qui varient selon la quantité de mémoire, de prise en charge de la mémoire partagée, de prise en charge de débogage ou de prise en charge double précision. C++ Accelerated les Massive Parallelism (C++ AMP) fournit des API que vous pouvez utiliser pour examiner les accélérateurs disponibles, définir un comme la valeur par défaut, spécifier plusieurs accelerator_views pour plusieurs appels au parallel_for_each et effectuer des tâches spéciales de débogage.  
@@ -180,11 +180,11 @@ Les chemins d’accès de périphérique de trois accélérateurs spéciaux sont
   
 - [Accelerator::direct3d_warp, données membres](reference/accelerator-class.md#direct3d_warp): cet accélérateur fournit une solution de secours pour l’exécution de code C++ AMP sur les processeurs multicœurs qui utilisent des Extensions Streaming SIMD (SSE).  
   
-- [Accelerator::cpu_accelerator, données membres](reference/accelerator-class.md#cpu_accelerator): vous pouvez utiliser cet accélérateur pour installer des tableaux temporaires. Il ne peut pas exécuter du code C++ AMP. Pour plus d’informations, consultez le [tableaux temporaires dans C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) publier sur la programmation parallèle en Code natif blog.  
+- [Accelerator::cpu_accelerator, données membres](reference/accelerator-class.md#cpu_accelerator): vous pouvez utiliser cet accélérateur pour installer des tableaux temporaires. Il ne peut pas exécuter du code C++ AMP. Pour plus d’informations, consultez le [tableaux temporaires dans C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) publier sur la programmation parallèle en Code natif blog.  
   
 ## <a name="interoperability"></a>Interopérabilité  
  
-Le runtime C++ AMP prend en charge l’interopérabilité entre le `accelerator_view` classe et le Direct3D [ID3D11Device interface](http://go.microsoft.com/fwlink/p/?linkId=248488). Le [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) méthode prend un `IUnknown` interface et retourne un `accelerator_view` objet. Le [get_device](https://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) méthode prend un `accelerator_view` objet et retourne un `IUknown` interface.  
+Le runtime C++ AMP prend en charge l’interopérabilité entre le `accelerator_view` classe et le Direct3D [ID3D11Device interface](/windows/desktop/api/d3d11/nn-d3d11-id3d11device). Le [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) méthode prend un `IUnknown` interface et retourne un `accelerator_view` objet. Le [get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) méthode prend un `accelerator_view` objet et retourne un `IUnknown` interface.  
   
 ## <a name="see-also"></a>Voir aussi  
  

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211702"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684822"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
 
@@ -157,5 +157,5 @@ Un objet `WeakRef` représente généralement un objet dont l'existence est cont
 |-|-|
 |[API principales par catégorie](../windows/key-wrl-apis-by-category.md)|Met en évidence la principale bibliothèque de modèles Windows Runtime C++ types, fonctions et les macros.|
 |[Référence](../windows/wrl-reference.md)|Contient des informations de référence pour la bibliothèque de modèles C++ Windows Runtime.|
-|[Référence rapide (Windows Runtime et Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Décrit brièvement le C + c++ / fonctionnalités CX qui prennent en charge l’exécution de Windows.|
-|[À l’aide de composants Windows Runtime en Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Montre comment utiliser C++ / c++ / CX pour créer un composant Windows Runtime de base.|
+|[Référence rapide (Windows Runtime et Visual C++)](../cppcx/quick-reference-c-cx.md)|Décrit brièvement le C + c++ / fonctionnalités CX qui prennent en charge l’exécution de Windows.|
+|[À l’aide de composants Windows Runtime en Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Montre comment utiliser C++ / c++ / CX pour créer un composant Windows Runtime de base.|

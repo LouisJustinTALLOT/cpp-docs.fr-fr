@@ -1,7 +1,7 @@
 ---
-title: UNION | Documents Microsoft
+title: UNION | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a2d7644e14903d2c4a9c4191ce54c8fea14849
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3b2d6ea844881961bdfb4a26a5e6cf79d8308de9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057667"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682470"
 ---
 # <a name="union"></a>UNION
-Déclare une union d’un ou plusieurs types de données. Le *fielddeclarations* doivent être des définitions de données valide. Omettre la [se termine](../../assembler/masm/ends-masm.md) *nom* étiquette sur imbriqués **UNION** définitions.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      name   
-      UNION [[alignment]] [[, NONUNIQUE]]  
-   fielddeclarations  
-[[name]] ENDS  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Déclare une union d’un ou plusieurs types de données. Le *déclarations de champ* doivent être des définitions de données valide. Omettre la [se termine](../../assembler/masm/ends-masm.md) *nom* étiquette sur imbriqués **UNION** définitions.
+
+## <a name="syntax"></a>Syntaxe
+
+> *nom* UNION [[*alignement*]] [[, non uniques]]<br/>
+> *déclarations de champs*<br/>
+> [[*nom*]] se termine
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

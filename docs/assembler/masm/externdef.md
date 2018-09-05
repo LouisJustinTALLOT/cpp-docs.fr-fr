@@ -1,7 +1,7 @@
 ---
-title: EXTERNDEF | Documents Microsoft
+title: EXTERNDEF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b010f52f91a04388f34052fcc5c374690cff13df
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d5c3d42cabb88c38ce1d98da24cd2cb4ddec8d5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052698"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683659"
 ---
 # <a name="externdef"></a>EXTERNDEF
-Définit une ou plusieurs variables externes, des étiquettes ou des symboles appelés *nom* dont le type est `type`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-EXTERNDEF [[langtype]] name:type [[, [[langtype]] name:type]]...  
-```  
-  
-## <a name="remarks"></a>Notes  
- Si *nom* est défini dans le module, il est traité comme [PUBLIC](../../assembler/masm/public-masm.md). Si *nom* est référencé dans le module, il est traité comme [EXTERN](../../assembler/masm/extern-masm.md). Si *nom* est ne pas référencée, elle est ignorée. Le `type` peut être [ABS](../../assembler/masm/operator-abs.md), qui importe *nom* en tant que constante. Normalement utilisée dans les fichiers include.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Définit une ou plusieurs variables externes, des étiquettes ou des symboles appelés *nom* dont le type est `type`.
+
+## <a name="syntax"></a>Syntaxe
+
+> Type de nom : EXTERNDEF [[langtype]] [[, [[langtype]] : type de nom]]...
+
+## <a name="remarks"></a>Notes
+
+Si *nom* est défini dans le module, il est traité comme [PUBLIC](../../assembler/masm/public-masm.md). Si *nom* est référencé dans le module, il est traité comme [EXTERN](../../assembler/masm/extern-masm.md). Si *nom* est ne pas référencé, il est ignoré. Le `type` peut être [ABS](../../assembler/masm/operator-abs.md), qui importe *nom* en tant que constante. Normalement utilisé dans les fichiers include.
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

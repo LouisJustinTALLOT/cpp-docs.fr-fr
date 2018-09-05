@@ -1,5 +1,5 @@
 ---
-title: -Qpar-report (niveau de Reporting PARALLÉLISEUR automatique) | Documents Microsoft
+title: -Qpar-report (niveau de rapport du PARALLÉLISEUR automatique) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a9db6d02b9233c51a49cf506a664c9be0f821e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70ac8433b4692586880648d6c5d5d83f1cbb15fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376012"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681693"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (Niveau de rapport du paralléliseur automatique)
 Active la fonctionnalité de création de rapports du compilateur [PARALLÉLISEUR](../../parallel/auto-parallelization-and-auto-vectorization.md) et spécifie le niveau des messages d’information pour la sortie pendant la compilation.  
@@ -53,4 +53,4 @@ Active la fonctionnalité de création de rapports du compilateur [PARALLÉLISEU
  [/Q (opérations de bas niveau), options](../../build/reference/q-options-low-level-operations.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
- [Programmation parallèle en Code natif](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Programmation parallèle en Code natif](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

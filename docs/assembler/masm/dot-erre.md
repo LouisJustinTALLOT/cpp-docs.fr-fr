@@ -1,7 +1,7 @@
 ---
-title: . ERRE | Documents Microsoft
+title: . ERRE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e8ef9f2be4dcf185bc731f8873a908f196a988
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e1029e3f0d6c40b258a23bb03d29d71503a78b15
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678217"
 ---
 # <a name="erre"></a>.ERRE
-Génère une erreur si *expression* a la valeur false (0).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.ERRE expression [[, message]]  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)
+
+Génère une erreur si *expression* a la valeur false (0).
+
+## <a name="syntax"></a>Syntaxe
+
+> . ERRE expression [[, message]]
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>

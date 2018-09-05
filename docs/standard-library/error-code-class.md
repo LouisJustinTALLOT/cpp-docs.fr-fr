@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ea90d30a492fc19020a3309a994f885ab5916be2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221570"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690545"
 ---
 # <a name="errorcode-class"></a>error_code, classe
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 Le premier constructeur stocke une valeur de code d’erreur égale à zéro et un pointeur vers [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Le deuxième constructeur stocke *val* en tant que la valeur de code d’erreur et un pointeur vers [error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Le deuxième constructeur stocke *val* en tant que la valeur de code d’erreur et un pointeur vers [error_category](../standard-library/error-category-class.md).
 
 Le troisième constructeur stocke `(value_type)_Errcode` comme valeur de code d’erreur et un pointeur vers [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -238,7 +238,7 @@ L’opérateur membre retourne `!(*this == right)`.
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-Vérifie si l’objet [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) est inférieur à l’objet `error_code` transmis pour la comparaison.
+Vérifie si l’objet `error_code` est inférieur à l’objet `error_code` transmis pour la comparaison.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,7 +260,7 @@ L’opérateur membre retourne `category() < right.category() || category() == r
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-Assigne une nouvelle valeur d’énumération à l’objet [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31).
+Assigne une nouvelle valeur d’énumération à l’objet `error_code`.
 
 ```cpp
 template <class _Enum>

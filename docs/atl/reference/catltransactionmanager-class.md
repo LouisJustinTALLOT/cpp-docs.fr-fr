@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a7f6ad0620591e51d1382cd1199c52dde222ac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b3776f95db1a1e6fad8f885e23bb0dc8836a31ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882765"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681656"
 ---
 # <a name="catltransactionmanager-class"></a>Catltransactionmanager, classe
 Catltransactionmanager, classe fournit un wrapper pour les fonctions de noyau Gestionnaire de transactions KTM (Kernel Transaction Manager).  
@@ -467,7 +467,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  Le nom du fichier ou du répertoire.  
   
  *dwAttributes*  
- Les attributs de fichier à définir pour le fichier. Pour plus d’informations, consultez [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699).  
+ Les attributs de fichier à définir pour le fichier. Pour plus d’informations, consultez [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda).  
   
 ### <a name="remarks"></a>Notes  
  Ce wrapper appelle le `SetFileAttributesTransacted` (fonction).  

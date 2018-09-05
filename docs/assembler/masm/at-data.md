@@ -1,7 +1,7 @@
 ---
-title: '@data | Documents Microsoft'
+title: '@data | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91da35eafb019d1067106c2d6057754ed6c4ae89
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3da3ffc3f6668b0b79d5604d4e010205b4b93aac
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049885"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681531"
 ---
 # <a name="data"></a>@data
-Le nom du groupe de données par défaut. Prend la valeur DGROUP pour tous les modèles sauf **plat**. A la valeur **plat** sous le **plat** le modèle de mémoire (macro de texte).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-@data  
-  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)
+
+Le nom du groupe de données par défaut. Prend la valeur DGROUP pour tous les modèles à l’exception **plat**. Prend la valeur **plat** sous le **plat** le modèle de mémoire (macro de texte).
+
+## <a name="syntax"></a>Syntaxe
+
+> @data
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)<br/>
