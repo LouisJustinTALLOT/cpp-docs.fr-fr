@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20611d2cc5e4b391e2dafdef614dd5173d32ef7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dade9987358c1c160dffd0221b0421b4fab92c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207296"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687640"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Ajout d'une variable membre (Visual C++)
-Vous pouvez ajouter une variable membre à une classe à l’aide de l’affichage de classes. Les variables membres peuvent être utilisées pour [l’échange et la validation de données](../mfc/dialog-data-exchange-and-validation.md), ou elles peuvent être génériques. L’Assistant Ajout de variable membre est spécialement conçu pour prélever les informations importantes et les utiliser pour insérer des éléments dans vos fichiers sources aux emplacements appropriés. Vous pouvez ajouter une variable membre à partir de [l’Éditeur de boîtes de dialogue](../windows/dialog-editor.md) dans [l’affichage des ressources](../windows/resource-view-window.md), ou à partir de [l’affichage de classes](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+Vous pouvez ajouter une variable membre à une classe à l’aide de l’affichage de classes. Les variables membres peuvent être utilisées pour [l’échange et la validation de données](../mfc/dialog-data-exchange-and-validation.md), ou elles peuvent être génériques. L’Assistant Ajout de variable membre est spécialement conçu pour prélever les informations importantes et les utiliser pour insérer des éléments dans vos fichiers sources aux emplacements appropriés. Vous pouvez ajouter une variable membre à partir de [l’Éditeur de boîtes de dialogue](../windows/dialog-editor.md) dans [l’affichage des ressources](../windows/resource-view-window.md), ou à partir de [l’affichage de classes](/visualstudio/ide/viewing-the-structure-of-code).  
   
 > [!NOTE]
 >  Quand vous concevez et implémentez une boîte de dialogue, il peut être plus efficace d’utiliser l’Éditeur de boîtes de dialogue pour ajouter les contrôles de boîte de dialogue, puis d’implémenter les variables membres des contrôles.  
@@ -49,7 +49,7 @@ Vous pouvez ajouter une variable membre à une classe à l’aide de l’afficha
   
 ### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>Pour ajouter une variable membre à partir de l’affichage de classes à l’aide de l’Assistant Ajout de variable membre  
   
-1.  Dans [l’affichage de classes](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), développez le nœud du projet afin d’afficher ses classes.  
+1.  Dans [l’affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), développez le nœud du projet afin d’afficher ses classes.  
   
 2.  Cliquez avec le bouton droit sur la classe à laquelle vous souhaitez ajouter une variable.  
   

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7e82a384e3b2e8ca446843c91984e78754d6cc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 468ce7d65e31a70192e1a48bf21126dd96a1936e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204058"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678910"
 ---
 # <a name="deployment-in-visual-c"></a>Déploiement dans Visual C++
 
@@ -58,7 +58,7 @@ En plus des bibliothèques liées dynamiquement, Visual Studio fournit la plupar
 
 ## <a name="troubleshooting-deployment-issues"></a>Résolution des problèmes de déploiement
 
-L’ordre de chargement des bibliothèques Visual C++ dépend du système. Pour diagnostiquer des problèmes liés au chargeur, utilisez depends.exe ou where.exe. Pour plus d’informations, consultez [Dynamic-Link Library Search Order (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx).
+L’ordre de chargement des bibliothèques Visual C++ dépend du système. Pour diagnostiquer des problèmes liés au chargeur, utilisez depends.exe ou where.exe. Pour plus d’informations, consultez [Dynamic-Link Library Search Order (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order).
 
 ## <a name="see-also"></a>Voir aussi
 
