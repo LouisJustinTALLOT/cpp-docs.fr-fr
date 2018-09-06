@@ -18,79 +18,83 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8e5cefd7ba2b4816bf7e204cd4b3f97ee86974a
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 61050f8fc1924f6d2a143893af5bd1918df94394
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538488"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895186"
 ---
 # <a name="stosb"></a>__stosb
-**Section spécifique à Microsoft**  
-  
- Génère une instruction de chaîne de magasin (`rep stosb`).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __stosb(   
-   unsigned char* Dest,   
-   unsigned char Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [out] `Dest`  
- La destination de l’opération.  
-  
- [in] `Data`  
- Les données à stocker.  
-  
- [in] `Count`  
- La longueur du bloc d’octets à écrire.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`__stosb`|x86, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- Le résultat est que le caractère `Data` est écrit dans un bloc de `Count` octets dans le `Dest` chaîne.  
-  
- Cette routine est disponible uniquement en tant qu'intrinsèque.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// stosb.c  
-// processor: x86, x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
+
+**Section spécifique à Microsoft**
+
+Génère une instruction de chaîne de magasin (`rep stosb`).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __stosb(
+   unsigned char* Dest,
+   unsigned char Data,
+   size_t Count
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
+[out] `Dest`  
+La destination de l’opération.
+
+[in] `Data`  
+Les données à stocker.
+
+[in] `Count`  
+La longueur du bloc d’octets à écrire.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`__stosb`|x86, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+Le résultat est que le caractère `Data` est écrit dans un bloc de `Count` octets dans le `Dest` chaîne.
+
+Cette routine est disponible uniquement en tant qu'intrinsèque.
+
+## <a name="example"></a>Exemple
+
+```C
+// stosb.c
+// processor: x86, x64
+#include <stdio.h>
+#include <intrin.h>
+
 #pragma intrinsic(__stosb)  
-  
+
 int main()  
-{  
-    unsigned char c = 0x40; /* '@' character */  
-    unsigned char s[] = "*********************************";  
-  
-    printf_s("%s\n", s);  
-    __stosb((unsigned char*)s+1, c, 6);  
-    printf_s("%s\n", s);  
-  
-}  
+{
+    unsigned char c = 0x40; /* '@' character */
+    unsigned char s[] = "*********************************";
+
+    printf_s("%s\n", s);
+    __stosb((unsigned char*)s+1, c, 6);
+    printf_s("%s\n", s);
+
+}
 ```  
-  
-```Output  
+
+```Output
 *********************************  
 *@@@@@@**************************  
 ```  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

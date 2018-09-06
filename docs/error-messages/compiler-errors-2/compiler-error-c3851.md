@@ -1,7 +1,7 @@
 ---
-title: Erreur du compilateur C3851 | Documents Microsoft
+title: Erreur du compilateur C3851 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,25 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82104776b2d1153310d0552bd873238333e746f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f495a61fd3c157862fe65d82c1ffe5f047d798dd
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268830"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895173"
 ---
 # <a name="compiler-error-c3851"></a>Erreur du compilateur C3851
-« char » : un nom de caractère universel ne peut pas désigner un caractère du jeu de caractères de base  
-  
- Dans le code compilé en C++, vous ne pouvez pas utiliser un nom de caractère universel représentant un caractère dans le jeu de caractères source de base en dehors d’une chaîne ou d’un littéral de caractère. Pour plus d’informations, consultez [jeux de caractères](../../cpp/character-sets.md). Dans le code compilé en tant que C, vous ne pouvez pas utiliser un nom de caractère universel pour les caractères dans la plage 0x20-0x7f, inclusivement, excepté pour 0x24 (« $ »), 0x40 (« @ ») ou 0x60 (« ` »).  
-  
- Les exemples suivants génèrent C3851 et montrent comment résoudre le problème :  
-  
-```cpp  
-// C3851.cpp  
+
+> «*char*' : un nom de caractère universel ne peut pas désigner un caractère dans le jeu de caractères de base
+
+## <a name="remarks"></a>Notes
+
+Dans le code compilé en C++, vous ne pouvez pas utiliser un nom de caractère universel représentant un caractère dans le jeu de caractères source de base en dehors d’une chaîne ou d’un littéral de caractère. Pour plus d’informations, consultez [jeux de caractères](../../cpp/character-sets.md). Dans le code compilé en C, vous ne pouvez pas utiliser un nom de caractère universel pour les caractères dans la plage 0 x 20-0x7f, inclusivement, excepté pour 0 x 24 (« $»), 0 x 40 («\@»), ou 0 x 60 («\`»).
+
+## <a name="example"></a>Exemple
+
+Les exemples suivants génèrent C3851 et montrent comment résoudre le problème :
+
+```cpp
+// C3851.cpp
 int main()  
-{  
-   int test1_\u0041 = 0;   // C3851, \u0041 = 'A' in basic character set  
-   int test2_A = 0;        // OK  
-}  
+{
+   int test1_\u0041 = 0;   // C3851, \u0041 = 'A' in basic character set
+   int test2_A = 0;        // OK
+}
 ```
