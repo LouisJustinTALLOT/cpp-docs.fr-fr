@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e7ab8ad911869cab56df12b08b9688b9912f2a63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403139"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895160"
 ---
 # <a name="postfix-expressions"></a>Expressions suffixées
 Les expressions suffixées se composent d'expressions primaires ou d'expressions dans lesquelles les opérateurs suffixés suivent une expression primaire. Les opérateurs suffixés sont répertoriées dans le tableau suivant.  
@@ -50,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- Dans l’expression ci-dessus, `func` est une expression primaire, `func(1)` est une expression de fonction suffixée, `func(1)->GetData` est une expression suffixée spécifiant un membre de la classe, `func(1)->GetData()` est une autre expression de fonction suffixée et l’ensemble expression est une expression suffixée incrémentant la valeur de retour de GetData.  L’expression entière signifie : Appeler fonction passant 1 comme argument et obtenir un pointeur vers une classe comme valeur de retour.  Appelez ensuite `GetValue()` sur cette classe, puis incrémenter la valeur retournée.  
+ Dans l’expression ci-dessus, `func` est une expression primaire, `func(1)` est une expression de fonction suffixée, `func(1)->GetValue` est une expression suffixée spécifiant un membre de la classe, `func(1)->GetValue()` est une autre expression de fonction suffixée et l’ensemble expression est une expression suffixée incrémentant la valeur de retour de GetValue.  L’expression entière signifie : Appeler fonction passant 1 comme argument et obtenir un pointeur vers une classe comme valeur de retour.  Appelez ensuite `GetValue()` sur cette classe, puis incrémenter la valeur retournée.  
   
  Les expressions répertoriées ci-dessus sont des expressions d'assignation, ce qui signifie que le résultat de ces expressions doit être une r-value.  
   

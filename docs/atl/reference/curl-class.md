@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753728"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895290"
 ---
 # <a name="curl-class"></a>CUrl, classe
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` vous permet de manipuler les champs d’une URL, tels que le numéro de port ou de chemin d’accès. `CUrl` comprend les URL sous la forme suivante :
 
-\<Schéma >  ://\<nom d’utilisateur > :\<mot de passe > @\<nom d’hôte > :\<numéro_port > /\<UrlPath >\<ExtraInfo >
+\<Schéma >  ://\<nom d’utilisateur > :\<mot de passe >\@\<nom d’hôte > :\<numéro_port > /\<UrlPath >\<ExtraInfo >
 
 (Certains champs sont facultatifs.) Par exemple, considérez cette URL :
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl) analyse comme suit :
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - Mot de passe : « secret »
 
-- Nom d’hôte : « www.microsoft.com »
+- Nom d’hôte : «`www.microsoft.com`»
 
 - Numéro de port : 80
 
@@ -235,7 +235,7 @@ Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
 
 Cette méthode ajoute des champs individuels pour construire la chaîne URL complète en utilisant le format suivant :
 
-**\<schéma >  ://\<utilisateur > :\<passer > @\<domaine > :\<port >\<chemin d’accès >\<supplémentaires >**
+**\<schéma >  ://\<utilisateur > :\<passer >\@\<domaine > :\<port >\<chemin d’accès >\<supplémentaires >**
 
 Lors de l’appel de cette méthode, le *pdwMaxLength* le paramètre doit contenir initialement la longueur maximale de la mémoire tampon de chaîne référencée par le *lpszUrl* paramètre. La valeur de la *pdwMaxLength* paramètre sera actualisée avec la longueur réelle de la chaîne d’URL.
 

@@ -1,7 +1,7 @@
 ---
-title: Avertissement NMAKE U4001 | Documents Microsoft
+title: Avertissement NMAKE U4001 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619c3184b24481d7c44cb27f6beed16d32d644b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b34cf70a43bf1beee6daf636ae44840d75b0d63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316171"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894627"
 ---
 # <a name="nmake-warning-u4001"></a>Avertissement NMAKE U4001
-fichier de commandes peut être appelé uniquement à partir de la ligne de commande  
-  
- Un fichier de commandes, qui est appelé par le signe arobase (**@**) spécificateur, ne peut pas contenir une spécification pour un autre fichier de commandes. Ce type d’imbrication n’est pas autorisée. La spécification a été ignorée.
+
+> fichier de commandes peut être appelé uniquement à partir de la ligne de commande
+
+Un fichier de commandes, qui est appelé par le signe arobase (**\@**) spécificateur, ne peut pas contenir une spécification pour un autre fichier de commandes. Ce type d’imbrication n’est pas autorisée. La spécification a été ignorée.
