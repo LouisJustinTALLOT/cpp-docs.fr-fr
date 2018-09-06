@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4358712e5573095229a48a6d08b78706c608874d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b434ca991ef05bb90c3cbdc659cf8adc3381aa0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403646"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752905"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -30,36 +30,36 @@ La syntaxe à attributs étendus pour la spécification de classe de stockage d�
 
 ## <a name="grammar"></a>Grammaire
 
-*decl-specifier*:  
+*decl-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
 
-*extended-decl-modifier-seq* :  
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub>  
+*extended-decl-modifier-seq* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
 
-*extended-decl-modifier* :  
-&nbsp;&nbsp;&nbsp;&nbsp;**Aligner (** *#* **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**appdomain**  
-&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Déconseillé**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
-&nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**  
-&nbsp;&nbsp;&nbsp;&nbsp;**noalias**  
-&nbsp;&nbsp;&nbsp;&nbsp;**noinline**  
-&nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
-&nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
-&nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Processus**  
-&nbsp;&nbsp;&nbsp;&nbsp;**propriété (** { **obtenir =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**restrict**  
-&nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
-&nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
-&nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**thread**  
-&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**  
+*extended-decl-modifier* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Aligner (** *#* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**appdomain**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Déconseillé**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**noalias**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**noinline**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**noreturn**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Processus**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**propriété (** { **obtenir =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**restrict**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**
 
 Un espace blanc sépare la séquence de modificateur de déclaration. Des exemples sont donnés dans des sections ultérieures.
 

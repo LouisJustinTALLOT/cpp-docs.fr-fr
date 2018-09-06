@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: cf975b0b434218d1917c2d630582e32cd287e298
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883711"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755064"
 ---
 # <a name="atlcommodule70-structure"></a>_Atl_com_module70, structure
-Utilisé par le code lié à COM dans ATL.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Utilisé par le code lié à COM dans ATL.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
@@ -39,34 +40,34 @@ struct _ATL_COM_MODULE70 {
     _ATL_OBJMAP_ENTRY** m_ppAutoObjMapLast;
     CRITICAL_SECTION m_csObjMap;
 };
-```  
-  
-## <a name="members"></a>Membres  
- `cbSize`  
- La taille de la structure, utilisée pour le contrôle de version.  
-  
- `m_hInstTypeLib`  
- L’instance de handle vers la bibliothèque de types pour ce module.  
-  
- `m_ppAutoObjMapFirst`  
- Adresse de l’élément de tableau indiquant le début des entrées de mappage d’objet pour ce module.  
-  
- `m_ppAutoObjMapLast`  
- Adresse de l’élément de tableau indiquant la fin des entrées de mappage d’objet pour ce module.  
-  
- `m_csObjMap`  
- Section critique pour sérialiser l’accès pour les entrées de mappage d’objet. Utilisé en interne par ATL.  
-  
-## <a name="remarks"></a>Notes  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) est défini comme un typedef de _ATL_COM_MODULE70.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** atlbase.h  
-  
-## <a name="see-also"></a>Voir aussi  
- [Les classes et structs](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Membres
 
+`cbSize`  
+La taille de la structure, utilisée pour le contrôle de version.
 
+`m_hInstTypeLib`  
+L’instance de handle vers la bibliothèque de types pour ce module.
 
+`m_ppAutoObjMapFirst`  
+Adresse de l’élément de tableau indiquant le début des entrées de mappage d’objet pour ce module.
+
+`m_ppAutoObjMapLast`  
+Adresse de l’élément de tableau indiquant la fin des entrées de mappage d’objet pour ce module.
+
+`m_csObjMap`  
+Section critique pour sérialiser l’accès pour les entrées de mappage d’objet. Utilisé en interne par ATL.
+
+## <a name="remarks"></a>Notes
+
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) est défini comme un typedef de _ATL_COM_MODULE70.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** atlbase.h
+
+## <a name="see-also"></a>Voir aussi
+
+[Les classes et structs](../../atl/reference/atl-classes.md)
 

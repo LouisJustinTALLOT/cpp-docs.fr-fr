@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 78d0cf9ec994d21845e1910b5affc9e3b5d74a8d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590325"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763800"
 ---
 # <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException, classe
 Levée lors d'une tentative de suppression de la référence à une référence d'objet null.  

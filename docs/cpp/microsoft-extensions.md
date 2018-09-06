@@ -14,44 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5699ce82a6e8537f12da50fdcb8288da167ecca3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408373"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752237"
 ---
 # <a name="microsoft-extensions"></a>Extensions Microsoft
-*instruction d’ASM*:  
- **__asm***instruction d’assembly* **;** opt    
-  
- **__asm {***liste d’instructions d’assembly***} ;** opt      
-  
- *liste d’instructions d’assembly*:  
- *instruction d’assembly* **;** opt  
-  
- *instruction d’assembly* **;** *liste d’instructions d’assembly* **;** opt  
-  
- *MS-modificateur-list*:  
- *MS-modificateur ms-modificateur-list*opt  
-  
- *MS-modificateur*:  
- **__cdecl**  
-  
- **__fastcall**  
-  
- **__stdcall**  
-  
- **__syscall** (réservé pour les implémentations futures)  
-  
- **__oldcall** (réservé pour les implémentations futures)  
-  
- **__unaligned** (réservé pour les implémentations futures)  
-  
- *modificateur en fonction*  
-  
- *modificateur basé*:  
- **__based (** *en fonction de type* **)**  
-  
- *en fonction de type*:  
- *name*  
+
+*instruction d’ASM*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm***instruction d’assembly* **;** <sub>opt  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm {***liste d’instructions d’assembly***} ;** <sub>opt    </sub>
+
+*liste d’instructions d’assembly*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction d’assembly* **;** <sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction d’assembly* **;** *liste d’instructions d’assembly* **;** <sub>opt</sub>
+
+*MS-modificateur-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*MS-modificateur* *ms-modificateur-list*<sub>opt</sub>
+
+*MS-modificateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__stdcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__syscall** (réservé pour les implémentations futures)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__oldcall** (réservé pour les implémentations futures)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__unaligned** (réservé pour les implémentations futures)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*modificateur en fonction*
+
+*modificateur basé*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__based (** *en fonction de type* **)**
+
+*en fonction de type*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Nom*

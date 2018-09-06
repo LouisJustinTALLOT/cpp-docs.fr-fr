@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ec2651ae44955a4adfa1319e5528b7fe948a15bf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581181"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759399"
 ---
 # <a name="platformuintptr-value-class"></a>Classe de valeur Platform::UIntPtr
 Représente un pointeur non signé dont la taille est appropriée pour la plateforme (32 bits ou 64 bits).  

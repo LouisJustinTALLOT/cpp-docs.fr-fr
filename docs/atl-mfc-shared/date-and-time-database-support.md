@@ -1,5 +1,5 @@
 ---
-title: 'Date et heure : prise en charge de base de données | Documents Microsoft'
+title: 'Date et heure : prise en charge de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,21 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5047dfb2d8a162cf6d82c07007504df897afa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c077ec376155f576b9cd0db9662f47a9d747c8a3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353886"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751470"
 ---
 # <a name="date-and-time-database-support"></a>Date et heure : prise en charge de base de données
-Depuis la version 4.0, bases de données MFC programmation utilise les [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) et [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes pour représenter les données de date et d’heure. Ces classes, également utilisés dans Automation, sont dérivées de la classe [COleVariant](../mfc/reference/colevariant-class.md). Ils fournissent une meilleure prise en charge pour la gestion des données de date et d’heure que [CTime](../atl-mfc-shared/reference/ctime-class.md) et [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
-  
--   [Prise en charge de l’Automation de date et de programmation](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Date et heure](../atl-mfc-shared/date-and-time.md)
 
+Depuis la version 4.0, MFC de base de données utilise programmation le [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) et [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes pour représenter les données de date et d’heure. Ces classes, également utilisés dans Automation, sont dérivées de la classe [COleVariant](../mfc/reference/colevariant-class.md). Ils fournissent une meilleure prise en charge pour la gestion des données de date et d’heure que les [CTime](../atl-mfc-shared/reference/ctime-class.md) et [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+- [Prise en charge de l’Automation de date et de programmation](../atl-mfc-shared/date-and-time-automation-support.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Date et heure](../atl-mfc-shared/date-and-time.md)
 

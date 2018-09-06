@@ -16,44 +16,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4cd2f2473249271285d6b8812dac1b924e5a172
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 914e11c71d4f015f7b62797d4ba2ab3bfca3c7fb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848533"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754131"
 ---
 # <a name="iunknown-implementation-classes"></a>Classes d’implémentation IUnknown
-Les classes suivantes implémentent `IUnknown` et les méthodes associées :  
-  
--   [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gère le décompte de références pour les objets regroupés et agrégées. Vous permet de spécifier un modèle de thread.  
-  
--   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) gère le décompte de références pour les objets regroupés et agrégées. Utilise la valeur par défaut, le modèle du serveur de thread.  
-  
--   [CComAggObject](../atl/reference/ccomaggobject-class.md) implémente `IUnknown` pour un objet agrégé.  
-  
--   [CComObject](../atl/reference/ccomobject-class.md) implémente `IUnknown` pour un objet non regroupées en agrégats.  
-  
--   [CComPolyObject](../atl/reference/ccompolyobject-class.md) implémente `IUnknown` pour les objets regroupés et. À l’aide de `CComPolyObject` évite d’avoir à la fois `CComAggObject` et `CComObject` dans votre module. Un seul `CComPolyObject` objet gère les cas regroupés et.  
-  
--   [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implémente `IUnknown` pour un objet non regroupées en agrégats, sans modifier le nombre de verrous du module.  
-  
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implémente `IUnknown` pour une interface détachable.  
-  
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implémente `IUnknown` pour une interface détachable « mise en cache ».  
-  
--   [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implémente `IUnknown` pour l’objet interne d’une agrégation ou une interface détachable.  
-  
--   [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) gère un décompte de références sur le module pour vous assurer de votre objet ne sera pas supprimé.  
-  
--   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) crée un objet COM temporaire, à l’aide d’une implémentation squelette de `IUnknown`.  
-  
-## <a name="related-articles"></a>Articles connexes  
- [Principes de base des objets ATL COM](../atl/fundamentals-of-atl-com-objects.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la classe](../atl/atl-class-overview.md)   
- [Agrégation et Macros de fabrique de classe](../atl/reference/aggregation-and-class-factory-macros.md)   
- [Macros de mappage COM](../atl/reference/com-map-macros.md)   
- [Fonctions globales de mappage COM](../atl/reference/com-map-global-functions.md)
+
+Les classes suivantes implémentent `IUnknown` et les méthodes associées :
+
+- [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gère le décompte de références pour les objets regroupés et agrégées. Vous permet de spécifier un modèle de thread.
+
+- [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) gère le décompte de références pour les objets regroupés et agrégées. Utilise la valeur par défaut, le modèle du serveur de thread.
+
+- [CComAggObject](../atl/reference/ccomaggobject-class.md) implémente `IUnknown` pour un objet agrégé.
+
+- [CComObject](../atl/reference/ccomobject-class.md) implémente `IUnknown` pour un objet non regroupées en agrégats.
+
+- [CComPolyObject](../atl/reference/ccompolyobject-class.md) implémente `IUnknown` pour les objets regroupés et. À l’aide de `CComPolyObject` évite d’avoir à la fois `CComAggObject` et `CComObject` dans votre module. Un seul `CComPolyObject` objet gère les cas regroupés et.
+
+- [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implémente `IUnknown` pour un objet non regroupées en agrégats, sans modifier le nombre de verrous du module.
+
+- [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implémente `IUnknown` pour une interface détachable.
+
+- [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implémente `IUnknown` pour une interface détachable « mise en cache ».
+
+- [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implémente `IUnknown` pour l’objet interne d’une agrégation ou une interface détachable.
+
+- [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) gère un décompte de références sur le module pour vous assurer de votre objet ne sera pas supprimé.
+
+- [CComObjectStack](../atl/reference/ccomobjectstack-class.md) crée un objet COM temporaire, à l’aide d’une implémentation squelette de `IUnknown`.
+
+## <a name="related-articles"></a>Articles connexes
+
+[Principes de base des objets ATL COM](../atl/fundamentals-of-atl-com-objects.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Vue d’ensemble de la classe](../atl/atl-class-overview.md)   
+[Agrégation et Macros de fabrique de classe](../atl/reference/aggregation-and-class-factory-macros.md)   
+[Macros de mappage COM](../atl/reference/com-map-macros.md)   
+[Fonctions globales de mappage COM](../atl/reference/com-map-global-functions.md)
 

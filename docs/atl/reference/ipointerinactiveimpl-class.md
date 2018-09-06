@@ -22,90 +22,102 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7c4ed7634cc1818250d8945a057f97c53edffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f53b75466a4fe623de9c1f0fd6f0ff768cf55f47
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223197"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760310"
 ---
 # <a name="ipointerinactiveimpl-class"></a>Ipointerinactiveimpl, classe
-Cette classe implémente `IUnknown` et [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) méthodes d’interface.  
-  
+
+Cette classe implémente `IUnknown` et [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) méthodes d’interface.
+
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template<class T>
 class IPointerInactiveImpl
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *T*  
- Votre classe, dérivée de `IPointerInactiveImpl`.  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|Récupère la stratégie d’activation en cours pour l’objet. L’implémentation de ATL retourne E_NOTIMPL.|  
-|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|Notifie l’objet qui le pointeur de la souris a été déplacé sur celui-ci, indiquant l’objet peut déclencher des événements de souris. L’implémentation de ATL retourne E_NOTIMPL.|  
-|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|Définit le pointeur de la souris pour l’objet inactif. L’implémentation de ATL retourne E_NOTIMPL.|  
-  
-## <a name="remarks"></a>Notes  
- Un objet inactif est un est simplement chargée ou en cours d’exécution. Contrairement à un objet actif, un objet inactif ne peut pas recevoir des messages de clavier et souris Windows. Par conséquent, les objets inactifs utilisent moins de ressources et sont généralement plus efficaces.  
-  
- Le [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) interface permet à un objet prendre en charge un niveau minimal d’interaction de la souris tout en restant inactif. Cette fonctionnalité est particulièrement utile pour les contrôles.  
-  
- Classe `IPointerInactiveImpl` implémente le `IPointerInactive` méthodes en retournant simplement E_NOTIMPL. Toutefois, il implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.  
-  
- **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `IPointerInactive`  
-  
- `IPointerInactiveImpl`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** atlctl.h  
-  
-##  <a name="getactivationpolicy"></a>  IPointerInactiveImpl::GetActivationPolicy  
- Récupère la stratégie d’activation en cours pour l’objet.  
-  
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*T*  
+Votre classe, dérivée de `IPointerInactiveImpl`.
+
+## <a name="members"></a>Membres
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|Récupère la stratégie d’activation en cours pour l’objet. L’implémentation de ATL retourne E_NOTIMPL.|
+|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|Notifie l’objet qui le pointeur de la souris a été déplacé sur celui-ci, indiquant l’objet peut déclencher des événements de souris. L’implémentation de ATL retourne E_NOTIMPL.|
+|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|Définit le pointeur de la souris pour l’objet inactif. L’implémentation de ATL retourne E_NOTIMPL.|
+
+## <a name="remarks"></a>Notes
+
+Un objet inactif est un est simplement chargée ou en cours d’exécution. Contrairement à un objet actif, un objet inactif ne peut pas recevoir des messages de clavier et souris Windows. Par conséquent, les objets inactifs utilisent moins de ressources et sont généralement plus efficaces.
+
+Le [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) interface permet à un objet prendre en charge un niveau minimal d’interaction de la souris tout en restant inactif. Cette fonctionnalité est particulièrement utile pour les contrôles.
+
+Classe `IPointerInactiveImpl` implémente le `IPointerInactive` méthodes en retournant simplement E_NOTIMPL. Toutefois, il implémente `IUnknown` en envoyant des informations à l’image des builds appareil en mode de débogage.
+
+**Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`IPointerInactive`
+
+`IPointerInactiveImpl`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** atlctl.h
+
+##  <a name="getactivationpolicy"></a>  IPointerInactiveImpl::GetActivationPolicy
+
+Récupère la stratégie d’activation en cours pour l’objet.
+
 ```
 HRESULT GetActivationPolicy(DWORD* pdwPolicy);
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Retourne E_NOTIMPL.  
-  
-### <a name="remarks"></a>Notes  
- Consultez [IPointerInactive::GetActivationPolicy](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) dans le Kit de développement logiciel Windows.  
-  
-##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove  
- Notifie l’objet qui le pointeur de la souris a été déplacé sur celui-ci, indiquant l’objet peut déclencher des événements de souris.  
-  
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Retourne E_NOTIMPL.
+
+### <a name="remarks"></a>Notes
+
+Consultez [IPointerInactive::GetActivationPolicy](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) dans le Kit de développement logiciel Windows.
+
+##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove
+
+Notifie l’objet qui le pointeur de la souris a été déplacé sur celui-ci, indiquant l’objet peut déclencher des événements de souris.
+
 ```
 HRESULT OnInactiveMouseMove(
     LPCRECT pRectBounds,
     long x,
     long y,
     DWORD dwMouseMsg);
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Retourne E_NOTIMPL.  
-  
-### <a name="remarks"></a>Notes  
- Consultez [IPointerInactive::OnInactiveMouseMove](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) dans le Kit de développement logiciel Windows.  
-  
-##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor  
- Définit le pointeur de la souris pour l’objet inactif.  
-  
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Retourne E_NOTIMPL.
+
+### <a name="remarks"></a>Notes
+
+Consultez [IPointerInactive::OnInactiveMouseMove](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) dans le Kit de développement logiciel Windows.
+
+##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor
+
+Définit le pointeur de la souris pour l’objet inactif.
+
 ```
 HRESULT OnInactiveSetCursor(
     LPCRECT pRectBounds,
@@ -113,13 +125,16 @@ HRESULT OnInactiveSetCursor(
     long y,
     DWORD dwMouseMsg,
     BOOL fSetAlways);
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Retourne E_NOTIMPL.  
-  
-### <a name="remarks"></a>Notes  
- Consultez [IPointerInactive::OnInactiveSetCursor](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) dans le Kit de développement logiciel Windows.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Retourne E_NOTIMPL.
+
+### <a name="remarks"></a>Notes
+
+Consultez [IPointerInactive::OnInactiveSetCursor](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) dans le Kit de développement logiciel Windows.
+
+## <a name="see-also"></a>Voir aussi
+
+[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

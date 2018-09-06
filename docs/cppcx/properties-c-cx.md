@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600853"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764304"
 ---
 # <a name="properties-ccx"></a>Propriétés (C++/CX)
 Types Windows Runtime exposent les données publiques en tant que propriétés. Le code client accède à la propriété comme un DataMember public. En interne, la propriété est implémentée en tant que bloc qui contient une méthode d'accesseur get et une méthode d'accesseur set ou les deux. En utilisant des méthodes d'accesseur, vous pouvez exécuter des actions supplémentaires avant ou après avoir récupéré la valeur. Par exemple, vous pouvez déclencher un événement ou effectuer des contrôles de validation.  

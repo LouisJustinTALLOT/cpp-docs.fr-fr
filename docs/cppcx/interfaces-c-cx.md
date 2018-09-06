@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592550"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764440"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 Même si une classe ref peut hériter au plus d'une classe concrète, elle peut implémenter n'importe quel nombre de classes interface. Une classe interface (ou struct d'interface) lui-même peut hériter (ou) nécessiter plusieurs classes d'interface, peuvent surcharger ses fonctions membres, et peut avoir des paramètres de type.  

@@ -113,11 +113,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1f67107b17f304c5a9c4d6f68d68797370502065
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221725"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761181"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 Fournit les fonctionnalités d'une zone de liste Windows.  

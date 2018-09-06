@@ -16,34 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec0e902f2b01e33ac460c6210d51c5e0637c3282
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3f7c9360af2b5e2220daacabcd9ac04e108871dc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202918"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764226"
 ---
 # <a name="atl-connection-points"></a>ATL, points de connexion
-Un objet connectable est un objet qui prend en charge les interfaces sortantes. Une interface sortante permet à l'objet de communiquer avec un client. Pour chaque interface sortante, l'objet connectable expose un point de connexion. Chaque interface sortante est implémentée par un client sur un objet appelé récepteur.  
-  
- ![Points de connexion](../atl/media/vc2zw31.gif "vc2zw31")  
-  
- Chaque point de connexion prend en charge la [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interface. L’objet connectable expose ses points de connexion au client via le [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer) interface.  
-  
-## <a name="in-this-section"></a>Dans cette section  
- [ATL, classes de point de connexion](../atl/atl-connection-point-classes.md)  
- Décrit brièvement les classes ATL qui prennent en charge les points de connexion.  
-  
- [Ajout de points de connexion à un objet](../atl/adding-connection-points-to-an-object.md)  
- Décrit les étapes à suivre pour ajouter des points de connexion à un objet.  
-  
- [ATL, exemple de point de connexion](../atl/atl-connection-point-example.md)  
- Présente un exemple de déclaration de point de connexion.  
-  
-## <a name="related-sections"></a>Rubriques connexes  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Concepts](../atl/active-template-library-atl-concepts.md)
+
+Un objet connectable est un objet qui prend en charge les interfaces sortantes. Une interface sortante permet à l'objet de communiquer avec un client. Pour chaque interface sortante, l'objet connectable expose un point de connexion. Chaque interface sortante est implémentée par un client sur un objet appelé récepteur.
+
+![Points de connexion](../atl/media/vc2zw31.gif "vc2zw31")
+
+Chaque point de connexion prend en charge la [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interface. L’objet connectable expose ses points de connexion au client via le [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer) interface.
+
+## <a name="in-this-section"></a>Dans cette section
+
+[ATL, classes de point de connexion](../atl/atl-connection-point-classes.md)  
+Décrit brièvement les classes ATL qui prennent en charge les points de connexion.
+
+[Ajout de points de connexion à un objet](../atl/adding-connection-points-to-an-object.md)  
+Décrit les étapes à suivre pour ajouter des points de connexion à un objet.
+
+[ATL, exemple de point de connexion](../atl/atl-connection-point-example.md)  
+Présente un exemple de déclaration de point de connexion.
+
+## <a name="related-sections"></a>Rubriques connexes
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).
+
+## <a name="see-also"></a>Voir aussi
+
+[Concepts](../atl/active-template-library-atl-concepts.md)
 
