@@ -35,16 +35,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a33c6c41b2a9567ef8ed156901b8d04405b6eb46
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336490"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578201"
 ---
 # <a name="general-property-page-project"></a>Général, page de propriétés (Projet)
 
-Quand vous cliquez avec le bouton droit sur un nœud de projet dans l’Explorateur de solutions et que vous sélectionnez **Propriétés**, la page de propriétés **Général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche deux sections de propriétés :
+Quand vous cliquez avec le bouton droit sur un nœud de projet dans l’Explorateur de solutions et que vous sélectionnez **Propriétés**, la page de propriétés **Général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche deux sections de propriétés :
 
 - Général
 
