@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: de406267a4c18cace88882b26f6b249fc5a0efa3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586709"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761041"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections (espace de noms) (C++/CX)
 C++ / c++ / CX complète l’espace de noms Windows::Foundation :: collections avec des fonctions qui simplifient l’utilisation des classes de collection Vector, VectorView, Map et MapView.  

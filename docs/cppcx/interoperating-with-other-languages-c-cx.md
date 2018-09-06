@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7d4aec775dc716a5e88e6b421a7cd7f818730c23
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589886"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767541"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interopérabilité avec d'autres langages (C++/CX)
 Cette partie de la documentation décrit comment utiliser C++ / c++ / CX pour créer des composants Windows Runtime qui peuvent être consommées par d’autres langages de programmation et bibliothèques. Vous pouvez également créer des composants qui ne peuvent pas être utilisés par toutes les langages. Cette section décrit les différents aspects à prendre en compte lorsque votre C + c++ / application de CX interagit avec des composants qui sont écrits à l’aide de JavaScript, un langage .NET Framework managés ou la bibliothèque de modèles C++ Windows Runtime.  

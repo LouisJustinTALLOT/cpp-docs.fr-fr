@@ -1,7 +1,7 @@
 ---
 title: Grammaire de préprocesseur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/04/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,98 +16,86 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42544399"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766114"
 ---
 # <a name="preprocessor-grammar"></a>Syntaxe du préprocesseur
-**#define***identificateur* *chaîne de jeton*opt    
-  
-*#* **définir***identificateur*[**(** *identificateur*opt **,** *...*  **,** *identificateur*opt **)**] *chaîne de jeton*opt    
-  
-**défini (***identificateur* **)**   
-  
-**défini***identificateur*   
-  
-`#include` **«***spécification de chemin d’accès***»**  
-  
-`#include` **\<***spécification de chemin d’accès***>**  
-  
-**#line**  *digit-sequence*  **"** *filename* **"** opt  
-  
-*#* **undef***identificateur*   
-  
-**#error***chaîne de jeton*   
-  
-**#pragma***chaîne de jeton*   
-  
-*conditionnel* :  
-*If-partie elif-parts*opt*partie « else »* opt*endif en ligne*  
-  
-*If-partie* :  
-*if-linetext*  
-  
-*If-line* :  
-**#if**  *constant-expression*  
-  
-**#ifdef***identificateur*  
-  
-**#ifndef***identificateur*  
-  
-*elif-parts* :  
-*elif-texte*  
-  
-*elif-parts elif-texte*  
-  
-*elif-ligne* :  
-**#elif**  *constant-expression*  
-  
-*partie « else »* :  
-*else-linetext*  
-  
-*ligne Else* :  
-`#else`  
-  
-*ligne endif* :  
-`#endif`  
-  
-*séquence de chiffres* :  
-*digit*  
-  
-*digit-sequence digit*  
-  
-*chiffre* : un des  
-**0 1 2 3 4 5 6 7 8 9**  
-  
-*chaîne de jeton* :  
-Chaîne de jetons  
-  
-*jeton* :  
-*keyword*  
-  
-*identifier*  
-  
-*constant*  
-  
-*operator*  
-  
-`punctuator`  
-  
-*nom de fichier* :  
-Nom de fichier du système d'exploitation conforme  
-  
-*spécification de chemin d’accès* :  
-Chemin d’accès de fichier conforme  
-  
-*texte* :  
-Toute séquence de texte  
-  
+
+*ligne de contrôle*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identificateur* *chaîne de jeton*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identificateur</em>**(** *identificateur*<sub>opt</sub> **,** ... **,** *identificateur*<sub>opt</sub> **)** *chaîne de jeton*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **»** *path-spec* **»**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *spécification de chemin d’accès* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *séquence de chiffres***»** *filename* **»**<sub>opt  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *chaîne de jeton*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *chaîne de jeton*
+
+*constant-expression* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**défini (** *identificateur* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**défini** *identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;toute autre expression constante
+
+*conditionnel* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*If-partie* *elif-parts*<sub>opt</sub> *partie « else »*<sub>opt</sub> *endif en ligne*
+
+*If-partie* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*If ligne* *texte*
+
+*If-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *expression constante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identificateur*
+
+*elif-parts* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-ligne* *texte*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-ligne* *texte*
+
+*elif-ligne* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *expression constante*
+
+*partie « else »* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ligne Else* *texte*
+
+*ligne Else* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+
+*ligne endif* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+
+*séquence de chiffres* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*chiffre*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*séquence de chiffres* *chiffre*
+
+*chiffre* : un des<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
+
+*chaîne de jeton* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Chaîne de jetons
+
+*jeton* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Mot clé*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Constante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Opérateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*/ / / délimiteur*
+
+*nom de fichier* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom de fichier de système d’exploitation conforme
+
+*spécification de chemin d’accès* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Chemin d’accès de fichier conforme
+
+*texte* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;N’importe quelle séquence de texte
+
 > [!NOTE]
-> Les éléments non terminaux suivants sont développées dans le [Conventions lexicales](../cpp/lexical-conventions.md) section de la *référence du langage C++*: `constant`, `constant` - *expression* , *identificateur*, *mot clé*, `operator`, et `punctuator`.  
-  
-## <a name="see-also"></a>Voir aussi  
- 
+> Les éléments non terminaux suivants sont développées dans le [Conventions lexicales](../cpp/lexical-conventions.md) section de la *référence du langage C++*: *constante*, *expression constante* , *identificateur*, *mot clé*, *opérateur*, et */ / / délimiteur*.
+
+## <a name="see-also"></a>Voir aussi
+
 [Résumé de la grammaire (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

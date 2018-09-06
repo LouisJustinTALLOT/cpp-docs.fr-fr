@@ -17,21 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 32d1363f845014bd10e6f0126e676c12477cea16
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958564"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752311"
 ---
 # <a name="running-objects-classes"></a>Classes d’objets en cours d’exécution
-La classe suivante prend en charge l’exécution d’objets :  
-  
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) détermine si un objet est en cours d’exécution, force à s’exécuter, ou se bloque à l’état en cours d’exécution.  
-  
-## <a name="related-articles"></a>Articles connexes  
- [Didacticiel ATL](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la classe](../atl/atl-class-overview.md)
+
+La classe suivante prend en charge l’exécution d’objets :
+
+- [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) détermine si un objet est en cours d’exécution, force à s’exécuter, ou se bloque à l’état en cours d’exécution.
+
+## <a name="related-articles"></a>Articles connexes
+
+[Didacticiel ATL](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Vue d’ensemble de la classe](../atl/atl-class-overview.md)
 

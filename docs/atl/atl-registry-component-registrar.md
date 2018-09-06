@@ -1,5 +1,5 @@
 ---
-title: Composant de Registre ATL (inscription) | Documents Microsoft
+title: Composant de Registre ATL (inscription) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c1aafdfd118a78aefff4fa32ac67f4e290596b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354898"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759429"
 ---
 # <a name="atl-registry-component-registrar"></a>Composant de registre ATL (Inscription)
-ATL Registrar offre un accès optimisé dans le Registre système via une interface personnalisée. Le bureau d’enregistrement est libre de threads et permet la liaison statique du code pour les clients C++.  
-  
+
+Le bureau d’enregistrement ATL fournit un accès optimisé dans le Registre système via une interface personnalisée. Le bureau d’enregistrement est libre de threads et permet la liaison statique du code pour les clients C++.
+
 > [!NOTE]
->  Vous trouverez le code source pour le bureau d’enregistrement ATL dans atlmfc\include\atliface.h.  
-  
-## <a name="in-this-section"></a>Dans cette section  
- [Création de scripts d’inscription](../atl/creating-registrar-scripts.md)  
- Guide de création de scripts de bureau d’enregistrement. Inclut des rubriques sur la syntaxe BNF, les arborescences d’analyse, les exemples, à l’aide des paramètres remplaçables et appeler des scripts de scripts du Registre.  
-  
- [Configuration d’un lien statique avec le Code Registrar (C++ uniquement)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
- Répertorie les étapes pour configurer la liaison statique pour le bureau d’enregistrement.  
-  
-## <a name="related-sections"></a>Rubriques connexes  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).
+>  Vous trouverez le code source pour le bureau d’enregistrement ATL dans atlmfc\include\atliface.h.
+
+## <a name="in-this-section"></a>Dans cette section
+
+[Création de scripts d’inscription](../atl/creating-registrar-scripts.md)  
+Guide de création de scripts de bureau d’enregistrement. Inclut des rubriques sur la syntaxe BNF, les arborescences d’analyse, exemples, à l’aide de paramètres remplaçables et l’appel de scripts de scripts du Registre.
+
+[Configuration d’un lien statique vers le Code d’inscription (C++ uniquement)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+Répertorie les étapes pour configurer la liaison statique pour le bureau d’enregistrement.
+
+## <a name="related-sections"></a>Rubriques connexes
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).
 

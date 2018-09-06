@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0e874b3dc479755f688128b3e6690eee89929c1c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606180"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760134"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode (énumération)
 Spécifie une catégorie numérique qui représente un type intégré.  

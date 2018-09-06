@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584118"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767605"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classes et structures de référence (C++/CX)
 C++ / c++ / prend en charge CX défini par l’utilisateur *classes ref* et *structs ref*, définis par l’utilisateur *valeur classes* et *valeur structs*. Ces structures de données sont des conteneurs principaux par quels C / c++ / CX prend en charge le système de type Windows Runtime. Leur contenu est émis vers des métadonnées selon certaines règles spécifiques, et cela leur permet de passer entre les composants Windows Runtime et les applications de plateforme Windows universelle qui sont écrits en C++ ou d’autres langages.  

@@ -15,24 +15,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac3b742406f1e8be955921a9ee238f3b35d3bdf
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c11f2f839ef806d74eae65c9fc8fe3a71cd2e9c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539426"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760810"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Résumé des définitions de grammaire
-Les terminaux sont des points de terminaison dans une définition de syntaxe. Aucune autre résolution n'est possible. Les terminaux incluent l'ensemble des mots réservés et des identificateurs définis par l'utilisateur.  
-  
-Les éléments non terminaux sont des espaces réservés dans la syntaxe. La plupart de ces éléments sont définis ailleurs dans ce résumé de syntaxe. Les définitions peuvent être récursives. Les éléments non terminaux suivants sont définis dans le [Conventions lexicales](../cpp/lexical-conventions.md) section de la *référence du langage C++*:  
-  
-`constant`, *constant-expression*, *identifier*, *keyword*, `operator`, `punctuator`  
-  
-Un composant facultatif est indiqué par l'élément opt indicé. Par exemple, le code suivant indique une expression facultative entre accolades :  
-  
-**{** *expression*opt **}**  
-  
-## <a name="see-also"></a>Voir aussi 
- 
+
+Les terminaux sont des points de terminaison dans une définition de syntaxe. Aucune autre résolution n'est possible. Les terminaux incluent l'ensemble des mots réservés et des identificateurs définis par l'utilisateur.
+
+Les éléments non terminaux sont des espaces réservés dans la syntaxe. La plupart de ces éléments sont définis ailleurs dans ce résumé de syntaxe. Les définitions peuvent être récursives. Les éléments non terminaux suivants sont définis dans le [Conventions lexicales](../cpp/lexical-conventions.md) section de la *référence du langage C++*:
+
+`constant`, *constant-expression*, *identifier*, *keyword*, `operator`, `punctuator`
+
+Un composant facultatif est indiqué par l’indice <sub>opt</sub>. Par exemple, le code suivant indique une expression facultative entre accolades :
+
+**{** *expression*<sub>opt</sub> **}**
+
+## <a name="see-also"></a>Voir aussi
+
 [Résumé de la grammaire (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

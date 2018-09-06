@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5df4f70d069c2d77cf828665986c892281ba27cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eaf582d364ddddb41c066c901af7ccd806c5484d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956681"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767814"
 ---
 # <a name="class-information-classes"></a>Classes d’informations de classe
-La classe suivante prend en charge pour récupérer des informations de classe :  
-  
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) fournit l’accès aux informations de type. Récupère l’IID sortant pour le jeu d’événements par défaut de l’objet.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la classe](../atl/atl-class-overview.md)
+
+La classe suivante prend en charge pour récupérer des informations de classe :
+
+- [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) fournit l’accès aux informations de type. Récupère l’IID sortant pour le jeu d’événements par défaut de l’objet.
+
+## <a name="see-also"></a>Voir aussi
+
+[Vue d’ensemble de la classe](../atl/atl-class-overview.md)
 

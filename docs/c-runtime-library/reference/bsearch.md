@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d7576b5e8914148a8c67d8df82573c1f379e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1128834e49de75feba37409101a9ffe2a3e2ece2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394692"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764785"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -74,11 +74,11 @@ Fonction de rappel qui compare deux éléments. Le premier est un pointeur vers 
 
 ## <a name="return-value"></a>Valeur de retour
 
-**bsearch** retourne un pointeur vers une occurrence de *clé* dans le tableau vers lequel pointé *base*. Si *clé* n’est trouvé, la fonction retourne **NULL**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
+**bsearch** retourne un pointeur vers une occurrence de *clé* dans le tableau vers lequel pointé *base*. Si *clé* est introuvable, la fonction retourne **NULL**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
 
 ## <a name="remarks"></a>Notes
 
-Le **bsearch** fonction effectue une recherche binaire dans un tableau trié de *nombre* éléments, chacun des *largeur* taille en octets. Le *base* valeur est un pointeur vers la base du tableau à rechercher, et *clé* est la valeur recherchée. Le *comparer* paramètre est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne l’une des valeurs suivantes précisant leur relation :
+Le **bsearch** fonction effectue une recherche binaire dans un tableau trié de *nombre* éléments, chacun des *largeur* taille octets. Le *base* valeur est un pointeur vers la base du tableau à rechercher, et *clé* est la valeur recherchée. Le *comparer* paramètre est un pointeur désignant une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne une des valeurs suivantes spécifiant leur relation :
 
 |Valeur retournée par *comparer* routine|Description|
 |-----------------------------------------|-----------------|
@@ -86,9 +86,9 @@ Le **bsearch** fonction effectue une recherche binaire dans un tableau trié de 
 |0|La clé est égale à l’élément de tableau.|
 |> 0|La clé est supérieure à l’élément de tableau.|
 
-Cette fonction valide ses paramètres. Si *comparer*, *clé* ou *nombre* est **NULL**, ou si *base* est **NULL**et **nombre* est différent de zéro, ou si *largeur* est égal à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**.
+Cette fonction valide ses paramètres. Si *comparer*, *clé* ou *nombre* est **NULL**, ou si *base* est **NULL**et *nombre* est différent de zéro, ou si *largeur* est égal à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur `EINVAL` et la fonction retourne **NULL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -29,11 +29,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540827"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751693"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Cmfcribbongallerymenubutton, classe
 Implémente un bouton de menu de ruban qui contient des galeries de ruban.  

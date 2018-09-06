@@ -13,11 +13,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589054"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764200"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes de valeur et structures de valeur (C++/CX)
 Un *struct value* ou *classe value* est un Runtime compatible (« structure POD plain old data ») de Windows. Elle a une taille fixe et se compose uniquement de champs ; contrairement à une classe ref, elle ne possède aucune propriété.  

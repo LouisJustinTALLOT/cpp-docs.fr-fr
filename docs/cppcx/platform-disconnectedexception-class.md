@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a84d07db2e3fe48d981641d2803352d90268d93a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606305"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754063"
 ---
 # <a name="platformdisconnectedexception-class"></a>Platform::DisconnectedException, classe
 Levée quand un objet proxy COM essaie de faire référence à un serveur COM qui n'existe plus  
