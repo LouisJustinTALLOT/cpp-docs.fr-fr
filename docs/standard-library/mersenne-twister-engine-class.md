@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959269"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100220"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine, classe
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*UIntType* le type de résultat entier non signé. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*W* **taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **taille de l’état**. Nombre d'éléments (valeurs) dans la séquence d'état.
+*N*<br/>
+**Taille de l’état**. Nombre d'éléments (valeurs) dans la séquence d'état.
 
-*M* **taille de décalage**. Nombre d'éléments à ignorer pendant chaque torsion. **Condition préalable** : `0 < M ≤ N`
+*M*<br/>
+**Taille de décalage**. Nombre d'éléments à ignorer pendant chaque torsion. **Condition préalable** : `0 < M ≤ N`
 
-*R* **bits du masque**. **Condition préalable** : `R ≤ W`
+*R*<br/>
+**Bits du masque**. **Condition préalable** : `R ≤ W`
 
-*Un* **masque XOR**. **Condition préalable** : `A ≤ (1u<<W) - 1u`
+*A*<br/>
+**Masque XOR**. **Condition préalable** : `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L* **Tempering les paramètres de décalage**. Utilisés comme valeurs de décalage pendant le brouillage (altération). Condition préalable :`U,S,T,L ≤ W`
+*U*, *S*, *T*, *L*<br/>
+**Paramètres de décalage d’altération**. Utilisés comme valeurs de décalage pendant le brouillage (altération). Condition préalable :`U,S,T,L ≤ W`
 
-*D*, *B*, *C* **Tempering les paramètres de masque de bits**. Utilisés comme valeurs de masque de bits pendant le brouillage (altération). Condition préalable :`D,B,C ≤ (1u<<W) - 1u`
+*D*, *B*, *C*<br/>
+**Paramètres de masque de bits d’altération**. Utilisés comme valeurs de masque de bits pendant le brouillage (altération). Condition préalable :`D,B,C ≤ (1u<<W) - 1u`
 
-*F* **multiplicateur d’initialisation**. Aide à l'initialisation de la séquence. Condition préalable :`F ≤ (1u<<W) - 1u`
+*F*<br/>
+**Multiplicateur d’initialisation**. Aide à l'initialisation de la séquence. Condition préalable :`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Membres
 

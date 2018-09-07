@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac444680a22a99f292b1728181103789435a150
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404706"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110193"
 ---
 # <a name="qsort"></a>qsort
 
@@ -59,19 +59,23 @@ void qsort(
 
 ### <a name="parameters"></a>Paramètres
 
-*base* début du tableau cible.
+<br/>
+Début du tableau cible.
 
-*nombre* taille en éléments de tableau.
+*Nombre*<br/>
+Taille du tableau dans les éléments.
 
-*largeur* taille en octets de l’élément.
+*width*<br/>
+Taille d’élément en octets.
 
-*comparer* pointeur vers une routine fournie par l’utilisateur qui compare deux éléments du tableau et retourne une valeur qui indique leur relation.
+*compare*<br/>
+Pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur qui spécifie leur relation.
 
 ## <a name="remarks"></a>Notes
 
-Le **qsort** fonction implémente un algorithme de tri rapide pour trier un tableau de *nombre* éléments, chacun des *largeur* octets. L’argument *base* est un pointeur vers la base du tableau à trier. **qsort** remplace ce tableau à l’aide des éléments triés.
+Le **qsort** fonction implémente un algorithme de tri rapide pour trier un tableau de *nombre* éléments, chacun des *largeur* octets. L’argument *base* est un pointeur vers la base du tableau à trier. **qsort** remplace ce tableau en utilisant les éléments triés.
 
-**qsort** appelle la *comparer* routine plusieurs fois pendant le tri et transmet les pointeurs à deux éléments de tableau à chaque appel.
+**qsort** appelle le *comparer* une routine ou plusieurs fois pendant le tri et transmet les pointeurs désignant deux éléments de tableau à chaque appel.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -81,15 +85,15 @@ La routine compare les éléments et retourner l’une des valeurs suivantes.
 
 |Valeur de retour de la fonction compare|Description|
 |-----------------------------------|-----------------|
-|< 0|**elem1** moins **elem2**|
-|0|**elem1** équivaut à **elem2**|
+|< 0|**elem1** inférieure à **elem2**|
+|0|**elem1** équivalent à **elem2**|
 |> 0|**elem1** supérieur **elem2**|
 
 Le tableau est trié par ordre croissant, comme défini par la fonction de comparaison. Pour trier un tableau par ordre décroissant, changez le sens de « supérieur à » et « inférieur à » dans la fonction de comparaison.
 
 Cette fonction valide ses paramètres. Si *comparer* ou *nombre* est **NULL**, ou si *base* est **NULL** et **nombre* est différent de zéro, ou si *largeur* est inférieur à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne et **errno** a la valeur **EINVAL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

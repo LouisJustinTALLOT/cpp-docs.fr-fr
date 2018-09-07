@@ -90,12 +90,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85e1637691d602c63208cd180071c0f388c5893
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954953"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102575"
 ---
 # <a name="forwardlist-class"></a>forward_list, classe
 
@@ -881,15 +881,20 @@ void splice_after(
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* la position dans la liste forward_list de destination après lequel insérer.
+*Where*<br/>
+Position dans la liste forward_list de destination après laquelle l'insertion doit être effectuée.
 
-*Source* la liste forward_list source qui doit être inséré dans la liste forward_list de destination.
+*Source*<br/>
+Liste forward_list source qui doit être insérée dans la liste forward_list de destination.
 
-*Iter* l’élément à insérer à partir de la liste forward_list source.
+*Iter*<br/>
+Élément à insérer à partir de la liste forward_list source.
 
-*Première* le premier élément dans la plage à insérer à partir de la liste forward_list source.
+*Premier*<br/>
+Premier élément de la plage à insérer à partir de la liste forward_list source.
 
-*Dernière* la première position au-delà de la plage à insérer à partir de la liste forward_list source.
+*Dernière*<br/>
+Première position au-delà de la plage à insérer à partir de la liste forward_list source.
 
 ### <a name="remarks"></a>Notes
 

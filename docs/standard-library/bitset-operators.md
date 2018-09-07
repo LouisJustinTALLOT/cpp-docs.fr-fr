@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955018"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107652"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;, opérateurs
 
@@ -48,9 +48,11 @@ operator&(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur de bits `AND`.
+*left*<br/>
+Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `AND` au niveau du bit.
 
-*droit* le second des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits `AND`.
+*right*<br/>
+Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `AND` au niveau du bit.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -98,7 +100,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* un objet de type **bitset\<N >** qui doit être inséré dans le flux de sortie sous forme de chaîne.
+*right*<br/>
+Objet de type **bitset\<N>** qui doit être inséré dans le flux de sortie sous forme de chaîne.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -157,9 +160,11 @@ _Istr,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Istr* la chaîne qui est entrée dans le flux d’entrée à insérer dans le bitset.
+*_Istr*<br/>
+Chaîne entrée dans le flux d’entrée à insérer dans le bitset.
 
-*droit* bitset qui reçoit les bits à partir du flux d’entrée.
+*right*<br/>
+Bitset qui reçoit les bits du flux d’entrée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -240,9 +245,11 @@ operator^(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur de bits `EXCLUSIVE-OR`.
+*left*<br/>
+Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `EXCLUSIVE-OR` au niveau du bit.
 
-*droit* le second des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits `EXCLUSIVE-OR`.
+*right*<br/>
+Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `EXCLUSIVE-OR` au niveau du bit.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -290,9 +297,11 @@ operator|(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur de bits `OR`.
+*left*<br/>
+Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `OR` au niveau du bit.
 
-*droit* le second des deux valarrays dont les éléments respectifs doivent être combinés avec l’opérateur de bits `OR`.
+*right*<br/>
+Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `OR` au niveau du bit.
 
 ### <a name="return-value"></a>Valeur de retour
 

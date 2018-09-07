@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5efee5c6c867cf7b9b58e94f7475f365dee580ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959470"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102588"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution, classe
 
@@ -90,7 +90,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* type de résultat, valeur par défaut est de virgule flottante **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Type de résultat, valeur par défaut est de virgule flottante **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -258,23 +259,32 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*firstI* un itérateur d’entrée du premier élément dans la plage de distribution.
+*firstI*<br/>
+Itérateur d'entrée du premier élément de la plage de distribution.
 
-*lastI* un itérateur d’entrée du dernier élément dans la plage de distribution.
+*lastI*<br/>
+Itérateur d'entrée du dernier élément de la plage de distribution.
 
-*firstW* un itérateur d’entrée du premier élément dans la plage de poids.
+*firstW*<br/>
+Itérateur d'entrée du premier élément de la plage de poids.
 
-*intervalles* un [initializer_list](../cpp/initializers.md) avec les intervalles de la distribution.
+*intervals*<br/>
+Un [initializer_list](../cpp/initializers.md) avec les intervalles de la distribution.
 
-*nombre de* le nombre d’éléments dans la plage de distribution.
+*count*<br/>
+Nombre d'éléments dans la plage de distribution.
 
-*XMIN* la plus petite valeur dans la plage de distribution.
+*xmin*<br/>
+Valeur la plus faible de la plage de distribution.
 
-*XMAX* la valeur la plus élevée dans la plage de distribution. Doit être supérieure à *xmin*.
+*xmax*<br/>
+Valeur la plus élevée de la plage de distribution. Doit être supérieure à *xmin*.
 
-*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
+*weightfunc*<br/>
+Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
 
-*parm* la structure de paramètre utilisée pour construire la distribution.
+*parm*<br/>
+Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 

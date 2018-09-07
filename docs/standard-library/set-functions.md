@@ -7,12 +7,12 @@ f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
-ms.openlocfilehash: b25194dc1cdc45bc93d9e5188715e3ea01258af4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0baea9b63bb012396847c6408625bbcc62001d0d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966330"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110290"
 ---
 # <a name="ltsetgt-functions"></a>&lt;set&gt;, fonctions
 
@@ -31,9 +31,11 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* set qui fournit les éléments à échanger ou set dont les éléments doivent être échangés avec ceux du jeu de *gauche*.
+*right*<br/>
+Le jeu qui fournit les éléments à échanger ou set dont les éléments doivent être échangés avec ceux du jeu de *gauche*.
 
-*gauche* set dont les éléments doivent être échangés avec ceux du jeu de *droit*.
+*left*<br/>
+Le jeu dont les éléments doivent être échangés avec ceux du set *droit*.
 
 ### <a name="remarks"></a>Notes
 
@@ -58,9 +60,11 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* multiset qui fournit les éléments à échanger ou multiset dont les éléments doivent être échangés avec ceux du multiset *gauche*.
+*right*<br/>
+La classe multiset qui fournit les éléments à échanger ou multiset dont les éléments doivent être échangés avec ceux du multiset *gauche*.
 
-*gauche* multiset dont les éléments doivent être échangés avec ceux du multiset *droit*.
+*left*<br/>
+Multiset dont les éléments doivent être échangés avec ceux du multiset *droit*.
 
 ### <a name="remarks"></a>Notes
 

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198313"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105313"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -50,7 +50,8 @@ Les options suivantes peuvent être spécifiées à **pgomgr**:
 *pgcfiles*<br/>
 Un ou plusieurs fichiers .pgc dont vous souhaitez fusionner dans le fichier .pgd les données de profil. Vous pouvez spécifier un fichier .pgc unique ou plusieurs fichiers .pgc. Si vous ne spécifiez pas de tous les fichiers .pgc, **pgomgr** fusionne tous les fichiers .pgc dont les noms de fichiers sont les mêmes que le fichier .pgd.
 
-*pgdFile* le fichier .pgd dans lequel vous fusionnez des données à partir du fichier .pgc ou les fichiers.
+*pgdFile*<br/>
+Le fichier .pgd dans lequel vous fusionnez des données à partir du fichier .pgc ou les fichiers.
 
 ## <a name="remarks"></a>Notes
 

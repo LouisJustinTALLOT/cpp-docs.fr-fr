@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956474"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110134"
 ---
 # <a name="uniquelock-class"></a>unique_lock, classe
 
@@ -74,9 +74,9 @@ En interne, un `unique_lock` stocke un pointeur vers associé à un `mutex` obje
 |[operator bool](#op_bool)|Spécifie si le thread appelant possède le `mutex` associé.|
 |[operator=](#op_eq)|Copie le pointeur `mutex` stocké et l’état de propriété associé à partir d’un objet spécifié.|
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
-`unique_lock`
+*unique_lock*<br/>
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -131,7 +131,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 ### <a name="parameters"></a>Paramètres
 
 *Autre*  
- Objet `unique_lock`.
+Objet `unique_lock`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -182,7 +182,7 @@ void swap(unique_lock& Other) noexcept;
 ### <a name="parameters"></a>Paramètres
 
 *Autre*  
- Objet `unique_lock`.
+Objet `unique_lock`.
 
 ## <a name="try_lock"></a>  try_lock
 
@@ -215,7 +215,7 @@ bool try_lock_for(
 ### <a name="parameters"></a>Paramètres
 
 *Rel_time*  
- Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
+Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -241,7 +241,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="parameters"></a>Paramètres
 
 *Abs_time*  
- Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
+Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -284,16 +284,16 @@ unique_lock(mutex_type& Mtx,
 ### <a name="parameters"></a>Paramètres
 
 *Mtx*  
- Objet de type mutex.
+Objet de type mutex.
 
 *Rel_time*  
- Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
+Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
 
 *Abs_time*  
- Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
+Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
 
 *Autre*  
- Objet `unique_lock`.
+Objet `unique_lock`.
 
 ### <a name="remarks"></a>Notes
 

@@ -7,12 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 36af7eb87f777686a0a83fab98032ce36e75c906
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966366"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102523"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt;, fonctions
 
@@ -33,9 +33,11 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* la carte qui fournit les éléments à échanger ou mappage dont les éléments doivent être échangés avec ceux du mappage *gauche*.
+*right*<br/>
+La carte qui fournit les éléments à échanger ou mappage dont les éléments doivent être échangés avec ceux du mappage *gauche*.
 
-*gauche* la carte dont les éléments doivent être échangés avec ceux du mappage *droit*.
+*left*<br/>
+Le mappage dont les éléments doivent être échangés avec ceux du mappage *droit*.
 
 ### <a name="remarks"></a>Notes
 
@@ -58,9 +60,11 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* multimap qui fournit les éléments à échanger ou multimap dont les éléments doivent être échangés avec ceux du multimap *gauche*.
+*right*<br/>
+La classe multimap qui fournit les éléments à échanger ou multimap dont les éléments doivent être échangés avec ceux du multimap *gauche*.
 
-*gauche* multimap dont les éléments doivent être échangés avec ceux du multimap *droit*.
+*left*<br/>
+Multimap dont les éléments doivent être échangés avec ceux du multimap *droit*.
 
 ### <a name="remarks"></a>Notes
 

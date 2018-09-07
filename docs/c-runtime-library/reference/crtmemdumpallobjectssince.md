@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24cf01facaba326c36454ea5410da8dbb05848f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92d6148f6cbe49799a122d1745a6a6cde4c8be30
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396867"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100377"
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 
@@ -53,19 +53,20 @@ void _CrtMemDumpAllObjectsSince(
 
 ### <a name="parameters"></a>Paramètres
 
-*état* pointeur vers l’état du tas pour commencer le vidage à partir d’ou **NULL**.
+*state*<br/>
+Pointeur désignant l’état de tas à partir duquel commencer le vidage ou **NULL**.
 
 ## <a name="remarks"></a>Notes
 
 Le **_CrtMemDumpAllObjectsSince** fonction exporte les informations d’en-tête de débogage des objets alloués dans le tas sous une forme lisible par l’utilisateur. Les informations de vidage permettent à l’application d’effectuer le suivi des allocations et de détecter les problèmes de mémoire. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtMemDumpAllObjectsSince** sont supprimés lors du prétraitement.
 
-**_CrtMemDumpAllObjectsSince** utilise la valeur de la *état* paramètre afin de déterminer où lancer l’opération de vidage. Pour commencer le vidage d’un état du tas spécifié, le *état* paramètre doit être un pointeur vers un **_CrtMemState** structure a été renseigné par [_CrtMemCheckpoint](crtmemcheckpoint.md) avant **_CrtMemDumpAllObjectsSince** a été appelée. Lorsque *état* est **NULL**, la fonction commence le dump à partir du début de l’exécution du programme.
+**_CrtMemDumpAllObjectsSince** utilise la valeur de la *état* paramètre pour déterminer où lancer l’opération de vidage. Pour commencer le vidage d’un état de tas spécifié, le *état* paramètre doit être un pointeur vers un **_CrtMemState** structure a été rempli par [_CrtMemCheckpoint](crtmemcheckpoint.md) avant **_CrtMemDumpAllObjectsSince** a été appelée. Lorsque *état* est **NULL**, la fonction commence le vidage à partir du début de l’exécution du programme.
 
-Si l’application a installé une fonction de raccordement de vidage en appelant [_CrtSetDumpClient](crtsetdumpclient.md), puis chaque fois que **_CrtMemDumpAllObjectsSince** exporte les informations sur un **_CLIENT_BLOCK** type de bloc, il appelle la fonction de vidage de fournie par l’application ainsi. Par défaut, les blocs de runtime C internes (**_CRT_BLOCK**) ne sont pas inclus dans les opérations de vidage de mémoire. Le [_CrtSetDbgFlag](crtsetdbgflag.md) fonction peut être utilisée pour activer la **_CRTDBG_CHECK_CRT_DF** de **_crtDbgFlag** afin d’inclure ces blocs. En outre, les blocs marqués comme libérés ou ignorés (**_FREE_BLOCK**, **_IGNORE_BLOCK**) ne sont pas inclus dans le vidage de la mémoire.
+Si l’application a installé une fonction de raccordement de vidage en appelant [_CrtSetDumpClient](crtsetdumpclient.md), chaque fois que **_CrtMemDumpAllObjectsSince** vide les informations sur un **_CLIENT_BLOCK** type de bloc, il appelle également la fonction de vidage fournie par l’application. Par défaut, les blocs de runtime C internes (**_CRT_BLOCK**) ne sont pas inclus dans les opérations de vidage de mémoire. Le [_CrtSetDbgFlag](crtsetdbgflag.md) fonction peut être utilisée pour activer la **_CRTDBG_CHECK_CRT_DF** de **_crtDbgFlag** afin d’inclure ces blocs. En outre, les blocs marqués comme libérés ou ignorés (**_FREE_BLOCK**, **_IGNORE_BLOCK**) ne sont pas inclus dans le vidage de la mémoire.
 
-Pour plus d’informations sur les fonctions d’état du tas et le **_CrtMemState** de la structure, consultez [fonctions de rapport état du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Pour plus d’informations sur les fonctions d’état du tas et le **_CrtMemState** structure, consultez [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

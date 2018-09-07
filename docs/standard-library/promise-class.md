@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a56e188e581ea5d9dcafaa222ab4367e0b4b33fe
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958551"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100298"
 ---
 # <a name="promise-class"></a>promise, classe
 
@@ -75,7 +75,7 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
-`promise`
+*promesse*<br/>
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -107,7 +107,8 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Autres* A `promise` objet.
+*Autre*<br/>
+Objet `promise`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -130,9 +131,11 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Al* un allocateur de mémoire. Pour plus d’informations, consultez [\<allocators>](../standard-library/allocators-header.md).
+*Al*<br/>
+Allocateur de mémoire. Pour plus d’informations, consultez [\<allocators>](../standard-library/allocators-header.md).
 
-*Autres* A `promise` objet.
+*Autre*<br/>
+Objet `promise`.
 
 ### <a name="remarks"></a>Notes
 
@@ -152,7 +155,8 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Exc* un [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) qui est stocké par cette méthode en tant que résultat de l’exception.
+*Exc.*<br/>
+[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) qui est stocké par cette méthode comme résultat de l’exception.
 
 ### <a name="remarks"></a>Notes
 
@@ -172,7 +176,8 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Exc* un [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) qui est stocké par cette méthode en tant que résultat de l’exception.
+*Exc.*<br/>
+[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) qui est stocké par cette méthode comme résultat de l’exception.
 
 ### <a name="remarks"></a>Notes
 
@@ -195,7 +200,8 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* la valeur à stocker comme résultat.
+*Val*<br/>
+Valeur à stocker comme résultat.
 
 ### <a name="remarks"></a>Notes
 
@@ -226,7 +232,8 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* la valeur à stocker comme résultat.
+*Val*<br/>
+Valeur à stocker comme résultat.
 
 ### <a name="remarks"></a>Notes
 
@@ -254,7 +261,8 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Autres* A `promise` objet.
+*Autre*<br/>
+Objet `promise`.
 
 ## <a name="see-also"></a>Voir aussi
 

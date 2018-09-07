@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1acf34f8478bc075b53780f1e48df125c22608b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ec0a30a8ee193db362efa375f6e9d0f5746a56f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845490"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105300"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error, classe
 
@@ -33,9 +33,31 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Notes
 
-La classe sert de classe de base pour toutes les exceptions levées afin de signaler une erreur dans des fonctions \<filesystem>. Elle stocke un objet de type chaîne, appelé ici mymesg. Il stocke également les deux objets de type path, appelés mypval1 et mypval2.
+La classe sert de classe de base pour toutes les exceptions levées afin de signaler une erreur dans des fonctions \<filesystem>. Il stocke un objet de type `string`, appelée `mymesg` ici aux fins de démonstration. Il stocke également deux objets de type `path`, appelé `mypval1` et `mypval2`.
 
-## <a name="filesystemerrorfilesystemerror"></a>filesystem_error::filesystem_error
+### <a name="constructors"></a>Constructeurs
+
+|Constructeur|Description|
+|-|-|
+|[filesystem_error](#filesystem_error)|Construit un `filesystem_error` message.|
+
+### <a name="member-functions"></a>Fonctions membres
+
+|Fonction membre|Description|
+|-|-|
+|[chemin1](#path1)|Retourne `mypval1`.|
+|[chemin2](#path2)|Retourne `mypval2`.|
+|[ce que](#what)|Retourne un pointeur vers `NTBS`.|
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** \<filesystem >
+
+**Espace de noms :** std::experimental::filesystem
+
+## <a name="filesystem_error"></a> filesystem_error::filesystem_error
+
+Le premier constructeur construit son message à partir de *what_arg* et *ec*. Le deuxième constructeur construit également son message à partir de *pval1*, qui est stockée dans `mypval1`. Le troisième constructeur construit également son message à partir de *pval1*, qui est stockée dans `mypval1`et à partir de *pval2*, qui est stockée dans `mypval2`.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -51,37 +73,43 @@ filesystem_error(const string& what_arg,
     error_code ec);
 ```
 
-Le premier constructeur construit son message à partir de what_arg et ec. Le deuxième constructeur construit également son message à partir de pval1, qu’il stocke dans mypval1. Le troisième constructeur construit également son message à partir de pval1, qu’il stocke dans mypval1, et à partir de pval2, qu’il stocke dans mypval2.
+### <a name="parameters"></a>Paramètres
 
-## <a name="filesystemerrorpath1"></a>filesystem_error::path1
+*what_arg*<br/>
+Message spécifié.
+
+*EC*<br/>
+Code d’erreur spécifié.
+
+*mypval1*<br/>
+Davantage de paramètre de message spécifié.
+
+*mypval2*<br/>
+Davantage de paramètre de message spécifié.
+
+## <a name="path1"></a> filesystem_error::path1
+
+La fonction membre retourne `mypval1`
 
 ```cpp
 const path& path1() const noexcept;
 ```
 
-La fonction membre retourne mypval1.
+## <a name="path2"></a> filesystem_error::path2
 
-## <a name="filesystemerrorpath2"></a>filesystem_error::path2
+La fonction membre retourne `mypval2`
 
 ```cpp
 const path& path2() const noexcept;
 ```
 
-La fonction membre retourne mypval2.
+## <a name="what"></a> filesystem_error::What
 
-## <a name="filesystemerrorwhat"></a>filesystem_error::what
+La fonction membre retourne un pointeur vers un `NTBS`, de préférence, composé à partir de, `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, et `mypval2.native_string()`.
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-La fonction membre retourne un pointeur vers un NTBS, de préférence, composé à partir de runtime_error::what(), system_error::what(), mymesg, mypval1.native_string(), and mypval2.native_string().
-
-## <a name="requirements"></a>Spécifications
-
-**En-tête :** \<filesystem >
-
-**Espace de noms :** std::experimental::filesystem
 
 ## <a name="see-also"></a>Voir aussi
 

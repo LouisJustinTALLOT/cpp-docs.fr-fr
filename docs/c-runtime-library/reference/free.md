@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc6dfd832d18dbabc1ebc10aec252cc8afe15346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35a1ae1a27b08db14673b125ecbc2978fd4738a3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402515"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100481"
 ---
 # <a name="free"></a>free
 
@@ -53,23 +53,24 @@ void free(
 
 ### <a name="parameters"></a>Paramètres
 
-*memblock* précédemment allouée de bloc de mémoire à libérer.
+*memblock*<br/>
+Bloc mémoire précédemment alloué à libérer.
 
 ## <a name="remarks"></a>Notes
 
-Le **libre** fonction libère un bloc de mémoire (*memblock*) qui a été précédemment allouée par un appel à **calloc**, **malloc**, ou **realloc**. Le nombre d’octets libérés est équivalent au nombre d’octets demandé lorsque le bloc a été alloué (ou réalloué, dans le cas de **realloc**). Si *memblock* est **NULL**, le pointeur est ignoré et **libre** retourne immédiatement. Une tentative de libération d’un pointeur non valide (un pointeur vers un bloc de mémoire n’est alloué par **calloc**, **malloc**, ou **realloc**) peuvent affecter les demandes ultérieures d’allocation et provoquer des erreurs.
+Le **gratuit** fonction libère un bloc de mémoire (*memblock*) qui a été précédemment alloué par un appel à **calloc**, **malloc**, ou **realloc**. Le nombre d’octets libérés est équivalent au nombre d’octets demandés quand le bloc a été alloué (ou réalloué, dans le cas de **realloc**). Si *memblock* est **NULL**, le pointeur est ignoré et **gratuit** retourne immédiatement. Tenter de libérer un pointeur non valide (un pointeur désignant un bloc de mémoire qui n’était pas alloué par **calloc**, **malloc**, ou **realloc**) peut affecter les demandes d’allocation ultérieures et provoquer des erreurs.
 
-Si une erreur se produit pendant la libération de la mémoire, **errno** est défini avec les informations sur la nature de la défaillance du système d’exploitation. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si une erreur se produit pendant la libération de la mémoire, **errno** est définie avec des informations sur la nature de la défaillance du système d’exploitation. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Une fois qu’un bloc de mémoire a été libéré, [_heapmin](heapmin.md) réduit la quantité de mémoire disponible sur le tas en fusionnant les régions inutilisées et en les libérant pour le système d’exploitation. La mémoire libérée qui n’est pas mise à la disposition du système d’exploitation est restaurée vers le pool libre et peut être réallouée.
 
-Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **libre** se résout en [_free_dbg](free-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **gratuit** se résout en [_free_dbg](free-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**libre** est marqué comme `__declspec(noalias)`, c'est-à-dire que la fonction ne peut ne pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
+**gratuit** est marqué `__declspec(noalias)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
 
 Pour libérer de la mémoire allouée avec [_malloca](malloca.md), utilisez [_freea](freea.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

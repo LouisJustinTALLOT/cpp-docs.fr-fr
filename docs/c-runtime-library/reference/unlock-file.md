@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d000dce4c0009341c787a211ed8ef41d1728b51b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407770"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107534"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
@@ -56,13 +56,14 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Paramètres
 
-*fichier* descripteur de fichier.
+*fichier*<br/>
+Descripteur de fichier.
 
 ## <a name="remarks"></a>Notes
 
-Le **_unlock_file** fonction déverrouille le fichier spécifié par *fichier*. Le déverrouillage d’un fichier autorise d’autres processus à y accéder. Cette fonction ne doit pas être appelée, sauf si **_lock_file** a été appelée précédemment sur le *fichier* pointeur. Appel de **_unlock_file** sur un fichier qui n’est pas verrouillé peut provoquer un blocage. Pour obtenir un exemple, consultez [_lock_file](lock-file.md).
+Le **_unlock_file** fonction déverrouille le fichier spécifié par *fichier*. Le déverrouillage d’un fichier autorise d’autres processus à y accéder. Cette fonction ne doit pas être appelée, sauf si **_lock_file** a été appelée précédemment sur le *fichier* pointeur. Appel **_unlock_file** sur un fichier qui n’est pas verrouillé peut provoquer un interblocage. Pour obtenir un exemple, consultez [_lock_file](lock-file.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

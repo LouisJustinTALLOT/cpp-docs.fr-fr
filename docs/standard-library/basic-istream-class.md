@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200026"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102614"
 ---
 # <a name="basicistream-class"></a>basic_istream, classe
 
@@ -193,11 +193,14 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*strbuf* un objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **true** s’il s’agit d’un flux standard ; sinon, **false**.
+*_Isstd*<br/>
+**true** s’il s’agit d’un flux standard ; sinon, **false**.
 
-*droit* A `basic_istream` objet à copier.
+*right*<br/>
+Objet `basic_istream` à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -277,15 +280,20 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre* le nombre de caractères à lire à partir de `strbuf`.
+*count*<br/>
+Nombre de caractères à lire à partir de `strbuf`.
 
-*Delim* le caractère qui doit arrêter la lecture s’il se trouve avant *nombre*.
+*Delim*<br/>
+Le caractère qui doit arrêter la lecture s’il se trouve avant *nombre*.
 
-*Str* une chaîne dans laquelle écrire.
+*str*<br/>
+Chaîne dans laquelle écrire.
 
-*CH* un caractère à obtenir.
+*CH*<br/>
+Caractère à obtenir.
 
-*strbuf* une mémoire tampon dans lequel écrire.
+*strbuf*<br/>
+Mémoire tampon dans laquelle écrire.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -356,11 +364,14 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre* le nombre de caractères à lire à partir de `strbuf`.
+*count*<br/>
+Nombre de caractères à lire à partir de `strbuf`.
 
-*Delim* le caractère qui doit arrêter la lecture s’il se trouve avant *nombre*.
+*Delim*<br/>
+Le caractère qui doit arrêter la lecture s’il se trouve avant *nombre*.
 
-*Str* une chaîne dans laquelle écrire.
+*str*<br/>
+Chaîne dans laquelle écrire.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -414,9 +425,11 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre de* le nombre d’éléments à ignorer à partir du position de lecture.
+*count*<br/>
+Nombre d’éléments à ignorer à partir de la position de lecture actuelle.
 
-*Delim* l’élément qui, si rencontré avant count, oblige `ignore` à retourner et autoriser tous les éléments après *Delim* à lire.
+*Delim*<br/>
+L’élément qui, si rencontré avant count, oblige `ignore` à retourner et autoriser tous les éléments après *Delim* à lire.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -474,11 +487,14 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*NFP* un pointeur de fonction.
+*NFP*<br/>
+Pointeur de fonction.
 
-*strbuf* un objet de type `stream_buf`.
+*strbuf*<br/>
+Objet de type `stream_buf`.
 
-*Val* la valeur à lire à partir du flux.
+*Val*<br/>
+Valeur à lire à partir du flux.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -584,7 +600,8 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* un `rvalue` font référence à un `basic_ifstream` objet.
+*right*<br/>
+Référence `rvalue` à un objet `basic_ifstream`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -653,7 +670,8 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Paramètres
 
-*CH* un caractère à replacer dans le flux.
+*CH*<br/>
+Caractère à remettre dans le flux.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -702,9 +720,11 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str* le tableau dans lequel lire les caractères.
+*str*<br/>
+Tableau dans lequel lire les caractères.
 
-*nombre de* le nombre de caractères à lire.
+*count*<br/>
+Nombre de caractères à lire.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -764,9 +784,11 @@ streamsize readsome(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str* tableau dans lequel `readsome` stocke les caractères lus.
+*str*<br/>
+Tableau dans lequel `readsome` stocke les caractères qu’il lit.
 
-*nombre de* le nombre de caractères à lire.
+*count*<br/>
+Nombre de caractères à lire.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -819,11 +841,14 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Paramètres
 
-*POS* la position absolue dans lequel déplacer le pointeur de lecture.
+*points de vente*<br/>
+Position absolue à laquelle déplacer le pointeur de lecture.
 
-*désactiver* décalage pour déplacer le pointeur de lecture relatif à *moyen*.
+*Hors tension*<br/>
+Décalage pour déplacer le pointeur de lecture relatif à *moyen*.
 
-*moyen* parmi les [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) énumérations.
+*moyen*<br/>
+Une des énumérations [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -887,7 +912,8 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* référence lvalue à un `basic_istream` objet.
+*right*<br/>
+Référence lvalue à un objet `basic_istream`.
 
 ### <a name="remarks"></a>Notes
 

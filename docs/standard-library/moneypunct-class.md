@@ -56,12 +56,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a3c45dc2762c85a2b0f191b8dcf858ccb33b24b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957507"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110095"
 ---
 # <a name="moneypunct-class"></a>moneypunct, classe
 
@@ -76,9 +76,11 @@ class moneypunct;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* le type utilisé dans un programme pour encoder des caractères.
+*CharType*<br/>
+Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
-*Intl* un indicateur qui spécifie si les conventions internationales doivent être respectées.
+*Intl*<br/>
+Indicateur spécifiant si les conventions internationales doivent être respectées.
 
 ## <a name="remarks"></a>Notes
 
@@ -442,14 +444,14 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 international frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 
 German_Germany.1252 domestic grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 domestic frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 ```
 
 ## <a name="grouping"></a>  moneypunct::grouping
@@ -511,14 +513,14 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 international frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 
 German_Germany.1252 domestic grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 domestic frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 ```
 
 ## <a name="moneypunct"></a>  moneypunct::moneypunct
@@ -531,7 +533,8 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs*<br/>
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 

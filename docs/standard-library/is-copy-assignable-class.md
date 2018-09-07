@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 863c842fe3d5635848b569ad0cad6dad0556e302
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960779"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102536"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable, classe
 
@@ -36,7 +36,8 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ## <a name="remarks"></a>Notes
 

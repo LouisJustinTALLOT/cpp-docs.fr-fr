@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe88c460dfc3341832abdcda21698357a649570
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1fe772f1c2925ce28d0e445023ab14d82b9b3f23
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759913"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107690"
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException, classe
-Levée lorsqu'un thread effectue un appel via un pointeur d'interface qui concerne un objet proxy qui n'appartient pas à l'apartment du thread.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Notes  
- Pour plus d'informations, consultez l'exception [COMException](../cppcx/platform-comexception-class.md).  
-  
-### <a name="requirements"></a>Configuration requise  
- **Minimum de client pris en charge :** Windows 8  
-  
- **Minimum de serveur pris en charge :** Windows Server 2012  
-  
- **Espace de noms :** Platform  
-  
- **Métadonnées :** platform.winmd  
-  
-## <a name="see-also"></a>Voir aussi  
- [Platform::COMException, classe](../cppcx/platform-comexception-class.md)
+
+Levée lorsqu'un thread effectue un appel via un pointeur d'interface qui concerne un objet proxy qui n'appartient pas à l'apartment du thread.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Notes
+
+Pour plus d'informations, consultez l'exception [COMException](../cppcx/platform-comexception-class.md).
+
+### <a name="requirements"></a>Configuration requise
+
+**Minimum de client pris en charge :** Windows 8
+
+**Minimum de serveur pris en charge :** Windows Server 2012
+
+**Espace de noms :** Platform
+
+**Métadonnées :** platform.winmd
+
+## <a name="see-also"></a>Voir aussi
+
+[Platform::COMException, classe](../cppcx/platform-comexception-class.md)

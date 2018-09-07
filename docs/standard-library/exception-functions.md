@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 5734c745f19d22c562f68aa2b518c9b4315ba12e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9401772e35527c63f47dc10bbb0e501029558825
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962271"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105404"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt;, fonctions
 
@@ -75,7 +75,8 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>Paramètres
 
-*À l’exception* la classe avec l’exception à copier. Généralement, vous spécifiez un objet de [classe exception](../standard-library/exception-class.md) comme argument pour la fonction `make_exception_ptr`, bien que tout objet de classe puisse être l’argument.
+*À l’exception*<br/>
+Classe avec l'exception à copier. Généralement, vous spécifiez un objet de [classe exception](../standard-library/exception-class.md) comme argument pour la fonction `make_exception_ptr`, bien que tout objet de classe puisse être l’argument.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -97,7 +98,8 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Paramètres
 
-*P* l’exception interceptée à lever à nouveau. Si *P* est une valeur null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), la fonction lève [std::bad_exception](../standard-library/bad-exception-class.md).
+*P*<br/>
+L'exception interceptée à lever de nouveau. Si *P* est une valeur null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), la fonction lève [std::bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Notes
 
@@ -121,7 +123,8 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*fnew* la fonction à appeler à la fin.
+*fnew*<br/>
+La fonction doit être appelée à la fin.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -178,7 +181,8 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*fnew* la fonction à appeler lorsqu’une exception inattendue.
+*fnew*<br/>
+Fonction à appeler en cas d’exception inattendue.
 
 ### <a name="return-value"></a>Valeur de retour
 
