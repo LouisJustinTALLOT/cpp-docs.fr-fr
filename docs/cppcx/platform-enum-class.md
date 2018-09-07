@@ -15,36 +15,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3d4f893099c129f82cfa08650c6f1f3fbbb2c46
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0568fba448d6f6976df466c46569e5059fb11ddf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764572"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105223"
 ---
 # <a name="platformenum-class"></a>Platform::Enum, classe
-Classe value qui représente un ensemble de constantes nommées.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public class Enum  
-```  
-  
-### <a name="members"></a>Membres  
- La classe Enum hérite des méthodes Equals(), GetHashCode() et ToString() de la [Platform::Object Class](../cppcx/platform-object-class.md).  
-  
-### <a name="remarks"></a>Notes  
- Utilisez le mot clé [classe enum publique](../windows/enum-class-cpp-component-extensions.md) pour créer des énumérations. N'utilisez pas le type Platform::Enum explicitement. Pour plus d'informations, consultez [Énumérations](../cppcx/enums-c-cx.md).  
-  
-### <a name="requirements"></a>Configuration requise  
- **Minimum de client pris en charge :** Windows 8  
-  
- **Minimum de serveur pris en charge :** Windows Server 2012  
-  
- **Espace de noms :** Platform  
-  
- **Métadonnées :** platform.winmd  
-  
-## <a name="see-also"></a>Voir aussi  
- [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+
+Classe value qui représente un ensemble de constantes nommées.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public class Enum
+```
+
+### <a name="members"></a>Membres
+
+La classe Enum hérite des méthodes Equals(), GetHashCode() et ToString() de la [Platform::Object Class](../cppcx/platform-object-class.md).
+
+### <a name="remarks"></a>Notes
+
+Utilisez le mot clé [classe enum publique](../windows/enum-class-cpp-component-extensions.md) pour créer des énumérations. N'utilisez pas le type Platform::Enum explicitement. Pour plus d'informations, consultez [Énumérations](../cppcx/enums-c-cx.md).
+
+### <a name="requirements"></a>Configuration requise
+
+**Minimum de client pris en charge :** Windows 8
+
+**Minimum de serveur pris en charge :** Windows Server 2012
+
+**Espace de noms :** Platform
+
+**Métadonnées :** platform.winmd
+
+## <a name="see-also"></a>Voir aussi
+
+[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)

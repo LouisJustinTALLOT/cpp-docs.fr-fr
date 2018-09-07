@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4937676b085988153b9b36875ae6bed4762d271c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954641"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102471"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper, classe
 
@@ -186,9 +186,11 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Paramètres
 
-*Types* les types de liste d’arguments.
+*Types*<br/>
+Types de la liste d’arguments.
 
-*args* la liste d’arguments.
+*args*<br/>
+Liste d’arguments.
 
 ### <a name="remarks"></a>Notes
 
@@ -229,9 +231,11 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* le type de retour à la ligne.
+*Ty*<br/>
+Type à inclure dans un wrapper.
 
-*Val* la valeur à inclure dans un wrapper.
+*Val*<br/>
+Valeur à inclure dans un wrapper.
 
 ### <a name="remarks"></a>Notes
 

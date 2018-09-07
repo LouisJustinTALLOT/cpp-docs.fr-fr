@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 568eb077a2006bdb33eb08e0fa5618b7c38a6cb1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a73527315b142bd8a650db67c1be29664e11be74
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962635"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105326"
 ---
 # <a name="iscopyconstructible-class"></a>is_copy_constructible, classe
 
@@ -36,7 +36,8 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ## <a name="remarks"></a>Notes
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 085a9c3926506ce7886b48465bdd2618541d4feb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83c929548d95ec0a741fd4b65c372402d22f2679
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956083"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099549"
 ---
 # <a name="isconst-class"></a>is_const, classe
 
@@ -37,7 +37,8 @@ struct is_const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ## <a name="remarks"></a>Notes
 

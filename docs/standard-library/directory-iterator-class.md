@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46e4d8fc7b59f8b4919a7e36a85f29f626aa80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845828"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105202"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator, classe
 
 Décrit un itérateur d’entrée qui parcourt en séquence les noms de fichiers dans un répertoire. Pour un itérateur X, l’expression *X correspond à un objet de la classe directory_entry qui inclut dans un wrapper le nom de fichier et tout ce qui est connu sur son état.
 
-La classe stocke un objet de type chemin, appelé ici mydir, qui représente le nom du répertoire à parcourir en séquence, et un objet de type directory_entry appelé myentry, qui représente le nom de fichier actuel dans la séquence du répertoire. Un objet construit par défaut de type directory_entry a un nom de chemin mydir vide et représente l’itérateur de fin de séquence.
+La classe stocke un objet de chemin d’accès de type, appelé `mydir` ici aux fins de démonstration, qui représente le nom du répertoire à séquencer et un objet de type directory_entry appelé `myentry` ici, qui représente le nom de fichier actuel dans la séquence de répertoires. Un objet construit par défaut de type directory_entry a vide `mydir` chemin d’accès et représente l’itérateur de fin de séquence.
 
 Par exemple, étant donné le répertoire abc avec les entrées def et ghi, le code :
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-appelle visit avec les arguments path("abc/def") et path("abc/ghi").
+appellera `visit` avec les arguments path("abc/def") et path("abc/ghi").
 
 Pour plus d’informations et pour obtenir des exemples de code, consultez [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md).
 
@@ -62,7 +62,40 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 class directory_iterator;
 ```
 
-## <a name="directoryiteratordirectoryiterator"></a>directory_iterator::directory_iterator
+### <a name="constructors"></a>Constructeurs
+
+|Constructeur|Description|
+|-|-|
+|[directory_iterator](#directory_iterator)|Construit un itérateur d’entrée qui parcourt les noms de fichiers dans un répertoire.|
+
+### <a name="member-functions"></a>Fonctions membres
+
+|Fonction membre|Description|
+|-|-|
+|[Incrément](#increment)|La fonction tente d’accéder au nom de fichier suivant dans le répertoire.|
+
+### <a name="operators"></a>Opérateurs
+
+|Opérateur|Description|
+|-|-|
+|[operator!=](#op_neq)|Retourne `!(*this == right)`.|
+|[operator=](#op_as)|Les opérateurs d’affectation de membre par défaut se comportent comme prévu.|
+|[operator==](#op_eq)|Retourne **true** uniquement si les deux `*this` et *droit* sont des itérateurs de fin de séquence ou les deux ne sont pas fin-de-séquence-itérateurs.|
+|[operator*](#op_star)|Retourne `myentry`.|
+|[operator->](#op_cast)|Retourne `&**this`.|
+|[operator++](#op_increment)|Appels `increment()`, puis retourne `*this`, ou une copie de l’objet, les appels `increment()`, puis retourne la copie.|
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** \<experimental/filesystem>
+
+**Espace de noms :** std::experimental::filesystem
+
+## <a name="directory_iterator"></a> directory_iterator::directory_iterator
+
+Le premier constructeur produit un itérateur de fin de séquence. Les deuxième et troisième constructeurs stockent *pval* dans `mydir`, puis essayez d’ouvrir et lire `mydir` en tant que répertoire. Si réussite, ils stockent le premier nom de fichier dans le répertoire dans `myentry`; sinon, ils produisent un itérateur de fin de séquence.
+
+Les constructeurs par défaut se comporte comme prévu.
 
 ```cpp
 directory_iterator() noexcept;
@@ -73,73 +106,94 @@ directory_iterator(const directory_iterator&) = default;
 directory_iterator(directory_iterator&&) noexcept = default;
 ```
 
-Le premier constructeur produit un itérateur de fin de séquence. Les deuxième et troisième constructeurs stockent pval dans mydir, puis tentent d’ouvrir et lire mydir en tant que répertoire. En cas de réussite, ils stockent le premier nom de fichier du répertoire dans myentry ; dans le cas contraire, ils produisent un itérateur de fin de séquence.
+### <a name="parameters"></a>Paramètres
 
-Les constructeurs par défaut se comporte comme prévu.
+*PVal*<br/>
+Le chemin d’accès de nom de fichier stocké.
 
-## <a name="directoryiteratorincrement"></a>directory_iterator::increment
+*EC*<br/>
+Le code d’erreur état. 
+
+*directory_iterator*<br/>
+L’objet stocké.
+
+## <a name="increment"></a> directory_iterator::Increment
+
+La fonction tente d’accéder au nom de fichier suivant dans le répertoire. Si réussie, elle stocke ce nom de fichier dans `myentry`; sinon, il génère un itérateur de fin de séquence.
 
 ```cpp
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-La fonction tente d’accéder au nom de fichier suivant dans le répertoire. En cas de réussite, elle stocke ce nom de fichier dans myentry ; dans le cas contraire, elle génère un itérateur de fin de séquence.
+## <a name="op_neq"></a> directory_iterator::operator ! =
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator!=
+L’opérateur membre retourne `!(*this == right)`.
 
 ```cpp
 bool operator!=(const directory_iterator& right) const;
 ```
 
-L’opérateur membre retourne !(*this == right).
+### <a name="parameters"></a>Paramètres
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator=
+*right*<br/>
+Le [directory_iterator](../standard-library/directory-iterator-class.md) qui est comparée à la `directory_iterator`.
+
+## <a name="op_as"></a> directory_iterator::operator =
+
+Les opérateurs d’affectation de membre par défaut se comportent comme prévu.
 
 ```cpp
 directory_iterator& operator=(const directory_iterator&) = default;
 directory_iterator& operator=(directory_iterator&&) noexcept = default;
 ```
 
-Les opérateurs d’affectation de membre par défaut se comportent comme prévu.
+### <a name="parameters"></a>Paramètres
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator==
+*right*<br/>
+Le [directory_iterator](../standard-library/directory-iterator-class.md) copié dans le `directory_iterator`.
+
+## <a name="op_eq"></a> directory_iterator::operator ==
+
+L’opérateur membre retourne **true** uniquement si les deux `*this` et *droit* sont des itérateurs de fin de séquence ou les deux ne sont pas fin-de-séquence-itérateurs.
 
 ```cpp
 bool operator==(const directory_iterator& right) const;
 ```
 
-L’opérateur membre retourne true seulement si *this et right sont des itérateurs de fin de séquence ou si les deux ne sont pas des itérateurs de fin de séquence.
+### <a name="parameters"></a>Paramètres
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator*
+*right*<br/>
+Le [directory_iterator](../standard-library/directory-iterator-class.md) qui est comparée à la `directory_iterator`.
+
+## <a name="op_star"></a> directory_iterator::operator *
+
+L’opérateur membre retourne `myentry`.
 
 ```cpp
 const directory_entry& operator*() const;
 ```
 
-L’opérateur membre retourne myentry.
+## <a name="op_cast"></a> directory_iterator::operator ->
 
-## <a name="directoryiteratoroperator-"></a>directory_iterator::operator->
+La fonction membre retourne `&**this`.
 
 ```cpp
 const directory_entry * operator->() const;
 ```
 
-La fonction membre retourne &**this.
+## <a name="op_increment"></a> directory_iterator::operator ++
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator++
+La première fonction membre appelle `increment()`, puis retourne `*this`. La deuxième fonction membre effectue une copie de l’objet, les appels `increment()`, puis retourne la copie.
 
 ```cpp
 directory_iterator& operator++();
 directory_iterator& operator++(int);
 ```
 
-La première fonction membre appelle increment(), puis retourne *this. La deuxième fonction membre effectue une copie de l’objet, appelle increment(), puis retourne la copie.
+### <a name="parameters"></a>Paramètres
 
-## <a name="requirements"></a>Spécifications
-
-**En-tête :** \<experimental/filesystem>
-
-**Espace de noms :** std::experimental::filesystem
+*int*<br/>
+Le nombre d’incréments.
 
 ## <a name="see-also"></a>Voir aussi
 

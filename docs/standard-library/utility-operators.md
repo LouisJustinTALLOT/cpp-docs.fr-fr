@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6c97e44e5110108351ac9c47f47434b828193fc7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962024"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099627"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt;, opérateurs
 
@@ -49,10 +49,10 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Paramètres
 
 *left*  
- Objet de type `pair`.
+Objet de type `pair`.
 
 *right*  
- Objet de type `pair`.
+Objet de type `pair`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -120,9 +120,11 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `pair`.
+*left*<br/>
+Objet de type `pair`.
 
-*droit* un objet de type `pair`.
+*right*<br/>
+Objet de type `pair`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -182,10 +184,10 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Paramètres
 
 *left*  
- Objet de type `pair` situé à gauche de l'opérateur.
+Objet de type `pair` situé à gauche de l'opérateur.
 
 *right*  
- Objet de type `pair` situé à droite de l'opérateur.
+Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -259,10 +261,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Paramètres
 
 *left*  
- Objet de type `pair` situé à gauche de l'opérateur.
+Objet de type `pair` situé à gauche de l'opérateur.
 
 *right*  
- Objet de type `pair` situé à droite de l'opérateur.
+Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -344,10 +346,10 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Paramètres
 
 *left*  
- Objet de type `pair` situé à gauche de l'opérateur.
+Objet de type `pair` situé à gauche de l'opérateur.
 
 *right*  
- Objet de type `pair` situé à droite de l'opérateur.
+Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -431,10 +433,10 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Paramètres
 
 *left*  
- Objet de type `pair` situé à gauche de l'opérateur.
+Objet de type `pair` situé à gauche de l'opérateur.
 
 *right*  
- Objet de type `pair` situé à droite de l'opérateur.
+Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
 

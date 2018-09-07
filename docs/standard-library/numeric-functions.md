@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ae1c3e043d35ba91813fb5288e100610986dbd76
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199186"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100181"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;, fonctions
 
@@ -48,13 +48,17 @@ Type accumulate(
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un itérateur d’entrée qui traite le premier élément dans la plage doit être additionné ou combiné selon une opération binaire spécifiée.
+*first*<br/>
+Itérateur d’entrée qui traite le premier élément de la plage qui doit être additionné ou combiné, selon l’opération binaire spécifiée.
 
-*dernière* un itérateur d’entrée qui traite le dernier élément dans la plage doit être additionné ou combiné selon une opération binaire spécifiée qui est une position après le dernier élément réellement inclus dans l’accumulation itérée.
+*last*<br/>
+Itérateur d’entrée qui traite le dernier élément d’une plage qui doit être additionné ou combiné selon une opération binaire spécifiée et dont la position se trouve immédiatement après le dernier élément inclus dans l’accumulation itérée.
 
-*Val* une valeur initiale à laquelle chaque élément est à son tour ajouté ou combiné selon une opération binaire spécifiée.
+*Val*<br/>
+Valeur initiale à laquelle chaque élément est à son tour ajouté ou combiné selon une opération binaire spécifiée.
 
-*binary_op* l’opération binaire qui doit être appliquée à chaque élément dans la plage spécifiée et le résultat de ses applications précédentes.
+*binary_op*<br/>
+Opération binaire qui doit être appliquée à chaque élément dans la plage spécifiée et le résultat de ses applications précédentes.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -151,16 +155,16 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
+( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
 The sum of the integers from 1 to 20 is: 210.
 The vector of partial sums is:
- ( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
+( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
 
 The original vector v3 is:
- ( 1 2 3 4 5 6 7 8 9 10 ).
+( 1 2 3 4 5 6 7 8 9 10 ).
 The product of the integers from 1 to 10 is: 3628800.
 The vector of partial products is:
- ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
+( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
 ## <a name="adjacent_difference"></a>  adjacent_difference
@@ -184,13 +188,17 @@ OutputIterator adjacent_difference(
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un itérateur d’entrée qui traite le premier élément dans la plage d’entrée dont les éléments doivent être différenciés de leurs prédécesseurs respectifs ou où la paire de valeurs doit être traitée par une autre opération binaire de spécifiée.
+*first*<br/>
+Itérateur d'entrée qui traite le premier élément d'une plage d'entrée dont les éléments doivent être différenciés de leurs prédécesseurs respectifs, ou bien, dont la paire de valeurs doit être utilisée dans le cadre d'une opération par une opération binaire spécifiée.
 
-*dernière* un itérateur d’entrée qui traite le dernier élément dans la plage d’entrée dont les éléments doivent être différenciés de leurs prédécesseurs respectifs ou où la paire de valeurs doit être traitée par une autre opération binaire de spécifiée.
+*last*<br/>
+Itérateur d'entrée qui traite le dernier élément d'une plage d'entrée dont les éléments doivent être différenciés de leurs prédécesseurs respectifs, ou bien, dont la paire de valeurs doit être utilisée dans le cadre d'une opération par une opération binaire spécifiée.
 
-*résultat* un itérateur de sortie qui traite le premier élément une plage de destination où la série de différences ou les résultats de l’opération spécifiée doit être stocké.
+*Résultat*<br/>
+Itérateur de sortie qui traite le premier élément d'une plage de destination dans laquelle les différences ou les résultats de l'opération spécifiée doivent être enregistrés.
 
-*binary_op* l’opération binaire qui doit être appliquée dans l’opération généralisée en remplaçant l’opération de soustraction de la procédure de différenciation.
+*binary_op*<br/>
+Opération binaire qui doit être appliquée dans l'opération généralisée par le remplacement de l'opération de soustraction de la procédure de différenciation.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -291,17 +299,23 @@ Type inner_product(
 
 ### <a name="parameters"></a>Paramètres
 
-*first1* un itérateur d’entrée qui traite le premier élément de la première plage dont le produit interne ou produit interne généralisé avec la deuxième plage doit être calculée.
+*first1*<br/>
+Itérateur d’entrée qui traite le premier élément de la première plage dont le produit interne ou le produit interne généralisé avec la deuxième plage est à calculer.
 
-*last1* un itérateur d’entrée qui traite le dernier élément de la première plage dont le produit interne ou produit interne généralisé avec la deuxième plage doit être calculée.
+*last1*<br/>
+Itérateur d’entrée qui traite le dernier élément de la première plage dont le produit interne ou le produit interne généralisé avec la deuxième plage est à calculer.
 
-*first2* un itérateur d’entrée qui traite le premier élément dans la deuxième plage dont le produit interne ou le produit interne généralisé avec la première plage est à calculer.
+*first2*<br/>
+Itérateur d’entrée qui traite le premier élément de la deuxième plage dont le produit interne ou le produit interne généralisé avec la première plage est à calculer.
 
-*Val* une valeur initiale à laquelle le produit interne ou le produit interne généralisé entre les plages d’adresses doit être ajoutée.
+*Val*<br/>
+Valeur initiale à laquelle ajouter le produit interne ou le produit interne généralisé entre les plages.
 
-*binary_op1* l’opération binaire qui remplace l’opération produit interne de somme appliquée aux produits d’éléments dans la généralisation du produit interne.
+*binary_op1*<br/>
+Opération binaire qui remplace l’opération de somme du produit interne appliquée aux produits d’éléments dans la généralisation du produit interne.
 
-*binary_op2* l’opération binaire qui remplace l’opération au niveau des éléments du produit interne de multiplication dans la généralisation du produit interne.
+*binary_op2*<br/>
+Opération binaire qui remplace l’opération de multiplication des éléments du produit interne dans la généralisation du produit interne.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -422,11 +436,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un itérateur d’entrée qui traite le premier élément dans la plage à remplir.
+*first*<br/>
+Itérateur d’entrée qui traite le premier élément de la plage à remplir.
 
-*dernière* un itérateur d’entrée qui traite le dernier élément dans la plage à remplir.
+*last*<br/>
+Itérateur d’entrée qui traite le dernier élément de la plage à remplir.
 
-*valeur* la valeur de départ à stocker dans le premier élément et à incrémenter successivement les éléments suivants.
+*valeur*<br/>
+Valeur de départ à stocker dans le premier élément et à incrémenter successivement dans les éléments suivants.
 
 ### <a name="remarks"></a>Notes
 
@@ -493,13 +510,17 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un itérateur d’entrée qui traite le premier élément dans la plage doit être partiellement additionné ou combiné selon une opération binaire spécifiée.
+*first*<br/>
+Itérateur d'entrée qui traite le premier élément de la plage qui doit être partiellement additionné ou combiné, selon l'opération binaire spécifiée.
 
-*dernière* un itérateur d’entrée qui traite le dernier élément dans la plage doit être partiellement additionné ou combiné selon une opération binaire spécifiée qui est une position après le dernier élément réellement inclus dans l’accumulation itérée.
+*last*<br/>
+Itérateur d'entrée qui traite le dernier élément d'une plage qui doit être partiellement additionné ou combiné selon une opération binaire spécifiée, et dont la position se trouve immédiatement après le dernier élément inclus dans l'accumulation itérée.
 
-*résultat* un itérateur de sortie qui traite le premier élément une plage de destination où la série de sommes partielles ou les résultats de l’opération spécifiée doit être stocké.
+*Résultat*<br/>
+Itérateur de sortie qui traite le premier élément d'une plage de destination dans laquelle les sommes partielles ou les résultats de l'opération spécifiée doivent être enregistrés.
 
-*binary_op* l’opération binaire qui doit être appliquée dans l’opération généralisée en remplaçant l’opération de somme de la procédure de somme partielle.
+*binary_op*<br/>
+Opération binaire qui doit être appliquée dans l'opération généralisée par le remplacement de l'opération de somme de la procédure de somme partielle.
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395300"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105274"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,17 +54,18 @@ void clearerr(
 
 ### <a name="parameters"></a>Paramètres
 
-*flux* pointeur vers **fichier** structure.
+*flux de données*<br/>
+Pointeur désignant la structure **FILE**.
 
 ## <a name="remarks"></a>Notes
 
-Le **clearerr** fonction réinitialise l’indicateur d’erreur et l’indicateur de fin de fichier pour *flux*. Indicateurs d’erreur ne sont pas automatiquement supprimées ; une fois que l’indicateur d’erreur pour un flux de données spécifié est défini, les opérations sur ce flux de données continuent à retourner une valeur d’erreur jusqu'à ce que **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [rembobiner](rewind.md) est appelée.
+Le **clearerr** fonction réinitialise l’indicateur d’erreur et l’indicateur de fin de fichier pour *flux*. Indicateurs d’erreur ne sont pas effacés automatiquement ; une fois que l’indicateur d’erreur pour un flux de données spécifié est défini, les opérations sur ce flux continuent de retourner une valeur d’erreur jusqu'à ce que **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [rewind](rewind.md) est appelée.
 
-Si *flux* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et le retourne. Pour plus d’informations sur **errno** et codes d’erreur, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
+Si *flux* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne. Pour plus d’informations sur **errno** et les codes d’erreur, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
 
 Une version plus sécurisée de cette fonction est disponible. Consultez [clearerr_s](clearerr-s.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

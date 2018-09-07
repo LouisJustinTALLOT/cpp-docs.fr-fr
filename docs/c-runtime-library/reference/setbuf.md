@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8592e8008fa78402ced307b60188ea8610960a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea1c979b261b81f80d95e4219f948dd2a3f5849e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407312"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100351"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -54,17 +54,19 @@ void setbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*flux* pointeur vers **fichier** structure.
+*flux de données*<br/>
+Pointeur désignant la structure **FILE**.
 
-*mémoire tampon* mémoire tampon allouée par l’utilisateur.
+*buffer*<br/>
+Mémoire tampon allouée par l’utilisateur.
 
 ## <a name="remarks"></a>Notes
 
-Le **setbuf** mise en mémoire tampon pour les contrôles de la fonction *flux*. Le *flux* argument doit faire référence à un fichier ouvert qui n’a pas été lu ou écrit. Si le *tampon* argument est **NULL**, le flux est non mis en mémoire tampon. Si non, la mémoire tampon doit pointer vers un tableau de caractères de longueur **BUFSIZ**, où **BUFSIZ** est la taille de mémoire tampon, tel que défini dans STDIO. H. La mémoire tampon spécifiée par l’utilisateur est utilisée pour la mise en mémoire tampon des E/S à la place de la mémoire tampon par défaut allouée par le système. Le **stderr** flux est non mis en mémoire tampon par défaut, mais vous pouvez utiliser **setbuf** pour affecter des mémoires tampons à **stderr**.
+Le **setbuf** mise en mémoire tampon pour les contrôles de la fonction *flux*. Le *flux* argument doit faire référence à un fichier ouvert qui n’a pas été lues ou écrit. Si le *tampon* argument est **NULL**, le flux est non mis en mémoire tampon. Si non, la mémoire tampon doit pointer vers un tableau de caractères de longueur **BUFSIZ**, où **BUFSIZ** est la taille du tampon, tel que défini dans STDIO. H. La mémoire tampon spécifiée par l’utilisateur est utilisée pour la mise en mémoire tampon des E/S à la place de la mémoire tampon par défaut allouée par le système. Le **stderr** flux est non mis en mémoire tampon par défaut, mais vous pouvez utiliser **setbuf** pour assigner des mémoires tampon à **stderr**.
 
 **setbuf** a été remplacé par [setvbuf](setvbuf.md), qui est la routine par défaut pour le nouveau code. **setbuf** est conservé pour la compatibilité avec le code existant.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

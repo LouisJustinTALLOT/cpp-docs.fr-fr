@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a46294156c1f7beffecb997569221a388b3394
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e12a6a16b8ec9c2d3564e78233da716585add1ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957309"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099510"
 ---
 # <a name="removevolatile-class"></a>remove_volatile, classe
 
@@ -40,7 +40,8 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-*T* type à modifier.
+*T*<br/>
+Type à modifier.
 
 ## <a name="remarks"></a>Notes
 

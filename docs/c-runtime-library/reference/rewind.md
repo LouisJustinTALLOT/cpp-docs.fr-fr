@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406831"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100285"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,23 +55,24 @@ void rewind(
 
 ### <a name="parameters"></a>Paramètres
 
-*flux* pointeur vers **fichier** structure.
+*flux de données*<br/>
+Pointeur désignant la structure **FILE**.
 
 ## <a name="remarks"></a>Notes
 
-Le **rembobiner** fonction repositionne le pointeur de fichier associé *flux* au début du fichier. Un appel à **rewind** produit les mêmes effets que
+Le **rewind** fonction repositionne le pointeur de fichier associé *flux* au début du fichier. Un appel à **rewind** produit les mêmes effets que
 
 **fseek (void) (** _flux_**, 0 L, SEEK_SET) ;**
 
-Cependant, contrairement à [fseek](fseek-fseeki64.md), **rembobiner** efface les indicateurs d’erreur pour le flux, ainsi que l’indicateur de fin de fichier. En outre, contrairement aux [fseek](fseek-fseeki64.md), **rembobiner** ne retourne pas une valeur pour indiquer si le pointeur a été déplacé.
+Cependant, contrairement à [fseek](fseek-fseeki64.md), **rewind** efface les indicateurs d’erreur pour le flux, ainsi que l’indicateur de fin de fichier. En outre, contrairement à [fseek](fseek-fseeki64.md), **rewind** ne retourne pas de valeur pour indiquer si le pointeur a bien été déplacé.
 
-Pour effacer la mémoire tampon du clavier, utilisez **rembobiner** avec le flux **stdin**, qui est associé à l’aide du clavier par défaut.
+Pour effacer la mémoire tampon du clavier, utilisez **rewind** avec le flux **stdin**, qui est associé à l’aide du clavier par défaut.
 
 Si le flux est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne et **errno** a la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

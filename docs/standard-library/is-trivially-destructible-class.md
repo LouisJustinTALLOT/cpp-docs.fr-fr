@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0e2fb16ad96ba102295981b9f9d56fda810ddff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 045c7d96e3dcf31500f7a88709633dd18201948b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961056"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110147"
 ---
 # <a name="istriviallydestructible-class"></a>is_trivially_destructible, classe
 
@@ -37,7 +37,8 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*T* type à interroger.
+*T*<br/>
+Type à interroger.
 
 ## <a name="remarks"></a>Notes
 

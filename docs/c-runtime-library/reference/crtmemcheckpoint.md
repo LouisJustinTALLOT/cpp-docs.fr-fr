@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ca83a9b9b48302e9ff4974d083d0a95796a1ef3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395511"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107566"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Obtient l’état actuel du tas de débogage et le stocke dans un fournie par l’application **_CrtMemState** structure (version debug uniquement).
+Obtient l’état actuel du tas de débogage et les stocke dans un fournie par l’application **_CrtMemState** structure (version debug uniquement).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,19 +54,20 @@ void _CrtMemCheckpoint(
 
 ### <a name="parameters"></a>Paramètres
 
-*état* pointeur vers **_CrtMemState** structure à remplir avec le point de contrôle de mémoire.
+*state*<br/>
+Pointeur vers **_CrtMemState** structure à remplir avec le point de contrôle de mémoire.
 
 ## <a name="remarks"></a>Notes
 
 Le **_CrtMemCheckpoint** fonction crée un instantané de l’état actuel du tas de débogage à un moment donné. Cet instantané peut être utilisé par d’autres fonctions d’état du tas, comme [_CrtMemDifference](crtmemdifference.md), pour aider à détecter les fuites de mémoire et d’autres problèmes. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtMemState** sont supprimés lors du prétraitement.
 
-L’application doit passer un pointeur vers une instance précédemment allouée de la **_CrtMemState** structure, définie dans Crtdbg.h, dans le *état* paramètre. Si **_CrtMemCheckpoint** rencontre une erreur lors de la création de point de contrôle, la fonction génère une **_CRT_WARN** qui décrit le problème de rapport de débogage.
+L’application doit passer un pointeur vers une instance précédemment allouée de la **_CrtMemState** structure, définie dans Crtdbg.h, dans le *état* paramètre. Si **_CrtMemCheckpoint** rencontre une erreur lors de la création de point de contrôle, la fonction génère une **_CRT_WARN** décrivant le problème de rapport de débogage.
 
-Pour plus d’informations sur les fonctions d’état du tas et le **_CrtMemState** de la structure, consultez [fonctions de rapport état du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Pour plus d’informations sur les fonctions d’état du tas et le **_CrtMemState** structure, consultez [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 Si *état* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) a la valeur **EINVAL** et la fonction retourne.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

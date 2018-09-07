@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeedb217466262d8643a851b5f93cb9ac26fb0a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2975e63f79818e5eac430056258b72b9c6641a49
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408439"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100272"
 ---
 # <a name="swab"></a>_swab
 
@@ -59,23 +59,26 @@ void _swab(
 
 ## <a name="parameters"></a>Paramètres
 
-*src* copiés et remplacez des données.
+*src*<br/>
+Données à copier et échanger.
 
-*dest* emplacement de stockage pour les données échangées.
+*dest*<br/>
+Emplacement de stockage des données échangées.
 
-*n* nombre d’octets à copier et échangés.
+*n*<br/>
+Nombre d’octets à copier et échanger.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **swab** fonction ne retourne pas de valeur. La fonction définit **errno** à **EINVAL** si le *src* ou *dest* pointeur est null ou *n* est inférieure à zéro et le paramètre non valide de gestionnaire est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+Le **swab** fonction ne retourne pas de valeur. La fonction définit **errno** à **EINVAL** si le *src* ou *dest* pointeur est null ou *n* est inférieure à zéro et le paramètre non valide gestionnaire est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 Pour plus d’informations sur ce code de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Si *n* est pair, le **_swab** fonction copies *n* octets à partir de *src*permute chaque paire d’octets adjacents et stocke le résultat à *dest*. Si *n* est impair, **_swab** copie et remplace le premier *n*-1 octets de *src*, et le dernier octet n’est pas copié. Le **_swab** fonction est généralement utilisée pour préparer les données binaires pour le transfert vers un ordinateur qui utilise un ordre d’octets différents.
+Si *n* est pair, le **_swab** fonction copies *n* octets à partir de *src*, échange chaque paire d’octets adjacents et stocke le résultat au niveau de *dest*. Si *n* est impair, **_swab** copie et échange de la première *n*-1 octets de *src*, et le dernier octet n’est pas copié. Le **_swab** fonction est généralement utilisée pour préparer des données binaires pour le transfert vers un ordinateur qui utilise un ordre d’octet différent.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
