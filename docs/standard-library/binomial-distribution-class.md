@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f853ada608b2f70dc0a7c7e3fb78e5fb28d0fa83
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957683"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100870"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution, classe
 
@@ -81,9 +81,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType* le type de résultat entier, valeur par défaut est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType*<br/>
+Le type de résultat entier, valeur par défaut est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*URNG* Le moteur de génération de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*GÉNÉRATEUR URNG*<br/>
+L’uniform Générateur moteur de nombres aléatoires. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -250,11 +252,14 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*t* le `t` paramètre de distribution.
+*t*<br/>
+Paramètre de distribution `t`.
 
-*p* le `p` paramètre de distribution.
+*p*<br/>
+Paramètre de distribution `p`.
 
-*parm* le `param_type` structure utilisée pour construire la distribution.
+*parm*<br/>
+Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -282,11 +287,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*t* le `t` paramètre de distribution.
+*t*<br/>
+Paramètre de distribution `t`.
 
-*p* le `p` paramètre de distribution.
+*p*<br/>
+Paramètre de distribution `p`.
 
-*droit* le `param_type` objet à comparer à cela.
+*right*<br/>
+Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
 

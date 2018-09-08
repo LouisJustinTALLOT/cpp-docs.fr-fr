@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202790"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100961"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf, classe
 
@@ -124,9 +124,11 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem* A [char_type](#char_type).
+*Elem*<br/>
+Un [char_type](#char_type).
 
-*TR* le caractère [traits_type](#traits_type).
+*Tr*<br/>
+Le [traits_type](#traits_type) du caractère.
 
 ## <a name="remarks"></a>Notes
 
@@ -250,7 +252,8 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* référence lvalue à le `basic_streambuf` objet qui est utilisé pour définir les valeurs pour ce `basic_streambuf` objet.
+*right*<br/>
+Référence lvalue à l’objet `basic_streambuf` qui est utilisée pour définir les valeurs de cet objet `basic_streambuf`.
 
 ### <a name="remarks"></a>Notes
 
@@ -312,7 +315,8 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre* la quantité de laquelle faire avancer le pointeur.
+*count*<br/>
+Quantité de laquelle faire avancer le pointeur.
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +374,8 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Loc* une référence à des paramètres régionaux.
+*_Loc*<br/>
+Référence à des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 
@@ -436,7 +441,8 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* référence lvalue à le `basic_streambuf` objet qui est utilisé pour affecter des valeurs à cet objet.
+*right*<br/>
+Référence lvalue à l'objet `basic_streambuf` qui est utilisée pour affecter des valeurs à cet objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -452,7 +458,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta* le caractère à insérer dans la mémoire tampon, ou **traits_type ::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Caractère à insérer dans la mémoire tampon ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -486,7 +493,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta* le caractère à insérer dans la mémoire tampon, ou **traits_type ::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Caractère à insérer dans la mémoire tampon ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -524,7 +532,8 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre de* le nombre de caractères de déplacement de l’écriture positionner vers l’avant.
+*count*<br/>
+Nombre de caractères duquel avancer la position d’écriture.
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +565,8 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Loc* une référence à des paramètres régionaux.
+*_Loc*<br/>
+Référence à des paramètres régionaux.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -582,11 +592,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* la position à rechercher par rapport à *_Way*.
+*_Off*<br/>
+La position à rechercher par rapport à *_Way*.
 
-*_Way* le point de départ pour les opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
+*_Way*<br/>
+Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
-*_Which* Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*<br/>
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -606,9 +619,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sp* la position à rechercher.
+*_Sp*<br/>
+Position à rechercher.
 
-*_Which* Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*<br/>
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -630,9 +645,11 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Buffer* un pointeur vers `char_type` pour cette instanciation.
+*_Buffer*<br/>
+Pointeur vers `char_type` pour cette instanciation.
 
-*nombre* la taille de la mémoire tampon.
+*count*<br/>
+Taille de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -707,11 +724,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* la position à rechercher par rapport à *_Way*.
+*_Off*<br/>
+La position à rechercher par rapport à *_Way*.
 
-*_Way* le point de départ pour les opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
+*_Way*<br/>
+Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
-*_Which* Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*<br/>
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -741,9 +761,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sp* la position à rechercher.
+*_Sp*<br/>
+Position à rechercher.
 
-*_Which* Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*<br/>
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -769,9 +791,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Buffer* pointeur vers une mémoire tampon.
+*_Buffer*<br/>
+Pointeur vers une mémoire tampon.
 
-*nombre* taille de la mémoire tampon.
+*count*<br/>
+Taille de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -793,11 +817,14 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Gbeg* un pointeur vers le début de la mémoire tampon.
+*_Gbeg*<br/>
+Pointeur vers le début de la mémoire tampon.
 
-*_Gnext* un pointeur vers quelque part au milieu de la mémoire tampon.
+*_Gnext*<br/>
+Pointeur vers un emplacement situé au milieu de la mémoire tampon.
 
-*_Gend* un pointeur vers la fin de la mémoire tampon.
+*_Gend*<br/>
+Pointeur vers la fin de la mémoire tampon.
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
@@ -809,9 +836,11 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pbeg* un pointeur vers le début de la mémoire tampon.
+*_Pbeg*<br/>
+Pointeur vers le début de la mémoire tampon.
 
-*_Pend* un pointeur vers la fin de la mémoire tampon.
+*_Pend*<br/>
+Pointeur vers la fin de la mémoire tampon.
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -863,9 +892,11 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* contient les caractères extraits de la mémoire tampon.
+*ptr*<br/>
+Mémoire tampon qui contient les caractères extraits.
 
-*nombre de* le nombre d’éléments à lire.
+*count*<br/>
+Nombre d’éléments à lire.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -967,7 +998,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* le caractère.
+*_Ch*<br/>
+Le caractère.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1014,7 +1046,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* le caractère.
+*_Ch*<br/>
+Le caractère.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1056,9 +1089,11 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* la chaîne de caractères.
+*ptr*<br/>
+La chaîne de caractères.
 
-*nombre de* le nombre de caractères.
+*count*<br/>
+Le nombre de caractères.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1281,9 +1316,11 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* contient les caractères extraits de la mémoire tampon.
+*ptr*<br/>
+Mémoire tampon qui contient les caractères extraits.
 
-*nombre de* le nombre d’éléments à extraire.
+*count*<br/>
+Nombre d’éléments à extraire.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1303,9 +1340,11 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* pointeur vers les éléments à insérer.
+*ptr*<br/>
+Pointeur vers les éléments à insérer.
 
-*nombre* nombre d’éléments à insérer.
+*count*<br/>
+Nombre d’éléments à insérer.
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959746"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100883"
 ---
 # <a name="basicregex-class"></a>basic_regex, classe
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem* le type des éléments à faire correspondre.
+*Elem*<br/>
+Type des éléments à faire correspondre.
 
-*RXtraits* classe Traits des éléments.
+*RXtraits*<br/>
+Classe Traits des éléments.
 
 ## <a name="remarks"></a>Notes
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Paramètres
 
-*STtraits* classe de Traits pour une source de chaîne.
+*STtraits*<br/>
+Classe de caractéristiques pour une source de chaîne.
 
-*STalloc* classe Allocator pour une source de chaîne.
+*STalloc*<br/>
+Classe d'allocateurs pour une source de chaîne.
 
-*InIt* type d’itérateur pour une source de la plage d’entrée.
+*InIt*<br/>
+Type d'itérateur d'entrée pour une source de plage.
 
-*droit* Regex source à copier.
+*right*<br/>
+Regex source à copier.
 
-*PTR* pointeur au début de la séquence à copier.
+*ptr*<br/>
+Pointeur vers le début de la séquence à copier.
 
-*indicateurs* indicateurs d’option de syntaxe à ajouter lors de la copie.
+*flags*<br/>
+Indicateurs d'option de syntaxe à ajouter lors de la copie.
 
 *Len/TD >* longueur de la séquence à copier.
 
-*Str* chaîne à copier.
+*str*<br/>
+Chaîne à copier.
 
-*première* début de la séquence à copier.
+*first*<br/>
+Début de la séquence à copier.
 
-*dernière* fin de séquence à copier.
+*last*<br/>
+Fin de la séquence à copier.
 
-*IList* initializer_list à copier.
+*IList*<br/>
+Initializer_list à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Paramètres
 
-*STtraits* classe de Traits pour une source de chaîne.
+*STtraits*<br/>
+Classe de caractéristiques pour une source de chaîne.
 
-*STalloc* classe Allocator pour une source de chaîne.
+*STalloc*<br/>
+Classe d'allocateurs pour une source de chaîne.
 
-*InIt* type d’itérateur pour une source de la plage d’entrée.
+*InIt*<br/>
+Type d'itérateur d'entrée pour une source de plage.
 
-*droit* Regex source à copier.
+*right*<br/>
+Regex source à copier.
 
-*PTR* pointeur au début de la séquence à copier.
+*ptr*<br/>
+Pointeur vers le début de la séquence à copier.
 
-*indicateurs* indicateurs d’option de syntaxe à ajouter lors de la copie.
+*flags*<br/>
+Indicateurs d'option de syntaxe à ajouter lors de la copie.
 
 *Len/TD >* longueur de la séquence à copier.
 
-*Str* chaîne à copier.
+*str*<br/>
+Chaîne à copier.
 
-*première* début de la séquence à copier.
+*first*<br/>
+Début de la séquence à copier.
 
-*dernière* fin de séquence à copier.
+*last*<br/>
+Fin de la séquence à copier.
 
-*IList* initializer_list à copier.
+*IList*<br/>
+Initializer_list à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*loc* l’objet de paramètres régionaux à stocker.
+*Loc*<br/>
+Objet de paramètres régionaux à stocker.
 
 ### <a name="remarks"></a>Notes
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*STtraits* classe de Traits pour une source de chaîne.
+*STtraits*<br/>
+Classe de caractéristiques pour une source de chaîne.
 
-*STalloc* classe Allocator pour une source de chaîne.
+*STalloc*<br/>
+Classe d'allocateurs pour une source de chaîne.
 
-*droit* Regex source à copier.
+*right*<br/>
+Regex source à copier.
 
-*Str* chaîne à copier.
+*str*<br/>
+Chaîne à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* l’objet d’expression régulière à échanger.
+*right*<br/>
+Objet d’expression régulière à échanger.
 
 ### <a name="remarks"></a>Notes
 

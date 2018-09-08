@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965988"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100922"
 ---
 # <a name="numput-class"></a>num_put, classe
 
@@ -45,9 +45,11 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
+*CharType*<br/>
+Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
-*OutputIterator* le type d’itérateur dans lequel les fonctions numériques put écrivent leur sortie.
+*OutputIterator*<br/>
+Type d'itérateur dans lequel les fonctions numériques Put écrivent leur sortie.
 
 ## <a name="remarks"></a>Notes
 
@@ -153,13 +155,17 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Paramètres
 
-*suivant* un itérateur qui traite le premier élément de la chaîne insérée.
+*next*<br/>
+Itérateur qui traite le premier élément de la chaîne insérée.
 
-*_Iosbase* Spécifie le flux qui contient des paramètres régionaux avec la facette numpunct utilisée pour les signes de ponctuation de la sortie et des indicateurs de mise en forme la sortie.
+*_Iosbase*<br/>
+Spécifie le flux qui contient des paramètres régionaux avec la facette numpunct utilisée pour les signes de ponctuation de la sortie et des indicateurs pour la mise en forme de la sortie.
 
-*_Fill* un caractère qui est utilisé pour l’espacement.
+*_Fill*<br/>
+Caractère utilisé pour l’espacement.
 
-*Val* le nombre ou le type booléen qui doit être généré.
+*Val*<br/>
+Nombre ou type booléen à envoyer en sortie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -318,7 +324,8 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs*<br/>
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -397,13 +404,17 @@ iter_type put(
 
 ### <a name="parameters"></a>Paramètres
 
-*dest* un itérateur qui traite le premier élément de la chaîne insérée.
+*dest*<br/>
+Itérateur qui traite le premier élément de la chaîne insérée.
 
-*_Iosbase* Spécifie le flux qui contient les paramètres régionaux avec la facette numpunct utilisée pour les signes de ponctuation de la sortie et des indicateurs de mise en forme la sortie.
+*_Iosbase*<br/>
+Spécifie le flux qui contient des paramètres régionaux avec la facette numpunct utilisée pour les signes de ponctuation de la sortie et des indicateurs pour la mise en forme de la sortie.
 
-*_Fill* un caractère qui est utilisé pour l’espacement.
+*_Fill*<br/>
+Caractère utilisé pour l’espacement.
 
-*Val* le nombre ou le type booléen qui doit être généré.
+*Val*<br/>
+Nombre ou type booléen à envoyer en sortie.
 
 ### <a name="return-value"></a>Valeur de retour
 
