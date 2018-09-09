@@ -1,7 +1,7 @@
 ---
-title: Compilateur avertissement (niveau 1) C4627 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4627 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/09/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde9e6707465fd95dbcb10e073a852624f0de0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
+ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284184"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249618"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>Avertissement du compilateur (niveau 1) C4627
-'\<identificateur >': ignoré lors de la recherche une utilisation d’en-tête précompilé  
+
+> «*header_file*' : ignoré lors de la recherche une utilisation d’en-tête précompilé
+
+Si le fichier source actuel a le [/Yu \(utilisation de fichier d’en-tête précompilé)](../../build/reference/yu-use-precompiled-header-file.md) option set, le compilateur ignore tous les éléments dans le fichier avant de l’en-tête précompilé est inclus. Avertissement **C4627** est générée dans Visual Studio 2015 et versions antérieures si *header_file* est inclus avant le fichier d’en-tête précompilé, et si l’en-tête précompilé n’inclut pas également *header_file*.
+
+## <a name="example"></a>Exemple
+
+Cet exemple montre comment l’erreur peut se produire et montre comment la corriger :
+ 
+```cpp
+// c4627.cpp
+#include <iostream>       // C4627 - iostream not included by pch.h
+#include "pch.h"          // precompiled header file that does not include iostream
+// #include <iostream>    // To fix, move the iostream header include here from above
+int main()
+{
+    std::cout << "std::cout is defined!\n";
+}
+```
   
- Lors de la recherche de l’emplacement où un en-tête précompilé est utilisé, le compilateur a rencontré un `#include` directive pour le  *\<identificateur >* fichier include. Le compilateur ignore le `#include` directive, mais il émet l’avertissement **C4627** si l’en-tête précompilé ne contient pas déjà le  *\<identificateur >* fichier include.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>Voir aussi
+
+[Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)
