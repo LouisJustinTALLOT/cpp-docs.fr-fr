@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6c1c11a9c81123c518e3a0da3e56cc81d4cd5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958927"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106754"
 ---
 # <a name="timeput-class"></a>time_put, classe
 
@@ -46,10 +46,10 @@ class time_put : public locale::facet;
 ### <a name="parameters"></a>Paramètres
 
 *CharType*  
- Type utilisé dans le cadre d'un programme pour encoder des caractères.
+Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
 *OutputIterator*  
- Type d'itération dans lequel les fonctions put temporelles enregistrent leur sortie.
+Type d'itération dans lequel les fonctions put temporelles enregistrent leur sortie.
 
 ## <a name="remarks"></a>Notes
 
@@ -109,19 +109,19 @@ virtual iter_type do_put(
 ### <a name="parameters"></a>Paramètres
 
 *next*  
- Itérateur de sortie indiquant où la séquence de caractères représentant la date et l’heure doivent être insérés.
+Itérateur de sortie indiquant où la séquence de caractères représentant la date et l’heure doivent être insérés.
 
 *_Iosbase*  
- Non utilisé.
+Non utilisé.
 
 *_Pt*  
- Les informations de date et d’heure fournies en sortie.
+Les informations de date et d’heure fournies en sortie.
 
 *_Fmt*  
- Le format de la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
+Le format de la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 *_Mod*  
- Un modificateur du format. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
+Un modificateur du format. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -172,28 +172,28 @@ iter_type put(iter_type next,
 ### <a name="parameters"></a>Paramètres
 
 *next*  
- Itérateur de sortie indiquant où la séquence de caractères représentant la date et l’heure doivent être insérés.
+Itérateur de sortie indiquant où la séquence de caractères représentant la date et l’heure doivent être insérés.
 
 *_Iosbase*  
- Non utilisé.
+Non utilisé.
 
 *_Fill*  
- Le caractère de type `CharType` utilisé pour l’espacement.
+Le caractère de type `CharType` utilisé pour l’espacement.
 
 *_Pt*  
- Les informations de date et d’heure fournies en sortie.
+Les informations de date et d’heure fournies en sortie.
 
 *_Fmt*  
- Le format de la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
+Le format de la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 *_Mod*  
- Un modificateur du format. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
+Un modificateur du format. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 *first*  
- Le début de la chaîne de mise en forme pour la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
+Le début de la chaîne de mise en forme pour la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 *last*  
- La fin de la chaîne de mise en forme pour la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
+La fin de la chaîne de mise en forme pour la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -257,7 +257,8 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs*<br/>
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 

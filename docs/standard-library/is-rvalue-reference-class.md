@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acba0f78df8cc537aecd5d2fc33380e4674e5721
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6bbaa215335a299eee8971b113fdcf3860e9b740
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956919"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106494"
 ---
 # <a name="isrvaluereference-class"></a>is_rvalue_reference, classe
 
@@ -37,7 +37,8 @@ struct is_rvalue_reference;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ## <a name="remarks"></a>Notes
 

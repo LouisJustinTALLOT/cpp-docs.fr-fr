@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e37d1506fd713f90b793c6f3f9a04b39bf53f7a4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954233"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100468"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt;, opérateurs
 
@@ -56,13 +56,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* l’un des objets à tester pour vérifier leur inégalité.
+*left*<br/>
+L'un des objets dont l'inégalité doit être testée.
 
-*droit* l’un des objets à tester pour vérifier leur inégalité.
+*right*<br/>
+L'un des objets dont l'inégalité doit être testée.
 
-*Ty1* type contrôlé par la gauche partagés à pointeur.
+*Ty1*<br/>
+Type contrôlé par le pointeur partagé de gauche.
 
-*Ty2* type contrôlé par le droit partagés à pointeur.
+*Ty2*<br/>
+Type contrôlé par le pointeur partagé de droite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -154,13 +158,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un des objets à tester pour égalité.
+*left*<br/>
+L'un des objets dont l'égalité doit être testée.
 
-*droit* un des objets à tester pour égalité.
+*right*<br/>
+L'un des objets dont l'égalité doit être testée.
 
-*Ty1* type contrôlé par la gauche partagés à pointeur.
+*Ty1*<br/>
+Type contrôlé par le pointeur partagé de gauche.
 
-*Ty2* type contrôlé par le droit partagés à pointeur.
+*Ty2*<br/>
+Type contrôlé par le pointeur partagé de droite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -258,13 +266,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* l’un des objets à comparer.
+*left*<br/>
+L'un des objets à comparer.
 
-*droit* l’un des objets à comparer.
+*right*<br/>
+L'un des objets à comparer.
 
-*Ty1* type contrôlé par la gauche partagés à pointeur.
+*Ty1*<br/>
+Type contrôlé par le pointeur partagé de gauche.
 
-*Ty2* type contrôlé par le droit partagés à pointeur.
+*Ty2*<br/>
+Type contrôlé par le pointeur partagé de droite.
 
 ### <a name="remarks"></a>Notes
 
@@ -288,13 +300,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* l’un des objets à comparer.
+*left*<br/>
+L'un des objets à comparer.
 
-*droit* l’un des objets à comparer.
+*right*<br/>
+L'un des objets à comparer.
 
-*Ty1* type contrôlé par le pointeur de gauche.
+*Ty1*<br/>
+Type contrôlé par le pointeur de gauche.
 
-*Ty2* type contrôlé par le pointeur de droite.
+*Ty2*<br/>
+Type contrôlé par le pointeur de droite.
 
 ## <a name="op_lt_eq"></a>  operator&lt;=
 
@@ -314,13 +330,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* l’un des objets à comparer.
+*left*<br/>
+L'un des objets à comparer.
 
-*droit* l’un des objets à comparer.
+*right*<br/>
+L'un des objets à comparer.
 
-*Ty1* type contrôlé par la gauche partagés à pointeur.
+*Ty1*<br/>
+Type contrôlé par le pointeur partagé de gauche.
 
-*Ty2* type contrôlé par le droit partagés à pointeur.
+*Ty2*<br/>
+Type contrôlé par le pointeur partagé de droite.
 
 ### <a name="remarks"></a>Notes
 
@@ -344,13 +364,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* l’un des objets à comparer.
+*left*<br/>
+L'un des objets à comparer.
 
-*droit* l’un des objets à comparer.
+*right*<br/>
+L'un des objets à comparer.
 
-*Ty1* type contrôlé par la gauche partagés à pointeur.
+*Ty1*<br/>
+Type contrôlé par le pointeur partagé de gauche.
 
-*Ty2* type contrôlé par le droit partagés à pointeur.
+*Ty2*<br/>
+Type contrôlé par le pointeur partagé de droite.
 
 ## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
@@ -364,15 +388,20 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem* le type de l’élément de flux de données.
+*Elem*<br/>
+Type de l’élément de flux.
 
-*TR* le type de caractéristiques d’élément de flux de données.
+*Tr*<br/>
+Type de caractéristiques d’élément de flux.
 
-*Ty* type contrôlé par le pointeur partagé.
+*Ty*<br/>
+Type contrôlé par le pointeur partagé.
 
-*out* le flux de sortie.
+*out*<br/>
+Flux de sortie.
 
-*SP* le pointeur partagé.
+*SP*<br/>
+Pointeur partagé.
 
 ### <a name="remarks"></a>Notes
 

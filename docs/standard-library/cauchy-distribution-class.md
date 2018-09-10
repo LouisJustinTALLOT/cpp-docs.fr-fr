@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 366a0ec46b69567e9f03f1e0667555acd08f31be
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3e3b61de731b518d965d3b7d1473489f6e863f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960952"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100856"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution, classe
 
@@ -80,9 +80,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*URNG* Le moteur de génération de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*GÉNÉRATEUR URNG*<br/>
+L’uniform Générateur moteur de nombres aléatoires. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -259,11 +261,14 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*un* le `a` paramètre de distribution.
+*a*<br/>
+Paramètre de distribution `a`.
 
-*b* le `b` paramètre de distribution.
+*b*<br/>
+Paramètre de distribution `b`.
 
-*parm* le `param_type` structure utilisée pour construire la distribution.
+*parm*<br/>
+Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -291,11 +296,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*un* le `a` paramètre de distribution.
+*a*<br/>
+Paramètre de distribution `a`.
 
-*b* le `b` paramètre de distribution.
+*b*<br/>
+Paramètre de distribution `b`.
 
-*droit* le `param_type` objet à comparer à cela.
+*right*<br/>
+Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
 

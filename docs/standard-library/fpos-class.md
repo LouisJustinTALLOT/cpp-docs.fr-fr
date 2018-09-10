@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966600"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105879"
 ---
 # <a name="fpos-class"></a>fpos, classe
 
@@ -47,7 +47,8 @@ class fpos
 
 ### <a name="parameters"></a>Paramètres
 
-*StateType* des informations d’état.
+*Statetype*<br/>
+Informations d'état.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -92,11 +93,14 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* offset dans le flux de données.
+*_Off*<br/>
+Décalage dans le flux.
 
-*_State* l’état de départ de la `fpos` objet.
+*_State*<br/>
+État de départ de l’objet `fpos`.
 
-*_Filepos* offset dans le flux de données.
+*_Filepos*<br/>
+Décalage dans le flux.
 
 ### <a name="remarks"></a>Notes
 
@@ -114,7 +118,8 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* l’indicateur de position de fichier avec lequel comparer.
+*right*<br/>
+Indicateur de position de fichier à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -186,7 +191,8 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* le décalage en fonction duquel vous voulez incrémenter l’indicateur de position de fichier.
+*_Off*<br/>
+Décalage duquel vous voulez incrémenter l’indicateur de position de fichier.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -210,7 +216,8 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* le décalage en fonction duquel vous voulez incrémenter l’indicateur de position de fichier.
+*_Off*<br/>
+Décalage duquel vous voulez incrémenter l’indicateur de position de fichier.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -236,9 +243,11 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* position de fichier.
+*right*<br/>
+Position du fichier.
 
-*_Off* décalage de Stream.
+*_Off*<br/>
+Décalage du flux.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -258,7 +267,8 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* décalage de Stream.
+*_Off*<br/>
+Décalage du flux.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -282,7 +292,8 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* l’indicateur de position de fichier avec lequel comparer.
+*right*<br/>
+Indicateur de position de fichier à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -355,7 +366,8 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Paramètres
 
-*_State* le nouvel état de conversion.
+*_State*<br/>
+Nouvel état de conversion.
 
 ### <a name="return-value"></a>Valeur de retour
 

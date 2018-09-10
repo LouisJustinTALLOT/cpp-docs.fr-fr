@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0a826d258cf9b88294a2d870cf802763a588520e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956932"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105722"
 ---
 # <a name="negate-struct"></a>negate, struct
 
@@ -44,14 +44,16 @@ struct negate<void>
   template <class Type>
   auto operator()(Type&& Left) const`
     -> decltype(-std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Type* n’importe quel type qui prend en charge un `operator-` qui accepte un opérande de type spécifié ou inféré.
+*Type*<br/>
+Tout type qui prend en charge un `operator-` qui accepte un opérande du type spécifié ou déduit.
 
-*Gauche* l’opérande à rendre négative. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *Type*.
+*Gauche*<br/>
+Opérande à rendre négatif. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *Type*.
 
 ## <a name="return-value"></a>Valeur de retour
 

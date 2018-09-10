@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74641b229fbf888504df72a97f8a5c025d9b7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30e2b226524e1d4a62c9f8cc950f4dd30846861
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963714"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100974"
 ---
 # <a name="basicostream-class"></a>basic_ostream, classe
 
@@ -50,9 +50,11 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem* A `char_type`.
+*Elem*<br/>
+`char_type`
 
-*TR* le caractère `traits_type`.
+*Tr*<br/>
+`traits_type` du caractère.
 
 ## <a name="remarks"></a>Notes
 
@@ -63,16 +65,16 @@ iostate state = goodbit;
 const sentry ok(*this);
 
 if (ok)
- {try
- {<convert and insert elements
+{try
+{<convert and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 width(0);
@@ -91,16 +93,16 @@ const sentry ok(*this);
 if (!ok)
     state |= badbit;
 else
- {try
- {<obtain and insert elements
+{try
+{<obtain and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 setstate(state);
@@ -161,11 +163,14 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*strbuf* un objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **true** s’il s’agit d’un flux standard ; sinon, **false**.
+*_Isstd*<br/>
+**true** s’il s’agit d’un flux standard ; sinon, **false**.
 
-*droit* une référence rvalue à un objet de type `basic_ostream`.
+*right*<br/>
+Référence rvalue à un objet de type `basic_ostream`.
 
 ### <a name="remarks"></a>Notes
 
@@ -242,11 +247,14 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Paramètres
 
-*NFP* un pointeur de fonction.
+*NFP*<br/>
+Pointeur de fonction.
 
-*strbuf* un pointeur vers un `stream_buf` objet.
+*strbuf*<br/>
+Un pointeur vers un `stream_buf` objet.
 
-*Val* un élément à écrire dans le flux.
+*Val*<br/>
+Élément à écrire dans le flux.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -360,7 +368,8 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* un `rvalue` font référence à un `basic_ostream` objet.
+*right*<br/>
+Référence `rvalue` à un objet `basic_ostream`.
 
 ### <a name="remarks"></a>Notes
 
@@ -376,7 +385,8 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* un caractère.
+*_Ch*<br/>
+Un caractère.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -419,11 +429,14 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pos* la position dans le flux.
+*_Pos*<br/>
+Position dans le flux.
 
-*_Off* décalage par rapport à *_Way*.
+*_Off*<br/>
+Décalage par rapport à *_Way*.
 
-*_Way* parmi les [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) énumérations.
+*_Way*<br/>
+Une des énumérations [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -485,7 +498,8 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* une référence à un `basic_ostream` objet.
+*right*<br/>
+Référence à un objet `basic_ostream`.
 
 ### <a name="remarks"></a>Notes
 
@@ -521,9 +535,11 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre* nombre de caractères à placer dans le flux.
+*count*<br/>
+Nombre de caractères à placer dans le flux.
 
-*Str* caractères à placer dans le flux.
+*str*<br/>
+Caractères à placer dans le flux.
 
 ### <a name="return-value"></a>Valeur de retour
 

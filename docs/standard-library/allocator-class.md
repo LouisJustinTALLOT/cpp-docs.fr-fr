@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4062ebc1e6c78bcd6e50adca4c372012030f75d0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eceb6c0b4bb6a43616ceae66701e762e08713bf9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964507"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101078"
 ---
 # <a name="allocator-class"></a>allocator, classe
 
@@ -64,7 +64,8 @@ class allocator
 
 ### <a name="parameters"></a>Paramètres
 
-*Type* le type d’objet pour lequel le stockage est alloué ou libéré.
+*Type*<br/>
+Type d'objet pour lequel le stockage est alloué ou libéré.
 
 ## <a name="remarks"></a>Notes
 
@@ -143,7 +144,8 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* la valeur const ou nonconst de l’objet dont l’adresse est recherchée.
+*Val*<br/>
+Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -193,7 +195,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 2 4 6 8 10 12 14 ).
+( 2 4 6 8 10 12 14 ).
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```
 
@@ -207,9 +209,11 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre de* le nombre d’éléments pour lequel l’espace de stockage suffisant doit être allouée.
+*count*<br/>
+Nombre d’éléments pour lesquels la quantité de stockage appropriée doit être allouée.
 
-*_Hint* un pointeur const pouvant aider l’objet allocateur satisfaire la demande de stockage en recherchant l’adresse d’un objet alloué avant la demande.
+*_Hint*<br/>
+Pointeur const pouvant aider l’objet allocateur à satisfaire la demande de stockage en recherchant l’adresse d’un objet alloué avant la demande.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -268,7 +272,8 @@ allocator(const allocator<Other>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* l’objet allocateur à copier.
+*right*<br/>
+Objet allocateur à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -388,7 +393,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 2 4 6 8 10 12 14 ).
+( 2 4 6 8 10 12 14 ).
 The integer's address found has a value of: 10.
 ```
 
@@ -442,7 +447,7 @@ int main( )
    // vcref = 150;
    // but the value of the first element could be modified through
    // its nonconst iterator and the const reference would remain valid
- *vfIter = 175;
+*vfIter = 175;
    cout << "The value of the element referred to by vcref,"
         <<"\n after nofication through its nonconst iterator, is: "
         << vcref << "." << endl;
@@ -451,11 +456,11 @@ int main( )
 
 ```Output
 The original vector v is:
- ( 100 200 300 400 500 600 700 ).
+( 100 200 300 400 500 600 700 ).
 The value of the element referred to by vref is: 100,
- the first element in the vector.
+the first element in the vector.
 The value of the element referred to by vcref,
- after nofication through its nonconst iterator, is: 175.
+after nofication through its nonconst iterator, is: 175.
 ```
 
 ## <a name="construct"></a>  allocator::construct
@@ -471,9 +476,11 @@ void construct(pointer ptr, _Other&&...   val);
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* un pointeur vers l’emplacement où l’objet doit être construite.
+*ptr*<br/>
+Pointeur vers l’emplacement où l’objet doit être construit.
 
-*Val* la valeur avec laquelle l’objet en cours de construction doit être initialisé.
+*Val*<br/>
+Valeur avec laquelle l’objet en cours de construction doit être initialisé.
 
 ### <a name="remarks"></a>Notes
 
@@ -523,9 +530,9 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 3 6 9 12 15 18 21 ).
+( 3 6 9 12 15 18 21 ).
 The modified vector v1 is:
- ( 3 7 9 12 15 18 21 ).
+( 3 7 9 12 15 18 21 ).
 ```
 
 ## <a name="deallocate"></a>  allocator::deallocate
@@ -538,9 +545,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* un pointeur vers le premier objet à désallouer dans le stockage.
+*ptr*<br/>
+Pointeur vers le premier objet à désallouer dans le stockage.
 
-*nombre de* le nombre d’objets à désallouer dans le stockage.
+*count*<br/>
+Nombre d’objets à désallouer dans le stockage.
 
 ### <a name="remarks"></a>Notes
 
@@ -560,7 +569,8 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* un pointeur désignant l’adresse de l’objet à détruire.
+*ptr*<br/>
+Pointeur désignant l’adresse de l’objet à détruire.
 
 ### <a name="remarks"></a>Notes
 
@@ -610,9 +620,9 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 2 4 6 8 10 12 14 ).
+( 2 4 6 8 10 12 14 ).
 The modified vector v1 is:
- ( 2 4 6 8 10 -99 14 ).
+( 2 4 6 8 10 -99 14 ).
 ```
 
 ## <a name="difference_type"></a>  allocator::difference_type
@@ -670,7 +680,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 0 2 4 6 8 10 12 14 ).
+( 0 2 4 6 8 10 12 14 ).
 Pointer v1PtrA addresses 4.
 Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.
@@ -756,7 +766,8 @@ allocator<Type>& operator=(const allocator<Other>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* un objet allocateur à assigner à un autre objet de ce type.
+*right*<br/>
+Objet allocateur à assigner à un autre objet allocateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -842,7 +853,7 @@ int main( )
       v1.push_back( 3 * i );
    }
 
-   cout << "The original vector v1 is:\n ( " ;
+   cout << "The original vector v1 is:\n( " ;
    for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ; v1Iter++ )
       cout << *v1Iter << " ";
    cout << ")." << endl;
@@ -858,7 +869,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 3 6 9 12 15 18 21 ).
+( 3 6 9 12 15 18 21 ).
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```
 
@@ -870,7 +881,8 @@ struct rebind {    typedef allocator<_Other> other ;    };
 ```
 ### <a name="parameters"></a>Paramètres
 
-*autres* le type d’élément pour lequel la mémoire est allouée.
+*other*<br/>
+Type d’élément pour lequel la mémoire est allouée.
 
 ### <a name="remarks"></a>Notes
 
@@ -969,9 +981,9 @@ int main( )
 
 ```Output
 The original vector v is:
- ( 100 200 300 400 500 600 700 ).
+( 100 200 300 400 500 600 700 ).
 The value of the element referred to by vref is: 100,
- the first element in the vector.
+the first element in the vector.
 The element referred to by vref after being modified is: 150.
 ```
 
@@ -1061,7 +1073,7 @@ int main( )
 
    vfIter = v.begin( );
    allocator<double>::value_type vecVal = 150.0;
- *vfIter = vecVal;
+*vfIter = vecVal;
    cout << "The value of the element addressed by vfIter is: "
         << *vfIter << ",\n the first element in the vector." << endl;
 
@@ -1074,11 +1086,11 @@ int main( )
 
 ```Output
 The original vector v is:
- ( 100 200 300 400 500 600 700 ).
+( 100 200 300 400 500 600 700 ).
 The value of the element addressed by vfIter is: 150,
- the first element in the vector.
+the first element in the vector.
 The modified vector v is:
- ( 150 200 300 400 500 600 700 ).
+( 150 200 300 400 500 600 700 ).
 ```
 
 ## <a name="see-also"></a>Voir aussi

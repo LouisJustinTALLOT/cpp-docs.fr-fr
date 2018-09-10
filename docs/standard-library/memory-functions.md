@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957423"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101662"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;, fonctions
 
@@ -113,7 +113,8 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* l’objet ou la fonction pour laquelle obtenir l’adresse exacte.
+*Val*<br/>
+Objet ou fonction desquels obtenir l'adresse exacte.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -136,13 +137,17 @@ void* align(
 
 ### <a name="parameters"></a>Paramètres
 
-*Alignement* limite d’alignement à tenter.
+*Alignement*<br/>
+Limite d'alignement à tenter.
 
-*Taille* la taille en octets du stockage aligné.
+*Taille*<br/>
+Taille en octets du stockage aligné.
 
-*PTR* l’adresse de départ du pool de stockage contigu disponible à utiliser. Ce paramètre est également un paramètre de sortie et est défini pour contenir la nouvelle adresse de départ si l’alignement est réussi. Si `align()` échoue, ce paramètre n'est pas modifié.
+*PTR*<br/>
+Adresse de départ du pool de stockage contigu disponible à utiliser. Ce paramètre est également un paramètre de sortie et est défini pour contenir la nouvelle adresse de départ si l’alignement est réussi. Si `align()` échoue, ce paramètre n'est pas modifié.
 
-*Espace* l’espace total disponible pour `align()` à utiliser pour créer le stockage aligné. Ce paramètre est également un paramètre de sortie. Il contient l'espace ajusté restant dans la mémoire tampon de stockage une fois le stockage aligné et toute surcharge associée soustraite.
+*Espace*<br/>
+Espace total disponible pour `align()` pour la création du stockage aligné. Ce paramètre est également un paramètre de sortie. Il contient l'espace ajusté restant dans la mémoire tampon de stockage une fois le stockage aligné et toute surcharge associée soustraite.
 
 Si `align()` échoue, ce paramètre n'est pas modifié.
 
@@ -189,9 +194,11 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>Paramètres
 
-*Alloc* allocateur utilisé pour créer des objets.
+*Alloc*<br/>
+Allocateur utilisé pour créer les objets.
 
-*Args* zéro ou plusieurs arguments qui deviennent les objets.
+*Args*<br/>
+Zéro ou plusieurs arguments qui deviennent les objets.
 
 ### <a name="remarks"></a>Notes
 
@@ -209,11 +216,14 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* type contrôlé par retourné partagés à pointeur.
+*Ty*<br/>
+Type contrôlé par le pointeur partagé retourné.
 
-*Autres* type contrôlé par le pointeur partagé d’argument.
+*Autre*<br/>
+Type contrôlé par le pointeur partagé d’argument.
 
-*Autres* le pointeur partagé d’argument.
+*Autre*<br/>
+Pointeur partagé d’argument.
 
 ### <a name="remarks"></a>Notes
 
@@ -275,7 +285,8 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* un pointeur vers une zone de stockage accessible, allouée, valide.
+*ptr*<br/>
+Pointeur vers une zone de stockage accessible, allouée et valide.
 
 ### <a name="remarks"></a>Notes
 
@@ -296,7 +307,8 @@ struct default_delete {
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* pointeur vers l’objet à supprimer.
+*PTR*<br/>
+Pointeur vers l'objet à supprimer.
 
 Autres type des éléments dans le tableau doit être supprimé.
 
@@ -316,11 +328,14 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* type contrôlé par retourné partagés à pointeur.
+*Ty*<br/>
+Type contrôlé par le pointeur partagé retourné.
 
-*Autres* type contrôlé par le pointeur partagé d’argument.
+*Autre*<br/>
+Type contrôlé par le pointeur partagé d’argument.
 
-*SP* le pointeur partagé d’argument.
+*SP*<br/>
+Pointeur partagé d’argument.
 
 ### <a name="remarks"></a>Notes
 
@@ -373,11 +388,14 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-*D* le type du SUPPRESSEUR.
+*D*<br/>
+Type du suppresseur.
 
-*Ty* type contrôlé par le pointeur partagé.
+*Ty*<br/>
+Type contrôlé par le pointeur partagé.
 
-*SP* le pointeur partagé.
+*SP*<br/>
+Pointeur partagé.
 
 ### <a name="remarks"></a>Notes
 
@@ -451,7 +469,8 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre de* le nombre maximal d’éléments demandés pour quelle mémoire doit être allouée.
+*count*<br/>
+Nombre maximal d’éléments demandés pour lesquels la mémoire doit être allouée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -619,15 +638,20 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>Paramètres
 
-*T* le type de l’objet qui le `unique_ptr` pointera vers.
+*T*<br/>
+Type de l’objet vers lequel pointera le `unique_ptr`.
 
-*Types* les types des arguments de constructeur spécifiés par *Args*.
+*Types*<br/>
+Les types des arguments de constructeur spécifiés par *Args*.
 
-*Args* les arguments à passer au constructeur de l’objet de type *T*.
+*Args*<br/>
+Les arguments à passer au constructeur de l’objet de type *T*.
 
-*Elem* un tableau d’éléments de type *T*.
+*Elem*<br/>
+Un tableau d’éléments de type *T*.
 
-*Taille* le nombre d’éléments à allouer de l’espace pour le nouveau tableau.
+*Taille*<br/>
+Nombre d’éléments pour lesquels allouer de l’espace dans le nouveau tableau.
 
 ### <a name="remarks"></a>Notes
 
@@ -684,9 +708,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Paramètres
 
-*à gauc_he* un pointeur partagé ou faible.
+*à gauc_he*<br/>
+Pointeur partagé ou faible.
 
-*droit* un pointeur partagé ou faible.
+*right*<br/>
+Pointeur partagé ou faible.
 
 ### <a name="remarks"></a>Notes
 
@@ -703,7 +729,8 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pbuf* un pointeur vers la mémoire à libérer.
+*_Pbuf*<br/>
+Pointeur vers la mémoire à libérer.
 
 ### <a name="remarks"></a>Notes
 
@@ -744,7 +771,7 @@ int main( )
 ```Output
 The number of integers in the array is: 7.
 The number of elements that the allocated memory
- could store is given by: resultPair.second = 7.
+could store is given by: resultPair.second = 7.
 ```
 
 ## <a name="static_pointer_cast"></a>  static_pointer_cast
@@ -759,11 +786,14 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* type contrôlé par retourné partagés à pointeur.
+*Ty*<br/>
+Type contrôlé par le pointeur partagé retourné.
 
-*Autres* type contrôlé par le pointeur partagé d’argument.
+*Autre*<br/>
+Type contrôlé par le pointeur partagé d’argument.
 
-*Autres* le pointeur partagé d’argument.
+*Autre*<br/>
+Pointeur partagé d’argument.
 
 ### <a name="remarks"></a>Notes
 
@@ -818,13 +848,17 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* type contrôlé par le pointeur partagé/faible de gauche.
+*Ty*<br/>
+Type contrôlé par le pointeur partagé/faible de gauche.
 
-*Autres* type contrôlé par le pointeur partagé/faible de droite.
+*Autre*<br/>
+Type contrôlé par le pointeur partagé/faible de droite.
 
-*gauche* le pointeur partagé/faible de gauche.
+*left*<br/>
+Pointeur partagé/faible de gauche.
 
-*droit* le pointeur partagé/faible de droite.
+*right*<br/>
+Pointeur partagé/faible de droite.
 
 ### <a name="remarks"></a>Notes
 
@@ -927,11 +961,14 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un itérateur d’entrée qui traite le premier élément dans la plage source.
+*first*<br/>
+Itérateur d'entrée qui traite le premier élément de la plage source.
 
-*dernière* un itérateur d’entrée qui traite le dernier élément dans la plage source.
+*last*<br/>
+Itérateur d'entrée qui traite le dernier élément de la plage source.
 
-*dest* un itérateur vers l’avant qui traite le premier élément dans la plage de destination.
+*dest*<br/>
+Itérateur vers l’avant qui traite le premier élément de la plage de destination.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1032,11 +1069,14 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un itérateur d’entrée qui fait référence à l’objet à copier.
+*first*<br/>
+Itérateur d'entrée qui fait référence à l'objet à copier.
 
-*nombre* A signé ou non signé de type entier spécifiant le nombre de fois pour copier l’objet.
+*count*<br/>
+Type entier signé ou non signé spécifiant le nombre de fois que l'objet doit être copié.
 
-*dest* un itérateur vers l’avant qui fait référence à où les nouvelles copies aller.
+*dest*<br/>
+Itérateur vers l’avant qui fait référence à l'emplacement des nouvelles copies.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1066,11 +1106,14 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un itérateur vers l’avant qui traite le premier élément dans la plage de destination devant être initialisée.
+*first*<br/>
+Itérateur vers l’avant qui traite le premier élément de la plage de destination devant être initialisée.
 
-*dernière* un itérateur vers l’avant qui traite le dernier élément dans la plage de destination devant être initialisée.
+*last*<br/>
+Itérateur vers l’avant qui traite le dernier élément de la plage de destination devant être initialisée.
 
-*Val* la valeur à utiliser pour initialiser la plage de destination.
+*Val*<br/>
+Valeur à utiliser pour initialiser la plage de destination.
 
 ### <a name="remarks"></a>Notes
 
@@ -1135,11 +1178,14 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un itérateur forward qui traite le premier élément dans la plage de destination devant être initialisée.
+*first*<br/>
+Itérateur vers l’avant qui traite le premier élément de la plage de destination devant être initialisée.
 
-*nombre de* le nombre d’éléments à initialiser.
+*count*<br/>
+Nombre d'éléments à initialiser.
 
-*Val* la valeur à utiliser pour initialiser la plage de destination.
+*Val*<br/>
+Valeur à utiliser pour initialiser la plage de destination.
 
 ### <a name="remarks"></a>Notes
 

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954888"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106449"
 ---
 # <a name="messages-class"></a>messages, classe
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
+*CharType*<br/>
+Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
 ## <a name="remarks"></a>Notes
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval* le catalogue à fermer.
+*_Catval*<br/>
+Catalogue à fermer.
 
 ### <a name="remarks"></a>Notes
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval* le catalogue à fermer.
+*_Catval*<br/>
+Catalogue à fermer.
 
 ### <a name="remarks"></a>Notes
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval* la valeur d’identification spécifiant le catalogue de messages à rechercher.
+*_Catval*<br/>
+Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*_Définir* premier identificateur utilisé pour localiser un message dans un catalogue de messages.
+*_Définir*<br/>
+Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Message* deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
+*_Message*<br/>
+Deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Dfault* la chaîne à retourner en cas d’échec.
+*_Dfault*<br/>
+Chaîne à retourner en cas d’échec.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catname* le nom du catalogue à rechercher.
+*_Catname*<br/>
+Nom du catalogue dans lequel rechercher.
 
-*_Loc* les paramètres régionaux recherchée dans le catalogue.
+*_Loc*<br/>
+Paramètres régionaux recherchés dans le catalogue.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval* la valeur d’identification spécifiant le catalogue de messages à rechercher.
+*_Catval*<br/>
+Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*_Définir* premier identificateur utilisé pour localiser un message dans un catalogue de messages.
+*_Définir*<br/>
+Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Message* deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
+*_Message*<br/>
+Deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Dfault* la chaîne à retourner en cas d’échec.
+*_Dfault*<br/>
+Chaîne à retourner en cas d’échec.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs*<br/>
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
-*_Locname* le nom des paramètres régionaux.
+*_Locname*<br/>
+Nom des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catname* le nom du catalogue à rechercher.
+*_Catname*<br/>
+Nom du catalogue dans lequel rechercher.
 
-*_Loc* les paramètres régionaux recherchée dans le catalogue.
+*_Loc*<br/>
+Paramètres régionaux recherchés dans le catalogue.
 
 ### <a name="return-value"></a>Valeur de retour
 

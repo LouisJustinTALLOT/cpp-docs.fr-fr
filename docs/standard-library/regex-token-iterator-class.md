@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d4dd1f7b428e3b19f86445bf0b191fb840ecdb9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960965"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101000"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator, classe
 
@@ -87,11 +87,14 @@ private:
 
 ### <a name="parameters"></a>Paramètres
 
-*BidIt* le type d’itérateur pour les sous-correspondances.
+*BidIt*<br/>
+Type d'itérateur pour les sous-correspondances.
 
-*Elem* le type des éléments à faire correspondre.
+*Elem*<br/>
+Type des éléments à faire correspondre.
 
-*RXtraits* classe Traits des éléments.
+*RXtraits*<br/>
+Classe Traits des éléments.
 
 ## <a name="remarks"></a>Notes
 
@@ -335,7 +338,8 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* l’itérateur à comparer à.
+*right*<br/>
+Itérateur auquel comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -679,7 +683,8 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* l’itérateur à comparer à.
+*right*<br/>
+Itérateur auquel comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -1144,13 +1149,17 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Paramètres
 
-*première* début de la séquence pour faire correspondre.
+*first*<br/>
+Début de la séquence à mettre en correspondance.
 
-*dernière* fin de séquence pour faire correspondre.
+*last*<br/>
+Fin de la séquence à mettre en correspondance.
 
-*Re* une expression régulière pour les correspondances.
+*RE*<br/>
+Expression régulière pour les correspondances.
 
-*f* indicateurs pour les correspondances.
+*f*<br/>
+Indicateurs pour les correspondances.
 
 ### <a name="remarks"></a>Notes
 

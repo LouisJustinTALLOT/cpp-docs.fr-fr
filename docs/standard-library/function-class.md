@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3cfafc2c17ef804cb8d87c1189c8a7f3163d3c46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959927"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104132"
 ---
 # <a name="function-class"></a>function, classe
 
@@ -89,9 +89,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*Fty* le type de fonction à encapsuler.
+*Fty*<br/>
+Type de fonction à encapsuler.
 
-*AX* la fonction d’allocateur.
+*AX*<br/>
+Fonction allocator.
 
 ## <a name="remarks"></a>Notes
 
@@ -164,11 +166,14 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Paramètres
 
-*_Func* un objet pouvant être appelé.
+*_Func*<br/>
+Objet pouvant être appelé.
 
-*_Fnref* un wrapper de référence qui contient un objet pouvant être appelé.
+*_Fnref*<br/>
+Wrapper de référence qui contient un objet pouvant être appelé.
 
-*AX* un objet allocateur.
+*AX*<br/>
+Objet allocateur.
 
 ### <a name="remarks"></a>Notes
 
@@ -199,17 +204,23 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* l’objet de fonction à copier.
+*right*<br/>
+Objet de fonction à copier.
 
-*FX* le type de l’objet pouvant être appelé.
+*FX*<br/>
+Type de l’objet pouvant être appelé.
 
-*_Func* l’objet pouvant être appelé à encapsuler.
+*_Func*<br/>
+Objet pouvant être appelé à inclure dans un wrapper.
 
-*Alloc* le type d’allocateur.
+*Alloc*<br/>
+Type allocateur.
 
-*AX* l’allocateur.
+*AX*<br/>
+Allocateur.
 
-*_Fnref* la référence d’objet pouvant être appelé à encapsuler.
+*_Fnref*<br/>
+Référence de l’objet pouvant être appelé à inclure dans un wrapper.
 
 ### <a name="remarks"></a>Notes
 
@@ -340,9 +351,11 @@ result_type operator()(
 
 ### <a name="parameters"></a>Paramètres
 
-*TN* le type de l’argument d’appel nième.
+*TN*<br/>
+Type du N-ième argument de l’appel.
 
-*tN* le N-ième argument de l’appel.
+*tN*<br/>
+N-ième argument de l’appel.
 
 ### <a name="remarks"></a>Notes
 
@@ -391,13 +404,17 @@ template <class Fty>
 
 ### <a name="parameters"></a>Paramètres
 
-*NPC* une constante pointeur null.
+*NPC*<br/>
+Pointeur null constant.
 
-*droit* l’objet de fonction à copier.
+*right*<br/>
+Objet de fonction à copier.
 
-*fn* l’objet pouvant être appelé à encapsuler.
+*fn*<br/>
+Objet pouvant être appelé à inclure dans un wrapper.
 
-*fnref* la référence d’objet pouvant être appelé à encapsuler.
+*fnref*<br/>
+Référence de l’objet pouvant être appelé à inclure dans un wrapper.
 
 ### <a name="remarks"></a>Notes
 
@@ -506,7 +523,8 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* l’objet de fonction à échanger.
+*right*<br/>
+Objet de fonction à échanger.
 
 ### <a name="remarks"></a>Notes
 
@@ -567,7 +585,8 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Paramètres
 
-*Fty2* le type d’objet pouvant être appelé cible à tester.
+*Fty2*<br/>
+Type d’objet pouvant être appelé cible à vérifier.
 
 ### <a name="remarks"></a>Notes
 

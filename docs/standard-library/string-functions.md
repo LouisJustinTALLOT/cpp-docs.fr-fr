@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954901"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106741"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt;, fonctions
 
@@ -85,11 +85,14 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>Paramètres
 
-*est* le flux d’entrée à partir de laquelle une chaîne doit être extraite.
+*is*<br/>
+Flux d'entrée à partir duquel une chaîne doit être extraite.
 
-*Str* la chaîne dans laquelle les caractères sont lus à partir du flux d’entrée.
+*str*<br/>
+Chaîne dans laquelle les caractères sont lus à partir du flux d'entrée.
 
-*delim* le délimiteur de ligne.
+*Delim*<br/>
+Délimiteur de ligne.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -426,9 +429,11 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* une chaîne dont les éléments doivent être échangés avec ceux d’une autre chaîne.
+*left*<br/>
+Chaîne dont les éléments doivent être échangés avec ceux d'une autre chaîne.
 
-*droit* l’autre chaîne dont les éléments doivent être échangés avec la première chaîne.
+*right*<br/>
+Autre chaîne dont les éléments doivent être échangés avec la première chaîne.
 
 ### <a name="remarks"></a>Notes
 

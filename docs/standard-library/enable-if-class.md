@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c4cdc26c66c05cda821b43367b806ecc2a2a8168
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966483"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100804"
 ---
 # <a name="enableif-class"></a>enable_if, classe
 
@@ -37,9 +37,11 @@ struct enable_if;
 
 ### <a name="parameters"></a>Paramètres
 
-*B* la valeur qui détermine l’existence du type résultant.
+*B*<br/>
+Valeur qui détermine l'existence du type obtenu.
 
-*T* type à instancier si *B* a la valeur true.
+*T*<br/>
+Type à instancier si *B* a la valeur true.
 
 ## <a name="remarks"></a>Notes
 
@@ -64,12 +66,12 @@ Voici quatre exemples de scénarios :
     template <your_stuff>
 typename enable_if<your_condition, your_return_type>::type
     yourfunction(args) {// ...
- }
+}
 // The alias template makes it more concise:
     template <your_stuff>
 enable_if_t<your_condition, your_return_type>
 yourfunction(args) {// ...
- }
+}
 ```
 
 - Scénario 2 : Ajout d'un paramètre de fonction qui a un argument par défaut :
@@ -78,7 +80,7 @@ yourfunction(args) {// ...
     template <your_stuff>
 your_return_type_if_present
     yourfunction(args, enable_if_t<your condition, FOO> = BAR) {// ...
- }
+}
 ```
 
 - Scénario 3 : Ajout d'un paramètre de modèle qui a un argument par défaut :
@@ -95,7 +97,7 @@ rest_of_function_declaration_goes_here
 void your_function(const T& t,
     enable_if_t<is_something<T>::value, const string&>
 s) {// ...
- }
+}
 ```
 
 Le scénario 1 ne fonctionne pas avec des constructeurs ni des opérateurs de conversion, car ils n'ont pas de types de retour.

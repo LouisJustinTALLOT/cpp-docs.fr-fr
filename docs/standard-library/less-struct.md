@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c146862a18d4292dd6c375dda83063bbcf4dee4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 231b3f0267f50f68452d4ba0b6cb2f186a07e3e5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954353"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100935"
 ---
 # <a name="less-struct"></a>less (struct)
 
@@ -51,9 +51,11 @@ struct less<void>
 
 *Type*, *T*, *U* n’importe quel type qui prend en charge un `operator<` qui accepte des opérandes des types spécifiés ou inférés.
 
-*Gauche* l’opérande gauche de la moins-que l’opération. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+*Gauche*<br/>
+Opérande gauche de l’opération Inférieur à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
 
-*Droite* l’opérande de droite de la moins-que l’opération. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+*Droite*<br/>
+Opérande droit de l’opération Inférieur à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -105,7 +107,7 @@ cout << Iter1->m_i << " ";
    for ( Iter1 = v1.begin() ; Iter1 != v1.end() ; Iter1++ )
 cout << Iter1->m_i << " ";
    cout << ")" << endl;
- }
+}
 ```
 
 ## <a name="output"></a>Sortie

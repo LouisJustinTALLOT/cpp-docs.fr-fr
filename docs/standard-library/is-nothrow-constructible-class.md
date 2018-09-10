@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c4a96224b86cb12af4e3abfed1f02b33e8a2594
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0726839baadf5265d604f231615f1add069ccfcb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966561"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106522"
 ---
 # <a name="isnothrowconstructible-class"></a>is_nothrow_constructible, classe
 
@@ -37,9 +37,11 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*T* type à interroger.
+*T*<br/>
+Type à interroger.
 
-*Args* les types d’arguments à faire correspondre dans un constructeur de *T*.
+*Args*<br/>
+Les types d’arguments à faire correspondre dans un constructeur de *T*.
 
 ## <a name="remarks"></a>Notes
 

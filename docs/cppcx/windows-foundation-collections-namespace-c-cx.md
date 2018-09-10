@@ -15,38 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de406267a4c18cace88882b26f6b249fc5a0efa3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2d5cf1895bcd2f5ae78ba8aa08d874fe7a60258
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761041"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101896"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections (espace de noms) (C++/CX)
-C++ / c++ / CX complète l’espace de noms Windows::Foundation :: collections avec des fonctions qui simplifient l’utilisation des classes de collection Vector, VectorView, Map et MapView.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-namespace Windows {  
-    namespace Foundation {  
-        namespace Collections;  
-    }  
-}  
-```  
-  
-### <a name="functions"></a>Fonctions  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[back_inserter, fonction](../cppcx/back-inserter-function.md)|Retourne un itérateur qui peut être utilisé pour insérer une valeur à la fin d’une collection.|  
-|[begin, fonction](../cppcx/begin-function.md)|Retourne un itérateur qui pointe vers le début d’une collection.|  
-|[end, fonction](../cppcx/end-function.md)|Retourne un itérateur qui pointe au-delà de la fin d’une collection.|  
-|[to_vector, fonction](../cppcx/to-vector-function.md)|Retourne une collection sous la forme d’un std::vector.|  
-  
-### <a name="requirements"></a>Configuration requise  
- **En-tête :** collection.h  
-  
- **Espace de noms :** Windows::Foundation::Collections  
-  
+
+C++ / c++ / CX complète l’espace de noms Windows::Foundation :: collections avec des fonctions qui simplifient l’utilisation des classes de collection Vector, VectorView, Map et MapView.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+namespace Windows {
+    namespace Foundation {
+        namespace Collections;
+    }
+}
+```
+
+### <a name="functions"></a>Fonctions
+
+|Nom|Description|
+|----------|-----------------|
+|[back_inserter, fonction](../cppcx/back-inserter-function.md)|Retourne un itérateur qui peut être utilisé pour insérer une valeur à la fin d’une collection.|
+|[begin, fonction](../cppcx/begin-function.md)|Retourne un itérateur qui pointe vers le début d’une collection.|
+|[end, fonction](../cppcx/end-function.md)|Retourne un itérateur qui pointe au-delà de la fin d’une collection.|
+|[to_vector, fonction](../cppcx/to-vector-function.md)|Retourne une collection sous la forme d’un std::vector.|
+
+### <a name="requirements"></a>Configuration requise
+
+**En-tête :** collection.h
+
+**Espace de noms :** Windows::Foundation::Collections
+

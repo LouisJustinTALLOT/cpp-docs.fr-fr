@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53a069138b4e54988be008917e5ca2b24fa0a6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69347ab698661346b8d598dda1bb007d071a21f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411882"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104145"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW, macros
 
@@ -136,23 +136,26 @@ _RPTFWn(
 
 ### <a name="parameters"></a>Paramètres
 
-*reportType* type de rapport : **_CRT_WARN**, **_CRT_ERROR**, ou **_CRT_ASSERT**.
+*reportType*<br/>
+Type de rapport : **_CRT_WARN**, **_CRT_ERROR**, ou **_CRT_ASSERT**.
 
-*format* chaîne de contrôle de Format utilisée pour créer le message de l’utilisateur.
+*format*<br/>
+Chaîne de contrôle de format utilisée pour créer le message utilisateur.
 
-*args* utilisés par des arguments de Substitution *format*.
+*args*<br/>
+Arguments de substitution utilisés par *format*.
 
 ## <a name="remarks"></a>Notes
 
-Toutes ces macros prennent le *reportType* et *format* paramètres. De plus, il peuvent aussi accepter jusqu’à quatre arguments supplémentaires, ce qui est indiqué par le nombre ajouté au nom de la macro. Par exemple, **_RPT0** et **_RPTF0** ne prendre aucun argument supplémentaire, **_RPT1** et **_RPTF1** prendre *arg1*, **_RPT2** et **_RPTF2** prendre *arg1* et **arg2**, et ainsi de suite.
+Toutes ces macros acceptent les *reportType* et *format* paramètres. De plus, il peuvent aussi accepter jusqu’à quatre arguments supplémentaires, ce qui est indiqué par le nombre ajouté au nom de la macro. Par exemple, **_RPT0** et **_RPTF0** ne prendre aucun argument supplémentaire, **_RPT1** et **_RPTF1** prendre *arg1*, **_RPT2** et **_RPTF2** prendre *arg1* et **arg2**, et ainsi de suite.
 
-Le **_RPT** et **_RPTF** macros sont similaires à la [printf](printf-printf-l-wprintf-wprintf-l.md) fonctionne, car ils peuvent être utilisés pour suivre la progression de l’application pendant le processus de débogage. Toutefois, ces macros sont plus souples que **printf** , car ils n’avez pas besoin d’être mises entre **#ifdef** instructions pour les empêcher d’être appelée dans une version commerciale d’une application. Cette souplesse est obtenue à l’aide de la [_DEBUG](../../c-runtime-library/debug.md) macro ; le **_RPT** et **_RPTF** macros sont disponibles uniquement quand le **_DEBUG** indicateur est défini. Lorsque **_DEBUG** est ne pas défini, les appels à ces macros sont supprimés lors du prétraitement.
+Le **_RPT** et **_RPTF** macros sont similaires à la [printf](printf-printf-l-wprintf-wprintf-l.md) fonctionner, car ils peuvent être utilisés pour suivre la progression d’une application pendant le processus de débogage. Toutefois, ces macros sont plus flexibles que **printf** , car ils n’êtes pas obligé d’être placé entre **#ifdef** les instructions pour les empêcher d’être appelées dans une version commerciale d’une application. Cette flexibilité s’obtient grâce à l’aide de la [_DEBUG](../../c-runtime-library/debug.md) macro ; le **_RPT** et **_RPTF** macros sont disponibles uniquement lorsque le **_DEBUG** indicateur est défini. Lorsque **_DEBUG** est ne pas défini, les appels à ces macros sont supprimés lors du prétraitement.
 
-Le **_RPTW** et **_RPTFW** macros sont des versions à caractères larges de ces macros. Ils sont similaires aux **wprintf** et prennent des chaînes de caractères larges en tant qu’arguments.
+Le **_RPTW** et **_RPTFW** macros sont des versions à caractères larges de ces macros. Ils sont similaires **wprintf** et prendre des chaînes à caractères larges en tant qu’arguments.
 
-Le **_RPT** macros appel le [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) fonction pour générer un rapport de débogage avec un message de l’utilisateur. Le **_RPTW** macros appel le **_CrtDbgReportW** afin de générer le même rapport avec les caractères larges. Le **_RPTF** et **_RPTFW** macros créent un rapport de débogage avec le nombre de fichiers et de la ligne source où la macro de rapport a été appelée, par ailleurs dans le message de l’utilisateur. Le message utilisateur est créé en substituant le **arg**[*n*] arguments dans le *format* chaîne, en utilisant les mêmes règles définies par le [printf](printf-printf-l-wprintf-wprintf-l.md)(fonction).
+Le **_RPT** macros appel le [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) fonction permettant de générer un rapport de débogage avec un message de l’utilisateur. Le **_RPTW** macros appel le **_CrtDbgReportW** fonction permettant de générer le même rapport avec des caractères larges. Le **_RPTF** et **_RPTFW** macros créent un rapport de débogage avec le nombre de lignes et les fichiers source où la macro de rapport a été appelée, en outre le message utilisateur. Le message utilisateur est créé en remplaçant le **arg**[*n*] arguments dans le *format* de chaîne, à l’aide des mêmes règles définies par le [printf](printf-printf-l-wprintf-wprintf-l.md)(fonction).
 
-**_CrtDbgReport** ou **_CrtDbgReportW** génère le rapport de débogage et détermine sa destinations basées sur les modes de rapport actuel et le fichier défini pour *reportType*. Les fonctions [_CrtSetReportMode](crtsetreportmode.md) et [_CrtSetReportFile](crtsetreportfile.md) servent à définir les destinations de chaque type de rapport.
+**_CrtDbgReport** ou **_CrtDbgReportW** génère le rapport de débogage et détermine ses destinations en fonction des modes de rapport actuel et le fichier défini pour *reportType*. Les fonctions [_CrtSetReportMode](crtsetreportmode.md) et [_CrtSetReportFile](crtsetreportfile.md) servent à définir les destinations de chaque type de rapport.
 
 Si un **_RPT** macro est appelée et ni **_CrtSetReportMode** ni **_CrtSetReportFile** a été appelée, les messages sont affichés comme suit.
 
@@ -162,11 +165,11 @@ Si un **_RPT** macro est appelée et ni **_CrtSetReportMode** ni **_CrtSetReport
 |**_CRT_ERROR**|Fenêtre contextuelle. Comme si `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` avait été spécifié.|
 |**_CRT_ASSERT**|Identique à **_CRT_ERROR**.|
 
-Lorsque la destination est une fenêtre de message de débogage et que l’utilisateur choisit le **réessayer** bouton, **_CrtDbgReport** ou **_CrtDbgReportW** retourne 1, à l’origine de ces macros, pour démarrer le débogueur, sous réserve que le débogage juste-à-temps (JIT) est activé. Pour plus d’informations sur l’utilisation de ces macros comme mécanisme de gestion des erreurs de débogage, consultez [Utilisation de macros pour la vérification et la création de rapports](/visualstudio/debugger/macros-for-reporting).
+Lorsque la destination est une fenêtre de message de débogage et l’utilisateur choisit le **de nouvelle tentative** bouton, **_CrtDbgReport** ou **_CrtDbgReportW** retourne 1, à l’origine de ces macros à démarrer le débogueur, autant que le débogage juste-à-temps (JIT) est activé. Pour plus d’informations sur l’utilisation de ces macros comme mécanisme de gestion des erreurs de débogage, consultez [Utilisation de macros pour la vérification et la création de rapports](/visualstudio/debugger/macros-for-reporting).
 
-Deux autres macros génèrent un rapport de débogage. La macro [_ASSERT](assert-asserte-assert-expr-macros.md) génère un rapport, mais seulement quand l’argument d’expression est évalué à FALSE. [_ASSERTE](assert-asserte-assert-expr-macros.md) est exactement comme **_ASSERT**, mais inclut l’expression qui a échoué dans le rapport généré.
+Deux autres macros génèrent un rapport de débogage. La macro [_ASSERT](assert-asserte-assert-expr-macros.md) génère un rapport, mais seulement quand l’argument d’expression est évalué à FALSE. [_ASSERTE](assert-asserte-assert-expr-macros.md) est identique à **_ASSERT**, mais inclut l’expression qui a échoué dans le rapport généré.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Macro|En-tête requis|
 |-----------|---------------------|
