@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58765b254069524f28b5edd171c10da92ab2f457
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b8bb688a0a79c82d4a8baa13ef2841956b5e331
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956141"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101714"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf, classe
 
@@ -61,11 +61,14 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Paramètres
 
-*Alloc* la classe allocator.
+*Alloc*<br/>
+Classe allocator.
 
-*Elem* le type de l’élément de base de la chaîne.
+*Elem*<br/>
+Type de l'élément de base de la chaîne.
 
-*TR* caractéristique spécialisée sur l’élément de base de la chaîne.
+*Tr*<br/>
+Caractéristique spécialisée sur l'élément de base de la chaîne.
 
 ## <a name="remarks"></a>Notes
 
@@ -135,9 +138,11 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*Mode _De* une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Mode _De*<br/>
+Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*Str* un objet de type [basic_string](../standard-library/basic-string-class.md).
+*str*<br/>
+Objet de type [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Notes
 
@@ -179,7 +184,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta* le caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
+*_Meta*<br/>
+Caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -203,7 +209,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta* le caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
+*_Meta*<br/>
+Caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -238,11 +245,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* la position à rechercher par rapport à *_Way*. Pour plus d’informations, consultez [basic_stringbuf::off_type](#off_type).
+*_Off*<br/>
+La position à rechercher par rapport à *_Way*. Pour plus d’informations, consultez [basic_stringbuf::off_type](#off_type).
 
-*_Way* le point de départ pour les opérations de décalage. Consultez [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
+*_Way*<br/>
+Point de départ des opérations de décalage. Consultez [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
-*Mode _De* Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Mode _De*<br/>
+Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -274,9 +284,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sp* la position à rechercher.
+*_Sp*<br/>
+Position à rechercher.
 
-*Mode _De* Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*Mode _De*<br/>
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -300,7 +312,8 @@ void str(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Newstr* la nouvelle chaîne.
+*_Newstr*<br/>
+La nouvelle chaîne.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -388,7 +401,8 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Paramètres
 
-*autres* basic_stringbuf dont le contenu sera permuté avec ce basic_stringbuf.
+*other*<br/>
+basic_stringbuf dont le contenu sera permuté avec ce basic_stringbuf.
 
 ### <a name="remarks"></a>Notes
 
@@ -402,7 +416,8 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Paramètres
 
-*autres* un basic_stringbuf dont le contenu, y compris les caractéristiques des paramètres régionaux, sera être assigné au stringbuf sur le côté gauche de l’opérateur.
+*other*<br/>
+Un basic_stringbuf dont le contenu, y compris les caractéristiques des paramètres régionaux, sera assigné au stringbuf à gauche de l'opérateur.
 
 ### <a name="remarks"></a>Notes
 

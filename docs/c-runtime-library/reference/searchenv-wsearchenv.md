@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e0fea9154801f850640234355af53dc1154160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afcd461446f98024e04e44e28facae4fba65b0aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408913"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100398"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -87,27 +87,30 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Paramètres
 
-*nom de fichier* nom du fichier à rechercher.
+*filename*<br/>
+Nom du fichier à rechercher.
 
-*nom de variable* environnement à rechercher.
+*nom de variable*<br/>
+Environnement dans lequel effectuer la recherche.
 
-*chemin d’accès* mémoire tampon pour stocker le chemin d’accès complet.
+*chemin d’accès*<br/>
+Mémoire tampon destinée à stocker le chemin d’accès complet.
 
 ## <a name="remarks"></a>Notes
 
 Le **_searchenv** routine recherche le fichier cible dans le domaine spécifié. Le *varname* variable peut être n’importe quel environnement ou une variable définie par l’utilisateur, par exemple, **chemin d’accès**, **LIB**, ou **INCLUDE**, qui spécifie un liste de chemins d’accès de répertoire. Étant donné que **_searchenv** respecte la casse, *varname* doit correspondre à la casse de la variable d’environnement.
 
-La routine recherche d'abord le fichier dans le répertoire de travail actuel. Si elle ne le trouve pas, elle parcourt les répertoires spécifiés par la variable d'environnement. Si le fichier cible est dans un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans *chemin d’accès*. Si le *nom de fichier* fichier est introuvable, *chemin d’accès* contient une chaîne vide se terminant par null.
+La routine recherche d'abord le fichier dans le répertoire de travail actuel. Si elle ne le trouve pas, elle parcourt les répertoires spécifiés par la variable d'environnement. Si le fichier cible est dans un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans *pathname*. Si le *filename* fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
 
-Le *chemin d’accès* mémoire tampon doit être au moins **_MAX_PATH** caractères pour prendre en compte la longueur totale du nom de chemin d’accès construit. Dans le cas contraire, **_searchenv** risque de saturer le *chemin d’accès* de mémoire tampon et provoquer un comportement inattendu.
+Le *pathname* mémoire tampon doit être au moins **_MAX_PATH** caractères pour prendre en compte la longueur totale du nom de chemin d’accès construit. Sinon, **_searchenv** risque de saturer le *pathname* mettre en mémoire tampon et entraîner un comportement inattendu.
 
-**_wsearchenv** est une version à caractères larges de **_searchenv**et les arguments de **_wsearchenv** sont des chaînes à caractères larges. **_wsearchenv** et **_searchenv** comportent de façon identique.
+**_wsearchenv** est une version à caractères larges de **_searchenv**et les arguments de **_wsearchenv** sont des chaînes à caractères larges. **_wsearchenv** et **_searchenv** se comportent de façon identique dans le cas contraire.
 
-Si *nom de fichier* est une chaîne vide, ces fonctions retournent **ENOENT**.
+Si *filename* est une chaîne vide, ces fonctions retournent **ENOENT**.
 
-Si *nom de fichier* ou *chemin d’accès* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Si *filename* ou *pathname* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
-Pour plus d’informations sur **errno** et codes d’erreur, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
+Pour plus d’informations sur **errno** et les codes d’erreur, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et plus sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -117,7 +120,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsearchenv**|**_searchenv**|**_searchenv**|**_wsearchenv**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

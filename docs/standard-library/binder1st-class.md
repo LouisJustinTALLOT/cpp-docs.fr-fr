@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a9e53d9344e56f9efc4f20b834ce31bcb05f9fbb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961719"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103983"
 ---
 # <a name="binder1st-class"></a>binder1st, classe
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-*Func* l’objet de fonction binaire à convertir en un objet de fonction unaire.
+*Func*<br/>
+Objet de fonction binaire à convertir en un objet de fonction unaire.
 
-*gauche* la valeur à laquelle le premier argument de l’objet de fonction binaire doit être lié.
+*left*<br/>
+Valeur à laquelle le premier argument de l’objet de fonction binaire doit être lié.
 
-*droit* la valeur de l’argument de l’objet binaire adapté compare à la valeur fixe du deuxième argument.
+*right*<br/>
+Valeur de l’argument que l’objet binaire adapté compare à la valeur fixe du deuxième argument.
 
 ## <a name="return-value"></a>Valeur de retour
 

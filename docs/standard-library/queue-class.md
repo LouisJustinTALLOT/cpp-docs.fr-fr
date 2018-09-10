@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954914"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103697"
 ---
 # <a name="queue-class"></a>queue, classe
 
@@ -52,9 +52,11 @@ class queue
 
 ### <a name="parameters"></a>Paramètres
 
-*Type* type de données de l’élément à stocker dans la file d’attente
+*Type*<br/>
+Type de données des éléments à stocker dans la classe queue
 
-*Conteneur* le type du conteneur sous-jacent utilisé pour implémenter la file d’attente.
+*Conteneur*<br/>
+Type du conteneur sous-jacent utilisé pour implémenter la classe queue.
 
 ## <a name="remarks"></a>Notes
 
@@ -331,7 +333,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* l’élément ajouté à l’arrière de la file d’attente.
+*Val*<br/>
+Élément ajouté à l’arrière de l’objet queue.
 
 ### <a name="remarks"></a>Notes
 
@@ -381,7 +384,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* le **const** conteneur sur lequel l’objet queue construit doit être une copie.
+*right*<br/>
+Conteneur **const** dont l’objet queue construit doit être une copie.
 
 ### <a name="remarks"></a>Notes
 

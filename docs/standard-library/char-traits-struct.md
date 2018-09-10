@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956880"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106081"
 ---
 # <a name="chartraits-struct"></a>char_traits, struct
 
@@ -57,7 +57,8 @@ struct char_traits;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* le type de données d’élément.
+*CharType*<br/>
+Type de données de l'élément.
 
 ## <a name="remarks"></a>Notes
 
@@ -116,11 +117,13 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom* le caractère dont la valeur doit être affecté.
 
-*_CharTo* l’élément qui doit être affecté à la valeur de caractère.
+*_CharTo*<br/>
+Élément qui doit être auquel doit être affectée la valeur du caractère.
 
 * strTo * le tableau de chaînes ou de caractères dont les éléments initiaux doivent être attribuées des valeurs de caractère.
 
-*_Num* le nombre d’éléments qui vont être affectées aux valeurs.
+*_Num*<br/>
+Nombre d’éléments auxquels des valeurs vont être assignées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -199,7 +202,8 @@ static int compare(const char_type* str1,
 
 * str2 * le second des deux chaînes à comparer à l’autre.
 
-*_Num* le nombre d’éléments dans les chaînes à comparer.
+*_Num*<br/>
+Nombre d’éléments dans les chaînes à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -258,11 +262,14 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Vers* l’élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
+*_Vers*<br/>
+Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*_From* l’élément au début du tableau de chaînes ou de caractères de source à copier.
+*_From*<br/>
+Élément au début du tableau source de chaînes ou de caractères à copier.
 
-*_Num* le nombre d’éléments à copier.
+*_Num*<br/>
+Nombre d’éléments à copier.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -317,13 +324,17 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*dest* le tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
+*dest*<br/>
+Tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*dest_size* la taille de *dest*. Si `char_type` est **char**, cette taille est exprimée en octets. Si `char_type` est **wchar_t**, cette taille est exprimée en mots.
+*dest_size*<br/>
+La taille de *dest*. Si `char_type` est **char**, cette taille est exprimée en octets. Si `char_type` est **wchar_t**, cette taille est exprimée en mots.
 
-*_From* du tableau de chaînes ou de caractères source à copier.
+*_From*<br/>
+Tableau source de chaînes ou de caractères à copier.
 
-*nombre de* le nombre d’éléments à copier.
+*count*<br/>
+Nombre d’éléments à copier.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -425,9 +436,11 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch1* le premier à tester l’égalité de deux caractères.
+*_Ch1*<br/>
+Premier de deux caractères dont l’égalité est à vérifier.
 
-*_Ch2* deuxième de deux caractères dont l’égalité.
+*_Ch2*<br/>
+Deuxième de deux caractères dont l’égalité est à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -483,9 +496,11 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch1* le premier des deux caractères à tester pour égalité comme `int_type`s.
+*_Ch1*<br/>
+Le premier des deux caractères à tester pour égalité comme `int_type`s.
 
-*_Ch2* le second des deux caractères à tester l’égalité en tant que `int_type`s.
+*_Ch2*<br/>
+Deuxième de deux caractères dont l’égalité est à vérifier, représentés sous la forme d’un `int_type`s.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -551,9 +566,9 @@ The char_types and corresponding int_types are:
     ch3 = x corresponding to int1 = 120.
 
 The int_type representation of character ch1
- is not equal to the int_type representation of ch2.
+is not equal to the int_type representation of ch2.
 The int_type representation of character ch1
- is equal to the int_type representation of ch3.
+is equal to the int_type representation of ch3.
 ```
 
 ## <a name="find"></a>  char_traits::find
@@ -568,11 +583,14 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Paramètres
 
-*Str* le premier caractère dans la chaîne à rechercher.
+*str*<br/>
+Premier caractère de la chaîne dans laquelle s’effectue la recherche.
 
-*_Num* le nombre de positions, à partir de la première, dans la plage à rechercher.
+*_Num*<br/>
+Nombre de positions, à partir de la première, de la plage dans laquelle s’effectue la recherche.
 
-*_Ch* le caractère à rechercher dans la plage.
+*_Ch*<br/>
+Caractère à rechercher dans la plage.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -616,7 +634,7 @@ int main( )
 The string to be searched is: f2d-1234-abcd
 The character searched for in s1 is: d
 The string beginning with the first occurrence
- of the character 'd' is: d-1234-abcd
+of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
@@ -646,7 +664,8 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Paramètres
 
-*Str* chaîne C dont la longueur doit être mesurée.
+*str*<br/>
+Chaîne C dont la longueur doit être mesurée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -688,9 +707,11 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch1* la première des deux caractères doit être testée inférieur à.
+*_Ch1*<br/>
+Premier de deux caractères dont la relation Inférieur à est à vérifier.
 
-*_Ch2* le second des deux caractères doit être testée inférieur à.
+*_Ch2*<br/>
+Deuxième de deux caractères dont la relation Inférieur à est à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -749,11 +770,14 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Vers* l’élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
+*_Vers*<br/>
+Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*_From* l’élément au début du tableau de chaînes ou de caractères de source à copier.
+*_From*<br/>
+Élément au début du tableau source de chaînes ou de caractères à copier.
 
-*_Num* le nombre d’éléments à copier à partir de la chaîne source.
+*_Num*<br/>
+Nombre d’éléments à copier à partir de la chaîne source.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -823,13 +847,17 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*dest* l’élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
+*dest*<br/>
+Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*dest_size* la taille de *dest*. Si `char_type` est **char**, est exprimée en octets. Si `char_type` est **wchar_t**, est exprimée en mots.
+*dest_size*<br/>
+La taille de *dest*. Si `char_type` est **char**, est exprimée en octets. Si `char_type` est **wchar_t**, est exprimée en mots.
 
-*_From* l’élément au début du tableau de chaînes ou de caractères de source à copier.
+*_From*<br/>
+Élément au début du tableau source de chaînes ou de caractères à copier.
 
-*nombre de* le nombre d’éléments à copier à partir de la chaîne source.
+*count*<br/>
+Nombre d’éléments à copier à partir de la chaîne source.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -895,7 +923,8 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* le caractère représenté comme un `int_type` à vérifier pour qu’il soit le caractère EOF ou non.
+*_Ch*<br/>
+Caractère représenté sous la forme d’un `int_type` à vérifier pour déterminer s’il est ou non le caractère EOF.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1002,7 +1031,8 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* le `int_type` caractère pour être représentée comme un `char_type`.
+*_Ch*<br/>
+Caractère `int_type` à représenter sous la forme d’un `char_type`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1107,7 +1137,8 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* le `char_type` caractère pour être représentée comme un `int_type`.
+*_Ch*<br/>
+Caractère `char_type` à représenter sous la forme d’un `int_type`.
 
 ### <a name="return-value"></a>Valeur de retour
 

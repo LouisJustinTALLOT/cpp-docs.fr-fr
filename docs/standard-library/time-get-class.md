@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0ab896860d1e759b5ad1df6bb23e93f42d28f9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9ff44c6352224b65d712161a62d34b34ee858ad6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960129"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102744"
 ---
 # <a name="timeget-class"></a>time_get, classe
 
@@ -70,10 +70,10 @@ class time_get : public time_base;
 ### <a name="parameters"></a>Paramètres
 
 *CharType*  
- Type utilisé dans le cadre d'un programme pour encoder des caractères.
+Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
 *InputIterator*  
- Itérateur dont les valeurs temporelles sont lues.
+Itérateur dont les valeurs temporelles sont lues.
 
 ## <a name="remarks"></a>Notes
 
@@ -216,7 +216,7 @@ Lit, puis convertit des données de caractères en valeur temporelle. Accepte un
 ```cpp
 virtual iter_type
     do_get(
- iter_type first,
+iter_type first,
     iter_type last,
     ios_base& iosbase,
     ios_base::iostate& state,
@@ -227,19 +227,26 @@ virtual iter_type
 
 ### <a name="parameters"></a>Paramètres
 
-*première* itérateur d’une entrée qui indique le début de la séquence à convertir.
+*first*<br/>
+Itérateur d'entrée qui indique le début de la séquence à convertir.
 
-*dernière* itérateur d’une entrée qui indique la fin de la séquence.
+*last*<br/>
+Itérateur d'entrée qui indique la fin de la séquence.
 
-*iosbase* un objet de flux.
+*iosbase*<br/>
+Objet de flux.
 
-*état* un champ dans iosbase où les éléments de masque de bits appropriés sont définis pour indiquer les erreurs.
+*state*<br/>
+Un champ dans iosbase où les éléments de masque de bits appropriés sont définis pour indiquer les erreurs.
 
-*ptm* un pointeur vers la structure de temps où l’heure doit être stocké.
+*ptm*<br/>
+Pointeur vers la structure time, où l'heure doit être stockée.
 
-*FMT* un caractère de spécificateur de conversion.
+*FMT*<br/>
+Caractère de spécificateur de conversion.
 
-*Mod* un caractère de modificateur facultatif.
+*Mod*<br/>
+Caractère de modificateur facultatif.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -314,19 +321,19 @@ virtual iter_type do_get_date(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 *state*  
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations de date doivent être stockées.
+Pointeur vers l’emplacement où les informations de date doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -365,19 +372,19 @@ virtual iter_type do_get_monthname(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Non utilisé.
+Non utilisé.
 
 *state*  
- Paramètre de sortie qui définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Paramètre de sortie qui définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations de mois doivent être stockées.
+Pointeur vers l’emplacement où les informations de mois doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -408,19 +415,19 @@ virtual iter_type do_get_time(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Non utilisé.
+Non utilisé.
 
 *state*  
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations de date doivent être stockées.
+Pointeur vers l’emplacement où les informations de date doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -459,19 +466,19 @@ virtual iter_type do_get_weekday(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 *state*  
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations de jour de la semaine doivent être stockées.
+Pointeur vers l’emplacement où les informations de jour de la semaine doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -502,19 +509,19 @@ virtual iter_type do_get_year(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 *state*  
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations d’année doivent être stockées.
+Pointeur vers l’emplacement où les informations d’année doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -557,31 +564,31 @@ iter_type get(
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d'entrée qui indique le début de la séquence à convertir.
+Itérateur d'entrée qui indique le début de la séquence à convertir.
 
 *last*  
- Itérateur d'entrée qui indique la fin de la séquence à convertir.
+Itérateur d'entrée qui indique la fin de la séquence à convertir.
 
 *iosbase*  
- flux.
+flux.
 
 *state*  
- Les éléments du masque de bits appropriés sont définis pour l'état du flux et indiquent les erreurs.
+Les éléments du masque de bits appropriés sont définis pour l'état du flux et indiquent les erreurs.
 
 *ptm*  
- Pointeur vers la structure time, où la date/heure doit être stockée.
+Pointeur vers la structure time, où la date/heure doit être stockée.
 
 *FMT*  
- Caractère de spécificateur de conversion.
+Caractère de spécificateur de conversion.
 
 *Mod*  
- Caractère de modificateur facultatif.
+Caractère de modificateur facultatif.
 
 *fmt_first*  
- Pointe là où les directives de format commencent.
+Pointe là où les directives de format commencent.
 
 *fmt_last*  
- Pointe vers la fin des directives de format.
+Pointe vers la fin des directives de format.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -614,19 +621,19 @@ iter_type get_date(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 *state*  
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations de date doivent être stockées.
+Pointeur vers l’emplacement où les informations de date doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -708,19 +715,19 @@ iter_type get_monthname(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Non utilisé.
+Non utilisé.
 
 *state*  
- Paramètre de sortie qui définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Paramètre de sortie qui définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations de mois doivent être stockées.
+Pointeur vers l’emplacement où les informations de mois doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -800,19 +807,19 @@ iter_type get_time(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Non utilisé.
+Non utilisé.
 
 *state*  
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations de date doivent être stockées.
+Pointeur vers l’emplacement où les informations de date doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -881,19 +888,19 @@ iter_type get_weekday(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 *state*  
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations de jour de la semaine doivent être stockées.
+Pointeur vers l’emplacement où les informations de jour de la semaine doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -958,19 +965,19 @@ iter_type get_year(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*  
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*  
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *iosbase*  
- Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 *state*  
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *ptm*  
- Pointeur vers l’emplacement où les informations d’année doivent être stockées.
+Pointeur vers l’emplacement où les informations d’année doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1044,7 +1051,7 @@ explicit time_get(size_t refs = 0);
 ### <a name="parameters"></a>Paramètres
 
 *Refs*  
- Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 

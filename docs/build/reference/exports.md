@@ -1,7 +1,7 @@
 ---
 title: EXPORTATIONS | Microsoft Docs
 ms.custom: ''
-ms.date: 08/20/2018
+ms.date: 09/07/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299d300cb3b2247a4dfa698a53c486bcef6164e3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894549"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104288"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -38,9 +38,7 @@ La première *définition* peut se trouver sur la même ligne que le `EXPORTS` m
 
 La syntaxe pour une exportation *définition* est :
 
-```DEF
-entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
-```
+> *nom d’entrée*\[__=__*internal_name*|*other_module.exported_name*] \[ **\@** _ordinale_ \[ **NONAME**]] \[ \[ **privé**] | \[ **Données**]]
 
 *nom d’entrée* est le nom de fonction ou une variable que vous souhaitez exporter. Cet élément est obligatoire. Si le nom que vous exportez diffère du nom dans la DLL, spécifiez nom de l’exportation dans la DLL à l’aide de *internal_name*. Par exemple, si votre DLL exporte une fonction `func1` et que vous voulez que les appelants l'utilisent comme `func2`, vous devez spécifier :
 
@@ -56,14 +54,14 @@ EXPORTS
    func2=other_module.func1
 ```
 
-Si le nom que vous exportez à partir d’un autre module qui exporte par ordinal, spécifiez l’exportation de la position ordinale dans la DLL à l’aide *other_module. #ordinal_number*. Par exemple, si votre DLL exporte une fonction à partir du module où il est 42 ordinale, et que vous souhaitez les appelants à utiliser en tant que `func2`, vous devez spécifier :
+Si le nom que vous exportez à partir d’un autre module qui exporte par ordinal, spécifiez l’exportation de la position ordinale dans la DLL à l’aide *other_module*.__#__ *ordinale*. Par exemple, si votre DLL exporte une fonction à partir du module où il est 42 ordinale, et que vous souhaitez les appelants à utiliser en tant que `func2`, vous devez spécifier :
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-Étant donné que le compilateur Visual C++ utilise la décoration de nom pour les fonctions C++, vous devez utiliser le nom décoré internal_name ou définir les fonctions exportées à l’aide d’extern « C » dans le code source. Le compilateur décore également les fonctions C qui utilisent le [__stdcall](../../cpp/stdcall.md) convention avec un trait de soulignement d’appel (\_) préfixe et un suffixe composé de l’arobase (\@) suivi du nombre d’octets (au format décimal) dans le liste d’arguments.
+Étant donné que le compilateur Visual C++ utilise la décoration de nom pour les fonctions C++, vous devez utiliser le nom décoré *internal_name* ou définir les fonctions exportées à l’aide de `extern "C"` dans le code source. Le compilateur décore également les fonctions C qui utilisent le [__stdcall](../../cpp/stdcall.md) convention avec un trait de soulignement d’appel (\_) préfixe et un suffixe composé de l’arobase (\@) suivi du nombre d’octets (au format décimal) dans le liste d’arguments.
 
 Pour rechercher les noms décorés produits par le compilateur, utilisez le [DUMPBIN](../../build/reference/dumpbin-reference.md) outil ou l’éditeur de liens [/mapper](../../build/reference/map-generate-mapfile.md) option. Les noms décorés sont spécifiques au compilateur. Si vous exportez les noms décorés dans le fichier .DEF, les exécutables qui sont liés à la DLL doivent également être générés à l'aide la même version du compilateur. Cela garantit que les noms décorés dans l'appelant correspondent aux noms exportés dans le fichier .DEF.
 
@@ -88,9 +86,16 @@ Il existe quatre méthodes pour exporter une définition, répertoriées dans l'
 
 3. Un [/EXPORT](../../build/reference/export-exports-a-function.md) spécification dans une commande LINK
 
-4. Un [commentaire](../../preprocessor/comment-c-cpp.md) directive dans le code source, sous la forme `#pragma comment(linker, "/export: definition ")`  
+4. Un [commentaire](../../preprocessor/comment-c-cpp.md) directive dans le code source, sous la forme `#pragma comment(linker, "/export: definition ")`. L’exemple suivant montre une directive de commentaire de #pragma avant une déclaration de fonction, où `PlainFuncName` est le nom non décoré, et `_PlainFuncName@4` est le nom décoré de la fonction :
 
-Ces quatre méthodes peuvent être utilisées dans le même programme. Quand LINK génère un programme qui contient des exportations, il crée également une bibliothèque d'importation, à moins qu'un fichier .EXP soit utilisé dans la build.
+    ```cpp
+    #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+    BOOL CALLBACK PlainFuncName( Things * lpParams)
+    ```
+
+La directive #pragma est utile si vous devez exporter le nom d’une fonction non décoré et avez exportations différents en fonction de la configuration de build (par exemple, dans les versions 32 bits ou 64 bits).
+
+Ces quatre méthodes peuvent être utilisées dans le même programme. Quand LINK génère un programme qui contient des exportations, il crée également une bibliothèque d'importation, à moins qu'un fichier .EXP soit utilisé dans la build. 
 
 Voici un exemple de section EXPORTS :
 

@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e644ec013b4beac6ebc4f7c774f926711dc1093e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12fd236f0b34020d6c368f603b81fe50729dcb7f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758958"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105144"
 ---
 # <a name="platformfailureexception-class"></a>Platform::FailureException, classe
-Levée lorsque l'opération a échoué. Il s'agit de l'équivalent de E_FAIL HRESULT.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public ref class FailureException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Notes  
- Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .  
-  
-### <a name="requirements"></a>Configuration requise  
- **Minimum de client pris en charge :** Windows 8  
-  
- **Minimum de serveur pris en charge :** Windows Server 2012  
-  
- **Espace de noms :** Platform  
-  
- **Métadonnées :** platform.winmd  
-  
-## <a name="see-also"></a>Voir aussi  
- [Platform::COMException, classe](../cppcx/platform-comexception-class.md)
+
+Levée lorsque l'opération a échoué. Il s'agit de l'équivalent de E_FAIL HRESULT.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public ref class FailureException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Notes
+
+Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
+
+### <a name="requirements"></a>Configuration requise
+
+**Minimum de client pris en charge :** Windows 8
+
+**Minimum de serveur pris en charge :** Windows Server 2012
+
+**Espace de noms :** Platform
+
+**Métadonnées :** platform.winmd
+
+## <a name="see-also"></a>Voir aussi
+
+[Platform::COMException, classe](../cppcx/platform-comexception-class.md)

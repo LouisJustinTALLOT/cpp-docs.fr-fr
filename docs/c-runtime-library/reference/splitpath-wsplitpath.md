@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221606"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103916"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -75,15 +75,20 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>Paramètres
 
-*chemin d’accès* chemin d’accès complet.
+*path*<br/>
+Chemin complet.
 
-*lecteur* lettre de lecteur, suivie du signe deux-points (**:**). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin de la lettre de lecteur.
+*Lecteur*<br/>
+Lecteur de lettre, suivie par un signe deux-points (**:**). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin de la lettre de lecteur.
 
-*dir* chemin d’accès de répertoire, y compris la barre oblique de fin. Barres obliques ( **/** ), barres obliques inverses ( **\\** ), ou les deux peuvent être utilisés. Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin du chemin du répertoire.
+*dir*<br/>
+Chemin de répertoire incluant une barre oblique de fin. Barres obliques ( **/** ), barres obliques inverses ( **\\** ), ou les deux peuvent être utilisés. Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin du chemin du répertoire.
 
-*fname* nom de fichier (sans extension) de Base. Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin du nom de fichier.
+*fname*<br/>
+Nom de fichier de base (sans extension). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin du nom de fichier.
 
-*Ext* extension de nom de fichier, y compris le point de début (**.**). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin de l’extension de nom de fichier.
+*Ext*<br/>
+Extension de nom de fichier, y compris le point de début (**.**). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin de l’extension de nom de fichier.
 
 ## <a name="remarks"></a>Notes
 

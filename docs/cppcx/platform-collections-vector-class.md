@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeaed487db1063efd14dddbca28480a169b13522
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761109"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103930"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 
@@ -49,10 +49,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Type des éléments contenus dans l'objet Vector.
 
-*E*  
+*E*<br/>
 Spécifie un prédicat binaire pour tester l’égalité des valeurs de type *T*. La valeur par défaut est `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Notes
@@ -128,7 +128,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Paramètres
 
-*index*  
+*index*<br/>
 Élément à insérer dans le Vector. Le type de *élément* est défini par le *T* typename.
 
 ## <a name="clear"></a>  Vector::Clear, méthode
@@ -173,7 +173,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Paramètres
 
-*index*  
+*index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -194,10 +194,10 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Paramètres
 
-*startIndex*  
+*startIndex*<br/>
 L'index de base zéro du début des éléments à récupérer.
 
-*dest*  
+*dest*<br/>
 Un tableau alloué par l’appelant d’éléments qui commencent à l’élément spécifié par *startIndex* et de fin au dernier élément dans le vecteur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -234,10 +234,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur*  
+*valeur*<br/>
 Élément à rechercher.
 
-*index*  
+*index*<br/>
 Index de base zéro de l’élément si paramètre *valeur* est trouvé ; sinon, 0.
 
 Le *index* paramètre a la valeur 0 si l’élément est introuvable ou l’élément est le premier élément du vecteur. Si la valeur de retour est `true`, l'élément est trouvé et représente le premier élément ; sinon, l'élément est introuvable.
@@ -262,10 +262,10 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Paramètres
 
-*index*  
+*index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
-*Élément*  
+*Élément*<br/>
 Un élément à insérer dans le vecteur après l’élément spécifié par *index*. Le type de *élément* est défini par le *T* typename.
 
 ## <a name="removeat"></a>  Vector::RemoveAt, méthode
@@ -280,7 +280,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Paramètres
 
-*index*  
+*index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
 ## <a name="removeatend"></a>  Vector::removeatend, méthode
@@ -305,7 +305,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>Paramètres
 
-*arr*  
+*arr*<br/>
 Un tableau d’objets dont le type est défini par le *T* typename.
 
 ## <a name="setat"></a>  Vector::SetAt, méthode
@@ -320,10 +320,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Paramètres
 
-*index*  
+*index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
-*Élément*  
+*Élément*<br/>
 Valeur à assigner à l’élément spécifié. Le type de *élément* est défini par le *T* typename.
 
 ## <a name="size"></a>  Vector::Size, méthode
@@ -365,40 +365,40 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>Paramètres
 
-*a*  
+*a*<br/>
 Un [std::array](../standard-library/array-class-stl.md) qui sera utilisé pour initialiser le Vector.
 
-*arr*  
+*arr*<br/>
 Un [Platform::Array](../cppcx/platform-array-class.md) qui sera utilisé pour initialiser le Vector.
 
-*InIt*  
+*InIt*<br/>
 Type d’une collection d’objets utilisée pour initialiser l’objet Vector actuel.
 
-*il*  
+*il*<br/>
 Un [std::initializer_list](../standard-library/initializer-list-class.md) d’objets de type *T* qui sera utilisé pour initialiser le Vector.
 
-*N*  
+*N*<br/>
 Nombre d’éléments d’une collection d’objets utilisée pour initialiser l’objet Vector actuel.
 
-*size*  
+*size*<br/>
 Nombre d'éléments dans l'objet Vector.
 
-*valeur*  
+*valeur*<br/>
 Valeur utilisée pour initialiser chaque élément de l'objet Vector actuel.
 
-*v*  
+*v*<br/>
 Un [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un [std::vector](../standard-library/vector-class.md) qui est utilisé pour initialiser l’objet Vector actuel.
 
-*ptr*  
+*ptr*<br/>
 Pointeur vers un `std::vector` utilisé pour initialiser l'objet Vector actuel.
 
-*first*  
+*first*<br/>
 Premier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type de *première* est passée au moyen de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*last*  
+*last*<br/>
 Dernier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type de *dernière* est passée au moyen de *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)  
-[Création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Plateforme Namespace](platform-namespace-c-cx.md)<br/>
+[Création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -15,42 +15,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 660ba394e6eacb640aae72a791d034499d69aa4e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759588"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101844"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata (espace de noms)
-Cet espace de noms contient les attributs qui modifient les déclarations de types.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-  
-namespace Platform {  
-   namespace Metadata {  
-}}  
-```  
-  
-### <a name="members"></a>Membres  
- Bien que cet espace de noms est destiné à un usage interne, les navigateurs peuvent afficher les membres suivants de cet espace de noms.  
-  
-|Name|Note|  
-|----------|------------|  
-|Attribut|Classe de base des attributs.|  
-|[Platform::Metadata::DefaultMemberAttribute (attribut)](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Indique la fonction par défaut à appeler parmi plusieurs fonctions surchargées possibles.|  
-|Indicateurs de l'[attribut Platform::Metadata::Attribute](../cppcx/platform-metadata-flagsattribute-attribute.md)|Déclare une énumération comme une énumération de champs de bits.<br /><br /> L'exemple ci-dessous montre comment appliquer une énumération à l'attribut `Flags` .<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|  
-|[Platform::Metadata::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Garantie qu'une classe ref privée dispose d'un nom de classe d'exécution valide.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `Platform`  
-  
-### <a name="requirements"></a>Configuration requise  
- **Métadonnées :** platform.winmd  
-  
- **Espace de noms :** Platform::Metadata  
-  
-## <a name="see-also"></a>Voir aussi  
- [Plateforme Namespace](platform-namespace-c-cx.md)
+
+Cet espace de noms contient les attributs qui modifient les déclarations de types.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+namespace Platform {
+   namespace Metadata {
+}}
+```
+
+### <a name="members"></a>Membres
+
+Bien que cet espace de noms est destiné à un usage interne, les navigateurs peuvent afficher les membres suivants de cet espace de noms.
+
+|Name|Note|
+|----------|------------|
+|Attribut|Classe de base des attributs.|
+|[Platform::Metadata::DefaultMemberAttribute (attribut)](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Indique la fonction par défaut à appeler parmi plusieurs fonctions surchargées possibles.|
+|Indicateurs de l'[attribut Platform::Metadata::Attribute](../cppcx/platform-metadata-flagsattribute-attribute.md)|Déclare une énumération comme une énumération de champs de bits.<br /><br /> L'exemple ci-dessous montre comment appliquer une énumération à l'attribut `Flags` .<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|
+|[Platform::Metadata::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Garantie qu'une classe ref privée dispose d'un nom de classe d'exécution valide.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`Platform`
+
+### <a name="requirements"></a>Configuration requise
+
+**Métadonnées :** platform.winmd
+
+**Espace de noms :** Platform::Metadata
+
+## <a name="see-also"></a>Voir aussi
+
+[Plateforme Namespace](platform-namespace-c-cx.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef4b993ec628771666ac3773b575ee518c18173
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954706"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106436"
 ---
 # <a name="basiciostream-class"></a>basic_iostream, classe
 
@@ -85,9 +85,11 @@ basic_iostream();
 
 ### <a name="parameters"></a>Paramètres
 
-*strbuf* existant `basic_streambuf` objet.
+*strbuf*<br/>
+Objet `basic_streambuf` existant.
 
-*droit* existant `basic_iostream` objet qui est utilisé pour construire un nouveau `basic_iostream`.
+*right*<br/>
+Objet `basic_iostream` existant utilisé pour construire un nouveau `basic_iostream`.
 
 ### <a name="remarks"></a>Notes
 
@@ -105,7 +107,8 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* un `rvalue` font référence à un `basic_iostream` objet affecter à partir de.
+*right*<br/>
+Référence `rvalue` à un objet `basic_iostream` à partir duquel effectuer l'assignation.
 
 ### <a name="remarks"></a>Notes
 
@@ -121,7 +124,8 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* le `basic_iostream` objet à échanger.
+*right*<br/>
+Objet `basic_iostream` à échanger.
 
 ### <a name="remarks"></a>Notes
 

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 018af5d544e38485dc38608f280d57ce595db49c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960194"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103277"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution, classe
 
@@ -77,9 +77,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*URNG* Le moteur de génération de nombres aléatoires. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*GÉNÉRATEUR URNG*<br/>
+Le moteur du Générateur de nombres aléatoires. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -191,9 +193,11 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*lambda* le `lambda` paramètre de distribution.
+*lambda*<br/>
+Paramètre de distribution `lambda`.
 
-*parm* le package de paramètres utilisé pour construire la distribution.
+*parm*<br/>
+Package de paramètres utilisé pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -220,9 +224,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*lambda* le `lambda` paramètre de distribution.
+*lambda*<br/>
+Paramètre de distribution `lambda`.
 
-*droit* le `param_type` objet à comparer à cela.
+*right*<br/>
+Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
 

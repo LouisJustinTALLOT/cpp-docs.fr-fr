@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954992"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100778"
 ---
 # <a name="sharedfuture-class"></a>shared_future, classe
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite* A `shared_future` objet.
+*Droite*<br/>
+Objet `shared_future`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite* A [futures](../standard-library/future-class.md) ou `shared_future` objet.
+*Droite*<br/>
+Objet [future](../standard-library/future-class.md) ou `shared_future`.
 
 ### <a name="remarks"></a>Notes
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rel_time* A [chrono::duration](../standard-library/duration-class.md) objet qui spécifie un intervalle de temps maximal que le thread se bloque.
+*Rel_time*<br/>
+Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie un intervalle de temps maximal pour le blocage du thread.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Paramètres
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) objet qui spécifie une heure après laquelle le thread peut être débloqué.
+*Abs_time*<br/>
+Objet [chrono::time_point](../standard-library/time-point-class.md) qui spécifie un point dans le temps après lequel le thread peut être débloqué.
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 526ed4340446e78a723af97f43fbed401f574764
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966576"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106042"
 ---
 # <a name="ostrstream-class"></a>ostrstream, classe
 
@@ -77,7 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Freezeit* A **bool** indiquant si vous souhaitez que le flux soit gelé.
+*_Freezeit*<br/>
+Un **bool** indiquant si vous souhaitez que le flux soit gelé.
 
 ### <a name="remarks"></a>Notes
 
@@ -101,11 +102,14 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* la mémoire tampon.
+*ptr*<br/>
+Mémoire tampon.
 
-*nombre* la taille de la mémoire tampon en octets.
+*count*<br/>
+Taille de la mémoire tampon en octets.
 
-*Mode _De* le mode d’entrée et de sortie de la mémoire tampon. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Mode _De*<br/>
+Mode d’entrée et de sortie de la mémoire tampon. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Notes
 

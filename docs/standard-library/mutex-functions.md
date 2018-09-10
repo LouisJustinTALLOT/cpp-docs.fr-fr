@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9e352d43f4ff7c6fa655bd14d2c7f595cfed32ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962186"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106702"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt;, fonctions et variables
 
@@ -50,11 +50,14 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Paramètres
 
-*Indicateur* A [once_flag](../standard-library/once-flag-structure.md) objet qui permet de s’assurer que l’objet pouvant être est appelée uniquement une fois.
+*Indicateur*<br/>
+Objet [once_flag](../standard-library/once-flag-structure.md) qui permet de s’assurer que l’objet pouvant être appelé n’est appelé qu’une seule fois.
 
-*F* un objet pouvant être appelé.
+*F*<br/>
+Objet pouvant être appelé.
 
-*Un* une liste d’arguments.
+*A*<br/>
+Liste d’arguments.
 
 ### <a name="remarks"></a>Notes
 

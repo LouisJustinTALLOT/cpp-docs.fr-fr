@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956864"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100909"
 ---
 # <a name="duration-class"></a>duration, classe
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rep2* un type arithmétique pour représenter le nombre de graduations.
+*Rep2*<br/>
+Type arithmétique pour représenter le nombre de battements.
 
-*Period2* A `std::ratio` spécialisation de modèle pour représenter la période de battements en unités de secondes.
+*Period2*<br/>
+Spécialisation de modèle `std::ratio` pour représenter la période de battements en unités de secondes.
 
-*R* le nombre de graduations de la période par défaut.
+*R*<br/>
+Nombre de battements de la période par défaut.
 
-*Durée* le nombre de graduations de la période spécifiée par *Period2*.
+*Durée*<br/>
+Le nombre de graduations de la période spécifiée par *Period2*.
 
 ### <a name="remarks"></a>Notes
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Paramètres
 
-*Div* pour la première méthode, *Div* représente un nombre de battements. Pour la deuxième méthode, *Div* est un `duration` objet qui contient un nombre de battements.
+*Div*<br/>
+Pour la première méthode, *Div* représente un nombre de battements. Pour la deuxième méthode, *Div* est un `duration` objet qui contient un nombre de battements.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Paramètres
 
-*Mult* une valeur du type spécifié par `duration::rep`.
+*Mult*<br/>
+Valeur du type spécifié par `duration::rep`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Paramètres
 
-*Div* une valeur du type spécifié par `duration::rep`.
+*Div*<br/>
+Valeur du type spécifié par `duration::rep`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Durée* A `duration` objet.
+*Durée*<br/>
+Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Durée* A `duration` objet.
+*Durée*<br/>
+Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Paramètres
 
-*Div* diviseur, qui est un objet de durée ou une valeur qui représente des nombres de cycles.
+*Div*<br/>
+Diviseur, qui est un objet duration ou une valeur représentant le nombre de cycles.
 
 ### <a name="remarks"></a>Notes
 

@@ -92,12 +92,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf3a5fcdb8c604dac368b60cf4a368bdb1c3f14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865752"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107518"
 ---
 # <a name="regexconstants-class"></a>regex_constants, classe
 
@@ -110,14 +110,14 @@ namespace regex_constants {
     enum syntax_option_type;
     enum match_flag_type;
     enum error_type;
- }
+}
 ```
 
 ## <a name="remarks"></a>Notes
 
 L'espace de noms `regex_constants` inclut plusieurs types d'indicateurs et les valeurs qui leur sont associées.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<regex>
 
@@ -214,7 +214,7 @@ Le type est un type de masque de bits qui décrit les options à utiliser durant
 
 Options de correspondance :
 
-`match_default`
+*match_default*<br/>
 
 `match_not_bol` : ne pas considérer la première position dans la séquence cible comme le début d’une ligne
 

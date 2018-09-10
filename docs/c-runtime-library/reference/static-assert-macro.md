@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbab8314a038d796ebd1a13342f3054e59f3e68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eda76666679b133b2d5486d21cd4c8e24d1fdf3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407364"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105079"
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT, macro
 
-Évaluer une expression au moment de la compilation et de générer une erreur lorsque le résultat est **FALSE**.
+Évalue une expression au moment de la compilation et génère une erreur lorsque le résultat est **FALSE**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,15 +49,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>Paramètres
 
-*booleanExpression* Expression (pointeurs inclus) qui prend la valeur de différente de zéro (**TRUE**) ou 0 (**FALSE**).
+*booleanExpression*<br/>
+Expression (pointeurs inclus) qui prend la valeur différente de zéro à (**TRUE**) ou 0 (**FALSE**).
 
 ## <a name="remarks"></a>Notes
 
-Cette macro ressemble à la [macros Assert et ASSERTE](assert-asserte-assert-expr-macros.md), sauf que *booleanExpression* est évaluée au moment de la compilation plutôt qu’à l’exécution. Si *booleanExpression* prend la valeur de **FALSE** (0), [erreur du compilateur C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) est généré.
+Cette macro ressemble à la [macros Assert et _ASSERTE](assert-asserte-assert-expr-macros.md), sauf que *booleanExpression* est évaluée au moment de la compilation et non lors de l’exécution. Si *booleanExpression* prend la valeur **FALSE** (0), [erreur du compilateur C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) est généré.
 
 ## <a name="example"></a>Exemple
 
-Dans cet exemple, nous vérifions si le [sizeof](../../c-language/sizeof-operator-c.md) un **int** est supérieure ou égale à 2 octets et si le [sizeof](../../c-language/sizeof-operator-c.md) un **long** est 1 octet. Le programme ne peut pas être compilé et génère des [erreur du compilateur C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) , car un **long** est supérieure à 1 octet.
+Dans cet exemple, nous vérifions si le [sizeof](../../c-language/sizeof-operator-c.md) un **int** est supérieure ou égale à 2 octets et si le [sizeof](../../c-language/sizeof-operator-c.md) un **long** est 1 octet. Le programme ne peut pas être compilé et générera [erreur du compilateur C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) , car un **long** est supérieure à 1 octet.
 
 ```C
 // crt__static_assert.c
@@ -77,7 +78,7 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Macro|En-tête requis|
 |-----------|---------------------|
