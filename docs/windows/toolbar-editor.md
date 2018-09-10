@@ -1,5 +1,5 @@
 ---
-title: Éditeur de la barre d’outils | Microsoft Docs
+title: Éditeur de la barre d’outils (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,7 +10,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource editors, Toolbar editor
+- resource editors [C++], Toolbar editor
 - editors, toolbars
 - toolbars [C++], editing
 - Toolbar editor
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0f9c4977ff82bd3f4af40af657a4bfed3a90568
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c51c8a5dc321d61b6167fb6a1e5b71d52145d81d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197874"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316950"
 ---
-# <a name="toolbar-editor"></a>Éditeur de barres d’outils
+# <a name="toolbar-editor-c"></a>Éditeur de la barre d’outils (C++)
 
-Le **barre d’outils** éditeur vous permet de créer des ressources de barre d’outils et de convertir des bitmaps en ressources de barre d’outils. Le **barre d’outils** éditeur utilise un affichage graphique pour afficher une barre d’outils et les boutons qui ressemblent étroitement à leur aspect dans une application finie.
+Le **barre d’outils** éditeur vous permet de créer des ressources de barre d’outils C++ et convertir des bitmaps en ressources de barre d’outils. Le **barre d’outils** éditeur utilise un affichage graphique pour afficher une barre d’outils et les boutons qui ressemblent étroitement à leur aspect dans une application finie.
 
 Avec le **barre d’outils** éditeur, vous pouvez :
 

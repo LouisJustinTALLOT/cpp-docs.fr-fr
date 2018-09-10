@@ -1,5 +1,5 @@
 ---
-title: 'Comment : ajouter la prise en charge MFC aux fichiers de Script de ressources | Microsoft Docs'
+title: 'Comment : ajouter la prise en charge MFC aux fichiers de Script de ressources (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,24 +10,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- rc files, adding MFC support
-- .rc files, adding MFC support
+- rc files [C++], adding MFC support
+- .rc files [C++], adding MFC support
 - MFC, adding support to resource scripts files
-- resource script files, adding MFC support
+- resource script files [C++], adding MFC support
 ms.assetid: 599dfe9d-ad26-4e34-899c-49b56599e37f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 194f2b4f2e6659412c9c2b5f688e0b73eea3bba5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f6951a5e8ceb56d366f8f9024aef479c83a5925f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692026"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317353"
 ---
-# <a name="how-to-add-mfc-support-to-resource-script-files"></a>Comment : ajouter de la prise en charge MFC aux fichiers de script de ressources
+# <a name="how-to-add-mfc-support-to-resource-script-files-c"></a>Comment : ajouter la prise en charge MFC aux fichiers de Script de ressources (C++)
 
 Normalement, lorsque vous générez une application MFC pour Windows à l’aide de la [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’Assistant génère un ensemble de base de fichiers (y compris un fichier de script (.rc) de ressources) qui contiennent les principales fonctionnalités de Microsoft Foundation classes (MFC). Toutefois, si vous modifiez un fichier .rc d’une application Windows qui n’est pas basée sur MFC, les fonctionnalités suivantes propres à l’infrastructure MFC ne sont pas disponibles :
 

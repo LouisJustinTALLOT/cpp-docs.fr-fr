@@ -1,5 +1,5 @@
 ---
-title: Déplacement d’une chaîne à partir d’un fichier de ressources vers un autre | Microsoft Docs
+title: Déplacement d’une chaîne à partir d’un fichier de ressources à un autre (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,23 +9,23 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - strings [C++], moving between files
-- resource script files, moving strings
+- resource script files [C++], moving strings
 - string editing, moving strings between resources
-- String editor, moving strings between files
+- String editor [C++], moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbed58a02d1b9ff6db1400a677a9049d23892b40
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c99b5640d2ea855ade7f3f39ba233b3e5ff2ef04
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212873"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318861"
 ---
-# <a name="moving-a-string-from-one-resource-file-to-another"></a>Déplacement d'une chaîne d'un fichier de ressources vers un autre
+# <a name="moving-a-string-from-one-resource-file-to-another-c"></a>Déplacement d’une chaîne à partir d’un fichier de ressources à un autre (C++)
 
 ### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Déplacer une chaîne à partir du fichier de script d’une ressource à un autre
 

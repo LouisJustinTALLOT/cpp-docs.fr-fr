@@ -1,5 +1,5 @@
 ---
-title: Affectation des touches d’accès rapide aux commandes de Menu | Microsoft Docs
+title: Affectation des touches d’accès rapide aux commandes de Menu (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,12 +9,12 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - access keys [C++], checking
-- menus, shortcut keys
+- menus [C++], shortcut keys
 - keyboard shortcuts [C++], command assignments
 - access keys [C++], assigning
-- mnemonics, adding to menus
+- mnemonics [C++], adding to menus
 - keyboard shortcuts [C++], uniqueness checking
-- mnemonics, uniqueness checking
+- mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: fbcf1a00-af6a-4171-805a-0ac01d4e8b0d
 author: mikeblome
@@ -22,16 +22,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab8ebb204b30883894e04c5d5d8a90f12c63a29b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 80a3480039330e85f468cfd46ba3901dd1c15dee
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591466"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318770"
 ---
-# <a name="assigning-access-keys-to-menu-commands"></a>Assignation de touches d'accès rapide à des commandes de menu
+# <a name="assigning-access-keys-to-menu-commands-c"></a>Affectation des touches d’accès rapide aux commandes de Menu (C++)
 
-Vous pouvez affecter une touche d’accès rapide (un mnémonique qui permet à l’utilisateur de sélectionner le menu à l’aide du clavier) à vos menus et commandes de menu.
+Dans un projet C++, vous pouvez affecter une clé d’accès (un mnémonique qui permet à l’utilisateur de sélectionner le menu à l’aide du clavier) à vos menus et les commandes de menu.
 
 ### <a name="to-assign-an-access-shortcut-key-to-a-menu-command"></a>Pour affecter une touche d’accès (raccourci) à une commande de menu
 

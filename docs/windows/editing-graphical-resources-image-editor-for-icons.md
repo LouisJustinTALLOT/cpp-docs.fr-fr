@@ -1,5 +1,5 @@
 ---
-title: Modification de ressources graphiques (Éditeur d’images pour les icônes) | Microsoft Docs
+title: Modification de ressources graphiques (Éditeur d’images C++ pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608859"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312634"
 ---
-# <a name="editing-graphical-resources-image-editor-for-icons"></a>Modification de ressources graphiques (Éditeur d'images pour les icônes)
+# <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Modification de ressources graphiques (Éditeur d’images C++ pour les icônes)
 
 Ressources graphiques sont les images que vous définissez pour votre application. Vous pouvez dessiner à main levée ou dessiner à l’aide de formes. Vous pouvez sélectionner des parties d’une image pour modification, la retourner ou la redimensionner, ou vous pouvez créer un pinceau personnalisé à partir d’une partie sélectionnée d’une image et dessiner avec ce pinceau. Vous pouvez définir les propriétés de l’image, enregistrer des images dans différents formats et convertir des images d’un format vers un autre.
 

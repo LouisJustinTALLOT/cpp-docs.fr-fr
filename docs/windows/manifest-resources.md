@@ -1,5 +1,5 @@
 ---
-title: Ressources de manifeste | Microsoft Docs
+title: Manifeste de ressources (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- manifest resources
-- resources [Visual Studio], manifest
+- manifest resources [C++]
+- resources [C++], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f06e2d430867d04600547312fbc484ec6257c53
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6d58e89250708f264ff6bb96c75e8124ffa02509
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685150"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316443"
 ---
-# <a name="manifest-resources"></a>Ressources de manifeste
+# <a name="manifest-resources-c"></a>Ressources de manifeste (C++)
 
-Les ressources de manifeste sont des fichiers XML qui décrivent les dépendances qu'une application utilise. Par exemple, dans Visual Studio, le fichier manifeste généré par l'Assistant MFC définit la DLL de contrôle commun Windows que l'application doit utiliser, version 5.0 ou 6.0 :
+Dans les projets de bureau C++, les ressources de manifeste sont des fichiers XML qui décrivent les dépendances qu’une application utilise. Par exemple, dans Visual Studio, le fichier manifeste généré par l'Assistant MFC définit la DLL de contrôle commun Windows que l'application doit utiliser, version 5.0 ou 6.0 :
 
 ```xml
 <description>Your app description here</description>

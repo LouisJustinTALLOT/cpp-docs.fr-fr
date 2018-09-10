@@ -1,5 +1,5 @@
 ---
-title: Propriétés de commande de menu | Microsoft Docs
+title: Propriétés de commande de menu (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34fa9944d1daa443850454560f8e5741e881f6f8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598709"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317914"
 ---
-# <a name="menu-command-properties"></a>Propriétés d'une commande de menu
+# <a name="menu-command-properties-c"></a>Propriétés de commande de menu (C++)
 
 Les informations ci-dessous sont organisées en fonction de la **Menu** propriétés qui apparaissent dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) lorsque vous sélectionnez une commande de menu. Celles-ci sont répertoriées par ordre alphabétique bien que le **propriétés** fenêtre vous permet également d’afficher ces propriétés par catégorie.
 

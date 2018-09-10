@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes de l’éditeur de boîtes de dialogue | Microsoft Docs
+title: Résolution des problèmes de l’éditeur de boîtes de dialogue (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,26 +9,24 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], troubleshooting
-- troubleshooting controls
-- Dialog editor, troubleshooting
-- troubleshooting Dialog editor
-- dialog boxes, troubleshooting
+- Dialog Editor [C++], troubleshooting
+- dialog boxes [C++], troubleshooting
 ms.assetid: 21882868-5ac4-4a41-a4a6-eaaa059402ea
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1678487a3b0d3adcf89a88a71b380e352e2721bf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bb2101526a7676be2f7f8dac5d8e03df1d72bb42
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578588"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315351"
 ---
-# <a name="troubleshooting-the-dialog-editor"></a>Dépannage de l’Éditeur de boîtes de dialogue
+# <a name="troubleshooting-the-dialog-editor-c"></a>Résolution des problèmes de l’éditeur de boîtes de dialogue (C++)
 
-Voici quelques problèmes dont vous devez connaître lorsque vous travaillez dans le **boîte de dialogue** éditeur.
+Voici quelques problèmes dont vous devez connaître lorsque vous travaillez dans le C++ **boîte de dialogue** éditeur.
 
 - [La boîte de dialogue ne fonctionne plus après l’ajout de contrôles](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)
 

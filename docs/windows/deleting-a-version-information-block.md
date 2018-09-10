@@ -1,5 +1,5 @@
 ---
-title: Suppression d’un bloc d’informations de Version | Microsoft Docs
+title: Suppression d’un bloc d’informations de Version (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - blocks, deleting
 - version information, deleting blocks
-- resources [Visual Studio], deleting version information
+- resources [C++], deleting version information
 ms.assetid: 4e1641eb-d5b2-4183-b273-bc5b51af1537
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fd8f3bd94f163e72c908568a167b870ccf0d8051
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3d7a3b64a612000eb25f2f72cd289caf7692f7b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596745"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315000"
 ---
-# <a name="deleting-a-version-information-block"></a>Suppression d'un bloc d'informations de version
+# <a name="deleting-a-version-information-block-c"></a>Suppression d’un bloc d’informations de Version (C++)
 
 ### <a name="to-delete-a-version-information-block"></a>Pour supprimer un bloc d’informations de version
 

@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de ressource ajouter | Microsoft Docs
+title: Ajouter des ressources, boîte de dialogue (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,20 +10,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], adding
-- Add Resource dialog box
+- resources [C++], adding
+- Add Resource dialog box [C++]
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a48b99ad1d00fdcc184f6a3fadc772b32057f75d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f44a0be0fc7614ab9dd09e814e7e444ed90e8a4a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601328"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317665"
 ---
 # <a name="add-resource-dialog-box"></a>Ajouter une ressource (boîte de dialogue)
 

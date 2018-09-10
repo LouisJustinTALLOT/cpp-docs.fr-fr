@@ -1,5 +1,5 @@
 ---
-title: Affichage ou masquage de la barre d’outils (Éditeur d’images pour les icônes) | Microsoft Docs
+title: Affichage ou masquage de la barre d’outils (Éditeur d’images C++ pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df6adfb026c9bfeab715e617dae64a25e993e868
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602610"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318926"
 ---
-# <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Affichage ou masquage de la barre d'outils (Éditeur d'images pour les icônes)
+# <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>Affichage ou masquage de la barre d’outils (Éditeur d’images C++ pour les icônes)
 
 Dans la mesure où la plupart des outils de dessin sont disponibles à partir de la [clavier](../windows/accelerator-keys-image-editor-for-icons.md), il est parfois utile de masquer la **Éditeur d’images** barre d’outils.
 

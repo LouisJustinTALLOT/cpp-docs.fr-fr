@@ -11,7 +11,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - symbol names
-- symbols, names
+- symbols [C++], names
 - restrictions, symbol names
 ms.assetid: 4ae7f695-ca86-4f4b-989a-fe6f89650ff7
 author: mikeblome
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ea169f196df1096d4732c88c0c5af9f9898f755
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 67527717319c4b571ff4b72b83d718c0ac149586
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604672"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313323"
 ---
 # <a name="symbol-name-restrictions"></a>Restrictions relatives au nom de symbole
 
@@ -49,7 +49,7 @@ Les noms de symboles comportent des préfixes descriptifs qui indiquent le genre
 |--------------|------------|---------|
 |Ressources|IDR_ IDD_ IDC_ IDI_ IDB_|Accélérateur ou menu (et ressources associées ou personnalisées), boîte de dialogue, curseur, icône, image bitmap|
 |Éléments de menu|ID_|Menu Item|
-|Commandes|ID_|Commande|
+|Commandes|ID_|Command|
 |Contrôles et fenêtres enfants|IDC_|Contrôle|
 |Chaînes|IDS_|Chaîne dans la table de chaînes|
 |MFC|AFX_|Réservé aux symboles MFC prédéfinis|

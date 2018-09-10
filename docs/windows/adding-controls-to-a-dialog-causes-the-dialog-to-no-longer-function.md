@@ -1,5 +1,5 @@
 ---
-title: Ajout de contrôles à une boîte de dialogue entraîne la boîte de dialogue ne fonctionne plus | Microsoft Docs
+title: Ajout de contrôles à une boîte de dialogue entraîne la boîte de dialogue ne fonctionne plus (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,10 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], troubleshooting
-- common controls, troubleshooting
-- troubleshooting controls
-- dialog boxes, troubleshooting
-- dialog box controls, troubleshooting
+- dialog boxes [C++], troubleshooting
 - InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
 author: mikeblome
@@ -20,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d27c12b491fc5f05da58a84703ea13e84e9e9c6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88990595fdf1f6cbb88efd40ec6247b70d90c586
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215368"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314896"
 ---
-# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>La boîte de dialogue ne fonctionne plus après l'ajout de contrôles
+# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function-c"></a>Ajout de contrôles à une boîte de dialogue entraîne la boîte de dialogue ne fonctionne plus (C++)
 
 Après avoir ajouté un contrôle commun ou un contrôle RichEdit une boîte de dialogue, elle n’apparaît pas lorsque vous testez la boîte de dialogue ou de la boîte de dialogue n’apparaîtra pas.
 

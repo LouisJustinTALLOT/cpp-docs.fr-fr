@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc922e99db517c9850a198c1682ea73aba31257b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7e6a555655ec6b05777c74a47090387ebf07f43
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842896"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314935"
 ---
 # <a name="invalidargument-class"></a>invalid_argument, classe
 
@@ -65,13 +65,13 @@ int main( )
       cerr << "Type " << typeid( e ).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught invalid bitset<N> char
 Type class std::invalid_argument
-*\
+*/
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<stdexcept>
 

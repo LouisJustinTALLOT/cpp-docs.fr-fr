@@ -1,5 +1,5 @@
 ---
-title: Insertion d’un espace entre les boutons sur une barre d’outils | Microsoft Docs
+title: Insertion d’un espace entre les boutons sur une barre d’outils (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,22 +8,22 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Toolbar editor, spacing toolbar buttons
-- toolbar buttons (in Toolbar editor), space between buttons
+- Toolbar editor [C++], spacing toolbar buttons
+- toolbar buttons [C++], space between buttons
 ms.assetid: 4925ea6b-5d3a-4949-a920-bf371a37e529
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d45fb3c7d0d61e1895ff03fff64ab75c828eda0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09086ea214bcf2abd9708f8abcee4f9f5f376994
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599664"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313414"
 ---
-# <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Insertion d'un espace entre des boutons sur une barre d'outils
+# <a name="inserting-a-space-between-buttons-on-a-toolbar-c"></a>Insertion d’un espace entre les boutons sur une barre d’outils (C++)
 
 En règle générale, pour insérer un espace entre les boutons, faites simplement glisser les autres dans la barre d’outils. Pour supprimer l’espace, faites-les glisser vers l’autre.
 

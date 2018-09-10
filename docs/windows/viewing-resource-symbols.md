@@ -1,5 +1,5 @@
 ---
-title: Affichage des symboles des ressources | Microsoft Docs
+title: Affichage des symboles des ressources (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,21 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], viewing
+- resources [C++], viewing
 - resource symbols
-- symbols, viewing
+- symbols [C++], viewing
 ms.assetid: 4bcc06d9-7d36-486a-8a37-71da0541643c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bf606d3618fca5a0da7fc4442c68e862cd2a446
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0a0a73657d5ea2167e8156a2567e39acf16f055d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598281"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317678"
 ---
 # <a name="viewing-resource-symbols"></a>Affichage des symboles des ressources
 

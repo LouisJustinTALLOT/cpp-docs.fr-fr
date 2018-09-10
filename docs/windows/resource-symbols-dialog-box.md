@@ -1,5 +1,5 @@
 ---
-title: Ressource de boîte de dialogue symboles | Microsoft Docs
+title: Boîte de dialogue (C++) de symboles de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,27 +10,27 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New Symbol dialog box
-- Resource Symbols dialog box
-- Change Symbol dialog box
+- New Symbol dialog box [C++]
+- Resource Symbols dialog box [C++]
+- Change Symbol dialog box [C++]
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc4c6a749a5e3ef1835d959e7803ac6b6f4435ec
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 064fb9adce8b41c13709819f7ce0b7c515fea12a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609817"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313167"
 ---
-# <a name="resource-symbols-dialog-box"></a>Symboles des ressources (boîte de dialogue)
+# <a name="resource-symbols-dialog-box-c"></a>Boîte de dialogue symboles de ressources (C++)
 
-Le **symboles des ressources** boîte de dialogue vous permet d’ajouter de nouveaux symboles des ressources, changer les symboles affichés, ou passez à l’emplacement dans le code source où un symbole est en cours d’utilisation.
+Le **symboles des ressources** boîte de dialogue C++ vous permet d’ajouter de nouveaux symboles des ressources, changer les symboles affichés, ou passez à l’emplacement dans le code source où un symbole est en cours d’utilisation.
 
-**Name**  
+**Nom**  
 Affiche le nom du symbole. Pour plus d’informations, consultez [restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md).
 
 **Valeur**  

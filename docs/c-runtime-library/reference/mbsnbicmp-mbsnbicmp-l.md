@@ -50,16 +50,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15038e42b87a9803312df79eb5d235f1add51669
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c9da102f81654062518ca8e886aab1c49df623
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405014"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314961"
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Compare **n** octets de caractères multioctets deux chaînes et ignore la casse.
+Compare **n** octets de caractères multioctets deux chaînes, en ignorant la casse.
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -88,23 +88,23 @@ La valeur de retour indique la relation entre les sous-chaînes.
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|*string1* sous-chaîne moins *chaîne2* sous-chaîne.|
-|0|*string1* sous-chaîne identique à *chaîne2* sous-chaîne.|
-|> 0|*string1* sous-chaîne supérieur *chaîne2* sous-chaîne.|
+|< 0|*string1* sous-chaîne inférieure à *string2* sous-chaîne.|
+|0|*string1* sous-chaîne identique à *string2* sous-chaîne.|
+|> 0|*string1* sous-chaîne supérieur *string2* sous-chaîne.|
 
 En cas d’erreur, **_mbsnbicmp** retourne **_NLSCMPERROR**, qui est défini dans String.h et Mbstring.h.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsnbicmp** fonction effectue une comparaison ordinale du premier au plus *nombre* octets de *string1* et *chaîne2*. La comparaison est effectuée en convertissant chaque caractère en minuscule ; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) est une version respectant la casse de **_mbsnbicmp**. La comparaison se termine si un caractère null de fin est atteint dans une chaîne avant *nombre* caractères soient comparés. Si les chaînes sont égales quand un caractère null de fin est atteinte dans chaîne avant *nombre* caractères soient comparés, la chaîne courte est moindre.
+Le **_mbsnbicmp** fonction effectue une comparaison ordinale du premier au maximum *nombre* octets de *string1* et *string2*. La comparaison est effectuée en convertissant chaque caractère en minuscule ; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) est une version de la casse de **_mbsnbicmp**. La comparaison se termine si un caractère null de fin est atteint dans une chaîne avant *nombre* caractères soient comparés. Si les chaînes sont égales quand un caractère null de fin est atteinte dans une chaîne avant *nombre* caractères soient comparés, la chaîne plus courte est moindre.
 
 **_mbsnbicmp** est similaire à [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), à ceci près qu’elle compare des chaînes jusqu'à *nombre* octets au lieu de caractères.
 
-La comparaison de deux chaînes contenant des caractères qui se trouvent entre « Z » et « a » dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») donne des résultats différents selon leur casse. Par exemple, les deux chaînes « ABCDE » et « ABCD ^ « comparer une façon si la comparaison est en minuscule (« abcde » > « abcd ^ ») et l’autre sens (« ABCDE » < « ABCD ^ ») si elle est en majuscule.
+La comparaison de deux chaînes contenant des caractères qui se trouvent entre « Z » et « a » dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») donne des résultats différents selon leur casse. Par exemple, les deux chaînes « ABCDE » et « ABCD ^ « comparent différemment selon si la comparaison est en minuscule (« abcde » > « abcd ^ ») et l’autre sens (« ABCDE » < « ABCD ^ ») si elle est en majuscules.
 
 **_mbsnbicmp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. Elle n'est pas affectée par les paramètres régionaux actuels.
 
-Si le paramètre *string1* ou *chaîne2* est un pointeur null, **_mbsnbicmp** appelle le Gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **_NLSCMPERROR** et définit **errno** à **EINVAL**.
+Si *string1* ou *string2* est un pointeur null, **_mbsnbicmp** appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **_NLSCMPERROR** et définit **errno** à **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -113,11 +113,11 @@ Si le paramètre *string1* ou *chaîne2* est un pointeur null, **_mbsnbicmp** ap
 |**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
 |**_tcsnicmp_l**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**_mbsnbicmp**|<mbstring.h>|
+|**_mbsnbicmp**|\<mbstring.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Association d’une commande de Menu à une touche accélérateur | Microsoft Docs
+title: Association d’une commande de Menu à une touche accélérateur (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,23 +8,23 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- keyboard shortcuts, menu association
-- commands, associating menu commands with accelerator keys
-- menu commands, associating with keyboard shortcuts
+- keyboard shortcuts [C++], menu association
+- commands [C++], associating menu commands with accelerator keys
+- menu commands [C++], associating with keyboard shortcuts
 ms.assetid: ad2de43f-b20a-4c9f-bda8-0420179da48c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b1411617df3736300536e84e07da0bb5df3a856
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b55535e9306d272d47f098e7cf15d28a764f3620
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599948"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316287"
 ---
-# <a name="associating-a-menu-command-with-an-accelerator-key"></a>Association d'une commande de menu à une touche accélérateur
+# <a name="associating-a-menu-command-with-an-accelerator-key-c"></a>Association d’une commande de Menu à une touche accélérateur (C++)
 
 Bien souvent, vous souhaitez qu’une commande de menu et une combinaison de touches du clavier exécutent la même commande de programme. Pour cela, vous devez utiliser le **Menu** éditeur pour assigner le même identificateur de ressource à la commande de menu et à une entrée dans la table d’accélérateurs de votre application. Ensuite, vous modifiez la [Légende](../windows/menu-command-properties.md) de la commande de menu pour afficher le nom de la touche accélérateur.
 

@@ -1,5 +1,5 @@
 ---
-title: Création d’une boîte de dialogue que les utilisateurs ne peuvent pas quitter | Microsoft Docs
+title: Création d’une boîte de dialogue (C++) que les utilisateurs ne peuvent pas quitter | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,8 +8,8 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, creating
-- modal dialog boxes, logon screens
+- dialog boxes [C++], creating
+- modal dialog boxes [C++], logon screens
 - logon screens
 ms.assetid: 54823c27-1658-4388-bd12-0a1ce8f3899e
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3e68d89ce0a2ece83876b6afcd6aa09e59ed93
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f0b9c290cb8e5ced7537fb377d6e7ac52f20d089
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598218"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314545"
 ---
-# <a name="creating-a-dialog-box-that-users-cannot-exit"></a>Création d'une boîte de dialogue que les utilisateurs ne peuvent pas quitter
+# <a name="creating-a-dialog-box-c-that-users-cannot-exit"></a>Création d’une boîte de dialogue (C++) que les utilisateurs ne peuvent pas quitter
 
 Vous pouvez créer une boîte de dialogue d’exécution qu’un utilisateur ne peut pas quitter. Ce type de boîte de dialogue est utile pour les ouvertures de session et pour le verrouillage d’application ou de document.
 

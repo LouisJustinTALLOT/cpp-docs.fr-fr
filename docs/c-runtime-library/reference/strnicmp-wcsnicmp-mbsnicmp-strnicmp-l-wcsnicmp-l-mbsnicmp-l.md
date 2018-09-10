@@ -76,18 +76,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba97d3bcd356a044245e7613470bead1cc42eb25
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0da454b2b980be3565ee27fde4ee14d7eadd42fb
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417127"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313625"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 Compare le nombre spécifié de caractères de deux chaînes sans tenir compte de la casse.
 
 > [!IMPORTANT]
-> **_mbsnicmp** et **_mbsnicmp_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicmp** et **_mbsnicmp_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -144,21 +144,21 @@ Indique la relation entre les sous-chaînes, comme suit.
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|*string1* sous-chaîne est inférieure à *chaîne2* sous-chaîne.|
-|0|*string1* sous-chaîne est identique à *chaîne2* sous-chaîne.|
-|> 0|*string1* sous-chaîne est supérieure à *chaîne2* sous-chaîne.|
+|< 0|*string1* sous-chaîne est inférieure à *string2* sous-chaîne.|
+|0|*string1* est identique à *string2* sous-chaîne.|
+|> 0|*string1* est supérieure à *string2* sous-chaîne.|
 
 Une erreur de validation de paramètre, ces fonctions retournent **_NLSCMPERROR**, qui est défini dans \<string.h > et \<mbstring.h >.
 
 ## <a name="remarks"></a>Notes
 
-Le **_strnicmp** fonction ordinale compare, au maximum, la première *nombre* caractères de *string1* et *chaîne2*. La comparaison est effectuée sans tenir compte de la casse, en convertissant chaque caractère en minuscule. **_strnicmp** est une version de la casse de **strncmp**. La comparaison se termine si un caractère null de fin est atteint dans une chaîne avant *nombre* caractères soient comparés. Si les chaînes sont égales quand un caractère null de fin est atteinte dans chaîne avant *nombre* caractères soient comparés, la chaîne courte est moindre.
+Le **_strnicmp** fonction ordinale compare, au maximum, la première *nombre* caractères de *string1* et *string2*. La comparaison est effectuée sans tenir compte de la casse, en convertissant chaque caractère en minuscule. **_strnicmp** est une version de non-respect de la casse de **strncmp**. La comparaison se termine si un caractère null de fin est atteint dans une chaîne avant *nombre* caractères soient comparés. Si les chaînes sont égales quand un caractère null de fin est atteinte dans une chaîne avant *nombre* caractères soient comparés, la chaîne plus courte est moindre.
 
-Les caractères compris entre 91 et 96 dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») sont évalués comme étant inférieurs à n’importe quel caractère alphabétique. Cette commande est identique à celle de **stricmp**.
+Les caractères compris entre 91 et 96 dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») sont évalués comme étant inférieurs à n’importe quel caractère alphabétique. Ce classement est identique à celle de **stricmp**.
 
-**_wcsnicmp** et **_mbsnicmp** sont des versions à caractères larges et caractères multioctets de **_strnicmp**. Les arguments de **_wcsnicmp** sont des caractères larges chaînes ; ceux de **_mbsnicmp** sont des chaînes de caractères multioctets. **_mbsnicmp** reconnaît les séquences de caractères multioctets selon la page de codes multioctets active et retourne **_NLSCMPERROR** en cas d’erreur. Pour plus d’informations, consultez [Pages de codes](../../c-runtime-library/code-pages.md). Ces trois fonctions se comportent sinon de façon identique. Ces fonctions sont affectées par les paramètres régionaux, les versions qui n’ont pas le **_l** suffixe utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe Utilisez plutôt le *paramètres régionaux* qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_wcsnicmp** et **_mbsnicmp** sont des versions à caractères larges et à caractères multioctets de **_strnicmp**. Les arguments de **_wcsnicmp** sont des caractères larges chaînes ; ceux de **_mbsnicmp** sont des chaînes de caractères multioctets. **_mbsnicmp** reconnaît les séquences de caractères multioctets en fonction de la page de codes multioctets actuelle et retourne **_NLSCMPERROR** en cas d’erreur. Pour plus d’informations, consultez [Pages de codes](../../c-runtime-library/code-pages.md). Ces trois fonctions se comportent sinon de façon identique. Ces fonctions sont affectées par les paramètres régionaux, les versions qui n’ont pas la **_l** suffixe utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe Utilisez plutôt le *paramètres régionaux* qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Toutes ces fonctions valident leurs paramètres. Si le paramètre *string1* ou *chaîne2* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et **errno** à **EINVAL**.
+Toutes ces fonctions valident leurs paramètres. Si *string1* ou *string2* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et définissez **errno** à **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -168,12 +168,12 @@ Toutes ces fonctions valident leurs paramètres. Si le paramètre *string1* ou *
 |**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
 |**_tcsncicmp_l**|**_strnicmp_l**|**_mbsnicmp_l**|**_wcsnicmp_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**_strnicmp**, **_strnicmp_l**|<string.h>|
-|**_wcsnicmp**, **_wcsnicmp_l**|<string.h> ou <wchar.h>|
+|**_strnicmp**, **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**, **_wcsnicmp_l**|\<string.h> ou \<wchar.h>|
 |**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
