@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688cef94721ac7ea3a36ccd375185b922b23a15f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 655d9be75fa031cc2cbebfd65c4634528f410e85
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395602"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110524"
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
@@ -53,17 +53,18 @@ void _CrtMemDumpStatistics(
 
 ### <a name="parameters"></a>Paramètres
 
-*état* pointeur vers l’état du tas à vider.
+*state*<br/>
+Pointeur vers l’état du tas à vider.
 
 ## <a name="remarks"></a>Notes
 
-Le **_CrtMemDumpStatistics** fonction exporte les informations d’en-tête de débogage pour un état spécifié du segment de mémoire sous une forme lisible par l’utilisateur. Les statistiques de vidage permettent à l’application d’effectuer le suivi des allocations, et de détecter les problèmes de mémoire. L’état de la mémoire peut contenir un état de tas spécifique, ou la différence entre deux états. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtMemDumpStatistics** sont supprimés lors du prétraitement.
+Le **_CrtMemDumpStatistics** fonction exporte les informations d’en-tête de débogage pour un état du tas sous une forme lisible par l’utilisateur spécifié. Les statistiques de vidage permettent à l’application d’effectuer le suivi des allocations, et de détecter les problèmes de mémoire. L’état de la mémoire peut contenir un état de tas spécifique, ou la différence entre deux états. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtMemDumpStatistics** sont supprimés lors du prétraitement.
 
-Le *état* paramètre doit être un pointeur vers un **_CrtMemState** structure a été renseigné par [_CrtMemCheckpoint](crtmemcheckpoint.md) ou retournée par [_ CrtMemDifference](crtmemdifference.md) avant **_CrtMemDumpStatistics** est appelée. Si *état* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et aucune action n’est effectuée. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Le *état* paramètre doit être un pointeur vers un **_CrtMemState** structure a été rempli par [_CrtMemCheckpoint](crtmemcheckpoint.md) ou retournée par [_ CrtMemDifference](crtmemdifference.md) avant **_CrtMemDumpStatistics** est appelée. Si *état* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et aucune action n’est effectuée. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Pour plus d’informations sur les fonctions d’état du tas et le **_CrtMemState** de la structure, consultez [fonctions de rapport état du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Pour plus d’informations sur les fonctions d’état du tas et le **_CrtMemState** structure, consultez [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

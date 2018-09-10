@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: adc817c92bfaa79422dacafd17e4b1706e5a1af8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 43ee5b62bcda9a38946bfd61c3ed3efbc8d89523
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965641"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110069"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt;, opérateurs
 
@@ -46,9 +46,11 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `set`.
+*left*<br/>
+Objet de type `set`.
 
-*droit* un objet de type `set`.
+*right*<br/>
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -105,9 +107,11 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `set`.
+*left*<br/>
+Objet de type `set`.
 
-*droit* un objet de type `set`.
+*right*<br/>
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -164,9 +168,11 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `set`.
+*left*<br/>
+Objet de type `set`.
 
-*droit* un objet de type `set`.
+*right*<br/>
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -230,9 +236,11 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `set`.
+*left*<br/>
+Objet de type `set`.
 
-*droit* un objet de type `set`.
+*right*<br/>
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -289,9 +297,11 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `set`.
+*left*<br/>
+Objet de type `set`.
 
-*droit* un objet de type `set`.
+*right*<br/>
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -348,9 +358,11 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `set`.
+*left*<br/>
+Objet de type `set`.
 
-*droit* un objet de type `set`.
+*right*<br/>
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -414,9 +426,11 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `multiset`.
+*left*<br/>
+Objet de type `multiset`.
 
-*droit* un objet de type `multiset`.
+*right*<br/>
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -473,9 +487,11 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `multiset`.
+*left*<br/>
+Objet de type `multiset`.
 
-*droit* un objet de type `multiset`.
+*right*<br/>
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -536,9 +552,11 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `multiset`.
+*left*<br/>
+Objet de type `multiset`.
 
-*droit* un objet de type `multiset`.
+*right*<br/>
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -608,9 +626,11 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `multiset`.
+*left*<br/>
+Objet de type `multiset`.
 
-*droit* un objet de type `multiset`.
+*right*<br/>
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -667,9 +687,11 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `multiset`.
+*left*<br/>
+Objet de type `multiset`.
 
-*droit* un objet de type `multiset`.
+*right*<br/>
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -730,9 +752,11 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche* un objet de type `multiset`.
+*left*<br/>
+Objet de type `multiset`.
 
-*droit* un objet de type `multiset`.
+*right*<br/>
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 

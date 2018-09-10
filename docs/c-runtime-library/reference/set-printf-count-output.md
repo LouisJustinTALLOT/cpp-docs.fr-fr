@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406639"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108317"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
@@ -55,7 +55,8 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Paramètres
 
-*activer* une valeur différente de zéro pour activer **%n** prennent en charge, 0 pour désactiver **%n** prend en charge.
+*enable*<br/>
+Une valeur différente de zéro pour activer **%n** prennent en charge, 0 pour désactiver **%n** prennent en charge.
 
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour
 
@@ -63,9 +64,9 @@ L’état de **%n** prennent en charge avant d’appeler cette fonction : zéro
 
 ## <a name="remarks"></a>Notes
 
-Pour des raisons de sécurité, la prise en charge pour le **%n** spécificateur de format est désactivé par défaut dans **printf** et toutes ses variantes. Si **%n** est rencontré dans un **printf** spécification de format, le comportement par défaut consiste à appeler le Gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Appel de **_set_printf_count_output** avec un argument différent de zéro entraîne **printf**-fonctions de famille pour interpréter **%n** comme décrit dans [Format Syntaxe de spécification : les fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Pour des raisons de sécurité, la prise en charge pour le **%n** spécificateur de format est désactivé par défaut dans **printf** et toutes ses variantes. Si **%n** est rencontré dans un **printf** spécification de format, le comportement par défaut consiste à appeler le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Appel **_set_printf_count_output** avec un argument différent de zéro entraîne **printf**-fonctions de famille pour interpréter **%n** comme décrit dans [Format Syntaxe de spécification : les fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

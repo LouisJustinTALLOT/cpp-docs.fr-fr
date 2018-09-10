@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 350fd6007ab6b89064ed6d0a7070a21e57427018
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 52a062d29124cd5ba4c0008c554d72f59aa8c645
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956320"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110537"
 ---
 # <a name="isconvertible-class"></a>is_convertible, classe
 
@@ -37,9 +37,11 @@ struct is_convertible;
 
 ### <a name="parameters"></a>Paramètres
 
-*À partir de* le type à convertir.
+*From*<br/>
+Type à partir duquel effectuer la conversion.
 
-*Ty* le type à convertir.
+*Ty*<br/>
+Type vers lequel effectuer la conversion.
 
 ## <a name="remarks"></a>Notes
 

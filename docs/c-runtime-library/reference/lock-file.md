@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400656"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107461"
 ---
 # <a name="lockfile"></a>_lock_file
 
-Verrouille un **fichier** objet pour garantir la cohérence pour les threads qui accèdent à la **fichier** objet simultanément.
+Verrouille un **fichier** objet pour garantir la cohérence des threads qui accèdent à la **fichier** objet simultanément.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,13 +53,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Paramètres
 
-*fichier* descripteur de fichier.
+*fichier*<br/>
+Descripteur de fichier.
 
 ## <a name="remarks"></a>Notes
 
-Le **_lock_file** fonction verrous le **fichier** objet spécifié par *fichier*. Le fichier sous-jacent n’est pas verrouillé par **_lock_file**. Utilisez [_unlock_file](unlock-file.md) pour libérer le verrou sur le fichier. Les appels à **_lock_file** et **_unlock_file** doit être mis en correspondance dans un thread.
+Le **_lock_file** fonctionner les verrous le **fichier** objet spécifié par *fichier*. Le fichier sous-jacent n’est pas verrouillé par **_lock_file**. Utilisez [_unlock_file](unlock-file.md) pour libérer le verrou sur le fichier. Les appels à **_lock_file** et **_unlock_file** doit être mise en correspondance dans un thread.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

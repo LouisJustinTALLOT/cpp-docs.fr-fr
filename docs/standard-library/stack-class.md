@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963223"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110410"
 ---
 # <a name="stack-class"></a>stack, classe
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>Paramètres
 
-*Type* type de données de l’élément à stocker dans la pile.
+*Type*<br/>
+Type de données des éléments à stocker dans la pile.
 
-*Conteneur* le type du conteneur sous-jacent utilisé pour implémenter la pile. La valeur par défaut est la classe `deque`*\<Type>*.
+*Conteneur*<br/>
+Type du conteneur sous-jacent utilisé pour implémenter la pile. La valeur par défaut est la classe `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Notes
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* l’élément ajouté en haut de la pile.
+*Val*<br/>
+Élément ajouté en haut de l’objet stack.
 
 ### <a name="remarks"></a>Notes
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* le conteneur sur lequel l’objet stack construit doit être une copie.
+*right*<br/>
+Conteneur dont l’objet stack construit doit être une copie.
 
 ### <a name="example"></a>Exemple
 

@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 945de6e2ef7e9ec3967091f88b1d0cfeaa8df5e3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958001"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108887"
 ---
 # <a name="autoptr-class"></a>auto_ptr, classe
 
@@ -65,9 +65,11 @@ public:
 ```
 ### <a name="parameters"></a>Paramètres
 
-*droit* le `auto_ptr` à partir duquel obtenir une ressource existante.
+*right*<br/>
+`auto_ptr` à partir duquel obtenir une ressource existante.
 
-*PTR* le pointeur spécifié pour remplacer le pointeur stocké.
+*ptr*<br/>
+Pointeur spécifié pour remplacer le pointeur stocké.
 
 ## <a name="remarks"></a>Notes
 
@@ -130,9 +132,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* le pointeur vers l’objet qui `auto_ptr` encapsule.
+*ptr*<br/>
+Pointeur vers l’objet que `auto_ptr` encapsule.
 
-*droit* le `auto_ptr` objet doit être copié par le constructeur.
+*right*<br/>
+L’objet `auto_ptr` doit être copié par le constructeur.
 
 ### <a name="remarks"></a>Notes
 
@@ -282,7 +286,8 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* un objet de type `auto_ptr`.
+*right*<br/>
+Objet de type `auto_ptr`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -499,7 +504,8 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* le pointeur spécifié pour remplacer le pointeur stocké `myptr`.
+*ptr*<br/>
+Le pointeur spécifié pour remplacer le pointeur stocké `myptr`.
 
 ### <a name="example"></a>Exemple
 

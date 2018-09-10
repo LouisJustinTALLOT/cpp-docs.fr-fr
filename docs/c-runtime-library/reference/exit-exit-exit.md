@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a06fa858ac7d2d8458bd3adf3fb44ca7bdee929
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d26cc39039b95b8c12e429d333918e83628b2619
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678152"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110602"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
@@ -70,7 +70,8 @@ void _exit(
 
 ### <a name="parameters"></a>Paramètres
 
-*état* code d’état de sortie.
+*status*<br/>
+Code d’état de sortie.
 
 ## <a name="remarks"></a>Notes
 

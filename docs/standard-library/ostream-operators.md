@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 766ab6f9a93cc617c2a3ecb4c305775d670a9640
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955931"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108952"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt;, opérateurs
 
@@ -88,17 +88,23 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* un caractère.
+*_Ch*<br/>
+Un caractère.
 
-*_Elem* le type d’élément.
+*_Elem*<br/>
+Type de l’élément.
 
-*_Ostr* A `basic_ostream` objet.
+*_Ostr*<br/>
+Objet `basic_ostream`.
 
-*Str* une chaîne de caractères.
+*str*<br/>
+Chaîne caractère.
 
-*_Tr* traits de caractère.
+*_Tr*<br/>
+Caractéristiques du caractère.
 
-*Val* le type
+*Val*<br/>
+Type
 
 ### <a name="return-value"></a>Valeur de retour
 

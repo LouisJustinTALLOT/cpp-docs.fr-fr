@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 673289f5ac8b739dfe7c1a4de446a37d85763452
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208830"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108406"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;, fonctions
 
@@ -55,9 +55,11 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Quantité* la valeur monétaire extraite.
+*_Quantité*<br/>
+Valeur monétaire extraite.
 
-*_Intl* si **true**, utiliser le format international. La valeur par défaut est **false**.
+*_Intl*<br/>
+Si **true**, utiliser le format international. La valeur par défaut est **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -76,9 +78,11 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Tptr* l’heure sous la forme d’une structure de temps.
+*_Tptr*<br/>
+Heure sous la forme d’une structure de temps.
 
-*_Fmt* le format souhaité à utiliser pour obtenir la valeur d’heure.
+*_Fmt*<br/>
+Format à utiliser pour obtenir la valeur de temps.
 
 ### <a name="remarks"></a>Notes
 
@@ -95,9 +99,11 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Quantité* valeur monétaire à insérer dans le flux.
+*_Quantité*<br/>
+Valeur monétaire à insérer dans le flux.
 
-*_Intl* définie sur **true** si le manipulateur doit utiliser le format international, **false** si il ne doit pas.
+*_Intl*<br/>
+La valeur **true** si le manipulateur doit utiliser le format international, **false** si il ne doit pas.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -120,9 +126,11 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Tptr* valeur de temps à écrire dans le flux fourni dans une structure de temps.
+*_Tptr*<br/>
+Valeur de temps à écrire dans le flux, fournie dans une structure de temps.
 
-*_Fmt* au format désiré pour écrire la valeur d’heure.
+*_Fmt*<br/>
+Format à utiliser pour écrire la valeur de temps.
 
 ### <a name="remarks"></a>Notes
 
@@ -141,11 +149,14 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Paramètres
 
-*Str* un std::string, un char\*, chaîne de littéral de chaîne brut ou littéral ou une version large d’un de ces (par exemple, std::wstring, wchar_t\*).
+*str*<br/>
+Un std::string, un char\*, chaîne de littéral de chaîne brut ou littéral ou une version large d’un de ces (par exemple, std::wstring, wchar_t\*).
 
-*délimiteur* caractère spécifié par l’utilisateur ou caractère large à utiliser comme délimiteur de début et fin de la chaîne.
+*Délimiteur*<br/>
+Caractère spécifié par l'utilisateur ou caractère large à utiliser comme délimiteur de début et de fin de chaîne.
 
-*échappement* caractère spécifié par l’utilisateur ou caractère large à utiliser comme caractère d’échappement pour les séquences d’échappement dans la chaîne.
+*échappement*<br/>
+Caractère spécifié par l'utilisateur ou caractère large à utiliser comme caractère d'échappement pour les séquences d'échappement dans la chaîne.
 
 ### <a name="remarks"></a>Notes
 
@@ -303,7 +314,8 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Paramètres
 
-*Masque* indicateurs à effacer.
+*Masque*<br/>
+Indicateurs à effacer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -323,7 +335,8 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Base* base numérique.
+*_Base*<br/>
+Base numérique.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -352,7 +365,8 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*CH* le caractère qui sera utilisé pour remplir les espaces dans un affichage aligné à droite.
+*CH*<br/>
+Caractère qui sera utilisé pour remplir les espaces dans un affichage aligné à droite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -372,7 +386,8 @@ T2 setiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Paramètres
 
-*Masque* les indicateurs à définir.
+*Masque*<br/>
+Indicateurs à définir.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -392,7 +407,8 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>Paramètres
 
-*PREC* la précision des valeurs à virgule flottante.
+*PREC*<br/>
+Précision des valeurs à virgule flottante.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -412,7 +428,8 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Paramètres
 
-*Large* la largeur de la zone d’affichage.
+*Large*<br/>
+Largeur de la zone d’affichage.
 
 ### <a name="return-value"></a>Valeur de retour
 

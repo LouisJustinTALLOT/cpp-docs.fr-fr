@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ac07884d3ac7390bdb3aba4144c1c436041434f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960041"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110056"
 ---
 # <a name="array-class-c-standard-library"></a>array, classe (Bibliothèque C++ standard)
 
@@ -202,7 +202,8 @@ array(const array& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* objet ou plage à insérer.
+*right*<br/>
+Objet ou plage à insérer.
 
 ### <a name="remarks"></a>Notes
 
@@ -257,7 +258,8 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* la valeur à assigner.
+*Val*<br/>
+Valeur à attribuer.
 
 ### <a name="remarks"></a>Notes
 
@@ -313,7 +315,8 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*désactiver* Position d’élément pour accéder à.
+*Hors tension*<br/>
+Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
 
@@ -1173,7 +1176,8 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*désactiver* Position d’élément pour accéder à.
+*Hors tension*<br/>
+Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
 
@@ -1225,7 +1229,8 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* conteneur à copier.
+*right*<br/>
+Conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -1602,7 +1607,8 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* tableau à échanger le contenu avec.
+*right*<br/>
+Tableau avec lequel échanger le contenu.
 
 ### <a name="remarks"></a>Notes
 

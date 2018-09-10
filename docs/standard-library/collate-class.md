@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966457"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110371"
 ---
 # <a name="collate-class"></a>collate, classe
 
@@ -52,7 +52,8 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* le type utilisé dans un programme pour encoder des caractères.
+*CharType*<br/>
+Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
 ## <a name="remarks"></a>Notes
 
@@ -111,15 +112,17 @@ public:
 
 protected:
     collate(
- const char* _Locname,
+const char* _Locname,
     size_t _Refs = 0);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs*<br/>
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
-*_Locname* le nom des paramètres régionaux.
+*_Locname*<br/>
+Nom des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 
@@ -146,13 +149,17 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-*first1* pointeur vers le premier élément dans la première séquence à comparer.
+*first1*<br/>
+Pointeur vers le premier élément de la première séquence à comparer.
 
-*last1* pointeur vers le dernier élément dans la première séquence à comparer.
+*last1*<br/>
+Pointeur vers le dernier élément de la première séquence à comparer.
 
-*first2* pointeur vers le premier élément dans la deuxième séquence à comparer.
+*first2*<br/>
+Pointeur vers le premier élément de la deuxième séquence à comparer.
 
-*last2* pointeur vers le dernier élément dans la deuxième séquence à comparer.
+*last2*<br/>
+Pointeur vers le dernier élément de la deuxième séquence à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -208,13 +215,17 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-*first1* pointeur vers le premier élément dans la première séquence à comparer.
+*first1*<br/>
+Pointeur vers le premier élément de la première séquence à comparer.
 
-*last1* pointeur vers le dernier élément dans la première séquence à comparer.
+*last1*<br/>
+Pointeur vers le dernier élément de la première séquence à comparer.
 
-*first2* pointeur vers le premier élément dans la deuxième séquence à comparer.
+*first2*<br/>
+Pointeur vers le premier élément de la deuxième séquence à comparer.
 
-*last2* pointeur vers le dernier élément dans la deuxième séquence à comparer.
+*last2*<br/>
+Pointeur vers le dernier élément de la deuxième séquence à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -244,9 +255,11 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un pointeur vers le premier caractère dans la séquence dont la valeur doit être déterminée.
+*first*<br/>
+Pointeur vers le premier caractère de la séquence dont la valeur doit être déterminée.
 
-*dernière* un pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
+*last*<br/>
+Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -270,9 +283,11 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un pointeur vers le premier caractère dans la séquence à convertir.
+*first*<br/>
+Pointeur vers le premier caractère de la séquence à convertir.
 
-*dernière* un pointeur vers le dernier caractère de la séquence à convertir.
+*last*<br/>
+Pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -296,9 +311,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un pointeur vers le premier caractère dans la séquence dont la valeur doit être déterminée.
+*first*<br/>
+Pointeur vers le premier caractère de la séquence dont la valeur doit être déterminée.
 
-*dernière* un pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
+*last*<br/>
+Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -364,9 +381,11 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*première* un pointeur vers le premier caractère dans la séquence à convertir.
+*first*<br/>
+Pointeur vers le premier caractère de la séquence à convertir.
 
-*dernière* un pointeur vers le dernier caractère de la séquence à convertir.
+*last*<br/>
+Pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 

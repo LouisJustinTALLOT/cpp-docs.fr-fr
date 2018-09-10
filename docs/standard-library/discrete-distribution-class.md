@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 97ac9d7e8e00e5f81d974aa84befaad99881391d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964208"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108757"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution, classe
 
@@ -82,7 +82,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType* le type de résultat entier, valeur par défaut est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*IntType*<br/>
+Le type de résultat entier, valeur par défaut est **int**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -209,21 +210,29 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*firstW* le premier itérateur dans la liste à partir duquel construire la distribution.
+*firstW*<br/>
+Premier itérateur dans la liste à partir duquel construire la distribution.
 
-*lastW* le dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide pour la fin).
+*lastW*<br/>
+Dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide pour la fin).
 
-*weightlist* le [initializer_list](../cpp/initializers.md) à partir duquel construire la distribution.
+*weightlist*<br/>
+[initializer_list](../cpp/initializers.md) à partir duquel construire la distribution.
 
-*nombre de* le nombre d’éléments dans la plage de distribution. Si `count==0`, équivalent au constructeur par défaut (génère toujours zéro).
+*count*<br/>
+Nombre d'éléments dans la plage de distribution. Si `count==0`, équivalent au constructeur par défaut (génère toujours zéro).
 
-*faible* la plus petite valeur dans la plage de distribution.
+*low*<br/>
+Valeur la plus faible de la plage de distribution.
 
-*haute* la valeur la plus élevée dans la plage de distribution.
+*high*<br/>
+Valeur la plus élevée de la plage de distribution.
 
-*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
+*weightfunc*<br/>
+Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
 
-*parm* le `param_type` structure utilisée pour construire la distribution.
+*parm*<br/>
+Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -269,21 +278,29 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*firstW* le premier itérateur dans la liste à partir duquel construire la distribution.
+*firstW*<br/>
+Premier itérateur dans la liste à partir duquel construire la distribution.
 
-*lastW* le dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide pour la fin).
+*lastW*<br/>
+Dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide pour la fin).
 
-*weightlist* le [initializer_list](../cpp/initializers.md) à partir duquel construire la distribution.
+*weightlist*<br/>
+[initializer_list](../cpp/initializers.md) à partir duquel construire la distribution.
 
-*nombre de* le nombre d’éléments dans la plage de distribution. Si *count* a la valeur 0, il est équivalent au constructeur par défaut (génère toujours zéro).
+*count*<br/>
+Nombre d'éléments dans la plage de distribution. Si *count* a la valeur 0, il est équivalent au constructeur par défaut (génère toujours zéro).
 
-*faible* la plus petite valeur dans la plage de distribution.
+*low*<br/>
+Valeur la plus faible de la plage de distribution.
 
-*haute* la valeur la plus élevée dans la plage de distribution.
+*high*<br/>
+Valeur la plus élevée de la plage de distribution.
 
-*weightfunc* l’objet qui représente la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
+*weightfunc*<br/>
+Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
 
-*droit* le `param_type` objet à comparer à cela.
+*right*<br/>
+Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
 

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ee9e6af44c77c16099dc5e30c78ac4a5f39aa54a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959855"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108539"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution, classe
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Par défaut est le type de résultat à virgule flottante, **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -208,11 +209,14 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*signifie* le `mean` paramètre de distribution.
+*mean*<br/>
+Paramètre de distribution `mean`.
 
-*STDDEV* le `stddev` paramètre de distribution.
+*stddev*<br/>
+Paramètre de distribution `stddev`.
 
-*parm* la structure de paramètre utilisée pour construire la distribution.
+*parm*<br/>
+Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
@@ -239,11 +243,14 @@ struct param_type {
 ```
 ### <a name="parameters"></a>Paramètres
 
-*signifie* le `mean` paramètre de distribution.
+*mean*<br/>
+Paramètre de distribution `mean`.
 
-*STDDEV* le `stddev` paramètre de distribution.
+*stddev*<br/>
+Paramètre de distribution `stddev`.
 
-*droit* le `param_type` structure utilisée pour comparer.
+*right*<br/>
+Structure `param_type` utilisée pour comparer.
 
 ### <a name="remarks"></a>Notes
 

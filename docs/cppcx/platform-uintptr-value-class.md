@@ -15,30 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec2651ae44955a4adfa1319e5528b7fe948a15bf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 197f43a8b5a9485642aca16c25cb35515cabe020
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759399"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109990"
 ---
 # <a name="platformuintptr-value-class"></a>Classe de valeur Platform::UIntPtr
-Représente un pointeur non signé dont la taille est appropriée pour la plateforme (32 bits ou 64 bits).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public value struct UintPtr  
-```  
-  
-### <a name="requirements"></a>Configuration requise  
- **Minimum de client pris en charge :** Windows 8  
-  
- **Minimum de serveur pris en charge :** Windows Server 2012  
-  
- **Espace de noms :** Platform  
-  
- **Métadonnées :** platform.winmd  
-  
-## <a name="see-also"></a>Voir aussi  
- [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+
+Représente un pointeur non signé dont la taille est appropriée pour la plateforme (32 bits ou 64 bits).
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public value struct UintPtr
+```
+
+### <a name="requirements"></a>Configuration requise
+
+**Minimum de client pris en charge :** Windows 8
+
+**Minimum de serveur pris en charge :** Windows Server 2012
+
+**Espace de noms :** Platform
+
+**Métadonnées :** platform.winmd
+
+## <a name="see-also"></a>Voir aussi
+
+[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
