@@ -1,5 +1,5 @@
 ---
-title: Conversion de Bitmaps en barres d’outils | Microsoft Docs
+title: Conversion de Bitmaps en barres d’outils (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - bitmaps [C++], converting to toolbars
-- Toolbar editor, converting bitmaps
+- Toolbar editor [C++], converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
 author: mikeblome
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5524b1d5ecb3fa4de38f46706f26d2a318fe5ef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602398"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317225"
 ---
-# <a name="converting-bitmaps-to-toolbars"></a>Conversion de bitmaps en barres d'outils
+# <a name="converting-bitmaps-to-toolbars-c"></a>Conversion de Bitmaps en barres d’outils (C++)
 
-Vous pouvez créer une nouvelle barre d’outils en convertissant une image bitmap. Le graphique à partir de l’image bitmap convertit les images du bouton d’une barre d’outils. L’image bitmap contient généralement plusieurs images de bouton sur une seule bitmap, avec une seule image pour chaque bouton. Images peuvent être n’importe quelle taille ; la valeur par défaut est 16 pixels de large et la hauteur de l’image. Vous pouvez spécifier la taille des images de bouton dans le [boîte de dialogue Nouvelle ressource de barre d’outils](../windows/new-toolbar-resource-dialog-box.md) lorsque vous choisissez **barre d’outils Éditeur** à partir de la **Image** menu dans l’éditeur d’images.
+Vous pouvez créer une nouvelle barre d’outils dans un projet C++ en convertissant une image bitmap. Le graphique à partir de l’image bitmap convertit les images du bouton d’une barre d’outils. L’image bitmap contient généralement plusieurs images de bouton sur une seule bitmap, avec une seule image pour chaque bouton. Images peuvent être n’importe quelle taille ; la valeur par défaut est 16 pixels de large et la hauteur de l’image. Vous pouvez spécifier la taille des images de bouton dans le [boîte de dialogue Nouvelle ressource de barre d’outils](../windows/new-toolbar-resource-dialog-box.md) lorsque vous choisissez **barre d’outils Éditeur** à partir de la **Image** menu dans l’éditeur d’images.
 
 ### <a name="to-convert-bitmaps-to-a-toolbar"></a>Pour convertir des bitmaps en une barre d’outils
 

@@ -1,5 +1,5 @@
 ---
-title: Éditeur d’informations | Microsoft Docs
+title: Éditeur d’informations (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Version Information editor, about Version Information editor
+- Version Information editor [C++], about Version Information editor
 - editors, Version Information
-- resource editors, Version Information editor
+- resource editors [C++], Version Information editor
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7eb767d3969f964f2605aaebc8c4adb743cd1fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1d8a4eb57996bcc2afd9ddc92a9eecf354f88116
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199764"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313694"
 ---
-# <a name="version-information-editor"></a>Éditeur d’informations sur la version
+# <a name="version-information-editor-c"></a>Éditeur d’informations (C++)
 
 Les informations sur la version sont composées de l’identification de l’entreprise et du produit, d’un numéro de version du produit, et de la notification de copyright et de marque déposée. Avec le **informations de Version** éditeur, vous créez et conserver ces données, qui sont stockées dans la ressource d’informations de version. La ressource d’informations sur la version n’est pas obligatoire pour une application, mais elle est utile pour recueillir des informations qui identifient l’application. Les informations sur la version sont également utilisées par les API d’installation.
 

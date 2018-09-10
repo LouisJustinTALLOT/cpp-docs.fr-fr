@@ -1,5 +1,5 @@
 ---
-title: Guide de boîte de dialogue Paramètres | Microsoft Docs
+title: Guide de la boîte de dialogue Paramètres (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DLUs (dialog units)
-- Dialog editor, snap to guides
+- Dialog Editor [C++], snap to guides
 - grid spacing
 - guides, settings
 - dialog units (DLUs)
@@ -23,14 +23,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3533d57aa8230feb4d0e6fcb8689e0210c61bbd8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7369fdb37dbef474dafea2ba2a9a7e28f5eface9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595502"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318887"
 ---
-# <a name="guide-settings-dialog-box"></a>Paramètres du repère, boîte de dialogue
+# <a name="guide-settings-dialog-box-c"></a>Boîte de dialogue Paramètres Guide (C++)
 
 ## <a name="layout-guides"></a>Repères de disposition
 

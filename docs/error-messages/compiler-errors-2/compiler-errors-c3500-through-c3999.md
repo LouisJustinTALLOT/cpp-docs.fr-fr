@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545796"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319069"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Erreurs du compilateur C3500 à C3999
 
@@ -496,7 +496,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3721](compiler-error-c3721.md)|«*signature*' : signature incompatible pour l’événement|
 |[Erreur du compilateur C3722](compiler-error-c3722.md)|un événement générique n’est pas autorisé.|
 |[Erreur du compilateur C3723](compiler-error-c3723.md)|«*fonction*' : Impossible de résoudre l’événement|
-|[Erreur du compilateur C3724](compiler-error-c3724.md)|doit #include < windows.h > pour utiliser multi-threading avec événements|
+|[Erreur du compilateur C3724](compiler-error-c3724.md)|doit #include \<windows.h > à utiliser multi-threading avec événements|
 |Erreur du compilateur C3725|Obsolète.|
 |C3726 d’erreur du compilateur|Obsolète.|
 |[Erreur du compilateur C3727](compiler-error-c3727.md)|«*événement*' : un événement managé doit être une fonction membre ou un membre de données est un pointeur vers un délégué|

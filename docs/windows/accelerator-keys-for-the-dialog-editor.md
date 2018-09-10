@@ -1,5 +1,5 @@
 ---
-title: Touches d’accès rapide pour l’éditeur de boîtes de dialogue | Microsoft Docs
+title: Touches d’accès rapide pour l’éditeur de boîtes de dialogue (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,28 +10,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Dialog editor, shortcut keys
+- Dialog Editor [C++], shortcut keys
 ms.assetid: 940270e9-a974-425b-a681-dfeaba0adf66
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c5abfe45cc2f6e73dfe3c7bd8d38a0c783a15e05
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6314d4333254957ea2d8116786128843dafef64a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685630"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313570"
 ---
-# <a name="accelerator-keys-for-the-dialog-editor"></a>Touches accélérateur pour l'Éditeur de boîtes de dialogue
+# <a name="accelerator-keys-for-the-dialog-editor-c"></a>Touches accélérateur pour l’éditeur de boîtes de dialogue (C++)
 
 Voici la valeur par défaut touches accélérateur pour les commandes de l’éditeur de boîte de dialogue. Pour changer les touches de raccourci, cliquez sur **Options** sur le **outils** menu, puis choisissez **clavier** sous le **environnement** dossier. Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
 > Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-|Commande|Touches|Description|
+|Command|Touches|Description|
 |-------------|----------|-----------------|
 |Format.AlignBottoms|**CTRL** + **MAJ** + **flèche vers le bas**|Aligne les bords inférieurs des contrôles sélectionnés sur le contrôle dominant|
 |Format.AlignCenters|**MAJ** + **F9**|Aligne les centres verticaux des contrôles sélectionnés sur le contrôle dominant|

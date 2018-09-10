@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Outil texte (Éditeur d’images pour les icônes) | Microsoft Docs
+title: Boîte de dialogue Outil texte (C++) (Éditeur d’images pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,21 +11,21 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - text, adding to an image
-- Text Tool dialog box
+- Text Tool dialog box [C++]
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 86de06ded585c027af6ebf31dec964222d088198
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e55ad361c9252cfc4989926f90a9fedfd523c7d9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613178"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313443"
 ---
-# <a name="text-tool-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Outil texte (Éditeur d'images pour les icônes)
+# <a name="text-tool-dialog-box-c-image-editor-for-icons"></a>Boîte de dialogue Outil texte (C++) (Éditeur d’images pour les icônes)
 
 Utilisez le **outil texte** boîte de dialogue pour ajouter du texte à une ressource curseur, bitmap ou icône.
 

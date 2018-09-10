@@ -1,5 +1,5 @@
 ---
-title: 'Comment : spécifier répertoires Include pour les ressources | Microsoft Docs'
+title: 'Comment : spécifier répertoires Include pour les ressources (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,22 +9,22 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - directories [C++], specifying include paths for resources
-- include files, specifying for resources
-- resources [Visual Studio], including in projects
+- include files [C++], specifying for resources
+- resources [C++], including in projects
 ms.assetid: d6a7c0f6-4810-4bb0-b4b7-7d2476a20ca2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e0b655713a378c859bb017f661022f86aa687ab6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 257ca11dcc44b22d6ddbb5043315d29a70377148
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676430"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313947"
 ---
-# <a name="how-to-specify-include-directories-for-resources"></a>Comment : spécifier des répertoires Include pour les ressources
+# <a name="how-to-specify-include-directories-for-resources-c"></a>Comment : spécifier répertoires Include pour les ressources (C++)
 
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Pour spécifier les répertoires Include d'un fichier .rc spécifique
 

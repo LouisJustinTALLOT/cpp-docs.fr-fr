@@ -1,5 +1,5 @@
 ---
-title: Recherche de données binaires | Microsoft Docs
+title: Recherche de données binaires (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa37084a88f307757ff7a21f98d9bbc7d9f313ec
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5c24d2c4fbae86d6b906de039b8cf6a041858b2e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591070"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315767"
 ---
 # <a name="finding-binary-data"></a>Recherche de données binaires
 

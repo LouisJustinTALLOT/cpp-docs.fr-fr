@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Include des ressources | Microsoft Docs
+title: Include des ressources boîte de dialogue (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,29 +10,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Resource Includes dialog box
-- rc files, changing storage
-- symbol header files, changing
-- compiling source code, including resources
-- .rc files, changing storage
-- symbol header files, read-only
-- symbols, symbol header files
+- Resource Includes dialog box [C++]
+- rc files [C++], changing storage
+- symbol header files [C++], changing
+- .rc files [C++], changing storage
+- symbol header files [C++], read-only
+- symbols [C++], symbol header files
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96ee92f1b21d67321b95a169cbc4c47eaca2de17
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1ea89cdd21f4debfa23716a04630e34e3b9203c1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610659"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313336"
 ---
-# <a name="resource-includes-dialog-box"></a>Include des ressources (boîte de dialogue)
+# <a name="resource-includes-dialog-box-c"></a>Include des ressources boîte de dialogue (C++)
 
-Vous pouvez utiliser la **Include des ressources** boîte de dialogue pour modifier l’environnement classique de stockage de toutes les ressources dans le fichier .rc de projet et toutes les [symboles](../windows/symbols-resource-identifiers.md) dans Resource.h.
+Vous pouvez utiliser la **Include des ressources** boîte de dialogue dans un projet C++ à modifier l’environnement classique de stockage de toutes les ressources dans le fichier .rc de projet et toutes les [symboles](../windows/symbols-resource-identifiers.md) dans Resource.h.
 
 Pour ouvrir le **Include des ressources** de fichiers dans la boîte de dialogue, avec le bouton droit une .rc [affichage des ressources](../windows/resource-view-window.md), puis choisissez **Include des ressources** dans le menu contextuel.
 

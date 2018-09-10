@@ -23,16 +23,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6c89e2550c01db695aa513a98d6d1cc8f116ca0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dea292ad348a155c6acdf64352dae47e858140b0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571663"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314103"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et droit (&gt; &gt; et &lt; &lt;)
 
-Les opérateurs de décalage de bits sont l’opérateur de décalage vers la droite (>>), qui déplace les bits de *shift-expression* vers la droite et l’opérateur de décalage vers la gauche (<<), qui déplace les bits de *shift-expression* vers la gauche. <sup>1</sup>
+Les opérateurs de décalage de bits sont l’opérateur de décalage vers la droite (**&gt;&gt;**), qui déplace les bits de *shift-expression* vers la droite et l’opérateur de décalage vers la gauche (**&lt; &lt;**), qui déplace les bits de *shift-expression* vers la gauche. <sup>1</sup>
 
 ## <a name="syntax"></a>Syntaxe
 

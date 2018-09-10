@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 72ce06a3f722bca0147d220fb8602ab9e30f8751
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954258"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319017"
 ---
 # <a name="timepoint-class"></a>time_point, classe
 
@@ -160,7 +160,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 Le premier constructeur construit un objet dont la valeur `duration` stockée est égale à [duration::zero](../standard-library/duration-class.md#zero).
 
-Le deuxième constructeur construit un objet dont la valeur Durée stockée est égale à *durée*. À moins que `is_convertible<Duration2, duration>`*n’ait la valeur true*, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
+Le deuxième constructeur construit un objet dont la valeur Durée stockée est égale à *durée*. À moins que `is_convertible<Duration2, duration>` a la valeur true, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
 
 Le deuxième constructeur initialise sa valeur `duration` à l'aide de `Tp.time_since_epoch()`.
 

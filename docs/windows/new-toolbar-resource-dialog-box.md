@@ -1,5 +1,5 @@
 ---
-title: Nouvelle ressource de barre d’outils, boîte de dialogue | Microsoft Docs
+title: Nouvelle boîte de dialogue ressource barre d’outils (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New Toolbar Resource dialog box
+- New Toolbar Resource dialog box [C++]
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6952fa51115d5bec9650ef6d6012e3c7aff2d127
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602168"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316300"
 ---
-# <a name="new-toolbar-resource-dialog-box"></a>Nouvelle ressource de barre d'outils (boîte de dialogue)
+# <a name="new-toolbar-resource-dialog-box-c"></a>Nouvelle boîte de dialogue ressource barre d’outils (C++)
 
-Le **nouvelle ressource de barre d’outils** boîte de dialogue vous permet de spécifier la largeur et la hauteur des boutons que vous ajoutez à une ressource de barre d’outils. La valeur par défaut est 16 x 15 pixels.
+Le **nouvelle ressource de barre d’outils** boîte de dialogue vous permet de spécifier la largeur et la hauteur des boutons que vous ajoutez à une ressource de barre d’outils dans un projet C++. La valeur par défaut est 16 x 15 pixels.
 
 Une image bitmap qui sert à créer une barre d’outils a une largeur maximale de 2048. Par conséquent, si vous définissez la **la largeur du bouton** à 512, vous ne pouvez avoir quatre boutons. Si vous définissez la largeur à 513, peut uniquement avoir trois boutons.
 

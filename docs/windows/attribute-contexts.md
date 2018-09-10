@@ -8,19 +8,19 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], contexts
+- attributes [C++/CLI], contexts
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7635f49a494648f18bcd59eb8d212cc76d1f1539
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0e3935b168220b528afaecd2e1438cfe49496b1b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600798"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313661"
 ---
 # <a name="attribute-contexts"></a>Contextes d'attribut
 Attributs C++ peuvent être décrits à l’aide de quatre champs de base : la cible, elles peuvent être appliquées à (**s’applique à**), si elles sont renouvelables ou non (**Repeatable**), le requis la présence d’autres attributs ( **Attributs requis**) et les incompatibilités avec d’autres attributs (**attributs non valides**). Ces champs sont répertoriés dans une table qui accompagne cet article dans la rubrique de référence de chaque attribut. Chacun de ces champs est décrite ci-dessous.

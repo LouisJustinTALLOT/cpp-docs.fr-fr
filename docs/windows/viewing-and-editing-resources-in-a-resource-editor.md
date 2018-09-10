@@ -1,5 +1,5 @@
 ---
-title: Affichage et modification de ressources dans un éditeur de ressources | Microsoft Docs
+title: Affichage et modification de ressources dans un éditeur de ressources (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,28 +10,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], viewing
-- rc files, viewing resources
-- Resource View pane
+- resources [C++], viewing
 - layouts, previewing resource
-- code, viewing resources
-- resource editors, viewing resources
-- .rc files, viewing resources
-- resources [Visual Studio], editing
+- resource editors [C++], viewing resources
+- .rc files [C++], viewing resources
+- resources [C++], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 742bdd9d869d6a913315229bb6b5c896584a5269
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4fd8ed4e1257c8f780f1b1ac733aa8dd2261685c
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593202"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316690"
 ---
-# <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Affichage et modification des ressources dans un Éditeur de ressources
+# <a name="viewing-and-editing-resources-in-a-resource-editor-c"></a>Affichage et modification de ressources dans un éditeur de ressources (C++)
 
 Chaque type de ressource a un **ressource** éditeur spécifique à ce type de ressource. Vous pouvez réorganiser, redimensionner, ajouter des contrôles et fonctionnalités ou bien modifier les aspects d’une ressource à l’aide de l’éditeur associé. Vous pouvez également modifier une ressource dans [au format texte](../windows/how-to-open-a-resource-script-file-in-text-format.md) et [format binaire](../windows/opening-a-resource-for-binary-editing.md).
 

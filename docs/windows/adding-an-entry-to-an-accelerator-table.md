@@ -1,5 +1,5 @@
 ---
-title: Ajout d’une entrée à une Table d’accélérateurs | Microsoft Docs
+title: Ajout d’une entrée à une Table d’accélérateurs (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d463dc59e88dbd5c302de632d5261f29d8a4aab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7055c21a2b9e7d0e32f3dac56641513b19953e18
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595565"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315578"
 ---
-# <a name="adding-an-entry-to-an-accelerator-table"></a>Ajout d'une entrée dans une table d'accélérateurs
+# <a name="adding-an-entry-to-an-accelerator-table-c"></a>Ajout d’une entrée à une Table d’accélérateurs (C++)
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Pour ajouter une entrée à une table d'accélérateurs
 
-1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](../windows/resource-view-window.md).
+1. Dans un projet C++, ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](../windows/resource-view-window.md).
 
    > [!NOTE]
    > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).

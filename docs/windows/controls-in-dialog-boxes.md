@@ -1,5 +1,5 @@
 ---
-title: Contrôles dans les boîtes de dialogue | Microsoft Docs
+title: Contrôles dans les boîtes de dialogue (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591956"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317106"
 ---
-# <a name="controls-in-dialog-boxes"></a>Contrôles dans les boîtes de dialogue
+# <a name="controls-in-dialog-box-ces"></a>Contrôle, dans la boîte de dialogue (C++), es
 
 Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de la [onglet de boîte de dialogue Éditeur](../windows/dialog-editor-tab-toolbox.md) dans le [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox), ce qui vous permet de choisir le contrôle souhaité et faites-le glisser vers la boîte de dialogue. Par défaut, la fenêtre de boîte à outils est définie sur Masquer automatiquement. Il s’affiche sous forme d’onglet dans la marge gauche de votre solution lorsque l’éditeur de boîtes de dialogue est ouverte. Toutefois, vous pouvez épingler la **boîte à outils** fenêtre dans sa position en cliquant sur le **Masquer automatiquement** bouton dans le coin supérieur droit de la fenêtre. Pour plus d’informations sur la façon de contrôler le comportement de cette fenêtre, consultez [gestion des fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 

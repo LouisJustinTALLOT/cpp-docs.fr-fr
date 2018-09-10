@@ -1,5 +1,5 @@
 ---
-title: Définition des Variables membres pour les contrôles de boîte de dialogue | Microsoft Docs
+title: Définition des Variables membres pour les contrôles de boîte de dialogue (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - member variables, defining for controls
 - variables, dialog box control member variables
 - controls [C++], member variables
-- Dialog editor, defining member variables for controls
+- Dialog Editor [C++], defining member variables for controls
 ms.assetid: 84347c63-c33c-4b04-91f5-6d008c45ba58
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dccf80feb4582610a4cfcc22ef0d658c2ce63fb2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599738"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317860"
 ---
-# <a name="defining-member-variables-for-dialog-controls"></a>Définition de variables membres pour les contrôles de boîte de dialogue
+# <a name="defining-member-variables-for-dialog-controls-c"></a>Définition des Variables membres pour les contrôles de boîte de dialogue (C++)
 
 Pour définir une variable membre pour un contrôle de boîte de dialogue à l'exception des boutons, vous pouvez utiliser la méthode suivante.
 

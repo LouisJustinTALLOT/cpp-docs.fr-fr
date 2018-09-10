@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0652ca867ba49243ca5c87caa1dec98da929cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764548"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314233"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Modification du contrôle ATL DHTML
 
@@ -51,7 +51,7 @@ L’Assistant contrôle ATL fournit un code de démarrage, vous pouvez générer
 
    Vous pouvez utiliser la **IWebBrowser2** méthodes car ATL fournit un pointeur vers cette interface pour vous dans votre fichier .h.
 
-Ensuite, modifiez la ressource HTML pour appeler les méthodes que vous avez créé. Vous allez ajouter trois boutons pour appeler ces méthodes.  
+Ensuite, modifiez la ressource HTML pour appeler les méthodes que vous avez créé. Vous allez ajouter trois boutons pour appeler ces méthodes.
 
 #### <a name="to-modify-the-html-resource"></a>Pour modifier la ressource HTML
 
@@ -72,9 +72,9 @@ Ensuite, modifiez la ressource HTML pour appeler les méthodes que vous avez cr�
 3. Ajoutez l’appel à la `HelloHTML` méthode que vous avez créé. Exemple :
 
     ```html
-    <br>  
-    <br>  
-    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>  
+    <br>
+    <br>
+    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
    Cette méthode crée un bouton intitulé **HelloHTML**, que l’utilisateur peut cliquer pour afficher le `HelloHTML` boîte de message.

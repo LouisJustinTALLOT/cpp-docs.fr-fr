@@ -1,5 +1,5 @@
 ---
-title: Touches accélérateur (Éditeur d’images pour les icônes) | Microsoft Docs
+title: Touches accélérateur (Éditeur d’images C++ pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,21 +19,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f211b15134ad292c9e7e4d3ed92d81ea59dd3b86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683298"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317743"
 ---
-# <a name="accelerator-keys-image-editor-for-icons"></a>Touches accélérateur (Éditeur d'images pour les icônes)
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>Touches accélérateur (Éditeur d’images C++ pour les icônes)
 
 Voici les touches accélérateur pour les commandes de l’éditeur d’Image qui sont liés aux clés par défaut. Pour modifier les touches d’accès rapide, cliquez sur **Options** sur le **outils** menu, puis choisissez **clavier** sous le **environnement** dossier. Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
 > Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-|Commande|Touches|Description|
+|Command|Touches|Description|
 |-------------|----------|-----------------|
 |Image.AirBrushTool|**Ctrl** + **A**|Dessine en utilisant un aérographe avec la taille sélectionnée et la couleur.|
 |Image.BrushTool|**CTRL** + **B**|Dessine à l’aide d’un pinceau avec la forme sélectionnée, la taille et la couleur.|

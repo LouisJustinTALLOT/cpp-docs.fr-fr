@@ -1,5 +1,5 @@
 ---
-title: Modification des Tables d’accélérateurs | Microsoft Docs
+title: Modification des Tables d’accélérateurs (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c258f691b7dbea814c707cbf1f3825b9db5ba42
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 14f9e82e87d395341dc1f05f1de49a20d58fec52
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596401"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314883"
 ---
-# <a name="editing-accelerator-tables"></a>Modification des tables d'accélérateurs
+# <a name="editing-accelerator-tables-c"></a>Modification des Tables d’accélérateurs (C++)
 
-Dans Visual C++, vous pouvez modifier une table d’accélérateurs directement avec la modification sur place dans le **Accelerator** éditeur.
+Dans un projet C++, vous pouvez modifier une table d’accélérateurs directement avec la modification sur place dans le **Accelerator** éditeur.
 
 Les procédures ci-dessous font référence à l’utilisation des pages de propriétés standard, toutefois, la modification sur place et la méthode de page de propriété ont le même résultat. Modifications apportées à l’aide des pages de propriétés ou à l’aide de la modification sur place sont immédiatement répercutées dans la table d’accélérateurs.
 

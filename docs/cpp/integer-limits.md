@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9a516ef366952f9d55e16891dfcb7bb81fac7e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6f49e224520751e08ba6aa7e37932314e11ef8a5
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406017"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315184"
 ---
 # <a name="integer-limits"></a>Limites d'entier
 
 **Section spécifique à Microsoft**
 
-Les limites pour les types d'entiers sont répertoriées dans le tableau ci-dessous. Ces limites sont également définies dans le fichier d’en-tête standard < limits.h >.
+Les limites pour les types d'entiers sont répertoriées dans le tableau ci-dessous. Ces limites sont également définies dans le fichier d’en-tête standard \<limits.h >.
 
 ## <a name="limits-on-integer-constants"></a>Limites appliquées aux constantes entières
 
@@ -59,4 +59,5 @@ Si une valeur dépasse la plus grande représentation d'entier, le compilateur M
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
- [Limites des valeurs à virgule flottante](../cpp/floating-limits.md)  
+
+[Limites des valeurs à virgule flottante](../cpp/floating-limits.md)
