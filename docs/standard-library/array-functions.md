@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a67a22b8236646b549032e236006cd4855c3a43c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961069"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108720"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt;, fonctions
 
@@ -50,13 +50,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Index* décalage de l’élément.
+*Index*<br/>
+Décalage de l’élément.
 
-*T* le type d’un élément.
+*T*<br/>
+Type d’un élément.
 
-*N* le nombre d’éléments dans le tableau.
+*N*<br/>
+Nombre d’éléments dans le tableau.
 
-*ARR* sélectionner à partir du tableau.
+*arr*<br/>
+Tableau dans lequel opérer la sélection.
 
 ### <a name="example"></a>Exemple
 
@@ -101,13 +105,17 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* le type d’un élément.
+*Ty*<br/>
+Type d’un élément.
 
-*N* la taille du tableau.
+*N*<br/>
+Taille du tableau.
 
-*gauche* le premier tableau à échanger.
+*left*<br/>
+Premier tableau à échanger.
 
-*droit* le deuxième tableau à échanger.
+*right*<br/>
+Deuxième tableau à échanger.
 
 ### <a name="remarks"></a>Notes
 

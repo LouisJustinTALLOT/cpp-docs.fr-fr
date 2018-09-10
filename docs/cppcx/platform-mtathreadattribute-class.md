@@ -17,103 +17,108 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc6405337814671d6789c8364e2f458c84d2487a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757118"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109704"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (classe)
-Indique que le modèle de thread d'une application est un modèle MTA (MultiThreaded Apartment).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-public ref class MTAThreadAttribute sealed : Attribute  
-```  
-  
-### <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[MTAThreadAttribute constructeur 1](#ctor) constructeur|Initialise une nouvelle instance de la classe.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
- L’attribut MTAThreadAttribute hérite [Platform::Object Class](../cppcx/platform-object-class.md). MTAThreadAttribute surcharge ou possède également les membres suivants :  
-  
-|Name|Description|  
-|----------|-----------------|  
-|[MTAThreadAttribute::Equals](#equals)|Détermine si l'objet spécifié est identique à l'objet actuel.|  
-|[MTAThreadAttribute::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|  
-|[MTAThreadAttribute::ToString](#tostring)|Retourne une chaîne qui représente l'objet actuel.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `Platform`  
-  
-### <a name="requirements"></a>Configuration requise  
- **Métadonnées :** platform.winmd  
-  
- **Espace de noms :** Platform  
 
+Indique que le modèle de thread d'une application est un modèle MTA (MultiThreaded Apartment).
 
+## <a name="syntax"></a>Syntaxe
+
+```
+public ref class MTAThreadAttribute sealed : Attribute
+```
+
+### <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[MTAThreadAttribute constructeur 1](#ctor) constructeur|Initialise une nouvelle instance de la classe.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+L’attribut MTAThreadAttribute hérite [Platform::Object Class](../cppcx/platform-object-class.md). MTAThreadAttribute surcharge ou possède également les membres suivants :
+
+|Name|Description|
+|----------|-----------------|
+|[MTAThreadAttribute::Equals](#equals)|Détermine si l'objet spécifié est identique à l'objet actuel.|
+|[MTAThreadAttribute::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|
+|[MTAThreadAttribute::ToString](#tostring)|Retourne une chaîne qui représente l'objet actuel.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`Platform`
+
+### <a name="requirements"></a>Configuration requise
+
+**Métadonnées :** platform.winmd
+
+**Espace de noms :** Platform
 
 ## <a name="ctor"></a> MTAThreadAttribute, constructeur
-Initialise une nouvelle instance de la classe MTAThreadAttribute.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public:MTAThreadAttribute()  
-```  
-  
 
+Initialise une nouvelle instance de la classe MTAThreadAttribute.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+public:MTAThreadAttribute();
+```
 
 ## <a name="equals"></a> MTAThreadAttribute::Equals
-Détermine si l'objet spécifié est identique à l'objet actuel.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public:virtual override bool Equals(  Object^ obj)  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- obj  
- Objet à comparer.  
-  
-### <a name="return-value"></a>Valeur de retour  
- `true` si les objets sont égaux ; sinon `false`.  
-  
 
+Détermine si l'objet spécifié est identique à l'objet actuel.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+public:virtual override bool Equals( Object^ obj );
+```
+
+### <a name="parameters"></a>Paramètres
+
+*obj*<br/>
+Objet à comparer.
+
+### <a name="return-value"></a>Valeur de retour
+
+`true` si les objets sont égaux ; sinon `false`.
 
 ## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
-Retourne le code de hachage de cette instance.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Code de hachage de cette instance.  
-  
 
+Retourne le code de hachage de cette instance.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Code de hachage de cette instance.
 
 ## <a name="tostring"></a> MTAThreadAttribute::ToString
-Retourne une chaîne qui représente l'objet actuel.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public:String^ ToString()  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Chaîne qui représente l'objet actuel.  
-    
-## <a name="see-also"></a>Voir aussi  
- [Plateforme Namespace](platform-namespace-c-cx.md)
+
+Retourne une chaîne qui représente l'objet actuel.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+public:String^ ToString();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Chaîne qui représente l'objet actuel.
+
+## <a name="see-also"></a>Voir aussi
+
+[Plateforme Namespace](platform-namespace-c-cx.md)

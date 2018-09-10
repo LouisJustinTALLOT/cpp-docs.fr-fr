@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954810"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108900"
 ---
 # <a name="moneyput-class"></a>money_put, classe
 
@@ -47,9 +47,11 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
+*CharType*<br/>
+Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
-*OutputIterator* le type d’itérateur dans lequel les fonctions put monétaires enregistrent leur sortie.
+*OutputIterator*<br/>
+Type d'itérateur dans lequel les fonctions put monétaires enregistrent leur sortie.
 
 ## <a name="remarks"></a>Notes
 
@@ -117,15 +119,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Paramètres
 
-*suivant* un itérateur qui traite le premier élément de la chaîne insérée.
+*next*<br/>
+Itérateur qui traite le premier élément de la chaîne insérée.
 
-*_Intl* valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
+*_Intl*<br/>
+Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-*_Iosbase* indicateur de format qui, quand, indique que le symbole monétaire est facultatif ; sinon, il est obligatoire
+*_Iosbase*<br/>
+Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
-*_Fill* un caractère qui est utilisé pour l’espacement.
+*_Fill*<br/>
+Caractère utilisé pour l’espacement.
 
-*Val* un objet chaîne à convertir.
+*Val*<br/>
+Objet de chaîne à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -195,7 +202,8 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs*<br/>
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -234,15 +242,20 @@ iter_type put(
 
 ### <a name="parameters"></a>Paramètres
 
-*suivant* un itérateur qui traite le premier élément de la chaîne insérée.
+*next*<br/>
+Itérateur qui traite le premier élément de la chaîne insérée.
 
-*_Intl* valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
+*_Intl*<br/>
+Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
-*_Iosbase* indicateur de format qui, quand, indique que le symbole monétaire est facultatif ; sinon, il est obligatoire
+*_Iosbase*<br/>
+Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
-*_Fill* un caractère qui est utilisé pour l’espacement.
+*_Fill*<br/>
+Caractère utilisé pour l’espacement.
 
-*Val* un objet chaîne à convertir.
+*Val*<br/>
+Objet de chaîne à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
 

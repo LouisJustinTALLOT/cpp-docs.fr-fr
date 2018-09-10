@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6703c177b20230d7308ebd22b3b54edbdb1d2a14
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c06da499ed463404cc917fef7c8aebd52695061e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758704"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109730"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan, classe
 
@@ -114,8 +114,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*
-
+*étendue*  
 Objet à comparer.
 
 ### <a name="return-value"></a>Valeur de retour

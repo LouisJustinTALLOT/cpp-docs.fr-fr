@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832a7b8f864dc21214d3b2428f83fd0c68330ff9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2b4712a76be411d237ee2abc97ddbdd4b67e57f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959889"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108356"
 ---
 # <a name="basicfstream-class"></a>basic_fstream, classe
 
@@ -46,9 +46,11 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem* l’élément de base de la mémoire tampon de fichier.
+*Elem*<br/>
+Élément de base de la mémoire tampon de fichier.
 
-*TR* les caractéristiques de l’élément de base de la mémoire tampon de fichier (généralement `char_traits` <  `Elem`>).
+*Tr*<br/>
+Caractéristiques de l’élément de base de la mémoire tampon de fichier (généralement `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Notes
 
@@ -135,11 +137,14 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filename* le nom du fichier à ouvrir.
+*_Filename*<br/>
+Nom du fichier à ouvrir.
 
-*Mode _De* une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Mode _De*<br/>
+Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* le fichier par défaut ouverture de protection, équivalente à la *shflag* paramètre dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Le fichier par défaut ouverture de protection, équivalente à la *shflag* paramètre dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Notes
 
@@ -215,11 +220,14 @@ void open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filename* le nom du fichier à ouvrir.
+*_Filename*<br/>
+Nom du fichier à ouvrir.
 
-*Mode _De* une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Mode _De*<br/>
+Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* le fichier par défaut ouverture de protection, équivalente à la *shflag* paramètre dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Le fichier par défaut ouverture de protection, équivalente à la *shflag* paramètre dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Notes
 
@@ -239,7 +247,8 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* référence lvalue à un `basic_fstream` objet.
+*right*<br/>
+Référence lvalue à un objet `basic_fstream`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -275,7 +284,8 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* un `lvalue` font référence à un `basic_fstream` objet.
+*right*<br/>
+Référence `lvalue` à un objet `basic_fstream`.
 
 ### <a name="remarks"></a>Notes
 

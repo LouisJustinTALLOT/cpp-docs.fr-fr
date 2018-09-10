@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4017fceab100689847ea99df80016aaba2fbd10f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962111"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107662"
 ---
 # <a name="alignedunion-class"></a>aligned_union, classe
 
@@ -39,9 +39,11 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Paramètres
 
-*Len* la valeur d’alignement pour le type le plus grand dans l’union.
+*Len*<br/>
+Valeur d'alignement pour le plus grand type dans l'union.
 
-*Types* types distincts dans l’union sous-jacente.
+*Types*<br/>
+Types distincts dans l'union sous-jacente.
 
 ## <a name="remarks"></a>Notes
 

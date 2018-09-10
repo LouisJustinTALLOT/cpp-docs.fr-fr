@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9acd5abc941c3cc3ab2f1c22486298d7cc7da16c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959230"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106962"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any, classe
 
@@ -111,9 +111,11 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Paramètres
 
-*Lck* A `mutex` objet de tout type.
+*Lck*<br/>
+Objet `mutex` de tout type.
 
-*Pred* toute expression qui retourne **true** ou **false**.
+*Pred*<br/>
+Toute expression qui retourne **true** ou **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -140,11 +142,14 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Paramètres
 
-*Lck* A `mutex` objet de tout type.
+*Lck*<br/>
+Objet `mutex` de tout type.
 
-*Rel_time* A `chrono::duration` objet qui spécifie la quantité de temps avant que le thread sort de veille.
+*Rel_time*<br/>
+Objet `chrono::duration` qui spécifie le délai avant l’éveil du thread.
 
-*Pred* toute expression qui retourne **true** ou **false**.
+*Pred*<br/>
+Toute expression qui retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -192,11 +197,14 @@ void wait_until(
 
 ### <a name="parameters"></a>Paramètres
 
-*Lck* un objet mutex.
+*Lck*<br/>
+Objet mutex.
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) objet.
+*Abs_time*<br/>
+Objet [chrono::time_point](../standard-library/time-point-class.md).
 
-*Pred* toute expression qui retourne **true** ou **false**.
+*Pred*<br/>
+Toute expression qui retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur de retour
 

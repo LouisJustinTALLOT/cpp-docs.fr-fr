@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957520"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109873"
 ---
 # <a name="sharedptr-class"></a>shared_ptr, classe
 
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Paramètres
 
-*SP* pointeur partagé à copier.
+*SP*<br/>
+Pointeur partagé à copier.
 
-*AP* pointeur automatique à copier.
+*Asie-Pacifique*<br/>
+Pointeur automatique à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR* un `lvalue` référence soit un `shared_ptr` ou un `weak_ptr`.
+*ptr*<br/>
+Référence `lvalue` à un `shared_ptr` ou à un `weak_ptr`.
 
 ### <a name="remarks"></a>Notes
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Autres* type contrôlé par le pointeur d’argument.
+*Autre*<br/>
+Type contrôlé par le pointeur d’argument.
 
-*D* le type du SUPPRESSEUR.
+*D*<br/>
+Type du suppresseur.
 
-*PTR* le pointeur à copier.
+*ptr*<br/>
+Pointeur à copier.
 
-*DTOR* SUPPRESSEUR à copier.
+*DTOR*<br/>
+Suppresseur à copier.
 
-*Un* le type de l’allocateur.
+*A*<br/>
+Type de l'allocateur.
 
-*Alloc* allocateur à copier.
+*Alloc*<br/>
+Allocateur à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Paramètres
 
-*Autres* type contrôlé par le pointeur d’argument.
+*Autre*<br/>
+Type contrôlé par le pointeur d’argument.
 
-*PTR* le pointeur à copier.
+*ptr*<br/>
+Pointeur à copier.
 
-*D* le type du SUPPRESSEUR.
+*D*<br/>
+Type du suppresseur.
 
-*Un* le type de l’allocateur.
+*A*<br/>
+Type de l'allocateur.
 
-*DTOR* SUPPRESSEUR.
+*DTOR*<br/>
+Suppresseur.
 
-*r* l’allocateur.
+*r*<br/>
+Allocateur.
 
-*SP* le pointeur intelligent à copier.
+*SP*<br/>
+Pointeur intelligent à copier.
 
-*WP* pointeur faible.
+*WP*<br/>
+Pointeur faible.
 
-*AP* pointeur automatique à copier.
+*Asie-Pacifique*<br/>
+Pointeur automatique à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-*SP* le pointeur partagé à échanger.
+*SP*<br/>
+Pointeur partagé à échanger.
 
 ### <a name="remarks"></a>Notes
 

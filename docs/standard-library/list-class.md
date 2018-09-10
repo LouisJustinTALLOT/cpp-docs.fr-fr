@@ -108,12 +108,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31f1562e5db85f0638dfd32ba6e2db0f6f70fea
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962915"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107473"
 ---
 # <a name="list-class"></a>list, classe
 
@@ -128,9 +128,11 @@ class list
 
 ### <a name="parameters"></a>Paramètres
 
-*Type* type de données de l’élément à stocker dans la liste.
+*Type*<br/>
+Type de données d'élément à stocker dans la liste.
 
-*Allocateur* le type qui représente l’objet allocateur stocké qui contient des informations sur l’allocation et la désallocation de mémoire de la liste. Cet argument est facultatif et la valeur par défaut est **allocateur**\<*Type*>.
+*Allocateur*<br/>
+Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la libération de mémoire de la liste. Cet argument est facultatif et la valeur par défaut est **allocateur**\<*Type*>.
 
 ## <a name="remarks"></a>Notes
 
@@ -250,15 +252,20 @@ void assign(
 
 ### <a name="parameters"></a>Paramètres
 
-*Première* Position du premier élément dans la plage d’éléments à copier à partir de la liste d’arguments.
+*Premier*<br/>
+Position du premier élément de la plage d’éléments à copier à partir de la liste d’arguments.
 
-*Dernière* Position du premier élément juste après la plage d’éléments à copier à partir de la liste d’arguments.
+*Dernière*<br/>
+Position du premier élément juste après la plage d'éléments à copier à partir de la liste d'arguments.
 
-*Nombre de* le nombre de copies d’un élément inséré dans la liste.
+*Nombre*<br/>
+Nombre de copies d'un élément inséré dans la liste.
 
-*Val* la valeur de l’élément inséré dans la liste.
+*Val*<br/>
+Valeur de l'élément inséré dans la liste.
 
-*IList* initializer_list qui contient les éléments à insérer.
+*IList*<br/>
+initializer_list qui contient les éléments à insérer.
 
 ### <a name="remarks"></a>Notes
 
@@ -952,7 +959,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+*c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is "
         << *c1_Iter << endl;
 
@@ -983,11 +990,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* Position de l’élément à supprimer de la liste.
+*Where*<br/>
+Position de l'élément à supprimer de la liste.
 
-*première* Position du premier élément supprimé de la liste.
+*first*<br/>
+Position du premier élément supprimé de la liste.
 
-*dernière* Position juste après le dernier élément supprimé à partir de la liste.
+*last*<br/>
+Position juste après le dernier élément supprimé de la liste.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1437,9 +1447,11 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* la liste d’arguments à fusionner avec la liste des cibles.
+*right*<br/>
+Liste d’arguments à fusionner avec la liste cible.
 
-*comp* l’opérateur de comparaison utilisé pour ordonner les éléments de la liste cible.
+*comp*<br/>
+Opérateur de comparaison utilisé pour classer les éléments de la liste cible.
 
 ### <a name="remarks"></a>Notes
 
@@ -1834,7 +1846,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;
+*c1_rIter = 40;
    cout << "The last element in the list is now " << *c1_rIter << "." << endl;
 }
 ```
@@ -1892,7 +1904,8 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* la valeur qui, si détenue par un élément, se traduira par la suppression de cet élément dans la liste.
+*Val*<br/>
+Valeur qui, si elle est contenue dans un élément, entraîne la suppression de cet élément de la liste.
 
 ### <a name="remarks"></a>Notes
 
@@ -1949,7 +1962,8 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Paramètres
 
-*pred* prédicat unaire qui, si satisfaite par un élément, entraîne la suppression de cet élément dans la liste.
+*Pred*<br/>
+Prédicat unaire qui, s’il est satisfait par un élément, entraîne la suppression de cet élément de la liste.
 
 ### <a name="example"></a>Exemple
 
@@ -2099,9 +2113,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Newsize* la nouvelle taille de la liste.
+*_Newsize*<br/>
+Nouvelle taille de la liste.
 
-*Val* la valeur des nouveaux éléments à ajouter à la liste si la nouvelle taille est plus grande que la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
+*Val*<br/>
+Valeur des nouveaux éléments à ajouter à la liste si la nouvelle taille est supérieure à la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
 
 ### <a name="remarks"></a>Notes
 
@@ -2279,7 +2295,8 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>Paramètres
 
-*comp* l’opérateur de comparaison utilisé pour classer les éléments consécutifs.
+*comp*<br/>
+Opérateur de comparaison utilisé pour classer les éléments consécutifs.
 
 ### <a name="remarks"></a>Notes
 
@@ -2350,15 +2367,20 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* la position dans la liste de destination avant lequel insérer.
+*Where*<br/>
+Position dans la liste de destination avant laquelle l'insertion doit être effectuée.
 
-*Source* la liste source qui doit être inséré dans la liste de destination.
+*Source*<br/>
+Liste source qui doit être insérée dans la liste de destination.
 
-*Iter* l’élément à insérer dans la liste source.
+*Iter*<br/>
+Élément à insérer à partir de la liste source.
 
-*Première* le premier élément dans la plage à insérer dans la liste source.
+*Premier*<br/>
+Premier élément de la plage à insérer à partir de la liste source.
 
-*Dernière* la première position au-delà du dernier élément dans la plage à insérer dans la liste source.
+*Dernière*<br/>
+Première position au-delà du dernier élément de la plage à insérer à partir de la liste source.
 
 ### <a name="remarks"></a>Notes
 
@@ -2460,9 +2482,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>Paramètres
 
-*droit* la liste qui fournit les éléments à échanger, ou la liste dont les éléments doivent être échangés avec ceux de la liste *gauche*.
+*right*<br/>
+La liste qui fournit les éléments à échanger, ou la liste dont les éléments doivent être échangés avec ceux de la liste *gauche*.
 
-*gauche* une liste dont les éléments doivent être échangés avec ceux de la liste *droit*.
+*left*<br/>
+Une liste dont les éléments doivent être échangés avec ceux de la liste *droit*.
 
 ### <a name="example"></a>Exemple
 
@@ -2525,7 +2549,8 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Paramètres
 
-*pred* le prédicat binaire utilisé pour comparer des éléments consécutifs.
+*Pred*<br/>
+Prédicat binaire utilisé pour comparer des éléments consécutifs.
 
 ### <a name="remarks"></a>Notes
 

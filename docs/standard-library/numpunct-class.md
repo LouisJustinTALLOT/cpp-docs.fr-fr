@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 81a176bd911203d04797f3437539730042b8dbae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965563"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108978"
 ---
 # <a name="numpunct-class"></a>numpunct, classe
 
@@ -60,7 +60,8 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* le type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux.
+*CharType*<br/>
+Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
 ## <a name="remarks"></a>Notes
 
@@ -341,7 +342,7 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 ```
 
 ## <a name="numpunct"></a>  numpunct::numpunct
@@ -354,7 +355,8 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* valeur entière utilisée pour spécifier le type de gestion de la mémoire pour l’objet.
+*_Refs*<br/>
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 

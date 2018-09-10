@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0230c92a448eedf0cae7c80778c2bd4c48d077
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 58551874227bde5d158946c7df9c77bcc0ff3ef3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963165"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108343"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
@@ -34,9 +34,12 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Paramètres
 
-*Elem* le type d’élément de caractères larges.
-*Maxcode* le nombre maximal de caractères pour la facette de paramètres régionaux.
-*Mode* informations de Configuration pour la facette de paramètres régionaux.
+*Elem*<br/>
+Type d'élément à caractères larges.
+*Maxcode*<br/>
+Nombre maximal de caractères pour la facette de paramètres régionaux.
+*Mode*<br/>
+Informations de configuration pour les facettes de paramètres régionaux.
 
 ## <a name="remarks"></a>Notes
 
@@ -44,4 +47,5 @@ Le flux d’octets peut être écrit dans un fichier binaire ou un fichier texte
 
 ## <a name="requirements"></a>Configuration requise
 
-En-tête : <codecvt> Espace de noms : std
+En-tête : \<codecvt > \
+Namespace : std

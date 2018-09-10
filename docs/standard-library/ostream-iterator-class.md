@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: c166b39a6252c3b49427f06d88c179bd9ca25ce8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207917"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108330"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator, classe
 
@@ -42,11 +42,14 @@ class ostream_iterator
 
 ### <a name="parameters"></a>Paramètres
 
-*Type* le type d’objet à insérer dans le flux de sortie.
+*Type*<br/>
+Type d'objet à insérer dans le flux de sortie.
 
-*CharType* le type qui représente le type de caractère pour le `ostream_iterator`. Cet argument est facultatif et la valeur par défaut est **char**.
+*CharType*<br/>
+Type qui représente le type de caractère de `ostream_iterator`. Cet argument est facultatif et la valeur par défaut est **char**.
 
-*Caractéristiques* le type qui représente le type de caractère pour le `ostream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char_traits`\< *CharType>.*
+*Caractéristiques*<br/>
+Type qui représente le type de caractère de `ostream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char_traits`\< *CharType>.*
 
 La classe ostream_iterator doit répondre aux exigences d’un itérateur de sortie. Les algorithmes peuvent être enregistrés directement dans le flux de sortie à l'aide de `ostream_iterator`.
 
@@ -114,9 +117,9 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to the output stream\n"
         << "by intOut are:" << endl;
- *intOut = 10;
- *intOut = 20;
- *intOut = 30;
+*intOut = 10;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 The integers written to the output stream
@@ -163,10 +166,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -213,10 +216,10 @@ int main( )
    // standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -236,7 +239,8 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val* la valeur de l’objet de type `Type` à insérer dans le flux de sortie.
+*Val*<br/>
+Valeur de l’objet de type `Type` à insérer dans le flux de sortie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -266,10 +270,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -294,9 +298,11 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ostr* le flux de sortie de type [ostream_iterator::ostream_type](#ostream_type) devant être itéré.
+*_Ostr*<br/>
+Flux de sortie de type [ostream_iterator::ostream_type](#ostream_type) devant être itéré.
 
-*_Delimiter* le délimiteur qui est inséré dans le flux de sortie entre les valeurs.
+*_Delimiter*<br/>
+Délimiteur qui est inséré dans le flux de sortie entre les valeurs.
 
 ### <a name="remarks"></a>Notes
 
@@ -319,9 +325,9 @@ int main( )
 
    // ostream_iterator for stream cout
    ostream_iterator<int> intOut ( cout , "\n" );
- *intOut = 10;
+*intOut = 10;
    intOut++;
- *intOut = 20;
+*intOut = 20;
    intOut++;
 
    int i;
@@ -404,9 +410,9 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to output stream\n"
         << "by intOut are:" << endl;
- *intOut = 1;
- *intOut = 10;
- *intOut = 100;
+*intOut = 1;
+*intOut = 10;
+*intOut = 100;
 }
 \* Output:
 The integers written to output stream

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d841428be45ae47eee94bec8c2f40d42e65e29a7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 86a37ce88870ff2c60ed4f0a693bdaae32523c24
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953245"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108236"
 ---
 # <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable, classe
 
@@ -36,7 +36,8 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ## <a name="remarks"></a>Notes
 

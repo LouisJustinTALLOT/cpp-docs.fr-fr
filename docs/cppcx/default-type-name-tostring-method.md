@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3855da95342098c9ae260dc1d238c77f0fe69b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 756fbf28a73314ad4e335f658a48527f90975e55
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752500"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108557"
 ---
 # <a name="defaulttypenametostring-method"></a>default::(type_name)::ToString, méthode
-Retourne une chaîne qui représente le type actuel.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-  
-String^ ToString()  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Chaîne qui représente l'objet actuel.  
-  
-### <a name="requirements"></a>Configuration requise  
- **Minimum de client pris en charge :** Windows 8  
-  
- **Minimum de serveur pris en charge :** Windows Server 2012  
-  
- **Espace de noms** : par défaut  
-  
- **En-tête :** vccorlib.h  
-  
-## <a name="see-also"></a>Voir aussi  
- [Espace de noms par défaut](../cppcx/default-namespace.md)
+
+Retourne une chaîne qui représente le type actuel.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+String^ ToString();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Chaîne qui représente l'objet actuel.
+
+### <a name="requirements"></a>Configuration requise
+
+**Minimum de client pris en charge :** Windows 8
+
+**Minimum de serveur pris en charge :** Windows Server 2012
+
+**Espace de noms** : par défaut
+
+**En-tête :** vccorlib.h
+
+## <a name="see-also"></a>Voir aussi
+
+[Espace de noms par défaut](../cppcx/default-namespace.md)
