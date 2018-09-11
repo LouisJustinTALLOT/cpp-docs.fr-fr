@@ -1,7 +1,7 @@
 ---
 title: regex_constants, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -92,14 +92,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0e330cccb83ad702994b3d31d762cc0203e78de0
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107518"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384993"
 ---
-# <a name="regexconstants-class"></a>regex_constants, classe
+# <a name="regexconstants-namespace"></a>espace de noms regex_constants
 
 Espace de noms des indicateurs d'expression régulière.
 
@@ -116,6 +116,12 @@ namespace regex_constants {
 ## <a name="remarks"></a>Notes
 
 L'espace de noms `regex_constants` inclut plusieurs types d'indicateurs et les valeurs qui leur sont associées.
+
+|||
+|-|-|
+|[error_type](#error_type)|Indicateurs pour signaler les erreurs de syntaxe des expressions régulières.|
+|[match_flag_type](#match_flag_type)|Indicateurs des options de correspondance d’expression régulière.|
+|[syntax_option_type](#syntax_option_type)|Indicateurs pour la sélection des options de syntaxe.|
 
 ## <a name="requirements"></a>Configuration requise
 
