@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (Éditeur d’images pour les icônes) | Microsoft Docs
+title: Barre d’outils (Éditeur d’images C++ pour les icônes) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fbad27020b18bafe2f9fc60ee08282d9101ea5a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604134"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314402"
 ---
-# <a name="toolbar-image-editor-for-icons"></a>Barre d'outils (Éditeur d'images pour les icônes)
+# <a name="toolbar-c-image-editor-for-icons"></a>Barre d’outils (Éditeur d’images C++ pour les icônes)
 
 Le **Éditeur d’images** barre d’outils contient les outils de dessin, peinture, saisie de texte, effacer et manipulation des vues. Il contient également un sélecteur d’options, avec lequel vous pouvez sélectionner des options pour l’utilisation de chaque outil. Par exemple, vous pouvez choisir à partir de différentes largeurs de pinceau facteurs d’agrandissement et des styles de ligne.
 
