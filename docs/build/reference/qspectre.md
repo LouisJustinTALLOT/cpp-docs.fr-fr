@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 2d3b238b9a5bc01fa3ee053acdb3c7c84b95df71
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130987"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44385006"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -44,7 +44,7 @@ Si votre code fonctionne sur les données qui transitent par une limite d’appr
 
 ### <a name="availability"></a>Disponibilité
 
-Le **/qspectre** option est disponible dans Visual Studio 2017 version 15.5.5 et toutes les mises à jour pour les compilateurs Microsoft Visual C++ (MSVC) effectuées sur ou après le 23 janvier 2018.
+Le **/qspectre** option est disponible dans Visual Studio 2017 version 15.5.5 et toutes les mises à jour pour les compilateurs Microsoft Visual C++ (MSVC) effectuées sur ou après le 23 janvier 2018. Utilisez Visual Studio Installer pour mettre à jour le compilateur et pour installer les bibliothèques d’atténuation de Spectre en tant que composants individuels. Le **/qspectre** option est également disponible dans Visual Studio 2015 Update 3 via un correctif. Pour plus d’informations, consultez [Ko 4338871](https://support.microsoft.com/help/4338871).
 
 Toutes les versions de Visual Studio 2017 version 15.5 et toutes les versions préliminaires de Visual Studio version 15.6 incluent déjà une option non documentée, **/d2guardspecload**, qui équivaut au comportement initial de   **/qspectre**. Vous pouvez utiliser **/d2guardspecload** à appliquer les atténuations mêmes à votre code dans ces versions du compilateur. Mettez à jour votre build pour utiliser **/qspectre** dans les compilateurs qui prennent en charge l’option ; la **/qspectre** option peut également en charge les atténuations de nouveau dans les versions ultérieures du compilateur.
 
