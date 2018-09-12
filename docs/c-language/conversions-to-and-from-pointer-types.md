@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cfe434397d45ef42b2f8ee3ebceae61098e36f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8ddcaa55e3b88e715428ea8fa44c897ab5f8b4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384292"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216096"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversions vers et depuis les types pointeur
 Un pointeur vers un type valeur peut être converti en un pointeur vers un type différent. Toutefois, le résultat peut être indéfini en raison des spécifications d'alignement et des tailles de types différents présents dans le stockage. Un pointeur vers un objet peut être converti en un pointeur vers un objet dont le type requiert moins d'alignement ou un alignement aussi strict, et inversement sans modification.  
@@ -43,7 +43,7 @@ Un pointeur vers un type valeur peut être converti en un pointeur vers un type 
   
 -   Si la taille du type intégral est différente de la taille du type pointeur, le type intégral est d’abord converti en la taille du pointeur, en utilisant les chemins de conversion indiqués dans les tableaux [Conversion de types intégraux signés](../c-language/conversions-from-signed-integral-types.md) et [Conversion de types intégraux non signés](../c-language/conversions-from-unsigned-integral-types.md). Il est ensuite traité comme une valeur de pointeur.  
   
- Une expression constante intégrale avec la valeur 0 ou cette même expression castée en type **void \*** peut être convertie par un cast de type, par assignation ou par comparaison en un pointeur de tout type. Il en résulte un pointeur null qui équivaut à un autre pointeur null du même type, mais ce pointeur null n'est pas égal à un pointeur vers une fonction ou un objet. Les entiers autres que la constante 0 peuvent être convertis en type pointeur, mais le résultat n'est pas portable.  
+ Une expression constante intégrale avec la valeur 0 ou cette même expression castée en type **void** <strong>\*</strong> peut être convertie par un cast de type, par assignation ou par comparaison en un pointeur de tout type. Il en résulte un pointeur null qui équivaut à un autre pointeur null du même type, mais ce pointeur null n'est pas égal à un pointeur vers une fonction ou un objet. Les entiers autres que la constante 0 peuvent être convertis en type pointeur, mais le résultat n'est pas portable.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversions d’assignation](../c-language/assignment-conversions.md)

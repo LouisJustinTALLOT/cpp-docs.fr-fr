@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409275"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205258"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Types de données SBCS et MBCS
 
@@ -34,7 +34,7 @@ Toute routine de bibliothèque Runtime Microsoft MBCS qui gère un seul caractè
 
 Ainsi, il est préférable de représenter un octet d’un caractère multi-octet sous forme de `unsigned char` 8 bits. Sinon, pour éviter un résultat négatif, il suffit de convertir un caractère codé sur un octet de type **char** en `unsigned char` avant de le convertir en **int** ou en **long**.
 
-Étant donné que certaines fonctions de gestion des chaînes SBCS acceptent des paramètres **char\*** (signés), un avertissement du compilateur d’incompatibilité de type est généré quand **_MBCS** est défini. Il existe trois façons d’éviter cet avertissement, indiquées dans l’ordre de leur efficacité :
+Étant donné que certaines fonctions de gestion des chaînes SBCS acceptent des paramètres **char**<strong>\*</strong> (signés), un avertissement du compilateur d’incompatibilité de type est généré quand **_MBCS** est défini. Il existe trois façons d’éviter cet avertissement, indiquées dans l’ordre de leur efficacité :
 
 1. Utilisez les fonctions inline de type sécurisé dans TCHAR.H. Il s'agit du comportement par défaut.
 

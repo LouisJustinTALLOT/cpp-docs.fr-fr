@@ -16,27 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2257ff9be5988ed6a08dd5d152c83910c6edc88
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387954"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214717"
 ---
 # <a name="multidimensional-arrays-c"></a>Tableaux multidimensionnels (C)
 Une expression d'indice peut également avoir plusieurs indices, comme suit :  
   
 ```  
-  
-expression1  
-[  
-expression2  
-] [  
-expression3  
-]...  
+expression1 [ expression2 ] [ expression3 ] ...  
 ```  
   
- Les expressions d'indice s'associent de gauche à droite. L’expression d’indice la plus à gauche, *expression1 ***[*** expression2***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L'opérateur d'indirection (**\***) est appliqué après l'évaluation de la dernière expression d'indice, sauf si la valeur de pointeur finale traite un type tableau (voir les exemples ci-dessous).  
+ Les expressions d'indice s'associent de gauche à droite. L’expression d’indice la plus à gauche, *expression1* **[** *expression2* **]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L'opérateur d'indirection (<strong>\*</strong>) est appliqué après l'évaluation de la dernière expression d'indice, sauf si la valeur de pointeur finale traite un type tableau (voir les exemples ci-dessous).  
   
  Les expressions à indices multiples font référence à des éléments de tableaux multidimensionnels. Un tableau multidimensionnel est un tableau dont les éléments sont des tableaux. Par exemple, le premier élément d'un tableau tridimensionnel est un tableau à deux dimensions.  
   

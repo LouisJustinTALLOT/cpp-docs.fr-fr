@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48d9a013240dddc95fbd977cdf383c3ebff188b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d040f3ce29f78b614c60d815cac16362374bddb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391026"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205608"
 ---
 # <a name="type-cast-conversions"></a>Conversions de type cast
 Vous pouvez utiliser des casts de type pour convertir explicitement les types.  
@@ -47,14 +47,14 @@ Vous pouvez utiliser des casts de type pour convertir explicitement les types.
 |-----------------------|-----------------------|  
 |Types intégraux|Tout type entier ou type à virgule flottante ou pointeur vers un objet|  
 |Virgule flottante|Tout type arithmétique|  
-|Pointeur vers un objet ou (**void \***)|Tout type entier, (**void \***), pointeur vers un objet ou pointeur fonction|  
+|Pointeur vers un objet, ou (**void** <strong>\*</strong>)|Type entier, (**void** <strong>\*</strong>), pointeur vers un objet ou pointeur fonction|  
 |Pointeur fonction|Tout type intégral, pointeur vers un objet ou pointeur fonction|  
 |Structure, union ou tableau|Aucun.|  
 |Type void|Tout type|  
   
  Tout identificateur peut être converti en type `void`. Toutefois, si le type spécifié dans une expression cast-type n'est pas `void`, l'identificateur converti en ce type ne peut pas être une expression `void`. Toute expression peut être convertie en `void`, mais une expression de type `void` ne peut pas être castée en un autre type. Par exemple, une fonction avec un type de retour `void` ne peut pas avoir son retour converti en un autre type.  
   
- Notez qu'une expression **void\*** possède un pointeur de type vers `void`, mais pas le type `void`. Si un objet est converti en type `void`, l'expression obtenue ne peut pas être assignée à un élément. De même, un objet type cast n'est pas une l-value acceptable. Ainsi, aucune assignation ne peut devenir un objet type cast.  
+ Notez qu’une expression **void** <strong>\*</strong> a un pointeur de type vers `void`, mais pas le type `void`. Si un objet est converti en type `void`, l'expression obtenue ne peut pas être assignée à un élément. De même, un objet type cast n'est pas une l-value acceptable. Ainsi, aucune assignation ne peut devenir un objet type cast.  
   
  **Section spécifique à Microsoft**  
   
@@ -62,7 +62,7 @@ Vous pouvez utiliser des casts de type pour convertir explicitement les types.
   
  **FIN de la section spécifique à Microsoft**  
   
- Vous pouvez convertir une expression en un type `void` avec un cast, mais l'expression obtenue peut être utilisée uniquement si une valeur n'est pas requise. Un pointeur d'objet converti en **void \*** et retourné au type d'origine retourne à sa valeur d'origine.  
+ Vous pouvez convertir une expression en un type `void` avec un cast, mais l'expression obtenue peut être utilisée uniquement si une valeur n'est pas requise. Un pointeur d’objet converti en **void** <strong>\*</strong> et retourné au type d’origine retourne à sa valeur d’origine.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversions de type](../c-language/type-conversions-c.md)
