@@ -1,7 +1,7 @@
 ---
 title: path, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4559bec84d7e6051155ad73f68a1ef8ae13ca6cc
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104158"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691508"
 ---
 # <a name="path-class"></a>path, classe
 
-La classe **path** stocke un objet de type string\_type, appelé ici myname à des fins de démonstration, qui peut être utilisé comme nom de chemin. string\_type est un synonyme de basic\_string\<value_type>, où value\_type est un synonyme de char sur Windows ou wchar_t sur Posix.
+Le **chemin d’accès** classe stocke un objet de type `string_type`, appelée `myname` ici aux fins de démonstration, pouvant être utilisée comme un chemin d’accès. `string_type` est un synonyme de `basic_string<value_type>`, où `value_type` est un synonyme de **char** sous Windows ou **wchar_t** sous Posix.
 
 Pour obtenir plus d’informations et des exemples de code, consultez [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md).
 
@@ -443,7 +443,7 @@ Pour `pval` un objet de type `path`:
 
 ## <a name="make_preferred"></a> Path::make_preferred
 
-Convertit chaque séparateur en un preferred_separator selon les besoins.
+Convertit chaque séparateur à un `preferred_separator` en fonction des besoins.
 
 ```cpp
 path& make_preferred();
@@ -529,7 +529,7 @@ Les fonctions membres se comportent comme les expressions correspondantes suivan
 
 1. `concat(source);`
 
-1. `concat(path(basic_string\<Elem>(1, elem)));`
+1. `concat(path(basic_string<Elem>(1, elem)));`
 
 ## <a name="op_divide"></a> Path::operator / =
 
@@ -576,7 +576,7 @@ path parent_path() const;
 
 ### <a name="remarks"></a>Notes
 
-Retourne le parent de composant de chemin d’accès de `myname`, spécifiquement le préfixe de `myname` après la suppression `filename().native()` et des séparateurs de répertoire immédiatement précédents. (De même, si `begin() != end()`, il correspond à la combinaison de tous les éléments dans la plage [begin(),--end()) en appliquant successivement l’opérateur / =.) Le composant peut être vide.
+Retourne le parent de composant de chemin d’accès de `myname`, spécifiquement le préfixe de `myname` après la suppression `filename().native()` et des séparateurs de répertoire immédiatement précédents. (De même, si `begin() != end()`, il correspond à la combinaison de tous les éléments dans la plage `[begin(), --end())` en appliquant successivement `operator/=`.) Le composant peut être vide.
 
 ## <a name="path"></a> Path::path
 
@@ -687,7 +687,7 @@ La nouvelle extension.
 
 ### <a name="remarks"></a>Notes
 
-Supprime d’abord le suffixe `extension().native()` de `myname`. Ensuite si `!newext.empty() && newext[0] != dot` (où `dot` est `*path(".").c_str()`), puis `dot` est ajouté à `myname`. Puis `newext` est ajouté à `myname`.
+Supprime d’abord le suffixe `extension().native()` de `myname`. Ensuite si `!newext.empty() && newext[0] != dot` (où `dot` est `*path(".").c_str()`), puis `dot` est ajouté à `myname`. Puis *newext* est ajouté à `myname`.
 
 ## <a name="replace_filename"></a> Path::replace_filename
 
@@ -747,7 +747,7 @@ path root_path() const;
 
 ### <a name="remarks"></a>Notes
 
-Retourne le composant de chemin d’accès racine de `myname`, root_name() / root_directory. Le composant peut être vide.
+Retourne le composant de chemin d’accès racine de `myname`, plus précisément `root_name()`  /  `root_directory`. Le composant peut être vide.
 
 ## <a name="stem"></a> Path::stem
 
@@ -773,7 +773,7 @@ string string() const;
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre (de modèle) convertit la séquence stockée dans mypath de la même façon que :
+La première fonction membre (modèle) convertit la séquence stockée dans `mypath` la même façon que :
 
 1. `string()` pour `string<char, Traits, Alloc>()`
 
@@ -783,7 +783,7 @@ La première fonction membre (de modèle) convertit la séquence stockée dans m
 
 1. `u32string()` pour `string<char32_t, Traits, Alloc>()`
 
-La deuxième fonction membre convertit la séquence stockée dans `mypath` pour l’encodage privilégié par le système hôte pour une séquence de caractères et la retourne stockée dans un objet de type chaîne.
+La deuxième fonction membre convertit la séquence stockée dans `mypath` dans l’encodage privilégié par le système hôte pour un **char** séquence et la retourne stockée dans un objet de type `string`.
 
 ## <a name="string_type"></a> Path::STRING_TYPE
 
@@ -827,7 +827,7 @@ string u8string() const;
 
 ## <a name="value_type"></a> Path::Value_type
 
-Le type décrit les éléments du chemin privilégiés par le système d’exploitation hôte.
+Le type décrit le `path` éléments privilégiés par le système d’exploitation hôte.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -839,7 +839,7 @@ typedef char value_type;
 
 ## <a name="wstring"></a> Path::wstring
 
-Convertit la séquence stockée dans `mypath` dans l’encodage privilégié par le système hôte pour un `wchar_t` séquence et la retourne stockée dans un objet de type `wstring`.
+Convertit la séquence stockée dans `mypath` dans l’encodage privilégié par le système hôte pour un **wchar_t** séquence et la retourne stockée dans un objet de type `wstring`.
 
 ```cpp
 wstring wstring() const;

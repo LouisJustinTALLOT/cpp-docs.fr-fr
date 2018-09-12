@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c6298c7b66c8967a4e5e23a37c3614edcddf3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c5272f662580eff92e9ec15860b978ab739e613
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415523"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691599"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 
@@ -96,11 +96,11 @@ Si *str* est **NULL**, le Gestionnaire de paramètre non valide est appelé, com
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actuellement. **tmpnam_s généraient** retourne un nom unique dans le répertoire de travail actuel. Notez que lorsqu’un nom de fichier est précédé d’une barre oblique inverse et d’aucune information de chemin, comme \fname21, cela indique que le nom est valide pour le répertoire de travail actif.
+Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actuellement. **tmpnam_s** retourne un nom unique dans le répertoire temporaire Windows désigné retourné par [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). Notez que lorsqu’un nom de fichier est précédé d’une barre oblique inverse et d’aucune information de chemin, comme \fname21, cela indique que le nom est valide pour le répertoire de travail actif.
 
-Pour **tmpnam_s généraient**, vous pouvez stocker ce nom de fichier généré dans *str*. La longueur maximale de la chaîne retournée par **tmpnam_s généraient** est **L_tmpnam_s**, défini dans STDIO. H. Si *str* est **NULL**, puis **tmpnam_s généraient** laisse le résultat dans un tampon statique interne. Par conséquent, tous les appels suivants détruisent cette valeur. Le nom généré par **tmpnam_s généraient** se compose d’un nom de fichier généré par le programme et, après le premier appel à **tmpnam_s généraient**, une extension de fichier de numéros séquentiels dans base 32 (.1-.1vvvvvu, lorsque **TMP _MAX_S** dans STDIO. H est **INT_MAX**).
+Pour **tmpnam_s**, vous pouvez stocker ce nom de fichier généré dans *str*. La longueur maximale d’une chaîne retournée par **tmpnam_s** est **L_tmpnam_s**, défini dans STDIO. H. Si *str* est **NULL**, puis **tmpnam_s** laisse le résultat dans une mémoire tampon statique interne. Par conséquent, tous les appels suivants détruisent cette valeur. Le nom généré par **tmpnam_s** se compose d’un nom de fichier généré par le programme et, après le premier appel à **tmpnam_s**, une extension de fichier de numéros séquentiels en base 32 (1-.1vvvvvu, quand **TMP _MAX_S** dans STDIO. H est **INT_MAX**).
 
-**tmpnam_s généraient** handles arguments de chaîne de caractères multioctets selon le cas, reconnaissant les séquences de caractères multioctets en fonction de la page de codes OEM obtient automatiquement à partir du système d’exploitation. **_wtmpnam_s** est une version à caractères larges de **tmpnam_s généraient**; la valeur des arguments et de retour de **_wtmpnam_s** sont des chaînes à caractères larges. **_wtmpnam_s** et **tmpnam_s généraient** se comportent de façon identique, sauf que **_wtmpnam_s** ne gère pas les chaînes de caractères multioctets.
+**tmpnam_s** automatiquement handles arguments de chaîne de caractères multioctets comme il convient, en identifiant les séquences de caractères multioctets en fonction de la page de codes OEM obtient du système d’exploitation. **_wtmpnam_s** est une version à caractères larges de **tmpnam_s**; l’argument et valeur de retour de **_wtmpnam_s** sont des chaînes à caractères larges. **_wtmpnam_s** et **tmpnam_s** ont un comportement identique, sauf que **_wtmpnam_s** ne gère pas les chaînes de caractères multioctets.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -110,7 +110,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttmpnam_s**|**tmpnam_s**|**tmpnam_s**|**_wtmpnam_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -150,6 +150,24 @@ int main( void )
       }
    }
 }
+```
+
+```Output
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.0 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.1 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.2 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.3 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.4 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.5 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.6 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.7 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.8 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.9 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.a is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.b is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.c is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.d is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file.
 ```
 
 ## <a name="see-also"></a>Voir aussi
