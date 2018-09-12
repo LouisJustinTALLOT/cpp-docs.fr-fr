@@ -1,7 +1,7 @@
 ---
 title: directory_iterator, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09970c0d3cf8771317c93670c0ec7f029e1ace2a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105202"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691586"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator, classe
 
-Décrit un itérateur d’entrée qui parcourt en séquence les noms de fichiers dans un répertoire. Pour un itérateur X, l’expression *X correspond à un objet de la classe directory_entry qui inclut dans un wrapper le nom de fichier et tout ce qui est connu sur son état.
+Décrit un itérateur d’entrée qui parcourt en séquence les noms de fichiers dans un répertoire. Pour un itérateur `X`, l’expression `*X` prend la valeur d’un objet de classe `directory_entry` qui encapsule le nom de fichier et tout élément connu sur son état.
 
-La classe stocke un objet de chemin d’accès de type, appelé `mydir` ici aux fins de démonstration, qui représente le nom du répertoire à séquencer et un objet de type directory_entry appelé `myentry` ici, qui représente le nom de fichier actuel dans la séquence de répertoires. Un objet construit par défaut de type directory_entry a vide `mydir` chemin d’accès et représente l’itérateur de fin de séquence.
+La classe stocke un objet de type `path`, appelé `mydir` ici aux fins de démonstration, qui représente le nom du répertoire à séquencer, et un objet de type `directory_entry` appelé `myentry` ici, qui représente l’actuel nom de fichier dans la séquence de répertoires. Un objet construit par défaut de type `directory_entry` a vide `mydir` chemin d’accès et représente l’itérateur de fin de séquence.
 
-Par exemple, étant donné le répertoire abc avec les entrées def et ghi, le code :
+Par exemple, étant donné le répertoire `abc` avec entrées `def` et `ghi`, le code :
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-appellera `visit` avec les arguments path("abc/def") et path("abc/ghi").
+appellera `visit` avec les arguments `path("abc/def")` et `path("abc/ghi")`.
 
 Pour plus d’informations et pour obtenir des exemples de code, consultez [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md).
 
@@ -72,7 +72,7 @@ class directory_iterator;
 
 |Fonction membre|Description|
 |-|-|
-|[Incrément](#increment)|La fonction tente d’accéder au nom de fichier suivant dans le répertoire.|
+|[Incrément](#increment)|Tente d’accéder au nom de fichier suivant dans le répertoire.|
 
 ### <a name="operators"></a>Opérateurs
 
