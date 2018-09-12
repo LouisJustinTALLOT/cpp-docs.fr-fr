@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c2bff6aa96ad5c2eea127fa643641d268e3cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4aaf456e83968cf47573a9ea2e765f9e7d552625
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392573"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760248"
 ---
 # <a name="ismbc-routines"></a>_ismbc, routines
 Chacune des routines **_ismbc** teste un caractère multioctet `c` pour une condition donnée.  
@@ -43,9 +43,9 @@ Chacune des routines **_ismbc** teste un caractère multioctet `c` pour une cond
 |[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|  
   
 ## <a name="remarks"></a>Notes  
- Le résultat de chaque routine **_ismbc** dépend de la page de codes multioctet utilisée. Les pages de codes multioctets comportent des caractères alphabétiques sur un octet. Par défaut, la page de codes multioctet est définie sur la page de codes ANSI par défaut du système, obtenue du système d’exploitation au démarrage du programme. Vous pouvez interroger la page de codes multioctet utilisée, ou la remplacer par [_getmbcp](../c-runtime-library/reference/getmbcp.md) ou [_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivement.  
+Le résultat de chaque routine **_ismbc** dépend de la page de codes multioctet utilisée. Les pages de codes multioctets comportent des caractères alphabétiques sur un octet. Par défaut, la page de codes multioctet est définie sur la page de codes ANSI par défaut du système, obtenue du système d’exploitation au démarrage du programme. Vous pouvez interroger la page de codes multioctet utilisée, ou la remplacer par [_getmbcp](../c-runtime-library/reference/getmbcp.md) ou [_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivement.  
   
- La valeur de sortie est affectée par le paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis.  
+La valeur de sortie est affectée par le paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis.  
   
 |Routine|Condition de test|Exemple de page de codes 932|  
 |-------------|--------------------|---------------------------|  
@@ -62,9 +62,9 @@ Chacune des routines **_ismbc** teste un caractère multioctet `c` pour une cond
 |[_ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Symbole multioctet|Retourne une valeur différente de zéro si et seulement si 0x8141<=`c`<=0x81AC.|  
 |[_ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Caractère alphabétique majuscule|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’une lettre de l’alphabet anglais majuscule ASCII : 0x41<=`c`<=0x5A.|  
   
- **Routines spécifiques à la page de codes 932**  
+**Routines spécifiques à la page de codes 932**  
   
- Les routines suivantes sont spécifiques à la page de codes 932.  
+Les routines suivantes sont spécifiques à la page de codes 932.  
   
 |Routine|Condition de test (page de codes 932 uniquement)|  
 |-------------|-------------------------------------------|  
@@ -74,11 +74,11 @@ Chacune des routines **_ismbc** teste un caractère multioctet `c` pour une cond
 |[_ismbcl1, _ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS niveau 1 : 0x889F<=`c`<=0x9872.|  
 |[_ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS niveau 2 : 0x989F<=`c`<=0xEA9E.|  
   
- `_ismbcl0`, `_ismbcl1` et `_ismbcl2` vérifient que la valeur spécifiée `c` satisfait aux conditions de test décrites ci-dessus, mais ne vérifient pas que `c` est un caractère multioctet valide. Si l’octet de poids faible est compris dans les plages 0x00-0x3F, 0x7F ou 0xFD-0xFF, ces fonctions retournent une valeur différente de zéro, indiquant que le caractère satisfait à la condition de test. Utilisez [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) pour tester si le caractère multioctet est défini.  
+`_ismbcl0`, `_ismbcl1` et `_ismbcl2` vérifient que la valeur spécifiée `c` satisfait aux conditions de test décrites ci-dessus, mais ne vérifient pas que `c` est un caractère multioctet valide. Si l’octet de poids faible est compris dans les plages 0x00-0x3F, 0x7F ou 0xFD-0xFF, ces fonctions retournent une valeur différente de zéro, indiquant que le caractère satisfait à la condition de test. Utilisez [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) pour tester si le caractère multioctet est défini.  
   
- **Fin des fonctions spécifiques à la page de codes 932**  
+**Fin des fonctions spécifiques à la page de codes 932**  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classifications des caractères](../c-runtime-library/character-classification.md)   
- [is, isw, routines](../c-runtime-library/is-isw-routines.md)   
- [_ismbb, routines](../c-runtime-library/ismbb-routines.md)
+[Classifications des caractères](../c-runtime-library/character-classification.md)   
+[is, isw, routines](../c-runtime-library/is-isw-routines.md)   
+[_ismbb, routines](../c-runtime-library/ismbb-routines.md)

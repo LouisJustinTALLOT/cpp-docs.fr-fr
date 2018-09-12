@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391959"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206131"
 ---
 # <a name="is-isw-routines"></a>is, isw, routines
 |||  
@@ -80,7 +80,7 @@ ms.locfileid: "32391959"
  `__iscsymf`  
  Lettre ou trait de soulignement  
   
- **isdigit**  
+ `isdigit`  
  Nombre décimal (0 - 9)  
   
  `isgraph`  
@@ -121,17 +121,16 @@ ms.locfileid: "32391959"
  `iswcntrl`  
  Caractère large de contrôle  
   
- **__iswcsym**  
- Tout caractère large pour lequel **isalnum** est true, ou le caractère « _ ».  
+ `__iswcsym`  
+ Tout caractère large pour lequel `isalnum` est true, ou le caractère « _ ».  
   
- **__iswcsymf**  
+ `__iswcsymf`  
  Tout caractère large pour lequel `iswalpha` est true, ou le caractère « _ ».  
   
  `iswctype`  
  La propriété du caractère est spécifiée par l’argument `desc`. Pour chaque valeur valide de l’argument `desc` de `iswctype`, il existe une routine de classification de caractères larges équivalente, comme dans le tableau suivant :  
   
- **Équivalence d’iswctype(**   
- ***c, desc* ) aux autres routines de test isw**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Équivalence d’iswctype(c, desc) aux autres routines de test isw
   
 |Valeur de l’argument *desc*|équivalent d’iswctype ( *c, desc* )|  
 |------------------------------|----------------------------------------|  

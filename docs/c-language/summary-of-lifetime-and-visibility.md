@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2c8b6f9c6be0b07dba710e50f71f96bdf3f0eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcda68906e281bdf33ebe95a8019851bcb3cdb11
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389778"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752298"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité
 Le tableau suivant récapitule les caractéristiques de durée de vie et de visibilité pour la plupart des identificateurs. Les trois premières colonnes indiquent les attributs qui définissent la durée de vie et la visibilité. Un identificateur avec les attributs indiqués par les trois premières colonnes a la durée de vie et la visibilité affichées dans les quatrième et cinquième colonnes. Toutefois, le tableau ne traite pas tous les cas possibles. Pour plus d'informations, consultez [Classes de stockage](../c-language/c-storage-classes.md).  
@@ -30,17 +30,17 @@ Le tableau suivant récapitule les caractéristiques de durée de vie et de visi
 |Attributs :<br /><br /> Niveau|Élément|Classe de stockage<br /><br /> Spécificateur|Résultat : <br /><br /> Durée de vie|Visibilité|  
 |---------------------------|----------|----------------------------------|--------------------------|----------------|  
 |Portée du fichier|Définition de variable|**static**|Global|Reste du fichier source dans lequel elle se produit|  
-||Déclaration de variable|`extern`|Global|Reste du fichier source dans lequel elle se produit|  
+||Déclaration de variable|**extern**|Global|Reste du fichier source dans lequel elle se produit|  
 ||Définition ou prototype de fonction|**static**|Global|Fichier source unique|  
-||Prototype de fonction|`extern`|Global|Reste du fichier source|  
-|Portée de bloc|Déclaration de variable|`extern`|Global|Bloc|  
+||Prototype de fonction|**extern**|Global|Reste du fichier source|  
+|Portée de bloc|Déclaration de variable|**extern**|Global|Bloc|  
 ||Définition de variable|**static**|Global|Bloc|  
 ||Définition de variable|**auto** ou **register**|Local|Bloc|  
   
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- L'exemple suivant illustre les blocs, l'imbrication et la visibilité des variables :  
+L'exemple suivant illustre les blocs, l'imbrication et la visibilité des variables :  
   
 ### <a name="code"></a>Code  
   
@@ -71,7 +71,7 @@ int main()  // main function defined at external level
 ```  
   
 ### <a name="comments"></a>Commentaires  
- Dans cet exemple, il existe quatre niveaux de visibilité : le niveau externe et trois niveaux de bloc. Les valeurs sont imprimées à l'écran comme indiqué dans les commentaires suivant chaque instruction.  
+Dans cet exemple, il existe quatre niveaux de visibilité : le niveau externe et trois niveaux de bloc. Les valeurs sont imprimées à l'écran comme indiqué dans les commentaires suivant chaque instruction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Durée de vie, portée, visibilité et liaison](../c-language/lifetime-scope-visibility-and-linkage.md)
+[Durée de vie, portée, visibilité et liaison](../c-language/lifetime-scope-visibility-and-linkage.md)

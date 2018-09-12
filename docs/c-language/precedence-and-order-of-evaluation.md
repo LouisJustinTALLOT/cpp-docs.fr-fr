@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84c3ec69c936605729f6813f28450ee1194951c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca8f77ee6d49aede8592d591241f8e2730fc15a8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392183"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218454"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Priorité et ordre d'évaluation
 La priorité et l’associativité des opérateurs C affectent le regroupement et l’évaluation des opérandes dans les expressions. La priorité d'un opérateur est significative uniquement si d'autres opérateurs dotés d'une priorité supérieure ou inférieure sont présents. Les expressions avec des opérateurs de priorité supérieure sont évaluées en premier. La priorité peut également être décrite par le mot « liaison ». Les opérateurs dotés d'une priorité plus élevée sont considérés comme ayant une liaison plus stricte.  
@@ -54,9 +54,9 @@ La priorité et l’associativité des opérateurs C affectent le regroupement 
   
  2. Tous les opérateurs d'assignation simple et composée ont une même priorité.  
   
- Une expression peut contenir plusieurs opérateurs avec une même priorité. Lorsque plusieurs opérateurs de ce type apparaissent au même niveau dans une expression, l'évaluation se poursuit selon l'associativité de l'opérateur, de droite à gauche ou de gauche à droite. Le sens de l’évaluation n’affecte pas les résultats des expressions comprenant plusieurs opérateurs de multiplication (**\***), plusieurs opérateurs d’addition (**+**) ou plusieurs opérateurs binaires au niveau du bit (**& &#124; ^**), sur un même niveau. L'ordre des opérations n'est pas défini par le langage. Le compilateur est libre d'évaluer de telles expressions dans n'importe quel ordre, s'il peut garantir un résultat cohérent.  
+ Une expression peut contenir plusieurs opérateurs avec une même priorité. Lorsque plusieurs opérateurs de ce type apparaissent au même niveau dans une expression, l'évaluation se poursuit selon l'associativité de l'opérateur, de droite à gauche ou de gauche à droite. Le sens de l’évaluation n’affecte pas les résultats des expressions comprenant plusieurs opérateurs de multiplication (<strong>\*</strong>), plusieurs opérateurs d’addition (**+**) ou plusieurs opérateurs binaires au niveau du bit (**&**, **&#124;** ou **^**), à un même niveau. L'ordre des opérations n'est pas défini par le langage. Le compilateur est libre d'évaluer de telles expressions dans n'importe quel ordre, s'il peut garantir un résultat cohérent.  
   
- Seuls les opérateurs d’évaluation séquentielle (**,**), les opérateurs logiques AND (**&&**), les opérateurs logiques OR (`||`), les opérateurs d’expression conditionnelle (**? :**) et les opérateurs d’appel de fonction constituent des points de séquence, et garantissent par conséquent un ordre particulier d’évaluation pour leurs opérandes. L'opérateur d'appel de fonction correspond au jeu de parenthèses suivant l'identificateur de fonction. L’opérateur d’évaluation séquentielle (**,**) est assuré d’évaluer ses opérandes de gauche à droite. (Notez que l'opérateur virgule dans un appel de fonction n'est pas le même que l'opérateur d'évaluation-séquentielle et ne fournit pas de garantie.) Pour plus d’informations, consultez [Points de séquence](../c-language/c-sequence-points.md).  
+ Seuls les opérateurs d’évaluation séquentielle (**,**), les opérateurs logiques AND (**&&**), les opérateurs logiques OR (**||**), les opérateurs d’expression conditionnelle (**? :**) et les opérateurs d’appel de fonction constituent des points de séquence, et garantissent par conséquent un ordre particulier d’évaluation pour leurs opérandes. L'opérateur d'appel de fonction correspond au jeu de parenthèses suivant l'identificateur de fonction. L’opérateur d’évaluation séquentielle (**,**) est assuré d’évaluer ses opérandes de gauche à droite. (Notez que l'opérateur virgule dans un appel de fonction n'est pas le même que l'opérateur d'évaluation-séquentielle et ne fournit pas de garantie.) Pour plus d’informations, consultez [Points de séquence](../c-language/c-sequence-points.md).  
   
  Les opérateurs logiques garantissent également l’évaluation de leurs opérandes de gauche à droite. Toutefois, ils évaluent le plus petit nombre d'opérandes nécessaires pour déterminer le résultat de l'expression. Cela est appelé « évaluation de court-circuit ». Ainsi, certains opérandes de l'expression ne peuvent pas être évalués. Par exemple, dans l'expression  
   
@@ -74,11 +74,11 @@ La priorité et l’associativité des opérateurs C affectent le regroupement 
 |a = b &#124;&#124; c|a = (b &#124;&#124; c)|  
 |q && r &#124;&#124; s--|(q && r) &#124;&#124; s--|  
 
- Dans la première expression, l'opérateur de bits AND (`&`) a une priorité plus élevée que l'opérateur OR logique (`||`), si bien que `a & b` forme le premier opérande de l'opération OR logique.  
+ Dans la première expression, l’opérateur AND au niveau du bit (**&**) a une priorité plus élevée que l’opérateur OR logique (**||**). `a & b` est donc le premier opérande de l’opération OR logique.  
   
- Dans la deuxième expression, l'opérateur OR logique (`||`) a une priorité plus élevée que l'opérateur d'assignation simple (`=`), afin qu'un `b || c` est regroupé comme opérande droit dans l'assignation. Notez que la valeur assignée à `a` est 0 ou 1.  
+ Dans la deuxième expression, l’opérateur OR logique (**||**) a une priorité plus élevée que l’opérateur d’assignation simple (**=**). `b || c` est donc regroupé comme opérande de droite dans l’assignation. Notez que la valeur assignée à `a` est 0 ou 1.  
   
- La troisième expression montre une expression formée correctement qui peut produire un résultat inattendu. L'opérateur AND logique (`&&`) a une priorité plus élevée que l'opérateur OR logique (`||`), de sorte que `q && r` est regroupé en tant qu'opérande. Comme les opérateurs logiques garantissent l’évaluation des opérandes de gauche à droite, `q && r` est évalué avant `s--`. Toutefois, si `q && r` correspond à une valeur différente de zéro, `s--` n’est pas évalué et `s` n’est pas décrémenté. Si le fait de ne pas décrémenter `s` peut poser problème dans votre programme, `s--` doit apparaître comme premier opérande de l’expression ou `s` doit être décrémenté dans une opération distincte.  
+ La troisième expression montre une expression formée correctement qui peut produire un résultat inattendu. L’opérateur AND logique (**&&**) a une priorité plus élevée que l’opérateur OR logique (**||**). `q && r` est donc regroupé comme opérande. Comme les opérateurs logiques garantissent l’évaluation des opérandes de gauche à droite, `q && r` est évalué avant `s--`. Toutefois, si `q && r` correspond à une valeur différente de zéro, `s--` n’est pas évalué et `s` n’est pas décrémenté. Si le fait de ne pas décrémenter `s` peut poser problème dans votre programme, `s--` doit apparaître comme premier opérande de l’expression ou `s` doit être décrémenté dans une opération distincte.  
   
  L'expression suivante est non conforme et produit un message de diagnostic au moment de la compilation :  
   
@@ -86,7 +86,7 @@ La priorité et l’associativité des opérateurs C affectent le regroupement 
 |------------------------|----------------------|  
 |p == 0 ? p += 1: p += 2|( p == 0 ? p += 1 : p ) += 2|  
   
- Dans cette expression, l'opérateur d'égalité (`==`) a la priorité la plus élevée, si bien que `p == 0` est regroupé comme opérande. L'opérateur d'expression conditionnelle (`? :`) possède la deuxième priorité la plus élevée. Son premier opérande est `p == 0` et son deuxième opérande est `p += 1`. Toutefois, le dernier opérande de l'opérateur d'expression conditionnelle est considéré comme étant `p` plutôt que `p += 2`, étant donné que cette occurrence de `p` se lie plus étroitement à l'opérateur d'expression conditionnelle qu'à l'opérateur d'assignation composée. Une erreur de syntaxe se produit car `+= 2` n'a pas d'opérande gauche. Vous devez utiliser des parenthèses pour éviter ce type d'erreurs et rédiger un code plus lisible. Par exemple, vous pouvez utiliser des parenthèses, comme indiqué ci-dessous, pour corriger et clarifier l'exemple précédent :  
+ Dans cette expression, l’opérateur d’égalité (**==**) a la priorité la plus élevée. `p == 0` est donc regroupé comme opérande. L’opérateur d’expression conditionnelle (**? :**) possède la deuxième priorité la plus élevée. Son premier opérande est `p == 0` et son deuxième opérande est `p += 1`. Toutefois, le dernier opérande de l'opérateur d'expression conditionnelle est considéré comme étant `p` plutôt que `p += 2`, étant donné que cette occurrence de `p` se lie plus étroitement à l'opérateur d'expression conditionnelle qu'à l'opérateur d'assignation composée. Une erreur de syntaxe se produit car `+= 2` n'a pas d'opérande gauche. Vous devez utiliser des parenthèses pour éviter ce type d'erreurs et rédiger un code plus lisible. Par exemple, vous pouvez utiliser des parenthèses, comme indiqué ci-dessous, pour corriger et clarifier l'exemple précédent :  
   
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`  
   
