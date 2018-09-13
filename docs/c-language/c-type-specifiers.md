@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197226"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764262"
 ---
 # <a name="c-type-specifiers"></a>Spécificateurs de type C
 
@@ -29,18 +29,18 @@ Les spécificateurs de type dans les déclarations définissent le type d'une va
 ## <a name="syntax"></a>Syntaxe
 
 *type-specifier* :  
-&nbsp;&nbsp;**void**  
-&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;**short**  
-&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;**long**  
-&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;**double**  
-&nbsp;&nbsp;**signed**  
-&nbsp;&nbsp;**unsigned**  
-&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;*typedef-name*  
+&nbsp;&nbsp;&nbsp;&nbsp;**void**  
+&nbsp;&nbsp;&nbsp;&nbsp;**char**  
+&nbsp;&nbsp;&nbsp;&nbsp;**short**  
+&nbsp;&nbsp;&nbsp;&nbsp;**int**  
+&nbsp;&nbsp;&nbsp;&nbsp;**long**  
+&nbsp;&nbsp;&nbsp;&nbsp;**float**  
+&nbsp;&nbsp;&nbsp;&nbsp;**double**  
+&nbsp;&nbsp;&nbsp;&nbsp;**signed**  
+&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**  
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*  
 
 Les types **signed char**, **signed int**, **signed short int** et **signed long int**, ainsi que leurs équivalents **unsigned** et **enum**, sont appelés types *intégraux*. Les spécificateurs de type **float**, **double** et **long double** sont appelés types *flottants* ou *à virgule flottante*. Vous pouvez utiliser n'importe quel spécificateur de type intégral ou à virgule flottante dans une variable ou une déclaration de fonction. Si aucun *type-specifier* n’est fourni dans une déclaration, **int** est utilisé par défaut.
 
