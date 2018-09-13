@@ -1,7 +1,7 @@
 ---
-title: 'Contrôles ActiveX MFC : Localisation d’un contrôle ActiveX | Documents Microsoft'
+title: 'Contrôles ActiveX MFC : Localisation d’un contrôle ActiveX | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -20,15 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f8eb474a0d527ca6673d6c50602e0914f10bbf76
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929606"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535026"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Contrôles ActiveX MFC : localisation d'un contrôle ActiveX
 Cet article décrit les procédures permettant de rechercher des interfaces de contrôle ActiveX.  
+
+>[!IMPORTANT]
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
   
  Si vous souhaitez adapter un contrôle ActiveX à un marché international, vous pouvez le localiser. Windows prend en charge plusieurs langues en plus de l'anglais par défaut, notamment l'allemand, le français et le suédois. Cela peut présenter des problèmes pour le contrôle si l'interface est uniquement en anglais.  
   
@@ -41,12 +44,12 @@ Cet article décrit les procédures permettant de rechercher des interfaces de c
     > [!NOTE]
     >  Cela ne fonctionne pas correctement dans certains cas, lorsque les instances ont des paramètres régionaux.  
   
--   Utilisez le `OnAmbientChanged` fonction de notification pour charger dynamiquement les ressources appropriées pour des paramètres régionaux du conteneur.  
+-   Utilisez le `OnAmbientChanged` fonction de notification pour charger dynamiquement les ressources appropriées des paramètres régionaux du conteneur.  
   
     > [!NOTE]
     >  Cela fonctionne pour le contrôle, mais la DLL d'exécution ne met pas à jour dynamiquement ses propres ressources lorsque la propriété LocaleID ambiante change. En outre, les DLL d’exécution des contrôles ActiveX utilisent les paramètres régionaux du thread pour déterminer les paramètres régionaux pour ses ressources.  
   
- Le reste de cet article décrit deux stratégies localisantes. La première stratégie [localise l’interface de programmabilité du contrôle](#_core_localizing_your_control.92.s_programmability_interface) (noms des propriétés, méthodes et événements). La seconde stratégie [localise l’interface utilisateur du contrôle](#_core_localizing_the_control.92.s_user_interface), à l’aide de la propriété de LocaleID ambiante du conteneur. Pour une démonstration de la localisation de contrôle, consultez l’exemple de contrôles ActiveX MFC [LOCALIZE](../visual-cpp-samples.md).  
+ Le reste de cet article décrit deux stratégies localisantes. La première stratégie [localise l’interface de programmabilité du contrôle](#_core_localizing_your_control.92.s_programmability_interface) (noms des propriétés, méthodes et événements). La deuxième stratégie [localise l’interface du contrôle utilisateur](#_core_localizing_the_control.92.s_user_interface), à l’aide de la propriété de LocaleID ambiante du conteneur. Pour une démonstration de la localisation de contrôle, consultez l’exemple de contrôles ActiveX MFC [LOCALIZE](../visual-cpp-samples.md).  
   
 ##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Localisation d’Interface de programmabilité du contrôle  
  En recherchant l'interface de programmabilité du contrôle (l'interface utilisée par les programmeurs dans les applications qui utilisent votre contrôle), vous devez créer une version modifiée du fichier .IDL de contrôle (un script pour générer la bibliothèque de types de contrôle) pour chaque langue que vous envisagez de prendre en charge. Il s'agit du seul emplacement dont vous avez besoin pour localiser les noms de propriété de contrôle.  
@@ -71,7 +74,7 @@ Cet article décrit les procédures permettant de rechercher des interfaces de c
   
 4.  Dans la zone de liste de fichiers, double-cliquez sur le fichier .IDL que vous souhaitez insérer dans le projet.  
   
-5.  Cliquez sur **ouvrir** lorsque vous avez ajouté tous les fichiers. Fichiers IDL.  
+5.  Cliquez sur **Open** lorsque vous avez ajouté tous les fichiers. Fichiers IDL.  
   
  Les fichiers ont été ajoutés au projet, ils seront générés lorsque le reste du projet sera généré. Les bibliothèques de types localisées se trouvent dans le répertoire du projet du contrôle ActiveX actuel.  
   
@@ -94,13 +97,13 @@ Cet article décrit les procédures permettant de rechercher des interfaces de c
   
  Notez que l'ID de sous-langue peut être activé dans chaque cas d'instruction switch, pour fournir plus de localisation spécialisée. Pour une démonstration de cette fonction, consultez le `GetResourceHandle` exemple de contrôles de fonction dans les MFC ActiveX [LOCALIZE](../visual-cpp-samples.md).  
   
- Lorsque le premier contrôle se charge dans un conteneur, il peut appeler [COleControl::AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid) pour récupérer l’ID de paramètres régionaux. Le contrôle peut ensuite passer la valeur retournée de l'ID des paramètres régionaux à la fonction `GetLocalizedResourceHandle`, qui charge la bibliothèque de ressources appropriée. Le contrôle doit passer le handle obtenu, si elle existe, à [AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):  
+ Lorsque le contrôle se charge tout d’abord dans un conteneur, il peut appeler [COleControl::AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid) pour récupérer l’ID de paramètres régionaux. Le contrôle peut ensuite passer la valeur retournée de l'ID des paramètres régionaux à la fonction `GetLocalizedResourceHandle`, qui charge la bibliothèque de ressources appropriée. Le contrôle doit passer le handle obtenu, cas échéant, à [AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):  
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
  Placez l’exemple de code ci-dessus dans une fonction membre du contrôle, tel qu’un remplacement de [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). En outre, *m_hResDLL* doit être une variable membre de la classe du contrôle.  
   
- Vous pouvez utiliser une logique similaire pour localiser la page des propriétés d'un contrôle. Pour localiser la page de propriétés, ajoutez un code similaire à l’exemple suivant au fichier d’implémentation de la page de propriétés (dans une substitution de [COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)) :  
+ Vous pouvez utiliser une logique similaire pour localiser la page des propriétés d'un contrôle. Pour localiser la page de propriétés, ajoutez un code similaire à l’exemple suivant au fichier d’implémentation de votre page de propriétés (dans une substitution de [COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)) :  
   
  [!code-cpp[NVC_MFC_AxLoc#5](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_5.cpp)]  
   

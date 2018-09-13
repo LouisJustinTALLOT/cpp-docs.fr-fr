@@ -1,7 +1,7 @@
 ---
 title: CDocObjectServer, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701cfc2f8a88f57a1c50c9c4310ecd21154ef09a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 156480c05833b9d653a903986a37f77878c37671
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337864"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535286"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer, classe
 Implémente les interfaces OLE supplémentaires nécessaires pour transformer un serveur normal `COleDocument` en serveur DocObject complet : `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`et `IPrint`.  
@@ -71,7 +71,7 @@ class CDocObjectServer : public CCmdTarget
   
  Pour personnaliser votre serveur DocObject, dérivez votre propre classe de `CDocObjectServer` et substituer ses fonctions d’installation de la vue, [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), et [OnSaveViewState ](#onsaveviewstate). Vous devez fournir une nouvelle instance de votre classe en réponse aux appels de framework.  
   
- Pour plus d’informations sur DocObjects, consultez [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) et [COleCmdUI](../../mfc/reference/colecmdui-class.md) dans le *référence MFC*. Consultez également [Internet premières étapes : Documents actifs](../../mfc/active-documents-on-the-internet.md) et [Documents actifs](../../mfc/active-documents-on-the-internet.md).  
+ Pour plus d’informations sur DocObjects, consultez [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) et [COleCmdUI](../../mfc/reference/colecmdui-class.md) dans le *référence MFC*.  
   
  Consultez également l’article suivant de la Base de connaissances :  
   

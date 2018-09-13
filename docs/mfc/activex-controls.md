@@ -1,7 +1,7 @@
 ---
-title: Contrôles ActiveX | Documents Microsoft
+title: Contrôles ActiveX | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,16 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc3cb9a43e9982a9c7e7b577562fd9d7cf4a7ccc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83a968a5f3521064feea61b3fa09583a4ede71c9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340786"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534961"
 ---
 # <a name="activex-controls"></a>Contrôles ActiveX
 Dans Visual C++, vous pouvez créer des contrôles ActiveX à l’aide de MFC ou ATL.  
-  
+
+>[!IMPORTANT]
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. De nombreuses fonctionnalités de contrôles ActiveX peuvent être effectuées de façon plus simple et plus sûre avec des technologies modernes comme HTML5 et JavaScript, les extensions de navigateur moderne ou WebAssembly modules. Pour plus d’informations, consultez [un saut dans le passé, partie 2 : Saying goodbye pour ActiveX, VBScript, attachEvent...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) et [messagerie Native](/microsoft-edge/extensions/guides/native-messaging) et [les extensions Microsoft Edge](/microsoft-edge/extensions) et [WebAssembly](https://webassembly.org/).
+
 -   [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)  
   
 -   [ATL](../atl/active-template-library-atl-concepts.md)  

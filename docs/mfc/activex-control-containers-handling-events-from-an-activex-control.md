@@ -1,7 +1,7 @@
 ---
-title: 'Conteneurs de contrôles ActiveX : Gestion des événements à partir d’un contrôle ActiveX | Documents Microsoft'
+title: 'Conteneurs de contrôles ActiveX : Gestion des événements à partir d’un contrôle ActiveX | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -21,22 +21,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: bf642a5485ed7659e313467679f57ceda7eead19
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930659"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534870"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Conteneurs de contrôles ActiveX : gestion d'événements à partir d'un contrôle ActiveX
-Cet article explique l’utilisation de la fenêtre Propriétés pour installer des gestionnaires d’événements pour les contrôles ActiveX dans un conteneur de contrôles ActiveX. Les gestionnaires d’événements sont utilisés pour recevoir des notifications (à partir du contrôle) de certains événements et exécuter des actions en réponse. Cette notification est appelée « déclenche » l’événement.  
+Cet article décrit l’utilisation de la fenêtre Propriétés pour installer des gestionnaires d’événements pour les contrôles ActiveX dans un conteneur de contrôles ActiveX. Les gestionnaires d’événements sont utilisés pour recevoir des notifications (à partir du contrôle) de certains événements et effectuer une action en réponse. Cette notification est appelée « déclenche » l’événement.
+
+>[!IMPORTANT]
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+  
   
 > [!NOTE]
->  Cet article utilise un basée sur la boîte de dialogue conteneur projet de contrôle ActiveX nommé conteneur et un contrôle incorporé (nommé Circ) comme exemples dans les procédures et le code.  
+>  Cet article utilise un boîte de dialogue ActiveX conteneur projet de contrôle nommé conteneur et un contrôle incorporé nommé CERC comme exemples dans les procédures et le code.  
   
- Utilisez le bouton événements dans la fenêtre Propriétés, vous pouvez créer une table d’événements qui peuvent se produire dans votre application conteneur de contrôles ActiveX. Ce mappage, appelé « table d’événements récepteur,'' est créé et géré par Visual C++, lorsque vous ajoutez des gestionnaires d’événements à la classe de conteneur du contrôle. Chaque gestionnaire d’événements, implémenté avec une entrée de mappage d’événement est mappé à un événement spécifique à une fonction de membre du Gestionnaire d’événements de conteneur. Cette fonction de gestionnaire d’événements est appelée lorsque l’événement spécifié est déclenché par l’objet de contrôle ActiveX.  
+ Utilisez le bouton événements dans la fenêtre Propriétés, vous pouvez créer une table d’événements qui peuvent se produire dans votre application de conteneur de contrôle ActiveX. Ce mappage, appelé « table d’événements récepteur,'' est créé et géré par Visual C++ lorsque vous ajoutez des gestionnaires d’événements à la classe de conteneur du contrôle. Chaque gestionnaire d’événements, implémentée avec une entrée de mappage d’événement, mappe un événement spécifique à une fonction de membre du Gestionnaire d’événements de conteneur. Cette fonction de gestionnaire d’événements est appelée lorsque l’événement spécifié est déclenché par l’objet de contrôle ActiveX.  
   
- Pour plus d’informations sur les tables de récepteurs d’événements, consultez [tables de récepteurs d’événements](../mfc/reference/event-sink-maps.md) dans les *Class Library Reference*.  
+ Pour plus d’informations sur les tables de récepteurs d’événements, consultez [tables de récepteurs d’événements](../mfc/reference/event-sink-maps.md) dans le *Class Library Reference*.  
   
 ##  <a name="_core_event_handler_modifications_to_the_project"></a> Modifications de gestionnaire d’événements au projet  
  Lorsque vous utilisez la fenêtre Propriétés pour ajouter des gestionnaires d’événements, une table de récepteur d’événements est déclarée et définie dans votre projet. Les instructions suivantes sont ajoutées au contrôle. Fichier CPP la première fois qu’un gestionnaire d’événements est ajouté. Ce code déclare une table de récepteur d’événements pour la classe de boîte de dialogue (dans ce cas, `CContainerDlg`) :  
@@ -44,9 +48,9 @@ Cet article explique l’utilisation de la fenêtre Propriétés pour installer 
  [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
 [!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]  
   
- Lorsque vous utilisez la fenêtre Propriétés pour ajouter des événements, un événement mapper entrée (`ON_EVENT`) est ajouté à la table de récepteur d’événement et un gestionnaire d’événements (fonction) est ajoutée à la mise en œuvre du conteneur (. (CPP) du contrôle.  
+ Lorsque vous utilisez la fenêtre Propriétés pour ajouter des événements, un événement mapper entrée (`ON_EVENT`) est ajouté à la table de récepteur d’événements et un gestionnaire d’événements (fonction) est ajoutée à la mise en œuvre du conteneur (. Fichier CPP).  
   
- L’exemple suivant déclare un gestionnaire d’événements, appelé `OnClickInCircCtrl`, pour le contrôle de Circ `ClickIn` événement :  
+ L’exemple suivant déclare un gestionnaire d’événements, appelé `OnClickInCircCtrl`, pour le contrôle CERC `ClickIn` événement :  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   
@@ -54,7 +58,7 @@ Cet article explique l’utilisation de la fenêtre Propriétés pour installer 
   
  [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]  
   
- Pour plus d’informations sur les macros de récepteur d’événements, consultez [tables de récepteurs d’événements](../mfc/reference/event-sink-maps.md) dans les *Class Library Reference*.  
+ Pour plus d’informations sur les macros de récepteur d’événements, consultez [tables de récepteurs d’événements](../mfc/reference/event-sink-maps.md) dans le *Class Library Reference*.  
   
 #### <a name="to-create-an-event-handler-function"></a>Pour créer une fonction de gestionnaire d’événements  
   
@@ -64,13 +68,13 @@ Cet article explique l’utilisation de la fenêtre Propriétés pour installer 
   
 3.  Dans la fenêtre Propriétés, sélectionnez l’ID de contrôle du contrôle ActiveX incorporé. Pour cet exemple, utilisez `IDC_CIRCCTRL1`.  
   
-     La fenêtre Propriétés affiche une liste des événements qui peuvent être déclenchés par le contrôle ActiveX incorporé. N’importe quelle fonction membre indiquée en gras déjà dispose de fonctions de gestionnaire qui lui est affectées.  
+     La fenêtre Propriétés affiche une liste des événements qui peuvent être déclenchés par le contrôle ActiveX incorporé. N’importe quelle fonction membre indiquée en gras déjà dispose de fonctions de gestionnaire qui lui est assignées.  
   
-4.  Sélectionnez l’événement que vous souhaitez que la classe de boîte de dialogue pour gérer. Dans cet exemple, sélectionnez **cliquez sur**.  
+4.  Sélectionnez l’événement que vous souhaitez que la classe de boîte de dialogue à gérer. Pour cet exemple, sélectionnez **cliquez sur**.  
   
 5.  Dans la zone de liste déroulante à droite, sélectionnez  **\<Ajouter > ClickCircctrl1**.  
   
-6.  Double-cliquez sur la nouvelle fonction de gestionnaire à partir de l’affichage de classes pour atteindre le code de gestionnaire d’événements dans l’implémentation (. Fichier CPP) de `CContainerDlg`.  
+6.  Double-cliquez sur la nouvelle fonction de gestionnaire à partir de l’affichage de classes pour accéder au code de gestionnaire d’événements dans l’implémentation (. Fichier CPP) de `CContainerDlg`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conteneurs de contrôles ActiveX](../mfc/activex-control-containers.md)

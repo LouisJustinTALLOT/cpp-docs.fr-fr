@@ -18,10 +18,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 35ad22a9a4b79a31665ab6b156f8174d395bb0ee
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "43687971"
 ---
 # <a name="masm-macro-directives-in-inline-assembly"></a>Directives relatives aux macros MASM dans l'assembly inline

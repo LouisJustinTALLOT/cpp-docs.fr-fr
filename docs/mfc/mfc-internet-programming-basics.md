@@ -1,7 +1,7 @@
 ---
-title: Base de programmation Internet MFC | Documents Microsoft
+title: Notions de programmation Internet MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -26,15 +26,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 980822792c3be4bc9c4de93baa20d4b3decb5af9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255607"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535156"
 ---
 # <a name="mfc-internet-programming-basics"></a>Éléments fondamentaux relatifs à la programmation Internet MFC
-Microsoft fournit plusieurs API pour la programmation d’applications clientes et serveur. Nombre de nouvelles applications sont écrites pour Internet et technologies, fonctionnalités de navigateur et modification des options de sécurité, les nouveaux types d’applications seront écrit. Les navigateurs s’exécutent sur les ordinateurs clients, en fournissant l’accès à Internet et l’affichage des pages HTML qui contiennent du texte, des graphiques, des contrôles ActiveX et des documents. Serveurs fournissent des services gopher, HTTP et FTP et exécutent des applications d’extension de serveur à l’aide de CGI. Votre application personnalisée peut récupérer des informations et fournir des données sur Internet.  
+
+Microsoft fournit de nombreuses API pour la programmation d’applications clientes et serveur. Nombre de nouvelles applications sont écrites pour Internet, et en tant que les technologies, les fonctionnalités du navigateur et modification des options de sécurité, les nouveaux types d’applications seront écrit. Les navigateurs s’exécutent sur les ordinateurs clients, fournissant un accès à Internet et l’affichage des pages HTML contenant du texte, des graphiques, des contrôles ActiveX et des documents. Les serveurs fournissent FTP, HTTP, services et gopher et exécuter des applications d’extension de serveur à l’aide de CGI. Votre application personnalisée peut récupérer des informations et fournir des données sur Internet.  
+
+>[!IMPORTANT]
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations, consultez [contrôles ActiveX](activex-controls.md).
   
  ![Applications clientes et serveur](../mfc/media/vc38bq1.gif "vc38bq1")  
   
@@ -58,8 +62,6 @@ Microsoft fournit plusieurs API pour la programmation d’applications clientes 
   
 -   [Contrôles ActiveX sur Internet](../mfc/activex-controls-on-the-internet.md)  
   
--   [Documents actifs sur Internet](../mfc/active-documents-on-the-internet.md)  
-  
 -   [Monikers asynchrones sur Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Extension Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)  
@@ -76,15 +78,15 @@ Microsoft fournit plusieurs API pour la programmation d’applications clientes 
   
 -   [Prise en charge d’ATL pour les contrôles DHTML](../atl/atl-support-for-dhtml-controls.md)  
   
-##  <a name="_core_web_sites_for_more_information"></a> Pour plus d’informations, les Sites Web  
- Pour plus d’informations sur les technologies Microsoft Internet, consultez le [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) site Web. (Liens peuvent changer sans préavis.)  
+##  <a name="_core_web_sites_for_more_information"></a> Sites Web pour plus d’informations  
+ Pour plus d’informations sur la technologie Internet de Microsoft, consultez le [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) site Web. (Liens peuvent changer sans préavis.)  
   
- Ce site Web pour les développeurs contient des informations sur l’utilisation des outils de développement Microsoft et les technologies et les récits supérieur sur conférences récentes et à venir. À partir de cette page, vous pouvez accéder à de nombreux sites de développeurs connexes, y compris .NET, les centres de développement XML. Vous pouvez également télécharger des kits de développement logiciel bêta et des exemples.  
+ Ce site Web pour les développeurs contient des informations sur l’utilisation des outils de développement Microsoft et des technologies et des témoignages sur les conférences récents et à venir. À partir de cette page, vous pouvez passer à de nombreux sites connexes pour les développeurs, y compris .NET, les centres de développement XML. Vous pouvez également télécharger des exemples et kits de développement logiciel bêta.  
   
- Le [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publie des spécifications pour HTML, HTTP, CGI et autres technologies World Wide Web.  
+ Le [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publie des spécifications pour HTML, HTTP, CGI et autres technologies du World Wide Web.  
   
-##  <a name="_core_more_internet_help"></a> Plus d’aide d’Internet  
- La section OLE du Kit de développement Windows contient des informations supplémentaires sur la programmation OLE. Cette information fournit des détails sur l’utilisation des fonctions Win32 WinInet directement, plutôt que via les classes MFC. Il contient également des informations générales sur les technologies Internet.  
+##  <a name="_core_more_internet_help"></a> Mieux à Internet  
+ La section OLE du kit SDK Windows contient des informations supplémentaires sur la programmation OLE. Ces informations fournissent des détails sur l’utilisation des fonctions Win32 WinInet directement, plutôt que via les classes MFC. Il contient également des informations générales sur les technologies Internet.  
   
 ## <a name="see-also"></a>Voir aussi  
 

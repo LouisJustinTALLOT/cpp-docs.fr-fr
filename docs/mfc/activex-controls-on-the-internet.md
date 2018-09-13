@@ -1,7 +1,7 @@
 ---
-title: Contrôles ActiveX sur Internet | Documents Microsoft
+title: Contrôles ActiveX sur Internet | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,15 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5c64980cbdfeec92f0029828183c8f56b390dd85
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931975"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535312"
 ---
 # <a name="activex-controls-on-the-internet"></a>Contrôles ActiveX sur Internet
-Les contrôles ActiveX sont la version mise à jour de la spécification de contrôle OLE. Les contrôles sont une architecture primaire pour le développement de composants logiciels programmables qui peuvent être utilisés dans plusieurs conteneurs, y compris les navigateurs Web compatibles COM sur Internet. Un contrôle ActiveX peut être un contrôle Internet et peut ajouter ses fonctionnalités dans un document actif ou faire partie d'une page Web. Les contrôles sur une page web peuvent communiquer entre eux à l’aide de scripts.  
+
+Les contrôles ActiveX sont la version mise à jour de la spécification de contrôle OLE. 
+
+>[!IMPORTANT]
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations, consultez [contrôles ActiveX](activex-controls.md).
+
+Les contrôles sont une architecture primaire pour le développement de composants logiciels programmables qui peuvent être utilisés dans plusieurs conteneurs, y compris les navigateurs Web compatibles COM sur Internet. Un contrôle ActiveX peut être un contrôle Internet et peut ajouter ses fonctionnalités dans un document actif ou faire partie d'une page Web. Les contrôles sur une page web peuvent communiquer entre eux à l’aide de scripts.  
   
  Les contrôles ActiveX ne sont pas limités à Internet. Un contrôle ActiveX peut également être utilisé dans n'importe quel conteneur, tant que le contrôle prend en charge les interfaces requises par ce conteneur.  
   
@@ -37,7 +43,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
 -   La possibilité d'être sans fenêtre et toujours actifs en place.  
   
- **Pour être un contrôle ActiveX, un contrôle doit :**  
+ **Pour être un contrôle ActiveX, il doit :**  
   
 -   Prise en charge la `IUnknown` interface.  
   
@@ -85,13 +91,13 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Pour créer votre projet à l'aide de l'Assistant Contrôle ActiveX MFC  
   
-1.  Cliquez sur **nouveau** sur la **fichier** menu.  
+1.  Cliquez sur **New** sur le **fichier** menu.  
   
 2.  Sélectionnez **Assistant contrôle ActiveX MFC** à partir de Visual C++, projets et nommez votre projet.  
   
 3.  Sur le **paramètres de contrôle** page, sélectionnez **charge les propriétés de façon asynchrone**. Cette option configure la propriété d'état Prêt et l'événement de modification d'état prêt pour vous.  
   
-     Vous pouvez également sélectionner des optimisations supplémentaires, telles que **l’activation sans fenêtre**, qui est décrite dans [contrôles ActiveX : optimisation](../mfc/mfc-activex-controls-optimization.md).  
+     Vous pouvez également sélectionner d’autres optimisations, telles que **l’activation sans fenêtre**, qui est décrite dans [contrôles ActiveX : optimisation](../mfc/mfc-activex-controls-optimization.md).  
   
 4.  Choisissez **Terminer** pour créer le projet.  
   
@@ -109,7 +115,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
      Notez que vous devez inclure AFXCMN.H pour utiliser la classe `CListCtrl`.  
   
-4.  Lorsque votre contrôle change d'état général (par exemple, de "en chargement" à "initialisé" ou "en interaction utilisateur"), appelez `COleControl::InternalSetReadyState`. Si le contrôle a une propriété de chemin d’accès de données qu’une seule, vous pouvez ajouter du code sur **BSCF_LASTDATANOTIFICATION** pour notifier au conteneur que le téléchargement est terminé. Exemple :  
+4.  Lorsque votre contrôle change d'état général (par exemple, de "en chargement" à "initialisé" ou "en interaction utilisateur"), appelez `COleControl::InternalSetReadyState`. Si votre contrôle a la propriété de données qu’un seul chemin d’accès, vous pouvez ajouter du code sur **BSCF_LASTDATANOTIFICATION** pour notifier au conteneur que le téléchargement est terminé. Exemple :  
   
      [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
@@ -119,9 +125,9 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
 #### <a name="to-add-a-property"></a>Pour ajouter une propriété  
   
-1.  Dans **affichage de classes**, avec le bouton droit de l’interface sous le nœud de bibliothèque et sélectionnez **ajouter**, puis **ajouter une propriété**. Ceci démarrera le **Assistant Ajout de propriété**.  
+1.  Dans **affichage de classes**, cliquez sur l’interface sous le nœud de bibliothèque et sélectionnez **ajouter**, puis **ajouter une propriété**. Ceci démarrera le **Assistant Ajout de propriété**.  
   
-2.  Dans le **Assistant Ajout de propriété**, sélectionnez le **méthodes Set/Get** case d’option, tapez le **nom de la propriété**, par exemple, EditControlText et sélectionnez BSTR comme le **Type de propriété**.  
+2.  Dans le **Assistant Ajout de propriété**, sélectionnez le **méthodes Set/Get** case d’option, tapez le **nom de la propriété**, par exemple, EditControlText, sélectionnez BSTR comme le **Type de propriété**.  
   
 3.  Cliquez sur **Terminer**.  
   
@@ -129,7 +135,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  Implémentez les méthodes `Get/Set`. Pour `Get`, la chaîne de retour. Pour `Set`, chargez la propriété et appelez `SetModifiedFlag`.  
+5.  Implémentez les méthodes `Get/Set`. Pour `Get`, retourner la chaîne. Pour `Set`, chargez la propriété et appelez `SetModifiedFlag`.  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   
@@ -163,7 +169,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
  L'exemple ASYNDOWN montre comment configurer une boucle asynchrone en utilisant des minuteries pour lire les données. ASYNDOWN est décrit en détail dans l'article de la Base de connaissances relatif à la "procédure : AsyncDown illustre le téléchargement asynchrone de données" (Q177244) et peut être téléchargé à partir du Centre de téléchargement Microsoft. (Pour plus d'informations sur le téléchargement de fichiers à partir du Centre de téléchargement Microsoft, consultez l'article relatif à la "procédure d'obtention des fichiers de support technique Microsoft depuis les services en ligne" (Q119591) dans la Base de connaissances Microsoft.) Vous pouvez trouver des articles de la Base de connaissances à [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
- La technique de base utilisée dans ASYNDOWN consiste à définir une minuterie dans **CDataPathProperty::OnDataAvailable** pour indiquer lorsque les données sont disponibles. Si le message de la minuterie est accepté, l'application lit des blocs de 128 octets de données et remplit un contrôle d'édition. Si les données ne sont pas disponibles lorsque le message de la minuterie est traité, la minuterie est désactivée. `OnDataAvailable` démarre la minuterie si davantage de données arrivent ultérieurement.  
+ La technique de base utilisée dans ASYNDOWN consiste à définir une minuterie dans **CDataPathProperty::OnDataAvailable** pour indiquer quand les données sont disponibles. Si le message de la minuterie est accepté, l'application lit des blocs de 128 octets de données et remplit un contrôle d'édition. Si les données ne sont pas disponibles lorsque le message de la minuterie est traité, la minuterie est désactivée. `OnDataAvailable` démarre la minuterie si davantage de données arrivent ultérieurement.  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>Affichage d’un contrôle sur une page web  
  Voici un exemple de balise et d’attributs d’objet pour insérer un contrôle sur une page web.  
@@ -203,7 +209,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
  [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]  
   
- Vous mettrez à jour l’état prêt lorsque votre code est téléchargé en appelant [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Un emplacement à partir duquel vous pouvez appeler `InternalSetReadyState` est depuis la substitution `OnProgress` de la classe dérivée de `CDataPathProperty`.  
+ Vous mettrez à jour l’état prêt comme votre code est téléchargé en appelant [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Un emplacement à partir duquel vous pouvez appeler `InternalSetReadyState` est depuis la substitution `OnProgress` de la classe dérivée de `CDataPathProperty`.  
   
 
   
