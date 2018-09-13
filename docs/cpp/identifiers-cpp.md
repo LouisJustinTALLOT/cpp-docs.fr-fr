@@ -1,7 +1,7 @@
 ---
 title: Identificateurs (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: cad3c53be23d472a8ce40dae9056d73ab1de1c89
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405228"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535143"
 ---
 # <a name="identifiers-c"></a>Identificateurs (C++)
 Un identificateur est une séquence de caractères servant à désigner l'un des éléments suivants :  
@@ -104,7 +104,7 @@ int main() {
   
  Les identificateurs ne peuvent pas avoir exactement la même orthographe et la même casse que les mots clés. Les identificateurs contenant des mots clés sont autorisés. Par exemple, `Pint` est un identificateur légal, bien qu’il contienne **int**, qui est un mot clé.  
   
- L'utilisation de deux traits de soulignement à la suite ( **__** ) au début d'un identificateur, ou d'un seul trait de soulignement suivi par une lettre majuscule, est réservée aux implémentations C++ dans toutes les portées. Évitez d'utiliser un seul trait de soulignement de début suivi d'une lettre minuscule pour les noms avec une portée de fichier en raison de conflits possibles avec les identificateurs réservés actuels ou futurs.  
+ Utilisation de deux traits de soulignement à la suite ( **__** ) dans un identificateur ou un seul trait de soulignement suivi par une lettre majuscule, est réservée aux implémentations C++ dans toutes les étendues. Évitez d'utiliser un seul trait de soulignement de début suivi d'une lettre minuscule pour les noms avec une portée de fichier en raison de conflits possibles avec les identificateurs réservés actuels ou futurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conventions lexicales](../cpp/lexical-conventions.md)

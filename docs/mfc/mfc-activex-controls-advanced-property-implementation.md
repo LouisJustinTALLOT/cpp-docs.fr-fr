@@ -1,7 +1,7 @@
 ---
-title: 'Contrôles ActiveX MFC : Avancées d’implémentation de la propriété | Documents Microsoft'
+title: 'Contrôles ActiveX MFC : Advanced implémentation de la propriété | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -16,15 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e5357354a747dd2ce2487bf66821e8be7d2a04a4
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928362"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534922"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Contrôles ActiveX MFC : implémentation des propriétés avancées
-Cet article décrit les rubriques relatives à l’implémentation des propriétés avancées dans un contrôle ActiveX :  
+Cet article décrit les rubriques relatives à l’implémentation des propriétés avancées dans un contrôle ActiveX.
+
+>[!IMPORTANT]
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).  
   
 -   [Propriétés en lecture seule et en écriture seule](#_core_read2donly_and_write2donly_properties)  
   
@@ -55,25 +58,25 @@ Cet article décrit les rubriques relatives à l’implémentation des propriét
   
 9. Cliquez sur **Terminer**.  
   
- Lorsque vous effectuez cette opération, l’Assistant Ajout de propriété insère la fonction `SetNotSupported` ou `GetNotSupported` dans l’entrée de mappage de distribution à la place d’un vecteur normal Set ou Get (fonction).  
+ Lorsque vous effectuez cette opération, l’Assistant Ajout de propriété insère la fonction `SetNotSupported` ou `GetNotSupported` dans l’entrée de mappage de distribution à la place d’un élément normal Set ou Get (fonction).  
   
- Si vous souhaitez modifier une propriété existante afin d’être en lecture seule ou en écriture seule, vous pouvez modifier manuellement de la table de dispatch et supprimer la fonction Set ou Get inutile à partir de la classe du contrôle.  
+ Si vous souhaitez modifier une propriété existante pour être en lecture seule ou en écriture seule, vous pouvez modifier manuellement de la table de dispatch et supprimer la fonction Set ou Get inutile de la classe de contrôle.  
   
- Si vous souhaitez une propriété conditionnellement en lecture seule ou en écriture seule (par exemple, uniquement lorsque le contrôle s’exécute dans un mode particulier), vous pouvez fournir la fonction Set ou Get, comme d’habitude et appeler le `SetNotSupported` ou `GetNotSupported` fonction le cas échéant. Exemple :  
+ Si vous souhaitez une propriété conditionnellement en lecture seule ou en écriture seule (par exemple, uniquement lorsque votre contrôle fonctionne dans un mode particulier), vous pouvez fournir la fonction Set ou Get, comme d’habitude et appeler le `SetNotSupported` ou `GetNotSupported` fonction des nécessités. Exemple :  
   
  [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
   
- Cet exemple de code appelle `SetNotSupported` si le `m_bReadOnlyMode` membre de données est **TRUE**. Si **FALSE**, alors la propriété est définie sur la nouvelle valeur.  
+ Cet exemple de code appelle `SetNotSupported` si le `m_bReadOnlyMode` est membre de données **TRUE**. Si **FALSE**, puis la propriété est définie sur la nouvelle valeur.  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> Renvoi des Codes d’erreur à partir d’une propriété  
- Pour indiquer qu’une erreur s’est produite lors de la tentative obtenir ou définir une propriété, utilisez le `COleControl::ThrowError` (fonction), qui prend SCODE (code d’état) en tant que paramètre. Vous pouvez utiliser un paramètre SCODE prédéfini ou définir votre propre. Pour obtenir la liste de paramètres prédéfinis SCODEs et obtenir des instructions permettant de définir SCODEs personnalisés, consultez [gestion des erreurs dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans les contrôles ActiveX : rubriques avancées.  
+ Pour indiquer qu’une erreur s’est produite lors de la tentative obtenir ou définir une propriété, utilisez le `COleControl::ThrowError` (fonction), qui prend SCODE (code d’état) en tant que paramètre. Vous pouvez utiliser un SCODE prédéfini ou définir votre propre. Pour obtenir la liste de paramètres prédéfinis SCODEs et obtenir des instructions pour la définition SCODEs personnalisés, consultez [gestion des erreurs dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans les contrôles ActiveX : rubriques avancées.  
   
- Fonctions d’assistance existent pour la plus courante prédéfinies SCODEs, par exemple [courants ;](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), et [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
+ Fonctions d’assistance existent pour la plus courante prédéfinies SCODEs, tel que [courants ;](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), et [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` est destiné à être utilisé uniquement comme un moyen de retourner une erreur à partir d’au sein Get d’une propriété ou Set fonction ou une méthode automation. Il s’agit de la seule fois où le Gestionnaire d’exceptions approprié sera présent sur la pile.  
   
- Pour plus d’informations sur les rapports d’exceptions dans d’autres zones du code, consultez [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) et la section [gestion des erreurs dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : avancé Rubriques.  
+ Pour plus d’informations sur le rapport des exceptions dans d’autres zones du code, consultez [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) et la section [gestion des erreurs dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : avancé Rubriques.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)   

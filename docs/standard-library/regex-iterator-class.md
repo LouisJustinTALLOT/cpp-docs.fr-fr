@@ -1,7 +1,7 @@
 ---
 title: regex_iterator, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 264f61ede0fb47e198459593b2eea154846cc7b9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2502ab1d7fbcbfc33883df3627ec36dfcf46e2d7
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108281"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535338"
 ---
 # <a name="regexiterator-class"></a>regex_iterator, classe
 
@@ -43,37 +43,10 @@ Classe d’itérateur pour les correspondances.
 template<class BidIt,
    class Elem = typename std::iterator_traits<BidIt>::value_type,
    class RxTraits = regex_traits<Elem> >
-class regex_iterator {
-public:
-   typedef basic_regex<Elem, RXtraits> regex_type;
-   typedef match_results<BidIt> value_type;
-   typedef std::forward_iterator_tag iterator_category;
-   typedef std::ptrdiff_t difference_type;
-   typedef const match_results<BidIt>* pointer;
-   typedef const match_results<BidIt>& reference;
-
-   regex_iterator();
-   regex_iterator(
-      BidIt first, BidIt last, const regex_type& re,
-      regex_constants::match_flag_type f = regex_constants::match_default);
-
-   bool operator==(const regex_iterator& right);
-   bool operator!=(const regex_iterator& right);
-   const match_results<BidIt>& operator*();
-   const match_results<BidIt> * operator->();
-   regex_iterator& operator++();
-   regex_iterator& operator++(int);
-
-private:
-   BidIt begin; // exposition only
-   BidIt end; // exposition only
-   regex_type *pregex;     // exposition only
-   regex_constants::match_flag_type flags; // exposition only
-   match_results<BidIt> match; // exposition only
-   };
+class regex_iterator 
 ```
 
-### <a name="parameters"></a>Paramètres
+## <a name="parameters"></a>Paramètres
 
 *BidIt*<br/>
 Type d'itérateur pour les sous-correspondances.
@@ -88,6 +61,39 @@ Classe Traits des éléments.
 
 Cette classe de modèle décrit un objet itérateur forward constant. Elle extrait les objets de type `match_results<BidIt>` en appliquant à plusieurs reprises son objet d’expression régulière `*pregex` à la séquence de caractères définie par la plage d’itérateurs `[begin, end)`.
 
+### <a name="constructors"></a>Constructeurs
+
+|Constructeur|Description|
+|-|-|
+|[regex_iterator](#regex_iterator)|Construit l’itérateur.|
+
+### <a name="typedefs"></a>Typedef
+
+|Nom de type|Description|
+|-|-|
+|[difference_type](#difference_type)|Type d’une différence d’itérateur.|
+|[iterator_category](#iterator_category)|Type de la catégorie d'itérateur.|
+|[pointer](#pointer)|Type d'un pointeur vers une correspondance.|
+|[reference](#reference)|Type d’une référence à une correspondance.|
+|[regex_type](#regex_type)|Type de l’expression régulière à mettre en correspondance.|
+|[value_type](#value_type)|Type d'une correspondance.|
+
+### <a name="operators"></a>Opérateurs
+
+|Opérateur|Description|
+|-|-|
+|[operator!=](#op_neq)|Compare l’inégalité d’itérateurs.|
+|[operator*](#op_star)|Accède à la correspondance désignée.|
+|[operator++](#op_add_add)|Incrémente l'itérateur.|
+|[operator=](#op_eq)|Compare des itérateurs pour déterminer s’ils sont égaux.|
+|[operator->](#op_arrow)|Accède à la correspondance désignée.|
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** \<regex>
+
+**Espace de noms :** std
+
 ## <a name="examples"></a>Exemples
 
 Consultez les rubriques suivantes pour obtenir des exemples d’expressions régulières :
@@ -100,11 +106,46 @@ Consultez les rubriques suivantes pour obtenir des exemples d’expressions rég
 
 - [swap](../standard-library/regex-functions.md#swap)
 
-## <a name="requirements"></a>Configuration requise
+```cpp
+// std__regex__regex_iterator.cpp
+// compile with: /EHsc
+#include <regex>
+#include <iostream>
 
-**En-tête :** \<regex>
+typedef std::regex_iterator<const char *> Myiter;
+int main()
+    {
+    const char *pat = "axayaz";
+    Myiter::regex_type rx("a");
+    Myiter next(pat, pat + strlen(pat), rx);
+    Myiter end;
 
-**Espace de noms :** std
+    for (; next != end; ++next)
+        std::cout << "match == " << next->str() << std::endl;
+
+// other members
+    Myiter it1(pat, pat + strlen(pat), rx);
+    Myiter it2(it1);
+    next = it1;
+
+    Myiter::iterator_category cat = std::forward_iterator_tag();
+    Myiter::difference_type dif = -3;
+    Myiter::value_type mr = *it1;
+    Myiter::reference ref = mr;
+    Myiter::pointer ptr = &ref;
+
+    dif = dif; // to quiet "unused" warnings
+    ptr = ptr;
+
+    return (0);
+    }
+```
+
+```Output
+match == a
+match == a
+match == a
+```
 
 ## <a name="difference_type"></a>  regex_iterator::difference_type
 
@@ -118,49 +159,6 @@ typedef std::ptrdiff_t difference_type;
 
 Le type est un synonyme de `std::ptrdiff_t`.
 
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_difference_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="iterator_category"></a>  regex_iterator::iterator_category
 
 Type de la catégorie d'itérateur.
@@ -172,49 +170,6 @@ typedef std::forward_iterator_tag iterator_category;
 ### <a name="remarks"></a>Notes
 
 Le type est un synonyme de `std::forward_iterator_tag`.
-
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_iterator_category.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="op_neq"></a>  regex_iterator::operator!=
 
@@ -233,49 +188,6 @@ Itérateur auquel comparer.
 
 La fonction membre retourne `!(*this == right)`.
 
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_operator_ne.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="op_star"></a>  regex_iterator::operator*
 
 Accède à la correspondance désignée.
@@ -287,49 +199,6 @@ const match_results<BidIt>& operator*();
 ### <a name="remarks"></a>Notes
 
 La fonction membre retourne la valeur stockée `match`.
-
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_operator_star.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="op_add_add"></a>  regex_iterator::operator++
 
@@ -345,49 +214,6 @@ regex_iterator& operator++(int);
 Si la correspondance actuelle ne comporte aucun caractère, le premier opérateur appelle `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail | regex_constants::match_not_null)`. Sinon, il avance la valeur stockée `begin` pour pointer vers le premier caractère situé après la correspondance actuelle, puis appelle `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail)`. Dans chaque cas, si la recherche n’aboutit pas, l’opérateur assigne à l’objet un itérateur de fin de séquence. L’opérateur retourne l’objet.
 
 Le deuxième opérateur effectue une copie de l'objet, incrémente l'objet, puis retourne la copie.
-
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_operator_inc.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="op_eq"></a>  regex_iterator::operator=
 
@@ -406,49 +232,6 @@ Itérateur auquel comparer.
 
 La fonction membre retourne la valeur true si `*this` et *droit* sont tous deux itérateurs de fin de séquence, ou si aucun des deux est un itérateur de fin de séquence et `begin == right.begin`, `end == right.end`, `pregex == right.pregex`, et `flags == right.flags`. Sinon, elle retourne false.
 
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_operator_as.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
 
 Accède à la correspondance désignée.
@@ -460,49 +243,6 @@ const match_results<BidIt> * operator->();
 ### <a name="remarks"></a>Notes
 
 La fonction membre retourne l’adresse de la valeur stockée `match`.
-
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_operator_arrow.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="pointer"></a>  regex_iterator::pointer
 
@@ -516,49 +256,6 @@ typedef match_results<BidIt> *pointer;
 
 Le type est un synonyme de `match_results<BidIt>*`, où `BidIt` est le paramètre de modèle.
 
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_pointer.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="reference"></a>  regex_iterator::reference
 
 Type d’une référence à une correspondance.
@@ -570,50 +267,6 @@ typedef match_results<BidIt>& reference;
 ### <a name="remarks"></a>Notes
 
 Le type est un synonyme de `match_results<BidIt>&`, où `BidIt` est le paramètre de modèle.
-
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_reference.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="regex_iterator"></a>  regex_iterator::regex_iterator
 
@@ -646,50 +299,6 @@ Indicateurs pour les correspondances.
 
 Le premier constructeur construit un itérateur de fin de séquence. Le deuxième constructeur initialise la valeur stockée `begin` avec *première*, la valeur stockée `end` avec *dernière*, la valeur stockée `pregex` avec `&re`et le valeur stockée `flags` avec *f*. Il appelle ensuite `regex_search(begin, end, match, *pregex, flags)`. En cas d’échec de la recherche, le constructeur assigne à l’objet un itérateur de fin de séquence.
 
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="regex_type"></a>  regex_iterator::regex_type
 
 Type de l’expression régulière à mettre en correspondance.
@@ -702,50 +311,6 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 Le typedef est un synonyme de `basic_regex<Elem, RXtraits>`.
 
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_regex_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="value_type"></a>  regex_iterator::value_type
 
 Type d'une correspondance.
@@ -757,50 +322,6 @@ typedef match_results<BidIt> value_type;
 ### <a name="remarks"></a>Notes
 
 Le type est un synonyme de `match_results<BidIt>`, où `BidIt` est le paramètre de modèle.
-
-### <a name="example"></a>Exemple
-
-```cpp
-// std__regex__regex_iterator_value_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="see-also"></a>Voir aussi
 
