@@ -1,32 +1,48 @@
 ---
 title: Classe EventSource | Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource
+- event/Microsoft::WRL::EventSource::Add
+- event/Microsoft::WRL::EventSource::addRemoveLock_
+- event/Microsoft::WRL::EventSource::EventSource
+- event/Microsoft::WRL::EventSource::GetSize
+- event/Microsoft::WRL::EventSource::InvokeAll
+- event/Microsoft::WRL::EventSource::Remove
+- event/Microsoft::WRL::EventSource::targets_
+- event/Microsoft::WRL::EventSource::targetsPointerLock_
 dev_langs:
 - C++
 helpviewer_keywords:
-- EventSource class
+- Microsoft::WRL::EventSource class
+- Microsoft::WRL::EventSource::Add method
+- Microsoft::WRL::EventSource::addRemoveLock_ data member
+- Microsoft::WRL::EventSource::EventSource, constructor
+- Microsoft::WRL::EventSource::GetSize method
+- Microsoft::WRL::EventSource::InvokeAll method
+- Microsoft::WRL::EventSource::Remove method
+- Microsoft::WRL::EventSource::targets_ data member
+- Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8805547c5803ae665178330063e6b77b1b3c662e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596209"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601494"
 ---
 # <a name="eventsource-class"></a>EventSource (classe)
 
-Représente un événement non agile. **EventSource** fonctions membres à ajouter, supprimer et appeler des gestionnaires d’événements. Pour les événements agiles, utiliser [AgileEventSource](agileeventsource-class.md).
+Représente un événement non agile. Les fonctions membres d'`EventSource` ajoutent, suppriment et appellent des gestionnaires d'événements. Pour les événements agiles, utiliser [AgileEventSource](agileeventsource-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,26 +60,26 @@ L’interface à un délégué qui représente un gestionnaire d’événements.
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
-|----------|-----------------|
-|[EventSource::EventSource, constructeur](../windows/eventsource-eventsource-constructor.md)|Initialise une nouvelle instance de la **EventSource** classe.|
+| Nom                                     | Description                                            |
+| ---------------------------------------- | ------------------------------------------------------ |
+| [EventSource::EventSource](#eventsource) | Initialise une nouvelle instance de la classe `EventSource`. |
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
-|----------|-----------------|
-|[EventSource::Add, méthode](../windows/eventsource-add-method.md)|Ajoute le Gestionnaire d’événements représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour actuel **EventSource** objet.|
-|[EventSource::GetSize, méthode](../windows/eventsource-getsize-method.md)|Récupère le nombre de gestionnaires d’événements associés à l’actuel **EventSource** objet|
-|[EventSource::InvokeAll, méthode](../windows/eventsource-invokeall-method.md)|Appelle chaque gestionnaire d’événements associé actuel **EventSource** avec les types d’arguments spécifiés et les arguments de l’objet.|
-|[EventSource::Remove, méthode](../windows/eventsource-remove-method.md)|Supprime le Gestionnaire d’événements représenté par le jeton d’inscription d’événement spécifié à partir de l’ensemble des gestionnaires d’événements associés à l’actuel **EventSource** objet.|
+| Nom                                 | Description                                                                                                                                                      |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [EventSource::Add](#add)             | Ajoute le Gestionnaire d’événements représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour actuel `EventSource` objet.                     |
+| [EventSource::GetSize](#getsize)     | Récupère le nombre de gestionnaires d’événements associés à l’actuel `EventSource` objet.                                                                         |
+| [EventSource::InvokeAll](#invokeall) | Appelle chaque gestionnaire d’événements associé actuel `EventSource` avec les types d’arguments spécifiés et les arguments de l’objet.                                      |
+| [EventSource::Remove](#remove)       | Supprime le Gestionnaire d’événements représenté par le jeton d’inscription d’événement spécifié à partir de l’ensemble des gestionnaires d’événements associés à l’actuel `EventSource` objet. |
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
-|----------|-----------------|
-|[EventSource::addRemoveLock_, données de membre](../windows/eventsource-addremovelock-data-member.md)|Synchronise l’accès à la [targets_](../windows/eventsource-targets-data-member.md) tableau lors de l’ajout, suppression ou appeler des gestionnaires d’événements.|
-|[EventSource::targets_, données de membre](../windows/eventsource-targets-data-member.md)|Tableau d’un ou plusieurs gestionnaires d’événements.|
-|[EventSource::targetsPointerLock_, données de membre](../windows/eventsource-targetspointerlock-data-member.md)|Synchronise l’accès aux membres de données internes, même lorsque des gestionnaires d’événements pour cette source d’événement sont ajoutés, supprimés ou appelé.|
+| Name                                                    | Description                                                                                                                       |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [EventSource::addRemoveLock_](#addremovelock)           | Synchronise l’accès à la [targets_](#targets) tableau lors de l’ajout, suppression ou appeler des gestionnaires d’événements.                          |
+| [EventSource::targets_](#targets)                       | Tableau d’un ou plusieurs gestionnaires d’événements.                                                                                           |
+| [EventSource::targetsPointerLock_](#targetspointerlock) | Synchronise l’accès aux membres de données internes, même lorsque des gestionnaires d’événements pour cette source d’événement sont ajoutés, supprimés ou appelé. |
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -75,7 +91,316 @@ L’interface à un délégué qui représente un gestionnaire d’événements.
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="see-also"></a>Voir aussi
+## <a name="add"></a>EventSource::Add
 
-[Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)  
-[AgileEventSource, classe](agileeventsource-class.md)
+Ajoute le Gestionnaire d’événements représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour actuel `EventSource` objet.
+
+```cpp
+HRESULT Add(
+   _In_ TDelegateInterface* delegateInterface,
+   _Out_ EventRegistrationToken* token
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*delegateInterface*  
+L’interface à un objet délégué, qui représente un gestionnaire d’événements.
+
+*Jeton*  
+Lorsque cette opération se termine, un handle qui représente l’événement. Utiliser ce jeton en tant que paramètre à la [Remove()](#remove) méthode pour ignorer le Gestionnaire d’événements.
+
+### <a name="return-value"></a>Valeur de retour
+
+S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
+
+## <a name="addremovelock"></a>EventSource::addRemoveLock_
+
+Synchronise l’accès à la [targets_](#targets) tableau lors de l’ajout, suppression ou appeler des gestionnaires d’événements.
+
+```cpp
+Wrappers::SRWLock addRemoveLock_;
+```
+
+## <a name="eventsource"></a>EventSource::EventSource
+
+Initialise une nouvelle instance de la classe `EventSource`.
+
+```cpp
+EventSource();
+```
+
+## <a name="getsize"></a>EventSource::GetSize
+
+Récupère le nombre de gestionnaires d’événements associés à l’actuel `EventSource` objet.
+
+```cpp
+size_t GetSize() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Le nombre de gestionnaires d’événements dans [targets_](#targets).
+
+## <a name="invokeall"></a>EventSource::InvokeAll
+
+Appelle chaque gestionnaire d’événements associé actuel `EventSource` avec les types d’arguments spécifiés et les arguments de l’objet.
+
+```cpp
+void InvokeAll();
+template <
+   typename T0
+>
+void InvokeAll(
+   T0arg0
+);
+template <
+   typename T0,
+   typename T1
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8,
+   typename T9
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8,
+   T9arg9
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*T0*  
+Le type de l’argument de gestionnaire d’événements zeroth.
+
+*T1*  
+Le type du premier argument de gestionnaire d’événements.
+
+*T2*  
+Le type du deuxième argument de gestionnaire d’événements.
+
+*T3*  
+Le type du troisième argument de gestionnaire d’événements.
+
+*T4*  
+Le type du quatrième argument de gestionnaire d’événements.
+
+*T5*  
+Le type du cinquième argument de gestionnaire d’événements.
+
+*T6*  
+Le type du sixième argument de gestionnaire d’événements.
+
+*T7*  
+Le type du septième argument de gestionnaire d’événements.
+
+*T8*  
+Le type de l’argument de gestionnaire d’événements huitième.
+
+*T9*  
+Le type du neuvième argument de gestionnaire d’événements.
+
+*arg0*  
+L’argument Gestionnaire d’événement zeroth.
+
+*arg1*  
+Le premier argument de gestionnaire de l’événement.
+
+*Arg2*  
+Le deuxième argument de gestionnaire de l’événement.
+
+*Arg3*  
+Le troisième argument de gestionnaire de l’événement.
+
+*Arg4*  
+Le quatrième argument de gestionnaire de l’événement.
+
+*Arg5*  
+Le cinquième argument de gestionnaire de l’événement.
+
+*Arg6*  
+Sixième argument de gestionnaire d’événements.
+
+*Arg7*  
+Septième argument de gestionnaire d’événements.
+
+*Arg8*  
+Argument d’événement huitième gestionnaire.
+
+*Arg9*  
+Neuvième argument de gestionnaire d’événements.
+
+## <a name="remove"></a>EventSource::Remove
+
+Supprime le Gestionnaire d’événements représenté par le jeton d’inscription d’événement spécifié à partir de l’ensemble des gestionnaires d’événements associés à l’actuel `EventSource` objet.
+
+```cpp
+HRESULT Remove(
+   EventRegistrationToken token
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Jeton*  
+Handle qui représente un gestionnaire d’événements. Ce jeton a été retourné lorsque le Gestionnaire d’événements a été inscrit par le [Add()](#add) (méthode).
+
+### <a name="return-value"></a>Valeur de retour
+
+S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
+
+### <a name="remarks"></a>Notes
+
+Pour plus d’informations sur la `EventRegistrationToken` structure, consultez la **Windows::Foundation :: eventregistrationtoken Structure** rubrique dans le **Windows Runtime** documentation de référence.
+
+## <a name="targets"></a>EventSource::targets_
+
+Tableau d’un ou plusieurs gestionnaires d’événements.
+
+```cpp
+ComPtr<Details::EventTargetArray> targets_;
+```
+
+### <a name="remarks"></a>Notes
+
+Lorsque l’événement qui est représenté par l’actuel `EventSource` objet se produit, les gestionnaires d’événements sont appelées.
+
+## <a name="targetspointerlock"></a>EventSource::targetsPointerLock_
+
+Synchronise l’accès aux membres de données internes même lorsque les gestionnaires d’événements pour ce `EventSource` sont ajoutés, supprimés ou appelée.
+
+```cpp
+Wrappers::SRWLock targetsPointerLock_;
+```

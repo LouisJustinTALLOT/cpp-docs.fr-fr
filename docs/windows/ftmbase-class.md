@@ -1,28 +1,46 @@
 ---
 title: Ftmbase, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase
+- ftm/Microsoft::WRL::FtmBaseCreateGlobalInterfaceTable
+- ftm/Microsoft::WRL::FtmBase::DisconnectObject
+- ftm/Microsoft::WRL::FtmBase::FtmBase
+- ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax
+- ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass
+- ftm/Microsoft::WRL::FtmBase::MarshalInterface
+- ftm/Microsoft::WRL::FtmBase::marshaller_
+- ftm/Microsoft::WRL::FtmBase::ReleaseMarshalData
+- ftm/Microsoft::WRL::FtmBase::UnmarshalInterface
 dev_langs:
 - C++
 helpviewer_keywords:
-- FtmBase class
+- Microsoft::WRL::FtmBase class
+- Microsoft::WRL::FtmBase::CreateGlobalInterfaceTable method
+- Microsoft::WRL::FtmBase::DisconnectObject method
+- Microsoft::WRL::FtmBase::FtmBase, constructor
+- Microsoft::WRL::FtmBase::GetMarshalSizeMax method
+- Microsoft::WRL::FtmBase::GetUnmarshalClass method
+- Microsoft::WRL::FtmBase::MarshalInterface method
+- Microsoft::WRL::FtmBase::marshaller_ data member
+- Microsoft::WRL::FtmBase::ReleaseMarshalData method
+- Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb3b9ecae955ac78c6139156c3379fcd97511671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584371"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601455"
 ---
 # <a name="ftmbase-class"></a>FtmBase (classe)
 
@@ -44,27 +62,27 @@ Pour plus d’informations, consultez [runtimeclass, classe](runtimeclass-class.
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
-|----------|-----------------|
-|[FtmBase::FtmBase, constructeur](../windows/ftmbase-ftmbase-constructor.md)|Initialise une nouvelle instance de la **FtmBase** classe.|
+| Nom                         | Description                                        |
+| ---------------------------- | -------------------------------------------------- |
+| [FtmBase::FtmBase](#ftmbase) | Initialise une nouvelle instance de la classe `FtmBase`. |
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
-|----------|-----------------|
-|[FtmBase::CreateGlobalInterfaceTable, méthode](../windows/ftmbase-createglobalinterfacetable-method.md)|Crée un tableau global d’interface (GIT).|
-|[FtmBase::DisconnectObject, méthode](../windows/ftmbase-disconnectobject-method.md)|Force libère toutes les connexions externes à un objet. Serveur de l’objet appelle l’implémentation de l’objet de cette méthode avant d’arrêter.|
-|[FtmBase::GetMarshalSizeMax, méthode](../windows/ftmbase-getmarshalsizemax-method.md)|Obtenir la limite supérieure sur le nombre d’octets nécessaires pour marshaler le pointeur d’interface spécifié sur l’objet spécifié.|
-|[FtmBase::GetUnmarshalClass, méthode](../windows/ftmbase-getunmarshalclass-method.md)|Obtient le CLSID COM utilise pour localiser la DLL contenant le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy.|
-|[FtmBase::MarshalInterface, méthode](../windows/ftmbase-marshalinterface-method.md)|Écrit dans un flux les données requises pour initialiser l’objet proxy dans un processus client.|
-|[FtmBase::ReleaseMarshalData, méthode](../windows/ftmbase-releasemarshaldata-method.md)|Détruit un paquet de données marshalé.|
-|[FtmBase::UnmarshalInterface, méthode](../windows/ftmbase-unmarshalinterface-method.md)|Initialise un proxy nouvellement créé et retourne un pointeur d’interface au proxy.|
+| Nom                                                               | Description                                                                                                                                                          |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | Crée un tableau global d’interface (GIT).                                                                                                                              |
+| [FtmBase::DisconnectObject](#disconnectobject)                     | Force libère toutes les connexions externes à un objet. Serveur de l’objet appelle l’implémentation de l’objet de cette méthode avant d’arrêter.                |
+| [FtmBase::GetMarshalSizeMax](#getmarshalsizemax)                   | Obtenir la limite supérieure sur le nombre d’octets nécessaires pour marshaler le pointeur d’interface spécifié sur l’objet spécifié.                                                |
+| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | Obtient le CLSID COM utilise pour localiser la DLL contenant le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy. |
+| [FtmBase::MarshalInterface](#marshalinterface)                     | Écrit dans un flux les données requises pour initialiser l’objet proxy dans un processus client.                                                                          |
+| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | Détruit un paquet de données marshalé.                                                                                                                                    |
+| [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | Initialise un proxy nouvellement créé et retourne un pointeur d’interface au proxy.                                                                                    |
 
 ### <a name="public-data-members"></a>Membres de données publics
 
-|Nom|Description|
-|----------|-----------------|
-|[FtmBase::marshaller_, données de membre](../windows/ftmbase-marshaller-data-member.md)|Contient une référence à FTM.|
+| Nom                                | Description                                       |
+| ----------------------------------- | ------------------------------------------------- |
+| [FtmBase::marshaller_](#marshaller) | Contient une référence à FTM. |
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -76,6 +94,240 @@ Pour plus d’informations, consultez [runtimeclass, classe](runtimeclass-class.
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="see-also"></a>Voir aussi
+## <a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
 
-[Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)
+Crée un tableau global d’interface (GIT).
+
+```cpp
+static HRESULT CreateGlobalInterfaceTable(
+   __out IGlobalInterfaceTable **git
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*GIT*  
+Lorsque cette opération se termine, un pointeur vers un tableau global d’interface.
+
+### <a name="return-value"></a>Valeur de retour
+
+S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
+
+### <a name="remarks"></a>Notes
+
+Pour plus d’informations, consultez le `IGlobalInterfaceTable` rubrique dans le `COM Interfaces` sous-rubrique de la `COM Reference` rubrique dans MSDN Library.
+
+## <a name="disconnectobject"></a>FtmBase::DisconnectObject
+
+Force libère toutes les connexions externes à un objet. Serveur de l’objet appelle l’implémentation de l’objet de cette méthode avant d’arrêter.
+
+```cpp
+STDMETHODIMP DisconnectObject(
+   __in DWORD dwReserved
+) override;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*dwReserved*  
+Réservé pour une future utilisation ; doit être nul.
+
+### <a name="return-value"></a>Valeur de retour
+
+S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
+
+## <a name="ftmbase"></a>FtmBase::FtmBase
+
+Initialise une nouvelle instance de la classe `FtmBase`.
+
+```cpp
+FtmBase();
+```
+
+## <a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
+
+Obtenir la limite supérieure sur le nombre d’octets nécessaires pour marshaler le pointeur d’interface spécifié sur l’objet spécifié.
+
+```cpp
+STDMETHODIMP GetMarshalSizeMax(
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags,
+   __out DWORD *pSize
+) override;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*riid*  
+Référence à l’identificateur de l’interface doivent être marshalées.
+
+*PV*  
+Pointeur d’interface doivent être marshalées ; peut être NULL.
+
+*dwDestContext*  
+Contexte de destination où l’interface spécifiée doit être marshalé.
+
+Spécifiez une ou plusieurs valeurs d’énumération MSHCTX.
+
+Actuellement, unmarshaling peut se produire dans un autre cloisonnement du processus en cours (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Réservé pour une utilisation ultérieure ; doit être NULL.
+
+*mshlflags*  
+Indicateur qui spécifie si les données doivent être marshalées doit être transmise au processus client, le cas par défaut, ou écrites dans une table globale, où il peut être extrait par plusieurs clients. Spécifiez une ou plusieurs valeurs d’énumération MSHLFLAGS.
+
+*pSize*  
+Lorsque cette opération se termine, pointeur vers la limite supérieure de la quantité de données à écrire dans le flux de marshaling.
+
+### <a name="return-value"></a>Valeur de retour
+
+S_OK en cas de réussite ; Sinon, E_FAIL ou E_NOINTERFACE.
+
+## <a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
+
+Obtient le CLSID COM utilise pour localiser la DLL contenant le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy.
+
+```cpp
+STDMETHODIMP GetUnmarshalClass(
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags,
+   __out CLSID *pCid
+) override;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*riid*  
+Référence à l’identificateur de l’interface doivent être marshalées.
+
+*PV*  
+Pointeur vers l’interface doivent être marshalées ; peut d’être NULL si l’appelant n’a pas un pointeur vers l’interface souhaitée.
+
+*dwDestContext*  
+Contexte de destination où l’interface spécifiée doit être marshalé.
+
+Spécifiez une ou plusieurs valeurs d’énumération MSHCTX.
+
+Unmarshaling peut se produire dans un autre cloisonnement du processus en cours (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Réservé pour une utilisation ultérieure ; doit être NULL.
+
+*mshlflags*  
+Lorsque cette opération se termine, pointeur vers le CLSID à utiliser pour créer un proxy dans le processus client.
+
+*pCid*
+
+### <a name="return-value"></a>Valeur de retour
+
+S_OK en cas de réussite ; Sinon, S_FALSE.
+
+## <a name="marshalinterface"></a>FtmBase::MarshalInterface
+
+Écrit dans un flux les données requises pour initialiser l’objet proxy dans un processus client.
+
+```cpp
+STDMETHODIMP MarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags
+) override;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*pStm*  
+Pointeur vers le flux à utiliser pendant le marshaling.
+
+*riid*  
+Référence à l’identificateur de l’interface doivent être marshalées. Cette interface doit être dérivée du `IUnknown` interface.
+
+*PV*  
+Pointeur vers le pointeur d’interface doivent être marshalées ; peut d’être NULL si l’appelant n’a pas un pointeur vers l’interface souhaitée.
+
+*dwDestContext*  
+Contexte de destination où l’interface spécifiée doit être marshalé.
+
+Spécifiez une ou plusieurs valeurs d’énumération MSHCTX.
+
+Unmarshaling peut se produire dans un autre cloisonnement du processus en cours (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Réservé pour une future utilisation ; doit être nul.
+
+*mshlflags*  
+Spécifie si les données doivent être marshalées doit être transmise au processus client, le cas par défaut, ou écrites dans une table globale, où il peut être extrait par plusieurs clients.
+
+### <a name="return-value"></a>Valeur de retour
+
+S_OK le pointeur d’interface a été marshalé avec succès.
+
+E_NOINTERFACE l’interface spécifiée n’est pas pris en charge.
+
+STG_E_MEDIUMFULL le flux de données est plein.
+
+E_FAIL l’opération a échoué.
+
+## <a name="marshaller"></a>FtmBase::marshaller_
+
+Contient une référence à FTM.
+
+```cpp
+Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
+```
+
+## <a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
+
+Détruit un paquet de données marshalé.
+
+```cpp
+STDMETHODIMP ReleaseMarshalData(
+   __in IStream *pStm
+) override;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*pStm*  
+Pointeur vers un flux qui contient le paquet de données d’être détruit.
+
+### <a name="return-value"></a>Valeur de retour
+
+S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
+
+## <a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
+
+Initialise un proxy nouvellement créé et retourne un pointeur d’interface au proxy.
+
+```cpp
+STDMETHODIMP UnmarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __deref_out void **ppv
+) override;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*pStm*  
+Pointeur vers le flux à partir duquel le pointeur d’interface doit être marshalé.
+
+*riid*  
+Référence à l’identificateur de l’interface pour être marshalé.
+
+*PPV*  
+Lorsque cette opération se termine, l’adresse d’une variable pointeur qui reçoit le pointeur d’interface demandé dans *riid*. Si cette opération est réussie, **ppv* contient le pointeur d’interface requis de l’interface pour être marshalé.
+
+### <a name="return-value"></a>Valeur de retour
+
+S_OK en cas de réussite ; Sinon, E_NOINTERFACE ou E_FAIL.

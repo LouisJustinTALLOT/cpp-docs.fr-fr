@@ -1,7 +1,7 @@
 ---
 title: MFC COM | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 026e8b39d751a352830b37ae0b5692882e2daa3f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205647"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534831"
 ---
 # <a name="mfc-com"></a>MFC COM
 Un sous-ensemble de MFC est conçu pour prendre en charge COM, alors que la plupart de la bibliothèque ATL (Active Template) est conçu pour la programmation COM. Cette section décrit la prise en charge de MFC pour COM.  
@@ -34,8 +34,6 @@ Un sous-ensemble de MFC est conçu pour prendre en charge COM, alors que la plup
  Les technologies actives (telles que ActiveX des contrôles, relation contenant-contenu de document actif, OLE et ainsi de suite) utilisent le composant COM (Object Model) pour activer les composants logiciels interagir avec eux dans un environnement réseau, quel que soit le langage avec lequel ils ont été créé. Technologies actives peuvent être utilisées pour créer des applications qui s’exécutent sur le bureau ou sur Internet. Pour plus d’informations, consultez [Introduction à COM](../atl/introduction-to-com.md) ou [le modèle d’objet composant](/windows/desktop/com/the-component-object-model).  
   
  Technologies Active incluent des technologies client et serveur, notamment les suivantes :  
-  
--   [Relation contenant-contenu de document actif](../mfc/active-document-containment.md), pris en charge dans MFC versions 4.2 et versions ultérieures, permet aux utilisateurs d’afficher [documents actifs](../mfc/active-documents.md) (tels que les fichiers Microsoft Excel ou Word) et activer l’interface native du document application dans la zone cliente d’une [conteneur de documents actifs](../mfc/active-document-containers.md) tels que le classeur Microsoft Office ou Microsoft Internet Explorer. Les conteneurs agissent comme des clients, tandis que les documents sont fournis par [serveurs de documents actifs](../mfc/active-document-servers.md). Pour plus d’informations sur l’utilisation de documents actifs dans les applications Internet, consultez : [Documents actifs sur Internet](../mfc/active-documents-on-the-internet.md).  
   
 -   Contrôles ActiveX sont des objets interactifs qui peuvent être utilisées dans des conteneurs, tel qu’un site Web. Pour plus d’informations sur les contrôles ActiveX, consultez :  
   

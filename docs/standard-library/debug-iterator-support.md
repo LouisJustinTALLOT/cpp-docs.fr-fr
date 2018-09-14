@@ -1,7 +1,7 @@
 ---
 title: Prise en charge des itérateurs de débogage | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffcd69475d13277884deaf9ee114f3cd8d86516f
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959590"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601468"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -38,7 +38,7 @@ La norme C++ décrit comment les fonctions membres peuvent entraîner la non-val
 
 - L’augmentation de la taille d’un [vecteur](../standard-library/vector.md) à l’aide de push ou insert entraîne la non-validité des itérateurs dans le `vector`.
 
-## <a name="example"></a>Exemple
+## <a name="invalid-iterators"></a>Itérateurs non valides
 
 Si vous compilez cet exemple de programme en mode débogage, au moment de l’exécution il effectue une assertion et s’arrête.
 
@@ -49,12 +49,7 @@ Si vous compilez cet exemple de programme en mode débogage, au moment de l’ex
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
-
+   std::vector<int> v {10, 15, 20};
    std::vector<int>::iterator i = v.begin();
    ++i;
 
@@ -69,7 +64,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="using-iteratordebuglevel"></a>À l’aide de _ITERATOR_DEBUG_LEVEL
 
 Vous pouvez utiliser la macro de préprocesseur [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) pour désactiver la fonctionnalité de débogage des itérateurs dans une version Debug. Ce programme n’effectue pas d’assertion, mais déclenche un comportement non défini.
 
@@ -81,11 +76,7 @@ Vous pouvez utiliser la macro de préprocesseur [_ITERATOR_DEBUG_LEVEL](../stand
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+    std::vector<int> v {10, 15, 20};
 
    std::vector<int>::iterator i = v.begin();
    ++i;
@@ -106,7 +97,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>Exemple
+## <a name="unitialized-iterators"></a>Itérateurs non initialisées
 
 Une assertion se produit également si vous essayez d’utiliser un itérateur avant son initialisation, comme illustré ici :
 
@@ -123,7 +114,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="incompatible-iterators"></a>Itérateurs incompatibles
 
 L’exemple de code suivant provoque une assertion, car les deux itérateurs vers l’algorithme [for_each](../standard-library/algorithm-functions.md#for_each) ne sont pas compatibles. Les algorithmes vérifient si les itérateurs qui leur sont fournis référencent le même conteneur.
 
@@ -136,14 +127,8 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1;
-    vector<int> v2;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    v2.push_back(10);
-    v2.push_back(20);
+    vector<int> v1 {10, 20};
+    vector<int> v2 {10, 20};
 
     // The next line asserts because v1 and v2 are
     // incompatible.
@@ -153,7 +138,7 @@ int main()
 
 Notez que cet exemple utilise l’expression lambda `[] (int& elem) { elem *= 2; }` au lieu d’un foncteur. Bien que ce choix n’ait aucune incidence sur l’échec de l’assertion (un foncteur similaire entraîne un échec de la même façon), les expressions lambda sont un moyen très utile d’accomplir des tâches d’objet de fonction compact. Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="example"></a>Exemple
+## <a name="iterators-going-out-of-scope"></a>Itérateurs doivent passer hors de portée
 
 Vérification des itérateur de débogage provoque également une variable d’itérateur qui est déclarée dans un **pour** boucle comme étant hors de l’étendue lorsque le **pour** boucle se termine de portée.
 
@@ -163,11 +148,7 @@ Vérification des itérateur de débogage provoque également une variable d’i
 #include <vector>
 #include <iostream>
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+   std::vector<int> v {10, 15, 20};
 
    for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
       ;   // do nothing
@@ -175,9 +156,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="destructors-for-debug-iterators"></a>Destructeurs pour les itérateurs de débogage
 
-Les itérateurs de débogage ont des destructeurs non triviaux. Si un destructeur ne s’exécute pas pour une raison quelconque, des violations d’accès et une altération des données peuvent se produire. Considérez cet exemple :
+Les itérateurs de débogage ont des destructeurs non triviaux. Si un destructeur ne s’exécute pas, mais la mémoire de l’objet est libérée, accès violations et les données soient endommagées. Considérez cet exemple :
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -195,11 +176,10 @@ struct derived : base {
 };
 
 int main() {
-   std::vector<int> vect( 10 );
-   base * pb = new derived( vect.begin() );
-   delete pb;  // doesn't call ~derived()
-   // access violation
-}
+  auto vect = std::vector<int>(10);
+  auto sink = new auto(std::begin(vect));
+  ::operator delete(sink); // frees the memory without calling ~iterator()
+} // access violation
 ```
 
 ## <a name="see-also"></a>Voir aussi
