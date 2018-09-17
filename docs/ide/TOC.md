@@ -144,7 +144,6 @@
 ### [Dépannage des personnalisations de génération](troubleshooting-build-customizations.md)
 ### [Mise en forme de la sortie d’une étape de génération personnalisée ou d’un événement de build](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [Macros courantes pour les propriétés et les commandes de génération](common-macros-for-build-commands-and-properties.md)
-## [Génération de projets externes](building-external-projects.md)
 ## [Fichiers projet](project-files.md)
 ## [Procédure pas à pas : compilation d’un programme C++ qui cible le CLR dans Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [Utilisation de l’IDE de Visual Studio pour le développement de bureau C++](using-the-visual-studio-ide-for-cpp-desktop-development.md)
