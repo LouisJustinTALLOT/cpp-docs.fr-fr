@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693970"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707464"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl, classe
 Le `CMFCEditBrowseCtrl` classe prend en charge le contrôle de navigation d’édition, qui est une zone de texte modifiable contenant éventuellement un bouton Parcourir. Lorsque l’utilisateur clique sur le bouton Parcourir, le contrôle effectue une action personnalisée ou affiche une boîte de dialogue standard qui contient un explorateur de fichiers ou de dossiers.  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  Le `CMFCEditBrowseCtrl` classe prend en charge les modes suivants.  
   
- **mode personnalisé**  
- Une action personnalisée est effectuée lorsque l’utilisateur clique sur le bouton Parcourir. Par exemple, vous pouvez afficher une boîte de dialogue spécifique à l’application.  
+- **mode personnalisé**
+
+   Une action personnalisée est effectuée lorsque l’utilisateur clique sur le bouton Parcourir. Par exemple, vous pouvez afficher une boîte de dialogue spécifique à l’application.  
   
- **mode de fichier**  
- Une boîte de dialogue de sélection de fichier standard s’affiche lorsque l’utilisateur clique sur le bouton Parcourir.  
+- **mode de fichier**
+
+   Une boîte de dialogue de sélection de fichier standard s’affiche lorsque l’utilisateur clique sur le bouton Parcourir.  
   
- **mode dossier**  
- Une boîte de dialogue de sélection de dossier standard s’affiche lorsque l’utilisateur clique sur le bouton Parcourir.  
+- **mode dossier**
+
+   Une boîte de dialogue de sélection de dossier standard s’affiche lorsque l’utilisateur clique sur le bouton Parcourir.  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>Comment : Spécifier un contrôle d’édition Parcourir  
  Procédez comme suit pour incorporer un contrôle d’édition Parcourir dans votre application :  

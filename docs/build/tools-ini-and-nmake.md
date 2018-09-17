@@ -1,5 +1,5 @@
 ---
-title: Tools.ini et NMAKE | Documents Microsoft
+title: Tools.ini et NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 860a334274a3a1a4ac9e11c3e7b5e9a0f136ecc0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84406886c9aa0c0053ed7c183912bf8a7f1f4771
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380548"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723578"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini et NMAKE
-NMAKE lit Tools.ini avant de lire les makefiles, sauf si /R est utilisée. Il recherche Tools.ini tout d’abord dans le répertoire actif, puis dans le répertoire spécifié par la variable d’environnement INIT. La section des paramètres NMAKE dans le fichier d’initialisation commence par `[NMAKE]` et peut contenir toutes les informations d’un makefile. Spécifiez un commentaire sur une ligne séparée commençant par un signe dièse (#).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Exécution de NMAKE](../build/running-nmake.md)
+
+NMAKE lit Tools.ini avant de lire les makefiles, sauf si /R est utilisée. Il recherche Tools.ini tout d’abord dans le répertoire actif, puis dans le répertoire spécifié par la variable d’environnement INIT. La section des paramètres NMAKE dans le fichier d’initialisation commence par `[NMAKE]` et peut contenir toutes les informations makefile. Spécifiez un commentaire sur une ligne séparée commençant par un signe dièse (#).
+
+## <a name="see-also"></a>Voir aussi
+
+[Exécution de NMAKE](../build/running-nmake.md)

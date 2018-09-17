@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208864"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719938"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Cmfcpropertygridfontproperty, classe
 Le `CMFCPropertyGridFileProperty` classe prend en charge un élément de contrôle de liste de propriétés qui ouvre une boîte de dialogue de sélection de police.  
@@ -83,23 +83,23 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *strName*  
- Nom de la propriété.  
+*strName*<br/>
+[in] Le nom de la propriété.  
   
- [in] *lf*  
- Une structure de police logique qui spécifie les attributs de la police.  
+*LF*<br/>
+[in] Une structure de police logique qui spécifie les attributs de la police.  
   
- [in] *dwFontDialogFlags*  
- Styles sont appliqués à la boîte de dialogue de police qui s’affiche lorsque vous cliquez sur le bouton de liste déroulante de valeur de propriété. La valeur par défaut est la combinaison au niveau du bit (ou) de CF_EFFECTS et CF_SCREENFONTS. Pour plus d’informations, consultez le *indicateurs* paramètre de la [CHOOSEFONT Structure](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
+*dwFontDialogFlags*<br/>
+[in] Styles sont appliqués à la boîte de dialogue de police qui s’affiche lorsque vous cliquez sur le bouton de liste déroulante de valeur de propriété. La valeur par défaut est la combinaison au niveau du bit (ou) de CF_EFFECTS et CF_SCREENFONTS. Pour plus d’informations, consultez le *indicateurs* paramètre de la [CHOOSEFONT Structure](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
- [in] *lpszDescr*  
- Description de la propriété de police. La valeur par défaut est NULL.  
+*lpszDescr*<br/>
+[in] Description de la propriété de police. La valeur par défaut est NULL.  
   
- [in] *dwData*  
- Données spécifiques à l’application, par exemple un entier ou un pointeur à d’autres données qui sont associés à la propriété. La valeur par défaut est 0.  
+*dwData*<br/>
+[in] Données spécifiques à l’application, par exemple un entier ou un pointeur à d’autres données qui sont associés à la propriété. La valeur par défaut est 0.  
   
- [in] *couleur*  
- La couleur de la police. La valeur par défaut est la couleur par défaut.  
+*Couleur*<br/>
+[in] La couleur de la police. La valeur par défaut est la couleur par défaut.  
   
 ### <a name="remarks"></a>Notes  
  Un `CMFCPropertyGridFontProperty` objet représente une propriété de police dans un contrôle de police de grille de propriétés.  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9112a6790175709a2575319c6f71a55d1303a83
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705313"
 ---
 # <a name="cmfcribbonseparator-class"></a>Cmfcribbonseparator, classe
 Implémente le séparateur de ruban.  
@@ -113,11 +113,11 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndListBox*  
- Un pointeur vers le **commandes** liste où le séparateur est ajouté.  
+*pWndListBox*<br/>
+[in] Un pointeur vers le **commandes** liste où le séparateur est ajouté.  
   
- [in] *bDeep*  
- Ignoré.  
+*bDeep*<br/>
+[in] Ignoré.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro à la chaîne dans la zone de liste spécifiée par *pWndListBox*.  
@@ -130,8 +130,8 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bIsHoriz*  
- Si la valeur est TRUE, le séparateur est horizontal ; Si la valeur est FALSE, le séparateur est vertical.  
+*bIsHoriz*<br/>
+[in] Si la valeur est TRUE, le séparateur est horizontal ; Si la valeur est FALSE, le séparateur est vertical.  
   
 ### <a name="remarks"></a>Notes  
  Séparateurs horizontaux sont utilisés dans les menus de l’application. Séparateurs verticaux sont utilisés dans les barres d’outils.  
@@ -149,8 +149,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *Src*  
- L’élément de ruban source à copier.  
+*src*<br/>
+[in] L’élément de ruban source à copier.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  Retourne la taille d’un séparateur.  
@@ -160,8 +160,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contenu de l’appareil.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contenu de l’appareil.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La taille du séparateur dans le contexte de périphérique donné.  
@@ -197,8 +197,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  Appelée par le système pour dessiner le séparateur sur la **commandes** liste.  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pDC*|Pointeur vers un contexte de périphérique.|  
-|[in] *strText*|Texte affiché dans la liste.|  
-|[in] *nTextOffset*|Espacement entre le texte et le côté gauche du rectangle englobant.|  
-|[in] *rect*|Spécifie le rectangle englobant.|  
-|[in] *bIsSelected*|Ignoré.|  
-|[in] *bHighlighted*|Ignoré.|  
+|*contrôleur de domaine principal*|[in] Pointeur vers un contexte de périphérique.|  
+|*strText*|[in] Texte affiché dans la liste.|  
+|*nTextOffset*|[in] Espacement entre le texte et le côté gauche du rectangle englobant.|  
+|*Rect*|[in] Spécifie le rectangle englobant.|  
+|*bIsSelected*|[in] Ignoré.|  
+|*bHighlighted*|[in] Ignoré.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

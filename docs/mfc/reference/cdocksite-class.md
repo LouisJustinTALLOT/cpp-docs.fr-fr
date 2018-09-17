@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d3af5911cac27a0ac2bb65e9ee0cdb7b714b41d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540826"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720302"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pos*  
- [in] *nHeight*  
+*points de vente*<br/>
+[in] [in] *nHeight*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -225,8 +225,8 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectToAlignBy*  
- [in] *rectResult*  
+*rectToAlignBy*<br/>
+[in] [in] *rectResult*  
  [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>Notes  
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwStyleEx*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *dwControlBarStyle*  
- [in] *pContext*  
+*dwStyleEx*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*dwControlBarStyle*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -298,8 +298,8 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParentDockBar*  
- [in] *nOffset*  
+*pParentDockBar*<br/>
+[in] [in] *nOffset*  
  [in] *nRowHeight*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -317,8 +317,8 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
  [in] *lpRect*  
   
 ### <a name="remarks"></a>Notes  
@@ -363,8 +363,8 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- ID de commande du volet à rechercher.  
+*nID*<br/>
+[in] ID de commande du volet à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le volet avec l’ID de commande spécifié, ou NULL si le volet est introuvable.  
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- [in] *ptDelta*  
+*Rect*<br/>
+[in] [in] *ptDelta*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -501,8 +501,8 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- [in] *nIndicateurs*  
+*pWnd*<br/>
+[in] [in] *nIndicateurs*  
  [in] *ptOffset*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pos*  
- [in] *bByShow*  
+*points de vente*<br/>
+[in] [in] *bByShow*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pRowToResize*  
- [in] *nOffset*  
+*pRowToResize*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectAvailable*  
- [in] *nSide*  
- [in] *bExpand*  
- [in] *nOffset*  
+*rectAvailable*<br/>
+[in] [in] *nSide*  
+*bExpand*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -583,8 +583,8 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndInsertAfter*  
- [in] *rectWnd*  
+*pWndInsertAfter*<br/>
+[in] [in] *rectWnd*  
  [in] *nIndicateurs*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pos*  
- [in] *bShow*  
+*points de vente*<br/>
+[in] [in] *bShow*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -614,8 +614,8 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pt*  
- Un point, en coordonnées d’écran, pour le volet à récupérer.  
+*pt*<br/>
+[in] Un point, en coordonnées d’écran, pour le volet à récupérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le volet situé dans le point spécifié ou NULL si aucun volet n’était présent au point spécifié.  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- [in] *point*  
+*Rect*<br/>
+[in] [in] *point*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pOldBar*  
- [in] *pNewBar*  
+*pOldBar*<br/>
+[in] [in] *pNewBar*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nNewWidth*  
- [in] *nNewHeight*  
+*nNewWidth*<br/>
+[in] [in] *nNewHeight*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -721,8 +721,8 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pRow*  
- [in] *nNewSize*  
+*pRow*<br/>
+[in] [in] *nNewSize*  
  [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -744,14 +744,14 @@ virtual BOOL ShowPane(
  [in] [out] *pBar*  
  Un pointeur vers le volet pour être affichée ou masquée.  
   
- [in] *bShow*  
- TRUE pour spécifier que le volet doit être affichée ; FALSE pour indiquer que le volet doit être masqué.  
+*bShow*<br/>
+[in] TRUE pour spécifier que le volet doit être affichée ; FALSE pour indiquer que le volet doit être masqué.  
   
- [in] *bDelay*  
- TRUE pour spécifier que la disposition du volet doit être différée jusqu'à une fois que le volet est affiché ; Sinon, FALSE.  
+*bDelay*<br/>
+[in] TRUE pour spécifier que la disposition du volet doit être différée jusqu'à une fois que le volet est affiché ; Sinon, FALSE.  
   
- [in] *bActivate*  
- Ce paramètre n'est pas utilisé.  
+*bActivate*<br/>
+[in] Ce paramètre n’est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet a été affiché ou masqué avec succès. FALSE si le volet spécifié n’appartient pas à ce site d’ancrage.  
@@ -770,8 +770,8 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pRow*  
- [in] *bShow*  
+*pRow*<br/>
+[in] [in] *bShow*  
  [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Notes  
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pFirstRow*  
- [in] *pSecondRow*  
+*pFirstRow*<br/>
+[in] [in] *pSecondRow*  
   
 ### <a name="remarks"></a>Notes  
   

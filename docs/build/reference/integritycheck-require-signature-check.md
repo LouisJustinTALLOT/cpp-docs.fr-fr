@@ -12,40 +12,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acc43bc4175f42282014e94426717527143dc059
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 31df513a40b60fcb57c48f0d20e124fc77888d99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197054"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703121"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Exiger la vérification de la signature)
-Spécifie que la signature numérique de l’image binaire doit être vérifiée au moment du chargement.  
-  
-```  
-/INTEGRITYCHECK[:NO]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Par défaut, **/INTEGRITYCHECK** est désactivé.  
-  
- Le **/INTEGRITYCHECK** groupes d’options, dans l’en-tête PE du fichier DLL ou du fichier exécutable, un indicateur pour le Gestionnaire de mémoire vérifier une signature numérique afin de charger l’image dans Windows. Cette option doit être définie pour les DLL 32 bits et 64 bits qui implémentent le code en mode noyau chargé par certaines fonctionnalités de Windows et est recommandée pour tous les pilotes de périphériques sur Windows Vista, Windows 7, Windows 8, Windows Server 2008 et Windows Server 2012. Les versions de Windows antérieures à Windows Vista ignorent cet indicateur. Pour plus d’informations, consultez [forcé l’intégrité de signature de fichiers Portable Executable (PE)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>Pour définir cette option d'éditeur de liens dans Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
-  
-2.  Développez le nœud **Propriétés de configuration**.  
-  
-3.  Développez le **l’éditeur de liens** nœud.  
-  
-4.  Sélectionnez le **ligne de commande** page de propriétés.  
-  
-5.  Dans **des Options supplémentaires**, entrez `/INTEGRITYCHECK` ou `/INTEGRITYCHECK:NO`.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l’éditeur de liens](../../build/reference/linker-options.md)   
- [Forcé l’intégrité signature de fichiers Portable Executable (PE)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)   
- [Procédure pas à pas de signature du Code en Mode noyau](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
- [DLL AppInit dans Windows 7 et Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+
+Spécifie que la signature numérique de l’image binaire doit être vérifiée au moment du chargement.
+
+```
+/INTEGRITYCHECK[:NO]
+```
+
+## <a name="remarks"></a>Notes
+
+Par défaut, **/INTEGRITYCHECK** est désactivé.
+
+Le **/INTEGRITYCHECK** groupes d’options, dans l’en-tête PE du fichier DLL ou du fichier exécutable, un indicateur pour le Gestionnaire de mémoire vérifier une signature numérique afin de charger l’image dans Windows. Cette option doit être définie pour les DLL 32 bits et 64 bits qui implémentent le code en mode noyau chargé par certaines fonctionnalités de Windows et est recommandée pour tous les pilotes de périphériques sur Windows Vista, Windows 7, Windows 8, Windows Server 2008 et Windows Server 2012. Les versions de Windows antérieures à Windows Vista ignorent cet indicateur. Pour plus d’informations, consultez [forcé l’intégrité de signature de fichiers Portable Executable (PE)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Pour définir cette option d'éditeur de liens dans Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+
+1. Développez le nœud **Propriétés de configuration**.
+
+1. Développez le **l’éditeur de liens** nœud.
+
+1. Sélectionnez le **ligne de commande** page de propriétés.
+
+1. Dans **des Options supplémentaires**, entrez `/INTEGRITYCHECK` ou `/INTEGRITYCHECK:NO`.
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
+[Forcé de l’intégrité de signature de fichiers Portable Executable (PE)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)
+[procédure de signature de Code en Mode noyau](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
+[DLL AppInit dans Windows 7 et Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

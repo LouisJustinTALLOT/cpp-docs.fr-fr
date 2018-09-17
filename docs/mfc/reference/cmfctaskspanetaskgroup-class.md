@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 57c7c55ae2214c4123973e93c65f5e189d32b99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849159"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701647"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Cmfctaskspanetaskgroup, classe
 Le `CMFCTasksPaneTaskGroup` classe est une classe d’assistance utilisée par le [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) contrôle. Les objets de type `CMFCTasksPaneTaskGroup` représentent un *groupe de tâches*. Le groupe de tâches est une liste d'éléments affichée par l'infrastructure dans une zone séparée comportant un bouton de réduction. La zone peut avoir une légende facultative (nom de groupe). Si un groupe est réduit, la liste de tâches n’est pas visible.  
@@ -216,11 +216,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParent*  
- Représente la fenêtre parent du groupe de tâches en cours.  
+*pParent*<br/>
+[in] Représente la fenêtre parent du groupe de tâches en cours.  
   
- [out] *données*  
- Un objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité du groupe de tâches en cours.  
+*data*<br/>
+[out] Un objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité du groupe de tâches en cours.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le *données* paramètre a été correctement remplis avec les données d’accessibilité du groupe de tâches en cours ; sinon, FALSE.  

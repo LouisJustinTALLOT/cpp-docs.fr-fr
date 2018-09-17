@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 64e819863623f05eeb4c1642f2f43cb81efcdb5b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b3a67fb381e262ddec71c36f226412b8f9b74b68
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108817"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725125"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt;, opérateurs
 
@@ -95,10 +95,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Paramètres
 
-*left*  
+*left*<br/>
 Objet de type `vector`.
 
-*right*  
+*right*<br/>
 Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -146,10 +146,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Paramètres
 
-*left*  
+*left*<br/>
 Objet de type `vector`.
 
-*right*  
+*right*<br/>
 Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -197,10 +197,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Paramètres
 
-*left*  
+*left*<br/>
 Objet de type `vector`.
 
-*right*  
+*right*<br/>
 Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -248,10 +248,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Paramètres
 
-*left*  
+*left*<br/>
 Objet de type `vector`.
 
-*right*  
+*right*<br/>
 Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -300,10 +300,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Paramètres
 
-*left*  
+*left*<br/>
 Objet de type `vector`.
 
-*right*  
+*right*<br/>
 Objet de type `vector`.
 
 ### <a name="return-value"></a>Valeur de retour

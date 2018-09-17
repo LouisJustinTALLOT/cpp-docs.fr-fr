@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 02806f26f623b2f4ad7f19cd67216018da984e42
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853632"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713698"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar, classe
 Barre de menus incorporée dans un menu contextuel.  
@@ -140,8 +140,8 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bRecalcLayout*  
- TRUE pour recalculer automatiquement la disposition du volet de barre de menu contextuel ; Sinon, FALSE.  
+*bRecalcLayout*<br/>
+[in] TRUE pour recalculer automatiquement la disposition du volet de barre de menu contextuel ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -153,8 +153,8 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiMenuResID*  
- Spécifie l’ID de menu de la ressource de menu à charger.  
+*uiMenuResID*<br/>
+[in] Spécifie l’ID de menu de la ressource de menu à charger.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne TRUE si l’opération réussit ou FALSE dans le cas contraire.  
@@ -190,8 +190,8 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Un point sur l’écran.  
+*point*<br/>
+[in] Un point sur l’écran.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un handle vers la barre d’outils où se trouve le point, le cas échéant, ou NULL dans le cas contraire.  
@@ -257,11 +257,11 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hMenu*  
- Le menu à partir duquel importer les boutons de menu contextuel.  
+*hMenu*<br/>
+[in] Le menu à partir duquel importer les boutons de menu contextuel.  
   
- [in] *bShowAllCommands*  
- TRUE si toutes les commandes du menu doivent être importés, ou FALSE si rarement utilisés peuvent être masqués.  
+*bShowAllCommands*<br/>
+[in] TRUE si toutes les commandes du menu doivent être importés, ou FALSE si rarement utilisés peuvent être masqués.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si les boutons de menu ont été correctement importés dans le menu, ou FALSE si pas.  
@@ -325,8 +325,8 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hMenu*  
- Handle vers le menu archivé à charger.  
+*hMenu*<br/>
+[in] Handle vers le menu archivé à charger.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si le menu est chargé avec succès, ou FALSE dans le cas contraire.  
@@ -364,11 +364,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Index de base zéro du bouton de barre d’outils dont le style doit être défini.  
+*nIndex*<br/>
+[in] Index de base zéro du bouton de barre d’outils dont le style doit être défini.  
   
- [in] *nStyle*  
- Le style du bouton. Consultez [Styles de contrôle de barre d’outils](../../mfc/reference/toolbar-control-styles.md) pour obtenir la liste des styles de bouton de barre d’outils disponibles.  
+*nStyle*<br/>
+[in] Le style du bouton. Consultez [Styles de contrôle de barre d’outils](../../mfc/reference/toolbar-control-styles.md) pour obtenir la liste des styles de bouton de barre d’outils disponibles.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -380,8 +380,8 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iOffset*  
- Le nombre de lignes que la barre de menu contextuel doit être décalée.  
+*iOffset*<br/>
+[in] Le nombre de lignes que la barre de menu contextuel doit être décalée.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -395,11 +395,11 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pMenuButton*  
- Pointeur vers le bouton de menu pour lequel définir le minuteur de délai.  
+*pMenuButton*<br/>
+[in] Pointeur vers le bouton de menu pour lequel définir le minuteur de délai.  
   
- [in] *nDelayFactor*  
- Délai facteur, égal au moins un, multiplier par le temps de retard de menu standard (généralement entre une demi-seconde et cinq secondes).  
+*nDelayFactor*<br/>
+[in] Délai facteur, égal au moins un, multiplier par le temps de retard de menu standard (généralement entre une demi-seconde et cinq secondes).  
   
 ### <a name="remarks"></a>Notes  
   

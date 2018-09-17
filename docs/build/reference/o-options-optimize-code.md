@@ -1,5 +1,5 @@
 ---
-title: -O (optimiser le Code), Options | Documents Microsoft
+title: O - Options (optimiser le Code) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ddebec9db7a02db40ef31c89c7ff48a66cf665
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c77fd91d63ec79fca87e11a4a02eca157eddf84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376798"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717533"
 ---
 # <a name="o-options-optimize-code"></a>/O (Optimiser le code), options
 
@@ -36,7 +36,7 @@ Le **/O** options contrôlent différentes optimisations qui vous aident à cré
 
 - [/Ob](../../build/reference/ob-inline-function-expansion.md) contrôle l’expansion des fonctions inline.
 
-- [/Od](../../build/reference/od-disable-debug.md) désactive l’optimisation, afin d’accélérer la compilation et de simplifier le débogage.
+- [/Od](../../build/reference/od-disable-debug.md) désactive l’optimisation, pour accélérer la compilation et de simplifier le débogage.
 
 - [/Og](../../build/reference/og-global-optimizations.md) Active les optimisations globales.
 
@@ -46,7 +46,7 @@ Le **/O** options contrôlent différentes optimisations qui vous aident à cré
 
 - [/OT](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (paramètre par défaut) indique au compilateur de favoriser les optimisations de vitesse par rapport aux optimisations de taille.
 
-- [/Ox](../../build/reference/ox-full-optimization.md) est une option de combinaison sélectionne plusieurs optimisations en mettant l’accent sur la vitesse. Il s’agit d’un sous-ensemble strict de la **/O2** optimisations.
+- [/Ox](../../build/reference/ox-full-optimization.md) est une option de combinaison qui sélectionne plusieurs optimisations en mettant l’accent sur la vitesse. Il est un sous-ensemble strict de la **/O2** optimisations.
 
 - [/Oy](../../build/reference/oy-frame-pointer-omission.md) supprime la création des pointeurs de frame sur la pile des appels pour les appels de fonction plus rapides.
 
@@ -56,5 +56,5 @@ Vous pouvez combiner plusieurs **/O** options dans une seule instruction d’opt
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)   
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

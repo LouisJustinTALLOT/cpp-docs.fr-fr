@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eb3ba676da2de9790fc992b9f788963f8dcdbc1
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: bdc9d89dbc0e77a8002cc34e5d010ee49d761da4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894640"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706691"
 ---
 # <a name="running-nmake"></a>Exécution de NMAKE
 
@@ -41,11 +41,11 @@ Le */commandfile* fichier texte (ou fichier réponse) contient l’entrée de li
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-[Options de NMAKE](../build/nmake-options.md)  
+[Options de NMAKE](../build/nmake-options.md)
 
-[Tools.ini et NMake](../build/tools-ini-and-nmake.md)  
+[Tools.ini et NMake](../build/tools-ini-and-nmake.md)
 
-[Codes de sortie de NMAKE](../build/exit-codes-from-nmake.md)  
+[Codes de sortie de NMAKE](../build/exit-codes-from-nmake.md)
 
 ## <a name="see-also"></a>Voir aussi
 

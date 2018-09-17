@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104288"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714520"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -30,7 +30,7 @@ Introduit une section d'une ou plusieurs définitions d'exportation qui spécifi
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>Notes
 
@@ -76,7 +76,7 @@ Le mot clé facultatif **données** Spécifie qu’une exportation donnée, et n
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 Il existe quatre méthodes pour exporter une définition, répertoriées dans l'ordre recommandé :
 
@@ -95,7 +95,7 @@ Il existe quatre méthodes pour exporter une définition, répertoriées dans l'
 
 La directive #pragma est utile si vous devez exporter le nom d’une fonction non décoré et avez exportations différents en fonction de la configuration de build (par exemple, dans les versions 32 bits ou 64 bits).
 
-Ces quatre méthodes peuvent être utilisées dans le même programme. Quand LINK génère un programme qui contient des exportations, il crée également une bibliothèque d'importation, à moins qu'un fichier .EXP soit utilisé dans la build. 
+Ces quatre méthodes peuvent être utilisées dans le même programme. Quand LINK génère un programme qui contient des exportations, il crée également une bibliothèque d'importation, à moins qu'un fichier .EXP soit utilisé dans la build.
 
 Voici un exemple de section EXPORTS :
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 Quand vous exportez une variable à partir d'une DLL en utilisant un fichier .DEF, vous n'êtes pas tenu de spécifier `__declspec(dllexport)` sur la variable. Toutefois, dans tout fichier qui utilise la DLL, vous devez encore utiliser `__declspec(dllimport)` sur la déclaration des données.
 

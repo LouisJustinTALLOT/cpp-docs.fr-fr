@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a30a09b9feae0d5c7e0d24967c133f076286f2fc
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 2bf3f35b4de412125fcaf1c801a044c1b72e3233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42545839"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716259"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement, fonctions intrinsèques
 **Section spécifique à Microsoft**  
@@ -108,8 +108,8 @@ __int64 _InterlockedDecrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in, out] `lpAddend`  
- Pointeur vers la variable à décrémenter.  
+*lpAddend*<br/>
+[in, out] Pointeur vers la variable à décrémenter.  
   
 ## <a name="return-value"></a>Valeur de retour  
  La valeur de retour est la valeur décrémentée résultante.  

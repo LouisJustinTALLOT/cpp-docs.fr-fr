@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852992"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721862"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Cmfccolorpopupmenu, classe
 Représente un menu contextuel utilisateurs permet de sélectionner des couleurs dans un document ou une application.  
@@ -133,51 +133,51 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *couleurs*  
- Un tableau de couleurs affichée par l’infrastructure dans le menu contextuel.  
+*Couleurs*<br/>
+[in] Un tableau de couleurs affichée par l’infrastructure dans le menu contextuel.  
   
- [in] *couleur*  
- La couleur sélectionnée par défaut.  
+*Couleur*<br/>
+[in] La couleur sélectionnée par défaut.  
   
- [in] *lpszAutoColor*  
- L’étiquette de texte de la *automatique* bouton de couleur (par défaut), ou NULL.  
+*lpszAutoColor*<br/>
+[in] L’étiquette de texte de la *automatique* bouton de couleur (par défaut), ou NULL.  
   
  L’étiquette pour le bouton automatique standard est **automatique**.  
   
- [in] *lpszOtherColor*  
- L’étiquette de texte de la *autres* bouton, qui affiche plus choix de couleurs, ou NULL.  
+*lpszOtherColor*<br/>
+[in] L’étiquette de texte de la *autres* bouton, qui affiche plus choix de couleurs, ou NULL.  
   
  L’étiquette du bouton autre standard est **couleurs supplémentaires...** .  
   
- [in] *lpszDocColors*  
- L’étiquette de texte du bouton de couleurs de document. La palette de couleurs de document répertorie toutes les couleurs que le document utilise actuellement.  
+*lpszDocColors*<br/>
+[in] L’étiquette de texte du bouton de couleurs de document. La palette de couleurs de document répertorie toutes les couleurs que le document utilise actuellement.  
   
- [in] *lstDocColors*  
- Une liste de couleurs que le document utilise actuellement.  
+*lstDocColors*<br/>
+[in] Une liste de couleurs que le document utilise actuellement.  
   
- [in] *nColumns*  
- Le nombre de colonnes qui a le tableau de couleurs.  
+*nColumns*<br/>
+[in] Le nombre de colonnes qui a le tableau de couleurs.  
   
- [in] *nHorzDockRows*  
- Le nombre de lignes ayant la barre de couleurs lorsqu’elle est ancrée horizontalement.  
+*nHorzDockRows*<br/>
+[in] Le nombre de lignes ayant la barre de couleurs lorsqu’elle est ancrée horizontalement.  
   
- [in] *nVertDockColumns*  
- Le nombre de colonnes possédant la barre de couleur lorsqu’il est ancré verticalement.  
+*nVertDockColumns*<br/>
+[in] Le nombre de colonnes possédant la barre de couleur lorsqu’il est ancré verticalement.  
   
- [in] *automatiqueCouleur*  
- La couleur par défaut que le framework s’applique lorsque vous cliquez sur le bouton automatique.  
+*automatiqueCouleur*<br/>
+[in] La couleur par défaut que le framework s’applique lorsque vous cliquez sur le bouton automatique.  
   
- [in] *uiCommandID*  
- ID de la commande de contrôle de barre de couleurs.  
+*uiCommandID*<br/>
+[in] ID de la commande de contrôle de barre de couleurs.  
   
- [in] *bStdColorDlg*  
- Valeur booléenne qui indique s’il faut afficher la boîte de dialogue de couleur système standard ou le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue.  
+*bStdColorDlg*<br/>
+[in] Valeur booléenne qui indique s’il faut afficher la boîte de dialogue de couleur système standard ou le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue.  
   
- [in] *pParentBtn*  
- Pointeur vers un bouton de parent.  
+*pParentBtn*<br/>
+[in] Pointeur vers un bouton de parent.  
   
- [in] *nID*  
- ID de la commande.  
+*nID*<br/>
+[in] ID de commande.  
   
 ### <a name="remarks"></a>Notes  
  Chaque surchargé constructeur affecte la `m_bEnabledInCustomizeMode` membre sur FALSE.  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pWndMain*|Pointeur vers la fenêtre parente de la barre détachable.|  
-|[in] *uiID*|L’ID de commande de la barre détachable.|  
-|[in] *le caractère*|Le texte de la fenêtre de la barre détachable.|  
+|*pWndMain*|[in] Pointeur vers la fenêtre parente de la barre détachable.|  
+|*uiID*|[in] L’ID de commande de la barre détachable.|  
+|*Caractère*|[in] Le texte de la fenêtre de la barre détachable.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le nouvel objet de barre de contrôle détachable.  
@@ -233,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndList*  
- Pointeur vers un objet de contrôle de grille de propriété.  
+*pWndList*<br/>
+[in] Pointeur vers un objet de contrôle de grille de propriété.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

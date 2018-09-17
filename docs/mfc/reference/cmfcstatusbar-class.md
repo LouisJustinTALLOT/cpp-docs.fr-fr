@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b153d733aca6b526150c2d149c1952811c994b4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7150789756273f9d70b3dd6e156c63d0649d0957
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543178"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708185"
 ---
 # <a name="cmfcstatusbar-class"></a>Cmfcstatusbar, classe
 Le `CMFCStatusBar` classe implémente une barre d’état semblable à la `CStatusBar` classe. Toutefois, la classe `CMFCStatusBar` a des fonctionnalités que n'offre pas la classe `CStatusBar` , telles que la capacité à afficher des images, des animations et des barres de progression et la possibilité de répondre aux doubles-clics de souris. 
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -229,8 +229,8 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParentWnd*  
- [in] *dwStyle*  
+*pParentWnd*<br/>
+[in] [in] *dwStyle*  
  [in] *nID*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParentWnd*  
- [in] *dwCtrlStyle*  
- [in] *dwStyle*  
- [in] *nID*  
+*pParentWnd*<br/>
+[in] [in] *dwCtrlStyle*  
+*dwStyle*<br/>
+[in] [in] *nID*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -277,8 +277,8 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- Si la valeur est TRUE, activer le traitement du double-clic de souris. Dans le cas contraire désactiver le traitement du double-clic de souris.  
+*bActivez*<br/>
+[in] Si la valeur est TRUE, activer le traitement du double-clic de souris. Dans le cas contraire désactiver le traitement du double-clic de souris.  
   
 ### <a name="remarks"></a>Notes  
  Si la barre d’état est activée pour traiter des double-clics, Windows envoie la notification WM_COMMAND avec un ID de ressource au propriétaire de l’état de la barre chaque fois que l’utilisateur double-clique sur le volet de barre d’état.  
@@ -297,23 +297,23 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index du volet dont barre de progression à activer.  
+*nIndex*<br/>
+[in] Spécifie l’index du volet dont barre de progression à activer.  
   
- [in] *%nnombre total*  
- Spécifie la valeur maximale de la barre de progression.  
+*nLa*<br/>
+[in] Spécifie la valeur maximale de la barre de progression.  
   
- [in] *bDisplayText*  
- Spécifie si la barre de progression doit afficher la valeur de progression actuel.  
+*bDisplayText*<br/>
+[in] Spécifie si la barre de progression doit afficher la valeur de progression actuel.  
   
- [in] *clrBar*  
- Spécifie la couleur d’arrière-plan de la barre de progression.  
+*clrBar*<br/>
+[in] Spécifie la couleur d’arrière-plan de la barre de progression.  
   
- [in] *clrBarDest*  
- Spécifie la couleur secondaire de l’arrière-plan de barre de progression. Utilisez une valeur autre que *clrBar* à remplir par une couleur fusionnée dans un dégradé.  
+*clrBarDest*<br/>
+[in] Spécifie la couleur secondaire de l’arrière-plan de barre de progression. Utilisez une valeur autre que *clrBar* à remplir par une couleur fusionnée dans un dégradé.  
   
- [in] *clrProgressText*  
- Spécifie la couleur du texte de la barre de progression.  
+*clrProgressText*<br/>
+[in] Spécifie la couleur du texte de la barre de progression.  
   
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez désactiver l’appel de barre de progression `EnablePaneProgressBar` avec *NLA* définie sur -1. Par défaut *NLA* est défini à 100. Par conséquent, il est inutile des calculs supplémentaires pour afficher la progression en pourcentage.  
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- [in] *lpRect*  
+*nIndex*<br/>
+[in] [in] *lpRect*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- [in] *s*  
+*nIndex*<br/>
+[in] [in] *s*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -460,8 +460,8 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index du volet de barre d’état.  
+*nIndex*<br/>
+[in] Spécifie l’index du volet de barre d’état.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La largeur du volet de barre d’état qui *nIndex* spécifie ; sinon, zéro si un volet de barre d’état n’existe pas.  
@@ -474,8 +474,8 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index du volet pour lequel récupérer le texte info-bulle.  
+*nIndex*<br/>
+[in] Spécifie l’index du volet pour lequel récupérer le texte info-bulle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le texte d’info-bulle du volet barre d’état qui *nIndex* spécifie. Sinon, la chaîne vide si un volet de barre d’état n’existe pas pour le texte spécifié *nIndex* ou si son texte d’info-bulle est vide.  
@@ -488,8 +488,8 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index du volet dont le contenu doit être invalidé et redessiné.  
+*nIndex*<br/>
+[in] Spécifie l’index du volet dont le contenu doit être invalidé et redessiné.  
   
 ### <a name="remarks"></a>Notes  
  Lors de la barre d’état est invalidée, il est marqué pour être redessiné. Windows redessine lorsque le `UpdateWindow` méthode envoie un message WM_PAINT à la `OnPaint` (méthode).  
@@ -504,11 +504,11 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique pour le dessin.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique pour le dessin.  
   
- [in] *pPane*  
- Un pointeur vers un `CMFCStatusBarPaneInfo` structure qui contient des informations sur le volet à être redessiné.  
+*pPane*<br/>
+[in] Un pointeur vers un `CMFCStatusBarPaneInfo` structure qui contient des informations sur le volet à être redessiné.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, `OnDrawPane` redessine le volet à l’aide du contexte de périphérique *pDC* en fonction de style et le contenu du volet.  
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpIDArray*  
- [in] *nIDCount*  
+*lpIDArray*<br/>
+[in] [in] *nIDCount*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -570,17 +570,17 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index du volet auquel vous souhaitez lui affecter une animation.  
+*nIndex*<br/>
+[in] Spécifie l’index du volet auquel vous souhaitez lui affecter une animation.  
   
- [in] *hImageList*  
- Spécifie un handle vers la liste d’images contenant les images d’animation.  
+*hImageList*<br/>
+[in] Spécifie un handle vers la liste d’images contenant les images d’animation.  
   
- [in] *nFrameRate*  
- Spécifie la fréquence d’images, en millisecondes, pour l’animation.  
+*nFrameRate*<br/>
+[in] Spécifie la fréquence d’images, en millisecondes, pour l’animation.  
   
- [in] *bUpdate*  
- Si la valeur est TRUE, à jour le volet de contenu. Sinon, le volet de contenu est mis à jour lorsqu’elle est invalidée.  
+*bUpdate*<br/>
+[in] Si la valeur est TRUE, à jour le volet de contenu. Sinon, le volet de contenu est mis à jour lorsqu’elle est invalidée.  
   
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez désactiver l’animation actuelle, appelez `SetPaneAnimation` avec `hImageList` la valeur NULL.  
@@ -596,14 +596,14 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index du volet pour lequel définir une couleur d’arrière-plan.  
+*nIndex*<br/>
+[in] Spécifie l’index du volet pour lequel définir une couleur d’arrière-plan.  
   
- [in] *clrBackground*  
- Spécifie la nouvelle couleur d’arrière-plan.  
+*clrBackground*<br/>
+[in] Spécifie la nouvelle couleur d’arrière-plan.  
   
- [in] *bUpdate*  
- Si la valeur est TRUE, à jour le volet de contenu. Dans le cas contraire, ne modifiez pas le volet de contenu jusqu'à ce que le volet est invalidé par une autre méthode.  
+*bUpdate*<br/>
+[in] Si la valeur est TRUE, à jour le volet de contenu. Dans le cas contraire, ne modifiez pas le volet de contenu jusqu'à ce que le volet est invalidé par une autre méthode.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
  Définir l’icône du volet de barre d’état.  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index du volet pour lequel définir l’image.  
+*nIndex*<br/>
+[in] Spécifie l’index du volet pour lequel définir l’image.  
   
- [in] *hIcon*  
- Spécifie un handle de l’icône à définir en tant que l’image du volet.  
+*hIcon*<br/>
+[in] Spécifie un handle de l’icône à définir en tant que l’image du volet.  
   
- [in] *bUpdate*  
- Spécifie s’il faut mettre à jour le volet de contenu immédiatement.  
+*bUpdate*<br/>
+[in] Spécifie s’il faut mettre à jour le volet de contenu immédiatement.  
   
- [in] *hBmp*  
- Spécifie un handle vers la bitmap à définir en tant que l’image du volet.  
+*hBmp*<br/>
+[in] Spécifie un handle vers la bitmap à définir en tant que l’image du volet.  
   
- [in] *clrTransparent*  
- Spécifie la couleur transparente de l’image bitmap qui le *hBmp* indique.  
+*clrTransparent*<br/>
+[in] Spécifie la couleur transparente de l’image bitmap qui le *hBmp* indique.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez passer HICON ou HBITMAP avec la couleur transparente pour définir image du volet. Si vous ne souhaitez pas afficher l’image de plus, passez la valeur NULL en tant que handle de l’image.  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -673,14 +673,14 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index du volet pour laquelle mettre à jour l’indicateur de progression.  
+*nIndex*<br/>
+[in] Spécifie l’index du volet pour laquelle mettre à jour l’indicateur de progression.  
   
- [in] *nCurr*  
- Spécifie la valeur actuelle de l’indicateur de progression.  
+*nCurr*<br/>
+[in] Spécifie la valeur actuelle de l’indicateur de progression.  
   
- [in] *bUpdate*  
- Spécifie si le volet doit être mis à jour immédiatement.  
+*bUpdate*<br/>
+[in] Spécifie si le volet doit être mis à jour immédiatement.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode lorsque vous souhaitez mettre à jour de l’indicateur de progression de la barre de progression dans le volet spécifié.  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- [in] *nStyle*  
+*nIndex*<br/>
+[in] [in] *nStyle*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -713,8 +713,8 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- [in] *lpszNewText*  
+*nIndex*<br/>
+[in] [in] *lpszNewText*  
  [in] *bUpdate*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -732,14 +732,14 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index du volet auquel vous souhaitez affecter une nouvelle couleur de texte.  
+*nIndex*<br/>
+[in] Spécifie l’index du volet auquel vous souhaitez affecter une nouvelle couleur de texte.  
   
- [in] *clrText*  
- Spécifie la couleur du texte.  
+*clrText*<br/>
+[in] Spécifie la couleur du texte.  
   
- [in] *bUpdate*  
- Si la valeur est TRUE, à jour le volet de contenu. Dans le cas contraire, ne modifiez pas le volet de contenu jusqu'à ce que le volet est invalidé par une autre méthode.  
+*bUpdate*<br/>
+[in] Si la valeur est TRUE, à jour le volet de contenu. Dans le cas contraire, ne modifiez pas le volet de contenu jusqu'à ce que le volet est invalidé par une autre méthode.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
  Définissez la largeur du volet de barre d’état.  
@@ -751,11 +751,11 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- L’index du volet de barre d’état pour lequel définir une nouvelle largeur.  
+*nIndex*<br/>
+[in] L’index du volet de barre d’état pour lequel définir une nouvelle largeur.  
   
- [in] *cx*  
- La nouvelle largeur du volet de barre d’état, en pixels.  
+*CX*<br/>
+[in] La nouvelle largeur du volet de barre d’état, en pixels.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
  Définir le texte d’info-bulle d’un volet de barre d’état.  
@@ -767,11 +767,11 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- L’index du volet auquel vous souhaitez affecter le texte d’info-bulle.  
+*nIndex*<br/>
+[in] L’index du volet auquel vous souhaitez affecter le texte d’info-bulle.  
   
- [in] *pszTipText*  
- Le nouveau texte info-bulle.  
+*pszTipText*<br/>
+[in] Le nouveau texte info-bulle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

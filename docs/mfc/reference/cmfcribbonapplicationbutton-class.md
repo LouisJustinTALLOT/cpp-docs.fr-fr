@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849013"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701387"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Cmfcribbonapplicationbutton, classe
 Implémente un bouton spécial situé dans l'angle supérieur gauche de la fenêtre d'application. Une fois activé, le bouton ouvre un menu qui contient généralement des commandes **Fichier** courantes telles que **Ouvrir**, **Enregistrer**et **Quitter**.  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiBmpResID*  
- L’ID de ressource de l’image à afficher sur le bouton d’application.  
+*uiBmpResID*<br/>
+[in] L’ID de ressource de l’image à afficher sur le bouton d’application.  
   
- [in] *hBmp*  
- Handle vers une image bitmap à afficher sur le bouton d’application.  
+*hBmp*<br/>
+[in] Handle vers une image bitmap à afficher sur le bouton d’application.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour affecter une nouvelle image pour le bouton d’application de ruban après avoir créé le bouton. Le bouton d’application se trouve dans le coin supérieur gauche de la fenêtre d’application.  

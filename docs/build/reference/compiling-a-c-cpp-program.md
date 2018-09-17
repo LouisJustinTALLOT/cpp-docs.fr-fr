@@ -1,5 +1,5 @@
 ---
-title: Compilation d’un programme C/C++ | Documents Microsoft
+title: Compilation d’un programme C/C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708bbea963fc2ea8b46061553e7eac2832fd75f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5923cad13464317f98d5500cb244449aa8537b63
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721225"
 ---
 # <a name="compiling-a-cc-program"></a>Compilation d'un programme C/C++
 
-Pour plus d’informations sur l’utilisation du compilateur, consultez les sections suivantes :  
-  
--   [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)  
-  
--   [Options du compilateur](../../build/reference/compiler-options.md)  
-  
--   [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)  
-  
--   [Prise en charge Unicode dans le compilateur et l’éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
+Pour plus d’informations sur l’utilisation du compilateur, consultez les sections suivantes :
 
-Pour plus d’informations sur le choix de l’architecture d’ordinateur hôte et la cible du compilateur, consultez [configurer Visual C++ pour 64 bits, x64 cibles](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
-  
-## <a name="see-also"></a>Voir aussi  
+- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+
+- [Options du compilateur](../../build/reference/compiler-options.md)
+
+- [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)
+
+- [Prise en charge Unicode dans le compilateur et l’éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md)
+
+Pour plus d’informations sur le choix de l’architecture d’hôte et cible du compilateur, consultez [configurer Visual C++ pour x64 64 64 bits, cibles](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+
+## <a name="see-also"></a>Voir aussi
 
 [Référence de la génération C/C++](../../build/reference/c-cpp-building-reference.md)

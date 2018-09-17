@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc66784a9f5b6c953516bb30271c973779340e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680635"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722850"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Section spécifique à Microsoft**  
@@ -41,7 +41,7 @@ void __svm_vmsave(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|L’adresse physique de la VMCB.|  
+|*VmcbPhysicalAddress*|[in] L’adresse physique de la VMCB.|  
   
 ## <a name="remarks"></a>Notes  
  Le `__svm_vmsave` fonction est équivalente à la `VMSAVE` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : programmation du système, « numéro 24593, révision 3.11 ou version ultérieure, à la [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) site.  

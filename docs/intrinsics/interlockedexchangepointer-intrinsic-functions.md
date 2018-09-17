@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fa2aa8fb79a0590c437699bcf887f2a7e1c1bb21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543175"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705014"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer, fonctions intrinsèques
 **Section spécifique à Microsoft**  
@@ -72,11 +72,11 @@ void * _InterlockedExchangePointer_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in, out] `Target`  
- Pointeur vers le pointeur vers la valeur à échanger. La fonction définit la valeur sur `Value` et retourne sa valeur précédente.  
+*Target*<br/>
+[in, out] Pointeur vers le pointeur vers la valeur à échanger. La fonction définit la valeur sur `Value` et retourne sa valeur précédente.  
   
- [in] `Value`  
- Valeur à échanger avec la valeur pointée par `Target`.  
+*Valeur*<br/>
+[in] Valeur à échanger avec la valeur vers laquelle pointe `Target`.  
   
 ## <a name="return-value"></a>Valeur de retour  
  La fonction renvoie la valeur initiale indiquée par `Target`.  

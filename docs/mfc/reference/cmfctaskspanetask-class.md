@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee7c04ee4cd581395ff03763c2ebe50b421986d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853967"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711137"
 ---
 # <a name="cmfctaskspanetask-class"></a>Cmfctaskspanetask, classe
 Le `CMFCTasksPaneTask` est une classe d’assistance qui représente des tâches pour le contrôle de volet de tâches ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). L’objet tâche représente un élément dans le groupe de tâches ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Chaque tâche peut avoir une commande exécutée par l’infrastructure lorsqu’un utilisateur clique sur la tâche et une icône qui apparaît à gauche du nom de la tâche.  
@@ -252,11 +252,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParent*  
- Représente la fenêtre parente de la tâche en cours.  
+*pParent*<br/>
+[in] Représente la fenêtre parente de la tâche en cours.  
   
- [out] *données*  
- Un objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité de la tâche en cours.  
+*data*<br/>
+[out] Un objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité de la tâche en cours.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le *données* paramètre a été correctement remplis avec les données d’accessibilité de la tâche en cours ; sinon, FALSE.  

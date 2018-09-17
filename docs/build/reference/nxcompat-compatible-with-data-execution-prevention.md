@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6e2c3f1c297493b2af72f280ac5eabcb6f17ce
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 52cf47335c1bed55ca38d508789d65902b335f0f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690317"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707627"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatible avec la prévention de l'exécution des données)
 
@@ -60,5 +60,5 @@ Pour plus d’informations sur la prévention de l’exécution des données, co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)  
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)  
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)

@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4555de3e42efd298cc7a6f67949a8b474f76064
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ffb17f8f38e83399ec32b792338f818cc06215dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541009"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703759"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Cmfctoolbarcomboboxbutton, classe
 Un bouton de barre d’outils qui contient un contrôle combo box ( [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)).  
@@ -168,11 +168,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszItem*  
- Le texte de l’élément à ajouter à la zone de liste.  
+*lpszItem*<br/>
+[in] Le texte de l’élément à ajouter à la zone de liste.  
   
- [in] *dwData*  
- Les données associées à l’élément à ajouter à la zone de liste.  
+*dwData*<br/>
+[in] Les données associées à l’élément à ajouter à la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’index du dernier élément dans la zone de liste.  
@@ -192,11 +192,11 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszItem*  
- Le texte de l’élément à ajouter à la zone de liste.  
+*lpszItem*<br/>
+[in] Le texte de l’élément à ajouter à la zone de liste.  
   
- [in] *dwData*  
- Les données associées à l’élément à ajouter à la zone de liste.  
+*dwData*<br/>
+[in] Les données associées à l’élément à ajouter à la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de l’élément qui a été ajouté à la zone de liste.  
@@ -226,17 +226,17 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiID*  
- L’ID de commande du bouton Nouveau.  
+*uiID*<br/>
+[in] L’ID de commande du bouton Nouveau.  
   
- [in] *iImage*  
- L’index d’image de l’image associée au bouton Nouveau.  
+*iImage*<br/>
+[in] L’index d’image de l’image associée au bouton Nouveau.  
   
- [in] *dwStyle*  
- Le style du bouton Nouveau.  
+*dwStyle*<br/>
+[in] Le style du bouton Nouveau.  
   
- [in] *iLargeur Argument de type*  
- La largeur, en pixels, du bouton Nouveau.  
+*iLargeur Argument de type*<br/>
+[in] La largeur, en pixels, du bouton Nouveau.  
   
 ### <a name="remarks"></a>Notes  
  La largeur par défaut est 150 pixels.  
@@ -263,11 +263,11 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszItem1*  
- Première chaîne à comparer.  
+*lpszItem1*<br/>
+[in] La première chaîne à comparer.  
   
- [in] *lpszItem2*  
- Deuxième chaîne à comparer.  
+*lpszItem2*<br/>
+[in] La deuxième chaîne à comparer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur qui indique la relation lexicographique respect de la casse entre les chaînes. Le tableau suivant répertorie les valeurs possibles :  
@@ -293,8 +293,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *src*  
- Objet `CMFCToolBarComboBoxButton` source.  
+*src*<br/>
+[in] La source `CMFCToolBarComboBoxButton` objet.  
   
 ##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
  Crée une nouvelle zone de liste déroulante pour le bouton de zone de liste déroulante.  
@@ -306,11 +306,11 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParent*  
- Pointeur vers la fenêtre parent du bouton.  
+*pWndParent*<br/>
+[in] Pointeur vers la fenêtre parent du bouton.  
   
- [in] *rect*  
- Rectangle englobant de la zone de liste déroulante.  
+*Rect*<br/>
+[in] Rectangle englobant de la zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la nouvelle zone de liste déroulante si la méthode a réussi ; Sinon, NULL.  
@@ -326,14 +326,14 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParent*  
- Pointeur vers la fenêtre parent du bouton.  
+*pWndParent*<br/>
+[in] Pointeur vers la fenêtre parent du bouton.  
   
- [in] *rect*  
- Rectangle englobant de la zone d’édition.  
+*Rect*<br/>
+[in] Rectangle englobant de la zone d’édition.  
   
- [in] *dwEditStyle*  
- Style de contrôle de la zone d’édition.  
+*dwEditStyle*<br/>
+[in] Style de contrôle de la zone d’édition.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la nouvelle zone d’édition si la méthode a réussi ; Sinon, NULL.  
@@ -351,14 +351,14 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIndex*  
- Index de base zéro de l’élément à supprimer.  
+*iIndex*<br/>
+[in] Index de base zéro de l’élément à supprimer.  
   
- [in] *dwData*  
- Les données associées à l’élément à supprimer.  
+*dwData*<br/>
+[in] Les données associées à l’élément à supprimer.  
   
- [in] *lpszText*  
- Le texte de l’élément à supprimer. S’il existe plusieurs éléments portant le même texte, le premier élément est supprimé.  
+*lpszText*<br/>
+[in] Le texte de l’élément à supprimer. S’il existe plusieurs éléments portant le même texte, le premier élément est supprimé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’élément a été trouve et a été supprimé ; Sinon, FALSE.  
@@ -383,8 +383,8 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer les cases à modifier et de liste déroulante ; FALSE pour désactiver les cases à modifier et de la liste déroulante.  
+*bActivez*<br/>
+[in] TRUE pour activer les cases à modifier et de liste déroulante ; FALSE pour désactiver les cases à modifier et de la liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
  Lorsque désactivée, les contrôles ne peut pas devenir actives et ne peut pas accepter l’entrée d’utilisateur.  
@@ -397,8 +397,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *bouton de menu*  
- Référence à un bouton de menu.  
+*Bouton de menu*<br/>
+[out] Référence à un bouton de menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Toujours TRUE.  
@@ -411,8 +411,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszText*  
- Le texte à rechercher dans la zone de liste.  
+*lpszText*<br/>
+[in] Le texte à rechercher dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément ; ou CB_ERR si l’élément est introuvable.  
@@ -429,11 +429,11 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmd*  
- L’ID de commande d’un bouton de zone de liste déroulante.  
+*uiCmd*<br/>
+[in] L’ID de commande d’un bouton de zone de liste déroulante.  
   
- [in] *bIsFocus*  
- True permet de rechercher uniquement axée boutons ; FALSE pour rechercher tous les boutons.  
+*bIsFocus*<br/>
+[in] True permet de rechercher uniquement axée boutons ; FALSE pour rechercher tous les boutons.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un bouton de zone de liste déroulante ; ou NULL si le bouton n’est pas trouvé.  
@@ -482,8 +482,8 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmd*  
- L’ID de commande d’un bouton de zone de liste déroulante.  
+*uiCmd*<br/>
+[in] L’ID de commande d’un bouton de zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans la zone de liste ; Sinon, CB_ERR si la liste déroulante zone de bouton est introuvable.  
@@ -511,8 +511,8 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmd*  
- L’ID de commande d’un bouton de zone de liste déroulante.  
+*uiCmd*<br/>
+[in] L’ID de commande d’un bouton de zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément actuellement sélectionné dans la zone de liste ; Sinon, CB_ERR si aucun élément n’est sélectionné ou un bouton de zone de liste déroulante est introuvable.  
@@ -550,8 +550,8 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIndex*  
- Index de base zéro d’un élément dans la zone de liste.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la chaîne qui est associé à l’élément ; Sinon, valeur NULL si le paramètre d’index n’est pas valide, ou si le paramètre d’index est -1 et il n’existe aucun élément sélectionné dans la zone de liste déroulante.  
@@ -569,11 +569,11 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmd*  
- L’ID de commande d’un bouton de zone de liste déroulante.  
+*uiCmd*<br/>
+[in] L’ID de commande d’un bouton de zone de liste déroulante.  
   
- [in] *iIndex*  
- Index de base zéro d’un élément dans la zone de liste.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la chaîne de l’élément si la méthode a réussi ; Sinon, NULL si l’index n’est pas valide, un bouton de zone de liste déroulante est introuvable, ou si l’index est -1 et il n’existe aucun élément sélectionné dans la zone de liste déroulante.  
@@ -589,8 +589,8 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIndex*  
- Index de base zéro d’un élément dans la zone de liste.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Les données associées à l’élément ; ou 0 si l’élément n’existe pas.  
@@ -608,11 +608,11 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmd*  
- L’ID de commande d’un bouton de zone de liste déroulante.  
+*uiCmd*<br/>
+[in] L’ID de commande d’un bouton de zone de liste déroulante.  
   
- [in] *iIndex*  
- Index de base zéro d’un élément dans la zone de liste.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Les données associées à l’élément si la méthode a réussi ; Sinon, 0 si l’index spécifié n’est pas valide, ou CB_ERR si la liste déroulante zone de bouton est introuvable.  
@@ -630,11 +630,11 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmd*  
- ID de commande du bouton de zone de liste déroulante.  
+*uiCmd*<br/>
+[in] ID de commande du bouton de zone de liste déroulante.  
   
- [in] *iIndex*  
- Index de base zéro d’un élément dans la zone de liste.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur associé à l’élément si la méthode a réussi ; Sinon,-1 si une erreur se produit, ou NULL si la liste déroulante zone de bouton est introuvable.  
@@ -674,8 +674,8 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmd*  
- L’ID de commande d’un bouton de zone de liste déroulante spécifique.  
+*uiCmd*<br/>
+[in] L’ID de commande d’un bouton de zone de liste déroulante spécifique.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le texte dans la zone d’édition si la méthode a réussi ; Sinon, NULL.  
@@ -728,8 +728,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hwnd*  
- Un handle de fenêtre.  
+*HWND*<br/>
+[in] Un handle de fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le handle est associé le bouton de zone de liste déroulante, ou l’un de ses enfants ; Sinon, FALSE.  
@@ -765,8 +765,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iNotifyCode*  
- Le message de notification qui est associé à la commande.  
+*iNotifyCode*<br/>
+[in] Le message de notification qui est associé à la commande.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Indique si le bouton de zone de liste déroulante traite le message.  
@@ -789,14 +789,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.  
+*contrôleur de domaine principal*<br/>
+[in] Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.  
   
- [in] *sizeDefault*  
- La taille par défaut, la liste déroulante du bouton de zone.  
+*sizeDefault*<br/>
+[in] La taille par défaut, la liste déroulante du bouton de zone.  
   
- [in] *bHorz*  
- L’état d’ancrage de la barre d’outils parent. TRUE si la barre d’outils est ancrée horizontalement et FALSE lorsque la barre d’outils est ancrée verticalement.  
+*bHorz*<br/>
+[in] L’état d’ancrage de la barre d’outils parent. TRUE si la barre d’outils est ancrée horizontalement et FALSE lorsque la barre d’outils est ancrée verticalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un `SIZE` structure qui contient les dimensions du bouton de zone de liste déroulante, en pixels.  
@@ -809,8 +809,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParent*  
- Pointeur vers la nouvelle barre d’outils parent.  
+*pWndParent*<br/>
+[in] Pointeur vers la nouvelle barre d’outils parent.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
  Appelé par le framework lorsque l’utilisateur clique sur le bouton de zone de liste déroulante.  
@@ -822,11 +822,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Pointeur vers la fenêtre parente de la liste déroulante du bouton de zone.  
+*pWnd*<br/>
+[in] Pointeur vers la fenêtre parente de la liste déroulante du bouton de zone.  
   
- [in] *bDelay*  
- Réservé pour une utilisation dans une classe dérivée.  
+*bDelay*<br/>
+[in] Réservé pour une utilisation dans une classe dérivée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode gère l’événement ; Sinon, FALSE.  
@@ -841,11 +841,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.  
+*contrôleur de domaine principal*<br/>
+[in] Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.  
   
- [in] *nCtlColor*  
- Non utilisé.  
+*nCtlColor*<br/>
+[in] Inutilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers le pinceau de l’infrastructure utilise pour peindre l’arrière-plan du bouton de zone de liste déroulante.  
@@ -869,29 +869,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *Pdc*  
- Le contexte de périphérique qui affiche le bouton.  
+*Contrôleur de domaine principal*<br/>
+[in] Le contexte de périphérique qui affiche le bouton.  
   
- [in] *rect*  
- Le rectangle englobant du bouton.  
+*Rect*<br/>
+[in] Le rectangle englobant du bouton.  
   
- [in] *pImages*  
- Collection d’images associée au bouton.  
+*pImages*<br/>
+[in] Collection d’images associée au bouton.  
   
- [in] *bHorz*  
- L’état d’ancrage de la barre d’outils parent. TRUE si la barre d’outils est ancrée horizontalement et FALSE lorsque la barre d’outils est ancrée verticalement.  
+*bHorz*<br/>
+[in] L’état d’ancrage de la barre d’outils parent. TRUE si la barre d’outils est ancrée horizontalement et FALSE lorsque la barre d’outils est ancrée verticalement.  
   
- [in] *bCustomizeMode*  
- Indique si l’application est en mode de personnalisation.  
+*bCustomizeMode*<br/>
+[in] Indique si l’application est en mode de personnalisation.  
   
- [in] *bHighlight*  
- Si vous souhaitez dessiner le bouton de zone de liste déroulante en surbrillance.  
+*bHighlight*<br/>
+[in] Si vous souhaitez dessiner le bouton de zone de liste déroulante en surbrillance.  
   
- [in] *bDrawBorder*  
- Si vous souhaitez dessiner le bouton de zone de liste modifiable avec une bordure.  
+*bDrawBorder*<br/>
+[in] Si vous souhaitez dessiner le bouton de zone de liste modifiable avec une bordure.  
   
- [in] *bGrayDisabledButtons*  
- True pour dessiner un ombrage les boutons désactivés ; FALSE pour utiliser la collection d’images désactivé.  
+*bGrayDisabledButtons*<br/>
+[in] True pour dessiner un ombrage les boutons désactivés ; FALSE pour utiliser la collection d’images désactivé.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
  Appelé par l’infrastructure pour dessiner le bouton de zone de liste déroulante dans le **commandes** volet de la **personnaliser** boîte de dialogue.  
@@ -904,14 +904,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.  
+*contrôleur de domaine principal*<br/>
+[in] Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.  
   
- [in] *rect*  
- Le rectangle englobant la zone de liste déroulante du bouton de zone.  
+*Rect*<br/>
+[in] Le rectangle englobant la zone de liste déroulante du bouton de zone.  
   
- [in] *bSelected*  
- TRUE si le bouton de zone de liste déroulante est sélectionné ; Sinon, FALSE.  
+*bSelected*<br/>
+[in] TRUE si le bouton de zone de liste déroulante est sélectionné ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La largeur, en pixels, du bouton de zone de liste déroulante.  
@@ -938,8 +938,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- Il faut masquer ou afficher le bouton de zone de liste déroulante.  
+*bShow*<br/>
+[in] Il faut masquer ou afficher le bouton de zone de liste déroulante.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
  Appelé par l’infrastructure pour modifier la taille du bouton de zone de liste déroulante lorsque la barre d’outils parent change de taille.  
@@ -949,8 +949,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iSize*  
- La nouvelle largeur du bouton de zone de liste déroulante.  
+*iSize*<br/>
+[in] La nouvelle largeur du bouton de zone de liste déroulante.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
  Appelé par le framework lorsque l’utilisateur modifie l’info-bulle pour le bouton de zone de liste déroulante.  
@@ -964,17 +964,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParent*  
- Pointeur vers la fenêtre parente pour le bouton de zone de liste déroulante.  
+*pWndParent*<br/>
+[in] Pointeur vers la fenêtre parente pour le bouton de zone de liste déroulante.  
   
- [in] *iButtonIndex*  
- ID de la liste déroulante du bouton de zone.  
+*iButtonIndex*<br/>
+[in] ID de la liste déroulante du bouton de zone.  
   
- [in] *wndToolTip*  
- L’info-bulle à associer avec le bouton de zone de liste déroulante.  
+*wndToolTip*<br/>
+[in] L’info-bulle à associer avec le bouton de zone de liste déroulante.  
   
- [in] *str*  
- Le texte info-bulle.  
+*str*<br/>
+[in] Le texte info-bulle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode gère l’événement ; Sinon, FALSE.  
@@ -1002,17 +1002,17 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIndex*  
- Index de base zéro d’un élément dans la zone de liste.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément dans la zone de liste.  
   
- [in] *bNotify*  
- TRUE pour informer le bouton de zone de liste déroulante de la sélection ; Sinon, FALSE.  
+*bNotify*<br/>
+[in] TRUE pour informer le bouton de zone de liste déroulante de la sélection ; Sinon, FALSE.  
   
- [in] *dwData*  
- Les données associées à un élément dans la zone de liste.  
+*dwData*<br/>
+[in] Les données associées à un élément dans la zone de liste.  
   
- [in] *lpszText*  
- Le texte d’un élément dans la zone de liste.  
+*lpszText*<br/>
+[in] Le texte d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -1039,17 +1039,17 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmd*  
- ID de commande du bouton de zone de liste déroulante qui contient la zone de liste.  
+*uiCmd*<br/>
+[in] ID de commande du bouton de zone de liste déroulante qui contient la zone de liste.  
   
- [in] *iIndex*  
- Index de base zéro de l’élément dans la zone de liste. La valeur -1 supprime la sélection actuelle dans la zone de liste et efface la zone d’édition.  
+*iIndex*<br/>
+[in] Index de base zéro de l’élément dans la zone de liste. La valeur -1 supprime la sélection actuelle dans la zone de liste et efface la zone d’édition.  
   
- [in] *dwData*  
- Les données d’un élément dans la zone de liste.  
+*dwData*<br/>
+[in] Les données d’un élément dans la zone de liste.  
   
- [in] *lpszText*  
- Le texte d’un élément dans la zone de liste.  
+*lpszText*<br/>
+[in] Le texte d’un élément dans la zone de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -1064,8 +1064,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in, out] *ar*  
- Le `CArchive` objet à sérialiser.  
+*ar*<br/>
+[in, out] Le `CArchive` objet à sérialiser.  
   
 ### <a name="remarks"></a>Notes  
  Paramètres dans le `CArchive` objet déterminer si cette méthode lit ou écrit dans l’archive.  
@@ -1080,11 +1080,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParent*  
- La fenêtre parente, la liste déroulante du bouton de zone.  
+*pParent*<br/>
+[in] La fenêtre parente, la liste déroulante du bouton de zone.  
   
- [out] *données*  
- Un `CAccessibilityData` objet qui reçoit les données d’accessibilité à partir du bouton de zone de liste déroulante.  
+*data*<br/>
+[out] Un `CAccessibilityData` objet qui reçoit les données d’accessibilité à partir du bouton de zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -1097,8 +1097,8 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bCenterVert*  
- TRUE pour centrer le bouton de zone de liste déroulante dans la barre d’outils ; FALSE pour aligner le bouton de zone de liste déroulante en haut de la barre d’outils.  
+*bCenterVert*<br/>
+[in] TRUE pour centrer le bouton de zone de liste déroulante dans la barre d’outils ; FALSE pour aligner le bouton de zone de liste déroulante en haut de la barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, les boutons de zone de liste déroulante sont alignés en haut.  
@@ -1111,8 +1111,8 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiResID*  
- L’ID de ressource de menu contextuel  
+*uiResID*<br/>
+[in] L’ID de ressource de menu contextuel  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
  Définit la hauteur de la zone de liste lorsqu’il est déplacé vers le bas.  
@@ -1122,8 +1122,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nHeight*  
- La hauteur, en pixels, de la zone de liste.  
+*nHeight*<br/>
+[in] La hauteur, en pixels, de la zone de liste.  
   
 ### <a name="remarks"></a>Notes  
  La hauteur par défaut est 150 pixels.  
@@ -1136,8 +1136,8 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bFlat*  
- TRUE pour un aspect de style à deux dimensions ; Sinon, FALSE.  
+*bFlat*<br/>
+[in] TRUE pour un aspect de style à deux dimensions ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Le style à deux dimensions par défaut pour les boutons de zone de liste déroulante est FALSE.  
@@ -1150,8 +1150,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nStyle*  
- Une combinaison (OR) au niveau du bit de styles de barre d’outils.  
+*nStyle*<br/>
+[in] Une combinaison (OR) au niveau du bit de styles de barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
  Pour obtenir la liste des styles de bouton de barre d’outils, consultez [Styles de contrôle de barre d’outils](../../mfc/reference/toolbar-control-styles.md)  
@@ -1164,8 +1164,8 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszText*  
- Pointeur vers une chaîne qui contient le texte de la zone d’édition.  
+*lpszText*<br/>
+[in] Pointeur vers une chaîne qui contient le texte de la zone d’édition.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b0a5a172a7b0f8a309f1d8fd0762e098dc5d416a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540229"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720029"
 ---
 # <a name="readpmc"></a>__readpmc
 **Section spécifique à Microsoft**  
@@ -39,8 +39,8 @@ unsigned __int64 __readpmc(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `counter`  
- Le compteur de performances à lire.  
+*counter*<br/>
+[in] Le compteur de performances à lire.  
   
 ## <a name="return-value"></a>Valeur de retour  
  La valeur du compteur de performance spécifié.  

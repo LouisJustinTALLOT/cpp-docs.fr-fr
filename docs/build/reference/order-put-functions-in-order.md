@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d8ea4df02e87a64d70ce773ed35d1a3cb0509f8b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894510"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717778"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Mettre les fonctions dans l'ordre)
 
@@ -39,7 +39,7 @@ Spécifier l’ordre des liens pour les fonctions séparément empaquetées (COM
 
 ### <a name="parameters"></a>Paramètres
 
-*filename*  
+*filename*<br/>
 Un fichier texte qui spécifie l’ordre de liaison des fonctions COMDAT.
 
 ## <a name="remarks"></a>Notes
@@ -83,5 +83,5 @@ Le **/Order** option désactive la liaison incrémentielle. Vous pouvez voir l�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)  
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)

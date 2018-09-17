@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221130"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706626"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Encapsule les fonctions API Windows, fournissant une interface orientée objet que vous utilisez pour accéder au Registre.  
@@ -102,8 +102,8 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pszPath*  
- Spécifie le nom d’une clé pour être créé ou ouvert.  
+*pszPath*<br/>
+[in] Spécifie le nom d’une clé pour être créé ou ouvert.  
   
 ### <a name="return-value"></a>Valeur de retour  
  0 en cas de réussite ; Sinon, une valeur différente de zéro.  
@@ -121,11 +121,11 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bCheminAdmin*  
- Paramètre booléen qui spécifie si le `CSettingsStore` objet agit en mode administrateur.  
+*bCheminAdmin*<br/>
+[in] Paramètre booléen qui spécifie si le `CSettingsStore` objet agit en mode administrateur.  
   
- [in] *bReadOnly*  
- Paramètre booléen qui spécifie si le `CSettingsStore` objet est créé dans le mode lecture seule.  
+*bReadOnly*<br/>
+[in] Paramètre booléen qui spécifie si le `CSettingsStore` objet est créé dans le mode lecture seule.  
   
 ### <a name="remarks"></a>Notes  
  Si *bCheminAdmin* est définie sur TRUE, le `m_hKey` variable de membre est définie sur **HKEY_LOCAL_MACHINE**. Si vous définissez *bCheminAdmin* sur FALSE, `m_hKey` a la valeur **HKEY_CURRENT_USER**.  
@@ -144,11 +144,11 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pszPath*  
- Le nom de la clé à supprimer.  
+*pszPath*<br/>
+[in] Le nom de la clé à supprimer.  
   
- [in] *bCheminAdmin*  
- Commutateur qui spécifie l’emplacement de la clé à supprimer.  
+*bCheminAdmin*<br/>
+[in] Commutateur qui spécifie l’emplacement de la clé à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -166,8 +166,8 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pszValue*  
- Spécifie le champ de valeur à supprimer.  
+*pszValue*<br/>
+[in] Spécifie le champ de valeur à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -180,8 +180,8 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pszPath*  
- Le nom d’une clé de Registre.  
+*pszPath*<br/>
+[in] Le nom d’une clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -265,53 +265,53 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pszKey*  
- Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur à lire à partir du Registre.  
+*pszKey*<br/>
+[in] Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur à lire à partir du Registre.  
   
- [out] *iVal*  
- Référence à une variable de type entier qui reçoit la valeur lue à partir de la clé de Registre.  
+*iVal*<br/>
+[out] Référence à une variable de type entier qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *dwVal*  
- Référence à une variable 32 bits double mot qui reçoit la valeur lue à partir de la clé de Registre.  
+*dwVal*<br/>
+[out] Référence à une variable 32 bits double mot qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *sVal*  
- Référence à une variable de chaîne qui reçoit la valeur lue à partir de la clé de Registre.  
+*sVal*<br/>
+[out] Référence à une variable de chaîne qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *scStringList*  
- Référence à une variable de liste de chaîne qui reçoit la valeur lue à partir de la clé de Registre.  
+*scStringList*<br/>
+[out] Référence à une variable de liste de chaîne qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *scArray*  
- Référence à une variable de tableau de chaîne qui reçoit la valeur lue à partir de la clé de Registre.  
+*scArray*<br/>
+[out] Référence à une variable de tableau de chaîne qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *dwcArray*  
- Référence à une variable de tableau de 32 bits double mot qui reçoit la valeur lue à partir de la clé de Registre.  
+*dwcArray*<br/>
+[out] Référence à une variable de tableau de 32 bits double mot qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *wcArray*  
- Référence à une variable de tableau de mot de 16 bits qui reçoit la valeur lue à partir de la clé de Registre.  
+*wcArray*<br/>
+[out] Référence à une variable de tableau de mot de 16 bits qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *bcArray*  
- Référence à une variable de tableau d’octets qui reçoit la valeur lue à partir de la clé de Registre.  
+*bcArray*<br/>
+[out] Référence à une variable de tableau d’octets qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *lpPoint*  
- Référence à un pointeur vers un `POINT` structure qui reçoit la valeur de lire à partir de la clé de Registre.  
+*lpPoint*<br/>
+[out] Référence à un pointeur vers un `POINT` structure qui reçoit la valeur de lire à partir de la clé de Registre.  
   
- [out] *rect*  
- Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.  
+*Rect*<br/>
+[out] Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *ppData*  
- Pointeur vers un pointeur vers les données qui reçoit la valeur lus à partir de la clé de Registre.  
+*ppData*<br/>
+[out] Pointeur vers un pointeur vers les données qui reçoit la valeur lus à partir de la clé de Registre.  
   
- [out] *pétaoctets*  
- Pointeur vers une variable d’entier non signé. Cette variable reçoit la taille de la mémoire tampon qui *ppData* pointe vers.  
+*Pétaoctets*<br/>
+[out] Pointeur vers une variable d’entier non signé. Cette variable reçoit la taille de la mémoire tampon qui *ppData* pointe vers.  
   
- [out] *liste*  
- Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.  
+*list*<br/>
+[out] Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *obj*  
- Référence à un [CObject](../../mfc/reference/cobject-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.  
+*obj*<br/>
+[out] Référence à un [CObject](../../mfc/reference/cobject-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.  
   
- [out] *pObj*  
- Référence à un pointeur vers un `CObject` variable qui reçoit la valeur lue à partir de la clé de Registre.  
+*pObj*<br/>
+[out] Référence à un pointeur vers un `CObject` variable qui reçoit la valeur lue à partir de la clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -395,53 +395,53 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pszKey*  
- Pointeur vers une chaîne qui contient le nom de la valeur à définir.  
+*pszKey*<br/>
+[in] Pointeur vers une chaîne qui contient le nom de la valeur à définir.  
   
- [in] *iVal*  
- Référence à une variable de type entier qui contient les données à stocker.  
+*iVal*<br/>
+[in] Référence à une variable de type entier qui contient les données à stocker.  
   
- [in] *dwVal*  
- Référence à une variable 32 bits double mot contenant les données à stocker.  
+*dwVal*<br/>
+[in] Référence à une variable 32 bits double mot contenant les données à stocker.  
   
- [in] *strVal*  
- Pointeur vers une variable de chaîne se terminant par null qui contient les données à stocker.  
+*strVal*<br/>
+[in] Pointeur vers une variable de chaîne se terminant par null qui contient les données à stocker.  
   
- [in] *scStringList*  
- Référence à un [CStringList](../../mfc/reference/cstringlist-class.md) variable qui contient les données à stocker.  
+*scStringList*<br/>
+[in] Référence à un [CStringList](../../mfc/reference/cstringlist-class.md) variable qui contient les données à stocker.  
   
- [in] *bcArray*  
- Référence à une variable de tableau d’octets qui contient les données à stocker.  
+*bcArray*<br/>
+[in] Référence à une variable de tableau d’octets qui contient les données à stocker.  
   
- [in] *scArray*  
- Référence à une variable de tableau de chaîne qui contient les données à stocker.  
+*scArray*<br/>
+[in] Référence à une variable de tableau de chaîne qui contient les données à stocker.  
   
- [in] *dwcArray*  
- Référence à une variable de tableau de 32 bits double mot contenant les données à stocker.  
+*dwcArray*<br/>
+[in] Référence à une variable de tableau de 32 bits double mot contenant les données à stocker.  
   
- [in] *wcArray*  
- Référence à une variable de tableau de mot de 16 bits qui contient les données à stocker.  
+*wcArray*<br/>
+[in] Référence à une variable de tableau de mot de 16 bits qui contient les données à stocker.  
   
- [in] *rect*  
- Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui contient les données à stocker.  
+*Rect*<br/>
+[in] Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui contient les données à stocker.  
   
- [in] *lpPoint*  
- Référence à un pointeur vers un `POINT` variable qui contient les données à stocker.  
+*lpPoint*<br/>
+[in] Référence à un pointeur vers un `POINT` variable qui contient les données à stocker.  
   
- [in] *pData*  
- Pointeur vers une mémoire tampon qui contient les données à stocker.  
+*pData*<br/>
+[in] Pointeur vers une mémoire tampon qui contient les données à stocker.  
   
- [in] *nBytes*  
- Spécifie la taille, en octets, des données à laquelle le *pData* paramètre pointe.  
+*nBytes*<br/>
+[in] Spécifie la taille, en octets, des données à laquelle le *pData* paramètre pointe.  
   
- [in] *liste*  
- Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui contient les données à stocker.  
+*list*<br/>
+[in] Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui contient les données à stocker.  
   
- [in] *obj*  
- Référence à un [CObject](../../mfc/reference/cobject-class.md) variable qui contient les données à stocker.  
+*obj*<br/>
+[in] Référence à un [CObject](../../mfc/reference/cobject-class.md) variable qui contient les données à stocker.  
   
- [in] *pObj*  
- Pointeur vers un pointeur vers un `CObject` variable qui contient les données à stocker.  
+*pObj*<br/>
+[in] Pointeur vers un pointeur vers un `CObject` variable qui contient les données à stocker.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite, sinon FALSE.  

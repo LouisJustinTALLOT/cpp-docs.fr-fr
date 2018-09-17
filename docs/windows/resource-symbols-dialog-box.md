@@ -19,40 +19,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 064fb9adce8b41c13709819f7ce0b7c515fea12a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 09d34d0247f7fd039bca3ea9b643802856734926
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313167"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719301"
 ---
 # <a name="resource-symbols-dialog-box-c"></a>Boîte de dialogue symboles de ressources (C++)
 
 Le **symboles des ressources** boîte de dialogue C++ vous permet d’ajouter de nouveaux symboles des ressources, changer les symboles affichés, ou passez à l’emplacement dans le code source où un symbole est en cours d’utilisation.
 
-**Nom**  
-Affiche le nom du symbole. Pour plus d’informations, consultez [restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md).
+- **Name**
 
-**Valeur**  
-Affiche la valeur numérique du symbole. Pour plus d’informations, consultez [Restrictions de valeur de symbole](../windows/symbol-value-restrictions.md).
+   Affiche le nom du symbole. Pour plus d’informations, consultez [restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md).
 
-**En cours d’utilisation**  
-En cas de sélection, indique que le symbole est utilisé par une ou plusieurs ressources. La ou les ressources sont répertoriées dans la zone Utilisé par.
+- **Valeur**
 
-**Afficher les symboles en lecture seule**  
-En cas de sélection, affiche les ressources en lecture seule. Par défaut, le **symboles des ressources** boîte de dialogue affiche uniquement les ressources modifiables dans votre fichier de script de ressources, mais avec cette option est sélectionnée, les ressources modifiables s’affichent en gras et les ressources en lecture seule s’affichent en texte brut.
+   Affiche la valeur numérique du symbole. Pour plus d’informations, consultez [Restrictions de valeur de symbole](../windows/symbol-value-restrictions.md).
 
-**Utilisé par**  
-Affiche la ou les ressources à l'aide du symbole sélectionné dans la liste des symboles. Pour passer à l’éditeur pour une ressource donnée, sélectionnez la ressource dans le **Used By** , puis cliquez sur **afficher l’utilisation**. Pour plus d’informations, consultez [ouverture de l’éditeur de ressources pour un symbole donné](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+- **En cours d’utilisation**
 
-**Nouveau**  
-Ouvre le **nouveau symbole** boîte de dialogue qui vous permet de définir le nom et, si nécessaire, une valeur pour un nouvel identificateur de ressource symbolique. Pour plus d’informations, consultez [création de nouveaux symboles](../windows/creating-new-symbols.md).
+   En cas de sélection, indique que le symbole est utilisé par une ou plusieurs ressources. La ou les ressources sont répertoriées dans la zone Utilisé par.
 
-**Modification**  
-Ouvre le **modifier le symbole** boîte de dialogue qui vous permet de modifier le nom ou la valeur d’un symbole. Si le symbole est destiné à un contrôle ou une ressource en cours d'utilisation, il ne peut être modifié qu'à partir de l'éditeur de ressources correspondant. Pour plus d’informations, consultez [modification des symboles non assignés](../windows/changing-unassigned-symbols.md).
+- **Afficher les symboles en lecture seule**
 
-**Afficher l’utilisation**  
-Ouvre la ressource qui contient le symbole dans l'éditeur de ressources correspondant. Pour plus d’informations, consultez [ouverture de l’éditeur de ressources pour un symbole donné](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+   En cas de sélection, affiche les ressources en lecture seule. Par défaut, le **symboles des ressources** boîte de dialogue affiche uniquement les ressources modifiables dans votre fichier de script de ressources, mais avec cette option est sélectionnée, les ressources modifiables s’affichent en gras et les ressources en lecture seule s’affichent en texte brut.
+
+- **Utilisé par**
+
+   Affiche la ou les ressources à l'aide du symbole sélectionné dans la liste des symboles. Pour passer à l’éditeur pour une ressource donnée, sélectionnez la ressource dans le **Used By** , puis cliquez sur **afficher l’utilisation**. Pour plus d’informations, consultez [ouverture de l’éditeur de ressources pour un symbole donné](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+
+- **Nouveau**
+
+   Ouvre le **nouveau symbole** boîte de dialogue qui vous permet de définir le nom et, si nécessaire, une valeur pour un nouvel identificateur de ressource symbolique. Pour plus d’informations, consultez [création de nouveaux symboles](../windows/creating-new-symbols.md).
+
+- **Modification**
+
+   Ouvre le **modifier le symbole** boîte de dialogue qui vous permet de modifier le nom ou la valeur d’un symbole. Si le symbole est destiné à un contrôle ou une ressource en cours d'utilisation, il ne peut être modifié qu'à partir de l'éditeur de ressources correspondant. Pour plus d’informations, consultez [modification des symboles non assignés](../windows/changing-unassigned-symbols.md).
+
+- **Afficher l’utilisation**
+
+   Ouvre la ressource qui contient le symbole dans l'éditeur de ressources correspondant. Pour plus d’informations, consultez [ouverture de l’éditeur de ressources pour un symbole donné](../windows/opening-the-resource-editor-for-a-given-symbol.md).
 
 ## <a name="requirements"></a>Configuration requise
 

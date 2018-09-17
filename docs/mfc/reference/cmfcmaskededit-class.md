@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a0bb29fdaff72370ec197fc9b3f651b5ff574c32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717429"
 ---
 # <a name="cmfcmaskededit-class"></a>Cmfcmaskededit, classe
 Le `CMFCMaskedEdit` classe prend en charge un contrôle d’édition par masque, ce qui valide l’entrée d’utilisateur par rapport à un masque et affiche les résultats validés en fonction d’un modèle.  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour spécifier que le [CMFCMaskedEdit::GetWindowText](#getwindowtext) méthode récupérer masquées uniquement des caractères ; FALSE pour indiquer que la méthode récupérer l’intégralité du texte. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] TRUE pour spécifier que le [CMFCMaskedEdit::GetWindowText](#getwindowtext) méthode récupérer masquées uniquement des caractères ; FALSE pour indiquer que la méthode récupérer l’intégralité du texte. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour activer la récupération des caractères masqués. Créez ensuite un contrôle d’édition par masque qui correspond au numéro de téléphone, telles que (425) 555-0187. Si vous appelez le `GetWindowText` (méthode), elle retourne « 4255550187 ». Si vous désactivez la récupération des caractères masqués, la `GetWindowText` méthode retourne le texte qui s’affiche dans le contrôle d’édition, par exemple « (425) 555-0187 ».  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszMask*  
- Chaîne de masque qui spécifie le type de caractère qui peut apparaître à chaque position dans l’entrée utilisateur. La longueur de la *lpszInputTemplate* et *lpszMask* chaînes de paramètres doivent être identiques. Consultez la section Notes pour plus d’informations sur les caractères de masque.  
+*lpszMask*<br/>
+[in] Chaîne de masque qui spécifie le type de caractère qui peut apparaître à chaque position dans l’entrée utilisateur. La longueur de la *lpszInputTemplate* et *lpszMask* chaînes de paramètres doivent être identiques. Consultez la section Notes pour plus d’informations sur les caractères de masque.  
   
- [in] *lpszInputTemplate*  
- Une chaîne de modèle de masque qui indique le littéral de caractères qui peut apparaître à chaque position dans l’entrée utilisateur. Utiliser le caractère de soulignement (« _ ») comme un espace réservé de caractère. La longueur de la *lpszInputTemplate* et *lpszMask* chaînes de paramètres doivent être identiques.  
+*lpszInputTemplate*<br/>
+[in] Une chaîne de modèle de masque qui indique le littéral de caractères qui peut apparaître à chaque position dans l’entrée utilisateur. Utiliser le caractère de soulignement (« _ ») comme un espace réservé de caractère. La longueur de la *lpszInputTemplate* et *lpszMask* chaînes de paramètres doivent être identiques.  
   
- [in] *chMaskInputTemplate*  
- Un caractère par défaut que le framework remplace chaque caractère non valide dans l’entrée utilisateur. La valeur par défaut de ce paramètre est un trait de soulignement (« _ »).  
+*chMaskInputTemplate*<br/>
+[in] Un caractère par défaut que le framework remplace chaque caractère non valide dans l’entrée utilisateur. La valeur par défaut de ce paramètre est un trait de soulignement (« _ »).  
   
- [in] *lpszValid*  
- Chaîne qui contient un jeu de caractères valides. NULL indique que tous les caractères sont valides. La valeur par défaut de ce paramètre est NULL.  
+*lpszValid*<br/>
+[in] Chaîne qui contient un jeu de caractères valides. NULL indique que tous les caractères sont valides. La valeur par défaut de ce paramètre est NULL.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour créer le masque pour le contrôle d’édition par masque. Dérivez une classe de la `CMFCMaskedEdit` classe et substituer les [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) méthode à utiliser votre propre code pour le traitement du masque personnalisé.  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour sélectionner uniquement des groupes ; Pour sélectionner l’intégralité du texte, la valeur est FALSE. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] TRUE pour sélectionner uniquement des groupes ; Pour sélectionner l’intégralité du texte, la valeur est FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction permet de spécifier si le contrôle d’édition par masque permet à un utilisateur de sélectionner par groupe ou l’intégralité du texte.  
@@ -218,8 +218,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour valider l’utilisateur d’entrée par rapport à seulement masquées caractères ; FALSE pour valider le masque entier. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] TRUE pour valider l’utilisateur d’entrée par rapport à seulement masquées caractères ; FALSE pour valider le masque entier. La valeur par défaut est TRUE.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Récupère de valider le texte à partir du contrôle d’édition par masque.  
@@ -233,14 +233,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *lpszStringBuf*  
- Pointeur vers une mémoire tampon qui reçoit le texte du contrôle d’édition.  
+*lpszStringBuf*<br/>
+[out] Pointeur vers une mémoire tampon qui reçoit le texte du contrôle d’édition.  
   
- [in] *nMaxCount*  
- Le nombre maximal de caractères à recevoir.  
+*nMaxCount*<br/>
+[in] Le nombre maximal de caractères à recevoir.  
   
- [out] *rstrString*  
- Une référence à l’objet de chaîne qui reçoit le texte à partir du contrôle d’édition.  
+*rstrString*<br/>
+[out] Une référence à l’objet de chaîne qui reçoit le texte à partir du contrôle d’édition.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La première surcharge de méthode retourne le nombre d’octets de la chaîne est copié vers le *lpszStringBuf* mémoire tampon de paramètre ; 0 si le contrôle d’édition par masque n’a aucun texte.  
@@ -260,11 +260,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *chChar*  
- Caractère à valider.  
+*chChar*<br/>
+[in] Caractère à valider.  
   
- [in] *chMaskChar*  
- Le caractère correspondant de la chaîne de masque.  
+*chMaskChar*<br/>
+[in] Le caractère correspondant de la chaîne de masque.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le *chChar* paramètre est le type de caractère autorisé par le *chMaskChar* paramètre ; sinon, FALSE.  
@@ -280,8 +280,8 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszValid*  
- Chaîne qui contient le jeu de caractères d’entrée valides. NULL signifie que tous les caractères sont valides. La valeur par défaut de ce paramètre est NULL.  
+*lpszValid*<br/>
+[in] Chaîne qui contient le jeu de caractères d’entrée valides. NULL signifie que tous les caractères sont valides. La valeur par défaut de ce paramètre est NULL.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour définir une liste des caractères valides. Si un caractère d’entrée n’est pas dans cette liste, contrôle d’édition par masque l’acceptera pas.  
@@ -298,8 +298,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszString*  
- Pointe vers une chaîne se terminant par null qui sera utilisé comme une invite de commandes.  
+*lpszString*<br/>
+[in] Pointe vers une chaîne se terminant par null qui sera utilisé comme une invite de commandes.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode définit le texte du contrôle.  

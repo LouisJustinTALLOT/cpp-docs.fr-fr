@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6788945a7f36a2b9b478b72e514552cf8d9603
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315806"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722044"
 ---
 # <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>Boîte de dialogue Police outil texte (C++) (Éditeur d’images pour les icônes)
 
@@ -34,20 +34,25 @@ Utilisez cette boîte de dialogue pour :
 
 Pour accéder à cette boîte de dialogue, cliquez sur le **police** situé dans le **outil texte** boîte de dialogue.
 
-**Police**  
-Répertorie les polices disponibles.
+- **Police**
 
-**Style de police**  
-Répertorie les styles disponibles pour la police spécifiée.
+   Répertorie les polices disponibles.
 
-**Taille**  
-Répertorie les tailles disponibles pour la police spécifiée.
+- **Style de police**
 
-**Exemple**  
-Montre un exemple de comment le texte s’affiche avec les paramètres de police spécifiée.
+   Répertorie les styles disponibles pour la police spécifiée.
 
-**Script**  
-Répertorie les scripts de langue disponibles pour la police spécifiée. Lorsque vous sélectionnez un script de langue différente, le jeu de caractères pour cette langue devient disponible pour la création de documents multilingues.
+- **Taille**
+
+   Répertorie les tailles disponibles pour la police spécifiée.
+
+- **Exemple**
+
+   Montre un exemple de comment le texte s’affiche avec les paramètres de police spécifiée.
+
+- **Script**
+
+   Répertorie les scripts de langue disponibles pour la police spécifiée. Lorsque vous sélectionnez un script de langue différente, le jeu de caractères pour cette langue devient disponible pour la création de documents multilingues.
 
 ## <a name="requirements"></a>Configuration requise
 

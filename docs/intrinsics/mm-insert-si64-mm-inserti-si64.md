@@ -19,17 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72597007922e78ab9b83687cb5b80bd6ecef7d01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1c6b21ded6814492557ced792772508add06e53
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712834"
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
+
 **Section spécifique à Microsoft**  
   
- Génère le `insertq` instruction pour insérer des bits de son second opérande dans son premier opérande.  
+Génère le `insertq` instruction pour insérer des bits à partir de son second opérande dans son premier opérande.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,22 +48,22 @@ __m128i _mm_inserti_si64(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Source1`  
- Un champ de 128 bits avec des données d’entrée dans son 64 bits inférieurs dans lequel un champ sera inséré.  
+*Source1*<br/>
+[in] Un champ de 128 bits avec des données d’entrée dans son 64 bits inférieurs dans lequel un champ sera inséré.  
   
- [in]  `Source2`  
- Un champ de 128 bits avec les données à insérer dans ses bits de poids faibles.  Pour `_mm_insert_si64`, contient également un descripteur de champ dans son bits de poids fort.  
+*Source2*<br/>
+[in] Un champ de 128 bits avec les données à insérer dans ses bits de poids faibles.  Pour `_mm_insert_si64`, contient également un descripteur de champ dans ses bits de poids fort.  
   
- [in]  `Length`  
- Une constante entière qui spécifie la longueur du champ à insérer.  
+*Longueur*<br/>
+[in] Une constante entière qui spécifie la longueur du champ à insérer.  
   
- [in]  `Index`  
- Une constante entière qui spécifie l’index du bit le moins significatif du champ dans lequel les données seront insérées.  
+*Index*<br/>
+[in] Une constante entière qui spécifie l’index du bit moins significatif du champ dans lequel les données seront insérées.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Un champ de 128 bits dont 64 bits inférieurs contiennent d’origine 64 bits de poids faibles de `Source1` avec le champ de bits spécifié remplacé par les bits de poids faibles `Source2`. Les 64 bits de poids supérieurs de la valeur de retour ne sont pas définis.  
+ Un champ de 128 bits dont 64 bits inférieurs contiennent d’origine 64 bits de poids faibles de `Source1` avec le champ de bits spécifié remplacé par les bits de poids faibles `Source2`. Les 64 bits supérieures de la valeur de retour ne sont pas définis.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -72,13 +73,13 @@ __m128i _mm_inserti_si64(
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- Cet intrinsèque génère le `insertq` instruction pour insérer des bits de `Source2` dans `Source1`. Il existe deux versions de cette intrinsèques : `_mm_inserti_si64`, est la version immédiate, et `_mm_insert_si64` est celui non immédiate.  Chaque version extrait un champ de bits d’une longueur donnée Source2 et l’insère dans Source1.  Les extraits sont les bits de poids de Source2.  Le Source1 du champ dans lequel ces bits seront insérées est défini par la longueur et l’index de son bit le moins significatif.  Les valeurs de la longueur et les index sont extraites mod 64, par conséquent, -1 et 127 sont interprétés en tant que 63. Si la somme des index de bits (réduit) et la longueur de champ (réduit) est supérieure à 64, les résultats sont indéfinis. Une valeur égale à zéro pour la longueur de champ est interprétée comme 64.  Si l’index de longueur et les bits du champ est les deux zéro, 63:0 de bits de `Source2` sont insérées dans `Source1`.  Si la longueur de champ est égal à zéro, mais l’index de bits est différente de zéro, les résultats sont indéfinis.  
+ Cet intrinsèque génère le `insertq` instruction pour insérer des bits de `Source2` dans `Source1`. Il existe deux versions de cette intrinsèques : `_mm_inserti_si64`, est la version immédiate, et `_mm_insert_si64` est celui non immédiat.  Chaque version extrait un champ de bits d’une longueur donnée Source2 et l’insère dans Source1.  Les extraits sont les bits les moins significatifs de Source2.  Le Source1 de champ dans lequel ces bits seront insérés est défini par la longueur et l’index de son bit le moins significatif.  Les valeurs de la longueur et les index sont effectuées mod 64, par conséquent, -1 et 127 sont interprétés en tant que 63. Si la somme des index de bits (réduit) et la longueur de champ (réduit) est supérieure à 64, les résultats sont indéfinis. Une valeur égale à zéro pour la longueur de champ est interprétée en tant que 64.  Si l’index de longueur et les bits du champ est les deux zéro, 63:0 de bits de `Source2` sont insérées dans `Source1`.  Si la longueur de champ est égal à zéro, mais l’index de bits est différente de zéro, les résultats sont indéfinis.  
   
- Dans un appel à _mm_insert_si64, la longueur de champ est contenue dans 77:72 de bits de Source2 et de l’index dans 69:64 de bits.  
+ Dans un appel à _mm_insert_si64, la longueur de champ est contenue dans 77:72 de bits de Source2 et l’index dans 69:64 de bits.  
   
- Si vous appelez `_mm_inserti_si64` avec des arguments que le compilateur ne peut pas déterminer à être des constantes entières, le compilateur génère du code pour le pack de ces valeurs dans un registre XMM et appeler `_mm_insert_si64`.  
+ Si vous appelez `_mm_inserti_si64` avec les arguments que le compilateur ne peut pas déterminer être des constantes entières, le compilateur génère du code pour regrouper ces valeurs dans un registre XMM et appeler `_mm_insert_si64`.  
   
- Pour déterminer la prise en charge matérielle pour le `insertq` appel le `__cpuid` intrinsèque avec `InfoType=0x80000001` et vérifiez le bit 6 de `CPUInfo[2] (ECX)`. Ce bit sera égale à 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `insertq` instruction, les résultats sont imprévisibles.  
+ Pour déterminer la prise en charge matérielle pour le `insertq` appel le `__cpuid` intrinsèque avec `InfoType=0x80000001` et vérifiez le bit 6 de `CPUInfo[2] (ECX)`. Ce bit sera égale à 1 si l’instruction est pris en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `insertq` instruction, les résultats sont imprévisibles.  
   
 ## <a name="example"></a>Exemple  
   
@@ -125,7 +126,8 @@ result3 = 0xfffffffff3210fff
 ```  
   
 **FIN de la section spécifique à Microsoft**  
- Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
+
+Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
   
 ## <a name="see-also"></a>Voir aussi  
  [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   

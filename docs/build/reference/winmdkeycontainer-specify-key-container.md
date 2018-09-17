@@ -1,5 +1,5 @@
 ---
-title: -WINMDKEYCONTAINER (spécifier un conteneur de clé) | Documents Microsoft
+title: -WINMDKEYCONTAINER (spécifier le conteneur de clé) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e4f74eb249c2687716fedb43ccf0a37e35f7b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8d48a0966b974b1a264b4d2b539f5861ce0dfd57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376609"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716820"
 ---
 # <a name="winmdkeycontainer-specify-key-container"></a>/WINMDKEYCONTAINER (spécifier un conteneur de clé de nom fort)
-Spécifie un conteneur de clé pour signer un fichier de métadonnées Windows (.winmd).  
-  
-```  
-/WINMDKEYCONTAINER:name  
-```  
-  
-## <a name="remarks"></a>Notes  
- Ressemble à la [/keycontainer](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md) option de l’éditeur de liens qui est appliquée à un fichier (.winmd).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
-  
-2.  Sélectionnez le **l’éditeur de liens** dossier.  
-  
-3.  Sélectionnez le **métadonnées Windows** page de propriétés.  
-  
-4.  Dans le **conteneur de clé de métadonnées Windows** , entrez l’emplacement.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l’éditeur de liens](../../build/reference/linker-options.md)
+
+Spécifie un conteneur de clé pour signer un fichier de métadonnées Windows (.winmd).
+
+```
+/WINMDKEYCONTAINER:name
+```
+
+## <a name="remarks"></a>Notes
+
+Ressemble à la [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md) option de l’éditeur de liens qui est appliquée à un fichier (.winmd).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+
+1. Sélectionnez le **l’éditeur de liens** dossier.
+
+1. Sélectionnez le **Windows métadonnées** page de propriétés.
+
+1. Dans le **conteneur de clé de métadonnées Windows** , entrez l’emplacement.
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)

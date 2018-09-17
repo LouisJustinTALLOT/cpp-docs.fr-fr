@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196709"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701831"
 ---
 # <a name="cbutton-class"></a>CButton, classe
 Fournit les fonctionnalités des contrôles bouton Windows.  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *lpszNote*|Pointeur vers une mémoire tampon, ce qui l’appelant est responsable de l’allocation et désallocation. Si la valeur de retour est TRUE, la mémoire tampon contient le texte de la Remarque qui est associé au contrôle de lien de commande en cours ; Sinon, la mémoire tampon est inchangée.|  
-|[in, out] *cchNote*|Pointeur vers une variable d’entier non signé.<br /><br /> Lorsque cette méthode est appelée, la variable contient la taille de la mémoire tampon spécifiée par le *lpszNote* paramètre.<br /><br /> Lorsque cette méthode est retournée, si la valeur renvoyée est TRUE, la variable contient la taille de la note associée au contrôle de lien de commande actuelle. Si la valeur de retour est FALSE, la variable contient la taille de mémoire tampon requise pour contenir la note.|  
+|*lpszNote*|[out] Pointeur vers une mémoire tampon, ce qui l’appelant est responsable de l’allocation et désallocation. Si la valeur de retour est TRUE, la mémoire tampon contient le texte de la Remarque qui est associé au contrôle de lien de commande en cours ; Sinon, la mémoire tampon est inchangée.|  
+|*cchNote*|[in, out] Pointeur vers une variable d’entier non signé.<br /><br /> Lorsque cette méthode est appelée, la variable contient la taille de la mémoire tampon spécifiée par le *lpszNote* paramètre.<br /><br /> Lorsque cette méthode est retournée, si la valeur renvoyée est TRUE, la variable contient la taille de la note associée au contrôle de lien de commande actuelle. Si la valeur de retour est FALSE, la variable contient la taille de mémoire tampon requise pour contenir la note.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Dans la première surcharge, un [CString](../../atl-mfc-shared/using-cstring.md) objet qui contient le texte de note associé au contrôle de lien de commande actuelle.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *pInfo*|Pointeur vers un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure qui reçoit des informations sur le contrôle de bouton partagé actuel. L’appelant est responsable de l’allocation de la structure.|  
+|*pInfo*|[out] Pointeur vers un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure qui reçoit des informations sur le contrôle de bouton partagé actuel. L’appelant est responsable de l’allocation de la structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *pSize*|Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la description d’un rectangle.|  
+|*pSize*|[out] Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la description d’un rectangle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *fDropDown*|TRUE pour définir l’état BST_DROPDOWNPUSHED ; Sinon, FALSE.|  
+|*fDropDown*|[in] TRUE pour définir l’état BST_DROPDOWNPUSHED ; Sinon, FALSE.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *fElevationRequired*|True pour définir `elevation required` état ; sinon, FALSE.|  
+|*fElevationRequired*|[in] True pour définir `elevation required` état ; sinon, FALSE.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *lpszNote*|Pointeur vers une chaîne Unicode qui est définie en tant que texte de la note pour le contrôle de lien de commande.|  
+|*lpszNote*|[in] Pointeur vers une chaîne Unicode qui est définie en tant que texte de la note pour le contrôle de lien de commande.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *chGlyph*|Un caractère qui spécifie le glyphe à utiliser comme la fractionnement bouton flèche de déroulement.|  
+|*chGlyph*|[in] Un caractère qui spécifie le glyphe à utiliser comme la fractionnement bouton flèche de déroulement.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pSplitImageList*|Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet à affecter pour le contrôle de bouton partagé actuel.|  
+|*pSplitImageList*|[in] Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet à affecter pour le contrôle de bouton partagé actuel.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pInfo*|Pointeur vers un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure qui définit le contrôle de bouton partagé actuel.|  
+|*pInfo*|[in] Pointeur vers un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure qui définit le contrôle de bouton partagé actuel.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pSize*|Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui décrit un rectangle englobant.|  
+|*pSize*|[in] Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui décrit un rectangle englobant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Combinaison au niveau du bit de styles de boutons de fractionnement. Pour plus d’informations, consultez le `uSplitStyle` membre de la [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure.|  
+|*uSplitStyle*|[in] Combinaison au niveau du bit de styles de boutons de fractionnement. Pour plus d’informations, consultez le `uSplitStyle` membre de la [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  

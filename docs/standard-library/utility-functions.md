@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960305"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718319"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt;, fonctions
 
@@ -41,11 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*  
- Objet qui reçoit la valeur de new_val.
+*Val*<br/>
+Objet qui reçoit la valeur de new_val.
 
-*new_val*  
- Objet dont la valeur est copiée ou déplacée dans val.
+*new_val*<br/>
+Objet dont la valeur est copiée ou déplacée dans val.
 
 ### <a name="remarks"></a>Notes
 
@@ -102,7 +102,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 |Paramètre|Description|
 |---------------|-----------------|
 |*Type*|Le type de la valeur passée dans *Arg*, qui peut être différent du type de *Arg*. Généralement déterminé par un argument template de la fonction de transfert.|
-|*Arg*|Argument sur lequel effectuer un cast.|
+|*arg*|Argument sur lequel effectuer un cast.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -163,17 +163,17 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Index*  
- Index de base 0 de l’élément désigné.
+*Index*<br/>
+Index de base 0 de l’élément désigné.
 
-*T1*  
- Type du premier élément de la paire.
+*T1*<br/>
+Type du premier élément de la paire.
 
-*T2*  
- Type du deuxième élément de la paire.
+*T2*<br/>
+Type du deuxième élément de la paire.
 
-*demande de tirage*  
- Paire dans laquelle opérer la sélection.
+*demande de tirage*<br/>
+Paire dans laquelle opérer la sélection.
 
 ### <a name="remarks"></a>Notes
 
@@ -234,11 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>Paramètres
 
-*Val1*  
- Valeur qui initialise le premier élément de `pair`.
+*Val1*<br/>
+Valeur qui initialise le premier élément de `pair`.
 
-*Val2*  
- Valeur qui initialise le second élément de `pair`.
+*Val2*<br/>
+Valeur qui initialise le second élément de `pair`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -278,7 +278,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 |Paramètre|Description|
 |---------------|-----------------|
 |*Type*|Un type déduit du type de l’argument passé dans *Arg*, avec la référence de règles de réduction.|
-|*Arg*|Argument sur lequel effectuer un cast. Bien que le type de *Arg* semble être spécifié comme une référence rvalue, `move` accepte également les arguments lvalue, car les références lvalue peuvent lier aux références rvalue.|
+|*arg*|Argument sur lequel effectuer un cast. Bien que le type de *Arg* semble être spécifié comme une référence rvalue, `move` accepte également les arguments lvalue, car les références lvalue peuvent lier aux références rvalue.|
 
 ### <a name="return-value"></a>Valeur de retour
 

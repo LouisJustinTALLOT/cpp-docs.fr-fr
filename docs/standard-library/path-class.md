@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691508"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725307"
 ---
 # <a name="path-class"></a>path, classe
 
@@ -638,7 +638,7 @@ Pour `template<class InIt> path(InIt first, InIt last, const locale& loc)` doive
 
 ## <a name="preferred_separator"></a> Path::preferred_separator
 
-L’objet de constante donne le caractère préféré pour la séparation des composants du chemin, en fonction du système d’exploitation hôte. 
+L’objet de constante donne le caractère préféré pour la séparation des composants du chemin, en fonction du système d’exploitation hôte.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -654,7 +654,7 @@ Notez qu’il est également possible dans la plupart des contextes sous Windows
 
 ## <a name="relative_path"></a> Path::RELATIVE_PATH
 
-Retourne le composant de chemin d’accès relatif de `myname`. 
+Retourne le composant de chemin d’accès relatif de `myname`.
 
 ```cpp
 path relative_path() const;
@@ -674,7 +674,7 @@ path& remove_filename();
 
 ## <a name="replace_extension"></a> Path::replace_extension
 
-Remplace l’extension de `myname`. 
+Remplace l’extension de `myname`.
 
 ```cpp
 path& replace_extension(const path& newext = path());
@@ -715,7 +715,7 @@ return (*this);
 
 ## <a name="root_directory"></a> Path::root_directory
 
-Retourne le composant du répertoire racine de `myname`. 
+Retourne le composant du répertoire racine de `myname`.
 
 ```cpp
 path root_directory() const;
@@ -727,7 +727,7 @@ Le composant peut être vide.
 
 ## <a name="root_name"></a> Path::root_name
 
-Retourne le composant de nom racine de `myname`. 
+Retourne le composant de nom racine de `myname`.
 
 ```cpp
 path root_name() const;

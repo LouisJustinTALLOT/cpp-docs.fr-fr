@@ -1,5 +1,5 @@
 ---
-title: __incfsbyte, __incfsword, __incfsdword | Documents Microsoft
+title: __incfsbyte, __incfsword, __incfsdword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330981"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719353"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 **Section spécifique à Microsoft**  
   
- Ajoutez-en une à la valeur à un emplacement de mémoire spécifié par un décalage par rapport au début de la `FS` segment.  
+ Ajouter un à la valeur à un emplacement de mémoire spécifié par un offset par rapport au début de la `FS` segment.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,10 +50,10 @@ void __incfsdword(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Offset`  
- Le décalage à partir du début de `FS`.  
+*Décalage*<br/>
+[in] Le décalage à partir du début de `FS`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -62,7 +62,7 @@ void __incfsdword(
 |`__incfsdword`|x86|  
   
 ## <a name="remarks"></a>Notes  
- Ces fonctions intrinsèques sont uniquement disponibles en mode noyau, et les routines sont disponibles seulement comme fonctions intrinsèques.  
+ Ces fonctions intrinsèques sont disponibles uniquement en mode noyau, et les routines sont uniquement disponibles en tant que fonctions intrinsèques.  
   
 **FIN de la section spécifique à Microsoft**  
   

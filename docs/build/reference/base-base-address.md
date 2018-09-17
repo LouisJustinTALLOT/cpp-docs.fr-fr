@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895212"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725970"
 ---
 # <a name="base-base-address"></a>/BASE (Adresse de base)
 
@@ -60,11 +60,11 @@ Sur la ligne de commande, un autre pour spécifier l’adresse de base consiste 
 
 Le *clé* est une chaîne de caractères alphanumériques et n’est pas sensible à la casse. Il s’agit généralement du nom d’une DLL, mais ne sont pas nécessairement. Le *clé* est suivie d’une base de *adresse* dans la notation en langage C, hexadécimale ou décimale et une valeur maximale facultative *taille*. Les trois arguments sont séparés par des espaces ou des tabulations. L’éditeur de liens émet un avertissement si le texte spécifié *taille* est inférieur à l’espace d’adressage virtuel requis par le programme. Un *commentaire* est spécifié par un point-virgule (**;**) et peut être sur le même ou sur une ligne distincte. L’éditeur de liens ignore tout le texte du point-virgule à la fin de la ligne. Cet exemple montre une partie de ce type de fichier :
 
-```  
+```
 main   0x00010000    0x08000000    ; for PROJECT.exe
 one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL
-```  
+```
 
 Si le fichier qui contient ces lignes s’appelle DLLS.txt, la commande suivante s’applique à ces informations :
 
@@ -88,5 +88,5 @@ Une autre consiste à définir l’adresse de base à l’aide de la *BASE* argu
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)  
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)

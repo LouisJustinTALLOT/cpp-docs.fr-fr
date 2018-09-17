@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ff43920400028e0fb13fc17615fb58cc551726b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540025"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704221"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Section spécifique à Microsoft**  
@@ -41,14 +41,14 @@ void __outdwordstring(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Port`  
- Le port pour envoyer les données.  
+*Port*<br/>
+[in] Le port pour envoyer les données.  
   
- [in] `Buffer`  
- Un pointeur vers les données seront envoyés le port spécifié.  
+*mémoire tampon*<br/>
+[in] Un pointeur vers les données seront envoyés le port spécifié.  
   
- [in] `Count`  
- Le nombre de mots doubles à envoyer.  
+*Nombre*<br/>
+[in] Le nombre de mots doubles à envoyer.  
   
 ## <a name="requirements"></a>Configuration requise  
   

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af74ab381293e04c08a1fa8c601558edaeacf6c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721511"
 ---
 # <a name="cmfcrebar-class"></a>Cmfcrebar, classe
 Un `CMFCReBar` objet est une barre de contrôle qui fournit des informations d’état pour les contrôles rebar, la persistance et la mise en page.  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in] [out] *pBar*  
  Pointeur vers la fenêtre enfant qui doit être inséré dans le contrôle rebar. L’objet référencé doit avoir le **WS_CHILD** style de fenêtre.  
   
- [in] *pszText*  
- Spécifie le texte à afficher sur le contrôle rebar. Le texte ne fait pas partie de la fenêtre enfant. Au lieu de cela, il est affiché sur le contrôle rebar lui-même.  
+*pszText*<br/>
+[in] Spécifie le texte à afficher sur le contrôle rebar. Le texte ne fait pas partie de la fenêtre enfant. Au lieu de cela, il est affiché sur le contrôle rebar lui-même.  
   
  [in] [out] *pbmp*  
  Spécifie l’image bitmap à afficher sur l’arrière-plan du contrôle rebar.  
   
- [in] *dwStyle*  
- Contient le style à appliquer à la bande. Pour obtenir une liste complète des styles de bande, consultez la description de `fStyle` dans le [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) structure dans la documentation du SDK Windows.  
+*dwStyle*<br/>
+[in] Contient le style à appliquer à la bande. Pour obtenir une liste complète des styles de bande, consultez la description de `fStyle` dans le [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) structure dans la documentation du SDK Windows.  
   
- [in] *clrFore*  
- Représente la couleur de premier plan du rebar.  
+*clrFore*<br/>
+[in] Représente la couleur de premier plan du rebar.  
   
- [in] *clrBack*  
- Représente la couleur d’arrière-plan du rebar.  
+*clrBack*<br/>
+[in] Représente la couleur d’arrière-plan du rebar.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la bande a été ajoutée avec succès pour le rebar ; Sinon, FALSE.  
@@ -146,14 +146,14 @@ BOOL Create(
  [in] [out] *pParentWnd*  
  Pointeur vers la fenêtre parente de ce contrôle rebar.  
   
- [in] *dwCtrlStyle*  
- Spécifie le style pour le contrôle rebar. La valeur de style par défaut est **RBS_BANDBORDERS**, qui affiche limiter les lignes entre les bandes contiguës sur le contrôle rebar. Pour obtenir la liste des styles valides, consultez [Styles de contrôle Rebar](/windows/desktop/Controls/rebar-control-styles) dans la documentation du SDK Windows.  
+*dwCtrlStyle*<br/>
+[in] Spécifie le style pour le contrôle rebar. La valeur de style par défaut est **RBS_BANDBORDERS**, qui affiche limiter les lignes entre les bandes contiguës sur le contrôle rebar. Pour obtenir la liste des styles valides, consultez [Styles de contrôle Rebar](/windows/desktop/Controls/rebar-control-styles) dans la documentation du SDK Windows.  
   
- [in] *dwStyle*  
- Le style de fenêtre du contrôle rebar. Pour obtenir la liste des styles valides, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Le style de fenêtre du contrôle rebar. Pour obtenir la liste des styles valides, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *nID*  
- ID de fenêtre enfant. du rebar  
+*nID*<br/>
+[in] ID de fenêtre enfant. du rebar  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le contrôle rebar a été créé avec succès ; Sinon, FALSE.  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- [in] *pTI*  
+*point*<br/>
+[in] [in] *pTI*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Notes  
   

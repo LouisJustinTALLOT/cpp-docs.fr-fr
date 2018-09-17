@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104604"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715596"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap, classe
 
@@ -369,7 +369,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
+*keyVal*<br/>
 Valeur de clé à mapper.
 
 ### <a name="remarks"></a>Notes
@@ -514,7 +514,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nbucket*  
+*nbucket*<br/>
 Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
@@ -880,7 +880,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
+*keyVal*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1201,7 +1201,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
+*keyVal*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1277,16 +1277,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*Where*  
+*Where*<br/>
 Position de l’élément à supprimer.
 
-*Premier*  
+*Premier*<br/>
 Position du premier élément à supprimer.
 
-*Dernière*  
+*Dernière*<br/>
 Position juste après le dernier élément à supprimer.
 
-*Key*  
+*Key*<br/>
 Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1309,7 +1309,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
+*keyVal*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -2011,7 +2011,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Paramètres
 
-*factor*  
+*factor*<br/>
 Nouveau facteur de charge maximale.
 
 ### <a name="remarks"></a>Notes
@@ -2291,7 +2291,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Paramètres
 
-*nbuckets*  
+*nbuckets*<br/>
 Nombre de compartiments demandés.
 
 ### <a name="remarks"></a>Notes

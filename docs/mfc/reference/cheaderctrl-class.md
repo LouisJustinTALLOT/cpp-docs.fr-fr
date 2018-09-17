@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758854"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712730"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 Fournit les fonctionnalités du contrôle commun d'en-tête Windows.  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iItem*|Index de base zéro d’un élément d’en-tête dont le style est HDF_SPLITBUTTON. Pour plus d’informations, consultez le `fmt` membre de la [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) structure.|  
-|[out] *lpRect*|Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui doit recevoir les informations de rectangle englobant.|  
+|*iItem*|[in] Index de base zéro d’un élément d’en-tête dont le style est HDF_SPLITBUTTON. Pour plus d’informations, consultez le `fmt` membre de la [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) structure.|  
+|*lpRect*|[out] Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui doit recevoir les informations de rectangle englobant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette fonction a réussi ; Sinon, FALSE.  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *lpRect*|Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit les informations de rectangle englobant.|  
+|*lpRect*|[out] Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit les informations de rectangle englobant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette fonction a réussi ; Sinon, FALSE.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in, out] *phdhti*|Pointeur vers un [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) structure qui spécifie le point à tester et reçoit les résultats du test.|  
+|*phdhti*|[in, out] Pointeur vers un [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) structure qui spécifie le point à tester et reçoit les résultats du test.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément d’en-tête, le cas échéant, la position spécifiée ; Sinon, -1.  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iItem*|Index de base zéro d’un élément d’en-tête.|  
+|*iItem*|[in] Index de base zéro d’un élément d’en-tête.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  

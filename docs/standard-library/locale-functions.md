@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 3a93a9c4e8cf9059d80b602d80043809fb75152a
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c92f4f845552f5f6c14adb08191f1bd0519c7ba9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895329"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712450"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt;, fonctions
 
@@ -64,7 +64,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux pour lesquels tester la présence d’une facette.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -107,10 +107,10 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément alphanumérique à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément alphanumérique à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -174,10 +174,10 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément alphabétique à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -239,10 +239,10 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -304,10 +304,10 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -369,10 +369,10 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -434,10 +434,10 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -499,10 +499,10 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -563,10 +563,10 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -628,10 +628,10 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -693,10 +693,10 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -758,10 +758,10 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Élément à tester.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -825,10 +825,10 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Caractère à convertir en minuscule.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant le caractère à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -874,10 +874,10 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*  
+*CH*<br/>
 Caractère à convertir en majuscule.
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux contenant le caractère à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -923,7 +923,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Loc*  
+*Loc*<br/>
 Paramètres régionaux const contenant le type de facette référencé.
 
 ### <a name="return-value"></a>Valeur de retour

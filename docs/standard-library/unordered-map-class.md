@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107456"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726230"
 ---
 # <a name="unorderedmap-class"></a>unordered_map, classe
 
@@ -561,7 +561,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nbucket*  
+*nbucket*<br/>
 Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
@@ -925,7 +925,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
+*keyVal*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1190,7 +1190,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
+*keyVal*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1260,16 +1260,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Paramètres
 
-*Where*  
+*Where*<br/>
 Position de l’élément à supprimer.
 
-*Premier*  
+*Premier*<br/>
 Position du premier élément à supprimer.
 
-*Dernière*  
+*Dernière*<br/>
 Position juste après le dernier élément à supprimer.
 
-*Key*  
+*Key*<br/>
 Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1292,7 +1292,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
+*keyVal*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -2009,7 +2009,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Paramètres
 
-*factor*  
+*factor*<br/>
 Nouveau facteur de charge maximale.
 
 ### <a name="remarks"></a>Notes
@@ -2381,7 +2381,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Paramètres
 
-*nbuckets*  
+*nbuckets*<br/>
 Nombre de compartiments demandés.
 
 ### <a name="remarks"></a>Notes
@@ -2565,7 +2565,7 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*  
+*right*<br/>
 Conteneur avec lequel faire l’échange.
 
 ### <a name="remarks"></a>Notes

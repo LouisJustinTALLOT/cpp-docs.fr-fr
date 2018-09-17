@@ -1,5 +1,5 @@
 ---
-title: -Fx (fusionner le Code injecté) | Documents Microsoft
+title: -Fx (fusionner le Code injecté) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,67 +22,70 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078019be2a1f818e9dd41acd3db2bced5fbda258
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0bd95ea00a63f28f04874f873cf0a4e991fac0fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373866"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710519"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Fusionner le code injecté)
-Produit une copie de chaque fichier source avec le code injecté fusionné dans la source.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/Fx  
-```  
-  
-## <a name="remarks"></a>Notes  
- Pour distinguer un fichier source fusionné d’un fichier source d’origine, **/Fx** ajoute une extension .mrg entre le nom de fichier et l’extension de fichier. Par exemple, un fichier nommé MyCode.cpp contenant du code avec attributs et généré avec **/Fx** crée un fichier nommé MyCode.mrg.cpp contenant le code suivant :  
-  
-```  
-//+++ Start Injected Code  
-[no_injected_text(true)];      // Suppress injected text, it has   
-                               // already been injected  
-#pragma warning(disable: 4543) // Suppress warnings about skipping   
-                               // injected text  
-#pragma warning(disable: 4199) // Suppress warnings from attribute   
-                               // providers  
-//--- End Injected Code  
-```  
-  
- Dans un fichier .mrg, le code injecté en raison d’un attribut est délimité comme suit :  
-  
-```  
-//+++ Start Injected Code  
-...  
-//--- End Injected Code  
-```  
-  
- L’attribut [no_injected_text](../../windows/no-injected-text.md) attribut est incorporé dans un fichier .mrg, ce qui permet la compilation du fichier .mrg sans réinjection de texte.  
-  
- Notez bien que le fichier source .mrg est destiné à être une représentation sous forme de code source injecté par le compilateur. Le fichier .mrg ne peut pas être compilé ou s’exécuter exactement comme le fichier source d’origine.  
-  
- Les macros ne sont pas développées dans le fichier .mrg.  
-  
- Si votre programme inclut un fichier d’en-tête qui utilise du code injecté, **/Fx** génère un fichier .mrg.h pour cet en-tête. **/Fx** ne fusionne pas les fichiers include qui n’utilisent pas de code injecté.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
-  
-2.  Cliquez sur le dossier **C/C++** .  
-  
-3.  Cliquez sur la page de propriétés des **Fichiers de sortie** .  
-  
-4.  Modifiez la propriété **Développement de la source avec attributs** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
-  
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fichier de sortie (/ F) Options](../../build/reference/output-file-f-options.md)   
- [Options du compilateur](../../build/reference/compiler-options.md)   
- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+
+Produit une copie de chaque fichier source avec le code injecté fusionné dans la source.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/Fx
+```
+
+## <a name="remarks"></a>Notes
+
+Pour distinguer un fichier source fusionné d’un fichier source d’origine, **/Fx** ajoute une extension .mrg entre le nom de fichier et l’extension de fichier. Par exemple, un fichier nommé MyCode.cpp contenant du code avec attributs et généré avec **/Fx** crée un fichier nommé MyCode.mrg.cpp contenant le code suivant :
+
+```
+//+++ Start Injected Code
+[no_injected_text(true)];      // Suppress injected text, it has
+                               // already been injected
+#pragma warning(disable: 4543) // Suppress warnings about skipping
+                               // injected text
+#pragma warning(disable: 4199) // Suppress warnings from attribute
+                               // providers
+//--- End Injected Code
+```
+
+Dans un fichier .mrg, le code injecté en raison d’un attribut est délimité comme suit :
+
+```
+//+++ Start Injected Code
+...
+//--- End Injected Code
+```
+
+L’attribut [no_injected_text](../../windows/no-injected-text.md) attribut est incorporé dans un fichier .mrg, ce qui permet la compilation du fichier .mrg sans réinjection de texte.
+
+Notez bien que le fichier source .mrg est destiné à être une représentation sous forme de code source injecté par le compilateur. Le fichier .mrg ne peut pas être compilé ou s’exécuter exactement comme le fichier source d’origine.
+
+Les macros ne sont pas développées dans le fichier .mrg.
+
+Si votre programme inclut un fichier d’en-tête qui utilise du code injecté, **/Fx** génère un fichier .mrg.h pour cet en-tête. **/Fx** ne fusionne pas les fichiers include qui n’utilisent pas de code injecté.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+
+1. Cliquez sur le dossier **C/C++** .
+
+1. Cliquez sur la page de propriétés des **Fichiers de sortie** .
+
+1. Modifiez la propriété **Développement de la source avec attributs** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
+
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fichier de sortie (/ F) Options](../../build/reference/output-file-f-options.md)
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
+[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

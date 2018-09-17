@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0b88e53d7f5cfdd03728f8d1a474ee5171ca5daa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693878"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717585"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 Encapsule les fonctionnalités d'un contrôle rebar, qui est un conteneur de fenêtre enfant.  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *uBand*|Index de base zéro d’une bande rebar.|  
-|[in] *cxWidth*|Nouvelle largeur de la bande rebar, en pixels.|  
+|*uBand*|[in] Index de base zéro d’une bande rebar.|  
+|*cxWidth*|[in] Nouvelle largeur de la bande rebar, en pixels.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwMask*|Une combinaison au niveau du bit (OR) d’indicateurs qui spécifient les indicateurs dans le *dwStyleEx* paramètre s’applique. Utiliser une ou plusieurs des valeurs suivantes :<br /><br /> RBS_EX_SPLITTER : Par défaut, afficher le séparateur en bas en mode horizontal et à droite en mode vertical.<br /><br /> RBS_EX_TRANSPARENT : Transférer le [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) message vers la fenêtre parente.|  
-|[in] *dwStyleEx*|Une combinaison (OR) au niveau du bit des indicateurs qui spécifient les styles à appliquer. Pour définir un style, spécifiez le même indicateur est utilisé dans le *dwMask* paramètre. Pour réinitialiser un style, spécifiez zéro binaire.|  
+|*dwMask*|[in] Une combinaison au niveau du bit (OR) d’indicateurs qui spécifient les indicateurs dans le *dwStyleEx* paramètre s’applique. Utiliser une ou plusieurs des valeurs suivantes :<br /><br /> RBS_EX_SPLITTER : Par défaut, afficher le séparateur en bas en mode horizontal et à droite en mode vertical.<br /><br /> RBS_EX_TRANSPARENT : Transférer le [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) message vers la fenêtre parente.|  
+|*dwStyleEx*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui spécifient les styles à appliquer. Pour définir un style, spécifiez le même indicateur est utilisé dans le *dwMask* paramètre. Pour réinitialiser un style, spécifiez zéro binaire.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le style étendu précédent.  

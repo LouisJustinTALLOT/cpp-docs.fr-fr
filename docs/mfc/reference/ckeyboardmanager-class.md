@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212889"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707484"
 ---
 # <a name="ckeyboardmanager-class"></a>Ckeyboardmanager, classe
 Gère les tables de touches de raccourci pour la fenêtre frame principale et les fenêtres frames enfants.  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmd*  
- ID de la commande.  
+*uiCmd*<br/>
+[in] ID de commande.  
   
- [out] *str*  
- Référence à un objet `CString`.  
+*str*<br/>
+[out] Une référence à un `CString` objet.  
   
- [in] *pWndFrame*  
- Pointeur vers une fenêtre frame.  
+*pWndFrame*<br/>
+[in] Pointeur vers une fenêtre frame.  
   
- [in] *bIsDefaultFrame*  
- Spécifie si la fenêtre frame est la fenêtre de frame par défaut.  
+*bIsDefaultFrame*<br/>
+[in] Spécifie si la fenêtre frame est la fenêtre de frame par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le raccourci est trouvé ; sinon 0.  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *nKey*|Clé à vérifier.|  
-|[in] *fVirt*|Spécifie le comportement de la touche de raccourci. Pour obtenir la liste des valeurs possibles, consultez [accélération Structure](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
-|[in] *pWndFrame*|Une fenêtre frame. Cette méthode détermine si une touche de raccourci est gérée dans ce frame.|  
-|[in] *bIsDefaultFrame*|Un paramètre booléen qui indique si *pWndFrame* est la fenêtre de frame par défaut.|  
+|*nKey*|[in] La clé à vérifier.|  
+|*fVirt*|[in] Spécifie le comportement de la touche de raccourci. Pour obtenir la liste des valeurs possibles, consultez [accélération Structure](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
+|*pWndFrame*|[in] Une fenêtre frame. Cette méthode détermine si une touche de raccourci est gérée dans ce frame.|  
+|*bIsDefaultFrame*|[in] Un paramètre booléen qui indique si *pWndFrame* est la fenêtre de frame par défaut.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la touche de raccourci est gérée. FALSE si la clé n’est pas gérée ou si *pWndFrame* a la valeur NULL.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *nChar*|Le caractère qui vérifie cette méthode.|  
+|*NChar*|[in] Le caractère qui vérifie cette méthode.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le caractère imprimable, zéro si elle n’est pas.  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Le chemin d’accès du Registre où `CKeyboardManager` les données sont enregistrées.  
+*lpszProfileName*<br/>
+[in] Le chemin d’accès du Registre où `CKeyboardManager` les données sont enregistrées.  
   
- [in] *pDefaultFrame*  
- Pointeur vers une fenêtre frame à utiliser comme la fenêtre par défaut.  
+*pDefaultFrame*<br/>
+[in] Pointeur vers une fenêtre frame à utiliser comme la fenêtre par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’état a été chargé avec succès ou 0 dans le cas contraire.  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Le chemin d’accès de Registre pour enregistrer le `CKeyboardManager` état.  
+*lpszProfileName*<br/>
+[in] Le chemin d’accès de Registre pour enregistrer le `CKeyboardManager` état.  
   
- [in] *pDefaultFrame*  
- Pointeur vers une fenêtre frame qui devient la fenêtre par défaut.  
+*pDefaultFrame*<br/>
+[in] Pointeur vers une fenêtre frame qui devient la fenêtre par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’état de gestionnaire de clavier a été enregistré avec succès, ou 0 dans le cas contraire.  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShowAll*  
- Si la valeur est TRUE, toutes les touches de raccourci seront affichera. Si la valeur est FALSE, la première touche de raccourci s’affichera.  
+*bShowAll*<br/>
+[in] Si la valeur est TRUE, toutes les touches de raccourci seront affichera. Si la valeur est FALSE, la première touche de raccourci s’affichera.  
   
- [in] *lpszDelimiter*  
- Chaîne à insérer entre les touches de raccourci. Ce séparateur n’a aucun effet si seulement une touche de raccourci s’affiche.  
+*lpszDelimiter*<br/>
+[in] Chaîne à insérer entre les touches de raccourci. Ce séparateur n’a aucun effet si seulement une touche de raccourci s’affiche.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, si une commande contient plus d’une touche de raccourci associée, uniquement la première touche de raccourci s’affichera. Cette fonction vous permet de répertorier toutes les touches de raccourci associés à toutes les commandes.  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nChar*  
- Caractère à convertir.  
+*NChar*<br/>
+[in] Caractère à convertir.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le caractère qui représente le Registre supérieur du paramètre d’entrée.  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pTemplate*  
- Pointeur vers un modèle de document.  
+*pTemplate*<br/>
+[in] Pointeur vers un modèle de document.  
   
- [in] *lpAccel*  
- Pointeur vers la nouvelle touche de raccourci.  
+*lpAccel*<br/>
+[in] Pointeur vers la nouvelle touche de raccourci.  
   
- [in] *nSize*  
- La taille de la nouvelle table de raccourci.  
+*nSize*<br/>
+[in] La taille de la nouvelle table de raccourci.  
   
- [in] *pDefaultFrame*  
- Pointeur vers la fenêtre de frame par défaut.  
+*pDefaultFrame*<br/>
+[in] Pointeur vers la fenêtre de frame par défaut.  
   
- [in] *hAccelNew*  
- Handle vers la nouvelle table de raccourci.  
+*hAccelNew*<br/>
+[in] Handle vers la nouvelle table de raccourci.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la méthode réussit ; sinon 0.  

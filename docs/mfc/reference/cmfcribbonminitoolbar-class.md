@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef348275059fd2623ca83b40730f010a7d18d6d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541043"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721173"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Cmfcribbonminitoolbar, classe
 Implémente une barre d'outils contextuelle.  
@@ -98,11 +98,11 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pRibbonBar*  
- La barre du ruban qui consiste à rechercher la mini-barre d’outils pour les boutons à afficher.  
+*pRibbonBar*<br/>
+[in] La barre du ruban qui consiste à rechercher la mini-barre d’outils pour les boutons à afficher.  
   
- [in] *lstCommands*  
- La liste des commandes à afficher sur la mini-barre d’outils. Toutes les catégories de ruban sont explorés pour rechercher les boutons associés.  
+*lstCommands*<br/>
+[in] La liste des commandes à afficher sur la mini-barre d’outils. Toutes les catégories de ruban sont explorés pour rechercher les boutons associés.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette fonction pour définir la liste des commandes à afficher dans la mini-barre d’outils.  
@@ -122,11 +122,11 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *x*  
- Spécifie la position horizontale de la mini-barre d’outils en coordonnées d’écran.  
+*x*<br/>
+[in] Spécifie la position horizontale de la mini-barre d’outils en coordonnées d’écran.  
   
- [in] *y*  
- Spécifie la position verticale de la mini-barre d’outils en coordonnées d’écran.  
+*y*<br/>
+[in] Spécifie la position verticale de la mini-barre d’outils en coordonnées d’écran.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la mini-barre d’outils a été affiché avec succès ; Sinon, FALSE.  
@@ -143,17 +143,17 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *x*  
- Spécifie la position horizontale du menu contextuel en coordonnées d’écran.  
+*x*<br/>
+[in] Spécifie la position horizontale du menu contextuel en coordonnées d’écran.  
   
- [in] *y*  
- Spécifie la position verticale du menu contextuel en coordonnées d’écran.  
+*y*<br/>
+[in] Spécifie la position verticale du menu contextuel en coordonnées d’écran.  
   
- [in] *uiMenuResID*  
- Spécifie l’ID de ressource du menu contextuel à afficher.  
+*uiMenuResID*<br/>
+[in] Spécifie l’ID de ressource du menu contextuel à afficher.  
   
- [in] *pWndOwner*  
- Identifie la fenêtre qui reçoit des messages dans le menu contextuel.  
+*pWndOwner*<br/>
+[in] Identifie la fenêtre qui reçoit des messages dans le menu contextuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le menu contextuel a été affiché avec succès ; Sinon, FALSE.  

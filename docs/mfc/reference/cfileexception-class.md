@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336518"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713594"
 ---
 # <a name="cfileexception-class"></a>CFileException, classe
 Représente une condition d'exception liée à un fichier.  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in, out] *lpszError*  
- Pointeur vers une mémoire tampon qui reçoit un message d’erreur.  
+*lpszError*<br/>
+[in, out] Pointeur vers une mémoire tampon qui reçoit un message d’erreur.  
   
- [in] *nMaxError*  
- Le nombre maximal de caractères de que la mémoire tampon spécifiée peut contenir. Cela inclut le caractère null de fin.  
+*nMaxError*<br/>
+[in] Le nombre maximal de caractères de que la mémoire tampon spécifiée peut contenir. Cela inclut le caractère null de fin.  
   
- [in, out] *pnHelpContext*  
- Pointeur vers un entier non signé qui reçoit l’ID de contexte d’aide. Si `NULL`, aucun ID n’est retourné.  
+*pnHelpContext*<br/>
+[in, out] Pointeur vers un entier non signé qui reçoit l’ID de contexte d’aide. Si `NULL`, aucun ID n’est retourné.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  

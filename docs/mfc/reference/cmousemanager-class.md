@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720269"
 ---
 # <a name="cmousemanager-class"></a>Cmousemanager, classe
 Permet à un utilisateur d’associer différentes commandes à un particulier [CView](../../mfc/reference/cview-class.md) lorsque l’utilisateur double-clique à l’intérieur de cette vue de l’objet.  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iViewId*  
- Un ID de la vue.  
+*iViewId*<br/>
+[in] Un ID de la vue.  
   
- [in] *uiViewNameResId*  
- Un ID de chaîne de ressource qui référence le nom de la vue.  
+*uiViewNameResId*<br/>
+[in] Un ID de chaîne de ressource qui référence le nom de la vue.  
   
- [in] *uiIconId*  
- Un ID d’icône de vue.  
+*uiIconId*<br/>
+[in] Un ID d’icône de vue.  
   
- [in] *iId*  
- Un ID de la vue.  
+*iId*<br/>
+[in] Un ID de la vue.  
   
- [in] *lpszViewName*  
- Un nom de la vue.  
+*lpszViewName*<br/>
+[in] Un nom de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iId*  
- L’ID de la vue.  
+*iId*<br/>
+[in] L’ID de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’identificateur de commande si la vue est associée à une commande ; sinon 0.  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iViewId*  
- L’ID de la vue.  
+*iViewId*<br/>
+[in] L’ID de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un identificateur de ressource d’icône en cas de réussite ; sinon 0.  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *le caractère*  
- Le nom de la vue.  
+*Caractère*<br/>
+[in] Le nom de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un ID de vue en cas de réussite ; sinon 0.  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *listOfNames*  
- Une référence à `CStringList` objet.  
+*listOfNames*<br/>
+[out] Une référence à `CStringList` objet.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode remplit le paramètre `listOfNames` avec les noms de toutes les vues inscrits à l’aide de [CMouseManager::AddView](#addview).  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Un chemin d’accès d’une clé de Registre.  
+*lpszProfileName*<br/>
+[in] Un chemin d’accès d’une clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Un chemin d’accès d’une clé de Registre.  
+*lpszProfileName*<br/>
+[in] Un chemin d’accès d’une clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iViewId*  
- L’identificateur de la vue.  
+*iViewId*<br/>
+[in] L’identificateur de la vue.  
   
- [in] *uiCmd*  
- Identificateur de commande.  
+*uiCmd*<br/>
+[in] Identificateur de commande.  
   
 ### <a name="remarks"></a>Notes  
  Pour associer une commande personnalisée à une vue, vous devez tout d’abord enregistrer la vue à l’aide de [CMouseManager::AddView](#addview). Le `AddView` méthode requiert un identificateur d’affichage comme paramètre d’entrée. Une fois que vous enregistrez une vue, vous pouvez appeler `CMouseManager::SetCommandForDblClk` avec le même identificateur d’entrée paramètre view que vous avez fournies à `AddView`. Par la suite, lorsque l’utilisateur double-clique sur la souris dans la vue inscrite, l’application exécute la commande indiquée par *uiCmd.* Pour prendre en charge le comportement de la souris personnalisé, vous devez également personnaliser l’affichage inscrit auprès du Gestionnaire de la souris. Pour plus d’informations sur le comportement de la souris personnalisé, consultez [personnalisation du clavier et souris](../keyboard-and-mouse-customization.md).  

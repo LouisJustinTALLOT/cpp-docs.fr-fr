@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f601d636ab280a5f7346447b907c3326a4fdecd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ddfbb4887a1b34770a1a350f4d2863635c837db0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725905"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset, classe
 
@@ -363,7 +363,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-keyVal la valeur de clé à mapper.
+*keyVal*<br/>
+Valeur de clé à mapper.
 
 ### <a name="remarks"></a>Notes
 
@@ -507,8 +508,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nbucket*  
- Numéro de compartiment.
+*nbucket*<br/>
+Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
 
@@ -873,8 +874,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
- Valeur de clé à rechercher.
+*keyVal*<br/>
+Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
@@ -1119,8 +1120,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nbucket*  
- Numéro de compartiment.
+*nbucket*<br/>
+Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
 
@@ -1187,8 +1188,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
- Valeur de clé à rechercher.
+*keyVal*<br/>
+Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
@@ -1261,17 +1262,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*Where*  
- Position de l’élément à supprimer.
+*Where*<br/>
+Position de l’élément à supprimer.
 
-*Premier*  
- Position du premier élément à supprimer.
+*Premier*<br/>
+Position du premier élément à supprimer.
 
-*Dernière*  
- Position juste après le dernier élément à supprimer.
+*Dernière*<br/>
+Position juste après le dernier élément à supprimer.
 
-*Key*  
- Valeur de clé des éléments à supprimer.
+*Key*<br/>
+Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1293,8 +1294,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
- Valeur de clé à rechercher.
+*keyVal*<br/>
+Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
@@ -1906,8 +1907,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Paramètres
 
-*factor*  
- Nouveau facteur de charge maximale.
+*factor*<br/>
+Nouveau facteur de charge maximale.
 
 ### <a name="remarks"></a>Notes
 
@@ -2188,8 +2189,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Paramètres
 
-*nbuckets*  
- Nombre de compartiments demandés.
+*nbuckets*<br/>
+Nombre de compartiments demandés.
 
 ### <a name="remarks"></a>Notes
 
@@ -2372,8 +2373,8 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*  
- Conteneur avec lequel faire l’échange.
+*right*<br/>
+Conteneur avec lequel faire l’échange.
 
 ### <a name="remarks"></a>Notes
 
@@ -2495,7 +2496,7 @@ unordered_multiset(
 |*Al*|Objet allocateur à stocker.|
 |*Comp.*|Objet de fonction de comparaison à stocker.|
 |*hachage*|Objet de fonction de hachage à stocker.|
-|*bucket_count*|Nombre minimal de compartiments.|
+|*Bucket_count*|Nombre minimal de compartiments.|
 |*Droite*|Conteneur à copier.|
 |*IList*|initializer_list depuis laquelle effectuer la copie.|
 
@@ -2505,7 +2506,7 @@ Le premier constructeur spécifie une copie de la séquence contrôlée par *dro
 
 Tous les constructeurs initialisent également plusieurs valeurs stockées. Pour le constructeur de copie, les valeurs sont obtenues à partir de *droite*. Sinon :
 
-le nombre minimal de compartiments est l’argument *Bucket_count*, si présent ; sinon c’est une valeur par défaut décrite ici comme la valeur définie par l’implémentation `N0`.
+Le nombre minimal de compartiments est l’argument *Bucket_count*, si présent ; sinon c’est une valeur par défaut décrite ici comme la valeur définie par l’implémentation `N0`.
 
 l’objet de fonction de hachage est l’argument *hachage*, si présent ; sinon c’est `Hash()`.
 

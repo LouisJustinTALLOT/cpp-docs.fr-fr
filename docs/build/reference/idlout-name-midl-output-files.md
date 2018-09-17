@@ -1,5 +1,5 @@
 ---
-title: -/IDLOUT (nommer les fichiers de sortie MIDL) | Documents Microsoft
+title: -IDLOUT (nommer les fichiers de sortie MIDL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,61 +23,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7eeb7af3d19a57b6948f867df87b8d04d0397b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6749b59a1c12b5d7c3116a925adc727ad6f7ab5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376060"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721836"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Nommer les fichiers de sortie MIDL)
-```  
-/IDLOUT:[path\]filename  
-```  
-  
-## <a name="parameters"></a>Paramètres  
- *path*  
- Une spécification de chemin d’accès absolu ou relatif. En spécifiant un chemin d’accès, vous affectez uniquement l’emplacement d’un fichier .idl ; tous les autres fichiers sont placés dans le répertoire du projet.  
-  
- *filename*  
- Spécifie le nom du fichier .idl créé par le compilateur MIDL. Aucune extension de fichier n’est supposée ; Spécifiez *nom de fichier*.idl si vous souhaitez une extension .idl.  
-  
-## <a name="remarks"></a>Notes  
- L’option /IDLOUT spécifie le nom et l’extension du fichier .idl.  
-  
- Le compilateur MIDL est appelé par l’éditeur de liens Visual C++ lors de la liaison des projets qui ont le [module](../../windows/module-cpp.md) attribut.  
-  
- L’option /IDLOUT spécifie également les noms de fichiers des autres fichiers de sortie associés au compilateur MIDL :  
-  
--   *nom de fichier*.tlb  
-  
--   *nom de fichier*_p.c  
-  
--   *nom de fichier*_i.c  
-  
--   *nom de fichier*.h  
-  
- *nom de fichier* est le paramètre que vous passez à /IDLOUT. Si [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md) est spécifié, le fichier .tlb obtiendra son nom de /TLBOUT *nom de fichier*.  
-  
- Si vous spécifiiez /TLBOUT, l’éditeur de liens crée vc70.tlb, vc70.idl, vc70_p.c, vc70_i.c et vc70.h.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Cliquez sur le **l’éditeur de liens** dossier.  
-  
-3.  Cliquez sur le **IDL incorporé** page de propriétés.  
-  
-4.  Modifier la **nom de fichier de Base IDL fusionné** propriété.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
-  
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergedIDLBaseFileName%2A>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l’éditeur de liens](../../build/reference/linker-options.md)   
- [/IGNOREIDL (ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [/MIDL (spécifier les Options de ligne de commande MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)   
- [Générer un programmes par attributs](../../windows/building-an-attributed-program.md)
+
+```
+/IDLOUT:[path\]filename
+```
+
+## <a name="parameters"></a>Paramètres
+
+*path*<br/>
+Une spécification de chemin d’accès absolu ou relatif. En spécifiant un chemin d’accès, vous affectez uniquement l’emplacement d’un fichier .idl ; tous les autres fichiers sont placés dans le répertoire du projet.
+
+*filename*<br/>
+Spécifie le nom du fichier .idl créé par le compilateur MIDL. Aucune extension de fichier n’est supposée ; Spécifiez *filename*.idl si vous souhaitez une extension .idl.
+
+## <a name="remarks"></a>Notes
+
+L’option /IDLOUT spécifie le nom et l’extension du fichier .idl.
+
+Le compilateur MIDL est appelé par l’éditeur de liens Visual C++ lors de la liaison de projets qui ont le [module](../../windows/module-cpp.md) attribut.
+
+L’option /IDLOUT spécifie également les noms de fichiers des autres fichiers de sortie associés au compilateur MIDL :
+
+- *nom de fichier*.tlb
+
+- *nom de fichier*_p.c
+
+- *nom de fichier*_i.c
+
+- *nom de fichier*.h
+
+*nom de fichier* est le paramètre que vous passez à /IDLOUT. Si [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md) est spécifié, le fichier .tlb obtiendra son nom de /TLBOUT *filename*.
+
+Si vous spécifiiez /TLBOUT, l’éditeur de liens crée vc70.tlb, vc70.idl, vc70_p.c, vc70_i.c et vc70.h.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+
+1. Cliquez sur le **l’éditeur de liens** dossier.
+
+1. Cliquez sur le **IDL incorporé** page de propriétés.
+
+1. Modifier le **nom de fichier de Base IDL fusionné** propriété.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergedIDLBaseFileName%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
+[/IGNOREIDL (ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+[/MIDL (spécifier les Options de ligne de commande MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)
+[générer un programmes par attributs](../../windows/building-an-attributed-program.md)

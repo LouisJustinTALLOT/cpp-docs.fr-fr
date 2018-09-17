@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f36d6231cfce86314be082a77a39034b619741ad
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5778b5be050fec50d30215a8b9cef2ca6e4b6dd4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336941"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709681"
 ---
 # <a name="cautohidedocksite-class"></a>Cautohidedocksite, classe
 Le `CAutoHideDockSite` étend la [cdocksite, classe](../../mfc/reference/cdocksite-class.md) pour implémenter des volets d’ancrage masquables automatiquement.  
@@ -115,7 +115,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pBar*|Le volet de base qui teste le framework.|  
+|*pBar*|[in] Le volet de base qui teste le framework.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si *pBar* est dérivée de `CMFCAutoHideBar`; FALSE sinon.  
@@ -138,9 +138,9 @@ virtual void DockPane(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pWnd*|Le volet de l’ancre de l’infrastructure.|  
-|[in] *dockMethod*|Stations d’accueil pour le volet.|  
-|[in] *lpRect*|Un rectangle qui spécifie les limites du volet ancré.|  
+|*pWnd*|[in] Le volet de l’ancre de l’infrastructure.|  
+|*dockMethod*|[in] Stations d’accueil pour le volet.|  
+|*lpRect*|[in] Un rectangle qui spécifie les limites du volet ancré.|  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut n’utilise pas le paramètre *dockMethod*, qui est fourni pour une utilisation ultérieure.  
@@ -159,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *rect*|Une référence à un rectangle. La méthode stocke la taille du site d’ancrage dans ce rectangle.|  
+|*Rect*|[in] Une référence à un rectangle. La méthode stocke la taille du site d’ancrage dans ce rectangle.|  
   
 ### <a name="remarks"></a>Notes  
  Le rectangle est ajusté pour les marges de décalage afin qu’ils ne sont pas inclus.  
@@ -182,8 +182,8 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nOffset*  
- Le nouveau décalage.  
+*nOffset*<br/>
+[in] Le nouveau décalage.  
   
 ### <a name="remarks"></a>Notes  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objets sont positionnés de manière statique dans le `CAutoHideDockSite` objet. Cela signifie que l’utilisateur ne peut pas modifier manuellement l’emplacement de `CMFCAutoHideBar` objets. Le `SetOffsetLeft` méthode de contrôler l’espacement entre le côté gauche de l’extrême gauche `CMFCAutoHideBar` et le côté gauche de la `CAutoHideDockSite`.  
@@ -196,8 +196,8 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nOffset*  
- Le nouveau décalage.  
+*nOffset*<br/>
+[in] Le nouveau décalage.  
   
 ### <a name="remarks"></a>Notes  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objets sont positionnés de manière statique dans le `CAutoHideDockSite` objet. Cela signifie que l’utilisateur ne peut pas modifier manuellement l’emplacement de la `CMFCAutoHideBar` objets. Le `SetOffsetRight` méthode de contrôler l’espacement entre le côté droit de la plus à droite `CMFCAutoHideBar` et le côté droit de la `CAutoHideDockSite`.  
@@ -214,7 +214,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *rectNewClientArea*|Une valeur réservée.|  
+|*rectNewClientArea*|[in] Une valeur réservée.|  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut n’utilise pas *rectNewClientArea*. Il redessine les volets avec les marges de la barre d’outils globale et l’espacement du bouton.  
@@ -231,7 +231,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pAutoHideToolbar*|Un pointeur vers un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) volet objets situés sur le `CAutoHideDockSite`.|  
+|*pAutoHideToolbar*|[in] Un pointeur vers un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) volet objets situés sur le `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode recherche la ligne qui contient *pAutoHideToolbar*. Il appelle `CMFCAutoHideBar.UnSetAutoHideMode` pour tous les `CMFCAutoHideBar` objets sur cette ligne. Si *pAutoHideToolbar* est introuvable ou sa valeur est NULL, cette méthode appelle `CMFCAutoHideBar.UnSetAutoHideMode` pour tous les `CMFCAutoHideBar` objets sur le `CAutoHideDockSite`.  

@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 175d7895331ec960244354870c6bd6845baf37d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110016"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725320"
 ---
 # <a name="basicios-class"></a>basic_ios, classe
 
@@ -230,9 +230,11 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Paramètres
 
-*état* (facultatif) les indicateurs que vous souhaitez définir après l’effacement de tous les indicateurs. La valeur par défaut est `goodbit`.
+*state*<br/>
+(Facultatif) Les indicateurs à définir après l’effacement de tous les indicateurs. La valeur par défaut est `goodbit`.
 
-*reraise* (facultatif) Spécifie si l’exception doit être levée de nouveau. Valeur par défaut est **false** (ne sera pas levée de nouveau l’exception).
+*reraise*<br/>
+(Facultatif) Spécifie si l’exception doit être levée de nouveau. Valeur par défaut est **false** (ne sera pas levée de nouveau l’exception).
 
 ### <a name="remarks"></a>Notes
 

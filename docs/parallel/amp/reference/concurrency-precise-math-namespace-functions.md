@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107423"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711050"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::precise_math
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 Valeur à virgule flottante
 
-`_Iptr` (paramètre de sortie)  
-La partie entière de `_X`, en tant que valeur à virgule flottante.
+`_Iptr`  
+[out] La partie entière de `_X`, en tant que valeur à virgule flottante.
 
 ### <a name="return-value"></a>Valeur de retour
 La partie fractionnaire signée de `_X`.
@@ -1891,8 +1891,8 @@ Le premier argument à virgule flottante.
 `_Y`  
 Le deuxième argument à virgule flottante.
 
-`_Quo` (paramètre de sortie)  
-L’adresse d’un entier qui est utilisé pour retourner le quotient des bits fractionnaires de `_X` divisé par bits fractionnaires de `_Y`.
+`_Quo`  
+[out] L’adresse d’un entier qui est utilisé pour retourner le quotient des bits fractionnaires de `_X` divisé par bits fractionnaires de `_Y`.
 
 ### <a name="return-value"></a>Valeur de retour
 Retourne le reste de `_X` divisé par `_Y`.
@@ -1914,8 +1914,8 @@ Le premier argument à virgule flottante.
 `_Y`  
 Le deuxième argument à virgule flottante.
 
-`_Quo` (paramètre de sortie)  
-L’adresse d’un entier qui est utilisé pour retourner le quotient des bits fractionnaires de `_X` divisé par bits fractionnaires de `_Y`.
+`_Quo`  
+[out] L’adresse d’un entier qui est utilisé pour retourner le quotient des bits fractionnaires de `_X` divisé par bits fractionnaires de `_Y`.
 
 ### <a name="return-value"></a>Valeur de retour
 Retourne le reste de `_X` divisé par `_Y`.

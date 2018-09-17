@@ -1,5 +1,5 @@
 ---
-title: Automation dans une DLL | Documents Microsoft
+title: Automation dans une DLL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41c5f31a72cf734296ecb281e0785d415c8043a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cde5d0e400f1bdd3f5a851d47da581380273b04a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360652"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717774"
 ---
 # <a name="automation-in-a-dll"></a>Automation dans une DLL
-Lorsque vous choisissez l’option Automation dans l’Assistant DLL MFC, l’Assistant vous fournit les éléments suivants :  
-  
--   Un ichier (. Fichier ODL)  
-  
--   Une directive include dans le fichier STDAFX.h pour Afxole.h  
-  
--   Une implémentation de la `DllGetClassObject` (fonction), qui appelle la **AfxDllGetClassObject** (fonction)  
-  
--   Une implémentation de la `DllCanUnloadNow` (fonction), qui appelle la **AfxDllCanUnloadNow** (fonction)  
-  
--   Une implémentation de la `DllRegisterServer` (fonction), qui appelle la [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) (fonction)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
-  
--   [Serveurs Automation](../mfc/automation-servers.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [DLL dans Visual C++](../build/dlls-in-visual-cpp.md)
+
+Lorsque vous choisissez l’option Automation dans l’Assistant DLL MFC, l’Assistant vous offre les éléments suivants :
+
+- Un langage de description d’objet starter (. Fichier ODL)
+
+- Une directive include dans le fichier STDAFX.h pour Afxole.h
+
+- Une implémentation de la `DllGetClassObject` (fonction), qui appelle le **AfxDllGetClassObject** (fonction)
+
+- Une implémentation de la `DllCanUnloadNow` (fonction), qui appelle le **AfxDllCanUnloadNow** (fonction)
+
+- Une implémentation de la `DllRegisterServer` (fonction), qui appelle le [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) (fonction)
+
+## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
+
+- [Serveurs Automation](../mfc/automation-servers.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[DLL dans Visual C++](../build/dlls-in-visual-cpp.md)

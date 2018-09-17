@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894588"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706938"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Spécification d'options de ligne de commande MIDL)
 
@@ -38,7 +38,7 @@ Spécifie un fichier de réponse pour les options de ligne de commande MIDL
 
 ## <a name="arguments"></a>Arguments
 
-*fichier*  
+*fichier*<br/>
 Le nom du fichier qui contient [options de ligne de commande MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Notes
@@ -61,9 +61,9 @@ Le fichier doit contenir une option de ligne de commande MIDL par ligne.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)   
-[/IDLOUT (nommer les fichiers de sortie MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
-[/IGNOREIDL (ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
-[/TLBOUT (nommer. Fichier TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
-[Générer un programmes par attributs](../../windows/building-an-attributed-program.md)
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
+[/IDLOUT (nommer les fichiers de sortie MIDL)](../../build/reference/idlout-name-midl-output-files.md)
+[/IGNOREIDL (ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+[/TLBOUT (nom. Fichier TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
+[générer un programmes par attributs](../../windows/building-an-attributed-program.md)

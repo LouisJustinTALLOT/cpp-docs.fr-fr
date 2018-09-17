@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ad50deb1cb500abb532acac8c3c0d035c37b87ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680102"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726438"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 Le `CMFCTabCtrl` classe fournit des fonctionnalités pour un contrôle onglet. Le contrôle onglet affiche une fenêtre ancrable avec des onglets plats ou tridimensionnels en haut ou en bas. Les onglets peuvent afficher un texte et une image et peuvent changer de couleur en cas d'activation.  
@@ -265,8 +265,8 @@ void ActivateMDITab(int nTab = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nTab*  
- Index de base zéro d’un onglet à afficher, ou -1 pour spécifier l’onglet actif.  
+*nTab*<br/>
+[in] Index de base zéro d’un onglet à afficher, ou -1 pour spécifier l’onglet actif.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
@@ -288,8 +288,8 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bAutoSize*  
- TRUE pour redimensionner automatiquement les fenêtres de contrôle d’onglet. Sinon, FALSE. La valeur par défaut est TRUE.  
+*bAutoSize*<br/>
+[in] TRUE pour redimensionner automatiquement les fenêtres de contrôle d’onglet. Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -307,23 +307,23 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *style*  
- Le style du contrôle onglet. Pour plus d'informations, consultez la section Notes.  
+*style*<br/>
+[in] Le style du contrôle onglet. Pour plus d'informations, consultez la section Notes.  
   
- [in] *rect*  
- Un rectangle qui délimite le contrôle onglet.  
+*Rect*<br/>
+[in] Un rectangle qui délimite le contrôle onglet.  
   
- [in] *pParentWnd*  
- Pointeur vers une fenêtre parente. Ne doit pas être NULL.  
+*pParentWnd*<br/>
+[in] Pointeur vers une fenêtre parente. Ne doit pas être NULL.  
   
- [in] *nID*  
- L’ID du contrôle onglet.  
+*nID*<br/>
+[in] L’ID du contrôle onglet.  
   
- [in] *emplacement*  
- L’emplacement des onglets. La valeur par défaut est LOCATION_BOTTOM. Pour plus d'informations, consultez la section Notes.  
+*Emplacement*<br/>
+[in] L’emplacement des onglets. La valeur par défaut est LOCATION_BOTTOM. Pour plus d'informations, consultez la section Notes.  
   
- [in] *bCloseBtn*  
- True pour afficher un bouton Fermer dans l’onglet ; Sinon, FALSE. La valeur par défaut est FALSE.  
+*bCloseBtn*<br/>
+[in] True pour afficher un bouton Fermer dans l’onglet ; Sinon, FALSE. La valeur par défaut est FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite ; Sinon, FALSE.  
@@ -362,8 +362,8 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectEdit*  
- Un rectangle qui spécifie la zone d’un onglet.  
+*rectEdit*<br/>
+[in] Un rectangle qui spécifie la zone d’un onglet.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode est appelée lorsque vous modifiez l’étiquette d’un onglet. Cette méthode réduit la forme les côtés gauche et droit du rectangle spécifié par une moitié de la hauteur onglet actuel et réduit la forme supérieure et inférieure d’une unité.  
@@ -376,8 +376,8 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- True pour afficher le bouton Fermer sous l’onglet actif ; FALSE pour afficher le bouton Fermer dans le coin supérieur droit de la zone d’onglet. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] True pour afficher le bouton Fermer sous l’onglet actif ; FALSE pour afficher le bouton Fermer dans le coin supérieur droit de la zone d’onglet. La valeur par défaut est TRUE.  
   
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
  Active ou désactive les étiquettes de l’onglet modifiable.  
@@ -387,8 +387,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer les étiquettes de l’onglet modifiable ; FALSE pour désactiver les étiquettes de l’onglet modifiable.  
+*bActivez*<br/>
+[in] TRUE pour activer les étiquettes de l’onglet modifiable ; FALSE pour désactiver les étiquettes de l’onglet modifiable.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -400,8 +400,8 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour afficher un menu contextuel des étiquettes de fenêtre à onglets ; FALSE pour afficher des boutons de défilement vers l’avant et vers l’arrière. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] TRUE pour afficher un menu contextuel des étiquettes de fenêtre à onglets ; FALSE pour afficher des boutons de défilement vers l’avant et vers l’arrière. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur clique sur une étiquette d’onglet, l’infrastructure affiche la fenêtre à onglets correspondante. Si l’étiquette d’onglet est visible, la fenêtre à onglets est ouvert sans modifier sa position. Si l’utilisateur sélectionne un document dans le menu contextuel et la fenêtre à onglets correspondante est hors écran, la fenêtre à onglets devient le premier onglet.  
@@ -414,8 +414,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iTab*  
- Index de base zéro d’un onglet.  
+*iTab*<br/>
+[in] Index de base zéro d’un onglet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’opération a réussi ; FALSE si le *iTab* index de paramètre n’est pas valide.  
@@ -431,8 +431,8 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nCmdID*  
- L’ID de commande d’un onglet dans un menu contextuel des fenêtres à onglets.  
+*nCmdID*<br/>
+[in] L’ID de commande d’un onglet dans un menu contextuel des fenêtres à onglets.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le handle d’une image bitmap.  
@@ -483,11 +483,11 @@ void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *rectTabAreaTop*  
- Lorsque cette méthode est retournée, cette référence contient un rectangle qui délimite la zone d’étiquette onglet supérieur. Le rectangle est dans les coordonnées clientes. Cette référence est vide si aucune zone d’étiquette onglet n’existe en haut du contrôle onglet.  
+*rectTabAreaTop*<br/>
+[out] Lorsque cette méthode est retournée, cette référence contient un rectangle qui délimite la zone d’étiquette onglet supérieur. Le rectangle est dans les coordonnées clientes. Cette référence est vide si aucune zone d’étiquette onglet n’existe en haut du contrôle onglet.  
   
- [out] *rectTabAreaBottom*  
- Lorsque cette méthode est retournée, cette référence contient un rectangle qui délimite la zone étiquette d’onglet en bas. Le rectangle est dans les coordonnées clientes. Cette référence est vide si aucune zone d’étiquette onglet n’existe en bas du contrôle onglet.  
+*rectTabAreaBottom*<br/>
+[out] Lorsque cette méthode est retournée, cette référence contient un rectangle qui délimite la zone étiquette d’onglet en bas. Le rectangle est dans les coordonnées clientes. Cette référence est vide si aucune zone d’étiquette onglet n’existe en bas du contrôle onglet.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour déterminer la taille et la position de la zone d’onglet dans la fenêtre à onglets.  
@@ -523,8 +523,8 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *rect*  
- Lorsque cette méthode est retournée, le *rect* paramètre contient un rectangle qui délimite la zone d’onglet.  
+*Rect*<br/>
+[out] Lorsque cette méthode est retournée, le *rect* paramètre contient un rectangle qui délimite la zone d’onglet.  
   
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  Récupère les limites de la zone cliente du contrôle onglet actuel.  
@@ -534,8 +534,8 @@ void GetWndArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in, out] *rect*  
- Lorsque cette méthode est retournée, ce paramètre contient un rectangle qui délimite le contrôle onglet actuel.  
+*Rect*<br/>
+[in, out] Lorsque cette méthode est retournée, ce paramètre contient un rectangle qui délimite le contrôle onglet actuel.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -557,8 +557,8 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bHide*  
- Not TRUE pour afficher une fenêtre inactive ; FALSE pour afficher une fenêtre inactive. La valeur par défaut est TRUE.  
+*bHide*<br/>
+[in] Not TRUE pour afficher une fenêtre inactive ; FALSE pour afficher une fenêtre inactive. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -570,8 +570,8 @@ void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bHide*  
- TRUE pour activer le dessin de la zone d’onglet ; FALSE pour désactiver le dessin. La valeur par défaut est TRUE.  
+*bHide*<br/>
+[in] TRUE pour activer le dessin de la zone d’onglet ; FALSE pour désactiver le dessin. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -583,8 +583,8 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bHide*  
- TRUE pour ne pas dessiner un onglet pour une seule fenêtre à onglets ; FALSE pour dessiner un seul onglet. La valeur par défaut est TRUE.  
+*bHide*<br/>
+[in] TRUE pour ne pas dessiner un onglet pour une seule fenêtre à onglets ; FALSE pour dessiner un seul onglet. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -749,8 +749,8 @@ BOOL ModifyTabStyle(Style style);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *style*  
- Une des valeurs d’énumération qui spécifie l’apparence du contrôle onglet. Pour plus d’informations, consultez le tableau dans la section Notes.  
+*style*<br/>
+[in] Une des valeurs d’énumération qui spécifie l’apparence du contrôle onglet. Pour plus d’informations, consultez le tableau dans la section Notes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Toujours TRUE.  
@@ -780,14 +780,14 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDataObject*  
- Pointe vers un objet de données qui contient les données que l’utilisateur fait glisser.  
+*pDataObject*<br/>
+[in] Pointe vers un objet de données qui contient les données que l’utilisateur fait glisser.  
   
- [in] *dwKeyState*  
- Contient l’état des touches de modification. Ce paramètre est une combinaison au niveau du bit (OR) des valeurs suivantes : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez le **Message paramètres** section de [sur l’entrée de la souris](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] Contient l’état des touches de modification. Ce paramètre est une combinaison au niveau du bit (OR) des valeurs suivantes : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez le **Message paramètres** section de [sur l’entrée de la souris](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *point*  
- Contient l’emplacement actuel du curseur en coordonnées clientes.  
+*point*<br/>
+[in] Contient l’emplacement actuel du curseur en coordonnées clientes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Toujours DROPEFFECT_NONE, ce qui signifie que la cible de déplacement ne peut pas accepter les données.  
@@ -808,14 +808,14 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDataObject*  
- Pointeur vers un [COleDataObject](../../mfc/reference/coledataobject-class.md) objet est glissé sur la cible de déplacement.  
+*pDataObject*<br/>
+[in] Pointeur vers un [COleDataObject](../../mfc/reference/coledataobject-class.md) objet est glissé sur la cible de déplacement.  
   
- [in] *dwKeyState*  
- L’état des touches de modification, qui est une combinaison au niveau du bit (ou) de MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez « Paramètres de Message » dans [sur l’entrée de la souris](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] L’état des touches de modification, qui est une combinaison au niveau du bit (ou) de MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON. Pour plus d’informations, consultez « Paramètres de Message » dans [sur l’entrée de la souris](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *point*  
- La position actuelle de la souris.  
+*point*<br/>
+[in] La position actuelle de la souris.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Toujours DROPEFFECT_NONE.  
@@ -831,8 +831,8 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Les coordonnées de l’emplacement afficher le menu contextuel.  
+*point*<br/>
+[in] Les coordonnées de l’emplacement afficher le menu contextuel.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -844,8 +844,8 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActive*  
- TRUE si l’onglet actuel l’onglet actif ; FALSE pour désactiver l’onglet actuel.  
+*bActive*<br/>
+[in] TRUE si l’onglet actuel l’onglet actif ; FALSE pour désactiver l’onglet actuel.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez organiser plusieurs fenêtres de document dans des groupes d’onglets verticaux ou horizontaux et transférer aisément des documents à partir d’un groupe d’onglets à un autre.  
@@ -858,8 +858,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iTab*  
- Spécifie l’index de base zéro de l’onglet à activer.  
+*iTab*<br/>
+[in] Spécifie l’index de base zéro de l’onglet à activer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’onglet spécifié a été effectuée active ; FALSE si le texte spécifié *iTab* valeur du paramètre n’est pas valide.  
@@ -877,8 +877,8 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bIsBold*  
- TRUE pour utiliser une police en gras pour afficher l’étiquette de l’onglet actif ; FALSE pour utiliser la police standard pour afficher l’étiquette. La valeur par défaut est TRUE.  
+*bIsBold*<br/>
+[in] TRUE pour utiliser une police en gras pour afficher l’étiquette de l’onglet actif ; FALSE pour utiliser la police standard pour afficher l’étiquette. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -890,8 +890,8 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bDraw*  
- True pour afficher un rectangle de cadre autour d’une barre incorporée ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bDraw*<br/>
+[in] True pour afficher un rectangle de cadre autour d’une barre incorporée ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -905,11 +905,11 @@ void SetFlatFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bFlat*  
- TRUE pour dessiner un cadre à deux dimensions (2D) autour de la zone d’onglet ; FALSE pour dessiner un cadre (3D) en trois dimensions. La valeur par défaut est TRUE.  
+*bFlat*<br/>
+[in] TRUE pour dessiner un cadre à deux dimensions (2D) autour de la zone d’onglet ; FALSE pour dessiner un cadre (3D) en trois dimensions. La valeur par défaut est TRUE.  
   
- [in] *bRepaint*  
- TRUE pour redessiner la fenêtre immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bRepaint*<br/>
+[in] TRUE pour redessiner la fenêtre immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -926,17 +926,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiID*  
- L’ID d’une ressource bitmap qui contient la liste d’images.  
+*uiID*<br/>
+[in] L’ID d’une ressource bitmap qui contient la liste d’images.  
   
- [in] *cx*  
- La largeur de chaque image, en pixels. La valeur par défaut est 15.  
+*CX*<br/>
+[in] La largeur de chaque image, en pixels. La valeur par défaut est 15.  
   
- [in] *clrTransp*  
- La couleur de l’image transparente. Les parties de l’image qui sont de cette couleur est transparents. La valeur par défaut est la couleur magenta, RGB(255,0,255).  
+*clrTransp*<br/>
+[in] La couleur de l’image transparente. Les parties de l’image qui sont de cette couleur est transparents. La valeur par défaut est la couleur magenta, RGB(255,0,255).  
   
- [in] *hImageList*  
- Handle vers une liste d’images préchargées.  
+*hImageList*<br/>
+[in] Handle vers une liste d’images préchargées.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode est réussie. FALSE si le contrôle d’onglet est créé à l’aide d’un style à deux dimensions ou si la première surcharge de méthode ne peut pas charger l’image bitmap qui est spécifié par le *uiID* paramètre.  
@@ -954,8 +954,8 @@ void SetResizeMode(ResizeMode resizeMode);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *resizeMode*  
- Parmi les `CMFCTabCtrl::ResizeMode` des valeurs d’énumération qui spécifie comment le contrôle onglet peut être redimensionné. Pour obtenir la liste des valeurs possibles, consultez le tableau dans la section Notes.  
+*resizeMode*<br/>
+[in] Parmi les `CMFCTabCtrl::ResizeMode` des valeurs d’énumération qui spécifie comment le contrôle onglet peut être redimensionné. Pour obtenir la liste des valeurs possibles, consultez le tableau dans la section Notes.  
   
 ### <a name="remarks"></a>Notes  
  Le *resizeMode* paramètre peut prendre l’une des opérations suivantes `ResizeMode` valeurs d’énumération.  
@@ -974,8 +974,8 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nTabMaxWidth*  
- Largeur de l’onglet maximale, en pixels.  
+*nTabMaxWidth*<br/>
+[in] Largeur de l’onglet maximale, en pixels.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour limiter la largeur de chaque onglet dans une fenêtre à onglets. Cette méthode est utile si les onglets ont des étiquettes de très longs. Le [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) constructeur de classe initialise la largeur maximale d’onglet à 0, ce qui en fait signifie que la largeur n’est pas limitée.  
@@ -988,8 +988,8 @@ void StopResize(BOOL bCancel);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bAnnuler*  
- TRUE pour abandonner l’opération de redimensionnement en cours ; FALSE pour effectuer des opération de redimensionnement en cours. Dans les deux cas, le framework s’arrête de dessiner le rectangle de redimensionnement.  
+*bAnnuler*<br/>
+[in] TRUE pour abandonner l’opération de redimensionnement en cours ; FALSE pour effectuer des opération de redimensionnement en cours. Dans les deux cas, le framework s’arrête de dessiner le rectangle de redimensionnement.  
   
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
  Dessine une barre de défilement horizontale dans un contrôle onglet qui affiche les onglets plats.  
@@ -999,8 +999,8 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *pScrollInfo*  
- Pointeur vers un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) structure ou valeur NULL. Lorsque cette méthode est retournée, et si ce paramètre n’est pas NULL, la structure contient tous les paramètres de la barre de défilement. La valeur par défaut est NULL.  
+*pScrollInfo*<br/>
+[out] Pointeur vers un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) structure ou valeur NULL. Lorsque cette méthode est retournée, et si ce paramètre n’est pas NULL, la structure contient tous les paramètres de la barre de défilement. La valeur par défaut est NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode réussit ; Sinon, FALSE.  

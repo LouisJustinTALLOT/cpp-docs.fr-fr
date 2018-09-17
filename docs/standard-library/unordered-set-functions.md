@@ -7,12 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fb028f3383225d89a8366461400bf704c7a4dd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956668"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720081"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt;, fonctions
 
@@ -34,23 +34,23 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Key*  
- Type de clé.
+*Key*<br/>
+Type de clé.
 
-*hachage*  
- Type d'objet de la fonction de hachage.
+*hachage*<br/>
+Type d'objet de la fonction de hachage.
 
-*Pred*  
- Type d’objet de fonction de comparaison d’égalité.
+*Pred*<br/>
+Type d’objet de fonction de comparaison d’égalité.
 
-*Alloc*  
- Classe allocator.
+*Alloc*<br/>
+Classe allocator.
 
-*left*  
- Premier conteneur à échanger.
+*left*<br/>
+Premier conteneur à échanger.
 
-*right*  
- Second conteneur à échanger.
+*right*<br/>
+Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
 
@@ -126,23 +126,23 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Key*  
- Type de clé.
+*Key*<br/>
+Type de clé.
 
-*hachage*  
- Type d'objet de la fonction de hachage.
+*hachage*<br/>
+Type d'objet de la fonction de hachage.
 
-*Pred*  
- Type d’objet de fonction de comparaison d’égalité.
+*Pred*<br/>
+Type d’objet de fonction de comparaison d’égalité.
 
-*Alloc*  
- Classe allocator.
+*Alloc*<br/>
+Classe allocator.
 
-*left*  
- Premier conteneur à échanger.
+*left*<br/>
+Premier conteneur à échanger.
 
-*right*  
- Second conteneur à échanger.
+*right*<br/>
+Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
 

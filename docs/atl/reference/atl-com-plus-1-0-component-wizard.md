@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e6b2150b2c8273576b8aedb1ff77c23a80f23b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767401"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717903"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistant Composant COM+ 1.0 ATL
 
@@ -38,49 +38,58 @@ Vous pouvez spécifier si l’objet prend en charge les interfaces doubles et l�
 
 Spécifiez les noms de l’objet, interface et les classes à ajouter à votre projet. À l’exception de **nom court**, toutes les autres zones peuvent être modifiées indépendamment des autres. Si vous modifiez le texte de **nom court**, la modification est répercutée dans les noms de tous les autres zones de cette page. Si vous modifiez le **coclasse** nom dans la section COM, la modification est répercutée dans le **Type** et **ProgID** cases, mais la **Interface** nom ne change pas. Ce comportement d’affectation de noms est conçu pour rendre tous les noms facilement identifiable pour vous lorsque vous développez votre contrôle.
 
-**Nom court**  
-Définit le nom abrégé pour l’objet. Le nom que vous fournissez détermine le `Class` et `Coclass` noms, le **fichier .cpp** et **fichier .h** noms, le **Interface** nom, le **Type** noms et le **ProgID**, sauf si vous modifiez ces champs individuellement.
+- **Nom court**
 
-**Fichier .h**  
-Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous choisissez un fichier existant, l’Assistant attend que vous cliquiez sur **Terminer** pour l’enregistrer à l’emplacement sélectionné.
+   Définit le nom abrégé pour l’objet. Le nom que vous fournissez détermine le `Class` et `Coclass` noms, le **fichier .cpp** et **fichier .h** noms, le **Interface** nom, le **Type** noms et le **ProgID**, sauf si vous modifiez ces champs individuellement.
 
-L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
+- **Fichier .h**
 
-**Classe**  
-Définit le nom de la classe à créer. Ce nom est basé sur le nom que vous fournissez dans **nom court**, précédé de « C », le préfixe classique pour un nom de classe.
+   Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous choisissez un fichier existant, l’Assistant attend que vous cliquiez sur **Terminer** pour l’enregistrer à l’emplacement sélectionné.
 
-**Fichier .cpp**  
-Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. L’Assistant attend que vous cliquiez sur **Terminer** pour enregistrer le fichier à l’emplacement sélectionné.
+   L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
 
-L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si l’implémentation de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
+- **Classe**
 
-**Attribué**  
-Indique si l’objet utilise des attributs. Si vous ajoutez un objet à un projet ATL avec attributs, cette option est sélectionnée et indisponible à modifier. Autrement dit, vous pouvez ajouter uniquement les objets attribués à un projet créé avec prise en charge de l’attribut.
+   Définit le nom de la classe à créer. Ce nom est basé sur le nom que vous fournissez dans **nom court**, précédé de « C », le préfixe classique pour un nom de classe.
 
-Si vous sélectionnez cette option pour un projet ATL qui n’a pas d’attribut prennent en charge, l’Assistant vous invite à spécifier si vous souhaitez ajouter la prise en charge de l’attribut au projet.
+- **Fichier .cpp**
 
-Les objets que vous ajoutez après avoir défini cette option sont désignés avec attributs par défaut (la case à cocher est activée). Vous pouvez désactiver cette case pour ajouter un objet qui n’utilise pas d’attributs.
+   Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. L’Assistant attend que vous cliquiez sur **Terminer** pour enregistrer le fichier à l’emplacement sélectionné.
 
-Consultez [paramètres d’Application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
+   L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si l’implémentation de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
+
+- **Attribué**
+
+   Indique si l’objet utilise des attributs. Si vous ajoutez un objet à un projet ATL avec attributs, cette option est sélectionnée et indisponible à modifier. Autrement dit, vous pouvez ajouter uniquement les objets attribués à un projet créé avec prise en charge de l’attribut.
+
+   Si vous sélectionnez cette option pour un projet ATL qui n’a pas d’attribut prennent en charge, l’Assistant vous invite à spécifier si vous souhaitez ajouter la prise en charge de l’attribut au projet.
+
+   Les objets que vous ajoutez après avoir défini cette option sont désignés avec attributs par défaut (la case à cocher est activée). Vous pouvez désactiver cette case pour ajouter un objet qui n’utilise pas d’attributs.
+
+   Consultez [paramètres d’Application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
 
 ### <a name="com"></a>COM
 
 Fournit des informations sur les fonctionnalités COM pour l’objet.
 
-**Coclasse**  
-Définit le nom de la classe de composant qui contient une liste des interfaces prises en charge par l’objet.
+- **Coclasse**
+
+   Définit le nom de la classe de composant qui contient une liste des interfaces prises en charge par l’objet.
 
 > [!NOTE]
 >  Si vous créez votre projet à l’aide d’attributs, ou si vous indiquez sur cette page d’Assistant que le composant COM + 1.0 utilise des attributs, vous ne pouvez pas modifier cette option, car ATL n’inclut pas le `coclass` attribut.
 
-**Type**  
-Définit la description de l’objet qui apparaîtra dans le Registre
+- **Type**
 
-**Interface**  
-Définit l’interface que vous créez pour votre objet. Cette interface contient vos méthodes personnalisées.
+   Définit la description de l’objet qui apparaîtra dans le Registre
 
-**ProgID**  
-Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
+- **Interface**
+
+   Définit l’interface que vous créez pour votre objet. Cette interface contient vos méthodes personnalisées.
+
+- **ProgID**
+
+   Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
 
 ## <a name="see-also"></a>Voir aussi
 

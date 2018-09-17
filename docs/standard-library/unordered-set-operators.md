@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-ms.openlocfilehash: 6edd8cb33aaf5cc90ead3a3d327f8222e4410443
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: af86ef68d734d72169a8bc8b506206cc72d3af4b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962307"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709538"
 ---
 # <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt;, opérateurs
 
@@ -32,11 +32,11 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Paramètres
 
-*left*  
- Objet de type `unordered_set`.
+*left*<br/>
+Objet de type `unordered_set`.
 
-*right*  
- Objet de type `unordered_set`.
+*right*<br/>
+Objet de type `unordered_set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -101,11 +101,11 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Paramètres
 
-*left*  
- Objet de type `unordered_set`.
+*left*<br/>
+Objet de type `unordered_set`.
 
-*right*  
- Objet de type `unordered_set`.
+*right*<br/>
+Objet de type `unordered_set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -170,11 +170,11 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Paramètres
 
-*left*  
- Objet de type `unordered_multiset`.
+*left*<br/>
+Objet de type `unordered_multiset`.
 
-*right*  
- Objet de type `unordered_multiset`.
+*right*<br/>
+Objet de type `unordered_multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -242,11 +242,11 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Paramètres
 
-*left*  
- Objet de type `unordered_multiset`.
+*left*<br/>
+Objet de type `unordered_multiset`.
 
-*right*  
- Objet de type `unordered_multiset`.
+*right*<br/>
+Objet de type `unordered_multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 

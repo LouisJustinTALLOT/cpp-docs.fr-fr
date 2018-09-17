@@ -1,5 +1,5 @@
 ---
-title: marshal_context::marshal_as | Documents Microsoft
+title: marshal_context::marshal_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27f27b164d7a00e05e8d080a692f97b696776cbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f88d086c76ea6b56f1bb049b886df70ceadbdbb9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136205"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707900"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
 Effectue le marshaling sur un objet de données spécifique pour le convertir entre managé et un type de données natif.  
@@ -39,21 +39,21 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `input`  
- La valeur que vous souhaitez marshaler un `To_Type` variable.  
+*entrée*<br/>
+[in] La valeur que vous souhaitez à marshaler en un `To_Type` variable.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Une variable de type `To_Type` qui est la valeur convertie de `input`.  
+ Une variable de type `To_Type` qui représente la valeur convertie de `input`.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction effectue le marshaling d’un objet de données spécifique. Utilisez cette fonction uniquement avec les conversions indiquées par la table de [vue d’ensemble du Marshaling dans C++](../dotnet/overview-of-marshaling-in-cpp.md).  
+ Cette fonction effectue le marshaling sur un objet de données spécifique. Utilisez cette fonction uniquement avec les conversions indiquées par la table dans [vue d’ensemble du Marshaling dans C++](../dotnet/overview-of-marshaling-in-cpp.md).  
   
- Si vous tentez de marshaler une paire de types de données qui ne sont pas pris en charge, `marshal_as` génère une erreur [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) au moment de la compilation. Lisez le message fourni avec cette erreur pour plus d’informations. Le `C4996` erreur peut être générée pour les fonctions plus simplement déconseillées. Deux conditions qui génèrent cette erreur sont tente de marshaler une paire de types de données qui ne sont pas prises en charge et essayez d’utiliser `marshal_as` pour une conversion qui nécessite un contexte.  
+ Si vous tentez de marshaler une paire de types de données qui ne sont pas pris en charge, `marshal_as` générera une erreur [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) au moment de la compilation. Lire le message fourni avec cette erreur pour plus d’informations. Le `C4996` erreur peut être générée pour les fonctions plus de simplement déconseillées. Deux conditions qui génèrent cette erreur sont essaie de marshaler une paire de types de données qui ne sont pas prises en charge et essaie d’utiliser `marshal_as` pour une conversion qui requiert un contexte.  
   
- La bibliothèque de marshaling se compose de plusieurs fichiers d’en-tête. Toute conversion ne nécessite qu’un seul fichier, mais vous pouvez inclure des fichiers supplémentaires si vous avez besoin pour les autres conversions. La table `Marshaling Overview in C++` indique quel fichier marshaling doit être inclus pour chaque conversion.  
+ La bibliothèque de marshaling se compose de plusieurs fichiers d’en-tête. Toute conversion ne nécessite qu’un seul fichier, mais vous pouvez inclure des fichiers supplémentaires si vous avez besoin pour les autres conversions. Le tableau dans `Marshaling Overview in C++` indique quel fichier marshaling doit être inclus pour chaque conversion.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple crée un contexte pour le marshaling d’un `System::String` à un `const char *` le type de variable. Les données converties ne seront plus valides après la ligne qui supprime le contexte.  
+ Cet exemple crée un contexte pour le marshaling d’un `System::String` à un `const char *` type de variable. Les données converties ne seront plus valides après la ligne qui supprime le contexte.  
   
 ```  
 // marshal_context_test.cpp  
@@ -75,7 +75,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête :** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, ou \<msclr\marshal_atl.h >  
   
  **Namespace :** msclr::interop  

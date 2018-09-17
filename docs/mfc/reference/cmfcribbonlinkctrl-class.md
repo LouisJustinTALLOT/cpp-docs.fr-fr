@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539455"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712515"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Cmfcribbonlinkctrl, classe
 Implémente un lien hypertexte qui est positionné sur un ruban. Le lien hypertexte ouvre une page web lorsque vous cliquez dessus.  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- Spécifie l’ID de commande de la commande qui s’exécute lorsque l’utilisateur clique sur le contrôle de lien.  
+*nID*<br/>
+[in] Spécifie l’ID de commande de la commande qui s’exécute lorsque l’utilisateur clique sur le contrôle de lien.  
   
- [in] *lpszText*  
- Spécifie l’étiquette à afficher sur le contrôle de lien.  
+*lpszText*<br/>
+[in] Spécifie l’étiquette à afficher sur le contrôle de lien.  
   
- [in] *lpszLink*  
- Spécifie le lien hypertexte associé au contrôle de lien.  
+*lpszLink*<br/>
+[in] Spécifie le lien hypertexte associé au contrôle de lien.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le constructeur de la `CMFCRibbonLinkCtrl` classe. Cet extrait de code fait partie de la [exemples de Gadgets de ruban](../../visual-cpp-samples.md).  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszLink*  
- Spécifie le texte du lien hypertexte.  
+*lpszLink*<br/>
+[in] Spécifie le texte du lien hypertexte.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7ae6e3d06f29b5f45c321cc7f11c9260f26ed1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 55233bb264231c3ddfd286a8f3d29883ed185a15
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538881"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711176"
 ---
 # <a name="cmfcribbonpanel-class"></a>Cmfcribbonpanel, classe
 Implémente un panneau qui contient un jeu d'éléments de ruban. Lorsque le panneau est dessiné, il affiche le plus d'éléments possible, selon la taille du panneau.  
@@ -235,8 +235,8 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in, out] *pElem*  
- Pointeur vers un élément de ruban.  
+*pElem*<br/>
+[in, out] Pointeur vers un élément de ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -262,17 +262,17 @@ UINT uiDisabledResID = 0);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiToolbarResID*  
- Spécifie l’ID de ressource de la barre d’outils à ajouter.  
+*uiToolbarResID*<br/>
+[in] Spécifie l’ID de ressource de la barre d’outils à ajouter.  
   
- [in] *uiColdResID*  
- Spécifie l’ID de ressource d’images à froid de la barre d’outils.  
+*uiColdResID*<br/>
+[in] Spécifie l’ID de ressource d’images à froid de la barre d’outils.  
   
- [in] *uiHotResID*  
- Spécifie l’ID de ressource d’images à chaud de la barre d’outils.  
+*uiHotResID*<br/>
+[in] Spécifie l’ID de ressource d’images à chaud de la barre d’outils.  
   
- [in] *uiDisabledResID*  
- Spécifie l’ID de ressource d’images désactivé de la barre d’outils.  
+*uiDisabledResID*<br/>
+[in] Spécifie l’ID de ressource d’images désactivé de la barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Appelez cette méthode pour ajouter une barre d’outils dans le volet du ruban. La barre d’outils apparaît en regard de l’élément de ruban ajouté par l’appel précédent à [CMFCRibbonPanel::Add](#add).  
@@ -292,14 +292,14 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *le caractère*  
- Le nom du Panneau de ruban.  
+*Caractère*<br/>
+[in] Le nom du Panneau de ruban.  
   
- [in] *hIcon*  
- Handle de l’icône du bouton par défaut pour le volet du ruban.  
+*hIcon*<br/>
+[in] Handle de l’icône du bouton par défaut pour le volet du ruban.  
   
- [in] *pPaletteButton*  
- Pointeur vers une galerie de ruban pour le volet du ruban.  
+*pPaletteButton*<br/>
+[in] Pointeur vers une galerie de ruban pour le volet du ruban.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
  Récupère l’élément de ruban qui est associé avec les données spécifiées.  
@@ -309,8 +309,8 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwData*  
- Les données associées à un élément de ruban.  
+*dwData*<br/>
+[in] Les données associées à un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
@@ -325,8 +325,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- ID de commande d’un élément de ruban.  
+*uiCmdID*<br/>
+[in] ID de commande d’un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’élément de ruban qui est identifiée par l’ID de la commande spécifiée ; Sinon, NULL si aucun élément de ruban n’est identifié avec l’ID de commande spécifiée.  
@@ -397,8 +397,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index de base zéro de l’élément à récupérer.  
+*nIndex*<br/>
+[in] Spécifie l’index de base zéro de l’élément à récupérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur valide vers l’élément de ruban base situé à la position *nIndex* dans le panneau de ruban, ou NULL s’il n’existe aucun élément à l’index spécifié.  
@@ -411,8 +411,8 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *arElements*  
- Un tableau à remplir avec tous les éléments de ruban qui sont contenus dans le volet du ruban.  
+*arElements*<br/>
+[out] Un tableau à remplir avec tous les éléments de ruban qui sont contenus dans le volet du ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -426,11 +426,11 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- ID de commande pour un élément de ruban.  
+*uiCmdID*<br/>
+[in] ID de commande pour un élément de ruban.  
   
- [in] *arElements*  
- Tableau d’éléments de ruban.  
+*arElements*<br/>
+[in] Tableau d’éléments de ruban.  
   
 ### <a name="remarks"></a>Notes  
  Uniquement les éléments de ruban qui sont contenus dans le volet du ruban sont testés.  
@@ -455,8 +455,8 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pElem*  
- Pointeur vers un élément de ruban.  
+*pElem*<br/>
+[in] Pointeur vers un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément de ruban spécifiée si la méthode a réussi ; sinon -1.  
@@ -471,8 +471,8 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *lstItems*  
- La liste des ID de commande pour les éléments de ruban qui sont contenus dans le volet du ruban.  
+*lstItems*<br/>
+[out] La liste des ID de commande pour les éléments de ruban qui sont contenus dans le volet du ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -528,8 +528,8 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *rect*  
- Ce paramètre n'est pas utilisé.  
+*Rect*<br/>
+[out] Ce paramètre n’est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours FALSE.  
@@ -569,8 +569,8 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pElem*  
- Pointeur vers un élément de ruban.  
+*pElem*<br/>
+[in] Pointeur vers un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet du ruban contient l’élément de ruban spécifiée ; Sinon, FALSE.  
@@ -587,11 +587,11 @@ CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bHighlight*  
- TRUE pour mettre en évidence le volet du ruban ; FALSE pour supprimer la surbrillance dans le volet du ruban.  
+*bHighlight*<br/>
+[in] TRUE pour mettre en évidence le volet du ruban ; FALSE pour supprimer la surbrillance dans le volet du ruban.  
   
- [in] *point*  
- Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -605,11 +605,11 @@ BOOL bCheckPanelCaption = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
- [in] *bCheckPanelCaption*  
- TRUE pour tester la légende du Panneau de ruban ; Sinon, FALSE.  
+*bCheckPanelCaption*<br/>
+[in] TRUE pour tester la légende du Panneau de ruban ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un élément de ruban si le point spécifié se trouve qu’il contient ; Sinon, NULL.  
@@ -625,8 +625,8 @@ virtual int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément de ruban qui a le point spécifié qu’il contient ; sinon -1.  
@@ -644,11 +644,11 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in, out] *pElem*  
- Pointeur vers un élément de ruban.  
+*pElem*<br/>
+[in, out] Pointeur vers un élément de ruban.  
   
- [in] *nIndex*  
- Valeur de base zéro, allant de -1 au nombre d’éléments de ruban qui sont contenus dans le tableau.  
+*nIndex*<br/>
+[in] Valeur de base zéro, allant de -1 au nombre d’éléments de ruban qui sont contenus dans le tableau.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’élément de ruban a été inséré avec succès ; Sinon, FALSE.  
@@ -664,8 +664,8 @@ virtual BOOL InsertSeparator(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index de base zéro où le séparateur est inséré.  
+*nIndex*<br/>
+[in] Spécifie l’index de base zéro où le séparateur est inséré.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le séparateur a été ajoutée avec succès ; Sinon, FALSE.  
@@ -769,11 +769,11 @@ int nHeight);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique pour le volet du ruban.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique pour le volet du ruban.  
   
- [in] *nHeight*  
- La hauteur du Panneau de ruban.  
+*nHeight*<br/>
+[in] La hauteur du Panneau de ruban.  
   
 ### <a name="remarks"></a>Notes  
  Un panneau de ruban change sa configuration de disposition en tant que les modifications de la largeur disponible.  
@@ -788,11 +788,11 @@ BOOL bDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index de base zéro de l’élément est supprimé du Panneau de ruban.  
+*nIndex*<br/>
+[in] Spécifie l’index de base zéro de l’élément est supprimé du Panneau de ruban.  
   
- [in] *bDelete*  
- TRUE pour supprimer l’élément en cours de suppression ; Sinon, FALSE.  
+*bDelete*<br/>
+[in] TRUE pour supprimer l’élément en cours de suppression ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’élément a été supprimé et supprimé (si *bDelete* a la valeur TRUE) ; FALSE si l’élément n’a pas été supprimé ou s’il existe aucun élément de ruban ne situé *nIndex*.  
@@ -820,8 +820,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index de base zéro de l’élément à remplacer.  
+*nIndex*<br/>
+[in] Spécifie l’index de base zéro de l’élément à remplacer.  
   
  [in] [out] *pElem*  
  Un pointeur valide vers l’élément qui remplace l’élément d’origine.  
@@ -842,8 +842,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- Spécifie l’ID de commande de l’élément à remplacer.  
+*uiCmdID*<br/>
+[in] Spécifie l’ID de commande de l’élément à remplacer.  
   
  [in] [out] *pElem*  
  Un pointeur valide vers l’élément qui remplacera l’élément d’origine.  
@@ -862,8 +862,8 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- TRUE pour centrer les positions verticales d’éléments de ruban dans leur rectangle d’affichage ; FALSE pour désactiver cette fonctionnalité.  
+*bSet*<br/>
+[in] TRUE pour centrer les positions verticales d’éléments de ruban dans leur rectangle d’affichage ; FALSE pour désactiver cette fonctionnalité.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -875,8 +875,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwData*  
- Spécifie les données définies par l’utilisateur à définir.  
+*dwData*<br/>
+[in] Spécifie les données définies par l’utilisateur à définir.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour associer les données définies par l’utilisateur avec le volet du ruban.  
@@ -900,20 +900,20 @@ BOOL bRightAlign = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- Spécifie l’ID de commande de l’élément de ruban dans lequel le menu est ajouté.  
+*uiCmdID*<br/>
+[in] Spécifie l’ID de commande de l’élément de ruban dans lequel le menu est ajouté.  
   
- [in] *hMenu*  
- Spécifie le handle vers le menu Windows à ajouter au volet du ruban.  
+*hMenu*<br/>
+[in] Spécifie le handle vers le menu Windows à ajouter au volet du ruban.  
   
- [in] *bIsDefautCommand*  
- TRUE pour spécifier que la commande associée à l’élément de ruban doit être exécutée si l’utilisateur clique sur l’élément de ruban. Dans ce cas, le menu est ouvert uniquement lorsque l’utilisateur clique sur la flèche en regard de l’élément de ruban. FALSE pour indiquer que la commande associée à l’élément de ruban ne doit pas être exécutée si l’utilisateur clique sur l’élément de ruban. Dans ce cas, le menu contextuel s’affiche, quel que soit l’endroit où l’utilisateur clique sur l’élément.  
+*bIsDefautCommand*<br/>
+[in] TRUE pour spécifier que la commande associée à l’élément de ruban doit être exécutée si l’utilisateur clique sur l’élément de ruban. Dans ce cas, le menu est ouvert uniquement lorsque l’utilisateur clique sur la flèche en regard de l’élément de ruban. FALSE pour indiquer que la commande associée à l’élément de ruban ne doit pas être exécutée si l’utilisateur clique sur l’élément de ruban. Dans ce cas, le menu contextuel s’affiche, quel que soit l’endroit où l’utilisateur clique sur l’élément.  
   
- [in] *bRightAlign*  
- TRUE pour spécifier que le menu contextuel est aligné à droite ; Sinon, FALSE.  
+*bRightAlign*<br/>
+[in] TRUE pour spécifier que le menu contextuel est aligné à droite ; Sinon, FALSE.  
   
- [in] *uiMenuResID*  
- Spécifie l’ID de ressource du menu à ajouter au volet du ruban.  
+*uiMenuResID*<br/>
+[in] Spécifie l’ID de ressource du menu à ajouter au volet du ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le menu a été assigné à l’élément de ruban ; Sinon, FALSE.  
@@ -931,8 +931,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index de base zéro de l’élément de ruban à ajouter.  
+*nIndex*<br/>
+[in] Spécifie l’index de base zéro de l’élément de ruban à ajouter.  
   
  [in] [out] *pRTC*  
  Un pointeur vers les informations de classe runtime de l’élément de ruban est ajouté au volet du ruban.  
@@ -953,8 +953,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- Spécifie l’ID de commande de l’élément de ruban à ajouter.  
+*uiCmdID*<br/>
+[in] Spécifie l’ID de commande de l’élément de ruban à ajouter.  
   
  [in] [out] *pRTC*  
  Un pointeur vers les informations de classe runtime associés à l’élément de ruban est ajouté au volet du ruban.  
@@ -999,8 +999,8 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- TRUE pour ajuster la largeur des éléments de ruban dans la même colonne à la largeur du plus grand élément de ruban dans la colonne ; FALSE pour désactiver cet ajustement de la largeur.  
+*bSet*<br/>
+[in] TRUE pour ajuster la largeur des éléments de ruban dans la même colonne à la largeur du plus grand élément de ruban dans la colonne ; FALSE pour désactiver cet ajustement de la largeur.  
   
 ### <a name="remarks"></a>Notes  
  Lorsque cette fonctionnalité est activée dans un panneau de ruban, les largeurs d’éléments de ruban dans la même colonne sont ajustées à la largeur du plus grand élément de ruban dans la même colonne.  
@@ -1013,8 +1013,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszKeys*  
- La touche d’accès pour le bouton par défaut du Panneau de ruban.  
+*lpszKeys*<br/>
+[in] La touche d’accès pour le bouton par défaut du Panneau de ruban.  
   
 ### <a name="remarks"></a>Notes  
  Le bouton par défaut s’affiche lorsqu’un panneau de ruban a un espace insuffisant pour afficher ses éléments de ruban.  
@@ -1027,8 +1027,8 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pButton*  
- Pointeur vers le bouton par défaut pour le volet du ruban.  
+*pButton*<br/>
+[in] Pointeur vers le bouton par défaut pour le volet du ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le menu contextuel pour le volet du ruban si la méthode a réussi ; Sinon, NULL.  

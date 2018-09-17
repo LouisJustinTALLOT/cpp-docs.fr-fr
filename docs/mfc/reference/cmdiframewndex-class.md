@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 91ca6c6a2d00bb377fe5b4980ea821184627826f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678812"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708238"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx, classe
 Étend les fonctionnalités de [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), une fenêtre de frame Windows Document Interface MDI (Multiple).  
@@ -314,11 +314,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pControlBar*  
- Pointeur vers le volet à inscrire.  
+*pControlBar*<br/>
+[in] Pointeur vers le volet à inscrire.  
   
- [in] *bTail*  
- Spécifie s’il faut ajouter ce volet à la fin de la liste.  
+*bTail*<br/>
+[in] Spécifie s’il faut ajouter ce volet à la fin de la liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur différente de zéro si le volet est inscrit avec succès. Retourne 0 si le volet est déjà inscrit auprès du Gestionnaire d’ancrage.  
@@ -341,8 +341,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hdwp*  
- Identifie la structure de la position de fenêtre multiple. Vous pouvez obtenir cette valeur en appelant `BeginDeferWindowPos`.  
+*hdwp*<br/>
+[in] Identifie la structure de la position de fenêtre multiple. Vous pouvez obtenir cette valeur en appelant `BeginDeferWindowPos`.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction membre pour recalculer la disposition de tous les volets ancré à la fenêtre frame.  
@@ -355,8 +355,8 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *pnMDITabsType*  
- Un pointeur vers une variable de type entier qui indique les fonctionnalités qui sont activées :  
+*pnMDITabsType*<br/>
+[out] Un pointeur vers une variable de type entier qui indique les fonctionnalités qui sont activées :  
   
 -   0 : toutes les fonctionnalités sont désactivées.  
   
@@ -414,11 +414,11 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpcszDocName*  
- Une chaîne de texte qui contient un identificateur de document. En règle générale, il est le chemin d’accès complet d’un fichier de document.  
+*lpcszDocName*<br/>
+[in] Une chaîne de texte qui contient un identificateur de document. En règle générale, il est le chemin d’accès complet d’un fichier de document.  
   
- [in] *pObj*  
- Pointeur vers un objet défini par l’utilisateur. Par exemple, un développeur peut créer une structure de données spécifiques à l’application décrivant le document et en indiquant comment le document doit être initialisé au démarrage.  
+*pObj*<br/>
+[in] Pointeur vers un objet défini par l’utilisateur. Par exemple, un développeur peut créer une structure de données spécifiques à l’application décrivant le document et en indiquant comment le document doit être initialisé au démarrage.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers `CMDIChildWndEx`.  
@@ -445,11 +445,11 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpcszDocName*  
- Le nom du document.  
+*lpcszDocName*<br/>
+[in] Le nom du document.  
   
- [in] *pObj*  
- Réservé à un usage ultérieur.  
+*pObj*<br/>
+[in] Réservé pour une utilisation ultérieure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la nouvelle fenêtre.  
@@ -465,14 +465,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Pointeur vers le volet pour ancrer.  
+*pBar*<br/>
+[in] Pointeur vers le volet pour ancrer.  
   
- [in] *nDockBarID*  
- Spécifie les côtés de la fenêtre frame pour ancrer dans.  
+*nDockBarID*<br/>
+[in] Spécifie les côtés de la fenêtre frame pour ancrer dans.  
   
- [in] *lpRect*  
- Non utilisé.  
+*lpRect*<br/>
+[in] Non utilisé.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode ancre spécifié le volet à un des côtés de la fenêtre frame qui a été spécifié quand [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) et [CMDIFrameWndEx::EnableDocking](#enabledocking) ont été appelées.  
@@ -492,11 +492,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Pointeur vers le volet d’ancrage.  
+*pBar*<br/>
+[in] Pointeur vers le volet d’ancrage.  
   
- [in] *pLeftOf*  
- Pointeur vers le volet qui sert le site d’ancrage. .  
+*pLeftOf*<br/>
+[in] Pointeur vers le volet qui sert le site d’ancrage. .  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si l’opération a réussi. Sinon, retourne FALSE.  
@@ -517,8 +517,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwDockStyle*  
- Spécifie les côtés de la fenêtre frame principale qui sera activée. Utiliser une ou plusieurs des indicateurs suivants.  
+*dwDockStyle*<br/>
+[in] Spécifie les côtés de la fenêtre frame principale qui sera activée. Utiliser une ou plusieurs des indicateurs suivants.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -546,8 +546,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwDockStyle*  
- Spécifie le style d’ancrage que vous souhaitez appliquer.  
+*dwDockStyle*<br/>
+[in] Spécifie le style d’ancrage que vous souhaitez appliquer.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -567,8 +567,8 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bEnableMenu*  
- TRUE pour afficher le menu principal dans le mode plein écran, ou FALSE pour le masquer.  
+*bEnableMenu*<br/>
+[in] TRUE pour afficher le menu principal dans le mode plein écran, ou FALSE pour le masquer.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -580,8 +580,8 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiFullScreenCmd*  
- L’ID d’une commande qui active ou désactive le mode plein écran.  
+*uiFullScreenCmd*<br/>
+[in] L’ID d’une commande qui active ou désactive le mode plein écran.  
   
 ### <a name="remarks"></a>Notes  
  En mode plein écran, toutes les barres de contrôle d’ancrage, les barres d’outils et les menus sont masqués et la vue active est redimensionnée pour occuper le mode plein écran. Lorsque vous activez le mode plein écran, vous devez spécifier un ID de la commande qui active ou désactive. Vous pouvez appeler `EnableFullScreenMode` à partir du frame principal `OnCreate` (fonction). Quand une fenêtre frame est basculer en mode plein écran, le framework crée une barre d’outils flottante avec un bouton qui possède l’ID de commande spécifiée. Si vous souhaitez conserver le menu principal sur l’écran, appelez [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
@@ -594,8 +594,8 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer le chargement de l’état d’ancrage, FALSE pour désactiver le chargement de l’état d’ancrage.  
+*bActivez*<br/>
+[in] TRUE pour activer le chargement de l’état d’ancrage, FALSE pour désactiver le chargement de l’état d’ancrage.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -609,11 +609,11 @@ void EnableMDITabbedGroups(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- Si la valeur est TRUE, la fonctionnalité de groupes avec onglet MDI est activée ; Si la valeur est FALSE, la fonctionnalité de groupes avec onglet MDI est désactivée.  
+*bActivez*<br/>
+[in] Si la valeur est TRUE, la fonctionnalité de groupes avec onglet MDI est activée ; Si la valeur est FALSE, la fonctionnalité de groupes avec onglet MDI est désactivée.  
   
- [in] *params*  
- Spécifie les paramètres de l’infrastructure applique aux fenêtres enfants qui sont créés dans la zone cliente MDI.  
+*params*<br/>
+[in] Spécifie les paramètres de l’infrastructure applique aux fenêtres enfants qui sont créés dans la zone cliente MDI.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour activer ou désactiver la fonctionnalité de groupes avec onglet MDI. Cette fonctionnalité permet aux applications MDI afficher les fenêtres enfants sous forme de fenêtres à onglets qui sont alignés verticalement ou horizontalement dans la zone cliente MDI. Les groupes de fenêtres avec onglet sont séparés par des séparateurs. L’utilisateur peut redimensionner des groupes avec onglet à l’aide d’un séparateur.  
@@ -695,8 +695,8 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bLastActiveTab*  
- Si la valeur est TRUE, permettre l’activation du dernier onglet actif. Si la valeur est FALSE, suspendre l’activation du dernier onglet actif.  
+*bLastActiveTab*<br/>
+[in] Si la valeur est TRUE, permettre l’activation du dernier onglet actif. Si la valeur est FALSE, suspendre l’activation du dernier onglet actif.  
   
 ### <a name="remarks"></a>Notes  
  Il existe deux manières d’ouvrir un onglet de la fermeture de l’onglet actif :  
@@ -723,23 +723,23 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- Si la valeur est TRUE, la gestion automatique du menu de volet est activée ; Si la valeur est FALSE, la gestion automatique est désactivée.  
+*bActivez*<br/>
+[in] Si la valeur est TRUE, la gestion automatique du menu de volet est activée ; Si la valeur est FALSE, la gestion automatique est désactivée.  
   
- [in] *uiCustomizeCmd*  
- ID de commande du **personnaliser** élément de menu. Cet élément de menu est généralement ajouté à la fin de la liste des volets.  
+*uiCustomizeCmd*<br/>
+[in] ID de commande du **personnaliser** élément de menu. Cet élément de menu est généralement ajouté à la fin de la liste des volets.  
   
- [in] *strCustomizeLabel*  
- Le texte à afficher pour le **personnaliser** élément de menu (pour la localisation).  
+*strCustomizeLabel*<br/>
+[in] Le texte à afficher pour le **personnaliser** élément de menu (pour la localisation).  
   
- [in] *uiViewToolbarsMenuEntryID*  
- Spécifie l’ID d’un élément de menu de barre d’outils qui ouvre le menu de volet. Il s’agit généralement du **barres d’outils** sous-menu de la **vue** menu.  
+*uiViewToolbarsMenuEntryID*<br/>
+[in] Spécifie l’ID d’un élément de menu de barre d’outils qui ouvre le menu de volet. Il s’agit généralement du **barres d’outils** sous-menu de la **vue** menu.  
   
- [in] *bContextMenuShowsToolbarsOnly*  
- Si la valeur est TRUE, le menu du volet affiche uniquement une liste des barres d’outils. Si la valeur est FALSE, le menu affiche une liste de barres d’outils et des barres d’ancrage.  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in] Si la valeur est TRUE, le menu du volet affiche uniquement une liste des barres d’outils. Si la valeur est FALSE, le menu affiche une liste de barres d’outils et des barres d’ancrage.  
   
- [in] *bViewMenuShowsToolbarsOnly*  
- Si la valeur est TRUE, le menu du volet affiche uniquement une liste des barres d’outils. Si la valeur est FALSE, le menu affiche une liste de barres d’outils et des barres d’ancrage.  
+*bViewMenuShowsToolbarsOnly*<br/>
+[in] Si la valeur est TRUE, le menu du volet affiche uniquement une liste des barres d’outils. Si la valeur est FALSE, le menu affiche une liste de barres d’outils et des barres d’ancrage.  
   
 ### <a name="remarks"></a>Notes  
  Le menu contextuel volet affiche la liste des volets de l’application et permet à l’utilisateur afficher ou masquer des volets individuels.  
@@ -768,17 +768,17 @@ void EnableWindowsDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiMenuId*  
- Spécifie l’ID de ressource d’un menu.  
+*uiMenuId*<br/>
+[in] Spécifie l’ID de ressource d’un menu.  
   
- [in] *lpszMenuText*  
- Spécifie le texte de l’élément.  
+*lpszMenuText*<br/>
+[in] Spécifie le texte de l’élément.  
   
- [in] *bShowHelpButton*  
- Spécifie s’il faut afficher un **aide** bouton dans la boîte de dialogue de gestion de windows.  
+*bShowHelpButton*<br/>
+[in] Spécifie s’il faut afficher un **aide** bouton dans la boîte de dialogue de gestion de windows.  
   
- [in] *uiMenuTextResId*  
- L’identificateur de ressource de chaîne qui contient la chaîne de texte de l’élément.  
+*uiMenuTextResId*<br/>
+[in] L’identificateur de ressource de chaîne qui contient la chaîne de texte de l’élément.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour insérer un élément de menu dont commande appelle une boîte de dialogue de gestion de fenêtre MDI enfant ( [cmfcwindowsmanagerdialog, classe](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Le nouvel élément est inséré dans le menu spécifié par *uiMenuId*. Appelez `EnableWindowsDialog` lorsque vous traitez le message WM_CREATE.  
@@ -884,8 +884,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- L’ID du contrôle.  
+*nID*<br/>
+[in] L’ID du contrôle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le volet qui porte l’ID du contrôle spécifié, s’il existe. Sinon, NULL.  
@@ -925,11 +925,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pButton*  
- Pointeur vers un bouton de barre d’outils.  
+*pButton*<br/>
+[in] Pointeur vers un bouton de barre d’outils.  
   
- [in] *strTTText*  
- Le texte d’info-bulle à afficher pour le bouton.  
+*strTTText*<br/>
+[in] Le texte d’info-bulle à afficher pour le bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’info-bulle s’affiche. FALSE sinon.  
@@ -947,14 +947,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pControlBar*  
- Pointeur vers le volet doit être inséré.  
+*pControlBar*<br/>
+[in] Pointeur vers le volet doit être inséré.  
   
- [in] *pTarget*  
- Pointeur vers le volet avant ou après lequel insérer le volet.  
+*pTarget*<br/>
+[in] Pointeur vers le volet avant ou après lequel insérer le volet.  
   
- [in] *exécuteront-ils*  
- Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.  
+*exécuteront-ils*<br/>
+[in] Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode correctement inscrit le volet, FALSE si le volet a déjà inscrit auprès du Gestionnaire d’ancrage.  
@@ -996,8 +996,8 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Pointeur vers la fenêtre à onglets.  
+*pWnd*<br/>
+[in] Pointeur vers la fenêtre à onglets.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la fenêtre à onglets spécifiée se trouve dans la liste des fenêtres à onglets qui constituent des groupes avec onglet MDI. Sinon, FALSE.  
@@ -1023,14 +1023,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Le point spécifié en coordonnées d’écran.  
+*point*<br/>
+[in] Le point spécifié en coordonnées d’écran.  
   
- [in] *dwBarAlignment*  
- Spécifie le bord le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Spécifie le bord le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- TRUE si le point est proche de la bordure externe du site d’ancrage ; FALSE sinon.  
+*bOuterEdge*<br/>
+[in] TRUE si le point est proche de la bordure externe du site d’ancrage ; FALSE sinon.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le point est proche du site d’ancrage ; Sinon, FALSE.  
@@ -1062,17 +1062,17 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIDResource*  
- L’ID d’une ressource partagée associée à la fenêtre frame.  
+*nIDResource*<br/>
+[in] L’ID d’une ressource partagée associée à la fenêtre frame.  
   
- [in] *dwDefaultStyle*  
- Le style de la fenêtre frame.  
+*dwDefaultStyle*<br/>
+[in] Le style de la fenêtre frame.  
   
- [in] *pParentWnd*  
- Pointeur vers le parent du cadre.  
+*pParentWnd*<br/>
+[in] Pointeur vers le parent du cadre.  
   
- [in] *pContext*  
- Un pointeur vers un [ccreatecontext, Structure](../../mfc/reference/ccreatecontext-structure.md). Ce paramètre peut être NULL.  
+*pContext*<br/>
+[in] Un pointeur vers un [ccreatecontext, Structure](../../mfc/reference/ccreatecontext-structure.md). Ce paramètre peut être NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit, sinon, FALSE.  
@@ -1085,8 +1085,8 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Spécifie le nom du profil.  
+*lpszProfileName*<br/>
+[in] Spécifie le nom du profil.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le chargement a réussi ; FALSE si le chargement a échoué ou aucune donnée à charger.  
@@ -1115,8 +1115,8 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bsuivant*  
- Si la valeur est TRUE, déplacez l’onglet au groupe d’onglets suivant. Si la valeur est FALSE, déplacez-le vers le groupe d’onglets précédent.  
+*bsuivant*<br/>
+[in] Si la valeur est TRUE, déplacez l’onglet au groupe d’onglets suivant. Si la valeur est FALSE, déplacez-le vers le groupe d’onglets précédent.  
   
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
  Crée un nouveau groupe à onglets qui dispose d’une fenêtre unique.  
@@ -1126,8 +1126,8 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bVert*  
- Spécifie l’alignement de groupe nouveau. Si la valeur est TRUE, le nouveau groupe est aligné verticalement. Si la valeur est FALSE, le nouveau groupe est aligné horizontalement.  
+*bVert*<br/>
+[in] Spécifie l’alignement de groupe nouveau. Si la valeur est TRUE, le nouveau groupe est aligné verticalement. Si la valeur est FALSE, le nouveau groupe est aligné horizontalement.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction permet de créer une nouvelle avec onglet de fenêtre (nouveau groupe avec onglets) et lui ajouter le premier onglet.  
@@ -1178,8 +1178,8 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nBorderCmd*  
- Contient l’une des valeurs suivantes à partir de l’énumération `CFrameWnd::BorderCmd`:  
+*nBorderCmd*<br/>
+[in] Contient l’une des valeurs suivantes à partir de l’énumération `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
   
@@ -1187,8 +1187,8 @@ virtual BOOL NegotiateBorderSpace(
   
 - `borderSet` = 3  
   
- [in, out] *lpRectBorder*  
- Pointeur vers un [Structure RECT](../../mfc/reference/rect-structure1.md) ou un [CRect, classe](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie les coordonnées de la bordure.  
+*lpRectBorder*<br/>
+[in, out] Pointeur vers un [Structure RECT](../../mfc/reference/rect-structure1.md) ou un [CRect, classe](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie les coordonnées de la bordure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la méthode a réussi ; sinon 0.  
@@ -1204,8 +1204,8 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Pointeur vers le volet en cours de fermeture.  
+*pWnd*<br/>
+[in] Pointeur vers le volet en cours de fermeture.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet d’ancrage peut être fermé. Sinon, FALSE.  
@@ -1223,8 +1223,8 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Pointeur vers la fenêtre mini-frame en cours de fermeture.  
+*pWnd*<br/>
+[in] Pointeur vers la fenêtre mini-frame en cours de fermeture.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la fenêtre flottante de mini-frame peut être fermée. Sinon, FALSE.  
@@ -1242,8 +1242,8 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pMenuPopup*  
- Pointeur vers un menu contextuel.  
+*pMenuPopup*<br/>
+[in] Pointeur vers un menu contextuel.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode si vous souhaitez traiter les notifications à partir de [cmfcpopupmenu, classe](../../mfc/reference/cmfcpopupmenu-class.md) objets qui appartiennent à la fenêtre frame MDI lorsque ces objets traitement les messages WM_DESTROY.  
@@ -1260,17 +1260,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- ID de la commande.  
+*nID*<br/>
+[in] ID de commande.  
   
- [in] *nCode*  
- Identifie le code de notification de commande. Consultez [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) pour plus d’informations sur les valeurs de *nCode*.  
+*nCode*<br/>
+[in] Identifie le code de notification de commande. Consultez [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) pour plus d’informations sur les valeurs de *nCode*.  
   
- [in] *pExtra*  
- Utilisé en fonction de la valeur de *nCode*. Consultez [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) pour plus d’informations sur *pExtra*.  
+*pExtra*<br/>
+[in] Utilisé en fonction de la valeur de *nCode*. Consultez [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) pour plus d’informations sur *pExtra*.  
   
- [in, out] *pHandlerInfo*  
- En règle générale, ce paramètre doit être NULL. Si non NULL, `OnCmdMsg` renseigne le `pTarget` et `pmf` membres de la *pHandlerInfo* structure au lieu de la distribution de la commande.  
+*pHandlerInfo*<br/>
+[in, out] En règle générale, ce paramètre doit être NULL. Si non NULL, `OnCmdMsg` renseigne le `pTarget` et `pmf` membres de la *pHandlerInfo* structure au lieu de la distribution de la commande.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le message est géré ; sinon 0.  
@@ -1286,14 +1286,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *pMenuButton*  
- Pointeur vers le bouton de menu.  
+*pMenuButton*<br/>
+[in] Pointeur vers le bouton de menu.  
   
- [in] *rectImage*  
- Rectangle englobant de l’image.  
+*rectImage*<br/>
+[in] Rectangle englobant de l’image.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode dessine l’image. L’implémentation par défaut retourne FALSE.  
@@ -1337,11 +1337,11 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pButton*  
- Le bouton de barre d’outils.  
+*pButton*<br/>
+[in] Le bouton de barre d’outils.  
   
- [out] *pTI*  
- Pointeur vers un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) structure.  
+*PTI*<br/>
+[out] Pointeur vers un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’application remplit le *pTI* paramètre. L’implémentation par défaut retourne FALSE.  
@@ -1357,8 +1357,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pFrame*  
- Pointeur vers une fenêtre mini-frame.  
+*pFrame*<br/>
+[in] Pointeur vers une fenêtre mini-frame.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit, sinon, FALSE.  
@@ -1373,11 +1373,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bPreview*  
- Si la valeur est TRUE, définit le mode Aperçu avant impression. Si la valeur est FALSE, annule mode Aperçu.  
+*bPreview*<br/>
+[in] Si la valeur est TRUE, définit le mode Aperçu avant impression. Si la valeur est FALSE, annule mode Aperçu.  
   
- [in] *pState*  
- Un pointeur vers un `CPrintPreviewState` structure.  
+*pState*<br/>
+[in] Un pointeur vers un `CPrintPreviewState` structure.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode remplace [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).  
@@ -1392,11 +1392,11 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pMenuPane*  
- Pointeur vers le volet de personnalisation rapide.  
+*pMenuPane*<br/>
+[in] Pointeur vers le volet de personnalisation rapide.  
   
- [in] *uiToolbarID*  
- ID de contrôle de la barre d’outils pour personnaliser.  
+*uiToolbarID*<br/>
+[in] ID de contrôle de la barre d’outils pour personnaliser.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne toujours la valeur TRUE.  
@@ -1417,11 +1417,11 @@ virtual BOOL OnShowMDITabContextMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- L’emplacement du menu en coordonnées d’écran.  
+*point*<br/>
+[in] L’emplacement du menu en coordonnées d’écran.  
   
- [in] *dwAllowedItems*  
- Combinaison au niveau du bit OR d’indicateurs qui indique les actions autorisées de l’onglet actif :  
+*dwAllowedItems*<br/>
+[in] Combinaison au niveau du bit OR d’indicateurs qui indique les actions autorisées de l’onglet actif :  
   
 - BCGP_MDI_CREATE_VERT_GROUP - peut créer un groupe d’onglets vertical.  
   
@@ -1433,8 +1433,8 @@ virtual BOOL OnShowMDITabContextMenu(
   
 - BCGP_MDI_CAN_BE_DOCKED - basculer d’un document à onglets à l’état ancré (concerne uniquement les documents avec onglet).  
   
- [in] *bTabDrop*  
- Valeur TRUE pour afficher le menu à la suite en faisant glisser l’onglet vers un autre groupe à onglets. FALSE pour afficher le menu sous forme de menu contextuel sur l’onglet actif.  
+*bTabDrop*<br/>
+[in] Valeur TRUE pour afficher le menu à la suite en faisant glisser l’onglet vers un autre groupe à onglets. FALSE pour afficher le menu sous forme de menu contextuel sur l’onglet actif.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Substituez cette méthode dans un [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-classe dérivée.  
@@ -1455,8 +1455,8 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- TRUE pour afficher les volets, FALSE pour masquer des volets.  
+*bShow*<br/>
+[in] TRUE pour afficher les volets, FALSE pour masquer des volets.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’état des volets change après l’appel à cette méthode, et FALSE si les volets sont déjà dans l’état spécifié par *bShow*. Par exemple, si les volets sont masqués et *bShow* est FALSE, la valeur de retour est FALSE.  
@@ -1491,11 +1491,11 @@ virtual void OnSizeMDIClient(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectOld*  
- La taille actuelle de la fenêtre du client MDI.  
+*rectOld*<br/>
+[in] La taille actuelle de la fenêtre du client MDI.  
   
- [in] *rectNew*  
- La nouvelle taille de la fenêtre du client MDI.  
+*rectNew*<br/>
+[in] La nouvelle taille de la fenêtre du client MDI.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1509,11 +1509,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pMenuPopup*  
- Pointeur vers le menu contextuel.  
+*pMenuPopup*<br/>
+[in] Pointeur vers le menu contextuel.  
   
- [in] *pBar*  
- Pointeur vers la barre détachable.  
+*pBar*<br/>
+[in] Pointeur vers la barre détachable.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE pour autoriser le menu contextuel avec la barre détachable qu’il veut activer ; Sinon, FALSE. La valeur par défaut est TRUE.  
@@ -1529,8 +1529,8 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hMenuAlt*  
- Un handle à un menu.  
+*hMenuAlt*<br/>
+[in] Un handle à un menu.  
   
 ##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
  Retourne le volet d’ancrage qui contient le point spécifié.  
@@ -1550,20 +1550,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Le point (en coordonnées d’écran).  
+*point*<br/>
+[in] Le point (en coordonnées d’écran).  
   
- [in] *nSensitivity*  
- Le rectangle de chaque volet activé de la fenêtre est agrandi dans toutes les directions de cette valeur.  
+*nSensitivity*<br/>
+[in] Le rectangle de chaque volet activé de la fenêtre est agrandi dans toutes les directions de cette valeur.  
   
- [in] *bExactBar*  
- Si la valeur est TRUE, le *nSensitivity* paramètre est ignoré.  
+*bExactBar*<br/>
+[in] Si la valeur est TRUE, le *nSensitivity* paramètre est ignoré.  
   
- [in] *pRTCBarType*  
- Si non NULL, la méthode parcourt uniquement les volets du type spécifié.  
+*pRTCBarType*<br/>
+[in] Si non NULL, la méthode parcourt uniquement les volets du type spécifié.  
   
- [out] *dwAlignment*  
- Si un volet est trouvé, ce paramètre doit spécifier de quel côté du volet est le plus proche du point spécifié.  
+*dwAlignment*<br/>
+[out] Si un volet est trouvé, ce paramètre doit spécifier de quel côté du volet est le plus proche du point spécifié.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un volet d’ancrage, ou NULL si aucun contrôle ne contient le point spécifié par *point*.  
@@ -1579,8 +1579,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bNotify*  
- Détermine si l’élément actif sur place de la fenêtre frame reçoit la notification de la modification de la disposition. Si la valeur est TRUE, l’élément est notifié ; Sinon, FALSE.  
+*bNotify*<br/>
+[in] Détermine si l’élément actif sur place de la fenêtre frame reçoit la notification de la modification de la disposition. Si la valeur est TRUE, l’élément est notifié ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode remplace [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).  
@@ -1598,20 +1598,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pControlBar*  
- Pointeur vers un volet à supprimer.  
+*pControlBar*<br/>
+[in] Pointeur vers un volet à supprimer.  
   
- [in] *bDestroy*  
- TRUE pour détruire le volet supprimé. FALSE ne la supprime ne pas.  
+*bDestroy*<br/>
+[in] TRUE pour détruire le volet supprimé. FALSE ne la supprime ne pas.  
   
- [in] *bAdjustLayout*  
- TRUE pour ajuster la disposition d’ancrage immédiatement. Si la valeur est FALSE, l’ajustement se produit uniquement lorsqu’un événement de renouvellement survient pour d’autres raisons (l’utilisateur redimensionne la fenêtre, fait glisser le frame principale, etc.).  
+*bAdjustLayout*<br/>
+[in] TRUE pour ajuster la disposition d’ancrage immédiatement. Si la valeur est FALSE, l’ajustement se produit uniquement lorsqu’un événement de renouvellement survient pour d’autres raisons (l’utilisateur redimensionne la fenêtre, fait glisser le frame principale, etc.).  
   
- [in] *bAutoHide*  
- TRUE pour supprimer le volet de la liste des volets de masquage automatique. FALSE pour supprimer le volet de la liste des volets régulières.  
+*bAutoHide*<br/>
+[in] TRUE pour supprimer le volet de la liste des volets de masquage automatique. FALSE pour supprimer le volet de la liste des volets régulières.  
   
- [in] *pBarReplacement*  
- Pointeur vers un volet qui remplace le volet supprimé.  
+*pBarReplacement*<br/>
+[in] Pointeur vers un volet qui remplace le volet supprimé.  
   
 ### <a name="remarks"></a>Notes  
  Vous devez inscrire chaque volet avec le Gestionnaire d’ancrage pour prendre part à la disposition d’ancrage. Utilisez [CMDIFrameWndEx::AddPane](#addpane) ou [CMDIFrameWndEx::InsertPane](#insertpane) pour inscrire des volets.  
@@ -1626,8 +1626,8 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Spécifie le nom du profil.  
+*lpszProfileName*<br/>
+[in] Spécifie le nom du profil.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’enregistrement a réussi ; FALSE si l’enregistrement a échoué.  
@@ -1660,8 +1660,8 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Pointeur vers une fenêtre frame de l’aperçu avant impression.  
+*pWnd*<br/>
+[in] Pointeur vers une fenêtre frame de l’aperçu avant impression.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1676,14 +1676,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *menu*  
- Une référence à un [CMenu (classe)](../../mfc/reference/cmenu-class.md) objet à modifier.  
+*Menu*<br/>
+[in] Une référence à un [CMenu (classe)](../../mfc/reference/cmenu-class.md) objet à modifier.  
   
- [in] *uiViewUserToolbarCmdFirst*  
- Spécifie la première commande définie par l’utilisateur.  
+*uiViewUserToolbarCmdFirst*<br/>
+[in] Spécifie la première commande définie par l’utilisateur.  
   
- [in] *uiViewUserToolbarCmdLast*  
- Spécifie la dernière commande définie par l’utilisateur.  
+*uiViewUserToolbarCmdLast*<br/>
+[in] Spécifie la dernière commande définie par l’utilisateur.  
   
 ##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
  Bascule le frame principal à partir du mode normal au mode plein écran.  
@@ -1706,17 +1706,17 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Pointeur vers le volet pour être affichée ou masquée.  
+*pBar*<br/>
+[in] Pointeur vers le volet pour être affichée ou masquée.  
   
- [in] *bShow*  
- TRUE pour afficher le volet. FALSE pour masquer le volet.  
+*bShow*<br/>
+[in] TRUE pour afficher le volet. FALSE pour masquer le volet.  
   
- [in] *bDelay*  
- Valeur TRUE pour différer le recalcul de la disposition d’ancrage. FALSE pour recalculer la disposition d’ancrage immédiatement.  
+*bDelay*<br/>
+[in] Valeur TRUE pour différer le recalcul de la disposition d’ancrage. FALSE pour recalculer la disposition d’ancrage immédiatement.  
   
- [in] *bActivate*  
- True pour afficher le volet doit comme active. FALSE pour afficher le volet comme étant inactive.  
+*bActivate*<br/>
+[in] True pour afficher le volet doit comme active. FALSE pour afficher le volet comme étant inactive.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour afficher ou masquer le volet. N’utilisez pas `ShowWindow` pour les volets d’ancrage.  
@@ -1786,11 +1786,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwData*  
- Spécifie les données en fonction des besoins pour le type d’aide spécifié par *nCmd*.  
+*dwData*<br/>
+[in] Spécifie les données en fonction des besoins pour le type d’aide spécifié par *nCmd*.  
   
- [in] *nCmd*  
- Spécifie le type d’aide demandée. Pour obtenir la liste de valeurs possibles et comment elles affectent le *dwData* paramètre, consultez le [fonction WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) dans le SDK Windows.  
+*nCmd*<br/>
+[in] Spécifie le type d’aide demandé. Pour obtenir la liste de valeurs possibles et comment elles affectent le *dwData* paramètre, consultez le [fonction WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) dans le SDK Windows.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode remplace [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

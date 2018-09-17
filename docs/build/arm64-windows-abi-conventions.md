@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d67f9a2e91e3a2e0a2731e61fc0e1c2ec55679
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028539"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716636"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI de ARM64
 
@@ -173,7 +173,7 @@ Pour chaque argument dans la liste les règles suivantes sont appliquées à son
 
 11. Le NGRN a la valeur 8.
 
-12. L’adresse NSAA est arrondie à la plus grande de 8 ou de l’alignement naturel de type de l’argument... 
+12. L’adresse NSAA est arrondie à la plus grande de 8 ou de l’alignement naturel de type de l’argument...
 
 13. Si l’argument est un type composite l’argument est copié dans la mémoire à l’adresse NSAA ajustée. L’adresse NSAA est incrémentée de la taille de l’argument. L’argument a maintenant été alloué.
 
@@ -189,7 +189,7 @@ Fonctions qui acceptent un nombre variable d’arguments sont gérées différem
 
 2. SIMD et inscrit les nombres à virgule flottante ne sont pas utilisés.
 
-Effectivement, cela revient aux règles suivantes C.12–C.15 pour allouer des arguments à une pile imaginaire, où les 64 premiers octets de la pile sont chargés dans x0-x7, et tous les autres arguments pile sont placés normalement. 
+Effectivement, cela revient aux règles suivantes C.12–C.15 pour allouer des arguments à une pile imaginaire, où les 64 premiers octets de la pile sont chargés dans x0-x7, et tous les autres arguments pile sont placés normalement.
 
 ## <a name="return-values"></a>Valeurs de retour
 
@@ -231,5 +231,5 @@ Notez que le compteur de cycles est un vrai compteur de cycles, pas une horloge 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-[La gestion des exceptions ARM64](../build/arm64-exception-handling.md)  
+[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[La gestion des exceptions ARM64](../build/arm64-exception-handling.md)

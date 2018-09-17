@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: decd015a184b66fa5867435177c07fdf23ad53ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691749"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704377"
 ---
 # <a name="obj-files-as-linker-input"></a>Fichiers .obj en tant qu'entrée de l'Éditeur de liens
 
@@ -42,9 +42,9 @@ Pour plus d’informations sur le compilateur et l’éditeur de liens, consulte
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers d’entrée LINK](../../build/reference/link-input-files.md)  
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)  
-[Prise en charge pour Unicode](../../text/support-for-unicode.md)  
-[Prise en charge Unicode dans le compilateur et l’éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Norme Unicode](http://www.unicode.org/)  
-[Format PE](/windows/desktop/Debug/pe-format)  
+[Fichiers d’entrée LINK](../../build/reference/link-input-files.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
+[Prise en charge pour Unicode](../../text/support-for-unicode.md)<br/>
+[Prise en charge Unicode dans le compilateur et l’éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md)<br/>
+[Norme Unicode](http://www.unicode.org/)<br/>
+[Format PE](/windows/desktop/Debug/pe-format)

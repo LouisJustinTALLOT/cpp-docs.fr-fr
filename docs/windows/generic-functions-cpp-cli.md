@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 700c88fa71e82e35602efef768fc5753760a5e1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593478"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709141"
 ---
 # <a name="generic-functions-ccli"></a>Fonctions génériques (C++/CLI)
 
@@ -63,11 +63,11 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Paramètres
 
-*attributs* (facultatif)  
-Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.
+*Attributs*  
+(Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.
 
-*modificateurs* (facultatif)  
-Un modificateur de la fonction, comme statique.  **virtuel** n’est pas autorisé dans la mesure où les méthodes virtuelles ne peuvent pas être génériques.
+*Modificateurs*  
+(Facultatif) Un modificateur de la fonction, comme statique.  **virtuel** n’est pas autorisé dans la mesure où les méthodes virtuelles ne peuvent pas être génériques.
 
 *type de retour*  
 Type retourné par la méthode. Si le type de retour est void, aucune valeur de retour n’est requis.
@@ -78,8 +78,8 @@ Nom de la fonction.
 *paramètre de type identificateur (s)*  
 Liste d’identificateurs séparés par des virgules.
 
-*paramètres-formels* (facultatif)  
-Liste de paramètres.
+*paramètres-formels*  
+(Facultatif) Liste de paramètres.
 
 *type de paramètre contraintes clauses*  
 Cela indique les restrictions sur les types qui peuvent être utilisés comme arguments de type et prend la forme spécifiée dans [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).

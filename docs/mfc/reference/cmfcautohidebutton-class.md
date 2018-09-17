@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4cfc3e0d129fdb10ee10275000df6d8c51604be
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cc824d31f305fe36e0971704fd63025b3c1fdad2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539638"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722954"
 ---
 # <a name="cmfcautohidebutton-class"></a>Cmfcautohidebutton, classe
 Bouton qui affiche ou masque une [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) configurée pour être masquée.  
@@ -144,14 +144,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParentBar*  
- Pointeur vers la barre d’outils parent.  
+*pParentBar*<br/>
+[in] Pointeur vers la barre d’outils parent.  
   
- [in] *pAutoHideWnd*  
- Un pointeur vers un [CDockablePane](../../mfc/reference/cdockablepane-class.md) objet. Ce bouton Masquer automatiquement masque et montre que `CDockablePane`.  
+*pAutoHideWnd*<br/>
+[in] Un pointeur vers un [CDockablePane](../../mfc/reference/cdockablepane-class.md) objet. Ce bouton Masquer automatiquement masque et montre que `CDockablePane`.  
   
- [in] *dwAlignment*  
- Une valeur qui spécifie l’alignement du bouton avec la fenêtre frame principale.  
+*dwAlignment*<br/>
+[in] Une valeur qui spécifie l’alignement du bouton avec la fenêtre frame principale.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -303,8 +303,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez personnaliser l’apparence des boutons Masquer automatiquement dans votre application, créez une nouvelle classe dérivée de `CMFCAutoHideButton`. Dans votre classe dérivée, substituez cette méthode.  
@@ -320,14 +320,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rectBounds*  
- Le rectangle englobant du bouton Masquer automatiquement.  
+*rectBounds*<br/>
+[in] Le rectangle englobant du bouton Masquer automatiquement.  
   
- [in] *rectBorderSize*  
- L’épaisseur de bordure pour chaque côté du bouton Masquer automatiquement.  
+*rectBorderSize*<br/>
+[in] L’épaisseur de bordure pour chaque côté du bouton Masquer automatiquement.  
   
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez personnaliser la bordure de chaque bouton Masquer automatiquement dans votre application, créez une nouvelle classe dérivée de la `CMFCAutoHideButton`. Dans votre classe dérivée, substituez cette méthode.  
@@ -342,11 +342,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Le rectangle englobant du bouton Masquer automatiquement.  
+*Rect*<br/>
+[in] Le rectangle englobant du bouton Masquer automatiquement.  
   
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez personnaliser l’arrière-plan de boutons Masquer automatiquement dans votre application, créez une nouvelle classe dérivée de la `CMFCAutoHideButton`. Dans votre classe dérivée, substituez cette méthode.  
@@ -359,8 +359,8 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- Valeur booléenne qui spécifie si cette méthode affiche le fichier joint `CDockablePane`.  
+*bShow*<br/>
+[in] Valeur booléenne qui spécifie si cette méthode affiche le fichier joint `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  Affiche ou masque le bouton masquer automatiquement.  
@@ -370,8 +370,8 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- Valeur booléenne qui spécifie s’il faut afficher le bouton Masquer automatiquement.  
+*bShow*<br/>
+[in] Valeur booléenne qui spécifie s’il faut afficher le bouton Masquer automatiquement.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
@@ -405,8 +405,8 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pFirstBarInGroup*  
- Pointeur vers la première barre du groupe.  
+*pFirstBarInGroup*<br/>
+[in] Un pointeur vers la première barre dans le groupe.  
   
 ### <a name="remarks"></a>Notes  
   

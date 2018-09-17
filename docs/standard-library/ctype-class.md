@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e34df871a655515bf4399b136de32db61d66ae0c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 24eb9bbad0e5732eaba523abcaa93eecd6e7c240
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204865"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719444"
 ---
 # <a name="ctype-class"></a>ctype, classe
 
@@ -67,7 +67,7 @@ class ctype : public ctype_base;
 ### <a name="parameters"></a>Paramètres
 
 *CharType*<br/>
- Type utilisé dans le cadre d'un programme pour encoder des caractères.
+Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
 ## <a name="remarks"></a>Notes
 
@@ -151,7 +151,7 @@ explicit ctype(size_t _Refs = 0);
 ### <a name="parameters"></a>Paramètres
 
 *_Refs*<br/>
- Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -186,19 +186,19 @@ virtual const CharType *do_is(
 ### <a name="parameters"></a>Paramètres
 
 *maskVal*<br/>
- Valeur de masque pour laquelle le caractère doit être vérifié.
+Valeur de masque pour laquelle le caractère doit être vérifié.
 
 *ch*<br/>
- Caractère dont les attributs doivent être vérifiés.
+Caractère dont les attributs doivent être vérifiés.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage dont les attributs doivent être classés.
+Pointeur vers le premier caractère de la plage dont les attributs doivent être classés.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage dont les attributs doivent être classés.
+Pointeur vers le caractère juste après le dernier caractère de la plage dont les attributs doivent être classés.
 
 *dest*<br/>
- Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
+Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -234,19 +234,19 @@ virtual const CharType* do_narrow(
 ### <a name="parameters"></a>Paramètres
 
 *ch*<br/>
- Caractère de type `Chartype` utilisé par les paramètres régionaux à convertir.
+Caractère de type `Chartype` utilisé par les paramètres régionaux à convertir.
 
 *default*<br/>
- La valeur par défaut doit être assignée par la fonction membre à des caractères de type `CharType` qui n’ont pas de caractère équivalent de type **char**.
+La valeur par défaut doit être assignée par la fonction membre à des caractères de type `CharType` qui n’ont pas de caractère équivalent de type **char**.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage de caractères à convertir.
+Pointeur vers le premier caractère de la plage de caractères à convertir.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
+Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
 *dest*<br/>
- Un pointeur const vers le premier caractère de type **char** dans la plage de destination qui stocke la plage de caractères convertis.
+Un pointeur const vers le premier caractère de type **char** dans la plage de destination qui stocke la plage de caractères convertis.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -276,13 +276,13 @@ virtual const CharType *do_scan_is(
 ### <a name="parameters"></a>Paramètres
 
 *maskVal*<br/>
- Valeur de masque qui doit correspondre à un caractère.
+Valeur de masque qui doit correspondre à un caractère.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage à analyser.
+Pointeur vers le premier caractère de la plage à analyser.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
+Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -310,13 +310,13 @@ virtual const CharType *do_scan_not(
 ### <a name="parameters"></a>Paramètres
 
 *maskVal*<br/>
- Valeur de masque qui ne doit pas correspondre à un caractère.
+Valeur de masque qui ne doit pas correspondre à un caractère.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage à analyser.
+Pointeur vers le premier caractère de la plage à analyser.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
+Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -346,13 +346,13 @@ virtual const CharType *do_tolower(
 ### <a name="parameters"></a>Paramètres
 
 *ch*<br/>
- Caractère à convertir en minuscule.
+Caractère à convertir en minuscule.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
+Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
+Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -382,13 +382,13 @@ virtual const CharType *do_toupper(
 ### <a name="parameters"></a>Paramètres
 
 *ch*<br/>
- Caractère à convertir en majuscule.
+Caractère à convertir en majuscule.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
+Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
+Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -419,16 +419,16 @@ virtual const char *do_widen(
 ### <a name="parameters"></a>Paramètres
 
 *byte*<br/>
- Le caractère de type **char** dans le jeu doit être convertie de caractères natif.
+Le caractère de type **char** dans le jeu doit être convertie de caractères natif.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage de caractères à convertir.
+Pointeur vers le premier caractère de la plage de caractères à convertir.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
+Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
 *dest*<br/>
- Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
+Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -461,19 +461,19 @@ const CharType *is(
 ### <a name="parameters"></a>Paramètres
 
 *maskVal*<br/>
- Valeur de masque pour laquelle le caractère doit être vérifié.
+Valeur de masque pour laquelle le caractère doit être vérifié.
 
 *ch*<br/>
- Caractère dont les attributs doivent être vérifiés.
+Caractère dont les attributs doivent être vérifiés.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage dont les attributs doivent être classés.
+Pointeur vers le premier caractère de la plage dont les attributs doivent être classés.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage dont les attributs doivent être classés.
+Pointeur vers le caractère juste après le dernier caractère de la plage dont les attributs doivent être classés.
 
 *dest*<br/>
- Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
+Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -542,19 +542,19 @@ const CharType* narrow(
 ### <a name="parameters"></a>Paramètres
 
 *ch*<br/>
- Caractère de type `Chartype` utilisé par les paramètres régionaux à convertir.
+Caractère de type `Chartype` utilisé par les paramètres régionaux à convertir.
 
 *default*<br/>
- La valeur par défaut doit être assignée par la fonction membre à des caractères de type `CharType` qui n’ont pas de caractère équivalent de type **char**.
+La valeur par défaut doit être assignée par la fonction membre à des caractères de type `CharType` qui n’ont pas de caractère équivalent de type **char**.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage de caractères à convertir.
+Pointeur vers le premier caractère de la plage de caractères à convertir.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
+Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
 *dest*<br/>
- Un pointeur const vers le premier caractère de type **char** dans la plage de destination qui stocke la plage de caractères convertis.
+Un pointeur const vers le premier caractère de type **char** dans la plage de destination qui stocke la plage de caractères convertis.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -606,13 +606,13 @@ const CharType *scan_is(
 ### <a name="parameters"></a>Paramètres
 
 *maskVal*<br/>
- Valeur de masque qui doit correspondre à un caractère.
+Valeur de masque qui doit correspondre à un caractère.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage à analyser.
+Pointeur vers le premier caractère de la plage à analyser.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
+Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -662,13 +662,13 @@ const CharType *scan_not(
 ### <a name="parameters"></a>Paramètres
 
 *maskVal*<br/>
- Valeur de masque qui ne doit pas correspondre à un caractère.
+Valeur de masque qui ne doit pas correspondre à un caractère.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage à analyser.
+Pointeur vers le premier caractère de la plage à analyser.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
+Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -718,13 +718,13 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 ### <a name="parameters"></a>Paramètres
 
 *ch*<br/>
- Caractère à convertir en minuscule.
+Caractère à convertir en minuscule.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
+Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
+Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -773,13 +773,13 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 ### <a name="parameters"></a>Paramètres
 
 *ch*<br/>
- Caractère à convertir en majuscule.
+Caractère à convertir en majuscule.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
+Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
+Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -828,16 +828,16 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 ### <a name="parameters"></a>Paramètres
 
 *byte*<br/>
- Caractère de type char du jeu de caractères natifs à convertir.
+Caractère de type char du jeu de caractères natifs à convertir.
 
 *first*<br/>
- Pointeur vers le premier caractère de la plage de caractères à convertir.
+Pointeur vers le premier caractère de la plage de caractères à convertir.
 
 *last*<br/>
- Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
+Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
 *dest*<br/>
- Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
+Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
 
 ### <a name="return-value"></a>Valeur de retour
 

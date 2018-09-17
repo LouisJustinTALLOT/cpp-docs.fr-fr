@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901009"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712830"
 ---
 # <a name="ctabbedpane-class"></a>Ctabbedpane, classe
 
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bActivez*  
-TRUE pour activer la coloration automatique des onglets ; Sinon, FALSE.
+*bActivez*<br/>
+[in] TRUE pour activer la coloration automatique des onglets ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*  
-[in] *nTabID*  
-[in] *dockMethod*  
-[in] *bHide*  
+*pBar*<br/>
+[in] [in] *nTabID*  
+*dockMethod*<br/>
+[in] [in] *bHide*  
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>Paramètres
 
-[out] *rectTabAreaTop*  
-Contient la taille et position, en coordonnées d’écran, de la zone d’onglet supérieur.
+*rectTabAreaTop*<br/>
+[out] Contient la taille et position, en coordonnées d’écran, de la zone d’onglet supérieur.
 
-[out] *rectTabAreaBottom*  
-Contient la taille et position, en coordonnées d’écran, de la zone d’onglet en bas.
+*rectTabAreaBottom*<br/>
+[out] Contient la taille et position, en coordonnées d’écran, de la zone d’onglet en bas.
 
 ### <a name="remarks"></a>Notes
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *arColors*  
-Contient le tableau de couleurs à définir.
+*arColors*<br/>
+[in] Contient le tableau de couleurs à définir.
 
 ### <a name="remarks"></a>Notes
 

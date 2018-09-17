@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544463"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700932"
 ---
 # <a name="cmenutearoffmanager-class"></a>Cmenutearoffmanager, classe
 Gère les menus détachables. Un menu détachable est un menu de la barre de menus. L'utilisateur peut supprimer un menu détachable de la barre de menus, provoquant ainsi son flottement.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiTearOffBarID*  
- [in] *strText*  
+*uiTearOffBarID*<br/>
+[in] [in] *strText*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszRegEntry*  
- Chaîne qui contient le chemin d’accès d’une entrée de Registre. Vos applications stocke les paramètres pour les barres de détachable dans cette entrée de Registre.  
+*lpszRegEntry*<br/>
+[in] Chaîne qui contient le chemin d’accès d’une entrée de Registre. Vos applications stocke les paramètres pour les barres de détachable dans cette entrée de Registre.  
   
- [in] *uiTearOffMenuFirst*  
- Le premier ID de menu pour un menu détachable.  
+*uiTearOffMenuFirst*<br/>
+[in] Le premier ID de menu pour un menu détachable.  
   
- [in] *uiTearOffMenuLast*  
- Le dernier ID de menu pour un menu détachable.  
+*uiTearOffMenuLast*<br/>
+[in] Le dernier ID de menu pour un menu détachable.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdId*  
- [in] *bUtiliser*  
+*uiCmdId*<br/>
+[in] [in] *bUtiliser*  
   
 ### <a name="remarks"></a>Notes  
   

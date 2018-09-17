@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f59cc50e864a241608e460a45f3336e7cb89ecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339434"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717637"
 ---
 # <a name="carray-class"></a>CArray (classe)
 Prend en charge les tableaux qui ressemblent à des tableaux C, mais peuvent réduire et dynamiquement selon les besoins de la croissance.  
@@ -69,12 +69,13 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- *TYPE*  
- Paramètre de modèle qui spécifie le type des objets stockés dans le tableau. *TYPE* est un paramètre qui est retourné par `CArray`.  
-  
- *ARG* *_* *TYPE*  
- Paramètre de modèle qui spécifie le type d’argument qui est utilisé pour accéder aux objets stockés dans le tableau. Souvent, une référence à *TYPE*. *ARG_TYPE* est un paramètre qui est passé à `CArray`.  
+#### <a name="parameters"></a>Paramètres
+
+*TYPE*<br/>
+Paramètre de modèle qui spécifie le type des objets stockés dans le tableau. *TYPE* est un paramètre qui est retourné par `CArray`.
+
+*ARG_TYPE*<br/>
+Paramètre de modèle qui spécifie le type d’argument qui est utilisé pour accéder aux objets stockés dans le tableau. Souvent, une référence à *TYPE*. *ARG_TYPE* est un paramètre qui est passé à `CArray`.  
   
 ## <a name="members"></a>Membres  
   
@@ -137,7 +138,7 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>Configuration requise  
- `Header:` afxtempl.h  
+**En-tête :** afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
  Ajoute un nouvel élément à la fin d’un tableau ne soit le tableau 1.  

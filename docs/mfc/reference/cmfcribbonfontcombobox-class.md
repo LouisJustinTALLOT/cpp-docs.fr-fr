@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216472"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705689"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox, classe
 Implémente une zone de liste déroulante contenant une liste de polices. Vous placez la zone de liste déroulante sur un panneau de ruban.  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nFontType*  
- Spécifie le type de police des polices à ajouter.  
+*nFontType*<br/>
+[in] Spécifie le type de police des polices à ajouter.  
   
- [in] *nCharSet*  
- Spécifie le jeu de caractères des polices à ajouter.  
+*nCharSet*<br/>
+[in] Spécifie le jeu de caractères des polices à ajouter.  
   
- [in] *nPitchAndFamily*  
- Spécifie la hauteur et la famille de polices à ajouter.  
+*nPitchAndFamily*<br/>
+[in] Spécifie la hauteur et la famille de polices à ajouter.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Crée et initialise un [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) objet.  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- ID de commande de la commande qui s’exécute lorsque l’utilisateur sélectionne un élément dans la zone de liste déroulante.  
+*nID*<br/>
+[in] ID de commande de la commande qui s’exécute lorsque l’utilisateur sélectionne un élément dans la zone de liste déroulante.  
   
- [in] *nFontType*  
- Spécifie les types de police à afficher dans la zone de liste déroulante. Les options valides sont DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE ou toute autre combinaison au niveau du bit de ces options.  
+*nFontType*<br/>
+[in] Spécifie les types de police à afficher dans la zone de liste déroulante. Les options valides sont DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE ou toute autre combinaison au niveau du bit de ces options.  
   
- [in] *nCharSet*  
- Filtre les polices dans la zone de liste déroulante pour ceux qui appartiennent au jeu de caractères spécifié...  
+*nCharSet*<br/>
+[in] Filtre les polices dans la zone de liste déroulante pour ceux qui appartiennent au jeu de caractères spécifié...  
   
- [in] *nPitchAndFamily*  
- Spécifie la hauteur et la famille de polices qui sont affichés dans la zone de liste déroulante.  
+*nPitchAndFamily*<br/>
+[in] Spécifie la hauteur et la famille de polices qui sont affichés dans la zone de liste déroulante.  
   
- [in] *nWidth*  
- Spécifie la largeur, en pixels, de la zone de liste déroulante.  
+*nWidth*<br/>
+[in] Spécifie la largeur, en pixels, de la zone de liste déroulante.  
   
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les éventuelles *nFontType* les valeurs de paramètre, consultez [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) dans la documentation du SDK Windows.  

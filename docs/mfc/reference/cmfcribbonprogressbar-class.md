@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541014"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711982"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar, classe
 Implémente un contrôle qui affiche l'avancement d'une opération de longue durée.  
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- Spécifie l’ID de commande pour la barre de progression du ruban.  
+*nID*<br/>
+[in] Spécifie l’ID de commande pour la barre de progression du ruban.  
   
- [in] *nWidth*  
- Spécifie la largeur, en pixels, de la barre de progression du ruban.  
+*nWidth*<br/>
+[in] Spécifie la largeur, en pixels, de la barre de progression du ruban.  
   
- [in] *nHeight*  
- Spécifie la hauteur, en pixels, de la barre de progression du ruban.  
+*nHeight*<br/>
+[in] Spécifie la hauteur, en pixels, de la barre de progression du ruban.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  Retourne la position actuelle de la barre de progression.  
@@ -197,8 +197,8 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- TRUE pour spécifier que la barre de progression est en mode infini ; Sinon, FALSE.  
+*bSet*<br/>
+[in] TRUE pour spécifier que la barre de progression est en mode infini ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  En règle générale, si la barre de progression est en mode infini, il signale à l’utilisateur qu’une opération est en cours, mais que l’heure d’achèvement est inconnu. Par conséquent, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale.  
@@ -213,11 +213,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nPos*  
- Spécifie la position à laquelle la barre de progression est définie.  
+*nPos*<br/>
+[in] Spécifie la position à laquelle la barre de progression est définie.  
   
- [in] *bRedraw*  
- Spécifie si la barre de progression doit être redessinée.  
+*bRedraw*<br/>
+[in] Spécifie si la barre de progression doit être redessinée.  
   
 ### <a name="remarks"></a>Notes  
  La plage définie doit être dans la plage spécifiée par la [CMFCRibbonProgressBar::SetRange](#setrange) (méthode).  
@@ -232,11 +232,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nMin*  
- Spécifie la valeur minimale de la plage.  
+*nMin*<br/>
+[in] Spécifie la valeur minimale de la plage.  
   
- [in] *nMax*  
- Spécifie la valeur maximale de la plage.  
+*nombre maximal*<br/>
+[in] Spécifie la valeur maximale de la plage.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour définir la plage de la barre de progression en définissant les valeurs minimales et maximales.  

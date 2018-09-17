@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201749"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712850"
 ---
 # <a name="moneyget-class"></a>money_get, classe
 
@@ -47,10 +47,10 @@ class money_get : public locale::facet;
 ### <a name="parameters"></a>Paramètres
 
 *CharType*<br/>
- Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
+Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
 *InputIterator*<br/>
- Type d'itérateur depuis lequel les fonctions get lisent leur entrée.
+Type d'itérateur depuis lequel les fonctions get lisent leur entrée.
 
 ## <a name="remarks"></a>Notes
 
@@ -116,22 +116,22 @@ virtual iter_type do_get(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*<br/>
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*<br/>
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *Intl*<br/>
- Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
+Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
 *iosbase*<br/>
- Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 *État*<br/>
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *Val*<br/>
- Chaîne stockant la séquence convertie.
+Chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -198,22 +198,22 @@ iter_type get(iter_type first,
 ### <a name="parameters"></a>Paramètres
 
 *first*<br/>
- Itérateur d’entrée traitant le début de la séquence à convertir.
+Itérateur d’entrée traitant le début de la séquence à convertir.
 
 *last*<br/>
- Itérateur d’entrée traitant la fin de la séquence à convertir.
+Itérateur d’entrée traitant la fin de la séquence à convertir.
 
 *Intl*<br/>
- Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
+Valeur booléenne indiquant le type de symbole monétaire attendu dans la séquence : **true** si international, **false** si national.
 
 *iosbase*<br/>
- Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 *État*<br/>
- Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
+Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
 *Val*<br/>
- Chaîne stockant la séquence convertie.
+Chaîne stockant la séquence convertie.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -295,7 +295,7 @@ explicit money_get(size_t _Refs = 0);
 ### <a name="parameters"></a>Paramètres
 
 *_Refs*<br/>
- Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 

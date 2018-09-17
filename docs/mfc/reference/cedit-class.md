@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535403"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726633"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fournit les fonctionnalités d'un contrôle d'édition Windows.  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *lpszText*  
- Un pointeur vers une chaîne qui contient le texte de la file d’attente.  
+*lpszText*<br/>
+[out] Un pointeur vers une chaîne qui contient le texte de la file d’attente.  
   
- [in] *cchText*  
- Le nombre de caractères qui peuvent être reçus. Ce nombre inclut le caractère NULL de fin.  
+*cchText*<br/>
+[in] Le nombre de caractères qui peuvent être reçus. Ce nombre inclut le caractère NULL de fin.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pour la première surcharge, TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *pichStart*|Index de base zéro du premier caractère dans la plage de texte est mis en surbrillance.|  
-|[out] *pichEnd*|Index de base zéro du dernier caractère dans la plage de texte est mis en surbrillance.|  
+|*pichStart*|[out] Index de base zéro du premier caractère dans la plage de texte est mis en surbrillance.|  
+|*pichEnd*|[out] Index de base zéro du dernier caractère dans la plage de texte est mis en surbrillance.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszText*  
- Pointeur vers une chaîne qui contient la file d’attente à afficher dans le contrôle d’édition.  
+*lpszText*<br/>
+[in] Pointeur vers une chaîne qui contient la file d’attente à afficher dans le contrôle d’édition.  
   
- [in] *fDrawWhenFocused*  
- Si la valeur est FALSE, la bannière de signal n’est pas dessinée lorsque l’utilisateur clique sur le contrôle d’édition et donne le contrôle le focus.  
+*fDrawWhenFocused*<br/>
+[in] Si la valeur est FALSE, la bannière de signal n’est pas dessinée lorsque l’utilisateur clique sur le contrôle d’édition et donne le contrôle le focus.  
   
  Si la valeur est TRUE, la bannière de signal est dessinée, même lorsque le contrôle a le focus. La bannière de signal disparaît lorsque l’utilisateur commence à taper dans le contrôle.  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *ichStart*|Index de base zéro du premier caractère dans la plage de texte pour mettre en surbrillance.|  
-|[in] *ichEnd*|Index de base zéro du dernier caractère dans la plage de texte pour mettre en surbrillance.|  
+|*ichStart*|[in] Index de base zéro du premier caractère dans la plage de texte pour mettre en surbrillance.|  
+|*ichEnd*|[in] Index de base zéro du dernier caractère dans la plage de texte pour mettre en surbrillance.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) message, qui est décrite dans le SDK Windows.  Cette méthode envoie le [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) message, qui est décrite dans le SDK Windows. Les deux `SetHighlight` et `GetHighlight` sont activés pour les builds UNICODE uniquement. 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pEditBalloonTip*|Pointeur vers un [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) structure qui décrit l’info-bulle.|  
-|[in] *lpszTitle*|Pointeur vers une chaîne Unicode qui contient le titre de l’info-bulle.|  
-|[in] *lpszText*|Pointeur vers une chaîne Unicode qui contient le texte d’info-bulle Info-bulle.|  
-|[in] *ttiIcon*|Un **INT** qui spécifie le type d’icône à associer à l’info-bulle. La valeur par défaut est TTI_NONE. Pour plus d’informations, consultez le `ttiIcon` membre de la [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) structure.|  
+|*pEditBalloonTip*|[in] Pointeur vers un [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) structure qui décrit l’info-bulle.|  
+|*lpszTitle*|[in] Pointeur vers une chaîne Unicode qui contient le titre de l’info-bulle.|  
+|*lpszText*|[in] Pointeur vers une chaîne Unicode qui contient le texte d’info-bulle Info-bulle.|  
+|*ttiIcon*|[in] Un **INT** qui spécifie le type d’icône à associer à l’info-bulle. La valeur par défaut est TTI_NONE. Pour plus d’informations, consultez le `ttiIcon` membre de la [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  

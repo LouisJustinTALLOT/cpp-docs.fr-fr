@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7fd978390a2b991da2bddedbab1c05497709d67
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 17136bbc1d914732871d256053acff20d78ab8b1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688141"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724239"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl, classe
 La classe `CPagerCtrl` inclut dans un wrapper le contrôle pager Windows, qui peut afficher une fenêtre contenue qui ne tient pas dans la fenêtre conteneur.  
@@ -151,10 +151,10 @@ virtual BOOL Create(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles) à appliquer au contrôle.|  
-|[in] *rect*|Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|  
-|[in] *pParentWnd*|Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle. Ce paramètre ne peut pas être NULL.|  
-|[in] *nID*|L’ID du contrôle.|  
+|*dwStyle*|[in] Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles) à appliquer au contrôle.|  
+|*Rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|  
+|*pParentWnd*|[in] Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle. Ce paramètre ne peut pas être NULL.|  
+|*nID*|[in] L’ID du contrôle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -183,11 +183,11 @@ virtual BOOL CreateEx(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Une combinaison au niveau du bit des styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le *dwExStyle* paramètre de la [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) (fonction).|  
-|[in] *dwStyle*|Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles) à appliquer au contrôle.|  
-|[in] *rect*|Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|  
-|[in] *pParentWnd*|Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle. Ce paramètre ne peut pas être NULL.|  
-|[in] *nID*|L’ID du contrôle.|  
+|*dwExStyle*|[in] Une combinaison au niveau du bit des styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le *dwExStyle* paramètre de la [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) (fonction).|  
+|*dwStyle*|[in] Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles) à appliquer au contrôle.|  
+|*Rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|  
+|*pParentWnd*|[in] Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle. Ce paramètre ne peut pas être NULL.|  
+|*nID*|[in] L’ID du contrôle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -206,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *bForward*|True pour les messages de la souris vers l’avant, ou FALSE pour ne pas transférer les messages de la souris.|  
+|*bForward*|[in] True pour les messages de la souris vers l’avant, ou FALSE pour ne pas transférer les messages de la souris.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [PGM_FORWARDMOUSE](/windows/desktop/Controls/pgm-forwardmouse) message, qui est décrite dans le SDK Windows.  
@@ -273,7 +273,7 @@ DWORD GetButtonState(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’état du bouton spécifié par le *iButton* paramètre. L’état est PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED ou PGF_HOT. Pour plus d’informations, consultez la section de la valeur de retour de la [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message.  
@@ -325,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le bouton spécifié est dans l’état enfoncé ; Sinon, FALSE.  
@@ -344,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le bouton spécifié est dans un état grisé ; Sinon, FALSE.  
@@ -363,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le bouton spécifié est dans un état actif ; Sinon, FALSE.  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le bouton spécifié est dans un état invisible ; Sinon, FALSE.  
@@ -408,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButton*|Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Indique le bouton pour lequel l’état est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton en haut et PGB_BOTTOMORRIGHT pour le bouton du bas. Pour plus d’informations, consultez [Styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le bouton spécifié est dans un état normal ; Sinon, FALSE.  
@@ -447,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *clrBk*|Un [COLORREF](/windows/desktop/gdi/colorref) valeur qui contient la nouvelle couleur d’arrière-plan du contrôle de pagineur.|  
+|*clrBk*|[in] Un [COLORREF](/windows/desktop/gdi/colorref) valeur qui contient la nouvelle couleur d’arrière-plan du contrôle de pagineur.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un [COLORREF](/windows/desktop/gdi/colorref) valeur qui contient la couleur précédente de l’arrière-plan du contrôle de pagineur.  
@@ -471,7 +471,7 @@ int SetBorder(int iBorder);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iBorder*|La nouvelle taille de bordure, en pixels. Si le *iBorder* paramètre est négatif, la taille de la bordure est définie à zéro.|  
+|*iBorder*|[in] La nouvelle taille de bordure, en pixels. Si le *iBorder* paramètre est négatif, la taille de la bordure est définie à zéro.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  La taille précédente de la bordure, en pixels.  
@@ -495,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iButtonSize*|La nouvelle taille du bouton, en pixels.|  
+|*iButtonSize*|[in] La nouvelle taille du bouton, en pixels.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  La taille du bouton précédent, en pixels.  
@@ -521,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *hwndChild*|Handle de la fenêtre doit être contenu.|  
+|*hwndChild*|[in] Handle de la fenêtre doit être contenu.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [PGM_SETCHILD](/windows/desktop/Controls/pgm-setchild) message, qui est décrite dans le SDK Windows.  
@@ -544,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iPos*|La nouvelle position de défilement, en pixels.|  
+|*iPos*|[in] La nouvelle position de défilement, en pixels.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) message, qui est décrite dans le SDK Windows.  

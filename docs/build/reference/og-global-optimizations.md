@@ -1,5 +1,5 @@
 ---
-title: -Og (optimisations globales) | Documents Microsoft
+title: -Og (optimisations globales) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/22/2017
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef87f31e478bfbc8691b7e678186dd1a0621e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8443ae8111476cdd3339982c8df0b4b7e3e9c475
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377155"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722525"
 ---
 # <a name="og-global-optimizations"></a>/Og (Optimisations globales)
 
@@ -40,13 +40,13 @@ Obsolète. Fournit des optimisations locales et globales, une allocation automat
 
 ## <a name="remarks"></a>Notes
 
-**/Og** est déconseillée. Ces optimisations sont désormais généralement activées par défaut. Pour plus d’informations sur les optimisations, consultez [/O1, / O2 (réduire la taille, augmenter la vitesse)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/Ox (activer plus vitesse optimisations)](../../build/reference/ox-full-optimization.md).
+**/Og** est déconseillée. Ces optimisations sont désormais généralement activées par défaut. Pour plus d’informations sur les optimisations, consultez [/O1, / O2 (réduire la taille, augmenter la vitesse)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/Ox (activer plus optimisations de vitesse)](../../build/reference/ox-full-optimization.md).
 
 Les optimisations suivantes sont disponibles sous **/Og**:
 
 - Élimination de sous-expressions communes locales et globales
 
-     Dans cette optimisation, la valeur d’une sous-expression commune est calculée une fois. Dans l’exemple suivant, si les valeurs de `b` et `c` ne changent pas entre les trois expressions, le compilateur peut assigner le calcul de `b + c` à une variable temporaire et substituer la variable à `b + c`:
+   Dans cette optimisation, la valeur d’une sous-expression commune est calculée une seule fois. Dans l’exemple suivant, si les valeurs de `b` et `c` ne changent pas entre les trois expressions, le compilateur peut assigner le calcul de `b + c` à une variable temporaire, puis remplacez la variable pour `b + c`:
 
     ```C
     a = b + c;
@@ -54,15 +54,15 @@ Les optimisations suivantes sont disponibles sous **/Og**:
     e = b + c;
     ```
 
-     Pour une optimisation de sous-expressions communes locales, le compilateur examine courtes sections de code de sous-expressions communes. Pour une optimisation de sous-expressions communes globales, le compilateur recherche des fonctions entières sous-expressions communes.
+   Pour une optimisation de sous-expressions communes locales, le compilateur examine de courtes sections de code pour les sous-expressions communes. Pour une optimisation de sous-expressions communes globales, le compilateur recherche des fonctions ensemble sous-expressions communes.
 
 - Allocation automatique de registres
 
-     Cette optimisation permet au compilateur de variables du magasin fréquemment utilisé et les sous-expressions dans les registres ; le `register` mot clé est ignoré.
+   Cette optimisation permet au compilateur de magasin utilisé fréquemment variables et sous-expressions dans les registres ; le `register` mot clé est ignoré.
 
-- Optimisation de la boucle
+- Optimisation des boucles
 
-     Cette optimisation supprime les sous-expressions de type invariant dans le corps d’une boucle. Une boucle optimale contient uniquement des expressions dont les valeurs changent à chaque exécution de la boucle. Dans l’exemple suivant, l’expression `x + y` ne change pas dans le corps de la boucle :
+   Cette optimisation supprime les sous-expressions de type invariant à partir du corps d’une boucle. Une boucle optimale contient uniquement des expressions dont les valeurs changent à chaque exécution de la boucle. Dans l’exemple suivant, l’expression `x + y` ne change pas dans le corps de boucle :
 
     ```C
     i = -100;
@@ -71,7 +71,7 @@ Les optimisations suivantes sont disponibles sous **/Og**:
     }
     ```
 
-     Après l’optimisation, `x + y` est calculée une fois au lieu de chaque fois que la boucle est exécutée :
+   Après l’optimisation, `x + y` est calculée une seule fois et non à chaque exécution de la boucle :
 
     ```C
     i = -100;
@@ -81,16 +81,16 @@ Les optimisations suivantes sont disponibles sous **/Og**:
     }
     ```
 
-     Optimisation de la boucle est beaucoup plus efficace lorsque le compilateur ne peut prendre aucune attribution d’alias, que vous définissez avec [__restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), ou [restreindre](../../cpp/restrict.md).
+   L’optimisation des boucles est beaucoup plus efficace lorsque le compilateur ne peut prendre aucune attribution d’alias, que vous définissez avec [__restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), ou [restreindre](../../cpp/restrict.md).
 
-    > [!NOTE]
-    > Vous pouvez activer ou désactiver l’optimisation globale sur une fonction par fonction à l’aide de la `optimize` pragma avec la `g` option.
+   > [!NOTE]
+   > Vous pouvez activer ou désactiver l’optimisation globale sur une fonction par fonction à l’aide de la `optimize` pragma conjointement avec la `g` option.
 
- Pour plus d’informations, consultez [/Oi (générer des fonctions intrinsèques)](../../build/reference/oi-generate-intrinsic-functions.md) et [/Ox (activer plus vitesse optimisations)](../../build/reference/ox-full-optimization.md).
+Pour plus d’informations, consultez [/Oi (générer des fonctions intrinsèques)](../../build/reference/oi-generate-intrinsic-functions.md) et [/Ox (activer plus optimisations de vitesse)](../../build/reference/ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 

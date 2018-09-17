@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747737125a54ab67f042d286074414d8b4a1e878
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: ff45758e0c458ea333595ced51476826651b593e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691573"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723890"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -63,7 +63,7 @@ Décrit les caractéristiques des éléments pour la mise en correspondance.
 
 ```cpp
 template<class Elem>
-class regex_traits 
+class regex_traits
 ```
 
 ## <a name="parameters"></a>Paramètres

@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 27a200ba94be8c4937342820fadf89e4225ba97d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106754"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719951"
 ---
 # <a name="timeput-class"></a>time_put, classe
 
@@ -45,10 +45,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*  
+*CharType*<br/>
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
-*OutputIterator*  
+*OutputIterator*<br/>
 Type d'itération dans lequel les fonctions put temporelles enregistrent leur sortie.
 
 ## <a name="remarks"></a>Notes
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Paramètres
 
-*next*  
+*next*<br/>
 Itérateur de sortie indiquant où la séquence de caractères représentant la date et l’heure doivent être insérés.
 
-*_Iosbase*  
+*_Iosbase*<br/>
 Non utilisé.
 
-*_Pt*  
+*_Pt*<br/>
 Les informations de date et d’heure fournies en sortie.
 
-*_Fmt*  
+*_Fmt*<br/>
 Le format de la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-*_Mod*  
+*_Mod*<br/>
 Un modificateur du format. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -171,28 +171,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Paramètres
 
-*next*  
+*next*<br/>
 Itérateur de sortie indiquant où la séquence de caractères représentant la date et l’heure doivent être insérés.
 
-*_Iosbase*  
+*_Iosbase*<br/>
 Non utilisé.
 
-*_Fill*  
+*_Fill*<br/>
 Le caractère de type `CharType` utilisé pour l’espacement.
 
-*_Pt*  
+*_Pt*<br/>
 Les informations de date et d’heure fournies en sortie.
 
-*_Fmt*  
+*_Fmt*<br/>
 Le format de la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-*_Mod*  
+*_Mod*<br/>
 Un modificateur du format. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-*first*  
+*first*<br/>
 Le début de la chaîne de mise en forme pour la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-*last*  
+*last*<br/>
 La fin de la chaîne de mise en forme pour la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
 ### <a name="return-value"></a>Valeur de retour

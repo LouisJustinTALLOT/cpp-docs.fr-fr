@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab2dd3b359806aa6b5d54e476ec3581f7bb31d02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201777"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717117"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -44,14 +44,14 @@ Ouvre une table OLE DB.
 *db_table*  
 Chaîne spécifiant le nom d’une table de base de données (par exemple, « produits »).
 
-*name* (facultatif)  
-Le nom de la poignée que vous utilisez pour travailler avec la table. Vous devez spécifier ce paramètre si vous souhaitez retourner plusieurs lignes de résultats. **db_table** génère une variable avec la valeur *nom* qui peut être utilisé pour parcourir l’ensemble de lignes ou d’exécuter plusieurs requêtes d’action.
+*name*  
+(Facultatif) Le nom de la poignée que vous utilisez pour travailler avec la table. Vous devez spécifier ce paramètre si vous souhaitez retourner plusieurs lignes de résultats. **db_table** génère une variable avec la valeur *nom* qui peut être utilisé pour parcourir l’ensemble de lignes ou d’exécuter plusieurs requêtes d’action.
 
-*source_name* (facultatif)  
-Variable `CSession` ou instance d’une classe à laquelle l’attribut `db_source` est appliqué et sur laquelle la commande est exécutée. Voir [db_source](../windows/db-source.md).
+*source_name*  
+(Facultatif) Le `CSession` variable ou une instance d’une classe qui a le `db_source` attribut appliqué à ce dernier sur lequel la commande s’exécute. Voir [db_source](../windows/db-source.md).
 
-*HRESULT* (facultatif)  
-Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
+*HRESULT*  
+(Facultatif) Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
 
 ## <a name="remarks"></a>Notes
 

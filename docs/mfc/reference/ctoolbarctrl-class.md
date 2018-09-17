@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686083"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724072"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de barre d'outils Windows.  
@@ -532,8 +532,8 @@ BOOL ChangeBitmap(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *idButton*|Identificateur de commande du bouton qui doit recevoir une nouvelle image bitmap.|  
-|[in] *iBitmap*|Index de base zéro d’une image dans la liste d’images du contrôle de barre d’outils en cours.|  
+|*idButton*|[in] Identificateur de commande du bouton qui doit recevoir une nouvelle image bitmap.|  
+|*iBitmap*|[in] Index de base zéro d’une image dans la liste d’images du contrôle de barre d’outils en cours.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -841,7 +841,7 @@ CString GetButtonText(int idButton) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *idButton*|L’identificateur pour le bouton d’affichage dont le texte est récupéré.|  
+|*idButton*|[in] L’identificateur pour le bouton d’affichage dont le texte est récupéré.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un [CString](../../atl-mfc-shared/using-cstring.md) qui contient le texte d’affichage du bouton spécifié.  
@@ -860,7 +860,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Pointeur vers un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) structure qui reçoit les informations de schéma de couleur. Lorsque cette méthode est retournée, la structure décrit la couleur de surbrillance et la couleur de l’ombre du contrôle de barre d’outils.|  
+|*lpColorScheme*|[out] Pointeur vers un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) structure qui reçoit les informations de schéma de couleur. Lorsque cette méthode est retournée, la structure décrit la couleur de surbrillance et la couleur de l’ombre du contrôle de barre d’outils.|  
   
 ### <a name="return-value"></a>Valeur de retour  
 TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1053,8 +1053,8 @@ BOOL GetPadding(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *pnHorzPadding*|Entier qui reçoit la marge intérieure horizontale du contrôle de barre d’outils, en pixels.|  
-|[out] *pnVertPadding*|Entier qui reçoit la marge intérieure verticale du contrôle de barre d’outils, en pixels.|  
+|*pnHorzPadding*|[out] Entier qui reçoit la marge intérieure horizontale du contrôle de barre d’outils, en pixels.|  
+|*pnVertPadding*|[out] Entier qui reçoit la marge intérieure verticale du contrôle de barre d’outils, en pixels.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1349,8 +1349,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- L’ID de commande pour le bouton de barre d’outils.  
+*nID*<br/>
+[in] L’ID de commande pour le bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Entier positif si le bouton est mis en surbrillance, 0 si le bouton n’est pas mis en surbrillance, ou -1 si une erreur se produit.  
@@ -1363,8 +1363,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- Identificateur de commande du bouton dans la barre d’outils.  
+*nID*<br/>
+[in] Identificateur de commande du bouton dans la barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Entier positif si le bouton est indéterminé, zéro si le bouton n’est pas indéterminé, ou -1 si une erreur se produit.  
@@ -1491,11 +1491,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- Identificateur de commande du bouton à appuyer sur ou de mise en production.  
+*nID*<br/>
+[in] Identificateur de commande du bouton à appuyer sur ou de mise en production.  
   
- [in] *bPress*  
- Valeur TRUE à appuyer sur le bouton spécifié ; FALSE pour libérer le bouton spécifié. La valeur par défaut est TRUE.  
+*bPress*<br/>
+[in] Valeur TRUE à appuyer sur le bouton spécifié ; FALSE pour libérer le bouton spécifié. La valeur par défaut est TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -1516,7 +1516,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Pointeur vers un [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) structure qui décrit la bitmap à remplacer et la nouvelle image bitmap.|  
+|*pReplaceBitmap*|[in] Pointeur vers un [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) structure qui décrit la bitmap à remplacer et la nouvelle image bitmap.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1593,8 +1593,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *fAnchor*  
- Spécifie si la mise en surbrillance d’ancrage est activée ou désactivée. Si cette valeur est différente de zéro, la mise en surbrillance d’ancrage est activée. Si cette valeur est zéro, la mise en surbrillance d’ancrage sera désactivée.  
+*fAnchor*<br/>
+[in] Spécifie si la mise en surbrillance d’ancrage est activée ou désactivée. Si cette valeur est différente de zéro, la mise en surbrillance d’ancrage est activée. Si cette valeur est zéro, la mise en surbrillance d’ancrage sera désactivée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le paramètre d’ancrage précédent. Si la mise en surbrillance a été activée, cette valeur est différente de zéro. Si la mise en surbrillance n’a pas été activée, cette valeur est zéro.  
@@ -1729,7 +1729,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Pointeur vers un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) structure qui décrit la couleur de surbrillance et la couleur de l’ombre du contrôle de barre d’outils.|  
+|*lpColorScheme*|[in] Pointeur vers un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) structure qui décrit la couleur de surbrillance et la couleur de l’ombre du contrôle de barre d’outils.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode n’a aucun effet si un thème visuel de Windows Vista est défini.  
@@ -1952,8 +1952,8 @@ DWORD SetPadding(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *nHorzPadding*|Spécifie la marge horizontale du contrôle de barre d’outils, en pixels.|  
-|[in] *nVertPadding*|Spécifie la marge verticale du contrôle de barre d’outils, en pixels.|  
+|*nHorzPadding*|[in] Spécifie la marge horizontale du contrôle de barre d’outils, en pixels.|  
+|*nVertPadding*|[in] Spécifie la marge verticale du contrôle de barre d’outils, en pixels.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un valeur DWORD dont mot de poids faible contient la valeur précédente de la marge intérieure horizontale et dont word haute contient la valeur précédente de la marge intérieure verticale. Les valeurs de remplissage sont mesurées en pixels.  
@@ -1979,8 +1979,8 @@ CImagelist* SetPressedImageList(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iImageID*|Index de base zéro de la liste d’images. Définissez ce paramètre sur zéro, si vous utilisez uniquement une liste d’images.|  
-|[in] *pImageList*|Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) qui contient la liste d’images.|  
+|*iImageID*|[in] Index de base zéro de la liste d’images. Définissez ce paramètre sur zéro, si vous utilisez uniquement une liste d’images.|  
+|*pImageList*|[in] Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) qui contient la liste d’images.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) qui contient la liste d’images précédente pour le contrôle actuel, ou NULL si aucune liste d’images de ce type n’a été défini.  

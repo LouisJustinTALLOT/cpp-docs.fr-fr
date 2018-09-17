@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214164"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713304"
 ---
 # <a name="deque-class"></a>deque, classe
 
@@ -119,10 +119,10 @@ class deque
 ### <a name="parameters"></a>Paramètres
 
 *Type*<br/>
- Type de données de l'élément à stocker dans la file d'attente à deux extrémités.
+Type de données de l'élément à stocker dans la file d'attente à deux extrémités.
 
 *Allocateur*<br/>
- Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la file d'attente à deux extrémités. Cet argument est facultatif et la valeur par défaut est **allocateur\<Type >**.
+Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la file d'attente à deux extrémités. Cet argument est facultatif et la valeur par défaut est **allocateur\<Type >**.
 
 ## <a name="remarks"></a>Notes
 
@@ -246,19 +246,19 @@ void assign(initializer_list<Type> IList);
 ### <a name="parameters"></a>Paramètres
 
 *Premier*<br/>
- Position du premier élément de la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
+Position du premier élément de la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
 
 *Dernière*<br/>
- Position du premier élément après la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
+Position du premier élément après la plage d’éléments à copier à partir de la file d’attente à deux extrémités de l’argument.
 
 *Nombre*<br/>
- Nombre de copies d’un élément inséré dans la file d’attente à deux extrémités.
+Nombre de copies d’un élément inséré dans la file d’attente à deux extrémités.
 
 *Val*<br/>
- Valeur de l’élément inséré dans la file d’attente à deux extrémités.
+Valeur de l’élément inséré dans la file d’attente à deux extrémités.
 
 *IList*<br/>
- Initializer_list inséré dans la file d’attente à deux extrémités.
+Initializer_list inséré dans la file d’attente à deux extrémités.
 
 ### <a name="remarks"></a>Notes
 
@@ -333,7 +333,7 @@ const_reference at(size_type pos) const;
 ### <a name="parameters"></a>Paramètres
 
 *points de vente*<br/>
- Indice (ou numéro de position) de l’élément à référencer dans la file d’attente à deux extrémités.
+Indice (ou numéro de position) de l’élément à référencer dans la file d’attente à deux extrémités.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1314,7 +1314,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+   *c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is " << *c1_Iter << endl;
 
    // If a const iterator had been declared instead with the line:
@@ -1346,13 +1346,13 @@ iterator erase(iterator first, iterator last);
 ### <a name="parameters"></a>Paramètres
 
 *_WHERE*<br/>
- Position de l’élément à supprimer de la file d’attente à deux extrémités.
+Position de l’élément à supprimer de la file d’attente à deux extrémités.
 
 *first*<br/>
- Position du premier élément supprimé de la file d’attente à deux extrémités.
+Position du premier élément supprimé de la file d’attente à deux extrémités.
 
 *last*<br/>
- Position juste après le dernier élément supprimé de la file d’attente à deux extrémités.
+Position juste après le dernier élément supprimé de la file d’attente à deux extrémités.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1603,7 +1603,7 @@ const_reference operator[](size_type pos) const;
 ### <a name="parameters"></a>Paramètres
 
 *points de vente*<br/>
- Position de l’élément de file d’attente à deux extrémités à référencer.
+Position de l’élément de file d’attente à deux extrémités à référencer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1714,7 +1714,7 @@ int main( )
 
    cout << "     ";
    S<MyDeque&&>::show ( move< MyDeque& > (d1) );
- }
+}
 ```
 
 ## <a name="pointer"></a>  deque::pointer
@@ -1951,7 +1951,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;  // This would have caused an error if a
+   *c1_rIter = 40;  // This would have caused an error if a
                     // const_reverse iterator had been declared as
                     // noted above
    cout << "Last element in deque is now " << *c1_rIter << "." << endl;
@@ -2069,7 +2069,7 @@ int main( )
    c1_rIter = c1.rend( );
    c1_rIter--; // Decrementing the reverse iterator moves it backward
                // in the reversed deque (to the last element here)
- *c1_rIter = 40; // This modification of the last element would
+   *c1_rIter = 40; // This modification of the last element would
                    // have caused an error if a const_reverse
                    // iterator had been declared (as noted above)
    cout << "The modified reversed deque is: ";
@@ -2099,10 +2099,10 @@ void resize(size_type _Newsize, Type val);
 ### <a name="parameters"></a>Paramètres
 
 *_Newsize*<br/>
- Nouvelle taille de la file d’attente à deux extrémités.
+Nouvelle taille de la file d’attente à deux extrémités.
 
 *Val*<br/>
- Valeur des nouveaux éléments à ajouter à la file d’attente à deux extrémités si la nouvelle taille est supérieure à la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
+Valeur des nouveaux éléments à ajouter à la file d’attente à deux extrémités si la nouvelle taille est supérieure à la taille d’origine. Si la valeur est omise, la valeur par défaut pour la classe est assignée aux nouveaux éléments.
 
 ### <a name="remarks"></a>Notes
 
@@ -2278,10 +2278,10 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 ### <a name="parameters"></a>Paramètres
 
 *right*<br/>
- File d’attente à deux extrémités qui fournit les éléments à échanger ou file d’attente à deux extrémités dont les éléments doivent être échangés avec ceux de la file d’attente à deux extrémités `left`.
+File d’attente à deux extrémités qui fournit les éléments à échanger ou file d’attente à deux extrémités dont les éléments doivent être échangés avec ceux de la file d’attente à deux extrémités `left`.
 
 *left*<br/>
- Un deque dont les éléments doivent être échangés avec ceux de la deque *droit*.
+Un deque dont les éléments doivent être échangés avec ceux de la deque *droit*.
 
 ### <a name="example"></a>Exemple
 

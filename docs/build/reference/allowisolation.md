@@ -18,33 +18,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9511ce2d94a426756581b87d863051da25a627b
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 12ee07a0ea6dbe2c3bea21aaa6b394b4c3e6f156
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571877"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704084"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
-Spécifie un comportement pour la recherche de manifeste.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-/ALLOWISOLATION[:NO]  
-```  
-  
-## <a name="remarks"></a>Notes  
- **/ ALLOWISOLATION** provoque le système d’exploitation et charger des manifestes.  
-  
- **/ ALLOWISOLATION** est la valeur par défaut.  
-  
- **/ALLOWISOLATION:no** indique que les fichiers exécutables sont chargés comme s’il n’y avait aucun manifeste et causes [référence EDITBIN](../../build/reference/editbin-reference.md) pour définir le `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dans l’en-tête optional `DllCharacteristics` champ.  
-  
- Quand l'isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas de trouver un manifeste d'application pour le processus nouvellement créé. Le nouveau processus n’a pas un contexte d’activation par défaut, même s’il existe un manifeste dans le fichier exécutable lui-même ou s’il existe un manifeste qui porte le nom *nom_exécutable*. exe.manifest.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Options EDITBIN](../../build/reference/editbin-options.md)   
- [/ALLOWISOLATION (recherche de manifeste)](../../build/reference/allowisolation-manifest-lookup.md)   
- [Référence des fichiers manifeste](/windows/desktop/SbsCs/manifest-files-reference)
+
+Spécifie un comportement pour la recherche de manifeste.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+/ALLOWISOLATION[:NO]
+```
+
+## <a name="remarks"></a>Notes
+
+**/ ALLOWISOLATION** provoque le système d’exploitation et charger des manifestes.
+
+**/ ALLOWISOLATION** est la valeur par défaut.
+
+**/ALLOWISOLATION:no** indique que les fichiers exécutables sont chargés comme s’il n’y avait aucun manifeste et causes [référence EDITBIN](../../build/reference/editbin-reference.md) pour définir le `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dans l’en-tête optional `DllCharacteristics` champ.
+
+Quand l'isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas de trouver un manifeste d'application pour le processus nouvellement créé. Le nouveau processus n’a pas un contexte d’activation par défaut, même s’il existe un manifeste dans le fichier exécutable lui-même ou s’il existe un manifeste qui porte le nom *nom_exécutable*. exe.manifest.
+
+## <a name="see-also"></a>Voir aussi
+
+[Options EDITBIN](../../build/reference/editbin-options.md)<br/>
+[/ALLOWISOLATION (recherche de manifeste)](../../build/reference/allowisolation-manifest-lookup.md)
+[référence des fichiers de manifeste](/windows/desktop/SbsCs/manifest-files-reference)

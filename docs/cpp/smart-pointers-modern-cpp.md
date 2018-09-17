@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb4af8f218a6040080cdf429b061205269cbc4dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462249"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703584"
 ---
 # <a name="smart-pointers-modern-c"></a>Pointeurs intelligents (Modern C++)
 Dans la programmation C++ moderne, la bibliothèque Standard inclut *intelligente des pointeurs*, qui sont utilisées pour garantir que les programmes sont libres de mémoire et les fuites de ressources et sont protégé contre les exceptions.  
@@ -69,8 +69,9 @@ Dans la programmation C++ moderne, la bibliothèque Standard inclut *intelligent
 ## <a name="kinds-of-smart-pointers"></a>Genres de pointeurs intelligents  
  La section suivante résume les différents genres de pointeurs intelligents disponibles dans l'environnement de programmation Windows, et indique quand les utiliser.  
   
- **Pointeurs intelligents de bibliothèque C++ Standard**  
- Utilisez ces pointeurs intelligents comme premier choix pour encapsuler les pointeurs vers les objets C++ anciens ordinaires (POCO).  
+### <a name="c-standard-library-smart-pointers"></a>Pointeurs intelligents de bibliothèque standard C++
+
+Utilisez ces pointeurs intelligents comme premier choix pour encapsuler les pointeurs vers les objets C++ anciens ordinaires (POCO).  
   
 -   `unique_ptr`   
      Autorise exactement un propriétaire du pointeur sous-jacent. À utiliser comme option par défaut pour POCO à moins que vous ne soyez certain d'avoir besoin de `shared_ptr`. Peut être déplacé vers un nouveau propriétaire, mais pas copié ou partagé. Remplace `auto_ptr`, qui est déconseillé. Comparez à `boost::scoped_ptr`. `unique_ptr` est petite et efficace ; la taille est un pointeur, et il prend en charge les références rvalue pour une insertion rapide et l’extraction des collections de la bibliothèque C++ Standard. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) et [unique_ptr, classe](../standard-library/unique-ptr-class.md).  
@@ -81,8 +82,9 @@ Dans la programmation C++ moderne, la bibliothèque Standard inclut *intelligent
 -   `weak_ptr`   
     Pointeur intelligent spécifique à utiliser en collaboration avec `shared_ptr`. `weak_ptr` fournit l'accès à un objet appartenant à une ou plusieurs instances `shared_ptr`, mais ne participe pas au décompte de références. À utiliser lorsque vous souhaitez observer un objet, mais n'avez pas besoin qu'il demeure actif. Obligatoire dans certains cas pour interrompre les références circulaires entre les instances `shared_ptr`. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) et [weak_ptr, classe](../standard-library/weak-ptr-class.md).  
   
- **Pointeurs intelligents pour les objets COM (programmation Windows classique)**  
- Lorsque vous travaillez avec les objets COM, encapsulez les pointeurs d'interface dans un type de pointeur intelligent approprié. La bibliothèque ATL (Active Template Library) définit plusieurs pointeurs intelligents pour différents besoins. Vous pouvez également utiliser le type pointeur intelligent `_com_ptr_t`, que le compilateur utilise lorsqu'il crée des classes wrapper à partir de fichiers .tlb. C'est le meilleur choix lorsque vous ne souhaitez pas inclure les fichiers d'en-tête ATL.  
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Pointeurs intelligents pour les objets COM (programmation Windows classique)
+
+Lorsque vous travaillez avec les objets COM, encapsulez les pointeurs d'interface dans un type de pointeur intelligent approprié. La bibliothèque ATL (Active Template Library) définit plusieurs pointeurs intelligents pour différents besoins. Vous pouvez également utiliser le type pointeur intelligent `_com_ptr_t`, que le compilateur utilise lorsqu'il crée des classes wrapper à partir de fichiers .tlb. C'est le meilleur choix lorsque vous ne souhaitez pas inclure les fichiers d'en-tête ATL.  
   
  [CComPtr, classe](../atl/reference/ccomptr-class.md)  
  Procédez ainsi à moins que vous ne puissiez pas utiliser ATL. Effectue un décompte des références à l'aide des méthodes `AddRef` et `Release`. Pour plus d’informations, consultez [Comment : créer et utiliser Instances CComPtr et CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
@@ -99,8 +101,9 @@ Dans la programmation C++ moderne, la bibliothèque Standard inclut *intelligent
  [_com_ptr_t, classe](../cpp/com-ptr-t-class.md)  
  Ressemble à `CComQIPtr` en termes de fonctionnalités mais ne dépend pas d'en-têtes ATL.  
   
- **Pointeurs intelligents ATL pour objets POCO**  
- En plus des pointeurs intelligents pour objets COM, ATL définit également des pointeurs intelligents et des collections de pointeurs intelligents pour les objets POD (Plain Old Data) de C++. Dans la programmation Windows classique, ces types sont des alternatives utiles pour les collections de la bibliothèque C++ Standard, en particulier lorsque la portabilité du code n’est pas nécessaire ou lorsque vous ne souhaitez pas mélanger les modèles de programmation de la bibliothèque Standard C++ et ATL.  
+### <a name="atl-smart-pointers-for-poco-objects"></a>Pointeurs intelligents ATL pour objets POCO
+
+En plus des pointeurs intelligents pour objets COM, ATL définit également des pointeurs intelligents et des collections de pointeurs intelligents pour les objets POD (Plain Old Data) de C++. Dans la programmation Windows classique, ces types sont des alternatives utiles pour les collections de la bibliothèque C++ Standard, en particulier lorsque la portabilité du code n’est pas nécessaire ou lorsque vous ne souhaitez pas mélanger les modèles de programmation de la bibliothèque Standard C++ et ATL.  
   
  [CAutoPtr, classe](../atl/reference/cautoptr-class.md)  
  Pointeur intelligent qui applique une propriété unique en transférant la propriété lors de la copie. Comparable à la classe `std::auto_ptr` déconseillée.  

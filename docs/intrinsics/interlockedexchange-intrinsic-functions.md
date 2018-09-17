@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6af43074e78ffb66299b9eeda97dd18f073d77fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a7a450d683bfa2c358e26a4109a2e8a75c04e233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599397"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716214"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange, fonctions intrinsèques
 **Section spécifique à Microsoft**  
@@ -152,11 +152,11 @@ __int64 _InterlockedExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in, out] `Target`  
- Pointeur vers la valeur à échanger. La fonction affecte à cette variable la valeur `Value` et retourne sa valeur précédente.  
+*Target*<br/>
+[in, out] Pointeur vers la valeur à échanger. La fonction affecte à cette variable la valeur `Value` et retourne sa valeur précédente.  
   
- [in] `Value`  
- Valeur à échanger avec la valeur pointée par `Target`.  
+*Valeur*<br/>
+[in] Valeur à échanger avec la valeur vers laquelle pointe `Target`.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne la valeur initiale pointée par `Target`.  

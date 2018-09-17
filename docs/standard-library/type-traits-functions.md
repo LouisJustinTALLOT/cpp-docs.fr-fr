@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 3754af9a32ab1beeb4f3b9a783547bd081d57a46
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 551282b6d99491e49a185bab2ede2f775bb55498
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955829"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707822"
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt;, fonctions
 
@@ -53,11 +53,11 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*To*  
- Type de l'objet qui reçoit l'assignation.
+*To*<br/>
+Type de l'objet qui reçoit l'assignation.
 
-*From*  
- Type de l'objet qui fournit la valeur.
+*From*<br/>
+Type de l'objet qui fournit la valeur.
 
 ### <a name="remarks"></a>Notes
 
@@ -74,8 +74,8 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*  
- Type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
@@ -92,8 +92,8 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*  
- Type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
@@ -145,8 +145,8 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
- Type à interroger.
+*T*<br/>
+Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
@@ -198,8 +198,8 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
- Type à interroger.
+*T*<br/>
+Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
@@ -216,8 +216,8 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
- Type à évaluer
+*T*<br/>
+Type à évaluer
 
 ### <a name="remarks"></a>Notes
 
@@ -234,8 +234,8 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*  
- Type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
@@ -252,8 +252,8 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
- Type à interroger.
+*T*<br/>
+Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
@@ -272,8 +272,8 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*  
- Type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
@@ -302,8 +302,8 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*  
- Type à interroger.
+*Ty*<br/>
+Type à interroger.
 
 ### <a name="remarks"></a>Notes
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55dc6492faea101df40c2901ced24321822f36e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 54a816bd4df165b3df9de723560192ac9072b29c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539258"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718833"
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Section spécifique à Microsoft**  
@@ -41,14 +41,14 @@ void __outbytestring(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Port`  
- Le port pour envoyer les données.  
+*Port*<br/>
+[in] Le port pour envoyer les données.  
   
- [in] `Buffer`  
- Les données seront envoyés le port spécifié.  
+*mémoire tampon*<br/>
+[in] Les données seront envoyés le port spécifié.  
   
- [in] `Count`  
- Le nombre d’octets de données à envoyer.  
+*Nombre*<br/>
+[in] Le nombre d’octets de données à envoyer.  
   
 ## <a name="requirements"></a>Configuration requise  
   

@@ -1,5 +1,5 @@
 ---
-title: __addfsbyte, __addfsword, __addfsdword | Documents Microsoft
+title: __addfsbyte, __addfsword, __addfsdword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c2b4a9e185f709ff829a3b88ea9cb67741fa1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330244"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714218"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 **Section spécifique à Microsoft**  
   
- Ajoutez une valeur à un emplacement de mémoire spécifié par un décalage par rapport au début de la `FS` segment.  
+ Ajouter une valeur à un emplacement de mémoire spécifié par un offset par rapport au début de la `FS` segment.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,13 +53,13 @@ void __addfsdword(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Offset`  
- Le décalage à partir du début de `FS`.  
+*Décalage*<br/>
+[in] Le décalage à partir du début de `FS`.  
   
- [in] `Data`  
- Valeur à ajouter à l’emplacement de mémoire.  
+*Données*<br/>
+[in] Valeur à ajouter à l’emplacement de mémoire.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -68,7 +68,7 @@ void __addfsdword(
 |`__addfsdword`|x86|  
   
 ## <a name="remarks"></a>Notes  
- Ces routines sont disponibles seulement comme fonctions intrinsèques.  
+ Ces routines sont disponibles uniquement sous forme de fonctions intrinsèques.  
   
 **FIN de la section spécifique à Microsoft**  
   

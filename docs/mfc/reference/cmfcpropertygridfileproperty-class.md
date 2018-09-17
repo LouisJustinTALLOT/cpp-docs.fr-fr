@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539273"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700831"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Cmfcpropertygridfileproperty, classe
 Le `CMFCPropertyGridFileProperty` classe prend en charge un élément de contrôle de liste de propriétés qui ouvre une boîte de dialogue de sélection de fichier.  
@@ -78,29 +78,29 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *strName*  
- Nom de la propriété.  
+*strName*<br/>
+[in] Le nom de propriété.  
   
- [in] *bOpenFileDialog*  
- True pour ouvrir un **ouvrir un fichier** boîte de dialogue ; FALSE pour ouvrir un **enregistrer le fichier** boîte de dialogue.  
+*bOpenFileDialog*<br/>
+[in] True pour ouvrir un **ouvrir un fichier** boîte de dialogue ; FALSE pour ouvrir un **enregistrer le fichier** boîte de dialogue.  
   
- [in] *strFileName*  
- Nom de fichier initial.  
+*strFileName*<br/>
+[in] Le nom de fichier initial.  
   
- [in] *lpszDefExt*  
- Chaîne d’une ou plusieurs extensions de nom de fichier. La valeur par défaut est NULL.  
+*lpszDefExt*<br/>
+[in] Une chaîne d’une ou plusieurs extensions de nom de fichier. La valeur par défaut est NULL.  
   
- [in] *dwFlags*  
- Indicateurs de boîte de dialogue. La valeur par défaut est une combinaison (OR) au niveau du bit de OFN_HIDEREADONLY et OFN_OVERWRITEPROMPT.  
+*dwFlags*<br/>
+[in] Indicateurs de boîte de dialogue. La valeur par défaut est une combinaison (OR) au niveau du bit de OFN_HIDEREADONLY et OFN_OVERWRITEPROMPT.  
   
- [in] *lpszFilter*  
- Chaîne d'un ou plusieurs filtres de fichiers. La valeur par défaut est NULL.  
+*lpszFilter*<br/>
+[in] Une chaîne d’un ou plusieurs filtres de fichier. La valeur par défaut est NULL.  
   
- [in] *lpszDescr*  
- Description d'élément de propriété. La valeur par défaut est NULL.  
+*lpszDescr*<br/>
+[in] La description d’élément de propriété. La valeur par défaut est NULL.  
   
- [in] *dwData*  
- Données propres à l'application associées à l'élément de propriété. Par exemple, un entier 32 bits ou un pointeur vers d'autres données. La valeur par défaut est 0.  
+*dwData*<br/>
+[in] Données spécifiques à l’application qui sont associées à l’élément de propriété. Par exemple, un entier 32 bits ou un pointeur vers d'autres données. La valeur par défaut est 0.  
   
 ### <a name="return-value"></a>Valeur de retour  
   

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ff031c64ab57373beadd8a88235d018f2e5c0f5
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f692dd8006618661d6710ee6e8e681047fea3b1f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894419"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706297"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Spécifier un fichier réponse de l'Éditeur de liens)
 
@@ -37,7 +37,7 @@ Spécifie un fichier de réponse de l’éditeur de liens.
 
 ## <a name="arguments"></a>Arguments
 
-*response_file*  
+*response_file*<br/>
 Un fichier texte spécifiant des commandes de l’éditeur de liens.
 
 ## <a name="remarks"></a>Notes
@@ -54,5 +54,5 @@ Consultez [@ (spécifier un fichier de réponse du compilateur)](../../build/ref
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)  
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)

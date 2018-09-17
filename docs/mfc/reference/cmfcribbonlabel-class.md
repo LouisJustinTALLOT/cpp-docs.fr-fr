@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848581"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703831"
 ---
 # <a name="cmfcribbonlabel-class"></a>Cmfcribbonlabel, classe
 Implémente une étiquette de texte non interactive pour un ruban.  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszText*  
- Le texte s’affiche dans l’étiquette.  
+*lpszText*<br/>
+[in] Le texte s’affiche dans l’étiquette.  
   
- [in] *bIsMultiLine*  
- TRUE pour spécifier que l’étiquette est une étiquette multiligne ; Sinon, FALSE.  
+*bIsMultiLine*<br/>
+[in] TRUE pour spécifier que l’étiquette est une étiquette multiligne ; Sinon, FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Détermine les données d’accessibilité de l’élément d’étiquette ruban actuel.  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParent*  
- Représente la fenêtre parente de l’étiquette de ruban actuelle.  
+*pParent*<br/>
+[in] Représente la fenêtre parente de l’étiquette de ruban actuelle.  
   
- [out] *données*  
- Un objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité de l’étiquette de ruban actuelle.  
+*data*<br/>
+[out] Un objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité de l’étiquette de ruban actuelle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le *données* paramètre a été correctement remplis avec les données d’accessibilité de l’étiquette de ruban actuelle ; sinon, FALSE.  

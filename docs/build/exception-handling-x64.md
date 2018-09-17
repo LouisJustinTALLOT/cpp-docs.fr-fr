@@ -15,27 +15,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acfcf5f37e0b679faf0e35549cc705ccee216c02
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 34695d8e0edf7a6c910173eca0c465cf01028c29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571952"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718742"
 ---
 # <a name="exception-handling-x64"></a>Gestion des exceptions (x64)
-Cette section décrit la gestion structurée des exceptions et le comportement sur le x64 des exceptions C++.  
-  
--   [Données de déroulement pour la gestion des exceptions et la prise en charge du débogueur](../build/unwind-data-for-exception-handling-debugger-support.md)  
-  
--   [La procédure de déroulement](../build/unwind-procedure.md)  
-  
--   [Gestionnaire spécifique au langage](../build/language-specific-handler.md)  
-  
--   [Assistances de déroulement pour MASM](../build/unwind-helpers-for-masm.md)  
-  
--   [Données de déroulement des définitions en C](../build/unwind-data-definitions-in-c.md)  
-  
- Pour plus d’informations, consultez l’article [Gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Conventions des logiciels x64](../build/x64-software-conventions.md)
+
+Cette section décrit la gestion structurée des exceptions et le comportement sur le x64 des exceptions C++.
+
+- [Données de déroulement pour la gestion des exceptions et la prise en charge du débogueur](../build/unwind-data-for-exception-handling-debugger-support.md)
+
+- [La procédure de déroulement](../build/unwind-procedure.md)
+
+- [Gestionnaire spécifique au langage](../build/language-specific-handler.md)
+
+- [Assistances de déroulement pour MASM](../build/unwind-helpers-for-masm.md)
+
+- [Données de déroulement des définitions en C](../build/unwind-data-definitions-in-c.md)
+
+Pour plus d’informations, consultez l’article [Gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Conventions des logiciels x64](../build/x64-software-conventions.md)

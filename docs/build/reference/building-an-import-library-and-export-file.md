@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894614"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723305"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Génération d'une bibliothèque d'importation et d'un fichier d'exportation
 
@@ -60,7 +60,7 @@ Ce sont les mêmes méthodes que vous utilisez pour spécifier des exportations 
 
 Les options suivantes s’appliquent à la création d’une bibliothèque d’importation et exportation de fichier :
 
-> **/ OUT :** *importer*  
+> **/ OUT :** *importer*
 
 Substitue le nom de fichier de sortie par défaut pour le *importer* bibliothèque en cours de création. Lorsque /OUT n’est pas spécifié, le nom par défaut est le nom de base de la bibliothèque dans la commande LIB et l’extension ou le premier fichier objet. lib. Le fichier d’exportation porte le même nom que la bibliothèque d’importation et l’extension. exp.
 

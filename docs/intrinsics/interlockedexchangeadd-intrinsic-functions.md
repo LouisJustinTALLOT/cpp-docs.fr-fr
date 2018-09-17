@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d438d31088c6ded53df3137e76ebc6a2953890e6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600890"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700913"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd, fonctions intrinsèques
 **Section spécifique à Microsoft**  
@@ -164,11 +164,11 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in, out] `Addend`  
- Valeur à laquelle il faut ajouter ; remplacée par le résultat de l'addition.  
+*Terme*<br/>
+[in, out] La valeur doit être ajouté remplacé par le résultat de l’addition.  
   
- [in] `Value`  
- Valeur à ajouter.  
+*Valeur*<br/>
+[in] Valeur à ajouter.  
   
 ## <a name="return-value"></a>Valeur de retour  
  La valeur de retour est la valeur initiale de la variable vers laquelle pointe le paramètre `Addend`.  

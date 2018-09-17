@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959067"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716187"
 ---
 # <a name="tupleelement-class"></a>tuple_element, classe
 
@@ -66,22 +66,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Paramètres
 
-*Index*  
+*Index*<br/>
 Index de l’élément désigné.
 
-*Tuple*  
+*Tuple*<br/>
 Type du tuple.
 
-*Elem*  
+*Elem*<br/>
 Type d’un élément de tableau.
 
-*Taille*  
+*Taille*<br/>
 Taille du tableau.
 
-*T1*  
+*T1*<br/>
 Le type du premier élément dans une paire.
 
-*T2*  
+*T2*<br/>
 Le type du second élément d’une paire.
 
 ## <a name="remarks"></a>Notes
@@ -184,7 +184,13 @@ int main() {
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<tuple > **en-tête :** \<array > (pour la spécialisation de tableau) **en-tête :** \<utilitaire > (pour les spécialisations de paire)  **Namespace :** std
+**En-tête :** \<tuple>
+
+**En-tête :** \<array> (pour la spécialisation de tableau)
+
+**En-tête :** \<utilitaire > (pour les spécialisations de paire)
+
+**Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 

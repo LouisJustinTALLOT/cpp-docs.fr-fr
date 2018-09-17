@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50c0025e561c86fc18bbf5c4554c9f894fe32ec7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cd5341dc4d47740410df01feadbd9e6aa3926a23
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541245"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721383"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 **Section spécifique à Microsoft**  
@@ -60,11 +60,11 @@ void __addgsqword(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Offset`  
- Le décalage à partir du début de `GS`.  
+*Décalage*<br/>
+[in] Le décalage à partir du début de `GS`.  
   
- [in] `Data`  
- Valeur à ajouter à l’emplacement de mémoire.  
+*Données*<br/>
+[in] Valeur à ajouter à l’emplacement de mémoire.  
   
 ## <a name="requirements"></a>Configuration requise  
   

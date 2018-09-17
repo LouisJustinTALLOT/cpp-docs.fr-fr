@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538478"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712952"
 ---
 # <a name="cmfcribbonbutton-class"></a>Cmfcribbonbutton, classe
 La classe `CMFCRibbonButton` implémente des boutons que vous pouvez placer sur des éléments de barre de ruban, tels que les volets, les barres d'outils Accès rapide et les menus contextuels.  
@@ -261,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pSubItem*  
- Spécifie un pointeur vers le nouvel élément à ajouter.  
+*pSubItem*<br/>
+[in] Spécifie un pointeur vers le nouvel élément à ajouter.  
   
- [in] *nIndex*  
- Spécifie l’index au niveau duquel ajouter l’élément dans le tableau d’éléments de menu du bouton ; -1 pour ajouter l’élément à la fin du tableau d’éléments de menu.  
+*nIndex*<br/>
+[in] Spécifie l’index au niveau duquel ajouter l’élément dans le tableau d’éléments de menu du bouton ; -1 pour ajouter l’élément à la fin du tableau d’éléments de menu.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -318,20 +318,20 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- Spécifie l’ID de commande du bouton.  
+*nID*<br/>
+[in] Spécifie l’ID de commande du bouton.  
   
- [in] *lpszText*  
- Spécifie l’étiquette de texte du bouton.  
+*lpszText*<br/>
+[in] Spécifie l’étiquette de texte du bouton.  
   
- [in] *nSmallImageIndex*  
- Spécifie un index de base zéro de l’image du bouton petit dans la liste d’images de la catégorie parente.  
+*nSmallImageIndex*<br/>
+[in] Spécifie un index de base zéro de l’image du bouton petit dans la liste d’images de la catégorie parente.  
   
- [in] *nLargeImageIndex*  
- Spécifie un index de base zéro de l’image du bouton volumineux dans la liste d’images de la catégorie parente.  
+*nLargeImageIndex*<br/>
+[in] Spécifie un index de base zéro de l’image du bouton volumineux dans la liste d’images de la catégorie parente.  
   
- [in] *hIcon*  
- Spécifie un handle de l’icône de l’application utilise en tant que l’image du bouton.  
+*hIcon*<br/>
+[in] Spécifie un handle de l’icône de l’application utilise en tant que l’image du bouton.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment construire un `CMFCRibbonButton` objet.  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- [in] *bCalcOnly*  
+*contrôleur de domaine principal*<br/>
+[in] [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -366,8 +366,8 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- [in] *type*  
+*contrôleur de domaine principal*<br/>
+[in] [in] *type*  
  [in] *rectImage*  
   
 ### <a name="remarks"></a>Notes  
@@ -385,10 +385,10 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- [in] *strText*  
- [in] *rectText*  
- [in] *uiDTFlags*  
+*contrôleur de domaine principal*<br/>
+[in] [in] *strText*  
+*rectText*<br/>
+[in] [in] *uiDTFlags*  
  [in] *clrText*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -403,8 +403,8 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiID*  
- Spécifie l’ID de commande de l’élément de menu contextuel.  
+*uiID*<br/>
+[in] Spécifie l’ID de commande de l’élément de menu contextuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément secondaire qui est associé à la *uiID*. -1 s’il n’existe aucun élément secondaire de ce type.  
@@ -456,8 +456,8 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bLargeImage*  
- Si la valeur est TRUE, retourne l’index d’image dans la liste d’images qui contient les images de grande taille ; Sinon, retourne l’index d’image dans la liste d’images qui contient les petites images.  
+*bLargeImage*<br/>
+[in] Si la valeur est TRUE, retourne l’index d’image dans la liste d’images qui contient les images de grande taille ; Sinon, retourne l’index d’image dans la liste d’images qui contient les petites images.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de l’image du bouton dans la liste d’images associée.  
@@ -763,8 +763,8 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Spécifie la position de la souris.  
+*point*<br/>
+[in] Spécifie la position de la souris.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée si vous souhaitez gérer cet événement.  
@@ -822,8 +822,8 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index de base zéro de l’élément de menu que vous souhaitez supprimer.  
+*nIndex*<br/>
+[in] Spécifie l’index de base zéro de l’élément de menu que vous souhaitez supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’élément spécifié a été supprimé avec succès ; Sinon, FALSE si *nIndex* est négatif ou dépasse le nombre d’éléments de menu dans le menu contextuel.  
@@ -857,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- Si la valeur est TRUE, le bouton affiche une grande image. Sinon, le bouton affiche une petite image.  
+*bSet*<br/>
+[in] Si la valeur est TRUE, le bouton affiche une grande image. Sinon, le bouton affiche une petite image.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Active la commande par défaut pour le bouton du ruban.  
@@ -868,8 +868,8 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- Si la valeur est TRUE, le bouton peut exécuter la commande par défaut. Si la valeur est FALSE, le bouton ne peut pas exécuter sa commande par défaut.  
+*bSet*<br/>
+[in] Si la valeur est TRUE, le bouton peut exécuter la commande par défaut. Si la valeur est FALSE, le bouton ne peut pas exécuter sa commande par défaut.  
   
 ### <a name="remarks"></a>Notes  
  *bSet* s’applique uniquement lorsque le bouton est un menu. Si *bSet* a la valeur TRUE, le bouton exécuter sa commande par défaut et le menu contextuel assigné s’affiche uniquement quand un utilisateur clique sur la flèche à droite du bouton. Sinon, le bouton ne peut pas exécuter la commande par défaut, et le menu contextuel s’affiche, quel que soit la zone du bouton l’utilisateur clique sur.  
@@ -896,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Spécifie l’index d’image.  
+*nIndex*<br/>
+[in] Spécifie l’index d’image.  
   
- [in] *bLargeImage*  
- Si la valeur est TRUE, l’index spécifié fait référence à la liste des images de grande taille. Sinon, l’index fait référence à la liste des petites images.  
+*bLargeImage*<br/>
+[in] Si la valeur est TRUE, l’index spécifié fait référence à la liste des images de grande taille. Sinon, l’index fait référence à la liste des petites images.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Affecte un menu contextuel au bouton du ruban.  
@@ -953,8 +953,8 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- Si la valeur est TRUE, le menu est aligné à droite. Sinon, le menu est aligné à gauche  
+*bSet*<br/>
+[in] Si la valeur est TRUE, le menu est aligné à droite. Sinon, le menu est aligné à gauche  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

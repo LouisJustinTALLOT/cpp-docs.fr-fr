@@ -1,5 +1,5 @@
 ---
-title: 'Comment : définir LIB. Exe dans l’environnement de développement Visual Studio | Documents Microsoft'
+title: 'Comment : définir LIB. Exe dans l’environnement de développement Visual Studio | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38b04fb40c62efdf5a8dd0ae3e3d8b6b4529b017
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8319ac7a40af4b43248c402306040c15f04a225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372358"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707213"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Comment : définir les options de LIB.EXE dans l'environnement de développement Visual Studio
-### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Pour définir LIB. Exe dans l’environnement de développement Visual Studio  
-  
-1.  Accès du projet [Page de propriétés](../../ide/working-with-project-properties.md) boîte de dialogue.  
-  
-2.  Avec un projet de bibliothèque statique actif, sélectionnez le **bibliothécaire** nœud.  
-  
-3.  Sélectionnez la page de propriétés d’entrée/sortie ou général.  
-  
-4.  Modifier les propriétés en fonction des besoins.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence LIB](../../build/reference/lib-reference.md)
+
+### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Pour définir LIB. Exe dans l’environnement de développement Visual Studio
+
+1. Le projet Access [Page de propriétés](../../ide/working-with-project-properties.md) boîte de dialogue.
+
+1. Avec un projet de bibliothèque statique actif, sélectionnez le **bibliothécaire** nœud.
+
+1. Sélectionnez la page de propriétés d’entrée/sortie ou général.
+
+1. Modifier les propriétés en fonction des besoins.
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence LIB](../../build/reference/lib-reference.md)

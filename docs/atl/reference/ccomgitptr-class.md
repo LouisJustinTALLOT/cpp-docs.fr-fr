@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758129"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703844"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr, classe
 
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *p*  
-Un pointeur d’interface à stocker dans la table d’interface globale (GIT).
+*p*<br/>
+[in] Un pointeur d’interface à stocker dans la table d’interface globale (GIT).
 
-[in] *git*  
-Une référence à un existant `CComGITPtr` objet.
+*GIT*<br/>
+[in] Une référence à un existant `CComGITPtr` objet.
 
-[in] *dwCookie*  
-Un cookie est utilisé pour identifier le pointeur d’interface.
+*dwCookie*<br/>
+[in] Un cookie est utilisé pour identifier le pointeur d’interface.
 
-[in] *rv*  
-La source `CComGITPtr` objet à déplacer des données à partir de.
+*RV*<br/>
+[in] La source `CComGITPtr` objet à déplacer des données à partir de.
 
 ### <a name="remarks"></a>Notes
 
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *p*  
-Pointeur vers une interface.
+*p*<br/>
+[in] Pointeur vers une interface.
 
-[in] *git*  
-Référence à un objet `CComGITPtr`.
+*GIT*<br/>
+[in] Une référence à un `CComGITPtr` objet.
 
-[in] *dwCookie*  
-Un cookie est utilisé pour identifier le pointeur d’interface.
+*dwCookie*<br/>
+[in] Un cookie est utilisé pour identifier le pointeur d’interface.
 
-[in] *rv*  
-Le `CComGITPtr` pour déplacer des données à partir de.
+*RV*<br/>
+[in] Le `CComGITPtr` pour déplacer des données à partir de.
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 627e6bfdb33561e3d4be55aebf07e831b6cdc035
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539252"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705131"
 ---
 # <a name="writemsr"></a>__writemsr
 **Section spécifique à Microsoft**  
@@ -40,11 +40,11 @@ void __writemsr(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Register`  
- Le Registre spécifiques du modèle.  
+*S’inscrire*<br/>
+[in] Le Registre spécifiques du modèle.  
   
- [in] `Value`  
- Valeur à écrire.  
+*Valeur*<br/>
+[in] Valeur à écrire.  
   
 ## <a name="requirements"></a>Configuration requise  
   

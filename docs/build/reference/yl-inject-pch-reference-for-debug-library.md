@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894653"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712372"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Injecter une référence PCH pour une bibliothèque de débogage)
 
@@ -31,16 +31,16 @@ Le **/Yl** option génère un symbole unique dans un fichier d’en-tête préco
 
 ## <a name="syntax"></a>Syntaxe
 
->**/Yl**  
->**/YL**_nom_  
->**/Yl-**  
+>**/YL**
+> **/Yl**_nom_
+> **/Yl-**
 
 ### <a name="arguments"></a>Arguments
 
-*name*  
+*name*<br/>
 Nom facultatif utilisé dans le cadre du symbole unique.
 
-*\-*  
+*\-*<br/>
 Un tiret (-) désactive explicitement la **/Yl** option du compilateur.
 
 ## <a name="remarks"></a>Notes
@@ -75,5 +75,5 @@ Pour plus d’informations sur les en-têtes précompilés, consultez :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)  
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)  
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
+[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

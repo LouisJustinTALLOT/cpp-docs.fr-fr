@@ -1,5 +1,5 @@
 ---
-title: Macros spéciales de NMAKE | Documents Microsoft
+title: Macros spéciales de NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb74d09c1facf664c39781f8134d653f3105c9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe854d4e3c625d23a5b83cee50ab468b76abcfff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380012"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710201"
 ---
 # <a name="special-nmake-macros"></a>Macros spéciales de NMAKE
-NMAKE propose plusieurs macros spéciales représentant différents noms de fichiers et les commandes. Une utilisation de certaines de ces macros est dans les règles d’inférence prédéfinies. Comme toutes les macros, les macros fournies par NMAKE respectent la casse.  
-  
--   [Macros de nom de fichier](../build/filename-macros.md)  
-  
--   [Macros récursives](../build/recursion-macros.md)  
-  
--   [Macros de commandes et macros d’options](../build/command-macros-and-options-macros.md)  
-  
--   [Macros de variables d’environnement](../build/environment-variable-macros.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [NMAKE et les macros](../build/macros-and-nmake.md)
+
+NMAKE propose plusieurs macros spéciales pour représenter les différents noms de fichiers et commandes. Une utilisation pour certaines de ces macros est dans les règles d’inférence prédéfinies. Comme toutes les macros, les macros fournies par NMAKE respectent la casse.
+
+- [Macros de nom de fichier](../build/filename-macros.md)
+
+- [Macros récursives](../build/recursion-macros.md)
+
+- [Macros de commandes et macros d’options](../build/command-macros-and-options-macros.md)
+
+- [Macros de variables d’environnement](../build/environment-variable-macros.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[NMAKE et les macros](../build/macros-and-nmake.md)

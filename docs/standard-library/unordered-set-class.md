@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954836"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726685"
 ---
 # <a name="unorderedset-class"></a>unordered_set, classe
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
- Valeur de clé à mapper.
+*keyVal*<br/>
+Valeur de clé à mapper.
 
 ### <a name="remarks"></a>Notes
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nbucket*  
- Numéro de compartiment.
+*nbucket*<br/>
+Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
- Valeur de clé à rechercher.
+*keyVal*<br/>
+Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
- Valeur de clé à rechercher.
+*keyVal*<br/>
+Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Paramètres
 
-*Where*  
- Position de l’élément à supprimer.
+*Where*<br/>
+Position de l’élément à supprimer.
 
-*Premier*  
- Position du premier élément à supprimer.
+*Premier*<br/>
+Position du premier élément à supprimer.
 
-*Dernière*  
- Position juste après le dernier élément à supprimer.
+*Dernière*<br/>
+Position juste après le dernier élément à supprimer.
 
-*Key*  
- Valeur de clé des éléments à supprimer.
+*Key*<br/>
+Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*  
- Valeur de clé à rechercher.
+*keyVal*<br/>
+Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Paramètres
 
-*factor*  
- Nouveau facteur de charge maximale.
+*factor*<br/>
+Nouveau facteur de charge maximale.
 
 ### <a name="remarks"></a>Notes
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Paramètres
 
-*nbuckets*  
- Nombre de compartiments demandés.
+*nbuckets*<br/>
+Nombre de compartiments demandés.
 
 ### <a name="remarks"></a>Notes
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*  
- Conteneur avec lequel faire l’échange.
+*right*<br/>
+Conteneur avec lequel faire l’échange.
 
 ### <a name="remarks"></a>Notes
 

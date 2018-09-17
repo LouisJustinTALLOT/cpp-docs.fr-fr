@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3670924bace1d76f02da816dc061616a4c39e199
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200566"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719210"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -38,8 +38,8 @@ Indique que la classe prend en charge l’agrégation.
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur* (facultatif)  
-Un paramètre pour indiquer quand l’objet COM peut être agrégée :
+*valeur*  
+(Facultatif) Un paramètre pour indiquer quand l’objet COM peut être agrégée :
 
 - `never` L’objet COM ne peut pas être agrégée.
 

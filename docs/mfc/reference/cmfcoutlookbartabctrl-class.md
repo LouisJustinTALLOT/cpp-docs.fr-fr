@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718261"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Contrôle onglet qui a l'apparence visuelle du **Volet de navigation** dans Microsoft Outlook.  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndCtrl*  
- Pointeur vers un contrôle à ajouter.  
+*pWndCtrl*<br/>
+[in] Pointeur vers un contrôle à ajouter.  
   
- [in] *le caractère*  
- Spécifie le nom de l’onglet.  
+*Caractère*<br/>
+[in] Spécifie le nom de l’onglet.  
   
- [in] *bDetachable*  
- Si la valeur est TRUE, la page créée comme détachable.  
+*bDetachable*<br/>
+[in] Si la valeur est TRUE, la page créée comme détachable.  
   
- [in] *nImageID*  
- Index d’image dans la liste d’images interne pour l’image à afficher dans le nouvel onglet.  
+*nImageID*<br/>
+[in] Index d’image dans la liste d’images interne pour l’image à afficher dans le nouvel onglet.  
   
- [in] *dwControlBarStyle*  
- Spécifie le style AFX_ CBRS_ * pour les volets d’ancrage encapsulées.  
+*dwControlBarStyle*<br/>
+[in] Spécifie le style AFX_ CBRS_ * pour les volets d’ancrage encapsulées.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette fonction pour ajouter un contrôle en tant que nouvelle page d’une barre outlook.  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Spécifie la taille initiale et la position, en pixels.  
+*Rect*<br/>
+[in] Spécifie la taille initiale et la position, en pixels.  
   
- [in] *pParentWnd*  
- Pointe vers la fenêtre parente. Ne doit pas être NULL.  
+*pParentWnd*<br/>
+[in] Pointe vers la fenêtre parente. Ne doit pas être NULL.  
   
- [in] *nID*  
- L’ID du contrôle.  
+*nID*<br/>
+[in] L’ID du contrôle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le contrôle a été créé avec succès ; sinon 0.  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- Spécifie si l’animation doit être activée ou désactivée.  
+*bActivez*<br/>
+[in] Spécifie si l’animation doit être activée ou désactivée.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction pour activer et désactiver l’animation. Lorsque l’utilisateur ouvre une page d’onglets, légende de la page diapositives vers le haut ou vers le bas si l’animation est activée. Si l’animation est désactivée, la page devient active immédiatement.  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- Détermine si les boutons de défilement sont affichées.  
+*bActivez*<br/>
+[in] Détermine si les boutons de défilement sont affichées.  
   
- [in] *bIsUp*  
- Détermine si la barre de défilement supérieur est affiché.  
+*bIsUp*<br/>
+[in] Détermine si la barre de défilement supérieur est affiché.  
   
- [in] *bIsDown*  
- Détermine si la barre de défilement en bas est affichée.  
+*bIsDown*<br/>
+[in] Détermine si la barre de défilement en bas est affichée.  
   
 ### <a name="remarks"></a>Notes  
  Permet d’afficher les boutons de défilement. Cette méthode est appelée par l’infrastructure lorsque l’onglet actif change pour restaurer les boutons de défilement.  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iTab*  
- Index de base zéro d’un onglet à ouvrir.  
+*iTab*<br/>
+[in] Index de base zéro d’un onglet à ouvrir.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’onglet spécifié a été ouverte avec succès ; sinon 0.  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nBorderSize*  
- Spécifie la nouvelle taille de bordure en pixels.  
+*nBorderSize*<br/>
+[in] Spécifie la nouvelle taille de bordure en pixels.  
   
 ### <a name="remarks"></a>Notes  
  Définit la nouvelle taille de bordure et recalcule la disposition de fenêtre outlook.  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiAlign*  
- Spécifie l’alignement du texte.  
+*uiAlign*<br/>
+[in] Spécifie l’alignement du texte.  
   
- [in] *bRedraw*  
- Si la valeur est TRUE, la fenêtre outlook est redessinée.  
+*bRedraw*<br/>
+[in] Si la valeur est TRUE, la fenêtre outlook est redessinée.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction permet de modifier l’alignement du texte des boutons de page.  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiID*  
- Spécifie l’ID de ressource de l’image à charger.  
+*uiID*<br/>
+[in] Spécifie l’ID de ressource de l’image à charger.  
   
- [in] *cx*  
- Spécifie la largeur d’une image dans la liste d’images, en pixels.  
+*CX*<br/>
+[in] Spécifie la largeur d’une image dans la liste d’images, en pixels.  
   
- [in] *clrTransp*  
- Une valeur RVB qui spécifie la couleur transparente.  
+*clrTransp*<br/>
+[in] Une valeur RVB qui spécifie la couleur transparente.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne TRUE en cas de réussite ; Sinon, retourne FALSE.  

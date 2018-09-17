@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214619"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711058"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer, fonctions intrinsèques
 **Section spécifique à Microsoft**  
@@ -87,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in, out] `Destination`  
- Pointeur vers un pointeur vers la valeur de destination. Le signe est ignoré.  
+*Destination*<br/>
+[in, out] Pointeur vers un pointeur vers la valeur de destination. Le signe est ignoré.  
   
- [in] `Exchange`  
- Pointeur d'échange. Le signe est ignoré.  
+*Exchange*<br/>
+[in] Pointeur d’échange. Le signe est ignoré.  
   
- [in] `Comparand`  
- Pointeur à comparer à la destination. Le signe est ignoré.  
+*Comparateur*<br/>
+[in] Pointeur à comparer à la destination. Le signe est ignoré.  
   
 ## <a name="return-value"></a>Valeur de retour  
  La valeur de retour est la valeur initiale de la destination.  

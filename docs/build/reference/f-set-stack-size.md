@@ -20,14 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 244fea4b776f0713b6fb2281563e39d27a910a2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103773"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704243"
 ---
 # <a name="f-set-stack-size"></a>/F (Définir la taille de pile)
+
 Définit la taille de pile du programme en octets.
 
 ## <a name="syntax"></a>Syntaxe
@@ -47,9 +48,9 @@ Vous devrez peut-être augmenter la taille de pile si votre programme obtient le
 
 Vous pouvez également définir la taille de pile :
 
--   À l’aide de la **/pile** option de l’éditeur de liens. Pour plus d’informations, consultez [/pile](../../build/reference/stack.md).
+- À l’aide de la **/pile** option de l’éditeur de liens. Pour plus d’informations, consultez [/pile](../../build/reference/stack.md).
 
--   À l’aide de EDITBIN sur le fichier .exe. Pour plus d’informations, consultez [référence EDITBIN](../../build/reference/editbin-reference.md).
+- À l’aide de EDITBIN sur le fichier .exe. Pour plus d’informations, consultez [référence EDITBIN](../../build/reference/editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
@@ -65,5 +66,5 @@ Vous pouvez également définir la taille de pile :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)   
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

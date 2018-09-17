@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fa6af27d314a4c4421230a9088ead6f3d9e53af3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196380"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723006"
 ---
 # <a name="cmfcmenubar-class"></a>Cmfcmenubar, classe
 Barre de menus qui implémente l'ancrage.  
@@ -265,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -282,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwMode*  
- [in] *nLength*  
+*dwMode*<br/>
+[in] [in] *nLength*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -333,14 +333,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParentWnd*  
- Pointeur vers la fenêtre parente pour le nouveau `CMFCMenuBar` objet.  
+*pParentWnd*<br/>
+[in] Pointeur vers la fenêtre parente pour le nouveau `CMFCMenuBar` objet.  
   
- [in] *dwStyle*  
- Style de la nouvelle barre de menus.  
+*dwStyle*<br/>
+[in] Style de la nouvelle barre de menus.  
   
- [in] *nID*  
- L’ID de la fenêtre enfant de la barre de menus.  
+*nID*<br/>
+[in] L’ID de la fenêtre enfant de la barre de menus.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite, sinon FALSE.  
@@ -366,20 +366,20 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParentWnd*  
- Pointeur vers la fenêtre parente de la nouvelle `CMFCMenuBar` objet.  
+*pParentWnd*<br/>
+[in] Pointeur vers la fenêtre parente de la nouvelle `CMFCMenuBar` objet.  
   
- [in] *dwCtrlStyle*  
- Styles supplémentaires pour la nouvelle barre de menus.  
+*dwCtrlStyle*<br/>
+[in] Styles supplémentaires pour la nouvelle barre de menus.  
   
- [in] *dwStyle*  
- Style de la nouvelle barre de menus principal.  
+*dwStyle*<br/>
+[in] Style de la nouvelle barre de menus principal.  
   
- [in] *rcBorders*  
- Un `CRect` paramètre qui spécifie les tailles pour les bordures de la `CMFCMenuBar` objet.  
+*rcBorders*<br/>
+[in] Un `CRect` paramètre qui spécifie les tailles pour les bordures de la `CMFCMenuBar` objet.  
   
- [in] *nID*  
- L’ID de la fenêtre enfant de la barre de menus.  
+*nID*<br/>
+[in] L’ID de la fenêtre enfant de la barre de menus.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la méthode réussit ; sinon 0.  
@@ -406,14 +406,14 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hMenu*  
- Handle vers une ressource de menu. `CreateFromMenu` utilise cette ressource en tant que modèle pour le `CMFCMenuBar`.  
+*hMenu*<br/>
+[in] Handle vers une ressource de menu. `CreateFromMenu` utilise cette ressource en tant que modèle pour le `CMFCMenuBar`.  
   
- [in] *bDefaultMenu*  
- Valeur booléenne qui indique si le nouveau menu est le menu par défaut.  
+*bDefaultMenu*<br/>
+[in] Valeur booléenne qui indique si le nouveau menu est le menu par défaut.  
   
- [in] *bForceUpdate*  
- Valeur booléenne qui indique si cette méthode force une mise à jour de menu.  
+*bForceUpdate*<br/>
+[in] Valeur booléenne qui indique si cette méthode force une mise à jour de menu.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode si vous souhaitez un contrôle de menu pour avoir les mêmes éléments de menu comme une ressource de menu. Vous appelez cette méthode une fois que vous appelez [CMFCMenuBar::Create](#create) ou [CMFCMenuBar::CreateEx](#createex).  
@@ -429,14 +429,14 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiID*  
- L’ID de commande pour le bouton de la **aide** zone de liste déroulante.  
+*uiID*<br/>
+[in] L’ID de commande pour le bouton de la **aide** zone de liste déroulante.  
   
- [in] *lpszPrompt*  
- Chaîne qui contient le texte de l’infrastructure s’affiche dans la zone de liste déroulante s’il est vide et n’est pas actif. Par exemple, « entrer le texte ici ».  
+*lpszPrompt*<br/>
+[in] Chaîne qui contient le texte de l’infrastructure s’affiche dans la zone de liste déroulante s’il est vide et n’est pas actif. Par exemple, « entrer le texte ici ».  
   
- [in] *nComboBoxWidth*  
- La largeur du bouton de la zone de liste déroulante en pixels.  
+*nComboBoxWidth*<br/>
+[in] La largeur du bouton de la zone de liste déroulante en pixels.  
   
 ### <a name="remarks"></a>Notes  
  Le **aide** zone de liste modifiable ressemble à la **aide** zone de liste déroulante dans la barre de menus de Microsoft Word.  
@@ -451,8 +451,8 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- Un paramètre booléen qui indique si les ombres doivent être activées pour les menus contextuels.  
+*bActivez*<br/>
+[in] Un paramètre booléen qui indique si les ombres doivent être activées pour les menus contextuels.  
   
 ### <a name="remarks"></a>Notes  
  L’algorithme utilisé par cette méthode est complexe et peut diminuer les performances de votre application sur des systèmes plus lents.  
@@ -558,8 +558,8 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bHorz*  
- Un paramètre booléen qui spécifie s’il faut retourner la police horizontale ou verticale. TRUE indique que la police horizontale.  
+*bHorz*<br/>
+[in] Un paramètre booléen qui spécifie s’il faut retourner la police horizontale ou verticale. TRUE indique que la police horizontale.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CFont](../../mfc/reference/cfont-class.md) paramètre qui contient la police de barre de menu actuel.  
@@ -575,8 +575,8 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iItem*  
- Index de l’élément de menu à retourner.  
+*iItem*<br/>
+[in] Index de l’élément de menu à retourner.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le `CMFCToolBarButton` objet qui correspond à l’index spécifié par *iItem*. NULL si l’index n’est pas valide.  
@@ -602,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiBtn*  
- [in] *bByCommand*  
+*uiBtn*<br/>
+[in] [in] *bByCommand*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -639,8 +639,8 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bHighlight*  
- Un paramètre booléen qui indique si le framework met en évidence les éléments de menu non disponible.  
+*bHighlight*<br/>
+[in] Un paramètre booléen qui indique si le framework met en évidence les éléments de menu non disponible.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, le framework ne met pas en surbrillance les éléments de menu non disponibles lorsque l’utilisateur positionne le pointeur de la souris au-dessus d’eux.  
@@ -740,14 +740,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Chaîne qui contient le chemin d’accès d’une clé de Registre Windows.  
+*lpszProfileName*<br/>
+[in] Chaîne qui contient le chemin d’accès d’une clé de Registre Windows.  
   
- [in] *nIndex*  
- L’ID de contrôle pour la barre de menus.  
+*nIndex*<br/>
+[in] L’ID de contrôle pour la barre de menus.  
   
- [in] *uiID*  
- Une valeur réservée.  
+*uiID*<br/>
+[in] Une valeur réservée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -777,8 +777,8 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hMenu*  
- Le handle pour le menu attaché à la `CMFCMenuBar` objet.  
+*hMenu*<br/>
+[in] Le handle pour le menu attaché à la `CMFCMenuBar` objet.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette fonction est sans effet. Remplacez cette fonction pour exécuter du code personnalisé une fois que l’infrastructure charge une ressource de menu à partir du fichier de ressources.  
@@ -805,8 +805,8 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pButton*  
- Un pointeur vers le [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) objet que l’utilisateur souhaite personnaliser.  
+*pButton*<br/>
+[in] Un pointeur vers le [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) objet que l’utilisateur souhaite personnaliser.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’infrastructure applique les modifications de l’utilisateur à la barre de menus ; Sinon, FALSE.  
@@ -824,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- [in] *pTI*  
+*point*<br/>
+[in] [in] *pTI*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -871,14 +871,14 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Chaîne qui contient le chemin d’accès d’une clé de Registre Windows.  
+*lpszProfileName*<br/>
+[in] Chaîne qui contient le chemin d’accès d’une clé de Registre Windows.  
   
- [in] *nIndex*  
- L’ID de contrôle pour la barre de menus.  
+*nIndex*<br/>
+[in] L’ID de contrôle pour la barre de menus.  
   
- [in] *uiID*  
- Une valeur réservée.  
+*uiID*<br/>
+[in] Une valeur réservée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite ; Sinon, FALSE.  
@@ -896,8 +896,8 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiResId*  
- L’ID de ressource pour le nouveau menu par défaut.  
+*uiResId*<br/>
+[in] L’ID de ressource pour le nouveau menu par défaut.  
   
 ### <a name="remarks"></a>Notes  
  Le [CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate) méthode restaure le menu par défaut à partir du fichier de ressources.  
@@ -927,14 +927,14 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bMax*  
- Valeur booléenne qui spécifie le mode. Pour plus d'informations, consultez la section Notes.  
+*bMax*<br/>
+[in] Valeur booléenne qui spécifie le mode. Pour plus d'informations, consultez la section Notes.  
   
- [in] *pWnd*  
- Pointeur vers la fenêtre MDI enfant qui est en cours de modification.  
+*pWnd*<br/>
+[in] Pointeur vers la fenêtre MDI enfant qui est en cours de modification.  
   
- [in] *bRecalcLayout*  
- Valeur booléenne qui spécifie si la disposition de la barre de menus doit être recalculée immédiatement.  
+*bRecalcLayout*<br/>
+[in] Valeur booléenne qui spécifie si la disposition de la barre de menus doit être recalculée immédiatement.  
   
 ### <a name="remarks"></a>Notes  
  Lorsqu’une fenêtre enfant MDI est agrandie, une barre de menus attachée à la fenêtre frame principale MDI affiche le menu système et le **réduire**, **agrandir** et **fermer** boutons. Si *bMax* a la valeur TRUE et *pWnd* n’est pas NULL, la fenêtre enfant MDI est agrandie et la barre de menus doit intégrer les contrôles supplémentaires. Sinon, la barre de menus retourne à son état normal.  
@@ -947,8 +947,8 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pMenuButtonRTC*  
- Le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) informations pour une classe dérivée de la [cmfcmenubutton, classe](../../mfc/reference/cmfcmenubutton-class.md).  
+*pMenuButtonRTC*<br/>
+[in] Le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) informations pour une classe dérivée de la [cmfcmenubutton, classe](../../mfc/reference/cmfcmenubutton-class.md).  
   
 ### <a name="remarks"></a>Notes  
  Lorsqu’un utilisateur ajoute de nouveaux boutons à la barre de menus, l’infrastructure crée dynamiquement les boutons. Par défaut, il crée `CMFCMenuButton` objets. Substituez cette méthode pour modifier le type d’objets de bouton qui crée l’infrastructure.  
@@ -963,11 +963,11 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpLogFont*  
- Un pointeur vers un [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) structure qui définit la police à définir.  
+*lpLogFont*<br/>
+[in] Un pointeur vers un [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) structure qui définit la police à définir.  
   
- [in] *bHorz*  
- TRUE si vous voulez le *lpLogFont* paramètre à utiliser pour la police verticale, et FALSE si vous souhaitez pouvoir être utilisé pour les polices horizontales.  
+*bHorz*<br/>
+[in] TRUE si vous voulez le *lpLogFont* paramètre à utiliser pour la police verticale, et FALSE si vous souhaitez pouvoir être utilisé pour les polices horizontales.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -985,8 +985,8 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bOn*  
- Valeur booléenne qui indique si les commandes de menu récemment utilisés sont affichées.  
+*bOn*<br/>
+[in] Valeur booléenne qui indique si les commandes de menu récemment utilisés sont affichées.  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
  Contrôle si un menu affiche toutes les commandes disponibles.  
@@ -996,8 +996,8 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShowAllCommands*  
- Un paramètre booléen qui spécifie si le menu contextuel affiche les commandes de menu.  
+*bShowAllCommands*<br/>
+[in] Un paramètre booléen qui spécifie si le menu contextuel affiche les commandes de menu.  
   
 ### <a name="remarks"></a>Notes  
  Si un menu ne s’affiche pas toutes les commandes de menu, elle masque les commandes qui sont rarement utilisées. Pour plus d’informations sur l’affichage des commandes de menu, consultez [cmfcmenubar, classe](../../mfc/reference/cmfcmenubar-class.md).  

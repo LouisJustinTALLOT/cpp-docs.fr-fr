@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4321a082efa71ecc81963099317ad3600ce8b36f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9cefe61fc6fb651933a76cfc36b3039d48ea9de9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676196"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713399"
 ---
 # <a name="vmxon"></a>__vmx_on
 **Section spécifique à Microsoft**  
@@ -38,8 +38,8 @@ unsigned char __vmx_on(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `VmsSupportPhysicalAddress`  
- Pointeur vers une adresse physique 64 bits qui pointe vers une structure de contrôle de la machine virtuelle (VMCS).  
+*VmsSupportPhysicalAddress*<br/>
+[in] Pointeur vers une adresse physique 64 bits qui pointe vers une structure de contrôle de la machine virtuelle (VMCS).  
   
 ## <a name="return-value"></a>Valeur de retour  
   

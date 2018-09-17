@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a281a3f9b6793047ae10b1d186e6a68002176a
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 028d363b935ee48ef89c4d1ffdd7fa03ed714154
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691482"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705937"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator, classe
 
@@ -50,7 +50,7 @@ Classe d’itérateur pour les sous-correspondances.
 template<class BidIt,
    class Elem = typename std::iterator_traits<BidIt>::value_type,
    class RxTraits = regex_traits<Elem> >
-class regex_token_iterator 
+class regex_token_iterator
 ```
 
 ## <a name="parameters"></a>Paramètres

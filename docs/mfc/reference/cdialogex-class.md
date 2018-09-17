@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335956"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716299"
 ---
 # <a name="cdialogex-class"></a>Cdialogex, classe
 La classe `CDialogEx` spécifie la couleur d'arrière-plan et l'image d'arrière-plan d'une boîte de dialogue.  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIDTemplate*  
- L’ID de ressource d’un modèle de boîte de dialogue.  
+*nIDTemplate*<br/>
+[in] L’ID de ressource d’un modèle de boîte de dialogue.  
   
- [in] *lpszTemplateName*  
- Le nom de la ressource d’un modèle de boîte de dialogue.  
+*lpszTemplateName*<br/>
+[in] Le nom de la ressource d’un modèle de boîte de dialogue.  
   
- [in] *pParent*  
- Pointeur vers la fenêtre parente. La valeur par défaut est NULL.  
+*pParent*<br/>
+[in] Pointeur vers la fenêtre parente. La valeur par défaut est NULL.  
   
- [in] *pParentWnd*  
- Pointeur vers la fenêtre parente. La valeur par défaut est NULL.  
+*pParentWnd*<br/>
+[in] Pointeur vers la fenêtre parente. La valeur par défaut est NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *couleur*  
- Une valeur de couleur RVB.  
+*Couleur*<br/>
+[in] Une valeur de couleur RVB.  
   
- [in] *bRepaint*  
- TRUE pour mettre immédiatement à jour l’écran ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bRepaint*<br/>
+[in] TRUE pour mettre immédiatement à jour l’écran ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hBitmap*  
- Handle vers l’image d’arrière-plan.  
+*hBitmap*<br/>
+[in] Handle vers l’image d’arrière-plan.  
   
- [in] *uiBmpResId*  
- L’ID de ressource de l’image d’arrière-plan.  
+*uiBmpResId*<br/>
+[in] L’ID de ressource de l’image d’arrière-plan.  
   
- [in] *emplacement*  
- Parmi les `CDialogEx::BackgroundLocation` valeurs qui spécifient l’emplacement de l’image. Les valeurs valides incluent BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT et BACKGR_BOTTOMRIGHT. La valeur par défaut est BACKGR_TILE.  
+*Emplacement*<br/>
+[in] Parmi les `CDialogEx::BackgroundLocation` valeurs qui spécifient l’emplacement de l’image. Les valeurs valides incluent BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT et BACKGR_BOTTOMRIGHT. La valeur par défaut est BACKGR_TILE.  
   
- [in] *bAutoDestroy*  
- TRUE pour détruire automatiquement l’image d’arrière-plan ; Sinon, FALSE.  
+*bAutoDestroy*<br/>
+[in] TRUE pour détruire automatiquement l’image d’arrière-plan ; Sinon, FALSE.  
   
- [in] *bRepaint*  
- Valeur TRUE à se redessiner immédiatement avec la boîte de dialogue ; Sinon, FALSE.  
+*bRepaint*<br/>
+[in] Valeur TRUE à se redessiner immédiatement avec la boîte de dialogue ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Dans la deuxième méthode de surcharge syntaxe, TRUE si la méthode a réussi ; Sinon, FALSE.  

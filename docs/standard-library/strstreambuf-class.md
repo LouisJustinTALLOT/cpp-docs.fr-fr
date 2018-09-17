@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960552"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719132"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf, classe
 
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Freezeit*  
- Un **bool** indiquant si vous souhaitez que le flux soit gelé.
+*_Freezeit*<br/>
+Un **bool** indiquant si vous souhaitez que le flux soit gelé.
 
 ### <a name="remarks"></a>Notes
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta*  
- Caractère à insérer dans la mémoire tampon, ou `EOF`.
+*_Meta*<br/>
+Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta*  
- Caractère à insérer dans la mémoire tampon, ou `EOF`.
+*_Meta*<br/>
+Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off*  
- La position à rechercher par rapport à *_Way*.
+*_Off*<br/>
+La position à rechercher par rapport à *_Way*.
 
-*_Way*  
- Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
+*_Way*<br/>
+Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
-*_Which*  
- Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*<br/>
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sp*  
- Position à rechercher.
+*_Sp*<br/>
+Position à rechercher.
 
-*_Which*  
- Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+*_Which*<br/>
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Allocfunc*  
- Fonction utilisée pour allouer de la mémoire tampon.
+*_Allocfunc*<br/>
+Fonction utilisée pour allouer de la mémoire tampon.
 
-*count*  
- Détermine la longueur de la mémoire tampon vers laquelle pointée *_Getptr*. Si *_Getptr* n’est pas un argument (première forme constructeur), une allocation suggérée de taille pour les mémoires tampons.
+*count*<br/>
+Détermine la longueur de la mémoire tampon vers laquelle pointée *_Getptr*. Si *_Getptr* n’est pas un argument (première forme constructeur), une allocation suggérée de taille pour les mémoires tampons.
 
-*_Freefunc*  
- Fonction utilisée pour libérer de la mémoire tampon.
+*_Freefunc*<br/>
+Fonction utilisée pour libérer de la mémoire tampon.
 
-*_Getptr*  
- Mémoire tampon utilisée pour l’entrée.
+*_Getptr*<br/>
+Mémoire tampon utilisée pour l’entrée.
 
-*_Putptr*  
- Mémoire tampon utilisée pour la sortie.
+*_Putptr*<br/>
+Mémoire tampon utilisée pour la sortie.
 
 ### <a name="remarks"></a>Notes
 

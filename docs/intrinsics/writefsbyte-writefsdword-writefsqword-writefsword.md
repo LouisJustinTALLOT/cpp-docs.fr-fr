@@ -1,5 +1,5 @@
 ---
-title: __writefsbyte, __writefsdword, __writefsqword, __writefsword | Documents Microsoft
+title: __writefsbyte, __writefsdword, __writefsqword, __writefsword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338300"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718469"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 **Section spécifique à Microsoft**  
   
- Écriture de mémoire à un emplacement spécifié par un décalage par rapport au début du segment FS.  
+ Écrire la mémoire à un emplacement spécifié par un décalage par rapport au début du segment FS.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,13 +60,13 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Offset`  
- Le décalage entre le début d’ADFS dans lequel écrire.  
+*Décalage*<br/>
+[in] Le décalage entre le début du FS à écrire dans.  
   
- [in] `Data`  
- Valeur à écrire.  
+*Données*<br/>
+[in] Valeur à écrire.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -78,7 +78,7 @@ void __writefsqword(
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- Ces routines sont disponibles seulement comme fonctions intrinsèques.  
+ Ces routines sont disponibles uniquement sous forme de fonctions intrinsèques.  
   
 **FIN de la section spécifique à Microsoft**  
   

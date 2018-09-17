@@ -1,5 +1,5 @@
 ---
-title: Priorité dans les règles d’inférence | Documents Microsoft
+title: Priorité dans les règles d’inférence | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d462d4222cbfc143dd7487d4cb6b1b8bb3ba3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4f2e7ff55e935b7e425b552ba85f47f134c6b80
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368484"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725229"
 ---
 # <a name="precedence-in-inference-rules"></a>Priorité dans les règles d'inférence
-Si une règle d’inférence est définie plusieurs fois, NMAKE utilise la définition de la priorité la plus élevée. La liste suivante indique l’ordre de priorité, du plus élevé au plus bas :  
-  
-1.  Une règle d’inférence définie dans un makefile ; définitions les plus récentes ont une priorité.  
-  
-2.  Une règle d’inférence définie dans Tools.ini ; définitions les plus récentes ont une priorité.  
-  
-3.  Règle d’inférence prédéfinie.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Règles d’inférence](../build/inference-rules.md)
+
+Si une règle d’inférence est définie plusieurs fois, NMAKE utilise la définition de la priorité la plus élevée. La liste suivante montre l’ordre de priorité, du plus élevé au plus bas :
+
+1. Règle d’inférence définie dans un makefile ; définitions les plus récentes ont une priorité.
+
+1. Règle d’inférence définie dans Tools.ini ; définitions les plus récentes ont une priorité.
+
+1. Une règle d’inférence prédéfinies.
+
+## <a name="see-also"></a>Voir aussi
+
+[Règles d’inférence](../build/inference-rules.md)

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199493"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710229"
 ---
 # <a name="vector-class"></a>vector, classe
 
@@ -116,11 +116,11 @@ class vector
 
 ### <a name="parameters"></a>Paramètres
 
-*Type*  
- Type de données des éléments à stocker dans le vecteur.
+*Type*<br/>
+Type de données des éléments à stocker dans le vecteur.
 
-*Allocateur*  
- Type qui représente l'objet allocateur stocké qui contient des informations détaillées sur l'allocation et la désallocation de mémoire du vecteur. Cet argument est facultatif et sa valeur par défaut est `allocator<Type>`.
+*Allocateur*<br/>
+Type qui représente l'objet allocateur stocké qui contient des informations détaillées sur l'allocation et la désallocation de mémoire du vecteur. Cet argument est facultatif et sa valeur par défaut est `allocator<Type>`.
 
 ## <a name="remarks"></a>Notes
 
@@ -234,20 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Paramètres
 
-*Premier*  
- Position du premier élément dans la plage d'éléments à copier.
+*Premier*<br/>
+Position du premier élément dans la plage d'éléments à copier.
 
-*Dernière*  
- Position du premier élément suivant la fin de la plage d'éléments à copier.
+*Dernière*<br/>
+Position du premier élément suivant la fin de la plage d'éléments à copier.
 
-*Nombre*  
- Nombre de copies d'un élément inséré dans le vecteur.
+*Nombre*<br/>
+Nombre de copies d'un élément inséré dans le vecteur.
 
-*Val*  
- Valeur de l'élément inséré dans le vecteur.
+*Val*<br/>
+Valeur de l'élément inséré dans le vecteur.
 
-*IList*  
- initializer_list qui contient les éléments à insérer.
+*IList*<br/>
+initializer_list qui contient les éléments à insérer.
 
 ### <a name="remarks"></a>Notes
 
@@ -313,8 +313,8 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pos*  
- Valeur de l'indice ou de la position de l'élément à référencer dans le vecteur.
+*_Pos*<br/>
+Valeur de l'indice ou de la position de l'élément à référencer dans le vecteur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1562,7 +1562,7 @@ void push_back(T&& Val);
 ### <a name="parameters"></a>Paramètres
 
 *Val*<br/>
- Valeur à affecter à l'élément ajouté à la fin du vecteur.
+Valeur à affecter à l'élément ajouté à la fin du vecteur.
 
 ### <a name="example"></a>Exemple
 
@@ -1726,8 +1726,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>Paramètres
 
-*count*  
- Taille de stockage minimale à allouer pour le vecteur.
+*count*<br/>
+Taille de stockage minimale à allouer pour le vecteur.
 
 ### <a name="example"></a>Exemple
 
@@ -1768,11 +1768,11 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>Paramètres
 
-*NewSize*  
- Nouvelle taille du vecteur.
+*NewSize*<br/>
+Nouvelle taille du vecteur.
 
-*Val*  
- Valeur d'initialisation des nouveaux éléments ajoutés au vecteur si la nouvelle taille est supérieure à la taille d'origine. Si la valeur est omise, les nouveaux objets utilisent leur constructeur par défaut.
+*Val*<br/>
+Valeur d'initialisation des nouveaux éléments ajoutés au vecteur si la nouvelle taille est supérieure à la taille d'origine. Si la valeur est omise, les nouveaux objets utilisent leur constructeur par défaut.
 
 ### <a name="remarks"></a>Notes
 
@@ -2010,11 +2010,11 @@ friend void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*right*  
- Un vecteur qui fournit les éléments à échanger ou un vecteur dont les éléments doivent être échangés avec ceux du vecteur *gauche*.
+*right*<br/>
+Un vecteur qui fournit les éléments à échanger ou un vecteur dont les éléments doivent être échangés avec ceux du vecteur *gauche*.
 
-*left*  
- Un vecteur dont les éléments doivent être échangés avec ceux du vecteur *droit*.
+*left*<br/>
+Un vecteur dont les éléments doivent être échangés avec ceux du vecteur *droit*.
 
 ### <a name="example"></a>Exemple
 

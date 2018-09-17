@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680578"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721251"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox, classe
 Le `CVSListBox` classe prend en charge un contrôle de liste modifiable.  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *strIext*  
- Une référence à une chaîne.  
+*strIext*<br/>
+[in] Une référence à une chaîne.  
   
- [in] *dwData*  
- Une valeur spécifique à l’application 32 bits qui est associée à la chaîne. La valeur par défaut est 0.  
+*dwData*<br/>
+[in] Une valeur spécifique à l’application 32 bits qui est associée à la chaîne. La valeur par défaut est 0.  
   
- [in] *iIndex*  
- Index de base zéro de la position qui contiendra la chaîne. Si le *iIndex* paramètre est -1, la chaîne est ajoutée à la fin de la liste. La valeur par défaut est -1.  
+*iIndex*<br/>
+[in] Index de base zéro de la position qui contiendra la chaîne. Si le *iIndex* paramètre est -1, la chaîne est ajoutée à la fin de la liste. La valeur par défaut est -1.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la position de la chaîne dans le contrôle de liste.  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIndex*  
- Index de base zéro d’un élément de contrôle de liste.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément de contrôle de liste.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’opération de modification démarre avec succès ; Sinon, FALSE.  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIndex*  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément de contrôle de liste modifiable.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de 32 bits qui est associée à l’élément spécifié.  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] `iIndex`  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément de contrôle de liste modifiable.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet qui contient le texte de l’élément spécifié.  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIndex*  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément de contrôle de liste modifiable.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’élément spécifié est supprimé ; Sinon, FALSE.  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iItem*  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+*iItem*<br/>
+[in] Index de base zéro d’un élément de contrôle de liste modifiable.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIndex*  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+*iIndex*<br/>
+[in] Index de base zéro d’un élément de contrôle de liste modifiable.  
   
- [in] *dwData*  
- Une valeur 32 bits. Cette valeur peut être un entier spécifique à l’application ou un pointeur à d’autres données.  
+*dwData*<br/>
+[in] Une valeur 32 bits. Cette valeur peut être un entier spécifique à l’application ou un pointeur à d’autres données.  
   
 ### <a name="remarks"></a>Notes  
   

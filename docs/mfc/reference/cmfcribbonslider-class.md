@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539436"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709330"
 ---
 # <a name="cmfcribbonslider-class"></a>Cmfcribbonslider, classe
 Le `CMFCRibbonSlider` classe implémente un contrôle de curseur que vous pouvez ajouter à une barre de ruban ou de la barre d’état du ruban. Le contrôle Slider de ruban ressemble aux curseurs de zoom présents dans les applications Office 2007.  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- ID de curseur.  
+*nID*<br/>
+[in] ID de curseur.  
   
  [in]. *nWidth*  
  Largeur du curseur en pixels.  
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nPos*  
- Spécifie la position à définir pour le curseur. La position est par rapport au début du curseur.  
+*nPos*<br/>
+[in] Spécifie la position à définir pour le curseur. La position est par rapport au début du curseur.  
   
- [in] *bRedraw*  
- Si la valeur est TRUE, le curseur est redessiné.  
+*bRedraw*<br/>
+[in] Si la valeur est TRUE, le curseur est redessiné.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Définissez la plage de valeurs pour le contrôle slider.  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nMin*  
- Spécifie la valeur minimale du contrôle slider.  
+*nMin*<br/>
+[in] Spécifie la valeur minimale du contrôle slider.  
   
- [in] *nMax*  
- Spécifie la valeur maximale du contrôle slider.  
+*nombre maximal*<br/>
+[in] Spécifie la valeur maximale du contrôle slider.  
   
 ### <a name="remarks"></a>Notes  
  Spécifie la plage de valeurs pour le contrôle de curseur en définissant les valeurs minimales et maximales.  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nZoomIncrement*  
- Spécifie l’incrément de zoom du contrôle slider.  
+*nZoomIncrement*<br/>
+[in] Spécifie l’incrément de zoom du contrôle slider.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

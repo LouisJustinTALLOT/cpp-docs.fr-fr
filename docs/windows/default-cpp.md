@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1055c0865988edf9b54539c0d214cebcda13735
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220418"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699919"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -46,8 +46,8 @@ Interface par défaut qui sera accessible aux environnements de script qui crée
 
 Si aucune interface par défaut n’est spécifiée, la première occurrence d’une interface non source est utilisée par défaut.
 
-*interface2*(facultatif)  
-Interface source par défaut. Vous devez aussi spécifier cette interface avec l’attribut [source](../windows/source-cpp.md) .
+*Interface2*<br/>
+(Facultatif) L’interface source par défaut. Vous devez aussi spécifier cette interface avec l’attribut [source](../windows/source-cpp.md) .
 
 Si aucune interface source par défaut n’est spécifiée, la première interface source est utilisée par défaut.
 

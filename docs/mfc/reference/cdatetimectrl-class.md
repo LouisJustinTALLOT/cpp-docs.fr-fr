@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf2134b334c259a6543af279ee058b659cf21d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9eb3b70851cb5e51ef2ddc0e99347c81fe632b6d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210185"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726659"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl (classe)
 Encapsule les fonctionnalités d'un contrôle de sélecteur de date et d'heure.  
@@ -192,7 +192,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *pDateTimePickerInfo*|Un pointeur vers un [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) structure qui reçoit une description du contrôle de sélecteur de date et l’heure actuelle.<br /><br /> L’appelant est chargé d’allouer cette structure. Toutefois, cette méthode initialise la *cbSize* membre de la structure.|  
+|*pDateTimePickerInfo*|[out] Un pointeur vers un [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) structure qui reçoit une description du contrôle de sélecteur de date et l’heure actuelle.<br /><br /> L’appelant est chargé d’allouer cette structure. Toutefois, cette méthode initialise la *cbSize* membre de la structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -347,7 +347,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *psize*|Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui contient la taille idéale pour le contrôle.|  
+|*psize*|[out] Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui contient la taille idéale pour le contrôle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de retour est toujours TRUE.  
@@ -458,7 +458,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Un nouveau mois calendrier style de contrôle, qui est une combinaison au niveau du bit (ou) de styles de contrôle month calendar. Pour plus d’informations, consultez [Styles de contrôle Month Calendar](/windows/desktop/Controls/month-calendar-control-styles).|  
+|*dwStyle*|[in] Un nouveau mois calendrier style de contrôle, qui est une combinaison au niveau du bit (ou) de styles de contrôle month calendar. Pour plus d’informations, consultez [Styles de contrôle Month Calendar](/windows/desktop/Controls/month-calendar-control-styles).|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le style précédent du contrôle calendar month de la liste déroulante.  

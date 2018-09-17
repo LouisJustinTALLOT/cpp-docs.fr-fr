@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40e943fd6c03838c8c14e202026e10d3c7b22ace
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab793b8c758b95c259c717a794436b59057d4273
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852938"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712983"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton, classe
 Le `CMFCColorMenuButton` classe prend en charge une commande de menu ou un bouton de barre d’outils qui démarre une boîte de dialogue de sélecteur de couleurs.  
@@ -143,14 +143,14 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- Un ID de commande de bouton.  
+*uiCmdID*<br/>
+[in] Un ID de commande de bouton.  
   
- [in] *lpszText*  
- Le texte du bouton.  
+*lpszText*<br/>
+[in] Le texte du bouton.  
   
- [in] *pPalette*  
- Pointeur vers la palette de couleurs du bouton.  
+*pPalette*<br/>
+[in] Pointeur vers la palette de couleurs du bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -167,8 +167,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *src*  
- Bouton de la source à copier.  
+*src*<br/>
+[in] Bouton de la source à copier.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode pour copier les objets qui sont dérivés de la `CMFCColorMenuButton` objet.  
@@ -197,14 +197,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszLabel*  
- Spécifie le texte du bouton qui s’affiche lorsque le bouton est automatique.  
+*lpszLabel*<br/>
+[in] Spécifie le texte du bouton qui s’affiche lorsque le bouton est automatique.  
   
- [in] *automatiqueCouleur*  
- Spécifie une nouvelle couleur automatique.  
+*automatiqueCouleur*<br/>
+[in] Spécifie une nouvelle couleur automatique.  
   
- [in] *bActivez*  
- Spécifie si le bouton est automatique ou non.  
+*bActivez*<br/>
+[in] Spécifie si le bouton est automatique ou non.  
   
 ### <a name="remarks"></a>Notes  
  Le bouton automatique s’applique à la couleur par défaut actuelle.  
@@ -219,11 +219,11 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszLabel*  
- Spécifie le texte du bouton.  
+*lpszLabel*<br/>
+[in] Spécifie le texte du bouton.  
   
- [in] *bActivez*  
- Valeur TRUE pour afficher les couleurs de document spécifique ou FALSE pour afficher les couleurs système.  
+*bActivez*<br/>
+[in] Valeur TRUE pour afficher les couleurs de document spécifique ou FALSE pour afficher les couleurs système.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour afficher les couleurs de document en cours ou de la palette de couleurs système lorsque l’utilisateur clique sur un bouton de menu de couleur.  
@@ -239,14 +239,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszLabel*  
- Spécifie le texte du bouton.  
+*lpszLabel*<br/>
+[in] Spécifie le texte du bouton.  
   
- [in] *bAltColorDlg*  
- Spécifiez TRUE pour afficher le `CMFCColorDialog` boîte de dialogue, ou FALSE pour afficher la boîte de dialogue de couleur système standard.  
+*bAltColorDlg*<br/>
+[in] Spécifiez TRUE pour afficher le `CMFCColorDialog` boîte de dialogue, ou FALSE pour afficher la boîte de dialogue de couleur système standard.  
   
- [in] *bActivez*  
- Spécifiez TRUE pour afficher le bouton « autre » ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] Spécifiez TRUE pour afficher le bouton « autre » ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -261,14 +261,14 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiID*  
- Spécifie l’ID pour le volet détachable.  
+*uiID*<br/>
+[in] Spécifie l’ID pour le volet détachable.  
   
- [in] *nVertDockColumns*  
- Spécifie le nombre de colonnes dans le volet ancré verticalement de couleur dans un état détachable.  
+*nVertDockColumns*<br/>
+[in] Spécifie le nombre de colonnes dans le volet ancré verticalement de couleur dans un état détachable.  
   
- [in] *nHorzDockRows*  
- Spécifie le nombre de lignes pour le volet ancré horizontalement de couleur dans un état détachable.  
+*nHorzDockRows*<br/>
+[in] Spécifie le nombre de lignes pour le volet ancré horizontalement de couleur dans un état détachable.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour activer la fonctionnalité « détacher » pour le volet de couleur qui s’affiche lorsque le `CMFCColorMenuButton` bouton est enfoncé.  
@@ -306,8 +306,8 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- Un ID de commande.  
+*uiCmdID*<br/>
+[in] Un ID de commande.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La couleur qui correspond à l’ID de commande spécifiée.  
@@ -336,8 +336,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParent*  
- Pointeur vers la nouvelle fenêtre parente.  
+*pWndParent*<br/>
+[in] Pointeur vers la nouvelle fenêtre parente.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -357,29 +357,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Un rectangle qui délimite la zone à redessiner.  
+*Rect*<br/>
+[in] Un rectangle qui délimite la zone à redessiner.  
   
- [in] *pImages*  
- Pointe vers une liste d’images de barre d’outils.  
+*pImages*<br/>
+[in] Pointe vers une liste d’images de barre d’outils.  
   
- [in] *bHorz*  
- TRUE pour indiquer que la barre d’outils se trouve dans un état ancré horizontal ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bHorz*<br/>
+[in] TRUE pour indiquer que la barre d’outils se trouve dans un état ancré horizontal ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
- [in] *bCustomizeMode*  
- TRUE pour spécifier que l’application est en mode de personnalisation ; Sinon, FALSE. La valeur par défaut est FALSE.  
+*bCustomizeMode*<br/>
+[in] TRUE pour spécifier que l’application est en mode de personnalisation ; Sinon, FALSE. La valeur par défaut est FALSE.  
   
- [in] *bHighlight*  
- TRUE pour spécifier que le bouton est mis en surbrillance ; Sinon, FALSE. La valeur par défaut est FALSE.  
+*bHighlight*<br/>
+[in] TRUE pour spécifier que le bouton est mis en surbrillance ; Sinon, FALSE. La valeur par défaut est FALSE.  
   
- [in] *bDrawBorder*  
- TRUE pour spécifier que la bordure du bouton est affichée ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bDrawBorder*<br/>
+[in] TRUE pour spécifier que la bordure du bouton est affichée ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
- [in] *bGrayDisabledButtons*  
- TRUE pour spécifier que les boutons désactivés sont grisées (grisée) Sinon, FALSE. La valeur par défaut est TRUE.  
+*bGrayDisabledButtons*<br/>
+[in] TRUE pour spécifier que les boutons désactivés sont grisées (grisée) Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -394,14 +394,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Un rectangle qui délimite le bouton à dessiner.  
+*Rect*<br/>
+[in] Un rectangle qui délimite le bouton à dessiner.  
   
- [in] *bSelected*  
- La valeur TRUE indique que le bouton est dans un état sélectionné ; Sinon, FALSE.  
+*bSelected*<br/>
+[in] La valeur TRUE indique que le bouton est dans un état sélectionné ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La largeur du bouton.  
@@ -419,11 +419,11 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *colorDefault*  
- La couleur par défaut qui est sélectionnée dans la boîte de dialogue couleur.  
+*colorDefault*<br/>
+[in] La couleur par défaut qui est sélectionnée dans la boîte de dialogue couleur.  
   
- [out] *colorRes*  
- Retourne la couleur de l’utilisateur sélectionne dans la boîte de dialogue couleur.  
+*colorRes*<br/>
+[out] Retourne la couleur de l’utilisateur sélectionne dans la boîte de dialogue couleur.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’utilisateur sélectionne une nouvelle couleur ; Sinon, zéro.  
@@ -441,11 +441,11 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *clr*  
- Une valeur de couleur RVB.  
+*CLR*<br/>
+[in] Une valeur de couleur RVB.  
   
- [in] *bNotify*  
- TRUE pour appliquer le *clr* couleur de paramètre à n’importe quel bouton de menu associé ou d’un bouton de barre d’outils ; sinon, FALSE.  
+*bNotify*<br/>
+[in] TRUE pour appliquer le *clr* couleur de paramètre à n’importe quel bouton de menu associé ou d’un bouton de barre d’outils ; sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour modifier la couleur du bouton de couleur actuelle. Si le *bNotify* paramètre est différent de zéro, la couleur du bouton correspondant sur n’importe quel menu contextuel associé ou de la barre d’outils est remplacée par la couleur spécifiée par le *clr* paramètre.  
@@ -460,11 +460,11 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- L’ID de ressource d’un bouton de menu de couleur.  
+*uiCmdID*<br/>
+[in] L’ID de ressource d’un bouton de menu de couleur.  
   
- [in] *couleur*  
- Une valeur de couleur RVB.  
+*Couleur*<br/>
+[in] Une valeur de couleur RVB.  
   
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
  Définit un nouveau nom pour la couleur spécifiée.  
@@ -476,11 +476,11 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *couleur*  
- La valeur RVB de la couleur, dont le nom change.  
+*Couleur*<br/>
+[in] La valeur RVB de la couleur, dont le nom change.  
   
- [in] *strName*  
- Le nouveau nom de la couleur.  
+*strName*<br/>
+[in] Le nouveau nom de la couleur.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -492,8 +492,8 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nColumns*  
- Le nombre de colonnes à afficher.  
+*nColumns*<br/>
+[in] Le nombre de colonnes à afficher.  
   
 ### <a name="remarks"></a>Notes  
   

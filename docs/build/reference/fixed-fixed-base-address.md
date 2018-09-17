@@ -1,5 +1,5 @@
 ---
-title: -FIXE (adresse de Base fixe) | Documents Microsoft
+title: -RÉSOLUTION (adresse de Base fixe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b1193b7cfe58aed45e4feec598a49227eafc87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 697f6ccfd98059175311cd04e4e82038877b2110
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374159"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723396"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Adresse de base fixe)
-```  
-/FIXED[:NO]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Indique au système d’exploitation pour charger le programme uniquement à son adresse de base préférée. Si l’adresse de base préférée n’est pas disponible, le système d’exploitation ne charge pas le fichier. Pour plus d’informations, consultez l’article [/BASE (Adresse de base)](../../build/reference/base-base-address.md).  
-  
- / Fixed : no est le paramètre par défaut pour une DLL et /FIXED est le paramètre par défaut pour n’importe quel autre type de projet.  
-  
- Lorsque /FIXED est spécifié, le lien ne génère pas une section de réadressage dans le programme. Au moment de l’exécution, si le système d’exploitation ne peut pas charger le programme à l’adresse spécifiée, il émet un message d’erreur et ne charge pas le programme.  
-  
- Spécifiez/FIXED : no pour générer une section de réadressage dans le programme.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
-  
-2.  Sélectionnez le **l’éditeur de liens** dossier.  
-  
-3.  Sélectionnez le **ligne de commande** page de propriétés.  
-  
-4.  Entrez le nom et la définition la **des Options supplémentaires** boîte.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
-  
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l’éditeur de liens](../../build/reference/linker-options.md)
+
+```
+/FIXED[:NO]
+```
+
+## <a name="remarks"></a>Notes
+
+Indique au système d’exploitation pour charger le programme uniquement à son adresse de base préférée. Si l’adresse de base préférée n’est pas disponible, le système d’exploitation ne charge pas le fichier. Pour plus d’informations, consultez l’article [/BASE (Adresse de base)](../../build/reference/base-base-address.md).
+
+/ Fixed : no est le paramètre par défaut pour une DLL et /FIXED est le paramètre par défaut pour n’importe quel autre type de projet.
+
+Lorsque /FIXED est spécifié, LINK ne génère pas d’une section de réadressage dans le programme. Au moment de l’exécution, si le système d’exploitation ne peut pas charger le programme à l’adresse spécifiée, il émet un message d’erreur et ne charge pas le programme.
+
+Spécifiez/FIXED : no pour générer une section de réadressage dans le programme.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+
+1. Sélectionnez le **l’éditeur de liens** dossier.
+
+1. Sélectionnez le **ligne de commande** page de propriétés.
+
+1. Tapez le nom de l’option et en définissant dans le **des Options supplémentaires** boîte.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)

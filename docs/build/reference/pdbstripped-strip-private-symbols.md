@@ -1,5 +1,5 @@
 ---
-title: -PDBSTRIPPED (suppression des symboles privés) | Documents Microsoft
+title: -PDBSTRIPPED (supprimer les symboles privés) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,59 +21,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 331e490512afe8e9267eb1d0d370cbcf99aa99aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0680f265214849c2e46c4ceb23dcb71bdff61c3f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376635"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710838"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (Supprimer les symboles privés)
-```  
-/PDBSTRIPPED:pdb_file_name  
-```  
-  
-## <a name="remarks"></a>Notes  
- où :  
-  
- *pdb_file_name*  
- Nom spécifié par l’utilisateur pour la base de données du programme supprimée (PDB) qui crée de l’éditeur de liens.  
-  
-## <a name="remarks"></a>Notes  
- L’option /PDBSTRIPPED crée un second fichier (PDB) de la base de données de programme lorsque vous générez votre image de programme avec toute du compilateur ou l’éditeur de liens générant un fichier PDB ([/DEBUG](../../build/reference/debug-generate-debug-info.md), [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), /Zd ou /Zi). Ce second fichier PDB omet les symboles que vous ne souhaitez pas envoyer à vos clients. Le second fichier PDB ne contient que :  
-  
--   Symboles publics  
-  
--   La liste des fichiers objets et les parties de l’exécutable auquel elles contribuent  
-  
--   Enregistrements de débogage (FPO) de l’optimisation pointeur frame utilisées pour parcourir la pile  
-  
- Le fichier PDB supprimé ne contiendra pas :  
-  
--   Informations de type  
-  
--   Informations de numéro de ligne  
-  
--   Symboles CodeView des fichiers par objet tels que ceux des fonctions, des variables locales et des données statiques  
-  
- Le fichier PDB complet sera toujours être généré lorsque vous utilisez /PDBSTRIPPED.  
-  
- Si vous ne créez pas un fichier PDB, /PDBSTRIPPED est ignoré.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Cliquez sur le **l’éditeur de liens** dossier.  
-  
-3.  Cliquez sur le **déboguer** page de propriétés.  
-  
-4.  Modifier la **suppression des symboles privés** propriété.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
-  
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l’éditeur de liens](../../build/reference/linker-options.md)
+
+```
+/PDBSTRIPPED:pdb_file_name
+```
+
+## <a name="arguments"></a>Arguments
+
+*pdb_file_name*<br/>
+Un nom spécifié par l’utilisateur pour la base de données du programme supprimée (PDB) qui crée l’éditeur de liens.
+
+## <a name="remarks"></a>Notes
+
+L’option /PDBSTRIPPED crée un deuxième fichier de base de données (PDB) du programme lorsque vous générez votre image de programme avec toute du compilateur ou l’éditeur de liens générant un fichier PDB ([/DEBUG](../../build/reference/debug-generate-debug-info.md), [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), /Zd ou /Zi). Ce second fichier PDB omet les symboles que vous ne souhaitez pas envoyer à vos clients. Le second fichier PDB contiendra uniquement :
+
+- Symboles publics
+
+- La liste des fichiers objets et les parties de l’exécutable auquel ils contribuent
+
+- Frame pointeur optimisation (FPO) les enregistrements de débogage utilisés pour parcourir la pile
+
+Le fichier PDB supprimé ne contiendra pas :
+
+- Informations de type
+
+- Informations de numéro de ligne
+
+- Symboles CodeView des fichiers par objet tels que ceux des fonctions, des variables locales et des données statiques
+
+Le fichier PDB complet sera toujours être généré lorsque vous utilisez /PDBSTRIPPED.
+
+Si vous ne créez pas un fichier PDB, /PDBSTRIPPED est ignoré.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+
+1. Cliquez sur le **l’éditeur de liens** dossier.
+
+1. Cliquez sur le **déboguer** page de propriétés.
+
+1. Modifier le **suppression des symboles privés** propriété.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)

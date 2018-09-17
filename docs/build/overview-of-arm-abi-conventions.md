@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027321"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721446"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Vue d’ensemble des Conventions ABI de ARM32
 
@@ -64,16 +64,16 @@ L'utilisation d'instructions IT dans le code Thumb-2 n'est pas autorisée, sauf 
 - L'instruction cible doit être l'une des suivantes :
 
    |Opcodes 16 bits|Classe|Restrictions|
-    |---------------------|-----------|------------------|
-    |MOV, MVN|Déplacement|Rm != PC, Rd != PC|
-    |LDR, LDR[S]B, LDR[S]H|Chargement à partir de la mémoire|Mais pas les formes littérales LDR|
-    |STR, STRB, STRH|Stockage en mémoire||
-    |ADD, ADC, RSB, SBC, SUB|Ajout ou soustraction|Mais pas les formes ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-    |CMP, CMN|Comparaison|Rm != PC, Rn != PC|
-    |MUL|Multiplication||
-    |ASR, LSL, LSR, ROR|Décalage de bits||
-    |AND, BIC, EOR, ORR, TST|Arithmétique au niveau du bit||
-    |BX|Création de branche vers le registre|Rm != PC|
+   |---------------------|-----------|------------------|
+   |MOV, MVN|Déplacement|Rm != PC, Rd != PC|
+   |LDR, LDR[S]B, LDR[S]H|Chargement à partir de la mémoire|Mais pas les formes littérales LDR|
+   |STR, STRB, STRH|Stockage en mémoire||
+   |ADD, ADC, RSB, SBC, SUB|Ajout ou soustraction|Mais pas les formes ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
+   |CMP, CMN|Comparaison|Rm != PC, Rn != PC|
+   |MUL|Multiplication||
+   |ASR, LSL, LSR, ROR|Décalage de bits||
+   |AND, BIC, EOR, ORR, TST|Arithmétique au niveau du bit||
+   |BX|Création de branche vers le registre|Rm != PC|
 
 Bien que les UC ARMv7 actuelles ne puissent pas signaler l'utilisation de formes d'instructions interdites, cela devrait être le cas dans les futures générations. Si ces formes sont détectées, tout programme qui les utilise peut se terminer avec une exception d'instruction non définie.
 
@@ -233,5 +233,5 @@ Le compteur est un vrai compteur de cycles, pas une horloge ; ainsi, la fréque
 
 ## <a name="see-also"></a>Voir aussi
 
-[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-[Gestion des exceptions ARM](../build/arm-exception-handling.md)  
+[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Gestion des exceptions ARM](../build/arm-exception-handling.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e9ca899b7ad0f83faed4b8aefe318d2c62abb76
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545829"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704988"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Section spécifique à Microsoft**  
@@ -38,8 +38,8 @@ unsigned long __segmentlimit(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `a`  
- Constante qui spécifie le sélecteur de segment.  
+*a*<br/>
+[in] Constante qui spécifie le sélecteur de segment.  
   
 ## <a name="return-value"></a>Valeur de retour  
  La limite du segment du sélecteur de segment spécifié par `a`, à condition que le sélecteur est valide et visible au niveau d’autorisation actuel.  

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ea89cdd21f4debfa23716a04630e34e3b9203c1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1263b5037d9e5ed3cf81eaa55f6e4accb8737e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313336"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705846"
 ---
 # <a name="resource-includes-dialog-box-c"></a>Include des ressources boîte de dialogue (C++)
 
@@ -35,14 +35,17 @@ Vous pouvez utiliser la **Include des ressources** boîte de dialogue dans un pr
 
 Pour ouvrir le **Include des ressources** de fichiers dans la boîte de dialogue, avec le bouton droit une .rc [affichage des ressources](../windows/resource-view-window.md), puis choisissez **Include des ressources** dans le menu contextuel.
 
-**Fichier d’en-tête de symbole**  
-Vous permet de modifier le nom du fichier d'en-tête où sont stockées les définitions de symbole de votre fichier de ressources. Pour plus d’informations, consultez [modification des noms de symbole de fichiers d’en-tête](../windows/changing-the-names-of-symbol-header-files.md).
+- **Fichier d’en-tête de symbole**
 
-**Directives de symboles en lecture seule**  
-Vous permet d'inclure les fichiers d'en-tête qui contiennent les symboles à ne pas modifier durant une session d'édition. Par exemple, vous pouvez inclure un fichier de symboles partagé entre plusieurs projets. Vous pouvez également inclure des fichiers MFC .h. Pour plus d’informations, consultez [symboles notamment partagés (lecture seule) ou calculés](../windows/including-shared-read-only-or-calculated-symbols.md).
+   Vous permet de modifier le nom du fichier d'en-tête où sont stockées les définitions de symbole de votre fichier de ressources. Pour plus d’informations, consultez [modification des noms de symbole de fichiers d’en-tête](../windows/changing-the-names-of-symbol-header-files.md).
 
-**Directives de compilation**  
-Vous permet d’inclure des fichiers de ressources qui sont créés et modifiés à l’écart des ressources de votre fichier de ressources principal, qui contiennent des directives au moment de la compilation (comme celles qui incluent des ressources de manière conditionnelle) ou qui contiennent des ressources dans un format personnalisé. Vous pouvez également utiliser le **zone directives de compilation** pour inclure des fichiers de ressources MFC standards. Pour plus d’informations, consultez [inclusion des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md).
+- **Directives de symboles en lecture seule**
+
+   Vous permet d'inclure les fichiers d'en-tête qui contiennent les symboles à ne pas modifier durant une session d'édition. Par exemple, vous pouvez inclure un fichier de symboles partagé entre plusieurs projets. Vous pouvez également inclure des fichiers MFC .h. Pour plus d’informations, consultez [symboles notamment partagés (lecture seule) ou calculés](../windows/including-shared-read-only-or-calculated-symbols.md).
+
+- **Directives de compilation**
+
+   Vous permet d’inclure des fichiers de ressources qui sont créés et modifiés à l’écart des ressources de votre fichier de ressources principal, qui contiennent des directives au moment de la compilation (comme celles qui incluent des ressources de manière conditionnelle) ou qui contiennent des ressources dans un format personnalisé. Vous pouvez également utiliser le **zone directives de compilation** pour inclure des fichiers de ressources MFC standards. Pour plus d’informations, consultez [inclusion des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md).
 
 > [!NOTE]
 > Entrées de ces zones de texte apparaissent dans le fichier .rc marqué par `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, et `TEXTINCLUDE 3` respectivement. Pour plus d’informations, consultez [TN035 : à l’aide de plusieurs fichiers de ressources et les fichiers d’en-tête avec Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).

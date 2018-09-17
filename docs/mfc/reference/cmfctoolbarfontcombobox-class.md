@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b510b05c80ba7cdbea0bbf0ec580e88daa55fbed
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216259"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704364"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Cmfctoolbarfontcombobox, classe
 Un bouton de barre d’outils qui contient un contrôle de zone de liste déroulante qui permet à l’utilisateur à sélectionner une police dans une liste de polices système.  
@@ -110,14 +110,14 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiID*  
- L’ID de commande de la zone de liste déroulante.  
+*uiID*<br/>
+[in] L’ID de commande de la zone de liste déroulante.  
   
- [in] *iImage*  
- Index de base zéro d’une image de la barre d’outils. L’image se trouve dans le [cmfctoolbarimages, classe](../../mfc/reference/cmfctoolbarimages-class.md) objet [cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md) classe conserve.  
+*iImage*<br/>
+[in] Index de base zéro d’une image de la barre d’outils. L’image se trouve dans le [cmfctoolbarimages, classe](../../mfc/reference/cmfctoolbarimages-class.md) objet [cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md) classe conserve.  
   
- [in] *nFontType*  
- Les types de polices qui contient la zone de liste déroulante. Ce paramètre peut être une combinaison (OR booléenne) des valeurs suivantes :  
+*nFontType*<br/>
+[in] Les types de polices qui contient la zone de liste déroulante. Ce paramètre peut être une combinaison (OR booléenne) des valeurs suivantes :  
   
  DEVICE_FONTTYPE  
   
@@ -125,20 +125,20 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in] *nCharSet*  
- Si la valeur DEFAULT_CHARSET, la zone de liste déroulante contient tout-nommés de manière unique les polices dans tous les jeux de caractères. (S’il existe deux polices portant le même nom, la zone de liste déroulante contient un d’eux.) Si défini sur une valeur de jeu de caractères valide, la zone de liste déroulante contient uniquement les polices dans le jeu de caractères spécifié. Consultez [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) pour obtenir la liste de caractères possibles définit.  
+*nCharSet*<br/>
+[in] Si la valeur DEFAULT_CHARSET, la zone de liste déroulante contient tout-nommés de manière unique les polices dans tous les jeux de caractères. (S’il existe deux polices portant le même nom, la zone de liste déroulante contient un d’eux.) Si défini sur une valeur de jeu de caractères valide, la zone de liste déroulante contient uniquement les polices dans le jeu de caractères spécifié. Consultez [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) pour obtenir la liste de caractères possibles définit.  
   
- [in] *dwStyle*  
- Style de la zone de liste déroulante. (consultez [Styles de zone de liste déroulante](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
+*dwStyle*<br/>
+[in] Style de la zone de liste déroulante. (consultez [Styles de zone de liste déroulante](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in] *iLargeur Argument de type*  
- La largeur en pixels du contrôle d’édition.  
+*iLargeur Argument de type*<br/>
+[in] La largeur en pixels du contrôle d’édition.  
   
- [in] *nPitchAndFamily*  
- Si la valeur DEFAULT_PITCH, la zone de liste déroulante contient des polices, quel que soit la tonalité. Si la valeur FIXED_PITCH ou VARIABLE_PITCH, la zone de liste déroulante contient uniquement les polices avec ce type de tonalité. Filtrage basé sur la famille de polices n’est pas pris en charge actuellement.  
+*nPitchAndFamily*<br/>
+[in] Si la valeur DEFAULT_PITCH, la zone de liste déroulante contient des polices, quel que soit la tonalité. Si la valeur FIXED_PITCH ou VARIABLE_PITCH, la zone de liste déroulante contient uniquement les polices avec ce type de tonalité. Filtrage basé sur la famille de polices n’est pas pris en charge actuellement.  
   
- [out] *pLstFontsExternal*  
- Pointeur vers un [CObList, classe](../../mfc/reference/coblist-class.md) objet qui stocke les polices disponibles.  
+*pLstFontsExternal*<br/>
+[out] Pointeur vers un [CObList, classe](../../mfc/reference/coblist-class.md) objet qui stocke les polices disponibles.  
   
 ### <a name="remarks"></a>Notes  
  En règle générale, `CMFCToolBarFontComboBox` objets stockent la liste des polices disponibles dans un seul partagé `CObList` objet. Si vous utilisez la deuxième surcharge du constructeur et fournir un pointeur valide vers *pLstFontsExternal*, qui `CMFCToolBarFontComboBox` objet remplira à la place la `CObList` qui *pLstFontsExternal* pointe vers des polices disponibles.  
@@ -156,8 +156,8 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIndex*  
- Spécifie l’index de base zéro d’un élément de zone de liste déroulante.  
+*iIndex*<br/>
+[in] Spécifie l’index de base zéro d’un élément de zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CMFCFontInfo` objet. Si *iIndex* ne spécifie pas un index d’élément valide, la valeur de retour est NULL.  
@@ -183,14 +183,14 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *le caractère*  
- Spécifie le nom de la police ou le préfixe.  
+*Caractère*<br/>
+[in] Spécifie le nom de la police ou le préfixe.  
   
- [in] *nCharSet*  
- Spécifie le jeu de caractères.  
+*nCharSet*<br/>
+[in] Spécifie le jeu de caractères.  
   
- [in] *bExact*  
- Spécifie si *le caractère* contient le nom de la police ou le préfixe de la police.  
+*bExact*<br/>
+[in] Spécifie si *le caractère* contient le nom de la police ou le préfixe de la police.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la police a été activée avec succès ; sinon 0.  

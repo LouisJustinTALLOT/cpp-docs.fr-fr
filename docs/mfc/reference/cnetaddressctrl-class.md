@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07581805edd92e5b577889c8dfb12c5cf08ac20b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b035f496a8daf34334d6e3a6690046c862795dc9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680757"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714556"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 La classe `CNetAddressCtrl` représente le contrôle d'adresse réseau, que vous pouvez utiliser pour entrer et valider le format des adresses IPv4, IPv6 et DNS nommées.  
@@ -127,10 +127,10 @@ virtual BOOL Create(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Une combinaison au niveau du bit de styles à appliquer au contrôle. Pour plus d’informations, consultez [modifier les Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle.|  
-|[in] *pParentWnd*|Un pointeur non null pour un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle.|  
-|[in] *nID*|L’ID du contrôle.|  
+|*dwStyle*|[in] Une combinaison au niveau du bit de styles à appliquer au contrôle. Pour plus d’informations, consultez [modifier les Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|*Rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle.|  
+|*pParentWnd*|[in] Un pointeur non null pour un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle.|  
+|*nID*|[in] L’ID du contrôle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -151,11 +151,11 @@ virtual BOOL CreateEx(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Une combinaison (OR) au niveau du bit des styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le *dwExStyle* paramètre de la [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) (fonction).|  
-|[in] *dwStyle*|Une combinaison (OR) au niveau du bit de styles à appliquer au contrôle. Pour plus d’informations, consultez [modifier les Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle.|  
-|[in] *pParentWnd*|Un pointeur non null pour un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle.|  
-|[in] *nID*|L’ID du contrôle.|  
+|*dwExStyle*|[in] Une combinaison (OR) au niveau du bit des styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le *dwExStyle* paramètre de la [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) (fonction).|  
+|*dwStyle*|[in] Une combinaison (OR) au niveau du bit de styles à appliquer au contrôle. Pour plus d’informations, consultez [modifier les Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|*Rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle.|  
+|*pParentWnd*|[in] Un pointeur non null pour un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle.|  
+|*nID*|[in] L’ID du contrôle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -183,10 +183,9 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
-  
-|Paramètre|Description|  
-|---------------|-----------------|  
-|[in, out] *pAddress*|Pointeur vers un [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) structure.  Définir le *pAddrInfo* membre de cette structure à l’adresse d’un [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) structure avant d’appeler la méthode GetAddress.|  
+
+*pAddress*<br/>
+[in, out] Pointeur vers un [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) structure.  Définir le *pAddrInfo* membre de cette structure à l’adresse d’un [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) structure avant d’appeler la méthode GetAddress.
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur S_OK si cette méthode a réussi ; Sinon, un code d’erreur COM. Pour plus d’informations sur les codes d’erreur possibles, consultez la section de la valeur de retour de la [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) (macro).  
@@ -222,7 +221,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwAddrMask*|Une combinaison (OR) d’indicateurs qui spécifie les types d’adresses que le contrôle d’adresse réseau peut prendre en charge. Pour plus d’informations, consultez [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|  
+|*dwAddrMask*|[in] Une combinaison (OR) d’indicateurs qui spécifie les types d’adresses que le contrôle d’adresse réseau peut prendre en charge. Pour plus d’informations, consultez [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si cette méthode a réussi ; Sinon, un code d’erreur COM.  

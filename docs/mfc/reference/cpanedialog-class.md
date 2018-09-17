@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682325"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710149"
 ---
 # <a name="cpanedialog-class"></a>Cpanedialog, classe
 Le `CPaneDialog` classe prend en charge une boîte de dialogue non modale et Ancrable.  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszWindowName*  
- Le nom de la boîte de dialogue d’accueil.  
+*lpszWindowName*<br/>
+[in] Le nom de la boîte de dialogue d’accueil.  
   
- [in] *pParentWnd*  
- Pointe vers la fenêtre parente.  
+*pParentWnd*<br/>
+[in] Pointe vers la fenêtre parente.  
   
- [in] *bHasGripper*  
- TRUE pour créer la boîte de dialogue d’ancrage avec une légende (barre de redimensionnement) ; Sinon, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE pour créer la boîte de dialogue d’ancrage avec une légende (barre de redimensionnement) ; Sinon, FALSE.  
   
- [in] *lpszTemplateName*  
- Le nom du modèle de boîte de dialogue de ressource.  
+*lpszTemplateName*<br/>
+[in] Le nom du modèle de boîte de dialogue de ressource.  
   
- [in] *nStyle*  
- Le style Windows.  
+*nStyle*<br/>
+[in] Le style Windows.  
   
- [in] *nID*  
- L’ID du contrôle.  
+*nID*<br/>
+[in] L’ID du contrôle.  
   
- [in] *nIDTemplate*  
- L’ID de ressource du modèle de boîte de dialogue.  
+*nIDTemplate*<br/>
+[in] L’ID de ressource du modèle de boîte de dialogue.  
   
- [in] *dwTabbedStyle*  
- Le style de la fenêtre à onglets qui se produit lorsque l’utilisateur fait glisser un autre volet de contrôle sur la légende du volet de ce contrôle. La valeur par défaut est AFX_CBRS_REGULAR_TABS. Pour plus d’informations, consultez la section Notes de la [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) (méthode).  
+*dwTabbedStyle*<br/>
+[in] Le style de la fenêtre à onglets qui se produit lorsque l’utilisateur fait glisser un autre volet de contrôle sur la légende du volet de ce contrôle. La valeur par défaut est AFX_CBRS_REGULAR_TABS. Pour plus d’informations, consultez la section Notes de la [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) (méthode).  
   
- [in] *dwControlBarStyle*  
- Attributs de style supplémentaires. La valeur par défaut est AFX_DEFAULT_DOCKING_PANE_STYLE. Pour plus d’informations, consultez la section Notes de la [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) (méthode).  
+*dwControlBarStyle*<br/>
+[in] Attributs de style supplémentaires. La valeur par défaut est AFX_DEFAULT_DOCKING_PANE_STYLE. Pour plus d’informations, consultez la section Notes de la [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) (méthode).  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode réussit ; Sinon, FALSE.  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *wParam*  
- Handle sur le contrôle qui doit recevoir le focus du clavier par défaut.  
+*wParam*<br/>
+[in] Handle sur le contrôle qui doit recevoir le focus du clavier par défaut.  
   
- [in] *lParam*  
- Spécifie les données d’initialisation supplémentaires.  
+*lParam*<br/>
+[in] Spécifie les données d’initialisation supplémentaires.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE. En outre, la valeur TRUE définit le focus clavier au contrôle spécifié par le *wParam* paramètre ; FALSE empêche de définir le focus du clavier par défaut.  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pOccDialogInfo*  
- Pointeur vers un modèle de boîte de dialogue qui permet de créer l’objet de boîte de dialogue. La valeur de ce paramètre est passée par la suite dans le [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) (méthode).  
+*pOccDialogInfo*<br/>
+[in] Pointeur vers un modèle de boîte de dialogue qui permet de créer l’objet de boîte de dialogue. La valeur de ce paramètre est passée par la suite dans le [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) (méthode).  
   
 ### <a name="return-value"></a>Valeur de retour  
  Toujours TRUE.  

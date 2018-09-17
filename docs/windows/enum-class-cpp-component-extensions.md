@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207600"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711085"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum, classe (extensions du composant C++)
 
@@ -101,11 +101,11 @@ Liste délimitée par des virgules des identificateurs (énumérateurs) contenus
 *name*  
 Nom de l’énumération. Les énumérations managées anonymes ne sont pas autorisées.
 
-*type* (facultatif)  
-Type sous-jacent des *identificateurs*. Cela peut être tout type scalaire, telles que les versions signés ou de **int**, **court**, ou **long**.  **bool** ou **char** est également autorisé.
+*type*  
+(Facultatif) Le type sous-jacent de la *identificateurs*. Cela peut être tout type scalaire, telles que les versions signés ou de **int**, **court**, ou **long**.  **bool** ou **char** est également autorisé.
 
-*var* (facultatif)  
-Nom d’une variable du type de l’énumération.
+*var*  
+(Facultatif) Nom d’une variable du type de l’énumération.
 
 ### <a name="remarks"></a>Notes
 

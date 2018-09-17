@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCWindowsManagerDialog | Documents Microsoft
+title: Cmfcwindowsmanagerdialog, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 71c85d3061da7cf4c87abef9549542900e962f64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042095"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707003"
 ---
-# <a name="cmfcwindowsmanagerdialog-class"></a>Classe de CMFCWindowsManagerDialog
-Le `CMFCWindowsManagerDialog` objet permet à un utilisateur gérer les fenêtres enfants MDI dans une application MDI.  
+# <a name="cmfcwindowsmanagerdialog-class"></a>Cmfcwindowsmanagerdialog, classe
+Le `CMFCWindowsManagerDialog` objet permet à un utilisateur gérer les fenêtres MDI enfants dans une application MDI.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,9 +43,9 @@ class CMFCWindowsManagerDialog : public CDialog
 |[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|Construit un objet `CMFCWindowsManagerDialog`.|  
   
 ## <a name="remarks"></a>Notes  
- Le `CMFCWindowsManagerDialog` contient une liste des fenêtres enfants MDI qui sont actuellement ouvertes dans l’application. L’utilisateur peut contrôler manuellement l’état des fenêtres MDI enfants à l’aide de cette boîte de dialogue.  
+ Le `CMFCWindowsManagerDialog` contient une liste des fenêtres enfants MDI qui sont actuellement ouverts dans l’application. L’utilisateur peut contrôler manuellement l’état des fenêtres MDI enfants à l’aide de cette boîte de dialogue.  
   
- `CMFCWindowsManagerDialog` est incorporé dans le [classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md). Le `CMFCWindowsManagerDialog` n’est pas une classe que vous devez créer manuellement. Au lieu de cela, appelez la fonction [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog), et il crée et affiche un `CMFCWindowsManagerDialog` objet.  
+ `CMFCWindowsManagerDialog` est incorporé à l’intérieur de la [CMDIFrameWndEx, classe](../../mfc/reference/cmdiframewndex-class.md). Le `CMFCWindowsManagerDialog` n’est pas une classe que vous devez créer manuellement. Au lieu de cela, appelez la fonction [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog), il crée et affiche un `CMFCWindowsManagerDialog` objet.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment construire un `CMFCWindowsManagerDialog` objet en appelant `CMDIFrameWndEx::ShowWindowsDialog`. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).  
@@ -76,11 +76,11 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pMDIFrame*  
- Pointeur vers la fenêtre parente ou propriétaire.  
+*pMDIFrame*<br/>
+[in] Pointeur vers la fenêtre parente ou propriétaire.  
   
- [in] *bHelpButton*  
- Un paramètre booléen qui indique si le framework affiche un **aide** bouton.  
+*bHelpButton*<br/>
+[in] Un paramètre booléen qui spécifie si le framework affiche un **aide** bouton.  
   
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les gestionnaires visuels, consultez [Gestionnaire de visualisation](../../mfc/visualization-manager.md).  
