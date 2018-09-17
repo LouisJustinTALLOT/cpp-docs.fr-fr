@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e292ff062449fd53aba0c5f4775e1b2e0b8ff909
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee097dd95a1a88b8cf2cb3dc48c4406499001443
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852384"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721387"
 ---
 # <a name="cmfcribboncategory-class"></a>Cmfcribboncategory, classe
 Le `CMFCRibbonCategory` classe implémente un onglet de ruban qui contient un groupe de [ruban panneaux](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -275,8 +275,8 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pElem*  
- Pointeur vers un élément de ruban.  
+*pElem*<br/>
+[in] Pointeur vers un élément de ruban.  
   
 ### <a name="remarks"></a>Notes  
  Les éléments de ruban dans la boîte de dialogue de personnalisation sont les commandes que vous pouvez ajouter à la barre d’outils Accès rapide.  
@@ -292,14 +292,14 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszPanelName*  
- Pointeur vers le nom du nouveau panneau de ruban.  
+*lpszPanelName*<br/>
+[in] Pointeur vers le nom du nouveau panneau de ruban.  
   
- [in] *hIcon*  
- Handle de l’icône par défaut pour le nouveau panneau de ruban.  
+*hIcon*<br/>
+[in] Handle de l’icône par défaut pour le nouveau panneau de ruban.  
   
- [in] *pRTI*  
- Pointeur vers les informations de classe runtime pour un panneau de ruban personnalisé.  
+*pRTI*<br/>
+[in] Pointeur vers les informations de classe runtime pour un panneau de ruban personnalisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le nouveau panneau de ruban si la méthode a réussi ; Sinon, NULL si le panneau de configuration n’a pas été créé.  
@@ -330,23 +330,23 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParenrRibbonBar*  
- Pointeur vers la barre du ruban parent de la catégorie de ruban.  
+*pParenrRibbonBar*<br/>
+[in] Pointeur vers la barre du ruban parent de la catégorie de ruban.  
   
- [in] *le caractère*  
- Nom de la catégorie de ruban.  
+*Caractère*<br/>
+[in] Nom de la catégorie de ruban.  
   
- [in] *uiSmallImagesResID*  
- ID de ressource de la liste d’images pour les petites images qui sont utilisées par les éléments de ruban dans la catégorie de ruban.  
+*uiSmallImagesResID*<br/>
+[in] ID de ressource de la liste d’images pour les petites images qui sont utilisées par les éléments de ruban dans la catégorie de ruban.  
   
- [in] *uiLargeImagesResID*  
- ID de ressource de la liste d’images pour les grandes images qui sont utilisées par les éléments de ruban dans la catégorie de ruban.  
+*uiLargeImagesResID*<br/>
+[in] ID de ressource de la liste d’images pour les grandes images qui sont utilisées par les éléments de ruban dans la catégorie de ruban.  
   
- [in] *sizeSmallImage*  
- Taille de petites images pour les éléments de ruban dans la catégorie de ruban par défaut.  
+*sizeSmallImage*<br/>
+[in] Taille de petites images pour les éléments de ruban dans la catégorie de ruban par défaut.  
   
- [in] *sizeLargeImage*  
- Taille des images de grande taille pour les éléments de ruban dans la catégorie de ruban par défaut.  
+*sizeLargeImage*<br/>
+[in] Taille des images de grande taille pour les éléments de ruban dans la catégorie de ruban par défaut.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
  Copie l’état de l’objet [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) actuel [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) objet.  
@@ -356,8 +356,8 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *src*  
- Objet `CMFCRibbonCategory` source.  
+*src*<br/>
+[in] La source `CMFCRibbonCategory` objet.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -371,11 +371,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwData*  
- Les données associées à un élément de ruban.  
+*dwData*<br/>
+[in] Les données associées à un élément de ruban.  
   
- [in] *bVisibleOnly*  
- TRUE pour inclure les éléments de ruban d’accès rapide dans la recherche ; FALSE pour exclure des éléments de ruban d’accès rapide dans la recherche.  
+*bVisibleOnly*<br/>
+[in] TRUE pour inclure les éléments de ruban d’accès rapide dans la recherche ; FALSE pour exclure des éléments de ruban d’accès rapide dans la recherche.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
@@ -392,11 +392,11 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- ID de commande associé à un élément de ruban.  
+*uiCmdID*<br/>
+[in] ID de commande associé à un élément de ruban.  
   
- [in] *bVisibleOnly*  
- TRUE pour inclure les éléments de ruban d’accès rapide dans la recherche ; FALSE pour exclure des éléments de ruban d’accès rapide dans la recherche.  
+*bVisibleOnly*<br/>
+[in] TRUE pour inclure les éléments de ruban d’accès rapide dans la recherche ; FALSE pour exclure des éléments de ruban d’accès rapide dans la recherche.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
@@ -411,8 +411,8 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pElement*  
- Pointeur vers un élément de ruban.  
+*pElement*<br/>
+[in] Pointeur vers un élément de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un panneau de ruban si la méthode a réussi ; Sinon, NULL.  
@@ -463,8 +463,8 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in, out] *arElements*  
- Référence à un [CArray](../../mfc/reference/carray-class.md) d’éléments de ruban.  
+*arElements*<br/>
+[in, out] Référence à un [CArray](../../mfc/reference/carray-class.md) d’éléments de ruban.  
   
 ### <a name="remarks"></a>Notes  
  Éléments de ruban qui sont conçus pour une utilisation dans la barre d’outils Accès rapide sont inclus dans le tableau.  
@@ -479,11 +479,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- ID de commande associé à un élément de ruban.  
+*uiCmdID*<br/>
+[in] ID de commande associé à un élément de ruban.  
   
- [in, out] *arElements*  
- Référence à un [CArray](../../mfc/reference/carray-class.md) d’éléments de ruban.  
+*arElements*<br/>
+[in, out] Référence à un [CArray](../../mfc/reference/carray-class.md) d’éléments de ruban.  
   
 ### <a name="remarks"></a>Notes  
  Éléments de ruban qui sont conçus pour une utilisation dans la barre d’outils Accès rapide sont inclus dans le tableau.  
@@ -532,8 +532,8 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bIsLargeImage*  
- TRUE pour le nombre d’images dans la liste d’images de grande taille ; Si la valeur est FALSE, le nombre d’images dans la liste de petite image.  
+*bIsLargeImage*<br/>
+[in] TRUE pour le nombre d’images dans la liste d’images de grande taille ; Si la valeur est FALSE, le nombre d’images dans la liste de petite image.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’images dans la liste d’images spécifiés.  
@@ -548,8 +548,8 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bIsLargeImage*  
- TRUE pour la taille des images de grande taille ; Si la valeur est FALSE, la taille de petites images.  
+*bIsLargeImage*<br/>
+[in] TRUE pour la taille des images de grande taille ; Si la valeur est FALSE, la taille de petites images.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La taille d’une image dans la liste d’images spécifiés.  
@@ -567,11 +567,11 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *lstItems*  
- La liste des ID de commande pour les éléments de ruban dans la catégorie de ruban.  
+*lstItems*<br/>
+[out] La liste des ID de commande pour les éléments de ruban dans la catégorie de ruban.  
   
- [in] *bHiddenOnly*  
- TRUE pour exclure des éléments de ruban affichés sur les panneaux de ruban dans la catégorie de ruban ; FALSE pour inclure tous les éléments de ruban dans la catégorie de ruban.  
+*bHiddenOnly*<br/>
+[in] TRUE pour exclure des éléments de ruban affichés sur les panneaux de ruban dans la catégorie de ruban ; FALSE pour inclure tous les éléments de ruban dans la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -605,8 +605,8 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique pour les panneaux de ruban.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique pour les panneaux de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur maximale de volets de ruban qui sont contenus dans la catégorie de ruban.  
@@ -634,8 +634,8 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Index de base zéro d’un panneau de ruban.  
+*nIndex*<br/>
+[in] Index de base zéro d’un panneau de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le volet du ruban qui se trouve à l’index spécifié.  
@@ -661,8 +661,8 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un panneau de ruban si la méthode a réussi ; Sinon, NULL.  
@@ -678,8 +678,8 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pPanel*  
- Pointeur vers un panneau de ruban.  
+*pPanel*<br/>
+[in] Pointeur vers un panneau de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du Panneau de ruban spécifiée si la méthode a réussi ; sinon -1.  
@@ -822,11 +822,11 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pHLPanel*  
- Pointeur vers le volet du ruban pour mettre en surbrillance.  
+*pHLPanel*<br/>
+[in] Pointeur vers le volet du ruban pour mettre en surbrillance.  
   
- [in] *point*  
- Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le volet du ruban précédemment mis en surbrillance ; Sinon, NULL si aucun volet du ruban n’est mis en surbrillance lorsque cette méthode est appelée.  
@@ -844,11 +844,11 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Les coordonnées x et y du pointeur de la souris, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur de la souris, par rapport à l’angle supérieur gauche de la fenêtre.  
   
- [in] *bCheckPanelCaption*  
- TRUE pour tester la légende du Panneau de ruban ; FALSE pour exclure la légende du Panneau de ruban.  
+*bCheckPanelCaption*<br/>
+[in] TRUE pour tester la légende du Panneau de ruban ; FALSE pour exclure la légende du Panneau de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
@@ -864,8 +864,8 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Les coordonnées x et y du pointeur de la souris, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur de la souris, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro d’un élément de ruban si la méthode a réussi ; sinon -1.  
@@ -881,8 +881,8 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Point à tester.  
+*point*<br/>
+[in] Point à tester.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si *point* se situe dans le rectangle englobant de la gauche ou sur le bouton de défilement vers la droite de la catégorie de ruban, retourne un pointeur vers ce bouton ou sinon, retourne NULL.  
@@ -939,17 +939,17 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bAccelerator*  
- TRUE si cette commande provenant d’un accélérateur, ou FALSE dans le cas contraire.  
+*bAccelerator*<br/>
+[in] TRUE si cette commande provenant d’un accélérateur, ou FALSE dans le cas contraire.  
   
- [in] *nNotifyCode*  
- Le code de notification.  
+*nNotifyCode*<br/>
+[in] Le code de notification.  
   
- [in] *wParam*  
- Le champ WPARAM du message.  
+*wParam*<br/>
+[in] Le champ WPARAM du message.  
   
- [in] *lParam*  
- Le champ LPARAM du message.  
+*lParam*<br/>
+[in] Le champ LPARAM du message.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si le message a été géré, ou FALSE dans le cas contraire.  
@@ -973,8 +973,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique pour la catégorie de ruban.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique pour la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -992,23 +992,23 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique pour l’image.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique pour l’image.  
   
- [in] *rect*  
- Rectangle d’affichage de l’image.  
+*Rect*<br/>
+[in] Rectangle d’affichage de l’image.  
   
- [in] *pElement*  
- Pointeur vers l’élément de ruban qui contient l’image.  
+*pElement*<br/>
+[in] Pointeur vers l’élément de ruban qui contient l’image.  
   
- [in] *bIsLargeImage*  
- TRUE si l’image est la grande taille ; FALSE si l’image est la petite taille.  
+*bIsLargeImage*<br/>
+[in] TRUE si l’image est la grande taille ; FALSE si l’image est la petite taille.  
   
- [in] *nImageIndex*  
- Index de base zéro de l’image dans le tableau de l’image qui est contenu dans la catégorie de ruban.  
+*nImageIndex*<br/>
+[in] Index de base zéro de l’image dans le tableau de l’image qui est contenu dans la catégorie de ruban.  
   
- [in] *bCenter*  
- TRUE pour centrer l’image dans le rectangle d’affichage ; Pour dessiner l’image dans le coin supérieur gauche du rectangle d’affichage, la valeur est FALSE.  
+*bCenter*<br/>
+[in] TRUE pour centrer l’image dans le rectangle d’affichage ; Pour dessiner l’image dans le coin supérieur gauche du rectangle d’affichage, la valeur est FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -1025,11 +1025,11 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Ce paramètre n'est pas utilisé.  
+*contrôleur de domaine principal*<br/>
+[in] Ce paramètre n’est pas utilisé.  
   
- [in] *pMenuBar*  
- Ce paramètre n'est pas utilisé.  
+*pMenuBar*<br/>
+[in] Ce paramètre n’est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien. Substituez cette méthode pour dessiner la bordure d’un menu contextuel.  
@@ -1055,8 +1055,8 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Les coordonnées x et y du pointeur de la souris, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur de la souris, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.  
@@ -1071,8 +1071,8 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1084,8 +1084,8 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
+*point*<br/>
+[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1097,8 +1097,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bIsRTL*  
- TRUE si la disposition est de droite à gauche ; FALSE si la disposition est de gauche à droite.  
+*bIsRTL*<br/>
+[in] TRUE si la disposition est de droite à gauche ; FALSE si la disposition est de gauche à droite.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode ajuste la disposition de tous les volets de ruban et les éléments de ruban qui sont contenus dans la catégorie de ruban.  
@@ -1113,11 +1113,11 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bScrollLeft*  
- TRUE pour faire défiler vers la gauche. FALSE pour faire défiler vers la droite.  
+*bScrollLeft*<br/>
+[in] TRUE pour faire défiler vers la gauche. FALSE pour faire défiler vers la droite.  
   
- [in] *nScrollOffset*  
- La distance de défilement, en pixels.  
+*nScrollOffset*<br/>
+[in] La distance de défilement, en pixels.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la catégorie de ruban est déplacé dans le sens horizontal ; Sinon, FALSE.  
@@ -1135,14 +1135,14 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pCmdUI*  
- Pointeur vers le `CMFCRibbonCmdUI` objet qui spécifie les éléments d’interface utilisateur à être activé et qui doivent être désactivées.  
+*pCmdUI*<br/>
+[in] Pointeur vers le `CMFCRibbonCmdUI` objet qui spécifie les éléments d’interface utilisateur à être activé et qui doivent être désactivées.  
   
- [in] *pTarget*  
- Pointeur vers la fenêtre qui contrôle l’activation ou la désactivation des éléments d’interface utilisateur.  
+*pTarget*<br/>
+[in] Pointeur vers la fenêtre qui contrôle l’activation ou la désactivation des éléments d’interface utilisateur.  
   
- [in] *bDisableIfNoHndler*  
- TRUE pour désactiver l’élément d’interface utilisateur si aucun gestionnaire n’est défini dans une table des messages ; Sinon, FALSE.  
+*bDisableIfNoHndler*<br/>
+[in] TRUE pour désactiver l’élément d’interface utilisateur si aucun gestionnaire n’est défini dans une table des messages ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1154,8 +1154,8 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique pour la catégorie de ruban.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique pour la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1169,11 +1169,11 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Le numéro d’index du panneau à supprimer. Obtenu en appelant le [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) (méthode).  
+*nIndex*<br/>
+[in] Le numéro d’index du panneau à supprimer. Obtenu en appelant le [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) (méthode).  
   
- [in] *bDelete*  
- TRUE pour supprimer l’objet de panneau de configuration de la mémoire ; FALSE pour supprimer l’objet de panneau de configuration sans la supprimer.  
+*bDelete*<br/>
+[in] TRUE pour supprimer l’objet de panneau de configuration de la mémoire ; FALSE pour supprimer l’objet de panneau de configuration sans la supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -1186,8 +1186,8 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique pour les panneaux de ruban qui sont contenus dans la catégorie de ruban.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique pour les panneaux de ruban qui sont contenus dans la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1199,8 +1199,8 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *arCollapseOrder*  
- Spécifie l’ordre de réduction. Le tableau contient des index de base zéro de volets de ruban.  
+*arCollapseOrder*<br/>
+[in] Spécifie l’ordre de réduction. Le tableau contient des index de base zéro de volets de ruban.  
   
 ### <a name="remarks"></a>Notes  
  La bibliothèque définit l’ordre de réduction. Toutefois, vous pouvez personnaliser ce comportement en fournissant la catégorie avec la liste des index qui spécifie l’ordre de réduction.  
@@ -1222,8 +1222,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwData*  
- Données définies par l'utilisateur.  
+*dwData*<br/>
+[in] Les données définies par l’utilisateur.  
   
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
  Assigne une touche d’accès à la catégorie de ruban.  
@@ -1233,8 +1233,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszKeys*  
- Le texte de la touche d’accès.  
+*lpszKeys*<br/>
+[in] Le texte de la touche d’accès.  
   
 ### <a name="remarks"></a>Notes  
  Combinaisons de touches sont affichées lorsque l’utilisateur appuie sur la touche Alt ou F10.  
@@ -1247,8 +1247,8 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *le caractère*  
- Le nom et la touche d’accès de la catégorie de ruban.  
+*Caractère*<br/>
+[in] Le nom et la touche d’accès de la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
  Pour définir la touche d’accès pour la catégorie de ruban, ajoutez une séquence d’échappement de saut de ligne suivie par les caractères de la touche d’accès à *le caractère*.  
@@ -1261,8 +1261,8 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *couleur*  
- Spécifie la nouvelle couleur de la catégorie de ruban.  
+*Couleur*<br/>
+[in] Spécifie la nouvelle couleur de la catégorie de ruban.  
   
 ### <a name="remarks"></a>Notes  
  Couleur peut être une des valeurs suivantes :  

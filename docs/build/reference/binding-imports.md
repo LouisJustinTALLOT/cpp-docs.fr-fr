@@ -1,5 +1,5 @@
 ---
-title: Liaison d’importations | Documents Microsoft
+title: Liaison d’importations | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7519fb18ac7f24e79a5f7f664cb35f8eb5b3fd77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 551028999d11379c06d3319f01e882a33ad57936
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368926"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705196"
 ---
 # <a name="binding-imports"></a>Liaison d’importations
-Le comportement de l’éditeur de liens par défaut est pour créer une table d’adresses importation pouvant être liées pour la DLL à chargement différé. Si la DLL est liée, la fonction d’assistance tente d’utiliser les informations liées au lieu d’appeler **GetProcAddress** sur chaque importation référencée. Si l’horodatage ou l’adresse préférée ne correspondre pas celles de la DLL chargée, la fonction d’assistance suppose la table d’adresses importation liée est obsolète et se poursuit comme s’il n’existe pas.  
-  
- Si vous n’envisagez pas de lier les importations à chargement différé de DLL, en spécifiant [/Delay](../../build/reference/delay-delay-load-import-settings.md): nobind sur la ligne de commande de l’éditeur de liens empêche la table d’adresses importation liées généré et beaucoup d’espace dans le fichier image.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge de l’éditeur de liens pour les DLL à chargement différé](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Le comportement de l’éditeur de liens par défaut consiste à créer une table d’adresse d’importation peut être liée pour le DLL à chargement différé. Si la DLL est liée, la fonction d’assistance tente d’utiliser les informations liées au lieu d’appeler **GetProcAddress** sur chacun des importations référencées. Si l’horodatage ou l’adresse préférée ne correspondre pas celles de la DLL chargée, la fonction d’assistance suppose que la table d’adresses importation liées est obsolète et poursuit comme si elle n’existe pas.
+
+Si vous n’envisagez pas de lier les importations à chargement différé de DLL, en spécifiant [/retarder](../../build/reference/delay-delay-load-import-settings.md): nobind sur la ligne de commande de l’éditeur de liens empêche la table d’adresses importation liées généré et beaucoup d’espace dans le fichier image.
+
+## <a name="see-also"></a>Voir aussi
+
+[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](../../build/reference/linker-support-for-delay-loaded-dlls.md)

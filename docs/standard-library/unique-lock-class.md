@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 780ccdb7f16ed79ef8205c07e1390e778bc33ef5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110134"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711384"
 ---
 # <a name="uniquelock-class"></a>unique_lock, classe
 
@@ -130,7 +130,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Autre*  
+*Autre*<br/>
 Objet `unique_lock`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -181,7 +181,7 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Autre*  
+*Autre*<br/>
 Objet `unique_lock`.
 
 ## <a name="try_lock"></a>  try_lock
@@ -214,7 +214,7 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rel_time*  
+*Rel_time*<br/>
 Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -240,7 +240,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Paramètres
 
-*Abs_time*  
+*Abs_time*<br/>
 Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -283,16 +283,16 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>Paramètres
 
-*Mtx*  
+*Mtx*<br/>
 Objet de type mutex.
 
-*Rel_time*  
+*Rel_time*<br/>
 Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
 
-*Abs_time*  
+*Abs_time*<br/>
 Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
 
-*Autre*  
+*Autre*<br/>
 Objet `unique_lock`.
 
 ### <a name="remarks"></a>Notes

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd5ebd1b70476fd4248d3e309dec967ea471cf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197395"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719288"
 ---
 # <a name="hook"></a>__hook
 
@@ -75,8 +75,8 @@ Pointeur vers la méthode de gestionnaire d'événements à raccorder à un év�
 
 - Événements managés : *ReceiverClass* est la classe de récepteur d’événements et `HandlerMethod` est le gestionnaire.
 
-*récepteur* (facultatif)<br/>
-Pointeur vers une instance de la classe de récepteur d'événements. Si vous ne spécifiez pas un récepteur, la valeur par défaut est la classe de récepteur ou d’une structure dans laquelle **__hook** est appelée.
+*Récepteur*<br/>
+(Facultatif) Pointeur vers une instance de la classe de récepteur d’événements. Si vous ne spécifiez pas un récepteur, la valeur par défaut est la classe de récepteur ou d’une structure dans laquelle **__hook** est appelée.
 
 ## <a name="usage"></a>Utilisation
 

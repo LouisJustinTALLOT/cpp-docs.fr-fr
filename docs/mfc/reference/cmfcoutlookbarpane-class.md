@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f62346d12c978a466de14357352f78345e99f1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc03777a490613cb3da111e4a3b678311f09f678
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691106"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706535"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane, classe
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
@@ -184,32 +184,32 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiImage*  
- Spécifie l’identificateur de ressource d’une image bitmap.  
+*uiImage*<br/>
+[in] Spécifie l’identificateur de ressource d’une image bitmap.  
   
- [in] *lpszLabel*  
- Spécifie le texte du bouton.  
+*lpszLabel*<br/>
+[in] Spécifie le texte du bouton.  
   
- [in] *iIdCommand*  
- Spécifie l’ID. du contrôle de bouton  
+*iIdCommand*<br/>
+[in] Spécifie l’ID. du contrôle de bouton  
   
- [in] *iInsertAt*  
- Spécifie l’index de base zéro sur la page de la barre outlook au niveau duquel insérer le bouton.  
+*iInsertAt*<br/>
+[in] Spécifie l’index de base zéro sur la page de la barre outlook au niveau duquel insérer le bouton.  
   
- [in] *uiLabel*  
- Un ID de ressource de chaîne.  
+*uiLabel*<br/>
+[in] Un ID de ressource de chaîne.  
   
- [in] *szBmpFileName*  
- Spécifie le nom du fichier d’image disque à charger.  
+*szBmpFileName*<br/>
+[in] Spécifie le nom du fichier d’image disque à charger.  
   
- [in] *szLabel*  
- Spécifie le texte du bouton.  
+*szLabel*<br/>
+[in] Spécifie le texte du bouton.  
   
- [in] *hBmp*  
- Handle vers une image bitmap d’un bouton.  
+*hBmp*<br/>
+[in] Handle vers une image bitmap d’un bouton.  
   
- [in] *hIcon*  
- Handle vers l’icône d’un bouton.  
+*hIcon*<br/>
+[in] Handle vers l’icône d’un bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si un bouton a été ajouté avec succès ; Sinon, FALSE.  
@@ -254,17 +254,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParentWnd*  
- Spécifie la fenêtre parente du contrôle de volet de barre Outlook. Ne doit pas être NULL.  
+*pParentWnd*<br/>
+[in] Spécifie la fenêtre parente du contrôle de volet de barre Outlook. Ne doit pas être NULL.  
   
- [in] *dwStyle*  
- Style de fenêtre.  Pour obtenir la liste des styles de fenêtre, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Le style de fenêtre.  Pour obtenir la liste des styles de fenêtre, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *uiID*  
- L’ID du contrôle. Doit être unique pour activer l’enregistrement de l’état du contrôle.  
+*uiID*<br/>
+[in] L’ID du contrôle. Doit être unique pour activer l’enregistrement de l’état du contrôle.  
   
- [in] *dwControlBarStyle*  
- Spécifie les styles spéciaux qui définissent le comportement du contrôle de volet de barre Outlook lorsqu’elle est détachée de la barre Outlook.  
+*dwControlBarStyle*<br/>
+[in] Spécifie les styles spéciaux qui définissent le comportement du contrôle de volet de barre Outlook lorsqu’elle est détachée de la barre Outlook.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -284,11 +284,11 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pButton*  
- Pointeur vers un bouton de barre d’outils sur lequel un utilisateur a cliqué.  
+*pButton*<br/>
+[in] Pointeur vers un bouton de barre d’outils sur lequel un utilisateur a cliqué.  
   
- [in] *pPopup*  
- Pointeur vers le menu contextuel.  
+*pPopup*<br/>
+[in] Pointeur vers le menu contextuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si le menu contextuel doit être affiché ; Sinon, FALSE.  
@@ -309,8 +309,8 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bPageScroll*  
- Si la valeur est TRUE, activer le mode de défilement de page. Si la valeur est FALSE, désactivez le mode de défilement.  
+*bPageScroll*<br/>
+[in] Si la valeur est TRUE, activer le mode de défilement de page. Si la valeur est FALSE, désactivez le mode de défilement.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
  Retourne l’opération standard (autrement dit, non sélectionné) couleur du texte du volet de barre Outlook.  
@@ -365,8 +365,8 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iIdCommand*  
- Spécifie l’ID de commande d’un bouton à supprimer.  
+*iIdCommand*<br/>
+[in] Spécifie l’ID de commande d’un bouton à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le bouton a été supprimé avec succès ; FALSE si l’ID de commande spécifié n’est pas valide.  
@@ -379,8 +379,8 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *couleur*  
- Spécifie la nouvelle couleur d’arrière-plan.  
+*Couleur*<br/>
+[in] Spécifie la nouvelle couleur d’arrière-plan.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction pour définir la couleur d’arrière-plan actuelle de la barre Outlook. La couleur d’arrière-plan est utilisée uniquement s’il n’existe aucune image d’arrière-plan.  
@@ -393,8 +393,8 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiImageID*  
- Spécifie l’ID de ressource d’image.  
+*uiImageID*<br/>
+[in] Spécifie l’ID de ressource d’image.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour définir l’Outlook image d’arrière-plan de la barre. La liste des images d’arrière-plan est gérée par l’embedded [cmfctoolbarimages, classe](../../mfc/reference/cmfctoolbarimages-class.md) objet.  
@@ -426,11 +426,11 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *clrRegText*  
- Spécifie la nouvelle couleur du texte non sélectionné.  
+*clrRegText*<br/>
+[in] Spécifie la nouvelle couleur du texte non sélectionné.  
   
- [in] *clrSelText*  
- Spécifie la nouvelle couleur pour le texte sélectionné.  
+*clrSelText*<br/>
+[in] Spécifie la nouvelle couleur pour le texte sélectionné.  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
  Définit la couleur transparente pour le volet de barre Outlook.  

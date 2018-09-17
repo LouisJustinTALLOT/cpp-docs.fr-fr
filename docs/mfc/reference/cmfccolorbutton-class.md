@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbabd502ca6d9d81c569831f9dcb0b344523bb3e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a6313bcf0a4acfaa705cb4718570dd49374530b4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215326"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707528"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton, classe
 Le `CMFCColorButton` et [cmfccolorbar, classe](../../mfc/reference/cmfccolorbar-class.md) classes sont utilisées ensemble pour implémenter un contrôle de sélecteur de couleurs.  
@@ -159,14 +159,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszLabel*  
- Spécifie le texte du bouton automatique.  
+*lpszLabel*<br/>
+[in] Spécifie le texte du bouton automatique.  
   
- [in] *automatiqueCouleur*  
- Une valeur RVB qui spécifie l’automatique couleur du bouton par défaut.  
+*automatiqueCouleur*<br/>
+[in] Une valeur RVB qui spécifie l’automatique couleur du bouton par défaut.  
   
- [in] *bActivez*  
- Spécifie si le bouton automatique est activé ou désactivé.  
+*bActivez*<br/>
+[in] Spécifie si le bouton automatique est activé ou désactivé.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -181,14 +181,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszLabel*  
- Spécifie le texte du bouton.  
+*lpszLabel*<br/>
+[in] Spécifie le texte du bouton.  
   
- [in] *bAltColorDlg*  
- Spécifie si le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue ou la boîte de dialogue de couleur système est ouvert lorsque l’utilisateur clique sur le bouton.  
+*bAltColorDlg*<br/>
+[in] Spécifie si le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue ou la boîte de dialogue de couleur système est ouvert lorsque l’utilisateur clique sur le bouton.  
   
- [in] *bActivez*  
- Spécifie si le bouton « autre » est activé ou désactivé.  
+*bActivez*<br/>
+[in] Spécifie si le bouton « autre » est activé ou désactivé.  
   
 ### <a name="remarks"></a>Notes  
  Cliquez sur le bouton « autre » pour afficher une boîte de dialogue couleur. Si le *bAltColorDlg* paramètre est TRUE, le [cmfccolordialog, classe](../../mfc/reference/cmfccolordialog-class.md) est affichée ; sinon, la boîte de dialogue de couleur système est affichée.  
@@ -249,14 +249,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointe vers le contexte de périphérique qui est utilisé pour restituer l’image du bouton.  
+*contrôleur de domaine principal*<br/>
+[in] Pointe vers le contexte de périphérique qui est utilisé pour restituer l’image du bouton.  
   
- [in] *rect*  
- Un rectangle qui délimite le bouton.  
+*Rect*<br/>
+[in] Un rectangle qui délimite le bouton.  
   
- [in] *uiState*  
- Spécifie l’état visuel du bouton.  
+*uiState*<br/>
+[in] Spécifie l’état visuel du bouton.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode pour personnaliser le processus de rendu.  
@@ -272,14 +272,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointe vers le contexte de périphérique utilisé pour dessiner la bordure.  
+*contrôleur de domaine principal*<br/>
+[in] Pointe vers le contexte de périphérique utilisé pour dessiner la bordure.  
   
- [in] *rectClient*  
- Un rectangle dans le contexte de périphérique spécifié par le *pDC* paramètre qui définit les limites du bouton à dessiner.  
+*rectClient*<br/>
+[in] Un rectangle dans le contexte de périphérique spécifié par le *pDC* paramètre qui définit les limites du bouton à dessiner.  
   
- [in] *uiState*  
- Spécifie l’état visuel du bouton.  
+*uiState*<br/>
+[in] Spécifie l’état visuel du bouton.  
   
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour personnaliser l’apparence de bordure du bouton de couleur.  
@@ -294,11 +294,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointe vers le contexte de périphérique utilisé pour dessiner le rectangle de focus.  
+*contrôleur de domaine principal*<br/>
+[in] Pointe vers le contexte de périphérique utilisé pour dessiner le rectangle de focus.  
   
- [in] *rectClient*  
- Un rectangle dans le contexte de périphérique spécifié par le *pDC* paramètre qui définit les limites du bouton.  
+*rectClient*<br/>
+[in] Un rectangle dans le contexte de périphérique spécifié par le *pDC* paramètre qui définit les limites du bouton.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode pour personnaliser l’apparence du rectangle de focus.  
@@ -323,7 +323,7 @@ void RebuildPalette(CPalette* pPal);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pPal*|Pointeur vers une palette logique, ou NULL. Si NULL, la palette du système par défaut est utilisée.|  
+|*pPal*|[in] Pointeur vers une palette logique, ou NULL. Si NULL, la palette du système par défaut est utilisée.|  
   
 ##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  Spécifie la couleur du bouton.  
@@ -333,8 +333,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *couleur*  
- Une valeur RVB.  
+*Couleur*<br/>
+[in] Une valeur RVB.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -348,11 +348,11 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *couleur*  
- La valeur de couleur RVB.  
+*Couleur*<br/>
+[in] La valeur de couleur RVB.  
   
- [in] *strName*  
- Nom de la couleur.  
+*strName*<br/>
+[in] Nom de la couleur.  
   
 ### <a name="remarks"></a>Notes  
  La liste des noms de couleur est globale pour chaque application. Par conséquent, cette méthode transfère ses paramètres [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname).  
@@ -365,8 +365,8 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nColumns*  
- Spécifie le nombre de colonnes.  
+*nColumns*<br/>
+[in] Spécifie le nombre de colonnes.  
   
 ### <a name="remarks"></a>Notes  
  L’utilisateur peut sélectionner une couleur à partir d’une barre de couleurs contextuelle qui affiche un tableau de couleurs prédéfinies. Utilisez cette méthode pour définir le nombre de colonnes dans la table.  
@@ -381,11 +381,11 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszLabel*  
- Spécifie l’étiquette à afficher avec le jeu de couleurs de document.  
+*lpszLabel*<br/>
+[in] Spécifie l’étiquette à afficher avec le jeu de couleurs de document.  
   
- [in] *lstColors*  
- Une référence à une liste de valeurs RVB.  
+*lstColors*<br/>
+[in] Une référence à une liste de valeurs RVB.  
   
 ### <a name="remarks"></a>Notes  
  Un `CMFCColorButton` objet conserve une liste de valeurs RVB qui sont transférés vers un [cmfccolorbar, classe](../../mfc/reference/cmfccolorbar-class.md) objet. Lorsque la barre de couleurs s’affiche, ces couleurs sont affichés dans une section spéciale dont le nom est spécifié par le *lpszLabel* paramètre.  
@@ -398,8 +398,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pPalette*  
- Pointeur vers une palette de couleurs.  
+*pPalette*<br/>
+[in] Pointeur vers une palette de couleurs.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -411,8 +411,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bCalcOnly*  
- Si elle est différente de zéro, la nouvelle taille du contrôle button est calculée, mais la taille réelle n’est pas modifiée.  
+*bCalcOnly*<br/>
+[in] Si elle est différente de zéro, la nouvelle taille du contrôle button est calculée, mais la taille réelle n’est pas modifiée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un `CSize` objet qui spécifie une nouvelle taille de contrôle de bouton.  
@@ -427,8 +427,8 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *couleur*  
- Une couleur sélectionnée par l’utilisateur.  
+*Couleur*<br/>
+[in] Une couleur sélectionnée par l’utilisateur.  
   
 ### <a name="remarks"></a>Notes  
  Le `UpdateColor` fonction modifie la couleur du bouton actuellement sélectionné et informe son parent en envoyant un message WM_COMMAND avec une notification standard BN_CLICKED. Utilisez le [CMFCColorButton::GetColor](#getcolor) méthode pour récupérer la couleur sélectionnée.  

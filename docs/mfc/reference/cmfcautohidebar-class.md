@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538241"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719977"
 ---
 # <a name="cmfcautohidebar-class"></a>Cmfcautohidebar, classe
 `CMFCAutoHideBar` est une classe de barre d'outils spéciale qui implémente la fonctionnalité de masquage automatique.  
@@ -136,11 +136,11 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pAutoHideWnd*  
- Fenêtre que vous souhaitez masquer.  
+*pAutoHideWnd*<br/>
+[in] La fenêtre que vous souhaitez masquer.  
   
- [in] *dwAlignment*  
- Valeur qui spécifie l’alignement du bouton Masquer automatiquement par rapport à la fenêtre d’application.  
+*dwAlignment*<br/>
+[in] Une valeur qui spécifie l’alignement du bouton Masquer automatiquement avec la fenêtre d’application.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -207,12 +207,12 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszClassName*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *nID*  
- [in] *dwControlBarStyle*  
+*lpszClassName*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*nID*<br/>
+[in] [in] *dwControlBarStyle*  
  [in] *pContext*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -342,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nLength*  
- La valeur n’est pas utilisée dans l’implémentation de base. Dans les implémentations dérivées, utilisez cette valeur pour indiquer la longueur du volet redimensionné.  
+*nLength*<br/>
+[in] La valeur n’est pas utilisée dans l’implémentation de base. Dans les implémentations dérivées, utilisez cette valeur pour indiquer la longueur du volet redimensionné.  
   
- [in] *bVert*  
- La valeur n’est pas utilisée dans l’implémentation de base. Dans les implémentations dérivées, utilisez True pour le handle, le cas où la barre à masquage automatique est réduite verticalement et FALSE dans le cas où la barre à masquage automatique est réduite horizontalement.  
+*bVert*<br/>
+[in] La valeur n’est pas utilisée dans l’implémentation de base. Dans les implémentations dérivées, utilisez True pour le handle, le cas où la barre à masquage automatique est réduite verticalement et FALSE dans le cas où la barre à masquage automatique est réduite horizontalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Taille résultante du volet redimensionné.  

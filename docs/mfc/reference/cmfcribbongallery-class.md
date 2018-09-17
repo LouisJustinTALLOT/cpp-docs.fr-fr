@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: de624d9775160d1cbe7f048baf2dd83a592cfbe3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538255"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724771"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery, classe
 Implémente les galeries de ruban de style Office 2007.  
@@ -195,20 +195,20 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszGroupName*  
- Spécifie le nom du groupe.  
+*lpszGroupName*<br/>
+[in] Spécifie le nom du groupe.  
   
- [in] *uiImagesPaletteResID*  
- Spécifie l’ID de ressource de la liste d’images qui contient les images pour le groupe.  
+*uiImagesPaletteResID*<br/>
+[in] Spécifie l’ID de ressource de la liste d’images qui contient les images pour le groupe.  
   
- [in] *cxPaletteImage*  
- Spécifie la largeur en pixels d’une image.  
+*cxPaletteImage*<br/>
+[in] Spécifie la largeur en pixels d’une image.  
   
- [in] *imagesGroup*  
- Une référence à la liste d’images qui contient des images de groupe.  
+*imagesGroup*<br/>
+[in] Une référence à la liste d’images qui contient des images de groupe.  
   
- [in] *nIconsNum*  
- Spécifie le nombre d’icônes dans le groupe. Ce paramètre doit être spécifié uniquement pour l’installation personnalisée (owner-drawn) groupes.  
+*nIconsNum*<br/>
+[in] Spécifie le nombre d’icônes dans le groupe. Ce paramètre doit être spécifié uniquement pour l’installation personnalisée (owner-drawn) groupes.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez diviser les éléments sur une galerie de ruban en plusieurs groupes en appelant cette méthode. Chaque groupe peut avoir une légende.  
@@ -224,14 +224,14 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pSubItem*  
- Pointeur vers l’élément à ajouter au menu.  
+*pSubItem*<br/>
+[in] Pointeur vers l’élément à ajouter au menu.  
   
- [in] *nIndex*  
- Spécifie l’index de base zéro d’un emplacement où insérer l’élément.  
+*nIndex*<br/>
+[in] Spécifie l’index de base zéro d’un emplacement où insérer l’élément.  
   
- [in] *bOnTop*  
- TRUE pour spécifier que l’élément doit être inséré avant la galerie du ruban ; Sinon, FALSE.  
+*bOnTop*<br/>
+[in] TRUE pour spécifier que l’élément doit être inséré avant la galerie du ruban ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez combiner des galeries de fenêtre contextuelle avec les éléments de menu contextuel en appelant cette méthode. Éléments de menu peuvent être placés avant ou après la galerie.  
@@ -325,11 +325,11 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer le redimensionnement du menu ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] TRUE pour activer le redimensionnement du menu ; Sinon, FALSE.  
   
- [in] *bVertcalOnly*  
- TRUE pour spécifier que la galerie peut être redimensionnée uniquement verticalement ; FALSE pour indiquer que la galerie peut être redimensionnée verticalement et horizontalement.  
+*bVertcalOnly*<br/>
+[in] TRUE pour spécifier que la galerie peut être redimensionnée uniquement verticalement ; FALSE pour indiquer que la galerie peut être redimensionnée verticalement et horizontalement.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour activer ou désactiver le redimensionnement de la galerie du ruban. Lorsque le redimensionnement est activé, la galerie du ruban affiche une barre de redimensionnement un utilisateur peut utiliser pour la redimensionner.  
@@ -342,8 +342,8 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour spécifier que la barre latérale est activée ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] TRUE pour spécifier que la barre latérale est activée ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour activer ou désactiver la barre latérale de style Office XP sur le côté gauche du menu.  
@@ -381,8 +381,8 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nGroupIndex*  
- Spécifie l’index de base zéro pour le groupe dont vous souhaitez récupérer le nom.  
+*nGroupIndex*<br/>
+[in] Spécifie l’index de base zéro pour le groupe dont vous souhaitez récupérer le nom.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nom du groupe situé à l’index spécifié. En passant un index non valide entraîne un échec d’assertion.  
@@ -420,8 +420,8 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nItemIndex*  
- Spécifie l’index de base zéro de l’élément pour lequel récupérer le texte d’info-bulle.  
+*nItemIndex*<br/>
+[in] Spécifie l’index de base zéro de l’élément pour lequel récupérer le texte d’info-bulle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la chaîne d’info-bulle assignée à un élément dans la galerie du ruban. Il peut être NULL si aucune info-bulle n’est affecté à cet élément.  
@@ -436,8 +436,8 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- Spécifie l’ID de commande de l’élément de menu qui a ouvert la galerie du ruban.  
+*uiCmdID*<br/>
+[in] Spécifie l’ID de commande de l’élément de menu qui a ouvert la galerie du ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Lorsque l’utilisateur sélectionne un élément dans la galerie du ruban, la bibliothèque envoie le message WM_COMMAND avec l’ID de commande du bouton de menu qui a ouvert la galerie du ruban.  
@@ -576,20 +576,20 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers le contexte de périphérique qui est utilisé pour le dessin.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers le contexte de périphérique qui est utilisé pour le dessin.  
   
- [in] *rectIcon*  
- Spécifie le rectangle englobant de l’icône à dessiner.  
+*rectIcon*<br/>
+[in] Spécifie le rectangle englobant de l’icône à dessiner.  
   
- [in] *nIconIndex*  
- Spécifie l’index de base zéro dans la liste d’images d’icônes de la galerie de l’icône à dessiner.  
+*nIconIndex*<br/>
+[in] Spécifie l’index de base zéro dans la liste d’images d’icônes de la galerie de l’icône à dessiner.  
   
- [in] *pIcon*  
- Pointeur vers l’icône qui est dessiné.  
+*pIcon*<br/>
+[in] Pointeur vers l’icône qui est dessiné.  
   
- [in] *clrText*  
- Spécifie la couleur du texte de l’élément à dessiner.  
+*clrText*<br/>
+[in] Spécifie la couleur du texte de l’élément à dessiner.  
   
 ### <a name="remarks"></a>Notes  
  Vous pouvez substituer cette méthode dans une classe dérivée pour personnaliser l’apparence d’une galerie de ruban.  
@@ -659,11 +659,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParent*  
- La fenêtre parente de la fenêtre de la galerie du ruban.  
+*pParent*<br/>
+[in] La fenêtre parente de la fenêtre de la galerie du ruban.  
   
- [out] *données*  
- Un objet `CAccessibilityData` qui reçoit les données d’accessibilité de la galerie du ruban.  
+*data*<br/>
+[out] Un `CAccessibilityData` objet qui reçoit les données d’accessibilité à partir de la galerie du ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -678,8 +678,8 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- True pour afficher la galerie du ruban comme un bouton de menu déroulant ; Pour afficher le contenu de la galerie du ruban directement sur le ruban, la valeur est FALSE.  
+*bSet*<br/>
+[in] True pour afficher la galerie du ruban comme un bouton de menu déroulant ; Pour afficher le contenu de la galerie du ruban directement sur le ruban, la valeur est FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -693,11 +693,11 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nGroupIndex*  
- Spécifie l’index de base zéro pour le groupe pour lequel le nom est en cours de modification.  
+*nGroupIndex*<br/>
+[in] Spécifie l’index de base zéro pour le groupe pour lequel le nom est en cours de modification.  
   
- [in] *lpszGroupName*  
- Spécifie le nouveau nom pour le groupe.  
+*lpszGroupName*<br/>
+[in] Spécifie le nouveau nom pour le groupe.  
   
 ### <a name="remarks"></a>Notes  
  Le groupe dont le nom est en cours de modification doit avoir été ajouté à l’aide de la [CMFCRibbonGallery::AddGroup](#addgroup) (méthode).  
@@ -710,8 +710,8 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIconsInRow*  
- Spécifie le nombre d’éléments à afficher dans chaque ligne de la galerie.  
+*nIconsInRow*<br/>
+[in] Spécifie le nombre d’éléments à afficher dans chaque ligne de la galerie.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour spécifier la largeur de la galerie du ruban.  
@@ -726,11 +726,11 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nItemIndex*  
- Index de base zéro de l’élément de la palette à laquelle associer l’info-bulle.  
+*nItemIndex*<br/>
+[in] Index de base zéro de l’élément de la palette à laquelle associer l’info-bulle.  
   
- [in] *lpszToolTip*  
- Le texte s’affiche sur l’info-bulle.  
+*lpszToolTip*<br/>
+[in] Le texte s’affiche sur l’info-bulle.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -747,14 +747,14 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *imagesPalette*  
- Spécifie la liste d’images qui contient les icônes à afficher dans la galerie.  
+*imagesPalette*<br/>
+[in] Spécifie la liste d’images qui contient les icônes à afficher dans la galerie.  
   
- [in] *uiImagesPaletteResID*  
- Spécifie l’ID de ressource de la liste d’images qui contient les icônes à afficher dans la galerie.  
+*uiImagesPaletteResID*<br/>
+[in] Spécifie l’ID de ressource de la liste d’images qui contient les icônes à afficher dans la galerie.  
   
- [in] *cxPaletteImage*  
- Spécifie la largeur, en pixels, d’une image dans la galerie.  
+*cxPaletteImage*<br/>
+[in] Spécifie la largeur, en pixels, d’une image dans la galerie.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -766,8 +766,8 @@ void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- Spécifie l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un utilisateur sélectionne un élément de la galerie.  
+*nID*<br/>
+[in] Spécifie l’ID de commande qui est envoyé dans le message WM_COMMAND lorsqu’un utilisateur sélectionne un élément de la galerie.  
   
 ### <a name="remarks"></a>Notes  
  Pour déterminer l’élément spécifique qu’un utilisateur sélectionnés à partir de la galerie, appelez le [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) méthode statique.  

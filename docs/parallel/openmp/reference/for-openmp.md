@@ -1,5 +1,5 @@
 ---
-title: pour (OpenMP) | Documents Microsoft
+title: pour (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694860"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721654"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-Provoque le travail effectué dans une boucle à l’intérieur d’une région parallèle pour être réparti entre les threads.  
+Provoque le travail effectué dans une boucle à l’intérieur d’une région parallèle doit être divisé entre threads.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,14 +33,13 @@ Provoque le travail effectué dans une boucle à l’intérieur d’une région 
    for_statement  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+## <a name="arguments"></a>Arguments
+
+*Clause*<br/>
+(Facultatif) Zéro ou plusieurs clauses. Consultez la section Notes pour obtenir la liste des clauses prises en charge par **pour**.  
   
- `clause`(facultatif)  
- Zéro ou plusieurs clauses. Consultez la section Notes pour obtenir la liste des clauses prises en charge par **pour**.  
-  
- `for_statement`  
- Une boucle for. Un comportement non défini se produira si le code utilisateur dans la boucle devient la variable d’index.  
+*for_Statement*<br/>
+Une boucle for. Un comportement non défini se produira si le code utilisateur dans la boucle devient la variable d’index.  
   
 ## <a name="remarks"></a>Notes  
  Le **pour** directive prend en charge les clauses OpenMP suivantes :  
@@ -51,7 +50,7 @@ Provoque le travail effectué dans une boucle à l’intérieur d’une région 
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [commandée](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [Commandée](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
@@ -59,7 +58,7 @@ Provoque le travail effectué dans une boucle à l’intérieur d’une région 
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Si **parallèles** est également spécifiée, `clause` peut être n’importe quelle clause acceptée par le **parallèles** ou **pour** directives, à l’exception **nowait**.  
+ Si **parallèles** est également spécifié, `clause` peut être toute clause acceptée par le **parallèles** ou **pour** directives, à l’exception **nowait**.  
   
  Pour plus d’informations, consultez [2.4.1 construction for](../../../parallel/openmp/2-4-1-for-construct.md).  
   

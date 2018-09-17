@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3e9c9e5122e4bef7007a767fb3225483984e11d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338397"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711683"
 ---
 # <a name="cmfccaptionbutton-class"></a>Cmfccaptionbutton, classe
 Le `CMFCCaptionButton` classe implémente un bouton qui s’affiche sur la barre de légende pour un volet d’ancrage ou une fenêtre mini-frame. En général, l'infrastructure crée les boutons de légende automatiquement.  
@@ -106,11 +106,11 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nHit*  
- La commande associée au bouton.  
+*nHit*<br/>
+[in] La commande associée au bouton.  
   
- [in] *bLeftAlign*  
- Spécifie si le bouton est aligné à gauche.  
+*bLeftAlign*<br/>
+[in] Spécifie si le bouton est aligné à gauche.  
   
  Le tableau suivant répertorie les valeurs possibles pour le *nHit* paramètre.  
   
@@ -161,11 +161,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bHorz*  
- TRUE pour une image de flèche gauche ou droite ID ; FALSE pour monter ou Descendre les identifiants d’images de flèche.  
+*bHorz*<br/>
+[in] TRUE pour une image de flèche gauche ou droite ID ; FALSE pour monter ou Descendre les identifiants d’images de flèche.  
   
- [in] *bMaximized*  
- TRUE pour un ID d’image agrandir ; FALSE pour un ID d’image de réduire.  
+*bMaximized*<br/>
+[in] TRUE pour un ID d’image agrandir ; FALSE pour un ID d’image de réduire.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’ID de l’image.  
@@ -221,11 +221,11 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *ptTo*  
- Nouvel emplacement.  
+*ptTo*<br/>
+[in] Le nouvel emplacement.  
   
- [in] *bHide*  
- Si vous souhaitez afficher le bouton.  
+*bHide*<br/>
+[in] Si vous souhaitez afficher le bouton.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  Dessine le bouton de légende.  
@@ -240,20 +240,20 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique pour le bouton.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique pour le bouton.  
   
- [in] *bActive*  
- Si vous souhaitez dessiner une image de bouton actif.  
+*bActive*<br/>
+[in] Si vous souhaitez dessiner une image de bouton actif.  
   
- [in] *bHorz*  
- Réservé pour une utilisation dans une classe dérivée.  
+*bHorz*<br/>
+[in] Réservé pour une utilisation dans une classe dérivée.  
   
- [in] *bMaximized*  
- Si vous souhaitez dessiner une image du bouton agrandie.  
+*bMaximized*<br/>
+[in] Si vous souhaitez dessiner une image du bouton agrandie.  
   
- [in] *bDésactivé*  
- Si vous souhaitez dessiner une image de bouton activé.  
+*bDésactiver*<br/>
+[in] Si vous souhaitez dessiner une image de bouton activé.  
   
 ### <a name="remarks"></a>Notes  
  Le *bMaximized* paramètre est utilisé lorsque le bouton est un agrandir ou réduire le bouton.  
@@ -266,8 +266,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- TRUE pour la hauteur de barre de titre mini ; Si la valeur est FALSE, hauteur par défaut de la barre de titre.  
+*bSet*<br/>
+[in] TRUE pour la hauteur de barre de titre mini ; Si la valeur est FALSE, hauteur par défaut de la barre de titre.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

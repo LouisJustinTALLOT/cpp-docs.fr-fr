@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209726"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713854"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Opérateurs de multiplication et opérateur modulo
 ## <a name="syntax"></a>Syntaxe  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  Étant donné que les conversions exécutées par les opérateurs de multiplication ne fournissent pas de conditions de dépassement de capacité positif ou de dépassement de capacité négatif, les informations peuvent être perdues si le résultat d'une opération de multiplication ne peut pas être représenté dans le type des opérandes après conversion.  
   
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- Dans Microsoft C++, le résultat d’une expression de modulo est toujours le même que le signe du premier opérande.  
-  
-**FIN de la section spécifique à Microsoft**  
- Si la division calculée de deux entiers est incorrecte et qu’un seul opérande est négatif, le résultat est le plus grand entier (en amplitude, sans tenir compte du signe) qui est inférieur à la valeur exacte que l’opérateur de division produirait. Par exemple, la valeur calculée de -11 / 3 est-3.666666666. Le résultat de cette division intégrale est -3.  
+**Section spécifique à Microsoft**
+
+Dans Microsoft C++, le résultat d’une expression de modulo est toujours le même que le signe du premier opérande.
+
+**FIN de la section spécifique à Microsoft**
+
+Si la division calculée de deux entiers est incorrecte et qu’un seul opérande est négatif, le résultat est le plus grand entier (en amplitude, sans tenir compte du signe) qui est inférieur à la valeur exacte que l’opérateur de division produirait. Par exemple, la valeur calculée de -11 / 3 est-3.666666666. Le résultat de cette division intégrale est -3.  
   
  La relation entre les opérateurs de multiplication est indiquée par l’identité (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   

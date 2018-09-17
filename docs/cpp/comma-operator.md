@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9beadf4f532d24ca1f4023ad95dd8583d653c11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409184"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707763"
 ---
 # <a name="comma-operator-"></a>Opérateur virgule : ,
 Permet le regroupement de deux instructions lorsque l'une d'elles est attendue.  
@@ -37,11 +37,7 @@ expression , expression
   
  Les virgules peuvent être utilisées comme séparateurs dans certains contextes, par exemple les listes d'arguments de fonction. Ne confondez pas l'utilisation de la virgule comme séparateur avec son utilisation comme opérateur. Ces deux utilisations sont entièrement différentes.  
   
- Prenons l'exemple de l'expression  
-  
- *E1* , *e2*  
-  
- Le type et la valeur de l’expression sont le type et la valeur de *e2*; le résultat de l’évaluation *e1* est ignorée. Le résultat est une l-value si l’opérande droite est une l-value.  
+ Prenons l'exemple de l'expression `e1, e2`. Le type et la valeur de l’expression sont le type et la valeur de *e2*; le résultat de l’évaluation *e1* est ignorée. Le résultat est une l-value si l’opérande droite est une l-value.  
   
  Alors que la virgule est normalement utilisée comme séparateur (par exemple dans les arguments réels des fonctions ou les initialiseurs d'agrégat), l'opérateur virgule et ses opérandes doivent être placés entre parenthèses. Exemple :  
   

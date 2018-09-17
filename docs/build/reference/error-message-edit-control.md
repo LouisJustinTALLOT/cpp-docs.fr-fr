@@ -1,5 +1,5 @@
 ---
-title: Contrôle d’édition de Message d’erreur | Documents Microsoft
+title: Contrôle d’édition de Message d’erreur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49a0852b0b73adb3c70ba1b01b8c7f4805f80321
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa0851f31487bf79ba3977bdedee86ce3b718f21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369612"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701895"
 ---
 # <a name="error-message-edit-control"></a>contrôle de modification du message d'erreur
-Le **Message d’erreur** zone contient le texte du message d’erreur système ou du message d’erreur de module selon la valeur entrée.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Valeur, contrôle d’édition](../../build/reference/value-edit-control.md)
+
+Le **Message d’erreur** zone contient le texte du message d’erreur système ou du message d’erreur de module selon la valeur entrée.
+
+## <a name="see-also"></a>Voir aussi
+
+[Valeur, contrôle d’édition](../../build/reference/value-edit-control.md)

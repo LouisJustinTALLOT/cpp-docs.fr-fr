@@ -1,5 +1,5 @@
 ---
-title: critique | Documents Microsoft
+title: critique | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691298"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716948"
 ---
 # <a name="critical"></a>critical
-Spécifie que code est uniquement être exécuté sur un thread à la fois.  
+Spécifie que code est uniquement être exécuté sur un seul thread à la fois.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,13 @@ Spécifie que code est uniquement être exécuté sur un thread à la fois.
 }  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+## <a name="arguments"></a>Arguments
+
+*name*<br/>
+(Facultatif) Un nom pour identifier le code critique. Notez ce nom doit être entre parenthèses.  
   
- (`name`) (facultatif)  
- Un nom pour identifier le code critique. Notez que ce nom doit être entre parenthèses.  
-  
 ## <a name="remarks"></a>Notes  
- Le **critique** directive prend en charge aucune clauses OpenMP.  
+ Le **critique** directive prend en charge aucune clause OpenMP.  
   
  Pour plus d’informations, consultez [2.6.2 critiques construire](../../../parallel/openmp/2-6-2-critical-construct.md).  
   

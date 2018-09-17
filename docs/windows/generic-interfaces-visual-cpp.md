@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d3e54f13f6b165288402bbb1d783a2f1979f4ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607697"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704898"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfaces génériques (Visual C++)
 
@@ -42,8 +42,8 @@ Pour plus d’informations sur les interfaces, consultez [classe d’interface](
 
 ## <a name="remarks"></a>Notes
 
-*attributs* (facultatif)  
-Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez **attributs**.
+*Attributs*  
+(Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez **attributs**.
 
 *clé de classe*  
 **classe** ou **typename**
@@ -54,20 +54,20 @@ Liste d’identificateurs séparés par des virgules.
 *type de paramètre contraintes clauses*  
 Prend la forme spécifiée dans [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*les modificateurs d’accessibilité* (facultatif)  
-Les modificateurs d’accessibilité (par exemple, **public, privé**).
+*modificateurs d’accessibilité*  
+(Facultatif) Les modificateurs d’accessibilité (par exemple, **public, privé**).
 
 *identifier*  
 Le nom de l’interface.
 
-*liste de base* (facultatif)  
-Une liste qui contient un ou plusieurs interfaces de base explicites séparés par des virgules.
+*liste de base*  
+(Facultatif) Une liste qui contient un ou plusieurs interfaces de base explicites séparés par des virgules.
 
 *corps de l’interface*  
 Déclarations des membres d’interface.
 
-*déclarateurs* (facultatif)  
-Déclarations de variables en fonction de ce type.
+*déclarateurs*  
+(Facultatif) Déclarations de variables en fonction de ce type.
 
 ## <a name="example"></a>Exemple
 

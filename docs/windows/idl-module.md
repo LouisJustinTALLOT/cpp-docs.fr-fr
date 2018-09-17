@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220463"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715531"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -49,26 +49,26 @@ function declaration
 *name*  
 Un nom défini par l’utilisateur du bloc de code qui s’affiche dans le fichier .idl.
 
-*dllname* (facultatif)  
-Le fichier .dll qui contient l’exportation.
+*dllname*  
+(Facultatif) Le fichier .dll qui contient l’exportation.
 
-*UUID* (facultatif)  
-ID unique.
+*uuid*  
+(Facultatif) Un ID unique.
 
-*HelpString* (facultatif)  
-Une chaîne de caractères utilisée pour décrire la bibliothèque de types.
+*helpstring*  
+(Facultatif) Une chaîne de caractères utilisée pour décrire la bibliothèque de types.
 
-*helpstringcontext* (facultatif)  
-L’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.
+*helpstringcontext*  
+(Facultatif) L’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.
 
-*HelpContext* (facultatif)  
-ID d’aide pour cette bibliothèque de types.
+*helpcontext*  
+(Facultatif) L’ID d’aide pour cette bibliothèque de types.
 
-*masqué* (facultatif)  
-Un paramètre qui empêche l’affichage de la bibliothèque. Consultez le [masqué](/windows/desktop/Midl/hidden) attribut MIDL pour plus d’informations.
+*hidden*  
+(Facultatif) Un paramètre qui empêche l’affichage de la bibliothèque. Consultez le [masqué](/windows/desktop/Midl/hidden) attribut MIDL pour plus d’informations.
 
-*restreint* (facultatif)  
-Membres de la bibliothèque ne peut pas être appelées arbitrairement. Consultez le [restreint](/windows/desktop/Midl/restricted) attribut MIDL pour plus d’informations.
+*restricted*  
+(Facultatif) Membres de la bibliothèque ne peut pas être appelées arbitrairement. Consultez le [restreint](/windows/desktop/Midl/restricted) attribut MIDL pour plus d’informations.
 
 *déclaration de fonction*  
 La fonction que vous définirez.

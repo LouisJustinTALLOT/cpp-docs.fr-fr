@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 18a260e0ea0283489d074e937011722cec2d570b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210848"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702570"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Cmfctoolbarbutton, classe
 Fournit les fonctionnalités de bouton aux barres d’outils.  
@@ -315,8 +315,8 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pToolbar*  
- Non utilisé.  
+*pToolbar*<br/>
+[in] Inutilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne la valeur TRUE.  
@@ -371,20 +371,20 @@ CMFCToolBarButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiID*  
- L’ID de commande du bouton.  
+*uiID*<br/>
+[in] L’ID de commande du bouton.  
   
- [in] *iImage*  
- L’index d’image du bouton dans la collection d’images.  
+*iImage*<br/>
+[in] L’index d’image du bouton dans la collection d’images.  
   
- [in] *lpszText*  
- L’étiquette de texte du bouton. Peut être NULL.  
+*lpszText*<br/>
+[in] L’étiquette de texte du bouton. Peut être NULL.  
   
- [in] *bUserButton*  
- Valeur booléenne qui détermine si le bouton est défini par l’utilisateur. Si ce paramètre est TRUE, le bouton est défini par l’utilisateur. Sinon, l’image du bouton est chargée à partir d’une ressource.  
+*bUserButton*<br/>
+[in] Valeur booléenne qui détermine si le bouton est défini par l’utilisateur. Si ce paramètre est TRUE, le bouton est défini par l’utilisateur. Sinon, l’image du bouton est chargée à partir d’une ressource.  
   
- [in] *bloqué*  
- Valeur booléenne qui détermine si le bouton peut être personnalisé. Si ce paramètre est TRUE, le bouton ne peuvent pas être personnalisé. Sinon, le bouton peut être personnalisé.  
+*Bloqué*<br/>
+[in] Valeur booléenne qui détermine si le bouton peut être personnalisé. Si ce paramètre est TRUE, le bouton ne peuvent pas être personnalisé. Sinon, le bouton peut être personnalisé.  
   
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith  
  Compare cette instance avec le paramètre `CMFCToolBarButton` objet.  
@@ -394,8 +394,8 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *autres*  
- Référence à l’objet à comparer à cette instance.  
+*other*<br/>
+[in] Référence à l’objet à comparer à cette instance.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’objet fourni est égal à la valeur de cette instance ; Sinon, 0.  
@@ -411,8 +411,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *src*  
- Une référence au bouton de la source à partir duquel copier.  
+*src*<br/>
+[in] Une référence au bouton de la source à partir duquel copier.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour copier un autre bouton de barre d’outils sur ce bouton de barre d’outils.  
@@ -425,8 +425,8 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDataObject*  
- L’objet de données source OLE.  
+*pDataObject*<br/>
+[in] L’objet de données source OLE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Objet `CMFCToolBarButton` créé.  
@@ -442,8 +442,8 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- Définissez ce paramètre à True pour activer l’entrée, ou False pour désactiver l’entrée.  
+*bActivez*<br/>
+[in] Définissez ce paramètre à True pour activer l’entrée, ou False pour désactiver l’entrée.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode appelle la `EnableWindow` (fonction) pour activer ou désactiver l’entrée. Pour plus d’informations, consultez [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) dans le SDK Windows.  
@@ -456,8 +456,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bouton de menu*  
- Une référence au bouton de menu cible.  
+*Bouton de menu*<br/>
+[in] Une référence au bouton de menu cible.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne la valeur TRUE.  
@@ -742,8 +742,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hwnd*  
- Un handle de fenêtre.  
+*HWND*<br/>
+[in] Un handle de fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le bouton est le propriétaire du handle de fenêtre fourni ; sinon 0.  
@@ -891,8 +891,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iNotifyCode*  
- Le message de notification qui est associé à la commande.  
+*iNotifyCode*<br/>
+[in] Le message de notification qui est associé à la commande.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne FALSE.  
@@ -935,8 +935,8 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pTarget*  
- La cible de l’opération de glisser-déplacer.  
+*pTarget*<br/>
+[in] La cible de l’opération de glisser-déplacer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le bouton peut être déposé sur la barre d’outils cible fourni ; Sinon, FALSE.  
@@ -957,14 +957,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Le contexte de périphérique qui affiche le bouton.  
+*contrôleur de domaine principal*<br/>
+[in] Le contexte de périphérique qui affiche le bouton.  
   
- [in] *sizeDefault*  
- La taille par défaut du bouton.  
+*sizeDefault*<br/>
+[in] La taille par défaut du bouton.  
   
- [in] *bHorz*  
- L’état d’ancrage de la barre d’outils parent. Ce paramètre est TRUE si la barre d’outils est ancrée horizontalement ou est flottant, ou FALSE si la barre d’outils est ancrée verticalement.  
+*bHorz*<br/>
+[in] L’état d’ancrage de la barre d’outils parent. Ce paramètre est TRUE si la barre d’outils est ancrée horizontalement ou est flottant, ou FALSE si la barre d’outils est ancrée verticalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un `SIZE` structure qui contient les dimensions du bouton, en pixels.  
@@ -994,8 +994,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParent*  
- La nouvelle fenêtre parente.  
+*pWndParent*<br/>
+[in] La nouvelle fenêtre parente.  
   
 ### <a name="remarks"></a>Notes  
  Le bouton est inséré dans une barre d’outils, par exemple, lorsque l’utilisateur fait glisser à partir d’une barre d’outils vers une autre barre d’outils.  
@@ -1012,11 +1012,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- La fenêtre parent du bouton de barre d’outils.  
+*pWnd*<br/>
+[in] La fenêtre parent du bouton de barre d’outils.  
   
- [in] *bDelay*  
- TRUE si le message doit être géré avec un délai.  
+*bDelay*<br/>
+[in] TRUE si le message doit être géré avec un délai.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne FALSE.  
@@ -1049,8 +1049,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- La fenêtre parent du bouton de barre d’outils.  
+*pWnd*<br/>
+[in] La fenêtre parent du bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne FALSE.  
@@ -1070,11 +1070,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Le contexte de périphérique qui affiche le bouton.  
+*contrôleur de domaine principal*<br/>
+[in] Le contexte de périphérique qui affiche le bouton.  
   
- [in] *nCtlColor*  
- La notification de couleur spécifique.  
+*nCtlColor*<br/>
+[in] La notification de couleur spécifique.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers l’objet brush que l’infrastructure utilise pour peindre l’arrière-plan du bouton.  
@@ -1094,8 +1094,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pMenu*  
- Menu Personnaliser.  
+*pMenu*<br/>
+[in] Menu Personnaliser.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne FALSE.  
@@ -1111,8 +1111,8 @@ virtual void OnDblClk(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- -   La fenêtre parent du bouton.  
+*pWnd*<br/>
+[in] - la fenêtre parent du bouton.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode est appelée par le `CMFCToolBar::OnLButtonDblClk` méthode lors de la barre d’outils parent gère un [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) message.  
@@ -1135,29 +1135,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Le contexte de périphérique qui affiche le bouton.  
+*contrôleur de domaine principal*<br/>
+[in] Le contexte de périphérique qui affiche le bouton.  
   
- [in] *rect*  
- Le rectangle englobant du bouton.  
+*Rect*<br/>
+[in] Le rectangle englobant du bouton.  
   
- [in] *pImages*  
- La collection d’images de barre d’outils qui est associée au bouton.  
+*pImages*<br/>
+[in] La collection d’images de barre d’outils qui est associée au bouton.  
   
- [in] *bHorz*  
- L’état d’ancrage de la barre d’outils parent. Ce paramètre a la valeur TRUE lorsque le bouton est ancré horizontalement et FALSE lorsque le bouton est ancré verticalement.  
+*bHorz*<br/>
+[in] L’état d’ancrage de la barre d’outils parent. Ce paramètre a la valeur TRUE lorsque le bouton est ancré horizontalement et FALSE lorsque le bouton est ancré verticalement.  
   
- [in] *bCustomizeMode*  
- Spécifie si la barre d’outils est en mode de personnalisation. Ce paramètre a la valeur TRUE lorsque la barre d’outils est en mode de personnalisation et FALSE lorsque la barre d’outils n’est pas en mode de personnalisation.  
+*bCustomizeMode*<br/>
+[in] Spécifie si la barre d’outils est en mode de personnalisation. Ce paramètre a la valeur TRUE lorsque la barre d’outils est en mode de personnalisation et FALSE lorsque la barre d’outils n’est pas en mode de personnalisation.  
   
- [in] *bHighlight*  
- Spécifie si le bouton est mis en surbrillance. Ce paramètre est la valeur TRUE lorsque le bouton est mis en surbrillance et FALSE lorsque le bouton n’est pas mis en surbrillance.  
+*bHighlight*<br/>
+[in] Spécifie si le bouton est mis en surbrillance. Ce paramètre est la valeur TRUE lorsque le bouton est mis en surbrillance et FALSE lorsque le bouton n’est pas mis en surbrillance.  
   
- [in] *bDrawBorder*  
- Spécifie si le bouton doit afficher sa bordure. Ce paramètre a la valeur TRUE lorsque le bouton doit afficher sa bordure et la valeur FALSE lorsque le bouton ne doit pas afficher sa bordure.  
+*bDrawBorder*<br/>
+[in] Spécifie si le bouton doit afficher sa bordure. Ce paramètre a la valeur TRUE lorsque le bouton doit afficher sa bordure et la valeur FALSE lorsque le bouton ne doit pas afficher sa bordure.  
   
- [in] *bGrayDisabledButtons*  
- Spécifie s’il faut ombrer les boutons désactivés ou utiliser la collection d’images désactivé. Ce paramètre a la valeur TRUE lorsque les boutons désactivés doivent être grisée et FALSE lorsque cette méthode doit utiliser la collection d’images désactivé.  
+*bGrayDisabledButtons*<br/>
+[in] Spécifie s’il faut ombrer les boutons désactivés ou utiliser la collection d’images désactivé. Ce paramètre a la valeur TRUE lorsque les boutons désactivés doivent être grisée et FALSE lorsque cette méthode doit utiliser la collection d’images désactivé.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode pour personnaliser le dessin de bouton de barre d’outils.  
@@ -1173,14 +1173,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Le contexte de périphérique qui affiche le bouton.  
+*contrôleur de domaine principal*<br/>
+[in] Le contexte de périphérique qui affiche le bouton.  
   
- [in] *rect*  
- Le rectangle englobant du bouton.  
+*Rect*<br/>
+[in] Le rectangle englobant du bouton.  
   
- [in] *bSelected*  
- Spécifie si le bouton est sélectionné. Si ce paramètre est TRUE, le bouton est sélectionné. Si ce paramètre est FALSE, le bouton n’est pas sélectionné.  
+*bSelected*<br/>
+[in] Spécifie si le bouton est sélectionné. Si ce paramètre est TRUE, le bouton est sélectionné. Si ce paramètre est FALSE, le bouton n’est pas sélectionné.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La largeur, en pixels, du bouton sur le contexte de périphérique spécifié.  
@@ -1200,8 +1200,8 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *strToolTip*  
- Un `CString` objet qui reçoit le texte d’info-bulle personnalisée.  
+*strToolTip*<br/>
+[out] Un `CString` objet qui reçoit le texte d’info-bulle personnalisée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne FALSE.  
@@ -1239,8 +1239,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- Spécifie si le bouton est visible. Si ce paramètre est TRUE, le bouton est visible. Sinon, le bouton n’est pas visible.  
+*bShow*<br/>
+[in] Spécifie si le bouton est visible. Si ce paramètre est TRUE, le bouton est visible. Sinon, le bouton n’est pas visible.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette méthode ne fait rien. Substituez cette méthode pour mettre à jour la visibilité du bouton.  
@@ -1253,8 +1253,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iSize*  
- La nouvelle largeur du bouton.  
+*iSize*<br/>
+[in] La nouvelle largeur du bouton.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette méthode ne fait rien. Substituez cette méthode pour redimensionner le bouton lorsque la taille ou la position de la barre d’outils parent est modifié.  
@@ -1269,11 +1269,11 @@ virtual BOOL OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- La fenêtre parent du bouton. Peut être NULL.  
+*pWnd*<br/>
+[in] La fenêtre parent du bouton. Peut être NULL.  
   
- [in] *pTI*  
- Un `TOOLINFO` structure qui contient des informations sur un outil dans un contrôle d’info-bulle.  
+*PTI*<br/>
+[in] Un `TOOLINFO` structure qui contient des informations sur un outil dans un contrôle d’info-bulle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le résultat de `OnMenuButtonToolHitTest` si le bouton peut récupérer un pointeur vers la fenêtre frame parente ; sinon, FALSE.  
@@ -1299,17 +1299,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParent*  
- La fenêtre parente.  
+*pWndParent*<br/>
+[in] La fenêtre parente.  
   
- [in] *iButtonIndex*  
- Index de base zéro du bouton dans la collection de boutons de parent.  
+*iButtonIndex*<br/>
+[in] Index de base zéro du bouton dans la collection de boutons de parent.  
   
- [in] *wndToolTip*  
- Le contrôle qui affiche le texte d’info-bulle.  
+*wndToolTip*<br/>
+[in] Le contrôle qui affiche le texte d’info-bulle.  
   
- [out] *str*  
- Un `CString` objet qui reçoit le texte d’info-bulle mis à jour.  
+*str*<br/>
+[out] Un `CString` objet qui reçoit le texte d’info-bulle mis à jour.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne FALSE.  
@@ -1325,8 +1325,8 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *srcItem*  
- Un `COleDataSource` objet qui stocke les informations d’état de l’opération de glisser-déplacer.  
+*srcItem*<br/>
+[in] Un `COleDataSource` objet qui stocke les informations d’état de l’opération de glisser-déplacer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’opération aboutit ; Sinon, FALSE.  
@@ -1380,8 +1380,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *ar*  
- Le `CArchive` objet à partir duquel ou de sérialisation.  
+*ar*<br/>
+[in] Le `CArchive` objet à partir duquel ou de sérialisation.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode prend en charge les processus de transfert de données telles que le Presse-papiers ou d’opérations de glisser-déplacer. Il lit ou écrit des propriétés du bouton telles que l’ID, étiquette de texte et ID de l’image à partir ou à la collection `CArchive` objet.  
@@ -1398,11 +1398,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParent*  
- La fenêtre parent du bouton de barre d’outils.  
+*pParent*<br/>
+[in] La fenêtre parent du bouton de barre d’outils.  
   
- [in] *données*  
- Un `CAccessibilityData` objet qui est rempli avec les données d’accessibilité du bouton de barre d’outils.  
+*data*<br/>
+[in] Un `CAccessibilityData` objet qui est rempli avec les données d’accessibilité du bouton de barre d’outils.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne la valeur TRUE.  
@@ -1418,8 +1418,8 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *le caractère*  
- Le nouveau nom du format de Presse-papiers global. Ne peut pas être Null.  
+*Caractère*<br/>
+[in] Le nouveau nom du format de Presse-papiers global. Ne peut pas être Null.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode rend possible pour les opérations de glisser-déplacer se produire entre plusieurs applications. Chaque application doit fournir le même nom de format de Presse-papiers.  
@@ -1434,8 +1434,8 @@ virtual void SetImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *iImage*  
- L’index de l’image dans la collection d’images de barre d’outils.  
+*iImage*<br/>
+[in] L’index de l’image dans la collection d’images de barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
  Si le bouton de barre d’outils est un séparateur, *iImage* fait référence à la nouvelle largeur du bouton séparateur.  
@@ -1450,8 +1450,8 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lstCmds*  
- La liste des commandes protégés.  
+*lstCmds*<br/>
+[in] La liste des commandes protégés.  
   
 ### <a name="remarks"></a>Notes  
  En mode de personnalisation, le framework désactive les commandes de bouton de barre d’outils qui sont protégées. L’utilisateur ne peut pas effectuer de glisser-déplacer et modifier des opérations sur les boutons de barre d’outils désactivées.  
@@ -1476,8 +1476,8 @@ void SetRect(const CRect rect);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Le nouveau rectangle englobant du bouton.  
+*Rect*<br/>
+[in] Le nouveau rectangle englobant du bouton.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode appelle la [CMFCToolBarButton::OnMove](#onmove) méthode une fois qu’il a le nouveau rectangle englobant.  
@@ -1490,8 +1490,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nStyle*  
- Le nouveau style du bouton.  
+*nStyle*<br/>
+[in] Le nouveau style du bouton.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut définit les [CMFCToolBarButton::m_nStyle](#m_nstyle) données membres à *nStyle*. Substituez cette méthode si vous souhaitez effectuer un traitement supplémentaire pour gérer le changement de style. Consultez [Styles de contrôle de barre d’outils](toolbar-control-styles.md) pour obtenir la liste des indicateurs de style valide.  
@@ -1504,8 +1504,8 @@ void SetVisible(BOOL bShow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- Une valeur booléenne qui spécifie s’il faut afficher ou masquer le bouton. Si ce paramètre est TRUE, le bouton est affiché. Si le paramètre est FALSE, le bouton est masqué.  
+*bShow*<br/>
+[in] Une valeur booléenne qui spécifie s’il faut afficher ou masquer le bouton. Si ce paramètre est TRUE, le bouton est affiché. Si le paramètre est FALSE, le bouton est masqué.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction permet de masquer ou afficher un bouton de barre d’outils particulier. Appelez le [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) méthode après avoir appelé cette méthode.  
@@ -1518,8 +1518,8 @@ void Show(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- Une valeur booléenne qui spécifie s’il faut afficher ou masquer le bouton. Si ce paramètre est TRUE, le bouton est affiché. Si le paramètre est FALSE, le bouton est masqué.  
+*bShow*<br/>
+[in] Une valeur booléenne qui spécifie s’il faut afficher ou masquer le bouton. Si ce paramètre est TRUE, le bouton est affiché. Si le paramètre est FALSE, le bouton est masqué.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode pour mettre à jour la visibilité des boutons de barre d’outils lorsque leur barre d’outils parent est redimensionné. L’infrastructure appelle cette méthode avec *bShow* définie sur FALSE lorsque le bouton ne tient plus dans les limites de la barre d’outils. L’infrastructure appelle cette méthode avec *bShow* la valeur TRUE lorsque après le redimensionnement du bouton Nouveau s’intègre dans les limites de la barre d’outils.  

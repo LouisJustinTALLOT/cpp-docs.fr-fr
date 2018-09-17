@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2eb6baf664c2cac7bfc1ed2c95a5fbd204d289b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686797"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703922"
 ---
 # <a name="map-class"></a>map, classe
 
@@ -124,18 +124,18 @@ class map;
 ### <a name="parameters"></a>Paramètres
 
 *Key*<br/>
- Type de données clé à stocker dans la classe map.
+Type de données clé à stocker dans la classe map.
 
 *Type*<br/>
- Type de données d'élément à stocker dans la classe map.
+Type de données d'élément à stocker dans la classe map.
 
 *Caractéristiques*<br/>
- Type qui fournit un objet de fonction pouvant comparer deux valeurs d'éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe map. Cet argument est facultatif et le prédicat binaire `less<Key>` est la valeur par défaut.
+Type qui fournit un objet de fonction pouvant comparer deux valeurs d'éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe map. Cet argument est facultatif et le prédicat binaire `less<Key>` est la valeur par défaut.
 
 Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat std::less<> qui n’a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers).
 
 *Allocateur*<br/>
- Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe map. Cet argument est facultatif et sa valeur par défaut est `allocator<pair<const Key, Type> >`.
+Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe map. Cet argument est facultatif et sa valeur par défaut est `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Notes
 
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Valeur de clé des éléments à mettre en correspondance à partir de la classe map.
+Valeur de clé des éléments à mettre en correspondance à partir de la classe map.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1041,7 +1041,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Valeur de clé d’argument à comparer à la clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
+Valeur de clé d’argument à comparer à la clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1128,16 +1128,16 @@ size_type erase(
 ### <a name="parameters"></a>Paramètres
 
 *Where*<br/>
- Position de l’élément à supprimer.
+Position de l’élément à supprimer.
 
 *Premier*<br/>
- Position du premier élément à supprimer.
+Position du premier élément à supprimer.
 
 *Dernière*<br/>
- Position juste après le dernier élément à supprimer.
+Position juste après le dernier élément à supprimer.
 
 *Key*<br/>
- Valeur de clé des éléments à supprimer.
+Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1240,7 +1240,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Valeur de clé qui doit correspondre à la clé de tri d'un élément du mappage dans lequel la recherche est effectuée.
+Valeur de clé qui doit correspondre à la clé de tri d'un élément du mappage dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1702,7 +1702,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Valeur de clé d’argument à comparer à la clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
+Valeur de clé d’argument à comparer à la clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2492,7 +2492,7 @@ void swap(
 ### <a name="parameters"></a>Paramètres
 
 *right*<br/>
- Argument map qui fournit les éléments à échanger avec la classe map cible.
+Argument map qui fournit les éléments à échanger avec la classe map cible.
 
 ### <a name="remarks"></a>Notes
 
@@ -2563,7 +2563,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Valeur de clé d’argument à comparer à la valeur de clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
+Valeur de clé d’argument à comparer à la valeur de clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 

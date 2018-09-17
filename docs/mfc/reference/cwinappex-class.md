@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5528e8eb8c7eeb54e221ca6c6167246a6491d7b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540837"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720068"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx, classe
 `CWinAppEx` Gère l’état de l’application enregistre l’état dans le Registre, charge l’état à partir du Registre, initialise les gestionnaires de l’application et fournit des liens vers ces mêmes gestionnaires d’applications.  
@@ -254,8 +254,8 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSectionName*  
- Chaîne qui contient un chemin d’accès d’une clé de Registre.  
+*lpszSectionName*<br/>
+[in] Chaîne qui contient un chemin d’accès d’une clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la méthode a réussi ; sinon 0.  
@@ -271,8 +271,8 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bResourceSmartUpdate*  
- Un paramètre booléen qui spécifie si l’objet de l’espace de travail doit détecter et gérer les mises à jour de la ressource.  
+*bResourceSmartUpdate*<br/>
+[in] Un paramètre booléen qui spécifie si l’objet de l’espace de travail doit détecter et gérer les mises à jour de la ressource.  
   
 ### <a name="remarks"></a>Notes  
  Le `CWinAppEx` classe a des méthodes d’initialisation, fournit des fonctionnalités pour enregistrer et charger des informations sur l’application dans le Registre et contrôle les paramètres d’application globale. Il vous permet également d’utiliser des gestionnaires globales comme le [ckeyboardmanager, classe](../../mfc/reference/ckeyboardmanager-class.md) et [cusertoolsmanager, classe](../../mfc/reference/cusertoolsmanager-class.md). Chaque application peut avoir qu’une seule instance de la `CWinAppEx` classe.  
@@ -285,8 +285,8 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- Spécifie si l’application charge la taille initiale et l’emplacement de la fenêtre frame principale à partir du Registre.  
+*bActivez*<br/>
+[in] Spécifie si l’application charge la taille initiale et l’emplacement de la fenêtre frame principale à partir du Registre.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, la taille et l’emplacement du frame principal est chargé à partir du Registre ainsi que les autres paramètres de l’application. Cela se produit au cours de [CWinAppEx::LoadState](#loadstate). Si vous ne souhaitez pas charger le positionnement de fenêtre initiale à partir du Registre, appelez cette méthode avec *bActivez* définie sur FALSE.  
@@ -302,14 +302,14 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszRegEntry*  
- Chaîne qui contient le chemin d’accès d’une clé de Registre. L’application utilise cette clé de Registre pour stocker des informations pour les menus détachables.  
+*lpszRegEntry*<br/>
+[in] Chaîne qui contient le chemin d’accès d’une clé de Registre. L’application utilise cette clé de Registre pour stocker des informations pour les menus détachables.  
   
- [in] *uiCmdFirst*  
- ID de menu est détachables.  
+*uiCmdFirst*<br/>
+[in] ID de menu est détachables.  
   
- [in] *uiCmdLast*  
- ID de la dernière détachables menu.  
+*uiCmdLast*<br/>
+[in] ID de la dernière détachables menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le `CMenuTearOffManager` est créé et initialisé avec succès ; FALSE si une erreur se produit ou si le `CMenuTearOffManager` existe déjà.  
@@ -331,23 +331,23 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdToolsDummy*  
- Entier non signé par le framework comme espace réservé pour l’ID de commande du menu outils utilisateur.  
+*uiCmdToolsDummy*<br/>
+[in] Entier non signé par le framework comme espace réservé pour l’ID de commande du menu outils utilisateur.  
   
- [in] *uiCmdFirst*  
- L’ID de commande pour la première commande d’outil utilisateur.  
+*uiCmdFirst*<br/>
+[in] L’ID de commande pour la première commande d’outil utilisateur.  
   
- [in] *uiCmdLast*  
- L’ID de commande pour la dernière commande d’outil utilisateur.  
+*uiCmdLast*<br/>
+[in] L’ID de commande pour la dernière commande d’outil utilisateur.  
   
- [in] *pToolRTC*  
- Une classe qui le `CUserToolsManager` objet utilise pour créer de nouveaux outils de l’utilisateur.  
+*pToolRTC*<br/>
+[in] Une classe qui le `CUserToolsManager` objet utilise pour créer de nouveaux outils de l’utilisateur.  
   
- [in] *uArgMenuID*  
- L’ID de menu d’argument.  
+*uArgMenuID*<br/>
+[in] L’ID de menu d’argument.  
   
- [in] *uInitDirMenuID*  
- L’ID de menu pour le répertoire de l’outil initiale.  
+*uInitDirMenuID*<br/>
+[in] L’ID de menu pour le répertoire de l’outil initiale.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode crée et initialise un `CUserToolsManager` de l’objet ; FALSE si la méthode échoue ou si un `CUserToolsManager` objet existe déjà.  
@@ -381,14 +381,14 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszEntry*  
- Chaîne qui contient le nom d’une clé de Registre.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient le nom d’une clé de Registre.  
   
- [out] *ppData*  
- Pointeur vers la mémoire tampon que la méthode remplit avec les données binaires.  
+*ppData*<br/>
+[out] Pointeur vers la mémoire tampon que la méthode remplit avec les données binaires.  
   
- [out] *pétaoctets*  
- Pointeur vers un entier non signé par la méthode pour écrire le nombre d’octets lus.  
+*Pétaoctets*<br/>
+[out] Pointeur vers un entier non signé par la méthode pour écrire le nombre d’octets lus.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite ; FALSE sinon.  
@@ -452,11 +452,11 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszEntry*  
- Chaîne qui contient le nom d’une entrée de Registre.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient le nom d’une entrée de Registre.  
   
- [in] *nParamètre par défaut*  
- La valeur par défaut que la méthode retourne si l’entrée de Registre spécifiée n’existe pas.  
+*nParamètre par défaut*<br/>
+[in] La valeur par défaut que la méthode retourne si l’entrée de Registre spécifiée n’existe pas.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Les données de Registre si la méthode a réussi ; sinon *nParamètre par défaut*.  
@@ -502,11 +502,11 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszEntry*  
- Chaîne qui contient le chemin d’accès relatif d’une entrée de Registre.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient le chemin d’accès relatif d’une entrée de Registre.  
   
- [out] *obj*  
- Une référence à un `CObject`. La méthode utilise cette référence pour stocker les données de Registre.  
+*obj*<br/>
+[out] Une référence à un `CObject`. La méthode utilise cette référence pour stocker les données de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la méthode a réussi ; sinon 0.  
@@ -537,8 +537,8 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *szSectionAdd*  
- Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
+*szSectionAdd*<br/>
+[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un `CString` qui contient le chemin d’accès absolu d’une clé de Registre.  
@@ -558,17 +558,17 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSubSection*  
- Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
+*lpszSubSection*<br/>
+[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
   
- [in] *lpszEntry*  
- Chaîne qui contient la valeur à lire.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient la valeur à lire.  
   
- [out] *ppData*  
- Pointeur vers la mémoire tampon où la méthode stocke les données.  
+*ppData*<br/>
+[out] Pointeur vers la mémoire tampon où la méthode stocke les données.  
   
- [out] *pétaoctets*  
- Pointeur vers un entier non signé. La méthode écrit la taille de *ppData* à ce paramètre.  
+*Pétaoctets*<br/>
+[out] Pointeur vers un entier non signé. La méthode écrit la taille de *ppData* à ce paramètre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite, sinon FALSE.  
@@ -589,14 +589,14 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSubSection*  
- Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
+*lpszSubSection*<br/>
+[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
   
- [in] *lpszEntry*  
- Chaîne qui contient la valeur à lire.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient la valeur à lire.  
   
- [in] *nParamètre par défaut*  
- La valeur par défaut à retourner si la valeur spécifiée n’existe pas.  
+*nParamètre par défaut*<br/>
+[in] La valeur par défaut à retourner si la valeur spécifiée n’existe pas.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Les données d’entier qui sont stockées dans la valeur de Registre spécifiée. *nParamètre par défaut* si les données n’existent pas.  
@@ -617,14 +617,14 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSubSection*  
- Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
+*lpszSubSection*<br/>
+[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
   
- [in] *lpszEntry*  
- Chaîne qui contient la valeur à lire.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient la valeur à lire.  
   
- [out] *obj*  
- Une référence à un `CObject`. La méthode utilise cette `CObject` pour stocker les données de Registre.  
+*obj*<br/>
+[out] Une référence à un `CObject`. La méthode utilise cette `CObject` pour stocker les données de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -645,14 +645,14 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSubSection*  
- Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
+*lpszSubSection*<br/>
+[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
   
- [in] *lpszEntry*  
- Chaîne qui contient la valeur à lire.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient la valeur à lire.  
   
- [in] *lpszDefault*  
- La valeur par défaut à retourner si la valeur spécifiée n’existe pas.  
+*lpszDefault*<br/>
+[in] La valeur par défaut à retourner si la valeur spécifiée n’existe pas.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Les données de chaîne stockées dans la valeur de Registre spécifiée si les données existent ; sinon *lpszDefault*.  
@@ -685,11 +685,11 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszEntry*  
- Chaîne qui contient le nom d’une clé de Registre  
+*lpszEntry*<br/>
+[in] Chaîne qui contient le nom d’une clé de Registre  
   
- [in] *lpzDefault*  
- La valeur par défaut que la méthode retourne si l’entrée de Registre spécifiée n’existe pas.  
+*lpzDefault*<br/>
+[in] La valeur par défaut que la méthode retourne si l’entrée de Registre spécifiée n’existe pas.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Les données de chaîne stockées dans le Registre en cas de réussite ; *lpszDefault* dans le cas contraire.  
@@ -819,8 +819,8 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSectionName*  
- Chaîne qui contient un chemin d’accès d’une clé de Registre.  
+*lpszSectionName*<br/>
+[in] Chaîne qui contient un chemin d’accès d’une clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la clé dans le Registre ; sinon 0.  
@@ -862,14 +862,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pFrame*  
- Pointeur vers un objet de fenêtre frame. La méthode applique les informations d’état dans le Registre pour cette fenêtre frame.  
+*pFrame*<br/>
+[in] Pointeur vers un objet de fenêtre frame. La méthode applique les informations d’état dans le Registre pour cette fenêtre frame.  
   
- [in] *lpszSectionName*  
- Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
+*lpszSectionName*<br/>
+[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
   
- [in] *pFrameImpl*  
- Un pointeur vers un `CFrameImpl` objet. La méthode applique les informations d’état dans le Registre pour cette fenêtre frame.  
+*pFrameImpl*<br/>
+[in] Un pointeur vers un `CFrameImpl` objet. La méthode applique les informations d’état dans le Registre pour cette fenêtre frame.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite ; 0 dans le cas contraire.  
@@ -892,14 +892,14 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *rectNormalPosition*  
- Un rectangle qui contient les coordonnées de la fenêtre frame principale lorsqu’elle est à la position restaurée.  
+*rectNormalPosition*<br/>
+[out] Un rectangle qui contient les coordonnées de la fenêtre frame principale lorsqu’elle est à la position restaurée.  
   
- [out] *nIndicateurs*  
- Indicateurs qui contrôlent la position de la fenêtre réduite et la façon dont le système d’exploitation bascule entre une fenêtre réduite et une fenêtre restaurée.  
+*nIndicateurs*<br/>
+[out] Indicateurs qui contrôlent la position de la fenêtre réduite et la façon dont le système d’exploitation bascule entre une fenêtre réduite et une fenêtre restaurée.  
   
- [out] *nShowCmd*  
- Entier qui spécifie l’état d’affichage de la fenêtre. Pour plus d’informations sur les valeurs possibles, consultez [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[out] Entier qui spécifie l’état d’affichage de la fenêtre. Pour plus d’informations sur les valeurs possibles, consultez [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite ; 0 dans le cas contraire.  
@@ -929,11 +929,11 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndControl*  
- Pointeur vers un objet de fenêtre pour laquelle l’utilisateur appelée aide contextuelle.  
+*pWndControl*<br/>
+[in] Pointeur vers un objet de fenêtre pour laquelle l’utilisateur appelée aide contextuelle.  
   
- [in] *[] dwHelpIDArray*  
- Une valeur réservée.  
+*[] dwHelpIDArray*<br/>
+[in] Une valeur réservée.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode est actuellement réservée pour une utilisation ultérieure. L’implémentation par défaut ne fait rien et il n’est actuellement pas appelée par l’infrastructure.  
@@ -946,8 +946,8 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pFrameImpl*  
- Un pointeur vers un `CFrameImpl` objet.  
+*pFrameImpl*<br/>
+[in] Un pointeur vers un `CFrameImpl` objet.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette méthode enregistre l’état de *pFrameImpl*.  
@@ -962,11 +962,11 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Un pointeur vers un objet dérivé le [classe CView](../../mfc/reference/cview-class.md).  
+*pWnd*<br/>
+[in] Un pointeur vers un objet dérivé le [classe CView](../../mfc/reference/cview-class.md).  
   
- [in] *iViewId*  
- L’ID de la vue.  
+*iViewId*<br/>
+[in] L’ID de la vue.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le framework détecte une commande ; Sinon, FALSE.  
@@ -1016,8 +1016,8 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pFrame*  
- Pointeur vers une fenêtre frame.  
+*pFrame*<br/>
+[in] Pointeur vers une fenêtre frame.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la méthode a réussi ; 0 si le chargement a échoué ou il y a aucune donnée à charger.  
@@ -1060,14 +1060,14 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSectionName*  
- Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
+*lpszSectionName*<br/>
+[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
   
- [in] *pFrameImpl*  
- Un pointeur vers un `CFrameImpl` objet. Ce frame est enregistré dans le Registre Windows.  
+*pFrameImpl*<br/>
+[in] Un pointeur vers un `CFrameImpl` objet. Ce frame est enregistré dans le Registre Windows.  
   
- [in] *pFrame*  
- Pointeur vers un objet de fenêtre frame. Ce frame est enregistré dans le Registre Windows.  
+*pFrame*<br/>
+[in] Pointeur vers un objet de fenêtre frame. Ce frame est enregistré dans le Registre Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite ; FALSE sinon.  
@@ -1085,8 +1085,8 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSectionName*  
- Chaîne qui contient le chemin d’accès d’une clé de Registre.  
+*lpszSectionName*<br/>
+[in] Chaîne qui contient le chemin d’accès d’une clé de Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Chaîne qui contient le chemin d’accès de l’emplacement de Registre par défaut.  
@@ -1105,14 +1105,14 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiMenuResId*  
- Un ID de ressource de menu.  
+*uiMenuResId*<br/>
+[in] Un ID de ressource de menu.  
   
- [in] *point*  
- Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) qui spécifie la position du menu en coordonnées d’écran.  
+*point*<br/>
+[in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) qui spécifie la position du menu en coordonnées d’écran.  
   
- [in] *pWnd*  
- Pointeur vers la fenêtre qui possède le menu contextuel.  
+*pWnd*<br/>
+[in] Pointeur vers la fenêtre qui possède le menu contextuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le menu contextuel s’affiche avec succès ; 0 dans le cas contraire.  
@@ -1133,14 +1133,14 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndicateurs*  
- Indicateurs qui contrôlent la position de la fenêtre réduite et la façon dont le système d’exploitation bascule entre une fenêtre réduite et une fenêtre restaurée.  
+*nIndicateurs*<br/>
+[in] Indicateurs qui contrôlent la position de la fenêtre réduite et la façon dont le système d’exploitation bascule entre une fenêtre réduite et une fenêtre restaurée.  
   
- [in] *nShowCmd*  
- Entier qui spécifie l’état d’affichage de la fenêtre. Pour plus d’informations sur les valeurs possibles, consultez [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[in] Entier qui spécifie l’état d’affichage de la fenêtre. Pour plus d’informations sur les valeurs possibles, consultez [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
- [in] *rectNormalPosition*  
- Un rectangle qui contient les coordonnées de la fenêtre frame principale lorsqu’il est dans l’état restauré.  
+*rectNormalPosition*<br/>
+[in] Un rectangle qui contient les coordonnées de la fenêtre frame principale lorsqu’il est dans l’état restauré.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite ; 0 dans le cas contraire.  
@@ -1161,14 +1161,14 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszEntry*  
- Chaîne qui contient le nom d’une clé de Registre.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient le nom d’une clé de Registre.  
   
- [in] *pData*  
- Les données à stocker.  
+*pData*<br/>
+[in] Les données à stocker.  
   
- [in] *nBytes*  
- La taille de *pData* en octets.  
+*nBytes*<br/>
+[in] La taille de *pData* en octets.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1188,11 +1188,11 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszEntry*  
- Chaîne qui contient le nom d’une clé de Registre.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient le nom d’une clé de Registre.  
   
- [in] *%n%nValeur*  
- Les données à stocker.  
+*%n%nValeur*<br/>
+[in] Les données à stocker.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1212,11 +1212,11 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszEntry*  
- Chaîne qui contient la valeur à définir.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient la valeur à définir.  
   
- [in] *obj*  
- Une référence à `CObject` données qui stocke la méthode.  
+*obj*<br/>
+[in] Une référence à `CObject` données qui stocke la méthode.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1236,17 +1236,17 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSubSection*  
- Chaîne qui contient le nom d’une clé de Registre  
+*lpszSubSection*<br/>
+[in] Chaîne qui contient le nom d’une clé de Registre  
   
- [in] *lpszEntry*  
- Chaîne qui contient la valeur à définir.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient la valeur à définir.  
   
- [in] *pData*  
- Les données à écrire dans le Registre.  
+*pData*<br/>
+[in] Les données à écrire dans le Registre.  
   
- [in] *nBytes*  
- La taille de *pData* en octets.  
+*nBytes*<br/>
+[in] La taille de *pData* en octets.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1267,14 +1267,14 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSubSection*  
- Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
+*lpszSubSection*<br/>
+[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.  
   
- [in] *lpszEntry*  
- Chaîne qui contient la valeur à définir.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient la valeur à définir.  
   
- [in] *%n%nValeur*  
- Les données à écrire dans le Registre.  
+*%n%nValeur*<br/>
+[in] Les données à écrire dans le Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1295,14 +1295,14 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSubSection*  
- Chaîne qui contient le nom d’une clé de Registre.  
+*lpszSubSection*<br/>
+[in] Chaîne qui contient le nom d’une clé de Registre.  
   
- [in] *lpszEntry*  
- Chaîne qui contient le nom de la valeur à définir.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient le nom de la valeur à définir.  
   
- [in] *obj*  
- Les données à stocker.  
+*obj*<br/>
+[in] Les données à stocker.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1323,14 +1323,14 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszSubSection*  
- Chaîne qui contient le nom d’une clé de Registre.  
+*lpszSubSection*<br/>
+[in] Chaîne qui contient le nom d’une clé de Registre.  
   
- [in] *lpszEntry*  
- Chaîne qui contient la valeur à définir.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient la valeur à définir.  
   
- [in] *lpszValue*  
- Les données de chaîne à écrire dans le Registre.  
+*lpszValue*<br/>
+[in] Les données de chaîne à écrire dans le Registre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1350,11 +1350,11 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszEntry*  
- Chaîne qui contient le nom d’une clé de Registre.  
+*lpszEntry*<br/>
+[in] Chaîne qui contient le nom d’une clé de Registre.  
   
- [in] *lpszValue*  
- Les données à stocker.  
+*lpszValue*<br/>
+[in] Les données à stocker.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  

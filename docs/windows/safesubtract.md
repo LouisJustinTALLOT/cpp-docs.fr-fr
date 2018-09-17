@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 055c1a0c19afce43338df90a92afef2a8469f3f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac6968a688c50ad665e8b28a883eaf62255aaf28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584027"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700108"
 ---
 # <a name="safesubtract"></a>SafeSubtract
 
@@ -41,14 +41,14 @@ inline bool SafeSubtract (
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *t*  
-Le premier numéro de la soustraction. Cela doit être de type `T`.
+*t*<br/>
+[in] Le premier numéro de la soustraction. Cela doit être de type `T`.
 
-[in] *u*  
-Le nombre à soustraire de *t*. Cela doit être de type `U`.
+*u*<br/>
+[in] Le nombre à soustraire de *t*. Cela doit être de type `U`.
 
-[out] *résultat*  
-Le paramètre où **SafeSubtract** stocke le résultat.
+*Résultat*<br/>
+[out] Le paramètre où **SafeSubtract** stocke le résultat.
 
 ## <a name="return-value"></a>Valeur de retour
 

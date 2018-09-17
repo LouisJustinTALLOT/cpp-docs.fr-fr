@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0d9b730e9cb1ca78b5247ea09f1f24a9bb8c307c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848517"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709785"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup, classe
 Le `CMFCRibbonButtonsGroup` classe vous permet d’organiser un ensemble de boutons de ruban dans un groupe. Tous les boutons du groupe sont directement adjacents horizontalement et placés dans une bordure.  
@@ -106,8 +106,8 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pButton*  
- Pointeur vers un bouton Ajouter.  
+*pButton*<br/>
+[in] Pointeur vers un bouton Ajouter.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  Ajoute une liste de boutons à un groupe.  
@@ -118,8 +118,8 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lstButtons*  
- Une liste de pointeurs vers les boutons que vous souhaitez ajouter.  
+*lstButtons*<br/>
+[in] Une liste de pointeurs vers les boutons que vous souhaitez ajouter.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  Construit un objet `CMFCRibbonButtonsGroup`.  
@@ -130,8 +130,8 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pButton*  
- Spécifie un bouton pour ajouter à la nouvelle `CMFCRibbonButtonsGroup` objet.  
+*pButton*<br/>
+[in] Spécifie un bouton pour ajouter à la nouvelle `CMFCRibbonButtonsGroup` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -145,8 +145,8 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *je*  
- Index de base zéro d’un bouton à retourner.  
+*i*<br/>
+[in] Index de base zéro d’un bouton à retourner.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le bouton qui se trouve à l’index spécifié. NULL si l’index spécifié est hors limites.  
@@ -183,8 +183,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers le contexte de périphérique du groupe de ruban.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers le contexte de périphérique du groupe de ruban.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -214,17 +214,17 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers le contexte de périphérique de le `CMFCRibbonButtonsGroup` objet.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers le contexte de périphérique de le `CMFCRibbonButtonsGroup` objet.  
   
- [in] *rectImage*  
- Le rectangle dans lequel dessiner l’image.  
+*rectImage*<br/>
+[in] Le rectangle dans lequel dessiner l’image.  
   
- [in] *pButton*  
- Le bouton pour lequel dessiner l’image.  
+*pButton*<br/>
+[in] Le bouton pour lequel dessiner l’image.  
   
- [in] *nImageIndex*  
- Index de l’image à dessiner sur le bouton (dans un des tableaux de trois images pour les boutons normales, en surbrillance ou désactivés).  
+*nImageIndex*<br/>
+[in] Index de l’image à dessiner sur le bouton (dans un des tableaux de trois images pour les boutons normales, en surbrillance ou désactivés).  
   
 ### <a name="remarks"></a>Notes  
   
@@ -248,14 +248,14 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pImages*  
- Les images.  
+*pImages*<br/>
+[in] Les images.  
   
- [in] *pHotImages*  
- Images interactives.  
+*pHotImages*<br/>
+[in] Images interactives.  
   
- [in] *pDisabledImages*  
- Images désactivés.  
+*pDisabledImages*<br/>
+[in] Images désactivés.  
   
 ### <a name="remarks"></a>Notes  
  Appelez `SetImages` avant d’ajouter des boutons à un groupe. Le nombre d’images doit être supérieur ou égal au nombre de boutons à ajouter au groupe.  
@@ -271,8 +271,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pCategory*  
- Pointeur vers la catégorie parente à définir (les groupes à onglets dans les contrôles de ruban sont appelés des catégories).  
+*pCategory*<br/>
+[in] Pointeur vers la catégorie parente à définir (les groupes à onglets dans les contrôles de ruban sont appelés des catégories).  
   
 ### <a name="remarks"></a>Notes  
   

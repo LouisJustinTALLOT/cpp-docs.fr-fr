@@ -1,5 +1,5 @@
 ---
-title: -MERGE (combiner des Sections) | Documents Microsoft
+title: -MERGE (combiner des Sections) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,39 +22,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ece36de793b17b8cc064ec3837ea481a1ce870a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01768ffcfd647d3e05c0b96647d544e3d68e77d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373473"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722661"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (Combiner des sections)
-```  
-/MERGE:from=to  
-```  
-  
-## <a name="remarks"></a>Notes  
- Cette option associe la première section (*de*) avec la deuxième section (*à*), nommant le résultat *à*. Par exemple, `/merge:.rdata=.text`.  
-  
- Si la deuxième section n’existe pas, LINK renomme la section *de* en tant que *à*.  
-  
- Cette option est utile pour créer des VxD et en remplaçant les noms de section de généré par le compilateur.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Cliquez sur le **l’éditeur de liens** dossier.  
-  
-3.  Cliquez sur le **avancé** page de propriétés.  
-  
-4.  Modifier la **fusionner les Sections** propriété.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
-  
-1.  Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l’éditeur de liens](../../build/reference/linker-options.md)
+
+```
+/MERGE:from=to
+```
+
+## <a name="remarks"></a>Notes
+
+Cette option associe la première section (*de*) avec la deuxième section (*à*), nommant le résultat *à*. Par exemple, `/merge:.rdata=.text`.
+
+Si la deuxième section n’existe pas, LINK renomme la section *de* comme *à*.
+
+Cette option est utile pour créer des VxD et en remplaçant les noms de sections générés par le compilateur.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+
+1. Cliquez sur le **l’éditeur de liens** dossier.
+
+1. Cliquez sur le **avancé** page de propriétés.
+
+1. Modifier le **fusionner les Sections** propriété.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
+1. Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)

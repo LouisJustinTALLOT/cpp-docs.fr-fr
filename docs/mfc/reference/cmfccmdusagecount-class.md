@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719964"
 ---
 # <a name="cmfccmdusagecount-class"></a>Cmfccmdusagecount, classe
 Suit le décompte d’utilisation de messages Windows, tels que lorsque l’utilisateur sélectionne un élément dans un menu.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *uiCmd*|Spécifie le compteur de commande à incrémenter.|  
+|*uiCmd*|[in] Spécifie le compteur de commande à incrémenter.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode ajoute une nouvelle entrée à la structure du plan du nombre de commandes, de `m_CmdUsage`, si l’entrée n’existe pas déjà.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *uiCmd*|L’ID du compteur de commande à récupérer.|  
+|*uiCmd*|[in] L’ID du compteur de commande à récupérer.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le décompte d’utilisation qui est associé à l’ID de commande donné.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *uiCmd*|Spécifie la commande à vérifier.|  
+|*uiCmd*|[in] Spécifie la commande à vérifier.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la commande est fréquemment utilisée ; sinon 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *ar*|Un `CArchive` objet à sérialiser depuis ou vers.|  
+|*ar*|[in] Un `CArchive` objet à sérialiser depuis ou vers.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode sérialise la structure du plan du nombre de commandes, de `m_CmdUsage`et l’utilisation de la commande total, `m_nTotalUsage`, compteur depuis ou vers l’archive spécifiée.  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *nStartCount*|Nouveau nombre initial de commandes de tous les suivis.|  
-|[in] *nMinUsagePercentage*|Le nouveau pourcentage d’utilisation minimale.|  
+|*nStartCount*|[in] Nouveau nombre initial de commandes de tous les suivis.|  
+|*nMinUsagePercentage*|[in] Le nouveau pourcentage d’utilisation minimale.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit, FALSE si le *nMinUsagePercentage* paramètre est supérieur ou égal à 100.  

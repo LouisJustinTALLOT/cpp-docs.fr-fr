@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687985"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721732"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine, classe
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Paramètres
 
-*UIntType*  
- Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
-*W*  
- **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **Décalage court**. Nombre de valeurs entières. **Condition préalable** : `0 < S < R`
+*S*<br/>
+**Décalage court**. Nombre de valeurs entières. **Condition préalable** : `0 < S < R`
 
-*R*  
- **Décalage long**. Détermine la périodicité dans la série générée.
+*R*<br/>
+**Décalage long**. Détermine la périodicité dans la série générée.
 
 ## <a name="members"></a>Membres
 

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205701"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711228"
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
@@ -175,26 +175,26 @@ Quand le format de déroulement compressé ne suffit pas à décrire le déroule
 1. Un en-tête de 1 ou 2 mots qui décrit la taille globale de la structure .xdata et fournit des données de fonction clés. Le deuxième mot n’est présent que si le *épilogue nombre* et *Code mots* champs sont toutes deux définies sur 0. Les champs sont décrits en détail dans ce tableau :
 
    |Mot|Bits|Objectif|
-    |----------|----------|-------------|
-    |0|0-17|*Longueur de la fonction* est un champ de 18 bits qui indique la longueur totale de la fonction en octets divisée par 2. Si une fonction dépasse 512 Ko, plusieurs enregistrements .pdata et .xdata doivent être utilisés pour décrire la fonction. Pour plus de détails, consultez la section Grandes fonctions dans ce document.|
-    |0|18-19|*Vers* est un champ de 2 bits qui décrit la version de l’enregistrement xdata restant. Seule la version 0 est actuellement définie ; les valeurs 1 à 3 sont réservées.|
-    |0|20|*X* est un champ de 1 bit qui indique la présence (1) ou non (0) des données d’exception.|
-    |0|21|*E* est un champ de 1 bit qui indique que les informations qui décrivent un épilogue unique sont compressées dans l’en-tête (1) au lieu de demander l’étendue supplémentaire mots ultérieures (0).|
-    |0|22|*F* est un champ de 1 bit qui indique que cet enregistrement décrit un fragment de fonction (1) ou une fonction complète (0). Un fragment implique l'absence de prologue et que tout le traitement des prologues doit être ignoré.|
-    |0|23-27|*Nombre d’épilogue* est un champ de 5 bits qui a deux significations, selon l’état de la *E* bits :<br /><br /> -If *E* est 0, ce champ indique le nombre total d’étendues d’exception décrites dans la section 3. Si plus de 31 portées existent dans la fonction, puis ce champ et le *Code mots* champ doive être toutes deux défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.<br />-If *E* est 1, ce champ spécifie l’index du premier code de déroulement qui décrit l’épilogue unique.|
-    |0|28-31|*Les mots de code* est un champ de 4 bits qui spécifie le nombre de mots de 32 bits nécessaires pour contenir tous les codes de déroulement à la section 4. Si plus de 15 mots sont nécessaires pour plus de 63 octets de code de déroulement, ce champ et le *épilogue nombre* champ doive être toutes deux défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.|
-    |1|0-15|*Étendue épilogue nombre* est un champ de 16 bits qui fournit davantage d’espace pour l’encodage d’un nombre exceptionnellement élevé d’épilogues. Le mot d’extension qui contient ce champ n’est présent que si le *épilogue nombre* et *Code mots* champs dans le premier mot d’en-tête sont toutes deux définies sur 0.|
-    |1|16-23|*Étendue des mots de Code* est un champ de 8 bits qui fournit davantage d’espace pour l’encodage d’un nombre exceptionnellement élevé de mots de code de déroulement. Le mot d’extension qui contient ce champ n’est présent que si le *épilogue nombre* et *Code mots* champs dans le premier mot d’en-tête sont toutes deux définies sur 0.|
-    |1|24-31|Réservée|
+   |----------|----------|-------------|
+   |0|0-17|*Longueur de la fonction* est un champ de 18 bits qui indique la longueur totale de la fonction en octets divisée par 2. Si une fonction dépasse 512 Ko, plusieurs enregistrements .pdata et .xdata doivent être utilisés pour décrire la fonction. Pour plus de détails, consultez la section Grandes fonctions dans ce document.|
+   |0|18-19|*Vers* est un champ de 2 bits qui décrit la version de l’enregistrement xdata restant. Seule la version 0 est actuellement définie ; les valeurs 1 à 3 sont réservées.|
+   |0|20|*X* est un champ de 1 bit qui indique la présence (1) ou non (0) des données d’exception.|
+   |0|21|*E* est un champ de 1 bit qui indique que les informations qui décrivent un épilogue unique sont compressées dans l’en-tête (1) au lieu de demander l’étendue supplémentaire mots ultérieures (0).|
+   |0|22|*F* est un champ de 1 bit qui indique que cet enregistrement décrit un fragment de fonction (1) ou une fonction complète (0). Un fragment implique l'absence de prologue et que tout le traitement des prologues doit être ignoré.|
+   |0|23-27|*Nombre d’épilogue* est un champ de 5 bits qui a deux significations, selon l’état de la *E* bits :<br /><br /> -If *E* est 0, ce champ indique le nombre total d’étendues d’exception décrites dans la section 3. Si plus de 31 portées existent dans la fonction, puis ce champ et le *Code mots* champ doive être toutes deux défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.<br />-If *E* est 1, ce champ spécifie l’index du premier code de déroulement qui décrit l’épilogue unique.|
+   |0|28-31|*Les mots de code* est un champ de 4 bits qui spécifie le nombre de mots de 32 bits nécessaires pour contenir tous les codes de déroulement à la section 4. Si plus de 15 mots sont nécessaires pour plus de 63 octets de code de déroulement, ce champ et le *épilogue nombre* champ doive être toutes deux défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.|
+   |1|0-15|*Étendue épilogue nombre* est un champ de 16 bits qui fournit davantage d’espace pour l’encodage d’un nombre exceptionnellement élevé d’épilogues. Le mot d’extension qui contient ce champ n’est présent que si le *épilogue nombre* et *Code mots* champs dans le premier mot d’en-tête sont toutes deux définies sur 0.|
+   |1|16-23|*Étendue des mots de Code* est un champ de 8 bits qui fournit davantage d’espace pour l’encodage d’un nombre exceptionnellement élevé de mots de code de déroulement. Le mot d’extension qui contient ce champ n’est présent que si le *épilogue nombre* et *Code mots* champs dans le premier mot d’en-tête sont toutes deux définies sur 0.|
+   |1|24-31|Réservée|
 
 2. Une fois les données d’exception (si le *E* bit dans l’en-tête a été défini sur 0) est une liste d’informations sur les portées d’épilogue, qui sont compressées dans un mot et stockées par ordre croissant de décalage de départ. Chaque portée contient ces champs :
 
    |Bits|Objectif|
-    |----------|-------------|
-    |0-17|*Décalage de début d’épilogue* est un champ de 18 bits qui décrit le décalage de l’épilogue, en octets divisée par 2, par rapport au début de la fonction.|
-    |18-19|*Res* est un champ de 2 bits réservé pour l’expansion future. Il doit avoir la valeur 0.|
-    |20-23|*Condition* est un champ de 4 bits qui dicte la condition sous laquelle l’épilogue est exécuté. Pour les épilogues inconditionnels, il doit avoir la valeur 0xE, ce qui indique « toujours ». (Un épilogue doit être entièrement conditionnel ou entièrement inconditionnel, et en mode Thumb-2, l'épilogue commence par la première instruction située après l'opcode IT.)|
-    |24-31|*Index de début d’épilogue* est un champ de 8 bits qui indique l’index d’octet du premier code de déroulement qui décrit cet épilogue.|
+   |----------|-------------|
+   |0-17|*Décalage de début d’épilogue* est un champ de 18 bits qui décrit le décalage de l’épilogue, en octets divisée par 2, par rapport au début de la fonction.|
+   |18-19|*Res* est un champ de 2 bits réservé pour l’expansion future. Il doit avoir la valeur 0.|
+   |20-23|*Condition* est un champ de 4 bits qui dicte la condition sous laquelle l’épilogue est exécuté. Pour les épilogues inconditionnels, il doit avoir la valeur 0xE, ce qui indique « toujours ». (Un épilogue doit être entièrement conditionnel ou entièrement inconditionnel, et en mode Thumb-2, l'épilogue commence par la première instruction située après l'opcode IT.)|
+   |24-31|*Index de début d’épilogue* est un champ de 8 bits qui indique l’index d’octet du premier code de déroulement qui décrit cet épilogue.|
 
 3. Après la liste des portées d'épilogue figure un tableau d'octets qui contient les codes de déroulement, qui sont décrits en détail dans la section Code de déroulement de cet article. Ce tableau est rempli à la fin jusqu'à la limite du mot complet le plus proche. Les octets sont stockés dans un ordre Little-Endian, ce qui permet de les récupérer directement en mode Little-Endian.
 
@@ -358,16 +358,16 @@ Est un cas spécial plus complexe de fragments de fonction *rétraction*, une te
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatiles
-     sub    sp, sp, #0x100    ; A: allocate all stack space up front
-     ...                     ; A:
-     add    r0, sp, #0xE4     ; A: prepare to do the inner save
-     stm    r0, {r5-r11}      ; A: save remaining non-volatiles
-     ...                     ; B:
-     add    r0, sp, #0xE4     ; B: prepare to do the inner restore
-     ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C:
+    push   {r4, lr}          ; A: save minimal non-volatiles
+    sub    sp, sp, #0x100    ; A: allocate all stack space up front
+    ...                      ; A:
+    add    r0, sp, #0xE4     ; A: prepare to do the inner save
+    stm    r0, {r5-r11}      ; A: save remaining non-volatiles
+    ...                      ; B:
+    add    r0, sp, #0xE4     ; B: prepare to do the inner restore
+    ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C:
 ```
 
 Les fonctions emballées par rétractation sont en principe censées préallouer l'espace pour les enregistrements de registre supplémentaires dans le prologue normal et procéder ensuite aux enregistrements de registres à l'aide de `str` ou `stm` à la place de `push`. Toutes les manipulations de pointeur de pile sont ainsi maintenues dans le prologue initial de la fonction.
@@ -386,14 +386,14 @@ Une autre approche peut aussi fonctionner si les manipulations de la pile réali
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatile registers
-     sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
-     ...                     ; A:
-     push   {r4-r9}           ; A: save remaining non-volatiles
-     ...                     ; B:
-     pop    {r4-r9}           ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C: restore non-volatile registers
+    push   {r4, lr}          ; A: save minimal non-volatile registers
+    sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
+    ...                      ; A:
+    push   {r4-r9}           ; A: save remaining non-volatiles
+    ...                      ; B:
+    pop    {r4-r9}           ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
 Ce qui importe ici, c'est qu'à chaque limite d'instruction, la pile est entièrement cohérente par rapport aux codes de déroulement de la région. Si un déroulement se produit avant le push interne de cet exemple, il est considéré comme faisant partie de la région A et seul le prologue de la région A prologue fait l'objet d'un déroulement. Si le déroulement se produit après le push interne, il est considéré comme partie de la région B, qui n’a pas de prologue, mais des codes de déroulement qui décrivent le push interne et le prologue initial de région une logique similaire A. contient au POP interne.
@@ -749,6 +749,5 @@ Function:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble des conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)  
-[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-
+[Vue d’ensemble des conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)

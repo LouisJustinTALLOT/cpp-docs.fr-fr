@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e24997fa2eb6e6e5c3d8438b137e168c2f70b1f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034736"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716531"
 ---
 # <a name="arm64-exception-handling"></a>La gestion des exceptions ARM64
 
@@ -129,7 +129,7 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-    R19 uniquement enregistré :
+   R19 uniquement enregistré :
 
     ```asm
         sub    sp, sp, #16              // reg save area allocation*
@@ -636,5 +636,5 @@ Remarque : EpilogStart Index [4] pointe vers le milieu de code de déroulement 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble des conventions ABI de ARM64](arm64-windows-abi-conventions.md)  
-[Gestion des exceptions ARM](../build/arm-exception-handling.md)  
+[Vue d’ensemble des conventions ABI de ARM64](arm64-windows-abi-conventions.md)<br/>
+[Gestion des exceptions ARM](../build/arm-exception-handling.md)

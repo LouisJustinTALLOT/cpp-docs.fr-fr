@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208883"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726789"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 Lorsque vous écrivez une application, vous créez un seul [CWinApp](../../mfc/reference/cwinapp-class.md)-objet dérivé. Dans certains cas, vous souhaitez obtenir des informations sur cet objet à partir en dehors de la `CWinApp`-objet dérivé. Ou bien, vous devrez peut-être accéder à d’autres objets globaux « Manager ».
@@ -406,8 +406,8 @@ Détermine si la fenêtre donnée est un objet frame étendu.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Pointeur vers un objet dérivé de `CWnd`.  
+*pWnd*<br/>
+[in] Un pointeur vers un objet qui est dérivé de `CWnd`.  
    
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la fenêtre fournie est un objet frame étendu ; Sinon, FALSE.  
@@ -442,8 +442,8 @@ Détermine si la fenêtre donnée est un objet de barre d’outils.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Pointeur vers un objet dérivé de `CWnd`.  
+*pWnd*<br/>
+[in] Un pointeur vers un objet qui est dérivé de `CWnd`.  
    
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la fenêtre fournie est un objet de la barre d’outils ; Sinon, FALSE.  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE indique que les informations du Registre sont dirigées vers le nœud HKCU ; La valeur FALSE indique que l’application écrit les informations du Registre pour le nœud par défaut. Le nœud par défaut est **HKEY_CLASSES_ROOT** ( **HKCR**).  
+*bActivez*<br/>
+[in] TRUE indique que les informations du Registre sont dirigées vers le nœud HKCU ; La valeur FALSE indique que l’application écrit les informations du Registre pour le nœud par défaut. Le nœud par défaut est **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Notes  
 

@@ -1,5 +1,5 @@
 ---
-title: Pseudocibles | Documents Microsoft
+title: Pseudocibles | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dbc6ae3ad331ab3297b62d00044c3edf679994
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56c0c0c93163759b604352a6e623f15726b8e7ec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368406"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715830"
 ---
 # <a name="pseudotargets"></a>Pseudocibles
-Une pseudocible est une étiquette utilisée à la place d’un nom de fichier dans une ligne de dépendance. Il est interprété comme un fichier qui n’existe pas et par conséquent, est obsolète. NMAKE suppose que les horodatage d’une pseudocible sont la plus récente de tous ses dépendants. Si elle ne dispose d’aucune dépendance, l’heure actuelle est supposé. Si une pseudocible est utilisée en tant que cible, ses commandes sont toujours exécutées. Une pseudocible utilisée comme dépendant doit également apparaître en tant que cible dans une autre dépendance. Toutefois, cette dépendance n’a pas besoin d’avoir un bloc de commandes.  
-  
- Noms des pseudocibles obéissent règles de syntaxe pour les cibles. Toutefois, si le nom ne possède pas d’extension (autrement dit, s’il ne contient pas une période), il peut dépasser la limite de 8 caractères pour les noms de fichiers et peut comporter jusqu'à 256 caractères.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Targets (Cibles MSBuild)](../build/targets.md)
+
+Une pseudocible est une étiquette utilisée à la place d’un nom de fichier dans une ligne de dépendance. Il est interprété comme un fichier qui n’existe pas et par conséquent, est obsolète. NMAKE suppose le que horodatage d’une pseudocible est la plus récente de tous ses éléments dépendants. Si elle n’a aucune dépendance, l’heure actuelle est supposé. Si une pseudocible est utilisée en tant que cible, ses commandes sont toujours exécutées. Une pseudocible utilisée comme dépendant doit également apparaître en tant que cible dans une autre dépendance. Toutefois, cette dépendance n’a pas besoin d’avoir un bloc de commandes.
+
+Noms des pseudocibles obéissent les règles de syntaxe de nom de fichier pour les cibles. Toutefois, si le nom n’a pas d’extension (autrement dit, s’il ne contient pas une période), il peut dépasser la limite de 8 caractères pour les noms de fichiers et peut comporter jusqu'à 256 caractères.
+
+## <a name="see-also"></a>Voir aussi
+
+[Targets (Cibles MSBuild)](../build/targets.md)

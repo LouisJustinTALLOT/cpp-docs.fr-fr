@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8405c41f5235ecba580bbf453a1129a38b4d8421
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206188"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719095"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl (classe)
 Encapsule les fonctionnalités d'un contrôle Month Calendar.  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *pmcGridInfo*|Pointeur vers un [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) structure qui reçoit des informations sur le contrôle de calendrier du mois en cours. L’appelant est chargé d’allouer et de l’initialisation de cette structure.|  
+|*pmcGridInfo*|[out] Pointeur vers un [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) structure qui reçoit des informations sur le contrôle de calendrier du mois en cours. L’appelant est chargé d’allouer et de l’initialisation de cette structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -733,7 +733,7 @@ void SetCalendarBorder(int cxyBorder);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *cxyBorder*|La largeur de la bordure, en pixels.|  
+|*cxyBorder*|[in] La largeur de la bordure, en pixels.|  
   
 ### <a name="remarks"></a>Notes  
  Si cette méthode réussit, la largeur de bordure est définie le *cxyBorder* paramètre. Sinon, la largeur de bordure est réinitialisée à la valeur par défaut qui est spécifiée par l’actuel [thème](/windows/desktop/Controls/visual-styles-overview), ou zéro si les thèmes ne sont pas utilisés.  
@@ -773,7 +773,7 @@ BOOL SetCalID(CALID calid);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *calid*|Parmi les [identificateur de calendrier](/windows/desktop/Intl/calendar-identifiers) constantes.|  
+|*calID*|[in] Parmi les [identificateur de calendrier](/windows/desktop/Intl/calendar-identifiers) constantes.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwNewView*|Une des valeurs suivantes qui spécifie un mensuelle, annuelle, des dix dernières années ou siècle vue.<br /><br /> MCMV_MONTH : Vue mensuelle<br /><br /> MCMV_YEAR : Vue annuel<br /><br /> MCMV_DECADE : Affichage des dix dernières années<br /><br /> MCMV_CENTURY : Vue de siècle|  
+|*dwNewView*|[in] Une des valeurs suivantes qui spécifie un mensuelle, annuelle, des dix dernières années ou siècle vue.<br /><br /> MCMV_MONTH : Vue mensuelle<br /><br /> MCMV_YEAR : Vue annuel<br /><br /> MCMV_DECADE : Affichage des dix dernières années<br /><br /> MCMV_CENTURY : Vue de siècle|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1137,7 +1137,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *lpRect*|Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui définit un rectangle qui contient le nombre souhaité de calendriers.|  
+|*lpRect*|[in] Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui définit un rectangle qui contient le nombre souhaité de calendriers.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui définit un rectangle dont la taille est inférieure ou égale au rectangle défini par le *lpRect* paramètre.  

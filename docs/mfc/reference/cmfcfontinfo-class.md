@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eef400f13e36ac543fbcd73ccb7aedf4bc053037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222092"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718092"
 ---
 # <a name="cmfcfontinfo-class"></a>Cmfcfontinfo, classe
 Le `CMFCFontInfo` classe décrit le nom et autres attributs d’une police.  
@@ -94,23 +94,23 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *le caractère*  
- Le nom de la police. Pour plus d’informations, consultez le `lfFaceName` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
+*Caractère*<br/>
+[in] Le nom de la police. Pour plus d’informations, consultez le `lfFaceName` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
   
- [in] *lpszScript*  
- Le nom du script (jeu de caractères) de la police.  
+*lpszScript*<br/>
+[in] Le nom du script (jeu de caractères) de la police.  
   
- [in] *nCharSet*  
- Une valeur qui spécifie le jeu de caractères (script) de la police. Pour plus d’informations, consultez le `lfCharSet` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
+*nCharSet*<br/>
+[in] Une valeur qui spécifie le jeu de caractères (script) de la police. Pour plus d’informations, consultez le `lfCharSet` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
   
- [in] *nPitchAndFamily*  
- Une valeur qui spécifie la hauteur et la famille de la police. Pour plus d’informations, consultez le `lfPitchAndFamily` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
+*nPitchAndFamily*<br/>
+[in] Une valeur qui spécifie la hauteur et la famille de la police. Pour plus d’informations, consultez le `lfPitchAndFamily` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
   
- [in] *%nLes*  
- Une valeur qui spécifie le type de police. Ce paramètre peut être une combinaison au niveau du bit (ou) de DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE.  
+*%nLes*<br/>
+[in] Une valeur qui spécifie le type de police. Ce paramètre peut être une combinaison au niveau du bit (ou) de DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE.  
   
- [in] *src*  
- Un existant `CMFCFontInfo` objet dont les membres sont utilisés pour construire ce `CMFCFontInfo` objet.  
+*src*<br/>
+[in] Un existant `CMFCFontInfo` objet dont les membres sont utilisés pour construire ce `CMFCFontInfo` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
   

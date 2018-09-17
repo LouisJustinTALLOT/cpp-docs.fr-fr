@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ca81fa18bb5f63f57c057eaa9e64c35df01e33f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196303"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726763"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap, classe
 
@@ -123,16 +123,16 @@ class hash_multimap
 ### <a name="parameters"></a>Paramètres
 
 *Key*<br/>
- Type de données de la clé à stocker dans l'objet hash_multimap.
+Type de données de la clé à stocker dans l'objet hash_multimap.
 
 *Type*<br/>
- Type de données de l'élément à stocker dans l'objet hash_multimap.
+Type de données de l'élément à stocker dans l'objet hash_multimap.
 
 *Caractéristiques*<br/>
- Type qui inclut les deux objets de fonction, une de la classe *Traits* qui est capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif et une fonction de hachage est un opérateur unaire prédicat mappage des valeurs clés des éléments à les entiers de type non signés `size_t`. Cet argument est facultatif et sa valeur par défaut est `hash_compare<Key, less<Key>>`.
+Type qui inclut les deux objets de fonction, une de la classe *Traits* qui est capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif et une fonction de hachage est un opérateur unaire prédicat mappage des valeurs clés des éléments à les entiers de type non signés `size_t`. Cet argument est facultatif et sa valeur par défaut est `hash_compare<Key, less<Key>>`.
 
 *Allocateur*<br/>
- Type qui représente l'objet allocateur stocké qui encapsule des informations détaillées sur l'allocation et la désallocation de mémoire de la classe hash_multimap. Cet argument est facultatif et sa valeur par défaut est `allocator<pair <const Key, Type>>`.
+Type qui représente l'objet allocateur stocké qui encapsule des informations détaillées sur l'allocation et la désallocation de mémoire de la classe hash_multimap. Cet argument est facultatif et sa valeur par défaut est `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Notes
 
@@ -600,7 +600,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé des éléments à mettre en correspondance à partir du hash_multimap.
+Clé des éléments à mettre en correspondance à partir du hash_multimap.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -895,7 +895,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_multimap::emplace_hint
@@ -955,7 +955,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_multimap::empty
@@ -1096,7 +1096,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
+Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1187,16 +1187,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Paramètres
 
 *_WHERE*<br/>
- Position de l'élément à supprimer du hash_multimap.
+Position de l'élément à supprimer du hash_multimap.
 
 *first*<br/>
- Position du premier élément supprimé du hash_multimap.
+Position du premier élément supprimé du hash_multimap.
 
 *last*<br/>
- Position juste après le dernier élément supprimé du hash_multimap.
+Position juste après le dernier élément supprimé du hash_multimap.
 
 *key*<br/>
- Clé des éléments à supprimer du hash_multimap.
+Clé des éléments à supprimer du hash_multimap.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1311,7 +1311,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé qui doit correspondre à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
+Clé qui doit correspondre à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1505,18 +1505,18 @@ hash_multimap(
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp,
     const Allocator& Al);
@@ -1762,7 +1762,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
+Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2316,7 +2316,7 @@ void swap(hash_multimap& right);
 ### <a name="parameters"></a>Paramètres
 
 *right*<br/>
- hash_multimap qui fournit les éléments à échanger ou hash_multimap dont les éléments doivent être échangés avec ceux du hash_multimap.
+hash_multimap qui fournit les éléments à échanger ou hash_multimap dont les éléments doivent être échangés avec ceux du hash_multimap.
 
 ### <a name="remarks"></a>Notes
 
@@ -2390,7 +2390,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
+Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 

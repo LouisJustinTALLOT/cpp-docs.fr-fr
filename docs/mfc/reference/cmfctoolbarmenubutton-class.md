@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d5baebfa1d706bf18b9fc36d706ebe474b6b042d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765929"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721719"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Cmfctoolbarmenubutton, classe
 Bouton de barre d'outils qui contient un menu contextuel.  
@@ -220,23 +220,23 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *src*  
- Un existant `CMFCToolBarMenuButton` objet doit être copié dans ce `CMFCToolBarMenuButton` objet.  
+*src*<br/>
+[in] Un existant `CMFCToolBarMenuButton` objet doit être copié dans ce `CMFCToolBarMenuButton` objet.  
   
- [in] *uiID*  
- L’ID de la commande à exécuter quand un utilisateur clique sur le bouton ; ou (UINT) -1 pour un bouton de menu qui n’exécute pas directement une commande.  
+*uiID*<br/>
+[in] L’ID de la commande à exécuter quand un utilisateur clique sur le bouton ; ou (UINT) -1 pour un bouton de menu qui n’exécute pas directement une commande.  
   
- [in] *hMenu*  
- Un handle à un menu ; ou NULL si le bouton n’a pas d’un menu.  
+*hMenu*<br/>
+[in] Un handle à un menu ; ou NULL si le bouton n’a pas d’un menu.  
   
- [in] *iImage*  
- Index de l’image pour le bouton ; ou -1 si ce bouton n’a pas d’une icône ou qu’il utilise l’icône de la commande spécifiée par *uiID*. L’index est la même pour chacun `CMFCToolBarImages` objet dans votre application.  
+*iImage*<br/>
+[in] Index de l’image pour le bouton ; ou -1 si ce bouton n’a pas d’une icône ou qu’il utilise l’icône de la commande spécifiée par *uiID*. L’index est la même pour chacun `CMFCToolBarImages` objet dans votre application.  
   
- [in] *lpszText*  
- Le texte du bouton de menu de barre d’outils.  
+*lpszText*<br/>
+[in] Le texte du bouton de menu de barre d’outils.  
   
- [in] *bUserButton*  
- TRUE si le bouton affiche une image défini par l’utilisateur ; FALSE si le bouton affiche une image prédéfinie associée à la commande spécifiée par *uiID*.  
+*bUserButton*<br/>
+[in] TRUE si le bouton affiche une image défini par l’utilisateur ; FALSE si le bouton affiche une image prédéfinie associée à la commande spécifiée par *uiID*.  
   
 ### <a name="remarks"></a>Notes  
  Si *uiID* n’est valide ID de commande, le bouton exécute cette commande lorsque l’utilisateur clique dessus. Si *hMenu* est un handle de menu valide, le bouton fournit un menu déroulant lorsqu’il apparaît dans une barre d’outils ou un sous-menu lorsqu’il apparaît dans un menu. Si les deux *uiID* et *hMenu* sont valides, le bouton est un bouton partagé avec une partie qui effectuera la commande lorsque l’utilisateur clique dessus et une partie avec une flèche vers le bas qui sera déroulant un menu lorsque l’utilisateur clique dessus. Toutefois, si *hMenu* est valide, un utilisateur ne sera pas en mesure de cliquer sur le bouton pour exécuter une commande lorsque le bouton est inséré dans un menu.  
@@ -280,8 +280,8 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hMenu*  
- Un handle à un menu.  
+*hMenu*<br/>
+[in] Un handle à un menu.  
   
 ### <a name="remarks"></a>Notes  
  Un bouton de menu de barre d’outils peut afficher un sous-menu de la liste déroulante.  
@@ -327,14 +327,14 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers le contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers le contexte de périphérique.  
   
- [in] *rectImage*  
- Coordonnées de l’image du rectangle englobant.  
+*rectImage*<br/>
+[in] Coordonnées de l’image du rectangle englobant.  
   
- [in] *hIcon*  
- Handle vers l’icône.  
+*hIcon*<br/>
+[in] Handle vers l’icône.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode prend une icône de document et il dessine sur le bouton de menu, centré dans la zone spécifiée par *rectImage*.  
@@ -424,8 +424,8 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *rectImage*  
- Une référence à un `CRect` objet qui reçoit les coordonnées de l’image de rectangle englobant.  
+*rectImage*<br/>
+[out] Une référence à un `CRect` objet qui reçoit les coordonnées de l’image de rectangle englobant.  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  Retourne le nombre de lignes dans le menu déroulant lorsque le menu est en mode de palette.  
@@ -560,8 +560,8 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- [in] *sizeDefault*  
+*contrôleur de domaine principal*<br/>
+[in] [in] *sizeDefault*  
  [in] *bHorz*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- [in] *bDelay*  
+*pWnd*<br/>
+[in] [in] *bDelay*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- [in] *rect*  
- [in] *pImages*  
- [in] *bHorz*  
- [in] *bCustomizeMode*  
- [in] *bHighlight*  
- [in] *bDrawBorder*  
- [in] *bGrayDisabledButtons*  
+*contrôleur de domaine principal*<br/>
+[in] [in] *rect*  
+*pImages*<br/>
+[in] [in] *bHorz*  
+*bCustomizeMode*<br/>
+[in] [in] *bHighlight*  
+*bDrawBorder*<br/>
+[in] [in] *bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -673,8 +673,8 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- [in] *rect*  
+*contrôleur de domaine principal*<br/>
+[in] [in] *rect*  
  [in] *bSelected*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -689,8 +689,8 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Spécifie la fenêtre qui reçoit les commandes de menu déroulant. Il peut être NULL uniquement si le bouton de menu de barre d’outils a une fenêtre parente.  
+*pWnd*<br/>
+[in] Spécifie la fenêtre qui reçoit les commandes de menu déroulant. Il peut être NULL uniquement si le bouton de menu de barre d’outils a une fenêtre parente.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE lorsque un [cmfcpopupmenu, classe](../../mfc/reference/cmfcpopupmenu-class.md) objet a été créé et ouvert avec succès ; sinon, FALSE.  
@@ -759,8 +759,8 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bMenuOnly*  
- TRUE pour afficher ce bouton comme un bouton de menu lorsqu’il a un ID de commande valide et un sous-menu, FALSE pour afficher ce bouton comme un bouton partagé lorsqu’il a un ID de commande valide et un sous-menu.  
+*bMenuOnly*<br/>
+[in] TRUE pour afficher ce bouton comme un bouton de menu lorsqu’il a un ID de commande valide et un sous-menu, FALSE pour afficher ce bouton comme un bouton partagé lorsqu’il a un ID de commande valide et un sous-menu.  
   
 ### <a name="remarks"></a>Notes  
  En règle générale, lorsqu’un bouton de menu de barre d’outils a un sous-menu et un ID de commande, le menu s’affiche pour être un bouton partagé qui a un bouton principal et un joint le bouton flèche bas. Si vous appelez cette méthode et *bMenuOnly* a la valeur TRUE, le bouton au lieu de cela semble être un bouton de menu unique avec une flèche vers le bas dans le bouton. Lorsque l’utilisateur clique sur la flèche dans les deux modes, le sous-menu s’ouvre, et lorsque l’utilisateur clique sur la partie non flèche du bouton en mode de l’infrastructure exécute la commande.  
@@ -775,11 +775,11 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bMenuPaletteMode*  
- Spécifie si le menu déroulant est en mode de palette.  
+*bMenuPaletteMode*<br/>
+[in] Spécifie si le menu déroulant est en mode de palette.  
   
- [in] *nPaletteRows*  
- Nombre de lignes dans la palette.  
+*nPaletteRows*<br/>
+[in] Nombre de lignes dans la palette.  
   
 ### <a name="remarks"></a>Notes  
  Dans le mode de palette, tous les éléments de menu sont affichés sous une palette multicolonne. Vous spécifiez le nombre de lignes à l’aide de *nPaletteRows*.  
@@ -816,8 +816,8 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiBarID*  
- Spécifie un nouveau à détacher barre ID.  
+*uiBarID*<br/>
+[in] Spécifie un nouveau à détacher barre ID.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour spécifier l’ID de la barre détachable est créée lorsque l’utilisateur fait glisser le bouton de menu sur une barre de menus. Si le *uiBarID* paramètre est 0, l’utilisateur ne peut pas détacher le bouton de menu.  

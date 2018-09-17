@@ -1,5 +1,5 @@
 ---
-title: '/ Zc : forScope (forcer la conformité dans pour la portée de la boucle) | Documents Microsoft'
+title: '/ Zc : forScope (forcer la conformité dans pour la portée d’une boucle) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bef68f47fe8fdc430138a6961078139b48030b3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378611"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723591"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Forcer la conformité à la portée de la boucle for)
 
@@ -40,7 +40,7 @@ Permet d'implémenter un comportement C++ standard pour les boucles [for](../../
 
 Le comportement standard consiste à laisser l’initialiseur d’une boucle **for** sortir de la portée après la boucle **for** . Sous **/Zc:forScope-** et [/Ze](../../build/reference/za-ze-disable-language-extensions.md), l’initialiseur de la boucle **for** reste dans la portée jusqu’à la fin de la portée locale.
 
-Le **/Zc : forScope** option est activée par défaut. **/ Zc : forScope** n’est pas affectée quand le [/ permissive-](permissive-standards-conformance.md) option est spécifiée.
+Le **/Zc : forScope** option est activée par défaut. **/ Zc : forScope** n’est pas affecté lorsque le [/ permissive-](permissive-standards-conformance.md) option est spécifiée.
 
 L’option **/Zc:forScope-** est déconseillée et sera supprimée dans une version ultérieure. L’utilisation de **/Zc:forScope-** génère l’avertissement D9035 de désapprobation.
 
@@ -49,7 +49,7 @@ Le code suivant est compilé sous **/Ze** , mais pas sous **/Za**:
 ```cpp
 // zc_forScope.cpp
 // compile by using: cl /Zc:forScope- /Za zc_forScope.cpp
-// C2065, D9035 expected  
+// C2065, D9035 expected
 int main() {
     // Compile by using cl /Zc:forScope- zc_forScope.cpp
     // to compile this non-standard code as-is.
@@ -65,13 +65,13 @@ Si vous utilisez **/Zc:forScope-**, l’avertissement C4288 (désactivé par dé
 
 Vous pouvez modifier le comportement au moment de l’exécution de **/Zc:forScope** en utilisant le pragma [conform](../../preprocessor/conform.md) .
 
-Si vous utilisez **/Zc:forScope-** dans un projet contenant déjà un fichier .pch, un avertissement est généré, **/Zc:forScope-** est ignoré et la compilation continue en utilisant les fichiers .pch existants. Si vous souhaitez générer un nouveau fichier .pch, utilisez [/Yc (créer un en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md).
+Si vous utilisez **/Zc:forScope-** dans un projet contenant déjà un fichier .pch, un avertissement est généré, **/Zc:forScope-** est ignoré et la compilation continue en utilisant les fichiers .pch existants. Si vous souhaitez générer un nouveau fichier .pch, utilisez [/Yc (créer un fichier d’en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md).
 
 Pour plus d’informations sur les problèmes de conformité dans Visual C++, consultez [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **langage** page de propriétés.
 

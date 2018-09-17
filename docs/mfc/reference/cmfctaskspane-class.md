@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 453bbb5d99d87a03a8627d231e45316cb5456794
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686455"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702051"
 ---
 # <a name="cmfctaskspane-class"></a>Cmfctaskspane, classe
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
@@ -399,20 +399,20 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nPageIdx*  
- Spécifie l’index de page de base zéro.  
+*nPageIdx*<br/>
+[in] Spécifie l’index de page de base zéro.  
   
- [in] *lpszGroupName*  
- Spécifie le nom du groupe.  
+*lpszGroupName*<br/>
+[in] Spécifie le nom du groupe.  
   
- [in] *bBottomLocation*  
- TRUE pour créer le groupe en bas du contrôle de volet de tâches ; Sinon, FALSE.  
+*bBottomLocation*<br/>
+[in] TRUE pour créer le groupe en bas du contrôle de volet de tâches ; Sinon, FALSE.  
   
- [in] *bSpecial*  
- TRUE pour marquer ce groupe comme un *spéciale* groupe ; sinon, FALSE. Pour plus d’informations sur les groupes spéciaux, consultez la section Notes de `CMFCTasksPane`.  
+*bSpecial*<br/>
+[in] TRUE pour marquer ce groupe comme un *spéciale* groupe ; sinon, FALSE. Pour plus d’informations sur les groupes spéciaux, consultez la section Notes de `CMFCTasksPane`.  
   
- [in] *hIcon*  
- Spécifie l’icône à afficher dans la légende du groupe.  
+*hIcon*<br/>
+[in] Spécifie l’icône à afficher dans la légende du groupe.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du groupe dans la liste interne des groupes qui tient à jour la classe.  
@@ -434,17 +434,17 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index du groupe dans lequel l’étiquette est ajouté.  
+*Dissocier*<br/>
+[in] Spécifie l’index du groupe dans lequel l’étiquette est ajouté.  
   
- [in] *lpszLabelName*  
- Spécifie le nom de l’étiquette.  
+*lpszLabelName*<br/>
+[in] Spécifie le nom de l’étiquette.  
   
- [in] *nTaskIcon*  
- Spécifie l’icône à afficher à côté de l’étiquette. Le framework stocke les icônes dans une liste d’images. Ce paramètre est un index dans cette liste.  
+*nTaskIcon*<br/>
+[in] Spécifie l’icône à afficher à côté de l’étiquette. Le framework stocke les icônes dans une liste d’images. Ce paramètre est un index dans cette liste.  
   
- [in] *bIsBold*  
- True pour afficher l’étiquette en gras ; Sinon, FALSE.  
+*bIsBold*<br/>
+[in] True pour afficher l’étiquette en gras ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du groupe où l’étiquette a été ajouté, ou -1 si le groupe spécifié par *nGroupe* n’existe pas.  
@@ -462,11 +462,11 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index d’un groupe. Cette méthode ajoute la dernière liste de fichiers au groupe spécifié par ce paramètre.  
+*Dissocier*<br/>
+[in] Spécifie l’index d’un groupe. Cette méthode ajoute la dernière liste de fichiers au groupe spécifié par ce paramètre.  
   
- [in] *nMaxFiles*  
- Spécifie le nombre de fichiers à afficher dans la liste des derniers fichiers utilisés.  
+*nMaxFiles*<br/>
+[in] Spécifie le nombre de fichiers à afficher dans la liste des derniers fichiers utilisés.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du groupe où la dernière liste de fichiers a été ajoutée, ou -1 si le groupe spécifié par *nGroupe* n’existe pas.  
@@ -479,8 +479,8 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszPageLabel*  
- Indique le nom de la page.  
+*lpszPageLabel*<br/>
+[in] Indique le nom de la page.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la nouvelle page.  
@@ -512,20 +512,20 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de groupe dans lequel la tâche est ajoutée.  
+*Dissocier*<br/>
+[in] Spécifie l’index de groupe dans lequel la tâche est ajoutée.  
   
- [in] *lpszTaskName*  
- Spécifie le nom de la tâche.  
+*lpszTaskName*<br/>
+[in] Spécifie le nom de la tâche.  
   
- [in] *nTaskIcon*  
- Spécifie l’icône à afficher à côté de la tâche. Le framework stocke les icônes dans une liste d’images. Ce paramètre est un index dans cette liste.  
+*nTaskIcon*<br/>
+[in] Spécifie l’icône à afficher à côté de la tâche. Le framework stocke les icônes dans une liste d’images. Ce paramètre est un index dans cette liste.  
   
- [in] *uiCommandID*  
- Spécifie l’ID de commande de la commande à exécuter lorsque l’utilisateur clique sur la tâche. La tâche est traitée comme une étiquette si *uiCommandID* est 0.  
+*uiCommandID*<br/>
+[in] Spécifie l’ID de commande de la commande à exécuter lorsque l’utilisateur clique sur la tâche. La tâche est traitée comme une étiquette si *uiCommandID* est 0.  
   
- [in] *dwUserData*  
- Spécifie les données définies par l’utilisateur à associer à la tâche.  
+*dwUserData*<br/>
+[in] Spécifie les données définies par l’utilisateur à associer à la tâche.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du groupe dans lequel la tâche a été ajoutée, ou -1 si le groupe spécifié par *nGroupe* n’existe pas.  
@@ -543,20 +543,20 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de groupe dans lequel la fenêtre est ajoutée.  
+*Dissocier*<br/>
+[in] Spécifie l’index de groupe dans lequel la fenêtre est ajoutée.  
   
- [in] *hwndTask*  
- Spécifie le handle de la fenêtre à ajouter.  
+*hwndTask*<br/>
+[in] Spécifie le handle de la fenêtre à ajouter.  
   
- [in] *nWndHeight*  
- Spécifie la hauteur de la fenêtre.  
+*nWndHeight*<br/>
+[in] Spécifie la hauteur de la fenêtre.  
   
- [in] *bAutoDestroyWindow*  
- TRUE pour détruire la fenêtre lorsque la tâche est supprimée ; Sinon, FALSE.  
+*bAutoDestroyWindow*<br/>
+[in] TRUE pour détruire la fenêtre lorsque la tâche est supprimée ; Sinon, FALSE.  
   
- [in] *dwUserData*  
- Spécifie les données définies par l’utilisateur associées à la tâche.  
+*dwUserData*<br/>
+[in] Spécifie les données définies par l’utilisateur associées à la tâche.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du groupe dans lequel la fenêtre a été ajoutée, ou -1 si le groupe spécifié par *nGroupe* n’existe pas.  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bCollapse*  
- [in] *nPageIdx*  
+*bCollapse*<br/>
+[in] [in] *nPageIdx*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -604,14 +604,14 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pGroup*  
- Spécifie le groupe à réduire.  
+*pGroup*<br/>
+[in] Spécifie le groupe à réduire.  
   
- [in] *bCollapse*  
- TRUE pour réduire le groupe ; FALSE pour développer le groupe.  
+*bCollapse*<br/>
+[in] TRUE pour réduire le groupe ; FALSE pour développer le groupe.  
   
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe à réduire dans la liste interne des groupes.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe à réduire dans la liste interne des groupes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le groupe réduit ou développe avec succès ; Sinon, FALSE.  
@@ -656,8 +656,8 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer l’animation qui se produit lorsqu’un groupe de tâches se développe ou réduit ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] TRUE pour activer l’animation qui se produit lorsqu’un groupe de tâches se développe ou réduit ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, l’animation qui se produit lorsqu’un groupe de tâches se développe ou réduit est activée.  
@@ -670,8 +670,8 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE si les utilisateurs peuvent réduire les groupes de tâches ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] TRUE si les utilisateurs peuvent réduire les groupes de tâches ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Un groupe de tâches est réduit affiche uniquement la légende du groupe ; la liste des tâches est masquée.  
@@ -684,8 +684,8 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- True pour activer les menus de liste déroulante sur le **suivant** et **précédent** boutons de navigation ; sinon, FALSE.  
+*bActivez*<br/>
+[in] True pour activer les menus de liste déroulante sur le **suivant** et **précédent** boutons de navigation ; sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, les listes déroulantes sur le **suivant** et **précédent** boutons sont désactivés.  
@@ -706,17 +706,17 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer la barre d’outils de navigation ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] TRUE pour activer la barre d’outils de navigation ; Sinon, FALSE.  
   
- [in] *uiToolbarBmpRes*  
- Spécifie l’ID de ressource de la bitmap qui contient les images à afficher dans la barre d’outils.  
+*uiToolbarBmpRes*<br/>
+[in] Spécifie l’ID de ressource de la bitmap qui contient les images à afficher dans la barre d’outils.  
   
- [in] *sizeToolbarImage*  
- Spécifie la taille d’une image de la barre d’outils.  
+*sizeToolbarImage*<br/>
+[in] Spécifie la taille d’une image de la barre d’outils.  
   
- [in] *sizeToolbarButton*  
- Spécifie la taille d’un bouton de barre d’outils.  
+*sizeToolbarButton*<br/>
+[in] Spécifie la taille d’un bouton de barre d’outils.  
   
 ### <a name="remarks"></a>Notes  
  La barre d’outils de navigation est une barre d’outils affichée par l’infrastructure en haut du volet Office. La barre d’outils de navigation contient le **retour**, **transférer**, et **accueil** boutons de navigation et un bouton de menu qui contient la liste des pages disponibles.  
@@ -743,8 +743,8 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour afficher les boutons de défilement situés dans le volet des tâches au lieu d’une barre de défilement ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] TRUE pour afficher les boutons de défilement situés dans le volet des tâches au lieu d’une barre de défilement ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, l’infrastructure affiche les boutons de défilement situés dans le volet des tâches.  
@@ -757,8 +757,8 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- True pour le texte des étiquettes de type wrap, qui s’affichent dans le volet des tâches ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] True pour le texte des étiquettes de type wrap, qui s’affichent dans le volet des tâches ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, le framework n’encapsule pas le texte dans les étiquettes. Lorsque le retour automatique est activé, le texte des étiquettes peut apparaître dans plusieurs lignes. L’étiquette peut inclure comme marqueurs de saut de ligne `\n` la marque et de soulignement `&`.  
@@ -771,8 +771,8 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour inclure des tâches dans le volet des tâches ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] TRUE pour inclure des tâches dans le volet des tâches ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, le retour automatique pour les tâches est désactivé.  
@@ -840,11 +840,11 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pGroup*  
- Spécifie le groupe de tâches dont l’emplacement est récupéré.  
+*pGroup*<br/>
+[in] Spécifie le groupe de tâches dont l’emplacement est récupéré.  
   
- [out] *dissocier*  
- Contient l’index de base zéro du groupe de tâches.  
+*Dissocier*<br/>
+[out] Contient l’index de base zéro du groupe de tâches.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le groupe de tâches a été trouvé ; Sinon, FALSE.  
@@ -894,11 +894,11 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe de tâches.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe de tâches.  
   
- [out] *nPage*  
- Contient l’index de page pour le groupe spécifié. Si le groupe de tâches contient uniquement une page par défaut, la valeur retournée est 0.  
+*nPage*<br/>
+[out] Contient l’index de page pour le groupe spécifié. Si le groupe de tâches contient uniquement une page par défaut, la valeur retournée est 0.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le groupe *nGroupe* existe ; sinon, FALSE.  
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe qui contient la tâche.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe qui contient la tâche.  
   
- [in] *%nLes*  
- Spécifie l’index de base zéro de la tâche dans la liste spécifiée par *nGroupe*.  
+*%nLes*<br/>
+[in] Spécifie l’index de base zéro de la tâche dans la liste spécifiée par *nGroupe*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La tâche à l’index spécifié.  
@@ -966,8 +966,8 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index du groupe de tâches.  
+*Dissocier*<br/>
+[in] Spécifie l’index du groupe de tâches.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de tâches dans le groupe spécifié, ou 0 si *nGroupe* n’est pas valide.  
@@ -980,8 +980,8 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe à récupérer.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe à récupérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le groupe de tâches à l’index spécifié.  
@@ -1007,20 +1007,20 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCommandID*  
- Spécifie l’ID de commande de la tâche à rechercher.  
+*uiCommandID*<br/>
+[in] Spécifie l’ID de commande de la tâche à rechercher.  
   
- [out] *dissocier*  
- Contient l’index de groupe de la tâche.  
+*Dissocier*<br/>
+[out] Contient l’index de groupe de la tâche.  
   
- [out] *%nLes*  
- Contient l’index de la tâche dans le groupe de tâches.  
+*%nLes*<br/>
+[out] Contient l’index de la tâche dans le groupe de tâches.  
   
- [in] *hwndTask*  
- Spécifie la fenêtre associée à la tâche.  
+*hwndTask*<br/>
+[in] Spécifie la fenêtre associée à la tâche.  
   
- [in] *pTask*  
- Spécifie la tâche à rechercher.  
+*pTask*<br/>
+[in] Spécifie la tâche à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’emplacement de la tâche a été trouvé ; FALSE si la tâche spécifiée n’existe pas.  
@@ -1199,8 +1199,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *uiID*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1238,17 +1238,17 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nGroupNumber*  
- Spécifie l’index de base zéro du groupe qui contient la tâche utilisateur a cliqué dessue.  
+*nGroupNumber*<br/>
+[in] Spécifie l’index de base zéro du groupe qui contient la tâche utilisateur a cliqué dessue.  
   
- [in] *nTaskNumber*  
- Spécifie l’index de base zéro de la tâche utilisateur a cliqué dessue.  
+*nTaskNumber*<br/>
+[in] Spécifie l’index de base zéro de la tâche utilisateur a cliqué dessue.  
   
- [in] *uiCommandID*  
- Spécifie l’ID de commande associé à la tâche.  
+*uiCommandID*<br/>
+[in] Spécifie l’ID de commande associé à la tâche.  
   
- [in] *dwUserData*  
- Contient les données définies par l’utilisateur associées à la tâche utilisateur a cliqué dessue.  
+*dwUserData*<br/>
+[in] Contient les données définies par l’utilisateur associées à la tâche utilisateur a cliqué dessue.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode lorsqu’un utilisateur clique sur une tâche. Par défaut, le framework vérifie l’ID de commande associé à la tâche utilisateur a cliqué dessue et, si elle n’est pas nulle, envoie le message WM_COMMAND au propriétaire du contrôle de volet de tâches.  
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pbtn*  
- [in] *pWndOwner*  
+*pbtn*<br/>
+[in] [in] *pWndOwner*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1378,8 +1378,8 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nPageIdx*  
- Spécifie l’index de base zéro de la page.  
+*nPageIdx*<br/>
+[in] Spécifie l’index de base zéro de la page.  
   
 ### <a name="remarks"></a>Notes  
  Supprime tous les groupes sur la page spécifiée par *nPageIdx*, ou tous les groupes s’il existe uniquement une page par défaut.  
@@ -1399,8 +1399,8 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe.  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
  Supprime un groupe.  
@@ -1410,8 +1410,8 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe à supprimer.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe à supprimer.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode supprime un groupe unique. Pour supprimer tous les groupes, appelez [CMFCTasksPane::RemoveAllGroups](#removeallgroups) à la place.  
@@ -1426,8 +1426,8 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nPageIdx*  
- Spécifie l’index de base zéro de la page à supprimer.  
+*nPageIdx*<br/>
+[in] Spécifie l’index de base zéro de la page à supprimer.  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
  Supprime une tâche d’un groupe de tâches.  
@@ -1440,14 +1440,14 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe de tâches qui contient la tâche à supprimer.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe de tâches qui contient la tâche à supprimer.  
   
- [in] *%nLes*  
- Spécifie l’index de base zéro de la tâche à supprimer.  
+*%nLes*<br/>
+[in] Spécifie l’index de base zéro de la tâche à supprimer.  
   
- [in] *bRedraw*  
- TRUE pour redessiner le volet des tâches ; Sinon, FALSE.  
+*bRedraw*<br/>
+[in] TRUE pour redessiner le volet des tâches ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la fonction aboutit ; FALSE si *nGroupe* ou *%nLes* n’est pas valide.  
@@ -1463,8 +1463,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *uiID*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1491,8 +1491,8 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nPageIdx*  
- Spécifie l’index de base zéro de la page à afficher.  
+*nPageIdx*<br/>
+[in] Spécifie l’index de base zéro de la page à afficher.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode déclare si le *nPageIdx* n’est pas valide.  
@@ -1505,8 +1505,8 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *le caractère*  
- Spécifie le nom de la légende.  
+*Caractère*<br/>
+[in] Spécifie le nom de la légende.  
   
 ### <a name="remarks"></a>Notes  
  Si un volet de tâches comporte plusieurs pages, la page par défaut porte la légende qui a été définie à l’aide de cette fonction.  
@@ -1519,8 +1519,8 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *n*  
- Spécifie la hauteur de légende.  
+*n*<br/>
+[in] Spécifie la hauteur de légende.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour personnaliser les marges d’éléments du volet de tâches.  
@@ -1535,8 +1535,8 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *n*  
- Spécifie le décalage horizontal de la légende de groupe.  
+*n*<br/>
+[in] Spécifie le décalage horizontal de la légende de groupe.  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  Définit le décalage vertical d'une légende de groupe.  
@@ -1546,8 +1546,8 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *n*  
- Spécifie le décalage vertical, en pixels, de la légende du groupe.  
+*n*<br/>
+[in] Spécifie le décalage vertical, en pixels, de la légende du groupe.  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  Définit un nom de groupe.  
@@ -1559,11 +1559,11 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe.  
   
- [in] *lpszGroupName*  
- Spécifie le nom du groupe.  
+*lpszGroupName*<br/>
+[in] Spécifie le nom du groupe.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le nom du groupe a été correctement défini ; Sinon, FALSE.  
@@ -1579,14 +1579,14 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe.  
   
- [in] *couleur*  
- Spécifie la couleur du texte.  
+*Couleur*<br/>
+[in] Spécifie la couleur du texte.  
   
- [in] *colorHot*  
- Spécifie la couleur du texte pour le groupe en surbrillance. Si-1, la couleur de surbrillance par défaut est utilisée.  
+*colorHot*<br/>
+[in] Spécifie la couleur du texte pour le groupe en surbrillance. Si-1, la couleur de surbrillance par défaut est utilisée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la couleur de texte de groupe a été modifiée avec succès ; Sinon, FALSE.  
@@ -1599,8 +1599,8 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *n*  
- Spécifie le décalage vertical.  
+*n*<br/>
+[in] Spécifie le décalage vertical.  
   
 ### <a name="remarks"></a>Notes  
  Le décalage vertical est la distance entre un groupe de tâches et de la bordure du volet Office.  
@@ -1615,8 +1615,8 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *n*  
- Spécifie la marge, en pixels.  
+*n*<br/>
+[in] Spécifie la marge, en pixels.  
   
 ### <a name="remarks"></a>Notes  
  La marge horizontale est la distance entre un volet de tâches et le bord supérieur ou inférieur de la zone cliente.  
@@ -1636,17 +1636,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiImageListResID*  
- Spécifie l’ID de ressource de la liste d’images.  
+*uiImageListResID*<br/>
+[in] Spécifie l’ID de ressource de la liste d’images.  
   
- [in] *cx*  
- Spécifie la taille des icônes dans la liste d’images.  
+*CX*<br/>
+[in] Spécifie la taille des icônes dans la liste d’images.  
   
- [in] *clrTransparent*  
- Spécifie la couleur transparente.  
+*clrTransparent*<br/>
+[in] Spécifie la couleur transparente.  
   
- [in] *éléments HICON*  
- Spécifie la liste d’images qui contient les icônes du volet Office.  
+*éléments HICON*<br/>
+[in] Spécifie la liste d’images qui contient les icônes du volet Office.  
   
 ### <a name="remarks"></a>Notes  
  Le framework stocke les icônes dans une liste d’images. Tâches sont associées à des icônes qui sont stockés dans cette liste.  
@@ -1663,11 +1663,11 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nPageIdx*  
- Spécifie l’index de base zéro de la page.  
+*nPageIdx*<br/>
+[in] Spécifie l’index de base zéro de la page.  
   
- [in] *le caractère*  
- Spécifie le texte de légende à afficher sur la page.  
+*Caractère*<br/>
+[in] Spécifie le texte de légende à afficher sur la page.  
   
 ### <a name="remarks"></a>Notes  
  Si un volet de tâches comporte plusieurs pages, la page par défaut porte la légende qui a été définie à l’aide de cette méthode.  
@@ -1683,14 +1683,14 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe de tâches.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe de tâches.  
   
- [in] *%nLes*  
- Spécifie l’index de base zéro de la tâche.  
+*%nLes*<br/>
+[in] Spécifie l’index de base zéro de la tâche.  
   
- [in] *lpszTaskName*  
- Spécifie le nom de la tâche.  
+*lpszTaskName*<br/>
+[in] Spécifie le nom de la tâche.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le nom de la tâche a été correctement défini ; Sinon, FALSE.  
@@ -1703,8 +1703,8 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *n*  
- Spécifie le décalage horizontal.  
+*n*<br/>
+[in] Spécifie le décalage horizontal.  
   
 ### <a name="remarks"></a>Notes  
  Le décalage horizontal est la distance en pixels des bords gauche et droite d’un groupe.  
@@ -1749,17 +1749,17 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe de tâches qui contient la tâche.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe de tâches qui contient la tâche.  
   
- [in] *%nLes*  
- Spécifie l’index de base zéro de la tâche.  
+*%nLes*<br/>
+[in] Spécifie l’index de base zéro de la tâche.  
   
- [in] *couleur*  
- Spécifie la couleur du texte pour la tâche.  
+*Couleur*<br/>
+[in] Spécifie la couleur du texte pour la tâche.  
   
- [in] *colorHot*  
- Spécifie la couleur du texte pour le groupe en surbrillance. Si-1, cette méthode utilise la couleur de surbrillance par défaut.  
+*colorHot*<br/>
+[in] Spécifie la couleur du texte pour le groupe en surbrillance. Si-1, cette méthode utilise la couleur de surbrillance par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la couleur du texte de la tâche a été correctement définie ; Sinon, FALSE.  
@@ -1772,8 +1772,8 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *n*  
- Spécifie la marge verticale à définir.  
+*n*<br/>
+[in] Spécifie la marge verticale à définir.  
   
 ### <a name="remarks"></a>Notes  
  La marge verticale est la distance entre un volet de tâches et les bords verticaux de la zone cliente.  
@@ -1796,14 +1796,14 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe qui contient le contrôle de fenêtre.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe qui contient le contrôle de fenêtre.  
   
- [in] *hwndTask*  
- Spécifie le handle vers le contrôle de fenêtre.  
+*hwndTask*<br/>
+[in] Spécifie le handle vers le contrôle de fenêtre.  
   
- [in] *nWndHeight*  
- Spécifie la hauteur à définir.  
+*nWndHeight*<br/>
+[in] Spécifie la hauteur à définir.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la hauteur du contrôle de fenêtre a été correctement définie ; FALSE si *nGroupe* n’est pas valide ou si *hwndTask* n’existe pas.  
@@ -1835,17 +1835,17 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dissocier*  
- Spécifie l’index de base zéro du groupe.  
+*Dissocier*<br/>
+[in] Spécifie l’index de base zéro du groupe.  
   
- [in] *%nLes*  
- Spécifie l’index de base zéro de la tâche pour afficher ou masquer.  
+*%nLes*<br/>
+[in] Spécifie l’index de base zéro de la tâche pour afficher ou masquer.  
   
- [in] *bShow*  
- TRUE pour afficher la tâche ; FALSE pour masquer la tâche.  
+*bShow*<br/>
+[in] TRUE pour afficher la tâche ; FALSE pour masquer la tâche.  
   
- [in] *bRedraw*  
- TRUE pour redessiner le volet des tâches ; Sinon, FALSE.  
+*bRedraw*<br/>
+[in] TRUE pour redessiner le volet des tâches ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la tâche a été correctement affichée ou masquée ; FALSE si le groupe spécifié ou la tâche n’existe pas.  
@@ -1864,14 +1864,14 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCommandID*  
- Spécifie l’ID de commande de la tâche pour afficher ou masquer.  
+*uiCommandID*<br/>
+[in] Spécifie l’ID de commande de la tâche pour afficher ou masquer.  
   
- [in] *bShow*  
- TRUE pour afficher la tâche ; FALSE pour masquer la tâche.  
+*bShow*<br/>
+[in] TRUE pour afficher la tâche ; FALSE pour masquer la tâche.  
   
- [in] *bRedraw*  
- TRUE pour redessiner le volet des tâches ; Sinon, FALSE.  
+*bRedraw*<br/>
+[in] TRUE pour redessiner le volet des tâches ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la tâche a été correctement affichée ou masquée ; FALSE si une tâche avec la commande spécifiée ID n’existe pas.  

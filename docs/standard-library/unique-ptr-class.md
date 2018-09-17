@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961553"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725190"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr, classe
 
@@ -104,17 +104,17 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*Droite*  
- `unique_ptr`
+*Droite*<br/>
+`unique_ptr`
 
-*Nptr*  
- `rvalue` de type `std::nullptr_t`.
+*Nptr*<br/>
+`rvalue` de type `std::nullptr_t`.
 
-*PTR*  
- `pointer`
+*PTR*<br/>
+`pointer`
 
-*SUPPRESSEUR*  
- Fonction `deleter` liée à un `unique_ptr`.
+*SUPPRESSEUR*<br/>
+Fonction `deleter` liée à un `unique_ptr`.
 
 ## <a name="exceptions"></a>Exceptions
 
@@ -348,8 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*right*  
- `unique_ptr` utilisé pour échanger des pointeurs.
+*right*<br/>
+`unique_ptr` utilisé pour échanger des pointeurs.
 
 ### <a name="remarks"></a>Notes
 

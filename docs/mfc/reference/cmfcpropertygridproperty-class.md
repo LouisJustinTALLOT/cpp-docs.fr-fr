@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d108bab368b7be57d336aae345df1e25723363
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb60681f47a32e40bff744adaecfedfe4b247c64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538885"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726243"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Cmfcpropertygridproperty, classe
 Un `CMFCPropertyGridProperty` objet représente un élément de liste dans un contrôle de liste de propriétés.  
@@ -326,11 +326,11 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszOption*  
- L’élément de liste (option) à ajouter.  
+*lpszOption*<br/>
+[in] L’élément de liste (option) à ajouter.  
   
- [in] *bInsertUnique*  
- TRUE pour ajouter la liste d’élément uniquement si elle n’existe pas déjà ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bInsertUnique*<br/>
+[in] TRUE pour ajouter la liste d’élément uniquement si elle n’existe pas déjà ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur TRUE, ce qui signifie que l’élément de liste est ajouté. Sinon, FALSE, ce qui signifie que l’élément de liste n’est pas ajouté, car le *bInsertUnique* paramètre est TRUE et la liste d’élément spécifiée par le *lpszOption* paramètre existe déjà.  
@@ -345,8 +345,8 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pProp*  
- Pointeur vers une propriété à ajouter.  
+*pProp*<br/>
+[in] Pointeur vers une propriété à ajouter.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la propriété spécifiée est correctement ajoutée comme une propriété enfant. FALSE si la propriété n’est pas ajoutée, car elle se produit déjà dans la propriété parent.  
@@ -380,11 +380,11 @@ virtual void AdjustInPlaceEditRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *rectEdit*  
- Lorsque cette méthode retourne un rectangle qui spécifie les limites de la zone de texte pour la valeur de propriété.  
+*rectEdit*<br/>
+[out] Lorsque cette méthode retourne un rectangle qui spécifie les limites de la zone de texte pour la valeur de propriété.  
   
- [out] *rectSpin*  
- Lorsque cette méthode retourne un rectangle qui spécifie les limites du contrôle de bouton toupie (spin) pour la valeur de propriété. Ou, si la propriété ne prend pas en charge un bouton toupie (spin), un rectangle vide.  
+*rectSpin*<br/>
+[out] Lorsque cette méthode retourne un rectangle qui spécifie les limites du contrôle de bouton toupie (spin) pour la valeur de propriété. Ou, si la propriété ne prend pas en charge un bouton toupie (spin), un rectangle vide.  
   
 ### <a name="remarks"></a>Notes  
  La zone des valeurs d’une propriété se compose d’une zone de texte et, éventuellement, un *case d’option*, tel qu’un contrôle de bouton toupie (spin). Cette méthode calcule les dimensions du bouton de zone et l’option de texte, puis retourne ces valeurs dans les paramètres spécifiés.  
@@ -397,8 +397,8 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bPermettre*  
- TRUE si la propriété modifiable ; La valeur FALSE à la propriété en lecture seule. La valeur par défaut est TRUE.  
+*bPermettre*<br/>
+[in] TRUE si la propriété modifiable ; La valeur FALSE à la propriété en lecture seule. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -423,32 +423,32 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *strGroupName*  
- Le nom du groupe. Un *groupe* est une collection de propriétés associées dans un contrôle de grille de propriétés. Si le contrôle est affiché de manière hiérarchique, le *nom_groupe* est affiché comme titre de la catégorie dans la ligne au-dessus du groupe.  
+*strGroupName*<br/>
+[in] Le nom du groupe. Un *groupe* est une collection de propriétés associées dans un contrôle de grille de propriétés. Si le contrôle est affiché de manière hiérarchique, le *nom_groupe* est affiché comme titre de la catégorie dans la ligne au-dessus du groupe.  
   
- [in] *dwData*  
- Données spécifiques à l’application, par exemple un entier ou un pointeur à d’autres données qui sont associés à la propriété. La valeur par défaut est 0.  
+*dwData*<br/>
+[in] Données spécifiques à l’application, par exemple un entier ou un pointeur à d’autres données qui sont associés à la propriété. La valeur par défaut est 0.  
   
- [in] *strName*  
- Nom de la propriété.  
+*strName*<br/>
+[in] Le nom de la propriété.  
   
- [in] *varValue*  
- Valeur de la propriété.  
+*varValue*<br/>
+[in] La valeur de propriété.  
   
- [in] *lpszDescr*  
- La description de la propriété. La valeur par défaut est NULL.  
+*lpszDescr*<br/>
+[in] La description de la propriété. La valeur par défaut est NULL.  
   
- [in] *lpszEditMask*  
- Le masque de modification, si la propriété est un contrôle d’édition par masque. La valeur par défaut est NULL.  
+*lpszEditMask*<br/>
+[in] Le masque de modification, si la propriété est un contrôle d’édition par masque. La valeur par défaut est NULL.  
   
- [in] *lpszEditTemplate*  
- Le modèle de modification, si la propriété est un contrôle d’édition par masque. La valeur par défaut est NULL.  
+*lpszEditTemplate*<br/>
+[in] Le modèle de modification, si la propriété est un contrôle d’édition par masque. La valeur par défaut est NULL.  
   
- [in] *lpszValidChars*  
- Une liste de caractères, si la propriété est un contrôle d’édition par masque. La valeur par défaut est NULL.  
+*lpszValidChars*<br/>
+[in] Une liste de caractères, si la propriété est un contrôle d’édition par masque. La valeur par défaut est NULL.  
   
- [in] *bIsValueList*  
- TRUE si la propriété représente une liste de valeurs ; FALSE si la propriété représente une valeur unique. La valeur par défaut est FALSE.  
+*bIsValueList*<br/>
+[in] TRUE si la propriété représente une liste de valeurs ; FALSE si la propriété représente une valeur unique. La valeur par défaut est FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -462,11 +462,11 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParent*  
- Pointeur vers la fenêtre parente de la zone de liste déroulante.  
+*pWndParent*<br/>
+[in] Pointeur vers la fenêtre parente de la zone de liste déroulante.  
   
- [in] *rect*  
- Le rectangle englobant de la zone de liste déroulante.  
+*Rect*<br/>
+[in] Le rectangle englobant de la zone de liste déroulante.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un nouveau [CComboBox](../../mfc/reference/ccombobox-class.md) objet.  
@@ -483,11 +483,11 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectEdit*  
- Le rectangle englobant du contrôle modifiable.  
+*rectEdit*<br/>
+[in] Le rectangle englobant du contrôle modifiable.  
   
- [in] *bDefaultFormat*  
- TRUE pour utiliser le format de la propriété par défaut pour définir le texte du contrôle modifiable ; Sinon, FALSE.  
+*bDefaultFormat*<br/>
+[in] TRUE pour utiliser le format de la propriété par défaut pour définir le texte du contrôle modifiable ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le contrôle modifiable si cette méthode réussit ; Sinon, NULL.  
@@ -505,8 +505,8 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectSpin*  
- Un rectangle qui définit où le contrôle de bouton toupie (spin) modifiable est créé.  
+*rectSpin*<br/>
+[in] Un rectangle qui définit où le contrôle de bouton toupie (spin) modifiable est créé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers une nouvelle [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) objet est casté en un pointeur vers un [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) objet.  
@@ -522,8 +522,8 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer la propriété ; FALSE pour désactiver la propriété. Propriétés désactivées ne répondent pas à la souris ou du clavier. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] TRUE pour activer la propriété ; FALSE pour désactiver la propriété. Propriétés désactivées ne répondent pas à la souris ou du clavier. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -538,14 +538,14 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer le contrôle de bouton toupie (spin) ; FALSE pour désactiver le contrôle de bouton toupie (spin). La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] TRUE pour activer le contrôle de bouton toupie (spin) ; FALSE pour désactiver le contrôle de bouton toupie (spin). La valeur par défaut est TRUE.  
   
- [in] *nMin*  
- La valeur minimale du contrôle de bouton toupie (spin). La valeur par défaut est 0.  
+*nMin*<br/>
+[in] La valeur minimale du contrôle de bouton toupie (spin). La valeur par défaut est 0.  
   
- [in] *nMax*  
- La valeur maximale du contrôle de bouton toupie (spin). La valeur par défaut est 0.  
+*nombre maximal*<br/>
+[in] La valeur maximale du contrôle de bouton toupie (spin). La valeur par défaut est 0.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure crée automatiquement un contrôle de bouton toupie (spin) lorsqu’une propriété est sur le point d’être modifié.  
@@ -560,8 +560,8 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bExpand*  
- TRUE pour développer la propriété ; Pour réduire la propriété, la valeur est FALSE. La valeur par défaut est TRUE.  
+*bExpand*<br/>
+[in] TRUE pour développer la propriété ; Pour réduire la propriété, la valeur est FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -615,7 +615,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *bIncludeHidden*|TRUE pour inclure des sous-éléments masqués dans le nombre ; Sinon, FALSE. La valeur par défaut est TRUE.|  
+|*bIncludeHidden*|[in] TRUE pour inclure des sous-éléments masqués dans le nombre ; Sinon, FALSE. La valeur par défaut est TRUE.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de sous-éléments développées.  
@@ -734,8 +734,8 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Index de base zéro de la propriété à récupérer. Ce paramètre est non valide si elle est inférieure à zéro ou supérieur ou égal au nombre de sous-propriétés.  
+*nIndex*<br/>
+[in] Index de base zéro de la propriété à récupérer. Ce paramètre est non valide si elle est inférieure à zéro ou supérieur ou égal au nombre de sous-propriétés.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un objet de propriété qui est un élément enfant de cette propriété.  
@@ -810,17 +810,17 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Point à tester, dans les coordonnées clientes. Ce paramètre est généralement l’emplacement actuel du pointeur de la souris.  
+*point*<br/>
+[in] Point à tester, dans les coordonnées clientes. Ce paramètre est généralement l’emplacement actuel du pointeur de la souris.  
   
- [in] *pt*  
- Point à tester, dans les coordonnées clientes.  
+*pt*<br/>
+[in] Point à tester, dans les coordonnées clientes.  
   
- [out] *pnArea*  
- Lorsque cette méthode est retournée, indique la zone qui contient le point spécifié. Pour plus d'informations, consultez la section Notes. La valeur par défaut est NULL.  
+*pnArea*<br/>
+[out] Lorsque cette méthode est retournée, indique la zone qui contient le point spécifié. Pour plus d'informations, consultez la section Notes. La valeur par défaut est NULL.  
   
- [in] *bPropsOnly*  
- TRUE pour tester n’importe quelle zone dans le contrôle de la propriété ; Pour tester uniquement la zone de description, la valeur est FALSE. La valeur par défaut est FALSE.  
+*bPropsOnly*<br/>
+[in] TRUE pour tester n’importe quelle zone dans le contrôle de la propriété ; Pour tester uniquement la zone de description, la valeur est FALSE. La valeur par défaut est FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un objet de propriété ou NULL.  
@@ -951,8 +951,8 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pProp*  
- Pointeur vers une propriété.  
+*pProp*<br/>
+[in] Pointeur vers une propriété.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la propriété spécifiée est un sous-élément de la propriété actuelle ; Sinon, FALSE.  
@@ -1025,8 +1025,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Un point, en coordonnées clientes.  
+*point*<br/>
+[in] Un point, en coordonnées clientes.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien.  
@@ -1042,7 +1042,7 @@ virtual void OnClickName(CPoint C);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *C*|Un point, en coordonnées clientes.|  
+|*C*|[in] Un point, en coordonnées clientes.|  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien.  
@@ -1057,11 +1057,11 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiMsg*  
- Un message de la souris.  
+*uiMsg*<br/>
+[in] Un message de la souris.  
   
- [in] *point*  
- Un point, en coordonnées clientes.  
+*point*<br/>
+[in] Un point, en coordonnées clientes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le message de la souris spécifié est traité par cette méthode ; Sinon, FALSE.  
@@ -1088,11 +1088,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *nCtlColor*  
- (Ce paramètre n’est pas utilisé.)  
+*nCtlColor*<br/>
+[in] (Ce paramètre n’est pas utilisé.)  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le handle d’un pinceau si cette méthode a réussi ; Sinon, NULL.  
@@ -1107,8 +1107,8 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Un point, en coordonnées clientes.  
+*point*<br/>
+[in] Un point, en coordonnées clientes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1135,11 +1135,11 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rectButton*  
- Un rectangle englobant qui spécifie où dessiner un bouton.  
+*rectButton*<br/>
+[in] Un rectangle englobant qui spécifie où dessiner un bouton.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1153,11 +1153,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Un rectangle englobant qui spécifie où dessiner la description de la propriété.  
+*Rect*<br/>
+[in] Un rectangle englobant qui spécifie où dessiner la description de la propriété.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode dessine le nom de propriété et la description dans la police utilisée par le contrôle de liste de propriété parent. La description de la propriété est dessinée dans le style Normal et le nom de propriété est dessiné dans le style gras.  
@@ -1172,11 +1172,11 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rectExpand*  
- Un rectangle englobant qui spécifie où dessiner le contrôle de zone de développement.  
+*rectExpand*<br/>
+[in] Un rectangle englobant qui spécifie où dessiner le contrôle de zone de développement.  
   
 ### <a name="remarks"></a>Notes  
  Cliquez sur le contrôle de zone de développement pour développer ou réduire une liste de sous-propriétés. Le contrôle de zone de développement est désigné par un carré qui contient un signe plus (+) ou moins (-). Un signe indique que la propriété peut être développée pour afficher une liste de sous-propriétés. Un signe moins indique que la liste peut être réduite pour afficher uniquement la propriété.  
@@ -1191,11 +1191,11 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Un rectangle englobant qui spécifie où dessiner le nom de propriété.  
+*Rect*<br/>
+[in] Un rectangle englobant qui spécifie où dessiner le nom de propriété.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1209,11 +1209,11 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Un rectangle englobant qui spécifie où dessiner la valeur de propriété.  
+*Rect*<br/>
+[in] Un rectangle englobant qui spécifie où dessiner la valeur de propriété.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1225,8 +1225,8 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lptClick*  
- (Ce paramètre n’est pas utilisé.) Pointeur vers un point, en coordonnées clientes.  
+*lptClick*<br/>
+[in] (Ce paramètre n’est pas utilisé.) Pointeur vers un point, en coordonnées clientes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’opération de modification démarre avec succès ; Sinon, FALSE.  
@@ -1258,7 +1258,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *CWnd*|(Non utilisé.) Pointeur vers une fenêtre.|  
+|*CWnd*|[in] (Non utilisé). Pointeur vers une fenêtre.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne toujours la valeur TRUE.  
@@ -1303,7 +1303,7 @@ virtual void OnRClickName(CPoint C);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *C*|Un point, en coordonnées clientes.|  
+|*C*|[in] Un point, en coordonnées clientes.|  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien.  
@@ -1321,8 +1321,8 @@ virtual void OnRClickValue(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *C*|Un point, en coordonnées clientes.|  
-|[in] *B*|Valeur booléenne.|  
+|*C*|[in] Un point, en coordonnées clientes.|  
+|*B*|[in] Valeur booléenne.|  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien et le *B* paramètre n’a aucune utilité prédéfinie.  
@@ -1383,8 +1383,8 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nChar*  
- Un caractère.  
+*NChar*<br/>
+[in] Un caractère.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la poursuite de l’opération de modification ; Sinon, FALSE.  
@@ -1421,11 +1421,11 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pProp*  
- Pointeur vers un sous-élément de la propriété.  
+*pProp*<br/>
+[in] Pointeur vers un sous-élément de la propriété.  
   
- [in] *bDelete*  
- True permet de supprimer l’objet de propriété qui est spécifié par le *pProp* paramètre ; sinon, FALSE. La valeur par défaut est TRUE.  
+*bDelete*<br/>
+[in] True permet de supprimer l’objet de propriété qui est spécifié par le *pProp* paramètre ; sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -1449,8 +1449,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwData*  
- Une valeur de 32 bits spécifique à l’application, comme un entier ou un pointeur à d’autres données.  
+*dwData*<br/>
+[in] Une valeur de 32 bits spécifique à l’application, comme un entier ou un pointeur à d’autres données.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez le [CMFCPropertyGridProperty::GetData](#getdata) méthode pour récupérer la valeur DWORD. Utilisez le [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) méthode à rechercher l’élément de liste de propriétés associée à la valeur DWORD spécifiée.  
@@ -1463,8 +1463,8 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *strDescr*  
- Texte qui décrit la propriété actuelle.  
+*strDescr*<br/>
+[in] Texte qui décrit la propriété actuelle.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1478,11 +1478,11 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *le caractère*  
- Nom de la propriété.  
+*Caractère*<br/>
+[in] Le nom de propriété.  
   
- [in] *bRedraw*  
- TRUE pour redessiner la propriété immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bRedraw*<br/>
+[in] TRUE pour redessiner la propriété immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1494,8 +1494,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *varValue*  
- Valeur.  
+*varValue*<br/>
+[in] Une valeur.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez le [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) méthode pour réinitialiser la valeur d’origine d’une propriété modifiée.  
@@ -1508,8 +1508,8 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *varValue*  
- Une référence à une valeur.  
+*varValue*<br/>
+[in] Une référence à une valeur.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1523,11 +1523,11 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- TRUE pour afficher la propriété actuelle et ses sous-éléments ; FALSE pour masquer la propriété actuelle et ses sous-éléments. La valeur par défaut est TRUE.  
+*bShow*<br/>
+[in] TRUE pour afficher la propriété actuelle et ses sous-éléments ; FALSE pour masquer la propriété actuelle et ses sous-éléments. La valeur par défaut est TRUE.  
   
- [in] *bAdjustLayout*  
- TRUE pour recalculer comment dessiner l’étiquette et la valeur d’une propriété, puis dessinez la propriété ; FALSE pour utiliser des calculs existants pour dessiner la propriété. La valeur par défaut est TRUE.  
+*bAdjustLayout*<br/>
+[in] TRUE pour recalculer comment dessiner l’étiquette et la valeur d’une propriété, puis dessinez la propriété ; FALSE pour utiliser des calculs existants pour dessiner la propriété. La valeur par défaut est TRUE.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

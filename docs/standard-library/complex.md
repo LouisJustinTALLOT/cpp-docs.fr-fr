@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726698"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -54,11 +54,7 @@ L'ensemble de nombres complexes avec les opérations d'addition complexe et de m
 
 En représentant un nombre complexe *z* = (*un*, *b*) sous la forme *z* = *un*  +  *bi*, où *je*<sup>2</sup> = -1, les règles pour l’algèbre de l’ensemble de nombres réels peut être appliquée à l’ensemble de nombres complexes et à leurs composants. Exemple :
 
-   (1 + 2*je*) \* (2 + 3*je*)  
-   = 1 \* (2 + 3*je*) + 2*je* \* (2 + 3*je*)  
-   = (2 + 3*je*) + (4*je* + 6*je*<sup>2</sup>)  
-   = (2 - 6) + (3 + 4)*je*  
-   = -4 + 7*je*
+   (1 + 2*je*) \* (2 + 3*je*) = 1 \* (2 + 3*je*) + 2*je* \* (2 + 3*i*) = (2 + 3*je*) + (4*je* + 6*je*<sup>2</sup>) = (2-6) + (3 + 4)*je* = -4 + 7*je*
 
 Le système des nombres complexes est un domaine, mais il n'est pas un domaine ordonné. Il n’existe aucun classement de nombres complexes qu’il existe pour le champ de nombres réels et ses sous-ensembles, donc les inégalités ne peuvent pas être appliquées aux nombres complexes, tels qu’ils sont en nombres réels.
 

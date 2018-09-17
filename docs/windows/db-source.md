@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bad61c157926fd417467afaa2d97d0db517430f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c43139dd1d927d9e6173d9e78765d0fcdbddae6a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201554"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716012"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -43,11 +43,11 @@ Crée une connexion à une source de données.
 *db_source*  
 Chaîne de connexion utilisée pour se connecter à la source de données. Pour le format de la chaîne de connexion, consultez [chaînes de connexion et des liaisons de données](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) dans le Kit de développement logiciel Microsoft Data Access Components (MDAC).
 
-*name* (facultatif)  
-Lorsque vous utilisez **db_source** sur une classe, *nom* est une instance d’un objet de source de données qui a le **db_source** attribut appliqué à ce dernier (voir exemple 1). Lorsque vous utilisez **db_source** inline dans une implémentation de méthode, *nom* est une variable (local à la méthode) qui peut être utilisée pour accéder aux données source (voir l’exemple 2). Vous la transmettre *nom* à la *source_name* paramètre de `db_command` pour associer la source de données avec une commande.
+*name*  
+(Facultatif) Lorsque vous utilisez **db_source** sur une classe, *nom* est une instance d’un objet de source de données qui a le **db_source** attribut appliqué à ce dernier (voir exemple 1). Lorsque vous utilisez **db_source** inline dans une implémentation de méthode, *nom* est une variable (local à la méthode) qui peut être utilisée pour accéder aux données source (voir l’exemple 2). Vous la transmettre *nom* à la *source_name* paramètre de `db_command` pour associer la source de données avec une commande.
 
-*HRESULT* (facultatif)  
-Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
+*HRESULT*  
+(Facultatif) Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
 
 ## <a name="remarks"></a>Notes
 

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02db557f877f43f39286856de02d68b87959fee
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 767c57db8f9af90ab997b0e75ce40461a2494725
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701869"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset, classe
 
@@ -120,13 +120,13 @@ class hash_multiset
 ### <a name="parameters"></a>Paramètres
 
 *Key*<br/>
- Type de données de l'élément à stocker dans le hash_multiset.
+Type de données de l'élément à stocker dans le hash_multiset.
 
 *Caractéristiques*<br/>
- Type qui inclut les deux objets de fonction, une de la classe comparer qui est un prédicat binaire capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif et une fonction de hachage qui est un mappage de prédicat unaire les valeurs clés des éléments à non signé entiers de type `size_t`. Cet argument est facultatif et sa valeur par défaut est `hash_compare<Key, less<Key> >`.
+Type qui inclut les deux objets de fonction, une de la classe comparer qui est un prédicat binaire capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif et une fonction de hachage qui est un mappage de prédicat unaire les valeurs clés des éléments à non signé entiers de type `size_t`. Cet argument est facultatif et sa valeur par défaut est `hash_compare<Key, less<Key> >`.
 
 *Allocateur*<br/>
- Type qui représente l'objet allocateur stocké qui encapsule des informations sur l'allocation et la désallocation de mémoire du hash_multiset. Cet argument est facultatif et sa valeur par défaut est `allocator<Key>`.
+Type qui représente l'objet allocateur stocké qui encapsule des informations sur l'allocation et la désallocation de mémoire du hash_multiset. Cet argument est facultatif et sa valeur par défaut est `allocator<Key>`.
 
 ## <a name="remarks"></a>Notes
 
@@ -555,7 +555,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé des éléments à mettre en correspondance à partir du hash_multiset.
+Clé des éléments à mettre en correspondance à partir du hash_multiset.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1022,7 +1022,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé d’argument à comparer à la clé de tri d’un élément du hash_multiset dans lequel la recherche est effectuée.
+Clé d’argument à comparer à la clé de tri d’un élément du hash_multiset dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1111,16 +1111,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Paramètres
 
 *_WHERE*<br/>
- Position de l'élément à supprimer du hash_multiset.
+Position de l'élément à supprimer du hash_multiset.
 
 *first*<br/>
- Position du premier élément supprimé du hash_multiset.
+Position du premier élément supprimé du hash_multiset.
 
 *last*<br/>
- Position juste après le dernier élément supprimé du hash_multiset.
+Position juste après le dernier élément supprimé du hash_multiset.
 
 *key*<br/>
- Clé des éléments à supprimer du hash_multiset.
+Clé des éléments à supprimer du hash_multiset.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1232,7 +1232,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé d’argument qui doit correspondre à la clé de tri d’un élément du hash_multiset dans lequel la recherche est effectuée.
+Clé d’argument qui doit correspondre à la clé de tri d’un élément du hash_multiset dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1667,7 +1667,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé d’argument à comparer à la clé de tri d’un élément du hash_multiset dans lequel la recherche est effectuée.
+Clé d’argument à comparer à la clé de tri d’un élément du hash_multiset dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2150,7 +2150,7 @@ void swap(hash_multiset& right);
 ### <a name="parameters"></a>Paramètres
 
 *right*<br/>
- Argument hash_multiset qui fournit les éléments à échanger avec le hash_multiset cible.
+Argument hash_multiset qui fournit les éléments à échanger avec le hash_multiset cible.
 
 ### <a name="remarks"></a>Notes
 
@@ -2226,7 +2226,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
- Clé d’argument à comparer à la clé de tri d’un élément du hash_multiset dans lequel la recherche est effectuée.
+Clé d’argument à comparer à la clé de tri d’un élément du hash_multiset dans lequel la recherche est effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 

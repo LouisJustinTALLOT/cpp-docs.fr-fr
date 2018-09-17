@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCBaseToolBar | Documents Microsoft
+title: Cmfcbasetoolbar, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037842"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705235"
 ---
-# <a name="cmfcbasetoolbar-class"></a>Classe de CMFCBaseToolBar
+# <a name="cmfcbasetoolbar-class"></a>Cmfcbasetoolbar, classe
 Classe de base pour les barres d’outils.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -54,7 +54,7 @@ class CMFCBaseToolBar : public CPane
 |`CMFCBaseToolBar::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Retourne le mode d'ancrage. (Substitue [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
 |[CMFCBaseToolBar::GetMinSize](#getminsize)|Retourne la taille minimale d’une barre d’outils. (Substitue [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Appelé par le framework après modification du parent du volet. (Substitue [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Appelé par l’infrastructure après modification du parent du volet. (Substitue [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -90,19 +90,19 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *taille*  
- La taille minimale d’une barre d’outils.  
+*size*<br/>
+[out] La taille minimale d’une barre d’outils.  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- Appelé par le framework après modification du parent du volet.  
+ Appelé par l’infrastructure après modification du parent du volet.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndOldParent*  
- Pointeur vers la fenêtre parente précédente.  
+*pWndOldParent*<br/>
+[in] Pointeur vers la fenêtre parente précédente.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

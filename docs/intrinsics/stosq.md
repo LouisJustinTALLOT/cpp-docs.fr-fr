@@ -1,5 +1,5 @@
 ---
-title: __stosq | Documents Microsoft
+title: __stosq | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332024"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715505"
 ---
 # <a name="stosq"></a>__stosq
 **Section spécifique à Microsoft**  
   
- Génère une instruction de chaîne magasin (`rep stosq`).  
+ Génère une instruction de chaîne de magasin (`rep stosq`).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,16 +41,16 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [out] `Dest`  
- La destination de l’opération.  
+*dest*<br/>
+[out] La destination de l’opération.  
   
- [in] `Data`  
- Les données à stocker.  
+*Données*<br/>
+[in] Les données à stocker.  
   
- [in] `Count`  
- La longueur du bloc de mots quadruples à écrire.  
+*Nombre*<br/>
+[in] La longueur du bloc de mots quadruples à écrire.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  

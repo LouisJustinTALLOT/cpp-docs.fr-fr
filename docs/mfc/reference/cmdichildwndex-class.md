@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc9965371de0ea75ece0cb31c7ec5187b9279cef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677689"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726711"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx, classe
 Le `CMDIChildWndEx` classe fournit les fonctionnalités d’un Windows fenêtre interface multidocument (MDI) enfant. Il étend les fonctionnalités de [CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md). L'infrastructure requiert cette classe lorsqu'une application MDI utilise certaines classes MFC.  
@@ -239,11 +239,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pControlBar*  
- Pointeur vers le volet.  
+*pControlBar*<br/>
+[in] Pointeur vers le volet.  
   
- [in] *bTail*  
- TRUE pour ajouter le volet à la fin de la liste des volets pour le Gestionnaire d’ancrage ; Sinon, FALSE.  
+*bTail*<br/>
+[in] TRUE pour ajouter le volet à la fin de la liste des volets pour le Gestionnaire d’ancrage ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet a été correctement inscrit auprès du Gestionnaire d’ancrage ; Sinon, FALSE.  
@@ -256,8 +256,8 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pControlBar*  
- Pointeur vers le volet.  
+*pControlBar*<br/>
+[in] Pointeur vers le volet.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Ajuste la disposition d’ancrage.  
@@ -267,8 +267,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hdwp*  
- Handle vers une structure de fenêtre différée.  
+*hdwp*<br/>
+[in] Handle vers une structure de fenêtre différée.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -305,14 +305,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Pointeur vers le volet.  
+*pBar*<br/>
+[in] Pointeur vers le volet.  
   
- [in] *nDockBarID*  
- L’ID du volet.  
+*nDockBarID*<br/>
+[in] L’ID du volet.  
   
- [in] *lpRect*  
- Pointeur vers un rectangle.  
+*lpRect*<br/>
+[in] Pointeur vers un rectangle.  
   
 ### <a name="remarks"></a>Notes  
  Le *lpRect* paramètre n’est pas utilisé.  
@@ -349,8 +349,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwDockStyle*  
- Spécifie les côtés de la fenêtre frame principale qui est activée. Utiliser une ou plusieurs des indicateurs suivants.  
+*dwDockStyle*<br/>
+[in] Spécifie les côtés de la fenêtre frame principale qui est activée. Utiliser une ou plusieurs des indicateurs suivants.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -371,8 +371,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwDockStyle*  
- Spécifie l’alignement d’ancrage à activer.  
+*dwDockStyle*<br/>
+[in] Spécifie l’alignement d’ancrage à activer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit ; Sinon, FALSE.  
@@ -453,8 +453,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- ID de contrôle du volet à rechercher.  
+*nID*<br/>
+[in] ID de contrôle du volet à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le volet si elle est trouvée, sinon NULL.  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pControlBar*  
- Pointeur vers le volet à insérer.  
+*pControlBar*<br/>
+[in] Pointeur vers le volet à insérer.  
   
- [in] *pTarget*  
- Pointeur vers le volet adjacent.  
+*pTarget*<br/>
+[in] Pointeur vers le volet adjacent.  
   
- [in] *exécuteront-ils*  
- Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.  
+*exécuteront-ils*<br/>
+[in] Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit, FALSE sinon.  
@@ -529,14 +529,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Le point spécifié.  
+*point*<br/>
+[in] Le point spécifié.  
   
- [in] *dwBarAlignment*  
- Spécifie le bord le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Spécifie le bord le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- TRUE si le point est proche de la bordure externe du site d’ancrage ; FALSE sinon.  
+*bOuterEdge*<br/>
+[in] TRUE si le point est proche de la bordure externe du site d’ancrage ; FALSE sinon.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le point est proche du site d’ancrage ; Sinon, FALSE.  
@@ -580,8 +580,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pFrame*  
- Pointeur vers une fenêtre mini-frame.  
+*pFrame*<br/>
+[in] Pointeur vers une fenêtre mini-frame.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit, sinon, FALSE.  
@@ -596,11 +596,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bPreview*  
- Si la valeur est TRUE, entrez le mode Aperçu avant impression. Si la valeur est FALSE, quitter le mode Aperçu avant impression.  
+*bPreview*<br/>
+[in] Si la valeur est TRUE, entrez le mode Aperçu avant impression. Si la valeur est FALSE, quitter le mode Aperçu avant impression.  
   
- [in] *pState*  
- Pointeur vers la structure d’état de l’aperçu avant impression.  
+*pState*<br/>
+[in] Pointeur vers la structure d’état de l’aperçu avant impression.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Appelé par l’infrastructure pour mettre à jour le titre du frame.  
@@ -610,8 +610,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bAddToTitle*  
- Si la valeur est TRUE, ajoutez le nom du document au titre.  
+*bAddToTitle*<br/>
+[in] Si la valeur est TRUE, ajoutez le nom du document au titre.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Retourne le volet qui contient le point donné.  
@@ -631,20 +631,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Spécifie le point, en coordonnées d’écran, à vérifier.  
+*point*<br/>
+[in] Spécifie le point, en coordonnées d’écran, à vérifier.  
   
- [in] *nSensitivity*  
- Augmenter la zone de recherche par ce montant. Un volet satisfait les critères de recherche si le point donné se trouve dans la zone accrue.  
+*nSensitivity*<br/>
+[in] Augmenter la zone de recherche par ce montant. Un volet satisfait les critères de recherche si le point donné se trouve dans la zone accrue.  
   
- [in] *bExactBar*  
- TRUE pour ignorer le *nSensitivity* paramètre ; sinon, FALSE.  
+*bExactBar*<br/>
+[in] TRUE pour ignorer le *nSensitivity* paramètre ; sinon, FALSE.  
   
- [in] *pRTCBarType*  
- Si non NULL, la méthode recherche uniquement les volets du type spécifié.  
+*pRTCBarType*<br/>
+[in] Si non NULL, la méthode recherche uniquement les volets du type spécifié.  
   
- [in] *dwAlignment*  
- Si un volet se trouve au point spécifié, ce paramètre contient le côté du volet qui a été le plus proche du point spécifié. Pour plus d'informations, consultez la section Remarques.  
+*dwAlignment*<br/>
+[in] Si un volet se trouve au point spécifié, ce paramètre contient le côté du volet qui a été le plus proche du point spécifié. Pour plus d'informations, consultez la section Remarques.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le `CBasePane`-objet dérivé qui contient le point donné, ou NULL si aucun volet a été trouvée.  
@@ -662,8 +662,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bNotify*  
- Si la valeur est TRUE, l’élément actif de la place de la fenêtre reçoit la notification de la modification de la disposition.  
+*bNotify*<br/>
+[in] Si la valeur est TRUE, l’élément actif de la place de la fenêtre reçoit la notification de la modification de la disposition.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Supprime un volet à partir du Gestionnaire d’ancrage.  
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pControlBar*  
- Pointeur vers le volet à supprimer.  
+*pControlBar*<br/>
+[in] Pointeur vers le volet à supprimer.  
   
- [in] *bDestroy*  
- Si la valeur est TRUE, le volet supprimé est détruit.  
+*bDestroy*<br/>
+[in] Si la valeur est TRUE, le volet supprimé est détruit.  
   
- [in] *bAdjustLayout*  
- Si la valeur est TRUE, ajuster la disposition d’ancrage immédiatement.  
+*bAdjustLayout*<br/>
+[in] Si la valeur est TRUE, ajuster la disposition d’ancrage immédiatement.  
   
- [in] *bAutoHide*  
- Si la valeur est TRUE, la disposition d’ancrage est liée à la liste des barres de masquage automatique. Si la valeur est FALSE, la disposition d’ancrage est liée à la liste des volets régulières.  
+*bAutoHide*<br/>
+[in] Si la valeur est TRUE, la disposition d’ancrage est liée à la liste des barres de masquage automatique. Si la valeur est FALSE, la disposition d’ancrage est liée à la liste des volets régulières.  
   
- [in] *pBarReplacement*  
- Pointeur vers un volet qui remplace le volet supprimé.  
+*pBarReplacement*<br/>
+[in] Pointeur vers un volet qui remplace le volet supprimé.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- [in] *bShow*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bShow*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Notes  
   

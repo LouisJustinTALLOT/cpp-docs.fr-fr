@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681623"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722241"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de touche d'accès rapide Windows.  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *wVirtualKeyCode*  
- Code de touche virtuelle du raccourci clavier. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h.  
+*wVirtualKeyCode*<br/>
+[out] Code de touche virtuelle du raccourci clavier. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h.  
   
- [out] *wModifiers*  
- Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification dans le raccourci clavier.  
+*wModifiers*<br/>
+[out] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification dans le raccourci clavier.  
   
  Les indicateurs de modificateur sont les suivantes :  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *wVirtualKeyCode*  
- Code de touche virtuelle du raccourci clavier. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h.  
+*wVirtualKeyCode*<br/>
+[in] Code de touche virtuelle du raccourci clavier. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h.  
   
- [in] *wModifiers*  
- Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification dans le raccourci clavier.  
+*wModifiers*<br/>
+[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification dans le raccourci clavier.  
   
  Les indicateurs de modificateur sont les suivantes :  
   

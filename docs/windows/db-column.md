@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195788"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715401"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -51,20 +51,20 @@ Numéro de colonne ordinal (`DBCOLUMNINFO` ordinale) ou nom de colonne (chaîne 
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*DbType* (facultatif)  
-OLE DB [indicateur de Type](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) pour l’entrée de la colonne.
+*DbType*  
+(Facultatif) OLE DB [indicateur de Type](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) pour l’entrée de la colonne.
 
-*précision* (facultatif)  
-La précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de la `bPrecision` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+(Facultatif) La précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de la `bPrecision` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*mise à l’échelle* (facultatif)  
-La mise à l’échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Mise à l’échelle*  
+(Facultatif) La mise à l’échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*état* (facultatif)  
-Une variable de membre permet de conserver l’état de cette colonne. L’état indique si la valeur de colonne est une valeur de données ou une autre valeur, comme NULL. Pour connaître les valeurs possibles, consultez [état](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+*status*  
+(Facultatif) Une variable de membre permet de conserver l’état de cette colonne. L’état indique si la valeur de colonne est une valeur de données ou une autre valeur, comme NULL. Pour connaître les valeurs possibles, consultez [état](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
 
-*longueur* (facultatif)  
-Une variable de membre utilisée pour conserver la taille de la colonne en octets.
+*length*  
+(Facultatif) Une variable de membre utilisée pour conserver la taille de la colonne en octets.
 
 ## <a name="remarks"></a>Notes
 

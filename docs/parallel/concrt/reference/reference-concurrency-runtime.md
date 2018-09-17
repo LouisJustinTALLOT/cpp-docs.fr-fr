@@ -1,5 +1,5 @@
 ---
-title: Référence (Runtime d’accès concurrentiel) | Documents Microsoft
+title: Référence (Runtime d’accès concurrentiel) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693450"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723227"
 ---
 # <a name="reference-concurrency-runtime"></a>Référence (runtime d'accès concurrentiel)
 Cette section contient des informations de référence pour le Runtime d’accès concurrentiel.
-**Remarque** norme du langage C++ de la réserve l’utilisation des identificateurs qui commencent par un caractère de soulignement (_) pour les implémentations telles que des bibliothèques. N'utilisez pas ces noms dans votre code. Le comportement des éléments de code, dont les noms suivent cette convention n'est pas garanti et est susceptible de changer dans les futures mises à jour. Pour ces raisons, ces éléments de code sont omis de la documentation du Runtime d’accès concurrentiel.
+
+> [!Note]
+> La norme du langage C++ réserve l’utilisation des identificateurs qui commencent par un caractère de soulignement (_) pour les implémentations telles que les bibliothèques. N'utilisez pas ces noms dans votre code. Le comportement des éléments de code, dont les noms suivent cette convention n'est pas garanti et est susceptible de changer dans les futures mises à jour. Pour ces raisons, ces éléments de code sont omis de la documentation du Runtime d’accès concurrentiel.
 
 ## <a name="in-this-section"></a>Dans cette section
+
 [accès concurrentiel Namespace](concurrency-namespace.md) l’espace de noms d’accès concurrentiel fournit des classes et des fonctions qui vous donnent accès au Runtime d’accès concurrentiel, une infrastructure de programmation simultanée pour C++. Pour plus d’informations, consultez [Runtime d’accès concurrentiel](../concurrency-runtime.md).
 
 [espace de noms std](std-namespace.md)
-[stdx espace de noms](stdx-namespace.md)
 
-
+[espace de noms stdx](stdx-namespace.md)

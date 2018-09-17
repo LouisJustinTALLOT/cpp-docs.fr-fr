@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540009"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721121"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Section spécifique à Microsoft**  
   
- Effectue une comparaison de verrouillées de 128 bits et d’échange.  
+Effectue une comparaison de verrouillées de 128 bits et d’échange.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,17 +43,17 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in, out] `Destination`  
- Pointeur vers la destination, qui est un tableau de deux entiers 64 bits considéré comme un champ de 128 bits. Les données de destination doivent être 16 octets aligné pour éviter une erreur de protection générale.  
+*Destination*<br/>
+[in, out] Pointeur vers la destination, qui est un tableau de deux entiers 64 bits considéré comme un champ de 128 bits. Les données de destination doivent être 16 octets aligné pour éviter une erreur de protection générale.  
   
- [in] `ExchangeHigh`  
- Entier 64 bits qui peut-être être échangé avec la partie haute de la destination.  
+*ExchangeHigh*<br/>
+[in] Entier 64 bits qui peut-être être échangé avec la partie haute de la destination.  
   
- [in] `ExchangeLow`  
- Entier 64 bits qui peut-être être échangé avec la partie basse de la destination.  
+*ExchangeLow*<br/>
+[in] Entier 64 bits qui peut-être être échangé avec la partie basse de la destination.  
   
- [in, out] `ComparandResult`  
- Pointeur vers un tableau de deux entiers 64 bits (considéré comme un champ de 128 bits) à comparer à la destination.  Lors de la sortie, il est remplacé par la valeur d’origine de la destination.  
+*ComparandResult*<br/>
+[in, out] Pointeur vers un tableau de deux entiers 64 bits (considéré comme un champ de 128 bits) à comparer à la destination.  Lors de la sortie, il est remplacé par la valeur d’origine de la destination.  
   
 ## <a name="return-value"></a>Valeur de retour  
  1 si le comparateur de 128 bits est égale à la valeur d’origine de la destination. `ExchangeHigh` et `ExchangeLow` remplacer la destination de 128 bits.  
@@ -128,8 +129,9 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**FIN de la section spécifique à Microsoft**  
- Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
+**FIN de la section spécifique à Microsoft**
+
+Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   

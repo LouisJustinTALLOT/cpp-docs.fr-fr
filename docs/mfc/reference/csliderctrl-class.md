@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bd20852f1dfd278d4ae58cc6c67d6047579cd08
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e06ff5301af07ff123954060053296839118d11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703961"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de curseur Windows.  
@@ -633,7 +633,7 @@ void SetThumbLength(int nLength);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *nLength*|Longueur du curseur, en pixels.|  
+|*nLength*|[in] Longueur du curseur, en pixels.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode exige que le contrôle de barre de suivi [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) style.  

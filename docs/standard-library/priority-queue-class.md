@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8e431b09d0eab84bd6b58e64f71d5f5d98b728fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199236"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714361"
 ---
 # <a name="priorityqueue-class"></a>priority_queue, classe
 
@@ -51,13 +51,13 @@ class priority_queue
 ### <a name="parameters"></a>Paramètres
 
 *Type*<br/>
- Type de données des éléments à stocker dans la classe priority_queue.
+Type de données des éléments à stocker dans la classe priority_queue.
 
 *Conteneur*<br/>
- Type du conteneur sous-jacent utilisé pour implémenter la classe priority_queue.
+Type du conteneur sous-jacent utilisé pour implémenter la classe priority_queue.
 
 *Compare*<br/>
- Type qui fournit un objet de fonction pouvant comparer deux valeurs d’éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe priority_queue. Cet argument est facultatif et le prédicat binaire `less<typename Container::value_type>` est la valeur par défaut.
+Type qui fournit un objet de fonction pouvant comparer deux valeurs d’éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe priority_queue. Cet argument est facultatif et le prédicat binaire `less<typename Container::value_type>` est la valeur par défaut.
 
 ## <a name="remarks"></a>Notes
 
@@ -253,19 +253,19 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 ### <a name="parameters"></a>Paramètres
 
 *_ comp*<br/>
- Fonction de comparaison de type **constTraits** qui est utilisée pour classer les éléments dans l’objet priority_queue (par défaut, la fonction compare du conteneur de base).
+Fonction de comparaison de type **constTraits** qui est utilisée pour classer les éléments dans l’objet priority_queue (par défaut, la fonction compare du conteneur de base).
 
 *_Cont*<br/>
- Conteneur de base dont l’objet priority_queue construit doit être une copie.
+Conteneur de base dont l’objet priority_queue construit doit être une copie.
 
 *right*<br/>
- Objet priority_queue dont le set construit doit être une copie.
+Objet priority_queue dont le set construit doit être une copie.
 
 *first*<br/>
- Position du premier élément de la plage d'éléments à copier.
+Position du premier élément de la plage d'éléments à copier.
 
 *last*<br/>
- Position du premier élément au-delà de la plage d'éléments à copier.
+Position du premier élément au-delà de la plage d'éléments à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -397,7 +397,7 @@ void push(const Type& val);
 ### <a name="parameters"></a>Paramètres
 
 *Val*<br/>
- Élément ajouté en haut du priority_queue.
+Élément ajouté en haut du priority_queue.
 
 ### <a name="remarks"></a>Notes
 

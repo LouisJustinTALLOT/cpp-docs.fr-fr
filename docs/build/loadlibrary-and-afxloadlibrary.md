@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687933"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726289"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary et AfxLoadLibrary
 
@@ -39,7 +39,7 @@ Pour les applications MFC qui chargent des DLL d’extension MFC, nous vous reco
 
 Si Windows ne peut pas charger la DLL, le processus peut tenter de récupérer à partir de l’erreur. Par exemple, le processus peut notifier l’utilisateur de l’erreur et demandez à l’utilisateur de spécifier un autre chemin d’accès à la DLL.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Veillez à spécifier le chemin d’accès complet de toute DLL. Le répertoire actif est tout d’abord recherché lors du chargement de fichiers. Si vous ne sont pas éligibles le chemin d’accès du fichier, un fichier qui n’est pas celle prévue peut être chargé. Une autre façon d’éviter ce problème consiste à l’aide de la [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) option de l’éditeur de liens.
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?

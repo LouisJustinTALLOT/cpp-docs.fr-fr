@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25e1c3fdad045b17b83f7562256592114a5c6e72
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a9b17c62c767b6665f70e91bfd04dc03379e08ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680651"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724670"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
@@ -332,8 +332,8 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *flagsSelect*  
- [in] *varChild*  
+*flagsSelect*<br/>
+[in] [in] *varChild*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -350,14 +350,14 @@ int AddProperty(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pProp*  
- Pointeur vers une propriété.  
+*pProp*<br/>
+[in] Pointeur vers une propriété.  
   
- [in] *bRedraw*  
- TRUE pour redessiner la propriété immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bRedraw*<br/>
+[in] TRUE pour redessiner la propriété immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
- [in] *bAdjustLayout*  
- TRUE pour recalculer la façon de dessiner le texte et la valeur de la propriété et dessinez la propriété ; FALSE pour utiliser des calculs existants pour dessiner la propriété. La valeur par défaut est TRUE.  
+*bAdjustLayout*<br/>
+[in] TRUE pour recalculer la façon de dessiner le texte et la valeur de la propriété et dessinez la propriété ; FALSE pour utiliser des calculs existants pour dessiner la propriété. La valeur par défaut est TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si cette méthode réussit, l’index de base zéro de la position dans le contrôle de grille de propriétés où la propriété est ajoutée ; Sinon, -1.  
@@ -447,17 +447,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwStyle*  
- Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *rect*  
- Coordonnées d’un rectangle englobant qui spécifie la taille et la position de la fenêtre, dans le client de *pParentWnd*.  
+*Rect*<br/>
+[in] Coordonnées d’un rectangle englobant qui spécifie la taille et la position de la fenêtre, dans le client de *pParentWnd*.  
   
- [in] *pParentWnd*  
- Pointeur vers la fenêtre parente. Ne doit pas être NULL.  
+*pParentWnd*<br/>
+[in] Pointeur vers la fenêtre parente. Ne doit pas être NULL.  
   
- [in] *nID*  
- L’ID de la fenêtre enfant.  
+*nID*<br/>
+[in] L’ID de la fenêtre enfant.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la fenêtre a été créée avec succès ; Sinon, FALSE.  
@@ -481,14 +481,14 @@ BOOL DeleteProperty(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pProp*  
- Pointeur vers une propriété.  
+*pProp*<br/>
+[in] Pointeur vers une propriété.  
   
- [in] *bRedraw*  
- TRUE pour redessiner le contrôle de grille de propriétés ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bRedraw*<br/>
+[in] TRUE pour redessiner le contrôle de grille de propriétés ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
- [in] *bAdjustLayout*  
- TRUE pour recalculer le dessin de texte, des images et des éléments dans le contrôle de grille de propriétés, puis dessiner le contrôle ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bAdjustLayout*<br/>
+[in] TRUE pour recalculer le dessin de texte, des images et des éléments dans le contrôle de grille de propriétés, puis dessiner le contrôle ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -517,11 +517,11 @@ virtual BOOL EditItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pProp*  
- Pointeur vers une propriété.  
+*pProp*<br/>
+[in] Pointeur vers une propriété.  
   
- [in] *lptClick*  
- Le point sur le contrôle de grille de propriétés que l’utilisateur a cliqué pour commencer l’opération de modification. Le point se trouve dans les coordonnées clientes du contrôle. La valeur par défaut est NULL.  
+*lptClick*<br/>
+[in] Le point sur le contrôle de grille de propriétés que l’utilisateur a cliqué pour commencer l’opération de modification. Le point se trouve dans les coordonnées clientes du contrôle. La valeur par défaut est NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -536,8 +536,8 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer la zone de description ; FALSE pour désactiver la zone de description. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] TRUE pour activer la zone de description ; FALSE pour désactiver la zone de description. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
  La zone de description s’affiche en bas du contrôle de grille de propriété. Par défaut, la zone de description est désactivé et non visibles.  
@@ -553,14 +553,14 @@ void EnableHeaderCtrl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer le contrôle header ; FALSE pour désactiver le contrôle header. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] TRUE pour activer le contrôle header ; FALSE pour désactiver le contrôle header. La valeur par défaut est TRUE.  
   
- [in] *lpszLeftColumn*  
- Le titre de la colonne de gauche du contrôle header. La valeur par défaut est **propriété**.  
+*lpszLeftColumn*<br/>
+[in] Le titre de la colonne de gauche du contrôle header. La valeur par défaut est **propriété**.  
   
- [in] *lpszRightColumn*  
- Le titre de la colonne de droite du contrôle header. La valeur par défaut est **valeur**.  
+*lpszRightColumn*<br/>
+[in] Le titre de la colonne de droite du contrôle header. La valeur par défaut est **valeur**.  
   
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
  Appelé par le framework lorsque l’utilisateur termine la modification d’une propriété.  
@@ -570,8 +570,8 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bUpdateData*  
- TRUE pour spécifier que les données de propriété modifiées doivent être validées lorsque l’opération de modification est terminée ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bUpdateData*<br/>
+[in] TRUE pour spécifier que les données de propriété modifiées doivent être validées lorsque l’opération de modification est terminée ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’opération de modification est correctement terminée ; FALSE si les données de la propriété modifiée ne sont pas valides ou si l’opération de modification doit continuer.  
@@ -588,11 +588,11 @@ void EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pProp*  
- Pointeur vers une propriété.  
+*pProp*<br/>
+[in] Pointeur vers une propriété.  
   
- [in] *bExpandParents*  
- TRUE pour développer les éléments parents pour afficher la propriété spécifiée ; Sinon, FALSE. La valeur par défaut est FALSE.  
+*bExpandParents*<br/>
+[in] TRUE pour développer les éléments parents pour afficher la propriété spécifiée ; Sinon, FALSE. La valeur par défaut est FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -604,8 +604,8 @@ void ExpandAll(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bExpand*  
- TRUE pour développer tous les nœuds ; FALSE pour réduire tous les nœuds. La valeur par défaut est TRUE.  
+*bExpand*<br/>
+[in] TRUE pour développer tous les nœuds ; FALSE pour réduire tous les nœuds. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -619,11 +619,11 @@ CMFCPropertyGridProperty* FindItemByData(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwData*  
- Une valeur DWORD.  
+*dwData*<br/>
+[in] Une valeur DWORD.  
   
- [in] *bSearchSubItems*  
- TRUE pour rechercher des sous-éléments de propriété ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bSearchSubItems*<br/>
+[in] TRUE pour rechercher des sous-éléments de propriété ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers l’objet de propriété associée si cette méthode réussit ; Sinon, NULL.  
@@ -669,8 +669,8 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *varChild*  
- [in] *pszHelp*  
+*varChild*<br/>
+[in] [in] *pszHelp*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -687,8 +687,8 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pszHelpFile*  
- [in] *varChild*  
+*pszHelpFile*<br/>
+[in] [in] *varChild*  
  [in] *pidTopic*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -705,8 +705,8 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *varChild*  
- [in] *pszKeyboardShortcut*  
+*varChild*<br/>
+[in] [in] *pszKeyboardShortcut*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -776,26 +776,26 @@ void GetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *clrBackground*  
- La couleur d’arrière-plan de valeurs de propriété.  
+*clrBackground*<br/>
+[out] La couleur d’arrière-plan de valeurs de propriété.  
   
- [out] *clrText*  
- Couleur de texte de valeur de propriété et les noms de propriété.  
+*clrText*<br/>
+[out] Couleur de texte de valeur de propriété et les noms de propriété.  
   
- [out] *clrGroupBackground*  
- La couleur d’arrière-plan d’un groupe de propriétés.  
+*clrGroupBackground*<br/>
+[out] La couleur d’arrière-plan d’un groupe de propriétés.  
   
- [out] *clrGroupText*  
- La couleur du texte dans le groupe de propriétés.  
+*clrGroupText*<br/>
+[out] La couleur du texte dans le groupe de propriétés.  
   
- [out] *clrDescriptionBackground*  
- La couleur d’arrière-plan de la zone de description.  
+*clrDescriptionBackground*<br/>
+[out] La couleur d’arrière-plan de la zone de description.  
   
- [out] *clrDescriptionText*  
- La couleur du texte dans la zone de description.  
+*clrDescriptionText*<br/>
+[out] La couleur du texte dans la zone de description.  
   
- [out] *clrLine*  
- La couleur des lignes sont dessinées entre les propriétés.  
+*clrLine*<br/>
+[out] La couleur des lignes sont dessinées entre les propriétés.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez le [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors) méthode pour définir des couleurs personnalisées.  
@@ -883,8 +883,8 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nIndex*  
- Index de base zéro d’un élément de contrôle de grille de propriétés.  
+*nIndex*<br/>
+[in] Index de base zéro d’un élément de contrôle de grille de propriétés.  
   
  Cette méthode déclare si le *nIndex* paramètre est inférieur à zéro ou supérieur ou égal au nombre de propriétés.  
   
@@ -939,8 +939,8 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nBar*  
- L’orientation de la barre de défilement, ce qui doit être SB_VERT.  
+*nBar*<br/>
+[in] L’orientation de la barre de défilement, ce qui doit être SB_VERT.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers une barre d’objet, ou NULL s’il n’existe aucune barre de défilement ou l’orientation de barre de défilement de défilement est SB_HORZ.  
@@ -972,14 +972,14 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pt*  
- Un point, en coordonnées clientes.  
+*pt*<br/>
+[in] Un point, en coordonnées clientes.  
   
- [in, out] *pnArea*  
- Un pointeur vers un `ClickArea` variable. Lorsque cette méthode est retournée, la variable indique la *zone de propriété* qui contient le point spécifié. Pour plus d’informations sur une zone de propriété, consultez la section Notes.  
+*pnArea*<br/>
+[in, out] Un pointeur vers un `ClickArea` variable. Lorsque cette méthode est retournée, la variable indique la *zone de propriété* qui contient le point spécifié. Pour plus d’informations sur une zone de propriété, consultez la section Notes.  
   
- [in] *bPropsOnly*  
- TRUE pour tester uniquement la zone de propriété ; FALSE pour tester le *zone description* si le point spécifié ne se trouve pas dans la zone de propriété. La valeur par défaut est FALSE. Pour plus d’informations sur la zone de description, consultez la section Notes.  
+*bPropsOnly*<br/>
+[in] TRUE pour tester uniquement la zone de propriété ; FALSE pour tester le *zone description* si le point spécifié ne se trouve pas dans la zone de propriété. La valeur par défaut est FALSE. Pour plus d’informations sur la zone de description, consultez la section Notes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si le *bPropsOnly* paramètre a la valeur TRUE et le point spécifié se trouve dans une zone de propriété, la valeur de retour est un pointeur vers l’objet de propriété correspondant. En outre, le *pnArea* est affectée à la partie qui contient le point spécifié. Sinon, la valeur de retour est NULL et la *pnArea* paramètre n’est pas modifié.  
@@ -1127,11 +1127,11 @@ void MarkModifiedProperties(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bMark*  
- True pour afficher les propriétés de style gras ; modifiées FALSE pour afficher les propriétés modifiées dans le style Normal. La valeur par défaut est TRUE.  
+*bMark*<br/>
+[in] True pour afficher les propriétés de style gras ; modifiées FALSE pour afficher les propriétés modifiées dans le style Normal. La valeur par défaut est TRUE.  
   
- [in] *bRedraw*  
- True pour redessiner le contrôle de grille de propriétés immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bRedraw*<br/>
+[in] True pour redessiner le contrôle de grille de propriétés immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1148,8 +1148,8 @@ virtual void OnChangeSelection(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pNewSel*|Pointeur vers la propriété nouvellement sélectionnée.|  
-|[in] *pOldSel*|Pointeur vers la propriété précédemment sélectionnée.|  
+|*pNewSel*|[in] Pointeur vers la propriété nouvellement sélectionnée.|  
+|*pOldSel*|[in] Pointeur vers la propriété précédemment sélectionnée.|  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette méthode ne fait rien.  
@@ -1162,8 +1162,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Un point, en coordonnées clientes.  
+*point*<br/>
+[in] Un point, en coordonnées clientes.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode met à jour la valeur de propriété actuelle.  
@@ -1176,8 +1176,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1191,11 +1191,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Rectangle qui spécifie l’emplacement où dessiner la zone de description.  
+*Rect*<br/>
+[in] Rectangle qui spécifie l’emplacement où dessiner la zone de description.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez le [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) méthode pour afficher la zone de description.  
@@ -1208,8 +1208,8 @@ virtual void OnDrawList(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1223,11 +1223,11 @@ virtual int OnDrawProperty(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *pProp*  
- Pointeur vers un objet de propriété.  
+*pProp*<br/>
+[in] Pointeur vers un objet de propriété.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1242,8 +1242,8 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pProp*  
- Pointeur vers un objet de propriété dont la valeur a changé.  
+*pProp*<br/>
+[in] Pointeur vers un objet de propriété dont la valeur a changé.  
   
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode envoie le [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) message au propriétaire du contrôle de grille de propriétés.  
@@ -1274,8 +1274,8 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bRedraw*  
- TRUE pour redessiner la liste de propriétés ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bRedraw*<br/>
+[in] TRUE pour redessiner la liste de propriétés ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1287,8 +1287,8 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- TRUE pour définir le mode alphabétique ; Mode alphabétique réinitialisation FALSE. La valeur par défaut est TRUE.  
+*bSet*<br/>
+[in] TRUE pour définir le mode alphabétique ; Mode alphabétique réinitialisation FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
  Lorsque le contrôle de grille de propriétés est en mode alphabétique, le contrôle trie toutes les propriétés qu’il contient par leur nom de propriété.  
@@ -1303,11 +1303,11 @@ void SetBoolLabels(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszTrue*  
- La chaîne de texte à afficher pour la valeur booléenne true.  
+*lpszTrue*<br/>
+[in] La chaîne de texte à afficher pour la valeur booléenne true.  
   
- [in] *lpszFalse*  
- La chaîne de texte à afficher pour la valeur booléenne false.  
+*lpszFalse*<br/>
+[in] La chaîne de texte à afficher pour la valeur booléenne false.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1321,11 +1321,11 @@ void SetCurSel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pProp*  
- Pointeur vers un objet de propriété.  
+*pProp*<br/>
+[in] Pointeur vers un objet de propriété.  
   
- [in] *bRedraw*  
- True pour redessiner le contrôle de grille de propriétés immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bRedraw*<br/>
+[in] True pour redessiner le contrôle de grille de propriétés immédiatement ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour annuler la sélection de l’élément actuel dans le contrôle de grille de propriétés, puis sélectionnez l’élément qui correspond à la propriété spécifiée.  
@@ -1345,26 +1345,26 @@ void SetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *clrBackground*  
- La couleur d’arrière-plan de valeurs de propriété.  
+*clrBackground*<br/>
+[in] La couleur d’arrière-plan de valeurs de propriété.  
   
- [in] *clrText*  
- Couleur de texte de valeur de propriété et les noms de propriété.  
+*clrText*<br/>
+[in] Couleur de texte de valeur de propriété et les noms de propriété.  
   
- [in] *clrGroupBackground*  
- La couleur d’arrière-plan d’un groupe de propriétés.  
+*clrGroupBackground*<br/>
+[in] La couleur d’arrière-plan d’un groupe de propriétés.  
   
- [in] *clrGroupText*  
- La nouvelle couleur de texte de groupe de propriétés.  
+*clrGroupText*<br/>
+[in] La nouvelle couleur de texte de groupe de propriétés.  
   
- [in] *clrDescriptionBackground*  
- La couleur d’arrière-plan de la zone de description.  
+*clrDescriptionBackground*<br/>
+[in] La couleur d’arrière-plan de la zone de description.  
   
- [in] *clrDescriptionText*  
- La couleur du texte dans la zone de description.  
+*clrDescriptionText*<br/>
+[in] La couleur du texte dans la zone de description.  
   
- [in] *clrLine*  
- La couleur des lignes sont dessinées entre les propriétés.  
+*clrLine*<br/>
+[in] La couleur des lignes sont dessinées entre les propriétés.  
   
 ### <a name="remarks"></a>Notes  
  Pour n’importe quel paramètre, spécifiez le `((COLORREF)-1)` de couleur à utiliser la couleur par défaut pour cet élément de la propriété du contrôle de grille.  
@@ -1379,8 +1379,8 @@ void SetDescriptionRows(int nDescRows);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nDescRows*  
- Le nombre de lignes à afficher dans la description de la propriété.  
+*nDescRows*<br/>
+[in] Le nombre de lignes à afficher dans la description de la propriété.  
   
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  Spécifie s’il faut afficher la largeur totale du nom de catégorie pour un groupe de propriétés dans le contrôle de grille de propriétés actuel.  
@@ -1392,11 +1392,11 @@ void SetGroupNameFullWidth(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bGroupNameFullWidth*  
- Valeur TRUE pour afficher la largeur complète du nom de catégorie, quel que soit la largeur de la colonne de nom de propriété. FALSE pour limiter la largeur de la largeur de la colonne de nom de propriété, le nom de catégorie. La valeur par défaut est TRUE.  
+*bGroupNameFullWidth*<br/>
+[in] Valeur TRUE pour afficher la largeur complète du nom de catégorie, quel que soit la largeur de la colonne de nom de propriété. FALSE pour limiter la largeur de la largeur de la colonne de nom de propriété, le nom de catégorie. La valeur par défaut est TRUE.  
   
- [in] *bRedraw*  
- True pour la mise à jour le contrôle de grille de propriétés immédiatement ; FALSE pour mettre à jour le contrôle lors de la prochaine redessiner l’événement se produit. La valeur par défaut est TRUE.  
+*bRedraw*<br/>
+[in] True pour la mise à jour le contrôle de grille de propriétés immédiatement ; FALSE pour mettre à jour le contrôle lors de la prochaine redessiner l’événement se produit. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
  Le contrôle de grille de propriétés se compose d’un redimensionnable *nom de la propriété* colonne et une *valeur de propriété* colonne. La fin de la colonne nom est également le début de la colonne de valeur. Pour redimensionner les colonnes, faites glisser la bordure entre les colonnes.  
@@ -1411,8 +1411,8 @@ void SetListDelimiter(TCHAR c);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *c*  
- Un caractère comme un délimiteur.  
+*c*<br/>
+[in] Un caractère comme un délimiteur.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour définir un caractère délimiteur dans une liste de valeurs de propriété qui sont utilisés dans le [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) constructeur. Dans ce constructeur, définissez le *bIsValueList* paramètre sur TRUE.  
@@ -1427,8 +1427,8 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShowDragContext*  
- TRUE pour redessiner les colonnes nom et valeur pendant une opération de redimensionnement ; La valeur FALSE à redessiner les colonnes une fois l’opération glisser est terminée. La valeur par défaut est TRUE.  
+*bShowDragContext*<br/>
+[in] TRUE pour redessiner les colonnes nom et valeur pendant une opération de redimensionnement ; La valeur FALSE à redessiner les colonnes une fois l’opération glisser est terminée. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
  L’utilisateur peut redimensionner les colonnes nom et la valeur d’un contrôle de grille de propriétés en faisant glisser la barre de fractionnement est entre les colonnes. Si le contexte de glissement est affiché, les colonnes nom et valeur sont redimensionnées tant que l’utilisateur fait glisser la barre de fractionnement. Sinon, la barre de fractionnement se déplace, mais les colonnes ne sont pas redessinés jusqu'à ce que l’opération glisser est terminée.  
@@ -1441,8 +1441,8 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSet*  
- True pour définir la grille des propriétés contrôlent le style qui est utilisé dans Visual Studio .NET ; Sinon, FALSE. La valeur par défaut est TRUE.  
+*bSet*<br/>
+[in] True pour définir la grille des propriétés contrôlent le style qui est utilisé dans Visual Studio .NET ; Sinon, FALSE. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -1454,8 +1454,8 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *couleur*  
- Une valeur de couleur RVB.  
+*Couleur*<br/>
+[in] Une valeur de couleur RVB.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode déclare en mode débogage si la propriété actuellement sélectionnée du contrôle de grille de propriété n’est pas une propriété de couleur.  
@@ -1471,7 +1471,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *pProp*|Pointeur vers une propriété. Ce paramètre n'est pas utilisé.|  
+|*pProp*|[in] Pointeur vers une propriété. Ce paramètre n'est pas utilisé.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Toujours TRUE.  

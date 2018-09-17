@@ -18,14 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3702dcafbc93e34852d5d8fd4a0f1d3c222ea1a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539261"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706951"
 ---
 # <a name="rdtscp"></a>__rdtscp
+
 **Section spécifique à Microsoft**  
   
  Génère le `rdtscp` écrit des instructions, `TSC_AUX[31:0`] à la mémoire et retourne le compteur d’horodatage 64 bits (`TSC)` résultat.  
@@ -39,8 +40,8 @@ unsigned __int64 __rdtscp(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [out] `Aux`  
- Pointeur vers un emplacement qui contiendra le contenu du Registre spécifiques à l’ordinateur `TSC_AUX[31:0]`.  
+*Aux*<br/>
+[out] Pointeur vers un emplacement qui contiendra le contenu du Registre spécifiques à l’ordinateur `TSC_AUX[31:0]`.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Un nombre de cycles d’entier non signé 64 bits.  
@@ -84,7 +85,8 @@ TSC_AUX was 0
 ```  
   
 **FIN de la section spécifique à Microsoft**  
- Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
+
+Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
   
 ## <a name="see-also"></a>Voir aussi  
  [__rdtsc](../intrinsics/rdtsc.md)   

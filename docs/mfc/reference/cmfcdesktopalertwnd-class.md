@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efe15f53cda42089b35d620ae9965050595121c7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720224"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 Le `CMFCDesktopAlertWnd` classe implémente les fonctionnalités d’une boîte de dialogue non modale qui apparaît à l’écran pour informer l’utilisateur sur un événement.  
@@ -166,20 +166,20 @@ virtual BOOL Create(
  [in] [out] *pWndOwner*  
  Spécifie le propriétaire de la fenêtre d’alerte. Ce propriétaire recevra ensuite toutes les notifications de la fenêtre d’alerte de bureau. Cette valeur ne peut pas être NULL.  
   
- [in] *uiDlgResID*  
- Spécifie l’ID de ressource de la fenêtre d’alerte.  
+*uiDlgResID*<br/>
+[in] Spécifie l’ID de ressource de la fenêtre d’alerte.  
   
- [in] *hMenu*  
- Spécifie le menu qui s’affiche lorsque l’utilisateur clique sur le bouton de menu. Si NULL, le bouton de menu n’est pas affiché.  
+*hMenu*<br/>
+[in] Spécifie le menu qui s’affiche lorsque l’utilisateur clique sur le bouton de menu. Si NULL, le bouton de menu n’est pas affiché.  
   
- [in] *ptPos*  
- Spécifie la position initiale, où la fenêtre d’alerte s’affiche, à l’aide des coordonnées d’écran. Si ce paramètre est (-1, -1), la fenêtre d’alerte s’affiche dans le coin inférieur droit de l’écran.  
+*ptPos*<br/>
+[in] Spécifie la position initiale, où la fenêtre d’alerte s’affiche, à l’aide des coordonnées d’écran. Si ce paramètre est (-1, -1), la fenêtre d’alerte s’affiche dans le coin inférieur droit de l’écran.  
   
- [in] *pRTIDlgBar*  
- Informations de classe runtime pour une classe de boîte de dialogue personnalisée qui couvre la zone cliente de la fenêtre d’alerte.  
+*pRTIDlgBar*<br/>
+[in] Informations de classe runtime pour une classe de boîte de dialogue personnalisée qui couvre la zone cliente de la fenêtre d’alerte.  
   
- [in] *params*  
- Spécifie les paramètres qui sont utilisés pour créer une fenêtre d’alerte.  
+*params*<br/>
+[in] Spécifie les paramètres qui sont utilisés pour créer une fenêtre d’alerte.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la fenêtre d’alerte a été créée avec succès ; Sinon, FALSE.  
@@ -311,8 +311,8 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- Ce paramètre n'est pas utilisé.  
+*uiCmdID*<br/>
+[in] Ce paramètre n’est pas utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Toujours la valeur FALSE.  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *wParam*  
- [in] *lParam*  
+*wParam*<br/>
+[in] [in] *lParam*  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -371,8 +371,8 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nSpeed*  
- Spécifie la vitesse d’animation nouvelle, en millisecondes.  
+*nSpeed*<br/>
+[in] Spécifie la vitesse d’animation nouvelle, en millisecondes.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour définir la vitesse d’animation de la fenêtre d’alerte. La vitesse d’animation par défaut est 30 millisecondes.  
@@ -385,8 +385,8 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *type*  
- Spécifie le type d’animation.  
+*type*<br/>
+[in] Spécifie le type d’animation.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour définir le type d’animation. Vous pouvez spécifier l'une des valeurs suivantes :  
@@ -409,8 +409,8 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *Nintervalle*  
- La durée, en millisecondes, qui doit s’écouler avant la fenêtre d’alerte se ferme automatiquement.  
+*Nintervalle*<br/>
+[in] La durée, en millisecondes, qui doit s’écouler avant la fenêtre d’alerte se ferme automatiquement.  
   
 ### <a name="remarks"></a>Notes  
  La fenêtre d’alerte est automatiquement fermée après l’heure spécifiée si l’utilisateur n’interagit pas avec la fenêtre.  
@@ -423,8 +423,8 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSmallCaption*  
- TRUE pour spécifier que la fenêtre d’alerte affiche une barre de titre réduite ; Sinon, FALSE pour spécifier que la fenêtre d’alerte affiche une légende de la taille normale.  
+*bSmallCaption*<br/>
+[in] TRUE pour spécifier que la fenêtre d’alerte affiche une barre de titre réduite ; Sinon, FALSE pour spécifier que la fenêtre d’alerte affiche une légende de la taille normale.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour afficher la légende de petite ou de taille normale. Par défaut, la barre de titre réduite est 7 pixels de haut. Vous pouvez obtenir la taille de la légende régulière en appelant la fonction Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
@@ -437,8 +437,8 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nTransparency*  
- Spécifie le niveau de transparence. Cette valeur doit être comprise entre 0 et 255 inclus. Plus la valeur, la plus opaque la fenêtre.  
+*nTransparency*<br/>
+[in] Spécifie le niveau de transparence. Cette valeur doit être comprise entre 0 et 255 inclus. Plus la valeur, la plus opaque la fenêtre.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction pour définir le niveau de transparence de la fenêtre contextuelle.  

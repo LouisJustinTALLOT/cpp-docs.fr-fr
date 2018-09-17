@@ -1,5 +1,5 @@
 ---
-title: -(Pilote Windows NT en Mode noyau) | Documents Microsoft
+title: -(Pilote Windows NT en Mode noyau) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66291391ed38c27ce7446eccc6fca227c7c2c2d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ae096c502cdc94d47a516caf4c29ac4f3eceb4b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373112"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705547"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Pilote Windows NT en mode noyau)
 
@@ -33,15 +33,15 @@ ms.locfileid: "32373112"
 
 ## <a name="remarks"></a>Notes
 
-Utilisez le **c** option de l’éditeur de liens pour générer un pilote de mode noyau Windows NT.
+Utilisez le **/DRIVER** option de l’éditeur de liens pour générer un pilote de mode noyau Windows NT.
 
-**/DRIVER:UPONLY** entraîne l’éditeur de liens ajouter la **IMAGE_FILE_UP_SYSTEM_ONLY figurant** les caractéristiques dans l’en-tête de sortie pour spécifier qu’il s’agit d’un monoprocesseur pilote au bit. Le système d’exploitation refuse de chargement d’un pilote sur un système multiprocesseur de (MP).
+**UPONLY** entraîne l’éditeur de liens ajouter le **IMAGE_FILE_UP_SYSTEM_ONLY** aux caractéristiques dans l’en-tête de sortie pour spécifier qu’il s’agit d’un pilote uniprocesseur (UP). Le système d’exploitation refuse de charger un pilote monoprocesseur sur un système multiprocesseur de (MP).
 
-**/ Driver : WDM** entraîne l’éditeur de liens définir le **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit dans le champ DllCharacteristics de l’en-tête facultatif.
+**/ Driver : WDM** entraîne l’éditeur de liens définir le **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit dans le champ DllCharacteristics facultatif de l’en-tête.
 
-Si **c** n’est pas spécifié, ces bits ne sont pas définis par l’éditeur de liens.
+Si **/DRIVER** n’est pas spécifié, ces bits ne sont pas définis par l’éditeur de liens.
 
-Si **c** est spécifié :
+Si **/DRIVER** est spécifié :
 
 - **/ Fixed : no** est en vigueur. Pour plus d’informations, consultez l’article [/BASE (Adresse de base fixe)](../../build/reference/fixed-fixed-base-address.md).
 
@@ -55,7 +55,7 @@ Si **c** est spécifié :
 
 1. Cliquez sur le **système** page de propriétés.
 
-1. Modifier la **pilote** propriété.
+1. Modifier le **pilote** propriété.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 
@@ -63,5 +63,5 @@ Si **c** est spécifié :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)

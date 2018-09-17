@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205241f2306885800813597568ed9ae8cf3858b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c2b1dc80cec8ba18522d8238752857105993074
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598231"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720726"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configuration des programmes pour Windows XP
 
 Étant donné que Visual Studio prend en charge plusieurs ensembles d’outils de plateforme, vous pouvez cibler les systèmes d’exploitation et les bibliothèques runtime qui ne sont pas pris en charge par l’ensemble d’outils par défaut. Par exemple, en passant l’ensemble d’outils de plateforme, vous pouvez utiliser C ++ 11, C ++ 14 et les améliorations de langage C ++ 17 pris en charge par le compilateur Visual C++ dans Visual Studio pour créer des applications qui ciblent Windows XP et Windows Server 2003. Vous pouvez également utiliser des ensembles d’outils de plateforme plus anciens pour maintenir le code hérité compatible binaire et quand même tirer parti des dernières fonctionnalités de l’IDE Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installer l’ensemble d’outils de plateforme Windows XP
+
 Pour obtenir les outils de plateforme et composants pour cibler Windows XP et Windows Server 2003 dans Visual Studio 2017, exécutez le programme d’installation Visual Studio. Lorsque vous installez initialement Visual Studio ou lorsque vous choisissez **modifier** pour modifier une installation existante, assurez-vous que le **développement Desktop en C++** charge de travail est sélectionné. Dans la liste des composants facultatifs pour cette charge de travail, choisissez **prise en charge de Windows XP pour C++**, puis choisissez **installer** ou **modifier**.
 
 ## <a name="windows-xp-targeting-experience"></a>Ciblage de Windows XP
@@ -72,7 +73,7 @@ En raison de différences de prise en charge de plateforme et de bibliothèque, 
 
 - **Débogage de DirectX graphics**
 
-     Étant donné que le débogueur graphique ne prend pas en charge l’API de 9 Direct3D, il ne peut pas servir à déboguer des applications qui utilisent Direct3D sur Windows XP ou Windows Server 2003. Cependant, si l'application implémente un autre convertisseur qui utilise les API Direct3D 10 ou Direct3D 11, le débogueur Graphics peut être utilisé pour diagnostiquer les problèmes liés à l'utilisation de ces API.
+   Étant donné que le débogueur graphique ne prend pas en charge l’API de 9 Direct3D, il ne peut pas servir à déboguer des applications qui utilisent Direct3D sur Windows XP ou Windows Server 2003. Cependant, si l'application implémente un autre convertisseur qui utilise les API Direct3D 10 ou Direct3D 11, le débogueur Graphics peut être utilisé pour diagnostiquer les problèmes liés à l'utilisation de ces API.
 
 - **Développement HLSL**
 

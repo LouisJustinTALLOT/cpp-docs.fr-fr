@@ -13,12 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: ce4c1a0b7fa1771cf80437d27ed9dd89baa5f220
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9990ecb01ea6de68713cedc49fbddadeb9ad7c30
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956961"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726347"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt;, opérateurs
 
@@ -40,8 +40,8 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-*TN*  
- Type du Nième élément de tuple.
+*TN*<br/>
+Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
 
@@ -105,8 +105,8 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-*TN*  
- Type du Nième élément de tuple.
+*TN*<br/>
+Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
 
@@ -170,8 +170,8 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-*TN*  
- Type du Nième élément de tuple.
+*TN*<br/>
+Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
 
@@ -235,8 +235,8 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-*TN*  
- Type du Nième élément de tuple.
+*TN*<br/>
+Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
 
@@ -300,8 +300,8 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-*TN*  
- Type du Nième élément de tuple.
+*TN*<br/>
+Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
 
@@ -365,8 +365,8 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-*TN*  
- Type du Nième élément de tuple.
+*TN*<br/>
+Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
 

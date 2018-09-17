@@ -1,5 +1,5 @@
 ---
-title: . Fichiers exp comme entrée de l’éditeur de liens | Documents Microsoft
+title: . Fichiers exp en tant qu’entrée de l’éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9b5c118e81372bd57810a9472526909ed21f765
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4badc93f38d5ce76dcc294ad4ae216c8e3f6454c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371097"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724007"
 ---
 # <a name="exp-files-as-linker-input"></a>Fichiers .exp en tant qu'entrée de l'Éditeur de liens
-Fichiers d’exportation (.exp) contiennent des informations sur les éléments de données et des fonctions exportées. Quand LIB crée une bibliothèque d’importation, il crée également un fichier .exp. Vous utilisez le fichier .exp lorsque vous liez un programme qui exporte vers et importe à partir d’un autre programme, directement ou indirectement. Si vous liez un fichier .exp, LINK ne crée pas une bibliothèque d’importation, car il suppose que LIB déjà créé une. Pour plus d’informations sur les fichiers .exp et les bibliothèques d’importation, consultez [utilisation de bibliothèques d’importation et exportation de fichiers](../../build/reference/working-with-import-libraries-and-export-files.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fichiers d’entrée LINK](../../build/reference/link-input-files.md)   
- [Options de l’éditeur de liens](../../build/reference/linker-options.md)
+
+Fichiers d’exportation (.exp) contiennent des informations sur les éléments de données et des fonctions exportées. Quand LIB crée une bibliothèque d’importation, il crée également un fichier .exp. Vous utilisez le fichier .exp lorsque vous liez un programme qui les exporte vers et importe à partir d’un autre programme, directement ou indirectement. Si vous liez un fichier .exp, LINK ne crée pas une bibliothèque d’importation, parce qu’il suppose que LIB déjà créé une. Pour plus d’informations sur les fichiers .exp et les bibliothèques d’importation, consultez [utilisation de bibliothèques d’importation et exportation de fichiers](../../build/reference/working-with-import-libraries-and-export-files.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Fichiers d’entrée LINK](../../build/reference/link-input-files.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)

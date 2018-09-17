@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa004d449190003f6438744c09c1c8023a0cbda3
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314428"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714445"
 ---
 # <a name="arrays-c-component-extensions"></a>Tableaux (extensions du composant C++)
 
@@ -62,12 +62,14 @@ Le premier exemple de la syntaxe de la **ref nouvelle** mot clé d’agrégation
     {initialization-list [,...]}
 ```
 
-*qualificateurs* [facultatif] un ou plusieurs de ces spécificateurs de classe de stockage : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statique](../cpp/static-members-cpp.md).
+*qualificateurs*<br/>
+(Facultatif) Un ou plusieurs de ces spécificateurs de classe de stockage : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statique](../cpp/static-members-cpp.md).
 
 *type de tableau*  
 Le type de la variable de tableau. Les types valides sont les classes Windows Runtime et types fondamentaux, les classes ref structs, les classes de valeur et les structures et des pointeurs natifs (`type*`).
 
-*rang* [facultatif] le nombre de dimensions du tableau. Doit être 1.
+*rank*<br/>
+(Facultatif) Le nombre de dimensions du tableau. Doit être 1.
 
 *identifier*  
 Le nom de la variable de tableau.
@@ -75,7 +77,8 @@ Le nom de la variable de tableau.
 *type de l’initialisation*  
 Le type des valeurs qui initialiser le tableau. En règle générale, *de type tableau* et *-type d’initialisation* sont du même type. Toutefois, les types peuvent être différents s’il existe une conversion à partir de *-type d’initialisation* à *de type tableau*— par exemple, si *-type d’initialisation* est dérivée de *de type tableau*.
 
-*liste d’initialisation* [facultatif] est une liste délimitée par des virgules de valeurs dans des crochets qui initialise les éléments du tableau. Par exemple, si *liste de taille de rang* ont été `(3)`, qui déclare un tableau unidimensionnel de 3 éléments, *liste d’initialisation* peut être `{1,2,3}`.
+*liste d’initialisation*<br/>
+(Facultatif) Une liste délimitée par des virgules des valeurs entre accolades qui initialisent les éléments du tableau. Par exemple, si *liste de taille de rang* ont été `(3)`, qui déclare un tableau unidimensionnel de 3 éléments, *liste d’initialisation* peut être `{1,2,3}`.
 
 ### <a name="remarks"></a>Notes
 
@@ -115,12 +118,14 @@ Le premier exemple de la syntaxe de la **gcnew** mot clé pour allouer un tablea
     {initialization-list [,...]}
 ```
 
-*qualificateurs* [facultatif] un ou plusieurs de ces spécificateurs de classe de stockage : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statique](../cpp/static-members-cpp.md).
+*qualificateurs*<br/>
+(Facultatif) Un ou plusieurs de ces spécificateurs de classe de stockage : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statique](../cpp/static-members-cpp.md).
 
 *type de tableau*  
 Le type de la variable de tableau. Les types valides sont les classes Windows Runtime et les types fondamentaux, les classes ref et les structs, valeur classes et structs, les pointeurs natifs (`type*`) et les types POD (anciennes données brutes) natifs.
 
-*rang* [facultatif] le nombre de dimensions du tableau. La valeur par défaut est 1 ; la valeur maximale est 32. Chaque dimension du tableau lui-même est un tableau.
+*rank*<br/>
+(Facultatif) Le nombre de dimensions du tableau. La valeur par défaut est 1 ; la valeur maximale est 32. Chaque dimension du tableau lui-même est un tableau.
 
 *identifier*  
 Le nom de la variable de tableau.
@@ -131,7 +136,8 @@ Le type des valeurs qui initialiser le tableau. En règle générale, *de type t
 *liste de taille de rang*  
 Une liste délimitée par des virgules de la taille de chaque dimension du tableau. Ou bien, si le *-liste d’initialisation* paramètre est spécifié, le compilateur peut déduire la taille de chaque dimension et *liste de taille de rang* peut être omis.
 
-*liste d’initialisation* [facultatif] est une liste délimitée par des virgules de valeurs dans des crochets qui initialise les éléments du tableau. Ou une liste délimitée par des virgules d’imbriquée *-liste d’initialisation* éléments qui initialisent les éléments dans un tableau multidimensionnel.
+*liste d’initialisation*<br/>
+(Facultatif) Une liste délimitée par des virgules des valeurs entre accolades qui initialisent les éléments du tableau. Ou une liste délimitée par des virgules d’imbriquée *-liste d’initialisation* éléments qui initialisent les éléments dans un tableau multidimensionnel.
 
 Par exemple, si *liste de taille de rang* ont été `(3)`, qui déclare un tableau unidimensionnel de 3 éléments, *liste d’initialisation* peut être `{1,2,3}`. Si *liste de taille de rang* ont été `(3,2,4)`, qui déclare un tableau tridimensionnel de 3 éléments dans la première dimension, 2 éléments dans la seconde et 4 éléments dans la troisième, *-liste d’initialisation* peut être `{{1,2,3},{0,0},{-5,10,-21,99}}`.)
 

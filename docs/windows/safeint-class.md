@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75c5e4df92cf23198d7225dfe337a5c82ecf5596
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b765f6393b9bd2d632539abb5fb7cd17c29297b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609202"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701751"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 
@@ -45,9 +45,9 @@ class SafeInt;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|[in] *rhs*|Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes.|
-|[in] *je*|Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes.|
-|[in] *bits*|Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes.|
+|*terme de droite*|[in] Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes.|
+|*i*|[in] Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes.|
+|*Bits*|[in] Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes.|
 
 ## <a name="members"></a>Membres
 

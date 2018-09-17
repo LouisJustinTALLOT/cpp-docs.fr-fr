@@ -35,16 +35,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02d2f75a9abbba44bd1900e2410ff73cf75cbb72
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c2780697c1a50e15e170f2096a2841e2c50d844a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466297"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724683"
 ---
 # <a name="try-except-statement"></a>try-except, instruction
 
-**Section spécifique à Microsoft**  
+**Section spécifique à Microsoft**
+
 Le **essayez-sauf** instruction est une extension Microsoft C et langages C++ qui prend en charge de gestion des exceptions structurées.  
 
 ## <a name="syntax"></a>Syntaxe  

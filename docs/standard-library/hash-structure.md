@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82684ac8f2dcd0b8e1b76f04ace8d51051681bd0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22a7ea0679e170051c9b242b61e6739fb461283a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843650"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721628"
 ---
 # <a name="hash-structure"></a>hash, structure
 
@@ -31,7 +31,7 @@ La classe de modèle définit sa méthode comme retournant `val.hash_code()`. La
 template <>
 struct hash<type_index>
 : public unary_function<type_index, size_t>
- { // hashes a typeinfo object
+{ // hashes a typeinfo object
     size_t operator()(type_index val) const;
 
 };

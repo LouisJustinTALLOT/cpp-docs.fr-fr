@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72e37cd8ba46e3ad9e59fa0d585d6a118b7a0038
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196058"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708628"
 ---
 # <a name="cdrawingmanager-class"></a>Cdrawingmanager, classe
 Le `CDrawingManager` classe implémente les algorithmes de dessins complexes.  
@@ -139,8 +139,8 @@ CDrawingManager(CDC& dc);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine*  
- Une référence à un contexte de périphérique. Le `CDrawingManager` utilise ce contexte de dessin.  
+*dc*<br/>
+[in] Une référence à un contexte de périphérique. Le `CDrawingManager` utilise ce contexte de dessin.  
   
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32  
  Crée une bitmap indépendante du périphérique 32 bits (DIB) que les applications peuvent écrire directement.  
@@ -160,8 +160,8 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *taille*|Un [CSize](../../atl-mfc-shared/reference/csize-class.md) paramètre qui indique la taille de la bitmap.|  
-|[out] *pBits*|Un pointeur vers un pointeur qui reçoit l’emplacement de du fichier DIB bit des valeurs.|  
+|*size*|[in] Un [CSize](../../atl-mfc-shared/reference/csize-class.md) paramètre qui indique la taille de la bitmap.|  
+|*pBits*|[out] Un pointeur vers un pointeur qui reçoit l’emplacement de du fichier DIB bit des valeurs.|  
 |*bitmap*|Un handle de bitmap d’origine|  
 |*clrTransparent*|Une valeur RVB en spécifiant une couleur transparente de l’image bitmap d’origine.|  
   
@@ -183,17 +183,17 @@ void DrawAlpha(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDstDC*  
- Pointeur vers le contexte de périphérique pour la destination.  
+*pDstDC*<br/>
+[in] Pointeur vers le contexte de périphérique pour la destination.  
   
- [in] *rectDst*  
- Le rectangle de destination.  
+*rectDst*<br/>
+[in] Le rectangle de destination.  
   
- [in] *pSrcDC*  
- Pointeur vers le contexte de périphérique pour la source.  
+*pSrcDC*<br/>
+[in] Pointeur vers le contexte de périphérique pour la source.  
   
- [in] *rectSrc*  
- Le rectangle source.  
+*rectSrc*<br/>
+[in] Le rectangle source.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode effectue la simulation de transparence pour les bitmaps de deux. Pour plus d’informations sur le blindage alpha, consultez [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) dans le SDK Windows.  
@@ -209,14 +209,14 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Le rectangle englobant de l’ellipse.  
+*Rect*<br/>
+[in] Le rectangle englobant de l’ellipse.  
   
- [in] *clrFill*  
- La couleur de que cette méthode utilise pour remplir l’ellipse.  
+*clrFill*<br/>
+[in] La couleur de que cette méthode utilise pour remplir l’ellipse.  
   
- [in] *clrLine*  
- La couleur de cette méthode utilise en tant que la bordure de l’ellipse.  
+*clrLine*<br/>
+[in] La couleur de cette méthode utilise en tant que la bordure de l’ellipse.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode retourne sans dessiner une ellipse si une couleur est définie sur -1. Elle retourne également sans dessiner une ellipse, si une dimension du rectangle englobant est 0.  
@@ -236,26 +236,26 @@ BOOL DrawGradientRing(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Un [CRect](../../atl-mfc-shared/reference/crect-class.md) paramètre qui spécifie la limite de l’anneau de dégradé.  
+*Rect*<br/>
+[in] Un [CRect](../../atl-mfc-shared/reference/crect-class.md) paramètre qui spécifie la limite de l’anneau de dégradé.  
   
- [in] *colorStart*  
- La première couleur du dégradé.  
+*colorStart*<br/>
+[in] La première couleur du dégradé.  
   
- [in] *colorFinish*  
- La dernière couleur du dégradé.  
+*colorFinish*<br/>
+[in] La dernière couleur du dégradé.  
   
- [in] *colorBorder*  
- La couleur de la bordure.  
+*colorBorder*<br/>
+[in] La couleur de la bordure.  
   
- [in] *nAngle*  
- Un paramètre qui spécifie l’angle du dégradé de dessin initial. Cette valeur doit être comprise entre 0 et 360.  
+*nAngle*<br/>
+[in] Un paramètre qui spécifie l’angle du dégradé de dessin initial. Cette valeur doit être comprise entre 0 et 360.  
   
- [in] *nWidth*  
- La largeur de la bordure de l’anneau.  
+*nWidth*<br/>
+[in] La largeur de la bordure de l’anneau.  
   
- [in] *clrFace*  
- Couleur de l’intérieur de l’anneau.  
+*clrFace*<br/>
+[in] Couleur de l’intérieur de l’anneau.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -287,11 +287,11 @@ void DrawLineA(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *x1*|Coordonnée x où la ligne commence.|  
-|[in] *y1*|Coordonnée y où la ligne commence.|  
-|[in] *x2*|Coordonnée x où la ligne se termine.|  
-|[in] *y2*|Coordonnée y où la ligne se termine.|  
-|[in] *clrLine*|La couleur de la ligne.|  
+|*x1*|[in] Coordonnée x où la ligne commence.|  
+|*y1*|[in] Coordonnée y où la ligne commence.|  
+|*x2*|[in] Coordonnée x où la ligne se termine.|  
+|*y2*|[in] Coordonnée y où la ligne se termine.|  
+|*clrLine*|[in] La couleur de la ligne.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode échoue si *clrLine* est égal à -1.  
@@ -307,14 +307,14 @@ void DrawRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Les limites du rectangle.  
+*Rect*<br/>
+[in] Les limites du rectangle.  
   
- [in] *clrFill*  
- La couleur de que cette méthode utilise pour remplir le rectangle.  
+*clrFill*<br/>
+[in] La couleur de que cette méthode utilise pour remplir le rectangle.  
   
- [in] *clrLine*  
- La couleur de cette méthode utilise pour la bordure du rectangle.  
+*clrLine*<br/>
+[in] La couleur de cette méthode utilise pour la bordure du rectangle.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode retourne sans dessiner un rectangle, si une couleur est définie sur -1. Elle retourne également si une dimension du rectangle est 0.  
@@ -335,29 +335,29 @@ BOOL DrawShadow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Une zone rectangulaire dans votre application. Le Gestionnaire de dessin Dessine une ombre en dessous de cette zone.  
+*Rect*<br/>
+[in] Une zone rectangulaire dans votre application. Le Gestionnaire de dessin Dessine une ombre en dessous de cette zone.  
   
- [in] *nDepth*  
- La largeur et la hauteur de l’ombre.  
+*nDepth*<br/>
+[in] La largeur et la hauteur de l’ombre.  
   
- [in] *iMinBrightness*  
- La luminosité minimale de l’ombre.  
+*iMinBrightness*<br/>
+[in] La luminosité minimale de l’ombre.  
   
- [in] *iMaxBrightness*  
- La luminosité maximale de l’ombre.  
+*iMaxBrightness*<br/>
+[in] La luminosité maximale de l’ombre.  
   
- [in] *pBmpSaveBottom*  
- Pointeur vers une image bitmap qui contient l’image pour la partie inférieure de l’ombre.  
+*pBmpSaveBottom*<br/>
+[in] Pointeur vers une image bitmap qui contient l’image pour la partie inférieure de l’ombre.  
   
- [in] *pBmpSaveRight*  
- Pointeur vers une image bitmap qui contient l’image de l’ombre est dessinée sur le côté droit du rectangle.  
+*pBmpSaveRight*<br/>
+[in] Pointeur vers une image bitmap qui contient l’image de l’ombre est dessinée sur le côté droit du rectangle.  
   
- [in] *clrBase*  
- Couleur de l’ombre.  
+*clrBase*<br/>
+[in] La couleur de l’ombre.  
   
- [in] *bRightShadow*  
- Un paramètre booléen qui indique comment l’ombre est dessinée. Si *bRightShadow* est `TRUE`, `DrawShadow` Dessine une ombre sur le côté droit du rectangle.  
+*bRightShadow*<br/>
+[in] Un paramètre booléen qui indique comment l’ombre est dessinée. Si *bRightShadow* est `TRUE`, `DrawShadow` Dessine une ombre sur le côté droit du rectangle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
@@ -389,26 +389,26 @@ void Fill4ColorsGradient(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Le rectangle à remplir.  
+*Rect*<br/>
+[in] Le rectangle à remplir.  
   
- [in] *colorStart1*  
- Couleur initiale du premier dégradé de couleur.  
+*colorStart1*<br/>
+[in] Couleur initiale du premier dégradé de couleur.  
   
- [in] *colorFinish1*  
- La couleur finale du premier dégradé de couleur.  
+*colorFinish1*<br/>
+[in] La couleur finale du premier dégradé de couleur.  
   
- [in] *colorStart2*  
- Couleur initiale du deuxième dégradé de couleur.  
+*colorStart2*<br/>
+[in] Couleur initiale du deuxième dégradé de couleur.  
   
- [in] *colorFinish2*  
- La couleur finale du deuxième dégradé de couleur.  
+*colorFinish2*<br/>
+[in] La couleur finale du deuxième dégradé de couleur.  
   
- [in] *bHorz*  
- Un paramètre booléen qui indique si `Fill4ColorsGradient` couleurs d’un dégradé horizontal ou vertical. TRUE indique un dégradé horizontal.  
+*bHorz*<br/>
+[in] Un paramètre booléen qui indique si `Fill4ColorsGradient` couleurs d’un dégradé horizontal ou vertical. TRUE indique un dégradé horizontal.  
   
- [in] *nPercentage*  
- Entier compris entre 0 et 100. Cette valeur indique le pourcentage du rectangle à remplir avec le dégradé de couleur de premier.  
+*nPercentage*<br/>
+[in] Entier compris entre 0 et 100. Cette valeur indique le pourcentage du rectangle à remplir avec le dégradé de couleur de premier.  
   
 ### <a name="remarks"></a>Notes  
  Lorsqu’un rectangle est rempli avec deux gradients de couleur, ils sont situés au-dessus de l’autre ou à côté de l’autre, selon la valeur de *bHorz*. Chaque dégradé de couleur est calculée indépendamment avec la méthode [CDrawingManager::FillGradient](#fillgradient).  
@@ -429,23 +429,23 @@ void FillGradient(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- La zone rectangulaire à remplir.  
+*Rect*<br/>
+[in] La zone rectangulaire à remplir.  
   
- [in] *colorStart*  
- La première couleur du dégradé.  
+*colorStart*<br/>
+[in] La première couleur du dégradé.  
   
- [in] *colorFinish*  
- La couleur finale du dégradé.  
+*colorFinish*<br/>
+[in] La couleur finale du dégradé.  
   
- [in] *bHorz*  
- Un paramètre booléen qui spécifie si `FillGradient` doit dessiner un dégradé horizontal ou vertical.  
+*bHorz*<br/>
+[in] Un paramètre booléen qui spécifie si `FillGradient` doit dessiner un dégradé horizontal ou vertical.  
   
- [in] *nStartFlatPercentage*  
- Le pourcentage du rectangle qui `FillGradient` remplit avec *colorStart* avant le début du dégradé.  
+*nStartFlatPercentage*<br/>
+[in] Le pourcentage du rectangle qui `FillGradient` remplit avec *colorStart* avant le début du dégradé.  
   
- [in] *nEndFlatPercentage*  
- Le pourcentage du rectangle qui `FillGradient` remplit avec *colorFinish* après avoir fini le dégradé.  
+*nEndFlatPercentage*<br/>
+[in] Le pourcentage du rectangle qui `FillGradient` remplit avec *colorFinish* après avoir fini le dégradé.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le `FillGradient` méthode de la `CDrawingManager` classe. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).  
@@ -464,17 +464,17 @@ void FillGradient2 (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- La zone rectangulaire à remplir.  
+*Rect*<br/>
+[in] La zone rectangulaire à remplir.  
   
- [in] *colorStart*  
- La première couleur du dégradé.  
+*colorStart*<br/>
+[in] La première couleur du dégradé.  
   
- [in] *colorFinish*  
- La dernière couleur du dégradé.  
+*colorFinish*<br/>
+[in] La dernière couleur du dégradé.  
   
- [in] *nAngle*  
- Entier compris entre 0 et 360. Ce paramètre spécifie le sens du dégradé de couleur.  
+*nAngle*<br/>
+[in] Entier compris entre 0 et 360. Ce paramètre spécifie le sens du dégradé de couleur.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez *nAngle* pour spécifier le sens du dégradé de couleur. Lorsque vous spécifiez le sens du dégradé de couleur, vous spécifiez également où le dégradé de couleur commence. La valeur 0 pour *nAngle* indique le dégradé démarre à partir du haut du rectangle. En tant que *nAngle* augmente, l’emplacement de départ pour le dégradé se déplace dans le sens inverse des aiguilles selon l’angle.  
@@ -496,17 +496,17 @@ BOOL GrayRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- La zone rectangulaire à remplir.  
+*Rect*<br/>
+[in] La zone rectangulaire à remplir.  
   
- [in] *nPercentage*  
- Le pourcentage de votre choix dans le rectangle de gris.  
+*nPercentage*<br/>
+[in] Le pourcentage de votre choix dans le rectangle de gris.  
   
- [in] *clrTransparent*  
- Couleur transparente.  
+*clrTransparent*<br/>
+[in] Couleur transparente.  
   
- [in] *clrDisabled*  
- La couleur par cette méthode pour la saturation de la déduplication si *nPercentage* a la valeur -1.  
+*clrDisabled*<br/>
+[in] La couleur par cette méthode pour la saturation de la déduplication si *nPercentage* a la valeur -1.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -529,20 +529,20 @@ BOOL HighlightRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Une zone rectangulaire pour mettre en surbrillance.  
+*Rect*<br/>
+[in] Une zone rectangulaire pour mettre en surbrillance.  
   
- [in] *nPercentage*  
- Un pourcentage qui indique le degré de transparence qui doit être à la mise en surbrillance.  
+*nPercentage*<br/>
+[in] Un pourcentage qui indique le degré de transparence qui doit être à la mise en surbrillance.  
   
- [in] *clrTransparent*  
- Couleur transparente.  
+*clrTransparent*<br/>
+[in] Couleur transparente.  
   
- [in] *nTolerance*  
- Un entier compris entre 0 et 255 qui indique la tolérance de couleur.  
+*nTolerance*<br/>
+[in] Un entier compris entre 0 et 255 qui indique la tolérance de couleur.  
   
- [in] *clrBlend*  
- La couleur de base pour la fusion.  
+*clrBlend*<br/>
+[in] La couleur de base pour la fusion.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -563,14 +563,14 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *H*  
- Un nombre compris entre 0 et 1 qui représente la teinte de la couleur.  
+*H*<br/>
+[in] Un nombre compris entre 0 et 1 qui représente la teinte de la couleur.  
   
- [in] *L*  
- Un nombre compris entre 0 et 1 qui indique la couleur de la luminosité.  
+*L*<br/>
+[in] Un nombre compris entre 0 et 1 qui indique la couleur de la luminosité.  
   
- [in] *S*  
- Un nombre compris entre 0 et 1 qui indique la saturation de la couleur.  
+*S*<br/>
+[in] Un nombre compris entre 0 et 1 qui indique la saturation de la couleur.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La représentation RVB de la couleur TSL fournie.  
@@ -591,14 +591,14 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *H*  
- Un nombre compris entre 0 et 360 qui représente la teinte de la couleur.  
+*H*<br/>
+[in] Un nombre compris entre 0 et 360 qui représente la teinte de la couleur.  
   
- [in] *L*  
- Un nombre compris entre 0 et 1 qui indique la couleur de la luminosité.  
+*L*<br/>
+[in] Un nombre compris entre 0 et 1 qui indique la couleur de la luminosité.  
   
- [in] *S*  
- Un nombre compris entre 0 et 1 qui indique la saturation de la couleur.  
+*S*<br/>
+[in] Un nombre compris entre 0 et 1 qui indique la saturation de la couleur.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La représentation RVB de la couleur TSL fournie.  
@@ -623,9 +623,9 @@ static COLORREF __stdcall HSVtoRGB(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *H*|Un nombre compris entre 0 et 360 qui indique la teinte de la couleur.|  
-|[in] *S*|Un nombre compris entre 0 et 1 qui indique la saturation de la couleur.|  
-|[in] *V*|Un nombre compris entre 0 et 1 qui indique la valeur de la couleur.|  
+|*H*|[in] Un nombre compris entre 0 et 360 qui indique la teinte de la couleur.|  
+|*S*|[in] Un nombre compris entre 0 et 1 qui indique la saturation de la couleur.|  
+|*V*|[in] Un nombre compris entre 0 et 1 qui indique la valeur de la couleur.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  La représentation RVB de la couleur TSL fournie.  
@@ -650,23 +650,23 @@ static BYTE __stdcall HueToRGB(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *m1*  
- Consultez la section Notes.  
+*M1*<br/>
+[in] Consultez la section Notes.  
   
- [in] *m2*  
- Consultez la section Notes.  
+*M2*<br/>
+[in] Consultez la section Notes.  
   
- [in] *h*  
- Consultez la section Notes.  
+*h*<br/>
+[in] Consultez la section Notes.  
   
- [in] *rm1*  
- Consultez la section Notes.  
+*RM1*<br/>
+[in] Consultez la section Notes.  
   
- [in] *rm2*  
- Consultez la section Notes.  
+*RM2*<br/>
+[in] Consultez la section Notes.  
   
- [in] *rh*  
- Consultez la section Notes.  
+*RH*<br/>
+[in] Consultez la section Notes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le composant de rouge, vert ou bleu individuel pour la teinte fourni.  
@@ -692,11 +692,11 @@ void MirrorRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Le rectangle englobant de la zone à retourner.  
+*Rect*<br/>
+[in] Le rectangle englobant de la zone à retourner.  
   
- [in] *bHorz*  
- Un paramètre booléen qui indique si le rectangle est retournée horizontalement ou verticalement.  
+*bHorz*<br/>
+[in] Un paramètre booléen qui indique si le rectangle est retournée horizontalement ou verticalement.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode peut retourner toute zone du contexte de périphérique appartenant à la `CDrawingManager` classe. Si *bHorz* est définie sur TRUE, cette méthode retourne la zone horizontalement. Sinon, elle retourne verticalement la zone.  
@@ -722,23 +722,23 @@ static COLORREF __stdcall PixelAlpha(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *srcPixel*  
- Couleur initiale pour le pixel.  
+*srcPixel*<br/>
+[in] Couleur initiale pour le pixel.  
   
- [in] *%*  
- Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence. Une valeur de 100 indique que la couleur initiale est complètement transparente.  
+*%*<br/>
+[in] Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence. Une valeur de 100 indique que la couleur initiale est complètement transparente.  
   
- [in] *percentR*  
- Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant rouge.  
+*percentR*<br/>
+[in] Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant rouge.  
   
- [in] *percentG*  
- Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant vert.  
+*percentG*<br/>
+[in] Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant vert.  
   
- [in] *percentB*  
- Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant bleu.  
+*percentB*<br/>
+[in] Un nombre compris entre 0 et 100 qui représente le pourcentage de transparence pour le composant bleu.  
   
- [in] *dstPixel*  
- La couleur de base pour le pixel.  
+*dstPixel*<br/>
+[in] La couleur de base pour le pixel.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La couleur finale du pixel translucide.  
@@ -760,17 +760,17 @@ static HBITMAP __stdcall PrepareShadowMask (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nDepth*  
- La largeur et la hauteur de l’ombre.  
+*nDepth*<br/>
+[in] La largeur et la hauteur de l’ombre.  
   
- [in] *clrBase*  
- Couleur de l’ombre.  
+*clrBase*<br/>
+[in] La couleur de l’ombre.  
   
- [in] *iMinBrightness*  
- La luminosité minimale de l’ombre.  
+*iMinBrightness*<br/>
+[in] La luminosité minimale de l’ombre.  
   
- [in] *iMaxBrightness*  
- La luminosité maximale de l’ombre.  
+*iMaxBrightness*<br/>
+[in] La luminosité maximale de l’ombre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un handle de bitmap créée si cette méthode a réussi ; Sinon, NULL.  
@@ -794,10 +794,10 @@ static void __stdcall RGBtoHSL(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *RVB*|La couleur de valeurs RVB.|  
-|[out] *H*|Pointeur vers un double où la méthode stocke la teinte de la couleur.|  
-|[out] *S*|Pointeur vers un double où la méthode stocke la saturation de la couleur.|  
-|[out] *L*|Pointeur vers un double où la méthode stocke la luminosité de la couleur.|  
+|*rgb*|[in] La couleur de valeurs RVB.|  
+|*H*|[out] Pointeur vers un double où la méthode stocke la teinte de la couleur.|  
+|*S*|[out] Pointeur vers un double où la méthode stocke la saturation de la couleur.|  
+|*L*|[out] Pointeur vers un double où la méthode stocke la luminosité de la couleur.|  
   
 ### <a name="remarks"></a>Notes  
  Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](http://go.microsoft.com/fwlink/p/?linkid=119126).  
@@ -816,17 +816,17 @@ static void __stdcall RGBtoHSV(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *RVB*  
- Couleur à convertir en une représentation RVB.  
+*rgb*<br/>
+[in] Couleur à convertir en une représentation RVB.  
   
- [out] *H*  
- Pointeur vers un double où cette méthode stocke la teinte résultant pour la couleur.  
+*H*<br/>
+[out] Pointeur vers un double où cette méthode stocke la teinte résultant pour la couleur.  
   
- [out] *S*  
- Pointeur vers un double où cette méthode stocke la saturation qui en résulte pour la couleur.  
+*S*<br/>
+[out] Pointeur vers un double où cette méthode stocke la saturation qui en résulte pour la couleur.  
   
- [out] *V*  
- Pointeur vers un double où cette méthode stocke la valeur obtenue pour la couleur.  
+*V*<br/>
+[out] Pointeur vers un double où cette méthode stocke la valeur obtenue pour la couleur.  
   
 ### <a name="remarks"></a>Notes  
  Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](http://go.microsoft.com/fwlink/p/?linkid=119126).  
@@ -849,29 +849,29 @@ static void __stdcall SetAlphaPixel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBits*  
- Pointeur vers les valeurs de bits de l’image bitmap.  
+*pBits*<br/>
+[in] Pointeur vers les valeurs de bits de l’image bitmap.  
   
- [in] *rect*  
- Une zone rectangulaire dans votre application. Le Gestionnaire de dessin Dessine une ombre en dessous et à droite de cette zone.  
+*Rect*<br/>
+[in] Une zone rectangulaire dans votre application. Le Gestionnaire de dessin Dessine une ombre en dessous et à droite de cette zone.  
   
- [in] *x*  
- La coordonnée horizontale du pixel de couleur.  
+*x*<br/>
+[in] La coordonnée horizontale du pixel de couleur.  
   
- [in] *y*  
- Coordonnée verticale du pixel de couleur.  
+*y*<br/>
+[in] Coordonnée verticale du pixel de couleur.  
   
- [in] *%*  
- Le pourcentage de transparence.  
+*%*<br/>
+[in] Le pourcentage de transparence.  
   
- [in] *iShadowSize*  
- La largeur et la hauteur de l’ombre.  
+*iShadowSize*<br/>
+[in] La largeur et la hauteur de l’ombre.  
   
- [in] *clrBase*  
- Couleur de l’ombre.  
+*clrBase*<br/>
+[in] La couleur de l’ombre.  
   
- [in] *bIsRight*  
- Un paramètre booléen qui indique quel pixel de couleur. Pour plus d'informations, consultez la section Notes.  
+*bIsRight*<br/>
+[in] Un paramètre booléen qui indique quel pixel de couleur. Pour plus d'informations, consultez la section Notes.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode est une méthode d’assistance qui est utilisée par le [CDrawingManager::DrawShadow](#drawshadow) (méthode). Nous recommandons que si vous souhaitez ajouter une ombre, appelez `CDrawingManager::DrawShadow` à la place.  
@@ -896,12 +896,12 @@ static void __stdcall SetPixel(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pBits*|Pointeur vers les valeurs de bits de l’image bitmap.|  
-|[in] *cx*|La largeur totale de l’image bitmap.|  
-|[in] *cy*|La hauteur totale de l’image bitmap.|  
-|[in] *x*|Coordonnée x du pixel de la bitmap à modifier.|  
-|[in] *y*|Coordonnée y du pixel de la bitmap à modifier.|  
-|[in] *couleur*|La nouvelle couleur du pixel identifié par les coordonnées fournies.|  
+|*pBits*|[in] Pointeur vers les valeurs de bits de l’image bitmap.|  
+|*CX*|[in] La largeur totale de l’image bitmap.|  
+|*CY*|[in] La hauteur totale de l’image bitmap.|  
+|*x*|[in] Coordonnée x du pixel de la bitmap à modifier.|  
+|*y*|[in] Coordonnée y du pixel de la bitmap à modifier.|  
+|*Couleur*|[in] La nouvelle couleur du pixel identifié par les coordonnées fournies.|  
   
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors  
  Combine deux couleurs selon un ratio pondéré.  
@@ -920,11 +920,11 @@ static COLORREF __stdcall SmartMixColors(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *color1*|La première couleur à combiner.|  
-|[in] *color2*|La deuxième couleur à combiner.|  
-|[in] *dblLumRatio*|Le rapport pour la luminosité de la nouvelle couleur. `SmartMixColors` Multiplie la luminosité de la couleur mixte par ce rapport avant de déterminer la couleur finale.|  
-|[in] *k1*|Le taux pondéré pour la première couleur.|  
-|[in] *k2*|Le taux pondéré pour la deuxième couleur.|  
+|*color1*|[in] La première couleur à combiner.|  
+|*color2*|[in] La deuxième couleur à combiner.|  
+|*dblLumRatio*|[in] Le rapport pour la luminosité de la nouvelle couleur. `SmartMixColors` Multiplie la luminosité de la couleur mixte par ce rapport avant de déterminer la couleur finale.|  
+|*K1*|[in] Le taux pondéré pour la première couleur.|  
+|*K2*|[in] Le taux pondéré pour la deuxième couleur.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Couleur qui représente une combinaison pondérée des couleurs fournis.  

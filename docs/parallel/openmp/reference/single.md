@@ -1,5 +1,5 @@
 ---
-title: seul | Documents Microsoft
+title: unique | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd5349331ac23998511a8f1b838d2cd13b01998
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716987"
 ---
 # <a name="single"></a>unique
-Permet de spécifier qu’une section de code doit être exécutée sur un seul thread, pas nécessairement le thread principal.  
+Vous permet de spécifier qu’une section de code doit être exécutée sur un seul thread, mais pas nécessairement le thread principal.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,8 +36,9 @@ Permet de spécifier qu’une section de code doit être exécutée sur un seul 
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `clause`(facultatif)  
- Zéro ou plusieurs clauses. Consultez la section Notes pour obtenir la liste des clauses prises en charge par **unique**.  
+
+`clause`  
+(Facultatif) Zéro ou plusieurs clauses. Consultez la section Notes pour obtenir la liste des clauses prises en charge par **unique**.  
   
 ## <a name="remarks"></a>Notes  
  Le **unique** directive prend en charge les clauses OpenMP suivantes :  

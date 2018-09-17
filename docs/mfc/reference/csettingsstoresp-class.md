@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf84e2e7db6f829cb7afcd1831521b4f94535bd
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4223ce5c358f4e95ab94baac9d5cf0edda5ad73f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850777"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716348"
 ---
 # <a name="csettingsstoresp-class"></a>Csettingsstoresp, classe
 Le `CSettingsStoreSP` classe est une classe d’assistance que vous pouvez utiliser pour créer des instances de la [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
@@ -88,11 +88,11 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bCheminAdmin*  
- Un paramètre booléen qui détermine si un `CSettingsStore` objet est créé en mode administrateur.  
+*bCheminAdmin*<br/>
+[in] Un paramètre booléen qui détermine si un `CSettingsStore` objet est créé en mode administrateur.  
   
- [in] *bReadOnly*  
- Un paramètre booléen qui détermine si un `CSettingsStore` objet est créé pour l’accès en lecture seule.  
+*bReadOnly*<br/>
+[in] Un paramètre booléen qui détermine si un `CSettingsStore` objet est créé pour l’accès en lecture seule.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce nouveau `CSettingsStore` objet.  
@@ -117,8 +117,8 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwUserData*  
- Données définies par l’utilisateur qui le `CSettingsStoreSP` stocke l’objet.  
+*dwUserData*<br/>
+[in] Données définies par l’utilisateur qui le `CSettingsStoreSP` stocke l’objet.  
   
 ### <a name="remarks"></a>Notes  
  Le `CSettingsStoreSP` objet stocke les données à partir de *dwUserData* dans la variable membre protégé `m_dwUserData`.  
@@ -131,8 +131,8 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pRTI*  
- Un pointeur vers les informations de classe runtime pour une classe dérivée de la [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
+*pRTI*<br/>
+[in] Un pointeur vers les informations de classe runtime pour une classe dérivée de la [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE en cas de réussite ; FALSE si la classe identifiée par *pRTI* n’est pas dérivé `CSettingsStore`.  

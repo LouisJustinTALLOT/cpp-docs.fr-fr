@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 810b59bb85d374b1cf65985a64be32c645e6f3b5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757099"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718072"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de bouton toupie (spin) Windows.  
@@ -352,9 +352,10 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *nLower* et *nUpper*  
- Limites supérieure et inférieure pour le contrôle. Pour `SetRange`, aucune limite peut être supérieur à UD_MAXVAL ou inférieure à UD_MINVAL ; en outre, la différence entre les deux limites ne doit pas dépasser UD_MAXVAL. `SetRange32` n’impose aucune restriction sur les limites ; utiliser des entiers.  
+### <a name="parameters"></a>Paramètres
+
+*nLower* et *nUpper*<br/>
+Limites supérieure et inférieure pour le contrôle. Pour `SetRange`, aucune limite peut être supérieur à UD_MAXVAL ou inférieure à UD_MINVAL ; en outre, la différence entre les deux limites ne doit pas dépasser UD_MAXVAL. `SetRange32` n’impose aucune restriction sur les limites ; utiliser des entiers.  
   
 ### <a name="remarks"></a>Notes  
  La fonction membre `SetRange32` définit la plage de 32 bits pour le contrôle de bouton toupie (spin).  

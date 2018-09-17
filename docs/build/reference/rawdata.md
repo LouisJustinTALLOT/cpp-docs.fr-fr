@@ -1,5 +1,5 @@
 ---
-title: -RAWDATA | Documents Microsoft
+title: -RAWDATA | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,31 +19,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28691e636f01174ecfe2a9d48b016523fce67f14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38677b0e67ddaec5b6ef0e3fcffed1bed27826b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374997"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707172"
 ---
 # <a name="rawdata"></a>/RAWDATA
-```  
-/RAWDATA[:{1|2|4|8|NONE[,number]]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Cette option affiche le contenu brut de chaque section dans le fichier. Les arguments de contrôlent le format de l’affichage, comme indiqué ci-dessous :  
-  
-|Argument|Résultat|  
-|--------------|------------|  
-|1|Valeur par défaut. Contenu est affiché dans les octets hexadécimaux et également en tant que caractères ASCII s’ils ont une représentation imprimée.|  
-|2|Contenu s’affiche en tant que valeurs hexadécimales de 2 octets.|  
-|4|Contenu s’affiche en tant que valeurs hexadécimales de 4 octets.|  
-|8|Contenu s’affiche en tant que valeurs hexadécimales de 8 octets.|  
-|AUCUN|Données brutes sont supprimées. Cet argument est utile pour contrôler la sortie de /ALL.|  
-|*Nombre*|Les lignes affichées sont définies à une largeur qui contient `number` valeurs par ligne.|  
-  
- Uniquement les [/HEADERS](../../build/reference/headers.md) (option DUMPBIN) est disponible pour les fichiers générés par le [/GL](../../build/reference/gl-whole-program-optimization.md) option du compilateur.  
-  
-## <a name="see-also"></a>Voir aussi  
- [DUMPBIN, options](../../build/reference/dumpbin-options.md)
+
+```
+/RAWDATA[:{1|2|4|8|NONE[,number]]
+```
+
+## <a name="remarks"></a>Notes
+
+Cette option affiche le contenu brut de chaque section dans le fichier. Les arguments de contrôlent le format de l’affichage, comme indiqué ci-dessous :
+
+|Argument|Résultat|
+|--------------|------------|
+|1|Valeur par défaut. Contenu s’affiche en octets hexadécimales et également en tant que caractères ASCII s’ils ont une représentation sous forme imprimée.|
+|2|Contenu s’affiche en tant que valeurs hexadécimales de 2 octets.|
+|4|Contenu s’affiche en tant que valeurs hexadécimales de 4 octets.|
+|8|Contenu s’affiche en tant que valeurs hexadécimales de 8 octets.|
+|NONE|Données brutes sont supprimées. Cet argument est utile pour contrôler la sortie de/ALL.|
+|*Nombre*|Les lignes affichées sont définies à une largeur qui contient `number` valeurs par ligne.|
+
+Uniquement les [/HEADERS](../../build/reference/headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](../../build/reference/gl-whole-program-optimization.md) option du compilateur.
+
+## <a name="see-also"></a>Voir aussi
+
+[DUMPBIN, options](../../build/reference/dumpbin-options.md)

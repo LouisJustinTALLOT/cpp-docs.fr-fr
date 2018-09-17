@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e04f2898caf1f62a9499096ffab09fce8da86ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539244"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700178"
 ---
 # <a name="fastfail"></a>__fastfail
 **Section spécifique à Microsoft**  
@@ -31,8 +31,8 @@ void __fastfail(unsigned int code);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `code`  
- Constante symbolique `FAST_FAIL_<description>` de winnt.h ou wdm.h qui indique la raison de l'arrêt du processus.  
+*Code*<br/>
+[in] Un `FAST_FAIL_<description>` constante symbolique de winnt.h ou wdm.h qui indique la raison de l’arrêt du processus.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le `__fastfail` intrinsèque ne retourne pas.  

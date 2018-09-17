@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2a0dd4f32f8c7b3a9e859e23fcc26e668fa87cdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218384"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726360"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -61,12 +61,12 @@ Crée un canal et exécute une commande.
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -88,13 +88,12 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 Le **_popen** fonction crée un canal et exécute une copie de l’interpréteur de commandes avec la chaîne spécifiée générée de manière asynchrone *commande*. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
 
-**« r »** le processus appelant peut lire la sortie standard de la commande générée en utilisant le flux retourné.
-
-**« w »** le processus appelant peut écrire dans l’entrée standard de la commande générée en utilisant le flux retourné.
-
-**« b »** ouvert en mode binaire.
-
-**« t »** ouvert en mode texte.
+|Mode d'accès|Description|
+|-|-|
+|**"r"**|Le processus appelant peut lire la sortie standard de la commande générée en utilisant le flux retourné.|
+|**"w"**|Le processus appelant peut écrire dans l’entrée standard de la commande générée en utilisant le flux retourné.|
+|**"b"**|Ouvre en mode binaire.|
+|**"t"**|Ouvre en mode texte.|
 
 > [!NOTE]
 > Si utilisé dans un programme Windows, le **_popen** fonction retourne un pointeur de fichier non valide qui amène le programme à cesser de répondre indéfiniment. **_popen** fonctionne correctement dans une application console. Pour créer une application Windows qui redirige les entrées et sorties, consultez [création d’un processus enfant avec redirigé d’entrée et sortie](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) dans le SDK Windows.

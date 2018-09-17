@@ -18,43 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee1d2cac587db64451fbc3622351461d4651b2f8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 715ed5bf12c424c49e96012c5391dfe334e44db4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318906"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705885"
 ---
 # <a name="custom-color-selector-dialog-box-c-image-editor-for-icons"></a>Boîte de dialogue Sélecteur de couleurs (C++) (Éditeur d’images pour les icônes)
 
 Cette boîte de dialogue vous permet de personnaliser les couleurs à qu'utiliser pour votre image. Pour plus d’informations, consultez [personnalisation ou modification des couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
 
-**Affichage de la couleur de dégradé**  
-Modifie les valeurs de la couleur sélectionnée. Positionner la croix sur la couleur que vous souhaitez modifier. Puis déplacez le curseur que vers le haut ou bas pour modifier la luminosité ou les valeurs RVB de la couleur.
+- **Affichage de la couleur de dégradé**
 
-**Barre de luminosité**  
-Définit la luminosité de la couleur que vous sélectionnez dans la **affichage des dégradés de couleur** boîte. Cliquez et faites glisser la flèche blanche de la barre de luminosité supérieure ou vers le bas à moindre coût. Notez que le **couleur** zone affiche la couleur que vous avez sélectionné ainsi que l’impact de la luminosité que vous définissez.
+   Modifie les valeurs de la couleur sélectionnée. Positionner la croix sur la couleur que vous souhaitez modifier. Puis déplacez le curseur que vers le haut ou bas pour modifier la luminosité ou les valeurs RVB de la couleur.
 
-**Couleur**  
-Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.
+- **Barre de luminosité**
 
-**HUE**  
-Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.
+   Définit la luminosité de la couleur que vous sélectionnez dans la **affichage des dégradés de couleur** boîte. Cliquez et faites glisser la flèche blanche de la barre de luminosité supérieure ou vers le bas à moindre coût. Notez que le **couleur** zone affiche la couleur que vous avez sélectionné ainsi que l’impact de la luminosité que vous définissez.
 
-**SAM**  
-Spécifie la valeur de saturation de la couleur que vous définissez. Saturation correspond à la quantité de couleur dans une teinte spécifiée. Les valeurs comprises entre 0 et 240.
+- **Couleur**
 
-**Lum**  
-Répertorie la luminosité de la couleur que vous définissez. Les valeurs comprises entre 0 et 240.
+   Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.
 
-**Rouge**  
-Spécifie la valeur rouge de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.
+- **HUE**
 
-**Vert**  
-Spécifie la valeur verte de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.
+   Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.
 
-**Bleu**  
-Spécifie la valeur bleue de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.
+- **SAM**
+
+   Spécifie la valeur de saturation de la couleur que vous définissez. Saturation correspond à la quantité de couleur dans une teinte spécifiée. Les valeurs comprises entre 0 et 240.
+
+- **Lum**
+
+   Répertorie la luminosité de la couleur que vous définissez. Les valeurs comprises entre 0 et 240.
+
+- **Rouge**
+
+   Spécifie la valeur rouge de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.
+
+- **Vert**
+
+   Spécifie la valeur verte de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.
+
+- **Bleu**
+
+   Spécifie la valeur bleue de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.
 
 ## <a name="requirements"></a>Configuration requise
 

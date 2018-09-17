@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1435d5fc286349efb2d44eeba65c3ee2231d111f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679462"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703896"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implémente un volet qui peut être ancré dans un site d'ancrage ou être inclus dans un volet à onglets.  
@@ -332,14 +332,14 @@ virtual CDockablePane* AttachToTabWnd(
  [in] [out] *pTabControlBarAttachTo*  
  Spécifie le volet cible que le volet actif s’attache à. Le volet cible doit être un volet Ancrable.  
   
- [in] *dockMethod*  
- Spécifie la méthode d’ancrage.  
+*dockMethod*<br/>
+[in] Spécifie la méthode d’ancrage.  
   
- [in] *bSetActive*  
- TRUE pour activer le volet à onglets après l’opération d’attachement ; Sinon, FALSE.  
+*bSetActive*<br/>
+[in] TRUE pour activer le volet à onglets après l’opération d’attachement ; Sinon, FALSE.  
   
- [out] *ppTabbedControlBar*  
- Contient le volet à onglets qui résulte de l’opération d’attachement.  
+*ppTabbedControlBar*<br/>
+[out] Contient le volet à onglets qui résulte de l’opération d’attachement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le volet actif, si elle n’est pas un volet à onglets ; Sinon, un pointeur vers le volet à onglets qui résulte de l’opération d’attachement. La valeur de retour est NULL si le volet actif ne peut pas être attaché, ou si une erreur se produit.  
@@ -375,11 +375,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bStretch*  
- Non utilisé.  
+*bStretch*<br/>
+[in] Non utilisé.  
   
- [in] *bHorz*  
- Non utilisé.  
+*bHorz*<br/>
+[in] Non utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un `CSize` objet qui contient la taille du rectangle de volet.  
@@ -392,8 +392,8 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pMiniFrame*  
- Pointeur vers un `CPaneFrameWnd` objet.  
+*pMiniFrame*<br/>
+[in] Pointeur vers un `CPaneFrameWnd` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si *pMiniFrame* peut être ancrée au volet ; sinon, FALSE.  
@@ -406,8 +406,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Spécifie le volet pour ancrer dans le volet actif.  
+*pBar*<br/>
+[in] Spécifie le volet pour ancrer dans le volet actif.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet spécifié peut être ancré vers ce volet ; Sinon, FALSE.  
@@ -469,8 +469,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActiveTabOnly*  
- Lorsque vous convertissez un `CTabbedPane`, spécifiez la valeur TRUE pour convertir uniquement l’onglet actif. Spécifiez la valeur FALSE pour convertir tous les onglets dans le volet.  
+*bActiveTabOnly*<br/>
+[in] Lorsque vous convertissez un `CTabbedPane`, spécifiez la valeur TRUE pour convertir uniquement l’onglet actif. Spécifiez la valeur FALSE pour convertir tous les onglets dans le volet.  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
  Détermine si le volet d’ancrage est masqué (également appelé mode de masquage automatique).  
@@ -495,8 +495,8 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bDirection*  
- TRUE si le volet est visible ; FALSE si le volet est masqué.  
+*bDirection*<br/>
+[in] TRUE si le volet est visible ; FALSE si le volet est masqué.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la condition d’arrêt est satisfaite ; Sinon, FALSE.  
@@ -514,8 +514,8 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pOrgBar*  
- Pointeur vers un volet Ancrable.  
+*pOrgBar*<br/>
+[in] Pointeur vers un volet Ancrable.  
   
 ### <a name="remarks"></a>Notes  
  `CDockablePane::CopyState` copie de l’état de *pOrgBar* dans le volet en cours en appelant les méthodes suivantes :  
@@ -558,38 +558,38 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszCaption*  
- Spécifie le nom de la fenêtre.  
+*lpszCaption*<br/>
+[in] Spécifie le nom de la fenêtre.  
   
  [in] [out] *pParentWnd*  
  Spécifie la fenêtre parente.  
   
- [in] *rect*  
- Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.  
+*Rect*<br/>
+[in] Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE pour créer le volet avec une légende ; Sinon, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE pour créer le volet avec une légende ; Sinon, FALSE.  
   
- [in] *nID*  
- Spécifie l’ID de la fenêtre enfant. Cette valeur doit être unique si vous souhaitez enregistrer l’état d’ancrage pour ce volet d’ancrage.  
+*nID*<br/>
+[in] Spécifie l’ID de la fenêtre enfant. Cette valeur doit être unique si vous souhaitez enregistrer l’état d’ancrage pour ce volet d’ancrage.  
   
- [in] *dwStyle*  
- Spécifie les attributs de style de fenêtre.  
+*dwStyle*<br/>
+[in] Spécifie les attributs de style de fenêtre.  
   
- [in] *dwTabbedStyle*  
- Spécifie le style à onglets d’une fenêtre à onglets qui est créé lorsque l’utilisateur fait glisser un volet sur la légende de ce volet.  
+*dwTabbedStyle*<br/>
+[in] Spécifie le style à onglets d’une fenêtre à onglets qui est créé lorsque l’utilisateur fait glisser un volet sur la légende de ce volet.  
   
- [in] *dwControlBarStyle*  
- Spécifie les attributs de style supplémentaires.  
+*dwControlBarStyle*<br/>
+[in] Spécifie les attributs de style supplémentaires.  
   
  [in] [out] *pContext*  
  Spécifie le contexte de la création de la fenêtre.  
   
- [in] *lpszWindowName*  
- Spécifie le nom de la fenêtre.  
+*lpszWindowName*<br/>
+[in] Spécifie le nom de la fenêtre.  
   
- [in] *sizeDefault*  
- Spécifie la taille de la fenêtre.  
+*sizeDefault*<br/>
+[in] Spécifie la taille de la fenêtre.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet ancrable est créé avec succès ; Sinon, FALSE.  
@@ -612,14 +612,14 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwAlignment*  
- Spécifie le côté du frame principal auquel le volet est ancré. Si *dwAlignment* contient l’indicateur CBRS_ALIGN_LEFT ou CBRS_ALIGN_RIGHT, cette méthode crée un vertical (`CPaneDivider::SS_VERT`) ligne de séparation ; sinon, cette méthode crée un horizontal (`CPaneDivider::SS_HORZ`) séparateur.  
+*dwAlignment*<br/>
+[in] Spécifie le côté du frame principal auquel le volet est ancré. Si *dwAlignment* contient l’indicateur CBRS_ALIGN_LEFT ou CBRS_ALIGN_RIGHT, cette méthode crée un vertical (`CPaneDivider::SS_VERT`) ligne de séparation ; sinon, cette méthode crée un horizontal (`CPaneDivider::SS_HORZ`) séparateur.  
   
- [in] *pParent*  
- Pointeur vers le frame parent.  
+*pParent*<br/>
+[in] Pointeur vers le frame parent.  
   
- [in] *pSliderRTC*  
- Non utilisé.  
+*pSliderRTC*<br/>
+[in] Non utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne un pointeur vers le séparateur qui vient d’être créé, ou NULL si la création de la ligne de séparation échoue.  
@@ -652,32 +652,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwStyleEx*  
- Spécifie les attributs de style étendu de la nouvelle fenêtre.  
+*dwStyleEx*<br/>
+[in] Spécifie les attributs de style étendu de la nouvelle fenêtre.  
   
- [in] *lpszCaption*  
- Spécifie le nom de la fenêtre.  
+*lpszCaption*<br/>
+[in] Spécifie le nom de la fenêtre.  
   
  [in] [out] *pParentWnd*  
  Spécifie la fenêtre parente.  
   
- [in] *rect*  
- Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.  
+*Rect*<br/>
+[in] Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE pour créer le volet avec une légende ; Sinon, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE pour créer le volet avec une légende ; Sinon, FALSE.  
   
- [in] *nID*  
- Spécifie l’ID de la fenêtre enfant. Cette valeur doit être unique si vous souhaitez enregistrer l’état d’ancrage pour ce volet d’ancrage.  
+*nID*<br/>
+[in] Spécifie l’ID de la fenêtre enfant. Cette valeur doit être unique si vous souhaitez enregistrer l’état d’ancrage pour ce volet d’ancrage.  
   
- [in] *dwStyle*  
- Spécifie les attributs de style de fenêtre.  
+*dwStyle*<br/>
+[in] Spécifie les attributs de style de fenêtre.  
   
- [in] *dwTabbedStyle*  
- Spécifie le style à onglets d’une fenêtre à onglets qui est créé lorsque l’utilisateur fait glisser un volet sur la légende de ce volet.  
+*dwTabbedStyle*<br/>
+[in] Spécifie le style à onglets d’une fenêtre à onglets qui est créé lorsque l’utilisateur fait glisser un volet sur la légende de ce volet.  
   
- [in] *dwControlBarStyle*  
- Spécifie les attributs de style supplémentaires.  
+*dwControlBarStyle*<br/>
+[in] Spécifie les attributs de style supplémentaires.  
   
  [in] [out] *pContext*  
  Spécifie le contexte de la création de la fenêtre.  
@@ -720,14 +720,14 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *barContainerManager*  
- Une référence au Gestionnaire de conteneur du conteneur qui est ancré.  
+*barContainerManager*<br/>
+[in] Une référence au Gestionnaire de conteneur du conteneur qui est ancré.  
   
- [in] *dwAlignment*  
- Valeur DWORD qui spécifie le côté du volet à laquelle le conteneur est ancré.  
+*dwAlignment*<br/>
+[in] Valeur DWORD qui spécifie le côté du volet à laquelle le conteneur est ancré.  
   
- [in] *dockMethod*  
- Non utilisé.  
+*dockMethod*<br/>
+[in] Non utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le conteneur a été correctement ancré sur le volet. Sinon, FALSE.  
@@ -750,8 +750,8 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bWasDocked*  
- Lorsque la méthode est retournée, cette valeur contient la valeur TRUE si le volet a été ancré avec succès ; Sinon, elle contient la valeur FALSE.  
+*bWasDocked*<br/>
+[in] Lorsque la méthode est retournée, cette valeur contient la valeur TRUE si le volet a été ancré avec succès ; Sinon, elle contient la valeur FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si le volet a été ancré à une fenêtre à onglets, ou si une fenêtre à onglets a été créée à la suite d’ancrage, cette méthode retourne un pointeur vers la fenêtre à onglets. Si le volet n’était autrement ancrée avec succès, cette méthode retourne le **cela** pointeur. En cas d’échec de la station d’accueil, cette méthode retourne NULL.  
@@ -783,11 +783,11 @@ virtual BOOL DockToWindow(
  [in] [out] *pTargetWindow*  
  Spécifie le volet ancrable pour ancrer ce volet pour.  
   
- [in] *dwAlignment*  
- Spécifie l’alignement d’ancrage du volet. Peut être CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Défini dans afxres.h.)  
+*dwAlignment*<br/>
+[in] Spécifie l’alignement d’ancrage du volet. Peut être CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Défini dans afxres.h.)  
   
- [in] *lpRect*  
- Spécifie le rectangle d’ancrage du volet.  
+*lpRect*<br/>
+[in] Spécifie le rectangle d’ancrage du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet a été ancré avec succès ; Sinon, FALSE.  
@@ -805,11 +805,11 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Représente le contexte de périphérique utilisé pour le dessin.  
+*contrôleur de domaine principal*<br/>
+[in] Représente le contexte de périphérique utilisé pour le dessin.  
   
- [in] *rectCaption*  
- Spécifie le rectangle englobant de la légende du volet.  
+*rectCaption*<br/>
+[in] Spécifie le rectangle englobant de la légende du volet.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode pour dessiner la légende d’un volet Ancrable.  
@@ -824,8 +824,8 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer le masquage automatique de toutes les fonctionnalités pour le volet ancrable ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] TRUE pour activer le masquage automatique de toutes les fonctionnalités pour le volet ancrable ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur maintient le **Ctrl** clé et clique sur le bouton épingler pour basculer d’un volet en mode de masquage automatique, tous les autres volets dans le même conteneur sont également de passer en mode de masquage automatique.  
@@ -840,8 +840,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer la légende ; Sinon, FALSE.  
+*bActivez*<br/>
+[in] TRUE pour activer la légende ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Lorsque l’infrastructure crée les volets ancrables, ils n’ont pas le style de fenêtre WS_STYLE, même si spécifié. Cela signifie que légende du volet est une zone non cliente qui est contrôlée par l’infrastructure, mais cette exposition diffère de la légende de fenêtre standard.  
@@ -908,11 +908,11 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pt*  
- L’emplacement du pointeur en coordonnées d’écran.  
+*pt*<br/>
+[in] L’emplacement du pointeur en coordonnées d’écran.  
   
- [in] *nSensitivity*  
- La distance, en pixels, en dehors de la bordure d’un rectangle le pointeur doit être à l’activation de l’ancrage.  
+*nSensitivity*<br/>
+[in] La distance, en pixels, en dehors de la bordure d’un rectangle le pointeur doit être à l’activation de l’ancrage.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs d’état suivant :  
@@ -964,11 +964,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectTabAreaTop*  
- `GetTabArea` remplit cette variable avec la zone d’onglet si les onglets sont situés en haut du volet. Si les onglets sont situés en bas du volet, cette variable est remplie avec un rectangle vide.  
+*rectTabAreaTop*<br/>
+[in] `GetTabArea` remplit cette variable avec la zone d’onglet si les onglets sont situés en haut du volet. Si les onglets sont situés en bas du volet, cette variable est remplie avec un rectangle vide.  
   
- [in] *rectTabAreaBottom*  
- `GetTabArea` remplit cette variable avec la zone d’onglet si les onglets sont situés en bas du volet. Si les onglets sont situés en haut du volet, cette variable est remplie avec un rectangle vide.  
+*rectTabAreaBottom*<br/>
+[in] `GetTabArea` remplit cette variable avec la zone d’onglet si les onglets sont situés en bas du volet. Si les onglets sont situés en haut du volet, cette variable est remplie avec un rectangle vide.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode est utilisée uniquement dans les classes dérivées de `CDockablePane` et disposent d’onglets. Pour plus d’informations, consultez [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) et [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
@@ -1011,11 +1011,11 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Spécifie le point à tester.  
+*point*<br/>
+[in] Spécifie le point à tester.  
   
- [in] *bDetectCaption*  
- TRUE si HTCAPTION doit être retournée si le point se trouve sur la légende du volet ; Sinon, FALSE.  
+*bDetectCaption*<br/>
+[in] TRUE si HTCAPTION doit être retournée si le point se trouve sur la légende du volet ; Sinon, FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs suivantes :  
@@ -1228,11 +1228,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndNewParent*  
- Pointeur vers la nouvelle fenêtre parente.  
+*pWndNewParent*<br/>
+[in] Pointeur vers la nouvelle fenêtre parente.  
   
- [in] *bDelay*  
- Valeur Booléenne qui spécifie s’il faut différer le recalcul de la disposition d’ancrage si le volet est détachée. Pour plus d’informations, consultez [CDockablePane::UndockPane](#undockpane).  
+*bDelay*<br/>
+[in] Valeur Booléenne qui spécifie s’il faut différer le recalcul de la disposition d’ancrage si le volet est détachée. Pour plus d’informations, consultez [CDockablePane::UndockPane](#undockpane).  
   
 ### <a name="remarks"></a>Notes  
  Si le volet est ancré et le nouveau parent n’autorise pas l’ancrage, cette méthode détache le volet.  
@@ -1249,11 +1249,11 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectFloat*  
- Spécifie la position et la taille du volet lorsqu’il est dans un état flottant.  
+*rectFloat*<br/>
+[in] Spécifie la position et la taille du volet lorsqu’il est dans un état flottant.  
   
- [in] *dockMethod*  
- Spécifie la méthode d’ancrage. Consultez [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) pour obtenir la liste des valeurs possibles.  
+*dockMethod*<br/>
+[in] Spécifie la méthode d’ancrage. Consultez [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) pour obtenir la liste des valeurs possibles.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet peut flotter ; Sinon, FALSE.  
@@ -1269,8 +1269,8 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nHit*  
- Ce paramètre n'est pas utilisé.  
+*nHit*<br/>
+[in] Ce paramètre n’est pas utilisé.  
   
 ### <a name="remarks"></a>Notes  
  Si vous ajoutez un bouton personnalisé à la légende d’un volet ancrable, substituez cette méthode pour recevoir des notifications quand un utilisateur appuie sur le bouton.  
@@ -1283,8 +1283,8 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSlideOut*  
- TRUE pour afficher le volet. FALSE pour masquer le volet.  
+*bSlideOut*<br/>
+[in] TRUE pour afficher le volet. FALSE pour masquer le volet.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour implémenter des effets de masquage automatique personnalisé.  
@@ -1310,14 +1310,14 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBarToReplaceWith*  
- Pointeur vers un volet Ancrable.  
+*pBarToReplaceWith*<br/>
+[in] Pointeur vers un volet Ancrable.  
   
- [in] *dockMethod*  
- Non utilisé.  
+*dockMethod*<br/>
+[in] Non utilisé.  
   
- [in] *bRegisterWithFrame*  
- Si la valeur est TRUE, le nouveau volet est inscrit auprès du Gestionnaire d’ancrage du parent du volet ancien. Le nouveau volet est inséré à l’index du volet ancien dans la liste des volets qui est gérée par le Gestionnaire d’ancrage.  
+*bRegisterWithFrame*<br/>
+[in] Si la valeur est TRUE, le nouveau volet est inscrit auprès du Gestionnaire d’ancrage du parent du volet ancien. Le nouveau volet est inséré à l’index du volet ancien dans la liste des volets qui est gérée par le Gestionnaire d’ancrage.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le remplacement a réussi ; Sinon, FALSE.  
@@ -1344,17 +1344,17 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bMode*  
- TRUE pour activer le mode de masquage automatique ; FALSE pour activer le mode d’ancrage standard.  
+*bMode*<br/>
+[in] TRUE pour activer le mode de masquage automatique ; FALSE pour activer le mode d’ancrage standard.  
   
- [in] *dwAlignment*  
- Spécifie l’alignement du volet masquage automatique pour la créer.  
+*dwAlignment*<br/>
+[in] Spécifie l’alignement du volet masquage automatique pour la créer.  
   
  [in] [out] *pCurrAutoHideBar*  
  Pointeur vers la barre d’outils de masquage automatique en cours. Peut être NULL.  
   
- [in] *bUseTimer*  
- Spécifie s’il faut utiliser l’effet de masquage automatique lorsque l’utilisateur bascule le volet en mode de masquage automatique ou masquer le volet immédiatement.  
+*bUseTimer*<br/>
+[in] Spécifie s’il faut utiliser l’effet de masquage automatique lorsque l’utilisateur bascule le volet en mode de masquage automatique ou masquer le volet immédiatement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La barre d’outils de masquage automatique qui a été créé après le passage au mode de masquage automatique, ou NULL.  
@@ -1374,11 +1374,11 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pToolBar*  
- Pointeur vers une barre d’outils de masquage automatique.  
+*pToolBar*<br/>
+[in] Pointeur vers une barre d’outils de masquage automatique.  
   
- [in] *pBtn*  
- Pointeur vers un bouton Masquer automatiquement.  
+*pBtn*<br/>
+[in] Pointeur vers un bouton Masquer automatiquement.  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
  Définit le pourcentage d’espace occupé par un volet dans son conteneur.  
@@ -1388,8 +1388,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *n*  
- Un **int** qui spécifie le pourcentage d’espace occupé par le volet dans son conteneur.  
+*n*<br/>
+[in] Un **int** qui spécifie le pourcentage d’espace occupé par le volet dans son conteneur.  
   
 ### <a name="remarks"></a>Notes  
  Le framework ajuste le volet pour utiliser la nouvelle valeur lorsque la disposition est recalculée.  
@@ -1402,8 +1402,8 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hRestoredSlider*  
- Handle vers un diviseur de volet (curseur).  
+*hRestoredSlider*<br/>
+[in] Handle vers un diviseur de volet (curseur).  
   
 ### <a name="remarks"></a>Notes  
  Un diviseur de volet par défaut est obtenu lorsqu’un volet est désérialisé. Pour plus d’informations, consultez [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
@@ -1416,8 +1416,8 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pRTC*  
- Les informations de classe runtime pour le volet à onglets.  
+*pRTC*<br/>
+[in] Les informations de classe runtime pour le volet à onglets.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour définir les informations de classe runtime pour les volets à onglets qui sont créés dynamiquement. Cela peut se produire lorsqu’un utilisateur fait glisser un volet à la légende d’un autre volet, ou si vous appelez le [CDockablePane::AttachToTabWnd](#attachtotabwnd) méthode pour créer par programmation un volet à onglets à partir de deux volets ancrables.  
@@ -1443,14 +1443,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- TRUE pour afficher le volet. FALSE pour masquer le volet.  
+*bShow*<br/>
+[in] TRUE pour afficher le volet. FALSE pour masquer le volet.  
   
- [in] *bDelay*  
- True pour délai ajuster la disposition d’ancrage ; FALSE pour ajuster la disposition d’ancrage immédiatement.  
+*bDelay*<br/>
+[in] True pour délai ajuster la disposition d’ancrage ; FALSE pour ajuster la disposition d’ancrage immédiatement.  
   
- [in] *bActivate*  
- TRUE pour activer le volet lors de son affichage ; Sinon, FALSE.  
+*bActivate*<br/>
+[in] TRUE pour activer le volet lors de son affichage ; Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode au lieu du [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) lors de l’affichage ou masquage des volets ancrables.  
@@ -1465,11 +1465,11 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bSlideOut*  
- TRUE pour afficher le volet. FALSE pour masquer le volet.  
+*bSlideOut*<br/>
+[in] TRUE pour afficher le volet. FALSE pour masquer le volet.  
   
- [in] *bUseTimer*  
- TRUE pour afficher ou masquer le volet de l’effet de masquage automatique ; FALSE pour afficher ou masquer le volet immédiatement.  
+*bUseTimer*<br/>
+[in] TRUE pour afficher ou masquer le volet de l’effet de masquage automatique ; FALSE pour afficher ou masquer le volet immédiatement.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode pour animer un volet qui est en mode de masquage automatique.  
@@ -1494,8 +1494,8 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bDelay*  
- True pour délai de calcul de la disposition d’ancrage ; FALSE pour recalculer la disposition d’ancrage immédiatement.  
+*bDelay*<br/>
+[in] True pour délai de calcul de la disposition d’ancrage ; FALSE pour recalculer la disposition d’ancrage immédiatement.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour détacher un volet à partir de la fenêtre frame principale ou d’un conteneur de fenêtre mini-frame de multiples (volet est flottant dans une fenêtre mini-frame unique avec les autres volets).  

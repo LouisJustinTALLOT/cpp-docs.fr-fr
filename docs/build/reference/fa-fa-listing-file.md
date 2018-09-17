@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101727"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717962"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Fichier listing)
 
@@ -49,38 +49,38 @@ Par défaut, chaque fichier listing Obtient le même nom que le fichier source e
 
 ### <a name="fa-arguments"></a>/FA arguments
 
-none  
+none<br/>
 Uniquement les langage assembleur sont inclus dans la liste.
 
-**c**  
+**c**<br/>
 Facultatif. Inclut le code machine dans la liste.
 
-**s**  
+**s**<br/>
 Facultatif. Inclut le code source dans la liste.
 
-**u**  
+**u**<br/>
 Facultatif. Encode le fichier d’annonce au format UTF-8 et inclut un marqueur d’ordre d’octet. Par défaut, le fichier est codé en ANSI. Utilisez `u` pour créer un fichier listing qui s’affiche correctement sur n’importe quel système, ou si vous utilisez Unicode des fichiers de code source en tant qu’entrée pour le compilateur.
 
 Si les deux **s** et **u** sont spécifiés et si une source de fichier de code utilise un encodage Unicode autre que UTF-8, puis les lignes de code dans le fichier .asm affichent ne peut-être pas correctement.
 
 ### <a name="fa-argument"></a>/FA argument
 
-none  
+none<br/>
 Un *source*fichier .asm est créé pour chaque fichier de code source dans la compilation.
 
-*filename*  
+*filename*<br/>
 Un fichier listing nommé *filename*.asm est placé dans le répertoire actif. Cela est uniquement valide lors de la compilation d’un fichier de code source unique.
 
-*nomfichier.extension*  
+*nomfichier.extension*<br/>
 Un fichier listing nommé *nomfichier.extension* est placé dans le répertoire actif. Cela est uniquement valide lors de la compilation d’un fichier de code source unique.
 
-*Répertoire*__\\__  
+*Répertoire*__\\__<br/>
 Un *source_file*fichier .asm est créé et placé dans le texte spécifié *directory* pour chaque fichier de code source dans la compilation. Notez la barre oblique de fin requise. Uniquement les chemins d’accès sur le disque en cours sont autorisées.
 
-*répertoire*__\\__*nom de fichier*  
+*répertoire*__\\__*nom de fichier*<br/>
 Un fichier listing nommé *filename*.asm est placé dans le texte spécifié *directory*. Cela est uniquement valide lors de la compilation d’un fichier de code source unique.
 
-*répertoire*__\\__*nomfichier.extension*  
+*répertoire*__\\__*nomfichier.extension*<br/>
 Un fichier listing nommé *nomfichier.extension* est placé dans le texte spécifié *directory*. Cela est uniquement valide lors de la compilation d’un fichier de code source unique.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
@@ -98,6 +98,7 @@ Notez que l’affectation à la fois **sortie de l’assembleur** et **utiliser 
 - Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> ou <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. Pour spécifier **/FAu**, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="example"></a>Exemple
+
 La ligne de commande suivante produit une source combinée et listing de code machine appelé Hello.cod combinant :
 
 ```cmd
@@ -106,7 +107,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichier de sortie (/ F) Options](../../build/reference/output-file-f-options.md)   
-[Options du compilateur](../../build/reference/compiler-options.md)   
-[Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
+[Fichier de sortie (/ F) Options](../../build/reference/output-file-f-options.md)
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
+[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
 [Spécification du nom de chemin](../../build/reference/specifying-the-pathname.md)

@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688543"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712034"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *lpvParam*  
-Réservé à un usage ultérieur.
+*lpvParam*<br/>
+[in] Réservé pour une utilisation ultérieure.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *lpszFileName*  
-Le nom du fichier à ouvrir.
+*lpszFileName*<br/>
+[in] Le nom du fichier à ouvrir.
 
-[in] *bAddToMRU*  
-TRUE indique que le document est un des fichiers plus récents ; La valeur FALSE indique que le document n’est pas un des fichiers plus récents.
+*bAddToMRU*<br/>
+[in] TRUE indique que le document est un des fichiers plus récents ; La valeur FALSE indique que le document n’est pas un des fichiers plus récents.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bCompat*  
-TRUE ajoute des entrées d’inscription pour les commandes d’interpréteur de commandes d’impression et imprimer vers, qui permet à un utilisateur imprimer des fichiers directement à partir de l’interpréteur de commandes, ou en faisant glisser le fichier à un objet de l’imprimante. Il ajoute également une clé DefaultIcon. Par défaut, ce paramètre a la valeur FALSE pour la compatibilité descendante.
+*bCompat*<br/>
+[in] TRUE ajoute des entrées d’inscription pour les commandes d’interpréteur de commandes d’impression et imprimer vers, qui permet à un utilisateur imprimer des fichiers directement à partir de l’interpréteur de commandes, ou en faisant glisser le fichier à un objet de l’imprimante. Il ajoute également une clé DefaultIcon. Par défaut, ce paramètre a la valeur FALSE pour la compatibilité descendante.
 
 ### <a name="remarks"></a>Notes
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |Paramètre|Description|
-|[in] *bRegisterRecoveryCallback*|TRUE indique que cette instance de l’application utilise une fonction de rappel de récupération ; La valeur FALSE indique qu’il n’existe pas. L’infrastructure appelle la fonction de rappel de récupération lorsque l’application se ferme de façon inattendue. Pour plus d’informations, consultez [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *strRestartIdentifier*|Chaîne unique qui identifie cette instance du Gestionnaire de redémarrage. L’identificateur de gestionnaire de redémarrage est unique pour chaque instance d’une application.|
-|[in] *pwzCommandLineArgs*|Chaîne qui contient les arguments supplémentaires à partir de la ligne de commande.|
-|[in] *dwRestartFlags*|Indicateurs facultatifs pour le Gestionnaire de redémarrage. Pour plus d'informations, consultez la section Remarques.|
-|[in] *pRecoveryCallback*|La fonction de rappel de récupération. Cette fonction doit accepter un paramètre LPVOID en tant qu’entrée et retourner une valeur DWORD. La fonction de rappel de récupération par défaut est `CWinApp::ApplicationRecoveryCallback`.|
-|[in] *lpvParam*|Le paramètre d’entrée pour la fonction de rappel de récupération. Pour plus d’informations, consultez [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *dwPingInterval*|La durée pendant laquelle le Gestionnaire de redémarrage attend que la fonction de rappel de récupération à retourner. Ce paramètre est exprimée en millisecondes.|
-|[in] *dwCallbackFlags*|Indicateurs transmis à la fonction de rappel de récupération. Réservé à un usage ultérieur.|
+|*bRegisterRecoveryCallback*|[in] TRUE indique que cette instance de l’application utilise une fonction de rappel de récupération ; La valeur FALSE indique qu’il n’existe pas. L’infrastructure appelle la fonction de rappel de récupération lorsque l’application se ferme de façon inattendue. Pour plus d’informations, consultez [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*strRestartIdentifier*|[in] Chaîne unique qui identifie cette instance du Gestionnaire de redémarrage. L’identificateur de gestionnaire de redémarrage est unique pour chaque instance d’une application.|
+|*pwzCommandLineArgs*|[in] Chaîne qui contient les arguments supplémentaires à partir de la ligne de commande.|
+|*dwRestartFlags*|[in] Indicateurs facultatifs pour le Gestionnaire de redémarrage. Pour plus d'informations, consultez la section Remarques.|
+|*pRecoveryCallback*|[in] La fonction de rappel de récupération. Cette fonction doit accepter un paramètre LPVOID en tant qu’entrée et retourner une valeur DWORD. La fonction de rappel de récupération par défaut est `CWinApp::ApplicationRecoveryCallback`.|
+|*lpvParam*|[in] Le paramètre d’entrée pour la fonction de rappel de récupération. Pour plus d’informations, consultez [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*dwPingInterval*|[in] La durée pendant laquelle le Gestionnaire de redémarrage attend que la fonction de rappel de récupération à retourner. Ce paramètre est exprimée en millisecondes.|
+|*dwCallbackFlags*|[in] Indicateurs transmis à la fonction de rappel de récupération. Réservé à un usage ultérieur.|
 
 ### <a name="return-value"></a>Valeur de retour
 

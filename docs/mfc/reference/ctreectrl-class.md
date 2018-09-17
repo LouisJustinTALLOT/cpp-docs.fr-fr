@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e623c0990477c5ee24fb4dcc782a6f243dce3337
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679245"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712165"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Fournit les fonctionnalités du contrôle commun d’arborescence Windows.  
@@ -465,7 +465,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *fCancelWithoutSave*|TRUE pour ignorer les modifications apportées à l’élément d’arborescence avant de conclure l’opération de modification, ou FALSE pour enregistrer les modifications apportées à l’élément d’arborescence avant de conclure l’opération.|  
+|*fCancelWithoutSave*|[in] TRUE pour ignorer les modifications apportées à l’élément d’arborescence avant de conclure l’opération de modification, ou FALSE pour enregistrer les modifications apportées à l’élément d’arborescence avant de conclure l’opération.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -732,7 +732,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle vers un élément de contrôle d’arborescence.|  
+|*hItem*|[in] Handle vers un élément de contrôle d’arborescence.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’image à afficher lorsque l’élément spécifié est dans l’état développé.  
@@ -798,9 +798,9 @@ BOOL GetItemPartRect(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle vers un élément de contrôle d’arborescence.|  
-|[in] *nPart*|Identificateur de la partie. Doit être définie sur TVGIPR_BUTTON.|  
-|[out] *lpRect*|Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Si cette méthode réussite, la structure reçoit les coordonnées du rectangle de la partie spécifiée par *hItem* et *nPart*.|  
+|*hItem*|[in] Handle vers un élément de contrôle d’arborescence.|  
+|*nPart*|[in] Identificateur de la partie. Doit être définie sur TVGIPR_BUTTON.|  
+|*lpRect*|[out] Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Si cette méthode réussite, la structure reçoit les coordonnées du rectangle de la partie spécifiée par *hItem* et *nPart*.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -879,7 +879,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle vers un élément de contrôle d’arborescence.|  
+|*hItem*|[in] Handle vers un élément de contrôle d’arborescence.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’état étendu de l’élément. Pour plus d’informations, consultez le `uStateEx` membre de la [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) structure.  
@@ -1322,7 +1322,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *uAccId*|Un identificateur d’accessibilité pour un élément dans l’élément d’arborescence.|  
+|*uAccId*|[in] Un identificateur d’accessibilité pour un élément dans l’élément d’arborescence.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le handle à un élément d’arborescence ( `HTREEITEM`) qui correspond à la *uAccId* paramètre. Pour plus d’informations, consultez le *hItem* membre de la [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) structure.  
@@ -1353,7 +1353,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle d’un élément d’arborescence dans le contrôle. Pour plus d’informations, consultez le *hItem* membre de la [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) structure.|  
+|*hItem*|[in] Handle d’un élément d’arborescence dans le contrôle. Pour plus d’informations, consultez le *hItem* membre de la [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’identificateur d’accessibilité qui correspond à la *hItem* paramètre.  
@@ -1474,8 +1474,8 @@ BOOL SetAutoscrollInfo(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *uPixelsPerSec*|Le nombre de pixels par seconde pour faire défiler.|  
-|[in] *uUpdateTime*|L’intervalle de temps entre les mises à jour du contrôle.|  
+|*uPixelsPerSec*|[in] Le nombre de pixels par seconde pour faire défiler.|  
+|*uUpdateTime*|[in] L’intervalle de temps entre les mises à jour du contrôle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Renvoie toujours TRUE.  
@@ -1555,8 +1555,8 @@ DWORD SetExtendedStyle(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *dwExMask*|Masque de bits qui spécifie les styles dans le contrôle d’arborescence actuelle sont affectés par cette méthode. Si ce paramètre est égal à zéro, elle est ignorée et la valeur de la *dwExStyles* paramètre est assigné au contrôle arborescence.<br /><br /> Spécifiez zéro ou une combinaison au niveau du bit (OR) de styles décrit dans [Styles étendus de contrôle d’arborescence](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
-|[in] *dwExStyles*|Masque de bits qui spécifie les styles dans l’arborescence actuelle de contrôle pour définir ou effacer.<br /><br /> Pour définir une combinaison de styles, spécifiez une combinaison au niveau du bit (OR) de styles décrit dans [Styles étendus de contrôle d’arborescence](/windows/desktop/Controls/tree-view-control-window-extended-styles). Pour effacer un jeu de styles, indiquez la valeur zéro.|  
+|*dwExMask*|[in] Masque de bits qui spécifie les styles dans le contrôle d’arborescence actuelle sont affectés par cette méthode. Si ce paramètre est égal à zéro, elle est ignorée et la valeur de la *dwExStyles* paramètre est assigné au contrôle arborescence.<br /><br /> Spécifiez zéro ou une combinaison au niveau du bit (OR) de styles décrit dans [Styles étendus de contrôle d’arborescence](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
+|*dwExStyles*|[in] Masque de bits qui spécifie les styles dans l’arborescence actuelle de contrôle pour définir ou effacer.<br /><br /> Pour définir une combinaison de styles, spécifiez une combinaison au niveau du bit (OR) de styles décrit dans [Styles étendus de contrôle d’arborescence](/windows/desktop/Controls/tree-view-control-window-extended-styles). Pour effacer un jeu de styles, indiquez la valeur zéro.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur qui contient la précédente étendue de styles de contrôle.  
@@ -1747,8 +1747,8 @@ BOOL SetItemExpandedImageIndex(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle vers un élément de contrôle d’arborescence.|  
-|[in] *iExpandedImage*|L’index de l’image à afficher lorsque l’élément spécifié est dans l’état développé.|  
+|*hItem*|[in] Handle vers un élément de contrôle d’arborescence.|  
+|*iExpandedImage*|[in] L’index de l’image à afficher lorsque l’élément spécifié est dans l’état développé.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1858,8 +1858,8 @@ BOOL SetItemStateEx(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle vers un élément de contrôle d’arborescence.|  
-|[in] *uStateEx*|L’état étendu de l’élément. Pour plus d’informations, consultez le `uStateEx` membre de la [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) structure.|  
+|*hItem*|[in] Handle vers un élément de contrôle d’arborescence.|  
+|*uStateEx*|[in] L’état étendu de l’élément. Pour plus d’informations, consultez le `uStateEx` membre de la [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -1984,7 +1984,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle vers un élément d’arborescence dans le contrôle. Pour plus d’informations, consultez le `hItem` membre de la [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) structure.|  
+|*hItem*|[in] Handle vers un élément d’arborescence dans le contrôle. Pour plus d’informations, consultez le `hItem` membre de la [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) structure.|  
   
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur la différence entre les info-bulles et des info-bulles, recherchez la rubrique « Info-bulles et info-bulles » à l’adresse [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  

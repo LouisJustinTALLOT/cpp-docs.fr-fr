@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430e6372c1ca26e946c2ff26bfcfe9180dfb0dba
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9c86d49aea2ce7a8d8b438c64cd883b71e5a4646
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894453"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720848"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Spécifier un fichier réponse du compilateur)
 
@@ -35,7 +35,7 @@ Spécifie un fichier de réponse du compilateur.
 
 ## <a name="arguments"></a>Arguments
 
-*response_file*  
+*response_file*<br/>
 Un fichier texte contenant les commandes du compilateur.
 
 ## <a name="remarks"></a>Notes
@@ -56,5 +56,5 @@ Il n’est pas possible de spécifier le **\@** option à partir d’un fichier 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)  
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)  
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
+[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

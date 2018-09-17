@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706834"
 ---
 # <a name="atl-text-encoding-functions"></a>Fonctions de codage de texte ATL
 
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pbSrcData*  
-La mémoire tampon contenant les données à décoder.
+*pbSrcData*<br/>
+[in] La mémoire tampon contenant les données à décoder.
 
-[in] *nSrcLen*  
-La longueur en octets de *pbSrcData*.
+*nSrcLen*<br/>
+[in] La longueur en octets de *pbSrcData*.
 
-[out] *szDest*  
-Mémoire tampon allouée par l’appelant pour recevoir les données décodées.
+*szDest*<br/>
+[out] Mémoire tampon allouée par l’appelant pour recevoir les données décodées.
 
-[out] *pnDestLen*  
-Pointeur vers une variable qui contient la longueur en octets de *szDest*. Si la fonction réussit, la variable reçoit le nombre d’octets écrits dans la mémoire tampon. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon.
+*pnDestLen*<br/>
+[out] Pointeur vers une variable qui contient la longueur en octets de *szDest*. Si la fonction réussit, la variable reçoit le nombre d’octets écrits dans la mémoire tampon. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon.
 
-[in] *dwFlags*  
-Indicateurs ATLSMTP_QPENCODE décrivant comment la conversion doit être effectuée.
+*dwFlags*<br/>
+[in] Indicateurs ATLSMTP_QPENCODE décrivant comment la conversion doit être effectuée.
 
 ### <a name="return-value"></a>Valeur de retour
 

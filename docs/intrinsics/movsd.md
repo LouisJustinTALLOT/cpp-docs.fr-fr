@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 659da66ea74088247a9eb46ae25f9920050719a1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90b96181dc3d48edbe6f58923e62d4fd1259f3c0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545815"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723929"
 ---
 # <a name="movsd"></a>__movsd
 **Section spécifique à Microsoft**  
@@ -41,14 +41,14 @@ void __movsd(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [out] `Dest`  
- La destination de l’opération.  
+*dest*<br/>
+[out] La destination de l’opération.  
   
- [in] `Source`  
- La source de l’opération.  
+*Source*<br/>
+[in] La source de l’opération.  
   
- [in] `Count`  
- Le nombre de mots doubles à copier.  
+*Nombre*<br/>
+[in] Le nombre de mots doubles à copier.  
   
 ## <a name="requirements"></a>Configuration requise  
   

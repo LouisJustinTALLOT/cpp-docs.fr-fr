@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540998"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711152"
 ---
 # <a name="bssseg"></a>bss_seg
 Spécifie le segment où les variables non initialisées sont stockées dans le fichier .obj.  
@@ -35,27 +35,27 @@ Spécifie le segment où les variables non initialisées sont stockées dans le 
 ```  
   
 ## <a name="remarks"></a>Notes  
- 
+
 Fichiers obj peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Le segment par défaut dans le fichier .obj pour les données non initialisées est .bss. Dans certains cas l’utilisation de **bss_seg** peut accélérer les temps de chargement en regroupant les données non initialisées en une seule section.  
   
 **bss_seg** sans paramètres réinitialise le segment à .bss.  
   
-*push* (facultatif)  
-Place un enregistrement sur la pile interne du compilateur. Un *push* peut avoir un *identificateur* et *segment-name*.  
+**push**<br/>
+(Facultatif) Place un enregistrement sur la pile interne du compilateur. Un *pu*sh * peut avoir un *identificateur* et *segment-name*.  
   
-*POP* (facultatif)  
-Supprime un enregistrement du haut de la pile interne du compilateur.  
+**pop**<br/>
+(Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.  
   
-*identificateur* (facultatif)  
-Lorsqu’il est utilisé avec *push*, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec *pop*, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
+*identifier*<br/>
+(Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
   
-*identificateur* permet à plusieurs enregistrements à dépiler avec une seule *pop* commande.  
+*identificateur* permet à plusieurs enregistrements à dépiler avec une seule **pop** commande.  
   
-*« segment-name »*(facultatif)  
-Nom d'un segment. Lorsqu’il est utilisé avec *pop*, la pile est dépilée et *segment-name* devient le nom de segment actif.  
+*« segment-name »*<br/>
+(Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment actif.  
   
-*« segment-class »* (facultatif)  
-Incluse pour la compatibilité avec les versions de C++ antérieures à la version 2.0. Elle est ignorée.  
+*« segment-class »*<br/>
+(Facultatif) Inclus pour la compatibilité avec C++ antérieures à la version 2.0. Elle est ignorée.  
   
 ## <a name="example"></a>Exemple  
   

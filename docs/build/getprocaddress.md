@@ -18,63 +18,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91fd6b983d648b682cbd60fa6126189e102b9f1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194357"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713718"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-Les processus liés de manière explicite à une DLL appellent [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) pour obtenir l’adresse d’une fonction exportée dans la DLL. Vous utilisez le pointeur de fonction retourné pour appeler la fonction de la DLL. **GetProcAddress** prend comme paramètres le handle de module DLL (retourné par **LoadLibrary**, `AfxLoadLibrary`, ou **GetModuleHandle**) et soit le nom de la fonction que vous souhaitez à l’appel ou l’ordinal d’exportation de la fonction.  
-  
- Étant donné que vous appelez la fonction DLL via un pointeur et qu’aucune vérification de type lors de la compilation, assurez-vous que les paramètres de la fonction sont corrects, afin que vous ne pas enfreindre la mémoire allouée sur la pile et provoquer une violation d’accès. Une méthodes permettant de fournir une sécurité de type consiste à examiner les prototypes des fonctions exportées et créer des typedefs correspondants pour les pointeurs de fonction. Exemple :  
-  
-```  
-typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);  
-...  
-  
-HINSTANCE hDLL;               // Handle to DLL  
-LPFNDLLFUNC1 lpfnDllFunc1;    // Function pointer  
-DWORD dwParam1;  
-UINT  uParam2, uReturnVal;  
-  
-hDLL = LoadLibrary("MyDLL");  
-if (hDLL != NULL)  
-{  
-   lpfnDllFunc1 = (LPFNDLLFUNC1)GetProcAddress(hDLL,  
-                                           "DLLFunc1");  
-   if (!lpfnDllFunc1)  
-   {  
-      // handle the error  
-      FreeLibrary(hDLL);  
-      return SOME_ERROR_CODE;  
-   }  
-   else  
-   {  
-      // call the function  
-      uReturnVal = lpfnDllFunc1(dwParam1, uParam2);  
-   }  
-}  
-```  
-  
- Manière dont vous spécifiez la fonction qui vous intéresse lorsque vous appelez **GetProcAddress** dépend de la façon dont la DLL a été générée.  
-  
- Vous ne pouvez obtenir l’ordinal d’exportation si la DLL que vous établissez la liaison est générée avec un fichier de définition (.def) de module et si les ordinaux sont listés avec les fonctions dans le **exportations** section du fichier .def de la DLL. Appel **GetProcAddress** avec une exportation ordinal, plutôt que le nom de fonction, est légèrement plus rapide si la DLL possède de nombreuses fonctions exportées car les ordinaux d’exportation servent de la table d’exportation de l’index dans la DLL. Avec un ordinal d’exportation, **GetProcAddress** peut localiser la fonction directement au lieu de comparer le nom spécifié aux noms des fonctions dans la table d’exportation de la DLL. Toutefois, vous devez appeler **GetProcAddress** avec un ordinal d’exportation uniquement si vous contrôlez l’assignation des ordinaux aux fonctions exportées dans le fichier .def.  
-  
-## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
-  
--   [Comment lier de manière implicite à une DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
-  
--   [Déterminer la méthode de liaison à utiliser](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
-  
--   [LoadLibrary et AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
-  
--   [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)  
-  
--   [Exportation à partir d’une DLL à l’aide de fichiers DEF](../build/exporting-from-a-dll-using-def-files.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [DLL dans Visual C++](../build/dlls-in-visual-cpp.md)
+
+Les processus liés de manière explicite à une DLL appellent [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) pour obtenir l’adresse d’une fonction exportée dans la DLL. Vous utilisez le pointeur de fonction retourné pour appeler la fonction de la DLL. **GetProcAddress** prend comme paramètres le handle de module DLL (retourné par **LoadLibrary**, `AfxLoadLibrary`, ou **GetModuleHandle**) et soit le nom de la fonction que vous souhaitez à l’appel ou l’ordinal d’exportation de la fonction.
+
+Étant donné que vous appelez la fonction DLL via un pointeur et qu’aucune vérification de type lors de la compilation, assurez-vous que les paramètres de la fonction sont corrects, afin que vous ne pas enfreindre la mémoire allouée sur la pile et provoquer une violation d’accès. Une méthodes permettant de fournir une sécurité de type consiste à examiner les prototypes des fonctions exportées et créer des typedefs correspondants pour les pointeurs de fonction. Exemple :
+
+```
+typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
+...
+
+HINSTANCE hDLL;               // Handle to DLL
+LPFNDLLFUNC1 lpfnDllFunc1;    // Function pointer
+DWORD dwParam1;
+UINT  uParam2, uReturnVal;
+
+hDLL = LoadLibrary("MyDLL");
+if (hDLL != NULL)
+{
+   lpfnDllFunc1 = (LPFNDLLFUNC1)GetProcAddress(hDLL,
+                                           "DLLFunc1");
+   if (!lpfnDllFunc1)
+   {
+      // handle the error
+      FreeLibrary(hDLL);
+      return SOME_ERROR_CODE;
+   }
+   else
+   {
+      // call the function
+      uReturnVal = lpfnDllFunc1(dwParam1, uParam2);
+   }
+}
+```
+
+Manière dont vous spécifiez la fonction qui vous intéresse lorsque vous appelez **GetProcAddress** dépend de la façon dont la DLL a été générée.
+
+Vous ne pouvez obtenir l’ordinal d’exportation si la DLL que vous établissez la liaison est générée avec un fichier de définition (.def) de module et si les ordinaux sont listés avec les fonctions dans le **exportations** section du fichier .def de la DLL. Appel **GetProcAddress** avec une exportation ordinal, plutôt que le nom de fonction, est légèrement plus rapide si la DLL possède de nombreuses fonctions exportées car les ordinaux d’exportation servent de la table d’exportation de l’index dans la DLL. Avec un ordinal d’exportation, **GetProcAddress** peut localiser la fonction directement au lieu de comparer le nom spécifié aux noms des fonctions dans la table d’exportation de la DLL. Toutefois, vous devez appeler **GetProcAddress** avec un ordinal d’exportation uniquement si vous contrôlez l’assignation des ordinaux aux fonctions exportées dans le fichier .def.
+
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
+
+- [Comment lier de manière implicite à une DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+
+- [Déterminer la méthode de liaison à utiliser](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+
+## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
+
+- [LoadLibrary et AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+
+- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+
+- [Exportation à partir d’une DLL à l’aide de fichiers DEF](../build/exporting-from-a-dll-using-def-files.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[DLL dans Visual C++](../build/dlls-in-visual-cpp.md)

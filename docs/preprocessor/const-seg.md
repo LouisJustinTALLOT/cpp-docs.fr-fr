@@ -1,7 +1,7 @@
 ---
 title: const_seg | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540569"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705209"
 ---
 # <a name="constseg"></a>const_seg
 Spécifie le segment où [const](../cpp/const-cpp.md) variables sont stockées dans le fichier .obj.  
@@ -34,33 +34,35 @@ Spécifie le segment où [const](../cpp/const-cpp.md) variables sont stockées d
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Notes  
- 
+### <a name="parameters"></a>Paramètres
+
+**push**<br/>
+(Facultatif) Place un enregistrement sur la pile interne du compilateur. Un **push** peut avoir un *identificateur* et *segment-name*.  
+  
+**pop**<br/>
+(Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.  
+  
+*identifier*<br/>
+(Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
+  
+À l’aide de *identificateur* permet à plusieurs enregistrements à dépiler avec une seule **pop** commande.  
+  
+«*segment-name*»<br/>  
+(Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment actif.  
+  
+«*segment-classe*»<br/>
+(Facultatif) Inclus pour la compatibilité avec C++ antérieures à la version 2.0. Elle est ignorée.  
+  
+## <a name="remarks"></a>Notes
+
 La signification des termes du contrat *segment* et *section* sont interchangeables dans cette rubrique.  
   
 Les fichiers OBJ peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Dans le fichier .obj, le segment par défaut pour les variables `const` est .rdata. Certaines variables `const`, telles que les scalaires, sont automatiquement incluses en ligne dans le flux de code. Le code inline n'apparaîtra pas dans .rdata.  
   
 La définition d'un objet qui requiert une initialisation dynamique dans un `const_seg` entraîne un comportement non défini.  
   
-`#pragma const_seg` sans paramètre réinitialise le segment sur .rdata.  
-  
-*push* (facultatif)  
-Place un enregistrement sur la pile interne du compilateur. Un *push* peut avoir un *identificateur* et *segment-name*.  
-  
-*POP* (facultatif)  
-Supprime un enregistrement du haut de la pile interne du compilateur.  
-  
-*identificateur* (facultatif)  
-Lorsqu’il est utilisé avec *push*, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec *pop*, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
-  
-À l’aide de *identificateur* permet à plusieurs enregistrements à dépiler avec une seule *pop* commande.  
-  
-«*segment-name*» (facultatif)  
-Nom d'un segment. Lorsqu’il est utilisé avec *pop*, la pile est dépilée et *segment-name* devient le nom de segment actif.  
-  
-«*segment-classe*» (facultatif)  
-Incluse pour la compatibilité avec les versions de C++ antérieures à la version 2.0. Elle est ignorée.  
-  
+`#pragma const_seg` sans paramètre réinitialise le segment sur .rdata.
+
 ## <a name="example"></a>Exemple  
   
 ```cpp  

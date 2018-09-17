@@ -1,5 +1,5 @@
 ---
-title: -O1, - O2 (réduire la taille, augmenter la vitesse) | Documents Microsoft
+title: -O1, - O2 (réduire la taille, augmenter la vitesse) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5003695c5ae2b16faf8aa80f68928858a3a48288
-ms.sourcegitcommit: 4cdfff1114829599ab54178767f57664ad3424d1
+ms.openlocfilehash: 832ea689b2db9a34b55664b695747079ac277bae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702557"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Réduire la taille, augmenter la vitesse)
 
@@ -39,12 +39,11 @@ Sélectionne un ensemble prédéfini d’options qui affectent la taille et la v
 
 ## <a name="syntax"></a>Syntaxe
 
-> /O1  
-> /O2
+> / / O2 O1
 
 ## <a name="remarks"></a>Notes
 
-Le **/O1** et **/O2** options du compilateur sont un moyen rapide de définir plusieurs options d’optimisation spécifiques à la fois. Le **/O1** option définit les options de l’optimisation individuels qui créent le code plus petit dans la majorité des cas. Le **/O2** option définit les options qui créent le code le plus rapide dans la majorité des cas. Le **/O2** option est la valeur par défaut pour les versions release. Ce tableau montre les options spécifiques qui sont définies par **/O1** et **/O2**:
+Le **/O1** et **/O2** options du compilateur constituent un moyen rapide pour définir plusieurs options d’optimisation spécifiques à la fois. Le **/O1** option définit les options d’optimisation qui créent le code plus petit dans la plupart des cas. Le **/O2** option définit les options qui créent le code le plus rapide dans la plupart des cas. Le **/O2** option est la valeur par défaut pour les versions release. Ce tableau montre les options spécifiques qui sont définies par **/O1** et **/O2**:
 
 |Option|Équivalent à|
 |------------|-------------------|
@@ -53,9 +52,8 @@ Le **/O1** et **/O2** options du compilateur sont un moyen rapide de définir pl
 
 **/ O1** et **/O2** s’excluent mutuellement.
 
-> [!NOTE]  
-> **x86 spécifiques**  
-> Ces options impliquent l’utilisation de l’Omission du pointeur Frame ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) option.
+> [!NOTE]
+> **x86 spécifique** ces options impliquent l’utilisation de l’Omission du pointeur Frame ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) option.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
@@ -63,7 +61,7 @@ Le **/O1** et **/O2** options du compilateur sont un moyen rapide de définir pl
 
 1. Sous **propriétés de Configuration**, ouvrez **C/C++** , puis choisissez le **optimisation** page de propriétés.
 
-1. Modifier la **optimisation** propriété.
+1. Modifier le **optimisation** propriété.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
@@ -71,7 +69,7 @@ Le **/O1** et **/O2** options du compilateur sont un moyen rapide de définir pl
 
 ## <a name="see-also"></a>Voir aussi
 
-[/O, options (Optimiser le code)](../../build/reference/o-options-optimize-code.md)  
-[Options du compilateur](../../build/reference/compiler-options.md)  
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)  
+[/O (optimiser le Code), options](../../build/reference/o-options-optimize-code.md)
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
+[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
 [/EH (Modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md)

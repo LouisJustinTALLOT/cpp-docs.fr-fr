@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d89020869db10b45688dbaae71f38711d2667c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676361"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712073"
 ---
 # <a name="cdockablepaneadapter-class"></a>Cdockablepaneadapter, classe
 Fournit la prise en charge de l'ancrage pour les volets dérivés de `CWnd`.  
@@ -90,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Nom du profil.  
+*lpszProfileName*<br/>
+[in] Le nom du profil.  
   
- [in] *nIndex*  
- L’index de profil.  
+*nIndex*<br/>
+[in] L’index de profil.  
   
- [in] *uiID*  
- L’ID du volet.  
+*uiID*<br/>
+[in] L’ID du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -114,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Nom du profil.  
+*lpszProfileName*<br/>
+[in] Le nom du profil.  
   
- [in] *nIndex*  
- L’index de profil (par défaut, l’ID de contrôle de la fenêtre).  
+*nIndex*<br/>
+[in] L’index de profil (par défaut, l’ID de contrôle de la fenêtre).  
   
- [in] *uiID*  
- L’ID du volet.  
+*uiID*<br/>
+[in] L’ID du volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -135,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWnd*  
- Pointeur vers la fenêtre de l’adaptateur de volet à encapsuler.  
+*pWnd*<br/>
+[in] Pointeur vers la fenêtre de l’adaptateur de volet à encapsuler.  
   
 ### <a name="return-value"></a>Valeur de retour  
   

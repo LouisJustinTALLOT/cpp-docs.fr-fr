@@ -1,5 +1,5 @@
 ---
-title: Classe de CRecentDockSiteInfo | Documents Microsoft
+title: Crecentdocksiteinfo, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,14 +40,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078998"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702609"
 ---
-# <a name="crecentdocksiteinfo-class"></a>Classe de CRecentDockSiteInfo
+# <a name="crecentdocksiteinfo-class"></a>Crecentdocksiteinfo, classe
 Le `CRecentDockSiteInfo` est une classe d’assistance qui stocke les informations d’état récentes pour la [CPANE, classe](../../mfc/reference/cpane-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -85,7 +85,7 @@ class CRecentDockSiteInfo : public CObject
 ## <a name="remarks"></a>Notes  
  `CRecentDockSiteInfo` est une classe de gestion de données. Elle suit le dernier état d'un `CPane` au fil de ses transitions entre les états ancré et flottant. Quand un utilisateur double-clique sur un volet ancrable flottant, il devient ancré. Un double-clic sur le volet ancré rétablit ses emplacement, taille et état précédents. De même, quand le volet est à nouveau ancré, il retrouve son emplacement d'ancrage précédent. Telles sont les possibilités offertes par cette classe de données. Comme les membres de cette classe stockent les informations d'état du volet ancré, ils ne doivent pas être directement modifiés par votre application.  
   
- Un objet `CRecentDockSiteInfo` est créé à chaque création d'un volet. Chaque `CPane` objet possède une variable membre, [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), pour stocker ces informations.  
+ Un objet `CRecentDockSiteInfo` est créé à chaque création d'un volet. Chaque `CPane` objet a une variable membre, [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), pour stocker ces informations.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -244,8 +244,8 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *CList < HWND*  
- [in] *lstOrg*  
+*CList < HWND*<br/>
+[in] [in] *lstOrg*  
  [in] *bForSlider*  
   
 ### <a name="remarks"></a>Notes  
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bForSlider*  
- [in] *srcInfo*  
+*bForSlider*<br/>
+[in] [in] *srcInfo*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -275,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pRecentContainer*  
- [in] *pTabbedBar*  
+*pRecentContainer*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Notes  
   

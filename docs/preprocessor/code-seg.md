@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 052e9a55d443fa263ecf8443c9e3933baeb1f3b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9b9be3cd2de53c957074d2acdee18183d688852
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719119"
 ---
 # <a name="codeseg"></a>code_seg
 Spécifie le segment de texte dans lequel les fonctions sont stockées dans un fichier .obj.  
@@ -34,6 +34,25 @@ Spécifie le segment de texte dans lequel les fonctions sont stockées dans un f
 #pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="paramters"></a>Paramètres
+  
+**push**<br/>
+(Facultatif) Place un enregistrement sur la pile interne du compilateur. Un **push** peut avoir un *identificateur* et *segment-name*.  
+  
+**pop**<br/>
+(Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.  
+  
+*identifier*<br/>
+(Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
+  
+*identificateur* permet à plusieurs enregistrements à dépiler avec un seul **pop** commande.  
+  
+«*segment-name*»<br/>  
+(Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment de texte active.  
+  
+«*segment-classe*»<br/>
+(Facultatif) Ignoré, mais inclus pour la compatibilité avec les versions antérieures à la version 2.0 de C++.  
+  
 ## <a name="remarks"></a>Notes  
  
 Le **code_seg** directive pragma ne contrôle pas l’emplacement de code objet généré pour les modèles instanciés, ni le code généré de manière implicite par le compilateur, par exemple, les fonctions membres spéciales. Nous vous recommandons d’utiliser le [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) attribut au lieu de cela, car il vous donne contrôler l’emplacement de tout le code objet. Cela comprend le code généré par le compilateur.  
@@ -43,24 +62,7 @@ Un *segment* dans un .obj fichier est un bloc nommé de données qui sont charg�
 Le **code_seg** directive pragma indique au compilateur de placer tout prochain code objet à partir de l’unité de traduction dans un segment de texte nommé *segment-name*. Par défaut, le segment de texte utilisé pour les fonctions d'un fichier .obj est nommé ".text".  
   
 Un **code_seg** directive pragma sans paramètres réinitialise le nom de segment de texte pour le prochain code objet en ".Text".  
-  
-*push* (facultatif)  
-Place un enregistrement sur la pile interne du compilateur. Un *push* peut avoir un *identificateur* et *segment-name*.  
-  
-*POP* (facultatif)  
-Supprime un enregistrement du haut de la pile interne du compilateur.  
-  
-*identificateur* (facultatif)  
-Lorsqu’il est utilisé avec *push*, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec *pop*, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
-  
-*identificateur* permet à plusieurs enregistrements à dépiler avec un seul *pop* commande.  
-  
-«*segment-name*» (facultatif)  
-Nom d'un segment. Lorsqu’il est utilisé avec *pop*, la pile est dépilée et *segment-name* devient le nom de segment de texte active.  
-  
-«*segment-classe*» (facultatif)  
-Ignoré, mais inclus pour des raisons de compatibilité avec les versions de C++ antérieures à la version 2.0.  
-  
+
 Vous pouvez utiliser le [DUMPBIN. EXE](../build/reference/dumpbin-command-line.md) application pour afficher les fichiers .obj. Version de DUMPBIN pour chaque architecture cible prise en charge est incluse avec Visual Studio.  
   
 ## <a name="example"></a>Exemple  

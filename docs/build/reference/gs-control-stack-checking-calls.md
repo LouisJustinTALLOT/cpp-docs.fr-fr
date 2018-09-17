@@ -22,27 +22,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c6a5af31eaba30af92201a2e2563b67aceed6e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104106"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719268"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (contrôler les appels de contrôle de pile)
+
 Gère les tests de pile.
 
 ## <a name="syntax"></a>Syntaxe
 
-```  
+```
 /Gs[size]
-```  
+```
 
 ## <a name="arguments"></a>Arguments
+
 *size*<br/>
 (Facultatif) Nombre d'octets que les variables locales peuvent occuper avant qu'une sonde de pile soit lancée. Si le **/GS** option est spécifiée sans un `size` argument, il est identique à la spécification **/Gs0**,
 
 ## <a name="remarks"></a>Notes
+
 Une sonde de pile est une séquence de code que le compilateur insère dans chaque appel de fonction. Lorsqu'elle est lancée, une sonde de pile pénètre sans heurt dans la mémoire en fonction de l'espace requis pour stocker les variables locales de la fonction.
 
 Si une fonction requiert plus de `size` octets d'espace de pile pour les variables locales, sa sonde de pile est démarrée. Par défaut, le compilateur génère du code qui lance une sonde de pile quand une fonction requiert plus d'une page d'espace de pile. Cela équivaut à une option du compilateur **/Gs4096** x86 x64 et les plateformes ARM. Cette valeur permet à une application et au gestionnaire de mémoire Windows d’augmenter la quantité de mémoire validée dynamiquement dans la pile du programme au moment de l’exécution.
@@ -58,18 +61,19 @@ Vous pouvez activer ou désactiver les sondes de pile à l’aide de [check_stac
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
-2.  Sélectionnez le **C/C++** dossier.
+1. Sélectionnez le **C/C++** dossier.
 
-3.  Sélectionnez le **ligne de commande** page de propriétés.
+1. Sélectionnez le **ligne de commande** page de propriétés.
 
-4.  Tapez l'option de compilateur dans la zone **Options supplémentaires** .
+1. Tapez l'option de compilateur dans la zone **Options supplémentaires** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Voir aussi
-[Options du compilateur](../../build/reference/compiler-options.md)   
+
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

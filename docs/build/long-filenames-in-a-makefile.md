@@ -1,5 +1,5 @@
 ---
-title: Noms de fichiers longs dans un Makefile | Documents Microsoft
+title: Noms de fichiers longs dans un Makefile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc199289f80e6ce2f9dbc5317ee439af528a055b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d69abd9fa67db7c1ec2e5dede0ebd5629d21e7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367626"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714543"
 ---
 # <a name="long-filenames-in-a-makefile"></a>Noms de fichiers longs dans un makefile
-Placez les longs dans des guillemets doubles, comme suit :  
-  
-```  
-all : "VeryLongFileName.exe"  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Contenu d’un makefile](../build/contents-of-a-makefile.md)
+
+Mettez les longs entre des guillemets doubles, comme suit :
+
+```
+all : "VeryLongFileName.exe"
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Contenu d’un makefile](../build/contents-of-a-makefile.md)

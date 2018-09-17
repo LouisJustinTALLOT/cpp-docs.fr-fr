@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690150"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705911"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de barre de progression Windows.  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *clrBar*|Un [COLORREF](/windows/desktop/gdi/colorref) valeur qui spécifie la nouvelle couleur de la barre de progression. Spécifiez CLR_DEFAULT pour provoquer la barre de progression à utiliser sa couleur par défaut.|  
+|*clrBar*|[in] Un [COLORREF](/windows/desktop/gdi/colorref) valeur qui spécifie la nouvelle couleur de la barre de progression. Spécifiez CLR_DEFAULT pour provoquer la barre de progression à utiliser sa couleur par défaut.|  
   
 ### <a name="return-value"></a>Valeur de retour  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *fMarqueeMode*|True pour activer le mode de texte défilant on, ou FALSE pour désactiver le mode de sélection.|  
-|[in] *%n%nintervalle*|Durée en millisecondes entre les mises à jour de l’animation de texte défilant.|  
+|*fMarqueeMode*|[in] True pour activer le mode de texte défilant on, ou FALSE pour désactiver le mode de sélection.|  
+|*%n%nintervalle*|[in] Durée en millisecondes entre les mises à jour de l’animation de texte défilant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne toujours la valeur TRUE.  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iState*|État pour définir la barre de progression. Utilisez l'une des valeurs suivantes :<br /><br /> -PBST_NORMAL - en cours<br />-PBST_ERROR - erreur<br />-PBST_PAUSED - suspendu|  
+|*iState*|[in] L’état à définir la barre de progression. Utilisez l'une des valeurs suivantes :<br /><br /> -PBST_NORMAL - en cours<br />-PBST_ERROR - erreur<br />-PBST_PAUSED - suspendu|  
   
 ### <a name="return-value"></a>Valeur de retour  
  État précédent du contrôle de barre de progression actuel.  

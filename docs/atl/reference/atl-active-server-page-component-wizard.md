@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29763bbc06d2f1425cf8a916885137be9719c1e6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760534"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713217"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Assistant Composant ASP ATL
 
@@ -44,48 +44,56 @@ Si vous modifiez le **coclasse** nom dans la section COM, la modification est r�
 
 Fournit des informations pour la classe C++ créée pour l’objet.
 
-**Nom court**  
-Définit le nom de la racine de l’objet. Le nom que vous fournissez détermine le `Class` et **coclasse** noms, le **fichier .cpp** et **fichier .h** noms, le **Interface**nom, le **Type** noms et le **ProgID**, sauf si vous modifiez ces champs individuellement.
+- **Nom court**  
 
-**Fichier .h**  
-Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous sélectionnez un fichier existant, l’Assistant pas enregistrera à l’emplacement sélectionné jusqu'à ce que vous cliquez sur **Terminer** dans l’Assistant.
+   Définit le nom de la racine de l’objet. Le nom que vous fournissez détermine le `Class` et **coclasse** noms, le **fichier .cpp** et **fichier .h** noms, le **Interface**nom, le **Type** noms et le **ProgID**, sauf si vous modifiez ces champs individuellement.
 
-L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
+- **Fichier .h**  
 
-**Classe**  
-Définit le nom de la classe à créer. Ce nom est basé sur le nom que vous fournissez dans **nom court**, précédé de « C », le préfixe classique pour un nom de classe.
+   Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous sélectionnez un fichier existant, l’Assistant pas enregistrera à l’emplacement sélectionné jusqu'à ce que vous cliquez sur **Terminer** dans l’Assistant.
 
-**Fichier .cpp**  
-Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. L’Assistant attend que vous cliquiez sur **Terminer** pour enregistrer le fichier à l’emplacement sélectionné.
+   L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
 
-L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si l’implémentation de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
+- **Classe**  
 
-**Attribué**  
-Indique si l’objet utilise des attributs. Si vous ajoutez un objet à un projet ATL avec attributs, cette option est sélectionnée et indisponible à modifier. Autrement dit, vous pouvez ajouter uniquement les objets attribués à un projet créé avec prise en charge de l’attribut.
+   Définit le nom de la classe à créer. Ce nom est basé sur le nom que vous fournissez dans **nom court**, précédé de « C », le préfixe classique pour un nom de classe.
 
-Si vous sélectionnez cette option pour un projet ATL qui n’a pas d’attribut prennent en charge, l’Assistant vous invite à spécifier si vous souhaitez ajouter la prise en charge de l’attribut au projet.
+- **Fichier .cpp**  
 
-Par défaut pour les projets sans attributs, les objets que vous ajoutez après avoir défini cette option sont désignés avec attributs (la case à cocher est sélectionnée). Vous pouvez désactiver cette case pour ajouter un objet qui n’utilise pas d’attributs.
+   Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. L’Assistant attend que vous cliquiez sur **Terminer** pour enregistrer le fichier à l’emplacement sélectionné.
 
-Consultez [paramètres d’Application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
+   L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si l’implémentation de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
+
+- **Attribué**  
+
+   Indique si l’objet utilise des attributs. Si vous ajoutez un objet à un projet ATL avec attributs, cette option est sélectionnée et indisponible à modifier. Autrement dit, vous pouvez ajouter uniquement les objets attribués à un projet créé avec prise en charge de l’attribut.
+
+   Si vous sélectionnez cette option pour un projet ATL qui n’a pas d’attribut prennent en charge, l’Assistant vous invite à spécifier si vous souhaitez ajouter la prise en charge de l’attribut au projet.
+
+   Par défaut pour les projets sans attributs, les objets que vous ajoutez après avoir défini cette option sont désignés avec attributs (la case à cocher est sélectionnée). Vous pouvez désactiver cette case pour ajouter un objet qui n’utilise pas d’attributs.
+
+   Consultez [paramètres d’Application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
 
 ### <a name="com"></a>COM
 
 Fournit des informations sur les fonctionnalités COM pour l’objet.
 
-**Coclasse**  
-Définit le nom de la classe de composant qui contient une liste des interfaces prises en charge par l’objet. Si votre projet ou cet objet utilise des attributs, vous ne pouvez pas modifier cette option, car ATL n’inclut pas le **coclasse** attribut.
+- **Coclasse**  
 
-**Type**  
-Définit la description de l’objet qui apparaîtra dans le Registre pour la coclasse.
+   Définit le nom de la classe de composant qui contient une liste des interfaces prises en charge par l’objet. Si votre projet ou cet objet utilise des attributs, vous ne pouvez pas modifier cette option, car ATL n’inclut pas le **coclasse** attribut.
 
-**Interface**  
-Définit l’interface que vous créez pour votre objet. Cette interface contient vos méthodes personnalisées.
+- **Type**  
 
-**ProgID**  
-Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
+   Définit la description de l’objet qui apparaîtra dans le Registre pour la coclasse.
+
+- **Interface**  
+
+   Définit l’interface que vous créez pour votre objet. Cette interface contient vos méthodes personnalisées.
+
+- **ProgID**  
+
+   Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Composant ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

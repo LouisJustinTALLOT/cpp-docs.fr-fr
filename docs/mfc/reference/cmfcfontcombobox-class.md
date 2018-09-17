@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686155"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725172"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox, classe
 Le `CMFCFontComboBox` classe crée un contrôle de zone de liste déroulante qui contient une liste de polices.  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDesc*  
- Pointe vers un objet de description de police.  
+*pDesc*<br/>
+[in] Pointe vers un objet de description de police.  
   
- [in] *le caractère*  
- Spécifie un nom de police.  
+*Caractère*<br/>
+[in] Spécifie un nom de police.  
   
- [in] *nCharSet*  
- Spécifie un jeu de caractères. La valeur par défaut est DEFAULT_CHARSET. Pour plus d’informations, consultez le `lfCharSet` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
+*nCharSet*<br/>
+[in] Spécifie un jeu de caractères. La valeur par défaut est DEFAULT_CHARSET. Pour plus d’informations, consultez le `lfCharSet` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si un élément dans la zone de liste déroulante police correspond à l’objet de description de police spécifiée ou de nom de la police et de jeu de caractères ; Sinon, FALSE.  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nFontType*  
- Spécifie le type de police. La valeur par défaut est la combinaison au niveau du bit (ou) de DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE.  
+*nFontType*<br/>
+[in] Spécifie le type de police. La valeur par défaut est la combinaison au niveau du bit (ou) de DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE.  
   
- [in] *nCharSet*  
- Spécifie le jeu de caractères de police. La valeur par défaut est DEFAULT_CHARSET.  
+*nCharSet*<br/>
+[in] Spécifie le jeu de caractères de police. La valeur par défaut est DEFAULT_CHARSET.  
   
- [in] *nPitchAndFamily*  
- Spécifie la hauteur de police et de la famille. La valeur par défaut est DEFAULT_PITCH.  
+*nPitchAndFamily*<br/>
+[in] Spécifie la hauteur de police et de la famille. La valeur par défaut est DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la zone de liste déroulante police a été initialisée avec succès ; Sinon, FALSE.  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676778"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716168"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Cmfcpropertygridtooltipctrl, classe
 Implémente une info-bulle de contrôle qui le [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) utilise pour afficher des info-bulles.  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParent*  
- Pointeur vers la fenêtre parente.  
+*pWndParent*<br/>
+[in] Pointeur vers la fenêtre parente.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la fenêtre a été créée avec succès ; Sinon, FALSE.  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *rect*  
- Contient la dernière position du contrôle d’info-bulle.  
+*Rect*<br/>
+[out] Contient la dernière position du contrôle d’info-bulle.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Masque le contrôle d’info-bulle.  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nTextMargin*  
- Spécifie l’espacement entre le texte info-bulle du contrôle et la bordure de la fenêtre d’info-bulle. La valeur par défaut est 10 pixels.  
+*nTextMargin*<br/>
+[in] Spécifie l’espacement entre le texte info-bulle du contrôle et la bordure de la fenêtre d’info-bulle. La valeur par défaut est 10 pixels.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Affiche le contrôle d’info-bulle.  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Spécifie la position et la taille du contrôle d’info-bulle.  
+*Rect*<br/>
+[in] Spécifie la position et la taille du contrôle d’info-bulle.  
   
- [in] *strText*  
- Spécifie le texte à afficher dans l’info-bulle.  
+*strText*<br/>
+[in] Spécifie le texte à afficher dans l’info-bulle.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode affiche le contrôle d’info-bulle à la position et la taille spécifiée par *rect*. Si la position, la taille et le texte n’ont pas changé depuis la dernière fois que cette méthode a été appelée, cette méthode n’a aucun effet.  

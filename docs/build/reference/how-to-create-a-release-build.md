@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer une version Release | Documents Microsoft'
+title: 'Comment : créer une version Release | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949cfe629332488821da4313c13d40054778ef06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1221133b55002d49c93d66210c5eae6844b534b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370874"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705601"
 ---
 # <a name="how-to-create-a-release-build"></a>Comment : créer une version release
-### <a name="to-generate-a-release-build-of-your-program"></a>Pour générer une version Release de votre programme  
-  
-1.  Sélectionnez **version** à partir de la **Configuration de la Solution** la liste déroulante, qui se trouve sur le **Standard** barre d’outils.  
-  
-2.  Sur le **générer** menu, cliquez sur **Build**.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Versions Release](../../build/reference/release-builds.md)
+
+### <a name="to-generate-a-release-build-of-your-program"></a>Pour générer une version Release de votre programme
+
+1. Sélectionnez **version** à partir de la **Configuration de la Solution** la liste déroulante, qui se trouve sur le **Standard** barre d’outils.
+
+1. Sur le **Build** menu, cliquez sur **Build**.
+
+## <a name="see-also"></a>Voir aussi
+
+[Versions Release](../../build/reference/release-builds.md)

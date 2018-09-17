@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 48c73e220c3e80abf0535e414572427f75b04511
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683750"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718209"
 ---
 # <a name="cbasepane-class"></a>Cbasepane, classe
 Classe de base pour tous les volets dans MFC.  
@@ -372,8 +372,8 @@ virtual void AccNotifyObjectFocusEvent(int);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *int*  
- Non utilisé.  
+*int*<br/>
+[in] Non utilisé.  
   
 ##  <a name="addpane"></a>  CBasePane::AddPane  
  Ajoute un volet au gestionnaire d’ancrage.  
@@ -383,8 +383,8 @@ void AddPane(CBasePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Pointeur vers un volet à ajouter.  
+*pBar*<br/>
+[in] Pointeur vers un volet à ajouter.  
   
 ### <a name="remarks"></a>Notes  
  Il s’agit d’une méthode pratique qui ajoute un volet à un gestionnaire d’ancrage. À l’aide de cette méthode, il est inutile d’écrire du code qui analyse le type du frame parent.  
@@ -399,8 +399,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *hdwp*  
- Handle vers une structure contenant plusieurs postes de fenêtre.  
+*hdwp*<br/>
+[out] Handle vers une structure contenant plusieurs postes de fenêtre.  
   
 ### <a name="remarks"></a>Notes  
  Il s’agit d’une méthode pratique qui ajuste la disposition d’ancrage. À l’aide de cette méthode, il est inutile d’écrire du code qui analyse le type du frame parent.  
@@ -427,11 +427,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bStretch*  
- Indique si la barre doit être étirée pour la taille de l’image. Le *bStretch* paramètre est différent de zéro lorsque la barre n’est pas une barre d’ancrage (non disponible pour la station d’accueil) et 0 lorsqu’il est ancré ou flottant (disponible d’ancrage).  
+*bStretch*<br/>
+[in] Indique si la barre doit être étirée pour la taille de l’image. Le *bStretch* paramètre est différent de zéro lorsque la barre n’est pas une barre d’ancrage (non disponible pour la station d’accueil) et 0 lorsqu’il est ancré ou flottant (disponible d’ancrage).  
   
- [in] *bHorz*  
- Indique que la barre est orientée horizontalement ou verticalement. Le *bHorz* paramètre est différent de zéro si la barre est orientée horizontalement et 0 s’il est orienté verticalement.  
+*bHorz*<br/>
+[in] Indique que la barre est orientée horizontalement ou verticalement. Le *bHorz* paramètre est différent de zéro si la barre est orientée horizontalement et 0 s’il est orienté verticalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La barre de contrôle de taille, en pixels, d’un `CSize` objet.  
@@ -447,8 +447,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Un pointeur vers le volet pour ancrer.  
+*pBar*<br/>
+[in] Un pointeur vers le volet pour ancrer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si un autre volet peut être accepté ; Sinon, FALSE.  
@@ -515,8 +515,8 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDockBar*  
- Pointeur vers un autre volet.  
+*pDockBar*<br/>
+[in] Pointeur vers un autre volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si ce volet peut être ancré à un autre volet ; Sinon, FALSE.  
@@ -597,8 +597,8 @@ virtual void CopyState(CBasePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pOrgBar*  
- Pointeur vers un autre volet.  
+*pOrgBar*<br/>
+[in] Pointeur vers un autre volet.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode copie l’état à partir de *pOrgBar* vers ce volet.  
@@ -611,8 +611,8 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectInitial*  
- Spécifie les coordonnées initiales de la fenêtre mini-frame.  
+*rectInitial*<br/>
+[in] Spécifie les coordonnées initiales de la fenêtre mini-frame.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la nouvelle fenêtre mini-frame ou NULL si la création a échoué.  
@@ -639,32 +639,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwStyleEx*  
- Les styles étendus (consultez [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) pour plus d’informations).  
+*dwStyleEx*<br/>
+[in] Les styles étendus (consultez [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) pour plus d’informations).  
   
- [in] *lpszClassName*  
- Le nom de classe de fenêtre.  
+*lpszClassName*<br/>
+[in] Le nom de classe de fenêtre.  
   
- [in] *lpszWindowName*  
- Nom de fenêtre.  
+*lpszWindowName*<br/>
+[in] Le nom de la fenêtre.  
   
- [in] *dwStyle*  
- Le style de fenêtre (consultez [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
+*dwStyle*<br/>
+[in] Le style de fenêtre (consultez [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
   
- [in] *rect*  
- Le rectangle initial.  
+*Rect*<br/>
+[in] Le rectangle initial.  
   
- [in] *pParentWnd*  
- Pointeur vers la fenêtre parente.  
+*pParentWnd*<br/>
+[in] Pointeur vers la fenêtre parente.  
   
- [in] *nID*  
- Spécifie l’ID de volet. Doit être unique.  
+*nID*<br/>
+[in] Spécifie l’ID de volet. Doit être unique.  
   
- [in] *dwControlBarStyle*  
- Indicateurs de style pour les volets.  
+*dwControlBarStyle*<br/>
+[in] Indicateurs de style pour les volets.  
   
- [in] *pContext*  
- Un pointeur vers `CcreateContext`  
+*pContext*<br/>
+[in] Un pointeur vers `CcreateContext`  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet est créé avec succès ; Sinon, FALSE.  
@@ -699,14 +699,14 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDockBar*  
- Pointeur vers un autre volet.  
+*pDockBar*<br/>
+[in] Pointeur vers un autre volet.  
   
- [in] *lpRect*  
- Spécifie le rectangle de destination.  
+*lpRect*<br/>
+[in] Spécifie le rectangle de destination.  
   
- [in] *dockMethod*  
- Spécifie la méthode d’ancrage.  
+*dockMethod*<br/>
+[in] Spécifie la méthode d’ancrage.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la barre de contrôle a été ancrée avec succès ; Sinon, FALSE.  
@@ -724,8 +724,8 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bUseDockSite*  
- Si la valeur est TRUE, ancrer sur le site d’ancrage. Si la valeur est FALSE, ancrer vers le frame parent.  
+*bUseDockSite*<br/>
+[in] Si la valeur est TRUE, ancrer sur le site d’ancrage. Si la valeur est FALSE, ancrer vers le frame parent.  
   
 ##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
  Ancre un volet ancrable à un frame.  
@@ -741,23 +741,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwAlignment*  
- Le côté du frame parent que vous souhaitez ancrer le volet à.  
+*dwAlignment*<br/>
+[in] Le côté du frame parent que vous souhaitez ancrer le volet à.  
   
- [in] *lpRect*  
- La taille souhaitée.  
+*lpRect*<br/>
+[in] La taille souhaitée.  
   
- [in] *dwDockFlags*  
- Ignoré.  
+*dwDockFlags*<br/>
+[in] Ignoré.  
   
- [in] *pRelativeBar*  
- Ignoré.  
+*pRelativeBar*<br/>
+[in] Ignoré.  
   
- [in] *nRelativeIndex*  
- Ignoré.  
+*nRelativeIndex*<br/>
+[in] Ignoré.  
   
- [in] *bOuterEdge*  
- Si TRUE et il existe des autres volets ancrables situé sur le côté spécifié par *dwAlignment*, le volet est ancré à l’extérieur les autres volets, plus proche sur le bord du frame parent. Si la valeur est FALSE, le volet est plus proche ancré au centre de la zone cliente.  
+*bOuterEdge*<br/>
+[in] Si TRUE et il existe des autres volets ancrables situé sur le côté spécifié par *dwAlignment*, le volet est ancré à l’extérieur les autres volets, plus proche sur le bord du frame parent. Si la valeur est FALSE, le volet est plus proche ancré au centre de la zone cliente.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -792,8 +792,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut appelle le Gestionnaire visuel actuel pour remplir l’arrière-plan ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
@@ -806,8 +806,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwAlignment*  
- Spécifie l’alignement d’ancrage à activer.  
+*dwAlignment*<br/>
+[in] Spécifie l’alignement d’ancrage à activer.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour permettre l’alignement d’ancrage au frame principal. Vous pouvez passer d’une combinaison d’indicateurs CBRS_ALIGN_ (pour plus d’informations, consultez [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
@@ -824,8 +824,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bActivez*  
- TRUE pour activer la barre de redimensionnement ; FALSE pour la désactiver.  
+*bActivez*<br/>
+[in] TRUE pour activer la barre de redimensionnement ; FALSE pour la désactiver.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure utilise cette méthode pour activer une barre de redimensionnement au lieu d’utiliser le style WS_CAPTION.  
@@ -841,14 +841,14 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rectFloat*  
- Spécifie les coordonnées d’écran dans lequel le volet flottant apparaît.  
+*rectFloat*<br/>
+[in] Spécifie les coordonnées d’écran dans lequel le volet flottant apparaît.  
   
- [in] *dockMethod*  
- Spécifie la méthode d’ancrage à utiliser pour les faire flotter le volet.  
+*dockMethod*<br/>
+[in] Spécifie la méthode d’ancrage à utiliser pour les faire flotter le volet.  
   
- [in] *bShow*  
- Spécifie si le volet flottant est visible (TRUE) ou masqué (FALSE).  
+*bShow*<br/>
+[in] Spécifie si le volet flottant est visible (TRUE) ou masqué (FALSE).  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet a été flottantes avec succès ; Sinon, FALSE.  
@@ -867,14 +867,14 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pszHelpFile*  
- Adresse du BSTR qui reçoit le chemin d’accès complet de le **WinHelp** fichier qui est associé à l’objet spécifié, le cas échéant.  
+*pszHelpFile*<br/>
+[in] Adresse du BSTR qui reçoit le chemin d’accès complet de le **WinHelp** fichier qui est associé à l’objet spécifié, le cas échéant.  
   
- [in] *varChild*  
- Spécifie si la rubrique d’aide à récupérer est celle de l’objet ou l’un des éléments enfants de l’objet. Ce paramètre peut être CHILDID_SELF (pour obtenir une rubrique d’aide pour l’objet) ou un ID enfant (pour obtenir une rubrique d’aide pour un des enfants des éléments de l’objet).  
+*varChild*<br/>
+[in] Spécifie si la rubrique d’aide à récupérer est celle de l’objet ou l’un des éléments enfants de l’objet. Ce paramètre peut être CHILDID_SELF (pour obtenir une rubrique d’aide pour l’objet) ou un ID enfant (pour obtenir une rubrique d’aide pour un des enfants des éléments de l’objet).  
   
- [in] *pidTopic*  
- Identifie le **aide** rubrique du fichier qui est associé à l’objet spécifié.  
+*pidTopic*<br/>
+[in] Identifie le **aide** rubrique du fichier qui est associé à l’objet spécifié.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `CBasePane` n’implémente pas cette méthode. Par conséquent, `CBasePane::get_accHelpTopic` toujours retourne S_FALSE.  
@@ -890,8 +890,8 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pvarChildren*  
- Reçoit des informations qui identifient les enfants sélectionnés.  
+*pvarChildren*<br/>
+[in] Reçoit des informations qui identifient les enfants sélectionnés.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `CBasePane` n’implémente pas cette méthode. Si *pvarChildren* est NULL, cette méthode retourne E_INVALIDARG. Sinon, cette méthode retourne DISP_E_MEMBERNOTFOUND.  
@@ -1017,8 +1017,8 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bBigIcon*  
- Spécifie un pixel 32 par icône 32 pixels avec la valeur True ; Spécifie un pixel 16 par 16 icône de pixel si la valeur FALSE.  
+*bBigIcon*<br/>
+[in] Spécifie un pixel 32 par icône 32 pixels avec la valeur True ; Spécifie un pixel 16 par 16 icône de pixel si la valeur FALSE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers l’icône du volet. En cas d’échec, retourne la valeur NULL.  
@@ -1067,8 +1067,8 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bNoAssert*  
- Si la valeur est TRUE, cette méthode ne vérifie pas pour les pointeurs non valide. Si vous appelez cette méthode lorsque vous quittez l’application, définissez ce paramètre sur TRUE.  
+*bNoAssert*<br/>
+[in] Si la valeur est TRUE, cette méthode ne vérifie pas pour les pointeurs non valide. Si vous appelez cette méthode lorsque vous quittez l’application, définissez ce paramètre sur TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur valide vers la fenêtre mini-frame parent si le volet est flottante. Sinon, NULL.  
@@ -1096,8 +1096,8 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *hWndTab*  
- Si la valeur de retour n’est pas NULL, ce paramètre contient le handle vers la fenêtre à onglets parente.  
+*hWndTab*<br/>
+[out] Si la valeur de retour n’est pas NULL, ce paramètre contient le handle vers la fenêtre à onglets parente.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur valide vers la fenêtre à onglets parent ou NULL.  
@@ -1139,14 +1139,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pControlBar*  
- Pointeur vers le volet à insérer.  
+*pControlBar*<br/>
+[in] Pointeur vers le volet à insérer.  
   
- [in] *pTarget*  
- Pointeur vers le volet adjacent.  
+*pTarget*<br/>
+[in] Pointeur vers le volet adjacent.  
   
- [in] *exécuteront-ils*  
- Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.  
+*exécuteront-ils*<br/>
+[in] Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit, FALSE sinon.  
@@ -1270,14 +1270,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Le point spécifié.  
+*point*<br/>
+[in] Le point spécifié.  
   
- [out] *dwBarAlignment*  
- Spécifie le bord le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[out] Spécifie le bord le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM  
   
- [out] *bOuterEdge*  
- TRUE si le point est proche de la bordure externe du site d’ancrage ; FALSE sinon.  
+*bOuterEdge*<br/>
+[out] TRUE si le point est proche de la bordure externe du site d’ancrage ; FALSE sinon.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le point est proche du site d’ancrage ; Sinon, FALSE.  
@@ -1349,14 +1349,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Nom du profil.  
+*lpszProfileName*<br/>
+[in] Nom du profil.  
   
- [in] *nIndex*  
- Index de profil.  
+*nIndex*<br/>
+[in] Index de profil.  
   
- [in] *uiID*  
- ID de volet.  
+*uiID*<br/>
+[in] ID de volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’état du volet a été chargé avec succès ; Sinon, FALSE.  
@@ -1375,14 +1375,14 @@ virtual HDWP MoveWindow(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *rect*  
- Un rectangle en spécifiant le nouvel emplacement et la taille du volet.  
+*Rect*<br/>
+[in] Un rectangle en spécifiant le nouvel emplacement et la taille du volet.  
   
- [in] *bRepaint*  
- Si la valeur est TRUE, le volet est redessiné. Si la valeur est FALSE, le volet n’est pas redessiné.  
+*bRepaint*<br/>
+[in] Si la valeur est TRUE, le volet est redessiné. Si la valeur est FALSE, le volet n’est pas redessiné.  
   
- [in] *hdwp*  
- Handle vers une structure de fenêtre différée.  
+*hdwp*<br/>
+[in] Handle vers une structure de fenêtre différée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers une structure de fenêtre différé, ou NULL.  
@@ -1398,8 +1398,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndOldParent*  
- Pointeur vers le parent précédent.  
+*pWndOldParent*<br/>
+[in] Pointeur vers le parent précédent.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode une fois que le parent du volet change, généralement en raison d’une opération d’ancrage ou flottante.  
@@ -1416,11 +1416,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndNewParent*  
- Un pointeur vers une nouvelle fenêtre parent.  
+*pWndNewParent*<br/>
+[in] Un pointeur vers une nouvelle fenêtre parent.  
   
- [in] *bDelay*  
- Spécifie si les ajustements de mise en page doivent être retardées.  
+*bDelay*<br/>
+[in] Spécifie si les ajustements de mise en page doivent être retardées.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode juste avant la modification du parent du volet, généralement en raison d’une station d’accueil, flottante ou une opération de masquage automatique.  
@@ -1458,11 +1458,11 @@ virtual void OnPaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParentFrame*  
- Pointeur vers le frame parent.  
+*pParentFrame*<br/>
+[in] Pointeur vers le frame parent.  
   
- [in] *point*  
- Spécifie l’emplacement du menu contextuel.  
+*point*<br/>
+[in] Spécifie l’emplacement du menu contextuel.  
   
 ### <a name="remarks"></a>Notes  
  `OnPaneContextMenu` appelle le Gestionnaire d’ancrage, qui gère la liste des volets qui appartiennent à la fenêtre frame actuel. Cette méthode ajoute les noms des volets à un menu contextuel et l’affiche. Les commandes dans le menu affichent ou masquer des volets individuels.  
@@ -1477,8 +1477,8 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pMiniFrame*  
- Pointeur vers une fenêtre mini-frame à partir de laquelle le volet est supprimé.  
+*pMiniFrame*<br/>
+[in] Pointeur vers une fenêtre mini-frame à partir de laquelle le volet est supprimé.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode lorsqu’un volet est supprimé de sa fenêtre de mini-frame parente (suite à la station d’accueil, par exemple).  
@@ -1493,8 +1493,8 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lVal*  
- Non utilisé.  
+*lVal*<br/>
+[in] Non utilisé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne toujours la valeur TRUE.  
@@ -1513,17 +1513,17 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *point*  
- Spécifie le point, en coordonnées d’écran, à vérifier.  
+*point*<br/>
+[in] Spécifie le point, en coordonnées d’écran, à vérifier.  
   
- [in] *nSensitivity*  
- Augmenter la zone de recherche par ce montant. Un volet satisfait les critères de recherche si le point donné se trouve dans la zone accrue.  
+*nSensitivity*<br/>
+[in] Augmenter la zone de recherche par ce montant. Un volet satisfait les critères de recherche si le point donné se trouve dans la zone accrue.  
   
- [in] *bExactBar*  
- TRUE pour ignorer le *nSensitivity* paramètre ; sinon, FALSE.  
+*bExactBar*<br/>
+[in] TRUE pour ignorer le *nSensitivity* paramètre ; sinon, FALSE.  
   
- [in] *pRTCBarType*  
- Si non NULL, la méthode recherche uniquement les volets du type spécifié.  
+*pRTCBarType*<br/>
+[in] Si non NULL, la méthode recherche uniquement les volets du type spécifié.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le `CBasePane`-objet dérivé qui contient le point donné, ou NULL si aucun volet a été trouvée.  
@@ -1548,20 +1548,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Pointeur vers un volet à supprimer.  
+*pBar*<br/>
+[in] Pointeur vers un volet à supprimer.  
   
- [in] *bDestroy*  
- Si la valeur est TRUE, le volet supprimé est détruit.  
+*bDestroy*<br/>
+[in] Si la valeur est TRUE, le volet supprimé est détruit.  
   
- [in] *bAdjustLayout*  
- Si la valeur est TRUE, ajuster la disposition d’ancrage immédiatement.  
+*bAdjustLayout*<br/>
+[in] Si la valeur est TRUE, ajuster la disposition d’ancrage immédiatement.  
   
- [in] *bAutoHide*  
- Si la valeur est TRUE, la disposition d’ancrage est liée à la liste des barres de masquage automatique. Si la valeur est FALSE, la disposition d’ancrage est liée à la liste des volets régulières.  
+*bAutoHide*<br/>
+[in] Si la valeur est TRUE, la disposition d’ancrage est liée à la liste des barres de masquage automatique. Si la valeur est FALSE, la disposition d’ancrage est liée à la liste des volets régulières.  
   
- [in] *pBarReplacement*  
- Pointeur vers un volet qui remplace le volet supprimé.  
+*pBarReplacement*<br/>
+[in] Pointeur vers un volet qui remplace le volet supprimé.  
   
 ##  <a name="savestate"></a>  CBasePane::SaveState  
  Enregistre l'état du volet dans le Registre.  
@@ -1574,14 +1574,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszProfileName*  
- Nom du profil.  
+*lpszProfileName*<br/>
+[in] Nom du profil.  
   
- [in] *nIndex*  
- Index de profil.  
+*nIndex*<br/>
+[in] Index de profil.  
   
- [in] *uiID*  
- ID de volet.  
+*uiID*<br/>
+[in] ID de volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’état a été enregistré avec succès ; Sinon, FALSE.  
@@ -1597,8 +1597,8 @@ CFont* SelectDefaultFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Un contexte de périphérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la valeur par défaut [CFont (classe)](../../mfc/reference/cfont-class.md) objet.  
@@ -1611,8 +1611,8 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwNewStyle*  
- Une combinaison OR au niveau du bit des valeurs possibles suivantes.  
+*dwNewStyle*<br/>
+[in] Une combinaison OR au niveau du bit des valeurs possibles suivantes.  
   
 |Style|Description|  
 |-----------|-----------------|  
@@ -1629,8 +1629,8 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dockModeNew*  
- Spécifie le nouveau mode d’ancrage du volet.  
+*dockModeNew*<br/>
+[in] Spécifie le nouveau mode d’ancrage du volet.  
   
 ### <a name="remarks"></a>Notes  
  Le framework prend en charge deux modes d’ancrage : standard et immédiate.  
@@ -1647,8 +1647,8 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwAlignment*  
- Spécifie l’alignement de nouveau.  
+*dwAlignment*<br/>
+[in] Spécifie l’alignement de nouveau.  
   
 ### <a name="remarks"></a>Notes  
  En règle générale, l’infrastructure appelle cette méthode lorsqu’un volet est ancré à partir d’un côté du frame principal vers un autre.  
@@ -1670,8 +1670,8 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *dwNewStyle*  
- Spécifie le nouveau style à définir.  
+*dwNewStyle*<br/>
+[in] Spécifie le nouveau style à définir.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode peut être utilisée pour définir le style CBRS_ qui est définis dans afxres.h. Étant donné que le style du volet et l’alignement de volet sont stockés ensemble, définissez le style de nouveau en la combinant avec l’alignement actuel comme suit.  
@@ -1693,26 +1693,26 @@ virtual HDWP SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndInsertAfter*  
- Identifie le `CWnd` objet vient avant cela `CWnd` objet dans l’ordre de plan. Pour plus d’informations, consultez [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*pWndInsertAfter*<br/>
+[in] Identifie le `CWnd` objet vient avant cela `CWnd` objet dans l’ordre de plan. Pour plus d’informations, consultez [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *x*  
- Spécifie la position du côté gauche de la fenêtre.  
+*x*<br/>
+[in] Spécifie la position du côté gauche de la fenêtre.  
   
- [in] *y*  
- Spécifie la position du haut de la fenêtre.  
+*y*<br/>
+[in] Spécifie la position du haut de la fenêtre.  
   
- [in] *cx*  
- Spécifie la largeur de la fenêtre.  
+*CX*<br/>
+[in] Spécifie la largeur de la fenêtre.  
   
- [in] *cy*  
- Spécifie la hauteur de la fenêtre.  
+*CY*<br/>
+[in] Spécifie la hauteur de la fenêtre.  
   
- [in] *nIndicateurs*  
- Spécifie les options de taille et la position. Pour plus d’informations, consultez [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*nIndicateurs*<br/>
+[in] Spécifie les options de taille et la position. Pour plus d’informations, consultez [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *hdwp*  
- Handle vers une structure qui contient les informations de taille et de position pour une ou plusieurs fenêtres.  
+*hdwp*<br/>
+[in] Handle vers une structure qui contient les informations de taille et de position pour une ou plusieurs fenêtres.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers une structure de position de fenêtre différée mis à jour, ou NULL.  
@@ -1731,14 +1731,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bShow*  
- Spécifie s’il faut afficher (TRUE) ou masquer (FALSE) d’un volet.  
+*bShow*<br/>
+[in] Spécifie s’il faut afficher (TRUE) ou masquer (FALSE) d’un volet.  
   
- [in] *bDelay*  
- Si la valeur est TRUE, recalculer la disposition d’ancrage est retardée.  
+*bDelay*<br/>
+[in] Si la valeur est TRUE, recalculer la disposition d’ancrage est retardée.  
   
- [in] *bActivate*  
- Si la valeur est TRUE, le volet est actif lors de son affichage.  
+*bActivate*<br/>
+[in] Si la valeur est TRUE, le volet est actif lors de son affichage.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode affiche ou masque un volet. Utilisez cette méthode au lieu de `ShowWindow` , car cette méthode avertit les gestionnaires d’ancrage pertinentes sur les modifications apportées dans une visibilité du volet.  
@@ -1755,11 +1755,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nLength*  
- La longueur en fonction desquelles étirer le volet.  
+*nLength*<br/>
+[in] La longueur en fonction desquelles étirer le volet.  
   
- [in] *bVert*  
- Si la valeur est TRUE, le volet être étirés verticalement. Si la valeur est FALSE, le volet d’étirement horizontal.  
+*bVert*<br/>
+[in] Si la valeur est TRUE, le volet être étirés verticalement. Si la valeur est FALSE, le volet d’étirement horizontal.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La taille du volet étendue.  

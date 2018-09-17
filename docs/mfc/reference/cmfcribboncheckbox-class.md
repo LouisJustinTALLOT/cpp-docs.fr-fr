@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027178"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712489"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Cmfcribboncheckbox, classe
 La classe `CMFCRibbonCheckBox` implémente une case à cocher que vous pouvez ajouter à un volet du ruban, une barre d'outils Accès rapide ou un menu contextuel.  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- Spécifie l’ID de commande.  
+*nID*<br/>
+[in] Spécifie l’ID de commande.  
   
- [in] *lpszText*  
- Spécifie l’étiquette de texte.  
+*lpszText*<br/>
+[in] Spécifie l’étiquette de texte.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Construit un objet de case à cocher du ruban.  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers la capture de données modifiées associé à la case à cocher.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers la capture de données modifiées associé à la case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un `CSize` objet qui contient la taille réduite de la case à cocher.  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers la capture de données modifiées associée à cette case à cocher.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers la capture de données modifiées associée à cette case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un `CSize` objet contenant la taille intermédiaire de la case à cocher.  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers l’objet de capture de données modifiées associé à cette case à cocher.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers l’objet de capture de données modifiées associé à cette case à cocher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un `CSize` objet qui contient la taille normale de la case à cocher.  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers la capture de données modifiées dans lequel dessiner la case à cocher.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers la capture de données modifiées dans lequel dessiner la case à cocher.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in] *Capture de données modifiées**  
  Pointeur vers la capture de données modifiées associé à la case à cocher.  
   
- [in] *CRect*  
- Un `CRect` objet qui spécifie le rectangle dans lequel dessiner l’image de menu.  
+*CRect*<br/>
+[in] Un `CRect` objet qui spécifie le rectangle dans lequel dessiner l’image de menu.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si l’image a été dessinée, ou FALSE dans le cas contraire.  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers le contexte de périphérique dans lequel dessiner la case à cocher.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers le contexte de périphérique dans lequel dessiner la case à cocher.  
   
- [in] *strText*  
- Texte affiché.  
+*strText*<br/>
+[in] Texte affiché.  
   
- [in] *nTextOffset*  
- La distance, en pixels, du côté gauche de la zone de liste pour afficher un texte.  
+*nTextOffset*<br/>
+[in] La distance, en pixels, du côté gauche de la zone de liste pour afficher un texte.  
   
- [in] *rect*  
- Le rectangle d’affichage pour la case à cocher.  
+*Rect*<br/>
+[in] Le rectangle d’affichage pour la case à cocher.  
   
- [in] *bIsSelected*  
- TRUE si la case à cocher est sélectionnée, ou FALSE dans le cas contraire.  
+*bIsSelected*<br/>
+[in] TRUE si la case à cocher est sélectionnée, ou FALSE dans le cas contraire.  
   
- [in] *bHighlighted*  
- TRUE si la case à cocher est mis en surbrillance, ou FALSE dans le cas contraire.  
+*bHighlighted*<br/>
+[in] TRUE si la case à cocher est mis en surbrillance, ou FALSE dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
   

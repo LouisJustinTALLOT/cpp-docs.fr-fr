@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 889a6f083cb4aace6e93d221a33caef29155d7f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540404"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725008"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Cmfcribbonstatusbarpane, classe
 Le `CMFCRibbonStatusBarPane` classe implémente un élément de ruban que vous pouvez ajouter une ruban barre d’état.  
@@ -136,32 +136,32 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nCmdID*  
- Spécifie l’ID de commande du volet.  
+*nCmdID*<br/>
+[in] Spécifie l’ID de commande du volet.  
   
- [in] *lpszText*  
- Spécifie la chaîne de texte à afficher sur le volet.  
+*lpszText*<br/>
+[in] Spécifie la chaîne de texte à afficher sur le volet.  
   
- [in] *bIsStatic*  
- Si la valeur est TRUE, le volet d’état ne peut pas être mis en surbrillance ou sélectionné en cliquant dessus.  
+*bIsStatic*<br/>
+[in] Si la valeur est TRUE, le volet d’état ne peut pas être mis en surbrillance ou sélectionné en cliquant dessus.  
   
- [in] *hIcon*  
- Spécifie un handle d’une icône à afficher dans le volet.  
+*hIcon*<br/>
+[in] Spécifie un handle d’une icône à afficher dans le volet.  
   
- [in] *lpszAlmostLargeText*  
- Spécifie la chaîne de texte la plus longue qui peut être affichée par le volet.  
+*lpszAlmostLargeText*<br/>
+[in] Spécifie la chaîne de texte la plus longue qui peut être affichée par le volet.  
   
- [in] *hBmpAnimationList*  
- Spécifie un handle vers une liste d’images qui est utilisé pour l’animation.  
+*hBmpAnimationList*<br/>
+[in] Spécifie un handle vers une liste d’images qui est utilisé pour l’animation.  
   
- [in] *cxAnimation*  
- Spécifie la largeur, en pixels, de l’icône dans la liste d’images qui est utilisée pour l’animation.  
+*cxAnimation*<br/>
+[in] Spécifie la largeur, en pixels, de l’icône dans la liste d’images qui est utilisée pour l’animation.  
   
- [in] *clrTrnsp*  
- Spécifie la couleur transparente d’images dans la liste d’images qui sont utilisées pour l’animation.  
+*clrTrnsp*<br/>
+[in] Spécifie la couleur transparente d’images dans la liste d’images qui sont utilisées pour l’animation.  
   
- [in] *uiAnimationListResID*  
- Spécifie un ID de ressource d’une liste d’images qui est utilisé pour l’animation.  
+*uiAnimationListResID*<br/>
+[in] Spécifie un ID de ressource d’une liste d’images qui est utilisé pour l’animation.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Obtient la chaîne de texte la plus longue que le volet de barre d’état peut afficher.  
@@ -253,8 +253,8 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszAlmostLargeText*  
- Spécifie la chaîne la plus longue qui peut être affichée dans le volet de barre d’état sans troncation.  
+*lpszAlmostLargeText*<br/>
+[in] Spécifie la chaîne la plus longue qui peut être affichée dans le volet de barre d’état sans troncation.  
   
 ### <a name="remarks"></a>Notes  
  La bibliothèque calcule la taille du texte qui *lpszAlmostLargeText* spécifie et redimensionne le volet en conséquence. Le texte est tronqué si elle toujours ne tient pas dans le volet.  
@@ -275,17 +275,17 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *hBmpAnimationList*  
- Spécifie un handle vers une liste d’images.  
+*hBmpAnimationList*<br/>
+[in] Spécifie un handle vers une liste d’images.  
   
- [in] *cxAnimation*  
- Spécifie la largeur, en pixels, de l’image dans la liste d’images.  
+*cxAnimation*<br/>
+[in] Spécifie la largeur, en pixels, de l’image dans la liste d’images.  
   
- [in] *clrTransp*  
- Spécifie la couleur transparente de la liste d’images.  
+*clrTransp*<br/>
+[in] Spécifie la couleur transparente de la liste d’images.  
   
- [in] *uiAnimationListResID*  
- Spécifie l’ID de ressource de la liste d’images.  
+*uiAnimationListResID*<br/>
+[in] Spécifie l’ID de ressource de la liste d’images.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la liste d’images est attachée avec succès vers le volet de barre d’état ; FALSE sinon.  
@@ -298,8 +298,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nAlign*  
- Spécifie l’alignement du texte.  
+*nAlign*<br/>
+[in] Spécifie l’alignement du texte.  
   
 ### <a name="remarks"></a>Notes  
  *nAlign* peut avoir l’une des valeurs suivantes :  
@@ -320,11 +320,11 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nFrameDelay*  
- Spécifie la fréquence d’images de l’animation, en millisecondes.  
+*nFrameDelay*<br/>
+[in] Spécifie la fréquence d’images de l’animation, en millisecondes.  
   
- [in] *nDuration*  
- Spécifie la durée pendant laquelle pour lire l’animation, en millisecondes. Utilisez -1 pour une boucle infinie.  
+*nDuration*<br/>
+[in] Spécifie la durée pendant laquelle pour lire l’animation, en millisecondes. Utilisez -1 pour une boucle infinie.  
   
 ### <a name="remarks"></a>Notes  
  Vous devez spécifier un handle vers une liste d’images avant d’appeler `StartAnimation` à l’aide de `SetAnimationList`.  

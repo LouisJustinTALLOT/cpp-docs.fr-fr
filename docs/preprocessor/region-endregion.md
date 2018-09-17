@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42545746"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715555"
 ---
 # <a name="region-endregion"></a>region, endregion
 `#pragma region` vous permet de spécifier un bloc de code que vous pouvez développer ou réduire lorsque vous utilisez le [fonctionnalité mode plan](/visualstudio/ide/outlining) de l’éditeur de Code Visual Studio.  
@@ -40,11 +40,11 @@ ms.locfileid: "42545746"
 ```  
   
 ### <a name="parameters"></a>Paramètres  
-*commentaire* (facultatif)  
-Commentaire qui s'affiche dans l'éditeur de code.  
+*commentaire*  
+(Facultatif) Un commentaire qui s’affiche dans l’éditeur de code.  
   
-*name* (facultatif)  
-Nom de la région.  Ce nom s'affiche dans l'éditeur de code.  
+*name*  
+(Facultatif) Le nom de la région.  Ce nom s'affiche dans l'éditeur de code.  
   
 ## <a name="remarks"></a>Notes  
  

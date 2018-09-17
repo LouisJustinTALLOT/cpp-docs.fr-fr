@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852966"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711631"
 ---
 # <a name="cmfctabdroptarget-class"></a>Cmfctabdroptarget, classe
 Fournit le mécanisme de communication entre un contrôle onglet et les bibliothèques OLE.  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pWnd*|Non utilisé.|  
-|[in] *pDataObject*|Pointeur vers l’objet de l’utilisateur fait glisser.|  
-|[in] *dwKeyState*|Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.|  
-|[in] *point*|L’emplacement du curseur en coordonnées clientes.|  
+|*pWnd*|[in] Inutilisé.|  
+|*pDataObject*|[in] Pointeur vers l’objet de l’utilisateur fait glisser.|  
+|*dwKeyState*|[in] Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.|  
+|*point*|[in] L’emplacement du curseur en coordonnées clientes.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’effet qui se produit si le déplacement se produit à l’emplacement spécifié par *point*. Il peut être une ou plusieurs des opérations suivantes :  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pWnd*|Non utilisé.|  
+|*pWnd*|[in] Inutilisé.|  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode appelle la `CMFCBaseTabCtrl::OnDragLeave` méthode pour effectuer l’opération glisser.  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pWnd*|Non utilisé.|  
-|[in] *pDataObject*|Pointeur vers l’objet de l’utilisateur fait glisser.|  
-|[in] *dwKeyState*|Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.|  
-|[in] *point*|L’emplacement du pointeur de la souris dans les coordonnées clientes.|  
+|*pWnd*|[in] Inutilisé.|  
+|*pDataObject*|[in] Pointeur vers l’objet de l’utilisateur fait glisser.|  
+|*dwKeyState*|[in] Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.|  
+|*point*|[in] L’emplacement du pointeur de la souris dans les coordonnées clientes.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’effet qui se produit si le déplacement se produit à l’emplacement spécifié par *point*. Il peut être une ou plusieurs des opérations suivantes :  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pWnd*|Non utilisé.|  
-|[in] *pDataObject*|Pointeur vers l’objet de l’utilisateur fait glisser.|  
-|[in] *dropEffect*|L’opération de liste par défaut.|  
-|[in] *liste déroulante*|Non utilisé.|  
-|[in] *point*|L’emplacement du pointeur de la souris dans les coordonnées clientes.|  
+|*pWnd*|[in] Inutilisé.|  
+|*pDataObject*|[in] Pointeur vers l’objet de l’utilisateur fait glisser.|  
+|*dropEffect*|[in] L’opération de liste par défaut.|  
+|*liste déroulante*|[in] Inutilisé.|  
+|*point*|[in] L’emplacement du pointeur de la souris dans les coordonnées clientes.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’effet obtenu. Il peut être une ou plusieurs des opérations suivantes :  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pOwner*|Le contrôle onglet à inscrire comme cible de dépôt.|  
+|*pOwner*|[in] Le contrôle onglet à inscrire comme cible de dépôt.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’inscription a réussi ; sinon 0.  

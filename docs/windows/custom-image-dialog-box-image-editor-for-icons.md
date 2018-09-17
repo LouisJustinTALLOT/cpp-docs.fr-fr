@@ -17,23 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f505694cd0efed303558438b2c2ed2fbff888b7
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1e5aff6796804d7868b4d61c94e4a181b88e9ab6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704833"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Image personnalisée, boîte de dialogue (C++) (Éditeur d’images pour les icônes)
+
 Vous permet de créer une nouvelle image avec une taille personnalisée et le nombre de couleurs.
- **Largeur**  
- Fournit un espace vous permettant d’entrer la largeur de l’image personnalisée en pixels (1-512, limite de 2048).
+
+- **Largeur**
+
+   Fournit un espace vous permettant d’entrer la largeur de l’image personnalisée en pixels (1-512, limite de 2048).
   
- **Hauteur**  
- Fournit un espace vous permettant d’entrer la hauteur de l’image personnalisée en pixels (1-512, limite de 2048).
+- **Hauteur**
+
+   Fournit un espace vous permettant d’entrer la hauteur de l’image personnalisée en pixels (1-512, limite de 2048).
   
- **Couleurs**  
- Fournit un espace vous permettant de choisir le nombre de couleurs pour l’image personnalisée : 2, 16 ou 256.
+- **Couleurs**
+
+   Fournit un espace vous permettant de choisir le nombre de couleurs pour l’image personnalisée : 2, 16 ou 256.
   
 ## <a name="requirements"></a>Configuration requise
  Aucun.

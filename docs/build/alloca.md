@@ -1,5 +1,5 @@
 ---
-title: alloca | Documents Microsoft
+title: alloca | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f58d0c959008196798087d139b44715a67f567b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0c73abcb52b991ee6bd4de839861aa4ef684181
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360418"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702744"
 ---
 # <a name="alloca"></a>alloca
-[_alloca](../c-runtime-library/reference/alloca.md) doit être de 16 octets alignée et utiliser un pointeur de frame.  
-  
- La pile est allouée doit inclure l’espace en dessous pour les paramètres des fonctions appelées par la suite, comme indiqué dans [Allocation de piles](../build/stack-allocation.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de la pile](../build/stack-usage.md)
+
+[_alloca](../c-runtime-library/reference/alloca.md) doit être de 16 octets alignée et utiliser un pointeur de frame.
+
+La pile est allouée doit inclure l’espace en dessous pour les paramètres des fonctions appelées par la suite, comme indiqué dans [Allocation de piles](../build/stack-allocation.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de la pile](../build/stack-usage.md)

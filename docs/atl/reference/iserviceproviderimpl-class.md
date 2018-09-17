@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7a39149969b7e85685930d6e901bf81db99d64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d14d00e57cbbb04c77f0b84c584ebb1c4f4260e5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759396"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703200"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl, classe
 
@@ -83,14 +83,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Paramètres
 
-[IN] *guidService*  
-Pointeur vers un identificateur de service (SID).
+*guidService*<br/>
+[in] Pointeur vers un identificateur de service (SID).
 
-[IN] *riid*  
-Identificateur de l’interface à laquelle l’appelant doit accéder.
+*riid*<br/>
+[in] Identificateur de l’interface à laquelle l’appelant doit accéder.
 
-[OUT] *ppvObj*  
-Pointeur indirect vers l’interface demandée.
+*ppvObj*<br/>
+[out] Pointeur indirect vers l’interface demandée.
 
 ### <a name="return-value"></a>Valeur de retour
 

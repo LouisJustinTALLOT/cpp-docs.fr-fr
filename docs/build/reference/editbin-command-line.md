@@ -1,5 +1,5 @@
 ---
-title: Ligne de commande EDITBIN | Documents Microsoft
+title: Ligne de commande EDITBIN | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23fb39a614854912a8de52ac606009f3de19b497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8868b455c135d12d2fffaf0ae5ab5632c51a324
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371175"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700592"
 ---
 # <a name="editbin-command-line"></a>Ligne de commande EDITBIN
-Pour exécuter EDITBIN, utilisez la syntaxe suivante :  
-  
-```  
-EDITBIN [options] files...  
-```  
-  
- Spécifiez un ou plusieurs fichiers pour les objets ou des images à modifier et une ou plusieurs options pour modifier les fichiers.  
-  
- Lorsque vous tapez la commande `editbin` sans aucune autre entrée de ligne de commande, EDITBIN affiche une instruction d’utilisation qui récapitule ses options.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Outils de génération C/C++](../../build/reference/c-cpp-build-tools.md)   
- [Informations de référence sur EDITBIN](../../build/reference/editbin-reference.md)
+
+Pour exécuter EDITBIN, utilisez la syntaxe suivante :
+
+```
+EDITBIN [options] files...
+```
+
+Spécifiez un ou plusieurs fichiers pour les objets ou des images à modifier et une ou plusieurs options pour modifier les fichiers.
+
+Lorsque vous tapez la commande `editbin` sans aucune autre entrée de ligne de commande, EDITBIN affiche une instruction d’utilisation qui récapitule ses options.
+
+## <a name="see-also"></a>Voir aussi
+
+[Outils de génération C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Informations de référence sur EDITBIN](../../build/reference/editbin-reference.md)

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb57f408c52f6884c68e93af88671d49815ef69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156eca047946ad13b1e4f09057edceb9f0bc6b34
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840340"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719184"
 ---
 # <a name="1-object"></a>_1, objet
 
@@ -35,12 +35,12 @@ Espaces réservés pour les arguments remplaçables.
 namespace placeholders {
     extern unspecified _1,
     _2, ... _M
- } // namespace placeholders (within std)
+} // namespace placeholders (within std)
 ```
 
 ## <a name="remarks"></a>Notes
 
-Les objets `_1, _2, ... _M` sont des espaces réservés désignant la première, deuxième,..., argument de mois, respectivement, dans un appel de fonction à un objet retourné par [lier](../standard-library/functional-functions.md#bind). Vous utilisez `_N` pour spécifier l’emplacement où le N-ième argument doit être inséré quand la liaison est évaluée.
+Les objets `_1, _2, ... _M` sont des espaces réservés désignant le premier, deuxième,..., M-ième argument respectivement dans un appel de fonction à un objet retourné par [lier](../standard-library/functional-functions.md#bind). Vous utilisez `_N` pour spécifier l’emplacement où le N-ième argument doit être inséré quand la liaison est évaluée.
 
 Dans cette implémentation, la valeur de `M` est 20.
 
@@ -96,7 +96,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

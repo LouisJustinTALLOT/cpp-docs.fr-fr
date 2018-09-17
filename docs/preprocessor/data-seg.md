@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 9841b74d7bef74a117350b84747a606043d05d67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539185"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707666"
 ---
 # <a name="dataseg"></a>data_seg
 Spécifie le segment de données où les variables initialisées sont stockées dans le fichier .obj.  
@@ -34,31 +34,33 @@ Spécifie le segment de données où les variables initialisées sont stockées 
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="parameters"></a>Paramètres
+
+**push**<br/>
+(Facultatif) Place un enregistrement sur la pile interne du compilateur. Un **push** peut avoir un *identificateur* et *segment-name*.  
+
+**pop**<br/>
+(Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.  
+  
+*identifier*<br/>
+(Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
+  
+*identificateur* permet à plusieurs enregistrements à dépiler avec une seule **pop** commande.  
+  
+*« segment-name »*<br/>
+(Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment actif.  
+  
+*« segment-class »*<br/>
+(Facultatif) Inclus pour la compatibilité avec C++ antérieures à la version 2.0. Elle est ignorée.  
+  
 ## <a name="remarks"></a>Notes 
 
 La signification des termes du contrat *segment* et *section* sont interchangeables dans cette rubrique.  
   
 Les fichiers OBJ peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Le segment par défaut dans le fichier .obj pour les variables initialisées est .data. Les variables qui ne sont pas initialisées doivent être initialisées sur zéro et sont stockées dans .bss.  
   
-**data_seg** sans paramètres réinitialise le segment sur .data.  
-  
-*push* (facultatif)  
-Place un enregistrement sur la pile interne du compilateur. Un *push* peut avoir un *identificateur* et *segment-name*.  
-  
-*POP* (facultatif)  
-Supprime un enregistrement du haut de la pile interne du compilateur.  
-  
-*identificateur* (facultatif)  
-Lorsqu’il est utilisé avec *push*, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec *pop*, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.  
-  
-*identificateur* permet à plusieurs enregistrements à dépiler avec une seule *pop* commande.  
-  
-*« segment-name »*(facultatif)  
-Nom d'un segment. Lorsqu’il est utilisé avec *pop*, la pile est dépilée et *segment-name* devient le nom de segment actif.  
-  
-*« segment-class »* (facultatif)  
-Incluse pour la compatibilité avec les versions de C++ antérieures à la version 2.0. Elle est ignorée.  
-  
+**data_seg** sans paramètres réinitialise le segment sur .data.
+
 ## <a name="example"></a>Exemple  
   
 ```cpp  

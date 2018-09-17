@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848766"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709181"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Cmfcribbonundobutton, classe
 Le `CMFCRibbonUndoButton` classe implémente un bouton de liste déroulante qui contient les commandes utilisateur plus récente. Les utilisateurs peuvent sélectionner un ou plusieurs des commandes plus récente dans la liste déroulante de restauration par progression ou les annuler.  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszLabel*  
- L’étiquette d’action qui s’affichera dans la liste déroulante.  
+*lpszLabel*<br/>
+[in] L’étiquette d’action qui s’affichera dans la liste déroulante.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  Efface la liste d’actions, qui est la liste déroulante.  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nID*  
- Spécifie l’identificateur de commande.  
+*nID*<br/>
+[in] Spécifie l’identificateur de commande.  
   
- [in] *lpszText*  
- Spécifie l’étiquette de texte du bouton.  
+*lpszText*<br/>
+[in] Spécifie l’étiquette de texte du bouton.  
   
- [in] *nSmallImageIndex*  
- Index de base zéro dans la liste d’images de l’objet parent pour l’image du bouton petit.  
+*nSmallImageIndex*<br/>
+[in] Index de base zéro dans la liste d’images de l’objet parent pour l’image du bouton petit.  
   
- [in] *nLargeImageIndex*  
- Index de base zéro dans la liste d’images de l’objet parent pour le d’image de grande taille du bouton.  
+*nLargeImageIndex*<br/>
+[in] Index de base zéro dans la liste d’images de l’objet parent pour le d’image de grande taille du bouton.  
   
- [in] *hIcon*  
- Un handle d’une icône que vous pouvez utiliser en tant qu’image d’un bouton.  
+*hIcon*<br/>
+[in] Un handle d’une icône que vous pouvez utiliser en tant qu’image d’un bouton.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Détermine le nombre d’éléments dont un utilisateur a sélectionné dans la liste déroulante.  

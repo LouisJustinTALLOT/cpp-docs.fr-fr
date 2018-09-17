@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701687"
 ---
 # <a name="inline-functions-c"></a>Fonctions inline (C++)
 Une fonction définie dans le corps d'une déclaration de classe est une fonction inline.  
@@ -156,7 +156,8 @@ private:
   
  Fonctions récursives peuvent être substituées inline à une profondeur spécifiée par le [inline_depth](../preprocessor/inline-depth.md) pragma, avec un maximum de 16 appels. Au-delà de cette profondeur, les appels de fonction récursive sont traités comme des appels à une instance de la fonction.  La profondeur à laquelle les fonctions récursives sont examinées par l’heuristique inline ne peut pas dépasser 16. Le [inline_recursion](../preprocessor/inline-recursion.md) pragma contrôle l’expansion inline d’une fonction en cours d’expansion. Consultez le [Expansion des fonctions Inline](../build/reference/ob-inline-function-expansion.md) (/ Ob) option de compilateur pour obtenir des informations connexes.  
   
-**FIN de la section spécifique à Microsoft**  
+**FIN de la section spécifique à Microsoft**
+
  Pour plus d’informations sur l’utilisation de la **inline** spécificateur, consultez :  
   
 -   [Fonctions de membre de classe inline](../cpp/inline-functions-cpp.md)  

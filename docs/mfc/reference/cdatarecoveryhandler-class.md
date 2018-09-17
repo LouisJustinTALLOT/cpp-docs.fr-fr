@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be1d106257787d5a5dd919372726c8d31a1edc1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 604ccf9ba0695cf9d17790f149be1f0738266076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339278"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701764"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Cdatarecoveryhandler, classe
 Le `CDataRecoveryHandler` enregistre automatiquement les documents et les restaure si une application se ferme de façon inattendue.  
@@ -188,8 +188,8 @@ virtual BOOL AutosaveDocumentInfo(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pDocument*|Un pointeur vers le `CDocument` à enregistrer.|  
-|[in] *bResetModifiedFlag*|TRUE indique que le `CDataRecoveryHandler` considère *pDocument* modifiables ; La valeur FALSE indique que le framework prend en compte *pDocument* pour être non modifié. Consultez la section Notes pour plus d’informations sur l’effet de cet indicateur.|  
+|*pDocument*|[in] Un pointeur vers le `CDocument` à enregistrer.|  
+|*bResetModifiedFlag*|[in] TRUE indique que le `CDataRecoveryHandler` considère *pDocument* modifiables ; La valeur FALSE indique que le framework prend en compte *pDocument* pour être non modifié. Consultez la section Notes pour plus d’informations sur l’effet de cet indicateur.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si les indicateurs appropriés sont définis et *pDocument* n’est valide `CDocument` objet.  
@@ -218,8 +218,8 @@ CDataRecoveryHandler(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *dwRestartManagerSupportFlags*|Indique les options du Gestionnaire de redémarrage sont prises en charge.|  
-|[in] *nAutosaveInterval*|Délai entre enregistre automatiquement. Ce paramètre est exprimée en millisecondes.|  
+|*dwRestartManagerSupportFlags*|[in] Indique les options du Gestionnaire de redémarrage sont prises en charge.|  
+|*nAutosaveInterval*|[in] Délai entre enregistre automatiquement. Ce paramètre est exprimée en millisecondes.|  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure MFC crée automatiquement un `CDataRecoveryHandler` objet pour votre application lorsque vous utilisez le **nouveau projet** Assistant. Sauf si vous personnalisez le comportement de récupération de données ou le Gestionnaire de redémarrage, vous ne devez pas créer un `CDataRecoveryHandler` objet.  
@@ -237,7 +237,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pDocument*|Un pointeur vers un `CDocument`. Cette méthode crée les informations de document pour ce `CDocument`.|  
+|*pDocument*|[in] Un pointeur vers un `CDocument`. Cette méthode crée les informations de document pour ce `CDocument`.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’implémentation par défaut retourne la valeur TRUE.  
@@ -269,7 +269,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *strAutosavedFile*|Chaîne qui contient le nom de fichier enregistrée automatiquement.|  
+|*strAutosavedFile*|[in] Chaîne qui contient le nom de fichier enregistrée automatiquement.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’implémentation par défaut toujours retourner TRUE.  
@@ -285,8 +285,8 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *strDocumentName*  
- Chaîne qui contient le nom du document. `GenerateAutosaveFileName` utilise ce nom de document pour générer un nom de fichier d’enregistrement automatique correspondante.  
+*strDocumentName*<br/>
+[in] Chaîne qui contient le nom du document. `GenerateAutosaveFileName` utilise ce nom de document pour générer un nom de fichier d’enregistrement automatique correspondante.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nom de fichier d’enregistrement automatique généré à partir de *strDocumentName*.  
@@ -326,7 +326,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pDocument*|Un pointeur vers un `CDocument`. `GetDocumentListName` Récupère le nom du document à partir de ce `CDocument`.|  
+|*pDocument*|[in] Un pointeur vers un `CDocument`. `GetDocumentListName` Récupère le nom du document à partir de ce `CDocument`.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nom du document à partir de *pDocument*.  
@@ -346,7 +346,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pDocument*|Un pointeur vers un `CDocument`.|  
+|*pDocument*|[in] Un pointeur vers un `CDocument`.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le titre normale pour le document spécifié.  
@@ -362,8 +362,8 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *strDocumentTitle*  
- Le titre normale pour le document.  
+*strDocumentTitle*<br/>
+[in] Le titre normale pour le document.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le titre de document récupéré.  
@@ -462,7 +462,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pDocument*|Pointeur vers le document à supprimer.|  
+|*pDocument*|[in] Pointeur vers le document à supprimer.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si *pDocument* a été supprimé de la liste ; FALSE si une erreur s’est produite.  
@@ -529,8 +529,8 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nAutosaveInterval*  
- Le nouvel intervalle d’enregistrement automatique en millisecondes.  
+*nAutosaveInterval*<br/>
+[in] Le nouvel intervalle d’enregistrement automatique en millisecondes.  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
  Définit le répertoire où sont stockés les fichiers enregistrée automatiquement.  
@@ -544,7 +544,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *strAutosavePath*|Le chemin d’accès où sont stockés les fichiers de sauvegarde automatique.|  
+|*strAutosavePath*|[in] Le chemin d’accès où sont stockés les fichiers de sauvegarde automatique.|  
   
 ### <a name="remarks"></a>Notes  
  Modification du répertoire d’enregistrement automatique ne déplace pas actuellement enregistrée automatiquement les fichiers.  
@@ -561,7 +561,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *strRestartIdentifier*|Identificateur unique pour le Gestionnaire de redémarrage.|  
+|*strRestartIdentifier*|[in] Identificateur unique pour le Gestionnaire de redémarrage.|  
   
 ### <a name="remarks"></a>Notes  
  Le Gestionnaire de redémarrage enregistre des informations sur les documents ouverts dans le Registre. Ces informations sont stockées avec l’identificateur de redémarrage unique comme clé. Étant donné que le redémarrage de l’identificateur est unique pour chaque instance d’une application, plusieurs instances d’une application se ferme de façon inattendue et le Gestionnaire de redémarrage peut récupérer chacun d’eux.  
@@ -578,7 +578,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *bSaveOnIdle*|TRUE pour enregistrer les informations de document au cours du cycle d’inactivité en cours ; La valeur FALSE à ne pas effectuer une sauvegarde.|  
+|*bSaveOnIdle*|[in] TRUE pour enregistrer les informations de document au cours du cycle d’inactivité en cours ; La valeur FALSE à ne pas effectuer une sauvegarde.|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  Définit si la sortie précédente de l’application a été provoquée par le Gestionnaire de redémarrage.  
@@ -592,7 +592,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *bShutdownByRestartManager*|TRUE pour indiquer que le Gestionnaire de redémarrage a provoqué l’application à s’arrêter ; FALSE pour indiquer que l’application s’est arrêté pour une autre raison.|  
+|*bShutdownByRestartManager*|[in] TRUE pour indiquer que le Gestionnaire de redémarrage a provoqué l’application à s’arrêter ; FALSE pour indiquer que l’application s’est arrêté pour une autre raison.|  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure se comporte différemment selon que la sortie précédente était inattendue ou si elle a été lancée par le Gestionnaire de redémarrage.  
@@ -609,7 +609,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pDocument*|Pointeur vers le document enregistré.|  
+|*pDocument*|[in] Pointeur vers le document enregistré.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode supprimé le document enregistré automatiquement et mis à jour les informations de document ; FALSE si une erreur s’est produite.  

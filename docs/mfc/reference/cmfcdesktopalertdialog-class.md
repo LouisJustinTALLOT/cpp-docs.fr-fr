@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e5eb06eb9b3a764589008949485aa8e62f15d3d6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541449"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710084"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>Cmfcdesktopalertdialog, classe
 Le `CMFCDesktopAlertDialog` classe est utilisée conjointement avec la [cmfcdesktopalertwnd, classe](../../mfc/reference/cmfcdesktopalertwnd-class.md) pour afficher une boîte de dialogue personnalisée dans une fenêtre contextuelle.  
@@ -90,8 +90,8 @@ BOOL CreateFromParams(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *params*  
- [in] *pParent*  
+*params*<br/>
+[in] [in] *pParent*  
   
 ### <a name="return-value"></a>Valeur de retour  
   

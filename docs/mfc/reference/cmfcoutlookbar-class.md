@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b9de076f4682bd3649f62940a0dd492eb801e28
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9ed3a07b7994d2c7adc7a5d708d31abe9c49437f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850181"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717104"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar, classe
 Volet à onglets avec l'apparence visuelle du **Volet de navigation** dans Microsoft Outlook 2000 et Outlook 2003. Le `CMFCOutlookBar` objet contient un [cmfcoutlookbartabctrl, classe](../../mfc/reference/cmfcoutlookbartabctrl-class.md) et une série d’onglets. Les onglets peuvent être soit [cmfcoutlookbarpane, classe](../../mfc/reference/cmfcoutlookbarpane-class.md) objets ou `CWnd`-objets dérivés. Pour l'utilisateur, la barre Outlook apparaît comme un ensemble de boutons et une zone d'affichage. Lorsque l'utilisateur clique sur un bouton, le volet de contrôle ou de bouton correspondant s'affiche.  
@@ -210,8 +210,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Pointeur vers un autre volet est ancré vers ce volet.  
+*pBar*<br/>
+[in] Pointeur vers un autre volet est ancré vers ce volet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si un autre volet peut être ancré dans le volet de barre Outlook ; Sinon, FALSE.  
@@ -253,26 +253,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszCaption*  
- Spécifie la légende de fenêtre.  
+*lpszCaption*<br/>
+[in] Spécifie la légende de fenêtre.  
   
- [in] *pParentWnd*  
- Spécifie un pointeur vers une fenêtre parente. Il ne doit pas être NULL.  
+*pParentWnd*<br/>
+[in] Spécifie un pointeur vers une fenêtre parente. Il ne doit pas être NULL.  
   
- [in] *rect*  
- Spécifie la taille et la position en pixels de la barre outlook.  
+*Rect*<br/>
+[in] Spécifie la taille et la position en pixels de la barre outlook.  
   
- [in] *nID*  
- Spécifie l’ID de contrôle. Doit être distinct des autres identificateurs utilisés dans l’application de contrôle.  
+*nID*<br/>
+[in] Spécifie l’ID de contrôle. Doit être distinct des autres identificateurs utilisés dans l’application de contrôle.  
   
- [in] *dwStyle*  
- Spécifie le style de barre de contrôle souhaité. Pour connaître les valeurs possibles, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Spécifie le style de barre de contrôle souhaité. Pour connaître les valeurs possibles, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *dwControlBarStyle*  
- Spécifie les styles définis par la bibliothèque spéciales.  
+*dwControlBarStyle*<br/>
+[in] Spécifie les styles définis par la bibliothèque spéciales.  
   
- [in] *pContext*  
- Créer le contexte.  
+*pContext*<br/>
+[in] Créer le contexte.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la méthode réussit ; sinon 0.  
@@ -300,17 +300,17 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszPageName*  
- L’étiquette de la page.  
+*lpszPageName*<br/>
+[in] L’étiquette de la page.  
   
- [in] *bActivatePage*  
- Si la valeur est TRUE, la page devient active lors de la création.  
+*bActivatePage*<br/>
+[in] Si la valeur est TRUE, la page devient active lors de la création.  
   
- [in] *dwEnabledDocking*  
- Une combinaison d’indicateurs CBRS_ALIGN_ qui spécifie les côtés d’ancrage est activées lorsque la page est détachée.  
+*dwEnabledDocking*<br/>
+[in] Une combinaison d’indicateurs CBRS_ALIGN_ qui spécifie les côtés d’ancrage est activées lorsque la page est détachée.  
   
- [in] *bEnableTextLabels*  
- Si la valeur est TRUE, les étiquettes de texte sont activés pour les boutons qui se trouvent sur la page.  
+*bEnableTextLabels*<br/>
+[in] Si la valeur est TRUE, les étiquettes de texte sont activés pour les boutons qui se trouvent sur la page.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la page qui vient d’être créée, ou NULL si la création a échoué.  
@@ -350,17 +350,17 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
- Un pointeur vers le volet pour float.  
+*pBar*<br/>
+[in] Un pointeur vers le volet pour float.  
   
- [in] *nTabID*  
- Index de base zéro de l’onglet en float.  
+*nTabID*<br/>
+[in] Index de base zéro de l’onglet en float.  
   
- [in] *dockMethod*  
- Spécifie la méthode à utiliser pour détacher le volet.  Pour plus d’informations, consultez [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
+*dockMethod*<br/>
+[in] Spécifie la méthode à utiliser pour détacher le volet.  Pour plus d’informations, consultez [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
- [in] *bHide*  
- TRUE pour masquer le volet avant flottante. Sinon, FALSE. Contrairement à la version de la classe de base de cette méthode, ce paramètre n’a pas de valeur par défaut.  
+*bHide*<br/>
+[in] TRUE pour masquer le volet avant flottante. Sinon, FALSE. Contrairement à la version de la classe de base de cette méthode, ce paramètre n’a pas de valeur par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le volet flottantes ; Sinon, FALSE.  
@@ -391,11 +391,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *rectTabAreaTop*  
- Lorsque la fonction retourne, contient la taille et la position (dans les coordonnées clientes) de la zone d’onglet supérieur.  
+*rectTabAreaTop*<br/>
+[out] Lorsque la fonction retourne, contient la taille et la position (dans les coordonnées clientes) de la zone d’onglet supérieur.  
   
- [out] *rectTabAreaBottom*  
- Lorsque la fonction retourne une valeur, contient la taille et la position (dans les coordonnées clientes) de la zone d’onglet en bas.  
+*rectTabAreaBottom*<br/>
+[out] Lorsque la fonction retourne une valeur, contient la taille et la position (dans les coordonnées clientes) de la zone d’onglet en bas.  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode pour déterminer le type d’ancrage dans le volet cible. Lorsque le framework détermine que l’utilisateur fait glisser le volet pour être ancré sur la zone d’onglet du volet cible, il tente d’ajouter le premier volet en tant qu’un nouvel onglet du volet cible. Sinon, il essaie d’ancrer le premier volet à un côté du volet cible approprié. L’infrastructure crée un conteneur avec un curseur pour prendre en charge le volet ancré supplémentaire.  
@@ -425,8 +425,8 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nPage*  
- Index de base zéro de la page d’onglets est devenue active.  
+*nPage*<br/>
+[in] Index de base zéro de la page d’onglets est devenue active.  
   
 ### <a name="remarks"></a>Notes  
  L’effet visuel de la définition de l’onglet actif varie selon que vous avez activé l’animation. Pour plus d’informations, consultez [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
@@ -439,8 +439,8 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nPage*  
- Index de base zéro de la page d’onglets qui doit être défini active.  
+*nPage*<br/>
+[in] Index de base zéro de la page d’onglets qui doit être défini active.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne TRUE si l’animation doit être utilisée lors de la définition du nouvel onglet actif, ou FALSE si l’animation doit être désactivée.  
@@ -455,8 +455,8 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bDown*  
- TRUE si la barre Outlook est défilement vers le bas, ou FALSE si elle défile des.  
+*bDown*<br/>
+[in] TRUE si la barre Outlook est défilement vers le bas, ou FALSE si elle défile des.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -470,11 +470,11 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiPage*  
- Index de base zéro de la page dans la fenêtre parente d’Outlook.  
+*uiPage*<br/>
+[in] Index de base zéro de la page dans la fenêtre parente d’Outlook.  
   
- [in] *pTargetWnd*  
- Pointerto la fenêtre parente d’Outlook.  
+*pTargetWnd*<br/>
+[in] Pointerto la fenêtre parente d’Outlook.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la page personnalisée a été supprimée avec succès ; sinon 0.  
@@ -496,11 +496,11 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pFont*  
- Spécifie la nouvelle police.  
+*pFont*<br/>
+[in] Spécifie la nouvelle police.  
   
- [in] *bRedraw*  
- Si la valeur est TRUE, la barre Outlook est redessinée.  
+*bRedraw*<br/>
+[in] Si la valeur est TRUE, la barre Outlook est redessinée.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour définir une police pour le texte affiché sur les boutons de page d’onglet outlook.  
@@ -513,8 +513,8 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bMode2003*  
- Si la valeur est TRUE, le mode d’Office 2003 est activé.  
+*bMode2003*<br/>
+[in] Si la valeur est TRUE, le mode d’Office 2003 est activé.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette fonction pour activer ou désactiver le mode d’Office 2003. Dans ce mode, la barre Outlook a une barre d’outils supplémentaire avec un bouton de personnalisation. Le comportement de la barre Outlook est conforme au comportement de la barre Outlook dans Microsoft Office 2003.  

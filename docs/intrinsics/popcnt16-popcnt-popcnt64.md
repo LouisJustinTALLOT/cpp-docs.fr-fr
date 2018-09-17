@@ -1,5 +1,5 @@
 ---
-title: __popcnt16, __popcnt, __popcnt64 | Documents Microsoft
+title: __popcnt16, __popcnt, __popcnt64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a639091bd7c5c263a3f09067858cd0fe4ac631cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34063223addb433a94c877ad56cf410f189e6681
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724733"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+
 **Section spécifique à Microsoft**  
   
  Compte le nombre de bits (peuplement) dans un 16, 32 ou entier non signé de 64 octets.  
@@ -48,26 +49,26 @@ unsigned __int64 __popcnt64(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `value`  
- Les 16, 32 ou entier non signé de 64 bits pour lequel nous souhaitons le volume de peuplement.  
+*valeur*<br/>
+[in] Le 16, 32 ou entier non signé 64 bits pour lequel nous voulons le volume de peuplement.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le nombre de bits un dans le `value` paramètre.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
-|`__popcnt16`|Manipulation de bits avancées|  
-|`__popcnt`|Manipulation de bits avancées|  
-|`__popcnt64`|Manipulation de bits avancées en mode 64 bits.|  
+|`__popcnt16`|Manipulation de bits avancés|  
+|`__popcnt`|Manipulation de bits avancés|  
+|`__popcnt64`|Manipulation de bits avancés en mode 64 bits.|  
   
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- Chacune de ces fonctions intrinsèques génère le `popcnt` instruction.  La taille de la valeur que la `popcnt` instruction retourne une valeur est identique à la taille de son argument.  En mode 32 bits ne des aucun 64 bits registres à caractère général, par conséquent, ne 64 bits `popcnt`.  
+ Chacune de ces fonctions intrinsèques génère la `popcnt` instruction.  La taille de la valeur que la `popcnt` instruction retourne est identique à la taille de son argument.  En mode 32 bits il n’existe aucune registres 64 bits à usage général, par conséquent, ne 64 bits `popcnt`.  
   
- Pour déterminer la prise en charge matérielle pour le `popcnt` instruction, appelez le `__cpuid` intrinsèque avec `InfoType=0x00000001` et vérifiez le bit 23 de `CPUInfo[2] (ECX)`. Ce bit est 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `popcnt` instruction, les résultats sont imprévisibles.  
+ Pour déterminer la prise en charge matérielle pour le `popcnt` instruction, appelez le `__cpuid` intrinsèque avec `InfoType=0x00000001` et vérifiez le bit 23 de `CPUInfo[2] (ECX)`. Ce bit est 1 si l’instruction est pris en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `popcnt` instruction, les résultats sont imprévisibles.  
   
 ## <a name="example"></a>Exemple  
   
@@ -107,7 +108,8 @@ __popcnt(0xffffffff) = 32
 ```  
   
 **FIN de la section spécifique à Microsoft**  
- Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
+
+Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
   
 ## <a name="see-also"></a>Voir aussi  
  [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

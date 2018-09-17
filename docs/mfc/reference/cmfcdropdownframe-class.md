@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 99b4a84109db8a412f0a3d64967a522d18ada930
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849446"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713451"
 ---
 # <a name="cmfcdropdownframe-class"></a>Cmfcdropdownframe, classe
 Fournit des fonctionnalités de fenêtre frame de la liste déroulante pour les barres d’outils de la liste déroulante et les boutons de barre d’outils de la liste déroulante.  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *pWndParent*|La fenêtre parente de l’image de la liste déroulante.|  
-|[in] *x*|Coordonnée d’écran horizontale pour l’emplacement de l’image du bas vers le bas.|  
-|[in] *y*|Coordonnée d’écran verticale pour l’emplacement de l’image du bas vers le bas.|  
-|[in] *pWndOriginToolbar*|La barre d’outils qui affiche les boutons de liste déroulante que cette méthode utilise pour remplir le nouvel objet de frame de la liste déroulante.|  
+|*pWndParent*|[in] La fenêtre parente de l’image de la liste déroulante.|  
+|*x*|[in] Coordonnée d’écran horizontale pour l’emplacement de l’image du bas vers le bas.|  
+|*y*|[in] Coordonnée d’écran verticale pour l’emplacement de l’image du bas vers le bas.|  
+|*pWndOriginToolbar*|[in] La barre d’outils qui affiche les boutons de liste déroulante que cette méthode utilise pour remplir le nouvel objet de frame de la liste déroulante.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si le frame de la liste déroulante a été créé avec succès ; Sinon, FALSE.  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|[in] *bNotify*|Non utilisé.|  
+|*bNotify*|[in] Inutilisé.|  
   
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode lorsque le frame de la liste déroulante est créé, ou la fenêtre parent est redimensionnée. Cette méthode calcule la position et la taille de l’image de la liste déroulante à l’aide de la position et la taille de la fenêtre parente.  
@@ -171,8 +171,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *bAutoDestroy*  
- TRUE pour détruire automatiquement la fenêtre de la barre d’outils de liste déroulante associée. Sinon, FALSE.  
+*bAutoDestroy*<br/>
+[in] TRUE pour détruire automatiquement la fenêtre de la barre d’outils de liste déroulante associée. Sinon, FALSE.  
   
 ### <a name="remarks"></a>Notes  
  Si *bAutoDestroy* a la valeur TRUE, le `CMFCDropDownFrame` destructeur détruit la fenêtre de la barre d’outils de liste déroulante associée. La valeur par défaut est TRUE.  

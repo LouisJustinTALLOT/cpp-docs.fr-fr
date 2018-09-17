@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d118c26e79a462723f87e76672b2d9b9c1a76cb2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cd5abaccb4adc9e642458669535cff369d963cfd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538238"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712575"
 ---
 # <a name="outword"></a>__outword
 **Section spécifique à Microsoft**  
@@ -39,11 +39,11 @@ void __outword(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Port`  
- Le port pour envoyer les données.  
+*Port*<br/>
+[in] Le port pour envoyer les données.  
   
- [in] `Data`  
- Les données à envoyer.  
+*Données*<br/>
+[in] Les données à envoyer.  
   
 ## <a name="requirements"></a>Configuration requise  
   

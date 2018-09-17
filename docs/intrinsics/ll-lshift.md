@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4bfb567774191edb86a9eb34a38be69344f19575
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540044"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702076"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Section spécifique à Microsoft**  
@@ -40,11 +40,11 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Mask`  
- La valeur d’entier 64 bits à déplacer vers la gauche.  
+*Masque*<br/>
+[in] La valeur d’entier 64 bits à déplacer vers la gauche.  
   
- [in] `nBit`  
- Nombre de bits à décaler.  
+*nBit*<br/>
+[in] Le nombre de bits de décalage.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le masque décalée vers la gauche par `nBit` bits.  

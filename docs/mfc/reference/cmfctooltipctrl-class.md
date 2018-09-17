@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f395ae726725507bf27f5033b20a4ece2a226a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715661"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl, classe
 Implémentation d’info-bulle étendue basée sur [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Une info-bulle basée sur la classe `CMFCToolTipCtrl` peut afficher une icône, une étiquette et une description. Vous pouvez personnaliser son apparence visuelle en utilisant un dégradé, un texte personnalisé et des couleurs de bordure, un texte en gras, des angles arrondis ou un style d'info-bulle.  
@@ -204,14 +204,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Le rectangle englobant de l’info-bulle.  
+*Rect*<br/>
+[in] Le rectangle englobant de l’info-bulle.  
   
- [in] *clrLine*  
- Couleur de bordure.  
+*clrLine*<br/>
+[in] Couleur de bordure.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour personnaliser l’apparence de la bordure d’info-bulle.  
@@ -227,8 +227,8 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- [in] *rect*  
+*contrôleur de domaine principal*<br/>
+[in] [in] *rect*  
  [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -245,11 +245,11 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rectImage*  
- Coordonnées de l’icône.  
+*rectImage*<br/>
+[in] Coordonnées de l’icône.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’icône a été dessinée. Sinon, FALSE.  
@@ -268,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Rectangle englobant de la zone d’étiquette.  
+*Rect*<br/>
+[in] Rectangle englobant de la zone d’étiquette.  
   
- [in] *bCalcOnly*  
- Si la valeur est TRUE, l’étiquette ne sera pas dessinée.  
+*bCalcOnly*<br/>
+[in] Si la valeur est TRUE, l’étiquette ne sera pas dessinée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Taille de l’étiquette, en pixels.  
@@ -295,17 +295,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *x1*  
- Coordonnée horizontale de l’extrémité gauche du séparateur.  
+*x1*<br/>
+[in] Coordonnée horizontale de l’extrémité gauche du séparateur.  
   
- [in] *x2*  
- Coordonnée horizontale de l’extrémité droite du séparateur.  
+*x2*<br/>
+[in] Coordonnée horizontale de l’extrémité droite du séparateur.  
   
- [in] *Y*  
- Coordonnée verticale du séparateur.  
+*Y*<br/>
+[in] Coordonnée verticale du séparateur.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut Dessine une ligne à partir du point (x1, y) au point (x2, y).  
@@ -324,17 +324,17 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rect*  
- Spécifie le rectangle englobant de la zone à remplir.  
+*Rect*<br/>
+[in] Spécifie le rectangle englobant de la zone à remplir.  
   
- [in] *clrText*  
- Info-bulle couleur de premier plan.  
+*clrText*<br/>
+[in] Info-bulle couleur de premier plan.  
   
- [in] *clrLine*  
- Couleur de bordure et la ligne de séparateur entre l’étiquette et description.  
+*clrLine*<br/>
+[in] Couleur de bordure et la ligne de séparateur entre l’étiquette et description.  
   
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut remplit le rectangle spécifié par *rect* avec la couleur ou le modèle spécifié par l’appel le plus récent à [CMFCToolTipCtrl::SetParams](#setparams).  
@@ -349,8 +349,8 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *strDesrciption*  
- Texte de description.  
+*strDesrciption*<br/>
+[in] Texte de description.  
   
 ### <a name="remarks"></a>Notes  
  Le texte de description s’affiche dans l’info-bulle sous le séparateur.  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nWidthRegular*  
- [in] *nWidthLargeImage*  
+*nWidthRegular*<br/>
+[in] [in] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Notes  
   
@@ -402,8 +402,8 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pParams*  
- Pointeur vers un [cmfctooltipinfo, classe](../../mfc/reference/cmfctooltipinfo-class.md) objet qui contient les paramètres d’affichage.  
+*pParams*<br/>
+[in] Pointeur vers un [cmfctooltipinfo, classe](../../mfc/reference/cmfctooltipinfo-class.md) objet qui contient les paramètres d’affichage.  
   
 ### <a name="remarks"></a>Notes  
  Chaque fois que l’info-bulle s’affiche, il est dessiné à l’aide de couleurs et styles visuels qui *pParams* spécifie. La valeur de *pParams* est stocké dans le membre protégé `m_Params`, qui peut être accédé par une classe dérivée qui substitue [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl : : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), ou [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)de conserver l’apparence spécifiée.  

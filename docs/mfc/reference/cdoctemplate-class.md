@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336983"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709837"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate (classe)
 Classe de base abstraite qui définit les fonctionnalités de base des modèles de document.  
@@ -431,11 +431,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszPathName*  
- Pointeur vers le chemin d’accès du fichier qui contient le document à ouvrir.  
+*lpszPathName*<br/>
+[in] Pointeur vers le chemin d’accès du fichier qui contient le document à ouvrir.  
   
- [in] *bAddToMRU*  
- TRUE indique que le document est un des fichiers plus récents ; La valeur FALSE indique que le document n’est pas un des fichiers plus récents.  
+*bAddToMRU*<br/>
+[in] TRUE indique que le document est un des fichiers plus récents ; La valeur FALSE indique que le document n’est pas un des fichiers plus récents.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le document dont le fichier est nommé par *lpszPathName*; Valeur NULL en cas d’échec.  

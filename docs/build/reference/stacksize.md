@@ -1,5 +1,5 @@
 ---
-title: STACKSIZE | Documents Microsoft
+title: STACKSIZE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2093762b3c6f21d319c53a85da5ec5b430a1fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d9b61febedde1a2647df6312a8588b08c6bdad7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376245"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705560"
 ---
 # <a name="stacksize"></a>STACKSIZE
-Définit la taille de la pile, en octets.  
-  
-```  
-STACKSIZE reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Pour définir la pile d’une manière équivalente est avec le [Allocations de la pile](../../build/reference/stack-stack-allocations.md) (/Stack) option. Consultez la documentation sur cette option pour plus d’informations la *réserver* et `commit` arguments.  
-  
- Cette option a aucun effet sur les DLL.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Règles s’appliquant aux instructions de définition de module](../../build/reference/rules-for-module-definition-statements.md)
+
+Définit la taille de la pile, en octets.
+
+```
+STACKSIZE reserve[,commit]
+```
+
+## <a name="remarks"></a>Notes
+
+Pour définir la pile d’une manière équivalente est avec la [Allocations de la pile](../../build/reference/stack-stack-allocations.md) (/Stack) option. Consultez la documentation sur cette option pour plus d’informations la *réserver* et `commit` arguments.
+
+Cette option n’a aucun effet sur les DLL.
+
+## <a name="see-also"></a>Voir aussi
+
+[Règles s’appliquant aux instructions de définition de module](../../build/reference/rules-for-module-definition-statements.md)
