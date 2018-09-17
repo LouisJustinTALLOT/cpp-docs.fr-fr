@@ -14,29 +14,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eaf9417f4d2b3b825933589556055772b84e057
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0a9e1769ff0ba9a0589f9d59c3d1f1ed2fc5bcb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197411"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699853"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>Comment : générer des composants COM sans inscription
-Les composants COM sans inscription sont des composants COM qui ont des manifestes générés dans les DLL.  
-  
-### <a name="to-build-manifests-into-com-components"></a>Pour générer des manifestes dans les composants COM  
-  
-1.  Ouvrez les pages de propriétés de projet pour le composant COM.  
-  
-2.  Développez le **propriétés de Configuration** nœud, puis développez le **outil manifeste** nœud.  
-  
-3.  Sélectionnez le **d’entrée et sortie** page de propriétés, puis définissez le **incorporer le manifeste** propriété égale à **Oui**.  
-  
-4.  Cliquez sur **OK**.  
-  
-5.  Générez la solution.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Applications isolées](/windows/desktop/SbsCs/isolated-applications)   
- [Sur les assemblys côte à côte](/windows/desktop/SbsCs/about-side-by-side-assemblies-)   
- [Guide pratique pour générer des applications isolées pour consommer des composants COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+
+Les composants COM sans inscription sont des composants COM qui ont des manifestes générés dans les DLL.
+
+### <a name="to-build-manifests-into-com-components"></a>Pour générer des manifestes dans les composants COM
+
+1. Ouvrez les pages de propriétés de projet pour le composant COM.
+
+1. Développez le **propriétés de Configuration** nœud, puis développez le **outil manifeste** nœud.
+
+1. Sélectionnez le **d’entrée et sortie** page de propriétés, puis définissez le **incorporer le manifeste** propriété égale à **Oui**.
+
+1. Cliquez sur **OK**.
+
+1. Générez la solution.
+
+## <a name="see-also"></a>Voir aussi
+
+[Applications isolées](/windows/desktop/SbsCs/isolated-applications)<br/>
+[Sur les assemblys côte à côte](/windows/desktop/SbsCs/about-side-by-side-assemblies-)<br/>
+[Guide pratique pour générer des applications isolées pour consommer des composants COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)

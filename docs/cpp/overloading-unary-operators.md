@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 54529bed25fc60815f80ea8660bcf5786cb2887c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401878"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700678"
 ---
 # <a name="overloading-unary-operators"></a>Surcharge des opérateurs unaires
 Les opérateurs unaires qui peuvent être surchargés sont les suivants :  
@@ -55,18 +55,18 @@ Les opérateurs unaires qui peuvent être surchargés sont les suivants :
   
  Les règles suivantes s'appliquent à tous les autres opérateurs unaires. Pour déclarer une fonction d'opérateur unaire en tant que membre non statique, vous devez la déclarer comme suit :  
   
- `ret-type operator` `op` `()`  
+> *RET-type* **opérateur** *op* **()**  
   
- où `ret-type` est le type de retour et `op` est l'un des opérateurs répertoriés dans le tableau précédent.  
+ où *ret-type* est le type de retour et *op* est un des opérateurs répertoriés dans le tableau précédent.  
   
  Pour déclarer une fonction d'opérateur unaire en tant que fonction globale, vous devez la déclarer comme suit :  
   
- `ret-type operator` `op` (`arg` )  
+> *RET-type* **opérateur** *op* **(** *arg* **)**  
   
- où `ret-type` et `op` apparaissent tels qu'ils sont décrits pour les fonctions d'opérateur de membre, et `arg` est un argument de type de classe à utiliser.  
+ où *ret-type* et *op* sont celles décrites pour les fonctions d’opérateur de membre et le *arg* est un argument de type de classe à utiliser.  
   
 > [!NOTE]
->  Il n'y a aucune restriction sur les types de retour des opérateurs unaires. Par exemple, il paraîtrait logique pour l'opérateur NOT logique (`!`) de retourner une valeur intégrale, mais cela n'est pas appliqué.  
+>  Il n’y a aucune restriction sur les types de retour des opérateurs unaires. Par exemple, il paraîtrait logique pour l'opérateur NOT logique (`!`) de retourner une valeur intégrale, mais cela n'est pas appliqué.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surcharge d'opérateur](../cpp/operator-overloading.md)

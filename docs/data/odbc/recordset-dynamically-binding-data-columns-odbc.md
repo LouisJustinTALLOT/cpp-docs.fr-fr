@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0be424b07fd9d13eec63c56172b2b0195b83d9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e64a8a795181115652ab25750c1bac8712fabbad
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338809"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703120"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset : liaison dynamique de colonnes de données (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -91,19 +91,16 @@ Création des listes de colonnes pour la liaison dynamiquement
      Une approche consiste à ajouter une boucle à votre recordset principal `DoFieldExchange` fonction qui effectue une itération sur la liste des nouvelles colonnes, appelle la fonction RFX appropriée pour chaque colonne dans la liste. À chaque appel RFX, passez un nom de colonne à partir de la liste des colonnes nom et un emplacement de stockage dans le membre correspondant de la liste de valeurs de résultat.  
   
 ###  <a name="_core_lists_of_columns"></a> Listes de colonnes  
- Les quatre listes que vous avez besoin pour travailler avec figurent dans le tableau suivant.  
-  
- **Colonnes de Table en cours (liste 1 dans l’illustration)** une liste des colonnes figurant dans la table sur la source de données. Cette liste peut correspondre à la liste des colonnes actuellement liées du recordset.  
-  
- **Colonnes de jeu d’enregistrements liées aux (liste 2 dans l’illustration)**  
- Liste des colonnes liées dans votre jeu d’enregistrements. Ces colonnes disposent déjà d’instructions RFX votre `DoFieldExchange` (fonction).  
-  
- **Colonnes-To-Bind-Dynamically (liste 3 dans l’illustration)**  
- Une liste de colonnes dans la table mais pas dans le jeu d’enregistrements. Ce sont les colonnes que vous souhaitez lier dynamiquement.  
-  
- **Valeurs de colonne dynamique (liste 4 dans l’illustration)**  
- Une liste contenant un stockage pour les valeurs extraites des colonnes que vous liez dynamiquement. Éléments de cette liste correspondent à celles des colonnes-to-Bind-Dynamically, un à un.  
-  
+
+Les quatre listes que vous avez besoin pour travailler avec figurent dans le tableau suivant.  
+
+|||
+|-|-|  
+**Colonnes de Table en cours**| (Liste 1 dans l’illustration) Une liste des colonnes figurant dans la table sur la source de données. Cette liste peut correspondre à la liste des colonnes actuellement liées du recordset.|
+|**Lié aux colonnes de recordsets**| (Liste 2 dans l’illustration) Liste des colonnes liées dans votre jeu d’enregistrements. Ces colonnes disposent déjà d’instructions RFX votre `DoFieldExchange` (fonction).|
+|**Colonnes-To-Bind-Dynamically**| (Liste 3 dans l’illustration) Une liste de colonnes dans la table mais pas dans le jeu d’enregistrements. Ce sont les colonnes que vous souhaitez lier dynamiquement.|
+|**Valeurs de colonne dynamique**| (Liste 4 dans l’illustration) Une liste contenant un stockage pour les valeurs extraites des colonnes que vous liez dynamiquement. Éléments de cette liste correspondent à celles des colonnes-to-Bind-Dynamically, un à un.|
+
 ###  <a name="_core_building_your_lists"></a> Création des listes  
  Avec une stratégie générale à l’esprit, vous pouvez activer pour les détails. Les procédures décrites dans le reste de cette rubrique vous montrent comment créer les listes affichées dans [listes de colonnes](#_core_lists_of_columns). Les procédures vous aident à :  
   

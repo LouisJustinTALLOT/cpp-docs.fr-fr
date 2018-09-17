@@ -1,5 +1,5 @@
 ---
-title: parallèle | Documents Microsoft
+title: parallèle | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1c8b1466eae343b6c644b6ecfbd919c3241259bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692283"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705963"
 ---
 # <a name="parallel"></a>parallel
 Définit une région parallèle, ce qui est le code qui sera exécuté par plusieurs threads en parallèle.  
@@ -35,11 +35,10 @@ Définit une région parallèle, ce qui est le code qui sera exécuté par plusi
 }  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
-  
- `clause`(facultatif)  
- Zéro ou plusieurs clauses.  Consultez la section Notes pour obtenir la liste des clauses prises en charge par **parallèles**.  
+## <a name="arguments"></a>Arguments
+
+*Clause*<br/>
+(Facultatif) Zéro ou plusieurs clauses.  Consultez la section Notes pour obtenir la liste des clauses prises en charge par **parallèles**.  
   
 ## <a name="remarks"></a>Notes  
  Le **parallèles** directive prend en charge les clauses OpenMP suivantes :  
@@ -65,7 +64,7 @@ Définit une région parallèle, ce qui est le code qui sera exécuté par plusi
  Pour plus d’informations, consultez [2.3 construction parallèle](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment définir le nombre de threads et de définir une région parallèle. Par défaut, le nombre de threads est égal au nombre de processeurs logiques sur l’ordinateur. Par exemple, si vous avez un ordinateur avec un processeur physique qui a l’hyperthreading activé, il aura deux processeurs logiques et, par conséquent, deux threads.  
+ L’exemple suivant montre comment définir le nombre de threads et de définir une région parallèle. Par défaut, le nombre de threads est égal au nombre de processeurs logiques sur l’ordinateur. Par exemple, si vous avez un ordinateur avec un processeur physique qui a l’hyperthreading est activé, il aura deux processeurs logiques et, par conséquent, deux threads.  
   
 ```  
 // omp_parallel.cpp  

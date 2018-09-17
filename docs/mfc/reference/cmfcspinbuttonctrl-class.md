@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCSpinButtonCtrl | Documents Microsoft
+title: Cmfcspinbuttonctrl, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 960a1a0338a3390fdc10cf03ddc235bcf4ecbae9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039464"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712749"
 ---
-# <a name="cmfcspinbuttonctrl-class"></a>Classe de CMFCSpinButtonCtrl
-La `CMFCSpinButtonCtrl` classe prend en charge un gestionnaire visuel qui dessine un contrôle de bouton toupie (spin).  
+# <a name="cmfcspinbuttonctrl-class"></a>Cmfcspinbuttonctrl, classe
+Le `CMFCSpinButtonCtrl` classe prend en charge un gestionnaire visuel qui dessine un contrôle de bouton toupie (spin).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
  Pour utiliser un gestionnaire visuel pour dessiner un contrôle de bouton toupie (spin) dans votre application, remplacez toutes les instances de la `CSpinButtonCtrl` classe avec la `CMFCSpinButtonCtrl` classe.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment créer un objet de la `CMFCSpinButtonCtrl` de classe et d’utiliser ses `Create` (méthode).  
+ L’exemple suivant montre comment créer un objet de la `CMFCSpinButtonCtrl` classe et utiliser ses `Create` (méthode).  
   
  [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
   
@@ -79,11 +79,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine principal*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
 ### <a name="remarks"></a>Notes  
- Le framework appelle la `CMFCSpinButtonCtrl::OnPaint` méthode pour gérer les [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) message et que méthode appelle à son tour ce `CMFCSpinButtonCtrl::OnDraw` (méthode). Substituez cette méthode pour personnaliser la façon dont le framework Dessine le contrôle de bouton toupie (spin).  
+ Le framework appelle la `CMFCSpinButtonCtrl::OnPaint` méthode pour gérer la [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) message et que méthode appelle à son tour cette `CMFCSpinButtonCtrl::OnDraw` (méthode). Substituez cette méthode pour personnaliser la façon dont le framework Dessine le contrôle de bouton toupie (spin).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

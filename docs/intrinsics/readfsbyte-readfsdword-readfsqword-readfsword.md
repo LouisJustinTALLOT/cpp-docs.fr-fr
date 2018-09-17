@@ -1,5 +1,5 @@
 ---
-title: __readfsbyte, __readfsdword, __readfsqword, __readfsword | Documents Microsoft
+title: __readfsbyte, __readfsdword, __readfsqword, __readfsword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705685"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 **Section spécifique à Microsoft**  
@@ -56,13 +56,13 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `Offset`  
- Le décalage à partir du début de `FS` à lire.  
+*Décalage*<br/>
+[in] Le décalage à partir du début de `FS` pour lire à partir de.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le contenu de la mémoire de l’octet, word, mot double ou mot quadruple (comme indiqué par le nom de la fonction appelée) à l’emplacement `FS:[Offset]`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -74,7 +74,7 @@ unsigned __int64 __readfsqword(
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="remarks"></a>Notes  
- Ces routines sont disponibles seulement comme fonctions intrinsèques.  
+ Ces routines sont disponibles uniquement sous forme de fonctions intrinsèques.  
   
 **FIN de la section spécifique à Microsoft**  
   

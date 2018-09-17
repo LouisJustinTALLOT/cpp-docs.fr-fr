@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5136826b62fb5c0e6b8e7affd06be3aa81c03d6
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e946406a708f26685d6f1b7307476b6253c5362e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571883"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713291"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modèle de gestion des exceptions)
 
@@ -117,8 +117,8 @@ Toutefois, l’attribut relatif à l’absence de levée d’exceptions ne garan
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)  
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)  
-[Erreurs et exceptions](../../cpp/errors-and-exception-handling-modern-cpp.md)  
-[Spécifications d’exception (throw)](../../cpp/exception-specifications-throw-cpp.md)  
-[Gestion structurée des exceptions (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)  
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
+[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
+[Erreurs et exceptions](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Spécifications d’exception (throw)](../../cpp/exception-specifications-throw-cpp.md)
+[structurée des exceptions (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e6c22d91bafc45699371dd40d317b66cf3d1ca11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105664"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706613"
 ---
 # <a name="basicstring-class"></a>basic_string, classe
 
@@ -3979,9 +3979,11 @@ Chaîne C qui doit être une source de caractères pour la chaîne d’opérand
 *_Ch*<br/>
 Caractère à copier dans la chaîne d’opérande.
 
-* first0 * un itérateur qui cible le premier caractère à supprimer dans la chaîne d’opérande.
+*first0*<br/>
+Itérateur qui cible le premier caractère à supprimer dans la chaîne d’opérande.
 
-* last0 * un itérateur qui cible le dernier caractère à supprimer dans la chaîne d’opérande.
+*last0*<br/>
+Itérateur qui cible le dernier caractère à supprimer dans la chaîne d’opérande.
 
 *first*<br/>
 Itérateur, const_pointer ou const_iterator qui cible le premier caractère à copier dans la chaîne de paramètre.

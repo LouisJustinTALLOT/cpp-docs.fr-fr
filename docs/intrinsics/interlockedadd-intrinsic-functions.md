@@ -1,5 +1,5 @@
 ---
-title: _Interlockedadd, fonctions intrinsèques | Documents Microsoft
+title: _InterlockedAdd, fonctions intrinsèques | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333945"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709525"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd, fonctions intrinsèques
 **Section spécifique à Microsoft**  
@@ -86,16 +86,16 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in, out] `Addend`  
- Pointeur vers le nombre entier auquel il faut ajouter ; remplacé par le résultat de l'addition.  
+*Terme*<br/>
+[in, out] Pointeur vers l’entier à ajouter remplacé par le résultat de l’addition.  
   
- [in] `Value`  
- Valeur à ajouter.  
+*Valeur*<br/>
+[in] Valeur à ajouter.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Ces deux fonctions renvoient le résultat de l'addition.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  

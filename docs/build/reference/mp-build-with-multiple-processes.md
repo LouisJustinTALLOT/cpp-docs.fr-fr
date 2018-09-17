@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e61f1ac30c2a50cbbefe6c0cbd9e28011a0d0bd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb24ed970d3b02835d5545cb0eaf1d9fd8e81c7e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572727"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713425"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Générer avec plusieurs processus)
 
@@ -127,7 +127,7 @@ Visual Studio utilise le [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) 
 
 Le temps de génération de votre solution dépend en partie du nombre de processus qui effectuent la génération. Le *nombre* argument de la [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild option spécifie le nombre maximal de projets à générer en même temps. De même, le *processMax* argument de la **/MP** option du compilateur spécifie le nombre maximal d’unités de compilation à générer en même temps. Si le **/maxcpucount** option spécifie *P* projets et le **/MP** option spécifie *C* processus, un maximum de *P*  x *C* processus s’exécutent en même temps.
 
- L’indication pour décider s’il faut utiliser MSBuild ou **/MP** technologie se présente comme suit :
+L’indication pour décider s’il faut utiliser MSBuild ou **/MP** technologie se présente comme suit :
 
 - S’il existe de nombreux projets avec peu de fichiers dans chaque projet, utilisez l’outil MSBuild.
 

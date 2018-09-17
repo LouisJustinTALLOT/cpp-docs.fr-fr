@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 810a375fce13d8628db5ff00d89964d84c83b525
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853668"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704041"
 ---
 # <a name="cmfckeymapdialog-class"></a>Cmfckeymapdialog, classe
 Le `CMFCKeyMapDialog` classe prend en charge un contrôle qui mappe des commandes à des touches du clavier.  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pWndParentFrame*  
- Un pointeur vers la fenêtre parente de la `CMFCKeyMapDialog` objet.  
+*pWndParentFrame*<br/>
+[in] Un pointeur vers la fenêtre parente de la `CMFCKeyMapDialog` objet.  
   
- [in] *bEnablePrint*  
- TRUE si la liste des touches d’accès rapide peut être imprimée ; Sinon, FALSE. La valeur par défaut est FALSE.  
+*bEnablePrint*<br/>
+[in] TRUE si la liste des touches d’accès rapide peut être imprimée ; Sinon, FALSE. La valeur par défaut est FALSE.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -144,8 +144,8 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nItem*  
- Index de base zéro d’un élément dans la liste interne de mappages de la clé.  
+*nItem*<br/>
+[in] Index de base zéro d’un élément dans la liste interne de mappages de la clé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un `CString` objet qui contient le texte de l’élément mis en forme.  
@@ -160,8 +160,8 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *uiCmdID*  
- Un ID de commande.  
+*uiCmdID*<br/>
+[in] Un ID de commande.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un point-virgule (« ; ») liste des touches de raccourci associée à la commande spécifiée.  
@@ -178,11 +178,11 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pButton*  
- Pointeur vers un bouton de barre d’outils qui est utilisé pour mapper une combinaison de touches du clavier pour un nom de la commande et une description. L’élément de mappage de clés est stockée dans un contrôle de liste interne.  
+*pButton*<br/>
+[in] Pointeur vers un bouton de barre d’outils qui est utilisé pour mapper une combinaison de touches du clavier pour un nom de la commande et une description. L’élément de mappage de clés est stockée dans un contrôle de liste interne.  
   
- [in] *nItem*  
- Index de base zéro qui spécifie où insérer le nouvel élément de mappage de clés dans le contrôle de liste interne.  
+*nItem*<br/>
+[in] Index de base zéro qui spécifie où insérer le nouvel élément de mappage de clés dans le contrôle de liste interne.  
   
 ### <a name="remarks"></a>Notes  
   
@@ -197,14 +197,14 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine*  
- Le contexte de périphérique pour l’imprimante.  
+*dc*<br/>
+[in] Le contexte de périphérique pour l’imprimante.  
   
- [in] *nPage*  
- Le numéro de page à imprimer.  
+*nPage*<br/>
+[in] Le numéro de page à imprimer.  
   
- [in] *cx*  
- Le décalage horizontal de l’en-tête, en pixels.  
+*CX*<br/>
+[in] Le décalage horizontal de l’en-tête, en pixels.  
   
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, la hauteur du texte imprimé. Pour plus d’informations, consultez la section de la valeur de retour de [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
@@ -225,20 +225,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *contrôleur de domaine*  
- Le contexte de périphérique de l’imprimante.  
+*dc*<br/>
+[in] Le contexte de périphérique de l’imprimante.  
   
- [in] *nItem*  
- Index de base zéro de l’élément à imprimer.  
+*nItem*<br/>
+[in] Index de base zéro de l’élément à imprimer.  
   
- [in] *y*  
- Le décalage vertical entre le haut de la page et la position de l’élément.  
+*y*<br/>
+[in] Le décalage vertical entre le haut de la page et la position de l’élément.  
   
- [in] *cx*  
- Le décalage horizontal entre la gauche de la page et la position de l’élément.  
+*CX*<br/>
+[in] Le décalage horizontal entre la gauche de la page et la position de l’élément.  
   
- [in] *bCalcHeight*  
- TRUE pour calculer la hauteur de meilleures pour l’élément d’impression ; FALSE pour tronquer l’élément impression afin qu’elle s’adapte l’espace par défaut.  
+*bCalcHeight*<br/>
+[in] TRUE pour calculer la hauteur de meilleures pour l’élément d’impression ; FALSE pour tronquer l’élément impression afin qu’elle s’adapte l’espace par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur de l’élément imprimé.  

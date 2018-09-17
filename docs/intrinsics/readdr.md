@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1d5cabbd1d779de4c6c081b57b8f241d9fa92f62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539259"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709058"
 ---
 # <a name="readdr"></a>__readdr
 Lit la valeur du Registre de débogage spécifié.  
@@ -34,8 +34,8 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [in] `DebugRegister`  
- Une constante comprise entre 0 et 7 identifiant le débogage s’inscrire.  
+*DebugRegister*<br/>
+[in] Une constante comprise entre 0 et 7 identifiant le débogage s’inscrire.  
   
 ## <a name="return-value"></a>Valeur de retour  
  La valeur du Registre de débogage spécifié.  

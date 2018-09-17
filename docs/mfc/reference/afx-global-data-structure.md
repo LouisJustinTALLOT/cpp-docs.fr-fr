@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0f5297b6764ba29805b842329403557ad2aa4c3b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677455"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701920"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (structure)
 La structure `AFX_GLOBAL_DATA` contient des champs et des méthodes qui permettent de gérer l’infrastructure ou de personnaliser l’apparence et le comportement de votre application.  
@@ -220,14 +220,14 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] *pWnd*  
- Pointeur vers la fenêtre d’un contrôle.  
+*pWnd*<br/>
+[in] Pointeur vers la fenêtre d’un contrôle.  
   
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *lpRect*  
- Pointeur vers un rectangle qui délimite la zone dans laquelle dessiner. La valeur par défaut est NULL.  
+*lpRect*<br/>
+[in] Pointeur vers un rectangle qui délimite la zone dans laquelle dessiner. La valeur par défaut est NULL.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -250,36 +250,36 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] *hTheme*  
- Handle vers les données de thème d’une fenêtre, ou NULL. L’infrastructure utilise le thème spécifié pour dessiner le texte si ce paramètre n’est pas NULL et thèmes sont pris en charge. Sinon, l’infrastructure n’utilise pas de thème pour dessiner le texte.  
+*hTheme*<br/>
+[in] Handle vers les données de thème d’une fenêtre, ou NULL. L’infrastructure utilise le thème spécifié pour dessiner le texte si ce paramètre n’est pas NULL et thèmes sont pris en charge. Sinon, l’infrastructure n’utilise pas de thème pour dessiner le texte.  
   
  Utilisez le [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) méthode pour créer un HTHEME.  
   
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *iPartId*  
- Composant du contrôle ayant l’apparence de texte désirée. Pour plus d’informations, consultez la colonne composants de la table dans [composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210). Si cette valeur est égale à 0, le texte est dessiné avec la police par défaut ou une police sélectionnée dans le contexte de l’appareil.  
+*iPartId*<br/>
+[in] La partie de contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne composants de la table dans [composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210). Si cette valeur est égale à 0, le texte est dessiné avec la police par défaut ou une police sélectionnée dans le contexte de l’appareil.  
   
- [in] *iStateId*  
- État du contrôle ayant l’apparence de texte désirée. Pour plus d’informations, consultez la colonne des États de la table dans [composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
+*iStateId*<br/>
+[in] L’état du contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne des États de la table dans [composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [in] *strText*  
- Texte à dessiner.  
+*strText*<br/>
+[in] Le texte à dessiner.  
   
- [in] *rect*  
- Limite de la zone dans laquelle le texte spécifié est dessiné.  
+*Rect*<br/>
+[in] La limite de la zone dans laquelle le texte spécifié est dessiné.  
   
- [in] *dwFlags*  
- Combinaison de bits (OR) d’indicateurs qui spécifient comment le texte spécifié est dessiné.  
+*dwFlags*<br/>
+[in] Une combinaison (OR) au niveau du bit des indicateurs qui spécifient comment le texte spécifié est dessiné.  
   
  Si le *hTheme* paramètre est `NULL` ou si les thèmes ne sont pas pris en charge et activés, le *nFormat* paramètre de la [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) méthode décrit valides indicateurs. Si les thèmes sont pris en charge, le *dwFlags* paramètre de la [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) méthode décrit les indicateurs valides.  
   
- [in] *nGlowSize*  
- Taille d’un éclat dessiné à l’arrière-plan avant de dessiner le texte spécifié. La valeur par défaut est 0.  
+*nGlowSize*<br/>
+[in] La taille d’un éclat dessiné à l’arrière-plan avant de dessiner le texte spécifié. La valeur par défaut est 0.  
   
- [in] *clrText*  
- Couleur utilisée pour dessiner le texte spécifié. La valeur par défaut est la couleur par défaut.  
+*clrText*<br/>
+[in] La couleur dans laquelle le texte spécifié est dessiné. La valeur par défaut est la couleur par défaut.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si un thème est utilisé pour dessiner le texte spécifié ; Sinon, FALSE.  
@@ -305,8 +305,8 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] *bActivez*  
- TRUE pour activer la prise en charge d’accessibilité ; FALSE pour désactiver la prise en charge de l’accessibilité. La valeur par défaut est TRUE.  
+*bActivez*<br/>
+[in] TRUE pour activer la prise en charge d’accessibilité ; FALSE pour désactiver la prise en charge de l’accessibilité. La valeur par défaut est TRUE.  
   
 ### <a name="remarks"></a>Notes  
  Active Accessibility est une technologie COM qui améliore les façon dont les programmes et le travail de système d’exploitation Windows ainsi que des produits de technologie d’assistance. Il fournit des méthodes fiables pour exposer des informations sur les éléments d’interface utilisateur. Toutefois, un modèle d’accessibilité plus récent appelé Microsoft UI Automation est maintenant disponible. Pour obtenir une comparaison des deux technologies, consultez [UI Automation et Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
@@ -331,17 +331,17 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] *strBuffer*  
- Une mémoire tampon de texte.  
+*strBuffer*<br/>
+[in] Une mémoire tampon de texte.  
   
- [in] *lpszTag*  
- Le nom d’une paire de balises de XML.  
+*lpszTag*<br/>
+[in] Le nom d’une paire de balises de XML.  
   
- [out] *strTag*  
- Lorsque cette méthode est retournée, le *strTag* paramètre contient le texte entre les balises XML les balises qui sont nommés en fonction du *lpszTag* paramètre. Tout espace blanc au début ou de fin est tronqué à partir du résultat.  
+*strTag*<br/>
+[out] Lorsque cette méthode est retournée, le *strTag* paramètre contient le texte entre les balises XML les balises qui sont nommés en fonction du *lpszTag* paramètre. Tout espace blanc au début ou de fin est tronqué à partir du résultat.  
   
- [in] *bIsCharsList*  
- True pour convertir les symboles pour les caractères d’échappement dans le *strTag* paramètre en caractères d’échappement réel ; Ne pas d’effectuer la conversion, la valeur est FALSE. La valeur par défaut est FALSE. Pour plus d'informations, consultez la section Notes.  
+*bIsCharsList*<br/>
+[in] True pour convertir les symboles pour les caractères d’échappement dans le *strTag* paramètre en caractères d’échappement réel ; Ne pas d’effectuer la conversion, la valeur est FALSE. La valeur par défaut est FALSE. Pour plus d'informations, consultez la section Notes.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  
@@ -370,8 +370,8 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] *nColor*  
- Une valeur qui spécifie un élément d’interface utilisateur dont la couleur est récupérée. Pour obtenir la liste des valeurs valides, consultez la *nIndex* paramètre de la [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) (méthode).  
+*nColor*<br/>
+[in] Une valeur qui spécifie un élément d’interface utilisateur dont la couleur est récupérée. Pour obtenir la liste des valeurs valides, consultez la *nIndex* paramètre de la [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) (méthode).  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de couleur RVB de l’élément d’interface utilisateur spécifié. Pour plus d'informations, consultez la section Notes.  
@@ -416,8 +416,8 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in, out] *info*  
- Un [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) structure qui contient les mesures évolutives associées à la zone non cliente d’une fenêtre non réduite.  
+*Info*<br/>
+[in, out] Un [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) structure qui contient les mesures évolutives associées à la zone non cliente d’une fenêtre non réduite.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode réussit ; Sinon, FALSE.  
@@ -435,8 +435,8 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] *bHorz*  
- TRUE pour récupérer la hauteur des caractères lorsque le texte à l’horizontale ; FALSE pour récupérer la hauteur des caractères lorsque le texte verticalement. La valeur par défaut est TRUE.  
+*bHorz*<br/>
+[in] TRUE pour récupérer la hauteur des caractères lorsque le texte à l’horizontale ; FALSE pour récupérer la hauteur des caractères lorsque le texte verticalement. La valeur par défaut est TRUE.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur de la police actuelle, qui est mesurée à partir de son ascender à son hampe.  
@@ -693,8 +693,8 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] *lpszClassNamePrefix*  
- Le nom de la classe de fenêtre à inscrire.  
+*lpszClassNamePrefix*<br/>
+[in] Le nom de la classe de fenêtre à inscrire.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nom qualifié de la classe inscrite si cette méthode réussit ; Sinon, un [exception de la ressource](exception-processing.md#afxthrowresourceexception).  
@@ -733,17 +733,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] *hwnd*  
- Handle de la fenêtre superposée.  
+*HWND*<br/>
+[in] Handle de la fenêtre superposée.  
   
- [in] *crKey*  
- La couleur de transparence de clé qui le [Gestionnaire de fenêtrage](/windows/desktop/dwm/dwm-overview) utilise pour composer la fenêtre superposée.  
+*crKey*<br/>
+[in] La couleur de transparence de clé qui le [Gestionnaire de fenêtrage](/windows/desktop/dwm/dwm-overview) utilise pour composer la fenêtre superposée.  
   
- [in] *bAlpha*  
- La valeur alpha est utilisée pour décrire l’opacité de la fenêtre superposée.  
+*bAlpha*<br/>
+[in] La valeur alpha est utilisée pour décrire l’opacité de la fenêtre superposée.  
   
- [in] *dwFlags*  
- Une combinaison (OR) au niveau du bit des indicateurs qui spécifient les paramètres de méthode à utiliser. Spécifiez LWA_COLORKEY à utiliser le *crKey* paramètre en tant que la couleur de transparence. Spécifiez LWA_ALPHA à utiliser le *bAlpha* paramètre pour déterminer l’opacité de la fenêtre superposée.  
+*dwFlags*<br/>
+[in] Une combinaison (OR) au niveau du bit des indicateurs qui spécifient les paramètres de méthode à utiliser. Spécifiez LWA_COLORKEY à utiliser le *crKey* paramètre en tant que la couleur de transparence. Spécifiez LWA_ALPHA à utiliser le *bAlpha* paramètre pour déterminer l’opacité de la fenêtre superposée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode réussit ; Sinon, FALSE.   
@@ -763,11 +763,11 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- [in] *lpLogFont*  
- Pointeur vers une structure qui contient les attributs d’une police.  
+*lpLogFont*<br/>
+[in] Pointeur vers une structure qui contient les attributs d’une police.  
   
- [in] *bHorz*  
- TRUE pour spécifier que les séquences de texte horizontalement ; FALSE pour spécifier que les séquences de texte verticalement.  
+*bHorz*<br/>
+[in] TRUE pour spécifier que les séquences de texte horizontalement ; FALSE pour spécifier que les séquences de texte verticalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode réussit ; Sinon, FALSE. En mode débogage, cette méthode déclare si cette méthode est infructueuse.  

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876373b5646790f9f8de0042442b2ab56d9d2971
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40242860"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706665"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (fichier Sourcelink inclure dans le fichier PDB)
 
@@ -33,7 +33,7 @@ Spécifie un fichier de configuration SourceLink à inclure dans le fichier PDB 
 
 ## <a name="arguments"></a>Arguments
 
-*filename*  
+*filename*<br/>
 Spécifie au format JSON fichier de configuration qui contient un mappage simple des chemins d’accès de fichier local à l’URL où le fichier source peut être récupéré pour l’affichage par le débogueur. Pour plus d’informations sur le format de ce fichier, consultez [schéma JSON de lien Source](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema).
 
 ## <a name="remarks"></a>Notes
@@ -48,11 +48,11 @@ SourceLink est un système indépendant du contrôle de code source et de langue
 
 1. Dans le **des options supplémentaires** zone, ajoutez **/SOURCELINK :**_filename_ , puis **OK** ou **appliquer**pour enregistrer vos modifications.
 
-### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
-  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
 - Cette option n’a pas un équivalent de programmation.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)  
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)  
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)
