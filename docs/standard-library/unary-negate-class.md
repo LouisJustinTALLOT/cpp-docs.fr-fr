@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7017ee7b29e8e41e4aa33f95560a10127dc812e7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 883bc55cc9b820c95a98e1fcc235fb53f22d7e9d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960890"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716182"
 ---
 # <a name="unarynegate-class"></a>unary_negate, classe
 
@@ -42,11 +42,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*Func*  
- Fonction unaire à inverser.
+*Func*<br/>
+Fonction unaire à inverser.
 
-*left*  
- Opérande de la fonction unaire à inverser.
+*left*<br/>
+Opérande de la fonction unaire à inverser.
 
 ## <a name="return-value"></a>Valeur de retour
 

@@ -1,5 +1,5 @@
 ---
-title: -FC (chemin d’accès complet du fichier de Code Source dans les Diagnostics) | Documents Microsoft
+title: -FC (chemin d’accès complet du fichier de Code Source dans les Diagnostics) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a721b6887b6c5c07d96a79b06f05e6d7855250b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d34fe85354d218d2499dbece70964c2e55e2592
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373203"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702705"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (Chemin d’accès complet du fichier de code source dans les diagnostics)
 
-Indique au compilateur afficher le chemin d’accès complet des fichiers de code source passé au compilateur dans le diagnostic.
+Indique au compilateur afficher le chemin d’accès complet des fichiers de code source passés au compilateur dans les diagnostics.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,7 +35,7 @@ Indique au compilateur afficher le chemin d’accès complet des fichiers de cod
 
 ## <a name="remarks"></a>Notes
 
-Prenons l’exemple de code suivant :
+Prenez l’exemple de code suivant :
 
 ```cpp
 // compiler_option_FC.cpp
@@ -52,19 +52,19 @@ Avec **/FC**, le texte de diagnostic devrait être semblable à ce texte de diag
 
 - c:\test\compiler_option_FC.cpp(5) : erreur C2143 : erreur de syntaxe : manquant ';' avant '}'
 
- **/FC** est également nécessaire si vous souhaitez afficher le chemin d’accès complet d’un nom de fichier lorsque vous utilisez la &#95; &#95;fichier&#95; &#95; (macro). Consultez [Macros prédéfinies](../../preprocessor/predefined-macros.md) pour plus d’informations sur &#95; &#95;fichier&#95;&#95;.
+**/FC** est également nécessaire si vous souhaitez afficher le chemin d’accès complet d’un nom de fichier lorsque vous utilisez le &#95; &#95;fichier&#95; &#95; (macro). Consultez [Macros prédéfinies](../../preprocessor/predefined-macros.md) pour plus d’informations sur &#95; &#95;fichier&#95;&#95;.
 
-Le **/FC** option est implicite **/Zi**. Pour plus d’informations sur **/Zi**, consultez [/Z7, / Zi, /ZI (Format des informations de débogage)](../../build/reference/z7-zi-zi-debug-information-format.md).
+Le **/FC** option est impliquée par **/Zi**. Pour plus d’informations sur **/Zi**, consultez [/Z7, / Zi, /ZI (Format des informations de débogage)](../../build/reference/z7-zi-zi-debug-information-format.md).
 
 **/FC** génère des chemins d’accès complets en minuscules.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **avancé** page de propriétés.
 
-1. Modifier la **utilisez les chemins d’accès complet** propriété.
+1. Modifier le **utilisation des chemins d’accès complets** propriété.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 
@@ -72,5 +72,5 @@ Le **/FC** option est implicite **/Zi**. Pour plus d’informations sur **/Zi**,
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)   
+[Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

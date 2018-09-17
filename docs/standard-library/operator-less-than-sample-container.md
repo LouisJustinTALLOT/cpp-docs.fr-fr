@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c56a5b56cfa52affa48b02892734db74a41106
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fd6e3343c4b0d64e16ce1d1a33d94ecaa7ef3fa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852775"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713533"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 
@@ -55,4 +55,4 @@ Retourne `lexicographical_compare(left.begin, left.end, right.begin, right.end)`
 
 [\<sample container>](../standard-library/sample-container.md)<br/>
 [begin](../standard-library/container-class-begin.md)<br/>
-[end](../standard-library/container-class-end.md)  
+[end](../standard-library/container-class-end.md)

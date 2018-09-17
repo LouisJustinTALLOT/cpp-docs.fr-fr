@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81e027108d0f7b62ba707718c5396432396bdc5e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538866"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711878"
 ---
 # <a name="ctooltipmanager-class"></a>Ctooltipmanager, classe
 Gère les informations d'exécution relatives aux info-bulles. La classe `CTooltipManager` est instanciée une fois par application.  
@@ -76,14 +76,14 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [out] *pToolTip*  
- Une référence à un pointeur d’info-bulle. Il est défini pour pointer vers l’info-bulle qui vient d’être créée lorsque la fonction retourne.  
+*pToolTip*<br/>
+[out] Une référence à un pointeur d’info-bulle. Il est défini pour pointer vers l’info-bulle qui vient d’être créée lorsque la fonction retourne.  
   
- [in] *pWndParent*  
- Parent de l’info-bulle.  
+*pWndParent*<br/>
+[in] Parent de l’info-bulle.  
   
- [in] *%nLes*  
- Type de l’info-bulle.  
+*%nLes*<br/>
+[in] Type de l’info-bulle.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si une info-bulle a été créée avec succès.  
@@ -117,8 +117,8 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in, out] *pToolTip*  
- Une référence à un pointeur vers une info-bulle à détruire.  
+*pToolTip*<br/>
+[in, out] Une référence à un pointeur vers une info-bulle à détruire.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour chaque [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) qui a été créé par [CTooltipManager::CreateToolTip](#createtooltip). Le contrôle parent doit appeler cette méthode à partir de son `OnDestroy` gestionnaire. Cela est nécessaire pour supprimer correctement l’info-bulle à partir de l’infrastructure. Cette méthode définit *pToolTip* avec la valeur NULL avant de retourner.  
@@ -134,14 +134,14 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *nTypes*  
- Spécifie les types de contrôle.  
+*nTypes*<br/>
+[in] Spécifie les types de contrôle.  
   
- [in] *pRTC*  
- Classe d’exécution de l’info-bulle personnalisée.  
+*pRTC*<br/>
+[in] Classe d’exécution de l’info-bulle personnalisée.  
   
- [in] *pParams*  
- Paramètres de l’info-bulle.  
+*pParams*<br/>
+[in] Paramètres de l’info-bulle.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode définit la classe d’exécution et les paramètres initiaux qui le [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) utilise lorsqu’il crée des info-bulles. Lorsqu’un contrôle appelle [CTooltipManager::CreateToolTip](#createtooltip) et passe dans une info-bulle de type qui est un des types indiqués par *nTypes*, le Gestionnaire d’info-bulle crée un contrôle d’info-bulle qui est une instance de la classe d’exécution spécifié par *pRTC* et transmet les paramètres spécifiés par *pParams* pour l’info-bulle de nouveau.  
@@ -168,20 +168,20 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pTI*  
- Pointeur vers un objet TOOLINFO.  
+*PTI*<br/>
+[in] Pointeur vers un objet TOOLINFO.  
   
- [in, out] *pToolTip*  
- Pointeur vers le contrôle d’info-bulle pour lequel définir le texte et la description.  
+*pToolTip*<br/>
+[in, out] Pointeur vers le contrôle d’info-bulle pour lequel définir le texte et la description.  
   
- [in] *%nLes*  
- Spécifie le type de contrôle à laquelle cette info-bulle est associée.  
+*%nLes*<br/>
+[in] Spécifie le type de contrôle à laquelle cette info-bulle est associée.  
   
- [in] *strText*  
- Texte à définir en tant que le texte d’info-bulle.  
+*strText*<br/>
+[in] Texte à définir en tant que le texte d’info-bulle.  
   
- [in] *lpszDescr*  
- Pointeur vers la description de l’info-bulle. Peut être NULL.  
+*lpszDescr*<br/>
+[in] Pointeur vers la description de l’info-bulle. Peut être NULL.  
   
 ### <a name="remarks"></a>Notes  
  La valeur de *%nLes* doit être la même valeur que la *%nLes* paramètre de [CTooltipManager::CreateToolTip](#createtooltip) lors de la création de l’info-bulle.  

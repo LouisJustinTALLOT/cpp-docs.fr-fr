@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 577e4b4e7bf54742035c8b4333d345ca894501ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202974"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708992"
 ---
 # <a name="cusertool-class"></a>Cusertool, classe
 Un outil utilisateur est un élément de menu qui exécute une application externe. Le **outils** onglet de la **personnaliser** boîte de dialogue ( [cmfctoolbarscustomizedialog, classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permet à l’utilisateur d’ajouter des outils de l’utilisateur et pour spécifier le nom, les commandes, les arguments, et répertoire initial de chaque outil utilisateur.  
@@ -122,11 +122,11 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers un contexte de périphérique.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers un contexte de périphérique.  
   
- [in] *rectImage*  
- Spécifie les coordonnées de la zone pour afficher l’icône.  
+*rectImage*<br/>
+[in] Spécifie les coordonnées de la zone pour afficher l’icône.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
  Retourne une chaîne qui contienne le texte de la commande associée à l’outil utilisateur.  
@@ -223,8 +223,8 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *lpszCmd*  
- Spécifie la nouvelle application à associer à l’outil utilisateur.  
+*lpszCmd*<br/>
+[in] Spécifie la nouvelle application à associer à l’outil utilisateur.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour définir une nouvelle application qui exécute l’outil utilisateur. La méthode détruit l’icône ancien et charge une nouvelle icône de l’application donnée. Si elle ne peut pas charger une icône à partir de l’application, il charge l’icône par défaut pour un outil utilisateur en appelant [CUserTool::LoadDefaultIcon](#loaddefaulticon).  

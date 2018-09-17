@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205285"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702089"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 Fournit les fonctionnalités d'une zone de liste modifiable Windows.  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[out] *lpszText*|Pointeur vers une mémoire tampon qui reçoit le texte de bannière de signal.|  
-|[in] *cchText*|Taille de la mémoire tampon qui le *lpszText* paramètre pointe vers.|  
+|*lpszText*|[out] Pointeur vers une mémoire tampon qui reçoit le texte de bannière de signal.|  
+|*cchText*|[in] Taille de la mémoire tampon qui le *lpszText* paramètre pointe vers.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Dans la première surcharge, un [CString](../../atl-mfc-shared/using-cstring.md) objet qui contient le texte de bannière de signal si elle existe ; sinon, un `CString` objet qui a une longueur nulle.  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *lpszText*|Pointeur vers une mémoire tampon se terminant par null qui contient le texte de la file d’attente.|  
+|*lpszText*|[in] Pointeur vers une mémoire tampon se terminant par null qui contient le texte de la file d’attente.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode a réussi ; Sinon, FALSE.  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] *iMinVisible*|Spécifie le nombre minimal d’éléments visibles.|  
+|*iMinVisible*|[in] Spécifie le nombre minimal d’éléments visibles.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si cette méthode a réussi ; Sinon, FALSE.  

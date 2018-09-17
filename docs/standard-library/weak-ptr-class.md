@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4aa0f8e94e0797badbae2a409ae1ce02caea6e81
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954862"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707527"
 ---
 # <a name="weakptr-class"></a>weak_ptr, classe
 
@@ -77,8 +77,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty*  
- Type contrôlé par le pointeur faible.
+*Ty*<br/>
+Type contrôlé par le pointeur faible.
 
 ## <a name="remarks"></a>Notes
 
@@ -290,14 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-*Autre*  
- Type contrôlé par le pointeur partagé/faible d’argument.
+*Autre*<br/>
+Type contrôlé par le pointeur partagé/faible d’argument.
 
-*WP*  
- Pointeur faible à copier.
+*WP*<br/>
+Pointeur faible à copier.
 
-*SP*  
- Pointeur partagé à copier.
+*SP*<br/>
+Pointeur partagé à copier.
 
 ### <a name="remarks"></a>Notes
 
@@ -349,8 +349,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Paramètres
 
-*ptr*  
- Référence `lvalue` à un `shared_ptr` ou à un `weak_ptr`.
+*ptr*<br/>
+Référence `lvalue` à un `shared_ptr` ou à un `weak_ptr`.
 
 ### <a name="remarks"></a>Notes
 
@@ -409,8 +409,8 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Paramètres
 
-*WP*  
- Pointeur faible à échanger.
+*WP*<br/>
+Pointeur faible à échanger.
 
 ### <a name="remarks"></a>Notes
 
@@ -529,14 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Paramètres
 
-*Autre*  
- Type contrôlé par le pointeur partagé/faible d’argument.
+*Autre*<br/>
+Type contrôlé par le pointeur partagé/faible d’argument.
 
-*WP*  
- Pointeur faible à copier.
+*WP*<br/>
+Pointeur faible à copier.
 
-*SP*  
- Pointeur partagé à copier.
+*SP*<br/>
+Pointeur partagé à copier.
 
 ### <a name="remarks"></a>Notes
 

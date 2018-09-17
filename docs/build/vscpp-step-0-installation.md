@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130889"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702895"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installer la prise en charge C++ dans Visual Studio
 
@@ -37,9 +37,9 @@ Pour plus d’informations sur l’espace disque et la configuration requise du 
 
 ## <a name="visual-studio-2015-installation"></a>Installation de Visual Studio 2015
 
- Pour installer Visual Studio 2015, accédez à [télécharger des versions antérieures de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Exécutez le programme d’installation et choisissez **installation personnalisée** , puis choisissez le composant C++. 
+Pour installer Visual Studio 2015, accédez à [Télécharger d’anciennes versions de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Exécutez le programme d’installation, choisissez **Installation personnalisée**, puis le composant C++.
 
- En règle générale, nous recommandons vivement d’utiliser Visual Studio 2017 même si vous avez besoin compiler votre code en utilisant le compilateur de Visual Studio 2015. Pour plus d’informations, consultez [Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](../porting/use-native-multi-targeting.md).
+En règle générale, nous vous recommandons vivement d’utiliser Visual Studio 2017 même si vous avez besoin de compiler votre code en utilisant le compilateur de Visual Studio 2015. Pour plus d’informations, consultez [Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](../porting/use-native-multi-targeting.md).
 
 ## <a name="visual-studio-2017-installation"></a>Installation de Visual Studio 2017
 
@@ -59,13 +59,13 @@ Pour plus d’informations sur l’espace disque et la configuration requise du 
 
    ![Développement Desktop en C++](../build/media/desktop-development-with-cpp.png "développement Desktop en C++")
 
-    Pour C++, sélectionnez le **développement Desktop en C++** charge de travail, puis choisissez **installer**.
+   Pour C++, sélectionnez le **développement Desktop en C++** charge de travail, puis choisissez **installer**.
 
    ![Installez le développement bureautique avec la charge de travail C++](../build/media/vscpp-concierge-choose-workload.gif "installez le développement bureautique avec la charge de travail C++")
 
 1. Lorsque l’installation est terminée, choisissez le **lancer** bouton pour démarrer Visual Studio.
 
-   La première fois que vous exécutez Visual Studio, vous êtes invité à vous connecter avec un Account Microsoft. Si vous n’en avez pas, vous pouvez créer un gratuitement. Vous devez également choisir un thème. Ne vous inquiétez pas, vous pouvez modifier ultérieurement si vous le souhaitez. 
+   La première fois que vous exécutez Visual Studio, vous êtes invité à vous connecter avec un Account Microsoft. Si vous n’en avez pas, vous pouvez créer un gratuitement. Vous devez également choisir un thème. Ne vous inquiétez pas, vous pouvez modifier ultérieurement si vous le souhaitez.
 
    Il faudra encore Visual Studio plusieurs minutes pour se préparer à utilisent la première fois que vous l’exécutez. Voici ce que cela donne dans un rapide séquentiel :
 
