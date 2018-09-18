@@ -16,24 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 10a57271c143a42f9bafaef5fa53f780fa03164f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761941"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700648"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Assistant Composant ASP ATL
 
 Utilisez cette page de l’Assistant composant Active Server Page ATL pour spécifier des paramètres facultatifs pour la gestion des informations et l’état associé à votre composant ASP.
 
-**Méthodes facultatives**  
-Ajoute les méthodes ASP facultatives, **OnStartPage** et **OnEndPage**, à votre objet. Cette option doit être sélectionnée pour définir des objets intrinsèques Active Server Pages. Par défaut, il est sélectionné.
+- **Méthodes facultatives**  
 
-- **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) est appelée la première fois que le script tente d’accéder à l’objet. **OnEndPage** est appelée lorsque l’objet a terminé le script de traitement.
+   Ajoute les méthodes ASP facultatives, **OnStartPage** et **OnEndPage**, à votre objet. Cette option doit être sélectionnée pour définir des objets intrinsèques Active Server Pages. Par défaut, il est sélectionné.
 
-**Objet intrinsèque**  
-Vous devez sélectionner le **OnStartPage/OnEndPage** option permettant de définir des objets intrinsèques ASP.
+- **OnStartPage/OnEndPage**
+
+   [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) est appelée la première fois que le script tente d’accéder à l’objet. **OnEndPage** est appelée lorsque l’objet a terminé le script de traitement.
+
+- **Objet intrinsèque**  
+
+   Vous devez sélectionner le **OnStartPage/OnEndPage** option permettant de définir des objets intrinsèques ASP.
 
 |Option|Description|
 |------------|-----------------|

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595046"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706678"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Optimisation à virgule flottante de Microsoft Visual C++
 
@@ -757,7 +757,6 @@ float sum = f1 + f2;
 Ce type d’arrondi supplémentaires peut-être provenir d’à l’aide d’une plus faible précision unité de virgule flottante, telle que SSE2, pour effectuer certains calculs intermédiaires. La précision de l’arrondi du mode fp : fast est donc dépendante de la plateforme ; code se compile correctement pour un seul processeur ne peut pas nécessairement fonctionnent bien pour un autre processeur. Il incombe à l’utilisateur pour déterminer si les avantages de vitesse compensent les éventuels problèmes de précision.
 
 Si l’optimisation de mode fp : fast est particulièrement problématique pour une fonction spécifique, le mode en virgule flottante permettre faire basculer localement fp : precise à l’aide du `float_control` du pragma de compilateur.
-
 
 ### <a name="algebraic-transformations-under-fpfast"></a>Transformations algébriques sous le mode fp : Fast
 

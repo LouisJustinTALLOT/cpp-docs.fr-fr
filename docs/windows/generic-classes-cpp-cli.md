@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76dc54662fac3dc769e0bbf72c672908196ef351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598245"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716779"
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 
@@ -47,8 +47,8 @@ class-body
 
 Dans la syntaxe ci-dessus, les termes suivants sont utilisés :
 
-*attributs* (facultatif)  
-Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.
+*Attributs*  
+(Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.
 
 *clé de classe*  
 Soit **classe** ou **typename**
@@ -58,7 +58,7 @@ Soit **classe** ou **typename**
 *clauses de contrainte*  
 Une liste (ne pas séparées par des virgules) de **où** clauses spécifiant les contraintes pour les paramètres de type. Prend la forme :
 
-`where`  *identificateur de paramètre de type*`:`*liste de contraintes*  `...`
+> **où** *identificateur de paramètre de type* **:** *liste de contraintes***...** 
 
 *liste de contraintes*  
 *classe ou interface*[`,` *...* ]
@@ -69,8 +69,8 @@ Modificateurs d’accessibilité pour la classe générique. Pour l’exécution
 *identifier*  
 Le nom de la classe générique, n’importe quel identificateur C++ valide.
 
-*modificateurs* (facultatif)  
-Autorisées incluent des modificateurs **sealed** et **abstraite**.
+*Modificateurs*  
+(Facultatif) Autorisées incluent des modificateurs **sealed** et **abstraite**.
 
 *liste de base*  
 Une liste qui contient la classe de base et les interfaces implémentées, toutes séparées par des virgules.

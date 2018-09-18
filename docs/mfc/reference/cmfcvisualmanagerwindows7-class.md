@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541244"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720549"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Cmfcvisualmanagerwindows7, classe
 Le `CMFCVisualManagerWindows7` donne à une application l’apparence d’une application de Windows 7.  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pEdit*  
- Pointeur vers le contrôle d’édition. Cette valeur ne peut pas être NULL.  
+*pEdit*<br/>
+[in] Pointeur vers le contrôle d’édition. Cette valeur ne peut pas être NULL.  
   
- [out] *bIsHighlighted*  
- Retourne si la zone du ruban est mis en surbrillance.  
+*bIsHighlighted*<br/>
+[out] Retourne si la zone du ruban est mis en surbrillance.  
   
- [out] *bIsPaneHighlighted*  
- Retourne la valeur TRUE si le ruban du panneau qui contient *pEdit* est mis en surbrillance.  
+*bIsPaneHighlighted*<br/>
+[out] Retourne la valeur TRUE si le ruban du panneau qui contient *pEdit* est mis en surbrillance.  
   
- [out] *bIsDisabled*  
- Retourne si *pEdit* est désactivé.  
+*bIsDisabled*<br/>
+[out] Retourne si *pEdit* est désactivé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La couleur d’arrière-plan de la zone d’édition *pEdit*.  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
- Pointeur vers le contexte de périphérique d’un bouton de menu.  
+*contrôleur de domaine principal*<br/>
+[in] Pointeur vers le contexte de périphérique d’un bouton de menu.  
   
- [in] *pButton*  
- Un pointeur vers un `CMFCToolBarButton`. L’infrastructure complète l’arrière-plan de ce bouton.  
+*pButton*<br/>
+[in] Un pointeur vers un `CMFCToolBarButton`. L’infrastructure complète l’arrière-plan de ce bouton.  
   
- [in] *rect*  
- Un rectangle qui spécifie les limites de la zone d’image de bouton menu.  
+*Rect*<br/>
+[in] Un rectangle qui spécifie les limites de la zone d’image de bouton menu.  
   
- [in] *état*  
- L’état du bouton.  
+*state*<br/>
+[in] L’état du bouton.  
   
 ### <a name="remarks"></a>Notes  
   
