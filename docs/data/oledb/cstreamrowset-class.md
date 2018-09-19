@@ -38,14 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2a8e4af6e85dbfa3b617471b592f806ae1ef5548
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 76eb58936082c7efde7e7bc87f17e7326ecc8920
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572368"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071547"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset, classe
+
 Utilisé dans un `CCommand` ou `CTable` déclaration.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -56,11 +57,13 @@ class CStreamRowset
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *TAccessor*  
- Classe d’accesseur.  
+
+*TAccessor*<br/>
+Classe d’accesseur.  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** atldbcli.h  
+
+**En-tête :** atldbcli.h  
   
 ## <a name="members"></a>Membres  
   
@@ -72,24 +75,26 @@ class CStreamRowset
 |[Fermer](#close)|Versions le [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) pointeur d’interface dans la classe.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez `CStreamRowset` dans votre `CCommand` ou `CTable` déclaration, par exemple :  
+
+Utilisez `CStreamRowset` dans votre `CCommand` ou `CTable` déclaration, par exemple :  
   
- [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
   
- ou  
+ou  
   
- [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` Retourne un `ISequentialStream` pointeur, qui est stocké dans `m_spStream`. Vous utilisez ensuite le `Read` méthode pour récupérer les données (chaîne Unicode) au format XML. Exemple :  
+`ICommand::Execute` Retourne un `ISequentialStream` pointeur, qui est stocké dans `m_spStream`. Vous utilisez ensuite le `Read` méthode pour récupérer les données (chaîne Unicode) au format XML. Exemple :  
   
- [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
- SQL Server 2000 effectue la mise en forme XML et retourne toutes les colonnes et toutes les lignes de l’ensemble de lignes sous forme de chaîne XML.  
+SQL Server 2000 effectue la mise en forme XML et retourne toutes les colonnes et toutes les lignes de l’ensemble de lignes sous forme de chaîne XML.  
   
 > [!NOTE]
 >  Cette fonctionnalité fonctionne uniquement avec SQL Server 2000.  
   
 ## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
+
 Instancie et initialise le `CStreamRowset` objet.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -99,6 +104,7 @@ CStreamRowset();
 ```  
 
 ## <a name="close"></a> CStreamRowset::Close
+
 Versions le [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) pointeur d’interface dans la classe.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -108,5 +114,6 @@ void Close();
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

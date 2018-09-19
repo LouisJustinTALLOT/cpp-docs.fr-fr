@@ -1,5 +1,5 @@
 ---
-title: Fonctions d’espace de noms Concurrency::Graphics | Documents Microsoft
+title: Fonctions d’espace de noms Concurrency::Graphics | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc00f1754358eca0d6e90d484153b79c0a67130
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6a31a205a90480ae91740ecaf859f411c331bd69
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037967"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Fonctions d’espace de noms Concurrency::Graphics
 |||  
@@ -26,7 +26,7 @@ ms.locfileid: "33687047"
 |[copy](#copy)|[copy_async](#copy_async)|  
   
 ##  <a name="copy"></a>  Copy, fonction (Concurrency::graphics Namespace)  
- Copie d’une texture source dans un mémoire tampon de destination, ou copie d’une mémoire tampon source dans un mémoire tampon de destination. La forme générale de cette fonction est `copy(src, dest)`.  
+ Copie une texture source dans un mémoire tampon de destination, ou copie une mémoire tampon source dans un mémoire tampon de destination. La forme générale de cette fonction est `copy(src, dest)`.  
   
 ```  
 template <
@@ -132,47 +132,47 @@ void copy (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Copy_extent`  
- L’étendue de la section de texture à copier.  
+*_Copy_extent*<br/>
+Étendue de la section de texture à copier.  
   
- `_Dst`  
- L’objet de destination.  
+*_Dst*<br/>
+L’objet dans lequel copier.  
   
- `_Dst_byte_size`  
- Le nombre d’octets dans la destination.  
+*_Dst_byte_size*<br/>
+Le nombre d’octets dans la destination.  
   
- `_Dst_type`  
- Le type de l’objet de destination.  
+*_Dst_type*<br/>
+Le type de l’objet de destination.  
   
- `_Dst_offset`  
- Offset dans la destination à partir duquel commencer la copie.  
+*_Dst_offset*<br/>
+Offset dans la destination à partir duquel commencer la copie.  
   
- `InputIterator`  
- Le type de l’interator d’entrée.  
+*InputIterator*<br/>
+Le type de l’itérateur d’entrée.  
   
- `OutputIterator`  
- Le type de l’itérateur de sortie.  
+*OutputIterator*<br/>
+Le type de l’itérateur de sortie.  
   
- `_Src`  
- À l’objet à copier.  
+*_Src*<br/>
+Objet à copier.  
   
- `_Src_byte_size`  
- Le nombre d’octets dans la source.  
+*_Src_byte_size*<br/>
+Le nombre d’octets dans la source.  
   
- `_Src_type`  
- Le type de l’objet source.  
+*_Src_type*<br/>
+Le type de l’objet source.  
   
- `_Src_offset`  
- Offset dans la source à partir duquel commencer la copie.  
+*_Src_offset*<br/>
+Offset dans la source à partir duquel commencer la copie.  
   
- `first`  
- Un itérateur de début dans le conteneur source.  
+*first*<br/>
+Un itérateur de départ dans le conteneur source.  
   
- `last`  
- Un itérateur de fin dans le conteneur source.  
+*last*<br/>
+Un itérateur de fin dans le conteneur source.  
   
 ##  <a name="copy_async"></a>  copy_async, fonction (Concurrency::graphics Namespace)  
- Copie de façon asynchrone une texture source dans une mémoire tampon de destination, ou copie d’une mémoire tampon source dans un mémoire tampon de destination, puis retourne un [completion_future](completion-future-class.md) objet qui peut être attendu. Impossible de copier les données lorsque le code s’exécute sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)`.  
+ Copie de façon asynchrone une texture source dans une mémoire tampon de destination, ou copie une mémoire tampon source dans un mémoire tampon de destination et retourne ensuite un [completion_future](completion-future-class.md) objet qui peut être attendu. Impossible de copier des données lorsque le code s’exécute sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)`.  
   
 ```  
 template<
@@ -274,46 +274,46 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Copy_extent`  
- L’étendue de la section de texture à copier.  
+*_Copy_extent*<br/>
+Étendue de la section de texture à copier.  
   
- `_Dst`  
- L’objet de destination.  
+*_Dst*<br/>
+L’objet dans lequel copier.  
   
- `_Dst_byte_size`  
- Le nombre d’octets dans la destination.  
+*_Dst_byte_size*<br/>
+Le nombre d’octets dans la destination.  
   
- `_Dst_type`  
- Le type de l’objet de destination.  
+*_Dst_type*<br/>
+Le type de l’objet de destination.  
   
- `_Dst_offset`  
- Offset dans la destination à partir duquel commencer la copie.  
+*_Dst_offset*<br/>
+Offset dans la destination à partir duquel commencer la copie.  
   
- `InputIterator`  
- Le type de l’interator d’entrée.  
+*InputIterator*<br/>
+Le type de l’itérateur d’entrée.  
   
- `OutputIterator`  
- Le type de l’itérateur de sortie.  
+*OutputIterator*<br/>
+Le type de l’itérateur de sortie.  
   
- `_Src`  
- À l’objet à copier.  
+*_Src*<br/>
+Objet à copier.  
   
- `_Src_byte_size`  
- Le nombre d’octets dans la source.  
+*_Src_byte_size*<br/>
+Le nombre d’octets dans la source.  
   
- `_Src_type`  
- Le type de l’objet source.  
+*_Src_type*<br/>
+Le type de l’objet source.  
   
- `_Src_offset`  
- Offset dans la source à partir duquel commencer la copie.  
+*_Src_offset*<br/>
+Offset dans la source à partir duquel commencer la copie.  
   
- `first`  
- Un itérateur de début dans le conteneur source.  
+*first*<br/>
+Un itérateur de départ dans le conteneur source.  
   
- `last`  
- Un itérateur de fin dans le conteneur source.  
+*last*<br/>
+Un itérateur de fin dans le conteneur source.  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_graphics.h  
   
  **Namespace :** Concurrency::graphics 

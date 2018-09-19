@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0ba2e8452defef14816993a2c1851de58bf624f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a22b97e730a40e8ebe71ea766919f946ac4dcb84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407281"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064361"
 ---
 # <a name="program-termination"></a>Terminaison du programme
-En C++, il existe plusieurs façons de quitter un programme :  
-  
--   Appelez le [quitter](../cpp/exit-function.md) (fonction).  
-  
--   Appelez le [abandonner](../cpp/abort-function.md) (fonction).  
-  
--   Exécuter un [retourner](../cpp/return-statement-in-program-termination-cpp.md) instruction à partir de `main`.  
-  
-## <a name="see-also"></a>Voir aussi  
- [main : démarrage du programme](../cpp/main-program-startup.md)
+
+En C++, il existe plusieurs façons de quitter un programme :
+
+- Appelez le [quitter](../cpp/exit-function.md) (fonction).
+
+- Appelez le [abandonner](../cpp/abort-function.md) (fonction).
+
+- Exécuter un [retourner](../cpp/return-statement-in-program-termination-cpp.md) instruction à partir de `main`.
+
+## <a name="see-also"></a>Voir aussi
+
+[main : démarrage du programme](../cpp/main-program-startup.md)

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41859ae16ecd7f4c3261d644ce37d86fe416ec94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071357"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Comment : utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows
 
@@ -42,24 +42,25 @@ Par défaut dans [Windows 8.1, winmdidl.exe et midlrt.exe se trouvent dans C:\Pr
 Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
-`/nologo`  
+**/nologo**<br/>
 Empêche l'affichage dans la console du message de copyright et du numéro de version winmdidl. 
 
-`/supressversioncheck`  
+**/supressversioncheck**<br/>
 Non utilisé.
 
-`/time`  
+**/ heure**<br/>
 Affiche la durée totale d'exécution dans la sortie de la console.
 
-/outdir :\<dir > Spécifie un répertoire de sortie. Si le chemin d’accès contient des espaces, placez-le entre guillemets. Le répertoire de sortie par défaut est  *\<lecteur >*: \Users\\*\<nom d’utilisateur >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
+**/outdir :**<em>dir</em><br/>
+Spécifie un répertoire de sortie. Si le chemin d’accès contient des espaces, placez-le entre guillemets. Le répertoire de sortie par défaut est  *\<lecteur >*: \Users\\*\<nom d’utilisateur >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
 
-`/banner:<file>`  
+**/ bannière :**<em>fichier</em><br/>
 Spécifie un fichier qui contient le texte personnalisé à faire figurer avant le message de copyright et le numéro de version winmdidl par défaut au début du fichier .idl généré. Si le chemin d’accès contient des espaces, placez-le entre guillemets.
 
-`/utf8`  
+**/utf8**<br/>
 Le format du fichier sera UTF-8.
 
-`Winmdfile`  
+*Winmdfile*<br/>
 Nom du fichier .winmd à analyser. Si le chemin d’accès contient des espaces, placez-le entre guillemets.
 
 ## <a name="midlrt-command-line-arguments"></a>Arguments de ligne de commande Midlrt

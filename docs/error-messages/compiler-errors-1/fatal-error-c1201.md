@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1201 | Documents Microsoft
+title: Erreur irrécupérable C1201 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a52ca6be4cfe2cf4d87e5e76bd1ff943097c8d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd48dec90f607d1744b2f994c96f8e7f6f425168
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046964"
 ---
 # <a name="fatal-error-c1201"></a>Erreur irrécupérable C1201
-impossible de continuer après une erreur de syntaxe dans la définition du modèle de classe  
-  
- Une erreur inattendue s’est produite pendant l’analyse d’une définition de modèle de classe.  
-  
- Corrigez les autres erreurs éventuelles et recompilez. Si cela n’aboutit pas, notez les circonstances de l’erreur, essayez d’isoler le problème et de créer un cas de test reproductible, puis contactez les [services de support technique Microsoft](/visualstudio/ide/talk-to-us).
+
+impossible de continuer après une erreur de syntaxe dans la définition du modèle de classe
+
+Une erreur inattendue s’est produite pendant l’analyse d’une définition de modèle de classe.
+
+Corrigez les autres erreurs éventuelles et recompilez. Si cela n’aboutit pas, notez les circonstances de l’erreur, essayez d’isoler le problème et de créer un cas de test reproductible, puis contactez les [services de support technique Microsoft](/visualstudio/ide/talk-to-us).

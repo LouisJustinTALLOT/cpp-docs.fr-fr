@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046249"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemple : Implémentation d’une Page de propriétés
 
@@ -153,25 +153,25 @@ Implémentez la méthode comme indiqué ci-dessous :
 Une fois que vous avez créé le projet, vous pouvez tester la page de propriétés et l’objet d’assistance à l’aide d’une macro simple que vous pouvez créer et exécuter dans l’environnement de développement Visual Studio. Cette macro créera une application d’assistance de l’objet, puis appelez ses `ShowPage` méthode à l’aide de l’identificateur ProgID de le **DocProperties** page de propriétés et le `IUnknown` pointeur du document actuellement actif dans l’éditeur Visual Studio. Le code que vous avez besoin pour cette macro est indiqué ci-dessous :
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 Lorsque vous exécutez cette macro, la page de propriétés s’affichera indiquant le nom de fichier et l’état en lecture seule du document texte actif. L’état en lecture seule du document reflète uniquement la capacité d’écrire dans le document dans l’environnement de développement ; Cela n’affecte pas l’attribut en lecture seule du fichier sur disque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Pages de propriétés](../atl/atl-com-property-pages.md)   
+[Pages de propriétés](../atl/atl-com-property-pages.md)<br/>
 [Exemple ATLPages](../visual-cpp-samples.md)

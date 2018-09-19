@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 3) C4557 | Documents Microsoft
+title: Compilateur avertissement (niveau 3) C4557 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1065d412a2f977e1784ba739d1226d08e28bc8ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97423da084c005e427b21043e75ebe850623c63b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055300"
 ---
 # <a name="compiler-warning-level-3-c4557"></a>Avertissement du compilateur (niveau 3) C4557
-'__assume' contient l'effet 'effet'  
-  
- La valeur passée à une [__assume](../../intrinsics/assume.md) statement2 a été modifié.  
-  
- Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
-  
- L’exemple suivant génère l’erreur C4557 :  
-  
-```  
-// C4557.cpp  
-// compile with: /W3  
-#pragma warning(default : 4557)  
-int main()  
-{  
-   int i;  
-   __assume(i++);   // C4557  
-}  
+
+'__assume' contient l'effet 'effet'
+
+La valeur passée à une [__assume](../../intrinsics/assume.md) instruction2 a été modifié.
+
+Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.
+
+L’exemple suivant génère l’erreur C4557 :
+
+```
+// C4557.cpp
+// compile with: /W3
+#pragma warning(default : 4557)
+int main()
+{
+   int i;
+   __assume(i++);   // C4557
+}
 ```

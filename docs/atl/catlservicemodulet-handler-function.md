@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbc7c74e0fd6fdd34ba9a0c386c028469113c88e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7c8dc0b0d41a18c775258e1eacddd8e4dbebdb3d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767080"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039216"
 ---
 # <a name="catlservicemodulethandler-function"></a>CAtlServiceModuleT::Handler, fonction
 
@@ -33,6 +33,6 @@ Pour gérer des instructions plus détaillées, vous devez modifier le `m_status
 
 ## <a name="see-also"></a>Voir aussi
 
-[services](../atl/atl-services.md)   
+[Services](../atl/atl-services.md)<br/>
 [CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)
 

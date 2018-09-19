@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043415"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agrégation et Macros de fabrique de classe
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Paramètres
 
-*x*  
+*x*<br/>
 [in] Le nom de la classe que vous définissez en tant que peut être agrégé.
 
 ### <a name="remarks"></a>Notes
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*  
+*CF*<br/>
 [in] Le nom de la classe qui implémente votre objet de fabrique de classe.
 
 ### <a name="remarks"></a>Notes
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Paramètres
 
-*contrat de licence*  
+*contrat de licence*<br/>
 [in] Une classe qui implémente `VerifyLicenseKey`, `GetLicenseKey`, et `IsLicenseValid`.
 
 ### <a name="remarks"></a>Notes
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Paramètres
 
-*licence*  
+*licence*<br/>
 Une classe qui implémente les fonctions statiques suivantes :
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>Paramètres
 
-*obj*  
+*obj*<br/>
 [in] Le nom de votre objet de classe.
 
 ### <a name="remarks"></a>Notes
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe.
 
 `CComClassFactorySingleton` dérive de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) et utilise [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) pour construire un objet unique. Chaque appel à la `CreateInstance` méthode interroge simplement cet objet pour un pointeur d’interface.
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Paramètres
 
-*x*  
+*x*<br/>
 [in] Le nom de l’objet de classe que vous définissez en tant que ne peut pas être agrégé.
 
 ### <a name="remarks"></a>Notes
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Paramètres
 
-*x*  
+*x*<br/>
 [in] Le nom de l’objet de classe que vous définissez comme uniquement peut être agrégé.
 
 ### <a name="remarks"></a>Notes
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Paramètres
 
-*x*  
+*x*<br/>
 [in] Le nom de l’objet de classe que vous définissez en tant que peut être agrégé ou ne peut pas être agrégé.
 
 ### <a name="remarks"></a>Notes
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>Paramètres
 
-*statusFlags*  
+*statusFlags*<br/>
 [in] Les indicateurs de double. Consultez [double](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) pour obtenir la liste d’indicateurs.
 
 ### <a name="example"></a>Exemple

@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4113 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4113 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086510c9f8aa4d5ae4231563bef833ec698ae1d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0f90df0fc9416246670e79975bbfde2025997f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057286"
 ---
 # <a name="compiler-warning-level-1-c4113"></a>Compilateur avertissement (niveau 1) C4113
-'identificateur1' diffère dans les listes de paramètres de 'identificateur2'  
-  
- Un pointeur de fonction est attribué à un autre pointeur fonction, mais les listes de paramètres formels des fonctions ne correspondent pas. L’affectation est compilée sans modification.
+
+'identificateur1' diffère dans les listes de paramètres à partir de 'identificateur2'
+
+Un pointeur de fonction est assigné à un autre pointeur de fonction, mais les listes de paramètres formels des fonctions ne correspondent pas. L’assignation est compilée sans modification.

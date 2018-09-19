@@ -1,5 +1,5 @@
 ---
-title: RECT Structure1 | Documents Microsoft
+title: RECT, Structure1 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b61c794b8fa383eeea62459a5a83948ef2efe10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e71459a1c22b9295c5c88ce29da9e494660fa26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372591"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046301"
 ---
-# <a name="rect-structure1"></a>RECT Structure1
-Le `RECT` structure définit les coordonnées des angles supérieur gauche et à droite d’un rectangle.  
+# <a name="rect-structure1"></a>RECT, Structure1
+Le `RECT` structure définit les coordonnées des angles supérieur gauche et inférieur droit d’un rectangle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,22 +40,22 @@ typedef struct tagRECT {
 ```  
   
 ## <a name="members"></a>Membres  
- `left`  
- Spécifie la coordonnée x du coin supérieur gauche d’un rectangle.  
+`left`<br/>
+Spécifie la coordonnée x du coin supérieur gauche d’un rectangle.  
   
- `top`  
- Spécifie la coordonnée y du coin supérieur gauche d’un rectangle.  
+`top`<br/>
+Spécifie la coordonnée y du coin supérieur gauche d’un rectangle.  
   
- `right`  
- Spécifie la coordonnée x de l’angle inférieur droit d’un rectangle.  
+`right`<br/>
+Spécifie la coordonnée x du coin inférieur droit d’un rectangle.  
   
- `bottom`  
- Spécifie la coordonnée y du coin inférieur droit d’un rectangle.  
+`bottom`<br/>
+Spécifie la coordonnée y du coin inférieur droit d’un rectangle.  
   
 ## <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_Utilities#38](../../mfc/codesnippet/cpp/rect-structure1_1.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** windef.h  
   
 ## <a name="see-also"></a>Voir aussi  

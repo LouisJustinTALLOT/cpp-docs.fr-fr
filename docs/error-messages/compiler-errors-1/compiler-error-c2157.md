@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2157 | Documents Microsoft
+title: Erreur du compilateur C2157 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e2867ed7e95f6b135581260103c9d5e1386fb9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd17b03cc48555800e3c36cc3f5512506f011372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072062"
 ---
 # <a name="compiler-error-c2157"></a>Erreur du compilateur C2157
-'function' : doit être déclaré(e) avant d’être utilisé(e) dans une liste pragma  
-  
- Le nom de la fonction n’est pas déclaré avant d’être référencé dans la liste des fonctions pour un pragma [alloc_text](../../preprocessor/alloc-text.md) .  
-  
- L’exemple suivant génère l’erreur C2157 :  
-  
-```  
-// C2157.cpp  
-// compile with: /c  
-#pragma alloc_text( "func", func)   // C2157  
-  
-// OK  
-extern "C" void func();  
-#pragma alloc_text( "func", func)  
+
+'function' : doit être déclaré(e) avant d’être utilisé(e) dans une liste pragma
+
+Le nom de la fonction n’est pas déclaré avant d’être référencé dans la liste des fonctions pour un pragma [alloc_text](../../preprocessor/alloc-text.md) .
+
+L’exemple suivant génère l’erreur C2157 :
+
+```
+// C2157.cpp
+// compile with: /c
+#pragma alloc_text( "func", func)   // C2157
+
+// OK
+extern "C" void func();
+#pragma alloc_text( "func", func)
 ```

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2835 | Documents Microsoft
+title: Erreur du compilateur C2835 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16d9cad69d42f25af04f7ba0df7fa88f2eeb6aee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97da0796b6b7f40462f4d0594e640ee98aa6aa49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044167"
 ---
 # <a name="compiler-error-c2835"></a>Erreur du compilateur C2835
-conversion définie par l’utilisateur 'type' n’accepte pas de paramètres formels  
-  
- Conversions de type défini par l’utilisateur ne peut pas accepter de paramètres formels.  
-  
- L’exemple suivant génère C2835 :  
-  
-```  
-// C2835.cpp  
-class A {  
-public:  
-   char v_char;  
-  
-   A() {   
-      v_char = 'A';   
-   };  
-   operator char(char a) {   // C2835  
-   // try the following line instead  
-   // operator char() {     
-      return v_char + 1;   
-   };  
-};  
-  
-int main() {  
-   A a;  
-}  
+
+conversion définie par l’utilisateur 'type' n’accepte aucun paramètre formel
+
+Conversions de type défini par l’utilisateur ne peut pas accepter de paramètres formels.
+
+L’exemple suivant génère C2835 :
+
+```
+// C2835.cpp
+class A {
+public:
+   char v_char;
+
+   A() {
+      v_char = 'A';
+   };
+   operator char(char a) {   // C2835
+   // try the following line instead
+   // operator char() {
+      return v_char + 1;
+   };
+};
+
+int main() {
+   A a;
+}
 ```

@@ -16,57 +16,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6403e9a40adcac5cd9a4dc1a3fbe8a1028d11f99
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1e20106795fbef536ae288649818a254a5688b82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692803"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064150"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Utilisation des modèles du consommateur OLE DB
+
 Les rubriques suivantes fournissent des exemples montrant comment utiliser les modèles du consommateur OLE DB dans des scénarios courants :  
   
--   [Simplification de l’accès aux données à l’aide d’attributs de base de données](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
+- [Simplification de l’accès aux données à l’aide d’attributs de base de données](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
--   [Données membres de l’état des champs dans les accesseurs générés par l’Assistant](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
+- [Données membres de l’état des champs dans les accesseurs générés par l’Assistant](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
   
--   [Parcours d’un jeu de lignes simple](../../data/oledb/traversing-a-simple-rowset.md)  
+- [Parcours d’un jeu de lignes simple](../../data/oledb/traversing-a-simple-rowset.md)  
   
--   [Émission d’une requête paramétrée](../../data/oledb/issuing-a-parameterized-query.md)  
+- [Émission d’une requête paramétrée](../../data/oledb/issuing-a-parameterized-query.md)  
   
--   [Récupération de données](../../data/oledb/fetching-data.md)  
+- [Récupération de données](../../data/oledb/fetching-data.md)  
   
--   [Mise à jour des jeux de lignes](../../data/oledb/updating-rowsets.md)  
+- [Mise à jour des jeux de lignes](../../data/oledb/updating-rowsets.md)  
   
--   [Utilisation des procédures stockées](../../data/oledb/using-stored-procedures.md)  
+- [Utilisation des procédures stockées](../../data/oledb/using-stored-procedures.md)  
   
--   [Utilisation des accesseurs](../../data/oledb/using-accessors.md)  
+- [Utilisation des accesseurs](../../data/oledb/using-accessors.md)  
   
--   [Récupération de métadonnées à l’aide de jeux de lignes du schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
+- [Récupération de métadonnées à l’aide de jeux de lignes du schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
   
--   [Prise en charge des transactions dans OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
+- [Prise en charge des transactions dans OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
   
--   [Utilisation des vues de l’enregistrement OLE DB](../../data/oledb/using-ole-db-record-views.md)  
+- [Utilisation des vues de l’enregistrement OLE DB](../../data/oledb/using-ole-db-record-views.md)  
   
--   [Utilisation d’un recordset ADO existant](../../data/oledb/using-an-existing-ado-recordset.md)  
+- [Utilisation d’un recordset ADO existant](../../data/oledb/using-an-existing-ado-recordset.md)  
   
--   [Mise à jour d’une colonne quand une autre table contient une référence à la ligne](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
+- [Mise à jour d’une colonne quand une autre table contient une référence à la ligne](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
   
--   [Utilisation des signets](../../data/oledb/using-bookmarks.md)  
+- [Utilisation des signets](../../data/oledb/using-bookmarks.md)  
   
--   [Récupération d’un BLOB](../../data/oledb/retrieving-a-blob.md)  
+- [Récupération d’un BLOB](../../data/oledb/retrieving-a-blob.md)  
   
--   [Réception des notifications](../../data/oledb/receiving-notifications.md)  
+- [Réception des notifications](../../data/oledb/receiving-notifications.md)  
   
- Pour obtenir un exemple de création et implémentation d’un consommateur OLE DB, consultez [création d’un consommateur Simple](../../data/oledb/creating-an-ole-db-consumer.md).  
+Pour obtenir un exemple de création et implémentation d’un consommateur OLE DB, consultez [création d’un consommateur Simple](../../data/oledb/creating-an-ole-db-consumer.md).  
   
- Vous pouvez également rechercher des exemples montrant comment utiliser les modèles du consommateur OLE DB dans les exemples suivants :  
+Vous pouvez également rechercher des exemples montrant comment utiliser les modèles du consommateur OLE DB dans les exemples suivants :  
   
--   [CatDB](https://github.com/Microsoft/VCSamples)  
+- [CatDB](https://github.com/Microsoft/VCSamples)  
   
--   [DBViewer](https://github.com/Microsoft/VCSamples)  
+- [DBViewer](https://github.com/Microsoft/VCSamples)  
   
--   [MultiRead](https://github.com/Microsoft/VCSamples)  
+- [MultiRead](https://github.com/Microsoft/VCSamples)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

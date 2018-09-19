@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047926"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de barre d'outils Windows.  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>Notes  
  Le *lpButtons* pointeur pointe vers un tableau de `TBBUTTON` structures. Chaque `TBBUTTON` structure associe le bouton ajouté avec du bouton style, image et/ou une chaîne, l’ID de commande, état et défini par l’utilisateur :  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  Les membres sont les suivantes :  
   
- `iBitmap`  
- Index de base zéro de l’image du bouton, -1 si aucune image pour ce bouton.  
+- `iBitmap`  
+
+   Index de base zéro de l’image du bouton, -1 si aucune image pour ce bouton.  
   
- `idCommand`  
- Identificateur de commande associé au bouton. Cet identificateur est envoyé dans un message WM_COMMAND lorsque le bouton est sélectionné. Si le `fsStyle` membre a la valeur TBSTYLE_SEP, ce membre doit être égal à zéro.  
+-  `idCommand`  
+
+   Identificateur de commande associé au bouton. Cet identificateur est envoyé dans un message WM_COMMAND lorsque le bouton est sélectionné. Si le `fsStyle` membre a la valeur TBSTYLE_SEP, ce membre doit être égal à zéro.  
   
- `fsState`  
- Indicateurs d’état du bouton. Il peut être une combinaison des valeurs répertoriées ci-dessous :  
+-  `fsState`  
+
+   Indicateurs d’état du bouton. Il peut être une combinaison des valeurs répertoriées ci-dessous :  
   
-- TBSTATE_CHECKED le bouton a le style TBSTYLE_CHECKED et est enfoncé.  
+   - TBSTATE_CHECKED le bouton a le style TBSTYLE_CHECKED et est enfoncé.  
   
-- Le bouton TBSTATE_ENABLED accepte les entrées utilisateur. Un bouton qui n’a pas de cet état n’accepte pas d’entrée d’utilisateur et est grisé.  
+   - Le bouton TBSTATE_ENABLED accepte les entrées utilisateur. Un bouton qui n’a pas de cet état n’accepte pas d’entrée d’utilisateur et est grisé.  
   
-- TBSTATE_HIDDEN le bouton n’est pas visible et ne peut pas recevoir l’entrée d’utilisateur.  
+   - TBSTATE_HIDDEN le bouton n’est pas visible et ne peut pas recevoir l’entrée d’utilisateur.  
   
-- TBSTATE_INDETERMINATE le bouton est grisé.  
+   - TBSTATE_INDETERMINATE le bouton est grisé.  
   
-- TBSTATE_PRESSED le bouton est enfoncé.  
+   - TBSTATE_PRESSED le bouton est enfoncé.  
   
-- Saut de ligne A TBSTATE_WRAP suit le bouton. Le bouton doit également avoir l’état TBSTATE_ENABLED.  
+   - Saut de ligne A TBSTATE_WRAP suit le bouton. Le bouton doit également avoir l’état TBSTATE_ENABLED.  
   
- `fsStyle`  
- Style de bouton. Il peut être une combinaison des valeurs répertoriées ci-dessous :  
+- `fsStyle`  
+
+   Style de bouton. Il peut être une combinaison des valeurs répertoriées ci-dessous :  
   
-- TBSTYLE_BUTTON crée un bouton de commande standard.  
+   - TBSTYLE_BUTTON crée un bouton de commande standard.  
   
-- TBSTYLE_CHECK crée un bouton qui fait basculer entre les États enfoncés et non enfoncés chaque fois que l’utilisateur clique dessus. Le bouton a une couleur d’arrière-plan différente lorsqu’il est dans un état appuyé.  
+   - TBSTYLE_CHECK crée un bouton qui fait basculer entre les États enfoncés et non enfoncés chaque fois que l’utilisateur clique dessus. Le bouton a une couleur d’arrière-plan différente lorsqu’il est dans un état appuyé.  
   
-- TBSTYLE_CHECKGROUP crée un bouton de vérification qui reste enfoncé jusqu'à ce que l’utilisateur appuie sur un autre bouton dans le groupe.  
+   - TBSTYLE_CHECKGROUP crée un bouton de vérification qui reste enfoncé jusqu'à ce que l’utilisateur appuie sur un autre bouton dans le groupe.  
   
-- TBSTYLE_GROUP crée un bouton qui reste enfoncé jusqu'à ce que l’utilisateur appuie sur un autre bouton dans le groupe.  
+   - TBSTYLE_GROUP crée un bouton qui reste enfoncé jusqu'à ce que l’utilisateur appuie sur un autre bouton dans le groupe.  
   
-- TBSTYLE_SEP crée un séparateur, en fournissant un petit intervalle entre les groupes de bouton. Un bouton qui a ce style ne reçoit pas d’entrée d’utilisateur.  
+   - TBSTYLE_SEP crée un séparateur, en fournissant un petit intervalle entre les groupes de bouton. Un bouton qui a ce style ne reçoit pas d’entrée d’utilisateur.  
   
- `dwData`  
- Données définies par l’utilisateur.  
+- `dwData`  
+
+   Données définies par l’utilisateur.  
   
- `iString`  
- Index de base zéro de la chaîne à utiliser comme bouton de l’étiquette, -1 s’il n’existe pas de chaîne pour ce bouton.  
+- `iString`  
+
+   Index de base zéro de la chaîne à utiliser comme bouton de l’étiquette, -1 s’il n’existe pas de chaîne pour ce bouton.  
   
- L’image et/ou une chaîne dont l’index que vous fournissez doit avoir déjà été ajoutée au contrôle de barre d’outils liste à l’aide de [AddBitmap](#addbitmap), [AddString](#addstring), et/ou [AddStrings](#addstrings).  
+L’image et/ou une chaîne dont l’index que vous fournissez doit avoir déjà été ajoutée au contrôle de barre d’outils liste à l’aide de [AddBitmap](#addbitmap), [AddString](#addstring), et/ou [AddStrings](#addstrings).  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  Ajoute une nouvelle chaîne, passée comme un ID de ressource, à la liste interne de la barre d’outils de chaînes.  

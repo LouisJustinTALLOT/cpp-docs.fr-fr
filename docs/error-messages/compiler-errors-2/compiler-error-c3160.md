@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3160 | Documents Microsoft
+title: Erreur du compilateur C3160 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 670dd386be82b4356262cb59442d36fb1d6f646b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf3ecc18e1afc9b13e47ad8b20bb92f7686d0cfc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249240"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042271"
 ---
 # <a name="compiler-error-c3160"></a>Erreur du compilateur C3160
-'pointeur' :  les données membres d'une classe managée ou WinRT ne peuvent pas avoir ce type  
-  
- Les pointeurs intérieurs de garbage collection peuvent pointer vers l’intérieur d’une classe managée ou WinRT. Comme ils sont plus lents que les pointeurs d'objet entier et nécessitent un traitement spécial par le récupérateur de mémoire, vous ne pouvez pas déclarer les pointeurs managés intérieurs en tant que membres d'une classe.  
-  
- L'exemple suivant génère l'erreur C3160 :  
-  
-```  
-// C3160.cpp  
-// compile with: /clr  
-ref struct A {  
-   // cannot create interior pointers inside a class  
-   interior_ptr<int> pg;   // C3160  
-   int g;   // OK  
-   int* pg2;   // OK  
-};  
-  
-int main() {  
-   interior_ptr<int> pg2;   // OK  
-}  
-```  
+
+'pointeur' :  les données membres d'une classe managée ou WinRT ne peuvent pas avoir ce type
+
+Les pointeurs intérieurs de garbage collection peuvent pointer vers l’intérieur d’une classe managée ou WinRT. Comme ils sont plus lents que les pointeurs d'objet entier et nécessitent un traitement spécial par le récupérateur de mémoire, vous ne pouvez pas déclarer les pointeurs managés intérieurs en tant que membres d'une classe.
+
+L'exemple suivant génère l'erreur C3160 :
+
+```
+// C3160.cpp
+// compile with: /clr
+ref struct A {
+   // cannot create interior pointers inside a class
+   interior_ptr<int> pg;   // C3160
+   int g;   // OK
+   int* pg2;   // OK
+};
+
+int main() {
+   interior_ptr<int> pg2;   // OK
+}
+```

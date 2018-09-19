@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1046 | Documents Microsoft
+title: Erreur irrécupérable C1046 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c609d5f846fa6f339eac98b725919560df068f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 449b181167ef493c149e9e34cb2f1a681148411d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198480"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035464"
 ---
 # <a name="fatal-error-c1046"></a>Erreur irrécupérable C1046
-limite du compilateur : structure imbriqués trop profondément  
-  
- La structure, union ou classe a dépassé la limite d’imbrication de 15 niveaux. Réécrivez la définition pour réduire le niveau d’imbrication. Fractionner la structure, union ou classe en deux ou plusieurs parties à l’aide `typedef` pour définir une ou plusieurs des structures imbriquées.
+
+limite du compilateur : structure imbriquée trop profondément
+
+La structure, union ou classe a dépassé la limite d’imbrication de 15 niveaux. Réécrivez la définition pour réduire le niveau d’imbrication. Fractionner la structure, union ou classe en deux ou plusieurs parties à l’aide `typedef` pour définir une ou plusieurs des structures imbriquées.

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0741cd65924a2c968153333aa1a557c31f429d45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039775"
 ---
 # <a name="atl-operators"></a>Opérateurs ATL
 
@@ -42,16 +42,16 @@ Cette section contient les rubriques de référence pour les opérateurs globaux
 
 Compare `CSid` objets ou `SID` égalité des structures (identificateur de sécurité).
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*  
+*LHS*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*  
+*terme de droite*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -62,16 +62,16 @@ Retourne la valeur TRUE si les objets sont égaux, FALSE si elles ne sont pas é
 
 Compare `CSid` objets ou `SID` inégalité des structures (identificateur de sécurité).
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*  
+*LHS*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*  
+*terme de droite*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -82,16 +82,16 @@ Retourne la valeur TRUE si les objets ne sont pas identiques, FALSE si elles son
 
 Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est inférieur au `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*  
+*LHS*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*  
+*terme de droite*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -106,16 +106,16 @@ Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` structure et est
 
 Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est supérieur à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*  
+*LHS*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*  
+*terme de droite*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -130,16 +130,16 @@ Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` structure et est
 
 Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est inférieur ou égal à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*  
+*LHS*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*  
+*terme de droite*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -154,16 +154,16 @@ Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` structure et est
 
 Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est supérieur ou égal à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*  
+*LHS*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*  
+*terme de droite*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour

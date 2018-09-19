@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760121"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063110"
 ---
 # <a name="cheapptrbase-class"></a>Cheapptrbase, classe
 
@@ -40,16 +40,16 @@ Cette classe constitue la base pour plusieurs classes de pointeur intelligent de
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Le type d’objet à stocker sur le tas.
 
-*Allocateur*  
+*Allocateur*<br/>
 La classe d’allocation de mémoire à utiliser. Par défaut, les routines CRT sont utilisés pour allouer et libérer de la mémoire.
 
 ## <a name="members"></a>Membres
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBytes*  
+*nBytes*<br/>
 Le nombre d’octets de mémoire à allouer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pData*  
+*pData*<br/>
 Le `CHeapPtrBase` objet prendra possession de ce pointeur.
 
 ### <a name="remarks"></a>Notes
@@ -216,7 +216,7 @@ Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle 
 
 L’opérateur de cast.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBytes*  
+*nBytes*<br/>
 La nouvelle quantité de mémoire à allouer, en octets.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -243,6 +243,6 @@ Retourne la valeur true si la mémoire est correctement alloué, false sinon.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cheapptr, classe](../../atl/reference/cheapptr-class.md)   
-[CComHeapPtr, classe](../../atl/reference/ccomheapptr-class.md)   
+[CHeapPtr, classe](../../atl/reference/cheapptr-class.md)<br/>
+[CComHeapPtr, classe](../../atl/reference/ccomheapptr-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

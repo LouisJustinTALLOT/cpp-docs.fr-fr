@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2524 | Documents Microsoft
+title: Erreur du compilateur C2524 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21a907de69291c6d7fbc23f3ea093271a1ad3b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e091abdf9f61512d99625c0111f73d0d5fc5315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230067"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060679"
 ---
 # <a name="compiler-error-c2524"></a>Erreur du compilateur C2524
-'destructeur' : un destructeur/finaliseur doit avoir une liste de paramètres 'void'  
-  
- Le destructeur ou finaliseur avait une liste de paramètres qui n’est pas [void](../../cpp/void-cpp.md). Autres types de paramètres ne sont pas autorisés.  
-  
-## <a name="example"></a>Exemple  
- Le code suivant reproduit l’erreur C2524.  
-  
-```  
-// C2524.cpp  
-// compile with: /c  
-class A {  
-   A() {}  
-   ~A(int i) {}    // C2524  
-   // try the following line instead  
-   // ~A() {}  
-};  
-```  
-  
-## <a name="example"></a>Exemple  
- Le code suivant reproduit l’erreur C2524.  
-  
-```  
-// C2524_b.cpp  
-// compile with: /clr /c  
-ref struct I1 {  
-protected:  
-   !I1(int i);   // C2524  
-   // try the following line instead  
-   // !I1();  
-};  
+
+'destructeur' : un destructeur/finaliseur doit avoir une liste de paramètres 'void'
+
+Le destructeur ou finaliseur avait une liste de paramètres qui n’est pas [void](../../cpp/void-cpp.md). Autres types de paramètres ne sont pas autorisés.
+
+## <a name="example"></a>Exemple
+
+Le code suivant reproduit l’erreur C2524.
+
+```
+// C2524.cpp
+// compile with: /c
+class A {
+   A() {}
+   ~A(int i) {}    // C2524
+   // try the following line instead
+   // ~A() {}
+};
+```
+
+## <a name="example"></a>Exemple
+
+Le code suivant reproduit l’erreur C2524.
+
+```
+// C2524_b.cpp
+// compile with: /clr /c
+ref struct I1 {
+protected:
+   !I1(int i);   // C2524
+   // try the following line instead
+   // !I1();
+};
 ```

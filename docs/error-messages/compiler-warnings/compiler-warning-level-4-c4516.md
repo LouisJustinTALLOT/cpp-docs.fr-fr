@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4516 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4516 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5ca56734d5bd9f2ddf66732ed894d805e368664
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88bb2232c635a89650be892a27e490a42d7197ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295169"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045618"
 ---
 # <a name="compiler-warning-level-4-c4516"></a>Avertissement du compilateur (niveau 4) C4516
-'class::symbol' : les déclarations d’accès sont déconseillées ; déclarations using de membres constituent un meilleur choix  
-  
- Le comité C++ ANSI a déclaré des déclarations d’accès (modification d’accès d’un membre dans une classe dérivée sans le [à l’aide de](../../cpp/using-declaration.md) mot clé) à être obsolètes. Déclarations d’accès ne peuvent pas être pris en charge par des versions futures de C++.  
-  
- L’exemple suivant génère C4516 :  
-  
-```  
-// C4516.cpp  
-// compile with: /W4  
-class A  
-{  
-public:  
-   void x(char);  
-};  
-  
-class B : protected A  
-{  
-public:  
-   A::x;  // C4516 on access-declaration  
-   // use the following line instead  
-   // using A::x; // using-declaration, ok  
-};  
-  
-int main()  
-{  
-}  
+
+'class::symbol' : déclarations d’accès sont déconseillées ; déclarations using de membres constituent un meilleur choix
+
+Le comité C++ ANSI a déclaré des déclarations d’accès (modification d’accès d’un membre dans une classe dérivée sans le [à l’aide de](../../cpp/using-declaration.md) mot clé) à être obsolètes. Déclarations d’accès ne peuvent pas pris en charge par les versions futures de C++.
+
+L’exemple suivant génère C4516 :
+
+```
+// C4516.cpp
+// compile with: /W4
+class A
+{
+public:
+   void x(char);
+};
+
+class B : protected A
+{
+public:
+   A::x;  // C4516 on access-declaration
+   // use the following line instead
+   // using A::x; // using-declaration, ok
+};
+
+int main()
+{
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3551 | Documents Microsoft
+title: Erreur du compilateur C3551 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9f69adcf071415d3c1760294bdaaaec7b71f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b45a6f66ab7cf2a5ebb7ae6b2a2f78e664092604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035732"
 ---
 # <a name="compiler-error-c3551"></a>Erreur du compilateur C3551
-« type de retour spécifié à la fin attendu »  
-  
- Si vous utilisez le mot clé `auto` en tant qu’espace réservé pour le type de retour d’une fonction, vous devez fournir un type de retour spécifié à la fin. Dans l’exemple suivant, le type de retour spécifié à la fin de la fonction `myFunction` est un pointeur vers un tableau de quatre éléments de type `int`.  
-  
-```  
-auto myFunction()->int(*)[4];   
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [auto](../../cpp/auto-cpp.md)
+
+« type de retour spécifié à la fin attendu »
+
+Si vous utilisez le mot clé `auto` en tant qu’espace réservé pour le type de retour d’une fonction, vous devez fournir un type de retour spécifié à la fin. Dans l’exemple suivant, le type de retour spécifié à la fin de la fonction `myFunction` est un pointeur vers un tableau de quatre éléments de type `int`.
+
+```
+auto myFunction()->int(*)[4];
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[auto](../../cpp/auto-cpp.md)

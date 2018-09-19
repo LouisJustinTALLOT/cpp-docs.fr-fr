@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f468117cc4d3fad8f3eb1d94abc948c9a4a032b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a88ecf9c5fcffa07066c3ab988fde1f36adf8d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057481"
 ---
 # <a name="catlmodulet-class"></a>Catlmodulet, classe
 
@@ -38,13 +38,13 @@ Cette classe implémente un module d’ATL.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe dérivée de `CAtlModuleT`.
 
 ## <a name="members"></a>Membres
@@ -74,7 +74,7 @@ Votre classe dérivée de `CAtlModuleT`.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [CAtlModule](../../atl/reference/catlmodule-class.md)
 
@@ -132,10 +132,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>Paramètres
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE si la bibliothèque de types doit être enregistré. La valeur par défaut est FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Pointe vers le CLSID de l’objet à inscrire. Si NULL (la valeur par défaut), tous les objets du mappage d’objets sera inscrit.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -166,10 +166,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Paramètres
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 TRUE si la bibliothèque de types doit également être annulée.
 
-*pCLSID*  
+*pCLSID*<br/>
 Pointe vers le CLSID de l’objet doit être annulée. Si la valeur NULL (la valeur par défaut), tous les objets du mappage d’objets sera annulée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -186,7 +186,7 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*bRegister*  
+*bRegister*<br/>
 Réservé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -195,6 +195,6 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CAtlModule, classe](../../atl/reference/catlmodule-class.md)   
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+[CAtlModule, classe](../../atl/reference/catlmodule-class.md)<br/>
+[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Classes de module](../../atl/atl-module-classes.md)

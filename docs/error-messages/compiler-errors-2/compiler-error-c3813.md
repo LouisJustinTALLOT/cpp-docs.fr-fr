@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3813 | Documents Microsoft
+title: Erreur du compilateur C3813 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e947b281c90c4d2ace83971f1de972c29bde72ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8984feb5b657c26d2137eb9a3c648f1bcf442bf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273105"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066269"
 ---
 # <a name="compiler-error-c3813"></a>Erreur du compilateur C3813
-une déclaration de propriété ne peut figurer qu'au sein d'une définition de type managé ou WinRT  
-  
-A [propriété](../../dotnet/how-to-use-properties-in-cpp-cli.md) peut uniquement être déclaré dans un managé ou Windows Runtime type. Les types natifs ne prennent pas en charge le mot clé `property`.  
-  
-## <a name="example"></a>Exemple  
-L'exemple suivant génère l'erreur C3813 et montre comment la corriger :  
-  
-```cpp  
-// C3813.cpp  
-// compile by using: cl /c /clr C3813.cpp  
-class A  
-{  
-   property int Int; // C3813  
-};  
-  
-ref class B  
-{  
-   property int Int; // OK - declared within managed type  
-};  
+
+une déclaration de propriété ne peut figurer qu'au sein d'une définition de type managé ou WinRT
+
+Un [propriété](../../dotnet/how-to-use-properties-in-cpp-cli.md) peut uniquement être déclaré dans managé ou Windows Runtime type. Les types natifs ne prennent pas en charge le mot clé `property`.
+
+## <a name="example"></a>Exemple
+
+L'exemple suivant génère l'erreur C3813 et montre comment la corriger :
+
+```cpp
+// C3813.cpp
+// compile by using: cl /c /clr C3813.cpp
+class A
+{
+   property int Int; // C3813
+};
+
+ref class B
+{
+   property int Int; // OK - declared within managed type
+};
 ```

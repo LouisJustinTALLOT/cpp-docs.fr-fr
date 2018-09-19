@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea57a79fab92152824b7c9aaf0c5d50c14fee32e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5f11e049965fb7374a2294e813502d1279f9f26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067413"
 ---
 # <a name="compiler-error-c3099"></a>Erreur du compilateur C3099
-'mot clé' : utilisez [System::AttributeUsageAttribute] pour les attributs managés ; utilisez [Windows::Foundation::Metadata::AttributeUsageAttribute] pour les attributs WinRT  
-  
- Utilisez <xref:System.AttributeUsageAttribute> pour déclarer **/CLR** attributs. Utilisez `Windows::Foundation::Metadata::AttributeUsageAttribute` pour déclarer des attributs Windows Runtime.  
-  
- Pour plus d’informations sur les attributs/CLR, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Pour obtenir des attributs pris en charge dans Windows Runtime, consultez [Windows.Foundation.Metadata espace de noms](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
-  
-## <a name="example"></a>Exemple  
- L'exemple suivant génère l'erreur C3099 et montre comment la corriger.  
-  
-```  
-// C3099.cpp  
-// compile with: /clr /c  
-using namespace System;  
-[usage(10)]   // C3099  
-// try the following line instead  
-// [AttributeUsageAttribute(AttributeTargets::All)]  
-ref class A : Attribute {};  
+
+'mot clé' : utilisez [System::AttributeUsageAttribute] pour les attributs managés ; utilisez [Windows::Foundation::Metadata::AttributeUsageAttribute] pour les attributs WinRT
+
+Utilisez <xref:System.AttributeUsageAttribute> pour déclarer **/CLR** attributs. Utilisez `Windows::Foundation::Metadata::AttributeUsageAttribute` pour déclarer des attributs Windows Runtime.
+
+Pour plus d’informations sur les attributs/CLR, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Pour obtenir des attributs pris en charge dans Windows Runtime, consultez [Windows.Foundation.Metadata espace de noms](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)
+
+## <a name="example"></a>Exemple
+
+L'exemple suivant génère l'erreur C3099 et montre comment la corriger.
+
+```
+// C3099.cpp
+// compile with: /clr /c
+using namespace System;
+[usage(10)]   // C3099
+// try the following line instead
+// [AttributeUsageAttribute(AttributeTargets::All)]
+ref class A : Attribute {};
 ```

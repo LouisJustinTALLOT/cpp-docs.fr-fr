@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2865 | Documents Microsoft
+title: Erreur du compilateur C2865 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b2c6c831fde18f9054e139a120d834a75b6950
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc0a49f8e6ab42f7e607cd5f4f7cc91f6895abe0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035161"
 ---
 # <a name="compiler-error-c2865"></a>Erreur du compilateur C2865
-'fonction' : comparaison non conforme pour handle_ou_pointeur  
-  
- Vous pouvez comparer les références aux [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md) ou gestion des types de référence uniquement pour l’égalité pour voir s’ils font référence au même objet (==) ou à des objets différents ( ! =).  
-  
- Impossible de comparer les pour le classement car le runtime .NET peut déplacer des objets managés à tout moment, modifier le résultat du test.
+
+'fonction' : comparaison non conforme pour handle_ou_pointeur
+
+Vous pouvez comparer les références aux [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md) ou des types de référence uniquement pour l’égalité pour voir s’ils font référence au même objet (==) ou à différents objets gérés ( ! =).
+
+Impossible de comparer les pour le classement car le runtime .NET peut déplacer des objets managés à tout moment, modifie le résultat du test.

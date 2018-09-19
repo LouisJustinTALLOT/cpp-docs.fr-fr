@@ -1,5 +1,5 @@
 ---
-title: Lock::operator == | Documents Microsoft
+title: Lock::operator == | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 276ad5b44dd2112abad2c7c2e293fc65b173fffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38cefb80b1c4c6969cba976c30383c1499a4968d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133257"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048888"
 ---
 # <a name="lockoperator"></a>lock::operator==
 Opérateur d’égalité.  
@@ -39,11 +39,11 @@ template<class T> bool operator==(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `t`  
- Objet à comparer l’égalité.  
+*t*<br/>
+Objet à comparer pour l’égalité.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne `true` si `t` est le même qu’objet du verrou, `false` dans le cas contraire.  
+ Retourne `true` si `t` est identique à l’objet du verrou, `false` dans le cas contraire.  
   
 ## <a name="example"></a>Exemple  
   
@@ -69,7 +69,7 @@ int main () {
 Equal!  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\lock.h >  
   
  **Namespace** msclr  

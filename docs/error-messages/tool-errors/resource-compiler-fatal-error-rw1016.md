@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RW1016 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RW1016 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff607f6b9e4b1bf74ff1c82c513737f0e20bba6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a2e2ac26b15529b86dc0e209b361feec6bf3d4a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046106"
 ---
 # <a name="resource-compiler-fatal-error-rw1016"></a>Erreur irrécupérable RW1016 du compilateur de ressources 
-Arrêt du RC après erreurs du pré-processeur  
-  
- Le compilateur de ressources est interrompue en raison d’autres erreurs. Corrigez les autres erreurs, puis recompilez.
+
+Arrêt du RC après erreurs du pré-processeur
+
+Le compilateur de ressources s’est arrêté en raison d’autres erreurs. Corrigez les autres erreurs, puis recompilez.

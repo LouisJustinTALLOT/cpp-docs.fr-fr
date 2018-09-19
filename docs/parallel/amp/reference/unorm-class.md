@@ -1,5 +1,5 @@
 ---
-title: unorm, classe | Documents Microsoft
+title: unorm, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071222"
 ---
 # <a name="unorm-class"></a>unorm, classe
-Représente un nombre unorm. Chaque élément est flottante point nombre dans la plage [0.0f, 1.0f].  
+Représente un nombre unorm. Chaque élément est flottante nombre à virgule dans la plage [0.0f, 1.0f].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,14 +38,14 @@ class unorm;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[unorm, constructeur](#ctor)|Surchargé. Constructeur par défaut. Initialiser à 0.0f.|  
+|[unorm, constructeur](#ctor)|Surchargé. Constructeur par défaut. Initialiser à 0,0 f.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
 |unorm::operator--||  
-|unorm::operator float|Opérateur de conversion. Convertir le nombre d’unorm flottante valeur du point.|  
+|unorm::operator float|Opérateur de conversion. Convertissez le nombre d’unorm flottante valeur de point.|  
 |unorm::operator * =||  
 |/ = unorm::operator||  
 |unorm::operator ++||  
@@ -56,14 +56,14 @@ class unorm;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `unorm`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  
   
 ##  <a name="ctor"></a> unorm 
 
- Constructeur par défaut. Initialiser à 0.0f.  
+ Constructeur par défaut. Initialiser à 0,0 f.  
   
 ```  
 unorm(
@@ -102,11 +102,11 @@ inline explicit unorm(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_V`  
- La valeur utilisée pour initialiser.  
+*_V*<br/>
+La valeur utilisée pour initialiser.  
   
- `_Other`  
- L’objet de la norme utilisée pour initialiser.  
+*_Autre*<br/>
+L’objet de la norme utilisée pour initialiser.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: pour chacune, dans | Documents Microsoft
+title: pour chacune, dans | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040690"
 ---
 # <a name="for-each-in"></a>for each, in
-Itère dans un tableau ou une collection. Ce mot clé non standard est disponible dans C++/CLI et les projets natifs C++. Toutefois, son utilisation n'est pas recommandée. Envisagez d’utiliser une norme [Range-based d’instruction (C++)](../cpp/range-based-for-statement-cpp.md) à la place.  
+Itère dans un tableau ou une collection. Ce mot clé non standard est disponible dans C++/CLI et les projets natifs C++. Toutefois, son utilisation n'est pas recommandée. Envisagez d’utiliser une norme [Range-based pour instruction (C++)](../cpp/range-based-for-statement-cpp.md) à la place.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
  **Syntaxe**  
@@ -43,23 +43,23 @@ Itère dans un tableau ou une collection. Ce mot clé non standard est disponibl
   
  **Paramètres**  
   
- `type`  
- Type d'élément `identifier`.  
+*type*<br/>
+Type d'élément `identifier`.  
   
- `identifier`  
- La variable d’itération qui représente l’élément de collection.  Lorsque `identifier` est un [opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md), vous pouvez modifier l’élément.  
+*identifier*<br/>
+La variable d’itération qui représente l’élément de collection.  Lorsque `identifier` est un [opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md), vous pouvez modifier l’élément.  
   
- `expression`  
- Expression ou collection de tableaux. L'élément de collection doit pouvoir être converti par le compilateur en type d'élément `identifier`.  
+*Expression*<br/>
+Expression ou collection de tableaux. L'élément de collection doit pouvoir être converti par le compilateur en type d'élément `identifier`.  
   
- `statements`  
- Une ou plusieurs instructions à exécuter.  
+*Instructions*<br/>
+Une ou plusieurs instructions à exécuter.  
   
  **Remarques**  
   
  L'instruction `for each` permet d'itérer au sein d'une collection. Vous pouvez modifier les éléments d’une collection, mais vous ne pouvez ni ajouter ni supprimer des éléments.  
   
- Le *instructions* sont exécutées pour chaque élément de la collection ou un tableau. Une fois l'itération terminée pour tous les éléments de la collection, le contrôle est transféré à l'instruction placée après le bloc `for each`.  
+ Le *instructions* sont exécutées pour chaque élément du tableau ou de la collection. Une fois l'itération terminée pour tous les éléments de la collection, le contrôle est transféré à l'instruction placée après le bloc `for each`.  
   
  `for each` et `in` sont [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
@@ -75,7 +75,7 @@ Itère dans un tableau ou une collection. Ce mot clé non standard est disponibl
   
 ## <a name="windows-runtime"></a>Windows Runtime  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ### <a name="example"></a>Exemple  
@@ -118,14 +118,14 @@ Testing
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Remarques**  
   
- La syntaxe CLR est le même que le **tous les Runtimes** syntaxe, sauf comme suit.  
+ La syntaxe CLR est identique à la **tous les Runtimes** syntaxe, sauf comme suit.  
   
- *expression*  
- Collection ou expression de tableau managé. L’élément de collection doit être tel que le compilateur peut convertir à partir <xref:System.Object> à la *identificateur* type.  
+ *Expression*  
+ Collection ou expression de tableau managé. L’élément de collection doit être converti par le compilateur peut convertir à partir <xref:System.Object> à la *identificateur* type.  
   
- *expression* correspond à un type qui implémente <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, ou un type qui définit un `GetEnumerator` méthode qui renvoie soit un type qui implémente <xref:System.Collections.IEnumerator> ou déclare toutes les méthodes qui sont définies dans `IEnumerator`.  
+ *expression* correspond à un type qui implémente <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, ou un type qui définit un `GetEnumerator` méthode qui retourne un type qui implémente <xref:System.Collections.IEnumerator> ou déclare toutes les méthodes qui sont définies dans `IEnumerator`.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="example"></a>Exemple  

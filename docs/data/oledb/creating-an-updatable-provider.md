@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fffc1ceef1f67dadde61190ccb12ce1cd5b7ba9b
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571705"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043298"
 ---
 # <a name="creating-an-updatable-provider"></a>Création d'un fournisseur actualisable
 
 Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qui peuvent mettre à jour (modifier) le magasin de données. Cette rubrique explique comment créer des fournisseurs d’être mise à jour à l’aide de modèles OLE DB.  
   
- Cette rubrique suppose que vous démarrez avec un fournisseur opérationnel. Il existe deux étapes pour créer un fournisseur actualisable. Vous devez d’abord déterminer comment le fournisseur sera apportée à la banque de données ; plus précisément, si modifications doivent être effectuées immédiatement ou différée jusqu'à ce que l’émission d’une commande de mise à jour. La section «[fournisseurs actualisables](#vchowmakingprovidersupdatable)» décrit les modifications et les paramètres que vous devez effectuer dans le code du fournisseur.  
+Cette rubrique suppose que vous démarrez avec un fournisseur opérationnel. Il existe deux étapes pour créer un fournisseur actualisable. Vous devez d’abord déterminer comment le fournisseur sera apportée à la banque de données ; plus précisément, si modifications doivent être effectuées immédiatement ou différée jusqu'à ce que l’émission d’une commande de mise à jour. La section «[fournisseurs actualisables](#vchowmakingprovidersupdatable)» décrit les modifications et les paramètres que vous devez effectuer dans le code du fournisseur.  
   
- Ensuite, il se peut que vous devez vous assurer que votre fournisseur contient toutes les fonctionnalités pour prendre en charge tout ce que le consommateur peut lui demander. Si le consommateur souhaite mettre à jour le magasin de données, le fournisseur doit contenir du code qui rend persistantes les données au magasin de données. Par exemple, vous pouvez utiliser la bibliothèque du Run-Time C ou MFC pour exécuter des opérations sur votre source de données. La section «[écriture dans la Source de données](#vchowwritingtothedatasource)» décrit comment écrire dans la source de données, gérer les valeurs NULL et par défaut et définir des indicateurs de la colonne.  
+Ensuite, il se peut que vous devez vous assurer que votre fournisseur contient toutes les fonctionnalités pour prendre en charge tout ce que le consommateur peut lui demander. Si le consommateur souhaite mettre à jour le magasin de données, le fournisseur doit contenir du code qui rend persistantes les données au magasin de données. Par exemple, vous pouvez utiliser la bibliothèque du Run-Time C ou MFC pour exécuter des opérations sur votre source de données. La section «[écriture dans la Source de données](#vchowwritingtothedatasource)» décrit comment écrire dans la source de données, gérer les valeurs NULL et par défaut et définir des indicateurs de la colonne.  
   
 > [!NOTE]
 >  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) est un exemple d’un fournisseur actualisable. UpdatePV est le même que MyProv, mais avec prise en charge de mettre à jour.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Fournisseurs actualisables  
 
- La clé pour rendre un fournisseur actualisable consiste à comprendre les opérations que vous voulez que votre fournisseur d’effectuer sur le magasin de données et comment vous voulez que le fournisseur pour effectuer ces opérations. Plus précisément, le problème majeur est indique si les mises à jour au magasin de données doivent être effectuées immédiatement ou différée (lot) jusqu'à ce qu’une commande de mise à jour est émise.  
+La clé pour rendre un fournisseur actualisable consiste à comprendre les opérations que vous voulez que votre fournisseur d’effectuer sur le magasin de données et comment vous voulez que le fournisseur pour effectuer ces opérations. Plus précisément, le problème majeur est indique si les mises à jour au magasin de données doivent être effectuées immédiatement ou différée (lot) jusqu'à ce qu’une commande de mise à jour est émise.  
   
- Vous devez d’abord déterminer s’il faut hériter `IRowsetChangeImpl` ou `IRowsetUpdateImpl` dans votre classe rowset. Selon que vous choisissez d’implémenter les fonctionnalités des trois méthodes seront affectées : `SetData`, `InsertRows`, et `DeleteRows`.  
+Vous devez d’abord déterminer s’il faut hériter `IRowsetChangeImpl` ou `IRowsetUpdateImpl` dans votre classe rowset. Selon que vous choisissez d’implémenter les fonctionnalités des trois méthodes seront affectées : `SetData`, `InsertRows`, et `DeleteRows`.  
   
 - Si vous héritez de [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), appel de ces trois méthodes modifie immédiatement le magasin de données.  
   
 - Si vous héritez de [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), les méthodes différeront des modifications au magasin de données jusqu'à ce que vous appeliez `Update`, `GetOriginalData`, ou `Undo`. Si la mise à jour implique plusieurs modifications, elles sont exécutées en mode batch (Notez que le traitement par lot de modifications peut ajouter des ressources mémoire considérables).  
   
- Notez que `IRowsetUpdateImpl` dérive `IRowsetChangeImpl`. Par conséquent, `IRowsetUpdateImpl` donne vous modifiez la fonction de traitement par lots en plus de fonctionnalité.  
+Notez que `IRowsetUpdateImpl` dérive `IRowsetChangeImpl`. Par conséquent, `IRowsetUpdateImpl` donne vous modifiez la fonction de traitement par lots en plus de fonctionnalité.  
   
 #### <a name="to-support-updatability-in-your-provider"></a>Pour prendre en charge les mises à jour dans votre fournisseur  
   
@@ -72,21 +72,21 @@ Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qu
     > [!NOTE]
     >  Vous devez supprimer la `IRowsetChangeImpl` ligne à partir de votre chaîne d’héritage. Cette seule exception à la directive mentionnée précédemment doit inclure le code pour `IRowsetChangeImpl`.  
   
-2.  Ajoutez le code suivant à votre mappage COM (`BEGIN_COM_MAP ... END_COM_MAP`) :  
+1. Ajoutez le code suivant à votre mappage COM (`BEGIN_COM_MAP ... END_COM_MAP`) :  
   
     |Si vous implémentez|Ajouter au mappage COM|  
     |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  Dans votre commande, ajoutez le code suivant au mappage des propriétés (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`) :  
+1. Dans votre commande, ajoutez le code suivant au mappage des propriétés (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`) :  
   
     |Si vous implémentez|Ajoutez au mappage de propriété|  
     |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  Dans le mappage de jeu de propriété, vous incluez également tous les paramètres suivants de telles qu’elles apparaissent ci-dessous :  
+1. Dans le mappage de jeu de propriété, vous incluez également tous les paramètres suivants de telles qu’elles apparaissent ci-dessous :  
   
     ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -145,7 +145,8 @@ Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qu
         >  Si vous prenez en charge les notifications, vous pouvez être amené d’autres propriétés ; consultez la section sur `IRowsetNotifyCP` pour cette liste.  
   
 ##  <a name="vchowwritingtothedatasource"></a> Écriture dans la Source de données  
- Pour lire à partir de la source de données, appelez le `Execute` (fonction). Pour écrire dans la source de données, appelez le `FlushData` (fonction). (Dans un sens général, flush signifie pour enregistrer les modifications à qu'apporter à une table ou un index sur le disque).  
+
+Pour lire à partir de la source de données, appelez le `Execute` (fonction). Pour écrire dans la source de données, appelez le `FlushData` (fonction). (Dans un sens général, flush signifie pour enregistrer les modifications à qu'apporter à une table ou un index sur le disque).  
 
 ```cpp
 
@@ -158,6 +159,7 @@ Le handle de ligne (HROW) arguments et d’accesseur handle (HACCESSOR) permette
 Le `FlushData` méthode écrit des données dans le format dans lequel elles ont été stockées. Si vous ne substituez pas cette fonction, votre fournisseur fonctionnera correctement mais les modifications ne seront pas vidées dans le magasin de données.
 
 ### <a name="when-to-flush"></a>Quand effectuer un vidage
+
 Les modèles du fournisseur appellent FlushData chaque fois que les données doivent être écrites dans le magasin de données ; Cela généralement (mais pas toujours) se produit suite à des appels aux fonctions suivantes :
 
 - `IRowsetChange::DeleteRows`
@@ -312,6 +314,7 @@ En tant que développeur de fournisseurs, vous devez prendre en compte la façon
 Examinez le code dans l’exemple UpdatePV ; Il illustre la façon dont un fournisseur peut gérer des données NULL. Dans UpdatePV, le fournisseur stocke les données de valeur NULL en écrivant la chaîne « NULL » dans le magasin de données. Lorsqu’il lit des données NULL à partir du magasin de données, il voit cette chaîne et puis vide la mémoire tampon, de création d’une chaîne NULL. Il a également une substitution de `IRowsetImpl::GetDBStatus` dans lequel il retourne DBSTATUS_S_ISNULL si cette valeur de données est vide.
 
 ### <a name="marking-nullable-columns"></a>Marquage des colonnes Nullable
+
 Si vous implémentez également des ensembles de lignes de schéma (voir `IDBSchemaRowsetImpl`), votre implémentation doit spécifier dans l’ensemble de lignes DBSCHEMA_COLUMNS (généralement marqué dans le fournisseur par CxxxSchemaColSchemaRowset) que la colonne est nullable.
 
 Vous devez également spécifier que toutes les colonnes nullables contiennent la valeur DBCOLUMNFLAGS_ISNULLABLE dans votre version de la `GetColumnInfo`.
@@ -441,4 +444,5 @@ m_rgRowData.Add(trData[0]);
 Ce code spécifie, entre autres choses, que la colonne prend en charge une valeur par défaut 0, qu’il soit accessible en écriture, et que toutes les données dans la colonne ont la même longueur. Si vous souhaitez que les données dans une colonne doit avoir une longueur variable, vous ne définirait pas cet indicateur.
 
 ## <a name="see-also"></a>Voir aussi
+
 [Création d’un fournisseur OLE DB](creating-an-ole-db-provider.md)

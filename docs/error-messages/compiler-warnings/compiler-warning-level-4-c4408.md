@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4408 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4408 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 640a3de24921186bd441b8f8b9bc5f3dcd7e5810
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7f804f8cbc3dce846783ce4937d7902d760511e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050188"
 ---
 # <a name="compiler-warning-level-4-c4408"></a>Avertissement du compilateur (niveau 4) C4408
-anonymousstruct ou une union n’a déclaré aucune donnée membre  
-  
- Un struct ou une union anonyme doit avoir au moins un membre de données.  
-  
- L'exemple suivant génère l'avertissement C4408 :  
-  
-```  
-// C4408.cpp  
-// compile with: /W4 /LD  
-static union  
-{  
-   // int i;  
-};  
-// a named union can have no data members  
-// } MyUnion;  
+
+anonymousstruct ou une union n’a déclaré aucune donnée membre
+
+Un struct ou une union anonyme doit avoir au moins un membre de données.
+
+L'exemple suivant génère l'avertissement C4408 :
+
+```
+// C4408.cpp
+// compile with: /W4 /LD
+static union
+{
+   // int i;
+};
+// a named union can have no data members
+// } MyUnion;
 ```

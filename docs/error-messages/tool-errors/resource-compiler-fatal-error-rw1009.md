@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RW1009 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RW1009 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 490f2865f8d3518facbaa86f4fa81932305e508d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 175b8fcbabbb0b16a69f20025e42939a38ef8bf0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319853"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056857"
 ---
 # <a name="resource-compiler-fatal-error-rw1009"></a>Erreur irrécupérable RW1009 du compilateur de ressources 
-Erreur de création du nom de la ressource  
-  
- N’a pas pu créer un fichier .res spécifié. Assurez-vous qu’il n’est pas créée sur un lecteur en lecture seule. Utilisez /V pour vérifier si le fichier est en cours de création.
+
+Erreur de création du nom de la ressource
+
+N’a pas pu créer un fichier .res spécifié. Assurez-vous qu’il n’est pas créé sur un lecteur en lecture seule. Utilisez /V pour vérifier si le fichier est en cours de création.

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3630 | Documents Microsoft
+title: Erreur du compilateur C3630 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8e38e06f2a32e9a95421ac113cdd0b5f1371334
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53d7b895c25a847e8abe1b9db11b8b413d3342d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066113"
 ---
 # <a name="compiler-error-c3630"></a>Erreur du compilateur C3630
-Erreur lors du traitement du jeton 'jeton'  
-  
- Un jeton dans le code source n’a pas pu être traité.
+
+Erreur lors du traitement du jeton 'jeton'
+
+Un jeton dans le code source n’a pas pu être traité.

@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7fae3dafe056598dea5026d0639ce257af3cee87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339534"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066776"
 ---
 # <a name="issuing-a-parameterized-query"></a>Émission d'une requête paramétrée
+
 L’exemple suivant émet une requête paramétrée simple qui Récupère les enregistrements avec un champ d’âge (qui est supérieur à 30) à partir d’une table dans une base de données Microsoft Access. Pour prendre en charge le paramètre, l’enregistrement de l’utilisateur doit avoir un mappage supplémentaire. Le code suivant, dans un projet ATL, utilise le `CCommand` classe au lieu du `CTable` classe utilisée dans l’exemple précédent, [parcourir un ensemble de lignes Simple](../../data/oledb/traversing-a-simple-rowset.md).  
   
 ```cpp  
@@ -51,7 +52,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- L’enregistrement de l’utilisateur, `CArtists`, ressemble à ceci :  
+L’enregistrement de l’utilisateur, `CArtists`, ressemble à ceci :  
   
 ```cpp  
 class CArtists  
@@ -78,4 +79,5 @@ END_PARAM_MAP()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

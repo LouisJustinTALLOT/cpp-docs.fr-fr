@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c5ddc9d49488aa4609249cbbdc7842e188cc34
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069390"
 ---
 # <a name="cwintraits-class"></a>CWinTraits, classe
 
@@ -45,10 +45,10 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 #### <a name="parameters"></a>Paramètres
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Styles de fenêtre standard par défaut.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 Par défaut des styles de fenêtre étendus.
 
 ## <a name="members"></a>Membres
@@ -68,14 +68,17 @@ Utilisez ce modèle lorsque vous souhaitez fournir par défaut des styles de fen
 
 ATL fournit trois spécialisations prédéfinies de ce modèle pour des combinaisons de styles de fenêtre couramment utilisés :
 
-`CControlWinTraits`  
-Conçu pour une fenêtre de contrôle standard. Les styles standards suivants sont utilisés : WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Il n’existe aucun des styles étendus.
+- `CControlWinTraits`  
 
-`CFrameWinTraits`  
-Conçu pour une fenêtre frame standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_APPWINDOW et WS_EX_WINDOWEDGE.
+   Conçu pour une fenêtre de contrôle standard. Les styles standards suivants sont utilisés : WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Il n’existe aucun des styles étendus.
 
-`CMDIChildWinTraits`  
-Conçu pour une fenêtre enfant MDI standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_MDICHILD.
+- `CFrameWinTraits`  
+
+   Conçu pour une fenêtre frame standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_APPWINDOW et WS_EX_WINDOWEDGE.
+
+- `CMDIChildWinTraits`  
+
+   Conçu pour une fenêtre enfant MDI standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_MDICHILD.
 
 Si vous souhaitez vous assurer que certains styles sont définis pour toutes les instances de la classe de fenêtre tout en autorisant d’autres styles à définir sur une base par instance, utilisez [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) à la place.
 
@@ -93,7 +96,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwStyle*  
+*dwStyle*<br/>
 Styles utilisés pour la création d’une fenêtre standards. Si *dwStyle* est 0, les valeurs de style de modèle (`t_dwStyle`) sont retournés. Si *dwStyle* est différent de zéro, *dwStyle* est retourné.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -110,7 +113,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Styles étendus utilisés pour la création d’une fenêtre. Si *dwExStyle* est 0, les valeurs de style de modèle (`t_dwExStyle`) sont retournés. Si *dwExStyle* est différent de zéro, *dwExStyle* est retourné.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -119,5 +122,5 @@ Styles de fenêtre étendus de l’objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Présentation des caractéristiques de fenêtre](../../atl/understanding-window-traits.md)

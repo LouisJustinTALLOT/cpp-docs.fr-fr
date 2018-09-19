@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91de6c09128acd3ef1a008437ae418b96b45ef66
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037357"
 ---
 # <a name="composite-control-global-functions"></a>Fonctions globales de contrôle composite
 
@@ -77,19 +77,19 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="parameters"></a>Paramètres
 
-*hInstance*  
+*hInstance*<br/>
 [in] Identifie une instance du module dont le fichier exécutable contient le modèle de boîte de dialogue.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro pour créer cette valeur.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Identifie la fenêtre propriétaire de la boîte de dialogue.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -100,9 +100,9 @@ Une des valeurs HRESULT standards.
 
 À utiliser `AtlAxDialogBox` avec un modèle de boîte de dialogue qui contient un contrôle ActiveX, spécifiez une chaîne CLSID, APPID ou URL valide comme le *texte* champ la **contrôle** section de la ressource de la boîte de dialogue, avec » AtlAxWin80 » en tant que le *nom de la classe* champ sous la même section. Les éléments suivants montrent quelles valide **contrôle** section peut ressembler :
 
-```  
+```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
-    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
 Pour plus d’informations sur la modification des scripts de ressources, consultez [Comment : ouvrir un fichier de Script de ressources au Format texte](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Pour plus d’informations sur les instructions de définition de ressource de contrôle, consultez [les paramètres de contrôle communs](/windows/desktop/menurc/common-control-parameters) sous Windows SDK *: SDK Tools*.
@@ -124,19 +124,19 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 ### <a name="parameters"></a>Paramètres
 
-*hInstance*  
+*hInstance*<br/>
 [in] Identifie une instance du module dont le fichier exécutable contient le modèle de boîte de dialogue.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro pour créer cette valeur.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Identifie la fenêtre propriétaire de la boîte de dialogue.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -163,7 +163,7 @@ ATLAPI AtlAxCreateControl(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*  
+*Caractère*<br/>
 Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
@@ -179,13 +179,13 @@ Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dan
    > [!NOTE]
    > « MSHTML : » doit précéder le fragment HTML afin qu’il est désigné comme étant un flux MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle de fenêtre qui joint le contrôle.
 
-*pStream*  
+*pStream*<br/>
 [in] Pointeur vers un flux qui est utilisé pour initialiser les propriétés du contrôle. Peut être NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] L’adresse d’un pointeur qui reçoit le `IUnknown` du conteneur. Peut être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -215,7 +215,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*  
+*Caractère*<br/>
 Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
@@ -231,22 +231,22 @@ Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dan
    > [!NOTE]
    > « MSHTML : » doit précéder le fragment HTML afin qu’il est désigné comme étant un flux MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle de fenêtre qui joint le contrôle.
 
-*pStream*  
+*pStream*<br/>
 [in] Pointeur vers un flux qui est utilisé pour initialiser les propriétés du contrôle. Peut être NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] L’adresse d’un pointeur qui reçoit le `IUnknown` du conteneur. Peut être NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] L’adresse d’un pointeur qui reçoit le `IUnknown` du contrôle créé. Peut être NULL.
 
-*iidSink*  
+*iidSink*<br/>
 L’identificateur d’interface d’une interface sortante sur l’objet de relation contenant-contenu.
 
-*punkSink*  
+*punkSink*<br/>
 Un pointeur vers le `IUnknown` interface de l’objet de récepteur à être connectés au point de connexion spécifié par *iidSink* sur l’objet de relation contenant-contenu une fois que l’objet de relation contenant-contenu a été créé avec succès.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -274,7 +274,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*  
+*Caractère*<br/>
 Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
@@ -290,16 +290,16 @@ Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dan
    > [!NOTE]
    > « MSHTML : » doit précéder le fragment HTML afin qu’il est désigné comme étant un flux MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 Handle de fenêtre qui joint le contrôle.
 
-*pStream*  
+*pStream*<br/>
 Pointeur vers un flux qui est utilisé pour initialiser les propriétés du contrôle. Peut être NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 L’adresse d’un pointeur qui reçoit le `IUnknown` du conteneur. Peut être NULL.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR contenant la licence pour le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -328,7 +328,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*  
+*Caractère*<br/>
 Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
@@ -344,25 +344,25 @@ Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dan
    > [!NOTE]
    > « MSHTML : » doit précéder le fragment HTML afin qu’il est désigné comme étant un flux MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 Handle de fenêtre qui joint le contrôle.
 
-*pStream*  
+*pStream*<br/>
 Pointeur vers un flux qui est utilisé pour initialiser les propriétés du contrôle. Peut être NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 L’adresse d’un pointeur qui reçoit le `IUnknown` du conteneur. Peut être NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] L’adresse d’un pointeur qui reçoit le `IUnknown` du contrôle créé. Peut être NULL.
 
-*iidSink*  
+*iidSink*<br/>
 L’identificateur d’interface d’une interface sortante sur l’objet de relation contenant-contenu.
 
-*punkSink*  
+*punkSink*<br/>
 Un pointeur vers le `IUnknown` interface de l’objet de récepteur à être connectés au point de connexion spécifié par *iidSink* sur l’objet de relation contenant-contenu une fois que l’objet de relation contenant-contenu a été créé avec succès.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR contenant la licence pour le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -390,13 +390,13 @@ ATLAPI AtlAxAttachControl(
 
 ### <a name="parameters"></a>Paramètres
 
-*pControl*  
+*pControl*<br/>
 [in] Un pointeur vers le `IUnknown` du contrôle.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle de la fenêtre qui héberge le contrôle.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Un pointeur vers un pointeur vers le `IUnknown` de l’objet conteneur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -420,10 +420,10 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Paramètres
 
-*h*  
+*h*<br/>
 [in] Handle vers la fenêtre qui héberge le contrôle.
 
-*PP*  
+*PP*<br/>
 [out] Le `IUnknown` du conteneur du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -440,10 +440,10 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Paramètres
 
-*h*  
+*h*<br/>
 [in] Handle vers la fenêtre qui héberge le contrôle.
 
-*PP*  
+*PP*<br/>
 [out] Le `IUnknown` du contrôle hébergé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -460,10 +460,10 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 
 ### <a name="parameters"></a>Paramètres
 
-*punkChild*  
+*punkChild*<br/>
 [in] Un pointeur vers le `IUnknown` interface de l’enfant.
 
-*punkParent*  
+*punkParent*<br/>
 [in] Un pointeur vers le `IUnknown` interface du parent.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -519,19 +519,19 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="parameters"></a>Paramètres
 
-*punkObj*  
+*punkObj*<br/>
 [in] Pointeur vers l’objet pour lequel les informations sont à retourner.
 
-*plibid*  
+*plibid*<br/>
 [out] Pointeur vers le LIBID de la bibliothèque de types contenant la définition de l’interface source.
 
-*piid*  
+*piid*<br/>
 [out] Pointeur vers l’ID de l’interface de source de l’objet par défaut.
 
-*pdwMajor*  
+*pdwMajor*<br/>
 [out] Pointeur vers le numéro de version principale de la bibliothèque de types contenant la définition de l’interface source.
 
-*pdwMinor*  
+*pdwMinor*<br/>
 [out] Pointeur vers le numéro de version secondaire de la bibliothèque de types contenant la définition de l’interface source.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -553,5 +553,5 @@ L’exemple ci-dessous montre comment vous pouvez définir une classe de récept
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions](../../atl/reference/atl-functions.md)   
+[Fonctions](../../atl/reference/atl-functions.md)<br/>
 [Macros de contrôle composite](../../atl/reference/composite-control-macros.md)

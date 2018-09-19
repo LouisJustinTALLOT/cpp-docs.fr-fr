@@ -1,5 +1,5 @@
 ---
-title: Erreur mathématique M6101 | Documents Microsoft
+title: Erreur mathématique M6101 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb428cb7f4ad59300de0ceab9a6faa727e44f9c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60ef740d94672b0828b97cc39c2b6a50054443a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340240"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041634"
 ---
 # <a name="math-error-m6101"></a>Erreur mathématique M6101
-non valide  
-  
- Opération non valide.  
-  
- Cette erreur peut être provoquée lorsqu’un opérande est NaN (pas un nombre) ou l’infini.  
-  
- Programme se termine par le code de sortie 129.
+
+non valide
+
+Opération non valide.
+
+Cette erreur peut être provoquée lorsqu’un opérande est NaN (pas un nombre) ou l’infini.
+
+Programme se termine par le code de sortie 129.

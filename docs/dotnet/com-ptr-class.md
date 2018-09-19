@@ -1,5 +1,5 @@
 ---
-title: com::PTR, classe | Documents Microsoft
+title: com::PTR, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd5b4115d50f9e2db9b1e3dc8a03818e2c8252f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066725"
 ---
 # <a name="comptr-class"></a>com::ptr, classe
 Wrapper pour un objet COM qui peut être utilisé en tant que membre d’une classe CLR.  Le wrapper automatise également la gestion de la durée de vie de l’objet COM à libérer détenus toutes les références sur l’objet lorsque son destructeur est appelé. Analogue à [classe CComPtr](../atl/reference/ccomptr-class.md).  
@@ -38,13 +38,13 @@ ref class ptr;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_interface_type`  
- Interface COM.  
+*_interface_type*<br/>
+Interface COM.  
   
 ## <a name="remarks"></a>Notes  
- Un `com::ptr` peut également servir comme une variable de fonction locale pour simplifier les différentes tâches de COM et d’automatiser la gestion de la durée de vie.  
+ Un `com::ptr` peut également servir en tant que fonction locale variable afin de simplifier les diverses tâches de COM et d’automatiser la gestion de la durée de vie.  
   
- A `com::ptr` ne peut pas être utilisé directement comme un paramètre de fonction ; utilisez un [opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md) ou un [Handle sur l’opérateur Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) à la place.  
+ Un `com::ptr` ne peut pas être utilisé directement comme paramètre de fonction ; utilisez un [opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md) ou un [gérer sur l’opérateur Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) à la place.  
   
  Un `com::ptr` ne peut pas être retourné directement à partir d’une fonction ; utilisez un handle à la place.  
   
@@ -163,7 +163,7 @@ int main() {
 <word>persnickety</word>  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  

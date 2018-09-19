@@ -1,5 +1,5 @@
 ---
-title: Event, classe | Documents Microsoft
+title: Event, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7f4156720d7d02b0c96ab36101d88c941dbfbfdd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071527"
 ---
 # <a name="event-class"></a>event, classe
 Événement de réinitialisation manuelle qui a explicitement connaissance du runtime d'accès concurrentiel.  
@@ -53,7 +53,7 @@ class event;
 |[reset](#reset)|Réinitialise l’événement à un état non signalé.|  
 |[set](#set)|Signale l’événement.|  
 |[attente](#wait)|Attend que l’événement soit signalé.|  
-|[wait_for_multiple](#wait_for_multiple)|Attend que plusieurs événements soient signalés.|  
+|[wait_for_multiple](#wait_for_multiple)|Attend que plusieurs événements soit signalé.|  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -62,12 +62,12 @@ class event;
 |[timeout_infinite](#timeout_infinite)|Valeur qui indique qu'une attente ne doit jamais expirer.|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [des Structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).  
+ Pour plus d’informations, consultez [les Structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `event`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -91,7 +91,7 @@ _CRTIMP event();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Il est probable qu’il n’y a aucun thread n’attend l’événement lorsque le destructeur s’exécute. Autoriser l’événement détruire les threads en attente sur ce dernier entraîne un comportement non défini.  
+ Il est probable qu’il n’y a aucun thread n’attend l’événement lorsque le destructeur s’exécute. Ce qui permet de l’événement de destruction de threads en attente sur ce dernier entraîne un comportement non défini.  
   
 ##  <a name="reset"></a> Réinitialiser 
 
@@ -110,7 +110,7 @@ void set();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Signalement de l’événement peut entraîner un nombre arbitraire de contextes en attente sur l’événement soit exécutable.  
+ Signalement de l’événement peut entraîner un nombre arbitraire de contextes d’attendre l’événement soit exécutable.  
   
 ##  <a name="timeout_infinite"></a> timeout_infinite 
 
@@ -129,18 +129,18 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Timeout`  
- Indique le nombre de millisecondes avant l’expiration de l’attente. La valeur `COOPERATIVE_TIMEOUT_INFINITE` signifie qu’il n’existe aucun délai d’expiration.  
+*_Délai*<br/>
+Indique le nombre de millisecondes avant l’attente expire. La valeur `COOPERATIVE_TIMEOUT_INFINITE` signifie qu’il n’existe aucun délai d’expiration.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si l’attente a été satisfaite, la valeur `0` est retourné ; sinon, la valeur `COOPERATIVE_WAIT_TIMEOUT` pour indiquer que l’attente a expiré sans que l’événement ne soit signalé.  
   
 > [!IMPORTANT]
->  Dans une application de plateforme Windows universelle (UWP), n’appelez pas `wait` sur l’ASTA thread, car cet appel peut bloquer le thread actuel et peut entraîner l’application de ne plus répondre.  
+>  Dans une application Universal Windows Platform (UWP), n’appelez pas `wait` sur l’ASTA thread, car cet appel peut bloquer le thread actuel et peut entraîner l’application à cesser de répondre.  
   
 ##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
- Attend que plusieurs événements soient signalés.  
+ Attend que plusieurs événements soit signalé.  
   
 ```
 static size_t __cdecl wait_for_multiple(
@@ -151,26 +151,26 @@ static size_t __cdecl wait_for_multiple(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_PPEvents`  
- Tableau d’événements à attendre. Le nombre d’événements dans le tableau est indiqué par le `count` paramètre.  
+*_PPEvents*<br/>
+Un tableau d’événements à attendre. Le nombre d’événements dans le tableau est indiqué par la `count` paramètre.  
   
- `count`  
- Le nombre d’événements dans le tableau fourni dans le `_PPEvents` paramètre.  
+*count*<br/>
+Le nombre d’événements dans le tableau fourni dans le `_PPEvents` paramètre.  
   
- `_FWaitAll`  
- Si la valeur `true`, le paramètre spécifie que tous les événements dans le tableau fourni dans le `_PPEvents` paramètre doit être signalé afin de répondre à l’attente. Si la valeur `false`, il spécifie que n’importe quel événement dans le tableau fourni dans le `_PPEvents` paramètre ne soit signalé satisfait l’attente.  
+*_FWaitAll*<br/>
+Si la valeur `true`, le paramètre spécifie que tous les événements dans le tableau fourni dans le `_PPEvents` paramètre doit être signalé pour satisfaire aux exigences de l’attente. Si la valeur `false`, il spécifie que n’importe quel événement dans le tableau fourni dans le `_PPEvents` paramètre ne soit signalé satisfait l’attente.  
   
- `_Timeout`  
- Indique le nombre de millisecondes avant l’expiration de l’attente. La valeur `COOPERATIVE_TIMEOUT_INFINITE` signifie qu’il n’existe aucun délai d’expiration.  
+*_Délai*<br/>
+Indique le nombre de millisecondes avant l’attente expire. La valeur `COOPERATIVE_TIMEOUT_INFINITE` signifie qu’il n’existe aucun délai d’expiration.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si l’attente a été satisfaite, l’index dans le tableau fourni dans le `_PPEvents` paramètre qui satisfait la condition d’attente ; sinon, la valeur `COOPERATIVE_WAIT_TIMEOUT` pour indiquer que l’attente a expiré sans que la condition est satisfaite.  
+ Si l’attente a été satisfaite, l’index dans le tableau fourni dans le `_PPEvents` paramètre qui satisfait la condition d’attente ; sinon, la valeur `COOPERATIVE_WAIT_TIMEOUT` pour indiquer que l’attente a expiré sans que la condition satisfaite.  
   
 ### <a name="remarks"></a>Notes  
- Si le paramètre `_FWaitAll` a la valeur `true` pour indiquer que tous les événements doivent être signalés afin de respecter l’attente, l’index retourné par la fonction véhicule aucune signification spéciale autre que le fait qu’il n’est pas la valeur `COOPERATIVE_WAIT_TIMEOUT`.  
+ Si le paramètre `_FWaitAll` a la valeur `true` pour indiquer que tous les événements doivent être signalés pour répondre à l’attente, l’index retourné par la fonction véhicule aucune signification spéciale autre que le fait qu’il n’est pas la valeur `COOPERATIVE_WAIT_TIMEOUT`.  
   
 > [!IMPORTANT]
->  Dans une application de plateforme Windows universelle (UWP), n’appelez pas `wait_for_multiple` sur l’ASTA thread, car cet appel peut bloquer le thread actuel et peut entraîner l’application de ne plus répondre.  
+>  Dans une application Universal Windows Platform (UWP), n’appelez pas `wait_for_multiple` sur l’ASTA thread, car cet appel peut bloquer le thread actuel et peut entraîner l’application à cesser de répondre.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)

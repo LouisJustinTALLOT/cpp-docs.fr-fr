@@ -1,5 +1,5 @@
 ---
-title: ScheduleGroup, classe | Documents Microsoft
+title: ScheduleGroup, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df2ad30fca410a71bc6333e34948bc938ca38d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039986"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup, classe
 Représente une abstraction d'un groupe de planification. Les groupes de planification organisent un ensemble de travaux connexes qui ont l’avantage d’être planifiés de façon rapprochée soit dans le temps, en exécutant une autre tâche dans le même groupe avant de passer à un autre groupe, soit dans l’espace, en exécutant plusieurs éléments au sein du même groupe sur le même nœud NUMA ou socket physique.  
@@ -51,13 +51,13 @@ class ScheduleGroup;
 |----------|-----------------|  
 |[Id](#id)|Retourne un identificateur pour le groupe de planification qui est unique dans le planificateur auquel le groupe appartient.|  
 |[Référence](#reference)|Incrémente le décompte de références de groupe de planification.|  
-|[Version release](#release)|Décrémente le planificateur groupe décompte de références.|  
+|[Version release](#release)|Décrémente le planificateur groupe nombre de références.|  
 |[ScheduleTask](#scheduletask)|Planifie une tâche légère dans le groupe de planification.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ScheduleGroup`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -75,7 +75,7 @@ virtual unsigned int Id() const = 0;
   
 ##  <a name="operator_delete"></a> opérateur delete 
 
- A `ScheduleGroup` détruit en interne par le runtime lorsque toutes les références externes sont libérés. Il ne peut pas être supprimé explicitement.  
+ Un `ScheduleGroup` détruit en interne par le runtime lorsque toutes les références externes à celle-ci sont libérés. Il ne peut pas être supprimé explicitement.  
   
 ```
 void operator delete(
@@ -89,8 +89,8 @@ void operator delete(
 ```    
   
 ### <a name="parameters"></a>Paramètres  
- `_PObject`  
- Pointeur vers l’objet à supprimer.  
+*_PObject*<br/>
+Pointeur vers l’objet à supprimer.  
   
 ##  <a name="reference"></a> Référence 
 
@@ -101,26 +101,26 @@ virtual unsigned int Reference() = 0;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le décompte de références qui vient d’être incrémenté.  
+ Le décompte de références qui vient d’être incrémentée.  
   
 ### <a name="remarks"></a>Notes  
  Cela est généralement utilisé pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le décompte de références d’un groupe de planification atteint zéro, le groupe de planification est supprimé par le runtime. Un groupe de planification créé à l’aide du [CurrentScheduler::CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) (méthode), ou le [Scheduler::CreateScheduleGroup](scheduler-class.md#createschedulegroup) méthode commence par un décompte de références d’un.  
   
-##  <a name="release"></a> mise en production 
+##  <a name="release"></a> Mise en production 
 
- Décrémente le planificateur groupe décompte de références.  
+ Décrémente le planificateur groupe nombre de références.  
   
 ```
 virtual unsigned int Release() = 0;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nombre de références décrémenté récemment.  
+ Le décompte de références qui vient d’être décrémentée.  
   
 ### <a name="remarks"></a>Notes  
- Cela est généralement utilisé pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le décompte de références d’un groupe de planification atteint zéro, le groupe de planification est supprimé par le runtime. Après avoir appelé la `Release` méthode le nombre de fois pour supprimer la création référence nombre et toutes les références supplémentaires placées à l’aide de la `Reference` (méthode), vous ne pouvez pas utiliser le groupe de planification. Cela entraînerait un comportement non défini.  
+ Cela est généralement utilisé pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le décompte de références d’un groupe de planification atteint zéro, le groupe de planification est supprimé par le runtime. Après avoir appelé la `Release` (méthode) le nombre de fois pour supprimer la création de référence nombre ainsi que les références supplémentaires placés à l’aide de la `Reference` (méthode), vous ne pourrez pas utiliser le groupe de planification. Cela entraînerait un comportement non défini.  
   
- Un groupe de planification est associé à une instance de planificateur spécifique. Vous devez vous assurer que toutes les références au groupe de planification sont libérés avant toutes les références au planificateur sont libérés, car ce dernier peut entraîner la destruction du planificateur. Vous sinon entraîne un comportement non défini.  
+ Un groupe de planification est associé à une instance de planificateur spécifique. Vous devez vous assurer que toutes les références au groupe de planification sont libérées avant toutes les références au planificateur, car ce dernier pourrait entraîner la destruction du planificateur. Permet de faire sinon les résultats dans un comportement non défini.  
   
 ##  <a name="dtor"></a> ~ScheduleGroup 
 
@@ -139,11 +139,11 @@ virtual void ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Proc`  
- Pointeur vers la fonction à exécuter pour exécuter le corps de la tâche non activable.  
+*_Proc*<br/>
+Pointeur vers la fonction à exécuter pour exécuter le corps de la tâche légère.  
   
- `_Data`  
- Un pointeur void vers les données qui seront passées en tant que paramètre dans le corps de la tâche.  
+*_Data*<br/>
+Un pointeur void vers les données qui seront passées en tant que paramètre au corps de la tâche.  
   
 ### <a name="remarks"></a>Notes  
  Appel de la `ScheduleTask` méthode place implicitement un décompte de références sur le groupe de planification qui est supprimé par le runtime à un moment approprié après l’exécution de la tâche.  

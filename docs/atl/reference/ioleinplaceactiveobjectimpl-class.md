@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4935c4cb936b803170f0fc11db5adb3f477a05a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8e74df913b22684a61ab4f45ade561e55db18544
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044507"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Ioleinplaceactiveobjectimpl, classe
 
@@ -49,7 +49,7 @@ class IOleInPlaceActiveObjectImpl
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe, dérivée de `IOleInPlaceActiveObjectImpl`.
 
 ## <a name="members"></a>Membres
@@ -201,6 +201,6 @@ Consultez [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/o
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComControl, classe](../../atl/reference/ccomcontrol-class.md)  
-[Interfaces de contrôles ActiveX](/windows/desktop/com/activex-controls-interfaces)  
+[CComControl, classe](../../atl/reference/ccomcontrol-class.md)<br/>
+[Interfaces de contrôles ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

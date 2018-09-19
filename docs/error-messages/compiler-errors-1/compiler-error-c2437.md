@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2437 | Documents Microsoft
+title: Erreur du compilateur C2437 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc9c619ac361fcbe2d095407b4030a2e38ada8ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 893c037e7efd363b8d867ef181db5a8df001d3c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047939"
 ---
 # <a name="compiler-error-c2437"></a>Erreur du compilateur C2437
-'identificateur' : déjà initialisé  
-  
- Un objet peut être initialisé qu’une seule fois.  
-  
- L’exemple suivant génère l’erreur C2437 :  
-  
-```  
-// C2437.cpp  
-// compile with: /c  
-class A {  
-public:  
-   A(int i) {}  
-};  
-  
-class B : A {  
-   B() : A(1), A(2) {}   // C2437  
-   B() : A(1) {}   // OK  
-};  
+
+'identificateur' : déjà initialisé
+
+Un objet peut être initialisé qu’une seule fois.
+
+L’exemple suivant génère l’erreur C2437 :
+
+```
+// C2437.cpp
+// compile with: /c
+class A {
+public:
+   A(int i) {}
+};
+
+class B : A {
+   B() : A(1), A(2) {}   // C2437
+   B() : A(1) {}   // OK
+};
 ```

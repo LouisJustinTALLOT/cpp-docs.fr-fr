@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3106 | Documents Microsoft
+title: Erreur du compilateur C3106 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059eaf684995dab6bdcbd1a65bbdb75f70b1551b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4371b8d63a57ef791dad9f1e593c8009d5361852
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248145"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052606"
 ---
 # <a name="compiler-error-c3106"></a>Erreur du compilateur C3106
-'attribute' : les arguments sans nom doivent précéder les arguments nommés  
-  
- Les arguments sans nom doivent être passés à un attribut avant les arguments nommés.  
-  
- Pour plus d'informations, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C3106.  
-  
-```  
-// C3106.cpp  
-// compile with: /c  
-[module(name="MyLib", dll)];   // C3106  
-[module(dll, name="MyLib")];   // OK  
+
+'attribute' : arguments sans nom doivent précéder les arguments nommés
+
+Les arguments sans nom doivent être passés à un attribut avant les arguments nommés.
+
+Pour plus d'informations, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère C3106.
+
+```
+// C3106.cpp
+// compile with: /c
+[module(name="MyLib", dll)];   // C3106
+[module(dll, name="MyLib")];   // OK
 ```

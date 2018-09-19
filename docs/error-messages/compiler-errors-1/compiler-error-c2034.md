@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2034 | Documents Microsoft
+title: Erreur du compilateur C2034 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 606276264a3218b4d222f346a932796e469f6236
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1dadc3249b7e58410eb153f8d298fca06a44ea7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034419"
 ---
 # <a name="compiler-error-c2034"></a>Erreur du compilateur C2034
-'identificateur' : type de champ de bits trop petit pour le nombre de bits  
-  
- Le nombre de bits dans la déclaration de champ de bits dépasse la taille du type de base.  
-  
- L’exemple suivant génère l’erreur C2034 :  
-  
-```  
-// C2034.cpp  
-struct A {  
-   char test : 9;   // C2034, char has 8 bits  
-};  
-```  
-  
- Solution possible :  
-  
-```  
-// C2034b.cpp  
-// compile with: /c  
-struct A {  
-   char test : 8;  
-};  
+
+'identificateur' : type de champ de bits trop petit pour le nombre de bits
+
+Le nombre de bits dans la déclaration de champ de bits dépasse la taille du type de base.
+
+L’exemple suivant génère l’erreur C2034 :
+
+```
+// C2034.cpp
+struct A {
+   char test : 9;   // C2034, char has 8 bits
+};
+```
+
+Solution possible :
+
+```
+// C2034b.cpp
+// compile with: /c
+struct A {
+   char test : 8;
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Lock::lock | Documents Microsoft
+title: Lock::lock | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 128a86b59ebf43ab87b0f4f4bcb7e9c684e4ad07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051817"
 ---
 # <a name="locklock"></a>lock::lock
-Construit un `lock` objet, si vous le souhaitez en attente d’acquérir le verrou indéfiniment, pour un laps de temps, ou pas du tout.  
+Construit un `lock` objet, si vous le souhaitez attend pour acquérir le verrou d’indéfiniment, pour une durée spécifiée, ou pas du tout.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,26 +51,26 @@ template<class T> lock(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_object`  
- Objet à verrouiller.  
+*_Object*<br/>
+L’objet à verrouiller.  
   
- `_timeout`  
- Valeur de délai d’attente en millisecondes, ou comme un <xref:System.TimeSpan>.  
+*_délai*<br/>
+Valeur de délai d’attente en millisecondes, ou comme un <xref:System.TimeSpan>.  
   
 ## <a name="exceptions"></a>Exceptions  
  Lève <xref:System.ApplicationException> si l’acquisition de verrou n’a pas lieu avant le délai d’attente.  
   
 ## <a name="remarks"></a>Notes  
- Les trois premières formes du constructeur tentent d’acquérir un verrou sur `_object` dans le délai imparti (ou <xref:System.Threading.Timeout.Infinite> si aucun n’est spécifié).  
+ Les trois premiers écrans du constructeur tentent d’acquérir un verrou sur `_object` dans le délai spécifié (ou <xref:System.Threading.Timeout.Infinite> si aucun n’est spécifié).  
   
- La quatrième forme du constructeur n’acquiert pas un verrou sur `_object`. `lock_later` est un membre de la [lock_when, Enum](../dotnet/lock-when-enum.md). Utilisez [lock::acquire](../dotnet/lock-acquire.md) ou [lock::try_acquire](../dotnet/lock-try-acquire.md) pour acquérir le verrou dans ce cas.  
+ La quatrième forme du constructeur n’acquiert pas un verrou sur `_object`. `lock_later` est un membre de la [lock_when, Enum](../dotnet/lock-when-enum.md). Utilisez [lock::acquire](../dotnet/lock-acquire.md) ou [lock::try_acquire](../dotnet/lock-try-acquire.md) d’acquérir le verrou dans ce cas.  
   
  Le verrou est automatiquement libéré lorsque le destructeur est appelé.  
   
- `_object` ne peut pas avoir la valeur <xref:System.Threading.ReaderWriterLock>.  S’il s’agit, une erreur du compilateur entraîne.  
+ `_object` ne peut pas avoir la valeur <xref:System.Threading.ReaderWriterLock>.  Dans le cas, une erreur de compilateur se produit.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principale utilise un verrou sur la même instance de la classe à vérifier régulièrement si les threads de travail existent toujours, et attend de quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
+ Cet exemple utilise une seule instance d’une classe entre plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread principal de l’application utilise un verrou sur la même instance de la classe pour vérifier périodiquement pour voir si les threads de travail existent toujours et attentes pour quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -158,7 +158,7 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\lock.h >  
   
  **Namespace** msclr  

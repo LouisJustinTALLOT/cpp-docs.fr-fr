@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2014 | Documents Microsoft
+title: Erreur du compilateur C2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839fececb10897c799473ae328afb9f422b4c390
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9167d71e717490b89c1861abe9a9da9e0ab6a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064846"
 ---
 # <a name="compiler-error-c2014"></a>Erreur du compilateur C2014
-commande de préprocesseur doit commencer comme premier espace autre que blanc  
-  
- Le `#` signe d’une directive de préprocesseur doit être le premier caractère d’une ligne qui n’est pas un espace blanc.  
-  
- L’exemple suivant génère l’erreur C2014 :  
-  
-```  
-// C2014.cpp  
-int k; #include <stdio.h>   // C2014  
-```  
-  
- Solution possible :  
-  
-```  
-// C2014b.cpp  
-// compile with: /c  
-int k;   
-#include <stdio.h>  
+
+commande de préprocesseur doit commencer comme premier espace blanc
+
+Le `#` signe d’une directive de préprocesseur doit être le premier caractère d’une ligne qui n’est pas un espace blanc.
+
+L’exemple suivant génère l’erreur C2014 :
+
+```
+// C2014.cpp
+int k; #include <stdio.h>   // C2014
+```
+
+Solution possible :
+
+```
+// C2014b.cpp
+// compile with: /c
+int k;
+#include <stdio.h>
 ```

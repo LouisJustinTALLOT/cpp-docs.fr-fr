@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a5b30ca507387b1529c9e9726e48735c844fac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3455e88c5a9852c902702544a0f915e8d20dc64e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043233"
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr, classe
 
@@ -32,13 +32,13 @@ Une classe de pointeur intelligent pour la gestion des pointeurs de tas.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename T>  
+template<typename T>
 class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Le type d’objet à stocker sur le tas.
 
 ## <a name="members"></a>Membres
@@ -76,7 +76,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pData*  
+*pData*<br/>
 Objet `CComHeapPtr` existant.
 
 ### <a name="remarks"></a>Notes
@@ -85,7 +85,7 @@ Le pointeur de segment de mémoire peut éventuellement être créé à l’aide
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cheapptr, classe](../../atl/reference/cheapptr-class.md)   
-[Cheapptrbase, classe](../../atl/reference/cheapptrbase-class.md)   
-[Ccomallocator, classe](../../atl/reference/ccomallocator-class.md)   
+[CHeapPtr, classe](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrBase, classe](../../atl/reference/cheapptrbase-class.md)<br/>
+[CComAllocator, classe](../../atl/reference/ccomallocator-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

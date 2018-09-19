@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2089 | Documents Microsoft
+title: Erreur du compilateur C2089 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f76c5b5ae8212e463a7022680ffca5dd4ca498
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb64f1f0c2a8c5af2a8b8625cd1a05c530066185
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046147"
 ---
 # <a name="compiler-error-c2089"></a>Erreur du compilateur C2089
-'identificateur' : 'clé-classe' trop grande  
-  
- La structure spécifiée ou l’union dépasse la limite de 4 Go.
+
+'identificateur' : 'class-key' trop grande
+
+La structure spécifiée ou une union dépasse la limite de 4 Go.

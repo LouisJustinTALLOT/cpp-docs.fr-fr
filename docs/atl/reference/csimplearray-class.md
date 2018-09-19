@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3e6809a8204b9a2380e896e4e458512e79fa2b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054504"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray, classe
 
@@ -40,16 +40,16 @@ Cette classe fournit des méthodes pour la gestion d’un tableau simple.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, class TEqual = CSimpleArrayEqualHelper<T>>  
+template <class T, class TEqual = CSimpleArrayEqualHelper<T>>
 class CSimpleArray
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Le type de données à stocker dans le tableau.
 
-*TEqual*  
+*TEqual*<br/>
 Un objet de trait, en définissant le test d’égalité pour les éléments de type *T*.
 
 ## <a name="members"></a>Membres
@@ -107,7 +107,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>Paramètres
 
-*t*  
+*t*<br/>
 L’élément à ajouter au tableau.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -123,13 +123,13 @@ Retourne la valeur TRUE si l’élément est correctement ajouté dans le tablea
 Le constructeur de l’objet de tableau.
 
 ```
-CSimpleArray(const CSimpleArray<T, TEqual>& src);  
+CSimpleArray(const CSimpleArray<T, TEqual>& src);
 CSimpleArray();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*src*  
+*src*<br/>
 Objet `CSimpleArray` existant.
 
 ### <a name="remarks"></a>Notes
@@ -158,7 +158,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*t*  
+*t*<br/>
 L’élément à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -203,7 +203,7 @@ T& operator[](int nindex);
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndex*  
+*nIndex*<br/>
 L’index d’élément.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -226,7 +226,7 @@ CSimpleArray<T, TEqual>
 
 ### <a name="parameters"></a>Paramètres
 
-*src*  
+*src*<br/>
 Tableau dans lequel copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -251,7 +251,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>Paramètres
 
-*t*  
+*t*<br/>
 L’élément à supprimer du tableau.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -284,7 +284,7 @@ BOOL RemoveAtint nIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndex*  
+*nIndex*<br/>
 Index qui pointe vers l’élément à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -307,10 +307,10 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndex*  
+*nIndex*<br/>
 Index de l’élément à modifier.
 
-*t*  
+*t*<br/>
 Valeur à assigner à l’élément spécifié.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -17,66 +17,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f2d35f8d5f263125cd6a5e0a5e34105c3424f87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466902"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070278"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
+
 Cette rubrique concerne le spécifiques à Microsoft déconseillé declspec déclaration. Pour plus d’informations sur C ++ 14 `[[deprecated]]` attribut et des conseils sur l’utilisation de cet attribut et le declspec de spécifique à Microsoft ou le pragma, consultez [attributs Standard C++](attributes.md).
 
-Avec les exceptions indiquées ci-dessous, le **déconseillée** déclaration offre les mêmes fonctionnalités que le [déconseillée](../preprocessor/deprecated-c-cpp.md) pragma :  
-  
--   Le **déconseillée** déclaration vous permet de spécifier des formes particulières de surcharges de fonction comme étant déconseillés, alors que la forme pragma s’applique à toutes les formes surchargées d’un nom de fonction.  
-  
--   Le **déconseillée** déclaration vous permet de spécifier un message qui s’affiche au moment de la compilation. Le texte du message peut être issu d'une macro.  
-  
--   Les macros ne peuvent être marquées comme déconseillées que via le **déconseillée** pragma.  
-  
- Si le compilateur détecte l’utilisation d’un identificateur déconseillé ou la norme [ `[[deprecated]]` ](attributes.md) attribut, un [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) avertissement est levé.  
-  
-## <a name="example"></a>Exemple  
- L'exemple suivant montre comment marquer des fonctions comme déconseillés, et comment spécifier un message à afficher au moment de la compilation, lorsque la fonction déconseillée est utilisée.  
-  
-```cpp 
-// deprecated.cpp  
-// compile with: /W3  
-#define MY_TEXT "function is deprecated"  
-void func1(void) {}  
-__declspec(deprecated) void func1(int) {}  
-__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}  
-__declspec(deprecated(MY_TEXT)) void func3(int) {}  
-  
-int main() {  
-   func1();  
-   func1(1);   // C4996  
-   func2(1);   // C4996  
-   func3(1);   // C4996  
-}  
-```  
-  
-## <a name="example"></a>Exemple  
- L'exemple suivant montre comment marquer des classes comme déconseillés, et comment spécifier un message à afficher au moment de la compilation, lorsque la classe déconseillée est utilisée.  
-  
-```cpp 
-// deprecate_class.cpp  
-// compile with: /W3  
-struct __declspec(deprecated) X {  
-   void f(){}  
-};  
-  
-struct __declspec(deprecated("** X2 is deprecated **")) X2 {  
-   void f(){}  
-};  
-  
-int main() {  
-   X x;   // C4996  
-   X2 x2;   // C4996  
-}  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [__declspec](../cpp/declspec.md)   
- [Mots clés](../cpp/keywords-cpp.md)
+Avec les exceptions indiquées ci-dessous, le **déconseillée** déclaration offre les mêmes fonctionnalités que le [déconseillée](../preprocessor/deprecated-c-cpp.md) pragma :
+
+- Le **déconseillée** déclaration vous permet de spécifier des formes particulières de surcharges de fonction comme étant déconseillés, alors que la forme pragma s’applique à toutes les formes surchargées d’un nom de fonction.
+
+- Le **déconseillée** déclaration vous permet de spécifier un message qui s’affiche au moment de la compilation. Le texte du message peut être issu d'une macro.
+
+- Les macros ne peuvent être marquées comme déconseillées que via le **déconseillée** pragma.
+
+Si le compilateur détecte l’utilisation d’un identificateur déconseillé ou la norme [ `[[deprecated]]` ](attributes.md) attribut, un [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) avertissement est levé.
+
+## <a name="example"></a>Exemple
+
+L'exemple suivant montre comment marquer des fonctions comme déconseillés, et comment spécifier un message à afficher au moment de la compilation, lorsque la fonction déconseillée est utilisée.
+
+```cpp
+// deprecated.cpp
+// compile with: /W3
+#define MY_TEXT "function is deprecated"
+void func1(void) {}
+__declspec(deprecated) void func1(int) {}
+__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}
+__declspec(deprecated(MY_TEXT)) void func3(int) {}
+
+int main() {
+   func1();
+   func1(1);   // C4996
+   func2(1);   // C4996
+   func3(1);   // C4996
+}
+```
+
+## <a name="example"></a>Exemple
+
+L'exemple suivant montre comment marquer des classes comme déconseillés, et comment spécifier un message à afficher au moment de la compilation, lorsque la classe déconseillée est utilisée.
+
+```cpp
+// deprecate_class.cpp
+// compile with: /W3
+struct __declspec(deprecated) X {
+   void f(){}
+};
+
+struct __declspec(deprecated("** X2 is deprecated **")) X2 {
+   void f(){}
+};
+
+int main() {
+   X x;   // C4996
+   X2 x2;   // C4996
+}
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[__declspec](../cpp/declspec.md)<br/>
+[Mots clés](../cpp/keywords-cpp.md)

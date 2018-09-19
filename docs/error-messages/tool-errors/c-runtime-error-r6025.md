@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c176e77a1704e3311d8c814d1c1b530b9f94f1ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680553"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070052"
 ---
 # <a name="c-runtime-error-r6025"></a>Erreur Runtime C R6025
-appel de fonction virtuelle pure  
-  
+
+appel de fonction virtuelle pure
+
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. La raison la plus courante de cette erreur est un bogue dans l’application ou une installation endommagée.  
->   
->  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :  
->   
->  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.  
-> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.  
-> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.  
-  
- **Informations pour les programmeurs**  
-  
- Aucun objet n’a été instancié pour gérer l’appel de fonction virtuelle pure.  
-  
- Cette erreur est due en appelant une fonction virtuelle dans une classe de base abstraite via un pointeur qui est créé par un cast vers le type de la classe dérivée, mais est en fait un pointeur vers la classe de base. Cela peut se produire lors de la conversion à partir d’un **void** <strong>\*</strong> vers un pointeur vers une classe lors de la **void** <strong>\*</strong> a été créé pendant la construction de la classe de base.  
-  
+>  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. La raison la plus courante de cette erreur est un bogue dans l’application ou une installation endommagée.
+>
+>  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
+>
+>  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
+> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
+> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+
+**Informations pour les programmeurs**
+
+Aucun objet n’a été instancié pour gérer l’appel de fonction virtuelle pure.
+
+Cette erreur est due en appelant une fonction virtuelle dans une classe de base abstraite via un pointeur qui est créé par un cast vers le type de la classe dérivée, mais est en fait un pointeur vers la classe de base. Cela peut se produire lors de la conversion à partir d’un **void** <strong>\*</strong> vers un pointeur vers une classe lors de la **void** <strong>\*</strong> a été créé pendant la construction de la classe de base.
+

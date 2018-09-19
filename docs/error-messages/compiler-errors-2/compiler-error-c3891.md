@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3891 | Documents Microsoft
+title: Erreur du compilateur C3891 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 021f19d50d0b83c9526956684737ad23fea9fb01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c85e5fa5ed5e6f202750fef05ffc96e9a0c86bc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051696"
 ---
 # <a name="compiler-error-c3891"></a>Erreur du compilateur C3891
-'var' : une donnée membre littérale ne peut pas être utilisée comme l-value  
-  
- A [littéral](../../windows/literal-cpp-component-extensions.md) variable est const, et sa valeur ne peut pas être modifiée après son initialisation dans la déclaration.  
-  
- L’exemple suivant génère l’erreur C3891 :  
-  
-```  
-// C3891.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   literal int staticConst = 9;  
-};  
-  
-int main() {  
-   Y1::staticConst = 0;   // C3891  
-}  
+
+'var' : une donnée membre littérale ne peut pas être utilisée comme l-value
+
+Un [littéral](../../windows/literal-cpp-component-extensions.md) variable est de type const, et sa valeur ne peut pas être modifiée après son initialisation dans la déclaration.
+
+L’exemple suivant génère l’erreur C3891 :
+
+```
+// C3891.cpp
+// compile with: /clr
+ref struct Y1 {
+   literal int staticConst = 9;
+};
+
+int main() {
+   Y1::staticConst = 0;   // C3891
+}
 ```

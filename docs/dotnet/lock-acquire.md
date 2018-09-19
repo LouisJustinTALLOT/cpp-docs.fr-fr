@@ -1,5 +1,5 @@
 ---
-title: Lock::acquire | Documents Microsoft
+title: Lock::acquire | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 54b74721e39489ce8fab5eb93f626f78493479b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c0b89b635ec0f0487027d5a90e43c57c39cde34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138967"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042011"
 ---
 # <a name="lockacquire"></a>lock::acquire
-Acquiert un verrou sur un objet, si vous le souhaitez en attente d’acquérir le verrou indéfiniment, pour un laps de temps, ou pas du tout.  
+Acquiert un verrou sur un objet, si vous le souhaitez attend pour acquérir le verrou d’indéfiniment, pour une durée spécifiée, ou pas du tout.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +44,19 @@ void acquire(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_timeout`  
- Valeur de délai d’attente en millisecondes, ou comme un <xref:System.TimeSpan>.  
+*_délai*<br/>
+Valeur de délai d’attente en millisecondes, ou comme un <xref:System.TimeSpan>.  
   
 ## <a name="exceptions"></a>Exceptions  
  Lève <xref:System.ApplicationException> si l’acquisition de verrou n’a pas lieu avant le délai d’attente.  
   
 ## <a name="remarks"></a>Notes  
- Si une valeur de délai d’attente n’est pas fournie, le délai d’attente par défaut est <xref:System.Threading.Timeout.Infinite>.  
+ Si une valeur de délai d’expiration n’est pas fournie, le délai d’expiration par défaut est <xref:System.Threading.Timeout.Infinite>.  
   
  Si un verrou a déjà été acquis, cette fonction ne fait rien.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principale utilise un verrou sur la même instance de la classe à vérifier régulièrement si les threads de travail existent toujours, et attend de quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
+ Cet exemple utilise une seule instance d’une classe entre plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread principal de l’application utilise un verrou sur la même instance de la classe pour vérifier périodiquement pour voir si les threads de travail existent toujours et attentes pour quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
   
 ```  
 // msl_lock_acquire.cpp  
@@ -144,7 +144,7 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\lock.h >  
   
  **Namespace** msclr  

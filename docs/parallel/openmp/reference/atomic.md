@@ -1,5 +1,5 @@
 ---
-title: atomique | Documents Microsoft
+title: atomique | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6287ff3c44d508a3e4293340e652edb201282f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e7e9e9ecad2f6ea53e2f922799340eee47dd4a7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037487"
 ---
 # <a name="atomic"></a>atomique
-Spécifie qu’un emplacement de mémoire qui sera mise à jour atomiquement.  
+Spécifie qu’un emplacement de mémoire qui sera mis à jour atomiquement.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,11 +34,11 @@ Spécifie qu’un emplacement de mémoire qui sera mise à jour atomiquement.
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `expression`  
- L’instruction contenant la valeur lvalue dont l’emplacement de mémoire que vous souhaitez protéger contre plusieurs écritures. Pour plus d’informations sur les formes expression juridique, consultez la spécification OpenMP.  
+*Expression*<br/>
+L’instruction contenant la valeur lvalue dont l’emplacement de mémoire que vous souhaitez protéger contre plusieurs écritures. Pour plus d’informations sur les formulaires de l’expression juridiques, consultez la spécification OpenMP.  
   
 ## <a name="remarks"></a>Notes  
- Le `atomic` directive prend en charge aucune clauses OpenMP.  
+ Le `atomic` directive prend en charge aucune clause OpenMP.  
   
  Pour plus d’informations, consultez [2.6.4 atomique construire](../../../parallel/openmp/2-6-4-atomic-construct.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: LNK4194 d’avertissement des outils Éditeur de liens | Documents Microsoft
+title: Avertissement LNK4194 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98a6c4803138a0f4fbfc71f17ed4e963478af684
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 530bcc0dab9182d0c194f23f6aa5575e431edb03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299186"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060601"
 ---
 # <a name="linker-tools-warning-lnk4194"></a>Avertissement des outils Éditeur de liens LNK4194
-DELAYLOAD ignoré  
-  
- L’éditeur de liens ne peut pas [chargement différé](../../build/reference/delayload-delay-load-import.md) la DLL requise.
+
+DELAYLOAD ignoré
+
+L’éditeur de liens ne peut pas [différer le chargement](../../build/reference/delayload-delay-load-import.md) la DLL requise.

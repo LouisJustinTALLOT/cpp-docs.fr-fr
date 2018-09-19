@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1013 | Documents Microsoft
+title: Erreur irrécupérable C1013 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b5dae643ec20e9d7d8a8dcdf41d9debe7e6b7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33c10062cac83984fb1c68835780497b89c4cbc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050509"
 ---
 # <a name="fatal-error-c1013"></a>Erreur irrécupérable C1013
-limite du compilateur : parenthèses ouvertes trop nombreuses  
-  
- Une expression contient trop de niveaux de parenthèses pour une même expression. Simplifiez l’expression ou scindez-la en plusieurs instructions.  
-  
- Avant Visual C++ 6.0 Service Pack 3, la limite d’imbrication de parenthèses dans une même expression était de 59. Actuellement, cette limite est de 256.
+
+limite du compilateur : parenthèses ouvertes trop nombreuses
+
+Une expression contient trop de niveaux de parenthèses pour une même expression. Simplifiez l’expression ou scindez-la en plusieurs instructions.
+
+Avant Visual C++ 6.0 Service Pack 3, la limite d’imbrication de parenthèses dans une même expression était de 59. Actuellement, cette limite est de 256.

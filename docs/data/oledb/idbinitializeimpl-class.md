@@ -50,14 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4f44d43d48f862ca2ca5465d5ea9ee44d0e9040e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072418"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl, classe
+
 Fournit une implémentation pour le [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -68,11 +69,13 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *T*  
- Votre classe, dérivée de `IDBInitializeImpl`.  
+
+*T*<br/>
+Votre classe, dérivée de `IDBInitializeImpl`.  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** atldb.h  
+
+**En-tête :** atldb.h  
   
 ## <a name="members"></a>Membres  
   
@@ -97,9 +100,11 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |[m_pCUtlPropInfo](#pcutlpropinfo)|Pointeur vers l’implémentation d’informations sur les propriétés de la base de données.|  
   
 ## <a name="remarks"></a>Notes  
- Une interface obligatoire sur les objets source de données et une interface facultative sur les énumérateurs.  
+
+Une interface obligatoire sur les objets source de données et une interface facultative sur les énumérateurs.  
 
 ## <a name="idbinitializeimpl"></a> IDBInitializeImpl::IDBInitializeImpl
+
 Constructeur.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -109,9 +114,11 @@ IDBInitializeImpl();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Initialise tous les membres de données. 
+
+Initialise tous les membres de données. 
   
 ## <a name="initialize"></a> IDBInitializeImpl::Initialize
+
 Initialise l’objet de source de données en préparation de sa prise en charge de la propriété.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -121,9 +128,11 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
+
+Consultez [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
+
 Place les données de source de l’objet dans un état non initialisé en libérant des ressources internes telles que la prise en charge de la propriété.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -133,9 +142,11 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>Notes  
- Consultez [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+
+Consultez [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
+
 Indicateurs de source de données.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -145,7 +156,8 @@ DWORD m_dwStatus;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Ces indicateurs spécifient ou indiquent l’état des différents attributs pour l’objet de source de données. Contient un ou plusieurs des opérations suivantes **enum** valeurs :  
+
+Ces indicateurs spécifient ou indiquent l’état des différents attributs pour l’objet de source de données. Contient un ou plusieurs des opérations suivantes **enum** valeurs :  
   
 ```cpp  
 enum DATASOURCE_FLAGS {  
@@ -162,6 +174,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_INITIALIZED`|Définir si la source de données a été initialisée.|  
 
 ## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
+
 Pointeur vers l’objet d’implémentation pour les informations de propriétés de la base de données.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -171,5 +184,6 @@ CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

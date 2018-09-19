@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28136c9fa131d525878fe0551f5ba2421576951
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b873a615e04bd92e08abb51a048f227f19fd9eec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057494"
 ---
 # <a name="cheapptrelementtraits-class"></a>Cheapptrelementtraits, classe
 
@@ -36,17 +36,17 @@ Cette classe fournit des méthodes, les fonctions statiques et les typedefs util
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename T, class Allocator = ATL::CCRTAllocator>  
+template<typename T, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrElementTraits : 
    public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Le type d’objet à stocker dans la classe de collection.
 
-*Allocateur*  
+*Allocateur*<br/>
 La classe d’allocation de mémoire à utiliser. La valeur par défaut est [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Membres
@@ -98,6 +98,6 @@ typedef T *& OUTARGTYPE;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cdefaultelementtraits, classe](../../atl/reference/cdefaultelementtraits-class.md)   
-[CComHeapPtr, classe](../../atl/reference/ccomheapptr-class.md)   
+[CDefaultElementTraits, classe](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CComHeapPtr, classe](../../atl/reference/ccomheapptr-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

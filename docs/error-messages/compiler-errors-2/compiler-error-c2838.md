@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2838 | Documents Microsoft
+title: Erreur du compilateur C2838 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a170e869a2d8869424b23fb154cd23f0ed26c9fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5607df86a44174536f58242c5c0a98f7fe5e7dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248194"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045274"
 ---
 # <a name="compiler-error-c2838"></a>Erreur du compilateur C2838
-'membre' : nom qualifié non conforme dans une déclaration de membre  
-  
- Une classe, structure ou union utilise un nom qualifié complet pour redéclarer un membre d’une autre classe, structure ou union.  
-  
- L’exemple suivant génère l’erreur C2838 :  
-  
-```  
-// C2838.cpp  
-// compile with: /c  
-class Bellini {  
-public:  
-    void Norma();  
-};  
-  
-class Bottesini {  
-   Bellini::Norma();  // C2838  
-};  
+
+'membre' : nom qualifié non conforme dans une déclaration de membre
+
+Une classe, une structure ou une union utilise un nom qualifié complet pour redéclarer un membre d’une autre classe, structure ou union.
+
+L’exemple suivant génère l’erreur C2838 :
+
+```
+// C2838.cpp
+// compile with: /c
+class Bellini {
+public:
+    void Norma();
+};
+
+class Bottesini {
+   Bellini::Norma();  // C2838
+};
 ```

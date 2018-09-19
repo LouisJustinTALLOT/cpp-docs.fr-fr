@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2856 | Documents Microsoft
+title: Erreur du compilateur C2856 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac67538a10d39bc68059b0a7d1aaf73a381abb2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6226bfd2fc11f05f894091f4ff02c145d09e11
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072710"
 ---
 # <a name="compiler-error-c2856"></a>Erreur du compilateur C2856
-\#pragma hdrstop ne peut pas être à l’intérieur d’un bloc #if  
-  
- Le `hdrstop` pragma ne peut pas être placé dans le corps d’un bloc de compilation conditionnelle.  
-  
- Déplacer le `#pragma hdrstop` instruction dans une zone qui n’est pas contenue dans un `#if/#endif` bloc.
+
+\#pragma hdrstop ne peut pas être dans un bloc #if
+
+Le `hdrstop` pragma ne peut pas être placé dans le corps d’un bloc de compilation conditionnelle.
+
+Déplacer le `#pragma hdrstop` instruction vers une zone qui n’est pas contenue dans un `#if/#endif` bloc.

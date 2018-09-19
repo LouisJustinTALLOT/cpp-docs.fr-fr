@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4206 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4206 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db7069f9d1ad242f0c79f8c6f490f4632162e6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 746fbc4c8752afcd9d02b9985373d669c3aacc5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048654"
 ---
 # <a name="compiler-warning-level-4-c4206"></a>Avertissement du compilateur (niveau 4) C4206
-**extension non standard utilisée : unité de traduction est vide**  
-  
- Le fichier était vide après le prétraitement.  
-  
- Cette extension peut empêcher votre code d’autres compilateurs. Il génère une erreur sous compatibilité ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) et s’applique uniquement au code source C.
+
+**extension non standard utilisée : unité de traduction est vide**
+
+Le fichier était vide après le prétraitement.
+
+Cette extension peut empêcher votre code d’autres compilateurs. Il génère une erreur sous compatibilité ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) et s’applique uniquement au code source C.

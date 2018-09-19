@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fed83cd67ff596581440fa317355186653a0cbec
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0da5f024e8dffd0115ba9bdbd6cf34f3f7c68a0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065788"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Changement du code de dessin (Didacticiel ATL, partie 4)
 
@@ -131,6 +131,6 @@ Dans l’étape suivante, vous allez ajouter un événement.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Didacticiel](../atl/active-template-library-atl-tutorial.md)   
+[Didacticiel](../atl/active-template-library-atl-tutorial.md)<br/>
 [Test des propriétés et des événements avec le conteneur de test](../mfc/testing-properties-and-events-with-test-container.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 2) C4309 | Documents Microsoft
+title: Compilateur avertissement (niveau 2) C4309 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cb98faf0c84210deb1a4c5164959d2ba4c08db9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b7eba833b547a54adc0644303ab51d3852740a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300145"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041972"
 ---
 # <a name="compiler-warning-level-2-c4309"></a>Avertissement du compilateur (niveau 2) C4309
-'conversion' : troncation de valeur de constante  
-  
- La conversion de type génère une constante dépasse l’espace alloué pour celle-ci. Vous devrez peut-être utiliser un type plus grand pour la constante.  
-  
- L’exemple suivant génère l’erreur C4309 :  
-  
-```  
-// C4309.cpp  
-// compile with: /W2  
-int main()  
-{  
-   char c = 128;   // C4309  
-}  
+
+'conversion' : troncation de valeur de constante
+
+La conversion de type provoque une constante à dépasser l’espace alloué pour celui-ci. Vous devrez peut-être utiliser un type plus grand pour la constante.
+
+L’exemple suivant génère l’erreur C4309 :
+
+```
+// C4309.cpp
+// compile with: /W2
+int main()
+{
+   char c = 128;   // C4309
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0061 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0061 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5edff0556b5105a57d3cb8de1c644959d65a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13f6954ce13c1a4b52b6d52e5f381f8732cc7b1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047380"
 ---
 # <a name="expression-evaluator-error-cxx0061"></a>Évaluateur d'expression, erreur CXX0061
-profondeur d’imbrication de fonction dépassée  
-  
- L’expression contient une fonction supérieure à la limite de profondeur d’imbrication. Modifiez l’expression pour réduire la profondeur d’imbrication.  
-  
- Cette erreur est identique à CAN0061.
+
+profondeur d’imbrication de fonction dépassé
+
+L’expression contient une fonction dépassent la limite de profondeur d’imbrication. Modifiez l’expression pour réduire la profondeur d’imbrication.
+
+Cette erreur est identique à CAN0061.

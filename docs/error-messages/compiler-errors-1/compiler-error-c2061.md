@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2061 | Documents Microsoft
+title: Erreur du compilateur C2061 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4d4b018dbab16e8e376a3331a85d0f1b1004f5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896fdb21c57e0f558b87ec23e2be309cf49f8095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167377"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057962"
 ---
 # <a name="compiler-error-c2061"></a>Erreur du compilateur C2061
-Erreur de syntaxe : identificateur 'identificateur'  
-  
- Le compilateur a détecté un identificateur là où il n’était pas attendu. Assurez-vous que `identifier` est déclaré avant de l’utiliser.  
-  
- Un initialiseur peut être mis entre parenthèses. Pour éviter ce problème, incluez le déclarateur entre parenthèses ou rendre un `typedef`.  
-  
- Cette erreur peut également être provoquée lorsque le compilateur détecte une expression comme argument de modèle de classe ; Utilisez [typename](../../cpp/typename.md) pour indiquer au compilateur qu’il s’agit d’un type.  
-  
- L’exemple suivant génère l’erreur C2061 :  
-  
-```  
-// C2061.cpp  
-// compile with: /c  
-template < A a >   // C2061  
-// try the following line instead  
-// template < typename b >  
-class c{};  
-```  
-  
- L’erreur C2061 peut se produire si vous passez un nom de l’instance [typeid](../../windows/typeid-cpp-component-extensions.md):  
-  
-```  
-// C2061b.cpp  
-// compile with: /clr  
-ref struct G {  
-   int i;  
-};  
-  
-int main() {  
-   G ^ pG = gcnew G;  
-   System::Type ^ pType = typeid<pG>;   // C2061  
-   System::Type ^ pType2 = typeid<G>;   // OK  
-}  
+
+Erreur de syntaxe : identificateur 'identifier'
+
+Le compilateur a détecté un identificateur là où il n’était pas attendu. Assurez-vous que l’option `identifier` est déclaré avant de l’utiliser.
+
+Un initialiseur peut être mis entre parenthèses. Pour éviter ce problème, incluez le déclarateur entre parenthèses ou en faire un `typedef`.
+
+Cette erreur peut également être provoquée quand le compilateur détecte une expression comme argument de modèle de classe ; Utilisez [typename](../../cpp/typename.md) pour indiquer au compilateur qu’il s’agit d’un type.
+
+L’exemple suivant génère l’erreur C2061 :
+
+```
+// C2061.cpp
+// compile with: /c
+template < A a >   // C2061
+// try the following line instead
+// template < typename b >
+class c{};
+```
+
+L’erreur C2061 peut se produire si vous passez un nom d’instance à [typeid](../../windows/typeid-cpp-component-extensions.md):
+
+```
+// C2061b.cpp
+// compile with: /clr
+ref struct G {
+   int i;
+};
+
+int main() {
+   G ^ pG = gcnew G;
+   System::Type ^ pType = typeid<pG>;   // C2061
+   System::Type ^ pType2 = typeid<G>;   // OK
+}
 ```

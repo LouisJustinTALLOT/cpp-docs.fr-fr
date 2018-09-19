@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2405 | Documents Microsoft
+title: Erreur du compilateur C2405 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e864d4e85b3422431cdf14dabd7083fafe04c04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f4993b32839fbd1dcdb18522021da685b865ed8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058378"
 ---
 # <a name="compiler-error-c2405"></a>Erreur du compilateur C2405
-référence non conforme au type short avec offset  
-  
- Références au type short doivent faire référence à une étiquette uniquement. Un offset supplémentaire ne peut pas être utilisé.
+
+référence non conforme au type short avec offset
+
+Les références anticipées courtes doivent faire référence à une étiquette uniquement. Un décalage supplémentaire ne peut pas être utilisé.

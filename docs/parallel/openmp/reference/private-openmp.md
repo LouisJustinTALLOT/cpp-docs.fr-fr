@@ -1,5 +1,5 @@
 ---
-title: Private (OpenMP) | Documents Microsoft
+title: privé (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7bd5b85e563f8160dd4490b650caf4f146a09410
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071235"
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 Spécifie que chaque thread doit avoir sa propre instance d’une variable.  
@@ -32,14 +32,13 @@ Spécifie que chaque thread doit avoir sa propre instance d’une variable.
 private(var)  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+### <a name="parameters"></a>Paramètres
   
- `var`  
- La variable à avoir des instances dans chaque thread.  
+*var*<br/>
+La variable à avoir des instances dans chaque thread.  
   
 ## <a name="remarks"></a>Notes  
- **privé** s’applique aux directives suivantes :  
+ **privé** s’applique pour les directives suivantes :  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
@@ -53,7 +52,7 @@ private(var)
   
 ## <a name="example"></a>Exemple  
   
-```  
+```C  
 // openmp_private.c  
 // compile with: /openmp  
 #include <windows.h>  

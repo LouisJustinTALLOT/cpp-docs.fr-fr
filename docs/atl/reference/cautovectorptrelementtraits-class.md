@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd39f56d69aef836714d70b50f6e2c882cad9448
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8308051d44b0daa0a4691ba825890970762dcc2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036902"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>Cautovectorptrelementtraits, classe
 
@@ -36,14 +36,14 @@ Cette classe fournit des méthodes, les fonctions statiques et les typedefs util
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <typename T>  
-class CAutoVectorPtrElementTraits : 
+template <typename T>
+class CAutoVectorPtrElementTraits :
    public CDefaultElementTraits<ATL::CAutoVectorPtr<T>>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-`T`  
+*T*<br/>
 Le type de pointeur.
 
 ## <a name="members"></a>Membres
@@ -93,6 +93,6 @@ typedef T*& OUTARGTYPE;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cdefaultelementtraits, classe](../../atl/reference/cdefaultelementtraits-class.md)   
-[Cautovectorptr, classe](../../atl/reference/cautovectorptr-class.md)   
+[CDefaultElementTraits, classe](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CAutoVectorPtr, classe](../../atl/reference/cautovectorptr-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

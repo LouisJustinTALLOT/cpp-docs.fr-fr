@@ -1,5 +1,5 @@
 ---
-title: copyprivate | Documents Microsoft
+title: copyprivate | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071131"
 ---
 # <a name="copyprivate"></a>copyprivate
-Spécifie qu’une ou plusieurs variables doivent être partagées entre tous les threads.  
+Spécifie qu’une ou plusieurs variables doivent être partagés entre tous les threads.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,11 +32,10 @@ Spécifie qu’une ou plusieurs variables doivent être partagées entre tous le
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+### <a name="parameters"></a>Paramètres
   
- `var`  
- Une ou plusieurs variables à partager. Si plusieurs variables est spécifié, séparez les noms de variables par des virgules.  
+*var*<br/>
+Une ou plusieurs variables à partager. Si plusieurs variables est spécifié, séparez les noms de variables par une virgule.  
   
 ## <a name="remarks"></a>Notes  
  `copyprivate` s’applique à la [unique](../../../parallel/openmp/reference/single.md) directive.  

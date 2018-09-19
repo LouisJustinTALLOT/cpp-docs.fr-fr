@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2128 | Documents Microsoft
+title: Erreur du compilateur C2128 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db4621a39e704c2b9d19b66b388cc1899b8da12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecd2b7eb2db0828387bd2c933b51ee39c00bae77
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066711"
 ---
 # <a name="compiler-error-c2128"></a>Erreur du compilateur C2128
-'fonction' : alloc_text/same_seg applicable qu’aux fonctions avec liaison C  
-  
- `pragma` `alloc_text` utilisable uniquement avec les fonctions déclarées liaison C.  
-  
- L’exemple suivant génère C2128 :  
-  
-```  
-// C2128.cpp  
-// compile with: /c  
-  
-// Delete the following line to resolve.  
-void func();  
-// #pragma alloc_text("my segment", func)   // C2128  
-  
-extern "C" {  
-void func();  
-}  
-  
-#pragma alloc_text("my segment", func)  
-void func() {}  
+
+'fonction' : alloc_text/same_seg applicable uniquement aux fonctions avec liaison C
+
+`pragma` `alloc_text` peut uniquement être utilisé avec les fonctions déclarées liaison C.
+
+L’exemple suivant génère C2128 :
+
+```
+// C2128.cpp
+// compile with: /c
+
+// Delete the following line to resolve.
+void func();
+// #pragma alloc_text("my segment", func)   // C2128
+
+extern "C" {
+void func();
+}
+
+#pragma alloc_text("my segment", func)
+void func() {}
 ```

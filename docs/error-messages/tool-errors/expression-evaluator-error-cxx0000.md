@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0000 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0000 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61099ba206269f13413fefe14ef02002968c65b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f028f53075aa540338e7abcce7f42fa132ad1af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059120"
 ---
 # <a name="expression-evaluator-error-cxx0000"></a>Évaluateur d'expression, erreur CXX0000
-aucune condition d’erreur  
-  
- Aucune erreur ne s’est produite. Vous pouvez continuer le débogage normalement.  
-  
- Notez les circonstances et avertissez les Services de Support technique Microsoft.
+
+aucune condition d’erreur
+
+Aucune erreur ne se n’est produite. Vous pouvez poursuivre le débogage normalement.
+
+Notez les circonstances et avertissez les Services de Support technique Microsoft.

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e70e744ca4eb9cfa4b84ac0cca58be2452a8e25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044273"
 ---
 # <a name="atl-collections-and-enumerators"></a>Collections et énumérateurs ATL
 
@@ -36,21 +36,21 @@ Vous pouvez en savoir plus sur les interfaces d’énumérateur par lecture de c
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Collections ATL et classes d’énumérateurs](../atl/atl-collection-and-enumerator-classes.md)  
+[Collections ATL et classes d’énumérateurs](../atl/atl-collection-and-enumerator-classes.md)<br/>
 Décrit brièvement et fournit des liens vers les classes ATL qui vous aidera à implémentent des collections et énumérateurs.
 
-[Principes de conception pour les interfaces d’énumérateurs et de collections](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+[Principes de conception pour les interfaces d’énumérateurs et de collections](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
 Décrit les principes de conception différent chaque type d’interface.
 
-[Implémentation d’une collection basée sur la bibliothèque standard C++](../atl/implementing-an-stl-based-collection.md)  
+[Implémentation d’une collection basée sur la bibliothèque standard C++](../atl/implementing-an-stl-based-collection.md)<br/>
 Un exemple d’étendue qui vous guide tout au long de l’implémentation d’une collection basée sur la bibliothèque C++ Standard.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).
 
-[ATLCollections, exemple](../visual-cpp-samples.md)  
+[ATLCollections, exemple](../visual-cpp-samples.md)<br/>
 Un exemple qui illustre l’utilisation de `ICollectionOnSTLImpl` et `CComEnumOnSTL`et l’implémentation de classes de stratégie de copie personnalisé.
 
 ## <a name="see-also"></a>Voir aussi
