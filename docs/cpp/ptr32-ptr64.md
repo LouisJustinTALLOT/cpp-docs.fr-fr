@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050317be4c5f933ca9e08055a02555f5597c583c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406531"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115994"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
@@ -42,7 +42,7 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- Sur un système 32 bits, un pointeur déclaré avec **__ptr64** est tronqué à un pointeur 32 bits. Sur un système 64 bits, un pointeur déclaré avec **__ptr32** est converti en un pointeur 64 bits.
+Sur un système 32 bits, un pointeur déclaré avec **__ptr64** est tronqué à un pointeur 32 bits. Sur un système 64 bits, un pointeur déclaré avec **__ptr32** est converti en un pointeur 64 bits.
 
 > [!NOTE]
 > Vous ne pouvez pas utiliser **__ptr32** ou **__ptr64** lors de la compilation avec **/CLR : pure**. Sinon, erreur du compilateur C2472 sera généré. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
@@ -80,4 +80,5 @@ int main()
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
- [Types fondamentaux](../cpp/fundamental-types-cpp.md)
+
+[Types fondamentaux](../cpp/fundamental-types-cpp.md)

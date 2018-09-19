@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RC1120 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RC1120 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d117f7b106e14cde2def5477fab5ad0fc92a6411
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62f28e381d4eac0bfd1f010ef3919452635a1b96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057000"
 ---
 # <a name="resource-compiler-fatal-error-rc1120"></a>Erreur irrécupérable RC1120 du compilateur de ressources 
-la mémoire, si nécessaire le nombre d’octets  
-  
- Le compilateur de ressources a manqué d’espace pour les éléments qu’il stocke dans le segment de mémoire. Cela est généralement le résultat d’avoir trop de symboles.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.  
-  
-1.  Augmentez l’espace de fichier d’échange Windows. Pour plus d’informations sur l’augmentation de l’espace de fichier d’échange, consultez la mémoire virtuelle dans l’aide de Windows.  
-  
-2.  Éliminer inutiles les fichiers include, en particulier les `#define`fonction et les prototypes.  
-  
-3.  Fractionnez le fichier en cours en deux ou plusieurs fichiers et de les compiler séparément.  
-  
-4.  Supprimer d’autres programmes ou les pilotes en cours d’exécution dans le système, qui utilisent des quantités importantes de mémoire.
+
+manque de mémoire nécessaire au nombre d’octets
+
+Le compilateur de ressources a manqué d’espace pour les éléments qu’il stocke dans le tas. Cela est généralement le résultat d’avoir trop de symboles.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.
+
+1. Augmentez l’espace de fichier d’échange Windows. Pour plus d’informations sur l’augmentation de l’espace de fichier d’échange, consultez la mémoire virtuelle dans l’aide de Windows.
+
+1. Éliminer inutiles les fichiers include, en particulier les inutiles `#define`(fonction) et les prototypes.
+
+1. Fractionner le fichier en cours en deux ou plusieurs fichiers et les compiler séparément.
+
+1. Supprimez les autres programmes ou pilotes en cours d’exécution dans le système, ce qui pourrait être consomme une quantité importante de mémoire.

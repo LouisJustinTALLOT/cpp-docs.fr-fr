@@ -1,5 +1,5 @@
 ---
-title: invalid_multiple_scheduling, classe | Documents Microsoft
+title: invalid_multiple_scheduling, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f693c884542b93431a77e914d210f76721c5a0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3cc4e3b2a23dd5c617b70a7a4b992323a0e963f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067338"
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling, classe
 Cette classe décrit une exception levée quand un objet `task_handle` est planifié à plusieurs reprises à l'aide de la méthode `run` d'un objet `task_group` ou `structured_task_group` sans appel intermédiaire aux méthodes `wait` ou `run_and_wait`.  
@@ -47,7 +47,7 @@ class invalid_multiple_scheduling : public std::exception;
   
  `invalid_multiple_scheduling`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -63,14 +63,14 @@ invalid_multiple_scheduling() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Message descriptif de l'erreur.  
+*_Message*<br/>
+Message descriptif de l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
  [task_handle, classe](task-handle-class.md)   
  [task_group, classe](task-group-class.md)   
- [Exécuter](task-group-class.md)   
+ [exécuter](task-group-class.md)   
  [attente](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group, classe](structured-task-group-class.md)

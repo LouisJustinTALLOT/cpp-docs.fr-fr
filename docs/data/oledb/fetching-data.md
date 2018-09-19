@@ -18,21 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339154"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067075"
 ---
 # <a name="fetching-data"></a>Récupération de données
+
 Une fois que vous ouvrez la source de données, session et objets d’ensemble de lignes, vous pouvez extraire des données. Selon le type d’accesseur que vous utilisez, vous devrez peut-être lier les colonnes.  
   
 ### <a name="to-fetch-data"></a>Pour extraire des données  
   
-1.  Ouvrez l’ensemble de lignes en utilisant la **Open** commande.  
+1. Ouvrez l’ensemble de lignes en utilisant la **Open** commande.  
   
-2.  Si vous utilisez `CManualAccessor`, liez les colonnes de sortie si vous ne le n'avez pas déjà fait. Pour lier les colonnes, appelez `GetColumnInfo`, puis créez un accesseur avec les liaisons, comme illustré dans l’exemple suivant :  
+1. Si vous utilisez `CManualAccessor`, liez les colonnes de sortie si vous ne le n'avez pas déjà fait. Pour lier les colonnes, appelez `GetColumnInfo`, puis créez un accesseur avec les liaisons, comme illustré dans l’exemple suivant :  
   
     ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -49,7 +50,7 @@ Une fois que vous ouvrez la source de données, session et objets d’ensemble d
     rs.Bind();  
     ```  
   
-3.  Écrire un `while` boucle pour récupérer les données. Dans la boucle, appelez `MoveNext` pour faire avancer le curseur et de tester la valeur de retour à S_OK, comme indiqué dans l’exemple suivant :  
+1. Écrire un `while` boucle pour récupérer les données. Dans la boucle, appelez `MoveNext` pour faire avancer le curseur et de tester la valeur de retour à S_OK, comme indiqué dans l’exemple suivant :  
   
     ```cpp  
     while (rs.MoveNext() == S_OK)  
@@ -59,7 +60,7 @@ Une fois que vous ouvrez la source de données, session et objets d’ensemble d
     }  
     ```  
   
-4.  Dans le `while` boucle, vous pouvez extraire les données en fonction du type d’accesseur.  
+1. Dans le `while` boucle, vous pouvez extraire les données en fonction du type d’accesseur.  
   
     -   Si vous utilisez le [CAccessor](../../data/oledb/caccessor-class.md) (classe), vous devez avoir un enregistrement utilisateur qui contient les membres de données. Vous pouvez accéder vos données à l’aide de ces données membres, comme indiqué dans l’exemple suivant :  
   
@@ -101,4 +102,5 @@ Une fois que vous ouvrez la source de données, session et objets d’ensemble d
         ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

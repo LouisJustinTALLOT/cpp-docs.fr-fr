@@ -1,5 +1,5 @@
 ---
-title: Structure de short_vector | Documents Microsoft
+title: short_vector, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a79280196da13a73f8495ea79e8c9551763262be
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 651a0e17def0a171eb881ec852f56e1d4cbf2c3b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045365"
 ---
 # <a name="shortvector-structure"></a>short_vector Structure
-short_vector fournit les définitions de métaprogrammation qui sont utiles pour la programmation des vecteurs courts de façon générique.  
+short_vector fournit les définitions de métaprogrammation qui sont utiles pour la programmation des vecteurs courts de manière générique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -85,8 +85,10 @@ struct short_vector<double, 4>;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_Scalar_type`  
- `_Size`  
+
+*_Scalar_type*<br/>
+
+*_Taille*<br/>
   
 ## <a name="members"></a>Membres  
   
@@ -105,7 +107,7 @@ struct short_vector<double, 4>;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `short_vector`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  

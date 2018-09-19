@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 828c3881771aa37181822859cc54894e8771c2cb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eddeb6467dfb3bf578c0287161de989e8ba12483
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097469"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>À l’aide des paramètres remplaçables (le bureau d’enregistrement&#39;s préprocesseur)
 
@@ -36,8 +36,8 @@ Le [Assistant contrôle ATL](../atl/reference/atl-control-wizard.md) génère au
 
 Une autre utilisation du préprocesseur consiste à concaténer les données d’exécution avec des données de script. Par exemple, une entrée est nécessaire, qui contient un chemin d’accès complet à un module avec la chaîne «`, 1`» est ajoutée à la fin. Tout d’abord, définissez l’expansion suivante :
 
-```  
-'MySampleKey' = s '%MODULE%, 1'  
+```
+'MySampleKey' = s '%MODULE%, 1'
 ```
 
 Ensuite, avant d’appeler une des méthodes répertoriées dans de traitement du script [appel des Scripts](../atl/invoking-scripts.md), ajoutez un remplacement à la carte :
@@ -53,8 +53,8 @@ Lors de l’analyse du script, le bureau d’enregistrement développe `'%MODULE
 >  Pour remplacer les valeurs de remplacement en cours d’exécution, supprimez l’appel dans le script pour le [macro DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) ou [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) macro. Au lieu de cela, le remplacer par votre propre `UpdateRegistry` méthode qui appelle [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) ou [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)et passer votre tableau de _ATL_REGMAP_ Structures d’entrée. Votre tableau de _ATL_REGMAP_ENTRY doit avoir au moins une entrée a la valeur {NULL, NULL}, et cette entrée doit toujours être la dernière entrée. Sinon, une erreur de violation d’accès sera généré lorsque `UpdateRegistryFromResource` est appelée.
 
 > [!NOTE]
->  Lorsque vous créez un projet qui produit un fichier exécutable, ATL ajoute automatiquement des guillemets autour du nom de chemin d’accès créé au moment de l’exécution avec le **MODULE %** paramètre de script de bureau d’enregistrement. Si vous ne souhaitez pas que le nom de chemin d’accès pour inclure les guillemets, utiliser la nouvelle **% MODULE_RAW %** paramètre à la place.  
->   
+>  Lorsque vous créez un projet qui produit un fichier exécutable, ATL ajoute automatiquement des guillemets autour du nom de chemin d’accès créé au moment de l’exécution avec le **MODULE %** paramètre de script de bureau d’enregistrement. Si vous ne souhaitez pas que le nom de chemin d’accès pour inclure les guillemets, utiliser la nouvelle **% MODULE_RAW %** paramètre à la place.
+>
 >  Lorsque vous créez un projet qui génère une DLL, ATL n’ajoute pas de guillemets dans le nom de chemin si **MODULE %** ou **% MODULE_RAW %** est utilisé.
 
 ## <a name="see-also"></a>Voir aussi

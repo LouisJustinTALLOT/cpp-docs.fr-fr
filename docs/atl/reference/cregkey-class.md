@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caf648b0c62827e9532fa3776def1a4e459a64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042882"
 ---
 # <a name="cregkey-class"></a>CRegKey, classe
 
@@ -153,7 +153,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*  
+*clé hKey*<br/>
 Le handle d’une clé de Registre.
 
 ### <a name="remarks"></a>Notes
@@ -189,25 +189,25 @@ LONG Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Le handle d’une clé ouverte.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Spécifie le nom d’une clé pour être créé ou ouvert. Ce nom doit être une sous-clé de *hKeyParent*.
 
-*lpszClass*  
+*lpszClass*<br/>
 Spécifie la classe de la clé à être créé ou ouvert. La valeur par défaut est REG_NONE.
 
-*dwOptions*  
+*dwOptions*<br/>
 Options de la clé. La valeur par défaut est REG_OPTION_NON_VOLATILE. Pour obtenir la liste de valeurs possibles et les descriptions, consultez [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) dans le SDK Windows.
 
-*samDesired*  
+*samDesired*<br/>
 L’accès de sécurité pour la clé. La valeur par défaut est KEY_READ &#124; KEY_WRITE. Pour obtenir la liste de valeurs possibles et les descriptions, consultez `RegCreateKeyEx`.
 
-*lpSecAttr*  
+*lpSecAttr*<br/>
 Un pointeur vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui indique si le handle de la clé peut être hérité par un processus enfant. Par défaut, ce paramètre est NULL (c'est-à-dire le handle ne peut pas être hérité).
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 [out] Si non NULL, récupère REG_CREATED_NEW_KEY (si la clé n’existait pas et a été créée) ou REG_OPENED_EXISTING_KEY (si la clé existait et a été ouvert).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -231,13 +231,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 Référence à un objet `CRegKey`.
 
-*clé hKey*  
+*clé hKey*<br/>
 Handle vers une clé de Registre.
 
-*pTM*  
+*pTM*<br/>
 Pointeur vers l'objet CAtlTransactionManager
 
 ### <a name="remarks"></a>Notes
@@ -266,7 +266,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszSubKey*  
+*lpszSubKey*<br/>
 Spécifie le nom de la clé à supprimer. Ce nom doit être une sous-clé de [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -287,7 +287,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszValue*  
+*lpszValue*<br/>
 Spécifie le champ de valeur à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -320,16 +320,16 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>Paramètres
 
-*iIndex*  
+*iIndex*<br/>
 L’index de sous-clés. Ce paramètre doit être zéro pour le premier appel et ensuite incrémentée pour les appels suivants
 
-*pszName*  
+*pszName*<br/>
 Pointeur vers une mémoire tampon qui reçoit le nom de la sous-clé, y compris le caractère null de fin. Uniquement le nom de la sous-clé est copié vers la mémoire tampon, et non la hiérarchie de clés complète.
 
-*pnNameLength*  
+*pnNameLength*<br/>
 Pointeur vers une variable qui spécifie la taille, en TCHARs, de la mémoire tampon spécifiée par le *pszName* paramètre. Cette taille doit inclure le caractère null de fin. Lorsque la méthode est retournée, la variable vers laquelle pointe *pnNameLength* contient le nombre de caractères stockés dans la mémoire tampon. Le nombre retourné n’inclut pas le caractère null de fin.
 
-*pftLastWriteTime*  
+*pftLastWriteTime*<br/>
 Pointeur vers une variable qui reçoit l’heure la sous-clé énumérée la dernière écriture dans.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -369,13 +369,13 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Paramètres
 
-*Si*  
+*Si*<br/>
 Le [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) valeur qui indique les informations de sécurité demandé.
 
-*PSD*  
+*PSD*<br/>
 Pointeur vers une mémoire tampon qui reçoit une copie du descripteur de sécurité demandé.
 
-*pnBytes*  
+*pnBytes*<br/>
 La taille, en octets, de la mémoire tampon vers laquelle pointé *psd*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -418,10 +418,10 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*bWatchSubtree*  
+*bWatchSubtree*<br/>
 Spécifie un indicateur qui indique s’il faut signaler les modifications dans la clé spécifiée et toutes ses sous-clés ou uniquement dans la clé spécifiée. Si ce paramètre est TRUE, la méthode signale les modifications apportées à la clé et ses sous-clés. Si le paramètre est FALSE, la méthode signale les modifications uniquement dans la clé.
 
-*dwNotifyFilter*  
+*dwNotifyFilter*<br/>
 Spécifie un jeu d’indicateurs qui contrôlent les modifications qui doit être signalé. Ce paramètre peut être une combinaison des valeurs suivantes :
 
 |Value|Signification|
@@ -431,10 +431,10 @@ Spécifie un jeu d’indicateurs qui contrôlent les modifications qui doit êtr
 |REG_NOTIFY_CHANGE_LAST_SET|Informer l’appelant des modifications apportées à une valeur de la clé. Cela peut inclure Ajout ou la suppression d’une valeur ou la modification d’une valeur existante.|
 |REG_NOTIFY_CHANGE_SECURITY|Informer l’appelant des modifications au descripteur de sécurité de la clé.|
 
-*hEvent*  
+*hEvent*<br/>
 Handle vers un événement. Si le *bAsync* paramètre est TRUE, la méthode retourne immédiatement et les modifications sont signalées par la signalisation de cet événement. Si *bAsync* est FALSE, *hEvent* est ignoré.
 
-*bAsync*  
+*bAsync*<br/>
 Spécifie un indicateur qui détermine comment la méthode signale les modifications apportées. Si ce paramètre est TRUE, la méthode retourne immédiatement et signale les modifications apportées par la signalisation de l’événement spécifié. Lorsque ce paramètre est FALSE, la méthode ne retourne pas jusqu'à ce qu’une modification a eu lieu. Si *hEvent* ne spécifie pas un événement valide, le *bAsync* paramètre ne peut pas être TRUE.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -461,13 +461,13 @@ LONG Open(
 
 ### <a name="parameters"></a>Paramètres
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Le handle d’une clé ouverte.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Spécifie le nom d’une clé pour être créé ou ouvert. Ce nom doit être une sous-clé de *hKeyParent*.
 
-*samDesired*  
+*samDesired*<br/>
 L’accès de sécurité pour la clé. La valeur par défaut est KEY_ALL_ACCESS. Pour obtenir la liste de valeurs possibles et les descriptions, consultez [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -484,7 +484,7 @@ Contrairement aux [CRegKey::Create](#create), `Open` ne crée pas la clé spéci
 
 Convertit un `CRegKey` objet à un HKEY.
 
-```  
+```
 operator HKEY() const throw();
 ```
 
@@ -498,7 +498,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 Clé à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -522,13 +522,13 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur de la requête.
 
-*pValue*  
+*pValue*<br/>
 Pointeur vers une mémoire tampon qui reçoit les données de la valeur.
 
-*pnBytes*  
+*pnBytes*<br/>
 Pointeur vers une variable qui spécifie la taille, en octets, de la mémoire tampon vers laquelle pointe le *pValue* paramètre. Lorsque la méthode est retournée, cette variable contient la taille des données copiées vers la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -554,10 +554,10 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur de la requête.
 
-*dwValue*  
+*dwValue*<br/>
 Pointeur vers une mémoire tampon qui reçoit la valeur DWORD.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -583,10 +583,10 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur de la requête.
 
-*guidValue*  
+*guidValue*<br/>
 Pointeur vers une variable qui reçoit le GUID.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -613,13 +613,13 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur de la requête.
 
-*pszValue*  
+*pszValue*<br/>
 Pointeur vers une mémoire tampon qui reçoit les données de chaîne multiple. Une chaîne multiple est un tableau de chaînes terminées par deux caractères null.
 
-*pnChars*  
+*pnChars*<br/>
 La taille, en TCHARs, de la mémoire tampon vers laquelle pointé *pszValue*. Lorsque la méthode est retournée, *pnChars* contient la taille, en TCHARs, de multi-chaîne récupéré, y compris un caractère null de fin.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -645,10 +645,10 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur de la requête.
 
-*qwValue*  
+*qwValue*<br/>
 Pointeur vers une mémoire tampon qui reçoit le QWORD.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -675,13 +675,13 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur de la requête.
 
-*pszValue*  
+*pszValue*<br/>
 Pointeur vers une mémoire tampon qui reçoit les données de chaîne.
 
-*pnChars*  
+*pnChars*<br/>
 La taille, en TCHARs, de la mémoire tampon vers laquelle pointé *pszValue*. Lorsque la méthode est retournée, *pnChars* contient la taille, en TCHARs, de la chaîne extraite, y compris un caractère null de fin.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -718,28 +718,28 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur de la requête. Si *pszValueName* est NULL ou une chaîne vide, « », la méthode récupère le type et les données de la clé du sans nom ou valeur par défaut, si un.
 
-*pdwType*  
+*pdwType*<br/>
 Pointeur vers une variable qui reçoit un code indiquant le type de données stockées dans la valeur spécifiée. Le *pdwType* paramètre peut être NULL si le code de type n’est pas obligatoire.
 
-*pData*  
+*pData*<br/>
 Pointeur vers une mémoire tampon qui reçoit les données de la valeur. Ce paramètre peut être NULL si les données ne sont pas requises.
 
-*pnBytes*  
+*pnBytes*<br/>
 Pointeur vers une variable qui spécifie la taille, en octets, de la mémoire tampon vers laquelle pointe le *pData* paramètre. Lorsque la méthode est retournée, cette variable contient la taille des copie des données *pData.*
 
-*dwValue*  
+*dwValue*<br/>
 Données numériques du champ de valeur.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Spécifie le champ de valeur à interroger.
 
-*szValue*  
+*szValue*<br/>
 Données de chaîne du champ de valeur.
 
-*pdwCount*  
+*pdwCount*<br/>
 La taille de la chaîne. Sa valeur est initialement définie sur la taille de la *szValue* mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -765,7 +765,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszKey*  
+*lpszKey*<br/>
 Spécifie le nom de la clé à supprimer. Ce nom doit être une sous-clé de [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -789,13 +789,13 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne contenant le nom de la valeur à définir. Si une valeur portant ce nom n’est pas déjà présente, la méthode l’ajoute à la clé.
 
-*pValue*  
+*pValue*<br/>
 Pointeur vers une mémoire tampon contenant les données doit être stockée avec le nom de la valeur spécifiée.
 
-*nBytes*  
+*nBytes*<br/>
 Spécifie la taille, en octets, des informations vers lequel pointé le *pValue* paramètre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -816,10 +816,10 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne contenant le nom de la valeur à définir. Si une valeur portant ce nom n’est pas déjà présente, la méthode l’ajoute à la clé.
 
-*dwValue*  
+*dwValue*<br/>
 Les données DWORD doit être stockée avec le nom de la valeur spécifiée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -840,10 +840,10 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne contenant le nom de la valeur à définir. Si une valeur portant ce nom n’est pas déjà présente, la méthode l’ajoute à la clé.
 
-*guidValue*  
+*guidValue*<br/>
 Référence vers le GUID doit être stockée avec le nom de la valeur spécifiée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -867,13 +867,13 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Spécifie le nom de la clé à être créé ou ouvert. Ce nom doit être une sous-clé de [m_hKey](#m_hkey).
 
-*lpszValue*  
+*lpszValue*<br/>
 Spécifie les données à stocker. Ce paramètre doit être non NULL.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Spécifie le champ de valeur à définir. Si un champ de valeur portant ce nom n’existe pas déjà dans la clé, il est ajouté.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -894,7 +894,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Si*  
+*Si*<br/>
 Spécifie les composants du descripteur de sécurité à définir. La valeur peut être une combinaison des valeurs suivantes :
 
 |Value|Signification|
@@ -904,7 +904,7 @@ Spécifie les composants du descripteur de sécurité à définir. La valeur peu
 |OWNER_SECURITY_INFORMATION|Définit le SID du propriétaire de la clé. La clé doit avoir l’accès WRITE_OWNER, ou le processus appelant doit être propriétaire de l’objet ou avoir le privilège SE_TAKE_OWNERSHIP_NAME activé.|
 |SACL_SECURITY_INFORMATION|Définit la liste de contrôle d’accès de la clé système (SACL). La clé doit avoir accès aux ACCESS_SYSTEM_SECURITY. La méthode appropriée pour obtenir cet accès consiste à activer le SE_SECURITY_NAME [privilège](https://msdn.microsoft.com/library/windows/desktop/aa379306) dans le jeton d’accès actuel de l’appelant, ouvrir un handle pour un accès ACCESS_SYSTEM_SECURITY et désactivez le privilège.|
 
-*PSD*  
+*PSD*<br/>
 Pointeur vers un [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) structure qui spécifie les attributs de sécurité à définir pour la clé spécifiée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -925,10 +925,10 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne contenant le nom de la valeur à définir. Si une valeur portant ce nom n’est pas déjà présente, la méthode l’ajoute à la clé.
 
-*pszValue*  
+*pszValue*<br/>
 Pointeur vers les données de chaîne multiple doit être stockée avec le nom de la valeur spécifiée. Une chaîne multiple est un tableau de chaînes terminées par deux caractères null.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -949,10 +949,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne contenant le nom de la valeur à définir. Si une valeur portant ce nom n’est pas déjà présente, la méthode l’ajoute à la clé.
 
-*qwValue*  
+*qwValue*<br/>
 Les données QWORD doit être stockée avec le nom de la valeur spécifiée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -976,13 +976,13 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne contenant le nom de la valeur à définir. Si une valeur portant ce nom n’est pas déjà présente, la méthode l’ajoute à la clé.
 
-*pszValue*  
+*pszValue*<br/>
 Pointeur vers les données de chaîne doit être stockée avec le nom de la valeur spécifiée.
 
-*dwType*  
+*dwType*<br/>
 Le type de la chaîne à écrire dans le Registre : REG_SZ (la valeur par défaut) ou REG_EXPAND_SZ (pour les multistrings).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1023,37 +1023,37 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszValueName*  
+*pszValueName*<br/>
 Pointeur vers une chaîne contenant le nom de la valeur à définir. Si une valeur portant ce nom n’est pas déjà présente dans la clé, la méthode l’ajoute à la clé. Si *pszValueName* est NULL ou une chaîne vide, « », la méthode définit le type et les données de la clé du sans nom ou valeur par défaut.
 
-*dwType*  
+*dwType*<br/>
 Spécifie un code indiquant le type de données vers lequel pointés le *pValue* paramètre.
 
-*pValue*  
+*pValue*<br/>
 Pointeur vers une mémoire tampon contenant les données doit être stockée avec le nom de la valeur spécifiée.
 
-*nBytes*  
+*nBytes*<br/>
 Spécifie la taille, en octets, des informations vers lequel pointé le *pValue* paramètre. Si les données sont de type REG_SZ, REG_EXPAND_SZ ou REG_MULTI_SZ, *nBytes* doit inclure la taille du caractère null de fin.
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Le handle d’une clé ouverte.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Spécifie le nom d’une clé pour être créé ou ouvert. Ce nom doit être une sous-clé de *hKeyParent*.
 
-*lpszValue*  
+*lpszValue*<br/>
 Spécifie les données à stocker. Ce paramètre doit être non NULL.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Spécifie le champ de valeur à définir. Si un champ de valeur portant ce nom n’existe pas déjà dans la clé, il est ajouté.
 
-*dwValue*  
+*dwValue*<br/>
 Spécifie les données à stocker.
 
-*bMulti*  
+*bMulti*<br/>
 Si la valeur est false, indique la chaîne est de type REG_SZ. Si la valeur est true, indique que la chaîne est une multiple de longueur fixe de type REG_MULTI_SZ.
 
-*nValueLen*  
+*nValueLen*<br/>
 Si *bMulti* a la valeur true, *nValueLen* est la longueur de la *lpszValue* chaîne en caractères. Si *bMulti* a la valeur false, la valeur -1 indique que la méthode calcule automatiquement la longueur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1068,5 +1068,5 @@ La troisième méthode appelle [RegSetValueEx](/windows/desktop/api/winreg/nf-wi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple DCOM](../../visual-cpp-samples.md)   
+[Exemple DCOM](../../visual-cpp-samples.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Du compilateur (niveau 4) d’avertissement C4458 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4458 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815433004756e4726ee4e562cbd0e424a35d377a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 873aa94db899ae6620e2bbb1f24277c6e7c841c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094544"
 ---
-# <a name="compiler-warning-level-4-c4458"></a>Du compilateur (niveau 4) d’avertissement C4458
-  
+# <a name="compiler-warning-level-4-c4458"></a>Compilateur avertissement (niveau 4) C4458
+
 > déclaration de '*identificateur*' masque le membre de classe
-  
-La déclaration de *identificateur* dans l’étendue locale masque la déclaration de la portant le même nom *identificateur* à portée de classe. Cet avertissement vous informe que les références à *identificateur* dans cette portée correspondent à la version déclarée localement, pas la classe membre version, ce qui peut ou ne peut pas être votre intention. Pour résoudre ce problème, nous vous recommandons de que vous donnez des noms de variables locales qui éviter les conflits avec les noms de membres de classe.  
-    
+
+La déclaration de *identificateur* dans l’étendue locale masque la déclaration de la portant *identificateur* à portée de classe. Cet avertissement vous informe que les références à *identificateur* dans cette portée correspondent à la version déclarée localement, pas la classe membre version, ce qui peut ou peut ne pas être votre intention. Pour résoudre ce problème, nous vous recommandons de que vous donner des noms de variables locales qui ne pas en conflit avec les noms de membres de classe.
+
 ## <a name="example"></a>Exemple
-  
-L’exemple suivant génère C4458, car le paramètre `x` et la variable locale `y` dans `member_fn` ont les mêmes noms que les membres de données dans la classe. Pour résoudre ce problème, utilisez des noms différents pour les paramètres et les variables locales.  
-  
-```cpp  
+
+L’exemple suivant génère le C4458, car le paramètre `x` et la variable locale `y` dans `member_fn` ont les mêmes noms que les membres de données dans la classe. Pour résoudre ce problème, utilisez des noms différents pour les paramètres et les variables locales.
+
+```cpp
 // C4458_hide.cpp
 // compile with: cl /W4 /c C4458_hide.cpp
 
@@ -42,10 +42,10 @@ struct S {
     float y;
     void member_fn(long x) {   // C4458
         double y;  // C4458
-        y = x;  
+        y = x;
         // To fix this issue, change the parameter name x
-        // and local name y to something that does not 
+        // and local name y to something that does not
         // conflict with the data member names.
     }
 } s;
-```  
+```

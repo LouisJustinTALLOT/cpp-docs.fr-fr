@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2753 | Documents Microsoft
+title: Erreur du compilateur C2753 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acbf5736c7c263293bc1c2782cab7df4f0af2083
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 722176744dc614e54d7b25ffd75be679ef9e63dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060582"
 ---
 # <a name="compiler-error-c2753"></a>Erreur du compilateur C2753
-'*modèle*' : une spécialisation partielle ne peuvent pas correspondre la liste d’arguments pour le modèle principal  
-  
- Si la liste d’arguments template correspond à la liste de paramètres, le compilateur le traite comme le même modèle. Définition de deux fois le même modèle n’est pas autorisée.  
-  
+
+«*modèle*' : une spécialisation partielle ne peut pas correspondre la liste d’arguments pour le modèle principal
+
+Si la liste d’arguments template correspond à la liste de paramètres, le compilateur le traite comme le même modèle. Définition de deux fois le même modèle n’est pas autorisée.
+
 ## <a name="example"></a>Exemple
- L’exemple suivant génère l’erreur C2753 et illustre une méthode pour résoudre ce problème :  
-  
-```cpp  
-// C2753.cpp  
+
+L’exemple suivant génère l’erreur C2753 et illustre une méthode permettant de résoudre le problème :
+
+```cpp
+// C2753.cpp
 // compile with: cl /c C2753.cpp
-template<class T>  
-struct A {};  
-  
-template<class T>  
-struct A<T> {};   // C2753  
-// try the following line instead  
-// struct A<int> {};  
-  
-template<class T, class U, class V, class W, class X>  
-struct B {};  
+template<class T>
+struct A {};
+
+template<class T>
+struct A<T> {};   // C2753
+// try the following line instead
+// struct A<int> {};
+
+template<class T, class U, class V, class W, class X>
+struct B {};
 ```

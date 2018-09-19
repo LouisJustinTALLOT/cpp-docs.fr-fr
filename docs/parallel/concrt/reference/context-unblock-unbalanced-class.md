@@ -1,5 +1,5 @@
 ---
-title: context_unblock_unbalanced, classe | Documents Microsoft
+title: context_unblock_unbalanced, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c964701f9a26c655bbb9529a112f036c7c9f0bf5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685747"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037474"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced, classe
 Cette classe décrit une exception levée quand des appels aux méthodes `Block` et `Unblock` d'un objet `Context` ne sont pas correctement associés.  
@@ -43,14 +43,14 @@ class context_unblock_unbalanced : public std::exception;
 |[context_unblock_unbalanced](#ctor)|Surchargé. Construit un objet `context_unblock_unbalanced`.|  
   
 ## <a name="remarks"></a>Notes  
- Les appels à la `Block` et `Unblock` méthodes d’un `Context` objet doit toujours être associé correctement. Le Runtime d’accès concurrentiel permet des opérations de se produire dans n’importe quel ordre. Par exemple, un appel à `Block` peut être suivi par un appel à `Unblock`, ou vice versa. Cette exception serait levée si, par exemple, deux appels à la `Unblock` méthode ont été effectuées dans une ligne, sur un `Context` objet qui n’a pas été bloqué.  
+ Les appels à la `Block` et `Unblock` méthodes d’un `Context` objet doit toujours être associé correctement. Le Runtime d’accès concurrentiel autorise les opérations se produire dans les deux sens. Par exemple, un appel à `Block` peut être suivie d’un appel à `Unblock`, ou vice versa. Cette exception serait levée si, par exemple, deux appels à la `Unblock` méthode ont été apportées dans une ligne, sur un `Context` objet qui n’a pas été bloqué.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `exception`  
   
  `context_unblock_unbalanced`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -67,8 +67,8 @@ context_unblock_unbalanced() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Message descriptif de l'erreur.  
+*_Message*<br/>
+Message descriptif de l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2307 | Documents Microsoft
+title: Erreur du compilateur C2307 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7136b5b49371c9181780bfa4a7bc7a17416a7ad2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26373ac75c4e6724ce01e24dbd46066f2ef534b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049391"
 ---
 # <a name="compiler-error-c2307"></a>Erreur du compilateur C2307
-pragma 'pragma' doit être une fonction externe si la compilation incrémentielle est activée  
-  
- Vous devez placer le `data_seg` pragma entre les fonctions si vous utilisez la compilation incrémentielle.
+
+pragma 'pragma' doit être une fonction externe si la compilation incrémentielle est activée
+
+Vous devez placer le `data_seg` pragma entre les fonctions si vous utilisez la compilation incrémentielle.

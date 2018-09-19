@@ -1,5 +1,5 @@
 ---
-title: task_completion_event, classe | Documents Microsoft
+title: task_completion_event, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088993"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event, classe
 La classe `task_completion_event` vous permet de retarder l'exécution d'une tâche jusqu'à ce qu'une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe.  
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_ResultType`  
- Type de résultat de cette classe `task_completion_event`.  
-  
- `T`  
+*_ResultType*<br/>
+Type de résultat de cette classe `task_completion_event`.  
+
   
 ## <a name="members"></a>Membres  
   
@@ -71,7 +70,7 @@ class task_completion_event<void>;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `task_completion_event`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ppltasks.h  
   
  **Espace de noms :** concurrency  
@@ -87,14 +86,14 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Result`  
- Le résultat pour définir cet événement.  
+*_Result*<br/>
+Le résultat pour définir cet événement avec.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La méthode retourne `true` si elle a réussi dans la définition de l’événement. Elle retourne `false` si l’événement est déjà défini.  
+ La méthode retourne `true` si elle a réussi à définir l’événement. Elle retourne `false` si l’événement est déjà défini.  
   
 ### <a name="remarks"></a>Notes  
- En présence de plusieurs ou d’appels simultanés à `set`, seul le premier appel réussi et que son résultat (le cas échéant) est stocké dans l’événement d’achèvement de tâche. Les jeux restants sont ignorés et la méthode retourne la valeur false. Lorsque vous définissez un événement d’achèvement de tâche, toutes les tâches sont créés à partir que les événements seront termine immédiatement et ses continuations, le cas échéant, sont planifiées. Tâches des objets d’achèvement qui ont un `_ResultType` autre que `void` passe la valeur de leurs continuations.  
+ En présence de plusieurs ou d’appels simultanés à `set`, seul le premier appel réussira et son résultat (le cas échéant) est stocké dans l’événement d’achèvement de tâche. Les ensembles restants sont ignorés et la méthode retourne la valeur false. Lorsque vous définissez un événement d’achèvement de tâche, toutes les tâches créées à partir de qu’événement se termineront immédiatement, et ses continuations, le cas échéant, seront planifiées. Tâches des objets de saisie semi-automatique qui ont un `_ResultType` autre que `void` passe la valeur à leurs continuations.  
   
 ##  <a name="set_exception"></a> set_exception 
 
@@ -108,9 +107,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+Type d'exception.
+
+*_Except*<br/>
+Exception à définir.
+
+*_ExceptionPtr*<br/>
+Le pointeur d’exception à définir.
   
 ### <a name="return-value"></a>Valeur de retour  
   

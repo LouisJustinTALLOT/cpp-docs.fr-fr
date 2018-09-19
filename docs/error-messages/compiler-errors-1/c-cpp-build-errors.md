@@ -1,5 +1,5 @@
 ---
-title: Erreurs de Build C/C++ | Documents Microsoft
+title: Erreurs de Build C/C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -310,20 +310,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a6eb5fe80c25912c76e3446efb1ee00413fff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14529f9246572299fc6629ec13ff4eab837bb5fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095844"
 ---
 # <a name="cc-build-errors"></a>Erreurs de build C/C++
 
-Les articles de cette section de la documentation expliquent erreur de diagnostic et les messages d’avertissement générés par les outils de génération.
+Les articles de cette section de la documentation expliquent l’erreur de diagnostic et les messages d’avertissement générés par les outils de génération.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence à la génération C/C++](../../build/reference/c-cpp-building-reference.md)   
+[Référence de la génération C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
 [Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

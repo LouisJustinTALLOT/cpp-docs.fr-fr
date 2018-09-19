@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RC1203 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RC1203 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5267011eea32929b85e6ca60fb26ea34b2c371
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 638af9b85aecdd4eaba712cee68bf4ec96f3ab56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321504"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081453"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>Erreur irrécupérable RC1203 du compilateur de ressources 
-ID de langue par défaut hexadécimal non valide spécifié.  
-  
- La langue par défaut de spécifier (/ l) l’option a été suivie d’un ID de langue hexadécimal non valide. Consultez [chaînes de langues et pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) dans les *Run-Time Library Reference* pour obtenir la liste des ID de langue valide.
+
+ID de langue par défaut hexadécimale non valide spécifié.
+
+La langue par défaut de spécifier (/ l) l’option a été suivie d’un ID de langue hexadécimal non valide. Consultez [chaînes de langues et pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) dans le *Run-Time Library Reference* pour obtenir la liste des ID de langue valide.

@@ -24,22 +24,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e847cff10c7e17185f76b5e790beda3745732312
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 855562b8b6eb5e577914fc6305668ee7305c86e1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110677"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personnalisation du traitement de ligne de commande C++
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- Si votre programme ne prend pas d’arguments de ligne de commande, vous pouvez économiser une petite quantité d’espace en supprimant l’utilisation de la routine de bibliothèque qui exécute le traitement de ligne de commande. Cette routine est appelée `_setargv` et est décrit dans [développement des caractères génériques](../cpp/wildcard-expansion.md). Pour supprimer son utilisation, définissez une routine qui ne fait rien dans le fichier contenant le `main` de fonction et nommez-le `_setargv`. L’appel à `_setargv` est ensuite satisfait par votre définition de `_setargv`, et la version de la bibliothèque n’est pas chargée.  
-  
- De même, si vous n’accédez jamais à la table d’environnement via le `envp` argument, vous pouvez fournir votre propre routine vide à utiliser à la place de `_setenvp`, la routine de traitement de l’environnement. Comme avec la `_setargv` (fonction), `_setenvp` doit être déclarée comme **extern « C »**.  
-  
- Votre programme peut effectuer des appels à la `spawn` ou `exec` famille des routines de la bibliothèque Runtime C. Le cas échéant, vous ne devez pas supprimer la routine de traitement de l'environnement, car cette routine est utilisée pour transmettre un environnement du processus parent au processus enfant.  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [main : démarrage du programme](../cpp/main-program-startup.md)
+
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+
+Si votre programme ne prend pas d’arguments de ligne de commande, vous pouvez économiser une petite quantité d’espace en supprimant l’utilisation de la routine de bibliothèque qui exécute le traitement de ligne de commande. Cette routine est appelée `_setargv` et est décrit dans [développement des caractères génériques](../cpp/wildcard-expansion.md). Pour supprimer son utilisation, définissez une routine qui ne fait rien dans le fichier contenant le `main` de fonction et nommez-le `_setargv`. L’appel à `_setargv` est ensuite satisfait par votre définition de `_setargv`, et la version de la bibliothèque n’est pas chargée.
+
+De même, si vous n’accédez jamais à la table d’environnement via le `envp` argument, vous pouvez fournir votre propre routine vide à utiliser à la place de `_setenvp`, la routine de traitement de l’environnement. Comme avec la `_setargv` (fonction), `_setenvp` doit être déclarée comme **extern « C »**.
+
+Votre programme peut effectuer des appels à la `spawn` ou `exec` famille des routines de la bibliothèque Runtime C. Le cas échéant, vous ne devez pas supprimer la routine de traitement de l'environnement, car cette routine est utilisée pour transmettre un environnement du processus parent au processus enfant.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[main : démarrage du programme](../cpp/main-program-startup.md)

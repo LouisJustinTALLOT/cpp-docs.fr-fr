@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2875 | Documents Microsoft
+title: Erreur du compilateur C2875 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b52ba86dccf5451c80c389d5726d81e2511ab31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c33813cbb6e6c6b0e7a386428414358709e0b0c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243066"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030638"
 ---
 # <a name="compiler-error-c2875"></a>Erreur du compilateur C2875
-la déclaration using provoque une déclaration multiple de 'classe::identificateur'  
-  
- La déclaration génère le même élément est défini deux fois.  
-  
- L’exemple suivant génère l’erreur C2875 :  
-  
-```  
-// C2875.cpp  
-struct A {  
-   void f(int*);  
-};  
-  
-struct B {  
-   void f(double*);  
-};  
-  
-struct AB : A, B {  
-   using A::f;  
-   using A::f;   // C2875  
-   using B::f;  
-};  
+
+la déclaration using provoque une déclaration multiple de 'classe::identificateur'
+
+La déclaration génère le même élément est défini deux fois.
+
+L’exemple suivant génère l’erreur C2875 :
+
+```
+// C2875.cpp
+struct A {
+   void f(int*);
+};
+
+struct B {
+   void f(double*);
+};
+
+struct AB : A, B {
+   using A::f;
+   using A::f;   // C2875
+   using B::f;
+};
 ```

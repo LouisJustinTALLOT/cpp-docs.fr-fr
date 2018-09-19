@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41068a81d52c0e30ef95cf364d759f35a39140c9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 414a37d51d39c94e022c726a5c8ede20504de5eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095740"
 ---
 # <a name="class-factories-classes"></a>Classe de fabriques de Classes
 
@@ -40,6 +40,6 @@ Les classes suivantes implémentent ou prennent en charge une fabrique de classe
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../atl/atl-class-overview.md)   
+[Vue d’ensemble de la classe](../atl/atl-class-overview.md)<br/>
 [Agrégation et macros de fabrique de classe](../atl/reference/aggregation-and-class-factory-macros.md)
 

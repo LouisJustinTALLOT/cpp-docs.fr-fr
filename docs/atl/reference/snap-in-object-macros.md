@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65995f24e58b0bdce4a15adc72de0b60ded644dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765539"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050552"
 ---
 # <a name="snap-in-object-macros"></a>Macros d’objet du composant logiciel enfichable
 
@@ -57,7 +57,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 
 ### <a name="parameters"></a>Paramètres
 
-*classname*  
+*classname*<br/>
 [in] Le nom de la classe de données d’extension du composant logiciel enfichable.
 
 ### <a name="remarks"></a>Notes
@@ -78,7 +78,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 
 ### <a name="parameters"></a>Paramètres
 
-*_classe*  
+*_classe*<br/>
 [in] Spécifie la classe d’objet Snap-In.
 
 ### <a name="example"></a>Exemple
@@ -111,7 +111,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 
 ### <a name="parameters"></a>Paramètres
 
-*_classe*  
+*_classe*<br/>
 [in] Spécifie la classe d’objet Snap-In.
 
 ### <a name="example"></a>Exemple
@@ -128,7 +128,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 
 ### <a name="parameters"></a>Paramètres
 
-*dataClass*  
+*dataClass*<br/>
 [in] La classe de données de l’extension du composant logiciel enfichable.
 
 ### <a name="remarks"></a>Notes
@@ -149,7 +149,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 
 ### <a name="parameters"></a>Paramètres
 
-*dataClass*  
+*dataClass*<br/>
 [in] La classe de données de l’extension du composant logiciel enfichable.
 
 ### <a name="remarks"></a>Notes
@@ -170,7 +170,7 @@ SNAPINMENUID( id )
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*  
+*ID*<br/>
 [in] Identifie le menu contextuel de l’objet Snap-In.
 
 ##  <a name="snapintoolbarid_entry"></a>  SNAPINTOOLBARID_ENTRY
@@ -183,7 +183,7 @@ SNAPINTOOLBARID_ENTRY( id )
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*  
+*ID*<br/>
 [in] Identifie le contrôle de barre d’outils.
 
 ### <a name="remarks"></a>Notes

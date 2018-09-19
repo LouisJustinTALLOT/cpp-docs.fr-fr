@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2767 | Documents Microsoft
+title: Erreur du compilateur C2767 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5ac628d1e02c53b0ed0872873ef23ef708df982
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6301471b4797bf3a1cb6f3936e54ab8bfb536b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234781"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051891"
 ---
 # <a name="compiler-error-c2767"></a>Erreur du compilateur C2767
-géré ou incompatibilité de dimension WinRTarray : attendu N argument (s) - M fournis  
-  
- La déclaration d'un tableau managé ou WinRT était incorrecte. Pour plus d'informations, consultez [tableau](../../windows/arrays-cpp-component-extensions.md).  
-  
- L'exemple suivant génère l'erreur C2767 et montre comment la corriger :  
-  
-```  
-// C2767.cpp  
-// compile with: /clr  
-int main() {  
-   array<int> ^p1 = new array<int>(2,3); // C2767  
-   array<int> ^p2 = new array<int>(2);   // OK  
-}  
+
+gérés ou incompatibilité de dimension WinRTarray : attendu N argument (s) - M fournis
+
+La déclaration d'un tableau managé ou WinRT était incorrecte. Pour plus d'informations, consultez [tableau](../../windows/arrays-cpp-component-extensions.md).
+
+L'exemple suivant génère l'erreur C2767 et montre comment la corriger :
+
+```
+// C2767.cpp
+// compile with: /clr
+int main() {
+   array<int> ^p1 = new array<int>(2,3); // C2767
+   array<int> ^p2 = new array<int>(2);   // OK
+}
 ```

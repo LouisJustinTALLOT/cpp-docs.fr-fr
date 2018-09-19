@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4237 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4237 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dfefb2dc7dd04f2334b2b7d222153d5ee351ae2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca72e4973c71655bc4a891570c6f686304d07eb0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092893"
 ---
 # <a name="compiler-warning-level-1-c4237"></a>Avertissement du compilateur (niveau 1) C4237
-' mot_clé ' n’est pas encore pris en charge, mais réservé pour un usage ultérieur  
-  
- Un mot clé dans la spécification C++ n’est pas implémenté dans le compilateur Visual C++, mais le mot clé n’est pas disponible comme symbole défini par l’utilisateur.  
-  
- L’exemple suivant génère l’erreur C4237 :  
-  
-```  
-// C4237.cpp  
-// compile with: /W1 /c  
-int export;   // C4237  
+
+mot clé 'mot_clé' n’est pas encore pris en charge, mais réservé pour une utilisation ultérieure
+
+Un mot clé dans la spécification C++ n’est pas implémenté dans le compilateur Visual C++, mais le mot clé n’est pas disponible comme symbole défini par l’utilisateur.
+
+L’exemple suivant génère l’erreur C4237 :
+
+```
+// C4237.cpp
+// compile with: /W1 /c
+int export;   // C4237
 ```

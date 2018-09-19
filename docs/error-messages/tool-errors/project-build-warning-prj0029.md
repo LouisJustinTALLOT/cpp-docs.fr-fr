@@ -1,5 +1,5 @@
 ---
-title: PRJ0029 d’avertissement de génération de projet | Documents Microsoft
+title: Avertissement de génération PRJ0029 de projet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6e7b738785d9cfacfb2128e03d3a3123da4fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 854120bf6021295348ff2e28b36f7b44007017b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320217"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026006"
 ---
 # <a name="project-build-warning-prj0029"></a>Avertissement de génération de projet PRJ0029
-La propriété 'Sorties' de l’étape de génération personnalisée au niveau du projet n’est pas définie. L’étape de génération personnalisée va être ignorée.  
-  
- Une étape de génération personnalisée n’a pas été exécutée car aucune sortie n’a été spécifié.  
-  
- Pour résoudre cette erreur, effectuez le des opérations suivantes :  
-  
--   Excluez l’étape de génération personnalisée de la build.  
-  
--   Ajouter une sortie.  
-  
--   Supprimez le contenu de la commande de l’étape de génération personnalisée.
+
+La propriété 'Sorties' de l’étape de génération personnalisée au niveau du projet n’est pas définie. L’étape de génération personnalisée va être ignorée.
+
+Une étape de génération personnalisée n’a pas été exécutée car aucune sortie n’a été spécifié.
+
+Pour résoudre cette erreur, procédez comme suit :
+
+- Exclure l’étape de génération personnalisée de la génération.
+
+- Ajouter une sortie.
+
+- Supprimez le contenu de la commande de l’étape de génération personnalisée.

@@ -1,5 +1,5 @@
 ---
-title: LNK1103 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK1103 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8211ef39b3524dbb1c0c3e8d25cabb84ee5f6b5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3abb7472e37edbec80381bbf6b4329d9da718d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298218"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095425"
 ---
 # <a name="linker-tools-error-lnk1103"></a>Erreur des outils Éditeur de liens LNK1103
-informations de débogage endommagées ; recompilez le module  
-  
- Cette erreur peut être provoquée, car la compilation a été interrompue avant la création d’un fichier d’objet valide.  
-  
- Recompilez le fichier objet donné. Si la recompilation ne résout pas le problème, notez les circonstances de l’erreur, essayez d’isoler le problème et de créer un cas de test reproductible. Recherchez le fichier d’aide du support technique ou la section de support technique dans un de vos manuels.
+
+informations de débogage endommagées ; recompilez le module
+
+Cette erreur peut être provoquée, car la compilation a été interrompue avant la création d’un fichier d’objet valide.
+
+Recompilez le fichier objet donné. Si la recompilation ne résout pas le problème, notez les circonstances de l’erreur, essayez d’isoler le problème et créer un cas de test reproductible. Consultez ensuite le fichier d’aide du support technique ou de la section support technique dans un de vos manuels.

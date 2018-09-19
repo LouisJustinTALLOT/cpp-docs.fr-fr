@@ -16,107 +16,111 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a415f695f512a9d6263025fc6e45d5f9df754f80
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 338cd25d68d68a00aa931b94e06afa4968f19985
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403905"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073276"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
-**Section spécifique à Microsoft**  
-  
- Copie un `BSTR` dans le `BSTR` encapsulé par un **_**`bstr_t`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void Assign(  
-   BSTR s  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *s*  
- `BSTR` à copier dans le `BSTR` encapsulé par un `_bstr_t`.  
-  
-## <a name="remarks"></a>Notes  
- **Affecter** effectue une copie binaire, ce qui signifie que toute la durée de la `BSTR` est copiée, indépendamment du contenu.  
-  
-## <a name="example"></a>Exemple  
-  
-```cpp 
-// _bstr_t_Assign.cpp  
-  
-#include <comdef.h>  
-#include <stdio.h>  
-  
-int main()  
-{  
-    // creates a _bstr_t wrapper  
-    _bstr_t bstrWrapper;   
-  
-    // creates BSTR and attaches to it  
-    bstrWrapper = "some text";  
-    wprintf_s(L"bstrWrapper = %s\n",  
-              static_cast<wchar_t*>(bstrWrapper));  
-  
-    // bstrWrapper releases its BSTR  
-    BSTR bstr = bstrWrapper.Detach();  
-    wprintf_s(L"bstrWrapper = %s\n",   
-              static_cast<wchar_t*>(bstrWrapper));  
-    // "some text"   
-    wprintf_s(L"bstr = %s\n", bstr);  
-  
-    bstrWrapper.Attach(SysAllocString(OLESTR("SysAllocedString")));  
-    wprintf_s(L"bstrWrapper = %s\n",   
-              static_cast<wchar_t*>(bstrWrapper));  
-  
-    // assign a BSTR to our _bstr_t  
-    bstrWrapper.Assign(bstr);  
-    wprintf_s(L"bstrWrapper = %s\n",   
-              static_cast<wchar_t*>(bstrWrapper));  
-  
-    // done with BSTR, do manual cleanup  
-    SysFreeString(bstr);  
-  
-    // resuse bstr  
-    bstr= SysAllocString(OLESTR("Yet another string"));  
-    // two wrappers, one BSTR   
-    _bstr_t bstrWrapper2 = bstrWrapper;     
-  
-    *bstrWrapper.GetAddress() = bstr;  
-  
-    // bstrWrapper and bstrWrapper2 do still point to BSTR  
-    bstr = 0;     
-    wprintf_s(L"bstrWrapper = %s\n",   
-              static_cast<wchar_t*>(bstrWrapper));  
-    wprintf_s(L"bstrWrapper2 = %s\n",   
-              static_cast<wchar_t*>(bstrWrapper2));  
-  
-    // new value into BSTR  
-    _snwprintf_s(bstrWrapper.GetBSTR(), 100, bstrWrapper.length(),  
-                 L"changing BSTR");     
-    wprintf_s(L"bstrWrapper = %s\n",   
-              static_cast<wchar_t*>(bstrWrapper));  
-    wprintf_s(L"bstrWrapper2 = %s\n",   
-              static_cast<wchar_t*>(bstrWrapper2));  
-}  
-```  
-  
-```Output  
-bstrWrapper = some text  
-bstrWrapper = (null)  
-bstr = some text  
-bstrWrapper = SysAllocedString  
-bstrWrapper = some text  
-bstrWrapper = Yet another string  
-bstrWrapper2 = some text  
-bstrWrapper = changing BSTR  
-bstrWrapper2 = some text  
-```  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [_bstr_t, classe](../cpp/bstr-t-class.md)
+
+**Section spécifique à Microsoft**
+
+Copie un `BSTR` dans le `BSTR` encapsulé par un **_**`bstr_t`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void Assign(
+   BSTR s
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*s*<br/>
+`BSTR` à copier dans le `BSTR` encapsulé par un `_bstr_t`.
+
+## <a name="remarks"></a>Notes
+
+**Affecter** effectue une copie binaire, ce qui signifie que toute la durée de la `BSTR` est copiée, indépendamment du contenu.
+
+## <a name="example"></a>Exemple
+
+```cpp
+// _bstr_t_Assign.cpp
+
+#include <comdef.h>
+#include <stdio.h>
+
+int main()
+{
+    // creates a _bstr_t wrapper
+    _bstr_t bstrWrapper;
+
+    // creates BSTR and attaches to it
+    bstrWrapper = "some text";
+    wprintf_s(L"bstrWrapper = %s\n",
+              static_cast<wchar_t*>(bstrWrapper));
+
+    // bstrWrapper releases its BSTR
+    BSTR bstr = bstrWrapper.Detach();
+    wprintf_s(L"bstrWrapper = %s\n",
+              static_cast<wchar_t*>(bstrWrapper));
+    // "some text"
+    wprintf_s(L"bstr = %s\n", bstr);
+
+    bstrWrapper.Attach(SysAllocString(OLESTR("SysAllocedString")));
+    wprintf_s(L"bstrWrapper = %s\n",
+              static_cast<wchar_t*>(bstrWrapper));
+
+    // assign a BSTR to our _bstr_t
+    bstrWrapper.Assign(bstr);
+    wprintf_s(L"bstrWrapper = %s\n",
+              static_cast<wchar_t*>(bstrWrapper));
+
+    // done with BSTR, do manual cleanup
+    SysFreeString(bstr);
+
+    // resuse bstr
+    bstr= SysAllocString(OLESTR("Yet another string"));
+    // two wrappers, one BSTR
+    _bstr_t bstrWrapper2 = bstrWrapper;
+
+    *bstrWrapper.GetAddress() = bstr;
+
+    // bstrWrapper and bstrWrapper2 do still point to BSTR
+    bstr = 0;
+    wprintf_s(L"bstrWrapper = %s\n",
+              static_cast<wchar_t*>(bstrWrapper));
+    wprintf_s(L"bstrWrapper2 = %s\n",
+              static_cast<wchar_t*>(bstrWrapper2));
+
+    // new value into BSTR
+    _snwprintf_s(bstrWrapper.GetBSTR(), 100, bstrWrapper.length(),
+                 L"changing BSTR");
+    wprintf_s(L"bstrWrapper = %s\n",
+              static_cast<wchar_t*>(bstrWrapper));
+    wprintf_s(L"bstrWrapper2 = %s\n",
+              static_cast<wchar_t*>(bstrWrapper2));
+}
+```
+
+```Output
+bstrWrapper = some text
+bstrWrapper = (null)
+bstr = some text
+bstrWrapper = SysAllocedString
+bstrWrapper = some text
+bstrWrapper = Yet another string
+bstrWrapper2 = some text
+bstrWrapper = changing BSTR
+bstrWrapper2 = some text
+```
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[_bstr_t, classe](../cpp/bstr-t-class.md)

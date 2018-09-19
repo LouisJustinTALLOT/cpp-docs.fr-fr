@@ -1,5 +1,5 @@
 ---
-title: LNK2026 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK2026 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b4a296379ab6e4ac8ad3b70668508303e2779d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b76c5533e79c75d06594d42464ca32104eb065ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299576"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046223"
 ---
 # <a name="linker-tools-error-lnk2026"></a>Erreur des outils Éditeur de liens LNK2026
-module unsafe pour l’image SAFESEH  
-  
- [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) a été spécifié, mais un module n’était pas compatible avec la fonctionnalité de gestion sécurisée des exceptions. Si vous souhaitez utiliser ce module avec **/SAFESEH**, vous devez recompiler le module.
+
+module unsafe pour l’image SAFESEH
+
+[/ SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) a été spécifié, mais un module n’était pas compatible avec la fonctionnalité sécurisée des exceptions. Si vous souhaitez utiliser ce module avec **/SAFESEH**, vous devez recompiler le module.

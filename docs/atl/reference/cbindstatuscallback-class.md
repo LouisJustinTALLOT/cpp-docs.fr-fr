@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d18a6b5eae55373be9ddc71a4d856547bf420c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a816d10a0cb9665938e77ae8c649464b7b6768c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758428"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108480"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback, classe
 
@@ -57,17 +57,17 @@ Cette classe implémente l'interface `IBindStatusCallback`.
 
 ```
 template <class T,
-    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>  
+    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>
 class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadModel::ThreadModelNoCS>,
     public IBindStatusCallbackImpl<T>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe qui contient la fonction est appelée lorsque les données sont reçues.
 
-*nBindFlags*  
+*nBindFlags*<br/>
 Spécifie les indicateurs de liaison qui sont retournés par [GetBindInfo](#getbindinfo). L’implémentation par défaut définit la liaison asynchrone récupère la dernière version de l’objet de données/et ne stocke pas les données récupérées dans le cache disque.
 
 ## <a name="members"></a>Membres
@@ -162,7 +162,7 @@ Libère toutes les ressources allouées.
 Crée un `CBindStatusCallback` objet et appelle `StartAsyncDownload` pour démarrer le téléchargement des données de façon asynchrone à partir de l’URL spécifiée.
 
 ```
-static HRESULT Download(  
+static HRESULT Download(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -172,21 +172,21 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>Paramètres
 
-*pT*  
+*pT*<br/>
 [in] Pointeur vers l’objet qui demande le transfert de données asynchrone. Le `CBindStatusCallback` transformer en modèle d’objet de cette classe de l’objet.
 
-*pFunc*  
+*pFunc*<br/>
 [in] Pointeur vers la fonction qui reçoit les données sont lues. La fonction est un membre de classe de l’objet de type `T`. Consultez [StartAsyncDownload](#startasyncdownload) pour la syntaxe et un exemple.
 
-*bstrURL*  
+*bstrURL*<br/>
 [in] L’URL pour obtenir des données à partir de. Peut être n’importe quel nom de fichier ou URL valide. Ne peut pas être Null. Exemple :
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in] Le `IUnknown` du conteneur. NULL par défaut.
 
-*bRelative*  
+*bRelative*<br/>
 [in] Un indicateur qui spécifie si l’URL est relative ou absolue. FALSE par défaut, ce qui signifie que l’URL est absolue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -209,7 +209,7 @@ STDMETHOD(GetBindInfo)(
 
 ### <a name="parameters"></a>Paramètres
 
-*pgrfBSCF*  
+*pgrfBSCF*<br/>
 [out] Pointeur vers les valeurs d’énumération BINDF indiquant comment l’opération de liaison doit se produire. Par défaut, définie avec les valeurs d’énumération suivantes :
 
 Téléchargement asynchrone BINDF_ASYNCHRONOUS.
@@ -220,7 +220,7 @@ L’opération de liaison BINDF_GETNEWESTVERSION doit récupérer la version la 
 
 BINDF_NOWRITECACHE l’opération de liaison ne doit pas stocker les données dans le cache disque récupérées.
 
-*pbindinfo*  
+*pbindinfo*<br/>
 [in, out] Un pointeur vers le `BINDINFO` structure, ce qui donne plus d’informations sur la façon dont l’objet souhaite liaison se produise.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -241,7 +241,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="parameters"></a>Paramètres
 
-*pnPriority*  
+*pnPriority*<br/>
 [out] Adresse de la **LONG** variable qui, en cas de réussite, reçoit la priorité.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -284,12 +284,12 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 La fonction vers laquelle pointe `m_pFunc` est un membre de classe de l’objet et présente la syntaxe suivante :
 
-```  
-void Function_Name(  
-   CBindStatusCallback<T>* pbsc,  
-   BYTE* pBytes,  
-   DWORD dwSize  
-   );  
+```
+void Function_Name(
+   CBindStatusCallback<T>* pbsc,
+   BYTE* pBytes,
+   DWORD dwSize
+   );
 ```
 
 ##  <a name="m_pt"></a>  CBindStatusCallback::m_pT
@@ -357,7 +357,7 @@ Initialisé dans `OnDataAvailable` à partir de la `STGMEDIUM` structure lors de
 Les appels de système de moniker asynchrone `OnDataAvailable` pour fournir des données à l’objet qu’il est disponible.
 
 ```
-STDMETHOD(  
+STDMETHOD(
     OnDataAvailable)(DWORD grfBSCF,
     DWORD dwSize,
     FORMATETC* /* pformatetc */,
@@ -366,16 +366,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Paramètres
 
-*grfBSCF*  
+*grfBSCF*<br/>
 [in] Une valeur d’énumération BSCF. Un ou plusieurs des opérations suivantes : BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION ou BSCF_LASTDATANOTIFICATION.
 
-*dwSize*  
+*dwSize*<br/>
 [in] La quantité cumulée (en octets) de données disponibles depuis le début de la liaison. Peut être égal à zéro, indiquant que la quantité de données n’est pas pertinente ou qu’aucune quantité spécifique est devenue disponible.
 
-*pFormatetc*  
+*pFormatetc*<br/>
 [in] Pointeur vers le [FORMATETC](/windows/desktop/com/the-formatetc-structure) structure qui contient le format des données disponibles. S’il n’existe aucun format, peut être CF_NULL.
 
-*pstgmed*  
+*pstgmed*<br/>
 [in] Pointeur vers le [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure) structure qui contient les données réelles désormais disponibles.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -396,7 +396,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwReserved*  
+*dwReserved*<br/>
 Réservé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -413,10 +413,10 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 
 ### <a name="parameters"></a>Paramètres
 
-*riid*  
+*riid*<br/>
 Identificateur d’interface de l’interface demandée. Non utilisé.
 
-*pUnk*  
+*pUnk*<br/>
 Adresse de l’interface IUnknown. Non utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -437,16 +437,16 @@ STDMETHOD(OnProgress)(
 
 ### <a name="parameters"></a>Paramètres
 
-*ulProgress*  
+*ulProgress*<br/>
 Entier long non signé. Non utilisé.
 
-*ulProgressMax*  
+*ulProgressMax*<br/>
 Entier long non signé n’est pas utilisé.
 
-*ulStatusCode*  
+*ulStatusCode*<br/>
 Entier long non signé. Non utilisé.
 
-*szStatusText*  
+*szStatusText*<br/>
 Adresse d’une valeur de chaîne. Non utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -463,10 +463,10 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwReserved*  
+*dwReserved*<br/>
 Réservé à un usage ultérieur.
 
-*pBinding*  
+*pBinding*<br/>
 [in] Adresse de l’interface IBinding d’actuel une opération de liaison. Cela ne peut pas être NULL. Le client doit appeler AddRef sur ce pointeur pour conserver une référence à l’objet de liaison.
 
 ##  <a name="onstopbinding"></a>  CBindStatusCallback::OnStopBinding
@@ -479,11 +479,11 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Paramètres
 
-*HRESULT*  
+*HRESULT*<br/>
 Code d’état retourné à partir de l’opération de liaison.
 
-szStatusText  
-Adresse d’une valeur de chaîne n’est pas utilisé.
+*szError*<br/>
+Adresse d’une valeur de chaîne. Non utilisé.
 
 ### <a name="remarks"></a>Notes
 
@@ -494,7 +494,7 @@ Appelé par le moniker asynchrone fourni par le système pour indiquer la fin de
 Démarre le téléchargement des données de façon asynchrone à partir de l’URL spécifiée.
 
 ```
-HRESULT StartAsyncDownload(  
+HRESULT StartAsyncDownload(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -504,21 +504,21 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>Paramètres
 
-*pT*  
+*pT*<br/>
 [in] Pointeur vers l’objet qui demande le transfert de données asynchrone. Le `CBindStatusCallback` transformer en modèle d’objet de cette classe de l’objet.
 
-*pFunc*  
+*pFunc*<br/>
 [in] Pointeur vers la fonction qui reçoit les données en cours de lecture. La fonction est un membre de classe de l’objet de type `T`. Consultez **remarques** pour la syntaxe et un exemple.
 
-*bstrURL*  
+*bstrURL*<br/>
 [in] L’URL pour obtenir des données à partir de. Peut être n’importe quel nom de fichier ou URL valide. Ne peut pas être Null. Exemple :
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in] Le `IUnknown` du conteneur. NULL par défaut.
 
-*bRelative*  
+*bRelative*<br/>
 [in] Un indicateur qui spécifie si l’URL est relative ou absolue. FALSE par défaut, ce qui signifie que l’URL est absolue.
 
 ### <a name="return-value"></a>Valeur de retour

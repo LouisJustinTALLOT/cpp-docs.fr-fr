@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33eac78dc871dd2a9869452bc829150c3356fd0a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6861f19e6b785ac72edec54577b92dea0c307bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100602"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel, classe
 
@@ -99,7 +99,7 @@ En plus de `AutoCriticalSection`, vous pouvez utiliser la **typedef** nom [Criti
 
 Le code suivant est modélisé d’après [CComObjectRootEx](ccomobjectrootex-class.md)et montre `AutoCriticalSection` utilisé dans un environnement de thread.
 
-```cpp  
+```cpp
 template<class ThreadModel>
 class CMyAutoCritClass
 {
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*  
+*p*<br/>
 [in] Pointeur vers la variable à décrémenter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -196,7 +196,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*  
+*p*<br/>
 [in] Pointeur vers la variable à incrémenter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -233,7 +233,7 @@ Consultez [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComSingleThreadModel, classe](ccomsinglethreadmodel-class.md)   
-[Ccomautocriticalsection, classe](ccomautocriticalsection-class.md)   
-[CComCriticalSection, classe](ccomcriticalsection-class.md)   
+[CComSingleThreadModel, classe](ccomsinglethreadmodel-class.md)<br/>
+[CComAutoCriticalSection, classe](ccomautocriticalsection-class.md)<br/>
+[CComCriticalSection, classe](ccomcriticalsection-class.md)<br/>
 [Vue d’ensemble de la classe](../atl-class-overview.md)

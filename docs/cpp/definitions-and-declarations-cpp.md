@@ -12,38 +12,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54754e465f3a153b769b7619ff2bfb70a1872907
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 623824c608832e07d342b6093968f822251e2342
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699613"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075655"
 ---
 # <a name="definitions-and-declarations-c"></a>Définitions et déclarations (C++)
+
 **Section spécifique à Microsoft**
 
- L’interface DLL fait référence à tous les éléments (fonctions et données) qui sont connus pour être exportés par un programme dans le système ; Autrement dit, tous les éléments qui sont déclarés comme **dllimport** ou **dllexport**. Toutes les déclarations incluses dans l’interface DLL doivent spécifier soit le **dllimport** ou **dllexport** attribut. Toutefois, la définition doit spécifier uniquement la **dllexport** attribut. Par exemple, la définition de fonction suivante génère une erreur de compilation :
+L’interface DLL fait référence à tous les éléments (fonctions et données) qui sont connus pour être exportés par un programme dans le système ; Autrement dit, tous les éléments qui sont déclarés comme **dllimport** ou **dllexport**. Toutes les déclarations incluses dans l’interface DLL doivent spécifier soit le **dllimport** ou **dllexport** attribut. Toutefois, la définition doit spécifier uniquement la **dllexport** attribut. Par exemple, la définition de fonction suivante génère une erreur de compilation :
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
                                        // prohibited on definition.
-   return 1;  
+   return 1;
 }
 ```
 
- Le code suivant génère aussi une erreur :
+Le code suivant génère aussi une erreur :
 
 ```
 __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 ```
 
- Mais voici la syntaxe correcte :
+Mais voici la syntaxe correcte :
 
 ```
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- L’utilisation de **dllexport** implique une définition, tandis que **dllimport** implique une déclaration. Vous devez utiliser le **extern** mot clé with **dllexport** pour forcer une déclaration ; sinon, une définition est impliquée. Les exemples suivants sont donc corrects :
+L’utilisation de **dllexport** implique une définition, tandis que **dllimport** implique une déclaration. Vous devez utiliser le **extern** mot clé with **dllexport** pour forcer une déclaration ; sinon, une définition est impliquée. Les exemples suivants sont donc corrects :
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -53,7 +54,7 @@ extern DllExport int k; // These are both correct and imply a
 DllImport int j;        // declaration.
 ```
 
- Les exemples suivants clarifient l'exemple précédent :
+Les exemples suivants clarifient l'exemple précédent :
 
 ```
 static __declspec( dllimport ) int l; // Error; not declared extern.
@@ -77,4 +78,5 @@ void func() {
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
- [dllexport, dllimport](../cpp/dllexport-dllimport.md)
+
+[dllexport, dllimport](../cpp/dllexport-dllimport.md)

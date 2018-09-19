@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2459 | Documents Microsoft
+title: Erreur du compilateur C2459 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6013720b55892ffd34e1faf132a69842e4bceb50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b67c5ba4c714b096da58b1e4d837840dc6b5fd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113212"
 ---
 # <a name="compiler-error-c2459"></a>Erreur du compilateur C2459
-'identificateur' : est défini ; Impossible d’ajouter comme membre anonyme  
-  
- Une classe, structure ou union est redéfinie dans sa propre portée par un membre d’une union anonyme.  
-  
- L’exemple suivant génère l’erreur C2459 :  
-  
-```  
-// C2459.cpp  
-// compile with: /c  
-class C {  
-   union { int C; };   // C2459  
-   union { int D; };  
-};  
+
+'identificateur' : est défini ; Impossible d’ajouter comme membre anonyme
+
+Une classe, une structure ou une union est redéfinie dans sa propre portée par un membre d’une union anonyme.
+
+L’exemple suivant génère l’erreur C2459 :
+
+```
+// C2459.cpp
+// compile with: /c
+class C {
+   union { int C; };   // C2459
+   union { int D; };
+};
 ```

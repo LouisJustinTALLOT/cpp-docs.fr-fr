@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476dd8b3eeb7174c7584a58ccb5d53bf251adbcc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6a2e6c334016c79f02dc43e9790d7dfc4645212
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43768006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075616"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programmation avec CComBSTR (ATL)
 
@@ -88,8 +88,8 @@ Notez que le même code ne serait pas provoquer une fuite si le paramètre de la
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepts](../atl/active-template-library-atl-concepts.md)   
-[CStringT, classe](../atl-mfc-shared/reference/cstringt-class.md)   
-[wstring](../standard-library/basic-string-class.md)   
+[Concepts](../atl/active-template-library-atl-concepts.md)<br/>
+[CStringT, classe](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[wstring](../standard-library/basic-string-class.md)<br/>
 [Macros de conversion de chaînes](../atl/reference/string-conversion-macros.md)
 

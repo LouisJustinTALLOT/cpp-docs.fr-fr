@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3034 | Documents Microsoft
+title: Erreur du compilateur C3034 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41918704bb00df2950079c80d2615e63fdfb4525
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e3d96e975450241a5baae60758beadfe40dbe5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091456"
 ---
 # <a name="compiler-error-c3034"></a>Erreur du compilateur C3034
-La directive OpenMP 'directive1' ne peut pas être directement imbriquée dans la directive 'directive2'  
-  
- Certaines directives ne peuvent pas être imbriquées. Pour corriger cette erreur, vous pouvez fusionner les instructions des deux directives dans le bloc d'une directive ou construire des directives consécutives.  
-  
- L’exemple suivant génère l’erreur C3034 :  
-  
-```  
-// C3034.cpp  
-// compile with: /openmp /link vcomps.lib  
-int main() {  
-  
-   #pragma omp single  
-   {  
-      #pragma omp single   // C3034   
-      {  
-      ;  
-      }  
-   }  
-  
-   // Two consecutive single clauses are OK.  
-   #pragma omp single  
-   {  
-   }  
-  
-   #pragma omp single  
-   {  
-   }  
-}  
+
+La directive OpenMP 'directive1' ne peut pas être directement imbriquée dans la directive 'directive2'
+
+Certaines directives ne peuvent pas être imbriquées. Pour corriger cette erreur, vous pouvez fusionner les instructions des deux directives dans le bloc d'une directive ou construire des directives consécutives.
+
+L’exemple suivant génère l’erreur C3034 :
+
+```
+// C3034.cpp
+// compile with: /openmp /link vcomps.lib
+int main() {
+
+   #pragma omp single
+   {
+      #pragma omp single   // C3034
+      {
+      ;
+      }
+   }
+
+   // Two consecutive single clauses are OK.
+   #pragma omp single
+   {
+   }
+
+   #pragma omp single
+   {
+   }
+}
 ```

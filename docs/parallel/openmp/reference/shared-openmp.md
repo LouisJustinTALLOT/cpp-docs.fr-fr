@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 078d4b01d2c797fa11c3603c79a341f75e11f18c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115474"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
 Spécifie qu’une ou plusieurs variables doivent être partagés entre tous les threads.  
@@ -32,11 +32,10 @@ Spécifie qu’une ou plusieurs variables doivent être partagés entre tous les
 shared(var)  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+### <a name="parameters"></a>Paramètres
   
- `var`  
- Une ou plusieurs variables à partager. Si plusieurs variables est spécifié, séparez les noms de variables par une virgule.  
+*var*<br/>
+Une ou plusieurs variables à partager. Si plusieurs variables est spécifié, séparez les noms de variables par une virgule.  
   
 ## <a name="remarks"></a>Notes  
  Une autre façon de partager des variables entre les threads est avec la [copyprivate](../../../parallel/openmp/reference/copyprivate.md) clause.  

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2311 | Documents Microsoft
+title: Erreur du compilateur C2311 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa68a79b8255b1e64884ec7da1d1847021b8bc2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f19e2a1b41c499605f22575f934b3d4872457011
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065099"
 ---
 # <a name="compiler-error-c2311"></a>Erreur du compilateur C2311
-'exception' : intercepté par '...' à la ligne  
-  
- Le gestionnaire catch pour les points de suspension (...) doit être le dernier gestionnaire pour une clause throw.  
-  
- L’exemple suivant génère C2311 :  
-  
-```  
-// C2311.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "ooops!";  
-   }  
-   catch( ... ) {}  
-   catch( int ) {}   // C2311  ellipsis handler not last catch  
-}  
+
+'exception' : intercepté par '...' à la ligne
+
+Le gestionnaire catch pour les points de suspension (...) doit être le dernier gestionnaire pour une clause throw.
+
+L’exemple suivant génère C2311 :
+
+```
+// C2311.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "ooops!";
+   }
+   catch( ... ) {}
+   catch( int ) {}   // C2311  ellipsis handler not last catch
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2790 | Documents Microsoft
+title: Erreur du compilateur C2790 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f1c90fed93666fad7513e2b4186a5baa2aa406
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc2c6b238fab7e42c0754e613b62756a86a5bb31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232815"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069571"
 ---
 # <a name="compiler-error-c2790"></a>Erreur du compilateur C2790
-'super' : ce mot clé peut être utilisé uniquement dans le corps de la fonction membre de classe  
-  
- Ce message d’erreur apparaît si l’utilisateur tente utilise le mot clé [super](../../cpp/super.md) en dehors du contexte d’une fonction membre.  
-  
- L’exemple suivant génère l’erreur C2790 :  
-  
-```  
-// C2790.cpp  
-void f() {  
-   __super::g();   // C2790  
-}  
+
+'super' : ce mot clé peut uniquement être utilisé dans le corps de fonction membre de classe
+
+Ce message d’erreur apparaît si l’utilisateur tente utilise le mot clé [super](../../cpp/super.md) en dehors du contexte d’une fonction membre.
+
+L’exemple suivant génère l’erreur C2790 :
+
+```
+// C2790.cpp
+void f() {
+   __super::g();   // C2790
+}
 ```

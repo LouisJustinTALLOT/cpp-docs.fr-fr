@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e773fd8e2c38311a1c36aff4c97199cbebb503e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fb94a54c4f99b79e3be742c5b1448151cff140c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406479"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116787"
 ---
 # <a name="function-template-instantiation"></a>Instanciation du modèle de fonction
-Lorsqu'un modèle de fonction est appelé pour la première fois pour chaque type, le compilateur crée une instanciation. Chaque instanciation est une version de la fonction basée sur un modèle spécialisée pour le type. Cette instanciation est appelée chaque fois que la fonction est utilisée pour le type. Si vous avez plusieurs instanciations identiques, même dans différents modules, une seule copie de l'instanciation finira dans le fichier exécutable.  
-  
- La conversion des arguments de fonction est autorisée dans les modèles de fonction pour toute paire argument-paramètre où le paramètre ne dépend pas d’un argument template.  
-  
- Les modèles de fonction peuvent être instanciés de manière explicite en déclarant le modèle avec un type particulier comme argument. Par exemple, le code suivant est autorisé :  
-  
+
+Lorsqu'un modèle de fonction est appelé pour la première fois pour chaque type, le compilateur crée une instanciation. Chaque instanciation est une version de la fonction basée sur un modèle spécialisée pour le type. Cette instanciation est appelée chaque fois que la fonction est utilisée pour le type. Si vous avez plusieurs instanciations identiques, même dans différents modules, une seule copie de l'instanciation finira dans le fichier exécutable.
+
+La conversion des arguments de fonction est autorisée dans les modèles de fonction pour toute paire argument-paramètre où le paramètre ne dépend pas d’un argument template.
+
+Les modèles de fonction peuvent être instanciés de manière explicite en déclarant le modèle avec un type particulier comme argument. Par exemple, le code suivant est autorisé :
+
 ```cpp
-// function_template_instantiation.cpp  
-template<class T> void f(T) { }  
-  
-// Instantiate f with the explicitly specified template.  
-// argument 'int'  
-//  
-template void f<int> (int);  
-  
-// Instantiate f with the deduced template argument 'char'.  
-template void f(char);  
-int main()  
-{  
-}  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Modèles de fonctions](../cpp/function-templates.md)
+// function_template_instantiation.cpp
+template<class T> void f(T) { }
+
+// Instantiate f with the explicitly specified template.
+// argument 'int'
+//
+template void f<int> (int);
+
+// Instantiate f with the deduced template argument 'char'.
+template void f(char);
+int main()
+{
+}
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Modèles de fonctions](../cpp/function-templates.md)

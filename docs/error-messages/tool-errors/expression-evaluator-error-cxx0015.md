@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0015 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0015 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945dbda4759fa2989acb0411d1a3216a5e9a036c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa37a2cc7208063ce4cfa786de196842ab42b45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297607"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050814"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Évaluateur d'expression, erreur CXX0015
-expression trop complexe (dépassement de capacité de pile)  
-  
- L’expression est trop complexe ou imbriquées trop profondément pour la quantité de stockage disponible pour l’évaluateur d’expression C.  
-  
- Dépassement de capacité se produit généralement en raison du trop grand nombre de calculs en attente.  
-  
- Réorganiser l’expression afin que chaque composant de l’expression peut être évaluée, tel qu’il est trouvé, au lieu de devoir attendre d’autres parties de l’expression doit être calculée.  
-  
- Fractionnez l’expression en plusieurs commandes.  
-  
- Cette erreur est identique à CAN0015.
+
+expression trop complexe (débordement de pile)
+
+L’expression est trop complexe ou imbriquées trop profondément pour la quantité de stockage disponible pour l’évaluateur d’expression de C.
+
+Dépassement de capacité se produit généralement en raison du trop grand nombre de calculs en attente.
+
+Réorganiser l’expression afin que chaque composant de l’expression peut être évaluée tel qu’il est trouvé, au lieu de devoir attendre d’autres parties de l’expression doit être calculée.
+
+Fractionnez l’expression en plusieurs commandes.
+
+Cette erreur est identique à CAN0015.

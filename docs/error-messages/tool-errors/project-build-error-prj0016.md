@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c07de9e766b7c2126d0ce4c8d1daed631a8355c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6604bc0bf27b3d0192f602c4df88e5f01e4a161
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135956"
 ---
 # <a name="project-build-error-prj0016"></a>Erreur de génération de projet PRJ0016
-Les paramètres de sécurité utilisateur empêchent la création du processus. Ces paramètres sont requis pour la génération.  
-  
- Vous êtes connecté en tant qu’utilisateur qui ne dispose pas des autorisations nécessaires pour créer des processus à l’aide d’un processus. Vous devez modifier les niveaux d’autorisation pour ce compte d’utilisateur, ou contactez votre administrateur de compte.  
-  
- Cette erreur peut également se produire si la valeur de la clé de Registre suivante :  
-  
- \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun  
-  
- Pour résoudre cette erreur, supprimez la clé RestrictRun. Si cette clé de Registre est nécessaire, ajoutez **vcspawn.exe** à la liste des entrées dans la clé.  
-  
- Une autre cause de cette erreur est que votre paramètre de stratégie n’inclut pas VCSpawn.exe sous la clé de Registre HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun comme programme Windows autorisé pour ce compte d’utilisateur.  
-  
- Pour plus d’informations, consultez :  
-  
--   Base de connaissances l’article 324153, qui est disponible sur [ http://support.microsoft.com/default.aspx?scid=kb; en-us ; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
-  
--   [Respect des paramètres de stratégie système](https://msdn.microsoft.com/library/aa372139), la section sur « Exécuter uniquement Windows applications autorisées ».
+
+Les paramètres de sécurité utilisateur empêchent la création du processus. Ces paramètres sont requis pour la génération.
+
+Vous êtes connecté en tant qu’utilisateur qui ne dispose pas des autorisations nécessaires pour créer des processus à l’aide d’un processus. Vous devez modifier les niveaux d’autorisation pour ce compte d’utilisateur, ou contactez votre administrateur de compte.
+
+Cette erreur peut également se produire si la valeur de la clé de Registre suivante :
+
+\\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun
+
+Pour résoudre cette erreur, supprimez la clé RestrictRun. Si cette clé de Registre est nécessaire, ajoutez **vcspawn.exe** à la liste des entrées dans la clé.
+
+Une autre cause de cette erreur est que votre paramètre de stratégie n’inclut pas VCSpawn.exe sous la clé de Registre HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun comme programme Windows autorisé pour ce compte d’utilisateur.
+
+Pour plus d’informations, consultez :
+
+- Base de connaissances l’article 324153, qui est disponible sur [ http://support.microsoft.com/default.aspx?scid=kb; en-us ; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).
+
+- [Respect des paramètres de stratégie système](https://msdn.microsoft.com/library/aa372139), la section sur « Exécuter uniquement Windows applications autorisées ».

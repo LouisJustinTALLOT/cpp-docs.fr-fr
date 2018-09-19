@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3dfc57e1d6af11628b37823f2452ee2b65f8a7f
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 9a1fc13df342b4282ee63c185205c2f2b12ca003
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110612"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificateurs Microsoft spécifiques
-Cette section décrit les extensions C++ spécifiques à Microsoft dans les domaines suivants :  
-  
--   [Adressage basé sur](based-addressing.md), la pratique consistant à l’aide d’un pointeur comme base à partir de laquelle d’autres pointeurs peuvent être décalées  
-  
--   [Conventions d’appel de fonction](calling-conventions.md)  
-  
--   Attributs étendus de stockage-classe déclarés avec le [__declspec](declspec.md) mot clé  
-  
--   Le [__w64](w64.md) mot clé  
 
-### <a name="microsoft-specific-keywords"></a>Mots clés spécifiques à Microsoft  
+Cette section décrit les extensions C++ spécifiques à Microsoft dans les domaines suivants :
 
-Un grand nombre des mots clés spécifiques à Microsoft peuvent être utilisés pour modifier des déclarateurs afin de former des types dérivés. Pour plus d’informations sur les déclarateurs, consultez [déclarateurs](overview-of-declarators.md).  
+- [Adressage basé sur](based-addressing.md), la pratique consistant à l’aide d’un pointeur comme base à partir de laquelle d’autres pointeurs peuvent être décalées
+
+- [Conventions d’appel de fonction](calling-conventions.md)
+
+- Attributs étendus de stockage-classe déclarés avec le [__declspec](declspec.md) mot clé
+
+- Le [__w64](w64.md) mot clé
+
+### <a name="microsoft-specific-keywords"></a>Mots clés spécifiques à Microsoft
+
+Un grand nombre des mots clés spécifiques à Microsoft peuvent être utilisés pour modifier des déclarateurs afin de former des types dérivés. Pour plus d’informations sur les déclarateurs, consultez [déclarateurs](overview-of-declarators.md).
 
 |Mot clé|Signification|Utilisé pour former des types dérivés ?|   
 |-------------|-------------|---------------------------------|
@@ -47,4 +48,5 @@ Un grand nombre des mots clés spécifiques à Microsoft peuvent être utilisés
 |[__vectorcall](vectorcall.md)|Le nom qui suit déclare une fonction qui utilise des registres, y compris les registres SSE lorsqu’ils sont disponibles, à la place de la pile, pour transmettre des arguments.|Oui|      
     
 ## <a name="see-also"></a>Voir aussi     
- [Informations de référence sur le langage C++](cpp-language-reference.md)
+
+[Informations de référence sur le langage C++](cpp-language-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Erreur RC2109 du compilateur de ressources | Documents Microsoft
+title: Erreur RC2109 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b5a5a01458c4117fb6cb49c967cc8ca94a77226
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ef826dcdb439a28630221bdc9b4a90e9f6f324f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319967"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072964"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Erreur RC2109 du compilateur de ressources 
-constante de la boîte de dialogue numérique attendue  
-  
- A **boîte de dialogue** instruction requiert des valeurs entières pour les *x, y, largeur*, et *hauteur* champs. Assurez-vous que ces valeurs sont placées après le **boîte de dialogue** (mot clé) et qu’ils ne sont pas négatifs.
+
+Boîte de dialogue numérique constante attendue
+
+Un **boîte de dialogue** instruction requiert des valeurs entières pour les *x, y, largeur*, et *hauteur* champs. Assurez-vous que ces valeurs sont placées après le **boîte de dialogue** mot clé et qu’ils ne sont pas négatifs.

@@ -1,5 +1,5 @@
 ---
-title: Classe Timer | Documents Microsoft
+title: Timer, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8372e32b408b97a6ac652b0ff2ff5cc19de69b54
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 42d77386350dab3e8714b00f8e55143b2a486e79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091658"
 ---
 # <a name="timer-class"></a>Classe timer
 Un bloc de messagerie `timer` est un `source_block` à cible unique, capable d'envoyer un message à sa cible après un délai spécifié ou à intervalles spécifiques.  
@@ -46,8 +46,8 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
- Type de charge utile des messages de sortie de ce bloc.  
+*T*<br/>
+Type de charge utile des messages de sortie de ce bloc.  
   
 ## <a name="members"></a>Membres  
   
@@ -70,12 +70,12 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
 |Nom|Description|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|Accepte un message qui a été offert par ce `timer` bloc de messagerie, transférer la propriété à l’appelant.|  
-|[consume_message](#consume_message)|Consomme un message précédemment offert par le `timer` et réservé par la cible, en transférant la propriété à l’appelant.|  
+|[accept_message](#accept_message)|Accepte un message qui a été proposé par ce `timer` bloc de messagerie, transfert de propriété à l’appelant.|  
+|[consume_message](#consume_message)|Consomme un message précédemment proposé par le `timer` et réservé par la cible, en transférant la propriété à l’appelant.|  
 |[link_target_notification](#link_target_notification)|Rappel qui notifie qu’une nouvelle cible a été liée à ce `timer` bloc de messagerie.|  
-|[propagate_to_any_targets](#propagate_to_any_targets)|Essaie d’offrir le message produit par le `timer` bloc pour toutes les cibles liées.|  
-|[release_message](#release_message)|Libère une réservation de message précédente. (Substitue [source_block::release_message](source-block-class.md#release_message).)|  
-|[reserve_message](#reserve_message)|Réserve un message précédemment offert par ce `timer` bloc de messagerie. (Substitue [source_block::reserve_message](source-block-class.md#reserve_message).)|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Essaie d’offrir le message généré par le `timer` bloc à toutes les cibles liées.|  
+|[release_message](#release_message)|Libère une réservation de message précédent. (Substitue [source_block::release_message](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Réserve un message précédemment proposé par ce `timer` bloc de messagerie. (Substitue [source_block::reserve_message](source-block-class.md#reserve_message).)|  
 |[resume_propagation](#resume_propagation)|Reprend la propagation après qu’une réservation a été libérée. (Substitue [source_block::resume_propagation](source-block-class.md#resume_propagation).)|  
   
 ## <a name="remarks"></a>Notes  
@@ -88,40 +88,40 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
  `timer`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
   
 ##  <a name="accept_message"></a> accept_message 
 
- Accepte un message qui a été offert par ce `timer` bloc de messagerie, transférer la propriété à l’appelant.  
+ Accepte un message qui a été proposé par ce `timer` bloc de messagerie, transfert de propriété à l’appelant.  
   
 ```
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_MsgId`  
- Le `runtime_object_identity` de le proposé `message` objet.  
+*_MsgId*<br/>
+Le `runtime_object_identity` de le proposé `message` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le `message` que l’appelant possède désormais la propriété de l’objet.  
+ Un pointeur vers le `message` que l’appelant a désormais la propriété de l’objet.  
   
 ##  <a name="consume_message"></a> consume_message 
 
- Consomme un message précédemment offert par le `timer` et réservé par la cible, en transférant la propriété à l’appelant.  
+ Consomme un message précédemment proposé par le `timer` et réservé par la cible, en transférant la propriété à l’appelant.  
   
 ```
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_MsgId`  
- Le `runtime_object_identity` de la `message` de l’objet ayant été consommé.  
+*_MsgId*<br/>
+Le `runtime_object_identity` de la `message` de l’objet ayant été consommé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le `message` que l’appelant possède désormais la propriété de l’objet.  
+ Un pointeur vers le `message` que l’appelant a désormais la propriété de l’objet.  
   
 ### <a name="remarks"></a>Notes  
  Semblable à `accept`, mais est toujours précédé par un appel à `reserve`.  
@@ -135,10 +135,10 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_PTarget`  
- Pointeur vers la cible qui vient d’être lié.  
+*_PTarget*<br/>
+Pointeur vers la cible qui vient d’être lié.  
   
-##  <a name="pause"></a> Pause 
+##  <a name="pause"></a> pause 
 
  Arrête le `timer` bloc de messagerie. S’il s’agit d’une répétition `timer` bloc de messagerie, il peut être redémarré avec une ultérieure `start()` appeler. Non extensible pour les minuteries, cela a le même effet qu’un `stop` appeler.  
   
@@ -148,7 +148,7 @@ void pause();
   
 ##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
- Essaie d’offrir le message produit par le `timer` bloc pour toutes les cibles liées.  
+ Essaie d’offrir le message généré par le `timer` bloc à toutes les cibles liées.  
   
 ```
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
@@ -156,33 +156,33 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
   
 ##  <a name="release_message"></a> release_message 
 
- Libère une réservation de message précédente.  
+ Libère une réservation de message précédent.  
   
 ```
 virtual void release_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_MsgId`  
- Le `runtime_object_identity` de la `message` de l’objet est libéré.  
+*_MsgId*<br/>
+Le `runtime_object_identity` de la `message` de l’objet qui est libéré.  
   
 ##  <a name="reserve_message"></a> reserve_message 
 
- Réserve un message précédemment offert par ce `timer` bloc de messagerie.  
+ Réserve un message précédemment proposé par ce `timer` bloc de messagerie.  
   
 ```
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_MsgId`  
- Le `runtime_object_identity` de la `message` de l’objet en cours de réservation.  
+*_MsgId*<br/>
+Le `runtime_object_identity` de la `message` de l’objet en cours de réservation.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si le message a été réservé avec succès, `false` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Après avoir `reserve` est appelée, si elle retourne `true`, `consume` ou `release` doit être appelé pour accepter ou libérer la possession du message.  
+ Après avoir `reserve` est appelée, si elle retourne `true`, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.  
   
 ##  <a name="resume_propagation"></a> resume_propagation 
 
@@ -208,7 +208,7 @@ void start();
 void stop();
 ```  
   
-##  <a name="ctor"></a> Minuterie 
+##  <a name="ctor"></a> Minuteur 
 
  Construit un `timer` bloc de messagerie qui déclenchera un message donné après un intervalle spécifié.  
   
@@ -235,23 +235,23 @@ timer(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Ms`  
- Le nombre de millisecondes qui doivent s’écouler après l’appel de démarrage pour le message spécifié à la propagation en aval.  
+*_Ms*<br/>
+Le nombre de millisecondes qui doivent s’écouler après l’appel à démarrer pour le message spécifié à être propagée en aval.  
   
- `value`  
- La valeur qui sera propagée en aval lorsque la minuterie est écoulé.  
+*valeur*<br/>
+La valeur qui sera propagée en aval lors de la minuterie s’écoule.  
   
- `_PTarget`  
- La cible à laquelle la minuterie propagera son message.  
+*_PTarget*<br/>
+La cible à laquelle le minuteur se propageront son message.  
   
- `_Repeating`  
- Si la valeur est true, indique que la minuterie déclenche périodiquement chaque `_Ms` millisecondes.  
+*_Repeating*<br/>
+Si la valeur est true, indique que la minuterie déclenche périodiquement chaque `_Ms` millisecondes.  
   
- `_Scheduler`  
- Le `Scheduler` objet dans lequel la tâche de propagation du `timer` bloc de messagerie est planifiée est planifié.  
+*_Scheduler*<br/>
+Le `Scheduler` objet dans lequel la tâche de propagation pour le `timer` bloc de messagerie est planifiée est planifié.  
   
- `_ScheduleGroup`  
- Le `ScheduleGroup` objet dans lequel la tâche de propagation du `timer` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.  
+*_ScheduleGroup*<br/>
+Le `ScheduleGroup` objet dans lequel la tâche de propagation pour le `timer` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.  
   
 ### <a name="remarks"></a>Notes  
  Le runtime utilise le planificateur par défaut si vous ne spécifiez pas le `_Scheduler` ou `_ScheduleGroup` paramètres.  

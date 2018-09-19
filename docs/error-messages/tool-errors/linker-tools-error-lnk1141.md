@@ -1,5 +1,5 @@
 ---
-title: LNK1141 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK1141 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cee194889f6b25842be49edf4dbc7ff4edf9ff1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c1046f240a701883058a4eede9670645dd12bcc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303736"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113628"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Erreur des outils Éditeur de liens LNK1141
-Échec lors de la génération du fichier des exportations  
-  
- [LIEN](../../build/reference/linker-command-line-syntax.md) Impossible de générer le fichier d’exportation (.exp).  
-  
- Les causes de cette erreur incluent des problèmes tels que des erreurs de syntaxe et de mémoire insuffisantes du système dans les options ou les instructions de définition de module.  
-  
- Cette erreur est précédée par une autre erreur qui donne des informations supplémentaires.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fichiers .exp en tant qu’entrée dans l’Éditeur de liens](../../build/reference/dot-exp-files-as-linker-input.md)
+
+Échec lors de la génération du fichier des exportations
+
+[LIEN](../../build/reference/linker-command-line-syntax.md) Impossible de générer le fichier d’exportation (.exp).
+
+Causes de cette erreur incluent des problèmes système telles que les erreurs de syntaxe et de mémoire insuffisantes dans les options ou les instructions de définition de module.
+
+Cette erreur est précédée par une autre erreur qui donne des informations supplémentaires.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fichiers .exp en tant qu’entrée dans l’Éditeur de liens](../../build/reference/dot-exp-files-as-linker-input.md)

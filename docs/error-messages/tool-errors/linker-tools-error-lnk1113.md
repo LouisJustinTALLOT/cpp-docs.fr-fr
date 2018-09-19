@@ -1,5 +1,5 @@
 ---
-title: LNK1113 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: LNK1113 d’erreur des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22baf1819ddc7d6fce195ad67c23d7b42ef6b1f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87dae5e17efb7ebeb9d9ac79c51edcfd8f19f620
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296001"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083897"
 ---
 # <a name="linker-tools-error-lnk1113"></a>Erreur des outils Éditeur de liens LNK1113
-type de l’ordinateur non valide  
-  
- Le type d’ordinateur spécifié dans l’en-tête de l’objet n’est pas valide.  
-  
- Cette erreur peut être provoquée si le fichier est endommagé. Reconstruire l’objet.
+
+type de machine non valide
+
+Le type d’ordinateur spécifié dans l’en-tête de l’objet n’est pas valide.
+
+Cette erreur peut être provoquée si le fichier est endommagé. Reconstruire l’objet.

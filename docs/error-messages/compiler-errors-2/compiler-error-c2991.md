@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2991 | Documents Microsoft
+title: Erreur du compilateur C2991 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1605c7b12a08b0fdb3701a94b2b5cf2e649c98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09b26d60968b9befc3bc9b027b46f09c269dd9a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091619"
 ---
 # <a name="compiler-error-c2991"></a>Erreur du compilateur C2991
-Redéfinition du paramètre de type 'paramètre'  
-  
- Il existe un conflit de type entre deux définitions génériques ou de modèle de `parameter`. Quand vous définissez plusieurs paramètres génériques ou de modèle, vous devez utiliser des types équivalents.  
-  
- L’exemple suivant génère l’erreur C2991 :  
-  
-```  
-// C2991.cpp  
-// compile with: /c  
-template<class T, class T> struct TC {};   // C2991  
-// try the following line instead  
-// template<class T, class T2> struct TC {};  
-```  
-  
- L’erreur C2991 peut également se produire lors de l’utilisation de génériques :  
-  
-```  
-// C2991b.cpp  
-// compile with: /clr /c  
-generic<class T,class T> ref struct GC {};   // C2991  
-// try the following line instead  
-// generic<class T,class T2> ref struct GC {};  
+
+Redéfinition du paramètre de type 'paramètre'
+
+Il existe un conflit de type entre deux définitions génériques ou de modèle de `parameter`. Quand vous définissez plusieurs paramètres génériques ou de modèle, vous devez utiliser des types équivalents.
+
+L’exemple suivant génère l’erreur C2991 :
+
+```
+// C2991.cpp
+// compile with: /c
+template<class T, class T> struct TC {};   // C2991
+// try the following line instead
+// template<class T, class T2> struct TC {};
+```
+
+L’erreur C2991 peut également se produire lors de l’utilisation de génériques :
+
+```
+// C2991b.cpp
+// compile with: /clr /c
+generic<class T,class T> ref struct GC {};   // C2991
+// try the following line instead
+// generic<class T,class T2> ref struct GC {};
 ```

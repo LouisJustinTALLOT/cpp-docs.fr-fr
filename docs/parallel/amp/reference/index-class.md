@@ -1,5 +1,5 @@
 ---
-title: index, classe | Documents Microsoft
+title: index, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: da6dae3aa76e593a3a98ff25b4d327faf284459e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695335"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097131"
 ---
 # <a name="index-class"></a>index, classe
-Définit un *N*-dimensionnel index pographics-cpp-amp.md.  
+Définit un *N*-index dimensionnel pographics-cpp-amp.md.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,8 +36,8 @@ class index;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_Rank`  
- Le rang, ou le nombre de dimensions.  
+*_Rank*<br/>
+Le rang, ou le nombre de dimensions.  
   
 ## <a name="members"></a>Membres  
   
@@ -52,7 +52,7 @@ class index;
 |Nom|Description|  
 |----------|-----------------|  
 |[operator--](#operator--)|Décrémente chaque élément de la `index` objet.|  
-|[operator(mod)=](#operator_mod_eq)|Calcule le modulo (reste) de chaque élément dans le `index` lorsque cet élément est divisé par un numéro de l’objet.|  
+|[operator(mod)=](#operator_mod_eq)|Calcule le modulo (reste) de chaque élément dans le `index` de l’objet lorsque cet élément est divisé par un nombre.|  
 |[operator*=](#operator_star_eq)|Multiplie chaque élément de la `index` objet par un nombre.|  
 |[operator/=](#operator_div_eq)|Divise chaque élément de la `index` objet par un nombre.|  
 |[index::operator\[\]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|  
@@ -66,22 +66,22 @@ class index;
   
 |Name|Description|  
 |----------|-----------------|  
-|[RANK (constante)](#rank)|Stocke le rang de le `index` objet.|  
+|[rang (constante)](#rank)|Stocke le rang de le `index` objet.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `index`  
   
 ## <a name="remarks"></a>Notes  
- Le `index` structure représente un vecteur de coordonnées de *N* entiers qui spécifie une position unique dans une *N*-espace 3D. Les valeurs dans le vecteur sont triés du plus significatif au moins significatif. Vous pouvez récupérer les valeurs des composants à l’aide de [opérateur =](#operator_eq).  
+ Le `index` structure représente un vecteur de coordonnées de *N* entiers qui spécifie une position unique dans une *N*-espace 3D. Les valeurs du vecteur sont triés du plus significatif au moins significatif. Vous pouvez récupérer les valeurs des composants à l’aide de [opérateur =](#operator_eq).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
 
 
 ## <a name="index_ctor"></a> index, constructeur
-Initialise une nouvelle instance de la classe de l’index.
+Initialise une nouvelle instance de la classe d’index.
 
 ```  
 index() restrict(amp,cpu);
@@ -114,18 +114,18 @@ explicit index(
 
 _ARRAY  
 Un tableau unidimensionnel avec les valeurs de classement.  
-J’A_I  
-Position d’index dans un index unidimensionnel.  
+_I  
+L’emplacement d’index dans un index unidimensionnel.  
 _I0  
-La longueur de la dimension la plus importante.  
+La longueur de la dimension la plus significative.  
 _I1  
 La longueur de la dimension suivant-à-plus significatif.  
 _I2  
-La longueur de la dimension de poids faible.  
-_Other  
-Un objet d’index sur lequel est basé le nouvel objet index.  
+La longueur de la dimension la moins significative.  
+_Autre  
+Objet index sur lequel est basé le nouvel objet index.  
 
-## <a name="operator--"></a>  opérateur--
+## <a name="operator--"></a>  operator--
 Décrémente chaque élément de l’objet index.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
@@ -146,11 +146,11 @@ index<_Rank>& operator%=(
 ) restrict(cpu, amp);
 ```  
 ### <a name="parameters"></a>Paramètres
-_Rhs le nombre à diviser par pour trouver le modulo.
+_Rhs nombre à diviser par pour trouver le modulo.
 Valeur de retour l’objet index.
 
 ## <a name="operator_star_eq"></a>  operator*=   
-Multiplie chaque élément dans l’objet d’index par le nombre spécifié.
+Multiplie chaque élément dans l’objet index par le nombre spécifié.
 ```
 index<_Rank>& operator*=(
    int _Rhs
@@ -160,7 +160,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>Paramètres
 _Rhs le nombre à multiplier.
 
-## <a name="operator_div_eq"></a>  / = (opérateur) 
+## <a name="operator_div_eq"></a>  / =, opérateur 
 Divise chaque élément dans l’objet index par le nombre spécifié.
 
 ```
@@ -224,23 +224,23 @@ index<_Rank>& operator+=(
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Paramètres
-_Rhs le nombre à ajouter.
+_Rhs nombre à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
 L’objet index.
 
 ## <a name="operator_eq"></a>  operator=   
-Copie le contenu de l’objet de l’index spécifié dans celle-ci.
+Copie le contenu de l’objet de l’index spécifié dans celui-ci.
 ```  
 index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Paramètres
-L’objet index à copier à partir de _Other.
+_Autre l’objet index à copier à partir de.
 
 ### <a name="return-value"></a>Valeur de retour
-Une référence à cet objet d’index.
+Une référence à cet objet index.
 
 ## <a name="operator_-_eq"></a>  operator-=
 Soustrait le nombre spécifié de chaque élément de l’objet index.
@@ -259,8 +259,8 @@ _Rhs le nombre à soustraire.
 ### <a name="return-value"></a>Valeur de retour
 L’objet index.   
 
-## <a name="rank"></a>  Rang  
-  Obtient le classement de l’objet index.
+## <a name="rank"></a>  rang  
+  Obtient le rang de l’objet index.
 ```
 static const int rank = _Rank;
 ``` 

@@ -19,85 +19,89 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afecaafc5a9d3c1eb9a9466cce303a493d355ce0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9dc4d19b94c8d0257eb1dbfc715b9eed7c5d85b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074434"
 ---
 # <a name="based-pointers-c"></a>Pointeurs basés sur (C++)
-**Section spécifique à Microsoft**  
-  
- Le **__based** mot clé vous permet de déclarer des pointeurs basés sur pointeurs (pointeurs sont des décalages par rapport à des pointeurs existants).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-type __based( base ) declarator   
-```  
-  
-## <a name="remarks"></a>Notes  
- Pointeurs basés sur les adresses de pointeur sont la seule forme de la **__based** mot clé valide dans les compilations 32 bits ou 64 bits. Pour le compilateur Microsoft C/C++ 32 bits, un pointeur based est un décalage de 32 bits par rapport à une base de pointeur 32 bits. Une restriction similaire s'applique pour les environnements 64 bits, où un pointeur based est un décalage de 64 bits par rapport à la base 64 bits.  
-  
- Les pointeurs basés sur pointeurs peuvent par exemple être utilisés pour des identificateurs persistants qui contiennent des pointeurs. Une liste liée composée de pointeurs basés sur un pointeur peut être enregistrée sur le disque, puis rechargée dans un autre emplacement mémoire, et les pointeurs restent valides. Exemple :  
-  
-```cpp 
-// based_pointers1.cpp  
-// compile with: /c  
-void *vpBuffer;  
-struct llist_t {  
-   void __based( vpBuffer ) *vpData;  
-   struct llist_t __based( vpBuffer ) *llNext;  
-};  
-```  
-  
- Le pointeur `vpBuffer` reçoit l'adresse de la mémoire allouée à un point ultérieur dans le programme. La liste liée est déplacée par rapport à la valeur de `vpBuffer`.  
-  
+
+**Section spécifique à Microsoft**
+
+Le **__based** mot clé vous permet de déclarer des pointeurs basés sur pointeurs (pointeurs sont des décalages par rapport à des pointeurs existants).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+type __based( base ) declarator
+```
+
+## <a name="remarks"></a>Notes
+
+Pointeurs basés sur les adresses de pointeur sont la seule forme de la **__based** mot clé valide dans les compilations 32 bits ou 64 bits. Pour le compilateur Microsoft C/C++ 32 bits, un pointeur based est un décalage de 32 bits par rapport à une base de pointeur 32 bits. Une restriction similaire s'applique pour les environnements 64 bits, où un pointeur based est un décalage de 64 bits par rapport à la base 64 bits.
+
+Les pointeurs basés sur pointeurs peuvent par exemple être utilisés pour des identificateurs persistants qui contiennent des pointeurs. Une liste liée composée de pointeurs basés sur un pointeur peut être enregistrée sur le disque, puis rechargée dans un autre emplacement mémoire, et les pointeurs restent valides. Exemple :
+
+```cpp
+// based_pointers1.cpp
+// compile with: /c
+void *vpBuffer;
+struct llist_t {
+   void __based( vpBuffer ) *vpData;
+   struct llist_t __based( vpBuffer ) *llNext;
+};
+```
+
+Le pointeur `vpBuffer` reçoit l'adresse de la mémoire allouée à un point ultérieur dans le programme. La liste liée est déplacée par rapport à la valeur de `vpBuffer`.
+
 > [!NOTE]
->  Les identificateurs persistants contenant des pointeurs également possible à l’aide de [fichiers mappés en mémoire](/windows/desktop/Memory/file-mapping).  
-  
- Lors du déréférencement d'un pointeur based, la base doit être spécifiée explicitement ou connue implicitement via la déclaration.  
-  
- Pour assurer la compatibilité avec les versions précédentes, **_basé** est un synonyme de **__based**.  
-  
-## <a name="example"></a>Exemple  
- Le code suivant illustre comment modifier un pointeur based en modifiant sa base.  
-  
-```cpp 
-// based_pointers2.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-int a1[] = { 1,2,3 };  
-int a2[] = { 10,11,12 };  
-int *pBased;  
-  
-typedef int __based(pBased) * pBasedPtr;  
-  
-using namespace std;  
-int main() {  
-   pBased = &a1[0];  
-   pBasedPtr pb = 0;  
-  
-   cout << *pb << endl;  
-   cout << *(pb+1) << endl;  
-  
-   pBased = &a2[0];  
-  
-   cout << *pb << endl;  
-   cout << *(pb+1) << endl;  
-}  
-```  
-  
-```Output  
-1  
-2  
-10  
-11  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Mots clés](../cpp/keywords-cpp.md)   
- [alloc_text](../preprocessor/alloc-text.md)
+>  Les identificateurs persistants contenant des pointeurs également possible à l’aide de [fichiers mappés en mémoire](/windows/desktop/Memory/file-mapping).
+
+Lors du déréférencement d'un pointeur based, la base doit être spécifiée explicitement ou connue implicitement via la déclaration.
+
+Pour assurer la compatibilité avec les versions précédentes, **_basé** est un synonyme de **__based**.
+
+## <a name="example"></a>Exemple
+
+Le code suivant illustre comment modifier un pointeur based en modifiant sa base.
+
+```cpp
+// based_pointers2.cpp
+// compile with: /EHsc
+#include <iostream>
+
+int a1[] = { 1,2,3 };
+int a2[] = { 10,11,12 };
+int *pBased;
+
+typedef int __based(pBased) * pBasedPtr;
+
+using namespace std;
+int main() {
+   pBased = &a1[0];
+   pBasedPtr pb = 0;
+
+   cout << *pb << endl;
+   cout << *(pb+1) << endl;
+
+   pBased = &a2[0];
+
+   cout << *pb << endl;
+   cout << *(pb+1) << endl;
+}
+```
+
+```Output
+1
+2
+10
+11
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Mots clés](../cpp/keywords-cpp.md)<br/>
+[alloc_text](../preprocessor/alloc-text.md)

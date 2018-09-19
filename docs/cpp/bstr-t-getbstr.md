@@ -16,34 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56297f53aa40741a506ea65761d151dcab98c421
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 3a62cd1c08409fb5915ebf42fa118c1e6124e29f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071859"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
-**Section spécifique à Microsoft**  
-  
- Pointe sur le début du `BSTR` encapsulé par l'objet `_bstr_t`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-BSTR& GetBSTR( );  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Début du `BSTR` encapsulé par l'objet `_bstr_t`.  
-  
-## <a name="remarks"></a>Notes  
- **GetBSTR** affecte tous les `_bstr_t` objets qui partagent un `BSTR`. Plusieurs `_bstr_t` peuvent partager un `BSTR` en utilisant le constructeur de copie et **opérateur =**.  
-  
-## <a name="example"></a>Exemple  
- Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour obtenir un exemple utilisant **GetBSTR**.  
-  
- **FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [_bstr_t, classe](../cpp/bstr-t-class.md)
+
+**Section spécifique à Microsoft**
+
+Pointe sur le début du `BSTR` encapsulé par l'objet `_bstr_t`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+BSTR& GetBSTR( );
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Début du `BSTR` encapsulé par l'objet `_bstr_t`.
+
+## <a name="remarks"></a>Notes
+
+**GetBSTR** affecte tous les `_bstr_t` objets qui partagent un `BSTR`. Plusieurs `_bstr_t` peuvent partager un `BSTR` en utilisant le constructeur de copie et **opérateur =**.
+
+## <a name="example"></a>Exemple
+
+Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour obtenir un exemple utilisant **GetBSTR**.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[_bstr_t, classe](../cpp/bstr-t-class.md)

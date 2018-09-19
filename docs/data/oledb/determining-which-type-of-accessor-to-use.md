@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 720a72406bec5672757c1b2c5713586b7fc7f1ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086965"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Détermination du type d’accesseur à utiliser
+
 Vous pouvez déterminer les types de données sur un ensemble de lignes au moment de la compilation ou au moment de l’exécution.  
   
- Si vous avez besoin déterminer les types de données au moment de la compilation, utilisez un accesseur statique (tel que `CAccessor`). Vous pouvez déterminer les types de données manuellement ou en utilisant l’Assistant Consommateur OLE DB ATL.  
+Si vous avez besoin déterminer les types de données au moment de la compilation, utilisez un accesseur statique (tel que `CAccessor`). Vous pouvez déterminer les types de données manuellement ou en utilisant l’Assistant Consommateur OLE DB ATL.  
   
- Si vous avez besoin déterminer les types de données au moment de l’exécution, utilisez un dynamique (`CDynamicAccessor` ou ses enfants) ou accesseur manuel (`CManualAccessor`). Dans ce cas, vous pouvez appeler `GetColumnInfo` sur l’ensemble de lignes à retourner les informations de liaison de colonne, à partir de laquelle vous pouvez déterminer les types.  
+Si vous avez besoin déterminer les types de données au moment de l’exécution, utilisez un dynamique (`CDynamicAccessor` ou ses enfants) ou accesseur manuel (`CManualAccessor`). Dans ce cas, vous pouvez appeler `GetColumnInfo` sur l’ensemble de lignes à retourner les informations de liaison de colonne, à partir de laquelle vous pouvez déterminer les types.  
   
- Le tableau suivant répertorie les types d’accesseurs fournis dans les modèles du consommateur. Chaque accesseur présente des avantages et des inconvénients. Selon votre situation, un seul type d’accesseur doit répondre à vos besoins.  
+Le tableau suivant répertorie les types d’accesseurs fournis dans les modèles du consommateur. Chaque accesseur présente des avantages et des inconvénients. Selon votre situation, un seul type d’accesseur doit répondre à vos besoins.  
   
 |Classe d’accesseur|Liaison|Paramètre|Commentaire|  
 |--------------------|-------------|---------------|-------------|  
@@ -42,4 +43,5 @@ Vous pouvez déterminer les types de données sur un ensemble de lignes au momen
 |`CXMLAccessor`|Automatique.|Non.|Récupère les données accédées à partir du magasin de données en tant que données de type chaîne et met en forme comme données XML.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des accesseurs](../../data/oledb/using-accessors.md)
+
+[Utilisation des accesseurs](../../data/oledb/using-accessors.md)

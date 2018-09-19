@@ -1,5 +1,5 @@
 ---
-title: double_3, classe | Documents Microsoft
+title: double_3, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1372a273f0296b8dc309068c83ffe2607d038f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6ecc1939faab978c84f786d90c8693b036d2e938
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027750"
 ---
 # <a name="double3-class"></a>double_3, classe
 Représente un vecteur court de trois valeurs de type double.  
@@ -210,7 +210,7 @@ class double_3;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `double_3`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  
@@ -267,20 +267,20 @@ explicit inline double_3(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_V0`  
- La valeur pour initialiser l’élément 0.  
+*_V0*<br/>
+La valeur pour initialiser l’élément 0.  
   
- `_V1`  
- La valeur pour initialiser l’élément 1.  
+*_V1*<br/>
+La valeur pour initialiser l’élément 1.  
   
- `_V2`  
- La valeur pour initialiser l’élément 2.  
+*_V2*<br/>
+La valeur pour initialiser l’élément 2.  
   
- `_V`  
- La valeur de l’initialisation.  
+*_V*<br/>
+La valeur pour l’initialisation.  
   
- `_Other`  
- Objet utilisé pour initialiser.  
+*_Autre*<br/>
+L’objet utilisé pour initialiser.  
   
 ##  <a name="double_3__size"></a> Taille 
 

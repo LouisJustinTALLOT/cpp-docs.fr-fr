@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314652"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116241"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Constructeurs d'initialisation uniforme et de délégation
+
 En C++ moderne, vous pouvez utiliser *accolade initialisation* pour n’importe quel type, sans le signe égal. En outre, vous pouvez utiliser les constructeurs de délégation pour simplifier votre code lorsque vous avez plusieurs constructeurs qui effectuent un travail similaire.
 
 ## <a name="brace-initialization"></a>Initialisation de l’accolade
+
 Vous pouvez utiliser des accolades pour toute classe, un struct ou une union. Si un type a un constructeur par défaut, implicitement ou explicitement déclaré, vous pouvez utiliser des accolades par défaut (avec accolades vides). Par exemple, la classe suivante peut être initialisée à l’aide de la valeur par défaut et les accolades non définis par défaut :
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>initializer_list constructeurs
+
 Le [initializer_list, classe](../standard-library/initializer-list-class.md) représente une liste d’objets d’un type spécifié qui peut être utilisé dans un constructeur et dans d’autres contextes. Vous pouvez construire un objet initializer_list à l’aide d’accolades :
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>Constructeurs qui effectuent une délégation
+
 De nombreuses classes possèdent plusieurs constructeurs qui faire des choses similaires, par exemple, valider les paramètres :
 
 ```cpp

@@ -1,5 +1,5 @@
 ---
-title: Conversion de données non pris en charge par le fournisseur | Documents Microsoft
+title: Conversion de données non pris en charge par le fournisseur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d0be19345ff6c425cfbc020f2096ca82680586d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa9fed1f7c779efc7104ec8138d618b85aeb2a33
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081739"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>Conversion des données non prises en charge par le fournisseur
+
 Lorsque le consommateur demande un type de données qui n’est pas pris en charge par le fournisseur, le modèle de fournisseur OLE DB de code pour `IRowsetImpl::GetData` appelle Msdadc.dll pour convertir le type de données.  
   
- Si vous implémentez une interface comme `IRowsetChange` qui nécessite une conversion de données, vous pouvez appeler Msdaenum.dll pour effectuer la conversion. Utilisez `GetData`, définie dans Atldb.h, comme un exemple.  
+Si vous implémentez une interface comme `IRowsetChange` qui requiert une conversion de données, vous pouvez appeler Msdaenum.dll pour effectuer la conversion. Utilisez `GetData`, définie dans Atldb.h, par exemple.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des modèles du fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Utilisation des modèles du fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

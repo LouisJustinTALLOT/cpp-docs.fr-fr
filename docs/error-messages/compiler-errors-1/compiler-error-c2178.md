@@ -1,5 +1,5 @@
 ---
-title: C2178 d’erreur du compilateur | Documents Microsoft
+title: Erreur du compilateur C2178 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2017
 ms.technology:
@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3727a66554b2e128061820df160c02a1370ebb74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af9efdb3258e6793a17a26b552df8ba4e63c9107
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171293"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102333"
 ---
-# <a name="compiler-error-c2178"></a>C2178 d’erreur du compilateur  
-  
-'*identificateur*'ne peut pas être déclarée avec'*spécificateur*' spécificateur  
-  
-A `mutable` spécificateur a été utilisé dans une déclaration, mais le spécificateur n’est pas autorisé dans ce contexte.  
-  
-Le `mutable` spécificateur peut être appliqué uniquement à des noms de membres de données de classe et ne peut pas être appliqué à des noms déclarés `const` ou `static`et ne peut pas être appliqué aux membres de référence.  
-  
-## <a name="example"></a>Exemple  
-  
-L’exemple suivant montre comment C2178 peut se produire et comment la corriger.  
-  
-```  
+# <a name="compiler-error-c2178"></a>Erreur du compilateur C2178
+
+«*identificateur*'ne peut pas être déclarée avec'*spécificateur*' spécificateur
+
+Un `mutable` spécificateur a été utilisé dans une déclaration, mais le spécificateur n’est pas autorisé dans ce contexte.
+
+Le `mutable` spécificateur peut être appliqué uniquement à des noms de membres de données de classe et ne peut pas être appliqué à des noms déclarés `const` ou `static`et ne peut pas être appliqué pour référencer des membres.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant montre comment C2178 peut se produire et comment la corriger.
+
+```
 // C2178.cpp
 // compile with: cl /c /W4 C2178.cpp
 
@@ -46,4 +46,4 @@ class S {
 
 mutable int x = 4; // C2178
 // To fix, remove mutable keyword
-```  
+```

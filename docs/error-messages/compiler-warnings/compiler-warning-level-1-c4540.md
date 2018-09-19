@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4540 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4540 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3939ad2bbcba1ab3b492d83bdbb8f7076c2c5f2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e3f553bd1f910c7b17e079dc1f03664c78383e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042765"
 ---
 # <a name="compiler-warning-level-1-c4540"></a>Avertissement du compilateur (niveau 1) C4540
-utilisé de dynamic_cast pour convertir une base ambiguë ou inaccessible ; test d’exécution échouera ('type1' en 'type2')  
-  
- Vous avez utilisé `dynamic_cast` convertir d’un type à un autre. Le compilateur a déterminé que le cast échouerait toujours (retourner **NULL**) parce qu’une classe de base est inaccessible (`private`, par exemple) ou ambiguë (apparaît plusieurs fois dans la hiérarchie de classes, par exemple).  
-  
- Voici un exemple de cet avertissement. Classe **B** est dérivé de la classe **A**. Le programme utilise `dynamic_cast` pour effectuer un cast à partir de la classe **B** (la classe dérivée) pour la classe **A**, qui continue d’échouer, car classe **B** est `private` et par conséquent inaccessible. Modification d’accès de **A** à **public** résout l’avertissement.  
-  
-```  
-// C4540.cpp  
-// compile with: /W1  
-  
-struct A {   
-   virtual void g() {}  
-};  
-  
-struct B : private A {  
-   virtual void g() {}  
-};  
-  
-int main() {  
-   B b;  
-   A * ap = dynamic_cast<A*>(&b);   // C4540  
-}  
+
+utilisé de dynamic_cast pour convertir une base ambiguë ou inaccessible ; test d’exécution échouera ('type1' en 'type2')
+
+Vous avez utilisé `dynamic_cast` pour convertir un type en un autre. Le compilateur a déterminé que le cast échoue toujours (retourner **NULL**) parce qu’une classe de base est inaccessible (`private`, par exemple) ou ambiguë (apparaît plusieurs fois dans la hiérarchie de classes, par exemple).
+
+Voici un exemple de cet avertissement. Classe **B** est dérivé de la classe **A**. Le programme utilise `dynamic_cast` pour effectuer un cast à partir de la classe **B** (la classe dérivée) à la classe **A**, qui échoue toujours, car classe **B** est `private` et par conséquent inaccessible. Modification d’accès de **A** à **public** résout l’avertissement.
+
+```
+// C4540.cpp
+// compile with: /W1
+
+struct A {
+   virtual void g() {}
+};
+
+struct B : private A {
+   virtual void g() {}
+};
+
+int main() {
+   B b;
+   A * ap = dynamic_cast<A*>(&b);   // C4540
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Erreur mathématique M6108 | Documents Microsoft
+title: Erreur mathématique M6108 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfeca48aa04ebfbc097649e5c25253166c50dad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1624a89b472733b4adb5563c8ba52e0b03dcaa2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048615"
 ---
 # <a name="math-error-m6108"></a>Erreur mathématique M6108
-racine carrée  
-  
- L’opérande d’une opération de la racine carrée est négative.  
-  
- Programme se termine par le code de sortie 136.  
-  
+
+racine carrée
+
+L’opérande dans une opération de la racine carrée était négatif.
+
+Programme se termine par le code de sortie 136.
+
 > [!NOTE]
->  Le `sqrt` fonction dans la bibliothèque Runtime C et la fonction intrinsèque FORTRAN **SQRT** ne génèrent pas cette erreur. C `sqrt` fonction vérifie l’argument avant d’effectuer l’opération et retourne une valeur d’erreur si l’opérande est négatif. Le FORTRAN **SQRT** fonction génère l’erreur de domaine [M6201](../../error-messages/tool-errors/math-error-m6201.md) au lieu de cette erreur.
+>  Le `sqrt` fonction dans la bibliothèque Runtime C et la fonction intrinsèque FORTRAN **SQRT** ne génèrent pas cette erreur. Le C `sqrt` fonction vérifie l’argument avant d’effectuer l’opération et retourne une valeur d’erreur si l’opérande est négatif. Le FORTRAN **SQRT** fonction génère l’erreur de domaine [M6201](../../error-messages/tool-errors/math-error-m6201.md) au lieu de cette erreur.

@@ -1,5 +1,5 @@
 ---
-title: Erreur d’exécution C R6031 | Documents Microsoft
+title: Erreur Runtime C R6031 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66d75fb0095b1de0fe1572d8c946823a89791740
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83dbcdc433ea731e6ddf0765b4b3a55d5707f429
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059496"
 ---
-# <a name="c-runtime-error-r6031"></a>Erreur d’exécution C R6031
-Tentative d’initialisation de la bibliothèque CRT plusieurs fois. Cela indique un bogue dans votre application.  
-  
+# <a name="c-runtime-error-r6031"></a>Erreur Runtime C R6031
+
+Tentative d’initialisation de la bibliothèque CRT plusieurs fois. Cela indique un bogue dans votre application.
+
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Cela peut être dû bogue dans l’application ou par un bogue dans un module complémentaire ou d’une extension de l’application utilise.  
->   
->  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :  
->   
->  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.  
-> -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour supprimer, réparer ou réinstaller tous les programmes d’un module complémentaire ou l’extension utilisées par l’application.  
-> -   Vérifiez **mise à jour Windows** dans les **le panneau de configuration** pour les mises à jour logicielles.  
-> -   Recherchez une version mise à jour de l’application. Si le problème persiste, contactez le fournisseur de l’application.  
-  
- **Informations pour les programmeurs**  
-  
- Ce diagnostic indique que des instructions MSIL s’exécutaient lors du verrouillage du chargeur. Pour plus d’informations, consultez [l’initialisation d’assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md).
+>  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Cela peut être dû bogue dans l’application ou par un bogue dans un module complémentaire ou une extension qui utilise l’application.
+>
+>  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
+>
+>  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
+> -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour supprimer, réparer ou réinstaller tous les programmes complémentaires ou extension utilisées par l’application.
+> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
+> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+
+**Informations pour les programmeurs**
+
+Ce diagnostic indique que des instructions MSIL sont exécutaient pendant le verrouillage du chargeur. Pour plus d’informations, consultez [l’initialisation des assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md).

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3914 | Documents Microsoft
+title: Erreur du compilateur C3914 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3818c54f3720bdff92280e04a4750ed1b4f238c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bb10652a6328bb8ddcc3a8e62755a960a7fc850
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029414"
 ---
 # <a name="compiler-error-c3914"></a>Erreur du compilateur C3914
-une propriété par défaut ne peut pas être statique  
-  
-Une propriété par défaut a été déclarée de manière incorrecte.  Pour plus d’informations, consultez [Comment : utiliser des propriétés dans C + c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
-  
-## <a name="example"></a>Exemple  
-L’exemple suivant génère l’erreur C3914 : et montre comment la corriger.  
-  
-```  
-// C3914.cpp  
-// compile with: /clr /c  
-ref struct X {  
-   static property int default[int] {   // C3914  
-   // try the following line instead  
-   // property int default[int] {  
-      int get(int) { return 0; }  
-      void set(int, int) {}  
-   }  
-};  
+
+une propriété par défaut ne peut pas être statique
+
+Une propriété par défaut a été correctement déclarée.  Pour plus d’informations, consultez [Comment : utilisez les propriétés en C / c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C3914 : et montre comment la corriger.
+
+```
+// C3914.cpp
+// compile with: /clr /c
+ref struct X {
+   static property int default[int] {   // C3914
+   // try the following line instead
+   // property int default[int] {
+      int get(int) { return 0; }
+      void set(int, int) {}
+   }
+};
 ```

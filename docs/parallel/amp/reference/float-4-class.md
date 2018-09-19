@@ -1,5 +1,5 @@
 ---
-title: float_4, classe | Documents Microsoft
+title: float_4, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5420cbaf6710f12852575926fc6280e1a33ce66
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd4de23a4395d8e09a51e8df4a8c101132b4ae7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104814"
 ---
 # <a name="float4-class"></a>float_4, classe
 Représente un vecteur court de quatre valeurs en virgule flottante.  
@@ -604,7 +604,7 @@ class float_4;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `float_4`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  
@@ -662,23 +662,23 @@ explicit inline float_4(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_V0`  
- La valeur pour initialiser l’élément 0.  
+*_V0*<br/>
+La valeur pour initialiser l’élément 0.  
   
- `_V1`  
- La valeur pour initialiser l’élément 1.  
+*_V1*<br/>
+La valeur pour initialiser l’élément 1.  
   
- `_V2`  
- La valeur pour initialiser l’élément 2.  
+*_V2*<br/>
+La valeur pour initialiser l’élément 2.  
   
- `_V3`  
- La valeur pour initialiser l’élément 3.  
+*_V3*<br/>
+La valeur pour initialiser l’élément 3.  
   
- `_V`  
- La valeur de l’initialisation.  
+*_V*<br/>
+La valeur pour l’initialisation.  
   
- `_Other`  
- Objet utilisé pour initialiser.  
+*_Autre*<br/>
+L’objet utilisé pour initialiser.  
   
 ##  <a name="float_4__size"></a> Taille 
 

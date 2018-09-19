@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a4a62f6e569e123b9612e922e2d7c70787371afc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136177"
 ---
 # <a name="context-class"></a>Context, classe
 Représente une abstraction pour un contexte d'exécution.  
@@ -210,8 +210,8 @@ void operator delete(void* _PObject);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_PObject`  
- Pointeur vers l’objet à supprimer.  
+*_PObject*<br/>
+Pointeur vers l’objet à supprimer.  
   
 ##  <a name="oversubscribe"></a> Manquer d’abonnements 
 
@@ -222,8 +222,8 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_BeginOversubscription`  
- Si `true`, une indication qu’un processeur virtuel supplémentaire doit être ajouté pour la durée du surabonnement. Si `false`, indique que le surabonnement doit se terminer et que le processeur virtuel ajouté précédemment doit être supprimé.  
+*_BeginOversubscription*<br/>
+Si `true`, une indication qu’un processeur virtuel supplémentaire doit être ajouté pour la durée du surabonnement. Si `false`, indique que le surabonnement doit se terminer et que le processeur virtuel ajouté précédemment doit être supprimé.  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 

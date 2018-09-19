@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1821a4e04667fd1e05a9bbd4fdd81cb19e6eaca7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c4da0167ef3b39b006a2f067114cf518cc231a45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762523"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086445"
 ---
 # <a name="registry-support-classes"></a>Classes de prise en charge de Registre
 
@@ -37,6 +37,6 @@ La classe suivante prend en charge de Registre :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../atl/atl-class-overview.md)   
+[Vue d’ensemble de la classe](../atl/atl-class-overview.md)<br/>
 [Macros de Registre](../atl/reference/registry-macros.md)
 

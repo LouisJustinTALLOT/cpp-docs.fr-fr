@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d873d29d5ac6de1073c1ba3f3065dd015cde1f5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd5bf96706b94ffbba8cb1b9aeeee8701b266e5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115038"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 Modifie le comportement de la [planification](../../../parallel/openmp/reference/schedule.md) clause lorsque `schedule(runtime)` est spécifié dans un `for` ou `parallel for` directive.  
@@ -37,8 +37,8 @@ set OMP_SCHEDULE[=type[,size]]
 *size*<br/>
 (Facultatif) Spécifie la taille d’itérations. `size` Doit être un entier positif. La valeur par défaut est 1, sauf quand `type` est statique. Non valide quand `type` est `runtime`.  
   
- `type`  
- Le type de planification :  
+*type*<br/>
+Le type de planification :  
   
 -   `dynamic`  
   

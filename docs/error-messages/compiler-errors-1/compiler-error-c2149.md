@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2149 | Documents Microsoft
+title: Erreur du compilateur C2149 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e02d69aa89c77c72685ef0db3125dab2cbf1898b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ebb710cc9f4d5f546c40d84909dbe23805f2f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094921"
 ---
 # <a name="compiler-error-c2149"></a>Erreur du compilateur C2149
-'identificateur' : un champ de bits nommé ne peut pas avoir une largeur égale à zéro  
-  
- Les champs de bits ne peuvent avoir une largeur égale à zéro que s’ils ne portent pas de nom.  
-  
- L’exemple suivant génère l’erreur C2149 :  
-  
-```  
-// C2149.cpp  
-// compile with: /c  
-struct C {  
-   int i : 0;   // C2149  
-   int j : 2;   // OK  
-};  
+
+'identificateur' : un champ de bits nommé ne peut pas avoir une largeur égale à zéro
+
+Les champs de bits ne peuvent avoir une largeur égale à zéro que s’ils ne portent pas de nom.
+
+L’exemple suivant génère l’erreur C2149 :
+
+```
+// C2149.cpp
+// compile with: /c
+struct C {
+   int i : 0;   // C2149
+   int j : 2;   // OK
+};
 ```

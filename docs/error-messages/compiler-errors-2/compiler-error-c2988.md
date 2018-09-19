@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2988 | Documents Microsoft
+title: Erreur du compilateur C2988 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a55b8a2fc1d272163ec65b6d8be0f06dcbca47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 472d0cf999628b021cc3617b6454f1bfb7f0f976
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061771"
 ---
 # <a name="compiler-error-c2988"></a>Erreur du compilateur C2988
-définition/déclaration de modèle non reconnaissable  
-  
- La déclaration de modèle n’analyse pas correctement. Vérifiez les délimiteurs.
+
+définition/déclaration de modèle non reconnaissable
+
+La déclaration de modèle n’analyse pas correctement. Vérifiez les délimiteurs.

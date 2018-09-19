@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7e3731132e1b9ed9381a7b97347406b620df70
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 13ddd14ad530fa2b7ce2892ce8838b27e307381f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135763"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP, classe
 
@@ -36,17 +36,17 @@ Cette classe expose [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ip
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class T, class CDV = CComDynamicUnkArray>  
+template<class T, class CDV = CComDynamicUnkArray>
 class IPropertyNotifySinkCP 
    : public IConnectionPointImpl<T, &IID_IPropertyNotifySink, CDV>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe, dérivée de `IPropertyNotifySinkCP`.
 
-*CDV*  
+*CDV*<br/>
 Une classe qui gère les connexions entre un point de connexion et ses récepteurs. La valeur par défaut est [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), ce qui permet un nombre illimité de connexions. Vous pouvez également utiliser [CComUnkArray](../../atl/reference/ccomunkarray-class.md), qui spécifie un nombre fixe de connexions.
 
 ## <a name="remarks"></a>Notes
@@ -65,6 +65,6 @@ Pour plus d’informations sur l’utilisation de points de connexion dans ATL, 
 
 ## <a name="see-also"></a>Voir aussi
 
-[IConnectionPointImpl, classe](../../atl/reference/iconnectionpointimpl-class.md)   
-[IConnectionPointContainerImpl, classe](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
+[IConnectionPointImpl, classe](../../atl/reference/iconnectionpointimpl-class.md)<br/>
+[IConnectionPointContainerImpl, classe](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3519 | Documents Microsoft
+title: Erreur du compilateur C3519 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740fef32484164e7439335686adce0a4aa8027f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ac9c1bfe01cee659ae8b637df23a86315b5310f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072782"
 ---
 # <a name="compiler-error-c3519"></a>Erreur du compilateur C3519
-'param_non_valide' : paramètre non valide pour l’attribut embedded_idl  
-  
- Un paramètre a été passé à la `embedded_idl` attribut de [#import](../../preprocessor/hash-import-directive-cpp.md), mais le compilateur n’a pas reconnu le paramètre.  
-  
- Les seuls paramètres autorisés pour `embedded_idl` sont `emitidl` et `no_emitidl`.  
-  
- L’exemple suivant génère l’erreur C3519 :  
-  
-```  
-// C3519.cpp  
-// compile with: /LD  
-[module(name="MyLib2")];  
-#import "C:\testdir\bin\importlib.tlb" embedded_idl("no_emitidcl")     
-// C3519  
-#import "C:\testdir\bin\importlib.tlb" embedded_idl("no_emitidl")     
-// OK  
+
+'param_non_valide' : paramètre non valide pour l’attribut embedded_idl
+
+Un paramètre a été passé à la `embedded_idl` attribut de [#import](../../preprocessor/hash-import-directive-cpp.md), mais le compilateur n’a pas reconnu le paramètre.
+
+Les seuls paramètres autorisés pour `embedded_idl` sont `emitidl` et `no_emitidl`.
+
+L’exemple suivant génère l’erreur C3519 :
+
+```
+// C3519.cpp
+// compile with: /LD
+[module(name="MyLib2")];
+#import "C:\testdir\bin\importlib.tlb" embedded_idl("no_emitidcl")
+// C3519
+#import "C:\testdir\bin\importlib.tlb" embedded_idl("no_emitidl")
+// OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2971 | Documents Microsoft
+title: Erreur du compilateur C2971 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd46be67a2ce8e7f3a8ab1319c7a16a465797474
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a311e6cd25ab275b7aa38325e45d26fd733d8b68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107532"
 ---
 # <a name="compiler-error-c2971"></a>Erreur du compilateur C2971
-'classe' : paramètre de modèle 'param' : 'arg' : une variable locale ne peut pas être utilisée comme argument sans type  
-  
- Vous ne pouvez pas utiliser le nom ou l’adresse d’une variable locale comme argument de modèle.  
-  
- L’exemple suivant génère l’erreur C2971 :  
-  
-```  
-// C2971.cpp  
-template <int *pi>   
-class Y {};  
-  
-int global_var = 0;  
-  
-int main() {  
-   int local_var = 0;  
-   Y<&local_var> aY;   // C2971  
-   // try the following line instead  
-   // Y<&global_var> aY;  
-}  
+
+'classe' : paramètre de modèle 'param' : 'arg' : une variable locale ne peut pas être utilisée comme argument sans type
+
+Vous ne pouvez pas utiliser le nom ou l’adresse d’une variable locale comme argument template.
+
+L’exemple suivant génère l’erreur C2971 :
+
+```
+// C2971.cpp
+template <int *pi>
+class Y {};
+
+int global_var = 0;
+
+int main() {
+   int local_var = 0;
+   Y<&local_var> aY;   // C2971
+   // try the following line instead
+   // Y<&global_var> aY;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: LNK4065 d’avertissement des outils Éditeur de liens | Documents Microsoft
+title: Avertissement LNK4065 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe8b1500ac5dc2f066052fbfe11ea65eb59193f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 98de30e7514c515d50751fab73533912e33da30e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135977"
 ---
 # <a name="linker-tools-warning-lnk4065"></a>Avertissement des outils Éditeur de liens LNK4065
-'fonction' ne peuvent pas être triée ; ignoré  
-  
- La fonction donnée n’a pas été compilée comme fonction packagée. Recompilez à l’aide de [/Gy](../../build/reference/gy-enable-function-level-linking.md).
+
+'fonction' ne peut pas être ordonnée ; ignoré
+
+La fonction donnée n’a pas été compilée comme fonction packagée. Recompilez à l’aide de [/Gy](../../build/reference/gy-enable-function-level-linking.md).

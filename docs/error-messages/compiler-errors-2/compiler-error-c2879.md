@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2879 | Documents Microsoft
+title: Erreur du compilateur C2879 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba1738da7d349ecafd9f10f31d8f05ac1f12df0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 632142ea0efd8a9d009f18b898213cfa92514b16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042474"
 ---
 # <a name="compiler-error-c2879"></a>Erreur du compilateur C2879
-'symbole' : seul un espace de noms existant peut être renommé par une définition d’alias d’espace de noms  
-  
- Vous ne pouvez pas créer un [alias d’espace de noms](../../cpp/namespaces-cpp.md#namespace_aliases) à un symbole autre qu’un espace de noms.  
-  
- L’exemple suivant génère l’erreur C2879 :  
-  
-```  
-// C2879.cpp  
-int main() {  
-   int i;  
-   namespace A = i;   // C2879 i is not a namespace  
-}  
+
+'symbol' : seul un espace de noms existant peut être renommé par une définition d’alias d’espace de noms
+
+Vous ne pouvez pas créer un [alias d’espace de noms](../../cpp/namespaces-cpp.md#namespace_aliases) pour un symbole autre qu’un espace de noms.
+
+L’exemple suivant génère l’erreur C2879 :
+
+```
+// C2879.cpp
+int main() {
+   int i;
+   namespace A = i;   // C2879 i is not a namespace
+}
 ```

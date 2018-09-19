@@ -1,5 +1,5 @@
 ---
-title: LNK2008 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK2008 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ee6a8a4c4cc6d33f47d5335daa9fccd4e5fd99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18eda06e7f133ada4de1b7ec28ac21be205a71f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086809"
 ---
 # <a name="linker-tools-error-lnk2008"></a>Erreur des outils Éditeur de liens LNK2008
-Cible de correction n’est pas alignée 'nom_symbole'  
-  
- LINK a trouvé une cible de correction dans votre fichier d’objet qui n’était pas correctement aligné.  
-  
- Cette erreur peut résulter d’alignement de section personnalisé (par exemple, #pragma [pack](../../preprocessor/pack.md)), [aligner](../../cpp/align-cpp.md) modificateur, ou à l’aide de code en langage assembleur qui modifie l’alignement.  
-  
- Si votre code n’utilise pas un des éléments ci-dessus, cela peut être dû par le compilateur.
+
+Cible de correction n’est pas alignée 'nom_symbole'
+
+LINK a trouvé une cible de correction dans votre fichier objet qui n’était pas correctement aligné.
+
+Cette erreur peut être provoquée par personnalisé d’un alignement de (par exemple, #pragma [pack](../../preprocessor/pack.md)), [aligner](../../cpp/align-cpp.md) modificateur, ou à l’aide de code en langage assembleur qui modifie l’alignement.
+
+Si votre code n’utilise aucun des éléments ci-dessus, cela peut être dû par le compilateur.

@@ -53,14 +53,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412626"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023664"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+
 Convertit un caractère en minuscule.
 
 ## <a name="syntax"></a>Syntaxe
@@ -99,9 +100,9 @@ Chacune de ces routines convertit une copie de *c* en minuscules si la conversio
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces routines convertit une lettre majuscule donnée en lettre minuscule si cela est possible et approprié. La conversion de casse **towlower** est spécifique aux paramètres régionaux. Seuls les caractères relevant des paramètres régionaux actifs changent de casse. Les fonctions sans le **_l** suffixe utiliser actuellement défini aux paramètres régionaux. Les versions de ces fonctions qui ont le **_l** suffixe prend les paramètres régionaux en tant que paramètre et l’utiliser à la place la paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Chacune de ces routines convertit une lettre majuscule donnée en lettre minuscule si cela est possible et approprié. La conversion de casse **towlower** est spécifique aux paramètres régionaux. Seuls les caractères relevant des paramètres régionaux actifs changent de casse. Les fonctions sans le **_l** suffixe utiliser actuellement définis aux paramètres régionaux. Les versions de ces fonctions qui ont le **_l** suffixe prennent les paramètres régionaux en tant que paramètre et utiliser à la place actuellement définis aux paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans l’ordre pour **_tolower** afin de donner les résultats attendus, [__isascii](isascii-isascii-iswascii.md) et [isupper](isupper-isupper-l-iswupper-iswupper-l.md) doit retourner différente de zéro.
+Dans l’ordre pour **_tolower** donne les résultats attendus, [__isascii](isascii-isascii-iswascii.md) et [isupper](isupper-isupper-l-iswupper-iswupper-l.md) doivent retourner différente de zéro.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -111,9 +112,9 @@ Dans l’ordre pour **_tolower** afin de donner les résultats attendus, [__isas
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l** et **_towlower_l** n’ont aucune dépendance des paramètres régionaux et ne sont pas destinés à être appelée directement. Elles sont fournies à un usage interne par **_totlower_l**.
+> **_tolower_l** et **_towlower_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux et ne sont pas destinés à être appelée directement. Elles sont fournies pour une utilisation interne par **_totlower_l**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

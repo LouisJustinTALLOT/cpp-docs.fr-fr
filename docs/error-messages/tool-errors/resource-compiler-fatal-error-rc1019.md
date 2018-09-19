@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RC1019 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RC1019 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cd9658a97f1f62a2a5a262e7262127744dd144a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a455daffba3957b9a4628ecab9e604994e4a4ce2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027087"
 ---
 # <a name="resource-compiler-fatal-error-rc1019"></a>Erreur irrécupérable RC1019 du compilateur de ressources 
-inattendue ' #else '  
-  
- Le `#else` directive ne figure pas dans un `#if`, **#ifdef**, ou **#ifndef** construire.  
-  
- Assurez-vous qu’il existe un `#if`, **#ifdef**, ou **#ifndef** instruction en vigueur avant cette instruction.
+
+inattendue ' #else '
+
+Le `#else` directive ne figure pas dans un `#if`, **#ifdef**, ou **#ifndef** construire.
+
+Assurez-vous qu’il existe un `#if`, **#ifdef**, ou **#ifndef** instruction en vigueur avant cette instruction.

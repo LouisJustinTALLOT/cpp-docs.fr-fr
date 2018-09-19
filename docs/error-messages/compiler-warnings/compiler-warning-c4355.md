@@ -1,5 +1,5 @@
 ---
-title: Avertissement du compilateur C4355 | Documents Microsoft
+title: Avertissement du compilateur C4355 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f57b8a7c279b820f4f9fc4a68715804a12e625
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44833c8e640002f2f94d44938641fa3c1fa33db7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273804"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115305"
 ---
 # <a name="compiler-warning-c4355"></a>Avertissement du compilateur C4355
-'this' : utilisé dans la liste des initialiseurs membre de base  
-  
- Le **cela** pointeur est valide uniquement dans les fonctions membres non statiques. Il ne peut pas être utilisé dans la liste d’initialiseurs d’une classe de base.  
-  
- Les constructeurs de classe de base et de membre de classe sont appelés avant **cela** constructeur. En effet, vous avez passé un pointeur vers un objet construit à un autre constructeur. Si ces autres constructeurs accéder aux membres ou appellent des fonctions membres cela, le résultat sera non défini. Vous ne devez pas utiliser le **cela** pointeur jusqu'à la fin de la construction.  
-  
- Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
-  
- L’exemple suivant génère C4355 :  
-  
-```  
-// C4355.cpp  
-// compile with: /w14355 /c  
-#include <tchar.h>  
-  
-class CDerived;  
-class CBase {  
-public:  
-   CBase(CDerived *derived): m_pDerived(derived) {};  
-   ~CBase();  
-   virtual void function() = 0;  
-  
-   CDerived * m_pDerived;  
-};  
-  
-class CDerived : public CBase {  
-public:  
-   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor  
-   virtual void function() {};  
-};  
-  
-CBase::~CBase() {  
-   m_pDerived -> function();  
-}  
-  
-int main() {  
-   CDerived myDerived;  
-}  
+
+'this' : utilisé dans la liste des initialiseurs membre de base
+
+Le **cela** pointeur est valide uniquement dans les fonctions membres non statiques. Il ne peut pas être utilisé dans la liste d’initialiseurs pour une classe de base.
+
+Les constructeurs de classe de base et de membre de classe sont appelées avant **cela** constructeur. En effet, vous avez passé un pointeur vers un objet non construit pour un autre constructeur. Si ces autres constructeurs accéder aux membres ou appellent des fonctions membres cela, le résultat sera non défini. Vous ne devez pas utiliser le **cela** pointeur jusqu'à la fin de la construction.
+
+Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.
+
+L’exemple suivant génère C4355 :
+
+```
+// C4355.cpp
+// compile with: /w14355 /c
+#include <tchar.h>
+
+class CDerived;
+class CBase {
+public:
+   CBase(CDerived *derived): m_pDerived(derived) {};
+   ~CBase();
+   virtual void function() = 0;
+
+   CDerived * m_pDerived;
+};
+
+class CDerived : public CBase {
+public:
+   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor
+   virtual void function() {};
+};
+
+CBase::~CBase() {
+   m_pDerived -> function();
+}
+
+int main() {
+   CDerived myDerived;
+}
 ```
