@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4235 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4235 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc63640bc58caefa281b9207b9796ffdf387a7a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e709017e51101efe53a8697bb145014f200871
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031819"
 ---
 # <a name="compiler-warning-level-4-c4235"></a>Avertissement du compilateur (niveau 4) C4235
-extension non standard utilisée : ' mot_clé ' non pris en charge sur cette architecture  
-  
- Le compilateur ne prend pas en charge le mot clé que vous avez utilisé.  
-  
- Cet avertissement est automatiquement promu en une erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma warning](../../preprocessor/warning.md). Par exemple, pour transformer l’avertissement C4235 en un avertissement de niveau 2, utilisez la ligne suivante de code  
-  
-```  
-#pragma warning(2:4235)  
-```  
-  
- dans votre fichier de code source.
+
+extension non standard utilisée : mot clé 'mot_clé' non pris en charge sur cette architecture
+
+Le compilateur ne prend pas en charge le mot clé que vous avez utilisé.
+
+Cet avertissement est automatiquement promu en une erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma warning](../../preprocessor/warning.md). Par exemple, pour transformer C4235 en un avertissement de niveau 2, utilisez la ligne de code suivante
+
+```
+#pragma warning(2:4235)
+```
+
+dans votre fichier de code source.

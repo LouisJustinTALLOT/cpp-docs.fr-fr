@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690044"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027854"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy, structure
 Abstraction d'un thread d'exécution. Selon la clé de stratégie `SchedulerType` du planificateur que vous créez, le gestionnaire des ressources vous accorde un proxy de thread assorti d'un thread Win32 standard ou d'un thread UMS (User-Mode Scheduling). Les threads UMS sont pris en charge sur les systèmes d'exploitation 64 bits avec Windows 7 et ses versions ultérieures.  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `switchState`  
- Indique l’état du proxy de thread qui exécute le commutateur. Le paramètre est de type `SwitchingProxyState`.  
+*switchState entraîne le démarrage*<br/>
+Indique l’état du proxy de thread qui exécute le commutateur. Le paramètre est de type `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez `SwitchOut` si vous devez dissocier un contexte de la racine du processeur virtuel sur laquelle il s'exécute, quelle que soit la raison. Selon la valeur que vous passez dans le paramètre `switchState`, et peu importe s'il s'exécute ou non sur une racine du processeur virtuel, l'appel retourne immédiatement ou bloque le proxy de thread associé au contexte. C'est une erreur que d'appeler `SwitchOut` avec le jeu de paramètres défini sur `Idle`. Cela entraîne une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception.  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `pContext`  
- Le contexte d’exécution pour basculer en coopération.  
+*pContext*<br/>
+Le contexte d’exécution pour basculer en coopération.  
   
- `switchState`  
- Indique l’état du proxy de thread qui exécute le commutateur. Le paramètre est de type `SwitchingProxyState`.  
+*switchState entraîne le démarrage*<br/>
+Indique l’état du proxy de thread qui exécute le commutateur. Le paramètre est de type `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour passer d’un contexte d’exécution vers un autre, à partir de la [IExecutionContext::Dispatch](iexecutioncontext-structure.md#dispatch) méthode du premier contexte d’exécution. La méthode associe le contexte d’exécution `pContext` avec un proxy de thread si elle ne l’est pas déjà. La propriété du proxy de thread actuel est déterminée par la valeur que vous spécifiez pour le `switchState` argument.  

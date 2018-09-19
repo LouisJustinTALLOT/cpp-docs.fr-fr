@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033977"
 ---
 # <a name="cheapptr-class"></a>Cheapptr, classe
 
@@ -37,16 +37,16 @@ Une classe de pointeur intelligent pour la gestion des pointeurs de tas.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Le type d’objet à stocker sur le tas.
 
-*Allocateur*  
+*Allocateur*<br/>
 La classe d’allocation de mémoire à utiliser.
 
 ## <a name="members"></a>Membres
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nElements*  
+*nElements*<br/>
 Le nombre d’éléments utilisée pour calculer la quantité de mémoire à allouer. La valeur par défaut est 1.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*  
+*p*<br/>
 Un pointeur de tas existant ou `CHeapPtr`.
 
 ### <a name="remarks"></a>Notes
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>Paramètres
 
-*p*  
+*p*<br/>
 Objet `CHeapPtr` existant.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nElements*  
+*nElements*<br/>
 Le nouveau nombre d’éléments utilisée pour calculer la quantité de mémoire à allouer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -177,6 +177,6 @@ Retourne la valeur true si la mémoire a été allouée, false en cas d’échec
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cheapptrbase, classe](../../atl/reference/cheapptrbase-class.md)   
-[Ccrtallocator, classe](../../atl/reference/ccrtallocator-class.md)   
+[CHeapPtrBase, classe](../../atl/reference/cheapptrbase-class.md)<br/>
+[CCRTAllocator, classe](../../atl/reference/ccrtallocator-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

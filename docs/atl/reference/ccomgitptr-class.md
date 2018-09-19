@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703844"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033951"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr, classe
 
@@ -38,13 +38,13 @@ Cette classe fournit des méthodes pour la gestion des pointeurs d’interface e
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-`T`  
+*T*<br/>
 Le type de pointeur d’interface à stocker dans le GIT.
 
 ## <a name="members"></a>Membres
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*  
+*p*<br/>
 Le pointeur d’interface à ajouter à la GIT.
 
-*dwCookie*  
+*dwCookie*<br/>
 Le cookie est utilisé pour identifier le pointeur d’interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*PP*  
+*PP*<br/>
 Le pointeur qui doit recevoir l’interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -262,7 +262,7 @@ Assigne une nouvelle valeur à un `CComGITPtr` objet, à partir d’un objet exi
 
 Retourne le cookie associé à la `CComGITPtr` objet.
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ Supprime l’interface à partir de la GIT.
 
 ## <a name="see-also"></a>Voir aussi
 
-[FTM](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[Accès aux Interfaces entre les cloisonnements](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[Quand utiliser le tableau Global d’Interface](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[FTM](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[Accès aux Interfaces entre les cloisonnements](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[Quand utiliser le tableau Global d’Interface](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

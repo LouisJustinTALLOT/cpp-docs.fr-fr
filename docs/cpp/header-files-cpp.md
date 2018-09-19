@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be194095b6461eaedd9e814c6130801b431fef5d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1e477b04421f7e8920bba47b2eba4e73df34cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028530"
 ---
 # <a name="header-files-c"></a>Fichiers d’en-tête (C++)
 
-Les noms d’éléments de programme tels que des variables, fonctions, classes et ainsi de suite doivent être déclarés avant de pouvoir être utilisés. Par exemple, vous ne pouvez pas simplement écrire `x = 42` sans déclarer d’abord « x ». 
+Les noms d’éléments de programme tels que des variables, fonctions, classes et ainsi de suite doivent être déclarés avant de pouvoir être utilisés. Par exemple, vous ne pouvez pas simplement écrire `x = 42` sans déclarer d’abord « x ».
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
- La déclaration indique au compilateur qu’est un **int**, un **double**, un **fonction**, un **classe** ou certaines autres chose.  En outre, chaque nom doit être déclaré (directement ou indirectement) dans chaque fichier .cpp dans lequel elle est utilisée. Lorsque vous compilez un programme, chaque fichier .cpp est compilé en indépendamment dans une unité de compilation. Le compilateur connaît pas les noms sont déclarés dans d’autres unités de compilation. Cela signifie que si vous définissez une classe ou la fonction ou la variable globale, vous devez fournir une déclaration de ceci dans chaque fichier .cpp supplémentaires qui l’utilise. Chaque déclaration de ceci doit être exactement identique dans tous les fichiers. Une incohérence légère sera provoquer des erreurs, ou un comportement inattendu, lorsque l’éditeur de liens tente de fusionner toutes les unités de compilation dans un seul programme.
+La déclaration indique au compilateur qu’est un **int**, un **double**, un **fonction**, un **classe** ou certaines autres chose.  En outre, chaque nom doit être déclaré (directement ou indirectement) dans chaque fichier .cpp dans lequel elle est utilisée. Lorsque vous compilez un programme, chaque fichier .cpp est compilé en indépendamment dans une unité de compilation. Le compilateur connaît pas les noms sont déclarés dans d’autres unités de compilation. Cela signifie que si vous définissez une classe ou la fonction ou la variable globale, vous devez fournir une déclaration de ceci dans chaque fichier .cpp supplémentaires qui l’utilise. Chaque déclaration de ceci doit être exactement identique dans tous les fichiers. Une incohérence légère sera provoquer des erreurs, ou un comportement inattendu, lorsque l’éditeur de liens tente de fusionner toutes les unités de compilation dans un seul programme.
 
-Pour réduire le risque d’erreurs, C++ a adopté la convention de l’utilisation de *fichiers d’en-tête* pour contenir les déclarations. Vous effectuez les déclarations dans un fichier d’en-tête, puis utiliser le #include, directive dans chaque fichier .cpp ou autre fichier d’en-tête nécessite cette déclaration. Le #include directive insère une copie du fichier d’en-tête directement dans le fichier .cpp avant la compilation. 
+Pour réduire le risque d’erreurs, C++ a adopté la convention de l’utilisation de *fichiers d’en-tête* pour contenir les déclarations. Vous effectuez les déclarations dans un fichier d’en-tête, puis utiliser le #include, directive dans chaque fichier .cpp ou autre fichier d’en-tête nécessite cette déclaration. Le #include directive insère une copie du fichier d’en-tête directement dans le fichier .cpp avant la compilation.
 
 ## <a name="example"></a>Exemple
 
@@ -91,7 +91,7 @@ Une fois que le compilateur a terminé la compilation de chaque fichier .cpp dan
 
 ## <a name="include-guards"></a>Protections de type include
 
-En règle générale, les fichiers d’en-tête ont un *#include guard* ou un `#pragma once` directive pour vous assurer qu’ils ne sont pas insérés plusieurs fois dans un fichier .cpp unique. 
+En règle générale, les fichiers d’en-tête ont un *#include guard* ou un `#pragma once` directive pour vous assurer qu’ils ne sont pas insérés plusieurs fois dans un fichier .cpp unique.
 
 ```cpp
 // my_class.h
@@ -115,20 +115,20 @@ namespace N
 Un fichier d’en-tête peut potentiellement être inclus par plusieurs fichiers, il ne peut pas contenir les définitions qui peuvent produire plusieurs définitions du même nom. Les éléments suivants ne sont pas autorisées, ou sont considérées comme très mauvaise pratique :
 
 - définitions de type intégré à l’espace de noms ou portée globale
-- définitions de fonction non inline 
+- définitions de fonction non inline
 - définitions de variable non const
 - définitions d’agrégation
 - espaces de noms sans nom
 - Directives using
 
-Utilisation de la **à l’aide de** directive pas nécessairement provoque une erreur, mais peut entraîner un problème, car il place l’espace de noms dans la portée dans chaque fichier .cpp qui directement ou indirectement inclut cet en-tête. 
+Utilisation de la **à l’aide de** directive pas nécessairement provoque une erreur, mais peut entraîner un problème, car il place l’espace de noms dans la portée dans chaque fichier .cpp qui directement ou indirectement inclut cet en-tête.
 
 ## <a name="sample-header-file"></a>Exemple de fichier en-tête
 
 L’exemple suivant montre les différents types de déclarations et définitions qui sont autorisées dans un fichier d’en-tête :
 
 ```cpp
-#pragma once 
+#pragma once
 #include <vector> // #include directive
 #include <string>
 
@@ -157,7 +157,7 @@ namespace N  // namespace declaration
     void print_to_log();
 #endif
 
-    class my_class   // regular class definition, 
+    class my_class   // regular class definition,
     {                // but no non-inline function definitions
 
         friend class other_class;

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2830 | Documents Microsoft
+title: Erreur du compilateur C2830 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31c5fef787328b4e3d34bb49078fc53354598264
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d54028b50852fec4d525afa9a79f93edb4ae09ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033028"
 ---
 # <a name="compiler-error-c2830"></a>Erreur du compilateur C2830
-Seuls les paramètres de positionnement de 'operator new' peuvent avoir des valeurs par défaut  
-  
-Les paramètres formels standards de [new, opérateur](../../standard-library/new-operators.md#op_new) ne peut pas avoir de valeurs par défaut. Seuls les paramètres définis par l’utilisateur de la sélection élective peuvent spécifier les paramètres par défaut.
+
+uniquement les paramètres de positionnement de 'operator new' peuvent avoir des valeurs par défaut
+
+Les paramètres formels standard pour [opérateur new](../../standard-library/new-operators.md#op_new) ne peut pas avoir de valeurs par défaut. Seuls les paramètres de positionnement définies par l’utilisateur peuvent spécifier des paramètres par défaut.

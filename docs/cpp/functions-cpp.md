@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0894ecf767d24f6e5ec5ea385b5aeca6daae41a8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131751"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022355"
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 
@@ -135,7 +135,7 @@ Les éléments facultatifs d'une déclaration de fonction sont les suivants :
 
 L'illustration suivante montre les parties d'une définition de fonction. La zone grisée est le corps de la fonction.
 
- ![Parties d’une définition de fonction](../cpp/media/vc38ru1.gif "vc38RU1") parties d’une définition de fonction
+![Parties d’une définition de fonction](../cpp/media/vc38ru1.gif "vc38RU1") parties d’une définition de fonction
 
 ## <a name="function-definitions"></a>Définitions de fonction
 
@@ -205,7 +205,7 @@ Lorsqu’une fonction modifie un argument passé par référence, elle modifie l
 void DoSomething(const std::string& input){...}
 ```
 
- **C++ 11 :** pour gérer explicitement les arguments sont passés par référence rvalue ou référence lvalue, utilisez une double perluète sur le paramètre pour indiquer une référence universelle :
+**C++ 11 :** pour gérer explicitement les arguments sont passés par référence rvalue ou référence lvalue, utilisez une double perluète sur le paramètre pour indiquer une référence universelle :
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -315,22 +315,22 @@ Il existe différentes manières de retourner plusieurs valeurs d’une fonction
     ```cpp
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     struct S
     {
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         S s = g();
@@ -338,16 +338,16 @@ Il existe différentes manières de retourner plusieurs valeurs d’une fonction
         return 0;
     }
     ```
-    
+
 1. Retourne un objet std::tuple ou std::pair :
 
     ```cpp
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-        
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -355,20 +355,20 @@ Il existe différentes manières de retourner plusieurs valeurs d’une fonction
         double d{ .01 };
         return { i,s,d };
     }
-    
+
     int main()
     {
         auto t = f();
         cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
-     
+
         // --or--
-    
+
         int myval;
         string myname;
         double mydecimal;
         tie(myval, myname, mydecimal) = f();
         cout << myval << " " << myname << " " << mydecimal << endl;
-    
+
         return 0;
     }
     ```
@@ -379,9 +379,9 @@ Il existe différentes manières de retourner plusieurs valeurs d’une fonction
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -394,25 +394,25 @@ Il existe différentes manières de retourner plusieurs valeurs d’une fonction
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         auto[x, y, z] = f(); // init from tuple
         cout << x << " " << y << " " << z << endl;
-    
+
         auto[a, b] = g(); // init from POD struct
         cout << a << " " << b << endl;
         return 0;
     }
     ```
-    
+
 1. Outre l’utilisation de la valeur de retour, vous pouvez « return » valeurs en définissant un nombre quelconque de paramètres à utiliser le passage par référence afin que la fonction peut être modifiés ou initialiser les valeurs des objets qui fournit de l’appelant. Pour plus d’informations, consultez [Arguments de fonction de Type référence](reference-type-function-arguments.md).
 
 ## <a name="function-pointers"></a>Pointeurs fonction
@@ -435,9 +435,10 @@ int (*myFunction(char* s))(int);
 La déclaration précédente est équivalente à la déclaration utilisant typedef ci-dessus.
 
 ## <a name="see-also"></a>Voir aussi
- [Surcharge de fonction](../cpp/function-overloading.md)  
- [Fonctions avec listes d’arguments variables](../cpp/functions-with-variable-argument-lists-cpp.md)  
- [Fonctions utilisées par défaut et supprimées explicitement](../cpp/explicitly-defaulted-and-deleted-functions.md)  
- [Recherche de nom qui dépend de l’argument (Koenig) sur les fonctions](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
- [Arguments par défaut](../cpp/default-arguments.md)  
- [Fonctions inline](../cpp/inline-functions-cpp.md)
+
+[Surcharge de fonction](../cpp/function-overloading.md)<br/>
+[Fonctions avec listes d’arguments variables](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>
+[Fonctions utilisées par défaut et supprimées explicitement](../cpp/explicitly-defaulted-and-deleted-functions.md)<br/>
+[Recherche de nom qui dépend de l’argument (Koenig) sur les fonctions](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)<br/>
+[Arguments par défaut](../cpp/default-arguments.md)<br/>
+[Fonctions inline](../cpp/inline-functions-cpp.md)

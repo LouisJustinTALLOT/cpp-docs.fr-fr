@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4131 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4131 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6563d5faf3a9f050deb3cb7831c1a908739c8532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43de917b2a6aff38602a6118e599c0d9df262a70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033184"
 ---
 # <a name="compiler-warning-level-4-c4131"></a>Avertissement du compilateur (niveau 4) C4131
-'fonction' : utilise un déclarateur obsolète  
-  
- La déclaration de fonction spécifiée n’est pas sous forme de prototype.  
-  
- Les anciennes déclarations de fonction doivent être converties sous forme de prototypes.  
-  
- L’exemple suivant montre une ancienne déclaration de fonction :  
-  
-```  
-// C4131.c  
-// compile with: /W4 /c  
-void addrec( name, id ) // C4131 expected  
-char *name;  
-int id;  
-{ }  
-```  
-  
- L’exemple suivant montre une forme de prototype :  
-  
-```  
-void addrec( char *name, int id )  
-{ }  
+
+'fonction' : utilise un déclarateur obsolète
+
+La déclaration de fonction spécifiée n’est pas sous forme de prototype.
+
+Les anciennes déclarations de fonction doivent être converties sous forme de prototypes.
+
+L’exemple suivant montre une ancienne déclaration de fonction :
+
+```
+// C4131.c
+// compile with: /W4 /c
+void addrec( name, id ) // C4131 expected
+char *name;
+int id;
+{ }
+```
+
+L’exemple suivant montre une forme de prototype :
+
+```
+void addrec( char *name, int id )
+{ }
 ```

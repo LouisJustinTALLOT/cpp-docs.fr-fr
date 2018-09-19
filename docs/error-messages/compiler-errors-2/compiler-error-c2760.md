@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2760 | Documents Microsoft
+title: Erreur du compilateur C2760 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beee34b7dfa31365e9bdf79c843cca501a930e02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ae920b9bf0d6d8a743bd9defac883304e80c117
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229834"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026086"
 ---
 # <a name="compiler-error-c2760"></a>Erreur du compilateur C2760
-Erreur de syntaxe : attendu 'nom1' non 'nom2'  
-  
- Un opérateur de cast est utilisé avec un opérateur non valide.  
-  
- L’exemple suivant génère l’erreur C2760 :  
-  
-```  
-// C2760.cpp  
-class B {};  
-class D : public B {};  
-  
-void f(B* pb) {  
-    D* pd1 = static_cast<D*>(pb);  
-    D* pd2 = static_cast<D*>=(pb);  // C2760  
-    D* pd3 = static_cast<D*=(pb);   // C2760  
-}  
+
+Erreur de syntaxe : attendu 'nom1' non 'nom2'
+
+Un opérateur de cast est utilisé avec un opérateur non valide.
+
+L’exemple suivant génère l’erreur C2760 :
+
+```
+// C2760.cpp
+class B {};
+class D : public B {};
+
+void f(B* pb) {
+    D* pd1 = static_cast<D*>(pb);
+    D* pd2 = static_cast<D*>=(pb);  // C2760
+    D* pd3 = static_cast<D*=(pb);   // C2760
+}
 ```

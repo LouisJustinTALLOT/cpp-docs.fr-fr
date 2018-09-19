@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4613 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4613 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbac6afb83e7ab44fb71a38e69860b168d45b1e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a69c1182a5ad5a25d80b5818f799bf9e684dec8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027104"
 ---
 # <a name="compiler-warning-level-1-c4613"></a>Avertissement du compilateur (niveau 1) C4613
-'segment' : la classe d’un segment ne peut pas être modifiée  
-  
- Vous avez tenté de créer un segment portant le même nom de classe qu’un segment utilisé par le compilateur. Aucun segment de classe n’a été créé.
+
+'segment' : la classe d’un segment ne peut pas être modifiée
+
+Vous avez tenté de créer un segment portant le même nom de classe qu’un segment utilisé par le compilateur. Aucun segment de classe n’a été créé.

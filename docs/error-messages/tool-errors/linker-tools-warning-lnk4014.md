@@ -1,5 +1,5 @@
 ---
-title: LNK4014 d’avertissement des outils Éditeur de liens | Documents Microsoft
+title: Avertissement LNK4014 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb86efbdc70342861a87a233ab687f7564cb48b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df0a3b6f30733413a0f27c0b8daa07394bb04b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300057"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023109"
 ---
 # <a name="linker-tools-warning-lnk4014"></a>Avertissement des outils Éditeur de liens LNK4014
-Impossible de trouver l’objet membre « %{ObjectName/} »  
-  
- LIB n’a pas pu trouver `objectname` dans la bibliothèque.  
-  
- Le **/suppression de** et **/extraire** options requièrent le nom complet de l’objet membre qui doit être supprimé ou copié vers un fichier. Le nom complet inclut le chemin d’accès du fichier objet d’origine. Pour afficher les noms complets des objets membres d’une bibliothèque, utilisez DUMPBIN [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md) ou LIB [/liste](../../build/reference/managing-a-library.md).
+
+Impossible de trouver l’objet membre « %{ObjectName/} »
+
+LIB n’a pas trouvé `objectname` dans la bibliothèque.
+
+Le **/supprimer** et **/extraire** options nécessitent le nom complet de l’objet de membre qui doit être supprimé ou copiées dans un fichier. Le nom complet inclut le chemin d’accès du fichier objet d’origine. Pour afficher les noms complets des objets membres dans une bibliothèque, utilisez DUMPBIN [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md) ou LIB [/la liste](../../build/reference/managing-a-library.md).

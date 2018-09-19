@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d0dfc28a510ab9fcc18149f1cd96037e6754d3d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2c786783963bf2f3613228b87a7ede23eb75a450
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025592"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl, classe
+
 Fournit une implémentation pour le `IDBProperties` interface.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -52,11 +53,13 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *T*  
- Votre classe, dérivée de `IDBPropertiesImpl`.  
+
+*T*<br/>
+Votre classe, dérivée de `IDBPropertiesImpl`.  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** atldb.h  
+
+**En-tête :** atldb.h  
   
 ## <a name="members"></a>Membres  
   
@@ -69,9 +72,11 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[SetProperties](#setproperties)|Définit les propriétés dans les groupes de propriétés de Source de données et d’initialisation, pour les objets de source de données, ou le groupe de propriétés d’initialisation pour les énumérateurs.|  
   
 ## <a name="remarks"></a>Notes  
- [IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\)) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)), elle doit exposer `IDBProperties`. `IDBPropertiesImpl` implémente `IDBProperties` à l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+[IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\)) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)), elle doit exposer `IDBProperties`. `IDBPropertiesImpl` implémente `IDBProperties` à l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
+
 Retourne les valeurs des propriétés dans les groupes de propriétés de Source de données, sources de données et d’initialisation qui sont actuellement définies sur l’objet de source de données ou les valeurs des propriétés dans le groupe de propriétés d’initialisation qui sont actuellement définies sur le énumérateur.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -84,9 +89,10 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+
+Consultez [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
- Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBProperties::GetProperties`:  
+Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBProperties::GetProperties`:  
   
 |Paramètres de modèle OLE DB|*Référence du programmeur OLE DB* paramètres|  
 |--------------------------------|------------------------------------------------|  
@@ -96,9 +102,11 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 |*prgProperties*|*prgPropertySets*|  
   
 ### <a name="remarks"></a>Notes  
- Si le fournisseur est initialisé, cette méthode retourne les valeurs des propriétés dans le DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, les groupes de propriétés DBPROPSET_DBINIT qui sont actuellement définies sur l’objet de source de données. Si le fournisseur n’est pas initialisé, elle retourne uniquement les propriétés de groupe DBPROPSET_DBINIT. 
+
+Si le fournisseur est initialisé, cette méthode retourne les valeurs des propriétés dans le DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, les groupes de propriétés DBPROPSET_DBINIT qui sont actuellement définies sur l’objet de source de données. Si le fournisseur n’est pas initialisé, elle retourne uniquement les propriétés de groupe DBPROPSET_DBINIT. 
   
 ## <a name="getpropertyinfo"></a> IDBPropertiesImpl::GetPropertyInfo
+
 Retourne des informations de propriété pris en charge par la source de données.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -112,9 +120,10 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+
+Consultez [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
- Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBProperties::GetPropertyInfo`:  
+Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBProperties::GetPropertyInfo`:  
   
 |Paramètres de modèle OLE DB|*Référence du programmeur OLE DB* paramètres|  
 |--------------------------------|------------------------------------------------|  
@@ -122,9 +131,11 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 |*rgPropertySets*|*rgPropertyIDSets*|  
   
 ### <a name="remarks"></a>Notes  
- Utilise [IDBInitializeImpl::m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) pour implémenter cette fonctionnalité. 
+
+Utilise [IDBInitializeImpl::m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) pour implémenter cette fonctionnalité. 
 
 ## <a name="setproperties"></a> IDBPropertiesImpl::SetProperties
+
 Définit les propriétés dans les groupes de propriétés de Source de données et d’initialisation, pour les objets de source de données, ou le groupe de propriétés d’initialisation pour les énumérateurs.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -135,11 +146,14 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+
+Consultez [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
- Si le fournisseur est initialisé, cette méthode définit les valeurs des propriétés dans le DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, groupes de propriétés DBPROPSET_DBINIT pour l’objet de source de données. Si le fournisseur n’est pas initialisé, elle définit uniquement les propriétés de groupe DBPROPSET_DBINIT.  
+
+Si le fournisseur est initialisé, cette méthode définit les valeurs des propriétés dans le DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, groupes de propriétés DBPROPSET_DBINIT pour l’objet de source de données. Si le fournisseur n’est pas initialisé, elle définit uniquement les propriétés de groupe DBPROPSET_DBINIT.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: Création du fournisseur | Documents Microsoft
+title: Création du fournisseur | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b08d2a2f68d174ae7c92d1d6bc0fa2bbb764fdca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3149e59a239401c7c847da9371619821824a5d37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032092"
 ---
 # <a name="creating-the-provider"></a>Création du fournisseur
+
 #### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Pour créer un fournisseur OLE DB avec l’Assistant fournisseur OLE DB ATL  
   
-1.  Cliquez sur le projet.  
+1. Cliquez sur le projet.  
   
-2.  Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une classe**.  
+1. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une classe**.  
   
-3.  Dans le **ajouter une classe** boîte de dialogue, sélectionnez le **fournisseur OLE DB ATL** icône, puis cliquez sur **ouvrir**.  
+1. Dans le **ajouter une classe** boîte de dialogue, sélectionnez le **fournisseur OLE DB ATL** icône, puis cliquez sur **Open**.  
   
-4.  Dans l’Assistant fournisseur OLE DB ATL, entrez un nom court pour le fournisseur dans le **nom court** boîte. Les rubriques suivantes utilisent le nom court « MyProvider », mais vous pouvez utiliser un autre nom. Les autres zones de nom remplissent en fonction du nom que vous entrez.  
+1. Dans l’Assistant fournisseur OLE DB ATL, entrez un nom court pour le fournisseur dans le **nom court** boîte. Les rubriques suivantes utilisent le nom court « MyProvider », mais vous pouvez utiliser un autre nom. Les autres zones de nom remplissent en fonction du nom que vous entrez.  
   
-5.  Modifiez les autres zones de nom si nécessaire. Outre les noms d’objet et de fichier, vous pouvez modifier les éléments suivants :  
+1. Modifiez les autres zones, si nécessaire. Outre les noms d’objet et de fichier, il se peut que vous pouvez modifier les éléments suivants :  
   
     -   **Coclasse**: le nom utilisé par COM pour créer le fournisseur.  
   
-    -   **ProgID**: l’identificateur programmatique, qui est une chaîne de texte qui peut être utilisée à la place d’un GUID.  
+    -   **ProgID**: l’identificateur programmatique, qui est une chaîne de texte qui peut être utilisée au lieu d’un GUID.  
   
-    -   **Version**: utilisée avec ProgID et coclasse pour générer un ID programmatique de dépendants de la version.  
+    -   **Version**: utilisé avec ProgID et coclasse pour générer un ID programmatique de dépendants de la version.  
   
-6.  Cliquez sur **Terminer**.  
+1. Cliquez sur **Terminer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

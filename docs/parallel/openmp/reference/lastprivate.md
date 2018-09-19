@@ -1,5 +1,5 @@
 ---
-title: lastprivate | Documents Microsoft
+title: lastprivate | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aaf80e3061877c42154ab9ee5ccd30f47f17135
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028192"
 ---
 # <a name="lastprivate"></a>lastprivate
-Spécifie que la version du contexte englobant de la variable est définie égale à la version privée du thread exécute la dernière itération (construction de la boucle for) ou la dernière section (sections #pragma).  
+Spécifie que la version du contexte englobant de la variable est définie égale à la version privée du thread quelconque qui exécute la dernière itération (construction de boucle for) ou la dernière section (sections #pragma).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,11 +32,10 @@ Spécifie que la version du contexte englobant de la variable est définie égal
 lastprivate(var)  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+### <a name="parameters"></a>Paramètres
   
- `var`  
- La variable est égale à la version privée du thread exécute la dernière itération (construction de la boucle for) ou la dernière section (sections #pragma).  
+*var*<br/>
+La variable est égale à la version privée du thread quelconque qui exécute la dernière itération (construction de boucle for) ou la dernière section (sections #pragma).  
   
 ## <a name="remarks"></a>Notes  
  `lastprivate` s’applique aux directives suivantes :  
@@ -48,7 +47,7 @@ lastprivate(var)
  Pour plus d’informations, consultez [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).  
   
 ## <a name="example"></a>Exemple  
- Consultez [planification](../../../parallel/openmp/reference/schedule.md) pour obtenir un exemple d’utilisation de `lastprivate` clause.  
+ Consultez [planification](../../../parallel/openmp/reference/schedule.md) pour obtenir un exemple d’utilisation `lastprivate` clause.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)

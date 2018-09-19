@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71dc40a7c2d4fe460f546dbfe4f55d00aff59667
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aa5f96b8937168126509025735d20fab7b35c2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019197"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Cprimitiveelementtraits, classe
 
@@ -33,13 +33,13 @@ Cette classe fournit des méthodes par défaut et des fonctions pour une classe 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <typename T>  
+template <typename T>
 class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Le type de données à stocker dans l’objet de classe de collection.
 
 ## <a name="members"></a>Membres
@@ -91,5 +91,5 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cdefaultelementtraits, classe](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits, classe](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

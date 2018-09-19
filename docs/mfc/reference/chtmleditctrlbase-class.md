@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e2d2bdddd950197406672c59a6577d33985d3a54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031507"
 ---
 # <a name="chtmleditctrlbase-class"></a>Chtmleditctrlbase, classe
 Représente un composant d'édition HTML.  
@@ -361,8 +361,8 @@ template <class T> class CHtmlEditCtrlBase
 |[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Active ou désactive la sélection actuelle entre une liste ordonnée et un bloc de format normal.|  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
- Le nom de la classe dérivée.  
+*T*<br/>
+Le nom de la classe dérivée.  
   
 ## <a name="remarks"></a>Notes  
  `CHtmlEditCtrlBase` Fournit des fonctions membres pour HTML de WebBrowser éditer des commandes, telles que [gras](#bold). (Vous pouvez également appeler [ExecCommand](#execcommand) pour exécuter la commande IDM_BOLD.)  

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2477 | Documents Microsoft
+title: Erreur du compilateur C2477 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1212a664582f19e91fbf21bde36431ec715946
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a3e8a9f76526ecc170b30436ff395d54f8d5395
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020164"
 ---
 # <a name="compiler-error-c2477"></a>Erreur du compilateur C2477
-'membre' : une donnée membre static ne peuvent pas être initialisée via une classe dérivée  
-  
- Une donnée membre static de la classe de modèle a été initialisé de manière incorrecte. Il s’agit d’une modification avec rupture avec les versions du compilateur Visual C++ antérieures à Visual Studio .NET 2003, pour se conformer à la norme ISO C++.  
-  
- L’exemple suivant génère l’erreur C2477 :  
-  
-```  
-// C2477.cpp  
-// compile with: /Za /c  
-template <class T>  
-struct S {  
-   static int n;  
-};  
-  
-struct X {};  
-struct A: S<X> {};  
-  
-int A::n = 0;   // C2477  
-  
-template<>  
-int S<X>::n = 0;  
+
+'membre' : données membres static ne peuvent pas être initialisées via une classe dérivée
+
+Une donnée membre statique d’une classe de modèle a été initialisé correctement. Il s’agit d’une modification avec rupture avec les versions du compilateur Visual C++ avant Visual Studio .NET 2003, afin de se conformer à la norme ISO C++.
+
+L’exemple suivant génère l’erreur C2477 :
+
+```
+// C2477.cpp
+// compile with: /Za /c
+template <class T>
+struct S {
+   static int n;
+};
+
+struct X {};
+struct A: S<X> {};
+
+int A::n = 0;   // C2477
+
+template<>
+int S<X>::n = 0;
 ```

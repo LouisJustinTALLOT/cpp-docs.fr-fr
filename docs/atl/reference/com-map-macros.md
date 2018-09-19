@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524f360f2dcc2e1eaec11723395da0be7058c21a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756501"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028049"
 ---
 # <a name="com-map-macros"></a>Macros de mappage COM
 
@@ -47,7 +47,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="parameters"></a>Paramètres
 
-*x*  
+*x*<br/>
 [in] Le nom de l’objet de classe que vous exposez des interfaces sur.
 
 ### <a name="remarks"></a>Notes
@@ -70,5 +70,5 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros](../../atl/reference/atl-macros.md)   
+[Macros](../../atl/reference/atl-macros.md)<br/>
 [Fonctions globales de mappage COM](../../atl/reference/com-map-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2117 | Documents Microsoft
+title: Erreur du compilateur C2117 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a51bebc1edf7398d91356adb16f35443820cef2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5579a6f05e1de768aebd2e68b64d0b861688607
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166872"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030980"
 ---
 # <a name="compiler-error-c2117"></a>Erreur du compilateur C2117
-'identificateur' : dépassement des limites du tableau  
-  
- Un tableau a trop d’initialiseurs :  
-  
--   Les éléments de tableau et les initialiseurs ne correspondent pas dans la taille et la quantité.  
-  
--   Pas d’espace pour le terminateur null dans une chaîne.  
-  
- L’exemple suivant génère l’erreur C2117 :  
-  
-```  
-// C2117.cpp  
-int main() {  
-   char abc[4] = "abcd";   // C2117  
-   char def[4] = "abd";   // OK  
-}  
+
+'identificateur' : dépassement des limites du tableau
+
+Un tableau a trop d’initialiseurs :
+
+- Les éléments de tableau et les initialiseurs ne correspondent pas dans la taille et la quantité.
+
+- Pas d’espace pour le terminateur null dans une chaîne.
+
+L’exemple suivant génère l’erreur C2117 :
+
+```
+// C2117.cpp
+int main() {
+   char abc[4] = "abcd";   // C2117
+   char def[4] = "abd";   // OK
+}
 ```

@@ -39,34 +39,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97595b29c2d79cd6209479e39987208cafe6f0f8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0804e2a3e9d2f1fc37fae1eb72599f481e6b8c7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020996"
 ---
 # <a name="bstrt-relational-operators"></a>Opérateurs relationnels _bstr_t
-**Section spécifique à Microsoft**  
-  
- Compare deux objets `_bstr_t`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-bool operator!( ) const throw( );   
-bool operator==(const _bstr_t& str) const throw( );  
-bool operator!=(const _bstr_t& str) const throw( );  
-bool operator<(const _bstr_t& str) const throw( );  
-bool operator>(const _bstr_t& str) const throw( );  
-bool operator<=(const _bstr_t& str) const throw( );  
-bool operator>=(const _bstr_t& str) const throw( );  
-```  
-  
-## <a name="remarks"></a>Notes  
- Ces opérateurs comparent deux objets `_bstr_t` du point de vue lexicographique. Les opérateurs retournent la valeur TRUE si les comparaisons valable, sinon retourne FALSE.  
-  
- **FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [_bstr_t, classe](../cpp/bstr-t-class.md)
+
+**Section spécifique à Microsoft**
+
+Compare deux objets `_bstr_t`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+bool operator!( ) const throw( ); 
+bool operator==(const _bstr_t& str) const throw( );
+bool operator!=(const _bstr_t& str) const throw( );
+bool operator<(const _bstr_t& str) const throw( );
+bool operator>(const _bstr_t& str) const throw( );
+bool operator<=(const _bstr_t& str) const throw( );
+bool operator>=(const _bstr_t& str) const throw( );
+```
+
+## <a name="remarks"></a>Notes
+
+Ces opérateurs comparent deux objets `_bstr_t` du point de vue lexicographique. Les opérateurs retournent la valeur TRUE si les comparaisons valable, sinon retourne FALSE.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[_bstr_t, classe](../cpp/bstr-t-class.md)

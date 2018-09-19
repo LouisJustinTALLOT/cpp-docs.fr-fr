@@ -1,5 +1,5 @@
 ---
-title: auto_handle::swap | Documents Microsoft
+title: auto_handle::swap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 87a0a59197a7ebe22c5419e992f681787cd3ea7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 059f56485dee9668105c7e44fdee6fb910844810
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103916"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018026"
 ---
 # <a name="autohandleswap"></a>auto_handle::swap
 Échange les objets avec un autre `auto_handle`.  
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_right`  
- Le `auto_handle` pour échanger des objets.  
+*à d_roite*<br/>
+Le `auto_handle` avec lequel échanger des objets.  
   
 ## <a name="example"></a>Exemple  
   
@@ -69,7 +69,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  

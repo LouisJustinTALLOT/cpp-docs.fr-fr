@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2611 | Documents Microsoft
+title: Erreur du compilateur C2611 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee4215d9407a9dc873c7affdf97e4d16c55ec2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 728d22a7af72232618716e665b241188773cd66c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031286"
 ---
 # <a name="compiler-error-c2611"></a>Erreur du compilateur C2611
-'jeton' : non conforme après ' ~' (identificateur attendu)  
-  
- Le jeton n’est pas un identificateur.  
-  
- L’exemple suivant génère C2611 :  
-  
-```  
-// C2611.cpp  
-// compile with: /c  
-class C {  
-   C::~operator int();   // C2611  
-   ~C();   // OK  
-};  
+
+'jeton' : non conforme après ' ~' (identificateur attendu)
+
+Le jeton n’est pas un identificateur.
+
+L’exemple suivant génère C2611 :
+
+```
+// C2611.cpp
+// compile with: /c
+class C {
+   C::~operator int();   // C2611
+   ~C();   // OK
+};
 ```

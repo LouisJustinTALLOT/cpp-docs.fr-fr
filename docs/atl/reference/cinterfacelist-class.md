@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752747"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032430"
 ---
 # <a name="cinterfacelist-class"></a>Cinterfacelist, classe
 
@@ -32,7 +32,7 @@ Cette classe fournit des méthodes utiles lors de la construction d’une liste 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Paramètres
 
-*I*  
+*I*<br/>
 Une interface COM qui spécifie le type de pointeur à stocker.
 
-*piid*  
+*piid*<br/>
 Un pointeur vers l’IID de *je*.
 
 ## <a name="members"></a>Membres
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBlockSize*  
+*nBlockSize*<br/>
 La taille de bloc, avec une valeur par défaut de 10.
 
 ### <a name="remarks"></a>Notes
@@ -89,7 +89,7 @@ La taille de bloc est une mesure de la quantité de mémoire allouée lorsqu’u
 
 ## <a name="see-also"></a>Voir aussi
 
-[CAtlList, classe](../../atl/reference/catllist-class.md)   
-[CComQIPtr, classe](../../atl/reference/ccomqiptr-class.md)   
-[Ccomqiptrelementtraits, classe](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlList, classe](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr, classe](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits, classe](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

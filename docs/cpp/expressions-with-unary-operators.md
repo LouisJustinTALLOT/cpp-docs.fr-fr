@@ -16,75 +16,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78808ba4ce8d54ecc8e88516ae5f9b2521f50979
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 718b27d14414480a3515a212bc0b272e8cfbb7c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017870"
 ---
 # <a name="expressions-with-unary-operators"></a>Expressions avec opérateurs unaires
-Les opérateurs unaires agissent sur un seul opérande dans une expression. Opérateurs unaires :  
-  
--   [Opérateur d’indirection (*)](../cpp/indirection-operator-star.md)  
-  
--   [Opérateur d’adresse (&)](../cpp/address-of-operator-amp.md)  
-  
--   [Opérateur (+) plus unaire](../cpp/unary-plus-and-negation-operators-plus-and.md)  
-  
--   [Opérateur de négation unaire (–)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
-  
--   [Opérateur de négation logique ( !)](../cpp/logical-negation-operator-exclpt.md)  
-  
--   [Opérateur de complément (~)](../cpp/one-s-complement-operator-tilde.md)  
-  
--   [Opérateur de pré-incrémentation (++)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
-  
--   [Opérateur de pré-décrémentation (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
-  
--   [Opérateur de cast ()](../cpp/cast-operator-parens.md)  
-  
--   [opérateur sizeof](../cpp/sizeof-operator.md)  
-  
--   [__uuidof, opérateur](../cpp/uuidof-operator.md)  
-  
--   [__alignof, opérateur](../cpp/alignof-operator.md)  
-  
--   [New, opérateur](../cpp/new-operator-cpp.md)  
-  
--   [opérateur delete](../cpp/delete-operator-cpp.md)  
-  
- Ces opérateurs ont une associativité de droite à gauche. Les expressions unaires impliquent en général une syntaxe qui précède une expression primaire ou suffixée.  
-  
- Voici les formes possibles des expressions unaires :  
-  
--   *postfix-expression*  
-  
--   `++` *expression unaire*  
-  
--   `--` *expression unaire*  
-  
--   *opérateur-unaire* *expression de cast*  
-  
--   **sizeof** *expression unaire*  
-  
--   `sizeof(` *nom de type* `)`  
-  
--   `decltype(` *Expression* `)`  
-  
--   *allocation-expression*  
-  
--   *expression de désallocation*  
-  
- N’importe quel *postfix-expression* est considéré comme un *expression unaire*, et parce que toute expression primaire est considérée comme un *postfix-expression*, est toute expression primaire considéré comme un *expression unaire* également. Pour plus d’informations, consultez [Expressions suffixées](../cpp/postfix-expressions.md) et [Expressions primaires](../cpp/primary-expressions.md).  
-  
- Un *-opérateur unaire* se compose d’une ou plusieurs des symboles suivants : `* & + - ! ~`  
-  
- Le *cast-expression* est une expression unaire avec un transtypage facultatif pour modifier le type. Pour plus d’informations, consultez [opérateur de Cast : ()](../cpp/cast-operator-parens.md).  
-  
- Un *expression* peut être toute expression. Pour plus d’informations, consultez [Expressions](../cpp/expressions-cpp.md).  
-  
- Le *allocation-expression* fait référence à la **nouveau** opérateur. Le *désallocation-expression* fait référence à la **supprimer** opérateur. Pour plus d'informations, reportez-vous aux liens fournis plus haut dans cette rubrique.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Types d’expressions](../cpp/types-of-expressions.md)
+
+Les opérateurs unaires agissent sur un seul opérande dans une expression. Opérateurs unaires :
+
+- [Opérateur d’indirection (*)](../cpp/indirection-operator-star.md)
+
+- [Opérateur d’adresse (&)](../cpp/address-of-operator-amp.md)
+
+- [Opérateur (+) plus unaire](../cpp/unary-plus-and-negation-operators-plus-and.md)
+
+- [Opérateur de négation unaire (–)](../cpp/unary-plus-and-negation-operators-plus-and.md)
+
+- [Opérateur de négation logique ( !)](../cpp/logical-negation-operator-exclpt.md)
+
+- [Opérateur de complément (~)](../cpp/one-s-complement-operator-tilde.md)
+
+- [Opérateur de pré-incrémentation (++)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
+
+- [Opérateur de pré-décrémentation (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
+
+- [Opérateur de cast ()](../cpp/cast-operator-parens.md)
+
+- [opérateur sizeof](../cpp/sizeof-operator.md)
+
+- [__uuidof, opérateur](../cpp/uuidof-operator.md)
+
+- [__alignof, opérateur](../cpp/alignof-operator.md)
+
+- [New, opérateur](../cpp/new-operator-cpp.md)
+
+- [opérateur delete](../cpp/delete-operator-cpp.md)
+
+Ces opérateurs ont une associativité de droite à gauche. Les expressions unaires impliquent en général une syntaxe qui précède une expression primaire ou suffixée.
+
+Voici les formes possibles des expressions unaires :
+
+- *postfix-expression*
+
+- `++` *expression unaire*
+
+- `--` *expression unaire*
+
+- *opérateur-unaire* *expression de cast*
+
+- **sizeof** *expression unaire*
+
+- `sizeof(` *nom de type* `)`
+
+- `decltype(` *Expression* `)`
+
+- *allocation-expression*
+
+- *expression de désallocation*
+
+N’importe quel *postfix-expression* est considéré comme un *expression unaire*, et parce que toute expression primaire est considérée comme un *postfix-expression*, est toute expression primaire considéré comme un *expression unaire* également. Pour plus d’informations, consultez [Expressions suffixées](../cpp/postfix-expressions.md) et [Expressions primaires](../cpp/primary-expressions.md).
+
+Un *-opérateur unaire* se compose d’une ou plusieurs des symboles suivants : `* & + - ! ~`
+
+Le *cast-expression* est une expression unaire avec un transtypage facultatif pour modifier le type. Pour plus d’informations, consultez [opérateur de Cast : ()](../cpp/cast-operator-parens.md).
+
+Un *expression* peut être toute expression. Pour plus d’informations, consultez [Expressions](../cpp/expressions-cpp.md).
+
+Le *allocation-expression* fait référence à la **nouveau** opérateur. Le *désallocation-expression* fait référence à la **supprimer** opérateur. Pour plus d'informations, reportez-vous aux liens fournis plus haut dans cette rubrique.
+
+## <a name="see-also"></a>Voir aussi
+
+[Types d’expressions](../cpp/types-of-expressions.md)

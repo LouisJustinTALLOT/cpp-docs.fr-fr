@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb54752efb23db7599538e6dc2b71ea3bf5eb3a3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf12d517647e36c8a0d9428b818f3812bfea2e1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020613"
 ---
 # <a name="subscript-operator-"></a>Opérateur d’indice]
 
@@ -64,7 +64,7 @@ Une expression d'indice peut également avoir plusieurs indices, comme suit :
 
 *expression1* **[** *expression2* **] [** *expression3* **]** ...
 
-Les expressions d'indice s'associent de gauche à droite. L’expression d’indice extrême gauche, *expression1* **[** *expression2* **]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (<strong>\*</strong>) est appliqué après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.
+Les expressions d'indice s'associent de gauche à droite. L’expression d’indice la plus à gauche, *expression1* **[** *expression2* **]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (<strong>\*</strong>) est appliqué après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.
 
 Les expressions à indices multiples font référence à des éléments de tableaux multidimensionnels. Un tableau multidimensionnel est un tableau dont les éléments sont des tableaux. Par exemple, le premier élément d'un tableau tridimensionnel est un tableau à deux dimensions. L'exemple suivant déclare et initialise un tableau de caractères simple à deux dimensions :
 
@@ -120,6 +120,6 @@ L'opérateur d'indice est commutatif. Par conséquent, les expressions *tableau*
 
 [Expressions suffixées](../cpp/postfix-expressions.md)<br/>
 [Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Tableaux](../cpp/arrays-cpp.md)
-[tableaux unidimensionnels](../c-language/one-dimensional-arrays.md)<br/>
+[Tableaux](../cpp/arrays-cpp.md)<br/>
+[Tableaux unidimensionnels](../c-language/one-dimensional-arrays.md)<br/>
 [Tableaux multidimensionnels](../c-language/multidimensional-arrays-c.md)<br/>

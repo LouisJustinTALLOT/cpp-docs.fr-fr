@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017961"
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain, classe
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>Paramètres
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Identificateur unique associé à l’objet chaînée et sa table des messages.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Le handle vers la fenêtre de réception du message.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Le message est envoyé à la fenêtre.
 
-*wParam*  
+*wParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*lParam*  
+*lParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*lResult*  
+*lResult*<br/>
 [out] Le résultat du traitement du message.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Identificateur unique associé à l’objet chaînée et sa table des messages. Vous définissez à l’origine de cette valeur via un appel à [SetChainEntry](#setchainentry).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>Paramètres
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Identificateur unique associé à l’objet chaînée et sa table des messages.
 
-*pObject*  
+*pObject*<br/>
 [in] Pointeur vers l’objet chaînée déclarant de la table des messages. Cet objet doit dériver de [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identificateur de la table des messages dans l’objet chaînée. La valeur par défaut est 0, qui identifie la table des messages par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Pour spécifier une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passer `msgMapID`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -201,5 +201,5 @@ Si le *dwChainID* valeur existe déjà dans la collection, son objet associé et
 
 ## <a name="see-also"></a>Voir aussi
 
-[CWindowImpl, classe](../../atl/reference/cwindowimpl-class.md)   
+[CWindowImpl, classe](../../atl/reference/cwindowimpl-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

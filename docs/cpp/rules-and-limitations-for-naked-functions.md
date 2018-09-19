@@ -14,71 +14,74 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d49f915174383273f538c38a6ec002558601ca10
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 944945c8a5660ef65621e022130a63a02b46761a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020470"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Règles et limitations concernant les fonctions naked
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- Les règles et les limitations suivantes s'appliquent aux fonctions naked :  
-  
--   Le **retourner** instruction n’est pas autorisée.  
-  
--   Les constructions de gestion structurée des exceptions et de gestion des exceptions C++ ne sont pas autorisées, car elles doivent se dérouler sur le frame de pile.  
-  
--   Pour la même raison, toute forme de `setjmp` est interdite.  
-  
--   L'utilisation de la fonction `_alloca` est interdite.  
-  
--   Pour s'assurer qu'aucun code d'initialisation de variables locales n'apparaît avant la séquence de prologue, les variables locales initialisées ne soient pas autorisées dans la portée de la fonction. En particulier, la déclaration d'objets C++ n'est pas autorisée dans la portée de la fonction. En revanche, il peut y avoir des données initialisées dans une portée imbriquée.  
-  
--   L'optimisation du pointeur de frame (option du compilateur /Oy) n'est pas recommandée, mais elle est supprimée automatiquement pour une fonction naked.  
-  
--   Vous ne pouvez pas déclarer d'objets de classe C++ dans la portée lexicale de fonction. Vous pouvez toutefois déclarer des objets dans un bloc imbriqué.  
-  
--   Le **naked** mot clé est ignoré lors de la compilation avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
-  
--   Pour [__fastcall](../cpp/fastcall.md) fonctions naked, chaque fois qu’il existe une référence dans le code C/C++ à un des arguments de Registre, le code de prologue doit stocker les valeurs de ce Registre à l’emplacement de la pile pour cette variable. Exemple :  
-  
-```cpp 
-// nkdfastcl.cpp  
-// compile with: /c  
-// processor: x86  
-__declspec(naked) int __fastcall  power(int i, int j) {  
-   // calculates i^j, assumes that j >= 0  
-  
-   // prolog  
-   __asm {  
-      push ebp  
-      mov ebp, esp  
-      sub esp, __LOCAL_SIZE  
-     // store ECX and EDX into stack locations allocated for i and j  
-     mov i, ecx  
-     mov j, edx  
-   }  
-  
-   {  
-      int k = 1;   // return value  
-      while (j-- > 0)   
-         k *= i;  
-      __asm {   
-         mov eax, k   
-      };  
-   }  
-  
-   // epilog  
-   __asm {  
-      mov esp, ebp  
-      pop ebp  
-      ret  
-   }  
-}  
-```  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [Appels de fonction naked](../cpp/naked-function-calls.md)
+
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+
+Les règles et les limitations suivantes s'appliquent aux fonctions naked :
+
+- Le **retourner** instruction n’est pas autorisée.
+
+- Les constructions de gestion structurée des exceptions et de gestion des exceptions C++ ne sont pas autorisées, car elles doivent se dérouler sur le frame de pile.
+
+- Pour la même raison, toute forme de `setjmp` est interdite.
+
+- L'utilisation de la fonction `_alloca` est interdite.
+
+- Pour s'assurer qu'aucun code d'initialisation de variables locales n'apparaît avant la séquence de prologue, les variables locales initialisées ne soient pas autorisées dans la portée de la fonction. En particulier, la déclaration d'objets C++ n'est pas autorisée dans la portée de la fonction. En revanche, il peut y avoir des données initialisées dans une portée imbriquée.
+
+- L'optimisation du pointeur de frame (option du compilateur /Oy) n'est pas recommandée, mais elle est supprimée automatiquement pour une fonction naked.
+
+- Vous ne pouvez pas déclarer d'objets de classe C++ dans la portée lexicale de fonction. Vous pouvez toutefois déclarer des objets dans un bloc imbriqué.
+
+- Le **naked** mot clé est ignoré lors de la compilation avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+
+- Pour [__fastcall](../cpp/fastcall.md) fonctions naked, chaque fois qu’il existe une référence dans le code C/C++ à un des arguments de Registre, le code de prologue doit stocker les valeurs de ce Registre à l’emplacement de la pile pour cette variable. Exemple :
+
+```cpp
+// nkdfastcl.cpp
+// compile with: /c
+// processor: x86
+__declspec(naked) int __fastcall  power(int i, int j) {
+   // calculates i^j, assumes that j >= 0
+
+   // prolog
+   __asm {
+      push ebp
+      mov ebp, esp
+      sub esp, __LOCAL_SIZE
+     // store ECX and EDX into stack locations allocated for i and j
+     mov i, ecx
+     mov j, edx
+   }
+
+   {
+      int k = 1;   // return value
+      while (j-- > 0)
+         k *= i;
+      __asm {
+         mov eax, k
+      };
+   }
+
+   // epilog
+   __asm {
+      mov esp, ebp
+      pop ebp
+      ret
+   }
+}
+```
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[Appels de fonction naked](../cpp/naked-function-calls.md)

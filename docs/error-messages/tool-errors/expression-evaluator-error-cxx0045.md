@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0045 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0045 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac52b16c2c8551282b79ef6a7fda40e24acc6bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9913bc77dfc3fbc95bd03fd32c954c4d304d27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023200"
 ---
 # <a name="expression-evaluator-error-cxx0045"></a>Évaluateur d'expression, erreur CXX0045
-pas d’une fonction  
-  
- Une liste d’arguments a été fournie pour un symbole dans le programme qui n’est pas le nom d’une fonction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-queue( alpha, beta )  
-```  
-  
- Lorsque `queue` n’est pas une fonction.  
-  
- Cette erreur est identique à CAN0045.
+
+pas une fonction
+
+Une liste d’arguments a été fournie pour un symbole dans le programme qui n’est pas le nom d’une fonction.
+
+## <a name="example"></a>Exemple
+
+```
+queue( alpha, beta )
+```
+
+Lorsque `queue` n’est pas une fonction.
+
+Cette erreur est identique à CAN0045.

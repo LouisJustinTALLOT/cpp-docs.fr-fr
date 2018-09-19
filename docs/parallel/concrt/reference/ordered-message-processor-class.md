@@ -1,5 +1,5 @@
 ---
-title: ordered_message_processor, classe | Documents Microsoft
+title: ordered_message_processor, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dfb6c1a64d3a4e9df24f3966ec89db1dfbe10c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fa27c46db5d23c78d9f433b41f27161f0bc41736
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028569"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor, classe
 Un `ordered_message_processor` est un `message_processor` qui permet aux blocs de messages de traiter les messages dans l'ordre de leur réception.  
@@ -42,8 +42,8 @@ class ordered_message_processor : public message_processor<T>;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
- Type de charge utile des messages traités par le processeur.  
+*T*<br/>
+Type de charge utile des messages traités par le processeur.  
   
 ## <a name="members"></a>Membres  
   
@@ -64,39 +64,39 @@ class ordered_message_processor : public message_processor<T>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[async_send](#async_send)|Files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait de façon asynchrone. (Substitue [message_processor::async_send](message-processor-class.md#async_send).)|  
+|[async_send](#async_send)|Les files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait de façon asynchrone. (Substitue [message_processor::async_send](message-processor-class.md#async_send).)|  
 |[initialiser](#initialize)|Initialise le `ordered_message_processor` objet avec le groupe de fonction, le planificateur et planification de rappel appropriées.|  
 |[initialize_batched_processing](#initialize_batched_processing)|Initialiser le traitement des messages par lot|  
-|[sync_send](#sync_send)|Mode synchrone des files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait. (Substitue [message_processor::sync_send](message-processor-class.md#sync_send).)|  
-|[attente](#wait)|Une attente de rotation spécifique au processeur utilisée dans les destructeurs de blocs de messages pour vous assurer que toutes les tâches de traitement asynchrone disposent de temps à se terminer avant de détruire le bloc. (Substitue [message_processor::wait](message-processor-class.md#wait).)|  
+|[sync_send](#sync_send)|Mode synchrone les files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait. (Substitue [message_processor::sync_send](message-processor-class.md#sync_send).)|  
+|[attente](#wait)|Attente de rotation spécifique au processeur utilisée dans les destructeurs de blocs de messages pour vous assurer que toutes les tâches de traitement asynchrone ont le temps se termine avant de détruire le bloc. (Substitue [message_processor::wait](message-processor-class.md#wait).)|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|La fonction de traitement appelée de façon asynchrone. Il enlève les messages et commence à les traiter. (Substitue [message_processor::process_incoming_message](message-processor-class.md#process_incoming_message).)|  
+|[process_incoming_message](#process_incoming_message)|La fonction de traitement qui est appelée de façon asynchrone. Il enlève les messages et commence à les traiter. (Substitue [message_processor::process_incoming_message](message-processor-class.md#process_incoming_message).)|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [message_processor](message-processor-class.md)  
   
  `ordered_message_processor`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
   
 ##  <a name="async_send"></a> async_send 
 
- Files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait de façon asynchrone.  
+ Les files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait de façon asynchrone.  
   
 ```
 virtual void async_send(_Inout_opt_ message<T>* _Msg);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Msg`  
- Pointeur vers un message.  
+*_Msg*<br/>
+Pointeur vers un message.  
   
 ##  <a name="initialize"></a> initialiser 
 
@@ -110,14 +110,14 @@ void initialize(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_PScheduler`  
- Pointeur vers le planificateur à utiliser pour la planification de tâches légères.  
+*_PScheduler*<br/>
+Pointeur vers le planificateur à utiliser pour la planification des tâches légères.  
   
- `_PScheduleGroup`  
- Pointeur vers le groupe de planification à utiliser pour la planification de tâches légères.  
+*_PScheduleGroup*<br/>
+Pointeur vers le groupe de planification à utiliser pour la planification des tâches légères.  
   
- `_Handler`  
- Functor de gestionnaire appelé pendant le rappel.  
+*_Handler*<br/>
+Le functor de gestionnaire appelé pendant le rappel.  
   
 ##  <a name="initialize_batched_processing"></a> initialize_batched_processing 
 
@@ -130,11 +130,11 @@ virtual void initialize_batched_processing(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Processor`  
- Functor processeur appelé pendant le rappel.  
+*_Processor*<br/>
+Le functor processeur appelé pendant le rappel.  
   
- `_Propagator`  
- Functor propagateur appelé pendant le rappel.  
+*_Propagator*<br/>
+Le functor propagateur appelé pendant le rappel.  
   
 ##  <a name="ctor"></a> ordered_message_processor 
 
@@ -145,7 +145,7 @@ ordered_message_processor();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cela `ordered_message_processor` planifiera pas de gestionnaires asynchrones ou synchrones jusqu'à ce que le `initialize` est appelée.  
+ Cela `ordered_message_processor` ne programmons pas de gestionnaires asynchrones ou synchrones jusqu'à ce que le `initialize` fonction est appelée.  
   
 ##  <a name="dtor"></a> ~ordered_message_processor 
 
@@ -160,7 +160,7 @@ virtual ~ordered_message_processor();
   
 ##  <a name="process_incoming_message"></a> process_incoming_message 
 
- La fonction de traitement appelée de façon asynchrone. Il enlève les messages et commence à les traiter.  
+ La fonction de traitement qui est appelée de façon asynchrone. Il enlève les messages et commence à les traiter.  
   
 ```
 virtual void process_incoming_message();
@@ -168,19 +168,19 @@ virtual void process_incoming_message();
   
 ##  <a name="sync_send"></a> sync_send 
 
- Mode synchrone des files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait.  
+ Mode synchrone les files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait.  
   
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Msg`  
- Pointeur vers un message.  
+*_Msg*<br/>
+Pointeur vers un message.  
   
 ##  <a name="wait"></a> attente 
 
- Une attente de rotation spécifique au processeur utilisée dans les destructeurs de blocs de messages pour vous assurer que toutes les tâches de traitement asynchrone disposent de temps à se terminer avant de détruire le bloc.  
+ Attente de rotation spécifique au processeur utilisée dans les destructeurs de blocs de messages pour vous assurer que toutes les tâches de traitement asynchrone ont le temps se termine avant de détruire le bloc.  
   
 ```
 virtual void wait();

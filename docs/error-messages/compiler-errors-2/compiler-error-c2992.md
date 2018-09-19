@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2992 | Documents Microsoft
+title: Erreur du compilateur C2992 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc21e5db2770c915c1c64f1e48c89e8e5401835d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8bfe5c6157f1d643861b68f98c71a21252fe1205
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030837"
 ---
 # <a name="compiler-error-c2992"></a>Erreur du compilateur C2992
-'class' : liste de paramètres de type non valide ou manquante  
-  
- La classe est précédée d’un mot clé `template` ou **générique** avec des paramètres manquants ou non valides.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C2992 :  
-  
-```  
-// C2992.cpp  
-// compile with: /c  
-template <class T>   
-struct TC1 {  
-   template <class U>  
-   struct TC2;  
-};  
-  
-template <class T>   struct TC1<T>::TC2 {};   // C2992  
-  
-// OK  
-template <class T>  
-template <class U>  
-struct TC1<T>::TC2 {};  
- // C2992 can also occur when using generics:  
-// C2992c.cpp  
-// compile with: /clr /c  
-generic <class T>  
-ref struct GC1 {  
-   generic <class U>  
-   ref struct GC2;  
-};  
-  
-generic <class T> ref struct GC1<T>::GC2 {};   // C2992  
-  
-// OK  
-generic <class T>  
-generic <class U>  
-ref struct GC1<T>::GC2 {};  
+
+'class' : liste de paramètres de type non valide ou manquante
+
+La classe est précédée d’un mot clé `template` ou **générique** avec des paramètres manquants ou non valides.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C2992 :
+
+```
+// C2992.cpp
+// compile with: /c
+template <class T>
+struct TC1 {
+   template <class U>
+   struct TC2;
+};
+
+template <class T>   struct TC1<T>::TC2 {};   // C2992
+
+// OK
+template <class T>
+template <class U>
+struct TC1<T>::TC2 {};
+// C2992 can also occur when using generics:
+// C2992c.cpp
+// compile with: /clr /c
+generic <class T>
+ref struct GC1 {
+   generic <class U>
+   ref struct GC2;
+};
+
+generic <class T> ref struct GC1<T>::GC2 {};   // C2992
+
+// OK
+generic <class T>
+generic <class U>
+ref struct GC1<T>::GC2 {};
 ```

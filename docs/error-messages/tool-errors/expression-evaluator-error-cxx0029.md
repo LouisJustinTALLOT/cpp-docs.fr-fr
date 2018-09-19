@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0029 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0029 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 216474bbb7a67cb3c435770ab418ab4b7f4e5c4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687708db71eedf9b8f62dc88efc1bfe473cde1d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297321"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017012"
 ---
 # <a name="expression-evaluator-error-cxx0029"></a>Évaluateur d'expression, erreur CXX0029
-pointeur non struct  
-  
- L’opérateur de sélection de membre (**->**) a été appliqué à une expression qui n’est pas un pointeur vers une structure.  
-  
- Vérifiez que l’expression entière est entre parenthèses correctement, ou effectuer un cast de type de l’expression d’adresse pour le type de pointeur de structure approprié.  
-  
- Cette erreur est identique à CAN0029.
+
+pointeur non struct
+
+L’opérateur de sélection de membre (**->**) a été appliqué à une expression qui n’est pas un pointeur vers une structure.
+
+Vérifiez que l’expression entière est entre parenthèses correctement, ou effectuer un cast de type de l’expression d’adresse pour le type de pointeur de structure approprié.
+
+Cette erreur est identique à CAN0029.

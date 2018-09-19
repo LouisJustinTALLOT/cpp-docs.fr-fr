@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2231 | Documents Microsoft
+title: Erreur du compilateur C2231 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775d559c332e37e91be2b89b10e046e0f8c1abd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6cd35d20f4ce0377aa5ae5cd66cd8c08004fb8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168553"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021672"
 ---
 # <a name="compiler-error-c2231"></a>Erreur du compilateur C2231
-'.' : opérande gauche pointe vers 'clé-classe', utilisez '->'  
-  
- L’opérande à gauche de l’opération de sélection de membres (.) est un pointeur au lieu d’une classe, structure ou union.  
-  
- L’exemple suivant génère l’erreur C2231 :  
-  
-```  
-// C2231.c  
-struct S {  
-   int member;  
-} s, *ps = &s;  
-int main() {  
-   ps.member = 0;   // C2231  
-  
-   // OK  
-   ps->member = 0;   // crash  
-   s.member = 0;  
-}  
+
+'.' : opérande gauche pointe vers 'class-key', utilisez '->'
+
+L’opérande à gauche de l’opération de sélection de membres (.) est un pointeur au lieu d’une classe, une structure ou une union.
+
+L’exemple suivant génère l’erreur C2231 :
+
+```
+// C2231.c
+struct S {
+   int member;
+} s, *ps = &s;
+int main() {
+   ps.member = 0;   // C2231
+
+   // OK
+   ps->member = 0;   // crash
+   s.member = 0;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: scheduler_not_attached, classe | Documents Microsoft
+title: scheduler_not_attached, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea0bf7f9e9467b35391034dafcbd48044b6229d7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c980115496e70cf0c767ce0592ef5ac9fd1fd239
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027022"
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached, classe
 Cette classe décrit une exception levée quand une opération qui requiert l'attachement d'un planificateur au contexte actuel est effectuée alors qu'aucun planificateur n'est attaché.  
@@ -47,7 +47,7 @@ class scheduler_not_attached : public std::exception;
   
  `scheduler_not_attached`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -63,8 +63,8 @@ scheduler_not_attached() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Message descriptif de l'erreur.  
+*_Message*<br/>
+Message descriptif de l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   

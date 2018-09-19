@@ -19,38 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f3790f4cb357ed830ba2c61b3c2906356dc64da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5a2883cba0d04bbed38ec44e8d00fdab0d4d5695
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021042"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
-**Section spécifique à Microsoft**  
-  
- Change le type de la `_variant_t` objet au `VARTYPE`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void ChangeType(  
-   VARTYPE vartype,  
-   const _variant_t* pSrc = NULL   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *VarType*  
- Le `VARTYPE` pour ce `_variant_t` objet.  
-  
- *pSrc*  
- Pointeur vers l'objet `_variant_t` à convertir. Si cette valeur est NULL, la conversion est effectuée en place.  
-  
-## <a name="remarks"></a>Notes  
- Cette fonction membre convertit un `_variant_t` objet dans le texte indiqué `VARTYPE`. Si *pSrc* est NULL, la conversion s’effectue sur place, sinon cela `_variant_t` objet est copié à partir de *pSrc* , puis sont converties.  
-  
- **FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [_variant_t, classe](../cpp/variant-t-class.md)
+
+**Section spécifique à Microsoft**
+
+Change le type de la `_variant_t` objet au `VARTYPE`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void ChangeType(
+   VARTYPE vartype,
+   const _variant_t* pSrc = NULL
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*VarType*<br/>
+Le `VARTYPE` pour ce `_variant_t` objet.
+
+*pSrc*<br/>
+Pointeur vers l'objet `_variant_t` à convertir. Si cette valeur est NULL, la conversion est effectuée en place.
+
+## <a name="remarks"></a>Notes
+
+Cette fonction membre convertit un `_variant_t` objet dans le texte indiqué `VARTYPE`. Si *pSrc* est NULL, la conversion s’effectue sur place, sinon cela `_variant_t` objet est copié à partir de *pSrc* , puis sont converties.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[_variant_t, classe](../cpp/variant-t-class.md)

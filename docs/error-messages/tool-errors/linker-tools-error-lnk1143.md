@@ -1,5 +1,5 @@
 ---
-title: LNK1143 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK1143 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ae5ac4abbdabc68813a7f1d8f25cac138961e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea0aa3daada09f5e1daae7f50caeb214db1aaadd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020587"
 ---
 # <a name="linker-tools-error-lnk1143"></a>Erreur des outils Éditeur de liens LNK1143
-fichier non valide ou endommagé : aucun symbole pour la section COMDAT numéro  
-  
- Cette erreur peut être provoquée si le fichier objet est endommagé.  
-  
- Régénérez le fichier.
+
+fichier non valide ou endommagé : aucun symbole pour la section COMDAT numéro
+
+Cette erreur peut être provoquée si le fichier objet est endommagé.
+
+Régénérez le fichier.

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147814856e1e447894fd9826b9620ea8d762d48c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4abf96e3850f88b58e138745536ffc40aef11b68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024539"
 ---
 # <a name="ca2caex-class"></a>Classe de CA2CAEX
 
@@ -36,13 +36,13 @@ Cette classe est utilisée par le typedef CA2CA macros de conversion de chaînes
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CA2CAEX
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 La taille de la mémoire tampon utilisée dans le processus de traduction. La longueur par défaut est 128 octets.
 
 ## <a name="members"></a>Membres
@@ -103,10 +103,10 @@ CA2CAEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*psz*  
+*psz*<br/>
 La chaîne de texte à convertir.
 
-*nCodePage*  
+*nCodePage*<br/>
 Inutilisé dans cette classe.
 
 ### <a name="remarks"></a>Notes
@@ -137,7 +137,7 @@ LPCSTR m_psz;
 
 Opérateur de conversion.
 
-```  
+```
 operator LPCSTR() const throw();
 ```
 
@@ -147,9 +147,9 @@ Retourne la chaîne de texte comme type LPCSTR.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe de CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Classe de CA2WEX](../../atl/reference/ca2wex-class.md)   
-[CW2AEX classe](../../atl/reference/cw2aex-class.md)   
-[Classe de CW2CWEX](../../atl/reference/cw2cwex-class.md)   
-[Classe de CW2WEX](../../atl/reference/cw2wex-class.md)   
+[CA2AEX, classe](../../atl/reference/ca2aex-class.md)<br/>
+[CA2WEX, classe](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX, classe](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX, classe](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX, classe](../../atl/reference/cw2wex-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

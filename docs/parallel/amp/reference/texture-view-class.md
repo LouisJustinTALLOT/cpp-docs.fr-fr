@@ -1,5 +1,5 @@
 ---
-title: texture_view, classe | Documents Microsoft
+title: texture_view, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 03684d287072e6c27fa06343ff498bbc62d4449a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696264"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027074"
 ---
 # <a name="textureview-class"></a>texture_view, classe
-Fournit l’accès en lecture et écriture à une texture. `texture_view` peut uniquement être utilisé pour lire les textures dont le type valeur est `int`, `unsigned int`, ou `float` qui ont bpse de 32 bits par défaut. Pour lire d’autres formats de texture, utilisez `texture_view<const value_type, _Rank>`.  
+Fournit l’accès en lecture et écriture à une texture. `texture_view` peut uniquement être utilisé pour lire les textures dont le type valeur est `int`, `unsigned int`, ou `float` qui a le bpse 32 bits de valeur par défaut. Pour lire d’autres formats de texture, utilisez `texture_view<const value_type, _Rank>`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,11 +50,11 @@ class texture_view<const value_type, _Rank>
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `value_type`  
- Le type des éléments dans l’agrégat de texture.  
+*value_type*<br/>
+Le type des éléments dans l’agrégat de texture.  
   
- `_Rank`  
- Le classement de la `texture_view`.  
+*_Rank*<br/>
+Le rang de le `texture_view`.  
   
 ## <a name="members"></a>Membres  
   
@@ -63,8 +63,8 @@ class texture_view<const value_type, _Rank>
 |Nom|Description|  
 |----------|-----------------|  
 |`value_type`|Le type des éléments dans les agrégats de texture.|  
-|`coordinates_type`|Le type de la coordonnée permet de spécifier un texel dans le `texture_view`: autrement dit, un `short_vector` qui a le même rang que la texture associé qui a un type de valeur `float`.|  
-|`gather_return_type`|Le type de retour utilisé pour collecter des opérations, autrement dit, un rang 4 `short_vector` que contient les quatre composants de couleur homogène collectées à partir des quatre valeurs texel échantillonnées.|  
+|`coordinates_type`|Le type de la coordonnée utilisée pour spécifier un texel dans le `texture_view`, autrement dit, un `short_vector` qui a le même rang que la texture associée qui a un type de valeur de `float`.|  
+|`gather_return_type`|Le type de retour utilisé pour rassembler des opérations, c'est-à-dire un rang 4 `short_vector` que contient les quatre composants de couleur homogènes collectées à partir de quatre valeurs texel échantillonnées.|  
   
 ### <a name="public-constructors"></a>Constructeurs publics  
   
@@ -77,12 +77,12 @@ class texture_view<const value_type, _Rank>
   
 |Nom|Description|  
 |----------|-----------------|  
-|[gather_alpha](#gather_alpha)|Surchargé. Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants alpha (w) de quatre texels échantillonnées.|  
-|[gather_blue](#gather_blue)|Surchargé. Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants bleu (z) de quatre texels échantillonnées.|  
-|[gather_green](#gather_green)|Surchargé. Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants vert (y) de quatre texels échantillonnées.|  
-|[gather_red](#gather_red)|Surchargé. Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants rouge (x) de quatre texels échantillonnées.|  
+|[gather_alpha](#gather_alpha)|Surchargé. Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants alpha (w) des quatre texels échantillonnés.|  
+|[gather_blue](#gather_blue)|Surchargé. Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants de bleu (z) des quatre texels échantillonnés.|  
+|[gather_green](#gather_green)|Surchargé. Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants vert (y) des quatre texels échantillonnés.|  
+|[gather_red](#gather_red)|Surchargé. Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants rouge (x) des quatre texels échantillonnés.|  
 |[get](#get)|Surchargé. Obtient la valeur de l’élément par index.|  
-|[Exemple](#sample)|Surchargé. Exemples de la texture au niveau de détail et aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié.|  
+|[Exemple](#sample)|Surchargé. Échantillonne la texture aux coordonnées spécifiées et de niveau de détail à l’aide de la configuration d’échantillonnage spécifié.|  
 |[set](#set)|Définit la valeur d’un élément par index.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
@@ -104,7 +104,7 @@ class texture_view<const value_type, _Rank>
   
  `texture_view`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_graphics.h  
   
  **Namespace :** concurrency::graphics  
@@ -156,32 +156,32 @@ texture_view(// [7] copy constructor
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
- [1, 2] Constructeur  
+*_Src*<br/>
+[1, 2] Constructeur  
  Le `texture` sur lequel l’accessible en écriture `texture_view` est créé.  
   
  [3, 4] Constructeur  
- Le `texture` sur lequel la non inscriptibles `texture_view` est créé.  
+ Le `texture` sur lequel le non inscriptibles `texture_view` est créé.  
   
- `_Other`  
- [5] constructeur de copie  
+*_Autre*<br/>
+[5] constructeur de copie  
  La source accessible en écriture `texture_view`.  
   
  [6, 7] Constructeur de copie  
  La source non inscriptibles `texture_view`.  
   
- `_Mipmap_level`  
- Le niveau de mipmap spécifique sur la source de `texture` que ce accessible en écriture `texture_view` lie à. La valeur par défaut est 0, ce qui représente le niveau mip de niveau supérieur (plus détaillé).  
+*_Mipmap_level*<br/>
+Le niveau de mipmap spécifique sur la source de `texture` autrement ce inscriptible `texture_view` lie à. La valeur par défaut est 0, ce qui représente le niveau mip de niveau supérieur (plus détaillé).  
   
- `_Most_detailed_mip`  
- Haut niveau mip de niveau (plus détaillé) pour l’affichage, par rapport à l’élément spécifié `texture_view` objet.  
+*_Most_detailed_mip*<br/>
+Haut niveau mip de niveau (le plus détaillé) pour l’affichage, par rapport à l’élément spécifié `texture_view` objet.  
   
- `_Mip_levels`  
- Le nombre de niveaux de mipmap accessibles via la `texture_view`.  
+*_Mip_levels*<br/>
+Le nombre de niveaux de mipmap accessibles via le `texture_view`.  
   
 ##  <a name="gather_red"></a> gather_red 
 
- Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants rouge (x) de quatre texels échantillonnées.  
+ Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants rouge (x) des quatre texels échantillonnés.  
   
 ```  
 const gather_return_type gather_red(
@@ -197,21 +197,21 @@ const gather_return_type gather_red(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Address_mode`  
- Le mode d’adresse à utiliser pour exemple le `texture_view`. Le mode d’adresse est identique pour toutes les dimensions.  
+*_Address_mode*<br/>
+Le mode d’adresse à utiliser pour exemple le `texture_view`. Le mode d’adresse est identique pour toutes les dimensions.  
   
- `_Sampler`  
- La configuration de l’échantillonneur à utiliser pour exemple le `texture_view`.  
+*_Sampler*<br/>
+La configuration d’échantillonnage à utiliser pour exemple le `texture_view`.  
   
- `_Coord`  
- Les coordonnées pour prendre l’exemple à partir de. Les valeurs de coordonnées fractions de seconde sont utilisées pour l’interpolation entre les éléments de texture par exemple.  
+*_Coord*<br/>
+Les coordonnées à prélevé l’exemple. Valeurs des coordonnées fractionnaires sont utilisées pour interpoler entre les exemples de texel.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un vecteur court rang 4 qui contient le composant rouge (x) de 4 échantillonnées valeurs texel.  
+ Un vecteur court de rang 4 contenant le composant rouge (x) du 4 des valeurs texel échantillonnées.  
   
 ##  <a name="gather_green"></a> gather_green 
 
- Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants vert (y) de quatre texels échantillonnées.  
+ Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants vert (y) des quatre texels échantillonnés.  
   
 ```  
 const gather_return_type gather_green(
@@ -227,21 +227,21 @@ const gather_return_type gather_green(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Address_mode`  
- Le mode d’adresse à utiliser pour exemple le `texture_view`. Le mode d’adresse est identique pour toutes les dimensions.  
+*_Address_mode*<br/>
+Le mode d’adresse à utiliser pour exemple le `texture_view`. Le mode d’adresse est identique pour toutes les dimensions.  
   
- `_Sampler`  
- La configuration de l’échantillonneur à utiliser pour exemple le `texture_view`.  
+*_Sampler*<br/>
+La configuration d’échantillonnage à utiliser pour exemple le `texture_view`.  
   
- `_Coord`  
- Les coordonnées pour prendre l’exemple à partir de. Les valeurs de coordonnées fractions de seconde sont utilisées pour l’interpolation entre les éléments de texture par exemple.  
+*_Coord*<br/>
+Les coordonnées à prélevé l’exemple. Valeurs des coordonnées fractionnaires sont utilisées pour interpoler entre les exemples de texel.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un vecteur court rang 4 qui contient le composant vert (y) de 4 échantillonnées valeurs texel.  
+ Un vecteur court de rang 4 contenant le composant vert (y) du 4 des valeurs texel échantillonnées.  
   
 ##  <a name="gather_blue"></a> gather_blue 
 
- Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants bleu (z) de quatre texels échantillonnées.  
+ Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants de bleu (z) des quatre texels échantillonnés.  
   
 ```  
 const gather_return_type gather_blue(
@@ -257,21 +257,21 @@ const gather_return_type gather_blue(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Address_mode`  
- Le mode d’adresse à utiliser pour exemple le `texture_view`. Le mode d’adresse est identique pour toutes les dimensions.  
+*_Address_mode*<br/>
+Le mode d’adresse à utiliser pour exemple le `texture_view`. Le mode d’adresse est identique pour toutes les dimensions.  
   
- `_Sampler`  
- La configuration de l’échantillonneur à utiliser pour exemple le `texture_view`.  
+*_Sampler*<br/>
+La configuration d’échantillonnage à utiliser pour exemple le `texture_view`.  
   
- `_Coord`  
- Les coordonnées pour prendre l’exemple à partir de. Les valeurs de coordonnées fractions de seconde sont utilisées pour l’interpolation entre les éléments de texture par exemple.  
+*_Coord*<br/>
+Les coordonnées à prélevé l’exemple. Valeurs des coordonnées fractionnaires sont utilisées pour interpoler entre les exemples de texel.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un vecteur court rang 4 qui contient le composant rouge (x) de 4 échantillonnées valeurs texel.  
+ Un vecteur court de rang 4 contenant le composant rouge (x) du 4 des valeurs texel échantillonnées.  
   
 ##  <a name="gather_alpha"></a> gather_alpha 
 
- Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants alpha (w) de quatre texels échantillonnées.  
+ Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants alpha (w) des quatre texels échantillonnés.  
   
 ```  
 const gather_return_type gather_alpha(
@@ -287,17 +287,17 @@ const gather_return_type gather_alpha(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Address_mode`  
- Le mode d’adresse à utiliser pour exemple le `texture_view`. Le mode d’adresse est identique pour toutes les dimensions.  
+*_Address_mode*<br/>
+Le mode d’adresse à utiliser pour exemple le `texture_view`. Le mode d’adresse est identique pour toutes les dimensions.  
   
- `_Sampler`  
- La configuration de l’échantillonneur à utiliser pour exemple le `texture_view`.  
+*_Sampler*<br/>
+La configuration d’échantillonnage à utiliser pour exemple le `texture_view`.  
   
- `_Coord`  
- Les coordonnées pour prendre l’exemple à partir de. Les valeurs de coordonnées fractions de seconde sont utilisées pour l’interpolation entre les éléments de texture par exemple.  
+*_Coord*<br/>
+Les coordonnées à prélevé l’exemple. Valeurs des coordonnées fractionnaires sont utilisées pour interpoler entre les exemples de texel.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un rang égal à 4 court du vecteur qui contient la valeur alpha (w) composant 4 échantillonnées valeurs texel.  
+ Du vecteur court de rang 4 contenant la valeur alpha (w) en composant des 4 des valeurs texel échantillonnées.  
   
 ##  <a name="get"></a> Télécharger 
 
@@ -314,11 +314,11 @@ value_type get(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Index`  
- Index de l’élément à obtenir, éventuellement à plusieurs dimensions.  
+*_Index*<br/>
+Index de l’élément à obtenir, probablement multidimensionnel.  
   
- `_Mip_level`  
- Le niveau de mipmap à partir de laquelle nous devrions obtenir la valeur. La valeur par défaut 0 représente le niveau de mipmap le plus détaillé.  
+*_Mip_level*<br/>
+Le niveau de mipmap à partir duquel nous devrions obtenir la valeur. La valeur par défaut 0 représente le niveau de mipmap le plus détaillé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur de l'élément.  
@@ -341,15 +341,15 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- [1, 2] Constructeur de copie  
- Un inscriptible `texture_view` objet.  
+*_Autre*<br/>
+[1, 2] Constructeur de copie  
+ Accessible en écriture `texture_view` objet.  
   
  [3] constructeur de copie  
  Non inscriptibles `texture_view` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une référence à ce `texture_view` instance.  
+ Une référence à cet `texture_view` instance.  
   
 ##  <a name="operator_at"></a> operator] 
 
@@ -369,11 +369,11 @@ value_type operator[] (int _I0) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Index`  
- L’index, éventuellement à plusieurs dimensions.  
+*_Index*<br/>
+Index, probablement multidimensionnel.  
   
- `_I0`  
- L’index de dimension.  
+*_I0*<br/>
+Index unidimensionnel.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de l’élément indexé par `_Index`.  
@@ -421,24 +421,24 @@ value_type operator() (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Index`  
- L’index, éventuellement à plusieurs dimensions.  
+*_Index*<br/>
+Index, probablement multidimensionnel.  
   
- `_I0`  
- Le composant plus significatif de l’index.  
+*_I0*<br/>
+Le composant plus significatif de l’index.  
   
- `_I1`  
- Le composant suivant-à-plus significatif de l’index.  
+*_I1*<br/>
+Le composant suivant-à-plus significatif de l’index.  
   
- `_I2`  
- Le composant de poids de l’index.  
+*_I2*<br/>
+Le composant moins significatif de l’index.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de l’élément indexé par `_Index`.  
   
 ##  <a name="sample"></a> Exemple 
 
- Exemples de la texture au niveau de détail et aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié.  
+ Échantillonne la texture aux coordonnées spécifiées et de niveau de détail à l’aide de la configuration d’échantillonnage spécifié.  
   
 ```  
 value_type sample(
@@ -457,23 +457,23 @@ value_type sample(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Filter_mode`  
- Le mode de filtre à utiliser pour échantillonner le texture_view. Le mode de filtre est la même pour la minimisation, optimisation et les filtres de mipmap.  
+*_Filter_mode*<br/>
+Le mode de filtre à utiliser pour échantillonner texture_view. Le mode de filtre est la même pour la minimisation, Maximisation et filtres de mipmap.  
   
- `_Address_mode`  
- Le mode d’adresse à utiliser pour échantillonner le texture_view. Le mode d’adresse est identique pour toutes les dimensions.  
+*_Address_mode*<br/>
+Le mode d’adresse à utiliser pour échantillonner texture_view. Le mode d’adresse est identique pour toutes les dimensions.  
   
- `_Sampler`  
- La configuration de l’échantillonneur à utiliser pour échantillonner le texture_view.  
+*_Sampler*<br/>
+La configuration d’échantillonnage à utiliser pour échantillonner texture_view.  
   
- `_Coord`  
- Les coordonnées pour prendre l’exemple à partir de. Les valeurs de coordonnées fractions de seconde sont utilisées pour l’interpolation entre les valeurs texel.  
+*_Coord*<br/>
+Les coordonnées à prélevé l’exemple. Valeurs des coordonnées fractionnaires sont utilisées pour interpoler entre les valeurs de texel.  
   
- `_Level_of_detail`  
- La valeur spécifie le niveau de mipmap à échantillonner dans. Valeurs fractionnaires sont utilisées pour l’interpolation entre deux niveaux de mipmap. Le niveau de détail par défaut est 0, qui représente le niveau de mipmap le plus détaillé.  
+*_Level_of_detail*<br/>
+La valeur spécifie le niveau de mipmap à échantillonner dans. Les valeurs fractionnaires sont utilisées pour interpoler entre deux niveaux de mipmap. Le niveau de détail par défaut est 0, ce qui représente le niveau mip le plus détaillé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La valeur interpolée d’exemple.  
+ Valeur d’exemple interpolée.  
   
 ##  <a name="set"></a> Ensemble 
 
@@ -486,15 +486,15 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Index`  
- Index de l’élément à définir éventuellement multidimensionnel.  
+*_Index*<br/>
+Index de l’élément à définir, probablement multidimensionnel.  
   
- `value`  
- Valeur à l’élément.  
+*valeur*<br/>
+Valeur à l’élément.  
   
 ##  <a name="value_type"></a> Value_type 
 
- Le type de valeur des éléments de la texture_view.  
+ Le type de valeur des éléments de texture_view.  
   
 ```  
 typedef typename const value_type value_type;  

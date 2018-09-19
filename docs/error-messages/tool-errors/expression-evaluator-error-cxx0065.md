@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0065 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0065 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78c25c9c6bde27219f10e4047dc7a6ab416f55d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c100b1edbd36f4384e8deb1abf5b36465e8da479
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024162"
 ---
 # <a name="expression-evaluator-error-cxx0065"></a>Évaluateur d'expression, erreur CXX0065
-variable a besoin du frame de pile  
-  
- Une expression contient une variable qui existe dans la portée actuelle, mais n’a pas encore été créée.  
-  
- Cette erreur peut se produire lorsque vous avez exécuté le code dans le prologue d’une fonction, mais pas encore configurer le frame de pile pour la fonction, ou si vous avez exécuté le code dans le code de sortie pour la fonction.  
-  
- Parcourez le code de prologue jusqu'à ce que le frame de pile a été configuré avant d’évaluer l’expression.  
-  
- Cette erreur est identique à CAN0065.
+
+la variable a besoin de frame de pile
+
+Une expression contient une variable qui existe dans la portée actuelle, mais n’a pas encore été créée.
+
+Cette erreur peut se produire lorsque vous avez exécuté le code dans le prologue d’une fonction, mais pas encore configurer le frame de pile pour la fonction, ou si vous avez exécuté le code dans le code de sortie pour la fonction.
+
+Parcourir le code de prologue jusqu'à ce que le frame de pile a été configuré avant d’évaluer l’expression.
+
+Cette erreur est identique à CAN0065.

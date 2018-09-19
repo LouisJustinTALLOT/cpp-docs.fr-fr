@@ -1,5 +1,5 @@
 ---
-title: multi_link_registry, classe | Documents Microsoft
+title: multi_link_registry, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 93d13e7d74a499091a8ad0c592b3cee45a9bbb5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688932"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029589"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry, classe
 L'objet `multi_link_registry` est un `network_link_registry` qui gère plusieurs blocs sources ou plusieurs blocs cibles.  
@@ -42,8 +42,8 @@ class multi_link_registry : public network_link_registry<_Block>;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_Block`  
- Le bloc type de données sont stockées dans le `multi_link_registry` objet.  
+*_Bloc*<br/>
+Le bloc type de données sont stockées dans le `multi_link_registry` objet.  
   
 ## <a name="members"></a>Membres  
   
@@ -70,7 +70,7 @@ class multi_link_registry : public network_link_registry<_Block>;
   
  `multi_link_registry`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -84,13 +84,13 @@ virtual void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Link`  
- Pointeur vers un bloc à ajouter.  
+*_Lier*<br/>
+Pointeur vers un bloc à ajouter.  
   
 ### <a name="remarks"></a>Notes  
  La méthode lève un [invalid_link_target](invalid-link-target-class.md) exception si le lien est déjà présent dans le Registre, ou si une limite a déjà été définie avec la `set_bound` (fonction) et un lien a été supprimé depuis.  
   
-##  <a name="begin"></a> Commencer 
+##  <a name="begin"></a> commencer 
 
  Retourne un itérateur au premier élément dans le `multi_link_registry` objet.  
   
@@ -113,8 +113,8 @@ virtual bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Link`  
- Un pointeur vers un bloc qui consiste à rechercher dans le `multi_link_registry` objet.  
+*_Lier*<br/>
+Un pointeur désignant un bloc qui consiste à rechercher dans le `multi_link_registry` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si le bloc spécifié a été trouvé, `false` dans le cas contraire.  
@@ -158,8 +158,8 @@ virtual bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Link`  
- Un pointeur vers un bloc doit être supprimée, si trouvée.  
+*_Lier*<br/>
+Un pointeur vers un bloc à supprimer, si trouvé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
@@ -173,8 +173,8 @@ void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_MaxLinks`  
- Le nombre maximal de liens qui les `multi_link_registry` objet peut contenir.  
+*_MaxLinks*<br/>
+Le nombre maximal de liens qui les `multi_link_registry` objet peut contenir.  
   
 ### <a name="remarks"></a>Notes  
  Une fois une limite définie, une entrée entraîne la `multi_link_registry` objet passe à un état immuable où autre appel aux `add` lèvera une `invalid_link_target` exception.  

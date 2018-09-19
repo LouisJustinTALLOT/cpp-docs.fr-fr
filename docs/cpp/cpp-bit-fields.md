@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029466"
 ---
 # <a name="c-bit-fields"></a>Champs de bits C++
 
@@ -38,7 +38,7 @@ Les classes et les structures peuvent contenir des membres qui occupent moins d'
 > [!NOTE]
 > Un champ de bits sans nom de la largeur 0 force l’alignement du champ de bits suivant à la suivante **type** limite, où **type** est le type du membre.
 
- L'exemple suivant déclare une structure qui contient des champs de bits :
+L'exemple suivant déclare une structure qui contient des champs de bits :
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ La liste suivante détaille les opérations erronées sur les champs de bits :
 - L’initialisation non -**const** référence avec un champ de bits.
 
 ## <a name="see-also"></a>Voir aussi
- [Classes et structs](../cpp/classes-and-structs-cpp.md)
+
+[Classes et structs](../cpp/classes-and-structs-cpp.md)
