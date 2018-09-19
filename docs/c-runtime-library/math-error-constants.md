@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb491e8073acf2af525814b595ce79365df0fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63da23d30b12859c79427432bce38e1156e190de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063331"
 ---
 # <a name="math-error-constants"></a>Constantes d'erreur mathématique
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>Notes  
- Les routines mathématiques de la bibliothèque Runtime peuvent générer des constantes d’erreur mathématique.  
-  
- Ces erreurs, comme indiqué ci-dessous, correspondent aux types d’exception définis dans les MATH.H et sont retournées par la fonction `_matherr` en cas d’erreur mathématique.  
-  
-|Constante|Signification|  
-|--------------|-------------|  
-|`_DOMAIN`|L’argument de fonction est en dehors du domaine de la fonction.|  
-|`_OVERFLOW`|Le résultat est trop grand pour être représenté dans le type de retour de la fonction.|  
-|`_PLOSS`|Perte partielle de précision survenue.|  
-|`_SING`|Singularité de l’argument : l’argument de la fonction a une valeur non conforme. (Par exemple, la valeur 0 est passée à une fonction qui requiert une valeur différente de zéro).|  
-|`_TLOSS`|Perte totale de précision survenue.|  
-|`_UNDERFLOW`|Le résultat est trop petit pour être représenté.|  
-  
-## <a name="see-also"></a>Voir aussi  
- [_matherr](../c-runtime-library/reference/matherr.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>Notes
+
+Les routines mathématiques de la bibliothèque Runtime peuvent générer des constantes d’erreur mathématique.
+
+Ces erreurs, comme indiqué ci-dessous, correspondent aux types d’exception définis dans les MATH.H et sont retournées par la fonction `_matherr` en cas d’erreur mathématique.
+
+|Constante|Signification|
+|--------------|-------------|
+|`_DOMAIN`|L’argument de fonction est en dehors du domaine de la fonction.|
+|`_OVERFLOW`|Le résultat est trop grand pour être représenté dans le type de retour de la fonction.|
+|`_PLOSS`|Perte partielle de précision survenue.|
+|`_SING`|Singularité de l’argument : l’argument de la fonction a une valeur non conforme. (Par exemple, la valeur 0 est passée à une fonction qui requiert une valeur différente de zéro).|
+|`_TLOSS`|Perte totale de précision survenue.|
+|`_UNDERFLOW`|Le résultat est trop petit pour être représenté.|
+
+## <a name="see-also"></a>Voir aussi
+
+[_matherr](../c-runtime-library/reference/matherr.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)

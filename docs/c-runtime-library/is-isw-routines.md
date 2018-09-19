@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f7edcf115a6fadc741c7f1bcde8f240c93abcc
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: db047c2b16eb67f086bc26976783e829189d4266
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895121"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095103"
 ---
 # <a name="is-isw-routines"></a>is, isw, routines
 
@@ -61,75 +61,75 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_
 
 Dans les paramètres régionaux « C », les conditions de test des routines **is** sont comme suit :
 
-`isalnum`  
+`isalnum`<br/>
 Alphanumériques (A - Z, a - z ou 0 - 9).
 
-`isalpha`  
+`isalpha`<br/>
 Alphabétiques (A - Z ou a - z).
 
-`__isascii`  
+`__isascii`<br/>
 Jeu de caractères ASCII (0x00 - 0x7F)
 
-`isblank`  
+`isblank`<br/>
 Tabulation horizontale ou espace (0x09 ou 0x20)
 
-`iscntrl`  
+`iscntrl`<br/>
 Caractère de contrôle (0x00-0x1F ou 0x7F)
 
-`__iscsym`  
+`__iscsym`<br/>
 Lettre, trait de soulignement ou chiffre
 
-`__iscsymf`  
+`__iscsymf`<br/>
 Lettre ou trait de soulignement
 
-`isdigit`  
+`isdigit`<br/>
 Nombre décimal (0 - 9)
 
-`isgraph`  
+`isgraph`<br/>
 Caractère imprimable sauf espace ( )
 
-`islower`  
+`islower`<br/>
 Lettre minuscule (a - z)
 
-`isprint`  
+`isprint`<br/>
 Caractère imprimable, y compris les espaces (0x20 - 0x7E)
 
-`ispunct`  
+`ispunct`<br/>
 Caractère de ponctuation
 
-`isspace`  
+`isspace`<br/>
 Espace blanc (0x09-0x0D ou 0x20)
 
-`isupper`  
+`isupper`<br/>
 Lettre majuscule (A - Z)
 
-`isxdigit`  
+`isxdigit`<br/>
 Chiffre hexadécimal (A - F, a - f, ou 0 - 9)
 
 Pour les routines **isw**, le résultat du test de la condition spécifiée est indépendant des paramètres régionaux. Les conditions de test pour les fonctions **isw** sont les suivantes :
 
-`iswalnum`  
+`iswalnum`<br/>
 `iswalpha` ou `iswdigit`.
 
-`iswalpha`  
+`iswalpha`<br/>
 Tout caractère large qui fait partie d’un jeu défini par l’implémentation et pour lequel aucun des `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` n’est différent de zéro. `iswalpha` retourne une valeur différente de zéro pour les caractères larges dont `iswupper` ou `iswlower` est différent de zéro.
 
-`iswascii`  
+`iswascii`<br/>
 Représentation d’un caractère ASCII (0x0000 - 0x007F) sous forme de caractère large
 
-`iswblank`  
+`iswblank`<br/>
 Caractère large qui correspond au caractère espace standard ou fait partie d’un jeu de caractères larges défini par l’implémentation pour lequel `iswalnum` a la valeur false Les caractères vides standard sont l’espace (L' ') et la tabulation horizontale (L'\t').
 
-`iswcntrl`  
+`iswcntrl`<br/>
 Caractère large de contrôle
 
-`__iswcsym`  
+`__iswcsym`<br/>
 Tout caractère large pour lequel `isalnum` est true, ou le caractère « _ ».
 
-`__iswcsymf`  
+`__iswcsymf`<br/>
 Tout caractère large pour lequel `iswalpha` est true, ou le caractère « _ ».
 
-`iswctype`  
+`iswctype`<br/>
 La propriété du caractère est spécifiée par l’argument `desc`. Pour chaque valeur valide de l’argument `desc` de `iswctype`, il existe une routine de classification de caractères larges équivalente, comme dans le tableau suivant :
 
 ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Équivalence d’iswctype(c, desc) aux autres routines de test isw
@@ -150,28 +150,28 @@ La propriété du caractère est spécifiée par l’argument `desc`. Pour chaqu
 |**_UPPER**|**iswupper(** `c` **)**|
 |**_HEX**|**iswxdigit(** `c` **)**|
 
-`iswdigit`  
+`iswdigit`<br/>
 Caractère large correspondant à un caractère numérique décimal.
 
-`iswgraph`  
+`iswgraph`<br/>
 Caractère large imprimable, à l’exception des caractères larges d’espace (L' ').
 
-`iswlower`  
+`iswlower`<br/>
 Lettre minuscule ou l’un des jeux de caractères larges définis par l’implémentation et pour lequel aucun des `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` n’est différent de zéro. `iswlower` retourne une valeur différente de zéro uniquement pour les caractères larges qui correspondent à des lettres minuscules.
 
-`iswprint`  
+`iswprint`<br/>
 Caractère large imprimable, y compris les caractères larges d’espace (L' ').
 
-`iswpunct`  
+`iswpunct`<br/>
 Caractère large imprimable qui n’est ni le caractère d’espace large (L' '), ni un caractère large pour lequel `iswalnum` est différent de zéro.
 
-`iswspace`  
+`iswspace`<br/>
 Caractère large qui correspond au caractère d’espace blanc standard ou fait partie d’un jeu de caractères larges défini par l’implémentation pour lequel `iswalnum` a la valeur false. Les caractères d’espace blanc standard sont l’espace (L' '), le saut de page (L'\f'), le saut de ligne (L'\n'), le retour chariot (L'\r'), la tabulation horizontale (L'\t') et la tabulation verticale (L'\v').
 
-`iswupper`  
+`iswupper`<br/>
 Caractère large en lettre majuscule ou qui fait partie d’un jeu de caractères larges défini par l’implémentation et pour lequel aucun des `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` n’est différent de zéro. `iswupper` retourne une valeur différente de zéro uniquement pour les caractères larges qui correspondent à des lettres majuscules.
 
-`iswxdigit`  
+`iswxdigit`<br/>
 Caractère large qui correspond à un caractère numérique hexadécimal.
 
 ## <a name="example"></a>Exemple
@@ -181,16 +181,16 @@ Caractère large qui correspond à un caractère numérique hexadécimal.
 /* This program tests all characters between 0x0
 * and 0x7F, then displays each character with abbreviations
 * for the character-type codes that apply.
-*/  
+*/
 
 #include <stdio.h>
 #include <ctype.h>
 
-int main( void )  
-{  
+int main( void )
+{
    int ch;
-   for( ch = 0; ch <= 0x7F; ch++ )  
-   {  
+   for( ch = 0; ch <= 0x7F; ch++ )
+   {
       printf( "%.2x  ", ch );
       printf( " %c", isprint( ch )  ? ch   : ' ' );
       printf( "%4s", isalnum( ch )  ? "AN" : "" );
@@ -208,9 +208,9 @@ int main( void )
       printf( "%3s", isupper( ch )  ? "U"  : "" );
       printf( "%3s", isxdigit( ch ) ? "X"  : "" );
       printf( ".\n" );
-   }  
-}  
-```  
+   }
+}
+```
 
 ## <a name="output"></a>Sortie
 
@@ -347,8 +347,8 @@ int main( void )
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../c-runtime-library/character-classification.md)   
-[Paramètres régionaux](../c-runtime-library/locale.md)   
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
-[Interprétation des séquences de caractères multioctets](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+[Classifications des caractères](../c-runtime-library/character-classification.md)<br/>
+[Paramètres régionaux](../c-runtime-library/locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[Interprétation des séquences de caractères multi-octets](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [to, fonctions](../c-runtime-library/to-functions.md)

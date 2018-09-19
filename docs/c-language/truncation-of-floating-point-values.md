@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e57a80a1550cc6147ce29894996183cce8f5ff99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b30700b52e7cbbbc295d6050b03283b4b45a0b08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385788"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103813"
 ---
 # <a name="truncation-of-floating-point-values"></a>Troncation des valeurs à virgule flottante
-**ANSI 3.2.1.4** Sens de la troncation ou de l'arrondi lorsqu'un nombre à virgule flottante est converti en nombre à virgule flottante plus étroit  
-  
- Lorsqu'un dépassement de capacité négatif se produit, la valeur d'une variable à virgule flottante est arrondie à zéro. Un dépassement de capacité positif peut provoquer une erreur d'exécution ou produire une valeur imprévisible, selon les optimisations spécifiées.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Mathématiques à virgule flottante](../c-language/floating-point-math.md)
+
+**ANSI 3.2.1.4** Sens de la troncation ou de l'arrondi lorsqu'un nombre à virgule flottante est converti en nombre à virgule flottante plus étroit
+
+Lorsqu'un dépassement de capacité négatif se produit, la valeur d'une variable à virgule flottante est arrondie à zéro. Un dépassement de capacité positif peut provoquer une erreur d'exécution ou produire une valeur imprévisible, selon les optimisations spécifiées.
+
+## <a name="see-also"></a>Voir aussi
+
+[Mathématiques à virgule flottante](../c-language/floating-point-math.md)

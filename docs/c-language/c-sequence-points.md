@@ -14,37 +14,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cf0b72314103587ddf64021db2a265044c469e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13d8bbc422be20a0e377a5705e8ebcf88db079aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059808"
 ---
 # <a name="c-sequence-points"></a>Points de séquence C
-La valeur d'un objet peut être modifiée une seule fois par une expression entre les « points de séquence » consécutifs. Le langage C définit les points de séquence suivants :  
-  
--   Opérande de gauche de l’opérateur AND logique (**&&**). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur false (0), l'autre opérande n'est pas évaluée.  
-  
--   Opérande gauche de l'opérateur OR logique (`||`). L'opérande gauche de l'opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur true (différent de zéro), l'autre opérande n'est pas évalué.  
-  
--   Opérande gauche de l'opérateur virgule. L'opérande gauche de l'opérateur virgule est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Les deux opérandes de l'opérateur virgule sont toujours évalués. Notez que l'opérateur virgule dans un appel de fonction ne garantit pas un ordre d'évaluation.  
-  
--   Opérateur d'appel de fonction. Tous les arguments d'une fonction sont évalués et tous les effets secondaires se terminent avant l'entrée dans la fonction. Aucun ordre d'évaluation entre les arguments n'est spécifié.  
-  
--   Premier opérande de l'opérateur conditionnel. Le premier opérande de l'opérateur conditionnel est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement.  
-  
--   La fin d'une expression d'initialisation complète (c'est-à-dire une expression qui ne fait pas partie d'une autre expression telle que la fin d'une initialisation dans une instruction de déclaration).  
-  
--   L'expression dans une instruction d'expression. Les instructions Expression sont composées d'une expression facultative suivie d'un point-virgule (**;**). L'expression est évaluée pour ses effets secondaires, et un point de séquence est ajouté à la suite de cette évaluation.  
-  
--   L'expression de contrôle d'une instruction de sélection (**if** ou `switch`). L'expression est complètement évaluée et tous les effets secondaires sont terminés avant l'exécution du code dépendant de la sélection.  
-  
--   Expression de contrôle d'une instruction `while` ou **do**. L'expression est complètement évaluée et tous les effets secondaires sont terminés avant l'exécution des instructions de l'itération suivante de la boucle `while` ou **do**.  
-  
--   Chacune des trois expressions d'une instruction **for**. Les expressions sont complètement évaluées et tous les effets secondaires sont terminés avant l'exécution des instructions de l'itération suivante de la boucle **for**.  
-  
--   L'expression dans une instruction `return`. L'expression est complètement évaluée et tous les effets secondaires sont terminés avant que le contrôle ne retourne à la fonction appelante.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Évaluation des expressions](../c-language/expression-evaluation-c.md)
+
+La valeur d'un objet peut être modifiée une seule fois par une expression entre les « points de séquence » consécutifs. Le langage C définit les points de séquence suivants :
+
+- Opérande de gauche de l’opérateur AND logique (**&&**). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur false (0), l'autre opérande n'est pas évaluée.
+
+- Opérande gauche de l'opérateur OR logique (`||`). L'opérande gauche de l'opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur true (différent de zéro), l'autre opérande n'est pas évalué.
+
+- Opérande gauche de l'opérateur virgule. L'opérande gauche de l'opérateur virgule est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Les deux opérandes de l'opérateur virgule sont toujours évalués. Notez que l'opérateur virgule dans un appel de fonction ne garantit pas un ordre d'évaluation.
+
+- Opérateur d'appel de fonction. Tous les arguments d'une fonction sont évalués et tous les effets secondaires se terminent avant l'entrée dans la fonction. Aucun ordre d'évaluation entre les arguments n'est spécifié.
+
+- Premier opérande de l'opérateur conditionnel. Le premier opérande de l'opérateur conditionnel est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement.
+
+- La fin d'une expression d'initialisation complète (c'est-à-dire une expression qui ne fait pas partie d'une autre expression telle que la fin d'une initialisation dans une instruction de déclaration).
+
+- L'expression dans une instruction d'expression. Les instructions Expression sont composées d'une expression facultative suivie d'un point-virgule (**;**). L'expression est évaluée pour ses effets secondaires, et un point de séquence est ajouté à la suite de cette évaluation.
+
+- L'expression de contrôle d'une instruction de sélection (**if** ou `switch`). L'expression est complètement évaluée et tous les effets secondaires sont terminés avant l'exécution du code dépendant de la sélection.
+
+- Expression de contrôle d'une instruction `while` ou **do**. L'expression est complètement évaluée et tous les effets secondaires sont terminés avant l'exécution des instructions de l'itération suivante de la boucle `while` ou **do**.
+
+- Chacune des trois expressions d'une instruction **for**. Les expressions sont complètement évaluées et tous les effets secondaires sont terminés avant l'exécution des instructions de l'itération suivante de la boucle **for**.
+
+- L'expression dans une instruction `return`. L'expression est complètement évaluée et tous les effets secondaires sont terminés avant que le contrôle ne retourne à la fonction appelante.
+
+## <a name="see-also"></a>Voir aussi
+
+[Évaluation des expressions](../c-language/expression-evaluation-c.md)

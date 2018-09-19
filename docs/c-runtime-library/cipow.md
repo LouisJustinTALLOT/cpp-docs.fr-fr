@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3500c0bd17b2638026f45c23b047e2bee411cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c09801841e25b5de2f98e64c01bf48b1eea9992b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386996"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052086"
 ---
 # <a name="cipow"></a>_CIpow
-Calcule *x* élevé à la puissance *y* en fonction des valeurs supérieures de la pile.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _CIpow();  
-```  
-  
-## <a name="remarks"></a>Notes  
- Cette version de la fonction `pow` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.  
-  
- La valeur obtenue est placée en haut de la pile.  
-  
-## <a name="requirements"></a>Configuration requise  
- **Plateforme :** x86  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)
+
+Calcule *x* élevé à la puissance *y* en fonction des valeurs supérieures de la pile.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __cdecl _CIpow();
+```
+
+## <a name="remarks"></a>Notes
+
+Cette version de la fonction `pow` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.
+
+La valeur obtenue est placée en haut de la pile.
+
+## <a name="requirements"></a>Configuration requise
+ **Plateforme :** x86
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)

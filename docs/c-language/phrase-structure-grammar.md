@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51e98ca95131a0adb17f75b51e8e51ecdd4f9075
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d215bd4dc33a0bd471555232e4f2714eaeb914c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058196"
 ---
 # <a name="phrase-structure-grammar"></a>Grammaire de la structure de la phrase
--   [Expressions](../c-language/summary-of-expressions.md)  
-  
--   [Déclarations](../c-language/summary-of-declarations.md)  
-  
--   [Instructions](../c-language/summary-of-statements.md)  
-  
--   [Définitions externes](../c-language/external-definitions.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Résumé de syntaxe du langage C](../c-language/c-language-syntax-summary.md)
+
+- [Expressions](../c-language/summary-of-expressions.md)
+
+- [Déclarations](../c-language/summary-of-declarations.md)
+
+- [Instructions](../c-language/summary-of-statements.md)
+
+- [Définitions externes](../c-language/external-definitions.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Résumé de syntaxe du langage C](../c-language/c-language-syntax-summary.md)

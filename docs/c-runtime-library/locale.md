@@ -20,22 +20,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 638d4fbe6fd4dfce1fb3eeb246ef85c5b60fada0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f3bf660b2e1c8301e9c6c8ba1bd1e11fa3956de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082220"
 ---
 # <a name="locale"></a>Paramètres régionaux
 
 Les *paramètres régionaux* font référence aux paramètres de pays/région et de langue que vous pouvez utiliser pour personnaliser votre programme. Certaines catégories dépendantes des paramètres régionaux incluent les formats d'affichage des dates et des valeurs monétaires. Pour plus d’informations, consultez [Catégories de paramètres régionaux](../c-runtime-library/locale-categories.md).
 
- Utilisez la fonction [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) pour modifier ou interroger certaines ou toutes les informations relatives aux paramètres régionaux du programme ou thread actif, tout en utilisant les fonctions sans le suffixe **_l**. Les fonctions avec le suffixe **_l** utilisent le paramètre locale qui leur est passé pour ses paramètres régionaux, uniquement pendant l’exécution de cette fonction. Pour créer des paramètres régionaux à utiliser avec une fonction dotée d’un suffixe **_l**, utilisez [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Pour libérer ces paramètres régionaux, utilisez [_free_locale](../c-runtime-library/reference/free-locale.md). Pour obtenir les paramètres régionaux actuels, utilisez [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
+Utilisez la fonction [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) pour modifier ou interroger certaines ou toutes les informations relatives aux paramètres régionaux du programme ou thread actif, tout en utilisant les fonctions sans le suffixe **_l**. Les fonctions avec le suffixe **_l** utilisent le paramètre locale qui leur est passé pour ses paramètres régionaux, uniquement pendant l’exécution de cette fonction. Pour créer des paramètres régionaux à utiliser avec une fonction dotée d’un suffixe **_l**, utilisez [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Pour libérer ces paramètres régionaux, utilisez [_free_locale](../c-runtime-library/reference/free-locale.md). Pour obtenir les paramètres régionaux actuels, utilisez [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
- Utilisez [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) pour déterminer si chaque thread possède ses propres paramètres régionaux, ou si tous les threads d’un programme partagent les mêmes paramètres régionaux. Pour plus d’informations, consultez [Paramètres régionaux et pages de codes](../text/locales-and-code-pages.md).
+Utilisez [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) pour déterminer si chaque thread possède ses propres paramètres régionaux, ou si tous les threads d’un programme partagent les mêmes paramètres régionaux. Pour plus d’informations, consultez [Paramètres régionaux et pages de codes](../text/locales-and-code-pages.md).
 
- Des versions plus sécurisées des fonctions contenues dans le tableau suivant sont disponibles. Elles sont indiquées par le suffixe **_s** (« sécurisé »). Pour plus d'informations, consultez [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Des versions plus sécurisées des fonctions contenues dans le tableau suivant sont disponibles. Elles sont indiquées par le suffixe **_s** (« sécurisé »). Pour plus d'informations, consultez [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="locale-dependent-routines"></a>Routines dépendantes des paramètres régionaux
 
@@ -82,4 +82,4 @@ Les *paramètres régionaux* font référence aux paramètres de pays/région et
 ## <a name="see-also"></a>Voir aussi
 
 [Internationalisation](../c-runtime-library/internationalization.md)<br/>
- [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

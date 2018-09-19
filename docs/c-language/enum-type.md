@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 521143207c9ecc873cfea1f857b6849a787500eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4e2419ff6b333eabb896ff4c3a059d80d2c2bd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382755"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069194"
 ---
 # <a name="enum-type"></a>enum, type
-**ANSI 3.5.2.2** Le type entier choisi pour représenter les valeurs d'un type énumération  
-  
- Une variable déclarée comme `enum` est `int`.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Structures, unions, énumérations et champs de bits](../c-language/structures-unions-enumerations-and-bit-fields.md)
+
+**ANSI 3.5.2.2** Le type entier choisi pour représenter les valeurs d'un type énumération
+
+Une variable déclarée comme `enum` est `int`.
+
+## <a name="see-also"></a>Voir aussi
+
+[Structures, unions, énumérations et champs de bits](../c-language/structures-unions-enumerations-and-bit-fields.md)

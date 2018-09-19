@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f258740c32cf232c93926efb3efa98e2596ff108
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eafccc1a2dda9143a39516878851f2c3a62a2d32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103332"
 ---
 # <a name="file-position-in-append-mode"></a>Position du fichier dans le mode adjonction
-**ANSI 4.9.3** Si l'indicateur de position de fichier d'un flux en mode Append est positionné initialement au début ou à la fin du fichier  
-  
- Lorsqu'un fichier est ouvert en mode Append, l'indicateur de position de fichier pointe initialement vers la fin du fichier.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions des bibliothèques](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Si l'indicateur de position de fichier d'un flux en mode Append est positionné initialement au début ou à la fin du fichier
+
+Lorsqu'un fichier est ouvert en mode Append, l'indicateur de position de fichier pointe initialement vers la fin du fichier.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions des bibliothèques](../c-language/library-functions.md)

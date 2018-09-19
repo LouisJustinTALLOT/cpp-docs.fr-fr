@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bfabc412c46a5fa73bf0cd3d000bb3823e5a389
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7773882d6fb04341a6f6d3a2cbcfda1d05f85d17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386769"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063279"
 ---
 # <a name="type-for-string-literals"></a>Type pour les littéraux de chaîne
-Les littéraux de chaîne ont un tableau de type `char` (autrement dit, **char[ ]**). (Les chaînes à caractères larges ont un tableau de type `wchar_t` (autrement dit, **wchar_t[ ]**).) Cela signifie qu'une chaîne est un tableau avec des éléments de type `char`. Le nombre d'éléments du tableau est égal au nombre de caractères dans la chaîne plus un pour le caractère null de fin.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Littéraux de chaîne C](../c-language/c-string-literals.md)
+
+Les littéraux de chaîne ont un tableau de type `char` (autrement dit, **char[ ]**). (Les chaînes à caractères larges ont un tableau de type `wchar_t` (autrement dit, **wchar_t[ ]**).) Cela signifie qu'une chaîne est un tableau avec des éléments de type `char`. Le nombre d'éléments du tableau est égal au nombre de caractères dans la chaîne plus un pour le caractère null de fin.
+
+## <a name="see-also"></a>Voir aussi
+
+[Littéraux de chaîne C](../c-language/c-string-literals.md)

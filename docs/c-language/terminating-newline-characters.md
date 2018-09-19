@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835b59a16927e447cbe462add99baf0c1fa9a241
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc13b4e8d7f70f107e78dbc8ab679b3fac3bc513
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028829"
 ---
 # <a name="terminating-newline-characters"></a>Fin des caractères de saut de ligne
-**ANSI 4.9.2** Indique si la dernière ligne d'un flux de texte requiert un caractère de saut de ligne de fin  
-  
- Les fonctions de flux identifient la nouvelle ligne ou la fin du fichier comme caractère de fin d'une ligne.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions des bibliothèques](../c-language/library-functions.md)
+
+**ANSI 4.9.2** Indique si la dernière ligne d'un flux de texte requiert un caractère de saut de ligne de fin
+
+Les fonctions de flux identifient la nouvelle ligne ou la fin du fichier comme caractère de fin d'une ligne.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions des bibliothèques](../c-language/library-functions.md)

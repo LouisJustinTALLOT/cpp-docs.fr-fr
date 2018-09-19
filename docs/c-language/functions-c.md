@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 166cf6e133b3e824669c583bef8952bc12e59182
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71acc0d1f8ead1fc84326f223d408f7e8d330b3e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057655"
 ---
 # <a name="functions-c"></a>Fonctions (C)
-La fonction est l'unité modulaire fondamentale en langage C. Une fonction est généralement conçue pour effectuer une tâche spécifique et son nom reflète souvent cette tâche. Une fonction contient des déclarations et des instructions. Cette section décrit comment déclarer, définir et appeler les fonctions C. Autres sujets abordés :  
-  
--   [Vue d’ensemble des fonctions](../c-language/overview-of-functions.md)  
-  
--   [Attributs de fonctions](../c-language/function-attributes.md)  
-  
--   [Spécifications des conventions d’appel](../c-language/specifying-calling-conventions.md)  
-  
--   [Fonctions inline](../c-language/inline-functions.md)  
-  
--   [Fonctions d'importation et d'exportation de DLL](../c-language/dll-import-and-export-functions.md)  
-  
--   [Fonctions naked](../c-language/naked-functions.md)  
-  
--   [Classe de stockage](../c-language/storage-class.md)  
-  
--   [Type de retour](../c-language/return-type.md)  
-  
--   [Arguments](../c-language/arguments.md)  
-  
--   [Paramètres](../c-language/parameters.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur le langage C](../c-language/c-language-reference.md)
+
+La fonction est l'unité modulaire fondamentale en langage C. Une fonction est généralement conçue pour effectuer une tâche spécifique et son nom reflète souvent cette tâche. Une fonction contient des déclarations et des instructions. Cette section décrit comment déclarer, définir et appeler les fonctions C. Autres sujets abordés :
+
+- [Vue d’ensemble des fonctions](../c-language/overview-of-functions.md)
+
+- [Attributs de fonctions](../c-language/function-attributes.md)
+
+- [Spécifications des conventions d’appel](../c-language/specifying-calling-conventions.md)
+
+- [Fonctions inline](../c-language/inline-functions.md)
+
+- [Fonctions d'importation et d'exportation de DLL](../c-language/dll-import-and-export-functions.md)
+
+- [Fonctions naked](../c-language/naked-functions.md)
+
+- [Classe de stockage](../c-language/storage-class.md)
+
+- [Type de retour](../c-language/return-type.md)
+
+- [Arguments](../c-language/arguments.md)
+
+- [Paramètres](../c-language/parameters.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur le langage C](../c-language/c-language-reference.md)

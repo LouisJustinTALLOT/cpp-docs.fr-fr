@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31914118283c9d0c5c502e3426ba12e86d7c7680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff4e032e205680da84369075514e3177fa5fb33e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051020"
 ---
 # <a name="simple-assignment-c"></a>Assignation simple (C)
-L’opérateur d’assignation simple assigne son opérande droit à son opérande gauche. La valeur de l’opérande droit est convertie dans le type de l’expression d’assignation et remplace la valeur stockée dans l’objet désigné par l’opérande gauche. Les règles de conversion relatives à l'assignation sont applicables (consultez [Conversions d'assignation](../c-language/assignment-conversions.md)).  
-  
-```  
-double x;  
-int y;  
-  
-x = y;  
-```  
-  
- Dans cet exemple, la valeur de `y` est convertie en type **double** et assignée à `x`.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Opérateurs d’assignation C](../c-language/c-assignment-operators.md)
+
+L’opérateur d’assignation simple assigne son opérande droit à son opérande gauche. La valeur de l’opérande droit est convertie dans le type de l’expression d’assignation et remplace la valeur stockée dans l’objet désigné par l’opérande gauche. Les règles de conversion relatives à l'assignation sont applicables (consultez [Conversions d'assignation](../c-language/assignment-conversions.md)).
+
+```
+double x;
+int y;
+
+x = y;
+```
+
+Dans cet exemple, la valeur de `y` est convertie en type **double** et assignée à `x`.
+
+## <a name="see-also"></a>Voir aussi
+
+[Opérateurs d’assignation C](../c-language/c-assignment-operators.md)

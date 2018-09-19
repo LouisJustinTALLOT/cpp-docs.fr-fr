@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c414ddee654897c88438ec879f9b481073888f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 36c8dd0467dc50c9eba9db954f28711aa8525cd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389292"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034275"
 ---
 # <a name="pctypefunc"></a>__pctype_func
-Récupère un pointeur vers un tableau d’informations de classification des caractères.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-const unsigned short *__pctype_func(  
-   )  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Pointeur vers un tableau d’informations de classification des caractères.  
-  
-## <a name="remarks"></a>Notes  
- Les informations contenues dans le tableau de classification des caractères est réservé exclusivement à un usage interne et utilisé par diverses fonctions de classification des caractères de type `char`. Pour plus d’informations, consultez la section `Remarks` de [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|__pctype_func|ctype.h|  
-  
-## <a name="see-also"></a>Voir aussi  
- [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)
+
+Récupère un pointeur vers un tableau d’informations de classification des caractères.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+const unsigned short *__pctype_func(
+   )
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Pointeur vers un tableau d’informations de classification des caractères.
+
+## <a name="remarks"></a>Notes
+
+Les informations contenues dans le tableau de classification des caractères est réservé exclusivement à un usage interne et utilisé par diverses fonctions de classification des caractères de type `char`. Pour plus d’informations, consultez la section `Remarks` de [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
+
+## <a name="requirements"></a>Configuration requise
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|__pctype_func|ctype.h|
+
+## <a name="see-also"></a>Voir aussi
+
+[_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)

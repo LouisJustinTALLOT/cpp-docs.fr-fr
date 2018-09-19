@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b66880bbb86d786516782892b540ff2b84be0321
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e8be236b2f84473fb8ea6b918d8520f7b2060cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019730"
 ---
 # <a name="file-access-limits"></a>Limites d'accès au fichier
-**ANSI 4.9.3** Indique si le même fichier peut être ouvert plusieurs fois  
-  
- L'ouverture d'un fichier déjà ouvert n'est pas autorisée.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions des bibliothèques](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Indique si le même fichier peut être ouvert plusieurs fois
+
+L'ouverture d'un fichier déjà ouvert n'est pas autorisée.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions des bibliothèques](../c-language/library-functions.md)

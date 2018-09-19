@@ -27,41 +27,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eabf83c8388819b074ad553dc2b29b1902f2f1b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c2eff59c8f766b96c1abaeaa2eb9b369720cc75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015949"
 ---
 # <a name="translation-mode-constants"></a>Constantes de mode de traduction
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <fcntl.h>  
-  
-```  
-  
-## <a name="remarks"></a>Notes  
- Les constantes manifestes `_O_BINARY` et `_O_TEXT` déterminent le mode de traduction des fichiers (`_open` et `_sopen`) ou le mode de traduction des flux (`_setmode`).  
-  
- Les valeurs autorisées sont :  
-  
- `_O_TEXT`  
- Ouvre un fichier en mode texte (traduit). Les combinaisons retour chariot/saut de ligne sont traduites en un seul saut de ligne en entrée. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture ou en lecture/écriture, `fopen` recherche un Ctrl+Z à la fin du fichier et le supprime, si possible. En effet, l’utilisation des fonctions `fseek` et `ftell` pour se déplacer dans un fichier qui se termine par un Ctrl+Z peut provoquer un comportement incorrect de `fseek` vers la fin du fichier.  
-  
- `_O_BINARY`  
- Ouvre un fichier en mode binaire (non traduit). Les traductions ci-dessus sont supprimées.  
-  
- `_O_RAW`  
- Comme pour `_O_BINARY`. Prise en charge pour la compatibilité C 2.0.  
-  
- Pour plus d’informations, consultez [E/S de fichier en mode texte et binaire](../c-runtime-library/text-and-binary-mode-file-i-o.md) et [Traduction des fichiers](../c-runtime-library/file-translation-constants.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [_open, _wopen](../c-runtime-library/reference/open-wopen.md)   
- [_pipe](../c-runtime-library/reference/pipe.md)   
- [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
- [_setmode](../c-runtime-library/reference/setmode.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <fcntl.h>
+
+```
+
+## <a name="remarks"></a>Notes
+
+Les constantes manifestes `_O_BINARY` et `_O_TEXT` déterminent le mode de traduction des fichiers (`_open` et `_sopen`) ou le mode de traduction des flux (`_setmode`).
+
+Les valeurs autorisées sont :
+
+|||
+|-|-|
+`_O_TEXT`  | Ouvre un fichier en mode texte (traduit). Les combinaisons retour chariot/saut de ligne sont traduites en un seul saut de ligne en entrée. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture ou en lecture/écriture, `fopen` recherche un Ctrl+Z à la fin du fichier et le supprime, si possible. En effet, l’utilisation des fonctions `fseek` et `ftell` pour se déplacer dans un fichier qui se termine par un Ctrl+Z peut provoquer un comportement incorrect de `fseek` vers la fin du fichier.
+`_O_BINARY`  | Ouvre un fichier en mode binaire (non traduit). Les traductions ci-dessus sont supprimées.
+`_O_RAW`  | Comme pour `_O_BINARY`. Prise en charge pour la compatibilité C 2.0.
+
+Pour plus d’informations, consultez [E/S de fichier en mode texte et binaire](../c-runtime-library/text-and-binary-mode-file-i-o.md) et [Traduction des fichiers](../c-runtime-library/file-translation-constants.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
+[_pipe](../c-runtime-library/reference/pipe.md)<br/>
+[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
+[_setmode](../c-runtime-library/reference/setmode.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)

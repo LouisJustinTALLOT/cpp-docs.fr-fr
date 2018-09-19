@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dae0eef25b11d49e5f869d88862e602d862135c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082246"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 La balise \<summary> doit être utilisée pour décrire un type ou un membre de type. Utilisez [\<remarks>](../ide/remarks-visual-cpp.md) pour ajouter des informations supplémentaires à une description de type.  
@@ -35,8 +35,8 @@ La balise \<summary> doit être utilisée pour décrire un type ou un membre de 
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `description`  
- Résumé de l’objet.  
+*description*<br/>
+Résumé de l’objet.  
   
 ## <a name="remarks"></a>Notes  
  Le texte de la balise \<summary> est la seule source d’informations sur le type dans IntelliSense et il est également affiché dans [l’Explorateur d’objets](/visualstudio/ide/viewing-the-structure-of-code) et dans le rapport web de commentaire de code.  

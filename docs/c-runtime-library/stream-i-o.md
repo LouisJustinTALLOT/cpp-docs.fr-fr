@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fba53f16fad9321701e641020ed01349b13a5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ab13141c573ad302528a09b74cb3a5e2aaa0382
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035216"
 ---
 # <a name="stream-io"></a>E/S de flux
 
@@ -89,23 +89,23 @@ Ces fonctions permettent de traiter des données de tailles et de formats diffé
 |[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Écrire des données mises en forme de la longueur spécifiée dans la mémoire tampon|
 |[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Écrire des données mises en forme dans la mémoire tampon|
 
- Quand un programme lance l’exécution, le code de démarrage ouvre automatiquement plusieurs flux : une entrée standard (désignée par **stdin**), une sortie standard (désignée par **stdout**) et une erreur standard (désignée par **stderr**). Par défaut, ces flux sont dirigés vers la console (clavier et écran). Utilisez **freopen** pour rediriger **stdin**, **stdout** ou **stderr** vers un fichier sur disque ou un périphérique.
+Quand un programme lance l’exécution, le code de démarrage ouvre automatiquement plusieurs flux : une entrée standard (désignée par **stdin**), une sortie standard (désignée par **stdout**) et une erreur standard (désignée par **stderr**). Par défaut, ces flux sont dirigés vers la console (clavier et écran). Utilisez **freopen** pour rediriger **stdin**, **stdout** ou **stderr** vers un fichier sur disque ou un périphérique.
 
- Par défaut, les fichiers ouverts à l'aide des routines de flux sont mis en mémoire tampon. Les fonctions **stdout** et **stderr** sont vidées chaque fois qu’elles sont pleines ou, si vous écrivez dans un périphérique d’entrée-sortie de caractères, après chaque appel de bibliothèque. Si un programme se termine de façon anormale, il est possible que les mémoires tampons de sortie ne se vident pas, entraînant ainsi une perte de données. Utilisez **fflush** ou **_flushall** pour faire en sorte que la mémoire tampon associée à un fichier spécifié ou toutes les mémoires tampons soient vidées sur le système d’exploitation, qui peut mettre les données en cache avant de les écrire sur disque. La fonctionnalité de validation sur disque garantit que le contenu de mémoire tampon vidé n'est pas perdu en cas de défaillance du système.
+Par défaut, les fichiers ouverts à l'aide des routines de flux sont mis en mémoire tampon. Les fonctions **stdout** et **stderr** sont vidées chaque fois qu’elles sont pleines ou, si vous écrivez dans un périphérique d’entrée-sortie de caractères, après chaque appel de bibliothèque. Si un programme se termine de façon anormale, il est possible que les mémoires tampons de sortie ne se vident pas, entraînant ainsi une perte de données. Utilisez **fflush** ou **_flushall** pour faire en sorte que la mémoire tampon associée à un fichier spécifié ou toutes les mémoires tampons soient vidées sur le système d’exploitation, qui peut mettre les données en cache avant de les écrire sur disque. La fonctionnalité de validation sur disque garantit que le contenu de mémoire tampon vidé n'est pas perdu en cas de défaillance du système.
 
- Il existe deux façons de valider le contenu de mémoire tampon sur disque :
+Il existe deux façons de valider le contenu de mémoire tampon sur disque :
 
--   Créer un lien avec le fichier COMMODE.OBJ pour définir un indicateur de validation global. Le paramètre par défaut de l’indicateur global est **n**, pour « no-commit » (pas de validation).
+- Créer un lien avec le fichier COMMODE.OBJ pour définir un indicateur de validation global. Le paramètre par défaut de l’indicateur global est **n**, pour « no-commit » (pas de validation).
 
--   Définir l’indicateur de mode sur **c** avec **fopen** ou **_fdopen**.
+- Définir l’indicateur de mode sur **c** avec **fopen** ou **_fdopen**.
 
- Le comportement d’un fichier spécifiquement ouvert avec l’indicateur **c** ou **n** varie en fonction de cet indicateur, quel que soit l’indicateur de validation global (« commit »/« no-commit »).
+Le comportement d’un fichier spécifiquement ouvert avec l’indicateur **c** ou **n** varie en fonction de cet indicateur, quel que soit l’indicateur de validation global (« commit »/« no-commit »).
 
- Si votre programme ne ferme pas explicitement un flux, le flux est fermé automatiquement quand le programme se termine. Cependant, vous devez fermer un flux une fois que le programme en a terminé avec celui-ci, car le nombre de flux pouvant être ouverts simultanément est limité. Pour plus d'informations sur cette limite, consultez [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .
+Si votre programme ne ferme pas explicitement un flux, le flux est fermé automatiquement quand le programme se termine. Cependant, vous devez fermer un flux une fois que le programme en a terminé avec celui-ci, car le nombre de flux pouvant être ouverts simultanément est limité. Pour plus d'informations sur cette limite, consultez [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .
 
- Une entrée ne peut suivre directement une sortie qu’à condition de faire un appel intermédiaire à **fflush** ou à une fonction de positionnement de fichier (**fseek**, **fsetpos** ou **rewind**). Une sortie peut suivre une entrée sans appel intermédiaire à une fonction de positionnement de fichier si l'opération d'entrée rencontre la fin du fichier.
+Une entrée ne peut suivre directement une sortie qu’à condition de faire un appel intermédiaire à **fflush** ou à une fonction de positionnement de fichier (**fseek**, **fsetpos** ou **rewind**). Une sortie peut suivre une entrée sans appel intermédiaire à une fonction de positionnement de fichier si l'opération d'entrée rencontre la fin du fichier.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Entrée et sortie](../c-runtime-library/input-and-output.md)<br/>
- [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

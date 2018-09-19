@@ -21,46 +21,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 410737380f6cc7c5ad52f29953926b3b1c2e71b5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6ce2390ac6e687600a06cba17a99a954e36e66ee
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678083"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704923"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Présentation des étapes de génération personnalisée et des événements de build
 Dans l’environnement de développement Visual C++, vous pouvez personnaliser le processus de build de trois façons :  
   
- **Étapes de build personnalisée**  
- Une étape de build personnalisée est une règle de build associée à un projet. Une étape de build personnalisée peut spécifier une ligne de commande à exécuter, une entrée supplémentaire ou des fichiers de sortie, et un message à afficher. Pour plus d’informations, consultez [Guide pratique pour ajouter une étape de build personnalisée à des projets MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
+- **Étapes de build personnalisée**
+
+   Une étape de build personnalisée est une règle de build associée à un projet. Une étape de build personnalisée peut spécifier une ligne de commande à exécuter, une entrée supplémentaire ou des fichiers de sortie, et un message à afficher. Pour plus d’informations, consultez [Guide pratique pour ajouter une étape de build personnalisée à des projets MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
   
- **Outils de build personnalisée**  
- Un outil de build personnalisée est une règle de build associée à un ou plusieurs fichiers. Une étape de build personnalisée peut passer des fichiers d’entrée à un outil de build personnalisée, ce qui produit un ou plusieurs fichiers de sortie. Par exemple, les fichiers d’aide dans une application MFC sont générés avec un outil de build personnalisée. Pour plus d’informations, consultez [Guide pratique pour ajouter des outils de build personnalisée à des projets MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) et [Spécification des outils de build personnalisée](../ide/specifying-custom-build-tools.md).  
+- **Outils de build personnalisée**
+
+   Un outil de build personnalisée est une règle de build associée à un ou plusieurs fichiers. Une étape de build personnalisée peut passer des fichiers d’entrée à un outil de build personnalisée, ce qui produit un ou plusieurs fichiers de sortie. Par exemple, les fichiers d’aide dans une application MFC sont générés avec un outil de build personnalisée. Pour plus d’informations, consultez [Guide pratique pour ajouter des outils de build personnalisée à des projets MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) et [Spécification des outils de build personnalisée](../ide/specifying-custom-build-tools.md).  
   
- **Événements de build**  
- Les événements de build vous permettent de personnaliser la génération d’un projet. Il existe trois événements de build : *pré-build*, *avant l’édition des liens* et *post-build*. Un événement de build vous permet de spécifier une action qui doit se produire à un moment précis dans le processus de build. Par exemple, vous pouvez utiliser un événement de build pour inscrire un fichier avec **regsvr32.exe** une fois le projet généré. Pour plus d’informations, consultez [Spécification d’événements de build](../ide/specifying-build-events.md).  
+- **Événements de build**
+
+   Les événements de build vous permettent de personnaliser la génération d’un projet. Il existe trois événements de build : *pré-build*, *avant l’édition des liens* et *post-build*. Un événement de build vous permet de spécifier une action qui doit se produire à un moment précis dans le processus de build. Par exemple, vous pouvez utiliser un événement de build pour inscrire un fichier avec **regsvr32.exe** une fois le projet généré. Pour plus d’informations, consultez [Spécification d’événements de build](../ide/specifying-build-events.md).  
   
- [Résolution des problèmes de personnalisations de build](../ide/troubleshooting-build-customizations.md) peut vous aider à faire en sorte que vos étapes de build personnalisée et vos événements de build s’exécutent comme prévu.  
+[Résolution des problèmes de personnalisations de build](../ide/troubleshooting-build-customizations.md) peut vous aider à faire en sorte que vos étapes de build personnalisée et vos événements de build s’exécutent comme prévu.  
   
- Le format de sortie d’une étape de build personnalisée ou d’un événement de build peut aussi améliorer la maniabilité de l’outil. Pour plus d’informations, consultez [Mise en forme de la sortie d’une étape de génération personnalisée ou d’un événement de build](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
+Le format de sortie d’une étape de build personnalisée ou d’un événement de build peut aussi améliorer la maniabilité de l’outil. Pour plus d’informations, consultez [Mise en forme de la sortie d’une étape de génération personnalisée ou d’un événement de build](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
   
- Les événements de build et les étapes de build personnalisée s’exécutent dans l’ordre suivant, avec d’autres étapes de build :  
+Les événements de build et les étapes de build personnalisée s’exécutent dans l’ordre suivant, avec d’autres étapes de build :  
   
-1.  Événement pré-build  
+1. Événement pré-build  
   
-2.  Outils de build personnalisée sur des fichiers individuels  
+2. Outils de build personnalisée sur des fichiers individuels  
   
-3.  MIDL  
+3. MIDL  
   
-4.  Compilateur de ressources  
+4. Compilateur de ressources  
   
-5.  Compilateur C/C++  
+5. Compilateur C/C++  
   
-6.  événement avant l'édition des liens  
+6. événement avant l'édition des liens  
   
-7.  Éditeur de liens ou Générateur de bibliothèques (selon ce qui convient le mieux)  
+7. Éditeur de liens ou Générateur de bibliothèques (selon ce qui convient le mieux)  
   
-8.  Outil Manifeste  
+8. Outil Manifeste  
   
 9. BSCMake  
   
@@ -68,7 +71,7 @@ Dans l’environnement de développement Visual C++, vous pouvez personnaliser l
   
 11. Événement post-build  
   
- L’`custom build step on the project` et un `post-build event` s’exécutent de manière séquentielle une fois que tous les autres processus de build sont terminés.  
+L’`custom build step on the project` et un `post-build event` s’exécutent de manière séquentielle une fois que tous les autres processus de build sont terminés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Génération de projets C++ dans Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   

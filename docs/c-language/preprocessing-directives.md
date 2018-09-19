@@ -15,25 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ff05b108e0debe2e408586e63bed244f87f6b76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47157fadca913cb436c84219bf1b4117aba619eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035576"
 ---
 # <a name="preprocessing-directives"></a>Directives de prétraitement
--   [Constantes de caractère et inclusion conditionnelle](../c-language/character-constants-and-conditional-inclusion.md)  
-  
--   [Intégration des noms de fichiers entre crochets](../c-language/including-bracketed-filenames.md)  
-  
--   [Intégration des noms de fichiers entre guillemets](../c-language/including-quoted-filenames.md)  
-  
--   [Séquences de caractères](../c-language/character-sequences.md)  
-  
--   [Pragmas](../c-language/pragmas.md)  
-  
--   [Date et heure par défaut](../c-language/default-date-and-time.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Comportement défini par l’implémentation](../c-language/implementation-defined-behavior.md)
+
+- [Constantes de caractère et inclusion conditionnelle](../c-language/character-constants-and-conditional-inclusion.md)
+
+- [Intégration des noms de fichiers entre crochets](../c-language/including-bracketed-filenames.md)
+
+- [Intégration des noms de fichiers entre guillemets](../c-language/including-quoted-filenames.md)
+
+- [Séquences de caractères](../c-language/character-sequences.md)
+
+- [Pragmas](../c-language/pragmas.md)
+
+- [Date et heure par défaut](../c-language/default-date-and-time.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Comportement défini par l’implémentation](../c-language/implementation-defined-behavior.md)

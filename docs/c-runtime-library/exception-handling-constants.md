@@ -23,15 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f23fd421d5108648d88c9eeda83c255f9861dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cc17e429c0750b9f0cc8d9eb24bc94adf00484e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070598"
 ---
 # <a name="exception-handling-constants"></a>Constantes de gestion des exceptions
-La constante `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, ou `EXCEPTION_EXECUTE_HANDLER` est retournée lorsqu’une exception se produit pendant l’exécution de la section protégée d’une instruction **try-except**. La valeur de retour détermine la façon dont l’exception est gérée. Pour plus d’informations, consultez [Instruction try-except](../cpp/try-except-statement.md) dans le *Guide de référence du langage C++*.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+La constante `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, ou `EXCEPTION_EXECUTE_HANDLER` est retournée lorsqu’une exception se produit pendant l’exécution de la section protégée d’une instruction **try-except**. La valeur de retour détermine la façon dont l’exception est gérée. Pour plus d’informations, consultez [Instruction try-except](../cpp/try-except-statement.md) dans le *Guide de référence du langage C++*.
+
+## <a name="see-also"></a>Voir aussi
+
+[Constantes globales](../c-runtime-library/global-constants.md)

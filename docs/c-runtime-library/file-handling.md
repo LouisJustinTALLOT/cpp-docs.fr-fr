@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036356"
 ---
 # <a name="file-handling"></a>Gestion de fichiers
 
@@ -86,7 +86,7 @@ Ces routines permettent de modifier la représentation du fichier entre une stru
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Retourne le descripteur de fichier de système d’exploitation associé au descripteur de fichier Runtime C existant.|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Associe un descripteur de fichier Runtime C à un descripteur de fichier de système d’exploitation existant.|
 
- Les fonctions Win32 suivantes permettent aussi d’ouvrir des fichiers et des canaux :
+Les fonctions Win32 suivantes permettent aussi d’ouvrir des fichiers et des canaux :
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 

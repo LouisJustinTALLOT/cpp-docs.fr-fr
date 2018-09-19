@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11e7a127fdf09fbc3704d6e06786e3bd76350941
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2f52e4f551f4ae59e7d3386af8bdba2d2fe5a0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077345"
 ---
 # <a name="clock-function-c"></a>clock, fonction (C)
-**ANSI 4.12.2.1** L'ère pour la fonction `clock`  
-  
- L'ère de la fonction `clock` commence (avec une valeur de 0) au démarrage du programme C à exécuter. Elle retourne des heures exprimées dans 1/**HORLOGES_PAR_SEC** (qui équivaut à 1/1000 pour Microsoft C).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions des bibliothèques](../c-language/library-functions.md)
+
+**ANSI 4.12.2.1** L'ère pour la fonction `clock`
+
+L'ère de la fonction `clock` commence (avec une valeur de 0) au démarrage du programme C à exécuter. Elle retourne des heures exprimées dans 1/**HORLOGES_PAR_SEC** (qui équivaut à 1/1000 pour Microsoft C).
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions des bibliothèques](../c-language/library-functions.md)

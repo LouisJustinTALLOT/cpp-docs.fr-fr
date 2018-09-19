@@ -31,29 +31,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafe81dc684300cb7fdf65137c2f7e45010285b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14c8483671e806adb9170429f2e17d4487de0cfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090488"
 ---
 # <a name="storage-of-basic-types"></a>Stockage de types de base
-Le tableau suivant résume le stockage associé à chaque type de base.  
-  
-### <a name="sizes-of-fundamental-types"></a>Tailles des types fondamentaux  
-  
-|Type|Stockage|  
-|----------|-------------|  
-|`char`, `unsigned char`, **signed char**|1 octet|  
-|**short**, **unsigned short**|2 octets|  
-|`int`, `unsigned int`|4 octets|  
-|**long**, `unsigned long`|4 octets|  
-|**float**|4 octets|  
-|**double**|8 octets|  
-|`long double`|8 octets|  
-  
- Les types de données C sont répartis dans des catégories générales. Les « types intégraux » incluent `char`, `int`, **short**, **long**, **signed**, `unsigned` et `enum`. Les « types flottants » sont **float**, **double** et `long double`. Les « types arithmétiques » incluent tous les types flottants et intégraux.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Déclarations et types](../c-language/declarations-and-types.md)
+
+Le tableau suivant résume le stockage associé à chaque type de base.
+
+### <a name="sizes-of-fundamental-types"></a>Tailles des types fondamentaux
+
+|Type|Stockage|
+|----------|-------------|
+|`char`, `unsigned char`, **signed char**|1 octet|
+|**short**, **unsigned short**|2 octets|
+|`int`, `unsigned int`|4 octets|
+|**long**, `unsigned long`|4 octets|
+|**float**|4 octets|
+|**double**|8 octets|
+|`long double`|8 octets|
+
+Les types de données C sont répartis dans des catégories générales. Les « types intégraux » incluent `char`, `int`, **short**, **long**, **signed**, `unsigned` et `enum`. Les « types flottants » sont **float**, **double** et `long double`. Les « types arithmétiques » incluent tous les types flottants et intégraux.
+
+## <a name="see-also"></a>Voir aussi
+
+[Déclarations et types](../c-language/declarations-and-types.md)

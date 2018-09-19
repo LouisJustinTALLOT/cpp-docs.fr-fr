@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87709026e9cc088b03f6e04dd30bd49d2cf3707b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 648b0e1addd509652ba67e09d32dbdd060f29e87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074420"
 ---
 # <a name="system-calls"></a>Appels système
 
@@ -39,6 +39,6 @@ Les fonctions suivantes sont des appels de système d’exploitation Windows.
 ## <a name="see-also"></a>Voir aussi
 
 [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [Gestion de fichiers](../c-runtime-library/file-handling.md)<br/>
- [Contrôle de répertoire](../c-runtime-library/directory-control.md)<br/>
- [E/S de bas niveau](../c-runtime-library/low-level-i-o.md)<br/>
+[Gestion de fichiers](../c-runtime-library/file-handling.md)<br/>
+[Contrôle de répertoire](../c-runtime-library/directory-control.md)<br/>
+[E/S de bas niveau](../c-runtime-library/low-level-i-o.md)<br/>

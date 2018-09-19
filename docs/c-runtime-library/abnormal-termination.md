@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70520b60ccfaf1af5b223bcb4ea1a90639aa484
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e311c27d61eca82019f8069b0984557af02c74a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028205"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
-Indique si le bloc `__finally` d’une [instruction try-finally](../cpp/try-finally-statement.md) est entré pendant que le système exécute une liste interne des gestionnaires de terminaisons.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-int   _abnormal_termination(  
-   );  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- `true` si le système *déroule* la pile ; sinon, `false`.  
-  
-## <a name="remarks"></a>Notes  
- Il s’agit d’une fonction interne utilisée pour gérer les exceptions de déroulement ; elle n’a pas vocation à être appelée à partir du code utilisateur.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|_abnormal_termination|excpt.h|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Instruction try-finally](../cpp/try-finally-statement.md)
+
+Indique si le bloc `__finally` d’une [instruction try-finally](../cpp/try-finally-statement.md) est entré pendant que le système exécute une liste interne des gestionnaires de terminaisons.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+int   _abnormal_termination(
+   );
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+`true` si le système *déroule* la pile ; sinon, `false`.
+
+## <a name="remarks"></a>Notes
+
+Il s’agit d’une fonction interne utilisée pour gérer les exceptions de déroulement ; elle n’a pas vocation à être appelée à partir du code utilisateur.
+
+## <a name="requirements"></a>Configuration requise
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|_abnormal_termination|excpt.h|
+
+## <a name="see-also"></a>Voir aussi
+
+[Instruction try-finally](../cpp/try-finally-statement.md)

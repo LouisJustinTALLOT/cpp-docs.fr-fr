@@ -21,31 +21,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a204118656625fc08a13738b128a41facf15673
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8a9cfa63b4d076a5ffc25389192032990dcf95c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082389"
 ---
 # <a name="expressions-and-assignments"></a>Expressions et assignations
-Cette section décrit comment former des expressions et assigner des valeurs en langage C. Les constantes, les identificateurs, les chaînes, et les appels de fonction sont tous des opérandes qui sont manipulés dans des expressions. Le langage C dispose de tous les opérateurs habituels de langage. Cette section décrit ces opérateurs ainsi que ceux qui sont uniques à C ou à Microsoft C. Les rubriques abordées incluent :  
-  
--   [Expressions L-Value et R-Value](../c-language/l-value-and-r-value-expressions.md)  
-  
--   [Expressions constantes](../c-language/c-constant-expressions.md)  
-  
--   [Effets secondaires](../c-language/side-effects.md)  
-  
--   [Points de séquence](../c-language/c-sequence-points.md)  
-  
--   [Opérateurs](../c-language/c-operators.md)  
-  
--   [Priorité des opérateurs](../c-language/precedence-and-order-of-evaluation.md)  
-  
--   [Conversions de type](../c-language/type-conversions-c.md)  
-  
--   [Casts de type](../c-language/type-cast-conversions.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur le langage C](../c-language/c-language-reference.md)
+
+Cette section décrit comment former des expressions et assigner des valeurs en langage C. Les constantes, les identificateurs, les chaînes, et les appels de fonction sont tous des opérandes qui sont manipulés dans des expressions. Le langage C dispose de tous les opérateurs habituels de langage. Cette section décrit ces opérateurs ainsi que ceux qui sont uniques à C ou à Microsoft C. Les rubriques abordées incluent :
+
+- [Expressions L-Value et R-Value](../c-language/l-value-and-r-value-expressions.md)
+
+- [Expressions constantes](../c-language/c-constant-expressions.md)
+
+- [Effets secondaires](../c-language/side-effects.md)
+
+- [Points de séquence](../c-language/c-sequence-points.md)
+
+- [Opérateurs](../c-language/c-operators.md)
+
+- [Priorité des opérateurs](../c-language/precedence-and-order-of-evaluation.md)
+
+- [Conversions de type](../c-language/type-conversions-c.md)
+
+- [Casts de type](../c-language/type-cast-conversions.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur le langage C](../c-language/c-language-reference.md)

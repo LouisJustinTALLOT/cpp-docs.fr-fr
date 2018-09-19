@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70edb3e7d8cf774a052837e62bdfc92e9981ba63
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f725e0f121e628a1cb8d28ca425d17abccfb397d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038637"
 ---
 # <a name="filenamemax"></a>FILENAME_MAX
-La longueur maximale autorisée pour une taille de mémoire tampon de chaîne `filename`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <stdio.h>  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Limites de champ de chemin](../c-runtime-library/path-field-limits.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+La longueur maximale autorisée pour une taille de mémoire tampon de chaîne `filename`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#include <stdio.h>
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Limites de champ de chemin](../c-runtime-library/path-field-limits.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)

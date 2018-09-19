@@ -15,16 +15,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900510"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708004"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurer un projet CMake Linux
 
-**Visual Studio 2017 15.4 et versions ultérieures**  
+**Visual Studio 2017 15.4 et versions ultérieures**<br/>
 Quand vous installez la charge de travail Linux C++ pour Visual Studio, la prise en charge de CMake pour Linux est sélectionnée par défaut. Vous pouvez maintenant utiliser votre base de code CMake existante sans avoir à la convertir en projet Visual Studio. Si votre base de code est multiplateforme, vous pouvez cibler Windows et Linux à partir de Visual Studio.
 
 Cette rubrique suppose que vous avez une connaissance de base de la prise en charge de CMake dans Visual Studio. Pour plus d’informations, consultez [Visual C++ Tools pour CMake](../ide/cmake-tools-for-visual-cpp.md). Pour plus d’informations sur la solution CMake proprement dite, consultez [Build, Test and Package Your Software With CMake](https://cmake.org/).
@@ -65,7 +65,7 @@ Une fois que vous avez spécifié une cible Linux, votre source est copiée sur 
 
 ![Générer le cache CMake sur Linux](media/cmake-linux-1.png "Générer le cache CMake sur Linux")
 
-**Visual Studio 2017 15.7 et versions ultérieures :**  
+**Visual Studio 2017 15.7 et versions ultérieures :**<br/>
 Pour assurer la prise en charge IntelliSense des en-têtes distants, Visual Studio les copie automatiquement dans un répertoire de votre ordinateur Windows local. Pour plus d’informations, consultez [IntelliSense pour les en-têtes distants](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Déboguer le projet

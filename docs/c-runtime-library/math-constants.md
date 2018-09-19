@@ -32,46 +32,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ca022fe2800a7c576af8d66e2e820be5f2375b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12a53aff22d55b8f99b05bf870276da1370fad13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081427"
 ---
 # <a name="math-constants"></a>Math, constantes
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#define _USE_MATH_DEFINES // for C++  
-#include <cmath>  
-  
-#define _USE_MATH_DEFINES // for C  
-#include <math.h>  
-```  
-  
-## <a name="remarks"></a>Notes  
- Les symboles suivants sont définis pour les valeurs de leurs expressions indiquées :  
-  
-|Symbole|Expression|Value|  
-|------------|----------------|-----------|  
-|M_E|e|2.71828182845904523536|  
-|M_LOG2E|log2(e)|1.44269504088896340736|  
-|M_LOG10E|log10(e)|0.434294481903251827651|  
-|M_LN2|ln(2)|0.693147180559945309417|  
-|M_LN10|ln(10)|2.30258509299404568402|  
-|M_PI|pi|3.14159265358979323846|  
-|M_PI_2|pi/2|1.57079632679489661923|  
-|M_PI_4|pi/4|0.785398163397448309616|  
-|M_1_PI|1/pi|0.318309886183790671538|  
-|M_2_PI|2/pi|0.636619772367581343076|  
-|M_2_SQRTPI|2/sqrt(pi)|1.12837916709551257390|  
-|M_SQRT2|sqrt(2)|1.41421356237309504880|  
-|M_SQRT1_2|1/sqrt(2)|0.707106781186547524401|  
-  
- Les constantes mathématiques ne sont pas définies en C/C++ standard. Pour les utiliser, vous devez d’abord définir `_USE_MATH_DEFINES`, puis inclure cmath ou math.h.  
-  
- Le fichier ATLComTime.h inclut math.h lorsque votre projet est généré en mode Release. Si vous utilisez une ou plusieurs des constantes mathématiques dans un projet qui inclut également ATLComTime.h, vous devez définir `_USE_MATH_DEFINES` avant d’inclure ATLComTime.h.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#define _USE_MATH_DEFINES // for C++
+#include <cmath>
+
+#define _USE_MATH_DEFINES // for C
+#include <math.h>
+```
+
+## <a name="remarks"></a>Notes
+
+Les symboles suivants sont définis pour les valeurs de leurs expressions indiquées :
+
+|Symbole|Expression|Value|
+|------------|----------------|-----------|
+|M_E|e|2.71828182845904523536|
+|M_LOG2E|log2(e)|1.44269504088896340736|
+|M_LOG10E|log10(e)|0.434294481903251827651|
+|M_LN2|ln(2)|0.693147180559945309417|
+|M_LN10|ln(10)|2.30258509299404568402|
+|M_PI|pi|3.14159265358979323846|
+|M_PI_2|pi/2|1.57079632679489661923|
+|M_PI_4|pi/4|0.785398163397448309616|
+|M_1_PI|1/pi|0.318309886183790671538|
+|M_2_PI|2/pi|0.636619772367581343076|
+|M_2_SQRTPI|2/sqrt(pi)|1.12837916709551257390|
+|M_SQRT2|sqrt(2)|1.41421356237309504880|
+|M_SQRT1_2|1/sqrt(2)|0.707106781186547524401|
+
+Les constantes mathématiques ne sont pas définies en C/C++ standard. Pour les utiliser, vous devez d’abord définir `_USE_MATH_DEFINES`, puis inclure cmath ou math.h.
+
+Le fichier ATLComTime.h inclut math.h lorsque votre projet est généré en mode Release. Si vous utilisez une ou plusieurs des constantes mathématiques dans un projet qui inclut également ATLComTime.h, vous devez définir `_USE_MATH_DEFINES` avant d’inclure ATLComTime.h.
+
+## <a name="see-also"></a>Voir aussi
+
+[Constantes globales](../c-runtime-library/global-constants.md)

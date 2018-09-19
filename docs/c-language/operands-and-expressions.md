@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 804039142e63af838ddd7e8a899d616657596f66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08b92dcf1e51a58255254f36df5c140ea36343f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383447"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023369"
 ---
 # <a name="operands-and-expressions"></a>Opérandes et expressions
-Un « opérande » est une entité sur laquelle agit un opérateur. Une « expression » est une séquence d'opérateurs et d'opérandes qui exécute toutes les combinaisons des actions suivantes :  
-  
--   Calcule une valeur  
-  
--   Indique un objet ou une fonction  
-  
--   Génère des effets secondaires  
-  
- Les opérandes en C incluent les constantes, les identificateurs, les chaînes, les appels de fonction, les expressions d’indice, les expressions member-selection et les expressions complexes formées en combinant des opérandes avec des opérateurs ou en mettant des opérandes entre parenthèses. La syntaxe pour ces opérandes est fournie dans [Expressions primaires](../c-language/c-primary-expressions.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Expressions et assignations](../c-language/expressions-and-assignments.md)
+
+Un « opérande » est une entité sur laquelle agit un opérateur. Une « expression » est une séquence d'opérateurs et d'opérandes qui exécute toutes les combinaisons des actions suivantes :
+
+- Calcule une valeur
+
+- Indique un objet ou une fonction
+
+- Génère des effets secondaires
+
+Les opérandes en C incluent les constantes, les identificateurs, les chaînes, les appels de fonction, les expressions d’indice, les expressions member-selection et les expressions complexes formées en combinant des opérandes avec des opérateurs ou en mettant des opérandes entre parenthèses. La syntaxe pour ces opérandes est fournie dans [Expressions primaires](../c-language/c-primary-expressions.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Expressions et assignations](../c-language/expressions-and-assignments.md)
