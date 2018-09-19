@@ -22,24 +22,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3f834dd94ab67ade81969de76eef33bf139299f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18653eaae84e619e549146bd721dee3199f90ac5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090891"
 ---
 # <a name="fopenmax-sysopen"></a>FOPEN_MAX, _SYS_OPEN
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>Notes  
- Il s’agit du nombre maximal de fichiers qui peuvent être ouverts simultanément. `FOPEN_MAX` est le nom compatible ANSI. `_SYS_OPEN` est fourni pour assurer la compatibilité avec le code existant.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>Notes
+
+Il s’agit du nombre maximal de fichiers qui peuvent être ouverts simultanément. `FOPEN_MAX` est le nom compatible ANSI. `_SYS_OPEN` est fourni pour assurer la compatibilité avec le code existant.
+
+## <a name="see-also"></a>Voir aussi
+
+[Constantes globales](../c-runtime-library/global-constants.md)

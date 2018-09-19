@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db365f2d1bc72c931c7469efaa2593f7b9b3616b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c64df5f523a5ba3debb57243241350ea939a9bb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028479"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Spécificateurs de classe de stockage pour les déclarations de niveau interne
-Vous pouvez utiliser chacun des quatre éléments terminaux *storage-class-specifier* pour les déclarations de variables au niveau interne. Lorsque vous omettez le *storage-class-specifier* d'une déclaration, la classe de stockage par défaut est **auto**. Par conséquent, le mot clé **auto** est rarement vu dans un programme C.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classes de stockage C](../c-language/c-storage-classes.md)
+
+Vous pouvez utiliser chacun des quatre éléments terminaux *storage-class-specifier* pour les déclarations de variables au niveau interne. Lorsque vous omettez le *storage-class-specifier* d'une déclaration, la classe de stockage par défaut est **auto**. Par conséquent, le mot clé **auto** est rarement vu dans un programme C.
+
+## <a name="see-also"></a>Voir aussi
+
+[Classes de stockage C](../c-language/c-storage-classes.md)

@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c4af90ddd3f8a166f63c8866dfcfc82bc8d02ed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b0ad11ca9acb99395e62f215b7bd1fef77d60f49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016089"
 ---
 # <a name="domain-errors"></a>Erreurs de domaine
-**ANSI 4.5.1** Valeurs retournées par les fonctions mathématiques pour les erreurs de domaine  
-  
-Le fichier ERRNO.H définit la constante d’erreur de domaine `EDOM` à 33.  Pour obtenir des informations sur la valeur de retour, consultez la rubrique d'aide de la fonction ayant provoqué l'erreur.  
-  
-## <a name="see-also"></a>Voir aussi  
+
+**ANSI 4.5.1** Valeurs retournées par les fonctions mathématiques pour les erreurs de domaine
+
+Le fichier ERRNO.H définit la constante d’erreur de domaine `EDOM` à 33.  Pour obtenir des informations sur la valeur de retour, consultez la rubrique d'aide de la fonction ayant provoqué l'erreur.
+
+## <a name="see-also"></a>Voir aussi
+
 [Fonctions des bibliothèques](../c-language/library-functions.md)

@@ -28,33 +28,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e91c03f619be1d0f1d8ad23f3b8d60e1be30cfb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f610b26c79201f3431b6263a002b59df7456cfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388063"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082441"
 ---
 # <a name="pcommode"></a>__p__commode
-Pointe vers la variable globale `_commode`, qui spécifie le *mode de validation de fichiers* par défaut pour les opérations d’E/S de fichier.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-int * __p__commode(  
-   );  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Pointeur vers la variable globale `_commode`.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `__p__commode` est exclusivement réservée à un usage interne et ne doit pas être appelée à partir du code utilisateur.  
-  
- Le mode de validation de fichiers spécifie quand les données critiques sont écrites sur le disque. Pour plus d’informations, consultez [fflush](../c-runtime-library/reference/fflush.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
+
+Pointe vers la variable globale `_commode`, qui spécifie le *mode de validation de fichiers* par défaut pour les opérations d’E/S de fichier.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+int * __p__commode(
+   );
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Pointeur vers la variable globale `_commode`.
+
+## <a name="remarks"></a>Notes
+
+La fonction `__p__commode` est exclusivement réservée à un usage interne et ne doit pas être appelée à partir du code utilisateur.
+
+Le mode de validation de fichiers spécifie quand les données critiques sont écrites sur le disque. Pour plus d’informations, consultez [fflush](../c-runtime-library/reference/fflush.md).
+
+## <a name="requirements"></a>Configuration requise
+
+|Routine|En-tête requis|
+|-------------|---------------------|
 |__p\__commode|internal.h|

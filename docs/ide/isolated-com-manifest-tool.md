@@ -17,34 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5439e04fdb2563748bc21fb494cc09fd7bd5c929
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216378"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720094"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM isolé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de &lt;NomProjet&gt;
 Utilisez cette boîte de dialogue pour spécifier des options **COM isolé** pour [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
- Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pages de propriétés pour votre projet ou votre feuille de propriétés. Développez le nœud **Outil Manifeste** sous **Propriétés communes**, puis sélectionnez **COM isolé**.  
+Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pages de propriétés pour votre projet ou votre feuille de propriétés. Développez le nœud **Outil Manifeste** sous **Propriétés communes**, puis sélectionnez **COM isolé**.  
   
 ## <a name="task-list"></a>Liste des tâches  
   
 -   [Guide pratique pour générer des applications isolées pour consommer des composants COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
 ## <a name="uielement-list"></a>Liste des éléments d’interface  
- **Fichier bibliothèque de types**  
- Utilise l’option /tlb pour spécifier le nom du fichier bibliothèque de types (fichier .tlb) que l’outil Manifeste utilise pour générer le fichier manifeste.  
+- **Fichier bibliothèque de types**
+
+   Utilise l’option /tlb pour spécifier le nom du fichier bibliothèque de types (fichier .tlb) que l’outil Manifeste utilise pour générer le fichier manifeste.  
   
- **Fichier de script d’inscription**  
- Utilise l’option /rgs pour spécifier le nom du fichier de script d’inscription (fichier .rgs) que l’outil Manifeste utilise pour générer le fichier manifeste.  
+- **Fichier de script d’inscription**
+
+   Utilise l’option /rgs pour spécifier le nom du fichier de script d’inscription (fichier .rgs) que l’outil Manifeste utilise pour générer le fichier manifeste.  
   
- **Nom de fichier du composant**  
- Utilise l’option /dll pour spécifier le nom de la ressource que l’outil Manifeste génère. Vous devez entrer une valeur pour cette propriété quand des valeurs sont spécifiées pour **Fichier bibliothèque de types** ou **Fichier de script d’inscription**.  
+- **Nom de fichier du composant**
+
+   Utilise l’option /dll pour spécifier le nom de la ressource que l’outil Manifeste génère. Vous devez entrer une valeur pour cette propriété quand des valeurs sont spécifiées pour **Fichier bibliothèque de types** ou **Fichier de script d’inscription**.  
   
- **Fichier de remplacement**  
- Utilise l’option /replacements pour spécifier le chemin complet au fichier qui contient des valeurs pour les chaînes remplaçables dans le fichier .rgs.  
+- **Fichier de remplacement**
+
+   Utilise l’option /replacements pour spécifier le chemin complet au fichier qui contient des valeurs pour les chaînes remplaçables dans le fichier .rgs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications isolées](/windows/desktop/SbsCs/isolated-applications)   

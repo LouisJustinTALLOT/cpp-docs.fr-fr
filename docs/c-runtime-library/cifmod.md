@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bde7a170eb499a9b179a909bfb95e75f8fc89518
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46bcc0fa01a05b3942bb1588153ee35b5d6d25e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090462"
 ---
 # <a name="cifmod"></a>_CIfmod
-Calcule le reste à virgule flottante des deux valeurs supérieures de la pile.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _CIfmod();  
-```  
-  
-## <a name="remarks"></a>Notes  
- Cette version de la fonction `fmod` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.  
-  
- La valeur obtenue est placée en haut de la pile.  
-  
-## <a name="requirements"></a>Configuration requise  
- **Plateforme :** x86  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)
+
+Calcule le reste à virgule flottante des deux valeurs supérieures de la pile.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __cdecl _CIfmod();
+```
+
+## <a name="remarks"></a>Notes
+
+Cette version de la fonction `fmod` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.
+
+La valeur obtenue est placée en haut de la pile.
+
+## <a name="requirements"></a>Configuration requise
+ **Plateforme :** x86
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)

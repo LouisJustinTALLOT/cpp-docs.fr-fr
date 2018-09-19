@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d52a8b3572f398a97c902cf0bcd647a3752cee8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86fc93b74f661ac0829c0ed5925cb9cf78a8876e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103631"
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>Interprétation des séquences de caractères multioctets
 
@@ -43,4 +43,4 @@ La plupart des routines de caractères multioctets dans la bibliothèque Runtime
 ## <a name="see-also"></a>Voir aussi
 
 [Internationalisation](../c-runtime-library/internationalization.md)<br/>
- [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

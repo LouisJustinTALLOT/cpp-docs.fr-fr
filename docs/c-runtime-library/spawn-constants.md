@@ -30,30 +30,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a069f9f29f6fd15c3ce21111a37757519af229
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8daaf38e60ca48b4a34deb2086bbd14eb45651e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408741"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116930"
 ---
 # <a name="spawn-constants"></a>spawn, constantes
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <process.h>  
-```  
-  
-## <a name="remarks"></a>Notes  
- L'argument `mode` détermine l'action effectuée par le processus appelant avant et pendant une opération de génération dynamique. Les valeurs suivantes pour `mode` sont possibles :  
-  
-|Constante|Signification|  
-|--------------|-------------|  
-|`_P_OVERLAY`|Superpose un processus appelant avec un nouveau processus, en détruisant le processus appelant (même effet que les appels `_exec`).|  
-|`_P_WAIT`|Interrompt un thread appelant jusqu'à ce que l'exécution du nouveau processus soit terminée (`_spawn` synchrone).|  
-|`_P_NOWAIT`, `_P_NOWAITO`|Continue d'exécuter un processus appelant en même temps que le nouveau processus (`_spawn` asynchrone).|  
-|`_P_DETACH`|Continue d'exécuter le processus appelant ; le nouveau processus est exécuté en arrière-plan sans accès à la console ou au clavier. Les appels à `_cwait` sur le nouveau processus échoueront. Il s’agit d’un `_spawn` asynchrone.|  
-  
-## <a name="see-also"></a>Voir aussi  
- [_spawn, _wspawn, fonctions](../c-runtime-library/spawn-wspawn-functions.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#include <process.h>
+```
+
+## <a name="remarks"></a>Notes
+
+L'argument `mode` détermine l'action effectuée par le processus appelant avant et pendant une opération de génération dynamique. Les valeurs suivantes pour `mode` sont possibles :
+
+|Constante|Signification|
+|--------------|-------------|
+|`_P_OVERLAY`|Superpose un processus appelant avec un nouveau processus, en détruisant le processus appelant (même effet que les appels `_exec`).|
+|`_P_WAIT`|Interrompt un thread appelant jusqu'à ce que l'exécution du nouveau processus soit terminée (`_spawn` synchrone).|
+|`_P_NOWAIT`, `_P_NOWAITO`|Continue d'exécuter un processus appelant en même temps que le nouveau processus (`_spawn` asynchrone).|
+|`_P_DETACH`|Continue d'exécuter le processus appelant ; le nouveau processus est exécuté en arrière-plan sans accès à la console ou au clavier. Les appels à `_cwait` sur le nouveau processus échoueront. Il s’agit d’un `_spawn` asynchrone.|
+
+## <a name="see-also"></a>Voir aussi
+
+[_spawn, _wspawn, fonctions](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)

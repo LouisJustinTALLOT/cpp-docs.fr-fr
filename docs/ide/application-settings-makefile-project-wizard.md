@@ -16,27 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8bfd7db4692b162ea603d91d7ca6174dddf4a3db
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677326"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722895"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Paramètres de l'application, Assistant Projet Makefile
 Fournissez les informations pour le projet. Les options que vous spécifiez s’affichent dans la [page de propriétés](../ide/working-with-project-properties.md) du projet. Une fois que vous avez créé le projet, vous pouvez afficher et modifier chacune des options suivantes dans la page **Nmake** de la page de propriétés du projet.  
   
- **Ligne de commande Build**  
- Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne **Générer** dans le menu **Générer**. Cette option est affichée dans le champ **Ligne de commande Build** de la page **Nmake** de la page de propriétés du projet.  
+- **Ligne de commande Build**
+
+   Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne **Générer** dans le menu **Générer**. Cette option est affichée dans le champ **Ligne de commande Build** de la page **Nmake** de la page de propriétés du projet.  
   
- **Sortie**  
- Spécifie le nom du fichier qui doit contenir la sortie de la ligne de commande. Par défaut, cette option est basée sur le nom du projet. Cette option est affichée dans le champ **Sortie** de la page **Nmake** de la page de propriétés du projet.  
+- **Sortie**
+
+   Spécifie le nom du fichier qui doit contenir la sortie de la ligne de commande. Par défaut, cette option est basée sur le nom du projet. Cette option est affichée dans le champ **Sortie** de la page **Nmake** de la page de propriétés du projet.  
   
- **Commandes de nettoyage**  
- Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne **Nettoyer** dans le menu **Générer**. Cette option est affichée dans le champ **Ligne de commande Clean** de la page **Nmake** de la page de propriétés du projet.  
+- **Commandes de nettoyage**
+
+   Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne **Nettoyer** dans le menu **Générer**. Cette option est affichée dans le champ **Ligne de commande Clean** de la page **Nmake** de la page de propriétés du projet.  
   
- **Ligne de commande Rebuild**  
- Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne **Regénérer** dans le menu **Générer**. Cette option est affichée dans le champ **Ligne de commande Rebuild All** de la page **Nmake** de la page de propriétés du projet.  
+- **Ligne de commande Rebuild**
+
+   Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne **Regénérer** dans le menu **Générer**. Cette option est affichée dans le champ **Ligne de commande Rebuild All** de la page **Nmake** de la page de propriétés du projet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Assistant Projet Makefile](../ide/makefile-project-wizard.md)   

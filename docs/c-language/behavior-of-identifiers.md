@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aedebf2177e9633eab8216048e8b19c7bf5d1bd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c51f683bc7a0478f6dabd88c9a27de82f1cf6ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028413"
 ---
 # <a name="behavior-of-identifiers"></a>Comportement des identificateurs
--   [Caractères significatifs sans liaison externe](../c-language/significant-characters-without-external-linkage.md)  
-  
--   [Caractères significatifs avec liaison externe](../c-language/significant-characters-with-external-linkage.md)  
-  
--   [Majuscules et minuscules](../c-language/uppercase-and-lowercase.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation d’extern pour spécifier la liaison](../cpp/using-extern-to-specify-linkage.md)
+
+- [Caractères significatifs sans liaison externe](../c-language/significant-characters-without-external-linkage.md)
+
+- [Caractères significatifs avec liaison externe](../c-language/significant-characters-with-external-linkage.md)
+
+- [Majuscules et minuscules](../c-language/uppercase-and-lowercase.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation d’extern pour spécifier la liaison](../cpp/using-extern-to-specify-linkage.md)

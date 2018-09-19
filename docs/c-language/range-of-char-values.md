@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bac6f2c8ce8fa1e10f24c6ea25491de2011de724
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b45d828cecb5908742a193c8836bc4b565a6498
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383863"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110690"
 ---
 # <a name="range-of-char-values"></a>Plage de valeurs char
-**ANSI 3.2.1.1** Si un type **char** « brut » a la même plage de valeurs qu’un type **signed char** ou `unsigned char`  
-  
- Toutes les valeurs de caractères signées sont comprises entre -128 et 127. Toutes les valeurs de caractères non signées sont comprises entre 0 et 255.  
-  
- L’option /J du compilateur modifie le paramètre par défaut en remplaçant **signed** par `unsigned`.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Caractères](../c-language/characters.md)
+
+**ANSI 3.2.1.1** Si un type **char** « brut » a la même plage de valeurs qu’un type **signed char** ou `unsigned char`
+
+Toutes les valeurs de caractères signées sont comprises entre -128 et 127. Toutes les valeurs de caractères non signées sont comprises entre 0 et 255.
+
+L’option /J du compilateur modifie le paramètre par défaut en remplaçant **signed** par `unsigned`.
+
+## <a name="see-also"></a>Voir aussi
+
+[Caractères](../c-language/characters.md)

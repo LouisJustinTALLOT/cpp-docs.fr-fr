@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 445e2061f9bca938d515dcb8e9be637700493bc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29492ee8584093b336ba10f4e35fdd153c48819b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034458"
 ---
 # <a name="floating-point-math"></a>Mathématiques à virgule flottante
--   [Valeurs](../c-language/values.md)  
-  
--   [Cast d’entiers en valeurs à virgule flottante](../c-language/casting-integers-to-floating-point-values.md)  
-  
--   [Troncation des valeurs à virgule flottante](../c-language/truncation-of-floating-point-values.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Comportement défini par l’implémentation](../c-language/implementation-defined-behavior.md)
+
+- [Valeurs](../c-language/values.md)
+
+- [Cast d’entiers en valeurs à virgule flottante](../c-language/casting-integers-to-floating-point-values.md)
+
+- [Troncation des valeurs à virgule flottante](../c-language/truncation-of-floating-point-values.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Comportement défini par l’implémentation](../c-language/implementation-defined-behavior.md)

@@ -22,20 +22,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203467eea055927ac7eb8d5ccf8a90242c62d33a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388615"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113719"
 ---
 # <a name="code-pages"></a>Pages de codes
 
 Une *page de codes* est un jeu de caractères, qui peut inclure des nombres, des signes de ponctuation et d’autres glyphes. Différents paramètres régionaux et langues peuvent utiliser différentes pages de codes. Par exemple, la page de codes ANSI 1252 est utilisée pour l'anglais et la plupart des langues européennes ; la page de codes OEM 932 est utilisée pour le kanji (japonais).
 
- Une page de codes peut être représentée dans un tableau sous la forme d'un mappage de caractères en valeurs codées sur un octet ou en valeurs multioctets. De nombreuses pages de codes partagent le jeu de caractères ASCII pour les caractères compris dans la plage 0x00 à 0x7F.
+Une page de codes peut être représentée dans un tableau sous la forme d'un mappage de caractères en valeurs codées sur un octet ou en valeurs multioctets. De nombreuses pages de codes partagent le jeu de caractères ASCII pour les caractères compris dans la plage 0x00 à 0x7F.
 
- La bibliothèque Runtime Microsoft utilise les types suivants de pages de codes :
+La bibliothèque Runtime Microsoft utilise les types suivants de pages de codes :
 
 - Page de codes ANSI par défaut du système : Par défaut, au démarrage, le système d'exécution définit automatiquement la page de codes multioctets sur la page de codes ANSI par défaut du système, qui est obtenue à partir du système d'exploitation. L'appel :
 
@@ -54,4 +54,4 @@ Une *page de codes* est un jeu de caractères, qui peut inclure des nombres, des
 ## <a name="see-also"></a>Voir aussi
 
 [Internationalisation](../c-runtime-library/internationalization.md)<br/>
- [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

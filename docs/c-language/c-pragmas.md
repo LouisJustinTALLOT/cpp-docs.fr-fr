@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87a6518eec495961d1f8d40c625e589db01bd3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a31d32ce7bdf89cd0216926c6628b4fa7bdd27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027347"
 ---
 # <a name="c-pragmas"></a>Pragmas C
 
@@ -37,8 +37,8 @@ Un *pragma* indique au compilateur d’effectuer une action particulière au mom
 
 Consultez [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) pour obtenir une description des pragmas du compilateur Microsoft C.
 
- **FIN de la section spécifique à Microsoft**
+**FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers sources et programmes sources](../c-language/source-files-and-source-programs.md)  
+[Fichiers sources et programmes sources](../c-language/source-files-and-source-programs.md)

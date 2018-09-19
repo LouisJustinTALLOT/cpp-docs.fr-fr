@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ce75fa9670f28079774f4ba564657d0b4614ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018312"
 ---
 # <a name="low-level-io"></a>E/S niveau bas
 
 Ces fonctions appellent le système d’exploitation directement pour l’opération du niveau inférieur à celui fourni par les E/S de flux. Les appels de bas niveau et de sortie ne mettent pas les données en mémoire tampon et ne les formatent pas.
 
- Les routines de bas niveau peuvent accéder aux flux standard ouverts au démarrage du programme à l’aide des descripteurs de fichier prédéfinis suivants.
+Les routines de bas niveau peuvent accéder aux flux standard ouverts au démarrage du programme à l’aide des descripteurs de fichier prédéfinis suivants.
 
 |Flux de données|Descripteur de fichier|
 |------------|---------------------|
@@ -39,7 +39,7 @@ Ces fonctions appellent le système d’exploitation directement pour l’opéra
 |**stdout**|1|
 |**stderr**|2|
 
- Les routines d’E/S de bas niveau définissent la variable globale [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) lorsqu’une erreur se produit. Lorsque vous utilisez des fonctions de bas niveau, vous ne devez inclure STDIO.H que si votre programme nécessite une constante définie dans STDIO.H, comme l’indicateur de fin de fichier (**EOF**).
+Les routines d’E/S de bas niveau définissent la variable globale [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) lorsqu’une erreur se produit. Lorsque vous utilisez des fonctions de bas niveau, vous ne devez inclure STDIO.H que si votre programme nécessite une constante définie dans STDIO.H, comme l’indicateur de fin de fichier (**EOF**).
 
 ## <a name="low-level-io-functions"></a>Fonctions d’E/S de bas niveau
 
@@ -64,5 +64,5 @@ Ces fonctions appellent le système d’exploitation directement pour l’opéra
 ## <a name="see-also"></a>Voir aussi
 
 [Entrée et sortie](../c-runtime-library/input-and-output.md)<br/>
- [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [Appels système](../c-runtime-library/system-calls.md)<br/>
+[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Appels système](../c-runtime-library/system-calls.md)<br/>

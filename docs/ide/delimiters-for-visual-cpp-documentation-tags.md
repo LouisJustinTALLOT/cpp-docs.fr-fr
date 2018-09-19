@@ -14,25 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a2394516773f428ae62fb9e8e39dd78dd790bebd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208573"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033912"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Délimiteurs pour les étiquettes de documentation Visual C++
 L’utilisation de balises de documentation exige des délimiteurs, qui indiquent au compilateur où un commentaire de documentation commence et se termine.  
   
  Vous pouvez utiliser les genres de délimiteurs ci-dessous avec les balises de documentation XML :  
+|||
+|-|-|
+|`///`  | Il s’agit de la forme illustrée dans les exemples de documentation et utilisée par les modèles de projet Visual C++.  |
+| `/** */`  | Ce sont des délimiteurs multilignes.  |
   
- `///`  
- Il s’agit de la forme illustrée dans les exemples de documentation et utilisée par les modèles de projet Visual C++.  
-  
- `/** */`  
- Ce sont des délimiteurs multilignes.  
-  
- Des règles de mise en forme s’appliquent quand vous utilisez les délimiteurs `/** */` :  
+Des règles de mise en forme s’appliquent quand vous utilisez les délimiteurs `/** */` :  
   
 -   Pour la ligne qui contient le délimiteur `/**`, si le reste de la ligne est un espace blanc, la ligne n’est pas traitée dans le cadre des commentaires. Si le premier caractère est un espace blanc, ce caractère est ignoré et le reste de la ligne est traité. Sinon, tout le texte de la ligne après le délimiteur `/**` est traité comme faisant partie du commentaire.  
   
@@ -40,7 +38,7 @@ L’utilisation de balises de documentation exige des délimiteurs, qui indiquen
   
 -   Pour les lignes qui suivent celle qui commence par le délimiteur `/**`, le compilateur recherche un modèle commun au début de chaque ligne qui consiste en un espace blanc facultatif et un astérisque (`*`) suivi d’autres espaces blancs facultatifs. Si le compilateur trouve un ensemble commun de caractères au début de chaque ligne, il ignore ce modèle pour toutes les lignes qui suivent le délimiteur `/**`, jusqu’à la ligne (en l’incluant éventuellement) qui contient le délimiteur `*/`.  
   
- Voici quelques exemples :  
+Voici quelques exemples :  
   
 -   La seule partie du commentaire suivant qui sera traitée est la ligne qui commence par `<summary>`. Les deux formats de balise suivants produisent les mêmes commentaires :  
   

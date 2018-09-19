@@ -149,12 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55690bc06ae838ad44e1d0d6f0527974b7859b94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0ef742989b4af7a3698f6047098110ee58e29bf4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035667"
 ---
 # <a name="data-type-constants"></a>Constantes de type de données
 
@@ -262,4 +262,4 @@ Les constantes suivantes donnent la plage et autres caractéristiques des types 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Constantes globales](../c-runtime-library/global-constants.md)  
+[Constantes globales](../c-runtime-library/global-constants.md)

@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d5983795dbb5711452db2f59b07cb6aa8b22a8c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200203"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083975"
 ---
 # <a name="time-management"></a>Gestion du temps
 
 Utilisez ces fonctions pour obtenir l’heure actuelle, et la convertir, la régler et la stocker selon vos besoins. L’heure actuelle est l’heure système.
 
- Les routines **_ftime** et **localtime** utilisent la variable d’environnement **TZ**. Si **TZ** n’est pas défini, la bibliothèque runtime tente d’utiliser les informations de fuseau horaire spécifiées par le système d’exploitation. Si ces informations ne sont pas disponibles, ces fonctions utilisent la valeur par défaut PST8PDT. Pour plus d’informations sur **TZ**, consultez [_tzset](../c-runtime-library/reference/tzset.md) et [_daylight, timezone et _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Les routines **_ftime** et **localtime** utilisent la variable d’environnement **TZ**. Si **TZ** n’est pas défini, la bibliothèque runtime tente d’utiliser les informations de fuseau horaire spécifiées par le système d’exploitation. Si ces informations ne sont pas disponibles, ces fonctions utilisent la valeur par défaut PST8PDT. Pour plus d’informations sur **TZ**, consultez [_tzset](../c-runtime-library/reference/tzset.md) et [_daylight, timezone et _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ### <a name="time-routines"></a>Routines de temps
 

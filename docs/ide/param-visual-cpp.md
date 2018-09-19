@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e2950fcc0b29fb819445f3216ef262a2657e4a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e88890917986e54b3b912d50e97da77032abab34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078788"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 La balise \<param> doit être utilisée dans le commentaire de la déclaration d’une méthode pour décrire l’un des paramètres de la méthode.  
@@ -35,11 +35,11 @@ La balise \<param> doit être utilisée dans le commentaire de la déclaration d
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `name`  
- Nom d’un paramètre de méthode.  Mettez le nom entre guillemets simples ou doubles.  Le compilateur émet un avertissement s'il ne trouve pas `name`.  
+*name*<br/>
+Nom d’un paramètre de méthode.  Mettez le nom entre guillemets simples ou doubles.  Le compilateur émet un avertissement s'il ne trouve pas `name`.  
   
- `description`  
- Description du paramètre.  
+*description*<br/>
+Description du paramètre.  
   
 ## <a name="remarks"></a>Notes  
  Le texte de la balise \<param> s’affiche dans IntelliSense, dans [l’Explorateur d’objets](/visualstudio/ide/viewing-the-structure-of-code) et dans le rapport web de commentaire de code.  
@@ -48,7 +48,7 @@ La balise \<param> doit être utilisée dans le commentaire de la déclaration d
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // xml_param_tag.cpp  
 // compile with: /clr /doc /LD  
 // post-build command: xdcmake xml_param_tag.dll  

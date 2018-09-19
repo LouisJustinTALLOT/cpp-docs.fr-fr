@@ -18,39 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365f4cf424ee51c493859e1d79f733b2cfcf331c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 24f25116a955c83f8f3685b9646c3086238d306e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020847"
 ---
 # <a name="extern-storage-class-specifier"></a>Spécificateur extern de classe de stockage
 
-Une variable déclarée avec le spécificateur de classe de stockage **extern** est une référence à une variable du même nom définie au niveau externe dans un autre fichier source. Elle permet de rendre la définition de variable au niveau externe visible. Une variable déclarée comme **extern** n’a aucun stockage alloué ; il s’agit uniquement d’un nom. 
-  
-## <a name="example"></a>Exemple  
- Cet exemple montre les déclarations aux niveaux interne et externe :  
-  
-```c  
+Une variable déclarée avec le spécificateur de classe de stockage **extern** est une référence à une variable du même nom définie au niveau externe dans un autre fichier source. Elle permet de rendre la définition de variable au niveau externe visible. Une variable déclarée comme **extern** n’a aucun stockage alloué ; il s’agit uniquement d’un nom.
 
-// Source1.c  
+## <a name="example"></a>Exemple
+
+Cet exemple montre les déclarations aux niveaux interne et externe :
+
+```c
+
+// Source1.c
 
 int i = 1;
 
-
 // Source2. c
 
-#include <stdio.h>  
+#include <stdio.h>
 
-// Refers to the i that is defined in Source1.c:   
+// Refers to the i that is defined in Source1.c:
 extern int i;
 
 void func(void);
 
 int main()
 {
-    // Prints 1:   
+    // Prints 1:
     printf_s("%d\n", i);
     func();
     return;
@@ -58,20 +58,21 @@ int main()
 
 void func(void)
 {
-    // Address of global i assigned to pointer variable:  
+    // Address of global i assigned to pointer variable:
     static int *external_i = &i;
 
-    // This definition of i hides the global i in Source.c:   
+    // This definition of i hides the global i in Source.c:
     int i = 16;
 
-    // Prints 16, 1:  
+    // Prints 16, 1:
     printf_s("%d\n%d\n", i, *external_i);
 }
-```  
-  
- Dans cet exemple, la variable `i` est définie dans Source1.c avec la valeur initiale 1. Une déclaration **extern** dans Source2.c rend « i » visible dans ce fichier. 
+```
 
- Dans la fonction `func`, l'adresse de la variable globale `i` est utilisée pour initialiser la variable pointeur **static** `external_i`. Cela fonctionne, car la variable globale possède une durée de vie **static**, ce qui signifie que son adresse ne change pas pendant l'exécution du programme. Ensuite, une variable `i` est définie dans la portée de `func` comme une variable locale avec la valeur initiale 16. Cette définition n'affecte pas la valeur de `i` au niveau externe, qui est masquée par l'utilisation de son nom pour la variable locale. La valeur du `i` global n’est désormais accessible qu’avec le pointeur `external_i`.   
-  
-## <a name="see-also"></a>Voir aussi  
- [Spécificateurs de classe de stockage pour les déclarations de niveau interne](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
+Dans cet exemple, la variable `i` est définie dans Source1.c avec la valeur initiale 1. Une déclaration **extern** dans Source2.c rend « i » visible dans ce fichier.
+
+Dans la fonction `func`, l'adresse de la variable globale `i` est utilisée pour initialiser la variable pointeur **static** `external_i`. Cela fonctionne, car la variable globale possède une durée de vie **static**, ce qui signifie que son adresse ne change pas pendant l'exécution du programme. Ensuite, une variable `i` est définie dans la portée de `func` comme une variable locale avec la valeur initiale 16. Cette définition n'affecte pas la valeur de `i` au niveau externe, qui est masquée par l'utilisation de son nom pour la variable locale. La valeur du `i` global n’est désormais accessible qu’avec le pointeur `external_i`.
+
+## <a name="see-also"></a>Voir aussi
+
+[Spécificateurs de classe de stockage pour les déclarations de niveau interne](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

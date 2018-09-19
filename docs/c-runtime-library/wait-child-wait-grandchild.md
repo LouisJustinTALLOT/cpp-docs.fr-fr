@@ -22,30 +22,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e0f195bebd43ced767f05a7c6073a6d6e9db61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dd7b3fab51c382413c507831572afedd824c3f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408019"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018338"
 ---
 # <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <process.h>  
-  
-```  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_cwait` peut être utilisée par n’importe quel processus pour attendre un autre processus (si l’ID du processus est connu). L’argument action peut être une des valeurs suivantes :  
-  
-|Constante|Signification|  
-|--------------|-------------|  
-|`_WAIT_CHILD`|Le processus appelant attend jusqu'à l’arrêt du nouveau processus spécifié.|  
-|`_WAIT_GRANDCHILD`|Le processus appelant attend jusqu'à l’arrêt du nouveau processus spécifié et de tous les processus qu’il crée.|  
-  
-## <a name="see-also"></a>Voir aussi  
- [_cwait](../c-runtime-library/reference/cwait.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <process.h>
+
+```
+
+## <a name="remarks"></a>Notes
+
+La fonction `_cwait` peut être utilisée par n’importe quel processus pour attendre un autre processus (si l’ID du processus est connu). L’argument action peut être une des valeurs suivantes :
+
+|Constante|Signification|
+|--------------|-------------|
+|`_WAIT_CHILD`|Le processus appelant attend jusqu'à l’arrêt du nouveau processus spécifié.|
+|`_WAIT_GRANDCHILD`|Le processus appelant attend jusqu'à l’arrêt du nouveau processus spécifié et de tous les processus qu’il crée.|
+
+## <a name="see-also"></a>Voir aussi
+
+[_cwait](../c-runtime-library/reference/cwait.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)

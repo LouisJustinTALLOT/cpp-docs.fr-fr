@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0de013e9ddd3fb983436bf6ee0db290458936eb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc3b7a92cdc8a05c73f15c7cea917d86a3b6bb46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085054"
 ---
 # <a name="allocating-zero-memory"></a>Allocation de mémoire initialisée à zéro
-**ANSI 4.10.3** Le comportement de la fonction `calloc`, `malloc` ou fonction `realloc` si la taille demandée est zéro  
-  
- Les fonctions `calloc`, `malloc` et `realloc` acceptent zéro comme argument. Aucune mémoire réelle n'est allouée, mais un pointeur valide est retourné et le bloc de mémoire peut être modifié ultérieurement par réallocation.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions des bibliothèques](../c-language/library-functions.md)
+
+**ANSI 4.10.3** Le comportement de la fonction `calloc`, `malloc` ou fonction `realloc` si la taille demandée est zéro
+
+Les fonctions `calloc`, `malloc` et `realloc` acceptent zéro comme argument. Aucune mémoire réelle n'est allouée, mais un pointeur valide est retourné et le bloc de mémoire peut être modifié ultérieurement par réallocation.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions des bibliothèques](../c-language/library-functions.md)

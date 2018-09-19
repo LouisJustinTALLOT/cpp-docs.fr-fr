@@ -35,46 +35,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178082356eb08130879cd3b4f2118cbf75e451ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42745d25c0f743fa1a11226d5cfe433327c8ff2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390264"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077046"
 ---
 # <a name="file-attribute-constants"></a>Constantes d'attributs de fichier
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <io.h>  
-```  
-  
-## <a name="remarks"></a>Notes  
- Ces constantes spécifient les attributs actuels du fichier ou du répertoire spécifié par la fonction.  
-  
- Les attributs sont représentés par les constantes manifestes suivantes :  
-  
- `_A_ARCH`  
- Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande BACKUP. Valeur : 0x20  
-  
- `_A_HIDDEN`  
- Fichier caché. Normalement non utilisé avec la commande DIR, sauf si l’option /AH est utilisée. Retourne des informations sur les fichiers normaux, ainsi que les fichiers avec cet attribut. Valeur : 0x02  
-  
- `_A_NORMAL`  
- Normal. Le fichier peut être lu et écrit sans restriction. Valeur : 0x00  
-  
- `_A_RDONLY`  
- Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ou de créer un fichier portant le même nom. Valeur : 0x01  
-  
- `_A_SUBDIR`  
- Sous-répertoire. Valeur : 0x10  
-  
- `_A_SYSTEM`  
- Fichier système. Normalement non utilisé avec la commande DIR, sauf si l’option /AS est utilisée. Valeur : 0x04  
-  
- Plusieurs constantes peuvent être combinées avec l’opérateur OR (&#124;).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions de recherche de nom de fichier](../c-runtime-library/filename-search-functions.md)   
- [Constantes globales](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <io.h>
+```
+
+## <a name="remarks"></a>Notes
+
+Ces constantes spécifient les attributs actuels du fichier ou du répertoire spécifié par la fonction.
+
+Les attributs sont représentés par les constantes manifestes suivantes :
+
+|Constante|Description|
+|-|-|
+|`_A_ARCH`| Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande BACKUP. Valeur : 0x20|
+|`_A_HIDDEN`| Fichier caché. Normalement non utilisé avec la commande DIR, sauf si l’option /AH est utilisée. Retourne des informations sur les fichiers normaux, ainsi que les fichiers avec cet attribut. Valeur : 0x02|
+|`_A_NORMAL`| Normal. Le fichier peut être lu et écrit sans restriction. Valeur : 0x00|
+|`_A_RDONLY`| Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ou de créer un fichier portant le même nom. Valeur : 0x01|
+|`_A_SUBDIR`| Sous-répertoire. Valeur : 0x10|
+|`_A_SYSTEM`| Fichier système. Normalement non utilisé avec la commande DIR, sauf si l’option /AS est utilisée. Valeur : 0x04|
+
+Plusieurs constantes peuvent être combinées avec l’opérateur OR (&#124;).
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions de recherche de nom de fichier](../c-runtime-library/filename-search-functions.md)<br/>
+[Constantes globales](../c-runtime-library/global-constants.md)

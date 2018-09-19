@@ -17,24 +17,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83a1e9b5581977b8f13076d76d077e146b74ff3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a33029e7c7a326efcc35166587ea0f94db3f074
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388573"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033847"
 ---
 # <a name="generic-text-mappings"></a>Mappages de texte générique
-Pour simplifier l’écriture de code pour les marchés internationaux, les mappages de texte générique sont définis dans TCHAR.H pour ce qui suit :  
-  
--   [Types de données](../c-runtime-library/data-type-mappings.md)  
-  
--   [Constantes et variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)  
-  
--   [Mappages de routine](../c-runtime-library/routine-mappings.md)  
-  
- Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../c-runtime-library/using-generic-text-mappings.md). Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Mappages de types de données](../c-runtime-library/data-type-mappings.md)   
- [Exemple de programme de texte générique](../c-runtime-library/a-sample-generic-text-program.md)
+
+Pour simplifier l’écriture de code pour les marchés internationaux, les mappages de texte générique sont définis dans TCHAR.H pour ce qui suit :
+
+- [Types de données](../c-runtime-library/data-type-mappings.md)
+
+- [Constantes et variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)
+
+- [Mappages de routine](../c-runtime-library/routine-mappings.md)
+
+Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../c-runtime-library/using-generic-text-mappings.md). Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.
+
+## <a name="see-also"></a>Voir aussi
+
+[Mappages de types de données](../c-runtime-library/data-type-mappings.md)<br/>
+[Exemple de programme de texte générique](../c-runtime-library/a-sample-generic-text-program.md)

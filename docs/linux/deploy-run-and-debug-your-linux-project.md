@@ -2,7 +2,7 @@
 title: Déployer, exécuter et déboguer votre projet Linux C++ dans Visual Studio | Microsoft Docs
 description: Décrit comment compiler, exécuter et déboguer du code sur la cible distante au sein d’un projet Linux C++ dans Visual Studio.
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 57f8aea7d3ff3ddfd28beff6647dc16885d972e3
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2e6c6c98b027c561f6972ab76a520e9793c30963
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207677"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601598"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Déployer, exécuter et déboguer un projet Linux
 

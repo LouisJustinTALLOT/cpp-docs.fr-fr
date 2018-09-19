@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 624ee0355a5d0443aed21cd8c8800a3c8c56c3ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64f1ac2b736a7aec440ee649fb5685199b687e9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054959"
 ---
 # <a name="atexit-function-c"></a>atexit, fonction (C)
-**ANSI 4.10.4.3** L'état retourné par la fonction `atexit` si la valeur de l'argument est autre que zéro, EXIT_SUCCESS, ou EXIT_FAILURE  
-  
- La fonction `atexit` retourne zéro en cas de réussite ou une valeur différente de zéro en cas d'échec.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions des bibliothèques](../c-language/library-functions.md)
+
+**ANSI 4.10.4.3** L'état retourné par la fonction `atexit` si la valeur de l'argument est autre que zéro, EXIT_SUCCESS, ou EXIT_FAILURE
+
+La fonction `atexit` retourne zéro en cas de réussite ou une valeur différente de zéro en cas d'échec.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions des bibliothèques](../c-language/library-functions.md)

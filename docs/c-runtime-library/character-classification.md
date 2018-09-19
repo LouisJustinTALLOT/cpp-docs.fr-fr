@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222446"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101343"
 ---
 # <a name="character-classification"></a>Classifications des caractères
 
 Chacune de ces routines teste un caractère sur un octet, un caractère large ou un caractère multioctet spécifié pour satisfaire une condition. (Par définition, le jeu de caractères ASCII compris entre 0 et 127 est un sous-ensemble de tous les jeux de caractères multioctets. Par exemple, le jeu de caractères japonais katakana inclut aussi bien des caractères ASCII que non-ASCII.)
 
- Les conditions de test sont affectées par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis.
+Les conditions de test sont affectées par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis.
 
- Ces routines s’exécutent en général plus rapidement que les tests que vous écrivez et doivent donc être privilégiées. Par exemple, le code suivant s’exécute plus lentement qu’un appel à `isalpha(c)` :
+Ces routines s’exécutent en général plus rapidement que les tests que vous écrivez et doivent donc être privilégiées. Par exemple, le code suivant s’exécute plus lentement qu’un appel à `isalpha(c)` :
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))

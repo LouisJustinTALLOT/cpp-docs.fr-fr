@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085756"
 ---
 # <a name="process-and-environment-control"></a>Contrôle de processus et d'environnement
 
@@ -77,11 +77,11 @@ Utilisez les routines de contrôle de processus pour démarrer, arrêter et gér
 |[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Créer un processus et l’exécuter en utilisant la variable **PATH**, l’environnement spécifié et le tableau d’arguments|
 |[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Exécuter une commande de système d’exploitation|
 
- Dans le système d’exploitation Windows, le processus généré équivaut au processus de génération. Tous les processus peuvent utiliser **_cwait** pour attendre un autre processus dont l’ID de processus est connu.
+Dans le système d’exploitation Windows, le processus généré équivaut au processus de génération. Tous les processus peuvent utiliser **_cwait** pour attendre un autre processus dont l’ID de processus est connu.
 
- La différence entre les familles **_exec** et **_spawn** est qu’une fonction **_spawn** peut retourner le contrôle du nouveau processus au processus appelant. Dans une fonction **_spawn**, le processus appelant et le nouveau processus sont présents dans la mémoire, sauf si **_P_OVERLAY** est spécifié. Dans une fonction **_exec**, le nouveau processus se superpose au processus appelant. Le contrôle ne peut donc pas être retourné au processus appelant, sauf si une erreur se produit pendant la tentative de démarrage de l’exécution du nouveau processus.
+La différence entre les familles **_exec** et **_spawn** est qu’une fonction **_spawn** peut retourner le contrôle du nouveau processus au processus appelant. Dans une fonction **_spawn**, le processus appelant et le nouveau processus sont présents dans la mémoire, sauf si **_P_OVERLAY** est spécifié. Dans une fonction **_exec**, le nouveau processus se superpose au processus appelant. Le contrôle ne peut donc pas être retourné au processus appelant, sauf si une erreur se produit pendant la tentative de démarrage de l’exécution du nouveau processus.
 
- Les différences entre les fonctions de la famille **_exec**, ainsi qu’entre celles de la famille **_spawn**, impliquent la méthode de localisation du fichier (à exécuter comme le nouveau processus), le formulaire dans lequel les arguments sont passés au nouveau processus et la méthode de définition de l’environnement, comme indiqué dans le tableau suivant. Utilisez une fonction qui passe une liste d’arguments quand le nombre d’arguments est constant ou connu au moment de la compilation. Utilisez une fonction qui passe un pointeur à un tableau contenant les arguments quand le nombre d’arguments doit être déterminé au moment de l’exécution. Les informations contenues dans le tableau suivant s’appliquent également aux caractères larges équivalents des fonctions **_spawn** et **_exec**
+Les différences entre les fonctions de la famille **_exec**, ainsi qu’entre celles de la famille **_spawn**, impliquent la méthode de localisation du fichier (à exécuter comme le nouveau processus), le formulaire dans lequel les arguments sont passés au nouveau processus et la méthode de définition de l’environnement, comme indiqué dans le tableau suivant. Utilisez une fonction qui passe une liste d’arguments quand le nombre d’arguments est constant ou connu au moment de la compilation. Utilisez une fonction qui passe un pointeur à un tableau contenant les arguments quand le nombre d’arguments doit être déterminé au moment de l’exécution. Les informations contenues dans le tableau suivant s’appliquent également aux caractères larges équivalents des fonctions **_spawn** et **_exec**
 
 ### <a name="spawn-and-exec-function-families"></a>Familles de fonctions _spawn et _exec
 

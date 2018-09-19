@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e919782022ee64f657611a14d6eae6173a67b8c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b443526248eb09accce8b35133235c71c06c2627
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094583"
 ---
 # <a name="conversions-from-other-types"></a>Conversions depuis les autres types
 
@@ -38,4 +38,4 @@ Le type **void** n’a aucune valeur, par définition. Donc, il ne peut pas êtr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conversions d’assignation](../c-language/assignment-conversions.md)  
+[Conversions d’assignation](../c-language/assignment-conversions.md)

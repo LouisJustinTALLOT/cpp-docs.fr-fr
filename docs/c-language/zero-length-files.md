@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a78a71ab42f466e16868ccb25f8082a27366b199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6352723cc65ba1ed87d867fd1a9938269cc84832
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033587"
 ---
 # <a name="zero-length-files"></a>Fichiers de longueur zéro
-**ANSI 4.9.3** Si un fichier de longueur zéro existe réellement  
-  
- Les fichiers dont la longueur est nulle sont autorisés.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions des bibliothèques](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Si un fichier de longueur zéro existe réellement
+
+Les fichiers dont la longueur est nulle sont autorisés.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions des bibliothèques](../c-language/library-functions.md)
