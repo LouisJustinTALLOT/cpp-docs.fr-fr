@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53078d740d1051a928b4592d275f33944685e622
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8c8ff6141fb5aa58e8de626675e29b46426ed47f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118438"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>Ccomautodeletecriticalsection, classe
 
@@ -54,6 +54,6 @@ Cette classe présente des méthodes supplémentaires au fil de sa classe de bas
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ccomsafedeletecriticalsection, classe](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
-[CComCriticalSection, classe](../../atl/reference/ccomcriticalsection-class.md)   
+[CComSafeDeleteCriticalSection, classe](../../atl/reference/ccomsafedeletecriticalsection-class.md)<br/>
+[CComCriticalSection, classe](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

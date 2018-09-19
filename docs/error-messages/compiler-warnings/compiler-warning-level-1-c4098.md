@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4098 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4098 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 889c9aa926a8400d977de00ef5c288316ae84782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84b3cdcdbb487774a92361d3a003ba83895d475e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276384"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118308"
 ---
 # <a name="compiler-warning-level-1-c4098"></a>Compilateur avertissement (niveau 1) C4098
-'fonction' : une fonction retournant une valeur void  
-  
- Une fonction déclarée avec le type de retour [void](../../cpp/void-cpp.md) a un `return` instruction qui retourne une valeur. Le compilateur suppose que la fonction retourne une valeur de type `int`.
+
+'fonction' : fonction void retournant une valeur
+
+Une fonction déclarée avec le type de retour [void](../../cpp/void-cpp.md) a un `return` instruction qui retourne une valeur. Le compilateur suppose que la fonction retourne une valeur de type `int`.

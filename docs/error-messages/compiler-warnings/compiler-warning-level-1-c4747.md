@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4747 | Documents Microsoft
+title: Compilateur Warning (level 1) C4747 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203943f3741d07e278652a7032a6dcdcb305a384
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d3eb5b83fedc7455cbf1b97119296a6eb6a1ab1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118477"
 ---
 # <a name="compiler-warning-level-1-c4747"></a>Avertissement du compilateur (niveau 1) C4747
-Appel managé 'point d’entrée' : Impossible d’exécuter du code managé le verrouillage du chargeur, y compris le point d’entrée de DLL et les appels accessibles à partir du point d’entrée DLL  
-  
- Le compilateur a détecté un point d’entrée DLL (probable) compilé en langage MSIL.  En raison de problèmes potentiels de chargement d’une DLL dont le point d’entrée a été compilé en langage MSIL, il est vivement déconseillé à partir de la compilation d’une fonction de point d’entrée DLL en langage MSIL.  
-  
- Pour plus d’informations, consultez [l’initialisation d’assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md) et [erreur des outils Éditeur de liens LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).  
-  
-### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
-  
-1.  Ne compilez pas le module avec **/CLR**.  
-  
-2.  Marquez la fonction de point d’entrée avec `#pragma unmanaged`.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C4747.  
-  
-```  
-// C4747.cpp  
-// compile with: /clr /c /W1  
-// C4747 expected  
-#include <windows.h>  
-  
-// Uncomment the following line to resolve.  
-// #pragma unmanaged  
-  
-BOOL WINAPI DllMain(HANDLE hInstance, ULONG Command, LPVOID Reserved) {  
-   return TRUE;  
-};  
+
+Appelant managé 'entrypoint' : Impossible d’exécuter du code managé le verrouillage du chargeur, y compris le point d’entrée DLL et les appels accessibles à partir du point d’entrée DLL
+
+Le compilateur a détecté un point d’entrée DLL (probable) compilé en langage MSIL.  En raison de problèmes potentiels avec le chargement d’une DLL dont point d’entrée a été compilé en langage MSIL, il est vivement déconseillé de se compiler une fonction de point d’entrée DLL en langage MSIL.
+
+Pour plus d’informations, consultez [l’initialisation des assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md) et [erreur des outils Éditeur de liens LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).
+
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur
+
+1. Ne compilez pas le module avec **/CLR**.
+
+1. Marquez la fonction de point d’entrée avec `#pragma unmanaged`.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère C4747.
+
+```
+// C4747.cpp
+// compile with: /clr /c /W1
+// C4747 expected
+#include <windows.h>
+
+// Uncomment the following line to resolve.
+// #pragma unmanaged
+
+BOOL WINAPI DllMain(HANDLE hInstance, ULONG Command, LPVOID Reserved) {
+   return TRUE;
+};
 ```

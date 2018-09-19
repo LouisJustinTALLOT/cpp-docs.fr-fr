@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535039"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118906"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass, classe
 
@@ -69,7 +69,8 @@ La liste des interfaces de l’objet implémente au-delà `IUnknown`, `IInspecta
 
 ## <a name="members"></a>Membres
 
-`RuntimeClassInitialize` Une fonction qui initialise l’objet si le `MakeAndInitialize` fonction de modèle est utilisée pour construire l’objet. Elle retourne S_OK si l’objet a été correctement initialisé, ou un code d’erreur COM en cas d’échec de l’initialisation. Le code d’erreur COM est propagé en tant que valeur de retour de `MakeAndInitialize`. Notez que le `RuntimeClassInitialize` méthode n’est pas appelée si le `Make` fonction de modèle est utilisée pour construire l’objet.
+`RuntimeClassInitialize`<br/>
+Une fonction qui initialise l’objet si le `MakeAndInitialize` fonction de modèle est utilisée pour construire l’objet. Elle retourne S_OK si l’objet a été correctement initialisé, ou un code d’erreur COM en cas d’échec de l’initialisation. Le code d’erreur COM est propagé en tant que valeur de retour de `MakeAndInitialize`. Notez que le `RuntimeClassInitialize` méthode n’est pas appelée si le `Make` fonction de modèle est utilisée pour construire l’objet.
 
 ### <a name="public-constructors"></a>Constructeurs publics
 

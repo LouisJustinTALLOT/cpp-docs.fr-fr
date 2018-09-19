@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c573f3e170929df1b988bf3e74535dd12b83a2f8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: f2a6ef80edc5f6bbeaf43bbc5851336b67d8cf36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131797"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118828"
 ---
 # <a name="attributes-in-c"></a>Attributs en C++
 
@@ -45,7 +45,7 @@ Les attributs représentent une alternative standardisée aux extensions spécif
 
 - `[[carries_dependency]]` Spécifie que la fonction propage les dépendances de données classement en ce qui concerne la synchronisation de threads. L’attribut peut être appliqué à un ou plusieurs paramètres, pour spécifier que l’argument transmis comporte une dépendance dans le corps de fonction. L’attribut peut être appliqué à la fonction elle-même, pour spécifier que la valeur de retour comporte une dépendance de la fonction. Le compilateur peut utiliser ces informations pour générer le code plus efficace.
 
-- `[[deprecated]]` **Visual Studio 2015 et versions ultérieur :** Spécifie qu’une fonction n’est pas destinée à utiliser et peut ne pas exister dans les futures versions d’une interface de bibliothèque. Le compilateur peut l’utiliser pour générer un message d’information lorsque le code client tente d’appeler la fonction. Peut être appliqué à la déclaration d’une classe, un nom de typedef, une variable, une donnée membre non static, une fonction, un espace de noms, une énumération, un énumérateur ou une spécialisation de modèle.  
+- `[[deprecated]]` **Visual Studio 2015 et versions ultérieur :** Spécifie qu’une fonction n’est pas destinée à utiliser et peut ne pas exister dans les futures versions d’une interface de bibliothèque. Le compilateur peut l’utiliser pour générer un message d’information lorsque le code client tente d’appeler la fonction. Peut être appliqué à la déclaration d’une classe, un nom de typedef, une variable, une donnée membre non static, une fonction, un espace de noms, une énumération, un énumérateur ou une spécialisation de modèle.
 
 - `[[fallthrough]]` **Visual Studio 2017 et versions ultérieur :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) le `[[fallthrough]]` attribut peut être utilisé dans le contexte de [basculer](switch-statement-cpp.md) instructions en tant qu’indicateur pour le compilateur (ou toute personne lisant le code) qui le comportement fallthrough est prévu. Le compilateur Visual C++ n’avertit actuellement pas sur le comportement fallthrough, cet attribut n’a aucun comportement de compilateur effet.
 
