@@ -22,53 +22,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41bc9c9771622b1778abc5bf86a8ebb6e67d3fbd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4ac33b9c7cbcc20f3cea55e73a0c079a21a068a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086055"
 ---
 # <a name="main-program-startup"></a>main : démarrage du programme
-Une fonction spéciale nommée **principal** est le point de départ de l’exécution de tous les programmes C et C++. Si vous êtes écrire du code qui suit le modèle de programmation Unicode, vous pouvez utiliser `wmain`, qui est la version à caractères larges de **principal**.  
-  
- Le **principal** fonction n’est pas prédéfinie par le compilateur. Elle doit être fournie dans le texte du programme.  
-  
- La syntaxe de déclaration pour **principal** est  
-  
-```cpp 
-int main();  
-```  
-  
- ou, éventuellement,  
-  
-```cpp 
-int main(int argc, char *argv[], char *envp[]);  
-```  
-  
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- La syntaxe de déclaration pour `wmain` est la suivante :  
-  
-```cpp 
-int wmain( );  
-```  
-  
- ou, éventuellement,  
-  
-```cpp 
-int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);  
-```  
-  
- Vous pouvez également utiliser `_tmain`, qui est définie dans TCHAR.h. `_tmain` correspond à **principal** , sauf si _UNICODE est défini. Dans ce cas, `_tmain` est résolu à `wmain`.  
-  
- Vous pouvez également le **principal** et `wmain` fonctions peuvent être déclarées comme retournant **void** (aucune valeur de retour). Si vous déclarez **principal** ou `wmain` comme retournant **void**, vous ne peut pas retourner un code de sortie pour le processus parent ou le système d’exploitation en utilisant un [retourner](../cpp/return-statement-in-program-termination-cpp.md) instruction. Pour retourner un code de sortie lorsque **principal** ou `wmain` est déclaré comme **void**, vous devez utiliser le [quitter](../cpp/exit-function.md) (fonction).  
-  
+
+Une fonction spéciale nommée **principal** est le point de départ de l’exécution de tous les programmes C et C++. Si vous êtes écrire du code qui suit le modèle de programmation Unicode, vous pouvez utiliser `wmain`, qui est la version à caractères larges de **principal**.
+
+Le **principal** fonction n’est pas prédéfinie par le compilateur. Elle doit être fournie dans le texte du programme.
+
+La syntaxe de déclaration pour **principal** est
+
+```cpp
+int main();
+```
+
+ou, éventuellement,
+
+```cpp
+int main(int argc, char *argv[], char *envp[]);
+```
+
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+
+La syntaxe de déclaration pour `wmain` est la suivante :
+
+```cpp
+int wmain( );
+```
+
+ou, éventuellement,
+
+```cpp
+int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
+```
+
+Vous pouvez également utiliser `_tmain`, qui est définie dans TCHAR.h. `_tmain` correspond à **principal** , sauf si _UNICODE est défini. Dans ce cas, `_tmain` est résolu à `wmain`.
+
+Vous pouvez également le **principal** et `wmain` fonctions peuvent être déclarées comme retournant **void** (aucune valeur de retour). Si vous déclarez **principal** ou `wmain` comme retournant **void**, vous ne peut pas retourner un code de sortie pour le processus parent ou le système d’exploitation en utilisant un [retourner](../cpp/return-statement-in-program-termination-cpp.md) instruction. Pour retourner un code de sortie lorsque **principal** ou `wmain` est déclaré comme **void**, vous devez utiliser le [quitter](../cpp/exit-function.md) (fonction).
+
 **FIN de la section spécifique à Microsoft**
 
- Les types pour `argc` et `argv` sont définis par le langage. Les noms `argc`, `argv` et `envp` sont traditionnels, mais ne sont pas requis par le compilateur. Pour plus d’informations et un exemple, consultez [définitions d’arguments](../cpp/argument-definitions.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Mots clés](../cpp/keywords-cpp.md)   
- [Utilisation de wmain au lieu de main](../cpp/using-wmain-instead-of-main.md)   
- [restrictions relatives à main (fonction)](../cpp/main-function-restrictions.md)   
- [Analyse des arguments de ligne de commande C++](../cpp/parsing-cpp-command-line-arguments.md)
+Les types pour `argc` et `argv` sont définis par le langage. Les noms `argc`, `argv` et `envp` sont traditionnels, mais ne sont pas requis par le compilateur. Pour plus d’informations et un exemple, consultez [définitions d’arguments](../cpp/argument-definitions.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Mots clés](../cpp/keywords-cpp.md)<br/>
+[Utilisation de wmain au lieu de main](../cpp/using-wmain-instead-of-main.md)<br/>
+[Restrictions relatives à la fonction main](../cpp/main-function-restrictions.md)<br/>
+[Analyse des arguments de ligne de commande C++](../cpp/parsing-cpp-command-line-arguments.md)

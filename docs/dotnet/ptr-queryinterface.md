@@ -1,5 +1,5 @@
 ---
-title: PTR::QueryInterface | Documents Microsoft
+title: PTR::QueryInterface | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd25661fc14cb9539d4b8e68f42c29895ce0d70e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3416f057d32a003eba1b9776456a60d915de95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160964"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090137"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
-Interroge l’objet COM appartenant à une interface et joint le résultat vers un autre `com::ptr`.  
+Interroge l’objet COM détenu pour une interface et joint le résultat vers un autre `com::ptr`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,8 +40,8 @@ void QueryInterface(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `other`  
- Le `com::ptr` qui obtiendra l’interface.  
+*other*<br/>
+Le `com::ptr` qui obtiendra l’interface.  
   
 ## <a name="exceptions"></a>Exceptions  
  En interne, `QueryInterface` est appelée sur l’objet COM détenu et toute erreur `HRESULT` est convertie en une exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
@@ -50,7 +50,7 @@ void QueryInterface(
  Utilisez cette méthode pour créer un wrapper COM pour une interface différente de l’objet COM détenu par le wrapper actuel. Cette méthode appelle `QueryInterface` via l’objet COM détenu pour demander un pointeur vers une interface spécifique de COM de l’objet et l’attache le pointeur d’interface retourné dans le passé `com::ptr`.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. Le `WriteTopLevelNode` fonction membre utilise `QueryInterface` pour remplir une variable locale `com::ptr` avec un `IXMLDOMNode` , puis passe le `com::ptr` (par référence de suivi) à une fonction membre privé qui écrit des propriétés de nom et le texte du nœud dans la console.  
+ Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. Le `WriteTopLevelNode` fonction membre utilise `QueryInterface` pour remplir une variable locale `com::ptr` avec un `IXMLDOMNode` , puis transmet le `com::ptr` (par référence de suivi) à une fonction membre privé qui écrit des propriétés de nom et le texte du nœud dans la console.  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -155,7 +155,7 @@ int main() {
 <#document>persnickety</#document>  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  

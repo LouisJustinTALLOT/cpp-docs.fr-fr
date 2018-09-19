@@ -48,14 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 73e0b7646da57af679e7b3cbec3b0bb72d4ea8b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0fd40d4cac87302a6a636693e0da4480720a2cf3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571495"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098118"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl, classe
+
 Fournit une implémentation de la [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -68,17 +69,19 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *T*  
- Votre classe d’objet ensemble de lignes ou de la commande.  
+
+*T*<br/>
+Votre classe d’objet ensemble de lignes ou de la commande.  
   
- *BindType*  
- Unité de stockage pour les informations de liaison. La valeur par défaut est le `ATLBINDINGS` structure (consultez atldb.h).  
+*BindType*<br/>
+Unité de stockage pour les informations de liaison. La valeur par défaut est le `ATLBINDINGS` structure (consultez atldb.h).  
   
- *BindingVector*  
- Unité de stockage pour les informations de colonne. La valeur par défaut est [CAtlMap](../../atl/reference/catlmap-class.md) où l’élément clé est une valeur HACCESSOR et l’élément de la valeur est un pointeur vers un `BindType` structure.  
+*BindingVector*<br/>
+Unité de stockage pour les informations de colonne. La valeur par défaut est [CAtlMap](../../atl/reference/catlmap-class.md) où l’élément clé est une valeur HACCESSOR et l’élément de la valeur est un pointeur vers un `BindType` structure.  
   
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** atldb.h  
+
+**En-tête :** atldb.h  
 
 ## <a name="members"></a>Membres  
   
@@ -98,9 +101,11 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](#releaseaccessor)|Libère un accesseur.|  
   
 ## <a name="remarks"></a>Notes  
- Ce champ est obligatoire sur les ensembles de lignes et de commandes. OLE DB requiert des fournisseurs implémenter un HACCESSOR, qui est une balise à un tableau de [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) structures. HACCESSORs fournis par `IAccessorImpl` sont des adresses de la `BindType` structures. Par défaut, `BindType` est défini comme un `ATLBINDINGS` dans `IAccessorImpl`de définition de modèle. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son `DBBINDING` ainsi que d’un nombre et accesseur des indicateurs de référence de tableau.  
+
+Ce champ est obligatoire sur les ensembles de lignes et de commandes. OLE DB requiert des fournisseurs implémenter un HACCESSOR, qui est une balise à un tableau de [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) structures. HACCESSORs fournis par `IAccessorImpl` sont des adresses de la `BindType` structures. Par défaut, `BindType` est défini comme un `ATLBINDINGS` dans `IAccessorImpl`de définition de modèle. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son `DBBINDING` ainsi que d’un nombre et accesseur des indicateurs de référence de tableau.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
+
 Constructeur.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -110,6 +115,7 @@ IAccessorImpl();
 ```  
 
 ## <a name="addrefaccessor"></a> IAccessorImpl::AddRefAccessor
+
 Ajoute un décompte de références à un accesseur existant.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -120,9 +126,11 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+
+Consultez [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
+
 Crée un accesseur à partir d’un jeu de liaisons.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -137,9 +145,11 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+
+Consultez [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
+
 Retourne les liaisons de colonnes de base du consommateur dans un accesseur.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -152,9 +162,11 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
+
+Consultez [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
+
 Libère un accesseur.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -165,8 +177,10 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+
+Consultez [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

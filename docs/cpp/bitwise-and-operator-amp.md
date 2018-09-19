@@ -18,48 +18,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3122cb3622469adeda3b8c0a2437fe4db7dfca62
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a8967861ab6ac4e6b6fafd11eea22e67de339ea8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111379"
 ---
 # <a name="bitwise-and-operator-amp"></a>Opérateur AND au niveau du bit : &amp;
 
-## <a name="syntax"></a>Syntaxe  
-  
+## <a name="syntax"></a>Syntaxe
+
 ```
-expression & expression  
+expression & expression
 ```
-  
-## <a name="remarks"></a>Notes  
- Les expressions peuvent être d'autres expressions-et, ou (en fonction des restrictions de type indiquées ci-dessous) des expressions d'égalité, des expressions relationnelles, des expressions additives, des expressions multiplicatives, des expressions de pointeur vers membre, des expressions de casts, des expressions unaires, des expressions suffixées ou des expressions primaires.  
-  
- L’opérateur AND au niveau du bit (**&**) compare chaque bit du premier opérande au bit correspondant du second opérande. Si les deux bits sont 1, le bit de résultat correspondant a la valeur 1. Sinon, le bit de résultat correspondant a la valeur 0.  
-  
- Les deux opérandes de l’opérateur de bits AND doivent être de types intégraux. Les conversions arithmétiques habituelles traitées dans [Conversions Standard](standard-conversions.md), sont appliquées aux opérandes.  
-  
-## <a name="operator-keyword-for-"></a>Mot clé operator pour &  
- Le **bitand** opérateur est l’équivalent textuel de **&**. Il existe deux façons d’accéder à la **bitand** opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
-  
-## <a name="example"></a>Exemple  
-  
-```cpp 
-// expre_Bitwise_AND_Operator.cpp  
-// compile with: /EHsc  
-// Demonstrate bitwise AND  
-#include <iostream>  
-using namespace std;  
-int main() {  
-   unsigned short a = 0xFFFF;      // pattern 1111 ...  
-   unsigned short b = 0xAAAA;      // pattern 1010 ...  
-  
-   cout  << hex << ( a & b ) << endl;   // prints "aaaa", pattern 1010 ...  
-}  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Opérateurs intégrés, priorité et associativité C++](cpp-built-in-operators-precedence-and-associativity.md)  
- [Opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Opérateurs de bits C](../c-language/c-bitwise-operators.md)
+
+## <a name="remarks"></a>Notes
+
+Les expressions peuvent être d'autres expressions-et, ou (en fonction des restrictions de type indiquées ci-dessous) des expressions d'égalité, des expressions relationnelles, des expressions additives, des expressions multiplicatives, des expressions de pointeur vers membre, des expressions de casts, des expressions unaires, des expressions suffixées ou des expressions primaires.
+
+L’opérateur AND au niveau du bit (**&**) compare chaque bit du premier opérande au bit correspondant du second opérande. Si les deux bits sont 1, le bit de résultat correspondant a la valeur 1. Sinon, le bit de résultat correspondant a la valeur 0.
+
+Les deux opérandes de l’opérateur de bits AND doivent être de types intégraux. Les conversions arithmétiques habituelles traitées dans [Conversions Standard](standard-conversions.md), sont appliquées aux opérandes.
+
+## <a name="operator-keyword-for-"></a>Mot clé operator pour &
+
+Le **bitand** opérateur est l’équivalent textuel de **&**. Il existe deux façons d’accéder à la **bitand** opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).
+
+## <a name="example"></a>Exemple
+
+```cpp
+// expre_Bitwise_AND_Operator.cpp
+// compile with: /EHsc
+// Demonstrate bitwise AND
+#include <iostream>
+using namespace std;
+int main() {
+   unsigned short a = 0xFFFF;      // pattern 1111 ...
+   unsigned short b = 0xAAAA;      // pattern 1010 ...
+
+   cout  << hex << ( a & b ) << endl;   // prints "aaaa", pattern 1010 ...
+}
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Opérateurs intégrés, priorité et associativité C++](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Opérateurs de bits C](../c-language/c-bitwise-operators.md)

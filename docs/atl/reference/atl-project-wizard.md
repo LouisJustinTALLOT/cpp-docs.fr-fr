@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139a20eb3db99ce87b2de51aa1ef7602f7b5a36a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d7ac74d1b310f4db7bfc4a558db5b89df5d8df5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758574"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109845"
 ---
 # <a name="atl-project-wizard"></a>Assistant Projet ATL
 
@@ -58,10 +58,10 @@ Vous pouvez spécifier les propriétés du projet (par exemple, [s’il faut lie
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création et gestion de projets Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
-[Types de projets Visual C++](../../ide/visual-cpp-project-types.md)   
-[Création de projets de bureau à l’aide des Assistants Application](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
-[Programmation avec ATL et le Code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Création et gestion de projets Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
+[Types de projets Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Création de projets de bureau à l’aide des Assistants Application](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Didacticiel](../../atl/active-template-library-atl-tutorial.md)
 

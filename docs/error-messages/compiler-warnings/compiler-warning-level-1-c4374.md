@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4374 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4374 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6304fa921d4b67c5dc33bfa54fbcbb3a722511
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa4a1372e6a9608781b4f57a10b57641efd02a89
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276670"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116059"
 ---
 # <a name="compiler-warning-level-1-c4374"></a>Avertissement du compilateur (niveau 1) C4374
-'fonction1' : méthode d’interface ne sera pas implémentée par une méthode non virtuelle 'fonction2'  
-  
- Le compilateur s’attendait à trouver le [virtuels](../../cpp/virtual-specifier.md) mot clé dans une définition de méthode.  
-  
- L’exemple suivant génère l’erreur C4374 :  
-  
-```  
-// C4374.cpp  
-// compile with: /clr /W1 /c /WX  
-public interface class I {  
-   void f();  
-};  
-  
-public ref struct B {  
-   void f() {  
-      System::Console::WriteLine("B::f()");  
-   }  
-};  
-  
-public ref struct C {  
-   virtual void f() {  
-      System::Console::WriteLine("C::f()");  
-   }  
-};  
-  
-public ref struct D : B, I {};   // C4374  
-public ref struct E : C, I {};   // OK  
+
+'fonction1' : méthode d’interface ne sera pas implémentée par une méthode non virtuelle 'fonction2'
+
+Le compilateur s’attendait à trouver le [virtuel](../../cpp/virtual-specifier.md) mot clé dans une définition de méthode.
+
+L’exemple suivant génère l’erreur C4374 :
+
+```
+// C4374.cpp
+// compile with: /clr /W1 /c /WX
+public interface class I {
+   void f();
+};
+
+public ref struct B {
+   void f() {
+      System::Console::WriteLine("B::f()");
+   }
+};
+
+public ref struct C {
+   virtual void f() {
+      System::Console::WriteLine("C::f()");
+   }
+};
+
+public ref struct D : B, I {};   // C4374
+public ref struct E : C, I {};   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0005 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0005 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203af51226bddd09e67f1d04efba7f97f19f0850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2dc22555b84a0726aa9ce0da8ce225c00a9d037
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294971"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094570"
 ---
 # <a name="expression-evaluator-error-cxx0005"></a>Évaluateur d'expression, erreur CXX0005
-opérateur non pris en charge.  
-  
- Un opérateur C non pris en charge a été spécifié dans une expression. Écrivez une expression équivalente en utilisant les opérateurs C pris en charge.  
-  
- Cette erreur est identique à CAN0005.
+
+opérateur non pris en charge.
+
+Un opérateur C non pris en charge a été spécifié dans une expression. Écrire une expression équivalente à l’aide des opérateurs C pris en charge.
+
+Cette erreur est identique à CAN0005.

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2708 | Documents Microsoft
+title: Erreur du compilateur C2708 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30b2e5c1856a604ae314316cd71d6acc00a7c74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0accd68881cccad5e34530a6c157a4e8179b283
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111093"
 ---
 # <a name="compiler-error-c2708"></a>Erreur du compilateur C2708
-'identificateur' : longueur en octets des paramètres réels diffère d’appel précédent ou référence  
-  
- A [__stdcall](../../cpp/stdcall.md) fonction doit être précédée d’un prototype. Sinon, le compilateur interprète le premier appel à la fonction en tant que prototype et cette erreur se produit lorsque le compilateur rencontre un appel qui ne correspond pas.  
-  
- Pour résoudre ce problème, ajoutez un prototype de fonction.
+
+'identificateur' : longueur en octets des paramètres réels diffère d’appel précédent ou de référence
+
+Un [__stdcall](../../cpp/stdcall.md) fonction doit être précédée d’un prototype. Sinon, le compilateur interprète le premier appel à la fonction comme un prototype et cette erreur se produit lorsque le compilateur rencontre un appel qui ne correspond pas.
+
+Pour résoudre ce problème, ajoutez un prototype de fonction.

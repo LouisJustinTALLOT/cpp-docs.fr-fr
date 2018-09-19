@@ -1,5 +1,5 @@
 ---
-title: Utilisation de connexions de base de données ODBC | Documents Microsoft
+title: Utilisation de connexions de base de données ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,21 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02c77f028cdd3e792aa03967f6716b3ce7ce27b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ad69bda1a49d6ebf2878d8b6a7b5d50840e9d8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094141"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084820"
 ---
 # <a name="work-with-odbc-database-connections"></a>Utilisation de connexions de base de données ODBC
+
 Les rubriques suivantes expliquent comment se connecter aux sources de données ODBC.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Gérer les connexions de base de données ODBC](../../data/odbc/data-source-managing-connections-odbc.md)  
+- [Gérer les connexions de base de données ODBC](../../data/odbc/data-source-managing-connections-odbc.md)  
   
--   [Configurer par programmation une source de données ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Configurer par programmation une source de données ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

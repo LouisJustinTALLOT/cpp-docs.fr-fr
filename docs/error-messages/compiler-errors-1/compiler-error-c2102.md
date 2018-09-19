@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2102 | Documents Microsoft
+title: Erreur du compilateur C2102 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1f5b5bf0c1acca3b85a3cf2059919abf45b33cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da6ca4739acecf3d8c27af7e4b6baff5aa1d6602
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089597"
 ---
 # <a name="compiler-error-c2102"></a>Erreur du compilateur C2102
-'&' nécessite une l-value  
-  
- L’opérateur d’adresse ( `&` ) doit avoir une l-value comme opérande.
+
+'&' nécessite une l-value
+
+L’opérateur d’adresse ( `&` ) doit avoir une l-value comme opérande.

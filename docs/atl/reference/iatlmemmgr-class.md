@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1e04bd31ca1942e5e5fa054cb4991233e2f61c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b772a548054cd9d829356436afe53748c215c193
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762185"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078918"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr, classe
 
@@ -76,7 +76,7 @@ void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBytes*  
+*nBytes*<br/>
 Nombre demandé d'octets dans le nouveau bloc de mémoire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -101,7 +101,7 @@ void Free(void* p) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*  
+*p*<br/>
 Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire.
 
 ### <a name="remarks"></a>Notes
@@ -122,7 +122,7 @@ size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*  
+*p*<br/>
 Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -143,10 +143,10 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*  
+*p*<br/>
 Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire.
 
-*nBytes*  
+*nBytes*<br/>
 Nombre demandé d'octets dans le nouveau bloc de mémoire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -173,7 +173,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>Paramètres
 
-*pbAllowContextMenu*  
+*pbAllowContextMenu*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -194,7 +194,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>Paramètres
 
-*pbAllowShowUI*  
+*pbAllowShowUI*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -215,7 +215,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>Paramètres
 
-*pbAllowWindowless*  
+*pbAllowWindowless*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -236,7 +236,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>Paramètres
 
-*pclrBackground*  
+*pclrBackground*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -257,7 +257,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>Paramètres
 
-*pbDisplayAsDefault*  
+*pbDisplayAsDefault*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -278,7 +278,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Paramètres
 
-*pdwDocHostDoubleClickFlags*  
+*pdwDocHostDoubleClickFlags*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -299,7 +299,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>Paramètres
 
-*pdwDocHostFlags*  
+*pdwDocHostFlags*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -320,7 +320,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>Paramètres
 
-*pFont*  
+*pFont*<br/>
 [out] L’adresse d’un `IFontDisp` pointeur d’interface utilisé pour recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -341,7 +341,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>Paramètres
 
-*pclrForeground*  
+*pclrForeground*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -362,7 +362,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>Paramètres
 
-*plcidLocaleID*  
+*plcidLocaleID*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -385,7 +385,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>Paramètres
 
-*pbMessageReflect*  
+*pbMessageReflect*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -406,7 +406,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>Paramètres
 
-*pbstrOptionKeyPath*  
+*pbstrOptionKeyPath*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -423,7 +423,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>Paramètres
 
-*pbShowGrabHandles*  
+*pbShowGrabHandles*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -444,7 +444,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>Paramètres
 
-*pbShowHatching*  
+*pbShowHatching*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -465,7 +465,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>Paramètres
 
-*pbUserMode*  
+*pbUserMode*<br/>
 [out] L’adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -486,7 +486,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>Paramètres
 
-*bAllowContextMenu*  
+*bAllowContextMenu*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -507,7 +507,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>Paramètres
 
-*bAllowShowUI*  
+*bAllowShowUI*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -528,7 +528,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>Paramètres
 
-*bAllowWindowless*  
+*bAllowWindowless*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -549,7 +549,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>Paramètres
 
-*clrBackground*  
+*clrBackground*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -570,7 +570,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>Paramètres
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -591,7 +591,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwDocHostDoubleClickFlags*  
+*dwDocHostDoubleClickFlags*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -612,7 +612,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwDocHostFlags*  
+*dwDocHostFlags*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -633,7 +633,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Paramètres
 
-*pFont*  
+*pFont*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -654,7 +654,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>Paramètres
 
-*clrForeground*  
+*clrForeground*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -675,7 +675,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>Paramètres
 
-*lcidLocaleID*  
+*lcidLocaleID*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -696,7 +696,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>Paramètres
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -717,7 +717,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>Paramètres
 
-*bstrOptionKeyPath*  
+*bstrOptionKeyPath*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -734,7 +734,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>Paramètres
 
-*bUserMode*  
+*bUserMode*<br/>
 [in] La nouvelle valeur de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -755,7 +755,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="parameters"></a>Paramètres
 
-*pDispatch*  
+*pDispatch*<br/>
 Pointeur vers la nouvelle interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -776,10 +776,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in] Un pointeur vers le `IUnknown` interface du contrôle à joindre à l’objet hôte.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle vers la fenêtre à utiliser pour l’hébergement.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -799,13 +799,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), un ProgID, une URL ou un HTML brut (précédé **MSHTML :**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle vers la fenêtre à utiliser pour l’hébergement.
 
-*pStream*  
+*pStream*<br/>
 [in] Un pointeur d’interface pour un flux contenant les données d’initialisation pour le contrôle. Peut être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -836,22 +836,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), un ProgID, une URL ou un HTML brut (avec le préfixe **MSHTML :**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle vers la fenêtre à utiliser pour l’hébergement.
 
-*pStream*  
+*pStream*<br/>
 [in] Un pointeur d’interface pour un flux contenant les données d’initialisation pour le contrôle. Peut être NULL.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] L’adresse d’un pointeur qui reçoit le `IUnknown` interface du contrôle créé. Peut être NULL.
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in] L’identificateur d’interface d’une interface sortante sur l’objet de relation contenant-contenu. Peut être IID_NULL.
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in] Un pointeur vers le `IUnknown` interface de l’objet de récepteur à être connectés au point de connexion sur l’objet de relation contenant-contenu spécifié par `iidSink`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -874,10 +874,10 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 
 ### <a name="parameters"></a>Paramètres
 
-*riid*  
+*riid*<br/>
 [in] L’ID d’une interface sur le contrôle demandé.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] L’adresse d’un pointeur qui reçoit l’interface spécifiée du contrôle créé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -894,7 +894,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*  
+*argument pDisp*<br/>
 [in] Un pointeur vers un `IDispatch` interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -911,7 +911,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*  
+*argument pDisp*<br/>
 [in] Un pointeur vers un `IDocHostUIHandlerDispatch` interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -936,7 +936,7 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="parameters"></a>Paramètres
 
-*bstrLic*  
+*bstrLic*<br/>
 [in] BSTR contenant la clé de licence pour le contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -966,7 +966,7 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="parameters"></a>Paramètres
 
-*bstrLic*  
+*bstrLic*<br/>
 [in] BSTR contenant la clé de licence pour le contrôle.
 
 ### <a name="remarks"></a>Notes

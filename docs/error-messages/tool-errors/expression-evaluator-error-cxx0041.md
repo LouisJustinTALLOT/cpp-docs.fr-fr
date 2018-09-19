@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0041 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0041 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93a2e5d8b589ddfbddac979aa27e0241ee02c68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1dc525ea75f58028f7359c7a063bdb45a8387a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299121"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080803"
 ---
 # <a name="expression-evaluator-error-cxx0041"></a>Évaluateur d'expression, erreur CXX0041
-élément de la classe doit être membre statique ou une fonction membre  
-  
- Un membre non statique d’une classe (ou structure ou union) a été utilisé sans spécification de l’instanciation de la classe à utiliser.  
-  
- Uniquement les données membres statiques et les fonctions membres peuvent être utilisées sans spécifier l’instanciation.  
-  
- Cette erreur est identique à CAN0041.
+
+élément de la classe doit être membre statique ou une fonction membre
+
+Un membre non statique d’une classe (ou structure ou union) a été utilisé sans spécification de l’instanciation de la classe à utiliser.
+
+Uniquement des membres de données statiques ou des fonctions de membre peuvent être utilisées sans spécifier l’instanciation.
+
+Cette erreur est identique à CAN0041.

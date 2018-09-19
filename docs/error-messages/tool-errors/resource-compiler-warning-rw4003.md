@@ -1,5 +1,5 @@
 ---
-title: Avertissement RW4003 du compilateur de ressources | Documents Microsoft
+title: Avertissement RW4003 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d584811e056995e19cac0ec68cb58f25ccc921e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f800fc37d41102044c0b8b88921d8bad216d5984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101122"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>Avertissement RW4003 du compilateur de ressources 
-Touche MAJ ou CTRL utilisée sans VIRTKEY  
-  
- Dans une ressource de la table d’accélérateurs, la touche MAJ ou CTRL nécessite VIRTKEY. Les touches MAJ et CTRL étant spécifiées en tant que bits d’indicateur dans un accélérateur de type VIRTKEY, elles ne peuvent pas exister indépendamment de ce dernier.
+
+Touche MAJ ou CTRL utilisée sans VIRTKEY
+
+Dans une ressource de table d’accélérateurs, la touche MAJ ou CTRL nécessite VIRTKEY. Les touches MAJ et CTRL étant spécifiées en tant que bits d’indicateur dans un accélérateur de type VIRTKEY, elles ne peuvent pas exister indépendamment de ce dernier.

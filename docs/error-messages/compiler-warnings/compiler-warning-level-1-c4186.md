@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4186 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4186 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc40d2b9f43d041c7b04ba2bc77a0aba0630274c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bfc722a07d2ddb10e5be8c6d8fde60956b297c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079776"
 ---
 # <a name="compiler-warning-level-1-c4186"></a>Avertissement du compilateur (niveau 1) C4186
-\#importation de l’attribut 'attribut' requiert nombre arguments ; ignoré  
-  
- Un attribut `#import` présente un nombre incorrect d’arguments.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// C4186.cpp  
-// compile with: /W1 /c  
-#import "stdole2.tlb" no_namespace("abc") rename("a","b","c")  // C4186  
-```  
-  
- L’attribut `no_namespace` n’accepte aucun argument. L’attribut **rename** accepte uniquement deux arguments.
+
+\#importer l’attribut 'attribut' requiert nombre arguments ; ignoré
+
+Un attribut `#import` présente un nombre incorrect d’arguments.
+
+## <a name="example"></a>Exemple
+
+```
+// C4186.cpp
+// compile with: /W1 /c
+#import "stdole2.tlb" no_namespace("abc") rename("a","b","c")  // C4186
+```
+
+L’attribut `no_namespace` n’accepte aucun argument. L’attribut **rename** accepte uniquement deux arguments.

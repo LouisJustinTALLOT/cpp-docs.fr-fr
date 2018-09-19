@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6835cb1f8fb6365149b91c30881b4966b4b644
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075707"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject, classe
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Paramètres
 
-`contained`  
+*contenu*<br/>
 Votre classe détachable, dérivée de `CComTearOffObjectBase` et les interfaces vous souhaitez que votre objet détachable pour prendre en charge.
 
 ## <a name="members"></a>Membres
@@ -121,7 +121,7 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*  
+*PV*<br/>
 [in] Pointeur vers le `IUnknown` de la `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Notes
@@ -170,7 +170,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Paramètres
 
-*contenu*  
+*contenu*<br/>
 [in] Votre classe détachable, dérivée de `CComTearOffObjectBase` et les interfaces vous souhaitez que votre objet détachable pour prendre en charge.
 
 ### <a name="remarks"></a>Notes
@@ -187,10 +187,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*  
+*IID*<br/>
 [in] Le GUID de l’interface demandée.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par *iid*, ou NULL si l’interface est introuvable.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -215,6 +215,6 @@ Dans les versions non debug retourne toujours 0. Dans les versions debug, retour
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComTearOffObject, classe](../../atl/reference/ccomtearoffobject-class.md)   
-[CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)   
+[CComTearOffObject, classe](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

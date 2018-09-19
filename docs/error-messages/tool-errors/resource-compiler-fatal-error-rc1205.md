@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RC1205 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RC1205 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e162f315b950718d5a7e2f602159fb0e8661669
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62c6538e77d3b21c088a5a48f9870a743ea9c5d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322232"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093946"
 ---
 # <a name="resource-compiler-fatal-error-rc1205"></a>Erreur irrécupérable RC1205 du compilateur de ressources 
-page de codes non valide  
-  
- Specify Code Page (/ c) l’option a été suivie d’une page de codes non valide. Consultez [Pages de codes](../../c-runtime-library/code-pages.md) dans les *Run-Time Library Reference* pour plus d’informations.
+
+page de codes non valide
+
+Specify Code Page (/ c) l’option a été suivie d’une page de codes non valide. Consultez [Pages de codes](../../c-runtime-library/code-pages.md) dans le *Run-Time Library Reference* pour plus d’informations.

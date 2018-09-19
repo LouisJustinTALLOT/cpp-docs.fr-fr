@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3764 | Documents Microsoft
+title: Erreur du compilateur C3764 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c214fcf40f442c35d754db64c8443c328d50ae10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b57b9005eacc6e4a59adecc38b40027fffb5bcf1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273626"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097001"
 ---
 # <a name="compiler-error-c3764"></a>Erreur du compilateur C3764
-'fonction_substitution' : ne peut pas substituer la méthode de classe de base 'fonction_classe_base'  
-  
- Le compilateur a détecté une substitution incorrecte. Par exemple, la fonction de la classe de base n’était pas `virtual`. Pour plus d’informations, consultez [remplacer](../../windows/override-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C3764.  
-  
-```  
-// C3764.cpp  
-// compile with: /clr /c  
-public ref struct A {  
-   void g(int);  
-   virtual void h(int);  
-};  
-  
-public ref struct B : A {  
-   virtual void g(int) override {}   // C3764  
-   virtual void h(int) override {}   // OK  
-};  
-```  
-  
-## <a name="example"></a>Exemple  
- C3764 peut également se produire lorsqu’une méthode de classe de base est explicitement et nommée substituée. L’exemple suivant génère C3764.  
-  
-```  
-// C3764_b.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   virtual void Test() {}  
-};  
-  
-ref struct B : public A {  
-   virtual void Test() override {}  
-   virtual void Test2() = A::Test {}   // C3764  
-};  
+
+'fonction_substitution' : ne peut pas substituer la méthode de classe de base 'fonction_classe_base'
+
+Le compilateur a détecté une substitution incorrecte. Par exemple, la fonction de la classe de base n’était pas `virtual`. Pour plus d’informations, consultez [remplacer](../../windows/override-cpp-component-extensions.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère C3764.
+
+```
+// C3764.cpp
+// compile with: /clr /c
+public ref struct A {
+   void g(int);
+   virtual void h(int);
+};
+
+public ref struct B : A {
+   virtual void g(int) override {}   // C3764
+   virtual void h(int) override {}   // OK
+};
+```
+
+## <a name="example"></a>Exemple
+
+C3764 peut également se produire lorsqu’une méthode de classe de base est à la fois explicitement et nommé substitution. L’exemple suivant génère C3764.
+
+```
+// C3764_b.cpp
+// compile with: /clr /c
+ref struct A {
+   virtual void Test() {}
+};
+
+ref struct B : public A {
+   virtual void Test() override {}
+   virtual void Test2() = A::Test {}   // C3764
+};
 ```

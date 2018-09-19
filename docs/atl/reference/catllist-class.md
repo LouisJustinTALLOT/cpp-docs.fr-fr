@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a24a98e7780a98726df29452a9878c8abf3d81
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 596fe8bb4a656eb5ebdc7bef855b5e6db8ab6196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090793"
 ---
 # <a name="catllist-class"></a>CAtlList, classe
 
@@ -61,16 +61,16 @@ Cette classe fournit des méthodes pour créer et gérer un objet de liste.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename E, class ETraits = CElementTraits<E>>  
+template<typename E, class ETraits = CElementTraits<E>>
 class CAtlList
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*E*  
+*E*<br/>
 Type de l’élément.
 
-*ETraits*  
+*ETraits*<br/>
 Le code utilisé pour copier ou déplacer des éléments. Consultez [celementtraits, classe](../../atl/reference/celementtraits-class.md) pour plus d’informations.
 
 ## <a name="members"></a>Membres
@@ -144,7 +144,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>Paramètres
 
-*Élément*  
+*Élément*<br/>
 Le nouvel élément.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -169,7 +169,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Paramètres
 
-*plNew*  
+*plNew*<br/>
 La liste à ajouter.
 
 ### <a name="remarks"></a>Notes
@@ -191,7 +191,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>Paramètres
 
-*Élément*  
+*Élément*<br/>
 Élément à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -216,7 +216,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Paramètres
 
-*plNew*  
+*plNew*<br/>
 La liste à ajouter.
 
 ### <a name="remarks"></a>Notes
@@ -253,7 +253,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBlockSize*  
+*nBlockSize*<br/>
 La taille du bloc.
 
 ### <a name="remarks"></a>Notes
@@ -288,10 +288,10 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Élément*  
+*Élément*<br/>
 L’élément à rechercher dans la liste.
 
-*posStartAfter*  
+*posStartAfter*<br/>
 Position de départ pour la recherche. Si aucune valeur n’est spécifiée, la recherche commence par l’élément head.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -316,7 +316,7 @@ POSITION FindIndex(size_t iElement) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*iElement*  
+*iElement*<br/>
 Index de base zéro de l’élément de liste requise.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -344,7 +344,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 La valeur POSITION en spécifiant un élément particulier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -435,7 +435,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Une valeur POSITION, retournée par un appel précédent à `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), ou d’autres `CAtlList` (méthode).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -463,7 +463,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Une valeur POSITION, retournée par un appel précédent à `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), ou d’autres `CAtlList` (méthode).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -543,10 +543,10 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 La valeur POSITION après lequel le nouvel élément sera inséré.
 
-*Élément*  
+*Élément*<br/>
 L’élément à insérer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -571,10 +571,10 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le nouvel élément sera inséré dans la liste avant cette valeur POSITION.
 
-*Élément*  
+*Élément*<br/>
 L’élément à insérer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -615,7 +615,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 La valeur de la POSITION de l’élément à déplacer.
 
 ### <a name="remarks"></a>Notes
@@ -636,7 +636,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 La valeur de la POSITION de l’élément à déplacer.
 
 ### <a name="remarks"></a>Notes
@@ -673,7 +673,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 La valeur de la POSITION de l’élément à supprimer.
 
 ### <a name="remarks"></a>Notes
@@ -768,10 +768,10 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 La valeur POSITION correspondant à l’élément à modifier.
 
-*Élément*  
+*Élément*<br/>
 La nouvelle valeur de l’élément.
 
 ### <a name="remarks"></a>Notes
@@ -792,10 +792,10 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pos1*  
+*pos1*<br/>
 La première valeur POSITION.
 
-*pos2*  
+*pos2*<br/>
 La deuxième valeur POSITION.
 
 ### <a name="remarks"></a>Notes
@@ -808,5 +808,5 @@ La deuxième valeur POSITION.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CList (classe)](../../mfc/reference/clist-class.md)   
+[CList, classe](../../mfc/reference/clist-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

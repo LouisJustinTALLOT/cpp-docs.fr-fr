@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2042 | Documents Microsoft
+title: Erreur du compilateur C2042 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b0442371b210f40d58a10b6bf1107979ea88db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbc1d0d5ec0781ebf203a2cebcd99a58996c6547
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164015"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079997"
 ---
 # <a name="compiler-error-c2042"></a>Erreur du compilateur C2042
-les mots clés signed/unsigned s'excluent mutuellement  
-  
- Les mots clés `signed` et `unsigned` sont utilisés dans une même déclaration.  
-  
- L’exemple suivant génère l’erreur C2042 :  
-  
-```  
-// C2042.cpp  
-unsigned signed int i;   // C2042  
-```  
-  
- Solution possible :  
-  
-```  
-// C2042b.cpp  
-// compile with: /c  
-unsigned int i;  
-signed int ii;  
+
+les mots clés signed/unsigned s'excluent mutuellement
+
+Les mots clés `signed` et `unsigned` sont utilisés dans une même déclaration.
+
+L’exemple suivant génère l’erreur C2042 :
+
+```
+// C2042.cpp
+unsigned signed int i;   // C2042
+```
+
+Solution possible :
+
+```
+// C2042b.cpp
+// compile with: /c
+unsigned int i;
+signed int ii;
 ```

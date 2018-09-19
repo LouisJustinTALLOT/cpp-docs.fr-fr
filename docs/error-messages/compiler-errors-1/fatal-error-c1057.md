@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1057 | Documents Microsoft
+title: Erreur irrécupérable C1057 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3e00b79757d87b54efd8be2492b473a54c73d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2fde010917e9e22c523b86ad816929e8526b6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092669"
 ---
 # <a name="fatal-error-c1057"></a>Erreur irrécupérable C1057
-fin de fichier inattendue dans une expansion macro  
-  
- Le compilateur a atteint la fin du fichier source lors de la collecte des arguments de l’appel de macro, probablement en raison d’une parenthèse fermante manquante dans l’appel de macro.
+
+fin de fichier inattendue dans une expansion macro
+
+Le compilateur a atteint la fin du fichier source lors de la collecte des arguments d’appel de macro, probablement en raison d’une parenthèse fermante manquante dans l’appel de macro.

@@ -1,5 +1,5 @@
 ---
-title: default_scheduler_exists, classe | Documents Microsoft
+title: default_scheduler_exists, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c18bf2a747cdedda2c9ce2ea6162e5a92e3b36
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 488f1d08c089b159971834729596d74b4e3dab22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106044"
 ---
 # <a name="defaultschedulerexists-class"></a>default_scheduler_exists, classe
 Cette classe décrit une exception levée quand la méthode `Scheduler::SetDefaultSchedulerPolicy` est appelée alors qu'un planificateur par défaut existe déjà au sein du processus.  
@@ -47,7 +47,7 @@ class default_scheduler_exists : public std::exception;
   
  `default_scheduler_exists`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -63,8 +63,8 @@ default_scheduler_exists() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Message descriptif de l'erreur.  
+*_Message*<br/>
+Message descriptif de l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)

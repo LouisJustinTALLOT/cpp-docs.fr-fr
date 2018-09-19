@@ -37,14 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 542c97c1e13d5979290772668b6dccebe1ece9f9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113160"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
+
 Fournit une implémentation pour le [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -57,14 +58,16 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *T*  
- Votre classe, dérivée de `IRowsetInfoImpl`.  
+
+*T*<br/>
+Votre classe, dérivée de `IRowsetInfoImpl`.  
   
- *PropClass*  
- Une classe de propriété définis par l’utilisateur par défaut est *T*. 
+*PropClass*<br/>
+Une classe de propriété définis par l’utilisateur par défaut est *T*. 
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** altdb.h   
+
+**En-tête :** altdb.h   
   
 ## <a name="members"></a>Membres  
   
@@ -77,9 +80,11 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 |[GetSpecification](#getspecification)|Retourne un pointeur d’interface sur l’objet (commande ou session) qui a créé cet ensemble de lignes.|  
   
 ## <a name="remarks"></a>Notes  
- Une interface obligatoire sur les ensembles de lignes. Cette classe implémente les propriétés de l’ensemble de lignes à l’aide de la [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md) définies dans votre classe de commande. Bien que la classe d’ensemble de lignes s’affiche à l’utilisation de propriété de la classe de commande définit, l’ensemble de lignes est fourni avec sa propre copie des propriétés d’exécution, lorsqu’il est créé par un objet de commande ou session.  
+
+Une interface obligatoire sur les ensembles de lignes. Cette classe implémente les propriétés de l’ensemble de lignes à l’aide de la [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md) définies dans votre classe de commande. Bien que la classe d’ensemble de lignes s’affiche à l’utilisation de propriété de la classe de commande définit, l’ensemble de lignes est fourni avec sa propre copie des propriétés d’exécution, lorsqu’il est créé par un objet de commande ou session.  
   
 ## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
+
 Retourne les paramètres actuels pour les propriétés de le `DBPROPSET_ROWSET` groupe.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -92,9 +97,11 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
+
+Consultez [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
+
 Retourne un pointeur d’interface pour l’ensemble de lignes auquel s’applique un signet.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -106,9 +113,11 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. Le *iOrdinal* paramètre doit être une colonne de signet. 
+
+Consultez [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. Le *iOrdinal* paramètre doit être une colonne de signet. 
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
+
 Retourne un pointeur d’interface sur l’objet (commande ou session) qui a créé cet ensemble de lignes.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -119,11 +128,14 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+
+Consultez [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette méthode avec [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) pour récupérer des propriétés de l’objet de source de données.  
+
+Utilisez cette méthode avec [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) pour récupérer des propriétés de l’objet de source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

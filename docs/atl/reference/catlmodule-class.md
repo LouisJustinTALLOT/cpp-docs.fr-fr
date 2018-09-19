@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d7b8ee240b94fe6a9b05d5c06c960ab8857ed6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093439"
 ---
 # <a name="catlmodule-class"></a>CAtlModule, classe
 
@@ -106,7 +106,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="parameters"></a>Paramètres
 
-*pRegistrar*  
+*pRegistrar*<br/>
 Réservé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -129,10 +129,10 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pFunc*  
+*pFunc*<br/>
 Pointeur vers la fonction à ajouter.
 
-*entrepôt de données*  
+*entrepôt de données*<br/>
 Les données définies par l’utilisateur, passé à la fonction.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -173,7 +173,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*ppGIT*  
+*ppGIT*<br/>
 Pointeur vers la variable qui reçoit le pointeur vers la Table d’Interface globale.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -270,16 +270,16 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszRes*  
+*lpszRes*<br/>
 Un nom de ressource.
 
-*nResID*  
+*nResID*<br/>
 Un ID de ressource.
 
-*bRegister*  
+*bRegister*<br/>
 TRUE si l’objet doit être inscrit ; FALSE sinon.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Pointeur vers la table de remplacement stocker des valeurs associées aux paramètres remplaçables du script. ATL utilise automatiquement le MODULE %. Pour utiliser les paramètres remplaçables supplémentaires, consultez [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Sinon, utilisez la valeur par défaut NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -307,13 +307,13 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszRes*  
+*lpszRes*<br/>
 Un nom de ressource.
 
-*bRegister*  
+*bRegister*<br/>
 Indique si l’objet doit être inscrite.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Pointeur vers la table de remplacement stocker des valeurs associées aux paramètres remplaçables du script. ATL utilise automatiquement le MODULE %. Pour utiliser les paramètres remplaçables supplémentaires, consultez [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Sinon, utilisez la valeur par défaut NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -342,16 +342,16 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Paramètres
 
-*nResID*  
+*nResID*<br/>
 Un ID de ressource.
 
-*lpszRes*  
+*lpszRes*<br/>
 Un nom de ressource.
 
-*bRegister*  
+*bRegister*<br/>
 Indique si le script de ressources doit être inscrite.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Pointeur vers la table de remplacement stocker des valeurs associées aux paramètres remplaçables du script. ATL utilise automatiquement le MODULE %. Pour utiliser les paramètres remplaçables supplémentaires, consultez [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Sinon, utilisez la valeur par défaut NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -364,7 +364,7 @@ Semblable à [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresour
 
 ## <a name="see-also"></a>Voir aussi
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)   
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
-[Classes de module](../../atl/atl-module-classes.md)   
+[_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
+[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
+[Classes de module](../../atl/atl-module-classes.md)<br/>
 [Composant de Registre (inscription)](../../atl/atl-registry-component-registrar.md)  

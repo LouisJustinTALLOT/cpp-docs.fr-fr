@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654996499c0fbee2c7410663fd7dfbbac3d145b2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ccd57fb3fa183fd93afbf8846769a8a11a7d6663
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078554"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Avertissement RC4214 du compilateur de ressources 
-Page de codes non valide : ignoré  
-  
- Le fichier .rc contenue un argument de la page de codes et de la page de codes spécifiée n’est pas valide. Consultez [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) pour plus d’informations.
+
+Page de codes non valide : ignoré
+
+Le fichier .rc contenue un argument de la page de codes et de la page de codes spécifiée n’est pas valide. Consultez [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) pour plus d’informations.

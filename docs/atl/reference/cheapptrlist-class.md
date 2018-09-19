@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e44475d7d9eee547e0e9d47c8d49c439d91bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1990de6165e50397f11d84cb0486c1d5d5d67fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089228"
 ---
 # <a name="cheapptrlist-class"></a>Cheapptrlist, classe
 
@@ -35,7 +35,7 @@ Cette classe fournit des méthodes utiles lors de la construction d’une liste 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename E, class Allocator = ATL::CCRTAllocator>  
+template<typename E, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrList 
    : public CAtlList<ATL::CHeapPtr<E, Allocator>,
                      CHeapPtrElementTraits<E, Allocator>>
@@ -43,10 +43,10 @@ class CHeapPtrList
 
 #### <a name="parameters"></a>Paramètres
 
-*E*  
+*E*<br/>
 Le type d’objet à stocker dans la classe de collection.
 
-*Allocateur*  
+*Allocateur*<br/>
 La classe d’allocation de mémoire à utiliser. La valeur par défaut est [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Membres
@@ -81,7 +81,7 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBlockSize*  
+*nBlockSize*<br/>
 La taille du bloc.
 
 ### <a name="remarks"></a>Notes
@@ -90,7 +90,7 @@ La taille de bloc est une mesure de la quantité de mémoire allouée lorsqu’u
 
 ## <a name="see-also"></a>Voir aussi
 
-[CAtlList, classe](../../atl/reference/catllist-class.md)   
-[Cheapptr, classe](../../atl/reference/cheapptr-class.md)   
-[Cheapptrelementtraits, classe](../../atl/reference/cheapptrelementtraits-class.md)   
+[CAtlList, classe](../../atl/reference/catllist-class.md)<br/>
+[CHeapPtr, classe](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrElementTraits, classe](../../atl/reference/cheapptrelementtraits-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

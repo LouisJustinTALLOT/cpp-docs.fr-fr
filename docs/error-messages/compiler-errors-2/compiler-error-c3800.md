@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3800 | Documents Microsoft
+title: Erreur du compilateur C3800 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d90b35cddda138144c231080e3430a454748f6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4b8a86199057f7e4b936200a82615db899a8d1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113303"
 ---
 # <a name="compiler-error-c3800"></a>Erreur du compilateur C3800
-'déclaration' : Impossible de mélanger les propriétés et événements  
-  
- Vous ne pouvez pas déclarer un constructeur qui soit une propriété et un événement.  
-  
- C3800 est uniquement accessible à l’aide de l’option du compilateur obsolète **oldSyntax ;**.  
+
+'déclaration' : Impossible de mélanger des propriétés et événements
+
+Vous ne pouvez pas déclarer une construction pour être une propriété et un événement.
+
+C3800 est uniquement accessible à l’aide de l’option de compilateur obsolète **/CLR : oldSyntax**.

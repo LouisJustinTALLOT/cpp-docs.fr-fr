@@ -1,5 +1,5 @@
 ---
-title: Création d’un consommateur OLE DB à l’aide d’un Assistant | Documents Microsoft
+title: Création d’un consommateur OLE DB à l’aide d’un Assistant | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fa7b9323630307aaf959cd55267a918bbd628bc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097885"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Création d'un consommateur OLE DB en utilisant l'Assistant
+
 Cette procédure montre comment vous pouvez utiliser l’Assistant Projet ATL et l’Assistant Consommateur OLE DB ATL pour générer un consommateur des modèles OLE DB, puis modifier le code principal de l’application de console pour récupérer et afficher des données à partir d’une table de base de données.  
   
- Les deux dernières sections expliquent le code généré par l’Assistant du consommateur OLE DB.  
+Les deux dernières sections expliquent le code généré par l’Assistant du consommateur OLE DB.  
   
- Cette section couvre les rubriques suivantes :  
+Cette section couvre les rubriques suivantes :  
   
--   [Création d’un consommateur simple](../../data/oledb/creating-a-simple-consumer.md)  
+- [Création d’un consommateur simple](../../data/oledb/creating-a-simple-consumer.md)  
   
--   [Implémentation d’un consommateur simple](../../data/oledb/implementing-a-simple-consumer.md)  
+- [Implémentation d’un consommateur simple](../../data/oledb/implementing-a-simple-consumer.md)  
   
--   [Classes de consommateur générées par l’Assistant](../../data/oledb/consumer-wizard-generated-classes.md)  
+- [Classes de consommateur générées par l’Assistant](../../data/oledb/consumer-wizard-generated-classes.md)  
   
--   [Méthodes de consommateur générées par l’Assistant](../../data/oledb/consumer-wizard-generated-methods.md)  
+- [Méthodes de consommateur générées par l’Assistant](../../data/oledb/consumer-wizard-generated-methods.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’un consommateur OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+
+[Création d’un consommateur OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

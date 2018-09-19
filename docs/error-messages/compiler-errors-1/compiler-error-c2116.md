@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2116 | Documents Microsoft
+title: Erreur du compilateur C2116 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e45ef2fe60a3f30a064ccbb3e4c7636df90165a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20a551d8e0df55418c195db791e46693979758a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165475"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104036"
 ---
 # <a name="compiler-error-c2116"></a>Erreur du compilateur C2116
-listes de paramètres de fonctions différentes  
-  
- Les paramètres affichés dans la liste des paramètres par défaut ne correspondent pas à la liste de paramètres formels.
+
+listes de paramètres de fonctions différentes
+
+Les paramètres affichés dans la liste des paramètres par défaut ne correspondent pas à la liste de paramètres formels.

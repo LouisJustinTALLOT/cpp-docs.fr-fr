@@ -1,5 +1,5 @@
 ---
-title: Enregistrement (MFC Data Access) | Documents Microsoft
+title: Enregistrement (accès de données MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b03bfb65bd10787f41d30c63117fec54e8dc30ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe348043d991aa04652eae02ba0f2efa393bcf5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098132"
 ---
 # <a name="record-mfc-data-access"></a>Enregistrement (Accès aux données MFC)
+
 Un enregistrement est une collection de données relatives à une seule entité, telle qu’un compte ou un client, stockée dans une table (une ligne de la table). Un enregistrement est constitué d'un groupe de colonnes contiguës (parfois appelées champs) qui contiennent des données de différents types. Un ensemble d'enregistrements sélectionnés à partir d'une source de données (souvent appelé jeu de résultats en termes de base de données) est appelé recordset dans MFC. Pour plus d’informations, consultez [Recordset (ODBC)](../data/odbc/recordset-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation (MFC/ATL) d’accès aux données](../data/data-access-programming-mfc-atl.md)
+
+[Accès aux données de programmation (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

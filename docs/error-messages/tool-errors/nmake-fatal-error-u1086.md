@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable NMAKE U1086 | Documents Microsoft
+title: Erreur irrécupérable NMAKE U1086 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9d314f523706ae6b4a18070f51341eba43984e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 300dac81a55a07f163f0fe6bb01646403517b554
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317201"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107635"
 ---
 # <a name="nmake-fatal-error-u1086"></a>Erreur irrécupérable NMAKE U1086
-**règle d’inférence ne peut pas avoir de dépendants**  
-  
- Le signe deux-points (**:**) dans une inférence règle doit être suivie par un d'entre eux :  
-  
--   Caractère de saut de ligne  
-  
--   Point-virgule (**;**), qui peut être suivi par une commande  
-  
--   Signe dièse (**#**), qui peut être suivi par un commentaire
+
+**règle d’inférence ne peut pas avoir de dépendants**
+
+Le signe deux-points (**:**) dans une inférence de règle doit être suivie par un d'entre eux :
+
+- Caractère de saut de ligne
+
+- Point-virgule (**;**), qui peut être suivi par une commande
+
+- Signe dièse (**#**), qui peut être suivi par un commentaire

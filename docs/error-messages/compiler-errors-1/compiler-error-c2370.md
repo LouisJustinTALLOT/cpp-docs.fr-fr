@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2370 | Documents Microsoft
+title: Erreur du compilateur C2370 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c939ee4c0c5200506c16360aa02afd8a1b733d8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa760612699cf71b9394011b0883531eef4f5fb8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102402"
 ---
 # <a name="compiler-error-c2370"></a>Erreur du compilateur C2370
-'identifier' : redéfinition ; classe de stockage différente  
-  
- L’identificateur est déjà déclaré avec une autre classe de stockage.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C2370 :  
-  
-```  
-// C2370.cpp  
-// compile with: /Za /c  
-extern int i;  
-static int i;   // C2370  
-int i;   // OK  
-```  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C2370 :  
-  
-```  
-// C2370b.cpp  
-#define Thread __declspec( thread )  
-extern int tls_i;  
-int Thread tls_i;   // C2370 declaration and the definition differ  
-int tls_i;   // OK  
+
+'identifier' : redéfinition ; classe de stockage différente
+
+L’identificateur est déjà déclaré avec une autre classe de stockage.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C2370 :
+
+```
+// C2370.cpp
+// compile with: /Za /c
+extern int i;
+static int i;   // C2370
+int i;   // OK
+```
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C2370 :
+
+```
+// C2370b.cpp
+#define Thread __declspec( thread )
+extern int tls_i;
+int Thread tls_i;   // C2370 declaration and the definition differ
+int tls_i;   // OK
 ```

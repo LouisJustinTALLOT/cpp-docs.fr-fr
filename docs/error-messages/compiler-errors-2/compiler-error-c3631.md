@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3631 | Documents Microsoft
+title: Erreur du compilateur C3631 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da206faed773c89ec9c3b64f962d8569d1d87bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 146358f9653acd36c855fa74f202e37d0656ad00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111339"
 ---
 # <a name="compiler-error-c3631"></a>Erreur du compilateur C3631
-'fonction' : impossible de surcharger les événements managés ou WinRT  
-  
- Un événement managé ou WinRT ne peut pas être surchargé.  
-  
- L’erreur C3631 est uniquement accessible à l’aide de l’option du compilateur obsolète **oldSyntax ;**.  
+
+'fonction' : impossible de surcharger les événements managés ou WinRT
+
+Un événement managé ou WinRT ne peut pas être surchargé.
+
+L’erreur C3631 est uniquement accessible à l’aide de l’option de compilateur obsolète **/CLR : oldSyntax**.

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3741 | Documents Microsoft
+title: Erreur du compilateur C3741 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67c1bdb78a48571f58b59930615bc3251f3eeea5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 531b2765bb829a6278bf2d1ca663733f6279b1b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106894"
 ---
 # <a name="compiler-error-c3741"></a>Erreur du compilateur C3741
-'classe' : doit être une coclasse quand le paramètre 'layout_dependent' d’event_receiver = true  
-  
- Lorsque `layout_dependent=true` pour un [event_receiver](../../windows/event-receiver.md) classe, puis la classe doit également avoir le [coclasse](../../windows/coclass.md) attribut.  
-  
- L’exemple suivant génère l’erreur C3741.  
-  
-```  
-// C3741.cpp  
-// compile with: /c  
-// C3741 expected  
-#define _ATL_ATTRIBUTES 1  
-#include <atlbase.h>  
-#include <atlcom.h>  
-[module(name="xx")];  
-  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface I{ HRESULT f(); };  
-  
-// Delete the following line to resolve.  
-[ event_receiver(com, layout_dependent=true)]  
-  
-// class or struct must be declared with coclass  
-// Uncomment the following line to resolve.  
-// [ event_receiver(com, layout_dependent=true), coclass, uuid("00000000-0000-0000-0000-000000000002")]  
-struct R : I {  
-   HRESULT f(){ return 0; }  
-   R(){}  
-   R(I* a){ __hook(I, a); }  
-};  
+
+'classe' : doit être une coclasse quand le paramètre 'layout_dependent' d’event_receiver = true
+
+Lorsque `layout_dependent=true` pour un [event_receiver](../../windows/event-receiver.md) classe, la classe doit également disposer du [coclasse](../../windows/coclass.md) attribut.
+
+L’exemple suivant génère l’erreur C3741.
+
+```
+// C3741.cpp
+// compile with: /c
+// C3741 expected
+#define _ATL_ATTRIBUTES 1
+#include <atlbase.h>
+#include <atlcom.h>
+[module(name="xx")];
+
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface I{ HRESULT f(); };
+
+// Delete the following line to resolve.
+[ event_receiver(com, layout_dependent=true)]
+
+// class or struct must be declared with coclass
+// Uncomment the following line to resolve.
+// [ event_receiver(com, layout_dependent=true), coclass, uuid("00000000-0000-0000-0000-000000000002")]
+struct R : I {
+   HRESULT f(){ return 0; }
+   R(){}
+   R(I* a){ __hook(I, a); }
+};
 ```

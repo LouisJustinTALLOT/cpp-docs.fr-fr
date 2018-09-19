@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708212"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095433"
 ---
 # <a name="cframewndex-class"></a>Cframewndex, classe
 Implémente les fonctionnalités d'une fenêtre frame superposée ou contextuelle à interface monodocument (SDI) Windows et fournit les membres permettant de gérer la fenêtre. Il étend le [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>Valeur de retour  
  Le mot de poids fort doit être une des valeurs suivantes.  
-  
- `0`  
- Le framework doit ignorer la séquence de touches.  
-  
- `1`  
- Le framework doit fermer le menu.  
-  
- `2`  
- Le framework doit sélectionner un des éléments affichés dans le menu. Le mot de poids faible contient l’ID de la commande Sélectionner.  
-  
-### <a name="remarks"></a>Notes  
+
+|||
+|-|-|
+ `0` | Le framework doit ignorer la séquence de touches.  
+ `1`  | Le framework doit fermer le menu.  
+ `2`  | Le framework doit sélectionner un des éléments affichés dans le menu. Le mot de poids faible contient l’ID de la commande Sélectionner.  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  L’infrastructure appelle cette méthode lorsque le pointeur se déplace.  

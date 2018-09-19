@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3420 | Documents Microsoft
+title: Erreur du compilateur C3420 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7614d07cf98ae9fe857809bf9400d36a48ab0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3997bc0744bf1e1db34fe7ce1de666ebd3e3b8cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255056"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078567"
 ---
 # <a name="compiler-error-c3420"></a>Erreur du compilateur C3420
-'finalizer' : un finaliseur ne peut pas être virtuel  
-  
- Un finaliseur peut uniquement être appelé de façon non virtuelle depuis son type englobant. Ainsi, il est incorrect de déclarer un finaliseur virtuel.  
-  
- Pour plus d’informations, consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C + c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C3420.  
-  
-```  
-// C3420.cpp  
-// compile with: /clr /c  
-ref class R {  
-   virtual !R() {}   // C3420  
-};  
+
+'finalizer' : un finaliseur ne peut pas être virtuel
+
+Un finaliseur peut uniquement être appelé de façon non virtuelle depuis son type englobant. Ainsi, il est incorrect de déclarer un finaliseur virtuel.
+
+Pour plus d’informations, consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C3420.
+
+```
+// C3420.cpp
+// compile with: /clr /c
+ref class R {
+   virtual !R() {}   // C3420
+};
 ```

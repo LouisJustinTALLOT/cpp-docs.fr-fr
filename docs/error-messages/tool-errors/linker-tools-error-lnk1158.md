@@ -1,5 +1,5 @@
 ---
-title: LNK1158 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK1158 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cee2a31d1a7b05104031fbf41e8e3addb82d7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ce319aa4529c74cad00342b09aa0ed98bb49ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094167"
 ---
 # <a name="linker-tools-error-lnk1158"></a>Erreur des outils Éditeur de liens LNK1158
-Impossible d’exécuter 'nom_fichier'  
-  
- Le fichier exécutable donné appelé par [lien](../../build/reference/linker-command-line-syntax.md) n’est pas dans le répertoire qui contient le lien, ni dans un répertoire spécifié dans la variable d’environnement PATH.  
-  
- Par exemple, vous obtiendrez cette erreur si vous essayez d’utiliser le paramètre PGOPTIMIZE le [LTCG](../../build/reference/ltcg-link-time-code-generation.md) option de l’éditeur de liens sur un ordinateur avec un système d’exploitation 32 bits.
+
+Impossible d’exécuter 'nom_fichier'
+
+Le fichier exécutable donné appelé par [lien](../../build/reference/linker-command-line-syntax.md) n’est pas dans le répertoire qui contient le lien ni dans un répertoire spécifié dans la variable d’environnement PATH.
+
+Par exemple, vous obtiendrez cette erreur si vous essayez d’utiliser le paramètre PGOPTIMIZE le [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) option de l’éditeur de liens sur un ordinateur avec un système d’exploitation 32 bits.

@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c1095df6caae94cac86e5e205507e0ed9eeb98e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075720"
 ---
 # <a name="catlmap-class"></a>CAtlMap, classe
 
@@ -70,15 +70,16 @@ class CAtlMap
 
 #### <a name="parameters"></a>Paramètres
 
-*K*  
+*K*<br/>
 Le type d’élément clé.
 
-*V* le type d’élément de valeur.
+*V*<br/>
+Le type d’élément de valeur.
 
-*KTraits*  
+*KTraits*<br/>
 Le code utilisé pour copier ou déplacer les éléments clés. Consultez [celementtraits, classe](../../atl/reference/celementtraits-class.md) pour plus d’informations.
 
-*VTraits*  
+*VTraits*<br/>
 Le code utilisé pour copier ou déplacer des éléments de valeur.
 
 ## <a name="members"></a>Membres
@@ -195,19 +196,19 @@ CAtlMap(
 
 ### <a name="parameters"></a>Paramètres
 
-*nBins*  
+*nBins*<br/>
 Le nombre d’emplacements en fournissant des pointeurs aux éléments stockées. Consultez la section Notes plus loin dans cette rubrique pour obtenir une explication des emplacements.
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Le taux de charge optimale.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Le seuil inférieur pour le taux de charge.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Le seuil supérieur pour le taux de charge.
 
-*nBlockSize*  
+*nBlockSize*<br/>
 La taille du bloc.
 
 ### <a name="remarks"></a>Notes
@@ -297,13 +298,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le compteur de position, retourné par un appel précédent à [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
-*key*  
+*key*<br/>
 Paramètre de modèle qui spécifie le type de clé de la carte.
 
-*valeur*  
+*valeur*<br/>
 Paramètre de modèle qui spécifie le type de valeur de la carte.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -352,7 +353,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le compteur de position, retourné par un appel précédent à [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -374,7 +375,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le compteur de position, retourné par un appel précédent à [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -394,13 +395,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le compteur de position, retourné par un appel précédent à [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
-*key*  
+*key*<br/>
 Paramètre de modèle qui spécifie le type de clé de la carte.
 
-*valeur*  
+*valeur*<br/>
 Paramètre de modèle qui spécifie le type de valeur de la carte.
 
 ### <a name="remarks"></a>Notes
@@ -417,7 +418,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le compteur de position, retourné par un appel précédent à [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -439,7 +440,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le compteur de position, retourné par un appel précédent à [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -488,7 +489,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le compteur de position, retourné par un appel précédent à [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -507,10 +508,10 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>Paramètres
 
-*nBins*  
+*nBins*<br/>
 Le nombre d’emplacements utilisés par la table de hachage. Consultez [CAtlMap::CAtlMap](#catlmap) pour obtenir une explication.
 
-*bAllocNow*  
+*bAllocNow*<br/>
 Une indication de l’indicateur lors de la mémoire doit être allouée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -567,10 +568,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 Spécifie la clé qui identifie l’élément à rechercher.
 
-*valeur*  
+*valeur*<br/>
 Variable qui reçoit la valeur recherché.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -591,7 +592,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 La clé de l’élément à ajouter ou remplacer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -612,7 +613,7 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*nBins*  
+*nBins*<br/>
 Nouveau nombre de compartiments à utiliser dans la table de hachage. Consultez [CAtlMap::CAtlMap](#catlmap) pour obtenir une explication.
 
 ### <a name="remarks"></a>Notes
@@ -641,7 +642,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le compteur de position, retourné par un appel précédent à [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Notes
@@ -658,7 +659,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 La clé correspondant à la paire de l’élément que vous souhaitez supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -681,10 +682,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 La valeur de clé à ajouter à la `CAtlMap` objet.
 
-*valeur*  
+*valeur*<br/>
 La valeur à ajouter à la `CAtlMap` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -709,16 +710,16 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>Paramètres
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Le taux de charge optimale.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Le seuil inférieur pour le taux de charge.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Le seuil supérieur pour le taux de charge.
 
-*bRehashNow*  
+*bRehashNow*<br/>
 Indicateur spécifiant si la table de hachage doit être recalculée.
 
 ### <a name="remarks"></a>Notes
@@ -737,10 +738,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*  
+*points de vente*<br/>
 Le compteur de position, retourné par un appel précédent à [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
-*valeur*  
+*valeur*<br/>
 La valeur à ajouter à la `CAtlMap` objet.
 
 ### <a name="remarks"></a>Notes
@@ -773,7 +774,7 @@ const K m_key;
 
 ### <a name="parameters"></a>Paramètres
 
-*K*  
+*K*<br/>
 Le type d’élément clé.
 
 ##  <a name="m_value"></a>  CAtlMap::CPair::m_value
@@ -786,11 +787,11 @@ V  m_value;
 
 ### <a name="parameters"></a>Paramètres
 
-*V*  
+*V*<br/>
 Le type d’élément de valeur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple de texte défilant](../../visual-cpp-samples.md)   
-[Exemple UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
+[Exemple de texte défilant](../../visual-cpp-samples.md)<br/>
+[Exemple UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

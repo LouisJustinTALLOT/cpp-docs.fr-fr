@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3798 | Documents Microsoft
+title: Erreur du compilateur C3798 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da4ca81f2110ff1f76fdc9d0377234087a532017
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 217aa46cdd643361fed16f8a69de7f8ec75214fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099837"
 ---
 # <a name="compiler-error-c3798"></a>Erreur du compilateur C3798
-'spécificateur' : déclaration de propriété ne peut pas avoir de spécificateur de substitution (doit être placé sur la propriété méthodes get/set à la place)  
-  
- Une propriété n’a pas été correctement déclarée. Pour plus d'informations, consultez  
-  
--   [propriété](../../windows/property-cpp-component-extensions.md)  
-  
--   [abstract](../../windows/abstract-cpp-component-extensions.md)  
-  
--   [sealed](../../windows/sealed-cpp-component-extensions.md)  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C3798  
-  
-```  
-// C3798.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   property int Prop_1 abstract;   // C3798  
-   property int Prop_2 sealed;   // C3798  
-  
-   // OK  
-   property int Prop_3 {  
-      virtual int get() abstract;  
-      virtual void set(int i) abstract;  
-   }  
-  
-   property int Prop_4 {  
-      virtual int get() sealed;  
-      virtual void set(int i) sealed;  
-   }  
-};  
+
+'spécificateur' : déclaration de propriété ne peut pas avoir de spécificateur de substitution (doivent être placés sur les méthodes get/set à la place de propriété)
+
+Une propriété n’a pas été correctement déclarée. Pour plus d'informations, consultez
+
+- [propriété](../../windows/property-cpp-component-extensions.md)
+
+- [abstract](../../windows/abstract-cpp-component-extensions.md)
+
+- [sealed](../../windows/sealed-cpp-component-extensions.md)
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère C3798
+
+```
+// C3798.cpp
+// compile with: /clr /c
+ref struct A {
+   property int Prop_1 abstract;   // C3798
+   property int Prop_2 sealed;   // C3798
+
+   // OK
+   property int Prop_3 {
+      virtual int get() abstract;
+      virtual void set(int i) abstract;
+   }
+
+   property int Prop_4 {
+      virtual int get() sealed;
+      virtual void set(int i) sealed;
+   }
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: LNK4220 d’avertissement des outils Éditeur de liens | Documents Microsoft
+title: Avertissement LNK4220 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d832a0ca961aed7359ad04391319f64a24216bff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9070b026f155a318d5eb087d0a08f05a64d5dd99
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33305306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073198"
 ---
 # <a name="linker-tools-warning-lnk4220"></a>Avertissement des outils Éditeur de liens LNK4220
-non valide 'option de l’éditeur de liens' valeur 'valeur' ; par défaut  
-  
- Une valeur hors limites a été spécifiée avec le [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) option. La valeur par défaut **/TLBID** est 1.
+
+non valide 'option de l’éditeur de liens' valeur 'valeur' ; valeur par défaut
+
+Une valeur hors limites a été spécifiée avec le [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) option. La valeur par défaut **/TLBID** est 1.

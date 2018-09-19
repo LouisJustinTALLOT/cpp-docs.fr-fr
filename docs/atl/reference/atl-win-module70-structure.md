@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4c5d7ad570d9745e10107f0df09faccd9eb42e3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c000175c031868136aad44e59644d0fa122d213e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084508"
 ---
 # <a name="atlwinmodule70-structure"></a>_Atl_win_module70, structure
 
@@ -43,16 +43,16 @@ struct _ATL_WIN_MODULE70 {
 
 ## <a name="members"></a>Membres
 
-`cbSize`  
+`cbSize`<br/>
 La taille de la structure, utilisée pour le contrôle de version.
 
-`m_csWindowCreate`  
+`m_csWindowCreate`<br/>
 Utilisé pour sérialiser l’accès au code de l’inscription de fenêtre. Utilisé en interne par ATL.
 
-`m_pCreateWndList`  
+`m_pCreateWndList`<br/>
 Utilisé pour lier windows à leurs objets. Utilisé en interne par ATL.
 
-`m_rgWindowClassAtoms`  
+`m_rgWindowClassAtoms`<br/>
 Utilisé pour le suivi des inscriptions de classe de fenêtre afin qu’ils puissent être correctement annulées à la fin. Utilisé en interne par ATL.
 
 ## <a name="remarks"></a>Notes

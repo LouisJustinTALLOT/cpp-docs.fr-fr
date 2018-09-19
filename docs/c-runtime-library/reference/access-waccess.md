@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77876aad65a06cd541949937898496f811375e58
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d1e8e4d8be25a175f40d59aa3d3b8eb1ecbf4c3e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097014"
 ---
 # <a name="access-waccess"></a>_access, _waccess
 
@@ -67,10 +67,10 @@ int _waccess(
 
 ### <a name="parameters"></a>Paramètres
 
-*path*  
+*path*<br/>
 Chemin du répertoire ou du fichier.
 
-*mode*  
+*mode*<br/>
 Attribut de lecture/écriture.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -151,8 +151,8 @@ File crt_ACCESS.C does not have write permission.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion de fichiers](../../c-runtime-library/file-handling.md)  
-[_chmod, _wchmod](chmod-wchmod.md)  
-[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
-[_open, _wopen](open-wopen.md)  
-[_stat, _wstat, fonctions](stat-functions.md)  
+[Gestion de fichiers](../../c-runtime-library/file-handling.md)<br/>
+[_chmod, _wchmod](chmod-wchmod.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_stat, _wstat, fonctions](stat-functions.md)

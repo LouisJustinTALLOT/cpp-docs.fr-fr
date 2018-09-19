@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2053 | Documents Microsoft
+title: Erreur du compilateur C2053 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ace887e096ca0761f08843a033dc6391cb26aa99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 711debdfe82db617e7974afbfb75b2116eec0260
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165293"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101989"
 ---
 # <a name="compiler-error-c2053"></a>Erreur du compilateur C2053
-'identificateur' : incompatibilité de chaînes étendues  
-  
- La chaîne large est assignée à un type incompatible.  
-  
- L’exemple suivant génère l’erreur C2053 :  
-  
-```  
-// C2053.c  
-int main() {  
-   char array[] = L"Rika";   // C2053  
-}  
+
+'identificateur' : incompatibilité de chaînes étendues
+
+La chaîne large est assignée à un type incompatible.
+
+L’exemple suivant génère l’erreur C2053 :
+
+```
+// C2053.c
+int main() {
+   char array[] = L"Rika";   // C2053
+}
 ```

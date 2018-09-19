@@ -16,31 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8dda27c3f1c535f60856bd9d4a3abb9a51a1a32
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afe11d570658ee077e8fdffe925349731f1921fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219918"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111366"
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
-**Section spécifique à Microsoft**  
-  
- Récupère le message de type chaîne pour HRESULT stockées dans le `_com_error` objet.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-const TCHAR * ErrorMessage( ) const throw( );  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne le message de type chaîne pour la valeur HRESULT est enregistré dans le `_com_error` objet. Si la valeur HRESULT est 16 bits mappée [wCode](../cpp/com-error-wcode.md), puis un message générique «`IDispatch error #<wCode>`» est retournée. Si aucun message n'est trouvé, un message générique « `Unknown error #<hresult>` » est retourné. La chaîne retournée est soit une chaîne Unicode ou multioctets, selon l’état de la macro _UNICODE.  
-  
-## <a name="remarks"></a>Notes  
- Récupère le texte du message système approprié pour le HRESULT est enregistré dans le `_com_error` objet. Le texte du message système est obtenu en appelant Win32 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (fonction). La chaîne retournée est allouée par l'API `FormatMessage` et elle est libérée lorsque l'objet `_com_error` est détruit.  
-  
- **FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [_com_error, classe](../cpp/com-error-class.md)
+
+**Section spécifique à Microsoft**
+
+Récupère le message de type chaîne pour HRESULT stockées dans le `_com_error` objet.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+const TCHAR * ErrorMessage( ) const throw( );
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne le message de type chaîne pour la valeur HRESULT est enregistré dans le `_com_error` objet. Si la valeur HRESULT est 16 bits mappée [wCode](../cpp/com-error-wcode.md), puis un message générique «`IDispatch error #<wCode>`» est retournée. Si aucun message n'est trouvé, un message générique « `Unknown error #<hresult>` » est retourné. La chaîne retournée est soit une chaîne Unicode ou multioctets, selon l’état de la macro _UNICODE.
+
+## <a name="remarks"></a>Notes
+
+Récupère le texte du message système approprié pour le HRESULT est enregistré dans le `_com_error` objet. Le texte du message système est obtenu en appelant Win32 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (fonction). La chaîne retournée est allouée par l'API `FormatMessage` et elle est libérée lorsque l'objet `_com_error` est détruit.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[_com_error, classe](../cpp/com-error-class.md)

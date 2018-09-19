@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 3) C4511 | Documents Microsoft
+title: Compilateur avertissement (niveau 3) C4511 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 602b92d52860429a70b2339f35093ab85934fc89
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8432b4aff0c4ac3526f99ba4faaf669e7c69ee72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102583"
 ---
 # <a name="compiler-warning-level-3-c4511"></a>Avertissement du compilateur (niveau 3) C4511
-'classe' : constructeur de copie n’a pas pu être généré.  
-  
- Le compilateur n’a pas pu générer un constructeur de copie par défaut pour une classe ; une classe de base peut avoir un constructeur de copie privé.
+
+'class' : constructeur de copie n’a pas pu être généré.
+
+Le compilateur n’a pas pu générer un constructeur de copie par défaut pour une classe ; une classe de base peut avoir un constructeur de copie privé.

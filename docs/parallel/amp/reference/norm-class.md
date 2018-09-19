@@ -1,5 +1,5 @@
 ---
-title: Norm, classe | Documents Microsoft
+title: Norm, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705391"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087476"
 ---
 # <a name="norm-class"></a>norm, classe
-Représente un numéro de la norme. Chaque élément est flottante point nombre dans la plage [-1.0f, 1.0f].  
+Représente un nombre de norme. Chaque élément est flottante nombre à virgule dans la plage [-1.0f, 1.0f].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ class norm;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Norm, constructeur](#ctor)|Surchargé. Constructeur par défaut. Initialiser à 0.0f.|  
+|[Norm, constructeur](#ctor)|Surchargé. Constructeur par défaut. Initialiser à 0,0 f.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -46,7 +46,7 @@ class norm;
 |----------|-----------------|  
 |Norm::operator-||  
 |Norm::operator--||  
-|Norm::operator float|Opérateur de conversion. Convertir le numéro de la norme flottante valeur du point.|  
+|Norm::operator float|Opérateur de conversion. Convertissez le nombre de norme flottante valeur de point.|  
 |Norm::operator * =||  
 |/ = Norm::operator||  
 |Norm::operator ++||  
@@ -57,14 +57,14 @@ class norm;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `norm`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  
   
 ##  <a name="ctor"></a> norme 
 
- Constructeur par défaut. Initialiser à 0.0f.  
+ Constructeur par défaut. Initialiser à 0,0 f.  
   
 ```  
 norm(
@@ -103,11 +103,11 @@ norm(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_V`  
- La valeur utilisée pour initialiser.  
+*_V*<br/>
+La valeur utilisée pour initialiser.  
   
- `_Other`  
- Objet utilisé pour initialiser.  
+*_Autre*<br/>
+L’objet utilisé pour initialiser.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

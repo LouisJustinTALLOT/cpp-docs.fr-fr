@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2151 | Documents Microsoft
+title: Erreur du compilateur C2151 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfd708c64beffe3be3e7bf127547c904cc39709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae236956d991aae2b62db704acbd4d736cbc56bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101551"
 ---
 # <a name="compiler-error-c2151"></a>Erreur du compilateur C2151
-plusieurs attributs de langue  
-  
- Une fonction a plusieurs mots clés ( `__cdecl`, `__stdcall`, ou `__fastcall`) en spécifiant une convention d’appel.
+
+plus d’un attribut de langage
+
+Une fonction a plus d’un mot clé ( `__cdecl`, `__stdcall`, ou `__fastcall`) en spécifiant une convention d’appel.

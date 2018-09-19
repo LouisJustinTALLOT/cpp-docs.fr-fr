@@ -1,5 +1,5 @@
 ---
-title: Erreur BSCMAKE BK1517 | Documents Microsoft
+title: Erreur BSCMAKE BK1517 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6f5619a7c2a6ccf671845b27bbedf93d8eb2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 941773fbcf65a3b1c1a6041a1e7a067cfc286823
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097053"
 ---
 # <a name="bscmake-error-bk1517"></a>Erreur BSCMAKE BK1517
-fichier source de fichiersbr compilé avec /Yc et /Yu  
-  
- Le fichier .sbr fait référence à elle-même. Il a probablement été recompilé avec /Yu après la compilation avec/Yc. Réinitialiser l’option de compilateur pour le fichier source à /Yc, puis sélectionnez **reconstruire** pour générer de nouveaux fichiers .sbr. Ne recompilez pas le fichier source avec /Yu.
+
+fichier de source de fichiersbr compilé avec /Yc et /Yu
+
+Le fichier .sbr fait référence à lui-même. Il a probablement été recompilé avec /Yu après la compilation avec/Yc. Réinitialiser l’option de compilateur pour le fichier source à /Yc, puis sélectionnez **reconstruire** à générer de nouveaux fichiers .sbr. Ne recompilez pas le fichier source avec /Yu.

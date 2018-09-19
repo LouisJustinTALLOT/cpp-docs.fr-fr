@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RW1030 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RW1030 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eded212dc2a3c397ab0d917e860daf29ce6b9c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3df9761f999eaf3623811874ec6bee0bfb4f9cae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112601"
 ---
 # <a name="resource-compiler-fatal-error-rw1030"></a>Erreur irrécupérable RW1030 du compilateur de ressources 
-Erreur de sortie  
-  
- Cette erreur peut être provoquée si le compilateur de ressources n’a pas pu créer le fichier de destination. Assurez-vous qu’il existe suffisamment d’espace disque et que vous disposez des autorisations d’écriture sur le volume.
+
+Erreur de sortie
+
+Cette erreur peut être provoquée si le compilateur de ressources n’a pas pu créer le fichier de destination. Assurez-vous qu’il existe suffisamment d’espace disque et que vous disposez des autorisations d’écriture sur le volume.

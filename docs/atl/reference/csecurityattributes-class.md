@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8642bf2bb6b2db06ecb33fa6ec1cc44d5e68317c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 672da1c98ebc51a7440e29234950be2adb5e1c0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093049"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes, classe
 
@@ -80,10 +80,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>Paramètres
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Référence à un descripteur de sécurité.
 
-*bInheritsHandle*  
+*bInheritsHandle*<br/>
 Spécifie si le handle retourné est hérité quand un nouveau processus est créé. Si ce membre a la valeur true, le nouveau processus hérite du handle.
 
 ##  <a name="set"></a>  CSecurityAttributes::Set
@@ -96,10 +96,10 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>Paramètres
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Référence à un descripteur de sécurité.
 
-*bInheritHandle*  
+*bInheritHandle*<br/>
 Spécifie si le handle retourné est hérité quand un nouveau processus est créé. Si ce membre a la valeur true, le nouveau processus hérite du handle.
 
 ### <a name="remarks"></a>Notes
@@ -108,8 +108,8 @@ Cette méthode est utilisée par le constructeur pour initialiser le `CSecurityA
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple de sécurité](../../visual-cpp-samples.md)   
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
-[descripteur de sécurité](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+[Exemple de sécurité](../../visual-cpp-samples.md)<br/>
+[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
+[descripteur de sécurité](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)

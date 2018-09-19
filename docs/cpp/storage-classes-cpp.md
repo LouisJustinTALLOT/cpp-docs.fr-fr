@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466583"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107459"
 ---
-# <a name="storage-classes-c"></a>Classes de stockage (C++)  
-  
-Un *classe de stockage* dans le contexte de C++, déclarations de variable est un spécificateur de type qui régit l’emplacement de mémoire, la liaison et la durée de vie des objets. Un objet donné ne peut avoir qu'une seule classe de stockage. Les variables définies dans un bloc ont un stockage automatique, sauf indication contraire à l’aide de la **extern**, **statique**, ou `thread_local` spécificateurs. Les objets automatiques et les variables n'ont aucune liaison ; ils ne sont pas visibles pour le code en dehors du bloc.  
-  
-**Notes**  
-  
-1.  Le [mutable](../cpp/mutable-data-members-cpp.md) mot clé peut être considéré comme un spécificateur de classe de stockage. Toutefois, il est uniquement disponible dans la liste des membres d'une définition de classe.  
-  
-2.  **Visual C++ 2010 et versions ultérieures :** le **automatique** mot clé n’est plus un spécificateur de classe de stockage C++ et le **inscrire** mot clé est déconseillé. **Visual Studio 2017 version 15.7 et ultérieure :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le **inscrire** mot clé est supprimé du langage C++.
+# <a name="storage-classes-c"></a>Classes de stockage (C++)
+
+Un *classe de stockage* dans le contexte de C++, déclarations de variable est un spécificateur de type qui régit l’emplacement de mémoire, la liaison et la durée de vie des objets. Un objet donné ne peut avoir qu'une seule classe de stockage. Les variables définies dans un bloc ont un stockage automatique, sauf indication contraire à l’aide de la **extern**, **statique**, ou `thread_local` spécificateurs. Les objets automatiques et les variables n'ont aucune liaison ; ils ne sont pas visibles pour le code en dehors du bloc.
+
+**Notes**
+
+1. Le [mutable](../cpp/mutable-data-members-cpp.md) mot clé peut être considéré comme un spécificateur de classe de stockage. Toutefois, il est uniquement disponible dans la liste des membres d'une définition de classe.
+
+1. **Visual C++ 2010 et versions ultérieures :** le **automatique** mot clé n’est plus un spécificateur de classe de stockage C++ et le **inscrire** mot clé est déconseillé. **Visual Studio 2017 version 15.7 et ultérieure :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le **inscrire** mot clé est supprimé du langage C++.
 
 
 ```cpp
@@ -148,14 +148,14 @@ using namespace std;
 struct C {
    void Test(int value) {
       static int var = 0;
-      if (var == value) 
+      if (var == value)
          cout << "var == value" << endl;
       else
          cout << "var != value" << endl;
 
       var = value;
    }
-}; 
+};
 
 int main() {
    C c1;
@@ -185,9 +185,9 @@ Le code suivant montre deux **extern** déclarations, `DefinedElsewhere` (qui fa
 ```cpp
 // external.cpp
 // DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;   
+extern int DefinedElsewhere;
 int main() {
-   int DefinedHere; 
+   int DefinedHere;
    {
       // refers to DefinedHere in the enclosing scope
       extern int DefinedHere;
@@ -205,7 +205,7 @@ thread_local float f = 42.0; // Global namespace. Not implicitly static.
 struct S // cannot be applied to type definition
 {
     thread_local int i; // Illegal. The member must be static.
-    thread_local static char buf[10]; // OK 
+    thread_local static char buf[10]; // OK
 };
 
 void DoSomething()
@@ -224,7 +224,7 @@ Choses à noter concernant le `thread_local` spécificateur :
 
 -  Vous pouvez appliquer `thread_local` uniquement aux déclarations de données et définitions ; `thread_local` ne peut pas être utilisé sur des définitions ou déclarations de fonction.
 
--  Vous pouvez spécifier `thread_local` uniquement sur les éléments de données ayant une durée de stockage statique. Cela inclut les objets de données globaux (à la fois **statique** et **extern**), les objets statiques locaux et les données membres statiques des classes. Toute variable locale déclarée `thread_local` est implicitement statique si aucune autre classe de stockage n’est fourni ; en d’autres termes, à la portée de bloc `thread_local` équivaut à `thread_local static`. 
+-  Vous pouvez spécifier `thread_local` uniquement sur les éléments de données ayant une durée de stockage statique. Cela inclut les objets de données globaux (à la fois **statique** et **extern**), les objets statiques locaux et les données membres statiques des classes. Toute variable locale déclarée `thread_local` est implicitement statique si aucune autre classe de stockage n’est fourni ; en d’autres termes, à la portée de bloc `thread_local` équivaut à `thread_local static`.
 
 -  Vous devez spécifier `thread_local` à la fois pour la déclaration et la définition d'un objet local de thread, que la déclaration et la définition se produisent dans le même fichier ou dans des fichiers séparés.
 
@@ -232,7 +232,7 @@ Sur Windows, `thread_local` est fonctionnellement équivalent à [__declspec (th
 
 ##  <a name="register"></a>  s’inscrire
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le **inscrire** mot clé n’est plus une classe de stockage pris en charge. Le mot clé est toujours réservé dans la norme pour une utilisation ultérieure. 
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le **inscrire** mot clé n’est plus une classe de stockage pris en charge. Le mot clé est toujours réservé dans la norme pour une utilisation ultérieure.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -322,4 +322,5 @@ Il existe plusieurs points à noter concernant le programme :
 - Enfin, les variables locales statiques telles que `I3` conservent leurs valeurs pour la durée du programme, mais sont détruites à la fin du programme.
 
 ## <a name="see-also"></a>Voir aussi
- [Déclarations et définitions](../cpp/declarations-and-definitions-cpp.md)
+
+[Déclarations et définitions](../cpp/declarations-and-definitions-cpp.md)

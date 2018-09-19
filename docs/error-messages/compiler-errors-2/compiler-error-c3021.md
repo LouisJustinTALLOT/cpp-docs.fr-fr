@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3021 | Documents Microsoft
+title: Erreur du compilateur C3021 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,72 +16,74 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82a69681910d92104d0fcf6523fe5917bdad691b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8cfe722dc46ddb9ac265c4719a448aa186592e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244919"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085110"
 ---
 # <a name="compiler-error-c3021"></a>Erreur du compilateur C3021
-'arg' : argument vide dans la directive OpenMP 'directive'  
-  
- Un argument est requis pour une directive OpenMP.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C3021 :  
-  
-```  
-// C3021.cpp  
-// compile with: /openmp  
-#include <stdio.h>  
-#include "omp.h"  
-  
-int g = 0;  
-  
-int main()  
-{  
-    int x, y, i;  
-  
-    #pragma omp parallel for schedule(static,)   // C3021  
-    for (i = 0; i < 10; ++i) ;  
-  
-    #pragma omp parallel for schedule()   // C3021  
-    for (i = 0; i < 10; ++i)  
-        printf_s("Hello world, thread %d, iteration %d\n",  
-                 omp_get_thread_num(), i);  
-  
-    #pragma omp parallel reduction()   // C3021  
-      ;  
-  
-    #pragma omp parallel reduction(+ :)   // C3021  
-      ;  
-  
-    //   
-    // The following shows correct syntax examples.  
-    //  
-    #pragma omp parallel reduction(+ : x, y)  
-      ;  
-  
-    #pragma omp parallel reduction(* : x, y)  
-      ;  
-  
-    #pragma omp parallel reduction(- : x, y)  
-      ;  
-  
-    #pragma omp parallel reduction(& : x, y)  
-      ;  
-  
-    #pragma omp parallel reduction(^ : x, y)  
-      ;  
-  
-    #pragma omp parallel reduction(| : x, y)  
-      ;  
-  
-    #pragma omp parallel reduction(&& : x, y)  
-      ;  
-  
-    #pragma omp parallel reduction(|| : x, y)  
-      ;  
-}  
+
+'arg' : argument vide dans la directive OpenMP 'directive'
+
+Un argument est requis pour une directive OpenMP.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C3021 :
+
+```
+// C3021.cpp
+// compile with: /openmp
+#include <stdio.h>
+#include "omp.h"
+
+int g = 0;
+
+int main()
+{
+    int x, y, i;
+
+    #pragma omp parallel for schedule(static,)   // C3021
+    for (i = 0; i < 10; ++i) ;
+
+    #pragma omp parallel for schedule()   // C3021
+    for (i = 0; i < 10; ++i)
+        printf_s("Hello world, thread %d, iteration %d\n",
+                 omp_get_thread_num(), i);
+
+    #pragma omp parallel reduction()   // C3021
+      ;
+
+    #pragma omp parallel reduction(+ :)   // C3021
+      ;
+
+    //
+    // The following shows correct syntax examples.
+    //
+    #pragma omp parallel reduction(+ : x, y)
+      ;
+
+    #pragma omp parallel reduction(* : x, y)
+      ;
+
+    #pragma omp parallel reduction(- : x, y)
+      ;
+
+    #pragma omp parallel reduction(& : x, y)
+      ;
+
+    #pragma omp parallel reduction(^ : x, y)
+      ;
+
+    #pragma omp parallel reduction(| : x, y)
+      ;
+
+    #pragma omp parallel reduction(&& : x, y)
+      ;
+
+    #pragma omp parallel reduction(|| : x, y)
+      ;
+}
 ```

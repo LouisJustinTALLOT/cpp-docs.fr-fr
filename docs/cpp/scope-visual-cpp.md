@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080439"
 ---
 # <a name="scope-c"></a>Portée (C++)
 
 Lorsque vous déclarez un élément de programme comme une classe, une fonction ou une variable, son nom peut uniquement être « vu » et utilisé dans certaines parties de votre programme. Le contexte dans lequel un nom est visible est appelé son *étendue*. Par exemple, si vous déclarez une variable `x` au sein d’une fonction, `x` est uniquement visible dans le corps de la fonction. Il a *portée locale*. Vous pouvez avoir des autres variables portant le même nom dans votre programme ; tant qu’elles se trouvent dans des portées différentes, ils ne violent pas une règle de définitions et aucune erreur n’est générée.
 
-Pour les variables non statiques automatiques, étendue détermine également quand ils sont créés et détruits dans la mémoire programme. 
+Pour les variables non statiques automatiques, étendue détermine également quand ils sont créés et détruits dans la mémoire programme.
 
 Il existe six types de portée :
 
@@ -51,9 +51,9 @@ Il existe six types de portée :
 
 Vous pouvez masquer un nom en le déclarant dans un bloc englobé. Dans l'illustration suivante, `i` est redéclaré dans le bloc interne, masquant ainsi la variable associée à `i` dans la portée de bloc externe.
 
- ![Bloc&#45;masquage de nom d’étendue](../cpp/media/vc38sf1.png "vc38SF1") portée de bloc et le masquage de nom
+![Bloc&#45;masquage de nom d’étendue](../cpp/media/vc38sf1.png "vc38SF1") portée de bloc et le masquage de nom
 
- La sortie du programme représentée dans l'illustration est la suivante :
+La sortie du programme représentée dans l'illustration est la suivante :
 
 ```cpp
 i = 0
@@ -67,7 +67,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Masquage des noms de classes
 
- Vous pouvez masquer les noms de classe en déclarant une fonction, un objet, une variable ou un énumérateur dans la même portée. Toutefois, le nom de classe est toujours accessible lorsque précédé du mot clé **classe**.
+Vous pouvez masquer les noms de classe en déclarant une fonction, un objet, une variable ou un énumérateur dans la même portée. Toutefois, le nom de classe est toujours accessible lorsque précédé du mot clé **classe**.
 
 ```cpp
 // hiding_class_names.cpp
@@ -91,7 +91,7 @@ double Account = 15.37;            // Hides class name Account
 
 int main()
 {
-    class Account Checking( Account ); // Qualifies Account as 
+    class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
     cout << "Opening account with balance of: "
@@ -103,13 +103,13 @@ int main()
 > [!NOTE]
 > Le nom de classe en tout lieu (`Account`) est appelé, la classe de mot clé doit être utilisée pour le différencier du compte de variable de portée globale. Cette règle ne s’applique pas lorsque le nom de classe apparaît à gauche de l’opérateur de résolution de portée (::). Les noms à gauche de l’opérateur de résolution de portée sont toujours considérés comme des noms de classe.
 
- L’exemple suivant montre comment déclarer un pointeur vers un objet de type `Account` à l’aide de la **classe** mot clé :
+L’exemple suivant montre comment déclarer un pointeur vers un objet de type `Account` à l’aide de la **classe** mot clé :
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
- Le `Account` dans l’initialiseur (entre parenthèses) dans l’instruction précédente a une portée globale ; il s’agit du type **double**.
+Le `Account` dans l’initialiseur (entre parenthèses) dans l’instruction précédente a une portée globale ; il s’agit du type **double**.
 
 > [!NOTE]
 > La réutilisation des noms d'identificateur, comme l'indique cet exemple, est considérée comme un style de programmation médiocre.
@@ -118,7 +118,7 @@ Pour plus d’informations sur la déclaration et initialisation des objets de c
 
 ## <a name="hiding-names-with-global-scope"></a>Masquage des noms avec portée globale
 
- Vous pouvez masquer des noms avec portée globale en déclarant explicitement le même nom dans la portée de bloc. Toutefois, les noms de portée globale est accessible à l’aide de l’opérateur de résolution de portée (`::`).
+Vous pouvez masquer des noms avec portée globale en déclarant explicitement le même nom dans la portée de bloc. Toutefois, les noms de portée globale est accessible à l’aide de l’opérateur de résolution de portée (`::`).
 
 ```cpp
 #include <iostream>
@@ -139,4 +139,5 @@ Global-scoped i has the value: 7
 ```
 
 ## <a name="see-also"></a>Voir aussi
- [Concepts de base](../cpp/basic-concepts-cpp.md)
+
+[Concepts de base](../cpp/basic-concepts-cpp.md)

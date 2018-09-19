@@ -1,5 +1,5 @@
 ---
-title: PTR::operator = | Documents Microsoft
+title: PTR::operator = | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075076"
 ---
 # <a name="ptroperator"></a>ptr::operator=
 Attache un objet COM d’un `com::ptr`.  
@@ -39,8 +39,8 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_right`  
- Le pointeur d’interface COM à attacher.  
+*à d_roite*<br/>
+Le pointeur d’interface COM à attacher.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Une référence de suivi sur le `com::ptr`.  
@@ -49,12 +49,12 @@ ptr<_interface_type> % operator=(
  Si le `com::ptr` possède déjà une référence à un objet COM, `operator=` lève <xref:System.InvalidOperationException>.  
   
 ## <a name="remarks"></a>Notes  
- Assignation d’un objet COM à une `com::ptr` fait référence à l’objet COM, mais ne libère pas de référence de l’appelant à celui-ci.  
+ Affectation d’un objet COM d’un `com::ptr` fait référence à l’objet COM mais ne libère pas de référence de l’appelant à celui-ci.  
   
  Cet opérateur a le même effet que `Attach`.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  Le `ReplaceDocument` premiers appels de fonction membre `Release` sur n’importe quel appartenaient objet, puis utilise `operator=` pour attacher un objet document.  
+ Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  Le `ReplaceDocument` fonction membre appelle première `Release` sur n’importe quel détenus auparavant objet, puis utilise `operator=` pour attacher un nouvel objet de document.  
   
 ```  
 // comptr_op_assign.cpp  
@@ -128,7 +128,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  

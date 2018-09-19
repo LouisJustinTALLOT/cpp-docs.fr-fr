@@ -1,5 +1,5 @@
 ---
-title: Stockage de chaînes dans le fournisseur OLE DB | Documents Microsoft
+title: Stockage de chaînes dans le fournisseur OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5ba289e7e53ba1bcaca550ba84c2d871d215306
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84ee07f236ac7ec79149b1cb36f358598f9c6c12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112692"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Stockage de chaînes dans le fournisseur OLE DB
+
 Dans MyProviderRS.h, l’Assistant fournisseur OLE DB ATL crée un enregistrement d’utilisateur par défaut appelé `CWindowsFile`. Pour gérer les deux chaînes, vous devez soit modifier `CWindowsFile` ou ajoutez votre propre enregistrement utilisateur comme indiqué dans le code suivant :  
   
 ```cpp
@@ -50,11 +51,12 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Les membres de données `szCommand` et `szText` représentent les deux chaînes, avec `szCommand2` et `szText2` fournissant des colonnes supplémentaires si nécessaire. Le membre de données `dwBookmark` n’est pas nécessaire pour ce fournisseur en lecture seule simple mais est utilisée ultérieurement pour ajouter une `IRowsetLocate` interface ; consultez [amélioration en lecture uniquement fournisseur Simple](../../data/oledb/enhancing-the-simple-read-only-provider.md). Le `==` opérateur compare des instances (l’implémentation de cet opérateur est facultative).  
+Les membres de données `szCommand` et `szText` représentent les deux chaînes, avec `szCommand2` et `szText2` fournissant des colonnes supplémentaires si nécessaire. Le membre de données `dwBookmark` n’est pas nécessaire pour ce fournisseur simple en lecture seule, mais sera utilisé ultérieurement pour ajouter un `IRowsetLocate` interface ; consultez [amélioration de la Simple lecture seul fournisseur](../../data/oledb/enhancing-the-simple-read-only-provider.md). Le `==` opérateur compare des instances (l’implémentation de cet opérateur est facultatif).  
   
- Dans ce cas, votre fournisseur doit être prêt à compiler et exécuter. Pour tester le fournisseur, vous avez besoin d’un consommateur avec la fonctionnalité de correspondance. [Implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md) montre comment créer un tel consommateur de test. Exécutez le consommateur de test avec le fournisseur. Vérifiez que le consommateur de test récupère les chaînes appropriées à partir du fournisseur lorsque vous cliquez sur le **exécuter** situé dans le **consommateur de Test** boîte de dialogue.  
+Dans ce cas, votre fournisseur doit être prêt à compiler et exécuter. Pour tester le fournisseur, vous avez besoin d’un consommateur avec la fonctionnalité de correspondance. [Implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md) montre comment créer un tel un consommateur de test. Exécutez le consommateur de test avec le fournisseur. Vérifiez que le consommateur de test récupère les chaînes appropriées à partir du fournisseur lorsque vous cliquez sur le **exécuter** situé dans le **consommateur de Test** boîte de dialogue.  
   
- Lorsque vous avez testé avec succès votre fournisseur, vous souhaiterez peut-être améliorer ses fonctionnalités en implémentant des interfaces supplémentaires. Voici un exemple dans [amélioration du fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+Lorsque vous avez testé avec succès votre fournisseur, vous souhaiterez peut-être améliorer son fonctionnement en implémentant des interfaces supplémentaires. Voici un exemple dans [amélioration le fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Implémentation d’un fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implémentation d’un fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md)

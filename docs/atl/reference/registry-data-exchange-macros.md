@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1864fb953c53cba562856fed24a44b6157a03603
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764213"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109338"
 ---
 # <a name="registry-data-exchange-macros"></a>Macros d’échange de données de Registre
 
@@ -89,19 +89,19 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé racine*  
+*Clé racine*<br/>
 Racine de la clé de Registre.
 
-*sous-clé*  
+*sous-clé*<br/>
 La sous-clé de Registre.
 
-*nom de valeur*  
+*nom de valeur*<br/>
 La clé de Registre.
 
-*Membre*  
+*Membre*<br/>
 La variable membre à associer à l’entrée de Registre spécifié.
 
-*member_size*  
+*member_size*<br/>
 La taille, en octets, de la variable membre.
 
 ### <a name="remarks"></a>Notes
@@ -123,19 +123,19 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé racine*  
+*Clé racine*<br/>
 Racine de la clé de Registre.
 
-*sous-clé*  
+*sous-clé*<br/>
 La sous-clé de Registre.
 
-*nom de valeur*  
+*nom de valeur*<br/>
 La clé de Registre.
 
-*Membre*  
+*Membre*<br/>
 La variable membre à associer à l’entrée de Registre spécifié.
 
-*member_size*  
+*member_size*<br/>
 La taille, en octets, de la variable membre.
 
 ### <a name="remarks"></a>Notes
@@ -157,19 +157,19 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé racine*  
+*Clé racine*<br/>
 Racine de la clé de Registre.
 
-*sous-clé*  
+*sous-clé*<br/>
 La sous-clé de Registre.
 
-*nom de valeur*  
+*nom de valeur*<br/>
 La clé de Registre.
 
-*Membre*  
+*Membre*<br/>
 La variable membre à associer à l’entrée de Registre spécifié.
 
-*member_size*  
+*member_size*<br/>
 La taille, en octets, de la variable membre.
 
 ### <a name="remarks"></a>Notes
@@ -191,19 +191,19 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé racine*  
+*Clé racine*<br/>
 Racine de la clé de Registre.
 
-*sous-clé*  
+*sous-clé*<br/>
 La sous-clé de Registre.
 
-*nom de valeur*  
+*nom de valeur*<br/>
 La clé de Registre.
 
-*Membre*  
+*Membre*<br/>
 La variable membre à associer à l’entrée de Registre spécifié.
 
-*member_size*  
+*member_size*<br/>
 La taille, en octets, de la variable membre.
 
 ### <a name="remarks"></a>Notes
@@ -212,6 +212,6 @@ Cette macro est utilisée conjointement avec les macros BEGIN_RDX_MAP et END_RDX
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros](../../atl/reference/atl-macros.md)   
+[Macros](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

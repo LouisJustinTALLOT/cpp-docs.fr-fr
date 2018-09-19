@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3303 | Documents Microsoft
+title: Erreur du compilateur C3303 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec00864bf0fb9d6a2f6e19198285a9b8ac65dd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7625d7b16eba226539473ac8af109a3367291cb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105092"
 ---
 # <a name="compiler-error-c3303"></a>Erreur du compilateur C3303
-'attribute' : l’attribut ne peut être utilisé que sur 'usage'  
-  
- Une tentative a été faite pour utiliser un attribut où il n’est pas valide.
+
+'attribute' : l’attribut ne peut être utilisé que sur 'usage'
+
+Une tentative a été faite pour utiliser un attribut où il n’est pas valide.

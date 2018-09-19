@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4027 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4027 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad35c43f602dcaa83f550db887275db3e5213c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b919eeece5529d1914fadf5724088e3e64e73db9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089513"
 ---
 # <a name="compiler-warning-level-1-c4027"></a>Avertissement du compilateur (niveau 1) C4027
-fonction déclarée sans liste de paramètres formels  
-  
- La déclaration de fonction n’a pas de paramètres formels, mais il existe des paramètres formels dans la définition de fonction ou des paramètres réels dans un appel. Les appels ultérieurs à cette fonction supposent que la fonction accepte des paramètres réels des types détectés dans l’appel ou la définition de fonction.
+
+fonction déclarée sans liste de paramètres formels
+
+La déclaration de fonction n’a pas de paramètres formels, mais il existe des paramètres formels dans la définition de fonction ou des paramètres réels dans un appel. Les appels ultérieurs à cette fonction supposent que la fonction accepte des paramètres réels des types détectés dans l’appel ou la définition de fonction.

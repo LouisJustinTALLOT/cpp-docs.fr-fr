@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2777 | Documents Microsoft
+title: Erreur du compilateur C2777 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc3eebe5d3fe12bf102adff0cc77b6647fcf2059
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57dc92e267004cbb41fa9a6153ddc09f9aeb6fc5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234105"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077436"
 ---
 # <a name="compiler-error-c2777"></a>Erreur du compilateur C2777
-une seule méthode 'put' peut être spécifiée par propriété  
-  
- A [propriété](../../cpp/property-cpp.md) modificateur declspec possédait plusieurs `put` propriété.  
-  
- L’exemple suivant génère l’erreur C2777 :  
-  
-```  
-// C2777.cpp  
-struct A {  
-   __declspec(property(put=PutProp,put=PutPropToo))   // C2777  
-   // try the following line instead  
-   // __declspec(property(put=PutProp))  
-      int prop;  
-   int PutProp(void);  
-   int PutPropToo(void);  
-};  
+
+qu’une seule méthode 'put' peut être spécifiée par propriété
+
+Un [propriété](../../cpp/property-cpp.md) modificateur declspec possédait plusieurs `put` propriété.
+
+L’exemple suivant génère l’erreur C2777 :
+
+```
+// C2777.cpp
+struct A {
+   __declspec(property(put=PutProp,put=PutPropToo))   // C2777
+   // try the following line instead
+   // __declspec(property(put=PutProp))
+      int prop;
+   int PutProp(void);
+   int PutPropToo(void);
+};
 ```

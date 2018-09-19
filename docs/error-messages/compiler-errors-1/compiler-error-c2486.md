@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2486 | Documents Microsoft
+title: Erreur du compilateur C2486 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 856d17d9ec816c8216553eca5bb273349ca0040e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 106d70c031a6981157875c86b1332bbe3be8a668
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081726"
 ---
 # <a name="compiler-error-c2486"></a>Erreur du compilateur C2486
-'__LOCAL_SIZE' uniquement autorisé dans une fonction avec l’attribut 'naked'  
-  
- Dans les fonctions d’assembly inline, le nom `__LOCAL_SIZE` est réservée pour les fonctions déclarées avec le [naked](../../cpp/naked-cpp.md) attribut.  
-  
- L’exemple suivant génère C2486 :  
-  
-```  
-// C2486.cpp  
-// processor: x86  
-void __declspec(naked) f1() {  
-   __asm {  
-      mov   eax,   __LOCAL_SIZE  
-   }  
-}  
-void f2() {  
-   __asm {  
-      mov   eax,   __LOCAL_SIZE   // C2486  
-   }  
-}  
+
+'__LOCAL_SIZE' uniquement autorisé dans une fonction avec l’attribut 'naked'
+
+Dans les fonctions d’assembly inline, le nom `__LOCAL_SIZE` est réservée pour les fonctions déclarées avec le [naked](../../cpp/naked-cpp.md) attribut.
+
+L’exemple suivant génère C2486 :
+
+```
+// C2486.cpp
+// processor: x86
+void __declspec(naked) f1() {
+   __asm {
+      mov   eax,   __LOCAL_SIZE
+   }
+}
+void f2() {
+   __asm {
+      mov   eax,   __LOCAL_SIZE   // C2486
+   }
+}
 ```

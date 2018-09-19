@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbd0031e9291edc39b2b437acb014c6f0424fa4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58b5936ab9f73ce2fe351d078e61bddfda54d6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097820"
 ---
 # <a name="crtthreadtraits-class"></a>Crtthreadtraits, classe
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpsa*  
+*lpsa*<br/>
 Les attributs de sécurité pour le nouveau thread.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 La taille de pile pour le nouveau thread.
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 La procédure de thread du nouveau thread.
 
-*pvParam*  
+*pvParam*<br/>
 Le paramètre à passer à la procédure de thread.
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 La création d’indicateurs (0 ou CREATE_SUSPENDED).
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out] Adresse de la variable DWORD qui, en cas de réussite, reçoit l’ID de thread du thread nouvellement créé.
 
 ### <a name="return-value"></a>Valeur de retour

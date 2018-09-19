@@ -1,5 +1,5 @@
 ---
-title: Call, classe | Documents Microsoft
+title: Call, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 585a490ec64152a1268b7707971ea94e69bf9fbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689699"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109715"
 ---
 # <a name="call-class"></a>call, classe
 Un bloc de messagerie `call` est un `target_block` ordonné à plusieurs sources qui appelle une fonction spécifiée lors de la réception d'un message.  
@@ -41,11 +41,11 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
- Le type de charge utile des messages propagés à ce bloc.  
+*T*<br/>
+Le type de charge utile des messages propagés à ce bloc.  
   
- `_FunctorType`  
- La signature des fonctions que ce bloc peut accepter.  
+*_FunctorType*<br/>
+La signature des fonctions que ce bloc peut accepter.  
   
 ## <a name="members"></a>Membres  
   
@@ -62,8 +62,8 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|Exécute la fonction d’appel sur les messages d’entrée.|  
 |[process_message](#process_message)|Traite un message qui a été accepté par ce `call` bloc de messagerie.|  
-|[propagate_message](#propagate_message)|Passe un message à partir de façon asynchrone un `ISource` à ce bloc `call` bloc de messagerie. Il est appelé par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.|  
-|[send_message](#send_message)|Passe de façon synchrone un message à partir d’un `ISource` à ce bloc `call` bloc de messagerie. Il est appelé par le `send` (méthode), lorsqu’elle est appelée par un bloc source.|  
+|[propagate_message](#propagate_message)|Passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `call` bloc de messagerie. Elle est appelée par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.|  
+|[send_message](#send_message)|Passe de façon synchrone un message à partir d’un `ISource` à ce bloc `call` bloc de messagerie. Elle est appelée par le `send` (méthode), lorsqu’elle est appelée par un bloc source.|  
 |[supports_anonymous_source](#supports_anonymous_source)|Remplace le `supports_anonymous_source` méthode pour indiquer que ce bloc peut accepter des messages offerts par une source qui n’est pas liée. (Substitue [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Notes  
@@ -76,7 +76,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  `call`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -113,24 +113,24 @@ call(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Func`  
- Une fonction qui sera appelée pour chaque message accepté.  
+*_Func*<br/>
+Une fonction qui sera appelée pour chaque message accepté.  
   
- `_Filter`  
- Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.  
+*_Filtre*<br/>
+Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.  
   
- `_PScheduler`  
- Le `Scheduler` objet dans lequel la tâche de propagation du `call` bloc de messagerie est planifiée.  
+*_PScheduler*<br/>
+Le `Scheduler` objet dans lequel la tâche de propagation pour le `call` bloc de messagerie est planifiée.  
   
- `_PScheduleGroup`  
- Le `ScheduleGroup` objet dans lequel la tâche de propagation du `call` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.  
+*_PScheduleGroup*<br/>
+Le `ScheduleGroup` objet dans lequel la tâche de propagation pour le `call` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.  
   
 ### <a name="remarks"></a>Notes  
  Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les paramètres `_PScheduler` ou `_PScheduleGroup` .  
   
  Le type `_Call_method` est un functor avec la signature `void (T const &)` qui est appelé par ce `call` bloc de messagerie pour traiter un message.  
   
- Le type `filter_method` est un functor avec la signature `bool (T const &)` qui est appelé par ce `call` bloc de messagerie pour déterminer si elle doit accepter un message proposé.  
+ Le type `filter_method` est un functor avec la signature `bool (T const &)` qui est appelé par ce `call` bloc de messagerie pour déterminer s’il doit accepter un message proposé.  
   
 ##  <a name="dtor"></a> ~ appeler 
 
@@ -149,7 +149,8 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_PMessage`  
+*_PMessage*<br/>
+Pointeur vers le message qui doit être gérées.  
   
 ##  <a name="process_message"></a> process_message 
 
@@ -160,12 +161,12 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_PMessage`  
- Pointeur vers le message qui doit être gérée.  
+*_PMessage*<br/>
+Pointeur vers le message qui doit être gérées.  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- Passe un message à partir de façon asynchrone un `ISource` à ce bloc `call` bloc de messagerie. Il est appelé par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.  
+ Passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `call` bloc de messagerie. Elle est appelée par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.  
   
 ```
 virtual message_status propagate_message(
@@ -174,18 +175,18 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_PMessage`  
- Pointeur vers l'objet `message`.  
+*_PMessage*<br/>
+Pointeur vers l'objet `message`.  
   
- `_PSource`  
- Pointeur vers le bloc source qui transmet le message.  
+*_PSource*<br/>
+Pointeur vers le bloc source qui transmet le message.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
+ Un [message_status](concurrency-namespace-enums.md) indication de ce que la cible a décidé de faire avec le message.  
   
 ##  <a name="send_message"></a> send_message 
 
- Passe de façon synchrone un message à partir d’un `ISource` à ce bloc `call` bloc de messagerie. Il est appelé par le `send` (méthode), lorsqu’elle est appelée par un bloc source.  
+ Passe de façon synchrone un message à partir d’un `ISource` à ce bloc `call` bloc de messagerie. Elle est appelée par le `send` (méthode), lorsqu’elle est appelée par un bloc source.  
   
 ```
 virtual message_status send_message(
@@ -194,14 +195,14 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_PMessage`  
- Pointeur vers l'objet `message`.  
+*_PMessage*<br/>
+Pointeur vers l'objet `message`.  
   
- `_PSource`  
- Pointeur vers le bloc source qui transmet le message.  
+*_PSource*<br/>
+Pointeur vers le bloc source qui transmet le message.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
+ Un [message_status](concurrency-namespace-enums.md) indication de ce que la cible a décidé de faire avec le message.  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 

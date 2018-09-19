@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0072 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0072 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e28fe0f27834b1ec18236ab8734b24601baef72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae9ef1017068fb2c515949110905a65e822d93a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295715"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074453"
 ---
 # <a name="expression-evaluator-error-cxx0072"></a>Évaluateur d'expression, erreur CXX0072
-Erreur : le type d’informations manquantes ou inconnues  
-  
- Le fichier .pch ne pas été lié ou le code a une référence à un type qui se trouve dans un module non compilé avec/Zi.  
-  
- Cette erreur est identique à CAN0067.
+
+Erreur : type d’informations manquantes ou inconnues
+
+Le fichier .pch ne pas été lié ou le code a une référence à un type qui se trouve dans un module non compilé avec/Zi.
+
+Cette erreur est identique à CAN0067.

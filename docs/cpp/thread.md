@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 80ea212f8c888680edf50e269c89e62988a0ee36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104385"
 ---
 # <a name="thread"></a>thread
 
@@ -34,7 +34,7 @@ Le **thread** modificateur de classe de stockage étendu est utilisé pour décl
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec (thread)** *déclarateur*  
+> **__declspec (thread)** *déclarateur*
 
 ## <a name="remarks"></a>Notes
 
@@ -96,6 +96,7 @@ En outre, vous devez respecter ces indications lorsque vous déclarez des variab
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
- [__declspec](../cpp/declspec.md)  
- [Mots clés](../cpp/keywords-cpp.md)  
- [Stockage local des threads (TLS)](../parallel/thread-local-storage-tls.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Mots clés](../cpp/keywords-cpp.md)<br/>
+[Stockage local des threads (TLS)](../parallel/thread-local-storage-tls.md)

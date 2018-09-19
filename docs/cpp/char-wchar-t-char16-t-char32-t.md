@@ -17,25 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0c89df02c624d96c613f6241c9beefd466827e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9855dc406c56f82eb3ed87248316103397e44007
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112653"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
+
 Les types **char**, **wchar_t**, **char16_t** et **char32_t** sont des types intégrés qui représentent des caractères alphanumériques ainsi que glyphes non alphanumériques et des caractères non imprimables.
 
 ## <a name="syntax"></a>Syntaxe
 
-```cpp  
-char     ch1{ 'a' };  // or { u8'a' }   
-wchar_t  ch2{ L'a' };    
-char16_t ch3{ u'a' };    
-char32_t ch4{ U'a' };  
-```  
-  
+```cpp
+char     ch1{ 'a' };  // or { u8'a' }
+wchar_t  ch2{ L'a' };
+char16_t ch3{ u'a' };
+char32_t ch4{ U'a' };
+```
+
 ## <a name="remarks"></a>Notes
 
 Le **char** type était le type de caractère d’origine en C et C++. Le type **unsigned char** est souvent utilisé pour représenter un *octets*, qui n’est pas un type intégré en C++. Le **char** type peut être utilisé pour stocker des caractères du jeu de caractères ASCII ou un des jeux de caractères ISO-8859 et chaque octet de caractères multioctets comme Shift-JIS ou l’encodage UTF-8 du jeu de caractères Unicode. Chaînes de **char** type sont appelés *affiner* des chaînes, même lorsque utilisé pour encoder des caractères multioctets. Dans le compilateur Microsoft, **char** est un type de 8 bits.
@@ -44,4 +45,4 @@ Le **wchar_t** type est un type défini par l’implémentation de caractères l
 
 Le **char16_t** et **char32_t** types représentent des caractères larges 16 bits et 32 bits, respectivement. Unicode encodé au format UTF-16 peut être stockées dans le **char16_t** type et Unicode encodés au format UTF-32 peut être stockées dans le **char32_t** type. Chaînes de ces types et **wchar_t** sont toutes appelées *large* des chaînes, bien que le terme fait souvent référence spécifiquement pour les chaînes de **wchar_t** type.
 
-Dans la bibliothèque standard C++, le `basic_string` type est spécialisé pour les chaînes étroites et étendues. Utilisez `std::string` lorsque les caractères sont de type **char**, `std::u16string` lorsque les caractères sont de type **char16_t**, `std::u32string` lorsque les caractères sont de type **char32_t** , et `std::wstring` lorsque les caractères sont de type **wchar_t**. Autres types qui représentent le texte, y compris `std::stringstream` et `std::cout` ont des spécialisations pour les chaînes étroites et étendues.  
+Dans la bibliothèque standard C++, le `basic_string` type est spécialisé pour les chaînes étroites et étendues. Utilisez `std::string` lorsque les caractères sont de type **char**, `std::u16string` lorsque les caractères sont de type **char16_t**, `std::u32string` lorsque les caractères sont de type **char32_t** , et `std::wstring` lorsque les caractères sont de type **wchar_t**. Autres types qui représentent le texte, y compris `std::stringstream` et `std::cout` ont des spécialisations pour les chaînes étroites et étendues.

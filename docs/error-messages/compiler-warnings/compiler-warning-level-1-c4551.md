@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4551 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4551 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ae77139e46e63946e4bb0402d3a697839d6fc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5dc8852ccaee1d2b07fbf35e57885b863afef921
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075564"
 ---
 # <a name="compiler-warning-level-1-c4551"></a>Avertissement du compilateur (niveau 1) C4551
-liste d’arguments de fonction appel manquant  
-  
- Un appel de fonction doit inclure les parenthèses ouvrantes et fermantes après le nom de fonction, même si la fonction ne prend aucun paramètre.  
-  
- L’exemple suivant génère C4551 :  
-  
-```  
-// C4551.cpp  
-// compile with: /W1  
-void function1() {  
-}  
-  
-int main() {  
-   function1;   // C4551  
-   function1();   // OK  
-}  
+
+liste d’arguments de fonction appel manquant
+
+Un appel de fonction doit inclure les parenthèses ouvrantes et fermantes après le nom de fonction, même si la fonction ne prend aucun paramètre.
+
+L’exemple suivant génère C4551 :
+
+```
+// C4551.cpp
+// compile with: /W1
+void function1() {
+}
+
+int main() {
+   function1;   // C4551
+   function1();   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 3) C4283 | Documents Microsoft
+title: Compilateur avertissement (niveau 3) C4283 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bcdb658c191d7386be8c35bd4eac13c760a6111
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0459d54764748f9c23bfa0ee3090f9d23f413423
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075499"
 ---
 # <a name="compiler-warning-level-3-c4283"></a>Avertissement du compilateur (niveau 3) C4283
-et via le type 'type'  
-  
- Cette suite de l’avertissement [C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md) montre que **operator ->** s’appelle elle-même via `type`.
+
+et via le type 'type'
+
+Cette suite de l’avertissement [C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md) montre que **operator ->** appelle lui-même via `type`.

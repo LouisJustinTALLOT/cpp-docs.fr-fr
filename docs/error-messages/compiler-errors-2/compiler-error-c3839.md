@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3839 | Documents Microsoft
+title: Erreur du compilateur C3839 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbb5541e07d168df36bae83f81b7b8a8a7273665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 597d02ff347d399833e2376743b50f65e7674a18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269512"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092906"
 ---
 # <a name="compiler-error-c3839"></a>Erreur du compilateur C3839
-impossible de changer l'alignement dans un type managé ou WinRT  
-  
- L’alignement des variables dans gérés ou les types Windows Runtime est contrôlé par le CLR ou Windows Runtime et ne peut pas être modifié avec [aligner](../../cpp/align-cpp.md).  
-  
- L'exemple suivant génère l'erreur C3839 :  
-  
-```  
-// C3839a.cpp  
-// compile with: /clr  
-ref class C  
-{  
-public:  
-   __declspec(align(32)) int m_j; // C3839  
-};  
-  
-int main()  
-{  
-}  
+
+impossible de changer l'alignement dans un type managé ou WinRT
+
+L’alignement des variables dans gérés ou des types Windows Runtime est contrôlé par le CLR ou Windows Runtime et ne peut pas être modifié avec [aligner](../../cpp/align-cpp.md).
+
+L'exemple suivant génère l'erreur C3839 :
+
+```
+// C3839a.cpp
+// compile with: /clr
+ref class C
+{
+public:
+   __declspec(align(32)) int m_j; // C3839
+};
+
+int main()
+{
+}
 ```

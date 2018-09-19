@@ -1,5 +1,5 @@
 ---
-title: LNK4044 d’avertissement des outils Éditeur de liens | Documents Microsoft
+title: Avertissement LNK4044 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b921f07638751b9e0702517b125b0f9de828f81b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3341c5b883e3476467cf4e214f632f84d805e70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098892"
 ---
 # <a name="linker-tools-warning-lnk4044"></a>Avertissement des outils Éditeur de liens LNK4044
-option non reconnue 'option' ; ignoré  
-  
- L’option donnée n’est pas une option valide pour cet outil. L’outil a ignoré l’option.  
-  
- Pour afficher la liste des options valides, exécutez l’outil sans arguments ou les options.
+
+option non reconnue 'option' ; ignoré
+
+L’option donnée n’est pas une option valide pour cet outil. L’outil a ignoré l’option.
+
+Pour afficher la liste des options valides, exécutez l’outil sans arguments ou les options.

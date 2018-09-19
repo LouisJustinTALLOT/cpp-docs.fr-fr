@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2630 | Documents Microsoft
+title: Erreur du compilateur C2630 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a77a658f724f701e67968adb7a1310922b9476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bcde84e241590b67e3877e3ce415f4cc00e757a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085938"
 ---
 # <a name="compiler-error-c2630"></a>Erreur du compilateur C2630
-'symbole' trouvé à la place d’une liste séparée par des virgules  
-  
- Le symbole apparaît dans un contexte qui requiert une virgule.  
-  
- L’exemple suivant génère l’erreur C2630 :  
-  
-```  
-// C2630.cpp  
-// compile with: /c  
-struct D {  
-   D(int);  
-};  
-  
-struct E {  
-   E(int);  
-};  
-  
-class C : public D, public E {  
-   C();  
-};  
-  
-C::C() : D(0) ; E(0) { }   // C2630  
-C::C() : D(0), E(0) {}   // OK  
+
+'symbol' trouvé à la place d’une liste séparée par des virgules
+
+Le symbole apparaît dans un contexte qui exige une virgule.
+
+L’exemple suivant génère l’erreur C2630 :
+
+```
+// C2630.cpp
+// compile with: /c
+struct D {
+   D(int);
+};
+
+struct E {
+   E(int);
+};
+
+class C : public D, public E {
+   C();
+};
+
+C::C() : D(0) ; E(0) { }   // C2630
+C::C() : D(0), E(0) {}   // OK
 ```

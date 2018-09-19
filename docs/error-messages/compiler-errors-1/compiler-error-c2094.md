@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2094 | Documents Microsoft
+title: Erreur du compilateur C2094 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4db86a805118cbdbf74f21737b4a331fc59237c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e3591fef423bc24562a2f2edf18f7f2774cfcc4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167318"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073523"
 ---
 # <a name="compiler-error-c2094"></a>Erreur du compilateur C2094
-Étiquette 'identifier' non définie  
-  
-L’étiquette utilisée par une instruction [goto](../../cpp/goto-statement-cpp.md) ne se trouve pas dans la fonction.  
-  
-## <a name="example"></a>Exemple  
-L’exemple suivant génère l’erreur C2094 :  
-  
-```cpp  
-// C2094.c  
-int main() {  
-   goto test;  
-}   // C2094  
-```  
-  
- Solution possible :  
-  
-```cpp  
-// C2094b.c  
-int main() {  
-   goto test;  
-   test:   
-   {  
-   }  
-}  
+
+Étiquette 'identifier' non définie
+
+L’étiquette utilisée par une instruction [goto](../../cpp/goto-statement-cpp.md) ne se trouve pas dans la fonction.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C2094 :
+
+```cpp
+// C2094.c
+int main() {
+   goto test;
+}   // C2094
+```
+
+Solution possible :
+
+```cpp
+// C2094b.c
+int main() {
+   goto test;
+   test:
+   {
+   }
+}
 ```

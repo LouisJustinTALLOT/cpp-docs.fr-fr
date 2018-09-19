@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405868"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076292"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ Utilisez `__declspec(align(#))` pour contrôler avec précision l'alignement des
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec (align (** *#* **))** *déclarateur*  
+> **__declspec (align (** *#* **))** *déclarateur*
 
 ## <a name="remarks"></a>Notes
 
@@ -251,6 +251,7 @@ Le décalage d'un objet est basé sur le décalage de l'objet précédent et du 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
-[__declspec](../cpp/declspec.md)  
-[Vue d’ensemble des conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)  
-[Vue d’ensemble des conventions d’appel x64](../build/overview-of-x64-calling-conventions.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Vue d’ensemble des conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Vue d’ensemble des conventions d’appel x64](../build/overview-of-x64-calling-conventions.md)
