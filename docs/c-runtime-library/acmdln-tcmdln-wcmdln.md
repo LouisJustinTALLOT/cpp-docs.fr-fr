@@ -32,30 +32,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 141e261af618cc6058a2a731b70e824582be303b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c9dd8af9b55ab022277737f2349b27eb257810f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386493"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135865"
 ---
 # <a name="acmdln-tcmdln-wcmdln"></a>_acmdln, _tcmdln, _wcmdln
-Variable globale CRT interne. Ligne de commande.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-char * _acmdln;  
-wchar_t * _wcmdln;  
-  
-#ifdef WPRFLAG  
-   #define _tcmdln _wcmdln  
-#else  
-   #define _tcmdln _acmdln  
-```  
-  
-## <a name="remarks"></a>Notes  
- Ces variables internes CRT stockent la ligne de commande entière. Si elles sont exposées dans les symboles exportées pour le CRT, elles ne sont pas destinées pour autant à être utilisées dans votre code. `_acmdln` stocke les données sous forme de chaîne de caractères. `_wcmdln` stocke les données sous forme de chaîne de caractères larges. `_tcmdln` peut être défini comme `_acmdln` ou `_wcmdln`, selon le cas.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Variables globales](../c-runtime-library/global-variables.md)
+
+Variable globale CRT interne. Ligne de commande.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+char * _acmdln;
+wchar_t * _wcmdln;
+
+#ifdef WPRFLAG
+   #define _tcmdln _wcmdln
+#else
+   #define _tcmdln _acmdln
+```
+
+## <a name="remarks"></a>Notes
+
+Ces variables internes CRT stockent la ligne de commande entière. Si elles sont exposées dans les symboles exportées pour le CRT, elles ne sont pas destinées pour autant à être utilisées dans votre code. `_acmdln` stocke les données sous forme de chaîne de caractères. `_wcmdln` stocke les données sous forme de chaîne de caractères larges. `_tcmdln` peut être défini comme `_acmdln` ou `_wcmdln`, selon le cas.
+
+## <a name="see-also"></a>Voir aussi
+
+[Variables globales](../c-runtime-library/global-variables.md)

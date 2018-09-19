@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4305 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4305 | Microsoft Docs
 ms.custom: ''
 ms.date: 1/17/2018
 ms.technology:
@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7694c511f57b6907227d62f969b61218f836cb14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88ae0fb38b7e6af14525906e90486a68ce22ee56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277821"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086822"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Avertissement du compilateur (niveau 1) C4305
 
-> '*contexte*' : troncation de '*type1*'à'*type2*'  
+> «*contexte*' : troncation de '*type1*'en'*type2*»
 
 ## <a name="remarks"></a>Notes
 
@@ -32,7 +32,7 @@ Cet avertissement est émis lorsqu’une valeur est convertie en un type plus pe
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre deux façons, vous pouvez voir cet avertissement :
+Cet exemple montre deux façons cet avertissement peut s’afficher :
 
 ```cpp
 // C4305.cpp

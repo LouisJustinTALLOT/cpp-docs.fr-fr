@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059093"
 ---
 # <a name="reduction"></a>reduction
 Spécifie qu’une ou plusieurs variables qui sont spécifiques à chaque thread font l’objet d’une opération de réduction à la fin de la région parallèle.  
@@ -32,14 +32,13 @@ Spécifie qu’une ou plusieurs variables qui sont spécifiques à chaque thread
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+### <a name="parameters"></a>Paramètres
   
- `operation`  
- L’opérateur pour l’opération à effectuer sur les variables (`var`) à la fin de la région parallèle.  
+*Opération*<br/>
+L’opérateur pour l’opération à effectuer sur les variables (`var`) à la fin de la région parallèle.  
   
- `var`  
- Une ou plusieurs variables sur laquelle effectuer la réduction scalaire. Si plusieurs variables est spécifié, séparez les noms de variables par une virgule.  
+*var*<br/>
+Une ou plusieurs variables sur laquelle effectuer la réduction scalaire. Si plusieurs variables est spécifié, séparez les noms de variables par une virgule.  
   
 ## <a name="remarks"></a>Notes  
  `reduction` s’applique aux directives suivantes :  

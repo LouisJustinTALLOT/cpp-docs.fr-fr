@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4083 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4083 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d0d7baa0e521484841c638cef4332001a65e78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64e81b6a68a9584e4fb30829e15da6472212ce05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046366"
 ---
 # <a name="compiler-warning-level-1-c4083"></a>Compilateur avertissement (niveau 1) C4083
-'jeton' attendu trouver l’identificateur 'identificateur'  
-  
- Un identificateur apparaît dans un emplacement erroné dans une **#pragma** instruction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// C4083.cpp  
-// compile with: /W1 /LD  
-#pragma warning disable:4083    // C4083  
-#pragma warning(disable:4083)   //correct  
-```  
-  
- Vérifiez la syntaxe de la [#pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) directives.
+
+'jeton' attendu trouver l’identificateur 'identifier'
+
+Un identificateur apparaît au mauvais endroit dans un **#pragma** instruction.
+
+## <a name="example"></a>Exemple
+
+```
+// C4083.cpp
+// compile with: /W1 /LD
+#pragma warning disable:4083    // C4083
+#pragma warning(disable:4083)   //correct
+```
+
+Vérifiez la syntaxe de la [#pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) directives.

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3354 | Documents Microsoft
+title: Erreur du compilateur C3354 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4bcc36580a453932068350f01b53c5f09f2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40f86702be19259bed7899cdbc5106346d6c6594
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257353"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058534"
 ---
 # <a name="compiler-error-c3354"></a>Erreur du compilateur C3354
-'fonction' : la fonction utilisée pour créer un délégué ne peut pas avoir un type de retour 'type'  
-  
- Les types suivants ne sont pas des types de retour valides pour un `delegate`:  
-  
--   Pointeur vers fonction  
-  
--   Pointeur vers membre  
-  
--   Pointeur vers fonction membre  
-  
--   Référence vers fonction  
-  
--   Référence vers fonction membre  
-  
- L’exemple suivant génère l’erreur C3354 :  
-  
-```  
-// C3354_2.cpp  
-// compile with: /clr /c  
-using namespace System;  
-typedef void ( *VoidPfn )();  
-  
-delegate VoidPfn func(); // C3354  
-// try the following line instead  
-// delegate  void func();  
-```  
+
+'fonction' : la fonction utilisée pour créer un délégué ne peut pas avoir un type de retour 'type'
+
+Les types suivants ne sont pas des types de retour valides pour un `delegate`:
+
+- Pointeur vers fonction
+
+- Pointeur vers membre
+
+- Pointeur vers fonction membre
+
+- Référence vers fonction
+
+- Référence vers fonction membre
+
+L’exemple suivant génère l’erreur C3354 :
+
+```
+// C3354_2.cpp
+// compile with: /clr /c
+using namespace System;
+typedef void ( *VoidPfn )();
+
+delegate VoidPfn func(); // C3354
+// try the following line instead
+// delegate  void func();
+```

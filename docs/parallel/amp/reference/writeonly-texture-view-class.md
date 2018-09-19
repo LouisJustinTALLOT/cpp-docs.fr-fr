@@ -1,5 +1,5 @@
 ---
-title: writeonly_texture_view, classe | Documents Microsoft
+title: writeonly_texture_view, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65e4895af0903008e17b75a38981c169f07fc1c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695403"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047750"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view, classe
-Fournit l’accès writeonly une texture.  
+Fournit un accès à une texture writeonly.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,11 +45,11 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `value_type`  
- Le type des éléments de la texture.  
+*value_type*<br/>
+Le type des éléments de la texture.  
   
- `_Rank`  
- Le rang de la texture.  
+*_Rank*<br/>
+Le rang de la texture.  
   
 ## <a name="members"></a>Membres  
   
@@ -83,14 +83,14 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Name|Description|  
 |----------|-----------------|  
-|[RANK (constante)](#rank)|Obtient le classement de la `writeonly_texture_view` objet.|  
+|[rang (constante)](#rank)|Obtient le rang de le `writeonly_texture_view` objet.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `_Texture_base`  
   
  `writeonly_texture_view`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_graphics.h  
   
  **Namespace :** Concurrency::graphics  
@@ -113,15 +113,15 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- `writeonly_texture_view` objet à copier à partir de.  
+*_Autre*<br/>
+`writeonly_texture_view` objet à copier.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une référence à ce `writeonly_texture_view` objet.  
+ Une référence à cet `writeonly_texture_view` objet.  
   
-##  <a name="rank"></a> Rang 
+##  <a name="rank"></a> rang 
 
- Obtient le classement de la `writeonly_texture_view` objet.  
+ Obtient le rang de le `writeonly_texture_view` objet.  
   
 ```  
 static const int rank = _Rank;  
@@ -138,11 +138,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Index`  
- L’index de l’élément.  
+*_Index*<br/>
+L’index de l’élément.  
   
- `value`  
- Nouvelle valeur de l’élément.  
+*valeur*<br/>
+Nouvelle valeur de l’élément.  
   
 ##  <a name="ctor"></a> writeonly_texture_view 
 
@@ -160,14 +160,14 @@ writeonly_texture_view(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Rank`  
- Le rang de la texture.  
+*_Rank*<br/>
+Le rang de la texture.  
   
- `value_type`  
- Le type des éléments de la texture.  
+*value_type*<br/>
+Le type des éléments de la texture.  
   
- `_Src`  
- La texture est utilisée pour créer le `writeonly_texture_view`.  
+*_Src*<br/>
+La texture est utilisée pour créer le `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

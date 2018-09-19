@@ -1,5 +1,5 @@
 ---
-title: cancellation_token_source, classe | Documents Microsoft
+title: cancellation_token_source, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053646"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source, classe
 La classe `cancellation_token_source` représente la capacité d'annulation d'une opération annulable.  
@@ -65,7 +65,7 @@ class cancellation_token_source;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `cancellation_token_source`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** pplcancellation_token.h  
   
  **Espace de noms :** concurrency  
@@ -97,7 +97,8 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
+*_Src*<br/>
+Objet à copier ou déplacer.  
   
 ##  <a name="create_linked_source"></a> create_linked_source 
 
@@ -112,15 +113,17 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Iter`  
- `_Src`  
- Jeton dont l'annulation provoque l'annulation de la source du jeton retourné. Notez que la source du jeton retourné peut également être annulée indépendamment de la source contenue dans ce paramètre.  
+*_Iter*<br/>
+Type d’itérateur.
+
+*_Src*<br/>
+Jeton dont l'annulation provoque l'annulation de la source du jeton retourné. Notez que la source du jeton retourné peut également être annulée indépendamment de la source contenue dans ce paramètre.  
   
- `_Begin`  
- Itérateur de bibliothèque Standard C++ correspondant au début de la plage de jetons à écouter pour l’annulation.  
+*_Commencer l'*<br/>
+Itérateur de bibliothèque Standard C++ correspondant au début de la plage de jetons à écouter pour l’annulation.  
   
- `_End`  
- Itérateur de bibliothèque C++ Standard correspondant à la fin de la plage de jetons à écouter pour l’annulation.  
+*_Mettre fin à*<br/>
+Itérateur de bibliothèque C++ Standard correspondant à la fin de la plage de jetons à écouter pour l’annulation.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `cancellation_token_source` qui est annulée lorsque le jeton fourni par le paramètre `_Src` est annulé.  
@@ -143,7 +146,8 @@ bool operator!= (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
+*_Src*<br/>
+Opérande.
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -156,8 +160,9 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
-  
+*_Src*<br/>
+Opérande.
+
 ### <a name="return-value"></a>Valeur de retour  
   
 ##  <a name="operator_eq_eq"></a> opérateur == 
@@ -167,7 +172,8 @@ bool operator== (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
+*_Src*<br/>
+Opérande.
   
 ### <a name="return-value"></a>Valeur de retour  
   

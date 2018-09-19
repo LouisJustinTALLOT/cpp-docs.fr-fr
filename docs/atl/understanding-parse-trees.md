@@ -14,37 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561bfa3e307a08c6a3560a6a8b6d3bebd8598343
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 08c92d86cbbfd38ed4ae852ce52e3b70735812e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028088"
 ---
 # <a name="understanding-parse-trees"></a>Présentation des arborescences d’analyse
 
 Vous pouvez définir une ou plusieurs arborescences d’analyse dans votre script de bureau d’enregistrement, où chaque arborescence d’analyse a la forme suivante :
 
-```  
-<root key>{<registry expression>}+  
+```
+<root key>{<registry expression>}+
 ```
 
 où :
 
-```  
+```
 <root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
     HKEY_LOCAL_MACHINE | HKEY_USERS |  
     HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
     HKEY_CURRENT_CONFIG | HKCR | HKCU |  
-    HKLM | HKU | HKPD | HKDD | HKCC  
-<registry expression> ::= <Add Key> | <Delete Key>  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]  
-<Delete Key> ::= Delete<Key Name>  
-<Key Name> ::= '<AlphaNumeric>+'  
-<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0  
-<Key Value> ::== <Key Type><Key Name>  
-<Key Type> ::= s | d  
-<Key Value> ::= '<AlphaNumeric>'  
+    HKLM | HKU | HKPD | HKDD | HKCC
+<registry expression> ::= <Add Key> | <Delete Key>
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
+<Delete Key> ::= Delete<Key Name>
+<Key Name> ::= '<AlphaNumeric>+'
+<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0
+<Key Value> ::== <Key Type><Key Name>
+<Key Type> ::= s | d
+<Key Value> ::= '<AlphaNumeric>'
 ```
 
 > [!NOTE]
@@ -52,8 +52,8 @@ où :
 
 Une arborescence d’analyse peut ajouter plusieurs clés et des sous-clés pour la \<clé racine >. Ce faisant, il conserve un handle de sous-clé ouvert jusqu'à ce que l’analyseur a terminé l’analyse de toutes ses sous-clés. Cette approche est plus efficace que le traitement d’une clé unique à la fois, comme illustré dans l’exemple suivant :
 
-```  
-HKEY_CLASSES_ROOT  
+```
+HKEY_CLASSES_ROOT
 {  
     'MyVeryOwnKey'  
     {  
@@ -61,8 +61,8 @@ HKEY_CLASSES_ROOT
         {  
             'PrettyCool'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 Ici, le bureau d’enregistrement s’affiche initialement (crée) `HKEY_CLASSES_ROOT\MyVeryOwnKey`. Il voit que `MyVeryOwnKey` a une sous-clé. Plutôt que fermer la clé à `MyVeryOwnKey`, le bureau d’enregistrement conserve le handle et ouvre (crée) `HasASubKey` à l’aide de ce handle parent. (Le Registre système peut être plus lent quand aucun handle parent n’est ouvert.) Par conséquent, ouvrir `HKEY_CLASSES_ROOT\MyVeryOwnKey` , puis en ouvrant `HasASubKey` avec `MyVeryOwnKey` comme le parent est plus rapide que l’ouverture `MyVeryOwnKey`, fermeture `MyVeryOwnKey`, puis en ouvrant `MyVeryOwnKey\HasASubKey`.
