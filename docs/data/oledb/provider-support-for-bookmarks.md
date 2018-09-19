@@ -19,25 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b16605b8cd0b5855d7a6cc1f5ceac9f46ad495f4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017171"
 ---
 # <a name="provider-support-for-bookmarks"></a>Prise en charge des signets par le fournisseur
+
 L’exemple de cette rubrique ajoute le `IRowsetLocate` interface pour la `CMyProviderRowset` classe. Dans presque tous les cas, vous commencez par ajouter une interface à un objet COM existant. Vous pouvez ensuite le tester en ajoutant plusieurs appels à partir de modèles du consommateur. L’exemple montre comment :  
   
--   Ajouter une interface à un fournisseur.  
+- Ajouter une interface à un fournisseur.  
   
--   Déterminer dynamiquement les colonnes à retourner au consommateur.  
+- Déterminer dynamiquement les colonnes à retourner au consommateur.  
   
--   Ajouter la prise en charge du signet.  
+- Ajouter la prise en charge du signet.  
   
- L'interface `IRowsetLocate` hérite de l'interface `IRowset`. Pour ajouter le `IRowsetLocate` l’interface, héritent `CMyProviderRowset` de [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
+L'interface `IRowsetLocate` hérite de l'interface `IRowset`. Pour ajouter le `IRowsetLocate` l’interface, héritent `CMyProviderRowset` de [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
- Ajout de la `IRowsetLocate` interface est un peu différente de la plupart des interfaces. Pour aligner la vtable, OLE DB modèles du fournisseur ont un paramètre de modèle pour gérer l’interface dérivée. Le code suivant montre la nouvelle liste d’héritage :  
+Ajout de la `IRowsetLocate` interface est un peu différente de la plupart des interfaces. Pour aligner la vtable, OLE DB modèles du fournisseur ont un paramètre de modèle pour gérer l’interface dérivée. Le code suivant montre la nouvelle liste d’héritage :  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -50,9 +51,9 @@ class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,
           IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>>  
 ```  
   
- La quatrième, cinquième et sixième paramètres sont tous ajoutés. Cet exemple utilise les valeurs par défaut pour la quatrième et cinquième paramètres mais spécifient `IRowsetLocateImpl` comme sixième paramètre. `IRowsetLocateImpl` est une classe de modèle OLE DB qui prend deux paramètres de modèle : ils raccordent le `IRowsetLocate` interface pour la `CMyProviderRowset` classe. Pour ajouter la plupart des interfaces, vous pouvez ignorer cette étape et passer à la suivante. Uniquement les `IRowsetLocate` et `IRowsetScroll` interfaces doivent être traitées de cette façon.  
+La quatrième, cinquième et sixième paramètres sont tous ajoutés. Cet exemple utilise les valeurs par défaut pour la quatrième et cinquième paramètres mais spécifient `IRowsetLocateImpl` comme sixième paramètre. `IRowsetLocateImpl` est une classe de modèle OLE DB qui prend deux paramètres de modèle : ils raccordent le `IRowsetLocate` interface pour la `CMyProviderRowset` classe. Pour ajouter la plupart des interfaces, vous pouvez ignorer cette étape et passer à la suivante. Uniquement les `IRowsetLocate` et `IRowsetScroll` interfaces doivent être traitées de cette façon.  
   
- Vous devez alors indiquer le `CMyProviderRowset` pour appeler `QueryInterface` pour le `IRowsetLocate` interface. Ajoutez la ligne `COM_INTERFACE_ENTRY(IRowsetLocate)` à la carte. La table d’interface pour `CMyProviderRowset` doit apparaître comme indiqué dans le code suivant :  
+Vous devez alors indiquer le `CMyProviderRowset` pour appeler `QueryInterface` pour le `IRowsetLocate` interface. Ajoutez la ligne `COM_INTERFACE_ENTRY(IRowsetLocate)` à la carte. La table d’interface pour `CMyProviderRowset` doit apparaître comme indiqué dans le code suivant :  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -66,11 +67,11 @@ BEGIN_COM_MAP(CMyProviderRowset)
 END_COM_MAP()  
 ```  
   
- Vous devez également raccorder votre table à la `CRowsetImpl` classe. Ajoutez la macro COM_INTERFACE_ENTRY_CHAIN pour raccorder la `CRowsetImpl` carte. En outre, créez un typedef appelé `RowsetBaseClass` qui contient les informations d’héritage. Ce typedef est arbitraire et peut être ignoré.  
+Vous devez également raccorder votre table à la `CRowsetImpl` classe. Ajoutez la macro COM_INTERFACE_ENTRY_CHAIN pour raccorder la `CRowsetImpl` carte. En outre, créez un typedef appelé `RowsetBaseClass` qui contient les informations d’héritage. Ce typedef est arbitraire et peut être ignoré.  
   
- Enfin, gérez le `IColumnsInfo::GetColumnsInfo` appeler. Les macros PROVIDER_COLUMN_ENTRY vous utiliseriez normalement pour ce faire. Toutefois, un consommateur souhaiterez peut-être utiliser des signets. Vous devez être en mesure de modifier les colonnes que le fournisseur retourne selon que le consommateur demande un signet.  
+Enfin, gérez le `IColumnsInfo::GetColumnsInfo` appeler. Les macros PROVIDER_COLUMN_ENTRY vous utiliseriez normalement pour ce faire. Toutefois, un consommateur souhaiterez peut-être utiliser des signets. Vous devez être en mesure de modifier les colonnes que le fournisseur retourne selon que le consommateur demande un signet.  
   
- Pour gérer les `IColumnsInfo::GetColumnsInfo` appeler, supprimez le `PROVIDER_COLUMN` mapper dans le `CTextData` classe. La macro PROVIDER_COLUMN_MAP définit une fonction `GetColumnInfo`. Vous devez définir vos propres `GetColumnInfo` (fonction). La déclaration de fonction doit ressembler à ceci :  
+Pour gérer les `IColumnsInfo::GetColumnsInfo` appeler, supprimez le `PROVIDER_COLUMN` mapper dans le `CTextData` classe. La macro PROVIDER_COLUMN_MAP définit une fonction `GetColumnInfo`. Vous devez définir vos propres `GetColumnInfo` (fonction). La déclaration de fonction doit ressembler à ceci :  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -88,7 +89,7 @@ class CTextData
 };  
 ```  
   
- Ensuite, implémentez la `GetColumnInfo` fonction dans le fichier MyProviderRS.cpp comme suit :  
+Ensuite, implémentez la `GetColumnInfo` fonction dans le fichier MyProviderRS.cpp comme suit :  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
@@ -159,11 +160,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo` premier vérifie si une propriété appelée `DBPROP_IRowsetLocate` est définie. OLE DB a des propriétés pour chacune des interfaces facultatives l’objet d’ensemble de lignes. Si le consommateur souhaite utiliser une de ces interfaces facultatives, il définit une propriété sur true. Le fournisseur peut ensuite vérifier cette propriété et prendre des mesures spéciales sur celui-ci.  
+`GetColumnInfo` premier vérifie si une propriété appelée `DBPROP_IRowsetLocate` est définie. OLE DB a des propriétés pour chacune des interfaces facultatives l’objet d’ensemble de lignes. Si le consommateur souhaite utiliser une de ces interfaces facultatives, il définit une propriété sur true. Le fournisseur peut ensuite vérifier cette propriété et prendre des mesures spéciales sur celui-ci.  
   
- Dans votre implémentation, vous obtenez la propriété à l’aide du pointeur vers l’objet de commande. Le `pThis` pointeur représente la classe rowset ou commande. Étant donné que vous utilisez des modèles ici, vous devez passer ceci comme un `void` pointeur ou le code n’est pas compilé.  
+Dans votre implémentation, vous obtenez la propriété à l’aide du pointeur vers l’objet de commande. Le `pThis` pointeur représente la classe rowset ou commande. Étant donné que vous utilisez des modèles ici, vous devez passer ceci comme un `void` pointeur ou le code n’est pas compilé.  
   
- Spécifiez un tableau statique pour contenir les informations de colonne. Si le consommateur ne souhaite pas que la colonne de signet, une entrée dans le tableau est gaspillée. Vous pouvez allouer dynamiquement de ce tableau, mais vous devez vous assurer d’éliminer correctement. Cet exemple définit et utilise les macros ADD_COLUMN_ENTRY et ADD_COLUMN_ENTRY_EX pour insérer les informations dans le tableau. Vous pouvez ajouter les macros au fichier MyProviderRS.H, comme indiqué dans le code suivant :  
+Spécifiez un tableau statique pour contenir les informations de colonne. Si le consommateur ne souhaite pas que la colonne de signet, une entrée dans le tableau est gaspillée. Vous pouvez allouer dynamiquement de ce tableau, mais vous devez vous assurer d’éliminer correctement. Cet exemple définit et utilise les macros ADD_COLUMN_ENTRY et ADD_COLUMN_ENTRY_EX pour insérer les informations dans le tableau. Vous pouvez ajouter les macros au fichier MyProviderRS.H, comme indiqué dans le code suivant :  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -194,7 +195,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- Pour tester le code dans le consommateur, vous devez apporter quelques modifications à la `OnRun` gestionnaire. La première modification à la fonction est d’ajouter le code pour ajouter une propriété au jeu de propriétés. Le code définit le `DBPROP_IRowsetLocate` propriété sur true, indiquant ainsi au fournisseur que vous voulez la colonne de signet. Le `OnRun` code du gestionnaire doit apparaître comme suit :  
+Pour tester le code dans le consommateur, vous devez apporter quelques modifications à la `OnRun` gestionnaire. La première modification à la fonction est d’ajouter le code pour ajouter une propriété au jeu de propriétés. Le code définit le `DBPROP_IRowsetLocate` propriété sur true, indiquant ainsi au fournisseur que vous voulez la colonne de signet. Le `OnRun` code du gestionnaire doit apparaître comme suit :  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -246,9 +247,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
- Le pendant que la boucle contient le code pour appeler le `Compare` méthode dans le `IRowsetLocate` interface. Le code que vous avez doit toujours passer, car vous comparez exactement les mêmes signets. En outre, stockez un signet dans une variable temporaire afin que vous puissiez l’utiliser après le pendant que boucle a fini d’appeler le `MoveToBookmark` fonction dans les modèles du consommateur. Le `MoveToBookmark` appels de fonction le `GetRowsAt` méthode dans `IRowsetLocate`.  
+Le pendant que la boucle contient le code pour appeler le `Compare` méthode dans le `IRowsetLocate` interface. Le code que vous avez doit toujours passer, car vous comparez exactement les mêmes signets. En outre, stockez un signet dans une variable temporaire afin que vous puissiez l’utiliser après le pendant que boucle a fini d’appeler le `MoveToBookmark` fonction dans les modèles du consommateur. Le `MoveToBookmark` appels de fonction le `GetRowsAt` méthode dans `IRowsetLocate`.  
   
- Vous devez également mettre à jour l’enregistrement d’utilisateur dans le consommateur. Ajouter une entrée dans la classe pour gérer un signet et une entrée dans le `COLUMN_MAP`:  
+Vous devez également mettre à jour l’enregistrement d’utilisateur dans le consommateur. Ajouter une entrée dans la classe pour gérer un signet et une entrée dans le `COLUMN_MAP`:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -273,7 +274,8 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Lorsque vous avez mis à jour le code, vous devez pouvoir générer et exécuter le fournisseur avec le `IRowsetLocate` interface.  
+Lorsque vous avez mis à jour le code, vous devez pouvoir générer et exécuter le fournisseur avec le `IRowsetLocate` interface.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Techniques avancées du fournisseur](../../data/oledb/advanced-provider-techniques.md)
+
+[Techniques avancées du fournisseur](../../data/oledb/advanced-provider-techniques.md)

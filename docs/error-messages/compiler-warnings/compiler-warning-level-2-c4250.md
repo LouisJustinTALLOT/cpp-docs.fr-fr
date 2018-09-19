@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 2) C4250 | Documents Microsoft
+title: Compilateur avertissement (niveau 2) C4250 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,112 +16,115 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0a49f42dec57677149ab5c36cfc1ab99822cc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5797782691385111f0be22854643315f4e596fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031431"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Avertissement du compilateur (niveau 2) C4250
-'classe1' : hérite de 'classe2::membre' via la dominance  
-  
- Deux membres ou plus ont le même nom. Celui de `class2` est héritée car il s’agit d’une classe de base pour les autres classes qui contenaient ce membre.  
-  
- Pour supprimer l’erreur C4250, utilisez le [avertissement](../../preprocessor/warning.md) pragma.  
-  
- Étant donné que la classe de base virtuelle est partagée entre plusieurs classes dérivées, un nom dans une classe dérivée domine un nom dans une classe de base. Par exemple, la hiérarchie de classe suivante, il existe deux définitions de func héritées dans un losange : l’instance ::Func() via la classe faible et le dominante :: func() via la classe dominante. Un appel non qualifié de func() via un objet de classe en losange, appelle toujours l’instance dominate::func.  Si la classe faible devait introduire une instance de func(), ni dépasse celle de définition et l’appel est marqué comme ambiguë.  
-  
-```  
-// C4250.cpp  
-// compile with: /c /W2  
-#include <stdio.h>  
-struct vbc {  
-   virtual void func() { printf("vbc::func\n"); }  
-};  
-  
-struct weak : public virtual vbc {};  
-  
-struct dominant : public virtual vbc {  
-   void func() { printf("dominant::func\n"); }  
-};  
-  
-struct diamond : public weak, public dominant {};  
-  
-int main() {  
-   diamond d;  
-   d.func();   // C4250  
-}  
-```  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C4250.  
-  
-```  
-// C4250_b.cpp  
-// compile with: /W2 /EHsc  
-#include <iostream>  
-using namespace std;  
-class A {  
-public:  
-   virtual operator int () {  
-      return 2;  
-   }  
-};  
-  
-class B : virtual public A {  
-public:  
-   virtual operator int () {  
-      return 3;  
-   }  
-};  
-  
-class C : virtual public A {};  
-  
-class E : public B, public C {};   // C4250  
-  
-int main() {  
-   E eObject;  
-   cout << eObject.operator int() << endl;  
-}  
-```  
-  
-## <a name="example"></a>Exemple  
- Cet exemple montre une situation plus complexe. L’exemple suivant génère l’erreur C4250.  
-  
-```  
-// C4250_c.cpp  
-// compile with: /W2 /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-class V {  
-public:  
-   virtual int f() {  
-      return 1024;  
-   }  
-};  
-  
-class B : virtual public V {  
-public:  
-   int b() {  
-      return f(); // B::b() calls V::f()  
-   }  
-};  
-  
-class M : virtual public V {  
-public:  
-   int f() {  
-      return 7;  
-   }  
-};  
-  
-// because of dominance, f() is M::f() inside D,  
-// changing the meaning of B::b's f() call inside a D  
-class D : public B, public M {};   // C4250  
-  
-int main() {  
-   D d;  
-   cout << "value is: " << d.b();   // invokes M::f()  
-}  
+
+'classe1' : hérite de 'classe2::membre' via la dominance
+
+Deux ou plusieurs membres ont le même nom. Celui de `class2` est héritée car c’est une classe de base pour les autres classes qui contenaient ce membre.
+
+Pour supprimer l’erreur C4250, utilisez le [avertissement](../../preprocessor/warning.md) pragma.
+
+Étant donné que la classe de base virtuelle est partagée entre plusieurs classes dérivées, un nom dans une classe dérivée domine un nom dans une classe de base. Par exemple, étant donné la hiérarchie de classe suivante, il y a deux définitions de func héritées dans un losange : l’instance ::Func() via la classe faible et le dominant :: func() via la classe dominante. Un appel non qualifié de func() via un objet de classe en losange, appelle toujours l’instance dominate::func.  Si la classe faible ont été d’introduire une instance de func(), ni dépasse celle de définition et l’appel est signalée comme ambiguë.
+
+```
+// C4250.cpp
+// compile with: /c /W2
+#include <stdio.h>
+struct vbc {
+   virtual void func() { printf("vbc::func\n"); }
+};
+
+struct weak : public virtual vbc {};
+
+struct dominant : public virtual vbc {
+   void func() { printf("dominant::func\n"); }
+};
+
+struct diamond : public weak, public dominant {};
+
+int main() {
+   diamond d;
+   d.func();   // C4250
+}
+```
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C4250.
+
+```
+// C4250_b.cpp
+// compile with: /W2 /EHsc
+#include <iostream>
+using namespace std;
+class A {
+public:
+   virtual operator int () {
+      return 2;
+   }
+};
+
+class B : virtual public A {
+public:
+   virtual operator int () {
+      return 3;
+   }
+};
+
+class C : virtual public A {};
+
+class E : public B, public C {};   // C4250
+
+int main() {
+   E eObject;
+   cout << eObject.operator int() << endl;
+}
+```
+
+## <a name="example"></a>Exemple
+
+Cet exemple montre une situation plus complexe. L’exemple suivant génère l’erreur C4250.
+
+```
+// C4250_c.cpp
+// compile with: /W2 /EHsc
+#include <iostream>
+using namespace std;
+
+class V {
+public:
+   virtual int f() {
+      return 1024;
+   }
+};
+
+class B : virtual public V {
+public:
+   int b() {
+      return f(); // B::b() calls V::f()
+   }
+};
+
+class M : virtual public V {
+public:
+   int f() {
+      return 7;
+   }
+};
+
+// because of dominance, f() is M::f() inside D,
+// changing the meaning of B::b's f() call inside a D
+class D : public B, public M {};   // C4250
+
+int main() {
+   D d;
+   cout << "value is: " << d.b();   // invokes M::f()
+}
 ```

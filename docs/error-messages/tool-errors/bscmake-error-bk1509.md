@@ -1,5 +1,5 @@
 ---
-title: Erreur BSCMAKE BK1509 | Documents Microsoft
+title: Erreur BSCMAKE BK1509 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825d1e1e119aa80445c5ae15804bbdde4a3d8bf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 091fab63737c7ee1b3b85753a354bb7214cfa411
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025241"
 ---
 # <a name="bscmake-error-bk1509"></a>Erreur BSCMAKE BK1509
-espace du tas insuffisant  
-  
- BSCMAKE n’a plus de mémoire, y compris la mémoire virtuelle.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.  
-  
-1.  Libérez de l’espace disque.  
-  
-2.  Augmentez la taille du fichier d’échange.  
-  
-3.  Augmentez la taille du fichier d’échange Windows.  
-  
-4.  Réduire la mémoire avec BSCMAKE, à l’aide de /Ei ou /Es à supprimer certains fichiers d’entrée ou /Em pour éliminer les corps de la macro.
+
+espace du tas insuffisant
+
+BSCMAKE a manqué de mémoire, y compris la mémoire virtuelle.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.
+
+1. Libérez de l’espace disque.
+
+1. Augmenter la taille du fichier d’échange.
+
+1. Augmenter la taille du fichier d’échange de Windows.
+
+1. Réduire la mémoire avec BSCMAKE, à l’aide de /Ei ou/es à éviter certains fichiers d’entrée ou /Em pour éliminer les corps de la macro.

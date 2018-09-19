@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
-ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
+ms.openlocfilehash: fef8d0ab55205d2377fc52049c40a1c50151b93e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024175"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>Avertissement du compilateur (niveau 1) C4627
 
@@ -32,7 +32,7 @@ Si le fichier source actuel a le [/Yu \(utilisation de fichier d’en-tête pré
 ## <a name="example"></a>Exemple
 
 Cet exemple montre comment l’erreur peut se produire et montre comment la corriger :
- 
+
 ```cpp
 // c4627.cpp
 #include <iostream>       // C4627 - iostream not included by pch.h
@@ -43,7 +43,7 @@ int main()
     std::cout << "std::cout is defined!\n";
 }
 ```
-  
+
 ## <a name="see-also"></a>Voir aussi
 
 [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)

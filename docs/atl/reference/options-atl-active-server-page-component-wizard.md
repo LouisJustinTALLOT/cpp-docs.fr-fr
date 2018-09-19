@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45824065a4ef190f509f003656b9d232ae287ca2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fda466ad45b5b91f02920d68eef8eab071010830
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020132"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Options, Assistant Composant ASP ATL
 
@@ -65,6 +65,6 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
 
 ## <a name="see-also"></a>Voir aussi
 
-[Assistant composant ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md)   
+[Assistant Composant ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
 [Composant ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
 

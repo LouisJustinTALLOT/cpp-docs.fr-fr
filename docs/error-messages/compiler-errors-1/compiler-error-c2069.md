@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2069 | Documents Microsoft
+title: Erreur du compilateur C2069 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e182409ec0d9bc609daf96060386c374072cdef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 548342ed0d08de93af1288c57bed5067ad97ccf3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032887"
 ---
 # <a name="compiler-error-c2069"></a>Erreur du compilateur C2069
-cast d'un terme 'void' en non 'void'  
-  
- Le type `void` ne peut pas être converti en un autre type.
+
+cast d'un terme 'void' en non 'void'
+
+Le type `void` ne peut pas être converti en un autre type.

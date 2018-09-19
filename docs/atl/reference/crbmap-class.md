@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f4ce858949aafe1a448fc51b8ecd5591270184
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0ffdb791355aa40a33d80104af540b856cdf601
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019482"
 ---
 # <a name="crbmap-class"></a>CRBMap, classe
 
@@ -38,22 +38,22 @@ Cette classe représente une structure de mappage, à l’aide d’une arboresce
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*K*  
+*K*<br/>
 Le type d’élément clé.
 
-*V*  
+*V*<br/>
 Le type d’élément de valeur.
 
-*KTraits*  
+*KTraits*<br/>
 Le code utilisé pour copier ou déplacer les éléments clés. Consultez [celementtraits, classe](../../atl/reference/celementtraits-class.md) pour plus d’informations.
 
-*VTraits*  
+*VTraits*<br/>
 Le code utilisé pour copier ou déplacer des éléments de valeur.
 
 ## <a name="members"></a>Membres
@@ -107,7 +107,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBlockSize*  
+*nBlockSize*<br/>
 La taille du bloc.
 
 ### <a name="remarks"></a>Notes
@@ -146,10 +146,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 Spécifie la clé qui identifie l’élément à rechercher.
 
-*valeur*  
+*valeur*<br/>
 Variable qui reçoit la valeur recherché.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -174,7 +174,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 La clé correspondant à la paire de l’élément que vous souhaitez supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -201,10 +201,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 La valeur de clé à ajouter à la `CRBMap` objet.
 
-*valeur*  
+*valeur*<br/>
 La valeur à ajouter à la `CRBMap` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -223,7 +223,7 @@ Consultez la documentation de la classe de base [CRBTree](../../atl/reference/cr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Crbtree, classe](../../atl/reference/crbtree-class.md)   
-[CAtlMap, classe](../../atl/reference/catlmap-class.md)   
-[CRBMultiMap, classe](../../atl/reference/crbmultimap-class.md)   
+[CRBTree, classe](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap, classe](../../atl/reference/catlmap-class.md)<br/>
+[CRBMultiMap, classe](../../atl/reference/crbmultimap-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

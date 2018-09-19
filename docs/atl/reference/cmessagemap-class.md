@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024392"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap, classe
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>Paramètres
 
-*hWnd*  
+*hWnd*<br/>
 [in] Le handle vers la fenêtre de réception du message.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Le message est envoyé à la fenêtre.
 
-*wParam*  
+*wParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*lParam*  
+*lParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*lResult*  
+*lResult*<br/>
 [out] Le résultat du traitement du message.
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identificateur de la table des messages qui traitera le message. La table des messages par défaut, déclaré avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), est identifié par 0. Une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), est identifié par `msgMapID`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -108,7 +108,7 @@ Appelée par la procédure de fenêtre un [CContainedWindow](../../atl/reference
 
 ## <a name="see-also"></a>Voir aussi
 
-[CDynamicChain, classe](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CDynamicChain, classe](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

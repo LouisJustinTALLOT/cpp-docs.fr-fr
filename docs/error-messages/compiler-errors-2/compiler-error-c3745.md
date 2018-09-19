@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3745 | Documents Microsoft
+title: Erreur du compilateur C3745 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97177fb51aecf668a041e43218ccb342f6c15b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa8393a1ac85c21df9299dcfeeb553ca145d5dac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025111"
 ---
 # <a name="compiler-error-c3745"></a>Erreur du compilateur C3745
-'fonction' : seul un événement peut être 'déclenché'  
-  
- Seule une fonction définie par le [__event](../../cpp/event.md) mot clé peut être passée à la [__raise](../../cpp/raise.md) (mot clé).  
-  
- L’exemple suivant génère l’erreur C3745 :  
-  
-```  
-// C3745.cpp  
-struct E {  
-   __event void func();  
-   void func(int) {  
-   }  
-  
-   void func2() {  
-   }  
-  
-   void bar() {  
-      __raise func();  
-      __raise func(1);   // C3745  
-      __raise func2();   // C3745  
-   }  
-};  
-  
-int main() {  
-   E e;  
-   __raise e.func();  
-   __raise e.func(1);   // C3745  
-   __raise e.func2();   // C3745  
-}  
+
+'fonction' : seul un événement peut être 'déclenché'
+
+Seule une fonction définie par le [__event](../../cpp/event.md) mot clé peut être passé à la [__raise](../../cpp/raise.md) mot clé.
+
+L’exemple suivant génère l’erreur C3745 :
+
+```
+// C3745.cpp
+struct E {
+   __event void func();
+   void func(int) {
+   }
+
+   void func2() {
+   }
+
+   void bar() {
+      __raise func();
+      __raise func(1);   // C3745
+      __raise func2();   // C3745
+   }
+};
+
+int main() {
+   E e;
+   __raise e.func();
+   __raise e.func(1);   // C3745
+   __raise e.func2();   // C3745
+}
 ```

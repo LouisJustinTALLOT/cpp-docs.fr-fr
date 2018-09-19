@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4918 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4918 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4ca1d8a33ac811a23fbb0ac3e438eeeb9c1acf8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb4cc66359c28ffc23afa64da1e5bdbaadd8fb9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296794"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023226"
 ---
 # <a name="compiler-warning-level-4-c4918"></a>Avertissement du compilateur (niveau 4) C4918
-'character' : caractère non valide dans la liste d’optimisation pragma  
-  
- Un caractère inconnu a été trouvé dans la liste d’optimisation d’une instruction pragma [optimize](../../preprocessor/optimize.md) .  
-  
- Par exemple, l’instruction suivante génère l’avertissement C4918 :  
-  
-```  
-// C4918.cpp  
-// compile with: /W4  
-#pragma optimize("X", on) // C4918 expected  
-int main()  
-{  
-}  
+
+'character' : caractère non valide dans la liste d’optimisation pragma
+
+Un caractère inconnu a été trouvé dans la liste d’optimisation d’une instruction pragma [optimize](../../preprocessor/optimize.md) .
+
+Par exemple, l’instruction suivante génère l’avertissement C4918 :
+
+```
+// C4918.cpp
+// compile with: /W4
+#pragma optimize("X", on) // C4918 expected
+int main()
+{
+}
 ```

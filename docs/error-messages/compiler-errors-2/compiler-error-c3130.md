@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3130 | Documents Microsoft
+title: Erreur du compilateur C3130 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e338ff497ca0674b68ee25ba745d669a10468a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe26a86b85d6b38283a6ef21d081620237f8788a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030833"
 ---
 # <a name="compiler-error-c3130"></a>Erreur du compilateur C3130
-L’erreur interne du compilateur : échec d’écriture de bloc de code injecté dans PDB  
-  
- Cette erreur se produit si le compilateur a échoué à écrire un bloc de code injecté dans le fichier .pdb. Le plus souvent de l’échec est le manque d’espace disque.
+
+Erreur interne du compilateur : échec d’écriture de bloc de code injecté dans PDB
+
+Cette erreur se produit si le compilateur a échoué écrire un bloc de code injecté dans le fichier .pdb. La raison la plus courante de l’échec est le manque d’espace disque.

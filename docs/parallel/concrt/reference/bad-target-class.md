@@ -1,5 +1,5 @@
 ---
-title: bad_target, classe | Documents Microsoft
+title: bad_target, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be10e5e4105dd16a68ad2854538d6181e90bfbe9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 12e035a27693fcad095cd83880aba99c37ba1c1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027633"
 ---
 # <a name="badtarget-class"></a>bad_target, classe
 Cette classe décrit une exception levée quand un bloc de messagerie reçoit un pointeur vers une cible qui n'est pas valide pour l'opération en cours.  
@@ -43,14 +43,14 @@ class bad_target : public std::exception;
 |[bad_target](#ctor)|Surchargé. Construit un objet `bad_target`.|  
   
 ## <a name="remarks"></a>Notes  
- Cette exception est généralement levée pour des raisons comme une cible essayant de consommer un message qui est réservé pour une cible différente ou annulant une réservation qu’il ne contient pas.  
+ Cette exception est généralement levée pour des raisons telles que d’une cible essayant de consommer un message qui est réservé à une autre cible ou la libération d’une réservation qu’il ne contient pas.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `exception`  
   
  `bad_target`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -66,8 +66,8 @@ bad_target() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Message descriptif de l'erreur.  
+*_Message*<br/>
+Message descriptif de l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   

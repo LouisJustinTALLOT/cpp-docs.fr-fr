@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3661 | Documents Microsoft
+title: Erreur du compilateur C3661 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f290e5149000aa823da8c1e3ce1fabe533406de1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7c7987e9ca84009cc8705c22a8f2ec7c3c89b00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026636"
 ---
 # <a name="compiler-error-c3661"></a>Erreur du compilateur C3661
-liste de substitution explicite n’a pas trouvé toutes les méthodes à substituer  
-  
- Une substitution explicite a spécifié un ou plusieurs noms de type.  Toutefois, il n’a aucune fonction avec la signature nécessaire dans l’ou les types qui correspondaient à la substitution de signature de fonction.  Si vous essayez de substituer basé sur le nom de type, il doit exister une ou plusieurs fonctions virtuelles dans les types spécifiés qui correspondent à la signature de la fonction de substitution.  
-  
- Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+liste de substitution explicite n’a pas trouvé les méthodes à substituer
+
+Une substitution explicite a spécifié un ou plusieurs noms de type.  Toutefois, aucune fonction ne possédait la signature nécessaire dans les ou les types de mise en correspondance de la substitution de signature de fonction.  Si vous essayez de substituer selon le nom de type, les types spécifiés qui correspondent à la signature de la fonction de substitution doit être un ou plusieurs fonctions virtuelles.
+
+Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).

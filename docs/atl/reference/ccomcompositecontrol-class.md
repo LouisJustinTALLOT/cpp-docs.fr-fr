@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756572"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021133"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl, classe
 
@@ -43,13 +43,13 @@ Cette classe fournit les méthodes requises pour implémenter un contrôle compo
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge pour votre contrôle composite.
 
 ## <a name="members"></a>Membres
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Paramètres
 
-*bAdvise*  
+*bAdvise*<br/>
 True si tous les contrôles doivent être avertie ; Sinon, false.
 
 ### <a name="return-value"></a>Valeur de retour
 
-S_OK  
-Tous les contrôles de table de récepteur ont été connecté ou déconnecté avec succès à partir de leur source d’événement.
-
-E_FAIL  
-Pas tous les contrôles dans l’événement table de récepteur peut être connecté ou déconnecté avec succès à partir de leur source d’événement.
-
-E_POINTER  
-Cette erreur indique généralement un problème avec une entrée dans la table de récepteur d’événements du contrôle ou un problème avec un argument de modèle utilisé dans un `IDispEventImpl` ou `IDispEventSimpleImpl` classe de base.
-
-CONNECT_E_ADVISELIMIT  
-Le point de connexion a déjà atteint sa limite de connexions et ne peut pas accepter d’autres.
-
-CONNECT_E_CANNOTCONNECT  
-Le récepteur ne prend pas en charge l’interface requise par ce point de connexion.
-
-CONNECT_E_NOCONNECTION  
-La valeur du cookie ne représente pas une connexion valide. Cette erreur indique généralement un problème avec une entrée dans la table de récepteur d’événements du contrôle ou un problème avec un argument de modèle utilisé dans un `IDispEventImpl` ou `IDispEventSimpleImpl` classe de base.
+|||
+|-|-|
+|S_OK  |Tous les contrôles de table de récepteur ont été connecté ou déconnecté avec succès à partir de leur source d’événement.|
+|E_FAIL  |Pas tous les contrôles dans l’événement table de récepteur peut être connecté ou déconnecté avec succès à partir de leur source d’événement.|
+|E_POINTER  |Cette erreur indique généralement un problème avec une entrée dans la table de récepteur d’événements du contrôle ou un problème avec un argument de modèle utilisé dans un `IDispEventImpl` ou `IDispEventSimpleImpl` classe de base.|
+|CONNECT_E_ADVISELIMIT  |Le point de connexion a déjà atteint sa limite de connexions et ne peut pas accepter d’autres.|
+|CONNECT_E_CANNOTCONNECT  |Le récepteur ne prend pas en charge l’interface requise par ce point de connexion.|
+|CONNECT_E_NOCONNECTION  |La valeur du cookie ne représente pas une connexion valide. Cette erreur indique généralement un problème avec une entrée dans la table de récepteur d’événements du contrôle ou un problème avec un argument de modèle utilisé dans un `IDispEventImpl` ou `IDispEventSimpleImpl` classe de base.|
 
 ### <a name="remarks"></a>Notes
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>Paramètres
 
-*size*  
+*size*<br/>
 Une référence à un `SIZE` structure doivent être remplis par cette méthode.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle vers la fenêtre parente du contrôle.
 
-*rcPos*  
+*rcPos*<br/>
 Réservé.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 Données à passer au contrôle lors de la création du contrôle. Les données transmises en tant que *dwInitParam* s’affichera en tant que le paramètre LPARAM de la [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) message, qui sera envoyé au contrôle composite quand il est créé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle vers la fenêtre parente du contrôle.
 
-*rcPos*  
+*rcPos*<br/>
 La valeur position rectangle du contrôle composite dans le client en coordonnées relatif *hWndParent*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -280,6 +271,6 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComControl, classe](../../atl/reference/ccomcontrol-class.md)   
-[Notions fondamentales du contrôle composite](../../atl/atl-composite-control-fundamentals.md)   
+[CComControl, classe](../../atl/reference/ccomcontrol-class.md)<br/>
+[Notions fondamentales du contrôle composite](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

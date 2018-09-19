@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1107 | Documents Microsoft
+title: Erreur irrécupérable C1107 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949ee09244a106984522fb35dd13c0b3426fc820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc896f08ac161cae4e4fab5e991da810f3faf195
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016635"
 ---
 # <a name="fatal-error-c1107"></a>Erreur irrécupérable C1107
-Impossible de trouver l’assembly 'fichier' : spécifiez le chemin de recherche en utilisant /AI ou en définissant la variable d’environnement LIBPATH  
-  
- Un fichier de métadonnées a été passé à un [#using](../../preprocessor/hash-using-directive-cpp.md) directive le compilateur n’a pas pu localiser.  
-  
- LIBPATH, qui est décrite dans la rubrique de `#using`et le [/AI](../../build/reference/ai-specify-metadata-directories.md) option du compilateur permettent de spécifier les répertoires dans lesquels le compilateur recherche les fichiers de métadonnées référencés.
+
+Impossible de trouver l’assembly 'fichier' : spécifiez le chemin de recherche des assemblys en utilisant /AI ou en définissant la variable d’environnement LIBPATH
+
+Un fichier de métadonnées a été passé à un [#using](../../preprocessor/hash-using-directive-cpp.md) directive le compilateur n’a pas pu localiser.
+
+LIBPATH, qui est décrite dans la rubrique pour `#using`et le [/AI](../../build/reference/ai-specify-metadata-directories.md) option du compilateur permettent de spécifier les répertoires dans lesquels le compilateur recherche les fichiers de métadonnées référencés.

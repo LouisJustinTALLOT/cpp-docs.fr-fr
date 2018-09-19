@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028335"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Fonctions globales du Registre et de TypeLib
 
@@ -72,8 +72,8 @@ Utilisez cette fonction pour déterminer si l’application redirige l’accès 
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);  
+```
+ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -101,22 +101,22 @@ Crée la clé de Registre spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*  
+*clé hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Le nom d’une clé de cette fonction ouvre ou crée.
 
-*phkResult*  
+*phkResult*<br/>
 Pointeur vers une variable qui reçoit un handle à la clé ouvert ou créé.
 
-*pTM*  
+*pTM*<br/>
 Pointeur vers un `CAtlTransactionManager` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -133,19 +133,19 @@ Supprime la clé de Registre spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*  
+*clé hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Le nom de la clé à supprimer.
 
-*pTM*  
+*pTM*<br/>
 Pointeur vers un `CAtlTransactionManager` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -162,19 +162,19 @@ Un programme d’assistance pour inscrire un gestionnaire d’aperçus.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);  
+```
+BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 Spécifie le CLSID du gestionnaire.
 
-*lpszShortTypeName*  
+*lpszShortTypeName*<br/>
 Spécifie le ProgID du gestionnaire.
 
-*lpszFilterExt*  
+*lpszFilterExt*<br/>
 Spécifie l’extension de fichier enregistrée avec ce gestionnaire.
 
 ### <a name="requirements"></a>Configuration requise
@@ -191,10 +191,10 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Handle de l’instance de module.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Chaîne au format «\\\N », où N est l’index d’entier de la ressource de bibliothèque de type. Peut d’être NULL si aucun index n’est requis.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -203,7 +203,8 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction d’assistance utilisée par [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) et [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).  
+Cette fonction d’assistance utilisée par [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) et [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
@@ -214,22 +215,22 @@ Ouvre la clé de Registre spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*  
+*clé hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Le nom d’une clé de cette fonction ouvre ou crée.
 
-*phkResult*  
+*phkResult*<br/>
 Pointeur vers une variable qui reçoit un handle vers la clé créée.
 
-*pTM*  
+*pTM*<br/>
 Pointeur vers un `CAtlTransactionManager` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -246,28 +247,28 @@ Ouvre la clé de Registre spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*  
+*clé hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Le nom d’une clé de cette fonction ouvre ou crée.
 
-*ulOptions*  
+*ulOptions*<br/>
 Ce paramètre est réservé et doit être égal à zéro.
 
-*samDesired*  
+*samDesired*<br/>
 Masque qui spécifie les droits d’accès souhaité à la clé.
 
-*phkResult*  
+*phkResult*<br/>
 Pointeur vers une variable qui reçoit un handle à la clé ouvert.
 
-*pTM*  
+*pTM*<br/>
 Pointeur vers un `CAtlTransactionManager` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -284,13 +285,13 @@ Un programme d’assistance pour annuler l’inscription d’un gestionnaire d�
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);  
+```
+BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 Spécifie le CLSID du gestionnaire doit être annulée.
 
 ### <a name="requirements"></a>Configuration requise
@@ -303,13 +304,13 @@ Définit si l’application redirige l’accès au Registre vers le **HKEY_CURRE
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);  
+```
+ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*  
+*bActivez*<br/>
 [in] TRUE indique que les informations du Registre sont dirigées vers le **HKCU** nœud ; La valeur FALSE indique que l’application écrit les informations du Registre pour le nœud par défaut. Le nœud par défaut est **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -321,6 +322,7 @@ S_OK si la méthode réussite, sinon l’erreur HRESULT du code si une erreur se
 La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au Registre est redirigé vers **HKEY_CURRENT_USER\Software\Classes**.
 
 La redirection n’est pas globale. Uniquement les infrastructures MFC et ATL sont affectés par cette redirection de Registre.  
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h  
@@ -339,10 +341,10 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="parameters"></a>Paramètres
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Handle de l’instance de module.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Chaîne au format «\\\N », où N est l’index d’entier de la ressource de bibliothèque de type. Peut d’être NULL si aucun index n’est requis.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -352,6 +354,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 ### <a name="remarks"></a>Notes
 
 Cette fonction d’assistance utilisée par [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) et [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
@@ -372,16 +375,16 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ### <a name="parameters"></a>Paramètres
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Handle vers le module associé à la bibliothèque de types.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Chaîne au format «\\\N », où N est l’index d’entier de la ressource de bibliothèque de type. Peut d’être NULL si aucun index n’est requis.
 
-*pbstrPath*  
+*pbstrPath*<br/>
 Lors d’un retour, contient le chemin d’accès complet du module associé à la bibliothèque de types.
 
-*ppTypeLib*  
+*ppTypeLib*<br/>
 Lors d’un retour, contient un pointeur vers un pointeur vers la bibliothèque de types chargés.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -415,13 +418,13 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>Paramètres
 
-*pT*  
+*pT*<br/>
 Pointeur vers l’objet actuel.
 
-*rdxOp*  
+*rdxOp*<br/>
 Une valeur d’énumération qui indique quelle opération la fonction doit effectuer. Consultez le tableau dans la section Notes pour les valeurs autorisées.
 
-*pItem*  
+*pItem*<br/>
 Pointeur vers les données qui doit être lues ou écrites dans le Registre. Les données peuvent également représenter une clé à supprimer à partir du Registre. La valeur par défaut est NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -446,5 +449,5 @@ Les valeurs enum possibles qui indiquent que l’opération la fonction doit eff
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions](atl-functions.md)   
+[Fonctions](atl-functions.md)<br/>
 [Macros d’échange de données de Registre](registry-data-exchange-macros.md)

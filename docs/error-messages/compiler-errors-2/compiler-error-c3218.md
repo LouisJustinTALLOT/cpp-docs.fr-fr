@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3218 | Documents Microsoft
+title: Erreur du compilateur C3218 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6938768211a78ca2a72c78ebb03a8972e0a86a74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a21050e49a05980a4e4a644fa9f08bc42f23310
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030818"
 ---
 # <a name="compiler-error-c3218"></a>Erreur du compilateur C3218
-'type' : type non autorisé comme contrainte  
-  
- Pour un type d’une contrainte, il doit être un type valeur ou une référence à une classe managée ou une interface.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C3218.  
-  
-```  
-// C3218.cpp  
-// compile with: /clr /c  
-class A {};  
-ref class B {};  
-  
-// Delete the following 3 lines to resolve.  
-generic <class T>  
-where T : A   // C3218  
-ref class C {};  
-  
-// OK  
-generic <class T>  
-where  T : B  
-ref class D {};  
+
+'type' : type non autorisé comme contrainte
+
+Pour un type soit une contrainte, il doit être un type valeur ou une référence à une classe managée ou une interface.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère C3218.
+
+```
+// C3218.cpp
+// compile with: /clr /c
+class A {};
+ref class B {};
+
+// Delete the following 3 lines to resolve.
+generic <class T>
+where T : A   // C3218
+ref class C {};
+
+// OK
+generic <class T>
+where  T : B
+ref class D {};
 ```

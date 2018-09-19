@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2086 | Documents Microsoft
+title: Erreur du compilateur C2086 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1a21c06adeeda5d9db428e984da51f06addb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0e0d8b105d58b0585bc31b8d340d3d7ba5fb29e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029843"
 ---
 # <a name="compiler-error-c2086"></a>Erreur du compilateur C2086
-'identificateur' : redéfinition  
-  
- L’identificateur est défini plusieurs fois, ou une déclaration ultérieure est différente d’une précédente.  
-  
- L’erreur C2086 peut également être le résultat d’une génération incrémentielle pour un assembly c# référencé. Régénérez l’assembly c# pour résoudre cette erreur.  
-  
- L’exemple suivant génère l’erreur C2086 :  
-  
-```  
-// C2086.cpp  
-main() {  
-  int a;  
-  int a;   // C2086 not an error in ANSI C  
-}  
+
+'identificateur' : redéfinition
+
+L’identificateur est défini plusieurs fois, ou une déclaration ultérieure diffère d’une précédente.
+
+C2086 peut également être le résultat d’une génération incrémentielle pour un assembly c# référencé. Régénérer l’assembly c# pour résoudre cette erreur.
+
+L’exemple suivant génère l’erreur C2086 :
+
+```
+// C2086.cpp
+main() {
+  int a;
+  int a;   // C2086 not an error in ANSI C
+}
 ```

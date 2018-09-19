@@ -1,5 +1,5 @@
 ---
-title: omp_set_nest_lock | Documents Microsoft
+title: omp_set_nest_lock | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e49a63fc4bc8d31583478ee6f61fe7b374bb9f0b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5af33e7223f245325d3b4835a1599034778cd04f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027698"
 ---
 # <a name="ompsetnestlock"></a>omp_set_nest_lock
-Blocs d’exécution du thread jusqu'à ce qu’un verrou n’est disponible.  
+Blocs d’exécution de thread jusqu'à ce qu’un verrou est disponible.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,14 +34,13 @@ void omp_set_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+### <a name="parameters"></a>Paramètres
   
- `lock`  
- Une variable de type [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) qui a été initialisée avec [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
+*lock*<br/>
+Une variable de type [imbriqué omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) qui a été initialisée avec [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [3.2.3 fonctions omp_set_lock and omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).  
+ Pour plus d’informations, consultez [3.2.3 fonctions omp_set_lock et omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).  
   
 ## <a name="examples"></a>Exemples  
  Consultez [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) pour obtenir un exemple d’utilisation de `omp_set_nest_lock`.  

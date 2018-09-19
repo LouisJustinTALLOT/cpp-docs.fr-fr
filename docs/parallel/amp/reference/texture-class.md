@@ -1,5 +1,5 @@
 ---
-title: texture, classe | Documents Microsoft
+title: texture, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16e449f3def7b4b86932e9806fa78d422466978
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 369ca34eb75b33208365d34756312e23e85afd92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029635"
 ---
 # <a name="texture-class"></a>texture, classe
-Une texture est un agrégat de données un `accelerator_view` dans le domaine de l’étendue. Il est une collection de variables, un pour chaque élément dans un domaine de l’étendue. Chaque variable contient une valeur correspondant à un type primitif C++ ( `unsigned int`, `int`, `float`, `double`), un type scalaire ( `norm`, ou `unorm`), ou un type de vecteur court.  
+Une texture est un agrégat de données sur un `accelerator_view` dans le domaine de l’étendue. C’est un ensemble de variables, une pour chaque élément dans un domaine d’étendue. Chaque variable contient une valeur correspondant au type primitif C++ ( `unsigned int`, `int`, `float`, `double`), un type scalaire ( `norm`, ou `unorm`), ou un type vectoriel court.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,11 +45,11 @@ class texture;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `value_type`  
- Le type des éléments de la texture.  
+*value_type*<br/>
+Le type des éléments de la texture.  
   
- `_Rank`  
- Le rang de la texture.  
+*_Rank*<br/>
+Le rang de la texture.  
   
 ## <a name="members"></a>Membres  
   
@@ -58,7 +58,7 @@ class texture;
 |Nom|Description|  
 |----------|-----------------|  
 |`scalar_type`|Types scalaires.|  
-|`value_type`|Types de valeur.|  
+|`value_type`|Les types de valeurs.|  
   
 ### <a name="public-constructors"></a>Constructeurs publics  
   
@@ -71,19 +71,19 @@ class texture;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[copy_to](#copy_to)|Copie le `texture` objet vers la destination, en effectuant une copie complète.|  
-|[data](#data)|Retourne un pointeur de l’UC pour les données brutes de cette texture.|  
+|[copy_to](#copy_to)|Copie le `texture` objet vers la destination, en faisant une copie complète.|  
+|[data](#data)|Retourne un pointeur CPU vers les données brutes de cette texture.|  
 |[get](#get)|Retourne la valeur de l’élément à l’index spécifié.|  
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|Retourne le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut pour cette texture doit être copié vers.|  
-|[get_depth_pitch](#get_depth_pitch)|Retourne le nombre d’octets entre chaque secteur de profondeur dans 3D texture sur l’UC de mise en lots.|  
-|[get_row_pitch](#get_row_pitch)|Retourne le nombre d’octets entre chaque ligne dans un 2D ou de la 3D texture sur l’UC de mise en lots.|  
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Retourne le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut cette texture à copier vers.|  
+|[get_depth_pitch](#get_depth_pitch)|Retourne le nombre d’octets entre chaque secteur de profondeur dans une texture 3D intermédiaire de l’UC.|  
+|[get_row_pitch](#get_row_pitch)|Retourne le nombre d’octets entre chaque ligne d’un 2D ou d’une texture 3D intermédiaire de l’UC.|  
 |[set](#set)|Définit la valeur de l’élément à l’index spécifié.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[operator()](#operator_call)|Retourne la valeur de l’élément spécifié par les paramètres.|  
+|[operator()](#operator_call)|Retourne la valeur de l’élément qui est spécifiée par les paramètres.|  
 |[operator[]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|  
 |[operator=](#operator_eq)|Copie le texte spécifié [texture](texture-class.md) objet à celui-ci.|  
   
@@ -91,14 +91,14 @@ class texture;
   
 |Name|Description|  
 |----------|-----------------|  
-|[RANK (constante)](#rank)|Obtient le classement de la `texture` objet.|  
+|[rang (constante)](#rank)|Obtient le rang de le `texture` objet.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[associated_accelerator_view](#associated_accelerator_view)|Obtient le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut pour cette texture doit être copié vers.|  
-|[depth_pitch](#depth_pitch)|Obtient le nombre d’octets entre chaque secteur de profondeur dans une texture 3D intermédiaire sur l’UC.|  
+|[associated_accelerator_view](#associated_accelerator_view)|Obtient le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut cette texture à copier vers.|  
+|[depth_pitch](#depth_pitch)|Obtient le nombre d’octets entre chaque secteur de profondeur dans une texture 3D intermédiaire de l’UC.|  
 |[row_pitch](#row_pitch)|Obtient le nombre d’octets entre chaque ligne dans un 2D ou 3D un intermédiaire texture sur l’UC.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -106,7 +106,7 @@ class texture;
   
  `texture`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_graphics.h  
   
  **Namespace :** Concurrency::graphics  
@@ -121,7 +121,7 @@ class texture;
   
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view 
 
- Obtient le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut pour cette texture doit être copié vers.  
+ Obtient le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut cette texture à copier vers.  
   
 ```  
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
@@ -129,7 +129,7 @@ __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelera
   
 ##  <a name="copy_to"></a> copy_to 
 
- Copie le `texture` objet vers la destination, en effectuant une copie complète.  
+ Copie le `texture` objet vers la destination, en faisant une copie complète.  
   
 ```  
 void copy_to(texture& _Dest) const; 
@@ -137,18 +137,18 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Dest`  
- L’objet de destination.  
+*_Dest*<br/>
+L’objet dans lequel copier.  
   
- `_Rank`  
- Le rang de la texture.  
+*_Rank*<br/>
+Le rang de la texture.  
   
- `value_type`  
- Le type des éléments de la texture.  
+*value_type*<br/>
+Le type des éléments de la texture.  
   
 ##  <a name="data"></a> Données 
 
- Retourne un pointeur de l’UC pour les données brutes de cette texture.  
+ Retourne un pointeur CPU vers les données brutes de cette texture.  
   
 ```  
 void* data() restrict(cpu);
@@ -158,11 +158,11 @@ const void* data() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers les données brutes de la texture.  
+ Un pointeur vers les données brutes de la texture.  
   
 ##  <a name="depth_pitch"></a> depth_pitch 
 
- Obtient le nombre d’octets entre chaque secteur de profondeur dans une texture 3D intermédiaire sur l’UC.  
+ Obtient le nombre d’octets entre chaque secteur de profondeur dans une texture 3D intermédiaire de l’UC.  
   
 ```  
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;  
@@ -177,48 +177,48 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Index`  
- L’index de l’élément.  
+*_Index*<br/>
+L’index de l’élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur de l’élément à l’index spécifié.  
   
 ##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
 
- Retourne l’accelerator_view qui est la cible par défaut pour cette texture doit être copié vers.  
+ Retourne l’accelerator_view qui est la cible par défaut pour cette texture à copier vers.  
   
 ```  
 Concurrency::accelerator_view get_associated_accelerator_view() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut pour cette texture doit être copié vers.  
+ Le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut cette texture à copier vers.  
   
 ##  <a name="get_depth_pitch"></a> get_depth_pitch 
 
- Retourne le nombre d’octets entre chaque secteur de profondeur dans 3D texture sur l’UC de mise en lots.  
+ Retourne le nombre d’octets entre chaque secteur de profondeur dans une texture 3D intermédiaire de l’UC.  
   
 ```  
 unsigned int get_depth_pitch() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nombre d’octets entre chaque secteur de profondeur dans 3D texture sur l’UC de mise en lots.  
+ Le nombre d’octets entre chaque secteur de profondeur dans une texture 3D intermédiaire de l’UC.  
   
 ##  <a name="get_row_pitch"></a> get_row_pitch 
 
- Retourne le nombre d’octets entre chaque ligne dans une texture 2D de mise en lots, ou entre chaque ligne d’un secteur de profondeur de texture mise en lots en 3 dimensions.  
+ Retourne le nombre d’octets entre chaque ligne dans une texture intermédiaire 2D, ou entre chaque ligne d’un secteur de profondeur dans 3-texture intermédiaire tridimensionnelle.  
   
 ```  
 unsigned int get_row_pitch() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le nombre d’octets entre chaque ligne dans une texture 2D de mise en lots, ou entre chaque ligne d’un secteur de profondeur de texture mise en lots en 3 dimensions.  
+ Le nombre d’octets entre chaque ligne dans une texture intermédiaire 2D, ou entre chaque ligne d’un secteur de profondeur dans 3-texture intermédiaire tridimensionnelle.  
   
 ##  <a name="operator_call"></a> operator() 
 
- Retourne la valeur de l’élément spécifié par les paramètres.  
+ Retourne la valeur de l’élément qui est spécifiée par les paramètres.  
   
 ```  
 const value_type operator() (
@@ -241,23 +241,23 @@ const value_type operator() (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Index`  
- Index.  
+*_Index*<br/>
+Index.  
   
- `_I0`  
- Le composant plus significatif de l’index.  
+*_I0*<br/>
+Le composant plus significatif de l’index.  
   
- `_I1`  
- Le composant suivant-à-plus significatif de l’index.  
+*_I1*<br/>
+Le composant suivant-à-plus significatif de l’index.  
   
- `_I2`  
- Le composant de poids de l’index.  
+*_I2*<br/>
+Le composant moins significatif de l’index.  
   
- `_Rank`  
- Le rang de l’index.  
+*_Rank*<br/>
+Le rang de l’index.  
   
 ### <a name="return-value"></a>Valeur de retour  
- La valeur de l’élément spécifié par les paramètres.  
+ La valeur de l’élément qui est spécifiée par les paramètres.  
   
 ##  <a name="operator_at"></a> operator] 
 
@@ -271,11 +271,11 @@ const value_type operator[] (int _I0) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Index`  
- Index.  
+*_Index*<br/>
+Index.  
   
- `_I0`  
- Index.  
+*_I0*<br/>
+Index.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’élément qui est à l’index spécifié.  
@@ -294,15 +294,15 @@ texture& operator= (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `texture` objet à copier à partir de.  
+*_Autre*<br/>
+Le `texture` objet à copier.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une référence à ce `texture` objet.  
+ Une référence à cet `texture` objet.  
   
-##  <a name="rank"></a> Rang 
+##  <a name="rank"></a> rang 
 
- Obtient le classement de la `texture` objet.  
+ Obtient le rang de le `texture` objet.  
   
 ```  
 static const int rank = _Rank;  
@@ -327,16 +327,16 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Index`  
- L’index de l’élément.  
+*_Index*<br/>
+L’index de l’élément.  
   
- `_Rank`  
- Le rang de l’index.  
+*_Rank*<br/>
+Le rang de l’index.  
   
- `value`  
- Nouvelle valeur de l’élément.  
+*valeur*<br/>
+Nouvelle valeur de l’élément.  
   
-##  <a name="ctor"></a> texture 
+##  <a name="ctor"></a> Texture 
 
  Initialise une nouvelle instance de la classe `texture`.  
   
@@ -561,59 +561,59 @@ texture(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Acc_view`  
- Le [accelerator_view](accelerator-view-class.md) qui spécifie l’emplacement de la texture.  
+*_Acc_view*<br/>
+Le [accelerator_view](accelerator-view-class.md) qui spécifie l’emplacement de la texture.  
   
- `_Av`  
- Le [accelerator_view](accelerator-view-class.md) qui spécifie l’emplacement de la texture.  
+*_Av*<br/>
+Le [accelerator_view](accelerator-view-class.md) qui spécifie l’emplacement de la texture.  
   
- `_Associated_av`  
- Accelerator_view qui spécifie la cible par défaut pour les copies vers ou à partir de cette texture.  
+*_Associated_av*<br/>
+Un accelerator_view qui spécifie la cible par défaut copie vers ou à partir de cette texture.  
   
- `_Bits_per_scalar_element`  
- Le nombre de bits par chaque élément scalaire dans le type scalaire sous-jacent de la texture. En général, la valeur prise en charge sont 8, 16, 32 et 64. Si 0 est spécifié, le nombre de bits est identique à la scalar_type sous-jacent. 64 est uniquement valide pour les textures double.  
+*_Bits_per_scalar_element*<br/>
+Le nombre de bits pour chaque élément scalaire dans le type scalaire sous-jacent de la texture. En règle générale, la valeur prise en charge sont 8, 16, 32 et 64. Si 0 est spécifié, le nombre de bits est le même scalar_type sous-jacent. 64 est uniquement valide pour les textures à double base.  
   
- `_Ext`  
- L’étendue de chaque dimension de la texture.  
+*_Ext*<br/>
+Objet extent dans chaque dimension de la texture.  
   
- `_E0`  
- Le composant plus significatif de la texture.  
+*_E0*<br/>
+Le composant le plus significatif de la texture.  
   
- `_E1`  
- Le composant suivant-à-plus significatif de la texture.  
+*_E1*<br/>
+Le composant suivant-à-plus significatif de la texture.  
   
- `_E2`  
- Le composant de poids faible de l’étendue de la texture.  
+*_E2*<br/>
+Composant le moins significatif de l’étendue de la texture.  
   
- `_Input_iterator`  
- Le type de l’interator d’entrée.  
+*_Input_iterator*<br/>
+Le type de l’itérateur d’entrée.  
   
- `_Mipmap_levels`  
- Le nombre de niveaux de mipmap dans la texture sous-jacente. Si 0 est spécifié, la texture aura la gamme complète des niveaux de mipmap jusqu'à la plus petite taille possible pour l’étendue spécifiée.  
+*_Mipmap_levels*<br/>
+Le nombre de niveaux de mipmap dans la texture sous-jacente. Si 0 est spécifié, la texture dispose de la gamme complète de niveaux de mipmap jusqu'à la plus petite taille possible pour l’étendue spécifiée.  
   
- `_Rank`  
- Le rang de l’étendue.  
+*_Rank*<br/>
+Le rang de l’étendue.  
   
- `_Source`  
- Pointeur vers une mémoire tampon hôte.  
+*_Source*<br/>
+Pointeur vers une mémoire tampon hôte.  
   
- `_Src`  
- Texture à copier.  
+*_Src*<br/>
+Pour texturer pour copier.  
   
- `_Src_byte_size`  
- Le nombre d’octets dans la mémoire tampon source.  
+*_Src_byte_size*<br/>
+Le nombre d’octets dans la mémoire tampon source.  
   
- `_Src_first`  
- Un itérateur de début dans le conteneur source.  
+*_Src_first*<br/>
+Un itérateur de départ dans le conteneur source.  
   
- `_Src_last`  
- Un itérateur de fin dans le conteneur source.  
+*_Src_last*<br/>
+Un itérateur de fin dans le conteneur source.  
   
- `_Other`  
- Autre source de données.  
+*_Autre*<br/>
+Autre source de données.  
   
- `_Rank`  
- Le rang de la section.  
+*_Rank*<br/>
+Le rang de la section.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

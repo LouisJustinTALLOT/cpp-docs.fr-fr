@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3609 | Documents Microsoft
+title: Erreur du compilateur C3609 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0f3ec99e5d528967fb7b02bc9d198402b16e18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0048d1493a540bfb460d03ae514b6b191ead39d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258294"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016908"
 ---
 # <a name="compiler-error-c3609"></a>Erreur du compilateur C3609
-'membre' : une fonction sealed ou final doit être virtuelle  
-  
- Le [sealed](../../windows/sealed-cpp-component-extensions.md) et [final](../../cpp/final-specifier.md) mots clés sont autorisés uniquement sur une fonction de classe, struct ou membre marquée `virtual`.  
-  
- L'exemple suivant génère l'erreur C3609 :  
-  
-```  
-// C3609.cpp  
-// compile with: /clr /c  
-ref class C {  
-   int f() sealed;   // C3609  
-   virtual int f2() sealed;   // OK  
-};  
-```  
+
+'membre' : une fonction sealed ou final doit être virtuelle
+
+Le [sealed](../../windows/sealed-cpp-component-extensions.md) et [finale](../../cpp/final-specifier.md) mots clés sont uniquement autorisés sur une classe, struct ou une fonction membre marquée `virtual`.
+
+L'exemple suivant génère l'erreur C3609 :
+
+```
+// C3609.cpp
+// compile with: /clr /c
+ref class C {
+   int f() sealed;   // C3609
+   virtual int f2() sealed;   // OK
+};
+```

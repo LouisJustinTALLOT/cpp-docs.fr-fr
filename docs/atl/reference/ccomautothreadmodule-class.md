@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0934a3c6690b75ffa2eca18f1fd38662bc2a9fd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e747386c37e760793ceaa0396f217304cbe621d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022680"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule (classe)
 
@@ -44,13 +44,13 @@ ms.locfileid: "43756988"
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class ThreadAllocator = CComSimpleThreadAllocator>  
+template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-`ThreadAllocator`  
+*ThreadAllocator*<br/>
 [in] La classe de la gestion de sélection de thread. La valeur par défaut est [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
 ## <a name="members"></a>Membres
@@ -122,13 +122,13 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Paramètres
 
-*pfnCreateInstance*  
+*pfnCreateInstance*<br/>
 [in] Pointeur vers une fonction de créateur.
 
-*riid*  
+*riid*<br/>
 [in] IID de l’interface demandée.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par *riid*. Si l’objet ne prend pas en charge cette interface, *ppvObj* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -181,16 +181,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Paramètres
 
-*p*  
+*p*<br/>
 [in] Pointeur vers un tableau d’entrées de mappage d’objet.
 
-*h*  
+*h*<br/>
 [in] HINSTANCE passé à `DLLMain` ou `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Pointeur vers le LIBID de la bibliothèque de types associé au projet.
 
-*nThreads*  
+*nThreads*<br/>
 [in] Le nombre de threads doit être créé. Par défaut, *nThreads* est la valeur retournée par [GetDefaultThreads](#getdefaultthreads).
 
 ### <a name="remarks"></a>Notes
@@ -269,5 +269,5 @@ Lorsque le nombre de verrous du module atteint zéro, le module peut être déch
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Classes de module](../../atl/atl-module-classes.md)

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cd7e80d3c01cf84080ba2b5851da99584122ec4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023941"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate (classe)
 Classe de base abstraite qui définit les fonctionnalités de base des modèles de document.  
@@ -167,17 +167,15 @@ CDocTemplate (
  Spécifie l’ID des ressources utilisées avec le type de document. Cela peut inclure le menu, icône, table d’accélérateurs et ressources de type chaîne.  
   
  La ressource de chaîne se compose de sous-chaînes jusqu'à sept séparés par le caractère « \n » (le caractère « \n » est nécessaire en tant qu’un espace réservé si une sous-chaîne n’est pas incluse ; Toutefois, les caractères de fin '\n' ne sont pas nécessaires) ; Ces sous-chaînes décrivent le type de document. Pour plus d’informations sur les sous-chaînes, consultez [GetDocString](#getdocstring). Cette ressource de chaîne se trouve dans le fichier de ressources de l’application. Exemple :  
-  
- `// MYCALC.RC`  
-  
- `STRINGTABLE PRELOAD DISCARDABLE`  
-  
- `BEGIN`  
-  
- `IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"`  
-  
- `END`  
-  
+
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"
+END
+```
+
  Notez que la chaîne commence par un caractère « \n » ; Il s’agit, car la première sous-chaîne n’est pas utilisée pour les applications MDI et par conséquent, n’est pas incluse. Vous pouvez modifier cette chaîne à l’aide de l’éditeur de chaînes ; la chaîne entière apparaît comme une entrée unique dans l’éditeur de chaîne, pas comme sept entrées distinctes.  
   
  *pDocClass*  

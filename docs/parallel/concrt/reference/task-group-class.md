@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33b285cb55e04bcae2fd7f65ef5e94686e88e5e6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d7ee8fa674174d95c3e538889f6d5538be049b70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020718"
 ---
 # <a name="taskgroup-class"></a>task_group, classe
 La classe `task_group` représente une collection de travail parallèle qui peut être attendue ou annulée.  
@@ -127,17 +127,17 @@ void run(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Function`  
- Le type de l’objet de fonction qui sera appelé pour exécuter le corps de la poignée de la tâche.  
+*_Function*<br/>
+Le type de l’objet de fonction qui sera appelé pour exécuter le corps de la poignée de la tâche.  
   
- `_Func`  
- Une fonction qui sera appelée pour appeler le corps de la tâche. Cela peut être une expression lambda ou un autre objet qui prend en charge une version de l’opérateur d’appel de fonction avec la signature `void operator()()`.  
+*_Func*<br/>
+Une fonction qui sera appelée pour appeler le corps de la tâche. Cela peut être une expression lambda ou un autre objet qui prend en charge une version de l’opérateur d’appel de fonction avec la signature `void operator()()`.  
   
- `_Placement`  
- Une référence à l’emplacement où la tâche représentée par le `_Func` paramètre doit s’exécuter.  
+*_Placement*<br/>
+Une référence à l’emplacement où la tâche représentée par le `_Func` paramètre doit s’exécuter.  
   
- `_Task_handle`  
- Handle vers le travail planifié. Notez que l’appelant est responsable de la durée de vie de cet objet. Le runtime continue à attendre qu’il live jusqu'à ce que le `wait` ou `run_and_wait` méthode a été appelée sur ce `task_group` objet.  
+*_Task_handle*<br/>
+Handle vers le travail planifié. Notez que l’appelant est responsable de la durée de vie de cet objet. Le runtime continue à attendre qu’il live jusqu'à ce que le `wait` ou `run_and_wait` méthode a été appelée sur ce `task_group` objet.  
   
 ### <a name="remarks"></a>Notes  
  Le runtime planifie la fonction de travail fournie pour s’exécuter à une date ultérieure, qui peut être après le retour de la fonction appelante. Cette méthode utilise un [task_handle](task-handle-class.md) objet pour conserver une copie de la fonction de travail fournie. Par conséquent, toute modification d’état qui se produire dans un objet de fonction que vous passez à cette méthode n’apparaîtra pas dans votre copie de cet objet de fonction. En outre, assurez-vous que la durée de vie de tous les objets que vous passez par pointeur ou par référence à la fonction de travail reste valide jusqu'à ce que retourne la fonction de travail.  
@@ -167,14 +167,14 @@ task_group_status run_and_wait(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Function`  
- Le type de l’objet de fonction qui sera appelé pour exécuter le corps de la tâche.  
+*_Function*<br/>
+Le type de l’objet de fonction qui sera appelé pour exécuter le corps de la tâche.  
   
- `_Task_handle`  
- Handle vers la tâche qui sera exécutée inline sur le contexte d’appel. Notez que l’appelant est responsable de la durée de vie de cet objet. Le runtime continue à attendre qu’il vivre jusqu'à la `run_and_wait` méthode termine son exécution.  
+*_Task_handle*<br/>
+Handle vers la tâche qui sera exécutée inline sur le contexte d’appel. Notez que l’appelant est responsable de la durée de vie de cet objet. Le runtime continue à attendre qu’il vivre jusqu'à la `run_and_wait` méthode termine son exécution.  
   
- `_Func`  
- Une fonction qui sera appelée pour appeler le corps du travail. Cela peut être une expression lambda ou un autre objet qui prend en charge une version de l’opérateur d’appel de fonction avec la signature `void operator()()`.  
+*_Func*<br/>
+Une fonction qui sera appelée pour appeler le corps du travail. Cela peut être une expression lambda ou un autre objet qui prend en charge une version de l’opérateur d’appel de fonction avec la signature `void operator()()`.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Indique si l’attente a été satisfaite ou le groupe de tâches a été annulé en raison d’une opération d’annulation explicite ou une exception levée par une de ses tâches. Pour plus d’informations, consultez [task_group_status](concurrency-namespace-enums.md#task_group_status).  
@@ -202,8 +202,8 @@ task_group(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_CancellationToken`  
- Un jeton d’annulation à associer à ce groupe de tâches. Le groupe de tâches est annulé lorsque le jeton est annulé.  
+*_CancellationToken*<br/>
+Un jeton d’annulation à associer à ce groupe de tâches. Le groupe de tâches est annulé lorsque le jeton est annulé.  
   
 ### <a name="remarks"></a>Notes  
  Le constructeur qui accepte un jeton d’annulation crée un `task_group` qui sera annulée lors de l’annulation de la source associée au jeton. En fournissant un jeton d’annulation explicite isole également ce groupe de tâches de participer à une annulation implicite d’un groupe parent avec un autre jeton ou aucun jeton.  

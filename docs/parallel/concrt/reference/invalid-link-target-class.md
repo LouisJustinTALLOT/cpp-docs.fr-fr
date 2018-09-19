@@ -1,5 +1,5 @@
 ---
-title: invalid_link_target, classe | Documents Microsoft
+title: invalid_link_target, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e718bd1a15df98487d0e9437c217c1750bfa5f5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2120f274dd783da00a43106338476c43cc0a9dad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021744"
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target, classe
 Cette classe décrit une exception levée quand la méthode `link_target` d'un bloc de messagerie est appelée et que le bloc de messagerie ne parvient pas à établir un lien avec la cible. Cette situation peut être due à un dépassement du nombre de liens autorisé pour le bloc de messagerie ou à une tentative à deux reprises de liaison d'une cible spécifique à la même source.  
@@ -47,7 +47,7 @@ class invalid_link_target : public std::exception;
   
  `invalid_link_target`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -63,8 +63,8 @@ invalid_link_target() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Message descriptif de l'erreur.  
+*_Message*<br/>
+Message descriptif de l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3149 | Documents Microsoft
+title: Erreur du compilateur C3149 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0441a7aebf86139aedbd5e45a7645db0a90b37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a522bfd3ba236661f206d8d4e4b550179c06b3f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033119"
 ---
 # <a name="compiler-error-c3149"></a>Erreur du compilateur C3149
-'type' : Impossible d’utiliser ce type ici sans un niveau supérieur 'char'  
-  
- Une déclaration n’a pas été spécifiée correctement.  
-  
- Par exemple, peut avoir défini un type CLR dans une portée globale et tenté de créer une variable du type dans le cadre de la définition. Étant donné que les variables globales de types CLR ne sont pas autorisées, le compilateur génère l’erreur C3149.  
-  
- Pour résoudre cette erreur, déclarez les variables des types CLR à l’intérieur d’une définition de fonction ou type.  
-  
- L’exemple suivant génère l’erreur C3149 :  
-  
-```  
-// C3149.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   // declare an array of value types   
-   array< Int32 ^> IntArray;   // C3149  
-   array< Int32>^ IntArray2;   // OK  
-}  
-```  
-  
- L’exemple suivant génère l’erreur C3149 :  
-  
-```  
-// C3149b.cpp  
-// compile with: /clr /c  
-delegate int MyDelegate(const int, int);  
-void Test1(MyDelegate m) {}   // C3149  
-void Test2(MyDelegate ^ m) {}   // OK  
-```  
+
+'type' : Impossible d’utiliser ce type ici sans un niveau supérieur 'char'
+
+Une déclaration n’a pas été spécifiée correctement.
+
+Par exemple, peut avoir défini un type CLR dans une portée globale et a tenté de créer une variable du type en tant que partie de la définition. Étant donné que les variables globales de types CLR ne sont pas autorisées, le compilateur générera C3149.
+
+Pour résoudre cette erreur, déclarez les variables de types CLR à l’intérieur d’une définition de fonction ou type.
+
+L’exemple suivant génère l’erreur C3149 :
+
+```
+// C3149.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   // declare an array of value types
+   array< Int32 ^> IntArray;   // C3149
+   array< Int32>^ IntArray2;   // OK
+}
+```
+
+L’exemple suivant génère l’erreur C3149 :
+
+```
+// C3149b.cpp
+// compile with: /clr /c
+delegate int MyDelegate(const int, int);
+void Test1(MyDelegate m) {}   // C3149
+void Test2(MyDelegate ^ m) {}   // OK
+```

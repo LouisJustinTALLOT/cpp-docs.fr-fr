@@ -1,5 +1,5 @@
 ---
-title: Erreur RC2165 du compilateur de ressources | Documents Microsoft
+title: Erreur RC2165 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a893b9ae94f45d9608d2ac67bcfdbf3b5ecb41f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61293576fa36d9e8a853cb7a8b71e4c2de98e932
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324312"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022550"
 ---
 # <a name="resource-compiler-error-rc2165"></a>Erreur RC2165 du compilateur de ressources 
-chaîne introuvable dans l’instruction DLGINCLUDE  
-  
- L’instruction n’a pas spécifié un fichier include valide.  
-  
- Le **DLGINCLUDE** instruction doit utiliser la syntaxe suivante :  
-  
- **DLGINCLUDE «*nom de fichier*.h »**
+
+chaîne introuvable dans l’instruction DLGINCLUDE
+
+L’instruction ne spécifiait pas un fichier include valide.
+
+Le **DLGINCLUDE** instruction doit utiliser la syntaxe suivante :
+
+**DLGINCLUDE «*nom de fichier*.h »**

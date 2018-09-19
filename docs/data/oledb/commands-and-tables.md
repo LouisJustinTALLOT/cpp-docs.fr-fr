@@ -22,28 +22,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6397e6e8355e8361ea95f03fc9b67d2f3211478
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fefd4241d1412ec6ea319db9ca6669856715e631
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685571"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028114"
 ---
 # <a name="commands-and-tables"></a>Commandes et tables
+
 Commandes et tables pouvoir accéder aux ensembles de lignes ; Autrement dit, ouvrir des ensembles de lignes, exécuter des commandes et lier les colonnes. Le [CCommand](../../data/oledb/ccommand-class.md) et [CTable](../../data/oledb/ctable-class.md) classes instancient les objets de commande et de table, respectivement. Ces classes dérivent [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) comme indiqué dans l’illustration suivante.  
   
- ![CCommand et CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
+![CCommand et CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
 Commande et les Classes de Table  
   
- Dans le tableau précédent, `TAccessor` peut être n’importe quel type d’accesseur répertoriée dans [Types d’accesseurs](../../data/oledb/accessors-and-rowsets.md). *TRowset* peut être n’importe quel type d’ensemble de lignes répertoriée dans [Types de l’ensemble de lignes](../../data/oledb/accessors-and-rowsets.md). *TMultiple* Spécifie le type de résultat (un seul ou plusieurs de jeu de résultats).  
+Dans le tableau précédent, `TAccessor` peut être n’importe quel type d’accesseur répertoriée dans [Types d’accesseurs](../../data/oledb/accessors-and-rowsets.md). *TRowset* peut être n’importe quel type d’ensemble de lignes répertoriée dans [Types de l’ensemble de lignes](../../data/oledb/accessors-and-rowsets.md). *TMultiple* Spécifie le type de résultat (un seul ou plusieurs de jeu de résultats).  
   
- Le [Assistant Consommateur OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) vous permet de spécifier si un objet de commande ou de table.  
+Le [Assistant Consommateur OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) vous permet de spécifier si un objet de commande ou de table.  
   
--   Pour les sources de données sans les commandes, vous pouvez utiliser la `CTable` classe. Vous l’utilisez généralement pour des ensembles de lignes simples qui ne spécifiez aucun paramètre et ne nécessitent aucune plusieurs résultats. Cette classe simple ouvre une table sur une source de données à l’aide d’un nom de table que vous spécifiez.  
+- Pour les sources de données sans les commandes, vous pouvez utiliser la `CTable` classe. Vous l’utilisez généralement pour des ensembles de lignes simples qui ne spécifiez aucun paramètre et ne nécessitent aucune plusieurs résultats. Cette classe simple ouvre une table sur une source de données à l’aide d’un nom de table que vous spécifiez.  
   
--   Pour les sources de données qui prennent en charge les commandes, vous pouvez utiliser la `CCommand` classe à la place. Pour exécuter une commande, appelez [Open](../../data/oledb/ccommand-open.md) sur cette classe. Comme alternative, vous pouvez appeler `Prepare` pour préparer une commande que vous souhaitez exécuter plusieurs fois.  
+- Pour les sources de données qui prennent en charge les commandes, vous pouvez utiliser la `CCommand` classe à la place. Pour exécuter une commande, appelez [Open](../../data/oledb/ccommand-open.md) sur cette classe. Comme alternative, vous pouvez appeler `Prepare` pour préparer une commande que vous souhaitez exécuter plusieurs fois.  
   
      `CCommand` possède trois arguments template : un type d’accesseur, un type d’ensemble de lignes et un type de résultat (`CNoMultipleResults`, par défaut, ou `CMultipleResults`). Si vous spécifiez `CMultipleResults`, le `CCommand` classe prend en charge la `IMultipleResults` interface et gère plusieurs ensembles de lignes. Le [DBVIEWER](https://github.com/Microsoft/VCSamples) exemple montre comment gérer les résultats multiples.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

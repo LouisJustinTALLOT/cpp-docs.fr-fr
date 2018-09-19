@@ -1,5 +1,5 @@
 ---
-title: progress_reporter, classe | Documents Microsoft
+title: progress_reporter, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d4dc98c4fb411a4d63fdfad5049cf0df723bec
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016765"
 ---
 # <a name="progressreporter-class"></a>progress_reporter, classe
 La classe d'indication de la progression permet de signaler des notifications de progression d'un type spécifique. Chaque objet progress_reporter est lié à une opération ou à une action asynchrone particulière.  
@@ -37,8 +37,8 @@ class progress_reporter;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_ProgressType`  
- Type de charge utile de chaque notification d'avancement signalé via l'indicateur de progression.  
+*_ProgressType*<br/>
+Type de charge utile de chaque notification d'avancement signalé via l'indicateur de progression.  
   
 ## <a name="members"></a>Membres  
   
@@ -60,7 +60,7 @@ class progress_reporter;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `progress_reporter`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ppltasks.h  
   
  **Espace de noms :** concurrency  
@@ -71,7 +71,7 @@ class progress_reporter;
 progress_reporter();
 ```  
   
-##  <a name="report"></a> Rapport 
+##  <a name="report"></a> rapport 
 
  Envoie un rapport d'avancement à l'action asynchrone ou à l'opération à laquelle est lié cet indicateur de progression.  
   
@@ -80,8 +80,8 @@ void report(const _ProgressType& val) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `val`  
- La charge utile au rapport via une notification de progression.  
+*Val*<br/>
+La charge utile à signaler via une notification de progression.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)

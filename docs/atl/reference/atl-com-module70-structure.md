@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf975b0b434218d1917c2d630582e32cd287e298
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cfa52749f6789ef8bfe65f9bdcdf5238923216f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755064"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019375"
 ---
 # <a name="atlcommodule70-structure"></a>_Atl_com_module70, structure
 
@@ -44,19 +44,19 @@ struct _ATL_COM_MODULE70 {
 
 ## <a name="members"></a>Membres
 
-`cbSize`  
+`cbSize`<br/>
 La taille de la structure, utilisée pour le contrôle de version.
 
-`m_hInstTypeLib`  
+`m_hInstTypeLib`<br/>
 L’instance de handle vers la bibliothèque de types pour ce module.
 
-`m_ppAutoObjMapFirst`  
+`m_ppAutoObjMapFirst`<br/>
 Adresse de l’élément de tableau indiquant le début des entrées de mappage d’objet pour ce module.
 
-`m_ppAutoObjMapLast`  
+`m_ppAutoObjMapLast`<br/>
 Adresse de l’élément de tableau indiquant la fin des entrées de mappage d’objet pour ce module.
 
-`m_csObjMap`  
+`m_csObjMap`<br/>
 Section critique pour sérialiser l’accès pour les entrées de mappage d’objet. Utilisé en interne par ATL.
 
 ## <a name="remarks"></a>Notes

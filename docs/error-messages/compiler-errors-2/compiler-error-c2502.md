@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2502 | Documents Microsoft
+title: Erreur du compilateur C2502 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093980d1e604eacde92a8ea7aa029f77f57d48b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e3197ca71ff277f2904666261e7d0546a9128f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032524"
 ---
 # <a name="compiler-error-c2502"></a>Erreur du compilateur C2502
-'identificateur' : trop de modificateurs d’accès sur la classe de base  
-  
- La classe de base comporte plus d’un modificateur d’accès. Uniquement un modificateur d’accès (`public`, `private`, ou `protected`) est autorisée.  
-  
- L’exemple suivant génère l’erreur C2502 :  
-  
-```  
-// C2502.cpp  
-// compile with: /c  
-class A { };  
-class B { };  
-class C : private public A { };   // C2502  
-  
-// OK  
-class D : private A {};  
-class E : public A, private B {};  
+
+'identificateur' : trop de modificateurs d’accès sur la classe de base
+
+La classe de base a plus d’un modificateur d’accès. Modificateur d’accès qu’un seul (`public`, `private`, ou `protected`) est autorisée.
+
+L’exemple suivant génère l’erreur C2502 :
+
+```
+// C2502.cpp
+// compile with: /c
+class A { };
+class B { };
+class C : private public A { };   // C2502
+
+// OK
+class D : private A {};
+class E : public A, private B {};
 ```

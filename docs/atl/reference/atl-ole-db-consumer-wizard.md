@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315370"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020431"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
 
@@ -193,6 +193,6 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
 ## <a name="see-also"></a>Voir aussi
 
-[Consommateur ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)
-[Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)
-[chaînes de connexion et des liaisons de données (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Consommateur ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
+[Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Chaînes de connexion et des liaisons de données (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

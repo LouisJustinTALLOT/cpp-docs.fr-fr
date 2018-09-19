@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2545 | Documents Microsoft
+title: Erreur du compilateur C2545 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7dfadefc8ec0c9bb7a5fbd516a561833340767
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94dd8220922b1db9d4cb361487948cd5e3b4e51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235486"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029037"
 ---
 # <a name="compiler-error-c2545"></a>Erreur du compilateur C2545
-'opérateur' : Impossible de trouver l’opérateur surchargé  
-  
- L’opérateur ne peut pas être utilisé avec les opérandes fournis. Vous devez fournir un opérateur surchargé avec les opérandes requis.  
-  
- Cette erreur peut être provoquée si les opérandes sont de type incorrect.  
-  
- Cette erreur peut être résolue si vous définissez un opérateur de conversion ou d’un constructeur qui accepte un seul paramètre.
+
+'opérateur' : Impossible de trouver l’opérateur surchargé
+
+L’opérateur ne peut pas être utilisé avec les opérandes fournis. Vous devez fournir un opérateur surchargé avec les opérandes requis.
+
+Cette erreur peut être provoquée si les opérandes ont un type incorrect.
+
+Cette erreur peut être résolue si vous définissez un opérateur de conversion ou un constructeur qui accepte un seul paramètre.

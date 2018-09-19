@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2671 | Documents Microsoft
+title: Erreur du compilateur C2671 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22812808ce6e159c0f35d9dc2de8e269ecc23cac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b37d9dc1e50da921bdbe758e73257100853517eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026153"
 ---
 # <a name="compiler-error-c2671"></a>Erreur du compilateur C2671
-'fonction' : les fonctions membres statiques n’ont pas de pointeurs 'this'  
-  
- A `static` fonction membre a tenté d’accéder au `this`.  
-  
- L’exemple suivant génère l’erreur C2671 :  
-  
-```  
-// C2671.cpp  
-struct S {  
-   static S* const func() { return this; }  // C2671  
-};  
+
+'fonction' : les fonctions membres statiques n’ont pas de pointeurs 'this'
+
+Un `static` fonction membre a tenté d’accéder à `this`.
+
+L’exemple suivant génère l’erreur C2671 :
+
+```
+// C2671.cpp
+struct S {
+   static S* const func() { return this; }  // C2671
+};
 ```

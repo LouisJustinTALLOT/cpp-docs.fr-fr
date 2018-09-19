@@ -1,5 +1,5 @@
 ---
-title: Erreur RC2113 du compilateur de ressources | Documents Microsoft
+title: Erreur RC2113 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152621a248c2a47a453034f1b171fe1746000fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb23ae8e9274368abd2c754d94a19050ae3805c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015868"
 ---
 # <a name="resource-compiler-error-rc2113"></a>Erreur RC2113 du compilateur de ressources 
-END attendu dans la boîte de dialogue  
-  
- Le **fin** mot clé doit se produire à la fin d’un **boîte de dialogue** instruction. Assurez-vous qu’il n’y aucun guillemet ouvrant à partir de l’instruction précédente.
+
+END attendu dans la boîte de dialogue
+
+Le **fin** mot clé doit se produire à la fin d’un **boîte de dialogue** instruction. Assurez-vous qu’il n’existe aucun guillemet ouvrant à partir de l’instruction précédente.

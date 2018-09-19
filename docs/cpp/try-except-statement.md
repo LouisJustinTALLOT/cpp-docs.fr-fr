@@ -35,29 +35,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2780697c1a50e15e170f2096a2841e2c50d844a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031435"
 ---
 # <a name="try-except-statement"></a>try-except, instruction
 
 **Section spécifique à Microsoft**
 
-Le **essayez-sauf** instruction est une extension Microsoft C et langages C++ qui prend en charge de gestion des exceptions structurées.  
+Le **essayez-sauf** instruction est une extension Microsoft C et langages C++ qui prend en charge de gestion des exceptions structurées.
 
-## <a name="syntax"></a>Syntaxe  
-  
-> **__try**   
-> {  
->    code protégé  
-> }  
-> **__except** ( *expression* )  
-> {  
->    code du Gestionnaire d’exception  
-> }  
+## <a name="syntax"></a>Syntaxe
+
+> **__try** {/ / service Guardian code} **__except** ( *expression* ) {/ / code de gestionnaire d’exception}
 
 ## <a name="remarks"></a>Notes
 
@@ -74,7 +67,7 @@ L’instruction composée après la **__try** clause est le corps ou la section 
 
 1. La section protégée est exécutée.
 
-2. Si aucune exception ne se produit pendant l’exécution de la section protégée, l’exécution se poursuit à l’instruction après le **__except** clause.  
+2. Si aucune exception ne se produit pendant l’exécution de la section protégée, l’exécution se poursuit à l’instruction après le **__except** clause.
 
 3. Si une exception se produit pendant l’exécution de la section protégée ou dans toute routine de la section protégée, la **__except** *expression* (appelée la *filtre* expression) est évaluée et la valeur détermine comment l’exception est gérée. Il existe trois valeurs :
 
@@ -88,10 +81,10 @@ L’instruction composée après la **__try** clause est le corps ou la section 
 
 Chaque application peut avoir son propre gestionnaire d'exceptions.
 
-Il n’est pas valide de sauter dans une **__try** mais valide de sauter hors d’une instruction. Le Gestionnaire d’exceptions n’est pas appelé si un processus est terminé au milieu de l’exécution un **essayez-sauf** instruction.  
-  
-Pour plus d'informations, consultez l'article de la Base de connaissances Q315937 : PROCÉDURE : interception du dépassement de capacité de la pile dans une application Visual C++.  
-  
+Il n’est pas valide de sauter dans une **__try** mais valide de sauter hors d’une instruction. Le Gestionnaire d’exceptions n’est pas appelé si un processus est terminé au milieu de l’exécution un **essayez-sauf** instruction.
+
+Pour plus d'informations, consultez l'article de la Base de connaissances Q315937 : PROCÉDURE : interception du dépassement de capacité de la pile dans une application Visual C++.
+
 ## <a name="the-leave-keyword"></a>Mot clé __leave
 
 Le **__leave** mot clé est valide uniquement dans la section protégée d’un **essayez-sauf** instruction et son effet consiste à accéder à la fin de la section protégée. L'exécution se poursuit à la première instruction située après le gestionnaire d'exceptions.
@@ -106,12 +99,12 @@ Gestion structurée des exceptions fournit deux fonctions intrinsèques qui sont
 
 La fonction intrinsèque `GetExceptionInformation` retourne un pointeur vers une structure contenant des informations supplémentaires relatives à l’exception. Ce pointeur vous permet d'accéder à l'état de l'ordinateur qui existait au moment d'une exception matérielle. La structure est la suivante :
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 Les types pointeur `PEXCEPTION_RECORD` et `PCONTEXT` sont définis dans le fichier include \<winnt.h >, et `_EXCEPTION_RECORD` et `_CONTEXT` sont définis dans le fichier include \<excpt.h >
 
@@ -123,10 +116,10 @@ excpt.h définit d’autres noms pour ces fonctions intrinsèques :
 
 `GetExceptionCode` équivaut à `_exception_code`
 
- `GetExceptionInformation` équivaut à `_exception_info`
+`GetExceptionInformation` équivaut à `_exception_info`
 
- `AbnormalTermination` équivaut à `_abnormal_termination`
-  
+`AbnormalTermination` équivaut à `_abnormal_termination`
+
 ## <a name="example"></a>Exemple
 
 ```cpp
@@ -176,24 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>Sortie  
-  
-```Output 
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**FIN de la section spécifique à Microsoft**  
+## <a name="output"></a>Sortie
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
- [Écriture d’un gestionnaire d’exceptions](../cpp/writing-an-exception-handler.md)   
- [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
- [Mots clés](../cpp/keywords-cpp.md)
+
+[Écriture d’un gestionnaire d’exceptions](../cpp/writing-an-exception-handler.md)<br/>
+[Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Mots clés](../cpp/keywords-cpp.md)

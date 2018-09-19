@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0052 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0052 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f4b6fb0db87a77f433775fedea9880f3f24bd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ba8fb898930ef830857773a89cd80e4c43c59c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302319"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028153"
 ---
 # <a name="expression-evaluator-error-cxx0052"></a>Évaluateur d'expression, erreur CXX0052
-fonction membre absente  
-  
- Une fonction membre a été spécifiée comme un point d’arrêt, mais est introuvable. Définition d’un point d’arrêt sur une fonction qui a été inline peut provoquer cette erreur.  
-  
- Recompilez le fichier inline forcé (/ Ob0) pour définir un point d’arrêt dans cette fonction.  
-  
- Une expression a appelé une fonction qui n’est pas définie.  
-  
- Cette erreur est identique à CAN0052.
+
+fonction membre non présente
+
+Une fonction membre a été spécifiée comme un point d’arrêt, mais est introuvable. Définition d’un point d’arrêt sur une fonction qui a été inline peut provoquer cette erreur.
+
+Recompiler le fichier avec incorporation (inlining) fermées de force (/ Ob0) pour définir un point d’arrêt dans cette fonction.
+
+Une expression a appelé une fonction qui n’était pas définie.
+
+Cette erreur est identique à CAN0052.

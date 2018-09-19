@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74836c06e4ff7a9188c9886087502ad4909aebf0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8041d3928b819a7a5a53f89cc3dc2351a29ecf8f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020902"
 ---
 # <a name="security-identifier-global-functions"></a>Fonctions globales identificateur de sécurité
 
@@ -111,6 +111,7 @@ CSid AccountOps() throw(...);
 ##  <a name="admins"></a>  SIDs::Admins
 
 Retourne le SID de DOMAIN_ALIAS_RID_ADMINS.  
+
 ```
 CSid Admins() throw(...);
 ```
@@ -118,6 +119,7 @@ CSid Admins() throw(...);
 ##  <a name="anonymouslogon"></a>  SIDs::AnonymousLogon
 
 Retourne le SID de SECURITY_ANONYMOUS_LOGON_RID.  
+
 ```
 CSid AnonymousLogon() throw(...);
 ```
@@ -125,6 +127,7 @@ CSid AnonymousLogon() throw(...);
 ##  <a name="authenticateduser"></a>  SIDs::AuthenticatedUser
 
 Retourne le SID de SECURITY_AUTHENTICATED_USER_RID.  
+
 ```
 CSid AuthenticatedUser() throw(...);
 ```
@@ -132,6 +135,7 @@ CSid AuthenticatedUser() throw(...);
 ##  <a name="backupops"></a>  SIDs::BackupOps
 
 Retourne le SID de DOMAIN_ALIAS_RID_BACKUP_OPS.  
+
 ```
 CSid BackupOps() throw(...);
 ```
@@ -139,6 +143,7 @@ CSid BackupOps() throw(...);
 ##  <a name="batch"></a>  SIDs::batch
 
 Retourne le SID de SECURITY_BATCH_RID.  
+
 ```
 CSid Batch() throw(...);
 ```
@@ -146,6 +151,7 @@ CSid Batch() throw(...);
 ##  <a name="creatorgroup"></a>  SIDs::CreatorGroup
 
 Retourne le SID de SECURITY_CREATOR_GROUP_RID.  
+
 ```
 CSid CreatorGroup() throw(...);
 ```
@@ -153,6 +159,7 @@ CSid CreatorGroup() throw(...);
 ##  <a name="creatorgroupserver"></a>  SIDs::CreatorGroupServer
 
 Retourne le SID de SECURITY_CREATOR_GROUP_SERVER_RID.  
+
 ```
 CSid CreatorGroupServer() throw(...);
 ```
@@ -160,6 +167,7 @@ CSid CreatorGroupServer() throw(...);
 ##  <a name="creatorowner"></a>  SIDs::CreatorOwner
 
 Retourne le SID de SECURITY_CREATOR_OWNER_RID.  
+
 ```
 CSid CreatorOwner() throw(...);
 ```
@@ -167,6 +175,7 @@ CSid CreatorOwner() throw(...);
 ##  <a name="creatorownerserver"></a>  SIDs::CreatorOwnerServer
 
 Retourne le SID de SECURITY_CREATOR_OWNER_SERVER_RID.  
+
 ```
 CSid CreatorOwnerServer() throw(...);
 ```
@@ -174,6 +183,7 @@ CSid CreatorOwnerServer() throw(...);
 ##  <a name="dialup"></a>  SIDs::Dialup
 
 Retourne le SID de SECURITY_DIALUP_RID.  
+
 ```
 CSid Dialup() throw(...);
 ```
@@ -181,6 +191,7 @@ CSid Dialup() throw(...);
 ##  <a name="guests"></a>  SIDs::Guests
 
 Retourne le SID de DOMAIN_ALIAS_RID_GUESTS.  
+
 ```
 CSid Guests() throw(...);
 ```
@@ -188,6 +199,7 @@ CSid Guests() throw(...);
 ##  <a name="interactive"></a>  SIDs::interactive
 
 Retourne le SID de SECURITY_INTERACTIVE_RID.  
+
 ```
 CSid Interactive() throw(...);
 ```
@@ -195,6 +207,7 @@ CSid Interactive() throw(...);
 ##  <a name="local"></a>  SIDs::local
 
 Retourne le SID de SECURITY_LOCAL_RID.  
+
 ```
 CSid Local() throw(...);
 ```
@@ -202,6 +215,7 @@ CSid Local() throw(...);
 ##  <a name="network"></a>  SIDs::Network
 
 Retourne le SID de SECURITY_NETWORK_RID.  
+
 ```
 CSid Network() throw(...);
 ```
@@ -209,6 +223,7 @@ CSid Network() throw(...);
 ##  <a name="networkservice"></a>  SIDs::NetworkService
 
 Retourne le SID de SECURITY_NETWORK_SERVICE_RID.  
+
 ```
 CSid NetworkService() throw(...);
 ```
@@ -222,6 +237,7 @@ Lorsque les compteurs de journal personnalisées sont créées avec la classe AT
 ##  <a name="null"></a>  SIDs::null
 
 Retourne le SID de SECURITY_NULL_RID.  
+
 ```
 CSid Null() throw(...);
 ```
@@ -229,6 +245,7 @@ CSid Null() throw(...);
 ##  <a name="prew2kaccess"></a>  SIDs::PreW2KAccess
 
 Retourne le SID de DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.  
+
 ```
 CSid PreW2KAccess() throw(...);
 ```
@@ -236,6 +253,7 @@ CSid PreW2KAccess() throw(...);
 ##  <a name="powerusers"></a>  SIDs::PowerUsers
 
 Retourne le SID de DOMAIN_ALIAS_RID_POWER_USERS.  
+
 ```
 CSid PowerUsers() throw(...);
 ```
@@ -243,6 +261,7 @@ CSid PowerUsers() throw(...);
 ##  <a name="printops"></a>  SIDs::PrintOps
 
 Retourne le SID de DOMAIN_ALIAS_RID_PRINT_OPS.  
+
 ```
 CSid PrintOps() throw(...);
 ```
@@ -250,6 +269,7 @@ CSid PrintOps() throw(...);
 ##  <a name="proxy"></a>  SIDs::proxy
 
 Retourne le SID de SECURITY_PROXY_RID.  
+
 ```
 CSid Proxy() throw(...);
 ```
@@ -257,6 +277,7 @@ CSid Proxy() throw(...);
 ##  <a name="rasservers"></a>  SIDs::RasServers
 
 Retourne le SID de DOMAIN_ALIAS_RID_RAS_SERVERS.  
+
 ```
 CSid RasServers() throw(...);
 ```
@@ -264,6 +285,7 @@ CSid RasServers() throw(...);
 ##  <a name="replicator"></a>  SIDs::Replicator
 
 Retourne le SID de DOMAIN_ALIAS_RID_REPLICATOR.  
+
 ```
 CSid Replicator() throw(...);
 ```
@@ -271,6 +293,7 @@ CSid Replicator() throw(...);
 ##  <a name="restrictedcode"></a>  SIDs::RestrictedCode
 
 Retourne le SID de SECURITY_RESTRICTED_CODE_RID.  
+
 ```
 CSid RestrictedCode() throw(...);
 ```
@@ -278,6 +301,7 @@ CSid RestrictedCode() throw(...);
 ##  <a name="self"></a>  SIDs::Self
 
 Retourne le SID de SECURITY_PRINCIPAL_SELF_RID.  
+
 ```
 CSid Self() throw(...);
 ```
@@ -285,6 +309,7 @@ CSid Self() throw(...);
 ##  <a name="serverlogon"></a>  SIDs::ServerLogon
 
 Retourne le SID de SECURITY_SERVER_LOGON_RID.  
+
 ```
 CSid ServerLogon() throw(...);
 ```
@@ -292,6 +317,7 @@ CSid ServerLogon() throw(...);
 ##  <a name="service"></a>  SIDs::service
 
 Retourne le SID de SECURITY_SERVICE_RID.  
+
 ```
 CSid Service() throw(...);
 ```
@@ -299,6 +325,7 @@ CSid Service() throw(...);
 ##  <a name="system"></a>  SIDs::System
 
 Retourne le SID de SECURITY_LOCAL_SYSTEM_RID.  
+
 ```
 CSid System() throw(...);
 ```
@@ -306,6 +333,7 @@ CSid System() throw(...);
 ##  <a name="systemops"></a>  SIDs::SystemOps
 
 Retourne le SID de DOMAIN_ALIAS_RID_SYSTEM_OPS.  
+
 ```
 CSid SystemOps() throw(...);
 ```
@@ -313,6 +341,7 @@ CSid SystemOps() throw(...);
 ##  <a name="terminalserver"></a>  SIDs::TerminalServer
 
 Retourne le SID de SECURITY_TERMINAL_SERVER_RID.  
+
 ```
 CSid TerminalServer() throw(...);
 ```
@@ -320,6 +349,7 @@ CSid TerminalServer() throw(...);
 ##  <a name="users"></a>  SIDs::Users
 
 Retourne le SID de DOMAIN_ALIAS_RID_USERS.  
+
 ```
 CSid Users() throw(...);
 ```
@@ -327,6 +357,7 @@ CSid Users() throw(...);
 ##  <a name="world"></a>  SIDs::World
 
 Retourne le SID de SECURITY_WORLD_RID.  
+
 ```
 CSid World() throw(...);
 ```

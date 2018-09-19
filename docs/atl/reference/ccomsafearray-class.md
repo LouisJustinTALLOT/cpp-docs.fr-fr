@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 920cfbde9229131c5148c359f6a82ce002d7fb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030142"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray, classe
 
@@ -58,7 +58,7 @@ class CComSafeArray
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Type de données à stocker dans le tableau.
 
 ## <a name="members"></a>Membres
@@ -158,19 +158,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*psaSrc*  
+*psaSrc*<br/>
 Un pointeur vers un `SAFEARRAY` objet.
 
-*ulCount*  
+*ulCount*<br/>
 Le nombre d’objets à ajouter au tableau.
 
-*pT*  
+*pT*<br/>
 Pointeur vers un ou plusieurs objets à ajouter au tableau.
 
-*t*  
+*t*<br/>
 Une référence à l’objet à ajouter au tableau.
 
-*bCopy*  
+*bCopy*<br/>
 Indique si une copie des données doit être créée. La valeur par défaut est TRUE.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -193,7 +193,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Paramètres
 
-*psaSrc*  
+*psaSrc*<br/>
 Un pointeur vers le `SAFEARRAY` structure.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -220,25 +220,25 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Paramètres
 
-*lié*  
+*lié*<br/>
 Structure `SAFEARRAYBOUND`.
 
-*ulCount*  
+*ulCount*<br/>
 Nombre d’éléments dans le tableau.
 
-*lLBound*  
+*lLBound*<br/>
 La valeur de la limite inférieure ; Autrement dit, l’index du premier élément du tableau.
 
-*pBound*  
+*pBound*<br/>
 Un pointeur vers un `SAFEARRAYBOUND` structure.
 
-*uDims*  
+*uDims*<br/>
 Le nombre de dimensions dans le tableau.
 
-*saSrc*  
+*saSrc*<br/>
 Une référence à un `SAFEARRAY` structure ou `CComSafeArray` objet. Dans les deux cas, le constructeur utilise cette référence pour effectuer une copie du tableau, donc le tableau n’est pas référencé après la construction.
 
-*psaSrc*  
+*psaSrc*<br/>
 Un pointeur vers un `SAFEARRAY` structure. Le constructeur utilise cette adresse pour effectuer une copie du tableau, donc le tableau n’est pas référencé après la construction.
 
 ### <a name="remarks"></a>Notes
@@ -267,7 +267,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Paramètres
 
-*ppArray*  
+*ppArray*<br/>
 Pointeur vers le `SAFEARRAY` à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -288,7 +288,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Paramètres
 
-*ppArray*  
+*ppArray*<br/>
 Un pointeur vers un emplacement dans lequel créer le nouveau `SAFEARRAY`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -310,16 +310,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*pBound*  
+*pBound*<br/>
 Un pointeur vers un `SAFEARRAYBOUND` objet.
 
-*uDims*  
+*uDims*<br/>
 Le nombre de dimensions dans le tableau.
 
-*ulCount*  
+*ulCount*<br/>
 Nombre d’éléments dans le tableau.
 
-*lLBound*  
+*lLBound*<br/>
 La valeur de la limite inférieure ; Autrement dit, l’index du premier élément du tableau.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -372,7 +372,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*lIndex Valeur de type*  
+*lIndex Valeur de type*<br/>
 Le numéro d’index de la valeur dans le tableau à retourner.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -389,7 +389,7 @@ ULONG GetCount(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*uDim*  
+*uDim*<br/>
 La dimension du tableau.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -422,7 +422,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*uDim*  
+*uDim*<br/>
 La dimension de tableau pour lequel obtenir la limite inférieure. Si omis, la valeur par défaut est 0.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -485,7 +485,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*uDim*  
+*uDim*<br/>
 La dimension de tableau pour lequel obtenir la limite supérieure. Si omis, la valeur par défaut est 0.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -526,10 +526,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 
 ### <a name="parameters"></a>Paramètres
 
-*alIndex*  
+*alIndex*<br/>
 Pointeur vers un vecteur d’index pour chaque dimension du tableau. La dimension (le plus significative) à l’extrême gauche est `alIndex[0]`.
 
-*t*  
+*t*<br/>
 Une référence aux données retournées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -546,10 +546,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 
 ### <a name="parameters"></a>Paramètres
 
-*alIndex*  
+*alIndex*<br/>
 Pointeur vers un vecteur d’index pour chaque dimension du tableau. La dimension (moins significatif) plus à droite est `alIndex`[0].
 
-*T*  
+*T*<br/>
 Spécifie la valeur du nouvel élément.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -571,7 +571,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*lIndex Valeur de type, nIndex*  
+*lIndex Valeur de type, nIndex*<br/>
 Numéro d’index de l’élément requis dans le tableau.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -593,10 +593,10 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Paramètres
 
-*saSrc*  
+*saSrc*<br/>
 Référence à un objet `CComSafeArray`.
 
-*psaSrc*  
+*psaSrc*<br/>
 Un pointeur vers un `SAFEARRAY` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -626,13 +626,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*pBound*  
+*pBound*<br/>
 Un pointeur vers un `SAFEARRAYBOUND` structure qui contient des informations sur le nombre d’éléments et la limite inférieure du tableau.
 
-*ulCount*  
+*ulCount*<br/>
 Le nombre demandé d’objets dans le tableau redimensionné.
 
-*lLBound*  
+*lLBound*<br/>
 La limite inférieure.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -653,13 +653,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*lIndex Valeur de type*  
+*lIndex Valeur de type*<br/>
 Numéro d’index de l’élément de tableau à définir.
 
-*t*  
+*t*<br/>
 La nouvelle valeur de l’élément spécifié.
 
-*bCopy*  
+*bCopy*<br/>
 Indique si une copie des données doit être créée. La valeur par défaut est TRUE.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -672,7 +672,7 @@ Le *bCopy* indicateur est pris en compte lorsque des éléments de type BSTR ou 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Type de données SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)   
-[CComSafeArray::Create](#create)   
-[CComSafeArray::Destroy](#destroy)   
+[Type de données SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[CComSafeArray::Create](#create)<br/>
+[CComSafeArray::Destroy](#destroy)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

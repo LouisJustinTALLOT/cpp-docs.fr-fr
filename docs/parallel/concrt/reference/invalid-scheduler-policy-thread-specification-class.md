@@ -1,5 +1,5 @@
 ---
-title: invalid_scheduler_policy_thread_specification, classe | Documents Microsoft
+title: invalid_scheduler_policy_thread_specification, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e2d5ba1c8fd4d8afd4af88c45069b34717a66c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab180a5f52a7645b7ce6cc0f8a04e2ea506f8aa4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695913"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016609"
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification, classe
 Cette classe décrit une exception levée quand est effectuée une tentative de définir les limites d'accès concurrentiel d'un objet `SchedulerPolicy` de telle sorte que la valeur de la clé `MinConcurrency` est inférieure à celle de la clé `MaxConcurrency`.  
@@ -45,7 +45,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
   
  `invalid_scheduler_policy_thread_specification`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -60,8 +60,8 @@ invalid_scheduler_policy_thread_specification() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Message descriptif de l'erreur.  
+*_Message*<br/>
+Message descriptif de l'erreur.  
 
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
