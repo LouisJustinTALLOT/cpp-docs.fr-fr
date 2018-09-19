@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2568 | Documents Microsoft
+title: Erreur du compilateur C2568 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 480d0ba97417476b192a962321ff4e9d0d18a617
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9d03f0dd5a1d7029028b7e5f0d17a5e90e2891
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021655"
 ---
 # <a name="compiler-error-c2568"></a>Erreur du compilateur C2568
-'identificateur1' : Impossible de résoudre la surcharge de fonction  
-  
- Le compilateur ne peut pas déterminer quelle surchargée fonction à appeler. Les paramètres réels transmis à la fonction doivent être converties pour correspondre aux paramètres formels pour l’une de la fonction surchargée, mais aucune correspondance n’est sans ambiguïté plus performants que tous les autres.
+
+'identificateur1' : Impossible de résoudre la surcharge de fonction
+
+Le compilateur ne peut pas déterminer les surchargées de fonction à appeler. Les paramètres réels transmis à la fonction doivent être converties pour correspondre aux paramètres formels pour l’une de la fonction surchargée, mais aucune correspondance n’est sans ambiguïté meilleure que toutes les autres.

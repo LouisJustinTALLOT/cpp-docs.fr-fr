@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eca3e25e1476023ef4b7192efd2ffbd4170e88ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b90d89a5a9541f0c3c68efc8031e6cb1dd87ad84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019027"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl, classe
+
 Fournit une implémentation de la [ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -45,14 +46,16 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *T*  
- Votre classe, dérivée de `ISessionPropertiesImpl`.  
+
+*T*<br/>
+Votre classe, dérivée de `ISessionPropertiesImpl`.  
   
- *PropClass*  
- Une classe de propriété définis par l’utilisateur par défaut est *T*.  
+*PropClass*<br/>
+Une classe de propriété définis par l’utilisateur par défaut est *T*.  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** atldb.h  
+
+**En-tête :** atldb.h  
   
 ## <a name="members"></a>Membres  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 |[SetProperties](#setproperties)|Définit les propriétés dans le groupe de propriétés de Session.|  
   
 ## <a name="remarks"></a>Notes  
- Une interface obligatoire sur les sessions. Cette classe implémente les propriétés d’une session en appelant une fonction statique définie par le [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md). Le mappage de jeu de propriétés doit être spécifié dans votre classe session.  
+
+Une interface obligatoire sur les sessions. Cette classe implémente les propriétés d’une session en appelant une fonction statique définie par le [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md). Le mappage de jeu de propriétés doit être spécifié dans votre classe session.  
   
 ## <a name="getproperties"></a> ISessionPropertiesImpl::GetProperties
+
 Retourne la liste des propriétés dans le `DBPROPSET_SESSION` groupe de propriétés qui sont actuellement définies sur la session.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -79,9 +84,11 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
+
+Consultez [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
+
 Définit les propriétés dans le `DBPROPSET_SESSION` groupe de propriétés.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -92,8 +99,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Consultez [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+
+Consultez [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

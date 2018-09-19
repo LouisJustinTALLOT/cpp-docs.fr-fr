@@ -1,5 +1,5 @@
 ---
-title: message_processor, classe | Documents Microsoft
+title: message_processor, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f720ad2590a731792f79ef66a68dd2894a15517d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026918"
 ---
 # <a name="messageprocessor-class"></a>message_processor, classe
 La classe `message_processor` est la classe de base abstraite pour le traitement des objets `message`. Aucune garantie n'existe sur l'ordre des messages.  
@@ -39,8 +39,8 @@ class message_processor;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
- Le type de données de la charge utile dans les messages gérés par cet `message_processor` objet.  
+*T*<br/>
+Le type de données de la charge utile dans les messages gérés par cet `message_processor` objet.  
   
 ## <a name="members"></a>Membres  
   
@@ -55,19 +55,19 @@ class message_processor;
 |Nom|Description|  
 |----------|-----------------|  
 |[async_send](#async_send)|En cas de substitution dans une classe dérivée, place de façon asynchrone des messages dans le bloc.|  
-|[sync_send](#sync_send)|En cas de substitution dans une classe dérivée, place les messages dans le bloc de façon synchrone.|  
+|[sync_send](#sync_send)|En cas de substitution dans une classe dérivée, place de façon synchrone des messages dans le bloc.|  
 |[attente](#wait)|En cas de substitution dans une classe dérivée, attend que toutes les opérations asynchrones se termine.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|En cas de substitution dans une classe dérivée, effectue le traitement de transfert des messages dans le bloc. Appelé à chaque fois qu’un nouveau message est ajouté et la file d’attente n’est pas vide.|  
+|[process_incoming_message](#process_incoming_message)|En cas de substitution dans une classe dérivée, effectue le traitement de transfert de messages dans le bloc. Appelé à chaque fois qu’un nouveau message est ajouté et la file d’attente n’est pas vide.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `message_processor`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -81,34 +81,34 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Msg`  
- A `message` objet à envoyer de façon asynchrone.  
+*_Msg*<br/>
+Un `message` objet à envoyer de façon asynchrone.  
   
 ### <a name="remarks"></a>Notes  
  Les implémentations de processeur doivent substituer cette méthode.  
   
 ##  <a name="process_incoming_message"></a> process_incoming_message 
 
- En cas de substitution dans une classe dérivée, effectue le traitement de transfert des messages dans le bloc. Appelé à chaque fois qu’un nouveau message est ajouté et la file d’attente n’est pas vide.  
+ En cas de substitution dans une classe dérivée, effectue le traitement de transfert de messages dans le bloc. Appelé à chaque fois qu’un nouveau message est ajouté et la file d’attente n’est pas vide.  
   
 ```
 virtual void process_incoming_message() = 0;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Les implémentations de bloc de message doivent substituer cette méthode.  
+ Les implémentations de bloc de message doivent remplacer cette méthode.  
   
 ##  <a name="sync_send"></a> sync_send 
 
- En cas de substitution dans une classe dérivée, place les messages dans le bloc de façon synchrone.  
+ En cas de substitution dans une classe dérivée, place de façon synchrone des messages dans le bloc.  
   
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Msg`  
- A `message` objet à envoyer de façon synchrone.  
+*_Msg*<br/>
+Un `message` objet à envoyer de façon synchrone.  
   
 ### <a name="remarks"></a>Notes  
  Les implémentations de processeur doivent substituer cette méthode.  

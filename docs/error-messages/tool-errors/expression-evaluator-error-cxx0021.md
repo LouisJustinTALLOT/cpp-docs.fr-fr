@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0021 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0021 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996fc46982d809da5e0b37b83f2940102892167e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ef765286d022b26aeed0ca98c9f43f94f5d17f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299365"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025774"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>Évaluateur d'expression, erreur CXX0021
-struct ou union utilisé comme scalaire  
-  
- Une structure ou une union a été utilisée dans une expression, mais aucun élément n’a été spécifié.  
-  
- Lors de la manipulation d’une structure ou une variable d’union, le nom de la variable peut apparaître de lui-même, sans qualificateur de champ. Si une structure ou une union est utilisée dans une expression, il doit être qualifié avec l’élément spécifique que vous le souhaitez.  
-  
- Spécifiez l’élément dont la valeur doit être utilisé dans l’expression.  
-  
- Cette erreur est identique à CAN0021.
+
+struct ou union utilisé comme scalaire
+
+Une structure ou une union a été utilisée dans une expression, mais aucun élément n’a été spécifié.
+
+Lors de la manipulation d’une structure ou une variable d’union, le nom de la variable peut apparaître seul, sans qualificateur de champ. Si une structure ou une union est utilisée dans une expression, il doit être qualifié avec l’élément spécifique que vous le souhaitez.
+
+Spécifiez l’élément dont la valeur doit être utilisé dans l’expression.
+
+Cette erreur est identique à CAN0021.

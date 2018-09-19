@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable NMAKE U1071 | Documents Microsoft
+title: Erreur irrécupérable NMAKE U1071 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63b354bfbdd3dbdfc7704effcbe6c0495cede27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bec5ed46b054002d1ae95e5e3f0b9b1c8ee4984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016154"
 ---
 # <a name="nmake-fatal-error-u1071"></a>Erreur irrécupérable NMAKE U1071
-cycle dans l’arborescence des dépendances pour la cible 'targetname'  
-  
- Il existe une dépendance circulaire dans l’arborescence des dépendances pour la cible spécifiée. La cible donnée est dépendante de l’un des objets dépendants de la cible donnée. Les dépendances circulaires ne sont pas valides.
+
+cycle dans l’arborescence des dépendances pour la cible 'targetname'
+
+Il existe une dépendance circulaire dans l’arborescence des dépendances pour la cible spécifiée. La cible donnée est dépendante d’un des objets dépendants de la cible donnée. Les dépendances circulaires ne sont pas valides.

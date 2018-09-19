@@ -1,5 +1,5 @@
 ---
-title: Classe de message | Documents Microsoft
+title: message, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b0828d1d8698cb696b257e6730e4aea3961dd159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042219"
 ---
 # <a name="message-class"></a>message, classe
 Enveloppe de message de base contenant la charge utile de données transmise entre les blocs de messagerie.  
@@ -40,8 +40,8 @@ class message : public ::Concurrency::details::_Runtime_object;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
- Le type de données de la charge utile dans le message.  
+*T*<br/>
+Le type de données de la charge utile dans le message.  
   
 ## <a name="members"></a>Membres  
   
@@ -62,9 +62,9 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[add_ref](#add_ref)|Ajoute au décompte de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.|  
+|[add_ref](#add_ref)|Ajoute au décompte de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie de message.|  
 |[msg_id](#msg_id)|Retourne l’ID de la `message` objet.|  
-|[remove_ref](#remove_ref)|Soustrait du nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.|  
+|[remove_ref](#remove_ref)|Soustrait du nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie de message.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
@@ -78,14 +78,14 @@ class message : public ::Concurrency::details::_Runtime_object;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `message`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
   
 ##  <a name="add_ref"></a> add_ref 
 
- Ajoute au décompte de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.  
+ Ajoute au décompte de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie de message.  
   
 ```
 long add_ref();
@@ -114,17 +114,17 @@ message(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_P`  
- La charge utile de ce message.  
+*_P*<br/>
+La charge utile de ce message.  
   
- `_Id`  
- ID unique de ce message.  
+*_ID*<br/>
+ID unique de ce message.  
   
- `_Msg`  
- Une référence ou un pointeur vers un `message` objet.  
+*_Msg*<br/>
+Une référence ou un pointeur vers un `message` objet.  
   
 ### <a name="remarks"></a>Notes  
- Le constructeur qui prend un pointeur vers un `message` de l’objet comme argument lève une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le paramètre `_Msg` est `NULL`.  
+ Le constructeur qui accepte un pointeur vers un `message` de l’objet comme un argument lève une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le paramètre `_Msg` est `NULL`.  
   
 ##  <a name="dtor"></a> ~ message 
 
@@ -155,7 +155,7 @@ T const payload;
   
 ##  <a name="remove_ref"></a> remove_ref 
 
- Soustrait du nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.  
+ Soustrait du nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie de message.  
   
 ```
 long remove_ref();

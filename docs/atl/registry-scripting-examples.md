@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753147"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022109"
 ---
 # <a name="registry-scripting-examples"></a>Exemples de scripts du Registre
 
@@ -32,17 +32,17 @@ Les exemples de script dans cette rubrique montrent comment ajouter une clé dan
 
 L’arborescence d’analyse suivante illustre un script simple qui ajoute une clé unique dans le Registre système. En particulier, le script ajoute la clé, `MyVeryOwnKey`à `HKEY_CURRENT_USER`. Il affecte également la valeur de chaîne par défaut `HowGoesIt` à la nouvelle clé :
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 Ce script peut facilement être étendu pour définir plusieurs sous-clés comme suit :
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 À présent, le script ajoute une sous-clé, `HasASubkey`à `MyVeryOwnKey`. Cette sous-clé, il ajoute les deux le `PrettyCool` sous-clé (avec une valeur par défaut `DWORD` valeur de 55) et le `ANameValue` nommée value (avec une valeur de chaîne `WithANamedValue`).
@@ -61,8 +61,8 @@ HKCU
 
 Le script suivant inscrit le serveur de bureau d’enregistrement COM proprement dit.
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 Au moment de l’exécution, cette arborescence d’analyse ajoute la `ATL.Registrar` clé à `HKEY_CLASSES_ROOT`. Pour cette nouvelle clé, puis informatique :
@@ -106,15 +106,15 @@ L’arborescence d’analyse ajoute à présent deux nouvelles sous-clés à `{4
 
 Pour spécifier plus d’une arborescence d’analyse dans un script, placez simplement un seul arbre à la fin d’un autre. Par exemple, le script suivant ajoute la clé, `MyVeryOwnKey`, aux arborescences d’analyse pour les deux `HKEY_CLASSES_ROOT` et `HKEY_CURRENT_USER`:
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]
