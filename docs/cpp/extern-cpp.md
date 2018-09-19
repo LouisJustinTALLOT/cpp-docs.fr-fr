@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaf699f2130c94729b8db9cc21dd17b9699d66c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7b090875b9656fec52e50cb68caf9c2c047d055b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606456"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114252"
 ---
 # <a name="extern-c"></a>extern (C++)
 
@@ -88,9 +88,9 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>déclarations de fonction extern « C » et extern « C++ »
 
- En C++, lorsqu’il est utilisé avec une chaîne, **extern** Spécifie que les conventions de liaison d’un autre langage sont utilisées pour l’ou les déclarateurs. Les données et les fonctions C sont accessibles uniquement si elles sont déclarées auparavant comme ayant une liaison C. Toutefois, elles doivent être définies dans une unité de traduction compilée séparément.
+En C++, lorsqu’il est utilisé avec une chaîne, **extern** Spécifie que les conventions de liaison d’un autre langage sont utilisées pour l’ou les déclarateurs. Les données et les fonctions C sont accessibles uniquement si elles sont déclarées auparavant comme ayant une liaison C. Toutefois, elles doivent être définies dans une unité de traduction compilée séparément.
 
- Microsoft C++ prend en charge les chaînes **« C »** et **« C++ »** dans le *littéral de chaîne* champ. Tous de la norme incluent l’utilisation de fichiers le **extern** syntaxe « C » pour autoriser les fonctions de bibliothèque du run-time à utiliser dans les programmes C++.
+Microsoft C++ prend en charge les chaînes **« C »** et **« C++ »** dans le *littéral de chaîne* champ. Tous de la norme incluent l’utilisation de fichiers le **extern** syntaxe « C » pour autoriser les fonctions de bibliothèque du run-time à utiliser dans les programmes C++.
 
 ## <a name="example"></a>Exemple
 
@@ -114,7 +114,7 @@ extern "C" {
     char GetChar(void);
 }
 
-//  Define the two functions 
+//  Define the two functions
 //  ShowChar and GetChar with C linkage.
 extern "C" char ShowChar(char ch) {
     putchar(ch);
@@ -131,7 +131,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
- Si une fonction a plusieurs spécifications de liaison, ils doivent concorder ; le fait de déclarer des fonctions comme ayant à la fois une liaison C et une liaison C++ constitue une erreur. En outre, si deux déclarations pour une fonction se produisent dans un programme (une avec une spécification de liaison et une autre sans), la déclaration avec la spécification de la liaison doit être la première. Toutes les déclarations redondantes de fonctions qui ont déjà une spécification de liaison sont affectées de la liaison spécifiée dans la première déclaration. Exemple :
+Si une fonction a plusieurs spécifications de liaison, ils doivent concorder ; le fait de déclarer des fonctions comme ayant à la fois une liaison C et une liaison C++ constitue une erreur. En outre, si deux déclarations pour une fonction se produisent dans un programme (une avec une spécification de liaison et une autre sans), la déclaration avec la spécification de la liaison doit être la première. Toutes les déclarations redondantes de fonctions qui ont déjà une spécification de liaison sont affectées de la liaison spécifiée dans la première déclaration. Exemple :
 
 ```cpp
 extern "C" int CFunc1();
@@ -147,8 +147,9 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>Voir aussi
- [Mots clés](../cpp/keywords-cpp.md)  
- [Programme et liaison](program-and-linkage-cpp.md)  
- [Spécificateur de classe de stockage en C extern](../c-language/extern-storage-class-specifier.md)  
- [Comportement des identificateurs en C](../c-language/behavior-of-identifiers.md)  
- [Liaison en C](../c-language/linkage.md)
+
+[Mots clés](../cpp/keywords-cpp.md)<br/>
+[Programme et liaison](program-and-linkage-cpp.md)<br/>
+[Spécificateur de classe de stockage en C extern](../c-language/extern-storage-class-specifier.md)<br/>
+[Comportement des identificateurs en C](../c-language/behavior-of-identifiers.md)<br/>
+[Liaison en C](../c-language/linkage.md)

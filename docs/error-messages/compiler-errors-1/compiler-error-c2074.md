@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2074 | Documents Microsoft
+title: Erreur du compilateur C2074 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278783563d883d150f61d4c1e54ffef8287e24b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f8beea0aa8ff319ab6bd5b33e8111a85e474549
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063955"
 ---
 # <a name="compiler-error-c2074"></a>Erreur du compilateur C2074
-'identificateur' : l’initialisation de 'clé-classe' nécessite des accolades  
-  
- La classe, la structure ou l’initialiseur d’union spécifié n’était pas entre accolades.
+
+'identificateur' : l’initialisation de 'clé-classe' nécessite des accolades
+
+La classe, la structure ou l’initialiseur d’union spécifié n’était pas entre accolades.

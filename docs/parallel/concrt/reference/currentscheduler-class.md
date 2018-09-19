@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539013"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059483"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler, classe
 Représente une abstraction pour le planificateur actuel associé au contexte d'appel.  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Policy`  
- La stratégie du planificateur qui décrit le comportement du planificateur qui vient d’être créé.  
+*Stratégie de _journal*<br/>
+La stratégie du planificateur qui décrit le comportement du planificateur qui vient d’être créé.  
   
 ### <a name="remarks"></a>Notes  
  La pièce jointe du planificateur au contexte d’appel place implicitement un décompte de références sur le planificateur.  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Placement`  
- Une référence à un emplacement où les tâches au sein du groupe de planification seront être évoque largement l’exécution à.  
+*_Placement*<br/>
+Une référence à un emplacement où les tâches au sein du groupe de planification seront être évoque largement l’exécution à.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le groupe de planification nouvellement créé. Cela `ScheduleGroup` objet possède un décompte de références initial.  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Placement`  
- Une référence à l’emplacement d’une requête sur le planificateur actuel.  
+*_Placement*<br/>
+Une référence à l’emplacement d’une requête sur le planificateur actuel.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une indication de valeur déterminant l’emplacement spécifié par le `_Placement` argument n’est disponible sur le planificateur actuel.  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_ShutdownEvent`  
- Handle vers un objet d’événement Windows qui sera signalé par l’exécution lorsque le planificateur associé au contexte actuel s’arrête et détruit proprement dit.  
+*_ShutdownEvent*<br/>
+Handle vers un objet d’événement Windows qui sera signalé par l’exécution lorsque le planificateur associé au contexte actuel s’arrête et détruit proprement dit.  
   
 ### <a name="remarks"></a>Notes  
  S’il n’existe aucun planificateur associé au contexte d’appel, cette méthode entraîne un [scheduler_not_attached](scheduler-not-attached-class.md) levée d’exception.  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Proc`  
- Pointeur vers la fonction à exécuter pour exécuter le corps de la tâche légère.  
+*_Proc*<br/>
+Pointeur vers la fonction à exécuter pour exécuter le corps de la tâche légère.  
   
- `_Data`  
- Un pointeur void vers les données qui seront passées en tant que paramètre au corps de la tâche.  
+*_Data*<br/>
+Un pointeur void vers les données qui seront passées en tant que paramètre au corps de la tâche.  
   
- `_Placement`  
- Une référence à un emplacement où la tâche légère sera être évoque largement l’exécution à.  
+*_Placement*<br/>
+Une référence à un emplacement où la tâche légère sera être évoque largement l’exécution à.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.  

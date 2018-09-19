@@ -1,5 +1,5 @@
 ---
-title: Utilisation d’accesseurs | Documents Microsoft
+title: Utilisation des accesseurs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 066e963cfe551173088f6d78efaf2057f29d05fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30ebb0e28bd25cf92a2d1c918d3cc5bc921df9f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099751"
 ---
 # <a name="using-accessors"></a>Utilisation des accesseurs
-Les rubriques suivantes expliquent comment déterminer le type d’accesseur est idéal pour les données de votre application, puis comment utiliser les différents types d’accesseurs disponibles :  
+
+Les rubriques suivantes expliquent comment déterminer le type d’accesseur convient le mieux à vos données application, puis comment utiliser les différents types d’accesseurs disponibles :  
   
--   [Détermination du type d’accesseur à utiliser](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
+- [Détermination du type d’accesseur à utiliser](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
   
--   [Utilisation de plusieurs accesseurs dans un jeu de lignes](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
+- [Utilisation de plusieurs accesseurs dans un jeu de lignes](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
   
--   [Utilisation d’accesseurs dynamiques](../../data/oledb/using-dynamic-accessors.md)  
+- [Utilisation d’accesseurs dynamiques](../../data/oledb/using-dynamic-accessors.md)  
   
--   [Utilisation des accesseurs manuels](../../data/oledb/using-manual-accessors.md)  
+- [Utilisation des accesseurs manuels](../../data/oledb/using-manual-accessors.md)  
   
--   [Accès aux données XML](../../data/oledb/accessing-xml-data.md)  
+- [Accès aux données XML](../../data/oledb/accessing-xml-data.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

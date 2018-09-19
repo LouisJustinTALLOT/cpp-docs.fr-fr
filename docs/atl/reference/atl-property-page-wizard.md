@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b5a150a81ea26e34e05cbfb9199c734a1ccad9b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094193"
 ---
 # <a name="atl-property-page-wizard"></a>Assistant Page de propriétés ATL
 
@@ -73,7 +73,7 @@ Fournit des informations sur les fonctionnalités COM pour l’objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options, Assistant Page de propriétés ATL](../../atl/reference/options-atl-property-page-wizard.md)   
-[Chaînes, Assistant Page de propriétés ATL](../../atl/reference/strings-atl-property-page-wizard.md)   
+[Options, Assistant Page de propriétés ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
+[Chaînes, Assistant Page de propriétés ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
 [Exemple : implémentation d’une page de propriétés](../../atl/example-implementing-a-property-page.md)
 

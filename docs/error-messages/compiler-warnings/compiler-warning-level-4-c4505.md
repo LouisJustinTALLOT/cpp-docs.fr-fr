@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4505 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4505 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4792be35ced122829410b284fb0ac15a5e15fa94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a89a6bd11b3d63f23f65ccc1bfbe16c49c13f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054777"
 ---
 # <a name="compiler-warning-level-4-c4505"></a>Avertissement du compilateur (niveau 4) C4505
-'fonction' : fonction locale non référencée a été supprimée.  
-  
- La fonction donnée est locale et non référencée dans le corps du module ; Par conséquent, la fonction est code mort.  
-  
- Le compilateur n’a pas généré de code pour cette fonction inutile.
+
+'fonction' : fonction locale non référencée a été supprimée.
+
+La fonction donnée est locale et non référencée dans le corps du module ; Par conséquent, la fonction est code mort.
+
+Le compilateur n’a pas généré de code pour cette fonction inutile.

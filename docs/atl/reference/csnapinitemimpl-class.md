@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091827"
 ---
 # <a name="csnapinitemimpl-class"></a>Csnapinitemimpl, classe
 
@@ -54,16 +54,16 @@ Cette classe fournit des méthodes pour implémenter un objet de nœud de compos
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe, dérivée de `CSnapInItemImpl`.
 
-*bIsExtension*  
+*bIsExtension*<br/>
 TRUE si l’objet est une extension de composant logiciel enfichable ; Sinon, FALSE.
 
 ## <a name="members"></a>Membres
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>Paramètres
 
-*piCallback*  
+*piCallback*<br/>
 [in] Pointeur vers le `IContextMenuCallback` qui peut ajouter des éléments au menu contextuel.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Identifie définies par Microsoft Management Console MMC, élément de menu points d’insertion qui peuvent être utilisés. Cela peut être une combinaison des indicateurs suivants :
 
 - CCM_INSERTIONALLOWED_TOP éléments peuvent être insérées en haut d’un menu contextuel.
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW éléments peuvent être insérés dans le menu Affichage de barre d’outils ou dans le sous-menu de l’affichage du menu contextuel de volet de résultats.
 
-*type*  
+*type*<br/>
 [in] Spécifie le type d’objet. Il peut avoir l’une des valeurs suivantes :
 
 - Objet de données de CCT_SCOPE pour le contexte de volet d’étendue.
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>Paramètres
 
-*lCommandID*  
+*lCommandID*<br/>
 [in] Spécifie l’identificateur de commande de l’élément de menu.
 
-*type*  
+*type*<br/>
 [in] Spécifie le type d’objet. Il peut avoir l’une des valeurs suivantes :
 
 - Objet de données de CCT_SCOPE pour le contexte de volet d’étendue.
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpProvider*  
+*lpProvider*<br/>
 [in] Pointeur vers le `IPropertySheetCallback` interface.
 
-*handle*  
+*handle*<br/>
 [in] Spécifie le handle utilisé pour router le message de notification MMCN_PROPERTY_CHANGE à la classe de données approprié.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Pointeur vers le `IExtendPropertySheet` interface sur l’objet qui contient des informations de contexte sur le nœud.
 
-*type*  
+*type*<br/>
 [in] Spécifie le type d’objet. Il peut avoir l’une des valeurs suivantes :
 
 - Objet de données de CCT_SCOPE pour le contexte de volet d’étendue.
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*  
+*CF*<br/>
 [in] Le format (texte, texte enrichi ou texte enrichi avec les éléments OLE) du Presse-papiers.
 
-*pStream*  
+*pStream*<br/>
 [in] Un pointeur vers le flux contenant les données d’objet.
 
 ### <a name="remarks"></a>Notes
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>Paramètres
 
-*ppViewType*  
+*ppViewType*<br/>
 [out] Pointeur vers l’adresse du type de vue renvoyé.
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out] Pointeur vers l’énumération MMC_VIEW_OPTIONS, qui fournit la console avec les options spécifiées par le composant logiciel enfichable propriétaire. Cette valeur peut être une des opérations suivantes :
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0 x 00000001 indique à la console à ne pas présenter des choix d’affichage de liste standard dans le **vue** menu. Permet le composant logiciel enfichable afficher ses propres affichages personnalisés uniquement dans le volet résultat. Il s’agit de l’indicateur d’option uniquement défini pour l’instant.
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>Paramètres
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out] Un pointeur vers le `SCOPEDATAITEM` structure de le `CSnapInItemImpl` objet.
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>Paramètres
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out] Un pointeur vers le `RESULTDATAITEM` structure de le `CSnapInItemImpl` objet.
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>Paramètres
 
-*event*  
+*event*<br/>
 [in] Identifie une action effectuée par un utilisateur. Les notifications suivantes sont possibles :
 
 - MMCN_ACTIVATE envoyé lorsqu’une fenêtre est activée et désactivée.
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - MMCN_VIEW_CHANGE envoyé lorsque le composant logiciel enfichable peut mettre à jour toutes les vues lorsqu’une modification se produit.
 
-*arg*  
+*arg*<br/>
 [in] Varie selon le type de notification.
 
-*param*  
+*param*<br/>
 [in] Varie selon le type de notification.
 
-*pComponentData*  
+*pComponentData*<br/>
 [out] Un pointeur vers l’objet qui implémente `IComponentData`. Ce paramètre est NULL si la notification n’est pas transférée à partir de `IComponentData::Notify`.
 
-*pComponent*  
+*pComponent*<br/>
 [out] Un pointeur vers l’objet qui implémente `IComponent`. Ce paramètre est NULL si la notification n’est pas transférée à partir de `IComponent::Notify`.
 
-*type*  
+*type*<br/>
 [in] Spécifie le type d’objet. Il peut avoir l’une des valeurs suivantes :
 
 - Objet de données de CCT_SCOPE pour le contexte de volet d’étendue.
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>Paramètres
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in] Différent de zéro si la fonction doit être appelée avant que les éléments sont ajoutés au menu contextuel ; sinon 0.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Identifie définies par Microsoft Management Console MMC, élément de menu points d’insertion qui peuvent être utilisés. Cela peut être une combinaison des indicateurs suivants :
 
 - CCM_INSERTIONALLOWED_TOP éléments peuvent être insérées en haut d’un menu contextuel.
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*  
+*ID*<br/>
 [in] L’ID du bouton de barre d’outils à définir.
 
-*fsState*  
+*fsState*<br/>
 [in] Les indicateurs d’état du bouton. Peut être une ou plusieurs des opérations suivantes :
 
 - TBSTATE_CHECKED le bouton a le style TBSTYLE_CHECKED et est enfoncé.
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - Saut de ligne A TBSTATE_WRAP suit le bouton. Le bouton doit également avoir le TBSTATE_ENABLED.
 
-*(fsType)*  
+*(fsType)*<br/>
 [in] Les indicateurs d’état du bouton. Peut être une ou plusieurs des opérations suivantes :
 
 - TBSTYLE_BUTTON crée un bouton de commande standard.
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*  
+*ID*<br/>
 [in] ID de l’élément de menu à définir.
 
-*pBuf*  
+*pBuf*<br/>
 [in] Pointeur vers la chaîne de l’élément de menu à mettre à jour.
 
-*flags*  
+*flags*<br/>
 [in] Spécifie les indicateurs d’état. Cela peut être une combinaison des indicateurs suivants :
 
 - MF_POPUP Spécifie qu’il s’agit d’un sous-menu dans le menu contextuel. Éléments de menu, les points d’insertion et les sous-menus davantage peuvent être ajoutés à ce sous-menu à l’aide de son `lCommandID` en tant que leur `IInsertionPointID`.
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*  
+*ID*<br/>
 Spécifie l’ID de bouton du bouton de barre d’outils de mise à jour.
 
-*fsState*  
+*fsState*<br/>
 Spécifie un état du bouton de barre d’outils. Si cet état doit être défini, retourne la valeur TRUE. Cela peut être une combinaison des indicateurs suivants :
 
 - ACTIVÉ le bouton accepte l’entrée d’utilisateur. Un bouton qui n’a pas de cet état n’accepte pas d’entrée d’utilisateur et est grisé.

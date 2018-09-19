@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3746e911b4931759baef4d0f4e4f9de77ea834b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d1347fcebc6a3793cbe63ae356f7f9d2e03742cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765594"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109767"
 ---
 # <a name="adding-an-atl-simple-object"></a>Ajout d’un objet Simple ATL
 
@@ -45,10 +45,10 @@ Vous pouvez définir des interfaces COM pour votre nouvel objet ATL lors de la c
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)   
-[Ajout d’une nouvelle Interface dans un projet ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[Ajout de Points de connexion à un objet](../../atl/adding-connection-points-to-an-object.md)   
-[Ajout d’une méthode](../../ide/adding-a-method-visual-cpp.md)   
-[Classe MFC](../../mfc/reference/adding-an-mfc-class.md)   
+[Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Ajout d’une nouvelle interface à un projet ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[Ajout de points de connexion à un objet](../../atl/adding-connection-points-to-an-object.md)<br/>
+[Ajout d’une méthode](../../ide/adding-a-method-visual-cpp.md)<br/>
+[Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Ajout d’une classe C++ générique](../../ide/adding-a-generic-cpp-class.md)
 

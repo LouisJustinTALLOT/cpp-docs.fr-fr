@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbfb34d34f6bd920744621042f5f3e09143e896
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2b70e7332c5f0a24af80ddb5cfd14a8ecf146de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751317"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025150"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl, classe
 
@@ -35,25 +35,25 @@ Cette classe fournit des méthodes utilisées par une classe de collection.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
+template <class T, class CollType, class ItemType, class CopyItem, class EnumType>
 class ICollectionOnSTLImpl : public T
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Une interface COM de la collection.
 
-*CollType*  
+*CollType*<br/>
 Une classe de conteneur de bibliothèque C++ Standard.
 
-*ItemType*  
+*ItemType*<br/>
 Le type d’élément exposé par l’interface du conteneur.
 
-*CopyItem*  
+*CopyItem*<br/>
 Un [copier la classe de stratégie](../../atl/atl-copy-policy-classes.md).
 
-*EnumType*  
+*EnumType*<br/>
 Un [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-classe d’énumérateur compatible.
 
 ## <a name="members"></a>Membres
@@ -111,7 +111,7 @@ STDMETHOD(getcount)(long* pcount);
 
 ### <a name="parameters"></a>Paramètres
 
-*pcount*  
+*pcount*<br/>
 [out] Le nombre d’éléments dans la collection.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -128,10 +128,10 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>Paramètres
 
-*Index*  
+*Index*<br/>
 [in] L’index de base 1, d’un élément dans la collection.
 
-*pVar*  
+*pVar*<br/>
 [out] L’élément correspondant *Index*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -152,7 +152,7 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>Paramètres
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Le **IUnknown** pointeur d’un objet énumérateur créé récemment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -173,5 +173,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>Voir aussi
 
-[ATLCollections, exemple](../../visual-cpp-samples.md)   
+[ATLCollections, exemple](../../visual-cpp-samples.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2953 | Documents Microsoft
+title: Erreur du compilateur C2953 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 403ebce4fdb8b3ff8cf014c27cfc6ec988a1a897
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1a22bfce625001c4e8130fa9ab7a9954d0cb0fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068778"
 ---
 # <a name="compiler-error-c2953"></a>Erreur du compilateur C2953
-'identificateur' : modèle de classe déjà défini  
-  
- Vérifiez si le fichier source et les fichiers Include contiennent d’autres définitions.  
-  
- L’exemple suivant génère l’erreur C2953 :  
-  
-```  
-// C2953.cpp  
-// compile with: /c  
-template <class T>  class A {};  
-template <class T>  class A {};   // C2953  
-template <class T>  class B {};   // OK  
+
+'identificateur' : modèle de classe déjà défini
+
+Vérifiez si le fichier source et les fichiers Include contiennent d’autres définitions.
+
+L’exemple suivant génère l’erreur C2953 :
+
+```
+// C2953.cpp
+// compile with: /c
+template <class T>  class A {};
+template <class T>  class A {};   // C2953
+template <class T>  class B {};   // OK
 ```

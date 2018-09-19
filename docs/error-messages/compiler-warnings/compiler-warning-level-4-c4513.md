@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4513 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4513 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92c3e89204ec30f9c96a5ea03ede5093dd013d0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75ae1c94d7a11fc9bb0049333c65a6677b04778a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087381"
 ---
 # <a name="compiler-warning-level-4-c4513"></a>Avertissement du compilateur (niveau 4) C4513
-'classe' : destructeur n’a pas pu être généré.  
-  
- Le compilateur ne peut pas générer un destructeur par défaut pour la classe donnée ; aucun destructeur n’a été créé. Le destructeur est dans une classe de base qui n’est pas accessible à la classe dérivée. Si la classe de base a un destructeur privé, déclarez-le public ou protégé.
+
+'class' : destructeur n’a pas pu être généré.
+
+Le compilateur ne peut pas générer un destructeur par défaut pour la classe donnée ; aucun destructeur a été créé. Le destructeur est dans une classe de base qui n’est pas accessible à la classe dérivée. Si la classe de base a un destructeur privé, rendre publique ou protégée.

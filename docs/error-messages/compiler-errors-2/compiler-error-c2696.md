@@ -1,5 +1,5 @@
 ---
-title: L’erreur C2696 erreur de compilateur | Documents Microsoft
+title: Erreur du compilateur C2696 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65ccdd6d2c8c34c360811b80d5a93abe76f5ef8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6e76b0c11d329c734b0609c540aca4315c7ed9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108740"
 ---
-# <a name="compiler-error-c2696"></a>Erreur C2696 erreur de compilateur
-Impossible de créer un objet temporaire d’un type managé 'type'  
-  
-Des références aux `const` dans un programme non managé que le compilateur appelle le constructeur et créer un objet temporaire sur la pile. Toutefois, une classe managée ne peut jamais être créée sur la pile.  
-  
-L’erreur C2696 est uniquement accessible à l’aide de l’option du compilateur obsolète **oldSyntax ;**.  
+# <a name="compiler-error-c2696"></a>Erreur du compilateur C2696
+
+Impossible de créer un objet temporaire d’un type managé 'type'
+
+Références à `const` dans un programme non managé contraindre le compilateur à appeler le constructeur et créer un objet temporaire sur la pile. Toutefois, une classe managée ne peut jamais être créée sur la pile.
+
+C2696 est uniquement accessible à l’aide de l’option de compilateur obsolète **/CLR : oldSyntax**.

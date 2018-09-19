@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4031 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4031 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 145619065350adec057b276712f5d2f0fc3ea080
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0957c4de911f8e117198b67a9e172a8c232b5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082129"
 ---
 # <a name="compiler-warning-level-1-c4031"></a>Compilateur avertissement (niveau 1) C4031
-seconde liste de paramètres formels plus longue que la première liste  
-  
- Une fonction est redéclarée avec des paramètres formels différents. Le compilateur utilise les paramètres formels fournis dans la première déclaration.
+
+deuxième liste de paramètres formels plus longue que la première liste
+
+Une fonction est redéclarée avec des paramètres formels différents. Le compilateur utilise les paramètres formels fournis dans la première déclaration.

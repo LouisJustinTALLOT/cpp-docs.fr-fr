@@ -1,5 +1,5 @@
 ---
-title: network_link_registry, classe | Documents Microsoft
+title: network_link_registry, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ae551c934c4286a321772fb01a21260c36dfccff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080322"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry, classe
 La classe de base abstraite `network_link_registry` gère les liens entre les blocs sources et cibles.  
@@ -40,8 +40,8 @@ class network_link_registry;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_Block`  
- Le bloc type de données sont stockées dans le `network_link_registry`.  
+*_Bloc*<br/>
+Le bloc type de données sont stockées dans le `network_link_registry`.  
   
 ## <a name="members"></a>Membres  
   
@@ -49,7 +49,7 @@ class network_link_registry;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`const_pointer`|Type qui fournit un pointeur vers un `const` élément dans un `network_link_registry` objet.|  
+|`const_pointer`|Un type qui fournit un pointeur vers un `const` élément dans un `network_link_registry` objet.|  
 |`const_reference`|Type qui fournit une référence à un `const` élément stocké dans un `network_link_registry` objet pour la lecture et exécution d’opérations const.|  
 |`iterator`|Un type qui fournit un itérateur qui peut lire ou modifier tout élément dans un `network_link_registry` objet.|  
 |`type`|Un type qui représente le type de bloc stocké dans le `network_link_registry` objet.|  
@@ -60,7 +60,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.|  
 |[begin](#begin)|En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.|  
-|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche la `network_link_registry` objet pour un bloc spécifié.|  
+|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet pour un bloc spécifié.|  
 |[count](#count)|En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.|  
 |[remove](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.|  
   
@@ -70,7 +70,7 @@ class network_link_registry;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `network_link_registry`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -84,10 +84,10 @@ virtual void add(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Link`  
- Pointeur vers un bloc à ajouter.  
+*_Lier*<br/>
+Pointeur vers un bloc à ajouter.  
   
-##  <a name="begin"></a> Commencer 
+##  <a name="begin"></a> commencer 
 
  En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.  
   
@@ -103,15 +103,15 @@ virtual iterator begin() = 0;
   
 ##  <a name="contains"></a> contient 
 
- En cas de substitution dans une classe dérivée, recherche la `network_link_registry` objet pour un bloc spécifié.  
+ En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet pour un bloc spécifié.  
   
 ```
 virtual bool contains(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Link`  
- Un pointeur vers un bloc qui est recherché dans le `network_link_registry` objet.  
+*_Lier*<br/>
+Un pointeur désignant un bloc qui est recherché dans le `network_link_registry` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si le bloc a été trouvé, `false` dans le cas contraire.  
@@ -136,8 +136,8 @@ virtual bool remove(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Link`  
- Un pointeur vers un bloc doit être supprimée, si trouvée.  
+*_Lier*<br/>
+Un pointeur vers un bloc à supprimer, si trouvé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  

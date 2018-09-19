@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 14c231edc5395515836ccbbe9adea87e0f31b33d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068402"
 ---
 # <a name="diagnostic-services"></a>Services de diagnostic
 La bibliothèque Microsoft Foundation Class fournit de nombreux services de diagnostic qui simplifient le débogage de vos programmes. Elle propose notamment des macros et des fonctions globales qui vous permettent d’effectuer le suivi des allocations mémoire de votre programme, de vider le contenu des objets au moment de l’exécution et d’afficher des messages de débogage au moment de l’exécution. Les macros et les fonctions globales pour les services de diagnostic sont regroupées dans les catégories suivantes :  
@@ -546,49 +546,31 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="remarks"></a>Notes  
  L’exemple ci-dessous reflète une seule ligne de la sortie générée à partir de l’appel `AfxDumpStack` à partir d’un gestionnaire de bouton dans une application de la boîte de dialogue MFC :  
   
- `=== begin AfxDumpStack output ===`  
-  
- `00427D55: DUMP2\DEBUG\DUMP2.EXE! void AfxDumpStack(unsigned long) + 181 bytes`  
-  
- `0040160B: DUMP2\DEBUG\DUMP2.EXE! void CDump2Dlg::OnClipboard(void) + 14 bytes`  
-  
- `0044F884: DUMP2\DEBUG\DUMP2.EXE! int _AfxDispatchCmdMsg(class CCmdTarget *,`  
-  
- `unsigned int,int,void ( CCmdTarget::*)(void),void *,unsigned int,struct AFX_CMDHANDLE`  
-  
- `0044FF7B: DUMP2\DEBUG\DUMP2.EXE! virtual int CCmdTarget::OnCmdMsg(unsigned`  
-  
- `int,int,void *,struct AFX_CMDHANDLERINFO *) + 626 bytes`  
-  
- `00450C71: DUMP2\DEBUG\DUMP2.EXE! virtual int CDialog::OnCmdMsg(unsigned`  
-  
- `int,int,void *,struct AFX_CMDHANDLERINFO *) + 36 bytes`  
-  
- `00455B27: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnCommand(unsigned`  
-  
- `int,long) + 312 bytes`  
-  
- `00454D3D: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnWndMsg(unsigned`  
-  
- `int,unsigned int,long,long *) + 83 bytes`  
-  
- `00454CC0: DUMP2\DEBUG\DUMP2.EXE! virtual long CWnd::WindowProc(unsigned`  
-  
- `int,unsigned int,long) + 46 bytes`  
-  
- `004528D9: DUMP2\DEBUG\DUMP2.EXE! long AfxCallWndProc(class CWnd *,struct`  
-  
- `HWND__ *,unsigned int,unsigned int,long) + 237 bytes`  
-  
- `00452D34: DUMP2\DEBUG\DUMP2.EXE! long AfxWndProc(struct HWND__ *,unsigned`  
-  
- `int,unsigned int,long) + 129 bytes`  
-  
- `BFF73663: WINDOWS\SYSTEM\KERNEL32.DLL! ThunkConnect32 + 2148 bytes`  
-  
- `BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes`  
-  
- `=== end AfxDumpStack() output ===`  
+```Output
+=== begin AfxDumpStack output ===
+00427D55: DUMP2\DEBUG\DUMP2.EXE! void AfxDumpStack(unsigned long) + 181 bytes
+0040160B: DUMP2\DEBUG\DUMP2.EXE! void CDump2Dlg::OnClipboard(void) + 14 bytes
+0044F884: DUMP2\DEBUG\DUMP2.EXE! int _AfxDispatchCmdMsg(class CCmdTarget *,
+unsigned int,int,void ( CCmdTarget::*)(void),void *,unsigned int,struct 
+AFX_CMDHANDLE
+0044FF7B: DUMP2\DEBUG\DUMP2.EXE! virtual int CCmdTarget::OnCmdMsg(unsigned
+int,int,void *,struct AFX_CMDHANDLERINFO *) + 626 bytes
+00450C71: DUMP2\DEBUG\DUMP2.EXE! virtual int CDialog::OnCmdMsg(unsigned
+int,int,void *,struct AFX_CMDHANDLERINFO *) + 36 bytes
+00455B27: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnCommand(unsigned
+int,long) + 312 bytes
+00454D3D: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnWndMsg(unsigned
+int,unsigned int,long,long *) + 83 bytes
+00454CC0: DUMP2\DEBUG\DUMP2.EXE! virtual long CWnd::WindowProc(unsigned
+int,unsigned int,long) + 46 bytes
+004528D9: DUMP2\DEBUG\DUMP2.EXE! long AfxCallWndProc(class CWnd *,struct
+HWND__ *,unsigned int,unsigned int,long) + 237 bytes
+00452D34: DUMP2\DEBUG\DUMP2.EXE! long AfxWndProc(struct HWND__ *,unsigned
+int,unsigned int,long) + 129 bytes
+BFF73663: WINDOWS\SYSTEM\KERNEL32.DLL! ThunkConnect32 + 2148 bytes
+BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
+=== end AfxDumpStack() output ===
+```
   
  Chaque ligne dans la sortie ci-dessus indique l’adresse du dernier appel de fonction, le nom de chemin d’accès complet du module qui contient l’appel de fonction et le prototype de fonction appelée. Si l’appel de fonction sur la pile ne sont pas effectuées à l’adresse exacte de la fonction, un décalage d’octets est indiqué.  
   

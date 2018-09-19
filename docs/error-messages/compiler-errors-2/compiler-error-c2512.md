@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2512 | Documents Microsoft
+title: Erreur du compilateur C2512 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 286be19ca407039a77d51503a34c7a27da1c3d5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1fbba98237879927fd82d6535c0c2688c1c304
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036916"
 ---
 # <a name="compiler-error-c2512"></a>Erreur du compilateur C2512
 
-> '*identificateur*' : aucun constructeur par défaut approprié disponible  
+> «*identificateur*' : aucun constructeur par défaut approprié disponible
 
-A *constructeur par défaut*, un constructeur qui ne requiert aucun argument, n’est pas disponible pour la classe spécifiée, structure ou union. Le compilateur fournit un constructeur par défaut uniquement si aucun constructeur défini par l’utilisateur n’est fournis.
+Un *constructeur par défaut*, un constructeur qui ne requiert aucun argument, n’est pas disponible pour la classe spécifiée, de structure ou union. Le compilateur fournit un constructeur par défaut uniquement si aucun constructeur défini par l’utilisateur n’est fournis.
 
-Si vous fournissez un constructeur qui accepte un paramètre non void, et vous souhaitez autoriser votre classe d’être créés sans paramètres (par exemple, les éléments d’un tableau), vous devez également fournir un constructeur par défaut. Le constructeur par défaut peut être un constructeur avec des valeurs par défaut pour tous les paramètres.
+Si vous fournissez un constructeur qui accepte un paramètre non void et que vous souhaitez autoriser votre classe d’être créés sans paramètres (comme par exemple, les éléments d’un tableau), vous devez également fournir un constructeur par défaut. Le constructeur par défaut peut être un constructeur avec des valeurs par défaut pour tous les paramètres.
 
 ## <a name="example"></a>Exemple
 
-Une cause courante de l’erreur C2512 est lorsque vous définissez un constructeur de classe ou un struct qui accepte des arguments, et vous tentez de déclarer une instance de votre classe ou un struct sans arguments. Par exemple, `struct B` ci-dessous déclare un constructeur qui nécessite un `char *` argument, mais pas un qui n’accepte aucun argument. Dans `main`, une instance de B est déclarée, mais aucun argument n’est fourni. Le compilateur génère l’erreur C2512 car il ne peut pas trouver un constructeur par défaut pour B.
+Une cause courante de l’erreur C2512 est lorsque vous définissez un constructeur de classe ou un struct qui accepte des arguments, et vous tentez de déclarer une instance de votre classe ou struct sans arguments. Par exemple, `struct B` ci-dessous déclare un constructeur qui nécessite un `char *` argument, mais pas celui qui n’accepte aucun argument. Dans `main`, une instance de B est déclarée, mais aucun argument n’est fourni. Le compilateur génère l’erreur C2512, car il ne trouve pas un constructeur par défaut pour B.
 
 ```cpp
 // C2512.cpp
@@ -50,4 +50,4 @@ int main() {
 }
 ```
 
-Vous pouvez résoudre ce problème en définissant un constructeur par défaut pour votre structure ou une classe, tels que `B() {}`, ou un constructeur dans lequel tous les arguments ont des valeurs par défaut, telles que `B (char * = nullptr) {}`.
+Vous pouvez résoudre ce problème en définissant un constructeur par défaut pour votre struct ou d’une classe, tel que `B() {}`, ou un constructeur dans lequel tous les arguments ont des valeurs par défaut, comme `B (char * = nullptr) {}`.

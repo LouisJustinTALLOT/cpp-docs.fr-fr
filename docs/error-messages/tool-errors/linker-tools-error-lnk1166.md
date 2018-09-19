@@ -1,5 +1,5 @@
 ---
-title: LNK1166 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK1166 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 474d4ad146edf4411bd9734a6ec4482273c065dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6aa86a9fd3c2d6d19482ba5ce5c866ab660e742e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073081"
 ---
 # <a name="linker-tools-error-lnk1166"></a>Erreur des outils Éditeur de liens LNK1166
-Impossible de modifier le code à l’offset = offset, va = valeur  
-  
- LIEN n’a pas pu compléter le code en fonction des besoins.  
-  
- Certaines instructions ne sont pas autorisées à franchir les limites de page sur certains processeurs. LIEN tente d’ajouter des remplissages pour corriger cette situation. Dans ce cas, lien ne pourrait pas contourner le problème.
+
+ne peut pas ajuster le code à l’offset = offset, va = valeur
+
+LIEN n’a pas pu compléter le code en fonction des besoins.
+
+Certaines instructions ne sont pas autorisées à franchir les limites de page sur certains processeurs. LIEN tente d’ajouter des panneaux pour corriger cette situation. Dans ce cas, lien ne pourrait pas contourner le problème.

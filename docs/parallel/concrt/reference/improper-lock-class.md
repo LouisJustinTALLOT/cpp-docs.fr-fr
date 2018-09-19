@@ -1,5 +1,5 @@
 ---
-title: improper_lock, classe | Documents Microsoft
+title: improper_lock, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695598"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106192"
 ---
 # <a name="improperlock-class"></a>improper_lock, classe
 Cette classe décrit une exception levée quand un verrou est incorrectement acquis.  
@@ -43,14 +43,14 @@ class improper_lock : public std::exception;
 |[improper_lock](#ctor)|Surchargé. Construit un objet `improper_lock exception`.|  
   
 ## <a name="remarks"></a>Notes  
- En règle générale, cette exception est levée lorsqu’une tentative est faite pour acquérir un verrou non réentrant de manière récursive dans le même contexte.  
+ En règle générale, cette exception est levée lorsqu’une tentative est faite pour acquérir un verrou non réentrant de manière récursive sur le même contexte.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `exception`  
   
  `improper_lock`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -66,8 +66,8 @@ improper_lock() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Message descriptif de l'erreur.  
+*_Message*<br/>
+Message descriptif de l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   

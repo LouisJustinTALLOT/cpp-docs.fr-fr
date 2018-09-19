@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2018 | Documents Microsoft
+title: Erreur du compilateur C2018 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c65afa60b5e86850f0bc22f85c3c4348c91ef05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03903c2a3aa17da0149f596053c133f04184a501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33162796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081596"
 ---
 # <a name="compiler-error-c2018"></a>Erreur du compilateur C2018
-caractère inconnu 'nombre_hexadécimal'  
-  
- Le fichier source contient un caractère ASCII inattendu, qui est identifié par son numéro hexadécimal. Pour résoudre l’erreur, supprimez le caractère.
+
+caractère inconnu 'nombre_hexadécimal'
+
+Le fichier source contient un caractère ASCII inattendu, qui est identifié par son numéro hexadécimal. Pour résoudre cette erreur, supprimez le caractère.

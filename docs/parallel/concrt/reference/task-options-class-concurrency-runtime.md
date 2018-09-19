@@ -1,5 +1,5 @@
 ---
-title: task_options, classe (Runtime d’accès concurrentiel) | Documents Microsoft
+title: task_options, classe (Runtime d’accès concurrentiel) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b01d9d5308590bead126cd623b7da0468f0df60f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65a12af3bf99075b2a2a77e0dc2c17d28e80849e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028257"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options, classe (runtime d’accès concurrentiel)
 Représente les options autorisées pour la création d’une tâche.  
@@ -53,7 +53,7 @@ class task_options;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `task_options`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ppltasks.h  
   
  **Espace de noms :** concurrency  
@@ -155,9 +155,13 @@ task_options(
   
 ### <a name="parameters"></a>Paramètres  
  `_SchedType`  
+
  `_Token`  
+
  `_ContinuationContext`  
+
  `_Scheduler`  
+
  `_TaskOptions`  
   
 ## <a name="see-also"></a>Voir aussi  

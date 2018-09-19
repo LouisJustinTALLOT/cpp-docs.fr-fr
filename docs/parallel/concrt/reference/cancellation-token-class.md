@@ -1,5 +1,5 @@
 ---
-title: cancellation_token, classe | Documents Microsoft
+title: cancellation_token, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 125d08def4a1fb801cb1b6c911d8c8c9c154c296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037962"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token, classe
 La classe `cancellation_token` représente la capacité à déterminer si l'annulation d'une opération a été demandée. Un jeton donné peut être associé à un objet `task_group`, `structured_task_group` ou `task` pour entraîner une annulation implicite. Il peut également être sondé à la recherche d'une annulation ou comporter un rappel enregistré en cas d'annulation de la classe `cancellation_token_source` associée.  
@@ -69,7 +69,7 @@ class cancellation_token;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `cancellation_token`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** pplcancellation_token.h  
   
  **Espace de noms :** concurrency  
@@ -89,7 +89,8 @@ cancellation_token(cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
+*_Src*<br/>
+Cancellation_token à être copié ou déplacé.
   
 ##  <a name="deregister_callback"></a> deregister_callback 
 
@@ -100,8 +101,8 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Registration`  
- Objet `cancellation_token_registration` correspondant au rappel dont l'enregistrement doit être annulé. Ce jeton doit avoir été précédemment retourné par un appel à la méthode `register`.  
+*_Registration*<br/>
+Objet `cancellation_token_registration` correspondant au rappel dont l'enregistrement doit être annulé. Ce jeton doit avoir été précédemment retourné par un appel à la méthode `register`.  
   
 ##  <a name="is_cancelable"></a> is_cancelable 
 
@@ -125,7 +126,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>Valeur de retour  
  `true` si le jeton a été annulé ; sinon `false`.  
   
-##  <a name="none"></a> Aucun 
+##  <a name="none"></a> None 
 
  Retourne un jeton d'annulation qui ne pourra jamais faire l'objet d'une annulation.  
   
@@ -143,8 +144,9 @@ bool operator!= (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token` à comparer.
+
 ### <a name="return-value"></a>Valeur de retour  
   
 ##  <a name="operator_eq"></a> opérateur = 
@@ -156,7 +158,8 @@ cancellation_token& operator= (cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
+*_Src*<br/>
+Le `cancellation_token` à affecter.
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -167,7 +170,8 @@ bool operator== (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
+*_Src*<br/>
+`cancellation_token` à comparer.
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -181,14 +185,14 @@ template<typename _Function>
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Function`  
- Type de l'objet de fonction qui est rappelé lorsque `cancellation_token` est annulé.  
+*_Function*<br/>
+Type de l'objet de fonction qui est rappelé lorsque `cancellation_token` est annulé.  
   
- `_Func`  
- Objet de fonction qui est rappelé lorsque `cancellation_token` est annulé.  
+*_Func*<br/>
+Objet de fonction qui est rappelé lorsque `cancellation_token` est annulé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Objet `cancellation_token_registration` qui peut être utilisé dans la méthode `deregister` pour annuler l'enregistrement d'un rappel précédemment enregistré et l'empêcher d'être effectué. La méthode lève un [invalid_operation](invalid-operation-class.md) exception si elle est appelée sur une `cancellation_token` objet qui a été créé à l’aide de la [cancellation_token::none](#none) (méthode).  
+ Objet `cancellation_token_registration` qui peut être utilisé dans la méthode `deregister` pour annuler l'enregistrement d'un rappel précédemment enregistré et l'empêcher d'être effectué. La méthode lève un [invalid_operation](invalid-operation-class.md) exception si elle est appelée sur un `cancellation_token` objet qui a été créé à l’aide de la [cancellation_token::none](#none) (méthode).  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)

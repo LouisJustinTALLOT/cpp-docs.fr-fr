@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 3) C4641 | Documents Microsoft
+title: Compilateur avertissement (niveau 3) C4641 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8413971353e7ffbe6579412d0eed9c735b91b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44e94868f6a7b379fb1a2f75bbd28ce011b54c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291435"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112107"
 ---
 # <a name="compiler-warning-level-3-c4641"></a>Avertissement du compilateur (niveau 3) C4641
-Le commentaire de document XML comporte une référence croisée ambiguë  
-  
- Le compilateur n’a pas pu résoudre clairement une référence. Pour résoudre cet avertissement, spécifiez les informations de paramètre nécessaires pour rendre la référence non équivoque.  
-  
- Pour plus d’informations, consultez [XML Documentation](../../ide/xml-documentation-visual-cpp.md).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C4641.  
-  
-```  
-// C4641.cpp  
-// compile with: /W3 /doc /clr /c  
-  
-/// <see cref="f" />   // C4641  
-// try the following line instead  
-// /// <see cref="f(int)" />  
-public ref class GR {  
-public:  
-   void f( int ) {}  
-   void f( char ) {}  
-};  
+
+Le commentaire de document XML comporte une référence croisée ambiguë
+
+Le compilateur n’a pas pu résoudre clairement une référence. Pour résoudre cet avertissement, spécifiez les informations de paramètre nécessaires pour rendre la référence non équivoque.
+
+Pour plus d’informations, consultez [XML Documentation](../../ide/xml-documentation-visual-cpp.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère C4641.
+
+```
+// C4641.cpp
+// compile with: /W3 /doc /clr /c
+
+/// <see cref="f" />   // C4641
+// try the following line instead
+// /// <see cref="f(int)" />
+public ref class GR {
+public:
+   void f( int ) {}
+   void f( char ) {}
+};
 ```

@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340028"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035537"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Substitution d’un accesseur dynamique
+
 Lorsque vous utilisez un accesseur dynamique tel que `CDynamicAccessor`, la commande `Open` méthode crée un accesseur pour vous automatiquement, selon les informations de colonne de l’ensemble de lignes ouvert. Vous pouvez substituer l’accesseur dynamique pour contrôler exactement comment les colonnes sont liées.  
   
- Pour substituer l’accesseur dynamique, passez **false** comme dernier paramètre à la `CCommand::Open` (méthode). Cela empêche `Open` de créer un accesseur automatiquement. Vous pouvez ensuite appeler `GetColumnInfo` et appelez `AddBindEntry` pour chaque colonne que vous voulez lier. Le code suivant montre comment procéder :  
+Pour substituer l’accesseur dynamique, passez **false** comme dernier paramètre à la `CCommand::Open` (méthode). Cela empêche `Open` de créer un accesseur automatiquement. Vous pouvez ensuite appeler `GetColumnInfo` et appelez `AddBindEntry` pour chaque colonne que vous voulez lier. Le code suivant montre comment procéder :  
   
 ```cpp  
 USES_CONVERSION;  
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des accesseurs](../../data/oledb/using-accessors.md)
+
+[Utilisation des accesseurs](../../data/oledb/using-accessors.md)

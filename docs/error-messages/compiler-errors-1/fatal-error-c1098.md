@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1098 | Documents Microsoft
+title: Erreur irrécupérable C1098 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ce35d7cdc16d7804cba280315db4d11b436e94d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff7ed883798abe457b1092fd5729c1d75fc6f9ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048992"
 ---
 # <a name="fatal-error-c1098"></a>Erreur irrécupérable C1098
-Incompatibilité de version avec le moteur Modifier & Continuer  
-  
- La version de débogage que vous utilisez ne correspond pas au compilateur utilisé pour créer l’exécutable. Si la recompilation ne résout pas le problème, vous devrez peut-être réinstaller Visual C++ pour vous assurer de disposer des versions appropriées du débogueur et du compilateur.
+
+Incompatibilité de version avec le moteur Modifier & Continuer
+
+La version de débogage que vous utilisez ne correspond pas au compilateur utilisé pour créer l’exécutable. Si la recompilation ne résout pas le problème, vous devrez peut-être réinstaller Visual C++ pour vous assurer de disposer des versions appropriées du débogueur et du compilateur.

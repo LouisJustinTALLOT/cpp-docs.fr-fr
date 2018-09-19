@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3704 | Documents Microsoft
+title: Erreur du compilateur C3704 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b3b1f255852def5e04d75751b0a902fb7072545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4504534e3a53f37089f0b0ba045b7afde5a8065d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054985"
 ---
 # <a name="compiler-error-c3704"></a>Erreur du compilateur C3704
-'fonction' : une méthode vararg ne peut pas déclencher d’événements  
-  
- Vous avez tenté d’utiliser [__event](../../cpp/event.md) sur une méthode vararg. Pour corriger cette erreur, remplacez le `fireEvent(int i, ...)` appel avec la `fireEvent(int i)` appeler comme indiqué dans l’exemple de code suivant.  
-  
- L’exemple suivant génère l’erreur C3704 :  
-  
-```  
-// C3704.cpp  
-[ event_source(native) ]  
-class CEventSrc {  
-   public:  
-      __event void fireEvent(int i, ...);   // C3704  
-      // try the following line instead:  
-      // __event void fireEvent(int i);  
-};  
-  
-int main() {  
-}  
+
+'fonction' : une méthode vararg ne peut pas déclencher d’événements
+
+Vous avez tenté d’utiliser [__event](../../cpp/event.md) sur une méthode vararg. Pour résoudre cette erreur, remplacez le `fireEvent(int i, ...)` appeler avec la `fireEvent(int i)` appeler comme indiqué dans l’exemple de code suivant.
+
+L’exemple suivant génère l’erreur C3704 :
+
+```
+// C3704.cpp
+[ event_source(native) ]
+class CEventSrc {
+   public:
+      __event void fireEvent(int i, ...);   // C3704
+      // try the following line instead:
+      // __event void fireEvent(int i);
+};
+
+int main() {
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4344 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4344 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a203288b5becde41704e0ab59dbb03e2bccef7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9505f7773a129430e5bdc7122e947c88fa57bb6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271368"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025608"
 ---
 # <a name="compiler-warning-level-1-c4344"></a>Avertissement du compilateur (niveau 1) C4344
-changement de comportement : utilisation d’arguments template explicites entraîne l’appel de 'fonction'  
-  
- Un appel à une fonction à l’aide des arguments template explicites appelle une autre fonction qu’il ferait si des arguments explicites n’avaient pas été spécifiés.
+
+changement de comportement : utilisation d’arguments template explicites entraîne dans l’appel à 'function'
+
+Un appel à une fonction à l’aide des arguments template explicites appelle une autre fonction qu’il le ferait si des arguments explicites n’avaient pas été spécifiés.

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68c22ff88ac92357dabfef8076c160271a76378
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756488"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025540"
 ---
 # <a name="connection-point-global-functions"></a>Fonctions globales de Point de connexion
 
@@ -59,16 +59,16 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Un pointeur vers le `IUnknown` de l’objet, le client souhaite se connecter avec.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Un pointeur vers le client `IUnknown`.
 
-*IID*  
+*IID*<br/>
 [in] Le GUID du point de connexion. En règle générale, cela est identique à l’interface sortante managée par le point de connexion.
 
-*PDW*  
+*PDW*<br/>
 [out] Pointeur vers le cookie qui identifie de façon unique la connexion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -99,13 +99,13 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Un pointeur vers le `IUnknown` de l’objet auquel le client est connecté avec.
 
-*IID*  
+*IID*<br/>
 [in] Le GUID du point de connexion. En règle générale, cela est identique à l’interface sortante managée par le point de connexion.
 
-*entrepôt de données*  
+*entrepôt de données*<br/>
 [in] Le cookie qui identifie de façon unique la connexion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -129,10 +129,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Paramètres
 
-*pT*  
+*pT*<br/>
 [in] Pointeur vers l’objet qui contient la table de récepteur.
 
-*bAdvise*  
+*bAdvise*<br/>
 [in] TRUE si toutes les entrées de récepteur doivent être avertie ; FALSE si toutes les entrées de récepteur doivent être arrêter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -145,5 +145,5 @@ Une valeur HRESULT standard.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions](../../atl/reference/atl-functions.md)   
+[Fonctions](../../atl/reference/atl-functions.md)<br/>
 [Macros de point de connexion](../../atl/reference/connection-point-macros.md)

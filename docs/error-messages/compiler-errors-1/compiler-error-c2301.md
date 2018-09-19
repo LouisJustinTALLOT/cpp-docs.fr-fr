@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2301 | Documents Microsoft
+title: Erreur du compilateur C2301 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c64405b9fc908f7e0aa9132921dd0b461c162f79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec21bde5a6b66487d4990b1cbe5aeba2035586a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110937"
 ---
 # <a name="compiler-error-c2301"></a>Erreur du compilateur C2301
-la partie gauche de '->~identificateur' doit pointer vers un class/struct/union  
-  
- L’expression à gauche de l’opérateur `->` ne correspond pas à un pointeur de classe, de structure ou d’union.
+
+la partie gauche de '->~identificateur' doit pointer vers un class/struct/union
+
+L’expression à gauche de l’opérateur `->` ne correspond pas à un pointeur de classe, de structure ou d’union.

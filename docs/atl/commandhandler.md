@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019469"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -29,7 +29,7 @@ ms.locfileid: "43752813"
 
 ## <a name="syntax"></a>Syntaxe
 
-```  
+```cpp
 LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
@@ -39,16 +39,16 @@ LRESULT CommandHandler(
 
 #### <a name="parameters"></a>Paramètres
 
-*wNotifyCode*  
+*wNotifyCode*<br/>
 Le code de notification.
 
-*wID*  
+*wID*<br/>
 L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
 
-*hWndCtl*  
+*hWndCtl*<br/>
 Handle vers un contrôle de fenêtre.
 
-*bHandled*  
+*bHandled*<br/>
 Les jeux de mappage de message *bHandled* sur TRUE avant `CommandHandler` est appelée. Si `CommandHandler` ne gère pas entièrement le message, il doit définir *bHandled* sur FALSE pour indiquer que le message nécessite un traitement supplémentaire.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -61,7 +61,7 @@ Pour obtenir un exemple de l’utilisation de ce gestionnaire de messages dans u
 
 ## <a name="see-also"></a>Voir aussi
 
-[Implémentation d’une fenêtre](../atl/implementing-a-window.md)   
-[Tables des messages](../atl/message-maps-atl.md)   
+[Implémentation d’une fenêtre](../atl/implementing-a-window.md)<br/>
+[Tables des messages](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

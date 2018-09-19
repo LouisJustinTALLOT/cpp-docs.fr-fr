@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2072 | Documents Microsoft
+title: Erreur du compilateur C2072 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd3be48272a8ae1ea794b27562075ccb1564cfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5060293f56b90b22cbfd62900f904d6047b8d46f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048784"
 ---
 # <a name="compiler-error-c2072"></a>Erreur du compilateur C2072
-'identificateur' : l’initialisation d’une fonction  
-  
- Un initialiseur de fonction a été spécifié correctement.
+
+'identificateur' : l’initialisation d’une fonction
+
+Un initialiseur de fonction a été spécifié correctement.

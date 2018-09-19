@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47c017a178d0a222780532b74db4135447f062
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a7364f86ad08f882660f49556853826bb7186f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760446"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108428"
 ---
 # <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl, classe
 
@@ -49,14 +49,14 @@ Cette classe implémente `IUnknown` et fournit des implémentations par défaut 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IViewObjectExImpl 
    : public IViewObjectEx
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe, dérivée de `IViewObjectExImpl`.
 
 ## <a name="members"></a>Membres
@@ -309,7 +309,7 @@ HRESULT CloseHandle(HANDLE hHandle);
 
 ### <a name="parameters"></a>Paramètres
 
-*hHandle*  
+*hHandle*<br/>
 Le handle à fermer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -336,10 +336,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwParam*  
+*dwParam*<br/>
 Le paramètre utilisateur.
 
-*hObject*  
+*hObject*<br/>
 Le handle qui a été signalé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -358,8 +358,8 @@ Le code suivant montre une implémentation simple de `IWorkerThreadClient::Execu
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComControl, classe](../../atl/reference/ccomcontrol-class.md)   
-[Interfaces de contrôles ActiveX](/windows/desktop/com/activex-controls-interfaces)   
-[Didacticiel](../../atl/active-template-library-atl-tutorial.md)   
-[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)   
+[CComControl, classe](../../atl/reference/ccomcontrol-class.md)<br/>
+[Interfaces de contrôles ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
+[Didacticiel](../../atl/active-template-library-atl-tutorial.md)<br/>
+[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

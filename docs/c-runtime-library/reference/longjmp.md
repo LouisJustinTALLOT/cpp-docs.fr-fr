@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857fae2e9c38dfe2c5cd468c6d1b50c6fdd2f317
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 196f95ae134458f2eaf00ab037c3a560d1317515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109687"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -53,10 +53,10 @@ void longjmp(
 
 ### <a name="parameters"></a>Paramètres
 
-*env*  
+*env*<br/>
 Variable dans laquelle l’environnement est stocké.
 
-*valeur*  
+*valeur*<br/>
 Valeur à retourner à l’appel `setjmp`.
 
 ## <a name="remarks"></a>Notes
@@ -83,7 +83,7 @@ Respecter les restrictions suivantes lors de l’utilisation **longjmp**:
 
 **FIN de la section spécifique à Microsoft**
 
-> [!NOTE]  
+> [!NOTE]
 > Dans le code C++ portable, vous ne pouvez pas supposer `setjmp` et `longjmp` prennent en charge la sémantique d’objet C++. Plus précisément, un `setjmp` / `longjmp` appel paire a un comportement indéfini si en remplaçant le `setjmp` et `longjmp` par **catch** et **lever** appellerait tous les destructeurs non triviaux pour tous les objets automatiques. Dans les programmes C++, nous vous recommandons de qu'utiliser le mécanisme de gestion des exceptions C++.
 
 Pour plus d’informations, consultez [Utilisation de setjmp et longjmp](../../cpp/using-setjmp-longjmp.md).
@@ -102,5 +102,5 @@ Consultez l’exemple relatif à [_fpreset](fpreset.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)  
-[setjmp](setjmp.md)  
+[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[setjmp](setjmp.md)

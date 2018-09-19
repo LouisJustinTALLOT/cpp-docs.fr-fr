@@ -1,5 +1,5 @@
 ---
-title: critical_section, classe | Documents Microsoft
+title: critical_section, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cbffd14bdde45c3d6124eb5f982b90c92f64f47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136216"
 ---
 # <a name="criticalsection-class"></a>critical_section, classe
 Mutex non réentrant qui a explicitement connaissance du runtime d'accès concurrentiel.  
@@ -68,16 +68,16 @@ class critical_section;
 |[lock](#lock)|Acquiert cette section critique.|  
 |[native_handle](#native_handle)|Retourne un handle natif de plateforme spécifique, s’il en existe.|  
 |[try_lock](#try_lock)|Tente d’acquérir le verrou sans se bloquer.|  
-|[try_lock_for](#try_lock_for)|Tente d’acquérir le verrou sans se bloquer pour un certain nombre de millisecondes.|  
+|[try_lock_for](#try_lock_for)|Tente d’acquérir le verrou sans se bloquer pendant un nombre spécifique de millisecondes.|  
 |[unlock](#unlock)|Déverrouille la section critique.|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [des Structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).  
+ Pour plus d’informations, consultez [les Structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `critical_section`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -99,9 +99,9 @@ critical_section();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Il est probable que le verrou n’est plus maintenu lorsque le destructeur s’exécute. Autoriser la section critique détruire avec le verrou maintenu toujours résultats un comportement non défini.  
+ Il est probable que le verrou n’est plus conservé lorsque le destructeur s’exécute. Ce qui permet de la section critique détruire avec le verrou conservé résultats en un comportement non défini.  
   
-##  <a name="lock"></a> verrou 
+##  <a name="lock"></a> Verrou 
 
  Acquiert cette section critique.  
   
@@ -110,9 +110,9 @@ void lock();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Il est souvent plus sécurisé d’utiliser la [scoped_lock](#critical_section__scoped_lock_class) construction pour acquérir et libérer un `critical_section` objet dans une exception sûre.  
+ Il est souvent préférable d’utiliser le [scoped_lock](#critical_section__scoped_lock_class) construction pour acquérir et libérer un `critical_section` objet dans une exception sûre.  
   
- Si le verrou est déjà contenu par le contexte d’appel, un [improper_lock](improper-lock-class.md) exception sera levée.  
+ Si le verrou est déjà détenu par le contexte d’appel, un [improper_lock](improper-lock-class.md) exception sera levée.  
   
 ##  <a name="native_handle"></a> native_handle 
 
@@ -126,7 +126,7 @@ native_handle_type native_handle();
  Une référence à la section critique.  
   
 ### <a name="remarks"></a>Notes  
- A `critical_section` objet n’est pas associé à un handle natif de plateforme spécifique pour le système d’exploitation Windows. La méthode retourne simplement une référence à l’objet lui-même.  
+ Un `critical_section` objet n’est pas associé à un handle natif de plateforme spécifique pour le système d’exploitation Windows. La méthode retourne simplement une référence à l’objet lui-même.  
   
 ##  <a name="critical_section__scoped_lock_class"></a>  critical_section::scoped_lock, classe  
  Un wrapper RAII sécurisé pour un `critical_section` objet.  
@@ -137,15 +137,15 @@ class scoped_lock;
   
 ##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock 
 
- Construit un `scoped_lock` de l’objet et acquiert le `critical_section` objet passé dans le `_Critical_section` paramètre. Si la section critique est détenue par un autre thread, cet appel se bloquera.  
+ Construit un `scoped_lock` de l’objet et acquiert le `critical_section` objet passé dans le `_Critical_section` paramètre. Si la section critique est maintenue par un autre thread, cet appel bloquera.  
   
 ```
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Critical_section`  
- La section critique à verrouiller.  
+*_Critical_section*<br/>
+La section critique à verrouiller.  
   
 ##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock :: ~ scoped_lock 
 
@@ -168,20 +168,20 @@ bool try_lock();
   
 ##  <a name="try_lock_for"></a> try_lock_for 
 
- Tente d’acquérir le verrou sans se bloquer pour un certain nombre de millisecondes.  
+ Tente d’acquérir le verrou sans se bloquer pendant un nombre spécifique de millisecondes.  
   
 ```
 bool try_lock_for(unsigned int _Timeout);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Timeout`  
- Le nombre de millisecondes à attendre avant l’expiration.  
+*_Délai*<br/>
+Le nombre de millisecondes à attendre avant l’expiration.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si le verrou a été acquis, la valeur `true`; sinon, la valeur `false`.  
   
-##  <a name="unlock"></a> déverrouiller 
+##  <a name="unlock"></a> Déverrouiller 
 
  Déverrouille la section critique.  
   

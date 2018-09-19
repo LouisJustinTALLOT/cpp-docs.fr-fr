@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0055 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0055 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce01ecbc6913c844cadcf2d3f761cfe815f68a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ee5fc5467e656bd811c89f78ecf7d36f6df1b54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301526"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066379"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Évaluateur d'expression, erreur CXX0055
-symbole ambigu dans l’opérateur de contexte  
-  
- Un symbole dans l’opérateur de contexte (**{}**) fait référence à plusieurs symboles dans le programme.  
-  
- L’opérateur de résolution de portée (`::`) peut être en mesure de résoudre l’ambiguïté.  
-  
- Cette erreur est identique à CAN0055.
+
+symbole ambigu dans l’opérateur de contexte
+
+Un symbole dans l’opérateur de contexte (**{}**) fait référence à plusieurs symboles dans le programme.
+
+L’opérateur de résolution de portée (`::`) peut être en mesure de résoudre l’ambiguïté.
+
+Cette erreur est identique à CAN0055.

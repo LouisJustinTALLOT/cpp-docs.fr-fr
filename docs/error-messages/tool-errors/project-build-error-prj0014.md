@@ -1,5 +1,5 @@
 ---
-title: PRJ0014 d’erreur de Build de projet | Documents Microsoft
+title: Erreur de génération PRJ0014 de projet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d088acfe817dc2980f593d3e013a021646586f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc13a7eb9a9b86ac57c66ff8c09c03ea9b3f3e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074729"
 ---
 # <a name="project-build-error-prj0014"></a>Erreur de génération de projet PRJ0014
-L’objet de traitement utilisé pour contrôler les processus générés dynamiquement a échoué.  La build ne peut pas continuer.  
-  
- Une erreur s’est produite dans l’environnement de développement.  
-  
- Pour résoudre cette erreur, fermez et rechargez le projet. Si nécessaire, quittez et redémarrez Visual Studio.
+
+L’objet de traitement utilisé pour contrôler les processus générés dynamiquement a échoué.  La build ne peut pas continuer.
+
+Une erreur s’est produite dans l’environnement de développement.
+
+Pour résoudre cette erreur, fermez et rechargez le projet. Si nécessaire, quittez et redémarrez Visual Studio.

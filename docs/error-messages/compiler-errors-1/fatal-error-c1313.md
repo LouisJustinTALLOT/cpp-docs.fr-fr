@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1313 | Documents Microsoft
+title: Erreur irrécupérable C1313 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e390fe35acd469cabba254f429a042e8c6feaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d32dc8cd42d9e038e8cf71bb0a323e2727b2a3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048186"
 ---
 # <a name="fatal-error-c1313"></a>Erreur irrécupérable C1313
-limite du compilateur : blocs de type ne peuvent pas être imbriqués au-delà de nombre de niveaux  
-  
- Exception gestion (ou la gestion structurée des exceptions) blocs étaient trop profondément imbriquées.  Simplifiez votre code.
+
+limite du compilateur : blocs de type ne peuvent pas être imbriqués plus poussé que le nombre de niveaux
+
+Exception gestion (ou gestion structurée des exceptions) blocs ont été imbriqués trop profondément.  Simplifiez votre code.

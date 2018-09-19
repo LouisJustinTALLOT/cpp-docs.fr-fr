@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069116"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
@@ -88,7 +88,7 @@ Une liste d’initialiseurs de membres est préférable d’utiliser assignation
     {}
 ```
 
-L’identificateur doit faire référence à un membre de classe ; Il est initialisé avec la valeur de l’argument. L’argument peut être un des paramètres de constructeur, un appel de fonction ou un [std::initializer_list\<T >](../standard-library/initializer-list-class.md). 
+L’identificateur doit faire référence à un membre de classe ; Il est initialisé avec la valeur de l’argument. L’argument peut être un des paramètres de constructeur, un appel de fonction ou un [std::initializer_list\<T >](../standard-library/initializer-list-class.md).
 
 **const** membres et les membres de type référence doivent être initialisés dans la liste d’initialiseurs de membres.
 
@@ -96,7 +96,7 @@ Appels aux constructeurs de classe de base paramétrable doivent être créées 
 
 ## <a name="default_constructors"></a> Constructeurs par défaut
 
- *Constructeurs par défaut* ont généralement pas de paramètres, mais ils peuvent avoir des paramètres avec valeurs par défaut.
+*Constructeurs par défaut* ont généralement pas de paramètres, mais ils peuvent avoir des paramètres avec valeurs par défaut.
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ Vous pouvez empêcher votre objet d’être copiés en définissant le construct
 Essayez de copier l’objet génère l’erreur *C2280 : tentative de référencement d’une fonction supprimée*.
 
 ## <a name="move_constructors"></a> Constructeurs de déplacement
+
 Un *constructeur de déplacement* est une fonction membre spéciale qui déplace la propriété des données d’un objet existant à une nouvelle variable sans copier les données d’origine. Il prend une référence rvalue comme son premier paramètre, et tous les paramètres supplémentaires doivent avoir des valeurs par défaut. Constructeurs de déplacement peuvent augmenter considérablement l’efficacité de votre programme lors de la transmission autour des objets volumineux. Un constructeur de déplacement accepte une référence rvalue en tant que son premier paramètre. Tous les autres paramètres doivent avoir des valeurs par défaut.
 
 ```cpp

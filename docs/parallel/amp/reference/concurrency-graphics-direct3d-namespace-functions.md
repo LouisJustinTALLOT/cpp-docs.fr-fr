@@ -1,5 +1,5 @@
 ---
-title: Fonctions d’espace de noms Concurrency::Graphics::Direct3D | Documents Microsoft
+title: 'Fonctions d’espace de noms Concurrency::Graphics :: Direct3D | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,14 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed95ed8df8a42dc62684c71a3005c2f33fecd18
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 78fbf9c260b1a53bb16628846033ef15ab04684f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110183"
 ---
-# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Fonctions d’espace de noms Concurrency::Graphics::Direct3D
+# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Fonctions d’espace de noms Concurrency::Graphics :: Direct3D
 ||||  
 |-|-|-|  
 |[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
@@ -29,7 +29,7 @@ ms.locfileid: "33686332"
 
  
 ##  <a name="get_sampler"></a>  get_sampler  
- Obtenir l’interface d’état D3D échantillonneur sur l’accélérateur donné afficher qui représente l’objet de l’échantillonneur spécifié.  
+ Obtenez l’interface d’état échantillonneur D3D sur l’accélérateur donné vue qui représente l’objet d’échantillonnage spécifié.  
   
 ```  
 IUnknown* get_sampler(
@@ -38,11 +38,11 @@ IUnknown* get_sampler(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Av`  
- Vue d’accélérateur D3D sur lequel l’état de l’échantillonneur D3D doit être créé.  
+*_Av*<br/>
+Une vue d’accélérateur D3D sur laquelle l’état d’échantillonnage D3D doit être créé.  
   
- `_Sampler`  
- Un objet d’échantillon pour lequel l’interface d’état D3D échantillonneur sous-jacent est créé.  
+*_Sampler*<br/>
+Un objet d’échantillonnage pour lequel l’interface d’état échantillonneur D3D sous-jacente est créée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le pointeur d’interface IUnknown correspondant à l’état de l’échantillonneur D3D qui représente l’échantillonneur donné.  
@@ -78,31 +78,31 @@ _Ret_ IUnknown *get_texture(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `value_type`  
- Le type d’élément de la texture.  
+*value_type*<br/>
+Le type d’élément de la texture.  
   
- `_Rank`  
- Le rang de la texture.  
+*_Rank*<br/>
+Le rang de la texture.  
   
- `_Texture`  
- Une texture ou une vue de texture associé à l’accelerator_view pour lequel l’interface de texture Direct3D sous-jacent est retourné.  
+*_Texture*<br/>
+Une texture ou une vue de texture associé à l’accelerator_view pour lequel l’interface de texture Direct3D sous-jacente est retournée.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le pointeur d’interface IUnknown correspondant à la texture Direct3D sous-jacents de la texture.  
+ Le pointeur d’interface IUnknown correspondant à la texture Direct3D sous-jacent à la texture.  
   
 ##  <a name="make_sampler"></a>  make_sampler  
- Créer un échantillon à partir d’un pointeur d’interface état D3D échantillonneur.  
+ Créez un échantillonneur à partir d’un pointeur d’interface état d’échantillonnage D3D.  
   
 ```  
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_D3D_sampler`  
- Pointeur d’interface IUnknown de l’état de l’échantillonneur D3D pour créer l’échantillonneur de.  
+*_D3D_sampler*<br/>
+Pointeur d’interface IUnknown de l’état d’échantillonnage D3D pour créer l’échantillonneur à partir de.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un échantillon de représente l’état de l’échantillonneur D3D fourni.  
+ Un échantillonnage représente l’état d’échantillonnage D3D fourni.  
   
 ##  <a name="make_texture"></a>  make_texture  
  Crée un [texture](texture-class.md) objet en utilisant les paramètres spécifiés.  
@@ -119,26 +119,26 @@ texture<value_type, _Rank> make_texture(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `value_type`  
- Le type des éléments de la texture.  
+*value_type*<br/>
+Le type des éléments de la texture.  
   
- `_Rank`  
- Le rang de la texture.  
+*_Rank*<br/>
+Le rang de la texture.  
   
- `_Av`  
- Vue d’accélérateur D3D sur laquelle la texture doit être créé.  
+*_Av*<br/>
+Une vue d’accélérateur D3D sur laquelle la texture doit être créé.  
   
- `_D3D_texture`  
- Pointeur d’interface IUnknown de la texture D3D pour créer la texture à partir de.  
+*_D3D_texture*<br/>
+Pointeur d’interface IUnknown de la texture D3D pour créer la texture à partir de.  
   
- `_View_format`  
- Le format DXGI à utiliser pour les vues créées à partir de cette texture. Passez DXGI_FORMAT_UNKNOWN (la valeur par défaut) pour dériver le format sous-jacent du _D3D_texture et value_type de ce modèle dans le format. La mise en forme fournie doit être compatible avec le format sous-jacent du _D3D_texture.  
+*_View_format*<br/>
+Le format DXGI à utiliser pour les vues créées à partir de cette texture. Passez DXGI_FORMAT_UNKNOWN (valeur par défaut) pour dériver le format sous-jacent de _D3D_texture et value_type de ce modèle dans le format. La mise en forme fournie doit être compatible avec le format sous-jacent de _D3D_texture.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une texture à l’aide de la texture D3D fournie.  
   
 ##  <a name="msad4"></a>  msad4  
- Compare une valeur de référence de 4 octets et une valeur de la source de 8 octets et accumule un vecteur de 4 sommes. Chaque somme correspond à la somme masquée des valeurs absolues des alignements d’octets différents entre la valeur de référence et la valeur de la source.  
+ Compare une valeur de référence de 4 octets et une valeur de la source de 8 octets et accumule un vecteur de 4 sommes. Chaque somme correspond à la somme masquée de différences absolues des alignements des octets entre la valeur de référence et la valeur source.  
   
 ```  
 inline uint4 msad4(
@@ -148,22 +148,22 @@ inline uint4 msad4(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Reference`  
- Le tableau de référence de 4 octets dans une seule valeur uint  
+*_Référence*<br/>
+Le tableau de référence de 4 octets dans une valeur uint  
   
- `_Source`  
- Le tableau de la source de 8 octets dans un vecteur de deux valeurs uint.  
+*_Source*<br/>
+Le tableau de la source de 8 octets dans un vecteur de deux valeurs uint.  
   
- `_Accum`  
- Un vecteur de 4 valeurs à ajouter à la somme masquée des valeurs absolues des alignements octets différents entre la valeur de référence et la valeur de la source.  
+*_Accum*<br/>
+Un vecteur de 4 valeurs à ajouter à la somme masquée de différences absolues des différents alignements des octets entre la valeur de référence et la valeur source.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne un vecteur de 4 sommes. Chaque somme correspond à la somme masquée des valeurs absolues des alignements d’octets différents entre la valeur de référence et la valeur de la source.  
+ Retourne un vecteur de 4 sommes. Chaque somme correspond à la somme masquée de différences absolues des alignements des octets entre la valeur de référence et la valeur source.  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_graphics.h  
   
- **Namespace :** Concurrency::graphics::direct3d 
+ **Namespace :** Concurrency::Graphics :: Direct3D 
 
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics::direct3d, espace de noms](concurrency-graphics-direct3d-namespace.md)

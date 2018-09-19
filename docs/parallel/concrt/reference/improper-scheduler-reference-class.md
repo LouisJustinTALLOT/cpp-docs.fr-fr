@@ -1,5 +1,5 @@
 ---
-title: improper_scheduler_reference, classe | Documents Microsoft
+title: improper_scheduler_reference, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320e0f4560baa5b07c982ca9af6134cf2bfdc292
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: adc6467a66163eeef5916580181005cac1a0a4b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695653"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016935"
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference, classe
 Cette classe décrit une exception levée quand la méthode `Reference` est appelée sur un objet `Scheduler` en cours d'arrêt, à partir d'un contexte qui ne fait pas partie de ce planificateur.  
@@ -47,7 +47,7 @@ class improper_scheduler_reference : public std::exception;
   
  `improper_scheduler_reference`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -63,8 +63,8 @@ improper_scheduler_reference() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Message descriptif de l'erreur.  
+*_Message*<br/>
+Message descriptif de l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   

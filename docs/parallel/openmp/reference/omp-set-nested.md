@@ -1,5 +1,5 @@
 ---
-title: omp_set_nested | Documents Microsoft
+title: omp_set_nested | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6539167b936efdc4c9f407cd951c9c582b0a138
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fc3506c35dca469febafe21509064abc1726d633
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116880"
 ---
 # <a name="ompsetnested"></a>omp_set_nested
 Active le parallélisme imbriqué.  
@@ -34,18 +34,17 @@ void omp_set_nested(
 );  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+### <a name="parameters"></a>Paramètres
   
- `val`  
- Si elle est différente de zéro, permet de parallélisme imbriqué. Si zéro, désactive le parallélisme imbriqué.  
+*Val*<br/>
+Si elle est différente de zéro, permet de parallélisme imbriqué. Si zéro, désactive le parallélisme imbriqué.  
   
 ## <a name="remarks"></a>Notes  
  OMP imbriqué parallélisme peut être activé avec `omp_set_nested`, ou en définissant le [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) variable d’environnement.  
   
- Le paramètre de `omp_set_nested` remplace le paramètre de la `OMP_NESTED` variable d’environnement.  
+ Le paramètre pour `omp_set_nested` remplace le paramètre de la `OMP_NESTED` variable d’environnement.  
   
- Lorsque activé, la variable d’environnement peut interrompre un programme opérationnel dans le cas contraire, car le nombre de threads augmente de façon exponentielle lors de l’imbrication de régions parallèles.  Par exemple, une fonction que récursivement 6 fois avec le nombre de threads OMP défini à 4 requiert 4 096 (4 à la puissance de 6) les threads en général, réduit les performances de votre application si le nombre de threads dépasse le nombre de processeurs. Une exception à cela serait qu'e/s liée d’applications.  
+ Lorsque l’option est activée, la variable d’environnement peut interrompre un programme opérationnels dans le cas contraire, car le nombre de threads augmente de façon exponentielle lors de l’imbrication de régions parallèles.  Par exemple, une fonction que récursivement 6 fois avec le nombre de threads OMP défini sur 4 requiert 4 096 (4 à la puissance de 6) les threads en général, les performances de votre application se dégradera si le nombre de threads dépasse le nombre de processeurs. Une exception à cela serait qu'applications liées aux e/s.  
   
  Utilisez [omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) pour afficher le paramètre actuel de `omp_set_nested`.  
   

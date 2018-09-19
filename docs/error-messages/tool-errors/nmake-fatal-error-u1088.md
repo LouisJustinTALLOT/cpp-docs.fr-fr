@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable NMAKE U1088 | Documents Microsoft
+title: Erreur irrécupérable NMAKE U1088 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3934e39cd87bd41432e90af1b7053815e5e44ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72f09dec61cec9870627682e9413d98e0d623188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109754"
 ---
 # <a name="nmake-fatal-error-u1088"></a>Erreur irrécupérable NMAKE U1088
-séparateur non valide ' ::' dans la règle d’inférence  
-  
- Une règle d’inférence doit être suivie par un signe des deux-points (**:**).
+
+séparateur non valide ' ::' sur la règle d’inférence
+
+Une règle d’inférence doit être suivie d’un seul signe deux-points (**:**).

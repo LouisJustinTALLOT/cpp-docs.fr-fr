@@ -1,5 +1,5 @@
 ---
-title: Erreur LNK1256 des outils Éditeur de liens | Documents Microsoft
+title: Erreur LNK1256 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e4039dccb4dc8abd421b4622bbe928931f7f396
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a711343eaf64a9ef1c46a5044cb3d6a2f84c5f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050643"
 ---
 # <a name="linker-tools-error-lnk1256"></a>Erreur des outils Éditeur de liens LNK1256
-Échec de l'opération ALINK : raison  
-  
- Une des raisons courantes de la survenue de l'erreur LNK1256 est l'existence d'un numéro de version incorrect pour un assembly. La valeur 65 535 n'est pas autorisée, quelle que soit la partie du numéro de version de l'assembly. La plage valide pour les versions d’assembly est 0 - 65534.  
-  
- L'erreur LNK1256 peut aussi survenir si ALINK n'a pas trouvé le conteneur de clé nommé. Supprimer le conteneur de clé et l’ajouter à nouveau pour le fournisseur de services cryptographiques de nom fort à l’aide de [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool).  
-  
- L'erreur LNK1256 peut aussi être liée à une incompatibilité de version entre l'éditeur de liens et Alink.dll. Une installation endommagée de Visual Studio peut en être la cause. Utilisez **programmes et fonctionnalités** dans le panneau de configuration Windows pour réparer ou réinstaller Visual Studio.  
-  
- L'exemple suivant génère l'erreur LNK1256 :  
-  
-```  
-// LNK1256.cpp  
-// compile with: /clr /LD  
-// LNK1256 expected  
-[assembly:System::Reflection::AssemblyVersionAttribute("1.0.65535")];  
-public class CMyClass {  
-public:  
-   int value;  
-};  
+
+Échec de l'opération ALINK : raison
+
+Une des raisons courantes de la survenue de l'erreur LNK1256 est l'existence d'un numéro de version incorrect pour un assembly. La valeur 65 535 n'est pas autorisée, quelle que soit la partie du numéro de version de l'assembly. La plage valide pour les versions d’assembly est 0 - 65534.
+
+L'erreur LNK1256 peut aussi survenir si ALINK n'a pas trouvé le conteneur de clé nommé. Supprimer le conteneur de clé et rajoutez-le au nom fort CSP à l’aide de [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool).
+
+L'erreur LNK1256 peut aussi être liée à une incompatibilité de version entre l'éditeur de liens et Alink.dll. Une installation endommagée de Visual Studio peut en être la cause. Utilisez **programmes et fonctionnalités** dans le panneau de configuration Windows pour réparer ou réinstaller Visual Studio.
+
+L'exemple suivant génère l'erreur LNK1256 :
+
+```
+// LNK1256.cpp
+// compile with: /clr /LD
+// LNK1256 expected
+[assembly:System::Reflection::AssemblyVersionAttribute("1.0.65535")];
+public class CMyClass {
+public:
+   int value;
+};
 ```

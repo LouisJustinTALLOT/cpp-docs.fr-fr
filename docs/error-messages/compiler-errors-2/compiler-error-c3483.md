@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3483 | Documents Microsoft
+title: Erreur du compilateur C3483 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2605674ff701f70f7be6ea1b4158c9f8f0c6ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: decc04f25689b24c560f59a71fd22a9708754352
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091684"
 ---
 # <a name="compiler-error-c3483"></a>Erreur du compilateur C3483
-'var' figure déjà dans la liste de capture lambda  
-  
- Vous avez passé plusieurs fois la même variable à la liste de capture d’une expression lambda.  
-  
-### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
-  
--   Supprimez toutes les instances supplémentaires de la variable de la liste de capture.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C3483, car la variable `n` apparaît plusieurs fois dans la liste de capture de l’expression lambda :  
-  
-```  
-// C3483.cpp  
-  
-int main()  
-{  
-   int m = 6, n = 5;  
-   [m,n,n] { return n + m; }(); // C3483  
-}  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Expressions lambda](../../cpp/lambda-expressions-in-cpp.md)
+
+'var' figure déjà dans la liste de capture lambda
+
+Vous avez passé plusieurs fois la même variable à la liste de capture d’une expression lambda.
+
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur
+
+- Supprimez toutes les instances supplémentaires de la variable de la liste de capture.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C3483, car la variable `n` apparaît plusieurs fois dans la liste de capture de l’expression lambda :
+
+```
+// C3483.cpp
+
+int main()
+{
+   int m = 6, n = 5;
+   [m,n,n] { return n + m; }(); // C3483
+}
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Expressions lambda](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Avertissement NMAKE U4007 | Documents Microsoft
+title: Avertissement NMAKE U4007 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c28bf0918e61f3819865f65458ce78e5cdc4eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40c186e222edbb3b141fd13d8a5964e4a696edd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087511"
 ---
 # <a name="nmake-warning-u4007"></a>Avertissement NMAKE U4007
-nom de fichier 'nom_fichier' trop long ; troncation à 8.3  
-  
- Le nom de base du fichier donné compte plus de huit caractères, ou l’extension comporte plus de trois caractères. NMAKE a tronqué le nom d’une base de huit caractères et une extension de trois caractères.  
-  
- Si les noms de fichiers longs sont pris en charge par votre système de fichiers, placez-le entre guillemets doubles (**»**).
+
+nom de fichier 'NomFichier' trop long ; troncation à 8.3
+
+Le nom de base du fichier donné a plus de huit caractères, ou l’extension a plus de trois caractères. NMAKE a tronqué le nom à une base de huit caractères et une extension de trois caractères.
+
+Si les noms de fichiers longs sont pris en charge par votre système de fichiers, placez-le entre guillemets doubles (**»**).

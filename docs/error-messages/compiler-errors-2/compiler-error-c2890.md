@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2890 | Documents Microsoft
+title: Erreur du compilateur C2890 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23bf91594817e27a681f999d9fb0209ccb90a1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbad8e1e46364579f4c7bc4bd6928e3a44d3cd66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042661"
 ---
 # <a name="compiler-error-c2890"></a>Erreur du compilateur C2890
-'classe' : une classe ref peut avoir uniquement une classe de base sans interface  
-  
- Une classe de référence peut avoir uniquement une classe de base.  
-  
- L’exemple suivant génère l’erreur C2890 :  
-  
-```  
-// C2890.cpp  
-// compile with: /clr /c  
-ref class A {};  
-ref class B {};  
-ref class C : public A, public B {};   // C2890  
-ref class D : public A {};   // OK  
-```  
+
+'classe' : une classe ref peut avoir uniquement une classe de base sans interface
+
+Une classe de référence peut avoir uniquement une classe de base.
+
+L’exemple suivant génère l’erreur C2890 :
+
+```
+// C2890.cpp
+// compile with: /clr /c
+ref class A {};
+ref class B {};
+ref class C : public A, public B {};   // C2890
+ref class D : public A {};   // OK
+```

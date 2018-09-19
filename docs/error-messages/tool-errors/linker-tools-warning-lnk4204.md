@@ -1,5 +1,5 @@
 ---
-title: Avertissement LNK4204 des outils Éditeur de liens | Documents Microsoft
+title: Avertissement LNK4204 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f000fa42357a299c943eda0cd5f8697aee138f4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee6164f20bbf91a8cb0b88d8a1333107f239d3f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136231"
 ---
 # <a name="linker-tools-warning-lnk4204"></a>Avertissement des outils Éditeur de liens LNK4204
-'NomFichier' n’a pas d’informations de débogage pour référencer le module ; objet sera lié sans informations de débogage  
-  
- Le fichier .pdb a une signature erronée. L’éditeur de liens poursuit la liaison de l’objet sans informations de débogage. Vous souhaiterez peut-être recompiler le fichier d’objet à l’aide du [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) option.  
-  
- LNK4204 peut se produire si certains des objets dans la bibliothèque font référence à un fichier qui n’existe plus. Cela peut arriver lors de la régénération de la solution, par exemple ; un fichier objet peut être supprimé et pas reconstruit en raison d’une erreur de compilation. Dans ce cas, compilez avec **/Z7**, ou **/Fd**pour mettre à jour les objets pour faire référence à un fichier unique par bibliothèque (qui n’est pas le nom de fichier .pdb par défaut).  Pour plus d’informations, consultez l’article [/Fd (Nom de fichier PDB)](../../build/reference/fd-program-database-file-name.md).  Assurez-vous que le fichier .pdb est enregistré avec la bibliothèque chaque fois qu’il est mis à jour dans le système de contrôle de code source.
+
+'nom_fichier' manque d’informations de débogage pour référencer le module ; objet sera lié sans informations de débogage
+
+Le fichier .pdb a une signature erronée. L’éditeur de liens poursuit la liaison de l’objet sans informations de débogage. Vous souhaiterez peut-être recompiler le fichier objet en utilisant le [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) option.
+
+LNK4204 peut se produire si certains des objets dans la bibliothèque font référence à un fichier qui n’existe plus. Cela peut arriver lors de la régénération de la solution, par exemple ; un fichier objet peut être supprimé et pas reconstruit en raison d’une erreur de compilation. Dans ce cas, compilez avec **/Z7**, ou **/Fd**, pour mettre à jour les objets pour faire référence à un fichier unique par bibliothèque (qui n’est pas le nom de fichier .pdb par défaut).  Pour plus d’informations, consultez l’article [/Fd (Nom de fichier PDB)](../../build/reference/fd-program-database-file-name.md).  Vérifiez que le fichier .pdb est enregistré avec la bibliothèque chaque fois qu’il est mis à jour dans le système de contrôle source.

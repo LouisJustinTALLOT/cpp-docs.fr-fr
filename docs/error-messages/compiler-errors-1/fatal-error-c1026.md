@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1026 | Documents Microsoft
+title: Erreur irrécupérable C1026 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c034d45b7f8b222471094f4580902ae1b8dc66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9167383df48dad274ef8941defaa53f51d3bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068986"
 ---
 # <a name="fatal-error-c1026"></a>Erreur irrécupérable C1026
-dépassement de capacité de la pile de l'analyseur, programme trop complexe  
-  
- L’espace requis pour analyser le programme a provoqué un dépassement de capacité de pile du compilateur.  
-  
- Réduire la complexité des expressions en :  
-  
--   Diminution du niveau d’imbrication des `for` et `switch` instructions. Placez les instructions plus profondément imbriquées dans des fonctions séparées.  
-  
--   Avec rupture des expressions longues qui impliquent des appels de fonction ou des opérateurs de virgules.
+
+dépassement de capacité de la pile de l'analyseur, programme trop complexe
+
+L’espace requis pour analyser le programme a provoqué un dépassement de capacité de pile du compilateur.
+
+Réduire la complexité des expressions en :
+
+- Diminution de l’imbrication dans `for` et `switch` instructions. Placer des instructions plus profondément imbriquées dans des fonctions séparées.
+
+- Découper des expressions longues qui impliquent des opérateurs de virgules ou des appels de fonction.

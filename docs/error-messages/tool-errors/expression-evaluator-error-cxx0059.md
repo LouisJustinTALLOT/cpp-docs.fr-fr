@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0059 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0059 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dbd0944eabe57dc3dd1cc224da220ee7f6435c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55fc60014bdc408d581ed8299715aad139ef9862
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050461"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Évaluateur d'expression, erreur CXX0059
-opérande gauche est une classe pas un nom de fonction  
-  
- L’opérande de gauche d’un appel de fonction a un nom de classe et n’a pas pu être résolu à un appel de fonction. Omission du nom d’une fonction membre dans une expression peut provoquer cette erreur.  
-  
- Cette erreur est identique à CAN0059.
+
+opérande gauche est une classe pas un nom de fonction
+
+L’opérande gauche d’un appel de fonction a un nom de classe et n’a pas pu être résolu en un appel de fonction. En omettant le nom d’une fonction membre dans une expression pouvant provoquer cette erreur.
+
+Cette erreur est identique à CAN0059.

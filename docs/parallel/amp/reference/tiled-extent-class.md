@@ -1,5 +1,5 @@
 ---
-title: tiled_extent, classe | Documents Microsoft
+title: tiled_extent, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d0a0606e531b4343bf8b5569daa5034c827dcb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114551"
 ---
 # <a name="tiledextent-class"></a>tiled_extent, classe
-A `tiled_extent` objet est un `extent` objet d’un à trois dimensions qui divise l’espace d’étendue en une, deux ou les vignettes en trois dimensions.  
+Un `tiled_extent` objet est un `extent` objet d’une à trois dimensions qui subdivise l’espace d’extent en une, deux ou vignettes en trois dimensions.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -56,14 +56,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Dim0`  
- La longueur de la dimension la plus importante.  
+*_Dim0*<br/>
+La longueur de la dimension la plus significative.  
   
- `_Dim1`  
- La longueur de la dimension importante suivant à la plupart des.  
+*_Dim1*<br/>
+La longueur de la prochaine-à-dimension la plus significative.  
   
- `_Dim2`  
- La longueur de la dimension de poids faible.  
+*_Dim2*<br/>
+La longueur de la dimension la moins significative.  
   
 ## <a name="members"></a>Membres  
   
@@ -79,8 +79,8 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |Nom|Description|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|Retourne un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
-|[pad](#pad)|Retourne un nouveau `tiled_extent` objet avec les extensions modifiés des divisible par les dimensions de la mosaïque.|  
-|[truncate](#truncate)|Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.|  
+|[pad](#pad)|Retourne un nouvel `tiled_extent` objet avec les étendues ajustée inscrire pour être également divisibles par les dimensions de la vignette.|  
+|[truncate](#truncate)|Retourne un nouvel `tiled_extent` objet avec les étendues sous-ajustées pour être également divisibles par les dimensions de la vignette.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -93,9 +93,9 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Name|Description|  
 |----------|-----------------|  
-|[tile_dim0 (constante)](#tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
-|[tile_dim1 (constante)](#tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
-|[tile_dim2 (constante)](#tile_dim2)|Stocke la longueur de la dimension de poids faible.|  
+|[tile_dim0 (constante)](#tile_dim0)|Stocke la longueur de la dimension la plus significative.|  
+|[tile_dim1 (constante)](#tile_dim1)|Stocke la longueur de la prochaine-à-dimension la plus significative.|  
+|[tile_dim2 (constante)](#tile_dim2)|Stocke la longueur de la dimension la moins significative.|  
 
   
 ### <a name="public-data-members"></a>Membres de données publics  
@@ -109,7 +109,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  `tiled_extent`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
@@ -130,8 +130,8 @@ tiled_extent(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `extent` ou `tiled_extent` objet à copier.  
+*_Autre*<br/>
+Le `extent` ou `tiled_extent` objet à copier.  
   
 
   
@@ -150,7 +150,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
   
 
 ## <a name="pad"> </a>  remplissage   
-Retourne un nouveau `tiled_extent` objet avec les extensions modifiés des divisible par les dimensions de la mosaïque.  
+Retourne un nouvel `tiled_extent` objet avec les étendues ajustée inscrire pour être également divisibles par les dimensions de la vignette.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -159,9 +159,9 @@ tiled_extent pad() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- La nouvelle `tiled_extent` objet par valeur. 
-## <a name="truncate"> </a>  Tronquer   
-Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.  
+ La nouvelle `tiled_extent` objet, par valeur. 
+## <a name="truncate"> </a>  tronquer   
+Retourne un nouvel `tiled_extent` objet avec les étendues sous-ajustées pour être également divisibles par les dimensions de la vignette.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -170,7 +170,7 @@ tiled_extent truncate() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.  
+ Retourne un nouvel `tiled_extent` objet avec les étendues sous-ajustées pour être également divisibles par les dimensions de la vignette.  
 
 ## <a name="operator_eq"> </a>  opérateur =   
 Copie le contenu de l’objet `tiled_index` objet dans celui-ci.  
@@ -183,14 +183,14 @@ tiled_extent&  operator= (
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `tiled_index` objet à copier à partir de.  
+*_Autre*<br/>
+Le `tiled_index` objet à copier.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une référence à ce `tiled_index` instance.  
+ Une référence à cet `tiled_index` instance.  
 
 ## <a name="tile_dim0"> </a>  tile_dim0   
-Stocke la longueur de la dimension la plus importante.  
+Stocke la longueur de la dimension la plus significative.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -199,7 +199,7 @@ static const int tile_dim0 = _Dim0;
 ```  
   
 ## <a name="tile_dim1"> </a>  tile_dim1   
-Stocke la longueur de la dimension importante suivant au plus.  
+Stocke la longueur de la prochaine-à-dimension la plus significative.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -207,7 +207,7 @@ Stocke la longueur de la dimension importante suivant au plus.
 static const int tile_dim1 = _Dim1;  
 ```  
 ## <a name="tile_dim2"> </a>  tile_dim2   
-Stocke la longueur de la dimension de poids faible.  
+Stocke la longueur de la dimension la moins significative.  
   
 ### <a name="syntax"></a>Syntaxe  
   

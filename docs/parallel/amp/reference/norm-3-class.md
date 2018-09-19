@@ -1,5 +1,5 @@
 ---
-title: norm_3, classe | Documents Microsoft
+title: norm_3, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe4852313d6eb445b3ea242f13e5dc5f6e90def2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074381"
 ---
 # <a name="norm3-class"></a>norm_3, classe
-Représente un vecteur court de trois nombres normales.  
+Représente un vecteur court de trois nombres normaux.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -210,7 +210,7 @@ class norm_3;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `norm_3`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  
@@ -264,20 +264,20 @@ explicit inline norm_3(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_V0`  
- La valeur pour initialiser l’élément 0.  
+*_V0*<br/>
+La valeur pour initialiser l’élément 0.  
   
- `_V1`  
- La valeur pour initialiser l’élément 1.  
+*_V1*<br/>
+La valeur pour initialiser l’élément 1.  
   
- `_V2`  
- La valeur pour initialiser l’élément 2.  
+*_V2*<br/>
+La valeur pour initialiser l’élément 2.  
   
- `_V`  
- La valeur de l’initialisation.  
+*_V*<br/>
+La valeur pour l’initialisation.  
   
- `_Other`  
- Objet utilisé pour initialiser.  
+*_Autre*<br/>
+L’objet utilisé pour initialiser.  
   
 ## <a name="a-namesize-size-constant"></a><a name="size"> taille (constante)
 ### <a name="syntax"></a>Syntaxe  

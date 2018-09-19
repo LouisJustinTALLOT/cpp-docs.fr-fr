@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2645 | Documents Microsoft
+title: Erreur du compilateur C2645 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0330f9f678da58648c2fd445f7a291b02c167a89
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ada345b79c061c71bc716bf7baf96116444bcc7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076825"
 ---
 # <a name="compiler-error-c2645"></a>Erreur du compilateur C2645
-Aucun nom qualifié pour un pointeur vers membre (trouvé ' :: *')  
-  
- La déclaration d’un pointeur vers un membre ne spécifie pas une classe.  
-  
- L’exemple suivant génère l’erreur C2645 :  
-  
-```  
-// C2645.cpp  
-class A {};  
-int main() {  
-   int B::* bp;   // C2645 B not defined  
-   int A::* ap;   // OK  
-}  
+
+Aucun nom qualifié pour un pointeur vers membre (trouvé ' :: *')
+
+La déclaration d’un pointeur vers un membre ne spécifie pas une classe.
+
+L’exemple suivant génère l’erreur C2645 :
+
+```
+// C2645.cpp
+class A {};
+int main() {
+   int B::* bp;   // C2645 B not defined
+   int A::* ap;   // OK
+}
 ```

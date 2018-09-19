@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RC1002 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RC1002 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 886b44d0a51df10295428daa69c8ea358660fd25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d54f49b7cce988c5902a01142efe061ba03e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114525"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>Erreur irrécupérable RC1002 du compilateur de ressources 
-espace du tas insuffisant  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.  
-  
-1.  Augmentez l’espace de fichier d’échange Windows. Pour plus d’informations sur l’augmentation de l’espace de fichier d’échange, consultez la mémoire virtuelle dans l’aide de Windows.  
-  
-2.  Fractionnez le fichier en cours en fichiers plus petits et de les compiler séparément.  
-  
-3.  Supprimer d’autres programmes ou les pilotes en cours d’exécution sur le système.
+
+espace du tas insuffisant
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.
+
+1. Augmentez l’espace de fichier d’échange Windows. Pour plus d’informations sur l’augmentation de l’espace de fichier d’échange, consultez la mémoire virtuelle dans l’aide de Windows.
+
+1. Fractionner le fichier en cours en fichiers plus petits et les compiler séparément.
+
+1. Supprimez les autres programmes ou pilotes en cours d’exécution sur le système.

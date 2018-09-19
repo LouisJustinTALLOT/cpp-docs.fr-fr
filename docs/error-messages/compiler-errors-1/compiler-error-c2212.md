@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2212 | Documents Microsoft
+title: Erreur du compilateur C2212 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152b38be30b50684684bb0c2c39a035b748915b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 773dff4c731830d300c97f1960b24923d2b7d67f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089877"
 ---
 # <a name="compiler-error-c2212"></a>Erreur du compilateur C2212
-'identificateur' : __based non disponible pour les pointeurs vers des fonctions  
-  
- Impossible de déclarer des pointeurs vers des fonctions `__based`. Si vous avez besoin des données basées sur le code, utilisez la `__declspec` mot clé ou le `data_seg` pragma.
+
+'identificateur' : __based non disponible pour les pointeurs vers des fonctions
+
+Impossible de déclarer les pointeurs vers des fonctions `__based`. Si vous avez besoin des données basées sur le code, utilisez le `__declspec` mot clé ou le `data_seg` pragma.

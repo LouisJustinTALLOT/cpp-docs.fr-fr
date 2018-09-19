@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef417232d62c664b4943a2198ae351a5c443b089
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136157"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et rapport d’erreurs
 
@@ -97,7 +97,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>Paramètres
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Expression (pointeurs inclus) qui prend une valeur différente de zéro ou 0.
 
 ### <a name="remarks"></a>Notes
@@ -119,10 +119,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>Paramètres
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Spécifie une expression booléenne à tester.
 
-*ressources humaines*  
+*ressources humaines*<br/>
 Spécifie un code d’erreur à retourner.
 
 ### <a name="remarks"></a>Notes
@@ -155,7 +155,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>Paramètres
 
-*funcname*  
+*funcname*<br/>
 [in] Chaîne contenant le nom de la fonction qui n’est pas implémentée.
 
 ### <a name="remarks"></a>Notes
@@ -185,16 +185,16 @@ ATLTRACE(
 
 ### <a name="parameters"></a>Paramètres
 
-*exp*  
+*exp*<br/>
 [in] La chaîne et les variables à envoyer à la fenêtre de sortie de Visual C++ ou n’importe quelle application qui intercepte ces messages.
 
-*category*  
+*category*<br/>
 [in] Type d’événement ou méthode sur lequel au rapport. Consultez la section Notes pour obtenir la liste des catégories.
 
-*Niveau*  
+*Niveau*<br/>
 [in] Le niveau de suivi pour le rapport. Consultez la section Notes pour plus d’informations.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] La chaîne mise en forme pour envoyer à l’unité de vidage.
 
 ### <a name="remarks"></a>Notes
@@ -216,16 +216,16 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>Paramètres
 
-*exp*  
+*exp*<br/>
 [in] Chaîne à envoyer à la fenêtre de sortie de Visual C++ ou n’importe quelle application qui intercepte ces messages.
 
-*category*  
+*category*<br/>
 [in] Type d’événement ou méthode sur lequel au rapport. Consultez la section Notes pour obtenir la liste des catégories.
 
-*Niveau*  
+*Niveau*<br/>
 [in] Le niveau de suivi pour le rapport. Consultez la section Notes pour plus d’informations.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] Le `printf`-style de chaîne de format à utiliser pour créer une chaîne à envoyer à l’unité de vidage.
 
 ### <a name="remarks"></a>Notes
@@ -295,5 +295,5 @@ ATLTRACE et ATLTRACE2 ont le même comportement, ATLTRACE est inclus pour la com
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros](../../atl/reference/atl-macros.md)   
+[Macros](../../atl/reference/atl-macros.md)<br/>
 [Fonctions globales de signalement d’erreurs et de débogage](../../atl/reference/debugging-and-error-reporting-global-functions.md)

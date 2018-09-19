@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2818 | Documents Microsoft
+title: Erreur du compilateur C2818 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d7f419d528fcd2445b82e29d92442002624909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f692f52477c988c277f60a689dac5ce83a90acb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112042"
 ---
 # <a name="compiler-error-c2818"></a>Erreur du compilateur C2818
-application de surchargé 'operator ->' est récurrente à travers le type 'type'  
-  
- Une redéfinition de l’opérateur de l’accès de membre de classe contient une récursive `return` instruction. Pour redéfinir la `->` opérateur avec la récurrence, vous devez déplacer la routine récurrente vers une fonction appelée à partir de l’opérateur de substituer la fonction.
+
+application de surchargé 'operator ->' est récurrente à travers le type 'type'
+
+Une redéfinition de l’opérateur de l’accès de membre de classe contient une récursive `return` instruction. Pour redéfinir le `->` opérateur avec la récurrence, vous devez déplacer la routine récursive à une fonction appelée à partir de l’opérateur de substituer la fonction.

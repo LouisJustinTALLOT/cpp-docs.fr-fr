@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2633 | Documents Microsoft
+title: Erreur du compilateur C2633 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97bc51896487b0520245aa714eafb25a393365e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2750cad468158ec5f8eddc967392ea68c1029119
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108552"
 ---
 # <a name="compiler-error-c2633"></a>Erreur du compilateur C2633
-'identificateur' : 'inline' est la classe de stockage autorisée uniquement pour les constructeurs  
-  
- Un constructeur est déclaré comme une classe de stockage autre qu’inline.  
-  
- L’exemple suivant génère C2633 :  
-  
-```  
-// C2633.cpp  
-// compile with: /c  
-class C {  
-   extern C();   // C2633, not inline  
-   inline C();   // OK  
-};  
+
+'identificateur' : 'inline' est la classe de stockage autorisée uniquement pour les constructeurs
+
+Un constructeur est déclaré comme une classe de stockage autre qu’inline.
+
+L’exemple suivant génère C2633 :
+
+```
+// C2633.cpp
+// compile with: /c
+class C {
+   extern C();   // C2633, not inline
+   inline C();   // OK
+};
 ```

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272c9674270c1c600fee697dd77d050d6adb4e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 79cace12447eccb9ac7dc560b6add45bd0dc81c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045079"
 ---
 # <a name="catlfilemappingbase-class"></a>Catlfilemappingbase, classe
 
@@ -89,13 +89,13 @@ Pour plus d’informations, consultez [fichier mappage](/windows/desktop/Memory/
 Constructeur.
 
 ```
-CAtlFileMappingBase(CAtlFileMappingBase& orig);  
+CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*orig*  
+*orig*<br/>
 L’objet de mappage de fichier d’origine à copier pour créer le nouvel objet.
 
 ### <a name="remarks"></a>Notes
@@ -128,7 +128,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*orig*  
+*orig*<br/>
 L’objet de mappage de fichier d’origine à copier à partir de.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -190,19 +190,19 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Paramètres
 
-*hFile*  
+*hFile*<br/>
 Handle au fichier à partir duquel créer un objet de mappage. *hFile* doit être valide et ne peut pas être définie sur INVALID_HANDLE_VALUE.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle du fichier identifié par *hFile.*
 
-*nOffset*  
+*nOffset*<br/>
 Le décalage de fichier dans lequel le mappage doit commencer. La valeur de décalage doit être un multiple de granularité d’allocation de mémoire du système.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 La protection souhaitée pour l’affichage des fichiers quand le fichier est mappé. Consultez *flProtect* dans [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) dans le SDK Windows.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -233,22 +233,22 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>Paramètres
 
-*nMappingSize*  
+*nMappingSize*<br/>
 La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par *szName*.
 
-*szName*  
+*szName*<br/>
 Le nom de l’objet de mappage.
 
-*pbAlreadyExisted*  
+*pbAlreadyExisted*<br/>
 Pointe vers une valeur BOOL qui a la valeur TRUE si l’objet de mappage déjà existé.
 
-*lpsa*  
+*lpsa*<br/>
 Le pointeur vers un `SECURITY_ATTRIBUTES` structure qui détermine si le handle retourné peut être hérité par les processus enfants. Consultez *lpAttributes* dans [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) dans le SDK Windows.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 La protection souhaitée pour l’affichage des fichiers, quand le fichier est mappé. Consultez *flProtect* dans `CreateFileMapping` dans le SDK Windows.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -273,16 +273,16 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>Paramètres
 
-*szName*  
+*szName*<br/>
 Le nom de l’objet de mappage. Si un handle est ouvert à un objet de mappage de fichier à ce nom et le descripteur de sécurité sur l’objet de mappage n’est pas en conflit avec le *dwViewDesiredAccess* paramètre, l’opération d’ouverture aboutisse.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par *szName*.
 
-*nOffset*  
+*nOffset*<br/>
 Le décalage de fichier dans lequel le mappage doit commencer. La valeur de décalage doit être un multiple de granularité d’allocation de mémoire du système.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -303,7 +303,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>Paramètres
 
-*orig*  
+*orig*<br/>
 L’objet de mappage de fichier actuel.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -328,5 +328,5 @@ Consultez [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/a
 
 ## <a name="see-also"></a>Voir aussi
 
-[Catlfilemapping, classe](../../atl/reference/catlfilemapping-class.md)   
+[CAtlFileMapping, classe](../../atl/reference/catlfilemapping-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

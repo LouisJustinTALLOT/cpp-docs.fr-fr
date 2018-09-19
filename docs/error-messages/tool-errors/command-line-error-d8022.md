@@ -1,5 +1,5 @@
 ---
-title: Erreur de ligne de commande D8022 | Documents Microsoft
+title: Erreur de ligne de commande D8022 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338612527555dff6331ceaeef5e3b3dba0949d51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1438473ff4fa45bf4000cb273ad3817d5673f219
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094418"
 ---
 # <a name="command-line-error-d8022"></a>Erreur de ligne de commande D8022
-Impossible d’ouvrir 'FichierMessages'  
-  
- Le fichier spécifié a été pas dans le répertoire actuel ou dans un répertoire spécifié dans la variable d’environnement PATH. Le fichier de message contient une brève description de la syntaxe de ligne de commande du compilateur et les options.  
-  
- Déplacer ce fichier dans le répertoire actuel ou un répertoire dans le chemin d’accès actuel. Si ce fichier est introuvable, exécutez le programme d’installation pour le copier à partir de disques de distribution.
+
+Impossible d’ouvrir 'FichierMessages'
+
+Le fichier donné était pas dans le répertoire actif ou dans un répertoire spécifié dans la variable d’environnement PATH. Le fichier de message contient un bref résumé de syntaxe de ligne de commande du compilateur et les options.
+
+Déplacer ce fichier vers le répertoire actif ou un répertoire dans le chemin d’accès actuel. Si ce fichier est introuvable, exécutez le programme d’installation pour le copier à partir des disques de distribution.

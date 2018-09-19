@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6009af2026f10ff25983544e6724385246a42f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4678acbe251086f3a42e3544e155a191a5847f11
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101395"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection, classe
 
@@ -157,6 +157,6 @@ Pour tout d’abord obtenir la propriété, le thread doit appeler le [verrou](#
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComFakeCriticalSection, classe](../../atl/reference/ccomfakecriticalsection-class.md)   
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+[CComFakeCriticalSection, classe](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
+[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [CComCritSecLock, classe](../../atl/reference/ccomcritseclock-class.md)

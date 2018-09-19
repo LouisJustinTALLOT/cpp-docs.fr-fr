@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06b34099ecdb9c61d3580586bcb3bcd73eaf709
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab3c4b349b64b96b8aeb7a53d6bf8809f41cea7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097781"
 ---
 # <a name="ccomcritseclock-class"></a>Ccomcritseclock, classe
 
@@ -39,7 +39,7 @@ template<class TLock> class CComCritSecLock
 
 #### <a name="parameters"></a>Paramètres
 
-*TLock*  
+*TLock*<br/>
 Objet à être verrouillées et déverrouillées.
 
 ## <a name="members"></a>Membres
@@ -76,10 +76,10 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>Paramètres
 
-*cs*  
+*cs*<br/>
 L’objet de section critique.
 
-*bInitialLock*  
+*bInitialLock*<br/>
 L’état de verrouillage initial : **true** signifie verrouillé.
 
 ### <a name="remarks"></a>Notes
@@ -128,5 +128,5 @@ Si l’objet est déjà déverrouillé, une erreur d’assertion se produit dans
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComCriticalSection, classe](../../atl/reference/ccomcriticalsection-class.md)   
+[CComCriticalSection, classe](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [CComAutoCriticalSection, classe](../../atl/reference/ccomautocriticalsection-class.md)

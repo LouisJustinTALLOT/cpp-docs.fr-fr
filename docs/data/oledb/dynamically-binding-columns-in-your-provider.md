@@ -17,31 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed2b8d1d8bc3ac516b3d605f13e02bda37bb0122
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028543"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Liaison dynamique des colonnes dans votre fournisseur
+
 Assurez-vous que vous avez vraiment besoin de liaison dynamique des colonnes. Vous en auriez besoin, car :  
   
--   Vos colonnes de l’ensemble de lignes ne sont pas définies au moment de la compilation.  
+- Vos colonnes de l’ensemble de lignes ne sont pas définies au moment de la compilation.  
   
--   Vous prend en charge un élément telles que les signets qui ajoute des colonnes.  
+- Vous prend en charge un élément telles que les signets qui ajoute des colonnes.  
   
 ### <a name="to-implement-dynamic-column-binding"></a>Pour implémenter la liaison de colonne dynamique  
   
-1.  Supprimez les `PROVIDER_COLUMN_MAP`s à partir de votre code.  
+1. Supprimez les `PROVIDER_COLUMN_MAP`s à partir de votre code.  
   
-2.  Dans l’enregistrement utilisateur (votre structure), ajoutez la déclaration suivante :  
+1. Dans l’enregistrement utilisateur (votre structure), ajoutez la déclaration suivante :  
   
     ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implémentez le `GetColumnInfo` (fonction). Cette fonction indique comment les informations sont stockées. Vous devrez peut-être obtenir les propriétés ou autres informations relatives à cette fonction. Vous souhaiterez peut-être créer une macro, similaire à la [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro, pour ajouter vos propres informations.  
+1. Implémentez le `GetColumnInfo` (fonction). Cette fonction indique comment les informations sont stockées. Vous devrez peut-être obtenir les propriétés ou autres informations relatives à cette fonction. Vous souhaiterez peut-être créer une macro, similaire à la [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro, pour ajouter vos propres informations.  
   
      L’exemple suivant montre un `GetColumnInfo` (fonction).  
   
@@ -97,4 +98,5 @@ Assurez-vous que vous avez vraiment besoin de liaison dynamique des colonnes. Vo
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des modèles du fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Utilisation des modèles du fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

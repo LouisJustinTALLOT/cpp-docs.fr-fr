@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1780a4f77cce4812ebdb03ebc89936da0dc0d5d0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068433"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 
@@ -51,10 +51,10 @@ template <class T,
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe, dérivée de `CDialogImpl`.
 
-*TBase*  
+*TBase*<br/>
 La classe de base de votre nouvelle classe. La classe de base par défaut est [CWindow](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Membres
@@ -113,7 +113,7 @@ où `MyDlg` est la **nom court** entré dans l’Assistant **noms** page.
 
 Crée une boîte de dialogue non modale.
 
-```  
+```
 HWND Create(
     HWND hWndParent,  
     LPARAM dwInitParam = NULL );  
@@ -121,18 +121,17 @@ HWND Create(
 HWND Create(
     HWND hWndParent,  
     RECT&, 
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Le handle vers la fenêtre propriétaire.
 
-**RECT &** *rect*  
-[in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie la taille et la position de la boîte de dialogue.
+**RECT &** *rect* [in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie la taille et la position de la boîte de dialogue.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -173,16 +172,16 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>Paramètres
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle de la boîte de dialogue.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Le message envoyé à la boîte de dialogue.
 
-*wParam*  
+*wParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*lParam*  
+*lParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -199,18 +198,18 @@ Vous pouvez remplacer `DialogProc` pour fournir un mécanisme différent pour la
 
 Crée une boîte de dialogue modale.
 
-```   
+```
 INT_PTR DoModal(  
     HWND hWndParent = ::GetActiveWindow(),   
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Le handle vers la fenêtre propriétaire. La valeur par défaut est la valeur de retour de la [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) fonction Win32.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -227,13 +226,13 @@ Pour créer une boîte de dialogue non modale, appelez [créer](#create).
 
 Détruit une boîte de dialogue modale.
 
-```   
-BOOL EndDialog(int nRetCode); 
+```
+BOOL EndDialog(int nRetCode);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] La valeur doit être retourné par [CDialogImpl::DoModal](#domodal).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -251,8 +250,8 @@ TRUE si la boîte de dialogue est détruite ; Sinon, FALSE.
 
 Retourne `DialogProc`, la procédure de boîte de dialogue actuelle.
 
-```   
-virtual WNDPROC GetDialogProc(); 
+```
+virtual WNDPROC GetDialogProc();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -267,13 +266,13 @@ Substituez cette méthode pour remplacer la procédure de boîte de dialogue par
 
 Convertit en unités (maps) les unités de boîte de dialogue du rectangle spécifié à l’écran (pixels).
 
-```   
-BOOL MapDialogRect(LPRECT lpRect); 
+```
+BOOL MapDialogRect(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*lpRect*  
+*lpRect*<br/>
 Pointe vers un `CRect` objet ou [RECT](../../mfc/reference/rect-structure1.md) structure qui doit recevoir les coordonnées clientes de la mise à jour qui englobe la région de mise à jour.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -288,13 +287,13 @@ La fonction remplace les coordonnées dans le texte spécifié `RECT` structure 
 
 Appelé après réception du dernier message (généralement `WM_NCDESTROY`).
 
-```   
-virtual void OnFinalMessage(HWND hWnd); 
+```
+virtual void OnFinalMessage(HWND hWnd);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle vers la fenêtre en cours de destruction.
 
 ### <a name="remarks"></a>Notes
@@ -305,26 +304,26 @@ Notez que si vous souhaitez supprimer automatiquement votre objet lors de la des
 
 Appelée une seule fois, lorsque le premier message est reçu, pour traiter les messages envoyés à la boîte de dialogue.
 
-```   
+```
 static LRESULT CALLBACK StartDialogProc(
     HWND hWnd,  
     UINT uMsg,  
     WPARAM wParam,  
-    LPARAM lParam); 
+    LPARAM lParam);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle de la boîte de dialogue.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Le message envoyé à la boîte de dialogue.
 
-*wParam*  
+*wParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*lParam*  
+*lParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -337,5 +336,5 @@ Après l’appel initial à `StartDialogProc`, `DialogProc` est défini comme un
 
 ## <a name="see-also"></a>Voir aussi
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

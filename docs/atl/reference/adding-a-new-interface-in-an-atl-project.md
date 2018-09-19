@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad90ac69fa41a6bec70373b84044344592d2d86e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d468e6e2770eca3bc01fca95fb585d1753210a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039021"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Ajout d’une nouvelle Interface dans un projet ATL
 
@@ -52,10 +52,10 @@ Vous pouvez ajouter une nouvelle interface à votre contrôle dans un des deux f
 
 ## <a name="see-also"></a>Voir aussi
 
-[Assistant Projet ATL](../../atl/reference/atl-project-wizard.md)   
-[Types de projets Visual C++](../../ide/visual-cpp-project-types.md)   
-[Création de projets de bureau à l’aide des Assistants Application](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Programmation avec ATL et le Code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
+[Assistant Projet ATL](../../atl/reference/atl-project-wizard.md)<br/>
+[Types de projets Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Création de projets de bureau à l’aide des Assistants Application](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)
 

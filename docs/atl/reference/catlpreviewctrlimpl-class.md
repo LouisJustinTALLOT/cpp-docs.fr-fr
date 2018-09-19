@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079334"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Catlpreviewctrlimpl, classe
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle vers la fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche.
 
-*République populaire de Chine*  
+*République populaire de Chine*<br/>
 Spécifie la taille initiale et la position de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Paramètres
 
-*HDC*  
+*HDC*<br/>
 Handle vers un contexte de périphérique pour la peinture.
 
 ### <a name="remarks"></a>Notes
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Paramètres
 
-*nMsg indique*  
+*nMsg indique*<br/>
 La valeur WM_PAINT.
 
-*wParam*  
+*wParam*<br/>
 Ce paramètre n'est pas utilisé.
 
-*lParam*  
+*lParam*<br/>
 Ce paramètre n'est pas utilisé.
 
-*bHandled*  
+*bHandled*<br/>
 Lorsque cette fonction est retournée, contient la valeur TRUE.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle vers la nouvelle fenêtre parente.
 
 ### <a name="remarks"></a>Notes
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Paramètres
 
-*clrBack*  
+*clrBack*<br/>
 Couleur d’arrière-plan de la fenêtre d’aperçu.
 
-*clrText*  
+*clrText*<br/>
 Couleur du texte de la fenêtre d’aperçu.
 
-*FLP*  
+*FLP*<br/>
 Police utilisée pour afficher du texte dans la fenêtre d’aperçu.
 
 ### <a name="remarks"></a>Notes
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Paramètres
 
-*République populaire de Chine*  
+*République populaire de Chine*<br/>
 Spécifie la nouvelle taille et la position du contrôle de version préliminaire.
 
-*bRedraw*  
+*bRedraw*<br/>
 Spécifie si le contrôle doit être redessiné.
 
 ### <a name="remarks"></a>Notes

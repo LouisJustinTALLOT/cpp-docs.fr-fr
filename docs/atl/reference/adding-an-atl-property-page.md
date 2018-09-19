@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d86adf69aef269e1bde04c0962ca383754fe803e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dfb5ec444be55d7b595660f7777ae54e19143fd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021614"
 ---
 # <a name="adding-an-atl-property-page"></a>Ajout d’une Page de propriétés ATL
 
@@ -44,7 +44,7 @@ Une fois que vous créez une page de propriétés pour un contrôle, vous devez 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Pages de propriétés](../../atl/atl-com-property-pages.md)   
-[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
+[Pages de propriétés](../../atl/atl-com-property-pages.md)<br/>
+[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Exemple : implémentation d’une page de propriétés](../../atl/example-implementing-a-property-page.md)
 

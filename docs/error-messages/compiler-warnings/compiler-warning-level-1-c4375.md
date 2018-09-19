@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4375 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4375 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ff084da77768e4e5a4abd153c5c96d91e738a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd7fa14b1ff7b0925dad5eed2e2d84f3531ad599
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114213"
 ---
 # <a name="compiler-warning-level-1-c4375"></a>Avertissement du compilateur (niveau 1) C4375
-une méthode non publique 'méthode2' ne substitue pas 'méthode1'  
-  
- Un type qui implémente un autre type défini par une méthode override, mais le remplacement n’est pas public. Par conséquent, la méthode ne remplace pas la méthode de type de base.
+
+méthode non publique 'méthode2' ne substitue pas 'méthode1'
+
+Un type qui implémente un autre type défini par une méthode override, mais le remplacement n’est pas publique. Par conséquent, la méthode ne remplace pas la méthode de type de base.

@@ -17,37 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebebb7f69239b62cf276e955fd6e54ef0cf37ea4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078892"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architecture des modèles du fournisseur OLE DB
+
 ## <a name="data-sources-and-sessions"></a>Sources de données et sessions  
- L’architecture du fournisseur OLE DB inclut un objet de source de données et une ou plusieurs sessions. L’objet de source de données est l’objet initial que chaque fournisseur doit instancier. Quand une application consommateur a besoin de données, il crée l’objet de source de données pour démarrer le fournisseur. L’objet de source de données crée un objet session (à l’aide de la `IDBCreateSession` interface) via lequel le consommateur se connecte à l’objet de source de données. Les programmeurs ODBC peuvent considérer que l’objet de source de données comme étant équivalent à la `HENV` et l’objet de session comme étant équivalents à le `HDBC`.  
+
+L’architecture du fournisseur OLE DB inclut un objet de source de données et une ou plusieurs sessions. L’objet de source de données est l’objet initial que chaque fournisseur doit instancier. Quand une application consommateur a besoin de données, il crée l’objet de source de données pour démarrer le fournisseur. L’objet de source de données crée un objet session (à l’aide de la `IDBCreateSession` interface) via lequel le consommateur se connecte à l’objet de source de données. Les programmeurs ODBC peuvent considérer que l’objet de source de données comme étant équivalent à la `HENV` et l’objet de session comme étant équivalents à le `HDBC`.  
   
- ![Architecture du fournisseur](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
+![Architecture du fournisseur](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- Avec les fichiers sources créés par l’Assistant fournisseur OLE DB, les modèles OLE DB implémentent un objet de source de données. Une session est un objet qui correspond à la norme OLE DB `TSession`.  
+Avec les fichiers sources créés par l’Assistant fournisseur OLE DB, les modèles OLE DB implémentent un objet de source de données. Une session est un objet qui correspond à la norme OLE DB `TSession`.  
   
 ## <a name="mandatory-and-optional-interfaces"></a>Interfaces obligatoires et facultatives  
- Les modèles du fournisseur OLE DB offrent des implémentations préconfigurées pour toutes les interfaces requises. Interfaces obligatoires et facultatives sont définies par OLE DB pour plusieurs types d’objets :  
+
+Les modèles du fournisseur OLE DB offrent des implémentations préconfigurées pour toutes les interfaces requises. Interfaces obligatoires et facultatives sont définies par OLE DB pour plusieurs types d’objets :  
   
--   [Source de données](../../data/oledb/data-source-object-interfaces.md)  
+- [Source de données](../../data/oledb/data-source-object-interfaces.md)  
   
--   [Session](../../data/oledb/session-object-interfaces.md)  
+- [Session](../../data/oledb/session-object-interfaces.md)  
   
--   [Rowset](../../data/oledb/rowset-object-interfaces.md)  
+- [Rowset](../../data/oledb/rowset-object-interfaces.md)  
   
--   [Commande](../../data/oledb/command-object-interfaces.md)  
+- [Commande](../../data/oledb/command-object-interfaces.md)  
   
--   [Transaction](../../data/oledb/transaction-object-interfaces.md)  
+- [Transaction](../../data/oledb/transaction-object-interfaces.md)  
   
- Notez que les modèles du fournisseur OLE DB n’implémentent pas les objets de ligne et de stockage.  
+Notez que les modèles du fournisseur OLE DB n’implémentent pas les objets de ligne et de stockage.  
   
- Le tableau suivant répertorie les interfaces obligatoires et facultatives pour les objets répertoriés ci-dessus, en fonction de la [OLE DB 2.6 SDK documentation sur](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+Le tableau suivant répertorie les interfaces obligatoires et facultatives pour les objets répertoriés ci-dessus, en fonction de la [OLE DB 2.6 SDK documentation sur](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
   
 |Composant|Interface|Commentaire|  
 |---------------|---------------|-------------|  
@@ -57,12 +60,13 @@ ms.locfileid: "43684288"
 |[Commande](../../data/oledb/command-object-interfaces.md) ([CCommand](ccommand-class.md))|[obligatoire] `IAccessor`<br /><br /> [obligatoire] `IColumnsInfo`<br /><br /> [obligatoire] `ICommand`<br /><br /> [obligatoire] `ICommandProperties`<br /><br /> [obligatoire] `ICommandText`<br /><br /> [obligatoire] `IConvertType`<br /><br /> [facultatif] `IColumnsRowset`<br /><br /> [facultatif] `ICommandPersist`<br /><br /> [facultatif] `ICommandPrepare`<br /><br /> [facultatif] `ICommandWithParameters`<br /><br /> [facultatif] `ISupportErrorInfo`<br /><br /> [facultatif] `ICommandStream`|L’objet de commande gère les opérations de données telles que les requêtes. Il peut gérer des instructions paramétrées ou non paramétrées.<br /><br /> L’objet de commande est également responsable du traitement des liaisons pour les paramètres et les colonnes de sortie. Une liaison est une structure qui contient des informations sur la façon dont une colonne, dans un ensemble de lignes doit être récupérée. Il contient des informations telles que l’ordinal, type de données, longueur et état.|  
 |[Transaction](../../data/oledb/transaction-object-interfaces.md) (facultatif)|[obligatoire] `IConnectionPointContainer`<br /><br /> [obligatoire] `ITransaction`<br /><br /> [facultatif] `ISupportErrorInfo`|L’objet de transaction définit une unité atomique de travail sur une source de données et détermine la façon dont ces unités de travail sont liés entre eux. Cet objet n’est pas directement pris en charge par les modèles du fournisseur OLE DB (autrement dit, vous créez votre propre objet).|  
   
- Pour plus d’informations, consultez les rubriques suivantes :  
+Pour plus d’informations, consultez les rubriques suivantes :  
   
--   [Mappages des propriétés](../../data/oledb/property-maps.md)  
+- [Mappages des propriétés](../../data/oledb/property-maps.md)  
   
--   [L’enregistrement de l’utilisateur](../../data/oledb/user-record.md)  
+- [L’enregistrement de l’utilisateur](../../data/oledb/user-record.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Interfaces OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Interfaces OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))

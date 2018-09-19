@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87f5b9f8295b49b9c1c4bec45cad96e3dec0872
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760056"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040802"
 ---
 # <a name="catlcommodule-class"></a>Catlcommodule, classe
 
@@ -107,10 +107,10 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE si la bibliothèque de types doit être enregistré. La valeur par défaut est FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Pointe vers le CLSID de l’objet à inscrire. Si NULL (la valeur par défaut), tous les objets du mappage d’objets sera inscrit.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -132,7 +132,7 @@ HRESULT RegisterTypeLib();
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Chaîne au format «\\\N », où N est l’index d’entier de la ressource TYPELIB.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -155,10 +155,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Paramètres
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE si la bibliothèque de types doit être annulée. La valeur par défaut est FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Pointe vers le CLSID de l’objet doit être annulée. Si la valeur NULL (la valeur par défaut), tous les objets du mappage d’objets sera annulée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -180,7 +180,7 @@ HRESULT UnRegisterTypeLib();
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Chaîne au format «\\\N », où N est l’index d’entier de la ressource TYPELIB.
 
 ### <a name="remarks"></a>Notes
@@ -193,5 +193,5 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ## <a name="see-also"></a>Voir aussi
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a0200f15ab7a5c97699165a34d52ec6ce1f239e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703883"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136333"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement, classe
 Le `CMFCRibbonBaseElement` est la classe de base pour tous les éléments que vous pouvez ajouter à un [barre du ruban](../../mfc/reference/cmfcribbonbar-class.md). Parmi les exemples d'éléments de ruban figurent les boutons de ruban, les cases à cocher de ruban et les zones de listes déroulantes de ruban.  
@@ -568,12 +568,11 @@ virtual void DrawImage(
  Par défaut, cette méthode ne fait rien. Substituez cette méthode dans une classe dérivée pour dessiner l’image pour l’élément de ruban.  
   
  Le tableau suivant répertorie les valeurs possibles pour le *type* paramètre :  
-  
- `RibbonImageLarge`  
- Grande taille d’image 32 x 32 pixels.  
-  
- `RibbonImageSmall`  
- Petite taille de l’image 16 x 16 pixels.  
+
+|||
+|-|-|
+| `RibbonImageLarge`  | Grande taille d’image 32 x 32 pixels.  |
+| `RibbonImageSmall`  | Petite taille de l’image 16 x 16 pixels.  |
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  Retourne le pointeur spécifié s’il pointe vers l’objet actuel.  

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039060"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook, classe
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Paramètres
 
-*szMachineName*  
+*szMachineName*<br/>
 Le nom de l’ordinateur auquel la sortie de débogage doit être envoyée. Par défaut, l’ordinateur local.
 
-*szPipeName*  
+*szPipeName*<br/>
 Le nom du canal nommé auquel la sortie de débogage doit être envoyée.
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Durée en millisecondes que cette classe doit attendre le canal nommé soit disponible.
 
 ##  <a name="dtor"></a>  CDebugReportHook :: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Paramètres
 
-*reportType*  
+*reportType*<br/>
 Le type de rapport (_CRT_WARN, _CRT_ERROR ou _CRT_ASSERT).
 
-*message*  
+*message*<br/>
 La chaîne de message.
 
-*returnValue*  
+*returnValue*<br/>
 La valeur doit être retournée par [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Paramètres
 
-*szMachineName*  
+*szMachineName*<br/>
 Le nom de l’ordinateur auquel la sortie de débogage doit être envoyée.
 
-*szPipeName*  
+*szPipeName*<br/>
 Le nom du canal nommé auquel la sortie de débogage doit être envoyée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Durée en millisecondes que cette classe doit attendre le canal nommé soit disponible.
 
 ## <a name="see-also"></a>Voir aussi

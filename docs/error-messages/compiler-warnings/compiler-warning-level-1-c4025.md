@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4025 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4025 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e84ba11c7bed7420a9a1c699361612ef2002d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 109f1694f63488c167e51c7c2c89675411b6d269
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045573"
 ---
 # <a name="compiler-warning-level-1-c4025"></a>Avertissement du compilateur (niveau 1) C4025
-'number' : pointeur based passé à une fonction avec des arguments de variables : paramètre number  
-  
- Passer un pointeur based à une fonction avec des arguments de variables entraîne la normalisation du pointeur, avec des résultats imprévisibles. Ne passez pas de pointeurs based à des fonctions avec des arguments de variables.
+
+'number' : pointeur based passé à une fonction avec des arguments de variables : paramètre number
+
+Passer un pointeur based à une fonction avec des arguments de variables entraîne la normalisation du pointeur, avec des résultats imprévisibles. Ne passez pas de pointeurs based à des fonctions avec des arguments de variables.

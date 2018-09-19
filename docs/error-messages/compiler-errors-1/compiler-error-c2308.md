@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2308 | Documents Microsoft
+title: Erreur du compilateur C2308 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4523fd23f0900172e80cf71fd748a9f939deb044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24c01565f03bafa1b0bf1c20c4fb967cde3fc5b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091970"
 ---
 # <a name="compiler-error-c2308"></a>Erreur du compilateur C2308
-concaténation de chaînes incompatibles  
-  
- Les deux chaînes à caractères larges et à l’échelle ont été spécifiées pour la concaténation. Vous ne peut pas concaténer une chaîne à caractères larges et la chaîne de caractères non étendue.
+
+concaténation de chaînes incompatibles
+
+Les deux chaînes à caractères larges et à l’échelle ont été spécifiées pour la concaténation. Vous ne pouvez pas concaténer une chaîne de caractères larges et une chaîne de caractères non larges.

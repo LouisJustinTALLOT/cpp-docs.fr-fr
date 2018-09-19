@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85a31aea113514651fc3e81ac147b5ea2974920c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2ea52c91391800b25ab9a71d977300dd1705fb51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604292"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025527"
 ---
 # <a name="floating-limits"></a>Limites des valeurs à virgule flottante
 
 **Section spécifique à Microsoft**
 
-Le tableau suivant répertorie les limites applicables aux valeurs des constantes à virgule flottante. Ces limites sont également définies dans le fichier d’en-tête standard \<float.h >.  
+Le tableau suivant répertorie les limites applicables aux valeurs des constantes à virgule flottante. Ces limites sont également définies dans le fichier d’en-tête standard \<float.h >.
 
 ## <a name="limits-on-floating-point-constants"></a>Limites des constantes à virgule flottante
 
@@ -57,4 +57,4 @@ Le tableau suivant répertorie les limites applicables aux valeurs des constante
 
 ## <a name="see-also"></a>Voir aussi
 
-[Limites d’entier](../cpp/integer-limits.md)  
+[Limites d’entier](../cpp/integer-limits.md)

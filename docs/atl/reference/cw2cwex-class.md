@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4314e4f2d31e499c01049d1fbec579f16c2849
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b45945a0f91570d78d8c1e365fd70240c2385b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116800"
 ---
 # <a name="cw2cwex-class"></a>Classe de CW2CWEX
 
@@ -36,13 +36,13 @@ Cette classe est utilisée par les macros de conversion de chaîne CW2CTEX CT2CW
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CW2CWEX
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 La taille de la mémoire tampon utilisée dans le processus de traduction. La longueur par défaut est 128 octets.
 
 ## <a name="members"></a>Membres
@@ -97,16 +97,16 @@ Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros
 Constructeur.
 
 ```
-CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);
 CW2CWEX(LPCWSTR psz) throw(...);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*psz*  
+*psz*<br/>
 La chaîne de texte à convertir.
 
-*nCodePage*  
+*nCodePage*<br/>
 La page de codes. Pas utilisé dans cette classe.
 
 ### <a name="remarks"></a>Notes
@@ -137,7 +137,7 @@ LPCWSTR m_psz;
 
 Opérateur de conversion.
 
-```  
+```
 operator LPCWSTR() const throw();
 ```
 
@@ -147,9 +147,9 @@ Retourne la chaîne de texte comme type LPCWSTR.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe de CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Classe de CA2CAEX](../../atl/reference/ca2caex-class.md)   
-[Classe de CA2WEX](../../atl/reference/ca2wex-class.md)   
-[CW2AEX classe](../../atl/reference/cw2aex-class.md)   
-[Classe de CW2WEX](../../atl/reference/cw2wex-class.md)   
+[CA2AEX, classe](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX, classe](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX, classe](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX, classe](../../atl/reference/cw2aex-class.md)<br/>
+[CW2WEX, classe](../../atl/reference/cw2wex-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

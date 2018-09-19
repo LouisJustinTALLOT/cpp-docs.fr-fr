@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RW1025 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RW1025 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ba216e63cb0cae92b4541800493a2fb6195553a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bf7bdeed320c004ffb75fa1d25d9b89147b0c13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117398"
 ---
 # <a name="resource-compiler-fatal-error-rw1025"></a>Erreur irrécupérable RW1025 du compilateur de ressources 
-La mémoire de tas lointain  
-  
- Rechercher les logiciels de résidant en mémoire qui peut occuper trop d’espace. Le programme CHKDSK permet de déterminer la quantité de mémoire.  
-  
- Si vous créez un fichier de ressources volumineux, fractionner le script de ressources en deux fichiers. Après avoir créé les deux fichiers .res, utilisez la ligne de commande MS-DOS pour joindre les :  
-  
-```  
-copy first.res /b + second.res /b full.res  
+
+Insuffisance de mémoire de tas lointain
+
+Recherchez les logiciels résidant en mémoire qui peut être occuper trop d’espace. Utilisez le programme CHKDSK pour connaître la quantité de mémoire vous disposez.
+
+Si vous créez un fichier de ressources de grande taille, fractionner le script de ressources en deux fichiers. Après avoir créé les deux fichiers .res, utilisez la ligne de commande MS-DOS pour les joindre :
+
+```
+copy first.res /b + second.res /b full.res
 ```

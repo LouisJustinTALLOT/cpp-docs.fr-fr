@@ -54,14 +54,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087875"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset, classe
+
 Éléments d’accès d’un ensemble de lignes à l’aide de la syntaxe de tableau.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -74,11 +75,13 @@ class CArrayRowset :
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *TAccessor*  
- Le type de classe d’accesseur que vous souhaitez que l’ensemble de lignes à utiliser.  
+
+*TAccessor*<br/>
+Le type de classe d’accesseur que vous souhaitez que l’ensemble de lignes à utiliser.  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** atldbcli.h  
+
+**En-tête :** atldbcli.h  
   
 ## <a name="members"></a>Membres  
   
@@ -102,6 +105,7 @@ class CArrayRowset :
 |[CArrayRowset::m_nRowsRead](#nrowsread)|Le nombre de lignes déjà lues.|  
   
 ## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+
 Crée un objet `CArrayRowset`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -111,10 +115,12 @@ CArrayRowset(int nMax = 100000);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *nombre maximal*  
- [in] Nombre maximal de lignes dans l’ensemble de lignes. 
+
+*nombre maximal*<br/>
+[in] Nombre maximal de lignes dans l’ensemble de lignes. 
 
 ## <a name="snapshot"></a> CArrayRowset::Snapshot
+
 Lit l’ensemble de lignes en mémoire, création d’une image ou un instantané de celui-ci.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -124,6 +130,7 @@ HRESULT Snapshot() throw();
 ```  
 
 ## <a name="operator"></a> CArrayRowset::operator
+
 Fournit la syntaxe de type tableau pour accéder à une ligne dans l’ensemble de lignes.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -133,19 +140,23 @@ TAccessor & operator[](int nrow);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *TAccessor*  
- Un paramètre basé sur un modèle qui spécifie le type d’accesseur stockée dans l’ensemble de lignes.  
+
+*TAccessor*<br/>
+Un paramètre basé sur un modèle qui spécifie le type d’accesseur stockée dans l’ensemble de lignes.  
   
- *nRow*  
- [in] Numéro de la ligne (élément de tableau) que vous souhaitez accéder.  
+*nRow*<br/>
+[in] Numéro de la ligne (élément de tableau) que vous souhaitez accéder.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le contenu de la ligne demandée.  
+
+Le contenu de la ligne demandée.  
   
 ### <a name="remarks"></a>Notes  
- Si *nRow* dépasse le nombre de lignes dans l’ensemble de lignes, une exception est levée.  
+
+Si *nRow* dépasse le nombre de lignes dans l’ensemble de lignes, une exception est levée.  
 
 ## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+
 Contient le nombre de lignes dans l’ensemble de lignes qui ont déjà été lues.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -155,6 +166,7 @@ ULONG m_nRowsRead;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Référence de modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CRowset, classe](../../data/oledb/crowset-class.md)
+
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CRowset, classe](../../data/oledb/crowset-class.md)

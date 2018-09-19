@@ -1,5 +1,5 @@
 ---
-title: Du compilateur (niveau 1) d’avertissement C4274 | Documents Microsoft
+title: Compilateur Warning (level 1) C4274 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b941fc0cb32e268e33d3b0e1ae66079e8decaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f6db0ee96674beda51ab02c8651e6f4960a0bf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286144"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094685"
 ---
-# <a name="compiler-warning-level-1-c4274"></a>Du compilateur (niveau 1) d’avertissement C4274
-\#Ident ignorée ; consultez la documentation pour #pragma comment (exestr, 'string')  
-  
- La `#ident` directive, qui insère une chaîne spécifiée par l’utilisateur dans l’objet ou le fichier exécutable, est déconseillée. Par conséquent, le compilateur ignore la directive.  
-  
+# <a name="compiler-warning-level-1-c4274"></a>Compilateur Warning (level 1) C4274
+
+\#Ident ignorée ; consultez la documentation pour #pragma comment (exestr, 'string')
+
+La `#ident` directive, qui insère une chaîne spécifiée par l’utilisateur dans l’objet ou le fichier exécutable, est déconseillée. Par conséquent, le compilateur ignore la directive.
+
 > [!CAUTION]
->  C4274 d’avertissement vous indique d’utiliser le [#pragma comment (exestr, 'string')](../../preprocessor/comment-c-cpp.md) la directive. Toutefois, ce Conseil est déconseillé et sera être modifié dans une prochaine version du compilateur. Si vous utilisez la `#pragma` directive, l’outil de l’éditeur de liens (LINK.exe) ignore l’enregistrement de commentaires généré par la directive et émet un avertissement [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Au lieu du `#ident` directive, nous vous recommandons d’utiliser une chaîne de ressource de version de fichier dans votre application.  
-  
-## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
-  
--   Supprimer le `#ident "` *chaîne* `"` la directive.  
-  
-## <a name="see-also"></a>Voir aussi  
- [commentaire (C/C++)](../../preprocessor/comment-c-cpp.md)   
- [Outils de l’éditeur de liens LNK4229 d’avertissement](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)   
- [Utilisation des fichiers de ressources](../../windows/working-with-resource-files.md)
+>  Avertissement C4274 vous conseille d’utiliser le [#pragma comment (exestr, 'string')](../../preprocessor/comment-c-cpp.md) directive. Toutefois, ce Conseil est déconseillé et sera modifié dans une prochaine version du compilateur. Si vous utilisez le `#pragma` directive, l’outil de l’éditeur de liens (LINK.exe) ignore l’enregistrement de commentaires produit par la directive et émet un avertissement [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Au lieu du `#ident` directive, nous vous recommandons d’utiliser une chaîne de ressource de version de fichier dans votre application.
+
+## <a name="to-correct-this-error"></a>Pour corriger cette erreur
+
+- Supprimer le `#ident "` *chaîne* `"` directive.
+
+## <a name="see-also"></a>Voir aussi
+
+[commentaire (C/C++)](../../preprocessor/comment-c-cpp.md)<br/>
+[Avertissement des outils Éditeur de liens LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)<br/>
+[Utilisation des fichiers de ressources](../../windows/working-with-resource-files.md)

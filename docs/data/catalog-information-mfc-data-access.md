@@ -1,5 +1,5 @@
 ---
-title: Catalogue des informations (MFC Data Access) | Documents Microsoft
+title: Catalogue (accès de données MFC) des informations | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af8fd53122dcad71fb5ff20298cbd35b4d8ba31c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb66b1068e20f4bfc8936e592afbcb5183974a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110950"
 ---
 # <a name="catalog-information--mfc-data-access"></a>Informations relatives au catalogue (Accès aux données MFC)
+
 Les informations sur les tables d'une source de données peuvent inclure les noms des tables et de leurs colonnes, les privilèges de table, les noms des clés primaires et étrangères, des informations sur les procédures stockées ou les requêtes prédéfinies, des informations sur les index des tables et des statistiques sur les tables.  
   
- Pour plus d’informations, consultez [Source de données : détermination du schéma de la Source de données (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
+Pour plus d’informations, consultez [Source de données : détermination du schéma de la Source de données (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation (MFC/ATL) d’accès aux données](../data/data-access-programming-mfc-atl.md)
+
+[Accès aux données de programmation (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

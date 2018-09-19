@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1088 | Documents Microsoft
+title: Erreur irrécupérable C1088 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1041bc87822e5347e519f73e039056355825da2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 570db0d6956be8345ef6ecae5a073bf28d2eee1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111496"
 ---
 # <a name="fatal-error-c1088"></a>Erreur irrécupérable C1088
-Impossible de vider le fichier de type de fichier : 'fichier' : message  
-  
- Le compilateur ne peut pas terminer une opération d’E/S.
+
+Impossible de vider le fichier de type de fichier : 'fichier' : message
+
+Le compilateur ne peut pas terminer une opération d’E/S.

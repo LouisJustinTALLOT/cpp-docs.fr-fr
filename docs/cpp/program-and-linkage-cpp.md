@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9998e7ad9605d6d2e32bcaff6204fb09dcbca2a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ef0f08efbcdf09420d53710a3f16326381f13c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056779"
 ---
 # <a name="program-and-linkage-c"></a>Programme et liaison (C++)
 
@@ -45,11 +45,11 @@ Toutefois, dans certains cas, il peut être nécessaire de déclarer une variabl
 
 ## <a name="linkage-vs-scope"></a>Liaison et étendue
 
-Le concept de *liaison* fait référence à la visibilité des symboles globaux (par exemple, les variables, les noms de types et les noms de fonction) dans le programme dans sa globalité entre les unités de traduction. Le concept de *étendue* fait référence aux symboles sont déclarés dans un bloc tel qu’un espace de noms, la classe ou le corps de la fonction. Ces symboles sont visibles uniquement dans la portée dans laquelle elles sont définies ; le concept de liaison ne s’applique pas à eux. 
+Le concept de *liaison* fait référence à la visibilité des symboles globaux (par exemple, les variables, les noms de types et les noms de fonction) dans le programme dans sa globalité entre les unités de traduction. Le concept de *étendue* fait référence aux symboles sont déclarés dans un bloc tel qu’un espace de noms, la classe ou le corps de la fonction. Ces symboles sont visibles uniquement dans la portée dans laquelle elles sont définies ; le concept de liaison ne s’applique pas à eux.
 
 ## <a name="external-vs-internal-linkage"></a>Externe et une liaison interne
 
-Un *gratuit fonction* est une fonction qui est définie au niveau global ou de la portée de l’espace de noms. Variables globales non-const et fonctions libres par défaut ont *une liaison externe*; ils sont visibles à partir de n’importe quelle unité de traduction dans le programme. Par conséquent, aucun autre objet global (variable, définition de classe, etc.) ne peut avoir ce nom. Un symbole avec *une liaison interne* ou *aucune liaison* est visible uniquement dans l’unité de traduction dans laquelle elle est déclarée. Lorsqu’un nom a une liaison interne, le même nom peut-être exister dans une autre unité de traduction. Les variables déclarées avec les définitions de classe ou le corps de fonction n’ont aucune liaison. 
+Un *gratuit fonction* est une fonction qui est définie au niveau global ou de la portée de l’espace de noms. Variables globales non-const et fonctions libres par défaut ont *une liaison externe*; ils sont visibles à partir de n’importe quelle unité de traduction dans le programme. Par conséquent, aucun autre objet global (variable, définition de classe, etc.) ne peut avoir ce nom. Un symbole avec *une liaison interne* ou *aucune liaison* est visible uniquement dans l’unité de traduction dans laquelle elle est déclarée. Lorsqu’un nom a une liaison interne, le même nom peut-être exister dans une autre unité de traduction. Les variables déclarées avec les définitions de classe ou le corps de fonction n’ont aucune liaison.
 
 Vous pouvez forcer un nom global pour avoir une liaison interne en déclarant explicitement en tant que **statique**. Cela limite sa visibilité à la même unité de traduction dans laquelle elle est déclarée. Notez que dans ce contexte, **statique** signifie que quelque chose de différent lorsque appliqués aux variables locales.
 
@@ -68,4 +68,5 @@ extern const int value = 42;
 Consultez [extern](extern-cpp.md) pour plus d’informations.
 
 ## <a name="see-also"></a>Voir aussi
- [Concepts de base](../cpp/basic-concepts-cpp.md)
+
+[Concepts de base](../cpp/basic-concepts-cpp.md)

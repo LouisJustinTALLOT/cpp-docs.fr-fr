@@ -44,14 +44,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9619ffdf9fd24bd73548fb3992084eb0a5d437a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114473"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet, classe
+
 Hérite de la `DBPROPIDSET` structurer et ajoute un constructeur qui initialise les champs clés, ainsi que les [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) accéder à la méthode.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -61,7 +62,8 @@ class CDBPropIDSet : public tagDBPROPIDSET
 ```  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** atldbcli.h
+
+**En-tête :** atldbcli.h
   
 ## <a name="members"></a>Membres  
   
@@ -80,9 +82,11 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[opérateur =](#op_equal)|Assigne le contenu d’une propriété ID définie à un autre.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisation de consommateurs OLE DB `DBPROPIDSET` structures pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans un seul [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) structure appartiennent à une propriété est définie.  
+
+Utilisation de consommateurs OLE DB `DBPROPIDSET` structures pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans un seul [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) structure appartiennent à une propriété est définie.  
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
+
 Ajoute un ID de propriété à l’ensemble d’ID de propriété.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -92,10 +96,12 @@ bool AddPropertyID(DBPROPID propid) throw();
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *ID de propriété*  
- [in] Définir l’ID de propriété à ajouter à l’ID de propriété.  
+
+*ID de propriété*<br/>
+[in] Définir l’ID de propriété à ajouter à l’ID de propriété.  
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
+
 Constructeur. Initialise le `rgProperties`, `cProperties`et (éventuellement) `guidPropertySet` champs de la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) structure.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -109,13 +115,15 @@ CDBPropIDSet();
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *guid*  
- [in] GUID utilisé pour initialiser le `guidPropertySet` champ.  
+
+*guid*<br/>
+[in] GUID utilisé pour initialiser le `guidPropertySet` champ.  
   
- *propidset*  
- [in] Un autre `CDBPropIDSet` objet pour la construction de copie.  
+*propidset*<br/>
+[in] Un autre `CDBPropIDSet` objet pour la construction de copie.  
 
 ## <a name="setguid"></a> CDBPropIDSet::SetGUID
+
 Définit le champ GUID dans le `DBPROPIDSET` structure.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -125,13 +133,16 @@ void SetGUID(const GUID& guid) throw();
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *guid*  
- [in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) structure.  
+
+*guid*<br/>
+[in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) structure.  
   
 ### <a name="remarks"></a>Notes  
- Ce champ peut être défini le [constructeur](../../data/oledb/cdbpropidset-cdbpropidset.md) également. Appelez cette fonction si vous utilisez le constructeur par défaut pour cette classe.  
+
+Ce champ peut être défini le [constructeur](../../data/oledb/cdbpropidset-cdbpropidset.md) également. Appelez cette fonction si vous utilisez le constructeur par défaut pour cette classe.  
 
 ## <a name="op_equal"></a> CDBPropIDSet::operator =
+
 Assigne le contenu d’une propriété ID est défini à un autre jeu de propriétés d’ID.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -141,5 +152,6 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

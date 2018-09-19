@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités d’enregistrement affichage de Classes (MFC Data Access) | Documents Microsoft
+title: Fonctionnalités d’enregistrement affichage de Classes (MFC Data Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b6717c0ef1167e01df2f5e8de14408b23a9dbb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1c99b8b271b4948584d9bdb25c74518fe835573
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093218"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>Fonctionnalités des classes d'affichage des enregistrements (Accès aux données MFC)
-Vous pouvez effectuer la programmation d’accès aux données de formulaire à la classe [CFormView](../mfc/reference/cformview-class.md), mais [CRecordView](../mfc/reference/crecordview-class.md) est généralement une meilleure classe dériver. En plus de son `CFormView` fonctionnalités, `CRecordView`:  
+
+Vous pouvez effectuer la programmation d’accès aux données de formulaire avec la classe [CFormView](../mfc/reference/cformview-class.md), mais [CRecordView](../mfc/reference/crecordview-class.md) est généralement une meilleure classe à dériver à partir de. Outre ses `CFormView` fonctionnalités, `CRecordView`:  
   
--   Fournit l’échange de données de boîtes de dialogue (DDX) entre les contrôles du formulaire et l’objet recordset associé.  
+- Fournit l’échange de données de boîtes de dialogue (DDX) entre les contrôles du formulaire et l’objet recordset associé.  
   
--   Gère les commandes Move First, Move Next, Move Previous et Move Last pour parcourir les enregistrements dans l’objet recordset associé.  
+- Gère les commandes Move First Move Next, Move Previous et Move Last pour naviguer dans les enregistrements dans l’objet recordset associé.  
   
--   Mises à jour devient l’enregistrement actif lorsque l’utilisateur se déplace vers un autre enregistrement.  
+- Mises à jour devient l’enregistrement en cours lorsque l’utilisateur se déplace vers un autre enregistrement.  
   
- Pour plus d’informations sur la navigation, consultez [vues des enregistrements : prise en charge la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).  
+Pour plus d’informations sur la navigation, consultez [vues d’enregistrements : prise en charge la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues des enregistrements (MFC Data Access)](../data/record-views-mfc-data-access.md)   
- [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)
+
+[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

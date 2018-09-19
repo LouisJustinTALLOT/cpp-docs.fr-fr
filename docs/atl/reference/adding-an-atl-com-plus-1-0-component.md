@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537755ff7162c30c586eb813fecf643de816a351
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 099844710080d2c500996d5918a32c6eb4426541
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078138"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Ajout d’un composant ATL COM + 1.0
 
@@ -38,6 +38,6 @@ Cet Assistant ajoute un objet à votre projet qui prend en charge les services C
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)   
+[Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Ajout d’une méthode](../../ide/adding-a-method-visual-cpp.md)
 
