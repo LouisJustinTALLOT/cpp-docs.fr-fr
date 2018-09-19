@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable CVTRES CVT1100 | Documents Microsoft
+title: Erreur irrécupérable CVTRES CVT1100 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32085c4c37c82567eb78f46b52bcc4a6c41daae5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18a5508301c54637fb34a751c8f1c4e307e47d50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068960"
 ---
 # <a name="cvtres-fatal-error-cvt1100"></a>Erreur irrécupérable CVTRES CVT1100
-une ressource dupliquée — type : type, nom : nom, langue :, indicateurs : indicateurs, taille :  
-  
- La ressource donnée a été spécifiée plusieurs fois.  
-  
- Vous pouvez obtenir cette erreur si vous n’avez pas spécifié et que l’éditeur de liens crée une bibliothèque de types [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) et une ressource de votre projet utilise déjà 1. Dans ce cas, spécifiez /TLBID et spécifiez un autre numéro à 65535.
+
+ressource dupliquée : type : type, nom : nom, langage : langage, indicateurs : indicateurs, taille : taille
+
+La ressource donnée a été spécifiée plusieurs fois.
+
+Vous pouvez obtenir cette erreur si l’éditeur de liens crée une bibliothèque de types et que vous n’avez pas spécifié [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) et une ressource de votre projet utilise déjà 1. Dans ce cas, spécifiez /TLBID et spécifiez un autre numéro à 65535.

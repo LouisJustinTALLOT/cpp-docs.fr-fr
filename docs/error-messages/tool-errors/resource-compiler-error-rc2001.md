@@ -1,5 +1,5 @@
 ---
-title: Erreur RC2001 du compilateur de ressources | Documents Microsoft
+title: Erreur RC2001 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ef1fd5d29fc5784ee418a8456cacec37e943b73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d75d0f906ba0d7be75ca5177bc1f58bccd226251
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039970"
 ---
 # <a name="resource-compiler-error-rc2001"></a>Erreur RC2001 du compilateur de ressources 
-saut de ligne dans la constante  
-  
- Une constante de chaîne se poursuivie sur une seconde ligne, sans utilisation d’une barre oblique inverse (**\\**) ou ouverture et fermeture des guillemets doubles (**»**).  
-  
- Pour interrompre une constante de chaîne sur deux lignes dans le fichier source, effectuez l’une des opérations suivantes :  
-  
--   Fin de la première ligne avec le caractère de continuation de ligne, une barre oblique inverse.  
-  
--   Fermez la chaîne sur la première ligne par un guillemet double et ouvrez la chaîne sur la ligne suivante avec un autre guillemet.  
-  
- Il n’est pas suffisant mettre fin à la première ligne par \n, la séquence d’échappement pour incorporer un caractère de saut de ligne dans une constante de chaîne.
+
+saut de ligne dans la constante
+
+Constante de chaîne se poursuivie sur une seconde ligne, sans utilisation d’une barre oblique inverse (**\\**) ou ouverture et fermeture des guillemets doubles (**»**).
+
+Pour interrompre une constante de chaîne qui se trouve sur deux lignes dans le fichier source, effectuez l’une des opérations suivantes :
+
+- La première ligne par le caractère de continuation de ligne, une barre oblique inverse de fin.
+
+- Fermez la chaîne sur la première ligne avec un guillemet double et ouvrez la chaîne sur la ligne suivante avec un autre guillemet.
+
+Il n’est pas suffisante pour terminer la première ligne par \n, la séquence d’échappement pour incorporer un caractère de saut de ligne dans une constante de chaîne.

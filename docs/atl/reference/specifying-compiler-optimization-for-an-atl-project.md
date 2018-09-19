@@ -19,32 +19,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95df1e21bee99914d2f20f194d68e5bfae29e203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 622c0720f55e638d6640094f095e59d2d5e5f931
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763553"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069337"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Spécification de l’optimisation du compilateur pour un projet ATL
 
 Par défaut, le [Assistant contrôle ATL](../../atl/reference/atl-control-wizard.md) génère les nouvelles classes avec la macro ATL_NO_VTABLE, comme suit :
 
-```  
-class ATL_NO_VTABLE CProjName  
-{  
-...  
-};  
+```
+class ATL_NO_VTABLE CProjName
+{
+...
+};
 ```
 
 ATL définit ensuite _ATL_NO_VTABLE de la manière suivante :
 
-```  
-#ifdef _ATL_DISABLE_NO_VTABLE  
-#define ATL_NO_VTABLE  
-#else  
-#define ATL_NO_VTABLE __declspec(novtable)  
-#endif  
+```
+#ifdef _ATL_DISABLE_NO_VTABLE
+#define ATL_NO_VTABLE
+#else
+#define ATL_NO_VTABLE __declspec(novtable)
+#endif
 ```
 
 Si vous ne définissez pas _ATL_DISABLE_NO_VTABLE, la macro ATL_NO_VTABLE se développe en `declspec(novtable)`. À l’aide de `declspec(novtable)`dans une classe déclaration empêche le pointeur vtable qui est initialisée dans le constructeur de classe et le destructeur. Lorsque vous générez votre projet, l’éditeur de liens élimine la vtable et toutes les fonctions vers laquelle pointe la vtable.
@@ -55,19 +55,19 @@ Vous ne devez pas appeler des fonctions virtuelles à partir du constructeur de 
 
 Si vous ne savez pas si vous devez utiliser le `declspec(novtable)` modificateur, vous pouvez supprimer la macro ATL_NO_VTABLE dans une définition de classe, ou vous pouvez le désactiver dans le monde entier en spécifiant
 
-```  
-#define _ATL_DISABLE_NO_VTABLE  
+```
+#define _ATL_DISABLE_NO_VTABLE
 ```
 
 Dans stdafx.h, fichiers d’en-tête sont incluses avant tous les autres ATL.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Assistant Projet ATL](../../atl/reference/atl-project-wizard.md)   
-[Types de projets Visual C++](../../ide/visual-cpp-project-types.md)   
-[Création de projets de bureau à l’aide des Assistants Application](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Programmation avec ATL et le Code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
-[novtable](../../cpp/novtable.md)   
+[Assistant Projet ATL](../../atl/reference/atl-project-wizard.md)<br/>
+[Types de projets Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Création de projets de bureau à l’aide des Assistants Application](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[novtable](../../cpp/novtable.md)<br/>
 [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)
 

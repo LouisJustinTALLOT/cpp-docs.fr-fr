@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable NMAKE U1036 | Documents Microsoft
+title: Erreur irrécupérable NMAKE U1036 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042bd493dcf8f59b0aa94170eaa5c2a37a2c0fb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa7f94f9f584ab66b83fdec0e6f9076feb6b5d12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048303"
 ---
 # <a name="nmake-fatal-error-u1036"></a>Erreur irrécupérable NMAKE U1036
-Erreur de syntaxe : noms trop nombreux à gauche de '='  
-  
- Chaîne qu’une seule est autorisée à gauche d’une définition de macro.
+
+Erreur de syntaxe : noms trop nombreux à gauche de '='
+
+Qu’une seule chaîne est autorisée à gauche d’une définition de macro.

@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 73abd8ef0ca29ee9e7f2312cc44a8178fc464261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451548"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064630"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -66,7 +66,7 @@ int _wchdir(
 
 ### <a name="parameters"></a>Paramètres
 
-*dirname*<br/>
+*nom_répertoire*<br/>
 Chemin du nouveau répertoire de travail.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -75,7 +75,7 @@ Ces fonctions retournent la valeur 0 en cas de réussite. Une valeur de retour d
 
 ## <a name="remarks"></a>Notes
 
-Le **_chdir** fonction modifie le répertoire de travail en cours pour le répertoire spécifié par *dirname*. Le *dirname* paramètre doit faire référence à un répertoire existant. Cette fonction peut changer le répertoire de travail actuel sur n’importe quel lecteur. Si une nouvelle lettre de lecteur n’est spécifiée dans *dirname*, la lettre de lecteur par défaut est également modifiée. Par exemple, si A est la lettre de lecteur par défaut et \BIN le répertoire de travail actuel, l’appel suivant change le répertoire de travail actuel pour le lecteur C et établit C comme nouveau lecteur par défaut :
+Le **_chdir** fonction modifie le répertoire de travail actuel vers le répertoire spécifié par *dirname*. Le *dirname* paramètre doit faire référence à un répertoire existant. Cette fonction peut changer le répertoire de travail actuel sur n’importe quel lecteur. Si une nouvelle lettre de lecteur n’est spécifiée dans *dirname*, la lettre de lecteur par défaut est également modifiée. Par exemple, si A est la lettre de lecteur par défaut et \BIN le répertoire de travail actuel, l’appel suivant change le répertoire de travail actuel pour le lecteur C et établit C comme nouveau lecteur par défaut :
 
 ```C
 _chdir("c:\temp");
@@ -83,7 +83,7 @@ _chdir("c:\temp");
 
 Lorsque vous utilisez le caractère facultatif barre oblique inverse (**&#92;**) dans les chemins d’accès, vous devez placer deux barres obliques inverses (**&#92;&#92;**) dans une chaîne littérale C pour représenter une barre oblique inverse ( **&#92;**).
 
-**_wchdir** est une version à caractères larges de **_chdir**; le *dirname* argument **_wchdir** est une chaîne à caractères larges. **_wchdir** et **_chdir** comportent de façon identique.
+**_wchdir** est une version à caractères larges de **_chdir**; le *dirname* l’argument de **_wchdir** est une chaîne de caractères larges. **_wchdir** et **_chdir** se comportent de façon identique dans le cas contraire.
 
 ### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique :
 
@@ -91,7 +91,7 @@ Lorsque vous utilisez le caractère facultatif barre oblique inverse (**&#92;**)
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tchdir**|**_chdir**|**_chdir**|**_wchdir**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
@@ -137,10 +137,10 @@ int main( int argc, char *argv[] )
 ```
 
 ```Output
- Volume in drive C has no label.
- Volume Serial Number is 2018-08A1
+Volume in drive C has no label.
+Volume Serial Number is 2018-08A1
 
- Directory of c:\windows
+Directory of c:\windows
 
 08/29/2002  04:00 AM         1,004,032 explorer.exe
 12/17/2002  04:43 PM            10,752 hh.exe

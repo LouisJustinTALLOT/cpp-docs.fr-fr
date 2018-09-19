@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d6ff72f9f5011d7c4e0f0b65cca9a82227b70d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4ec124d1010a5870d47b9f1504655a7822505fe6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040490"
 ---
 # <a name="catlfile-class"></a>Catlfile, classe
 
@@ -107,13 +107,13 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*fichier*  
+*fichier*<br/>
 L’objet fichier.
 
-*hFile*  
+*hFile*<br/>
 Le handle de fichier.
 
-*pTM*  
+*pTM*<br/>
 Pointeur vers l'objet CAtlTransactionManager
 
 ### <a name="remarks"></a>Notes
@@ -137,25 +137,25 @@ HRESULT Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*szFilename*  
+*szFilename*<br/>
 Nom du fichier.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 L’accès désiré. Consultez *dwDesiredAccess* dans [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) dans le SDK Windows.
 
-*dwShareMode*  
+*dwShareMode*<br/>
 Le mode de partage. Consultez *dwShareMode* dans `CreateFile`.
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 La disposition de création. Consultez *dwCreationDisposition* dans `CreateFile`.
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 Les indicateurs et les attributs. Consultez *dwFlagsAndAttributes* dans `CreateFile`.
 
-*lpsa*  
+*lpsa*<br/>
 Les attributs de sécurité. Consultez *lpSecurityAttributes* dans `CreateFile`.
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 Le fichier de modèle. Consultez *hTemplateFile* dans `CreateFile`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -195,13 +195,13 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>Paramètres
 
-*pOverlapped*  
+*pOverlapped*<br/>
 La structure avec chevauchement. Consultez *lpOverlapped* dans [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) dans le SDK Windows.
 
-*dwBytesTransferred*  
+*dwBytesTransferred*<br/>
 Les octets transférés. Consultez *lpNumberOfBytesTransferred* dans `GetOverlappedResult`.
 
-*bWait*  
+*bWait*<br/>
 L’option d’attente. Consultez *bWait* dans `GetOverlappedResult`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -222,7 +222,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nPos*  
+*nPos*<br/>
 La position en octets.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -243,7 +243,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nLen*  
+*nLen*<br/>
 Le nombre d’octets dans le fichier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -264,10 +264,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nPos*  
+*nPos*<br/>
 Position dans le fichier où le verrou doit commencer.
 
-*nCount*  
+*nCount*<br/>
 La longueur de la plage d’octets à verrouiller.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -316,19 +316,19 @@ HRESULT Read(
 
 ### <a name="parameters"></a>Paramètres
 
-*pBuffer*  
+*pBuffer*<br/>
 Pointeur vers la mémoire tampon qui recevra les données lues à partir du fichier.
 
-*nBufSize*  
+*nBufSize*<br/>
 Taille de la mémoire tampon en octets.
 
-*nBytesRead*  
+*nBytesRead*<br/>
 Nombre d'octets lus.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 La structure avec chevauchement. Consultez *lpOverlapped* dans [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) dans le SDK Windows.
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 La routine d’exécution. Consultez *lpCompletionRoutine* dans [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -351,10 +351,10 @@ HRESULT Seek(
 
 ### <a name="parameters"></a>Paramètres
 
-*nOffset*  
+*nOffset*<br/>
 Le décalage à partir du point de départ donné par *dwFrom*.
 
-*dwFrom*  
+*dwFrom*<br/>
 Le point de départ (FILE_BEGIN, FILE_CURRENT ou FILE_END).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -375,7 +375,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nNewLen*  
+*nNewLen*<br/>
 Nouvelle longueur du fichier en octets.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -396,10 +396,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nPos*  
+*nPos*<br/>
 Position dans le fichier où le déverrouillage doit commencer.
 
-*nCount*  
+*nCount*<br/>
 La longueur de la plage d’octets à déverrouiller.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -434,19 +434,19 @@ HRESULT Write(
 
 ### <a name="parameters"></a>Paramètres
 
-*pBuffer*  
+*pBuffer*<br/>
 La mémoire tampon contenant les données à écrire dans le fichier.
 
-*nBufSize*  
+*nBufSize*<br/>
 Le nombre d’octets à transférer à partir de la mémoire tampon.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 La structure avec chevauchement. Consultez *lpOverlapped* dans [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) dans le SDK Windows.
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 La routine d’exécution. Consultez *lpCompletionRoutine* dans [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) dans le SDK Windows.
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 Octets écrits.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -459,6 +459,6 @@ Les trois premiers formulaires appellent [WriteFile](/windows/desktop/api/fileap
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple de texte défilant](../../visual-cpp-samples.md)   
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+[Exemple de texte défilant](../../visual-cpp-samples.md)<br/>
+[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [CHandle, classe](../../atl/reference/chandle-class.md)

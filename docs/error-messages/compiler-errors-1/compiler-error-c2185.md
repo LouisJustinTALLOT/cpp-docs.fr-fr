@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2185 | Documents Microsoft
+title: Erreur du compilateur C2185 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078860f39ff75c9475678a95adabfdc8ba1a91c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29d7fd5a94122de9950ea6bcec3888a70b743c74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063942"
 ---
 # <a name="compiler-error-c2185"></a>Erreur du compilateur C2185
-'identificateur' : allocation de base non conforme  
-  
- Une variable de Registre ou une variable automatique (locale) est déclarée `__based`. Seules les variables globales peuvent être déclarées `__based`.
+
+'identificateur' : non conforme en fonction d’allocation
+
+Une variable de Registre ou une variable automatique (locale) est déclarée `__based`. Seules les variables globales peuvent être déclarées `__based`.

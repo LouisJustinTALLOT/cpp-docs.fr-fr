@@ -15,63 +15,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f891388149990864d35c82affd69c5322e1a222c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 56606eb495337f7462c20d56369e5bcbdb126207
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052727"
 ---
 # <a name="atl-functions"></a>Fonctions ATL
 
 Pour trouver une fonction ATL par catégorie, consultez les rubriques suivantes.
 
-[Fonctions de chemin ATL](../../atl/reference/com-map-global-functions.md)  
+[Fonctions de chemin ATL](../../atl/reference/com-map-global-functions.md)<br/>
 Prennent en charge pour la manipulation des chemins d’accès de fichier.
 
-[Fonctions globales de mappage COM](../../atl/reference/com-map-global-functions.md)  
+[Fonctions globales de mappage COM](../../atl/reference/com-map-global-functions.md)<br/>
 Fournir la prise en charge pour le mappage COM `IUnknown` implémentations.
 
-[Fonctions globales de contrôle composite](../../atl/reference/composite-control-global-functions.md)  
+[Fonctions globales de contrôle composite](../../atl/reference/composite-control-global-functions.md)<br/>
 Fournir la prise en charge pour la création de boîtes de dialogue et de création, d’hébergement et de licences des contrôles ActiveX.
 
-[Fonctions globales de point de connexion](../../atl/reference/connection-point-global-functions.md)  
+[Fonctions globales de point de connexion](../../atl/reference/connection-point-global-functions.md)<br/>
 Points de connexion prennent en charge et tables de récepteurs.
 
-[Fonctions globales de signalement d’erreurs et de débogage](../../atl/reference/debugging-and-error-reporting-global-functions.md)  
+[Fonctions globales de signalement d’erreurs et de débogage](../../atl/reference/debugging-and-error-reporting-global-functions.md)<br/>
 Fournit des équipements de trace et de débogage utiles.
 
-[Fonctions globales de contexte d’appareil](../../atl/reference/device-context-global-functions.md)  
+[Fonctions globales de contexte d’appareil](../../atl/reference/device-context-global-functions.md)<br/>
 Crée un contexte de périphérique pour un appareil donné.
 
-[Fonctions globales de gestion des événements](../../atl/reference/event-handling-global-functions.md)  
+[Fonctions globales de gestion des événements](../../atl/reference/event-handling-global-functions.md)<br/>
 Fournit un gestionnaire d’événements.
 
-[Fonctions globales de marshaling](../../atl/reference/marshaling-global-functions.md)  
+[Fonctions globales de marshaling](../../atl/reference/marshaling-global-functions.md)<br/>
 Prennent en charge pour le marshaling et la conversion des données de marshaling dans les pointeurs d’interface.
 
-[Fonctions globales de Conversion pixel/HIMETRIC](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
+[Fonctions globales de Conversion pixel/HIMETRIC](../../atl/reference/pixel-himetric-conversion-global-functions.md)<br/>
 Conversion de pixel et unités HIMETRIC prennent en charge.
 
-[Fonctions globales du Registre et de TypeLib](../../atl/reference/registry-and-typelib-global-functions.md)  
+[Fonctions globales du Registre et de TypeLib](../../atl/reference/registry-and-typelib-global-functions.md)<br/>
 Prennent en charge le chargement et l’inscription d’une bibliothèque de types.
 
-[Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)  
+[Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)<br/>
 Modification des SID et ACL objets prennent en charge.
 
-[Fonctions globales d’identificateur de sécurité](../../atl/reference/security-identifier-global-functions.md)  
+[Fonctions globales d’identificateur de sécurité](../../atl/reference/security-identifier-global-functions.md)<br/>
 Retourne des objets common SID bien connu.
 
-[Fonctions globales d’inscription de serveur](../../atl/reference/server-registration-global-functions.md)  
+[Fonctions globales d’inscription de serveur](../../atl/reference/server-registration-global-functions.md)<br/>
 Prennent en charge l’inscription et annulation de l’inscription de serveur, d’objets du mappage d’objets.
 
-[Fonctions globales WinModule](../../atl/reference/winmodule-global-functions.md)  
+[Fonctions globales WinModule](../../atl/reference/winmodule-global-functions.md)<br/>
 Fournir la prise en charge de `_AtlCreateWndData` structure des opérations.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)   
-[Macros](../../atl/reference/atl-macros.md)   
-[Variables globales](../../atl/reference/atl-global-variables.md)   
-[Typedefs](../../atl/reference/atl-typedefs.md)   
+[Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)<br/>
+[Macros](../../atl/reference/atl-macros.md)<br/>
+[Variables globales](../../atl/reference/atl-global-variables.md)<br/>
+[Typedef](../../atl/reference/atl-typedefs.md)<br/>
 [Les classes et structs](../../atl/reference/atl-classes.md)

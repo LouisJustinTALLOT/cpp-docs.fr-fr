@@ -16,31 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afcda41d5dc4ad3cc1fd74ed5449d574946f1e5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2f40ea4dd39e88508e6e12c9d7103b7a536902d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070548"
 ---
 # <a name="comerrorhelpfile"></a>_com_error::HelpFile
-**Section spécifique à Microsoft**  
-  
- Appels `IErrorInfo::GetHelpFile` (fonction).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-_bstr_t HelpFile() const;  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne le résultat de `IErrorInfo::GetHelpFile` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Le BSTR résultant est encapsulé dans un objet `_bstr_t`. Si aucun `IErrorInfo` est enregistrée, elle retourne un vide `_bstr_t`.  
-  
-## <a name="remarks"></a>Notes  
- Tout échec lors de l’appel la `IErrorInfo::GetHelpFile` méthode est ignorée.  
-  
- **FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [_com_error, classe](../cpp/com-error-class.md)
+
+**Section spécifique à Microsoft**
+
+Appels `IErrorInfo::GetHelpFile` (fonction).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+_bstr_t HelpFile() const;
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne le résultat de `IErrorInfo::GetHelpFile` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Le BSTR résultant est encapsulé dans un objet `_bstr_t`. Si aucun `IErrorInfo` est enregistrée, elle retourne un vide `_bstr_t`.
+
+## <a name="remarks"></a>Notes
+
+Tout échec lors de l’appel la `IErrorInfo::GetHelpFile` méthode est ignorée.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[_com_error, classe](../cpp/com-error-class.md)

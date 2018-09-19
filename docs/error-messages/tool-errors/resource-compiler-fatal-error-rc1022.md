@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RC1022 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RC1022 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c81a6afc3316c163e9d1451af51f57f208b6a209
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4186b531fce1b608122df676139b9c676ce2df27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321221"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070443"
 ---
 # <a name="resource-compiler-fatal-error-rc1022"></a>Erreur irrécupérable RC1022 du compilateur de ressources 
-'#endif' attendu  
-  
- Un `#if`, **#ifdef**, ou **#ifndef** directive n’a pas été terminée avec un `#endif` la directive.  
-  
- Assurez-vous qu’il existe un `#if`, **#ifdef**, ou **#ifndef** instruction en vigueur avant cette instruction.
+
+« #endif » attendu
+
+Un `#if`, **#ifdef**, ou **#ifndef** directive n’a pas été terminée avec un `#endif` directive.
+
+Assurez-vous qu’il existe un `#if`, **#ifdef**, ou **#ifndef** instruction en vigueur avant cette instruction.

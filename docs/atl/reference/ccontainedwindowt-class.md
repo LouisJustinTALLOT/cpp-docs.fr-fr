@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040477"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT, classe
 
@@ -49,16 +49,16 @@ Cette classe implémente une fenêtre contenue dans un autre objet.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*TBase*  
+*TBase*<br/>
 La classe de base de votre nouvelle classe. La classe de base par défaut est `CWindow`.
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Une classe de traits qui définit les styles de votre fenêtre. La valeur par défaut est `CControlWinTraits`.
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] Le nom d’une classe de fenêtre existante sur laquelle la fenêtre de relation contenant-contenue doit être basée.
 
-*pObject*  
+*pObject*<br/>
 [in] Pointeur vers l’objet conteneur qui déclare la table des messages. Cette classe de l’objet doit dériver de [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifie la table des messages qui traitera les messages de la relation contenant-contenu de la fenêtre. La valeur par défaut, 0, spécifie la table des messages par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Pour utiliser une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passer `msgMapID`.
 
 ### <a name="remarks"></a>Notes
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] Le nom d’une classe de fenêtre existante sur laquelle la fenêtre de relation contenant-contenue doit être basée.
 
-*pObject*  
+*pObject*<br/>
 [in] Pointeur vers l’objet conteneur qui déclare la table des messages. Cette classe de l’objet doit dériver de [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifie la table des messages qui traitera les messages de la relation contenant-contenu de la fenêtre. La valeur par défaut, 0, spécifie la table des messages par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Pour utiliser une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passer `msgMapID`.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Le handle vers la fenêtre parente ou propriétaire.
 
-*Rect*  
+*Rect*<br/>
 [in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure spécifiant la position de la fenêtre. Le `RECT` peuvent être passés par pointeur ou par référence.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Spécifie le nom de la fenêtre. La valeur par défaut est NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Le style de la fenêtre. La valeur par défaut est WS_CHILD &#124; WS_VISIBLE. Pour obtenir la liste des valeurs possibles, consultez [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Le style de fenêtre étendus. La valeur par défaut est 0, ce qui signifie qu’aucun style étendu. Pour obtenir la liste des valeurs possibles, consultez [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Pour une fenêtre enfant, l’identificateur de la fenêtre. Pour une fenêtre de niveau supérieur, un handle de menu de la fenêtre. La valeur par défaut est **0 u**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Pointeur vers les données de création de la fenêtre. Pour une description complète, consultez la description pour le paramètre final [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Paramètres
 
-*uMsg*  
+*uMsg*<br/>
 [in] Le message est envoyé à la fenêtre.
 
-*wParam*  
+*wParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*lParam*  
+*lParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*hWnd*  
+*hWnd*<br/>
 [in] Le handle vers la fenêtre sous-classée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identificateur de plan de message. Pour utiliser le mappage de message par défaut déclaré avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), passer zéro. Pour utiliser une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passer `msgMapID`.
 
 ### <a name="remarks"></a>Notes
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bForce*  
+*bForce*<br/>
 [in] Définissez cette valeur sur True pour forcer la procédure de fenêtre d’origine pour être restaurée même si la procédure de fenêtre pour ce `CContainedWindowT` objet n’est pas actuellement actif. Si *bForce* a la valeur FALSE et la procédure de fenêtre pour ce `CContainedWindowT` objet n’est pas actuellement actif, la procédure de fenêtre d’origine n’est pas restaurée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Paramètres
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle vers la fenêtre.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Le message est envoyé à la fenêtre.
 
-*wParam*  
+*wParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*lParam*  
+*lParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -472,9 +472,9 @@ Le résultat du traitement du message.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CWindow, classe](../../atl/reference/cwindow-class.md)   
-[CWindowImpl, classe](../../atl/reference/cwindowimpl-class.md)   
-[CMessageMap, classe](../../atl/reference/cmessagemap-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CWindow, classe](../../atl/reference/cwindow-class.md)<br/>
+[CWindowImpl, classe](../../atl/reference/cwindowimpl-class.md)<br/>
+[CMessageMap, classe](../../atl/reference/cmessagemap-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

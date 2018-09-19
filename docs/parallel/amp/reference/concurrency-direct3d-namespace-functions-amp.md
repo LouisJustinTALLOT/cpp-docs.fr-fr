@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 099bd36908ef12d2cd4c6b4603dc047d7ed6e74f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: aefb11f8028aa2af9822bc6433e85d06d0609a9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039164"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Fonctions Concurrency::Direct3D de l’espace de noms (AMP)
 ||||
@@ -60,7 +60,7 @@ inline int abs(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière
 
 ### <a name="return-value"></a>Valeur de retour
@@ -83,13 +83,13 @@ inline int clamp(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 La valeur à ancrer.
 
-`_Min`  
+*_Min*<br/>
 La limite inférieure de la plage d’ancrage.
 
-`_Max`  
+*_Max*<br/>
 La limite supérieure de la plage d’ancrage.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -103,7 +103,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière non signée
 
 ### <a name="return-value"></a>Valeur de retour
@@ -126,16 +126,16 @@ accelerator_view create_accelerator_view(
 ```  
 
 #### <a name="parameters"></a>Paramètres
-`_Accelerator`  
+*_Accelerator*<br/>
 L’accélérateur sur lequel le nouveau new_accelerator doit être créé.
 
-`_D3D_device`  
+*_D3D_device*<br/>
 Pointeur vers l’interface de périphérique Direct3D.
 
-`_Disable_timeout`  
+*_Disable_timeout*<br/>
 Un paramètre booléen qui spécifie si le délai d’expiration doit être désactivée pour l’accelerator_view qui vient d’être créée. Cela correspond à l’indicateur D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT pour la création de périphérique Direct3D et est utilisé pour indiquer si le système d’exploitation doit autoriser les charges de travail qui prennent plus de 2 secondes à s’exécuter sans réinitialiser l’appareil par le délai d’attente de Windows mécanisme de détection et de récupération. Utilisation de cet indicateur est recommandée si vous avez besoin effectuer des tâches de longue durée sur accelerator_view.
 
-`_Qmode`  
+*_Qmode*<br/>
 Le [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) à utiliser pour l’accelerator_view qui vient d’être créée. Ce paramètre a la valeur par défaut `queuing_mode_automatic`.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -157,7 +157,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_Av`  
+*_Av*<br/>
 Accelerator_view à verrouiller.
 
 ##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock
@@ -168,7 +168,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_Av`  
+*_Av*<br/>
 Accelerator_view à verrouiller.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -182,7 +182,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_Av`  
+*_Av*<br/>
 L’accelerator_view pour lequel le verrou doit être libéré.
 
 ##  <a name="firstbithigh"></a>  firstbithigh
@@ -193,7 +193,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière
 
 ### <a name="return-value"></a>Valeur de retour
@@ -207,7 +207,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière
 
 ### <a name="return-value"></a>Valeur de retour
@@ -226,13 +226,13 @@ IUnknown *get_buffer(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`value_type`  
+*value_type*<br/>
 Type des éléments dans le tableau.
 
-`_Rank`  
+*_Rank*<br/>
 Le rang du tableau.
 
-`_Array`  
+*_ARRAY*<br/>
 Un tableau sur un accelerator_view Direct3D pour lequel l’interface de mémoire tampon Direct3D sous-jacente est retournée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -263,10 +263,10 @@ inline int imax(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière
 
-`_Y`  
+*_Y*<br/>
 Valeur entière
 
 ### <a name="return-value"></a>Valeur de retour
@@ -282,10 +282,10 @@ inline int imin(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière
 
-`_Y`  
+*_Y*<br/>
 Valeur entière
 
 ### <a name="return-value"></a>Valeur de retour
@@ -299,7 +299,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_Accelerator_view`  
+*_Accelerator_view*<br/>
 L’accelerator_view pour lequel le paramètre de délai désactivé doit être interrogé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -334,13 +334,13 @@ inline unsigned int mad(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Le premier argument spécifié.
 
-`_Y`  
+*_Y*<br/>
 Le deuxième argument spécifié.
 
-`_Z`  
+*_Z*<br/>
 Le troisième argument spécifié.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -361,19 +361,19 @@ array<value_type, _Rank> make_array(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`value_type`  
+*value_type*<br/>
 Le type d’élément du tableau à créer.
 
-`_Rank`  
+*_Rank*<br/>
 Le rang du tableau à créer.
 
-`_Extent`  
+*_Extent*<br/>
 Une étendue qui décrit la forme de l’agrégat de tableau.
 
-`_Rv`  
+*_Rv*<br/>
 Une vue d’accélérateur D3D sur laquelle le tableau doit être créé.
 
-`_D3D_buffer`  
+*_D3D_buffer*<br/>
 Pointeur d’interface IUnknown de la mémoire tampon D3D pour créer le tableau à partir de.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -387,7 +387,7 @@ inline float noise(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur à virgule flottante à partir duquel générer le bruit de Perlin
 
 ### <a name="return-value"></a>Valeur de retour
@@ -401,7 +401,7 @@ inline float radians(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
@@ -418,7 +418,7 @@ inline double rcp(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 La valeur pour laquelle la réciproque.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -432,7 +432,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière non signée
 
 ### <a name="return-value"></a>Valeur de retour
@@ -446,7 +446,7 @@ inline float saturate(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
@@ -460,7 +460,7 @@ inline int sign(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière
 
 ### <a name="return-value"></a>Valeur de retour
@@ -477,13 +477,13 @@ inline float smoothstep(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_Min`  
+*_Min*<br/>
 Valeur à virgule flottante
 
-`_Max`  
+*_Max*<br/>
 Valeur à virgule flottante
 
-`_X`  
+*_X*<br/>
 Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
@@ -499,10 +499,10 @@ inline float step(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_Y`  
+*_Y*<br/>
 Valeur à virgule flottante
 
-`_X`  
+*_X*<br/>
 Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
@@ -518,10 +518,10 @@ inline unsigned int umax(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière
 
-`_Y`  
+*_Y*<br/>
 Valeur entière
 
 ### <a name="return-value"></a>Valeur de retour
@@ -537,10 +537,10 @@ inline unsigned int umin(
 ```  
 
 ### <a name="parameters"></a>Paramètres
-`_X`  
+*_X*<br/>
 Valeur entière
 
-`_Y`  
+*_Y*<br/>
 Valeur entière
 
 ### <a name="return-value"></a>Valeur de retour

@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0023 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0023 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e074035d7f336963696e8924dfe641572f858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94536a0499b4c226f1343bd27c44cc52bbbf3558
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296996"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034601"
 ---
 # <a name="expression-evaluator-error-cxx0023"></a>Évaluateur d'expression, erreur CXX0023
-base incorrecte  
-  
- L’évaluateur d’expression C ne reconnaît pas la base spécifiée. Uniquement les bases octales, décimales et hexadécimales sont valides.  
-  
- Cette erreur est identique à CAN0023.
+
+base incorrecte
+
+L’évaluateur d’expression de C ne reconnaît pas la base spécifiée. Uniquement les bases décimaux, hexadécimaux et octaux sont valides.
+
+Cette erreur est identique à CAN0023.

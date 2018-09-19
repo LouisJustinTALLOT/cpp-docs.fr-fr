@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37564920e2ffb4c2526631cd04864db1971a6f02
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039086"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -39,16 +39,16 @@ LRESULT MessageHandler(
 
 ### <a name="parameters"></a>Paramètres
 
-*uMsg*  
+*uMsg*<br/>
 Spécifie le message.
 
-*wParam*  
+*wParam*<br/>
 Informations supplémentaires spécifiques au message.
 
-*lParam*  
+*lParam*<br/>
 Informations supplémentaires spécifiques au message.
 
-*bHandled*  
+*bHandled*<br/>
 Les jeux de mappage de message *bHandled* sur TRUE avant `MessageHandler` est appelée. Si `MessageHandler` ne gère pas entièrement le message, il doit définir *bHandled* sur FALSE pour indiquer que le message nécessite un traitement supplémentaire.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -61,6 +61,6 @@ Pour obtenir un exemple de l’utilisation de ce gestionnaire de messages dans u
 
 ## <a name="see-also"></a>Voir aussi
 
-[Implémentation d’une fenêtre](../atl/implementing-a-window.md)   
-[Tables des messages](../atl/message-maps-atl.md)   
+[Implémentation d’une fenêtre](../atl/implementing-a-window.md)<br/>
+[Tables des messages](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

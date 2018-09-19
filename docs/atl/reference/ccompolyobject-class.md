@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec995026b0142fc30470836b29697457be91937e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fcf62e142c99fad15bec667534bc60b4d19e43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045053"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject, classe
 
@@ -41,14 +41,14 @@ Cette classe implémente `IUnknown` pour un objet regroupé ou.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class contained>  
+template<class contained>
 class CComPolyObject : public IUnknown,
       public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*contenu*  
+*contenu*<br/>
 Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge sur l’objet.
 
 ## <a name="members"></a>Membres
@@ -127,7 +127,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*  
+*PV*<br/>
 [in] Un pointeur vers l’inconnu externe si l’objet doit être agrégées, ou NULL si l’objet si l’objet n’est pas agrégée.
 
 ### <a name="remarks"></a>Notes
@@ -160,7 +160,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Paramètres
 
-*PP*  
+*PP*<br/>
 [out] Un pointeur vers un **CComPolyObject <** `contained` **>** pointeur. Si `CreateInstance` échoue, *pp* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -203,7 +203,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Paramètres
 
-*contenu*  
+*contenu*<br/>
 [in] Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge sur l’objet.
 
 ### <a name="remarks"></a>Notes
@@ -216,22 +216,22 @@ Récupère un pointeur vers l'interface demandée.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Q*  
+*Q*<br/>
 L’interface COM.
 
-*IID*  
+*IID*<br/>
 [in] L’identificateur de l’interface demandée.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par *iid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est définie sur NULL.
 
-*PP*  
+*PP*<br/>
 [out] Un pointeur vers l’interface identifiée par `__uuidof(Q)`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -256,6 +256,6 @@ Dans les versions debug, `Release` retourne une valeur qui peut-être être util
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)   
-[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
+[CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

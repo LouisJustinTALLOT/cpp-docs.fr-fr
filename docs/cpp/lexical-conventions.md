@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9dd92d321f0452c24de04fb94427aa2499677155
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064819"
 ---
 # <a name="lexical-conventions"></a>Conventions lexicales
+
 Cette section introduit les éléments fondamentaux d'un programme C++. Vous utilisez ces éléments, appelés « éléments lexicaux » ou « jetons », pour élaborer les instructions, les définitions, les déclarations, etc., utilisées pour construire des programmes complets. Les éléments lexicaux suivants sont présentés dans cette section :
 
 - [Vue d’ensemble de la traduction de fichier](overview-of-file-translation.md)
@@ -45,5 +46,6 @@ Cette section introduit les éléments fondamentaux d'un programme C++. Vous uti
 - [Littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>Voir aussi
- [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)  
- [Programme et liaison](program-and-linkage-cpp.md)
+
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
+[Programme et liaison](program-and-linkage-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: LNK1169 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: LNK1169 d’erreur des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79682f58111804b3c1340aa7dc5ab5f0c97e0d68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30171eedd43695b26be24f6c7e2c9751ae8fcdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302696"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036044"
 ---
 # <a name="linker-tools-error-lnk1169"></a>Erreur des outils Éditeur de liens LNK1169
-un ou plusieurs symboles définis de multiplication  
-  
- La génération a échoué en raison de plusieurs définitions d’un ou plusieurs symboles. Cette erreur est précédée par l’erreur [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).  
-  
- Le [/force](../../build/reference/force-force-file-output.md) ou **multiple** option substitue à cette erreur.
+
+un ou plusieurs symboles définis trouvées de multiplier
+
+La build a échoué en raison de plusieurs définitions d’un ou plusieurs symboles. Cette erreur est précédée par l’erreur [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).
+
+Le [/FORCE](../../build/reference/force-force-file-output.md) ou **multiple** option substitue à cette erreur.

@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072067"
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
+
 Une classe générique qui vous permet de spécifier des restrictions pour les ensembles de lignes de schéma.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -43,17 +44,19 @@ class CRestrictions :
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *T*  
- La classe utilisée pour l’accesseur.  
+
+*T*<br/>
+La classe utilisée pour l’accesseur.  
   
- *nRestrictions*  
- Le nombre de colonnes de restriction pour l’ensemble de lignes de schéma.  
+*nRestrictions*<br/>
+Le nombre de colonnes de restriction pour l’ensemble de lignes de schéma.  
   
- *pguid*  
- Un pointeur vers le GUID pour le schéma.  
+*pguid*<br/>
+Un pointeur vers le GUID pour le schéma.  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** atldbsch.h 
+
+**En-tête :** atldbsch.h 
   
 ## <a name="members"></a>Membres  
   
@@ -64,6 +67,7 @@ class CRestrictions :
 |[Ouvrir](#open)|Retourne un résultat défini selon les restrictions fournies par l’utilisateur.|   
 
 ## <a name="open"></a> CRestrictions::Open
+
 Retourne un résultat défini selon les restrictions fournies par l’utilisateur.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -81,24 +85,28 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *session*  
- [in] Spécifie un objet de session existant utilisé pour se connecter à la source de données.  
+
+*session*<br/>
+[in] Spécifie un objet de session existant utilisé pour se connecter à la source de données.  
   
- *lpszParam*  
- [in] Spécifie les restrictions sur l’ensemble de lignes de schéma.  
+*lpszParam*<br/>
+[in] Spécifie les restrictions sur l’ensemble de lignes de schéma.  
   
- *bBind*  
- [in] Spécifie s’il faut lier automatiquement de mapper les colonnes. La valeur par défaut est **true**, ce qui provoque le mappage de colonne à lier automatiquement. Paramètre *bBind* à **false** empêche la liaison automatique de la carte de colonne afin que vous pouvez lier manuellement. (Liaison manuelle est un intérêt particulier pour les utilisateurs OLAP).  
+*bBind*<br/>
+[in] Spécifie s’il faut lier automatiquement de mapper les colonnes. La valeur par défaut est **true**, ce qui provoque le mappage de colonne à lier automatiquement. Paramètre *bBind* à **false** empêche la liaison automatique de la carte de colonne afin que vous pouvez lier manuellement. (Liaison manuelle est un intérêt particulier pour les utilisateurs OLAP).  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une des valeurs HRESULT standards.  
+
+Une des valeurs HRESULT standards.  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez spécifier un maximum de sept restrictions sur un ensemble de lignes de schéma.  
+
+Vous pouvez spécifier un maximum de sept restrictions sur un ensemble de lignes de schéma.  
   
- Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) pour plus d’informations sur les restrictions définies sur chaque ensemble de lignes de schéma.  
+Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) pour plus d’informations sur les restrictions définies sur chaque ensemble de lignes de schéma.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Référence de modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)    
- [Classes de jeu de lignes du schéma et classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Classes de jeu de lignes du schéma et classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

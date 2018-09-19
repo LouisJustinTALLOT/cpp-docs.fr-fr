@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2709 | Documents Microsoft
+title: Erreur du compilateur C2709 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea21e5344b9eb20cc4dfd10103f4535f666c437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2962303eeb32f6aae33c08fc7e9be31af03f880
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035680"
 ---
 # <a name="compiler-error-c2709"></a>Erreur du compilateur C2709
-'identificateur' : la longueur en octets des paramètres formels diffère de celle de la déclaration précédente  
-  
- La signature figurant dans un appel à la fonction spécifiée diffère du prototype.
+
+'identificateur' : la longueur en octets des paramètres formels diffère de celle de la déclaration précédente
+
+La signature figurant dans un appel à la fonction spécifiée diffère du prototype.

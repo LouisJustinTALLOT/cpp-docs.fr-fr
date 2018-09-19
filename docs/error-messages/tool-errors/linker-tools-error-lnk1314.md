@@ -1,5 +1,5 @@
 ---
-title: LNK1314 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: LNK1314 d’erreur des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a4afa4d5cd0be19163204d48e0a29b3b359a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8863c22bea588417025164bf2d303d01cfe6d7b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301107"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042947"
 ---
 # <a name="linker-tools-error-lnk1314"></a>Erreur des outils Éditeur de liens LNK1314
-(non défini static ou symbole d’étiquette) table de symboles COFF endommagée ou non valide  
-  
- Le contenu généré par le compilateur pour une section dans l’objet donné semble endommagé.  
-  
- Cette erreur peut représenter une défaillance du compilateur.
+
+(non défini static ou symbole d’étiquette) table de symboles COFF endommagée ou non valide
+
+Le contenu généré par le compilateur pour une section dans l’objet donné semble être endommagé.
+
+Cette erreur peut représenter une défaillance du compilateur.

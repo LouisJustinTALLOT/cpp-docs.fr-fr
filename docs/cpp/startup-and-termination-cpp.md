@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71541c20831180a0097780e9ee6b2fd9dfb2c43
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a16edcc40c0e81453e10275189384d81151123d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071956"
 ---
 # <a name="startup-and-termination-c"></a>Démarrage et terminaison (C++)
-Démarrage du programme et arrêt sont facilités en utilisant deux fonctions : [principal](../cpp/main-program-startup.md) et [quitter](../cpp/program-termination.md). Un autre code de démarrage et d'arrêt est susceptible d'être exécuté.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Concepts de base](../cpp/basic-concepts-cpp.md)
+
+Démarrage du programme et arrêt sont facilités en utilisant deux fonctions : [principal](../cpp/main-program-startup.md) et [quitter](../cpp/program-termination.md). Un autre code de démarrage et d'arrêt est susceptible d'être exécuté.
+
+## <a name="see-also"></a>Voir aussi
+
+[Concepts de base](../cpp/basic-concepts-cpp.md)

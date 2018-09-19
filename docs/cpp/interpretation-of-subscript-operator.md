@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eeb8d4232fae16cfaa588341a54bf4318483b92
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e1457744747ee3638d7f0b9485ac12af60e5cdd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213429"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058339"
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interprétation de l'opérateur Indice
 
@@ -34,8 +34,8 @@ Comme dans toute addition qui implique des types pointeur, la mise à l'échelle
 
 De même, pour des tableaux multidimensionnels, l'adresse est dérivée à l'aide de la méthode suivante :
 
-((*nom de tableau*) + (*indice*1 \* *max*2 \* *max*3 \* ... \* *max*n) + (*indice*2 \* *max*3 \* ... \* *max*n) +... + *indice*n))  
-  
+((*nom de tableau*) + (*indice*1 \* *max*2 \* *max*3 \* ... \* *max*n) + (*indice*2 \* *max*3 \* ... \* *max*n) +... + *indice*n))
+
 ## <a name="see-also"></a>Voir aussi
 
 [Tableaux](../cpp/arrays-cpp.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2693 | Documents Microsoft
+title: Erreur du compilateur C2693 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bed9c0dcad60febf343357ee3e0762ab3d93ef6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ecf51f5fdbe7d1c6b5d5070e048c69bfc840460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051254"
 ---
 # <a name="compiler-error-c2693"></a>Erreur du compilateur C2693
-'opérateur' : comparaison non conforme entre des références et un tableau managé ou WinRT  
-  
- Vous ne pouvez pas tester un tableau managé ou WinRT pour un type quelconque d'inégalité. Par exemple, vous pouvez tester pour voir si des tableaux managés sont égaux, mais vous ne pouvez pas vérifier si un tableau est supérieur ou inférieur à un autre tableau.  
+
+'opérateur' : comparaison non conforme entre des références et un tableau managé ou WinRT
+
+Vous ne pouvez pas tester un tableau managé ou WinRT pour un type quelconque d'inégalité. Par exemple, vous pouvez tester pour voir si des tableaux managés sont égaux, mais vous ne pouvez pas vérifier si un tableau est supérieur ou inférieur à un autre tableau.

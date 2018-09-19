@@ -1,5 +1,5 @@
 ---
-title: Du compilateur (niveau 3) d’avertissement C4133 | Documents Microsoft
+title: Compilateur avertissement (niveau 3) C4133 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f01a3a4b6ccf1750ec3cd0df643c02b7678bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f22878ebb7caa5549779d4c53b1f6b7068dc480
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056831"
 ---
-# <a name="compiler-warning-level-3-c4133"></a>Du compilateur (niveau 3) d’avertissement C4133
-'type' : types incompatibles - de 'type1' en 'type2'  
-  
- Cet avertissement peut être provoqué par la tentative de soustraction de deux pointeurs de types différents.  
-  
- Pour éviter cet avertissement, fournissez un cast de type approprié.
+# <a name="compiler-warning-level-3-c4133"></a>Compilateur avertissement (niveau 3) C4133
+
+'type' : types incompatibles - de 'type1' en 'type2'
+
+Cet avertissement peut être provoqué par la tentative de soustraction de deux pointeurs de types différents.
+
+Pour éviter cet avertissement, fournissez un cast de type approprié.

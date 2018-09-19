@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4566 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4566 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8044df3a37e54585f7f3b495b99314e258934f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c25ff9d2a4c915570a28752d11778983f2cf2fc3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049174"
 ---
 # <a name="compiler-warning-level-1-c4566"></a>Avertissement du compilateur (niveau 1) C4566
-caractère représenté par le nom de caractère universel 'char' ne peut pas être représenté dans la page de codes actuelle (page)  
-  
- Pas tous les caractères Unicode peuvent être représentés dans votre page de codes ANSI actuelle.  
-  
- Les chaînes étroites (caractères à un octet) sont convertis en caractères multioctets alors que les chaînes étendues (caractères sur deux octets) ne sont pas.  
-  
- L’exemple suivant génère l’erreur C4566 :  
-  
-```  
-// C4566.cpp  
-// compile with: /W1  
-int main() {  
-   char c1 = '\u03a0';   // C4566  
-   char c2 = '\u0642';   // C4566  
-  
-   wchar_t c3 = L'\u03a0';   // OK  
-   wchar_t c4 = L'\u0642';   // OK  
-}  
+
+caractère représenté par le nom de caractère universel 'char' ne peut pas être représenté dans la page de codes actuelle (page)
+
+Pas tous les caractères Unicode peuvent être représentés dans votre page de codes ANSI actuelle.
+
+Les chaînes étroites (caractères sur un octet) sont convertis en caractères multioctets, tandis que les chaînes étendues (caractères sur deux octets) ne sont pas.
+
+L’exemple suivant génère l’erreur C4566 :
+
+```
+// C4566.cpp
+// compile with: /W1
+int main() {
+   char c1 = '\u03a0';   // C4566
+   char c2 = '\u0642';   // C4566
+
+   wchar_t c3 = L'\u03a0';   // OK
+   wchar_t c4 = L'\u0642';   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Création d’un consommateur OLE DB | Documents Microsoft
+title: Création d’un consommateur OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e68aacb013cb7f91d0225094cfd941eae5e2c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034083"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Création d’un consommateur OLE DB
-Vous pouvez créer un consommateur des modèles OLE DB avec ou sans l’Assistant Consommateur OLE DB ATL, bien que l’Assistant est la méthode recommandée. Un consommateur peut opérer dans n’importe quelle application qui prend en charge ATL.  
+
+Vous pouvez créer un consommateur des modèles OLE DB avec ou sans l’Assistant Consommateur OLE DB ATL, bien que l’utilisation de l’Assistant est la méthode recommandée. Un consommateur peut fonctionner dans n’importe quelle application qui prend en charge ATL.  
   
- Cette section couvre les rubriques suivantes :  
+Cette section couvre les rubriques suivantes :  
   
--   [Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
+- [Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
   
--   [Création d’un consommateur OLE DB sans utiliser d’Assistant](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
+- [Création d’un consommateur OLE DB sans utiliser l’Assistant](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

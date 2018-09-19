@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043935"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (classe)
 Fournit les fonctionnalités du contrôle commun d'onglet Windows.  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>Notes  
  Lorsque le message est envoyé, le `mask` membre spécifie quels attributs retourner. Si le `mask` membre spécifie la valeur TCIF_TEXT, le `pszText` membre doit contenir l’adresse de la mémoire tampon qui reçoit le texte de l’élément et le `cchTextMax` membre doit spécifier la taille de la mémoire tampon.  
   
- `mask`  
- Valeur spécifiant quel `TCITEM` membres à récupérer ou définir de la structure. Ce membre peut être zéro ou une combinaison des valeurs suivantes :  
+- `mask`
+
+   Valeur spécifiant quel `TCITEM` membres à récupérer ou définir de la structure. Ce membre peut être zéro ou une combinaison des valeurs suivantes :  
   
-- TCIF_TEXT le `pszText` membre n’est valide.  
+   - TCIF_TEXT le `pszText` membre n’est valide.  
   
-- TCIF_IMAGE le `iImage` membre n’est valide.  
+   - TCIF_IMAGE le `iImage` membre n’est valide.  
   
-- TCIF_PARAM le `lParam` membre n’est valide.  
+   - TCIF_PARAM le `lParam` membre n’est valide.  
   
-- TCIF_RTLREADING le texte de `pszText` s’affiche à l’aide de l’ordre de lecture de droite à gauche sur les systèmes hébreu ou l’arabe.  
+   - TCIF_RTLREADING le texte de `pszText` s’affiche à l’aide de l’ordre de lecture de droite à gauche sur les systèmes hébreu ou l’arabe.  
   
-- TCIF_STATE le `dwState` membre n’est valide.  
+   - TCIF_STATE le `dwState` membre n’est valide.  
   
- `pszText`  
- Pointeur vers une chaîne se terminant par null qui contient le texte de l’onglet si la structure contient des informations sur un onglet. Si la structure reçoit plus d’informations, ce membre spécifie l’adresse de la mémoire tampon qui reçoit le texte de l’onglet.  
+- `pszText`  
+
+   Pointeur vers une chaîne se terminant par null qui contient le texte de l’onglet si la structure contient des informations sur un onglet. Si la structure reçoit plus d’informations, ce membre spécifie l’adresse de la mémoire tampon qui reçoit le texte de l’onglet.  
   
- `cchTextMax`  
- Taille de la mémoire tampon vers laquelle pointe `pszText`. Ce membre est ignoré si la structure ne reçoit pas d’informations.  
+- `cchTextMax`  
+
+   Taille de la mémoire tampon vers laquelle pointe `pszText`. Ce membre est ignoré si la structure ne reçoit pas d’informations.  
   
- `iImage`  
+- `iImage`  
  Index dans le contrôle onglet liste d’images, ou - 1 s’il n’existe aucune image de l’onglet.  
   
- lParam  
- Données définies par l’application associées à l’onglet. S’il existe plus de quatre octets de données défini par l’application par onglet, une application doit définir une structure et l’utiliser à la place de la `TCITEM` structure. Le premier membre de la structure définie par l’application doit être un [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)structure. Le `TCITEMHEADER` structure est identique à la `TCITEM` de structure, mais sans le `lParam` membre. La différence entre la taille de votre structure et la taille de la `TCITEMHEADER` structure doit être égal au nombre d’octets supplémentaires par onglet.  
+- `lParam`  
+
+   Données définies par l’application associées à l’onglet. S’il existe plus de quatre octets de données défini par l’application par onglet, une application doit définir une structure et l’utiliser à la place de la `TCITEM` structure. Le premier membre de la structure définie par l’application doit être un [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)structure. Le `TCITEMHEADER` structure est identique à la `TCITEM` de structure, mais sans le `lParam` membre. La différence entre la taille de votre structure et la taille de la `TCITEMHEADER` structure doit être égal au nombre d’octets supplémentaires par onglet.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

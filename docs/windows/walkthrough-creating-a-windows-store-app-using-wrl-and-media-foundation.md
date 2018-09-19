@@ -1,7 +1,7 @@
 ---
 title: 'Procédure pas à pas : Création d’une application UWP à l’aide de WRL et Media Foundation | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3eb82c5c86411af63ea79a4dbcf2e54d2d3ce5f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038306"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Procédure pas à pas : Création d’une application UWP à l’aide de WRL et Media Foundation
 
@@ -101,7 +101,7 @@ Dans la plupart des cas, vous pouvez utiliser C++ / c++ / CX pour créer le Wind
 
    1. Sous **entrée**, pour le **fichier de définition de Module**, spécifiez `GrayScaleTransform.def`.
 
-   2. Également sous **entrée**, ajouter `runtimeobject.lib`, `mfuuid.lib`, et `mfplatf.lib` à la **dépendances supplémentaires** propriété.
+   2. Également sous **entrée**, ajouter `runtimeobject.lib`, `mfuuid.lib`, et `mfplat.lib` à la **dépendances supplémentaires** propriété.
 
    3. Sous **Windows métadonnées**, affectez la valeur **générer des métadonnées Windows** à **Oui (/ WINMD)**.
 

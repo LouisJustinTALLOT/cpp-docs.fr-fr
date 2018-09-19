@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b6266ac31e2d6dec6eabc847b67b080b250837
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 533458b35e4589e04d95a4618a04a90aa1994c35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751421"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039333"
 ---
 # <a name="cinterfacearray-class"></a>Cinterfacearray, classe
 
@@ -32,7 +32,7 @@ Cette classe fournit des méthodes utiles lors de la construction d’un tableau
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class I, const IID* piid=& __uuidof(I)>  
+template <class I, const IID* piid=& __uuidof(I)>
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>Paramètres
 
-*I*  
+*I*<br/>
 Une interface COM qui spécifie le type de pointeur à stocker.
 
-*piid*  
+*piid*<br/>
 Un pointeur vers l’IID de *je*.
 
 ## <a name="members"></a>Membres
@@ -84,7 +84,7 @@ Initialise le tableau de pointeurs intelligents.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CAtlArray, classe](../../atl/reference/catlarray-class.md)   
-[CComQIPtr, classe](../../atl/reference/ccomqiptr-class.md)   
-[Ccomqiptrelementtraits, classe](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlArray, classe](../../atl/reference/catlarray-class.md)<br/>
+[CComQIPtr, classe](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits, classe](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

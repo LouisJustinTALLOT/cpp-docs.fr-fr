@@ -1,5 +1,5 @@
 ---
-title: source_link_manager, classe | Documents Microsoft
+title: source_link_manager, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff869fb93d5dae39a924c3d4133f5a6bc6fb824f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059795"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager, classe
 L'objet `source_link_manager` gère les liens réseau des blocs de messagerie avec les blocs `ISource`.  
@@ -45,8 +45,8 @@ class source_link_manager;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_LinkRegistry`  
- Registre de liens réseau.  
+*_LinkRegistry*<br/>
+Le Registre de lien réseau.  
   
 ## <a name="members"></a>Membres  
   
@@ -54,7 +54,7 @@ class source_link_manager;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`const_pointer`|Type qui fournit un pointeur vers un `const` élément dans un `source_link_manager` objet.|  
+|`const_pointer`|Un type qui fournit un pointeur vers un `const` élément dans un `source_link_manager` objet.|  
 |`const_reference`|Type qui fournit une référence à un `const` élément stocké dans un `source_link_manager` objet pour la lecture et exécution d’opérations const.|  
 |`iterator`|Un type qui fournit un itérateur qui peut lire ou modifier tout élément dans le `source_link_manager` objet.|  
 |`type`|Le type de Registre de liens qui est géré par le `source_link_manager` objet.|  
@@ -70,9 +70,9 @@ class source_link_manager;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[add](#add)|Ajoute un lien de la source à la `source_link_manager` objet.|  
+|[add](#add)|Ajoute un lien source vers le `source_link_manager` objet.|  
 |[begin](#begin)|Retourne un itérateur au premier élément dans le `source_link_manager` objet.|  
-|[contient](#contains)|Recherche le `network_link_registry` dans cette `source_link_manager` objet pour un bloc spécifié.|  
+|[contient](#contains)|Recherche le `network_link_registry` dans cet `source_link_manager` objet pour un bloc spécifié.|  
 |[count](#count)|Compte le nombre de blocs liés dans le `source_link_manager` objet.|  
 |[reference](#reference)|Acquiert une référence sur le `source_link_manager` objet.|  
 |[register_target_block](#register_target_block)|Inscrit le bloc cible qui conserve ce `source_link_manager` objet.|  
@@ -81,29 +81,29 @@ class source_link_manager;
 |[set_bound](#set_bound)|Définit le nombre maximal de liens source qui peuvent être ajoutés à ce `source_link_manager` objet.|  
   
 ## <a name="remarks"></a>Notes  
- Actuellement, les blocs de code source ont un décompte. Il s’agit d’un wrapper un `network_link_registry` objet qui permet l’accès simultané aux liens et offre la possibilité de référencer les liens via des rappels. Blocs de messages ( `target_block`s ou `propagator_block`s) doivent utiliser cette classe pour leurs liens source.  
+ Actuellement, les blocs de code source ont un décompte. C’est un wrapper sur un `network_link_registry` objet qui permet l’accès simultané aux liens et offre la possibilité de référencer les liens via des rappels. Blocs de messages ( `target_block`s ou `propagator_block`s) doivent utiliser cette classe pour leurs liens source.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `source_link_manager`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
   
 ##  <a name="add"></a> Ajouter 
 
- Ajoute un lien de la source à la `source_link_manager` objet.  
+ Ajoute un lien source vers le `source_link_manager` objet.  
   
 ```
 void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Link`  
- Pointeur vers un bloc à ajouter.  
+*_Lier*<br/>
+Pointeur vers un bloc à ajouter.  
   
-##  <a name="begin"></a> Commencer 
+##  <a name="begin"></a> commencer 
 
  Retourne un itérateur au premier élément dans le `source_link_manager` objet.  
   
@@ -119,15 +119,15 @@ iterator begin();
   
 ##  <a name="contains"></a> contient 
 
- Recherche le `network_link_registry` dans cette `source_link_manager` objet pour un bloc spécifié.  
+ Recherche le `network_link_registry` dans cet `source_link_manager` objet pour un bloc spécifié.  
   
 ```
 bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Link`  
- Un pointeur vers un bloc qui consiste à rechercher dans le `source_link_manager` objet.  
+*_Lier*<br/>
+Un pointeur désignant un bloc qui consiste à rechercher dans le `source_link_manager` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si le bloc spécifié a été trouvé, `false` dans le cas contraire.  
@@ -160,10 +160,10 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_PTarget`  
- Le bloc cible contenant cet `source_link_manager` objet.  
+*_PTarget*<br/>
+Le bloc cible contenant cet `source_link_manager` objet.  
   
-##  <a name="release"></a> mise en production 
+##  <a name="release"></a> Mise en production 
 
  Libère la référence sur le `source_link_manager` objet.  
   
@@ -180,8 +180,8 @@ bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Link`  
- Un pointeur vers un bloc doit être supprimée, si trouvée.  
+*_Lier*<br/>
+Un pointeur vers un bloc à supprimer, si trouvé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
@@ -195,8 +195,8 @@ void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_MaxLinks`  
- Le nombre maximal de liens.  
+*_MaxLinks*<br/>
+Le nombre maximal de liens.  
   
 ##  <a name="ctor"></a> source_link_manager 
 

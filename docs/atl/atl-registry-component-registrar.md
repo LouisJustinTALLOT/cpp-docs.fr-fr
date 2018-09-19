@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d3f8f52e237fe364f73057c81eb17c8fd3def18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759429"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041036"
 ---
 # <a name="atl-registry-component-registrar"></a>Composant de registre ATL (Inscription)
 
@@ -36,14 +36,14 @@ Le bureau d’enregistrement ATL fournit un accès optimisé dans le Registre sy
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Création de scripts d’inscription](../atl/creating-registrar-scripts.md)  
+[Création de scripts d’inscription](../atl/creating-registrar-scripts.md)<br/>
 Guide de création de scripts de bureau d’enregistrement. Inclut des rubriques sur la syntaxe BNF, les arborescences d’analyse, exemples, à l’aide de paramètres remplaçables et l’appel de scripts de scripts du Registre.
 
-[Configuration d’un lien statique vers le Code d’inscription (C++ uniquement)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+[Configuration d’un lien statique vers le Code d’inscription (C++ uniquement)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
 Répertorie les étapes pour configurer la liaison statique pour le bureau d’enregistrement.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).
 

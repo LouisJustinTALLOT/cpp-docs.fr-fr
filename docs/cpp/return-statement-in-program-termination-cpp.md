@@ -16,27 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cfcf65258767178c0f74f63ca6e938e1d940e3be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461111"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061134"
 ---
 # <a name="return-statement-in-program-termination-c"></a>Instruction return dans la terminaison du programme (C++)
-Émission d’un **retourner** instruction à partir de `main` est fonctionnellement équivalent à l’appel le `exit` (fonction). Prenons l'exemple suivant :  
-  
-```cpp 
-// return_statement.cpp  
-#include <stdlib.h>  
-int main()  
-{  
-    exit( 3 );  
-    return 3;  
-}  
-```  
-  
- Le `exit` et **retourner** dans l’exemple précédent, les instructions sont fonctionnellement identiques. Toutefois, C++ exige que fonctions dont les types de retour autre que **void** retournent une valeur. Le **retourner** instruction vous permet de retourner une valeur à partir de `main`.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Terminaison du programme](../cpp/program-termination.md)
+
+Émission d’un **retourner** instruction à partir de `main` est fonctionnellement équivalent à l’appel le `exit` (fonction). Prenons l'exemple suivant :
+
+```cpp
+// return_statement.cpp
+#include <stdlib.h>
+int main()
+{
+    exit( 3 );
+    return 3;
+}
+```
+
+Le `exit` et **retourner** dans l’exemple précédent, les instructions sont fonctionnellement identiques. Toutefois, C++ exige que fonctions dont les types de retour autre que **void** retournent une valeur. Le **retourner** instruction vous permet de retourner une valeur à partir de `main`.
+
+## <a name="see-also"></a>Voir aussi
+
+[Terminaison du programme](../cpp/program-termination.md)

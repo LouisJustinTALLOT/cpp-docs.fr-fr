@@ -1,5 +1,5 @@
 ---
-title: Erreur de ligne de commande D8036 | Documents Microsoft
+title: Erreur de ligne de commande D8036 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f121310318cbb91b1f983ec240b42d5d9ea34b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9c533ada388f876443021fbf159320f171a07a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041842"
 ---
 # <a name="command-line-error-d8036"></a>Erreur de ligne de commande D8036
-'/ option' non autorisé avec plusieurs fichiers sources  
-  
- Ces options du compilateur ne peut pas être utilisées avec plusieurs fichiers sources :  
-  
--   Liste des noms de fichier assembly (/ Fa)  
-  
--   Renommez le fichier objet (/ Fo)  
-  
--   Créer des informations du navigateur source sans variables locales (/ Fr)  
-  
--   Créer des informations du navigateur source qui inclut les variables locales (/ FR)
+
+'/ option' non autorisé avec plusieurs fichiers sources
+
+Ces options du compilateur ne peut pas être utilisées avec plusieurs fichiers sources :
+
+- Liste des noms de fichier assembly (/ Fa)
+
+- Renommer le fichier objet (/ Fo)
+
+- Créer des informations du navigateur source sans variables locales (/ Fr)
+
+- Créer des informations du navigateur source qui inclut des variables locales (/ FR)

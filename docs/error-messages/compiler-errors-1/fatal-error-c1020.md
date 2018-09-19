@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1020 | Documents Microsoft
+title: Erreur irrécupérable C1020 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c70727b5e0d83b03099b637e0f768f65d271b05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ab0da342e575c0af452ec70d1759fe34188db9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224637"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066867"
 ---
 # <a name="fatal-error-c1020"></a>Erreur irrécupérable C1020
-#endif inattendu  
-  
- La directive `#endif` n’a aucune directive `#if`, `#ifdef`ou `#ifndef` correspondante. Vérifiez que chaque `#endif` a une directive correspondante.  
-  
- L’exemple suivant génère l’erreur C1020 :  
-  
-```  
-// C1020.cpp  
-#endif     // C1020  
-```  
-  
- Solution possible :  
-  
-```  
-// C1020b.cpp  
-// compile with: /c  
-#if 1  
-#endif  
+
+#endif inattendu
+
+La directive `#endif` n’a aucune directive `#if`, `#ifdef`ou `#ifndef` correspondante. Vérifiez que chaque `#endif` a une directive correspondante.
+
+L’exemple suivant génère l’erreur C1020 :
+
+```
+// C1020.cpp
+#endif     // C1020
+```
+
+Solution possible :
+
+```
+// C1020b.cpp
+// compile with: /c
+#if 1
+#endif
 ```

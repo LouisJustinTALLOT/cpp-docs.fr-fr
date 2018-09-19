@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RC1009 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RC1009 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f90b127ccee7579304e3963d4edb6ff56ecd95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ceed87c62863f9a5150feebf90f67118656d858
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317542"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034107"
 ---
 # <a name="resource-compiler-fatal-error-rc1009"></a>Erreur irrécupérable RC1009 du compilateur de ressources 
-limite du compilateur : macros imbriquées trop profondément 'macro'  
-  
- Le fichier dépasse la limite de compilateur de ressources pour l’imbrication de macro. Modifiez le fichier source spécifié pour réduire la profondeur d’imbrication des macros.
+
+limite du compilateur : macros imbriquées trop profondément 'macro'
+
+Le fichier dépasse la limite du compilateur de ressources pour l’imbrication de la macro. Modifiez le fichier source spécifié pour diminuer la profondeur d’imbrication des macros.

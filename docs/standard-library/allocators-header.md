@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcda07b5d2ab499a769c389538e8f272fd8441a6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f860d90905c244327787182c40505207c4745201
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069168"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -68,23 +68,22 @@ où l’argument de modèle `Type` est le type géré par l’instance d’alloc
 
 Utilisez une instanciation d’allocateur appropriée comme deuxième argument de type quand vous créez un conteneur, comme dans l’exemple de code suivant.
 
-`#include <list>`
-
-`#include <allocators>`
-
-`std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`
+```cpp
+#include <list>
+#include <allocators>
+std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;
+```
 
 _List0 alloue des nœuds avec `allocator_chunklist` et le filtre de synchronisation par défaut.
 
 Utilisez la macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) pour créer des modèles d’allocateur avec des filtres de synchronisation autre que celui par défaut :
 
-`#include <list>`
-
-`#include <allocators>`
-
-`ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);`
-
-`std::list<int, alloc<int> > _List1;`
+```cpp
+#include <list>
+#include <allocators>
+ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);
+std::list<int, alloc<int> > _List1;
+```
 
 _Lst1 alloue des nœuds avec `allocator_chunklist` et le filtre de synchronisation [sync_per_thread](../standard-library/sync-per-thread-class.md).
 

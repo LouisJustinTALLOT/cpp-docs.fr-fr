@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e18c02909c247af4066033fc3e3633db74327f55
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 54700ad2a1eed391647a66a4c54a726b75e812f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069714"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,7 +54,7 @@ void _aligned_free (
 
 ### <a name="parameters"></a>Paramètres
 
-*memblock*  
+*memblock*<br/>
 Pointeur vers le bloc de mémoire qui a été retourné à la fonction `_aligned_malloc` ou `_aligned_offset_malloc`.
 
 ## <a name="remarks"></a>Notes
@@ -75,4 +75,4 @@ Pour plus d’informations, consultez [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Alignement des données](../../c-runtime-library/data-alignment.md)  
+[Alignement des données](../../c-runtime-library/data-alignment.md)

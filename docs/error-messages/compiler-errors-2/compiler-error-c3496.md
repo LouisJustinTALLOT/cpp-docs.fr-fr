@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3496 | Documents Microsoft
+title: Erreur du compilateur C3496 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbc128c1e9a80c61ad42514827bbf8d47b693e84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ec4602e6a0061f5eb750ab29587209a6c97985d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062291"
 ---
 # <a name="compiler-error-c3496"></a>Erreur du compilateur C3496
-'this' est toujours capturé par valeur : '&' ignoré  
-  
- Vous ne pouvez pas capturer le pointeur `this` par référence.  
-  
-### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
-  
--   Capturez le pointeur `this` par valeur.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C3496, car une référence au pointeur `this` se trouve dans la liste de capture d’une expression lambda :  
-  
-```  
-// C3496.cpp  
-// compile with: /c  
-  
-class C  
-{  
-   void f()  
-   {  
-      [&this] {}(); // C3496  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Expressions lambda](../../cpp/lambda-expressions-in-cpp.md)
+
+'this' est toujours capturé par valeur : '&' ignoré
+
+Vous ne pouvez pas capturer le pointeur `this` par référence.
+
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur
+
+- Capturez le pointeur `this` par valeur.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C3496, car une référence au pointeur `this` se trouve dans la liste de capture d’une expression lambda :
+
+```
+// C3496.cpp
+// compile with: /c
+
+class C
+{
+   void f()
+   {
+      [&this] {}(); // C3496
+   }
+};
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Expressions lambda](../../cpp/lambda-expressions-in-cpp.md)

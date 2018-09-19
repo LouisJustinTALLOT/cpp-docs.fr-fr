@@ -1,5 +1,5 @@
 ---
-title: LNK1140 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK1140 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0d59589a1882aca4ef2deb419e1e4f1081e52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f850360bc749a41e548cebae9f58f9fc7d3d420
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044702"
 ---
 # <a name="linker-tools-error-lnk1140"></a>Erreur des outils Éditeur de liens LNK1140
-trop de modules pour la base de données du programme ; Liez avec/PDB : NONE  
-  
- Le projet contient plus de 4096 modules.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.  
-  
-1.  Rétablir les liens à l’aide de [/PDB : NONE](../../build/reference/pdb-use-program-database.md).  
-  
-2.  Compilez certains modules sans informations de débogage.  
-  
-3.  Réduisez le nombre de modules.
+
+trop de modules pour la base de données du programme ; Liez avec/PDB : NONE
+
+Le projet contient des modules de plus de 4 096.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.
+
+1. Relier à l’aide de [/PDB : NONE](../../build/reference/pdb-use-program-database.md).
+
+1. Compilez certains modules sans informations de débogage.
+
+1. Réduire le nombre de modules.

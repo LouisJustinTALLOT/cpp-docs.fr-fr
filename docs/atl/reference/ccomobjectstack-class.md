@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3e29c3eed99c95ee92841413ceaca6e17e8565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 277951a5425a75c9769c5a2c4104421303f677c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065334"
 ---
 # <a name="ccomobjectstack-class"></a>Ccomobjectstack, classe
 
@@ -36,13 +36,13 @@ Cette classe crée un objet COM temporaire et il fournit une implémentation squ
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class  Base>  
+template <class  Base>
 class CComObjectStack : public Base
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*base de*  
+*base de*<br/>
 Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que toute autre interface souhaitées prendre en charge sur l’objet.
 
 ## <a name="members"></a>Membres
@@ -170,7 +170,7 @@ En mode débogage, appelle `_ASSERTE`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComAggObject, classe](../../atl/reference/ccomaggobject-class.md)   
-[CComObject, classe](../../atl/reference/ccomobject-class.md)   
-[Ccomobjectglobal, classe](../../atl/reference/ccomobjectglobal-class.md)   
+[CComAggObject, classe](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject, classe](../../atl/reference/ccomobject-class.md)<br/>
+[CComObjectGlobal, classe](../../atl/reference/ccomobjectglobal-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

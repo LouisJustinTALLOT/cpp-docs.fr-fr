@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9ad03df6a342d47919eb576227422f687d15b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f11c698b0f89e0584b673a112da10e82250cf5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035771"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -29,22 +29,22 @@ Le nom de la fonction identifiée par le troisième paramètre de la macro NOTIF
 
 ## <a name="syntax"></a>Syntaxe
 
-```  
+```cpp
 LRESULT NotifyHandler(
-    int idCtrl,  
-    LPNMHDR pnmh,  
+    int idCtrl,
+    LPNMHDR pnmh,
     BOOL& bHandled);
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*idCtrl*  
+*idCtrl*<br/>
 L’identificateur du contrôle qui envoie le message.
 
-*pnmh*  
+*pnmh*<br/>
 Adresse d’un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) structure qui contient le code de notification et des informations supplémentaires. Pour certains messages de notification, ce paramètre pointe vers une plus grande structure qui a le `NMHDR` structure en tant que son premier membre.
 
-*bHandled*  
+*bHandled*<br/>
 Les jeux de mappage de message *bHandled* sur TRUE avant *NotifyHandler* est appelée. Si *NotifyHandler* ne gère pas entièrement le message, il doit définir *bHandled* à **FALSE** pour indiquer le message nécessite un traitement supplémentaire.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -57,6 +57,6 @@ Pour obtenir un exemple de l’utilisation de ce gestionnaire de messages dans u
 
 ## <a name="see-also"></a>Voir aussi
 
-[Implémentation d’une fenêtre](../atl/implementing-a-window.md)   
-[Tables des messages](../atl/message-maps-atl.md)   
+[Implémentation d’une fenêtre](../atl/implementing-a-window.md)<br/>
+[Tables des messages](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

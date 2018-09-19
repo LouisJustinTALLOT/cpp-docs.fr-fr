@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7873b7006962449a40a8e67d118b6699ac61f263
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b90d8901a60b5945b2b29db2c378a0cd29939f63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059268"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Principes de base des objets ATL COM
 
@@ -57,30 +57,30 @@ Autres aspects de votre objet ATL COM sont gérés par d’autres classes :
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Implémentation de CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+[Implémentation de CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
 Afficher les entrées de mappage COM pour l’implémentation exemple `CComObjectRootEx`.
 
-[Implémentation de CComObject, CComAggObject et CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+[Implémentation de CComObject, CComAggObject et CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
 Explique comment la **macros DECLARE_\*_AGGREGATABLE** macros affectent l’utilisation de `CComObject`, `CComAggObject`, et `CComPolyObject`.
 
-[Prise en charge d’IDispatch et IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+[Prise en charge d’IDispatch et IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
 Répertorie les classes d’implémentation ATL à utiliser pour prendre en charge la `IDispatch` et `IErrorInfo` interfaces.
 
-[Prise en charge d’IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+[Prise en charge d’IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
 Décrit les étapes pour implémenter un point de connexion pour votre classe.
 
-[Modification de la fabrique de classe et du modèle d’agrégation par défaut](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+[Modification de la fabrique de classe et du modèle d’agrégation par défaut](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
 Afficher les macros à utiliser pour modifier le mode factory et d’agrégation de la classe par défaut.
 
-[Création d’un objet agrégé](../atl/creating-an-aggregated-object.md)  
+[Création d’un objet agrégé](../atl/creating-an-aggregated-object.md)<br/>
 Répertorie les étapes de création d’un objet agrégé.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Création d’un projet ATL](../atl/reference/creating-an-atl-project.md)  
+[Création d’un projet ATL](../atl/reference/creating-an-atl-project.md)<br/>
 Fournit des informations sur la création d’un objet COM ATL.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).
 
 ## <a name="see-also"></a>Voir aussi

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2152 | Documents Microsoft
+title: Erreur du compilateur C2152 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e241f918191547812854de9734995b9f0b10770
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3a2215e43573b08a69501edfbd0c7c86897fdd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064903"
 ---
 # <a name="compiler-error-c2152"></a>Erreur du compilateur C2152
-'identificateur' : pointeurs vers des fonctions avec des attributs différents  
-  
- Un pointeur vers une fonction avec une convention d’appel (`__cdecl`, `__stdcall`, ou `__fastcall`) est affectée à un pointeur vers une fonction avec une autre convention d’appel.
+
+'identificateur' : pointeurs vers des fonctions avec des attributs différents
+
+Un pointeur vers une fonction avec une convention d’appel (`__cdecl`, `__stdcall`, ou `__fastcall`) est affectée à un pointeur vers une fonction avec une autre convention d’appel.

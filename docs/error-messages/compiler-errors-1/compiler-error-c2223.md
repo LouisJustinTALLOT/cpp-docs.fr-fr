@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2223 | Documents Microsoft
+title: Erreur du compilateur C2223 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 330786ca92becb5132194e5e25104bdaaa58c129
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0ca3cd091b349536046b0ead8e52805db3dff9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067653"
 ---
 # <a name="compiler-error-c2223"></a>Erreur du compilateur C2223
-la partie gauche de '-> identificateur' doit pointer vers struct/union  
-  
- L’opérande à gauche de `->` n’est pas un pointeur vers une classe, structure ou union.  
-  
- Cette erreur peut résulter d’un opérande de gauche est une variable indéfinie (par conséquent, tapez `int`).
+
+la partie gauche de '-> identificateur' doit pointer vers struct/union
+
+L’opérande à gauche de `->` n’est pas un pointeur vers une classe, structure ou union.
+
+Cette erreur peut être provoquée par un opérande gauche est une variable non définie (par conséquent, tapez `int`).

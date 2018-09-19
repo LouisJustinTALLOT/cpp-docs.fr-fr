@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058495"
 ---
 # <a name="registry-macros"></a>Macros de Registre
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Paramètres
 
-*LIBID*  
+*LIBID*<br/>
 GUID de la bibliothèque de types.
 
 ### <a name="remarks"></a>Notes
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>Paramètres
 
-*class*  
+*class*<br/>
 [in] Inclus pour la compatibilité descendante.
 
-*pid*  
+*pid*<br/>
 [in] LPCTSTR qui est un identificateur de programme de spécifique à la version.
 
-*vpid*  
+*vpid*<br/>
 [in] LPCTSTR qui est un identificateur de programme indépendant de la version.
 
-*NID*  
+*NID*<br/>
 [in] UINT qui est un index de la chaîne de ressource dans le Registre à utiliser comme la description du programme.
 
-*flags*  
+*flags*<br/>
 [in] Un valeur DWORD contenant le modèle de thread du programme dans le Registre. Doit être une des valeurs suivantes : THREADFLAGS_APARTMENT, THREADFLAGS_BOTH ou AUTPRXFLAG.
 
 ### <a name="remarks"></a>Notes
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Paramètres
 
-*RESID*  
+*RESID*<br/>
 L’id de ressource du fichier .rgs qui contient des informations sur le *appid*.
 
-*ID d’application*  
+*ID d’application*<br/>
 GUID.
 
 ### <a name="remarks"></a>Notes
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Paramètres
 
-*x*  
+*x*<br/>
 [in] Identificateur de votre ressource de chaîne.
 
 ### <a name="remarks"></a>Notes
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Paramètres
 
-*x*  
+*x*<br/>
 [in] Identificateur généré par l’Assistant de votre ressource.
 
 ### <a name="remarks"></a>Notes

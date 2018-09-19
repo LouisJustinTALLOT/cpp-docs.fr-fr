@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2376 | Documents Microsoft
+title: Erreur du compilateur C2376 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83174f74b30cd7b1c945587f4cd790f9b88a10a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 978fc9044550be79f913180231799749cac97548
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060042"
 ---
 # <a name="compiler-error-c2376"></a>Erreur du compilateur C2376
-'fonction' : redéfinition ; allocation de base différente  
-  
- La fonction est déjà déclarée avec une allocation de base différente.
+
+'fonction' : redéfinition ; allocation de base différente
+
+La fonction est déjà déclarée avec une allocation de base différente.

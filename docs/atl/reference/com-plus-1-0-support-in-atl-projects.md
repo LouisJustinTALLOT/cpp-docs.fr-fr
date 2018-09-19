@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a9e6cd4a374f0941b360a3f8f24f61e4b46a6a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 64046eab403dca8da630c9c5324d320e0c79d4cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054296"
 ---
 # <a name="com-10-support-in-atl-projects"></a>Prise en charge COM + 1.0 dans les projets ATL
 
@@ -39,7 +39,7 @@ Si vous sélectionnez le **prise en charge COM + 1.0** case à cocher, vous pouv
 
 ## <a name="see-also"></a>Voir aussi
 
-[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
-[Programmation avec ATL et le Code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)
 

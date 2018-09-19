@@ -1,5 +1,5 @@
 ---
-title: Lock::operator ! = | Documents Microsoft
+title: Lock::operator ! = | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6b34eb410e05bd102f7a10205e57b3731b8f476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca39249a73df4519c741182827036158169fd3ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130345"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043012"
 ---
 # <a name="lockoperator"></a>lock::operator!=
 Opérateur d’inégalité.  
@@ -39,11 +39,11 @@ template<class T> bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `t`  
- Objet à comparer en termes d’inégalité.  
+*t*<br/>
+L’objet pour lequel comparer l’inégalité.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne `true` si `t` diffère objet du verrou, `false` dans le cas contraire.  
+ Retourne `true` si `t` diffère, objet du verrou, `false` dans le cas contraire.  
   
 ## <a name="example"></a>Exemple  
   
@@ -70,7 +70,7 @@ int main () {
 Inequal!  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\lock.h >  
   
  **Namespace** msclr  

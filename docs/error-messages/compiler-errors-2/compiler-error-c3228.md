@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3228 | Documents Microsoft
+title: Erreur du compilateur C3228 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c949aef15e9049f47b68094ae89b297bee1fc700
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1818cbae07af904a468447e16fcb95384e5dcd17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248994"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054686"
 ---
 # <a name="compiler-error-c3228"></a>Erreur du compilateur C3228
-'function' : l’argument de type générique de 'param' ne peut pas être 'type', il doit s’agir d’un type valeur ou d’un type de handle  
-  
- Un type incorrect a été transmis comme argument de type générique.  
-  
- L’exemple suivant génère l’erreur C3228 :  
-  
-```  
-// C3228.cpp  
-// compile with: /clr  
-class A {};  
-  
-value class B {};  
-  
-generic <class T>  
-void Test() {}  
-  
-ref class C {  
-public:  
-   generic <class T>  
-   static void f() {}  
-};  
-  
-int main() {  
-   C::f<A>();   // C3228  
-   C::f<B>();   // OK  
-  
-   Test<C>();   // C3228  
-   Test<C ^>();   // OK  
-}  
+
+'function' : l’argument de type générique de 'param' ne peut pas être 'type', il doit s’agir d’un type valeur ou d’un type de handle
+
+Un type incorrect a été transmis comme argument de type générique.
+
+L’exemple suivant génère l’erreur C3228 :
+
+```
+// C3228.cpp
+// compile with: /clr
+class A {};
+
+value class B {};
+
+generic <class T>
+void Test() {}
+
+ref class C {
+public:
+   generic <class T>
+   static void f() {}
+};
+
+int main() {
+   C::f<A>();   // C3228
+   C::f<B>();   // OK
+
+   Test<C>();   // C3228
+   Test<C ^>();   // OK
+}
 ```

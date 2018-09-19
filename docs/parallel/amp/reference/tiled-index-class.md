@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069415"
 ---
 # <a name="tiledindex-class"></a>tiled_index, classe
 Fournit un index dans un [tiled_extent](tiled-extent-class.md) objet. Cette classe possède des propriétés pour accéder aux éléments par rapport à l’origine de la vignette local et par rapport à l’origine globale. Pour plus d’informations sur les espaces en mosaïque, consultez [à l’aide de vignettes](../../../parallel/amp/using-tiles.md).  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_Dim0`  
- La longueur de la dimension la plus significative.  
+*_Dim0*<br/>
+La longueur de la dimension la plus significative.  
   
- `_Dim1`  
- La longueur de la prochaine-à-dimension la plus significative.  
+*_Dim1*<br/>
+La longueur de la prochaine-à-dimension la plus significative.  
   
- `_Dim2`  
- La longueur de la dimension la moins significative.  
+*_Dim2*<br/>
+La longueur de la dimension la moins significative.  
   
 ## <a name="members"></a>Membres  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_Global`  
- Global [index](index-class.md) de construit `tiled_index`.  
+*_Global*<br/>
+Global [index](index-class.md) de construit `tiled_index`.  
   
- `_Local`  
- Local [index](index-class.md) de construit `tiled_index`  
+*_Locale*<br/>
+Local [index](index-class.md) de construit `tiled_index`  
   
- `_Tile`  
- La vignette [index](index-class.md) de construit `tiled_index`  
+*_Tile*<br/>
+La vignette [index](index-class.md) de construit `tiled_index`  
   
- `_Tile_origin`  
- L’origine de la vignette [index](index-class.md) de construit `tiled_index`  
+*_Tile_origin*<br/>
+L’origine de la vignette [index](index-class.md) de construit `tiled_index`  
   
- `_Barrier`  
- Le [tile_barrier](tile-barrier-class.md) objet de construit `tiled_index`.  
+*_Barrier*<br/>
+Le [tile_barrier](tile-barrier-class.md) objet de construit `tiled_index`.  
   
- `_Other`  
- Le `tile_index` objet doit être copié vers construit `tiled_index`.  
+*_Autre*<br/>
+Le `tile_index` objet doit être copié vers construit `tiled_index`.  
   
 ## <a name="overloads"></a>Overloads  
   

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2174 | Documents Microsoft
+title: Erreur du compilateur C2174 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d11c4234bd4e1343198658b1dfcada556b0e1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a7dc9cee6bf24f4605455818a32bd757bcd60c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052370"
 ---
 # <a name="compiler-error-c2174"></a>Erreur du compilateur C2174
-'fonction' : le paramètre réel a 'void 'comme type : paramètre number1, number2 de liste de paramètres  
-  
- Paramètre `number1` passé à la liste de paramètres `number2` est un `void` paramètre. Les paramètres ne peuvent pas avoir de type `void`. Utilisez plutôt `void*`.
+
+'fonction' : le paramètre réel a le type 'void' : paramètre nombre1, nombre2 de liste de paramètre
+
+Paramètre `number1` passé à la liste de paramètres `number2` est un `void` paramètre. Les paramètres ne peut pas avoir de type `void`. Utilisez plutôt `void*`.

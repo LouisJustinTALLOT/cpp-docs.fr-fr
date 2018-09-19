@@ -1,5 +1,5 @@
 ---
-title: unsupported_feature, classe | Documents Microsoft
+title: unsupported_feature, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ccc811e3459fe668b6a8dbd255007cb60bf0cf1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7472e8fa8932983569ad9e2a9c1fe6cdfc9318b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059678"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature, classe
 Exception levée lorsqu’une fonctionnalité non prise en charge est utilisée.  
@@ -52,7 +52,7 @@ class unsupported_feature : public runtime_exception;
   
 ## <a name="unsupported_feature__ctor"></a> unsupported_feature 
 
-  Construit une nouvelle instance de l’exception d’unsupported_feature.  
+  Construit une nouvelle instance de l’exception unsupported_feature.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -64,13 +64,13 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Message`  
- Description de l'erreur.  
+*_Message*<br/>
+Description de l'erreur.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Objet `unsupported_feature`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amprt.h  
   
  **Espace de noms :** Concurrency  

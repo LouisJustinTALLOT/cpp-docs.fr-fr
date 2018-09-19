@@ -1,5 +1,5 @@
 ---
-title: Avertissement BSCMAKE BK4502 | Documents Microsoft
+title: Avertissement BSCMAKE BK4502 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ed7145c28b10885dc6edf0c399478aea4503ca0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4142993b3f4f5bda2b3e4ce322aa26d7beca8584
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296248"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056324"
 ---
 # <a name="bscmake-warning-bk4502"></a>Avertissement BSCMAKE BK4502
-tronqué. SBR 'nom_fichier ' pas de nom de fichier  
-  
- Un fichier .sbr de longueur nulle qui ne faisait pas partie du fichier .bsc a été spécifié pendant une mise à jour.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes  
-  
-1.  Nom de fichier incorrect spécifié.  
-  
-2.  Fichier a été supprimé. (Erreur [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) résultats.)  
-  
-3.  Fichier endommagé, BSCMAKE nécessaire pour effectuer une génération complète.
+
+tronqué. SBR 'nom_fichier ' pas de nom de fichier
+
+Un fichier .sbr de longueur nulle qui ne faisait pas partie du fichier .bsc a été spécifié pendant une mise à jour.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes
+
+1. Nom de fichier incorrect spécifié.
+
+1. Fichier a été supprimé. (Erreur [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) résultats.)
+
+1. Fichier endommagé, BSCMAKE nécessaire pour effectuer une génération complète.

@@ -1,5 +1,5 @@
 ---
-title: Erreur d’exécution de C R6033 | Documents Microsoft
+title: Erreur Runtime C R6033 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed66dec4f4eb17378c9901439be2ad1449597a93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb107dcd2bd044ad6fb933869319bb7afd5aab72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049798"
 ---
-# <a name="c-runtime-error-r6033"></a>Erreur d’exécution de C R6033
-Essayez d’utiliser le code MSIL de cet assembly lors de l’initialisation du code natif. Cela indique un bogue dans votre application. Il est très probablement le résultat de l’appel à un MSIL compilé (/ clr) à partir d’un constructeur natif ou de DllMain (fonction).  
-  
+# <a name="c-runtime-error-r6033"></a>Erreur Runtime C R6033
+
+Essayez d’utiliser le code MSIL de cet assembly pendant l’initialisation du code natif. Cela indique un bogue dans votre application. Il est très probablement le résultat de l’appel d’un code MSIL compilé (/ clr) à partir d’un constructeur natif ou de DllMain (fonction).
+
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Cette erreur peut être provoquée par un bogue dans l’application, ou par un bogue dans un complément ou une extension qu’il utilise.  
->   
->  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :  
->   
->  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.  
-> -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** supprimer, réparer ou réinstaller les extensions ou les compléments.  
-> -   Vérifiez **mise à jour Windows** dans les **le panneau de configuration** pour les mises à jour logicielles.  
-> -   Recherchez une version mise à jour de l’application. Si le problème persiste, contactez le fournisseur de l’application.  
-  
- **Informations pour les programmeurs**  
-  
- Ce diagnostic indique que des instructions MSIL s’exécutaient lors du verrouillage du chargeur. Cela peut se produire si vous avez compilé le code C++ natif à l’aide de l’indicateur/CLR. Utilisez uniquement l’indicateur/CLR sur les modules qui contiennent du code managé. Pour plus d’informations, consultez [l’initialisation d’assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md).
+>  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Cette erreur peut être provoquée par un bogue dans l’application ou par un bogue dans un complément ou une extension qu’il utilise.
+>
+>  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
+>
+>  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
+> -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** à supprimer, réparer ou réinstaller des extensions ou des compléments.
+> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
+> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+
+**Informations pour les programmeurs**
+
+Ce diagnostic indique que des instructions MSIL sont exécutaient pendant le verrouillage du chargeur. Cela peut se produire si vous avez compilé le code C++ natif à l’aide de l’indicateur/CLR. Utilisez uniquement l’indicateur/CLR sur les modules qui contiennent du code managé. Pour plus d’informations, consultez [l’initialisation des assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md).

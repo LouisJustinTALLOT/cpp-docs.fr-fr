@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070156"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase, classe
 
@@ -41,13 +41,13 @@ Cette classe fournit une base pour les classes de pointeur intelligent à l’ai
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Le type d’objet devant être référencé par le pointeur intelligent.
 
 ## <a name="members"></a>Membres
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnk*  
+*pUnk*<br/>
 Un pointeur vers le client `IUnknown`.
 
-*IID*  
+*IID*<br/>
 Le GUID du point de connexion. En règle générale, cela est identique à l’interface sortante managée par le point de connexion.
 
-*PDW*  
+*PDW*<br/>
 Pointeur vers le cookie qui identifie de façon unique la connexion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*P2*  
+*P2*<br/>
 Le `CComPtrBase` objet prendra possession de ce pointeur.
 
 ### <a name="remarks"></a>Notes
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>Paramètres
 
-*szProgID*  
+*szProgID*<br/>
 Pointeur vers un ProgID, utilisé pour récupérer le CLSID.
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Si NULL, indique que l’objet n’est pas créé en tant que partie d’un agrégat. Si non NULL, est un pointeur vers l’objet d’agrégation `IUnknown` interface (le contrôle `IUnknown`).
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Contexte dans lequel s’exécutera le code qui gère l’objet nouvellement créé.
 
-*rclsid*  
+*rclsid*<br/>
 CLSID associé aux données et au code qui sera utilisé pour créer l’objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*ppT*  
+*ppT*<br/>
 Adresse de la variable qui reçoit le `CComPtrBase` pointeur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pOther*  
+*pOther*<br/>
 `IUnknown *` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pT*  
+*pT*<br/>
 Pointeur vers un objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*pT*  
+*pT*<br/>
 Pointeur vers un objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -345,7 +345,7 @@ Retourne la valeur true si le pointeur est géré par l’objet actuel est infé
 
 L’opérateur de cast.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Paramètres
 
-*Q*  
+*Q*<br/>
 Le type d’objet dont pointeur d’interface est nécessaire.
 
-*PP*  
+*PP*<br/>
 Adresse de variable de sortie qui reçoit le pointeur d’interface demandé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*punkParent*  
+*punkParent*<br/>
 Un pointeur vers le `IUnknown` interface du parent.
 
 ### <a name="return-value"></a>Valeur de retour

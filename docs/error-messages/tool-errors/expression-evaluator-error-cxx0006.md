@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0006 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0006 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636708042b2291e4edd295baa0da1ffb57dde4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c44f950955db71e2f81873513a9052e345799d4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300239"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070260"
 ---
 # <a name="expression-evaluator-error-cxx0006"></a>Évaluateur d'expression, erreur CXX0006
-parenthèse ouvrante manquante  
-  
- Parenthèses non équilibrées ont été trouvés dans l’expression. Tapez à nouveau l’expression entre parenthèses à charge équilibrée.  
-  
- Cette erreur est identique à CAN0006.
+
+parenthèse gauche manquante
+
+Non concordance des parenthèses ont été trouvés dans l’expression. Retapez l’expression entre parenthèses à charge équilibrée.
+
+Cette erreur est identique à CAN0006.

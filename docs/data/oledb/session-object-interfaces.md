@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8208a372989fac5fa7c7b0c13b83eb27a4d1444b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e8c641cc543f213b6c81950c22b97f25b31d6c4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057326"
 ---
 # <a name="session-object-interfaces"></a>Interfaces de l'objet session
+
 Le tableau suivant montre les interfaces obligatoires et facultatives définies par OLE DB pour un objet de session.  
   
 |Interface|Obligatoire ?|Implémentée par les modèles OLE DB ?|  
@@ -50,9 +51,10 @@ Le tableau suivant montre les interfaces obligatoires et facultatives définies 
 |[ITransactionLocal](/previous-versions/windows/desktop/ms714893\(v=vs.85\))|Facultatif|Non|  
 |[ITransactionObject](/previous-versions/windows/desktop/ms713659\(v=vs.85\))|Facultatif|Non|  
   
- L’objet session crée un objet d’ensemble de lignes. Si le fournisseur prend en charge les commandes, la session crée également un objet de commande (`CCommand`, implémentation OLE DB `TCommand`). Implémente l’objet de commande le `ICommand` interface et utilise le `ICommand::Execute` méthode à exécuter des commandes sur l’ensemble de lignes, comme indiqué dans l’illustration suivante.  
+L’objet session crée un objet d’ensemble de lignes. Si le fournisseur prend en charge les commandes, la session crée également un objet de commande (`CCommand`, implémentation OLE DB `TCommand`). Implémente l’objet de commande le `ICommand` interface et utilise le `ICommand::Execute` méthode à exécuter des commandes sur l’ensemble de lignes, comme indiqué dans l’illustration suivante.  
   
- ![Diagramme conceptuel des fournisseurs](../../data/oledb/media/vc4u551.gif "vc4u551")  
+![Diagramme conceptuel des fournisseurs](../../data/oledb/media/vc4u551.gif "vc4u551")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2577 | Documents Microsoft
+title: Erreur du compilateur C2577 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4fb6d5a2d7621df1b11e9040ca7dd4f5551289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d9a2b09fc9b8b15c4fc21f5eb537f18f5d3b03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232049"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065814"
 ---
 # <a name="compiler-error-c2577"></a>Erreur du compilateur C2577
-'membre' : destructeur/finaliseur ne peut pas avoir un type de retour  
-  
- Un destructeur ou un finaliseur ne peut pas retourner une valeur de `void` ou tout autre type. Supprimer la `return` instruction à partir de la définition du destructeur.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C2577.  
-  
-```  
-// C2577.cpp  
-// compile with: /c  
-class A {  
-public:  
-   A() {}  
-   ~A(){  
-      return 0;   // C2577  
-   }  
-};  
+
+'membre' : destructeur/finaliseur ne peut pas avoir un type de retour
+
+Un destructeur ou un finaliseur ne peut pas retourner une valeur de `void` ou tout autre type. Supprimer la `return` instruction à partir de la définition du destructeur.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère C2577.
+
+```
+// C2577.cpp
+// compile with: /c
+class A {
+public:
+   A() {}
+   ~A(){
+      return 0;   // C2577
+   }
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3611 | Documents Microsoft
+title: Erreur du compilateur C3611 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd09d86eac5e6182adb9f012c0e450b92d410b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bc7f1f96e774c7b0dd9df2f760d9c45a522de1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039645"
 ---
 # <a name="compiler-error-c3611"></a>Erreur du compilateur C3611
-'fonction' : une fonction sealed ne peut pas avoir de spécificateur pure  
-  
- Une fonction sealed a été déclarée de manière incorrecte.  Pour plus d’informations, consultez [sealed](../../windows/sealed-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C3611.  
-  
-```  
-// C3611.cpp  
-// compile with: /clr /c  
-  
-ref struct V {  
-   virtual void Test() sealed = 0;   // C3611  
-   virtual void Test2() sealed;   // OK  
-   virtual void Test3() = 0;   // OK  
-};  
+
+'fonction' : une fonction sealed ne peut pas avoir de spécificateur pure
+
+Une fonction sealed a été correctement déclarée.  Pour plus d’informations, consultez [sealed](../../windows/sealed-cpp-component-extensions.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère C3611.
+
+```
+// C3611.cpp
+// compile with: /clr /c
+
+ref struct V {
+   virtual void Test() sealed = 0;   // C3611
+   virtual void Test2() sealed;   // OK
+   virtual void Test3() = 0;   // OK
+};
 ```

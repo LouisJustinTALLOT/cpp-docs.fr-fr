@@ -21,26 +21,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e395bcb32858bc63b3e848f20a7d794156876e26
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ca1913376ef4b1e6afc19be81ce7814ce92699c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071937"
 ---
 # <a name="naked-function-calls"></a>Appels de fonction naked
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- Les fonctions déclarées avec le **naked** attribut sont émises sans code de prologue ni d’épilogue, ce qui vous permet d’écrire vos propres séquences personnalisées de prologue/épilogue à l’aide de la [assembleur inline](../assembler/inline/inline-assembler.md). Les fonctions naked sont fournies en tant que fonctionnalité avancée. Elles vous permettent de déclarer une fonction appelée à partir d'un contexte autre que C/C++, et ainsi de faire des hypothèses différentes quant à l'emplacement où se trouvent les paramètres ou sur les registres qui sont conservés. Il s'agit par exemple de routines telles que les gestionnaires d'interruptions. Cette fonctionnalité est particulièrement utile pour les rédacteurs de pilotes de périphériques virtuels (VxDs).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
-  
--   [naked](../cpp/naked-cpp.md)  
-  
--   [Règles et limitations concernant les fonctions naked](../cpp/rules-and-limitations-for-naked-functions.md)  
-  
--   [Considérations sur l’écriture de code de prologue/épilogue](../cpp/considerations-for-writing-prolog-epilog-code.md)  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [Conventions d’appel](../cpp/calling-conventions.md)
+
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+
+Les fonctions déclarées avec le **naked** attribut sont émises sans code de prologue ni d’épilogue, ce qui vous permet d’écrire vos propres séquences personnalisées de prologue/épilogue à l’aide de la [assembleur inline](../assembler/inline/inline-assembler.md). Les fonctions naked sont fournies en tant que fonctionnalité avancée. Elles vous permettent de déclarer une fonction appelée à partir d'un contexte autre que C/C++, et ainsi de faire des hypothèses différentes quant à l'emplacement où se trouvent les paramètres ou sur les registres qui sont conservés. Il s'agit par exemple de routines telles que les gestionnaires d'interruptions. Cette fonctionnalité est particulièrement utile pour les rédacteurs de pilotes de périphériques virtuels (VxDs).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
+
+- [naked](../cpp/naked-cpp.md)
+
+- [Règles et limitations concernant les fonctions naked](../cpp/rules-and-limitations-for-naked-functions.md)
+
+- [Considérations sur l’écriture de code de prologue/épilogue](../cpp/considerations-for-writing-prolog-epilog-code.md)
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[Conventions d’appel](../cpp/calling-conventions.md)

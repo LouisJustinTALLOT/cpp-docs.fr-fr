@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b6e62f90cfca34e92d76294e7deb5e79e8dbd12
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d7bfd2690cf8f1ed692e6e21bf05b56e2280ce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756007"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055661"
 ---
 # <a name="supporting-idispeventimpl"></a>Prise en charge d’IDispEventImpl
 
@@ -70,13 +70,12 @@ Dans l’ordre pour les notifications d’événements à être gérées par la 
 
 ATL fournit plusieurs macros, [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map), [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map), et [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex), qui rendent ce mappage plus facile. Le format standard est la suivante :
 
-`BEGIN_SINK_MAP(comClass)`
-
-`SINK_ENTRY_EX(id, iid, dispid, func)`
-
-`. . . //additional external event entries`
-
-`END_SINK_MAP()`
+```cpp
+BEGIN_SINK_MAP(comClass)
+  SINK_ENTRY_EX(id, iid, dispid, func)
+  . . . //additional external event entries
+END_SINK_MAP()
+```
 
 L’exemple suivant déclare une table de récepteur d’événements avec deux gestionnaires d’événements :
 

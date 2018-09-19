@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable C1037 | Documents Microsoft
+title: Erreur irrécupérable C1037 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12c6720219a638d15b1b7bf684531dfe4d752d49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8091eb7316531c6bdda9bf714ec7a195b5406182
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047679"
 ---
 # <a name="fatal-error-c1037"></a>Erreur irrécupérable C1037
-impossible d’ouvrir le fichier objet 'nom_fichier'  
-  
- Le fichier objet spécifié par [/Fo](../../build/reference/fo-object-file-name.md) ne peut pas être ouvert.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes  
-  
-1.  Nom de fichier non valide.  
-  
-2.  Mémoire insuffisante pour ouvrir le fichier.  
-  
-3.  Un autre processus utilise le fichier.  
-  
-4.  Un fichier en lecture seule porte le même nom.  
-  
+
+impossible d’ouvrir le fichier objet 'nom_fichier'
+
+Le fichier objet spécifié par [/Fo](../../build/reference/fo-object-file-name.md) ne peut pas être ouvert.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes
+
+1. Nom de fichier non valide.
+
+1. Mémoire insuffisante pour ouvrir le fichier.
+
+1. Un autre processus utilise le fichier.
+
+1. Un fichier en lecture seule porte le même nom.
+

@@ -14,35 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68920a47971f260cbdd11224edd5d8e8b70a0f07
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f5dbe30a7775413a44a163bec13d1d7d3a1e0dae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058560"
 ---
 # <a name="types-of-expressions"></a>Types d'expressions
-Les expressions C++ sont classées en plusieurs catégories :  
-  
--   [Expressions primaires](../cpp/primary-expressions.md). Ce sont les blocs de construction à partir desquels toutes les autres expressions sont formées.  
-  
--   [Expressions suffixées](../cpp/postfix-expressions.md). Ce sont des expressions primaires suivies d'un opérateur, telles que l'indice de tableau ou l'opérateur d'incrémentation suffixé.  
-  
--   [Expressions formées avec des opérateurs unaires](../cpp/expressions-with-unary-operators.md). Les opérateurs unaires agissent sur un seul opérande dans une expression.  
-  
--   [Expressions formées avec des opérateurs binaires](../cpp/expressions-with-binary-operators.md). Les opérateurs binaires agissent sur deux opérandes dans une expression.  
-  
--   [Expressions avec l’opérateur conditionnel](../cpp/conditional-operator-q.md). L’opérateur conditionnel est un opérateur ternaire (le seul opérateur de ce type en langage C++) et il accepte trois opérandes.  
-  
--   [Expressions constantes](../cpp/cpp-constant-expressions.md). Les expressions constantes sont constituées entièrement de données constantes.  
-  
--   [Expressions avec conversions de type explicite](explicit-type-conversion-operator-parens.md). Des conversions de type explicite, ou « casts », peuvent être utilisées dans les expressions.  
-  
--   [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).  
-  
--   [Conversion](../cpp/casting.md). Des « casts » de type sécurisé peuvent être utilisés dans les expressions.  
-  
--   [Informations de Type au moment de l’exécution](../cpp/run-time-type-information.md). Déterminez le type d'un objet pendant l'exécution du programme.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Expressions](../cpp/expressions-cpp.md)
+
+Les expressions C++ sont classées en plusieurs catégories :
+
+- [Expressions primaires](../cpp/primary-expressions.md). Ce sont les blocs de construction à partir desquels toutes les autres expressions sont formées.
+
+- [Expressions suffixées](../cpp/postfix-expressions.md). Ce sont des expressions primaires suivies d'un opérateur, telles que l'indice de tableau ou l'opérateur d'incrémentation suffixé.
+
+- [Expressions formées avec des opérateurs unaires](../cpp/expressions-with-unary-operators.md). Les opérateurs unaires agissent sur un seul opérande dans une expression.
+
+- [Expressions formées avec des opérateurs binaires](../cpp/expressions-with-binary-operators.md). Les opérateurs binaires agissent sur deux opérandes dans une expression.
+
+- [Expressions avec l’opérateur conditionnel](../cpp/conditional-operator-q.md). L’opérateur conditionnel est un opérateur ternaire (le seul opérateur de ce type en langage C++) et il accepte trois opérandes.
+
+- [Expressions constantes](../cpp/cpp-constant-expressions.md). Les expressions constantes sont constituées entièrement de données constantes.
+
+- [Expressions avec conversions de type explicite](explicit-type-conversion-operator-parens.md). Des conversions de type explicite, ou « casts », peuvent être utilisées dans les expressions.
+
+- [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).
+
+- [Conversion](../cpp/casting.md). Des « casts » de type sécurisé peuvent être utilisés dans les expressions.
+
+- [Informations de Type au moment de l’exécution](../cpp/run-time-type-information.md). Déterminez le type d'un objet pendant l'exécution du programme.
+
+## <a name="see-also"></a>Voir aussi
+
+[Expressions](../cpp/expressions-cpp.md)

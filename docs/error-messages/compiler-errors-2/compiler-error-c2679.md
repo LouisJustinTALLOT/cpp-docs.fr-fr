@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2679 | Documents Microsoft
+title: Erreur du compilateur C2679 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24a304d88ccc6044c5358759efffa2a38dfeaf67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a01a79dfdff06c50b65bde33de62676e6df64a82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069493"
 ---
 # <a name="compiler-error-c2679"></a>Erreur du compilateur C2679
-'opérateur' binaire : aucun opérateur ne trouvé qui accepte un opérande de droite de type 'type' (ou il n’existe aucune conversion acceptable)  
-  
- Pour utiliser l'opérateur, vous devez le surcharger pour le type spécifié ou définir une conversion vers un type pour lequel l'opérateur est défini.  
-  
- L’exemple suivant génère l’erreur C2679 :  
-  
-```  
-// C2679.cpp  
-class C {  
-public:  
-   C();   // no constructor with an int argument  
-} c;  
-  
-class D {  
-public:  
-   D(int) {}  
-   D(){}  
-} d;  
-  
-int main() {  
-   c = 10;   // C2679  
-   d = 10;   // OK  
-}  
+
+'opérateur' binaire : aucun opérateur ne trouvé qui accepte un opérande de droite de type 'type' (ou il n’existe aucune conversion acceptable)
+
+Pour utiliser l'opérateur, vous devez le surcharger pour le type spécifié ou définir une conversion vers un type pour lequel l'opérateur est défini.
+
+L’exemple suivant génère l’erreur C2679 :
+
+```
+// C2679.cpp
+class C {
+public:
+   C();   // no constructor with an int argument
+} c;
+
+class D {
+public:
+   D(int) {}
+   D(){}
+} d;
+
+int main() {
+   c = 10;   // C2679
+   d = 10;   // OK
+}
 ```

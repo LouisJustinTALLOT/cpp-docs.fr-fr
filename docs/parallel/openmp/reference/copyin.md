@@ -1,5 +1,5 @@
 ---
-title: copyin | Documents Microsoft
+title: copyin | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688243"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059327"
 ---
 # <a name="copyin"></a>copyin
 Permet aux threads d’accéder à valeur du thread principal, pour un [threadprivate](../../../parallel/openmp/reference/threadprivate.md) variable.  
@@ -32,11 +32,10 @@ Permet aux threads d’accéder à valeur du thread principal, pour un [threadpr
 copyin(var)  
 ```  
   
-## <a name="remarks"></a>Notes  
- où,  
+## <a name="parameters"></a>Paramètres
   
- `var`  
- Le `threadprivate` variable qui sera initialisée avec la valeur de la variable dans le thread principal, tel qu’il existe avant la construction parallèle.  
+*var*<br/>
+Le `threadprivate` variable qui sera initialisé avec la valeur de la variable dans le thread principal, tel qu’il existe avant la construction parallèle.  
   
 ## <a name="remarks"></a>Notes  
  `copyin` s’applique aux directives suivantes :  

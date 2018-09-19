@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4429 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4429 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d4812fb1eefdd4364376288f063a6bf8b5dddf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19e10806ffa601caa4212b5e5f98b823ec8941d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049219"
 ---
 # <a name="compiler-warning-level-4-c4429"></a>Avertissement du compilateur (niveau 4) C4429
-possible incomplet ou incorrectement formé universel-nom de caractère  
-  
- Le compilateur a détecté une séquence de caractères qui peut être un nom de caractère universel incorrect. Un nom de caractère universel est `\u` suivie de quatre chiffres hexadécimaux, ou `\U` suivie de huit chiffres hexadécimaux.  
-  
- L’exemple suivant génère C4429 :  
-  
-```  
-// C4429.cpp  
-// compile with: /W4 /WX  
-int \ug0e4 = 0;   // C4429  
-// Try the following line instead:  
-// int \u00e4 = 0;   // OK, a well-formed universal character name.  
+
+possible incomplet ou incorrectement formé universel-nom de caractère
+
+Le compilateur a détecté une séquence de caractères qui peut être un nom de caractère universel formés de manière incorrecte. Un nom de caractère universel est `\u` suivie de quatre chiffres hexadécimaux, ou `\U` suivie à huit chiffres hexadécimaux.
+
+L’exemple suivant génère C4429 :
+
+```
+// C4429.cpp
+// compile with: /W4 /WX
+int \ug0e4 = 0;   // C4429
+// Try the following line instead:
+// int \u00e4 = 0;   // OK, a well-formed universal character name.
 ```

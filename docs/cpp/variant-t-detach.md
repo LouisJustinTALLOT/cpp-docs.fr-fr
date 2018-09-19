@@ -19,31 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fc4bd5186ade5efaa9c4fa8e9f567f37509039
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 4ab1e4f83025dcc3e4bc65274746e0617cf31b5b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065021"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
-**Section spécifique à Microsoft**  
-  
- Détache encapsulé `VARIANT` objet à partir de ce `_variant_t` objet.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-VARIANT Detach( );  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Encapsulé `VARIANT`.  
-  
-## <a name="remarks"></a>Notes  
- Extrait et retourne encapsulé `VARIANT`, puis efface alors cet `_variant_t` objet sans le détruire. Cette fonction membre supprime le `VARIANT` d’encapsulation et définit le `VARTYPE` de ce `_variant_t` objet avec la valeur VT_EMPTY. Il vous incombe de libérer retourné `VARIANT` en appelant le [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) (fonction).  
-  
- **FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [_variant_t, classe](../cpp/variant-t-class.md)
+
+**Section spécifique à Microsoft**
+
+Détache encapsulé `VARIANT` objet à partir de ce `_variant_t` objet.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+VARIANT Detach( );
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Encapsulé `VARIANT`.
+
+## <a name="remarks"></a>Notes
+
+Extrait et retourne encapsulé `VARIANT`, puis efface alors cet `_variant_t` objet sans le détruire. Cette fonction membre supprime le `VARIANT` d’encapsulation et définit le `VARTYPE` de ce `_variant_t` objet avec la valeur VT_EMPTY. Il vous incombe de libérer retourné `VARIANT` en appelant le [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) (fonction).
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[_variant_t, classe](../cpp/variant-t-class.md)

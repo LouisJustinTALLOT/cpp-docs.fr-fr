@@ -1,5 +1,5 @@
 ---
-title: PRJ0034 d’erreur de Build de projet | Documents Microsoft
+title: Erreur de génération PRJ0034 de projet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a65ca2c53ba2801f861471c66f7e1f2ec8766345
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b271875173bf0e55d94989d60a1c8f7aaf408b2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065580"
 ---
 # <a name="project-build-error-prj0034"></a>Erreur de génération de projet PRJ0034
-La propriété 'Dépendances supplémentaires' pour personnalisée au niveau du projet étape de génération contenait 'macro' dont l’évaluation donne 'expansion_macro'.  
-  
- Une étape de génération personnalisée sur un projet contenait une erreur dans ses dépendances supplémentaires, probablement en raison d’un problème d’évaluation de macro. Cette erreur peut aussi signifier que le chemin d’accès est incorrect, contenant des caractères ou des combinaisons de caractères qui ne sont pas autorisés dans un chemin d’accès de fichier.  
-  
- Pour résoudre cette erreur, corrigez la macro ou corrigez la spécification de chemin d’accès. Le chemin d’accès évalué est un chemin d’accès absolu du répertoire de projet.
+
+La propriété 'Dépendances supplémentaires' pour personnalisé au niveau du projet étape de génération contenait 'macro' dont l’évaluation donne 'expansion_macro'.
+
+Une étape de génération personnalisée sur un projet contenait une erreur dans ses dépendances supplémentaires, probablement en raison d’un problème d’évaluation de macros. Cette erreur peut aussi signifier que le chemin d’accès est incorrect, contenant des caractères ou des combinaisons de caractères qui ne sont pas autorisés dans un chemin d’accès de fichier.
+
+Pour résoudre cette erreur, corrigez la macro ou corriger la spécification de chemin d’accès. Le chemin d’accès évaluée est un chemin d’accès absolu du répertoire du projet.

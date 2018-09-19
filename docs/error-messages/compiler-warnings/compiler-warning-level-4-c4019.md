@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4019 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4019 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d015b5674ad8f64a68b86979ce93313fa098c867
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48915f72acdaf0b02acd04de38f10fcdb2a20e93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065314"
 ---
 # <a name="compiler-warning-level-4-c4019"></a>Avertissement du compilateur (niveau 4) C4019
-instruction vide au niveau de la portée globale  
-  
- Un point-virgule compris dans une portée globale n’est pas précédé d’une instruction.  
-  
- Cet avertissement peut être résolu si vous supprimez le point-virgule supplémentaire.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// C4019.c  
-// compile with: /Za /W4  
-#define declint( varname ) int varname;  
-declint( a );   // C4019, int a;;  
-declint( b )   // OK, int b;  
-  
-int main()  
-{  
-}  
+
+instruction vide au niveau de la portée globale
+
+Un point-virgule compris dans une portée globale n’est pas précédé d’une instruction.
+
+Cet avertissement peut être résolu si vous supprimez le point-virgule supplémentaire.
+
+## <a name="example"></a>Exemple
+
+```
+// C4019.c
+// compile with: /Za /W4
+#define declint( varname ) int varname;
+declint( a );   // C4019, int a;;
+declint( b )   // OK, int b;
+
+int main()
+{
+}
 ```
