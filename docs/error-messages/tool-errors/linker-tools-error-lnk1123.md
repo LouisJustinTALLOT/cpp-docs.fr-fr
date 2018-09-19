@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f0b2c7f89e7ad7d0142cb6830c4d4c3361b014c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075838"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Erreur des outils Éditeur de liens LNK1123
 
@@ -47,6 +47,6 @@ Les fichiers d'entrée doivent avoir le format COFF (Common Object File Format).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers .obj en tant qu’entrée dans l’éditeur de liens](../../build/reference/dot-obj-files-as-linker-input.md)  
-[Informations de référence sur EDITBIN](../../build/reference/editbin-reference.md)  
-[Informations de référence sur DUMPBIN](../../build/reference/dumpbin-reference.md)  
+[Fichiers .obj en tant qu’entrée dans l’éditeur de liens](../../build/reference/dot-obj-files-as-linker-input.md)<br/>
+[Informations de référence sur EDITBIN](../../build/reference/editbin-reference.md)<br/>
+[Informations de référence sur DUMPBIN](../../build/reference/dumpbin-reference.md)

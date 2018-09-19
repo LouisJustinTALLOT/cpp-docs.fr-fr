@@ -1,5 +1,5 @@
 ---
-title: location, classe | Documents Microsoft
+title: location, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a7d441aff74faede9ecbc41f03fe52cd05528e06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104762"
 ---
 # <a name="location-class"></a>location, classe
 Abstraction d'un emplacement physique sur du matériel.  
@@ -63,7 +63,7 @@ class location;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `location`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -76,7 +76,7 @@ class location;
 ~location();
 ```  
   
-##  <a name="current"></a> En cours 
+##  <a name="current"></a> Actuel 
 
  Retourne un `location` objet représentant l’emplacement plus spécifique que le thread appelant s’exécute.  
   
@@ -96,8 +96,8 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_NumaNodeNumber`  
- Le nombre de nœuds NUMA pour construire un emplacement pour.  
+*_NumaNodeNumber*<br/>
+Le numéro de nœud NUMA pour construire un emplacement pour.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un emplacement qui représente le nœud NUMA spécifié par le `_NumaNodeNumber` paramètre.  
@@ -120,14 +120,19 @@ location(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Src`  
- `_LocationType`  
- `_Id`  
- `_BindingId`  
- `_PBinding`  
-  
+*_Src*<br/>
+
+*_LocationType*<br/>
+
+*_ID*<br/>
+
+*_BindingId*<br/>
+
+*_PBinding*<br/>
+(Facultatif) Pointeur de la liaison.
+
 ### <a name="remarks"></a>Notes  
- Un emplacement par défaut construit représente le système dans son ensemble.  
+ Un emplacement par défaut construit représente le système dans sa globalité.  
   
 ##  <a name="operator_neq"></a> opérateur ! = 
 
@@ -138,7 +143,8 @@ bool operator!= (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Rhs`  
+*_Rhs*<br/>
+Opérande `location`.
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si les deux emplacements sont différents, `false` dans le cas contraire.  
@@ -152,8 +158,8 @@ location& operator= (const location& _Rhs);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Rhs`  
- Objet `location` source.  
+*_Rhs*<br/>
+Objet `location` source.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -166,7 +172,8 @@ bool operator== (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Rhs`  
+*_Rhs*<br/>
+Opérande `location`.
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si les deux emplacements sont identiques, et `false` dans le cas contraire.  

@@ -1,5 +1,5 @@
 ---
-title: Du compilateur (niveau 1) d’avertissement C4034 | Documents Microsoft
+title: Compilateur Warning (level 1) C4034 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9f948b0f2a9ffae849e2e80a3288111ce9e73e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11f8d8a6682cd09281b13fd57d799335343f20e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270870"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079256"
 ---
-# <a name="compiler-warning-level-1-c4034"></a>Du compilateur (niveau 1) d’avertissement C4034
-sizeof retourne 0  
-  
- Le `sizeof` opérateur est appliqué à un opérande de taille zéro (une structure vide, union, classe ou un type énuméré, type ou `void`).
+# <a name="compiler-warning-level-1-c4034"></a>Compilateur Warning (level 1) C4034
+
+sizeof retourne 0
+
+Le `sizeof` opérateur est appliqué à un opérande de taille zéro (une structure vide, union, classe ou un type énuméré, ou type `void`).

@@ -1,5 +1,5 @@
 ---
-title: LNK1196 d’erreur des outils Éditeur de liens | Documents Microsoft
+title: Erreur des LNK1196 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ef867a966df027ff918db209ec6e46a5ca9d9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18ebfff81eed0268501c268cc6704914ebf054ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296820"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084742"
 ---
 # <a name="linker-tools-error-lnk1196"></a>Erreur des outils Éditeur de liens LNK1196
-objet d’importation non valide ou endommagé : version inconnue  
-  
- La bibliothèque d’importation est endommagée. Régénérez la bibliothèque.
+
+objet d’importation non valide ou endommagé : version inconnue
+
+La bibliothèque d’importation est endommagée. Régénérez la bibliothèque.

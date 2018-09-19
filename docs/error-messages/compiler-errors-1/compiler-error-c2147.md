@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2147 | Documents Microsoft
+title: Erreur du compilateur C2147 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60047795428aad2da94b117882f351375fed4545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 786d47e23986962575567b8afdc2eefd5aac5be6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082428"
 ---
 # <a name="compiler-error-c2147"></a>Erreur du compilateur C2147
-Erreur de syntaxe : 'identifier' est un nouveau mot clé  
-  
- Un identificateur qui est désormais un mot clé réservé dans le langage a été utilisé.  
-  
- L’exemple suivant génère l’erreur C2147 :  
-  
-```  
-// C2147.cpp  
-// compile with: /clr  
-int main() {  
-   int gcnew = 0;   // C2147  
-   int i = 0;   // OK  
-}  
+
+Erreur de syntaxe : 'identifier' est un nouveau mot clé
+
+Un identificateur a été utilisé qui est désormais un mot clé réservé dans le langage.
+
+L’exemple suivant génère l’erreur C2147 :
+
+```
+// C2147.cpp
+// compile with: /clr
+int main() {
+   int gcnew = 0;   // C2147
+   int i = 0;   // OK
+}
 ```

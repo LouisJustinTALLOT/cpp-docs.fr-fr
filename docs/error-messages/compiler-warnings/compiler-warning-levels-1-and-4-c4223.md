@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveaux 1 et 4) C4223 | Documents Microsoft
+title: Compilateur avertissement (niveaux 1 et 4) C4223 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ac6890a5a51d7448c3317a8cf37f23791d27f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a04ccf80bac123a3d2c6f28a063c274fe40a7e58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075434"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4223"></a>Avertissement du compilateur (niveaux 1 et 4) C4223
-extension non standard utilisée : tableau de valeurs non-lvalue converti en pointeur  
-  
- En C standard, vous ne peut pas convertir un tableau de valeurs non-lvalue à un pointeur. Avec les extensions Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), vous pouvez.
+
+extension non standard utilisée : tableau de valeurs non-lvalue converti en pointeur
+
+En C standard, vous ne peut pas convertir un tableau de valeurs non-lvalue vers un autre pointeur. Avec les extensions Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), vous pouvez.

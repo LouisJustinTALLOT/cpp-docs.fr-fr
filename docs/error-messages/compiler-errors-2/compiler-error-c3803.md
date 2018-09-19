@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3803 | Documents Microsoft
+title: Erreur du compilateur C3803 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d720e2f94cc4a480122413e31b897ec1718ebc15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a841dbaae4142e92d8e0987b0618285e4f71f60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269255"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075863"
 ---
 # <a name="compiler-error-c3803"></a>Erreur du compilateur C3803
-'propriété' : propriété a un type qui n’est pas compatible avec l’un de ses accesseurs 'accesseur'  
-  
- Le type d’une propriété défini avec [propriété](../../cpp/property-cpp.md) ne correspond pas au type de retour pour l’une de ses fonctions d’accesseur.  
-  
- L’exemple suivant génère l’erreur C3803 :  
-  
-```  
-// C3803.cpp  
-struct A  
-{  
-   __declspec(property(get=GetIt)) int i;  
-   char GetIt()  
-   {  
-      return 0;  
-   }  
-  
-   /*  
-   // try the following definition instead  
-   int GetIt()  
-   {  
-      return 0;  
-   }  
-   */  
-}; // C3803  
-  
-int main()  
-{  
-}  
+
+'property' : propriété a un type qui n’est pas compatible avec l’un de ses accesseurs 'accesseur'
+
+Le type d’une propriété définie avec [propriété](../../cpp/property-cpp.md) ne correspond pas au type de retour pour l’une de ses fonctions d’accesseur.
+
+L’exemple suivant génère l’erreur C3803 :
+
+```
+// C3803.cpp
+struct A
+{
+   __declspec(property(get=GetIt)) int i;
+   char GetIt()
+   {
+      return 0;
+   }
+
+   /*
+   // try the following definition instead
+   int GetIt()
+   {
+      return 0;
+   }
+   */
+}; // C3803
+
+int main()
+{
+}
 ```

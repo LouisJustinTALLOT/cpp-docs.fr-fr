@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3805 | Documents Microsoft
+title: Erreur du compilateur C3805 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa7a2d388e950b7825c8dba78df565bc4a798a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b83f75cca9b292c454fc40ad5487cf80ee9ceaef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106335"
 ---
 # <a name="compiler-error-c3805"></a>Erreur du compilateur C3805
-'jeton' : jeton inattendu, attendu '}' ou un identificateur  
-  
- Lorsque vous définissez une propriété, un jeton non valide a été rencontré. Supprimez le jeton non valide.
+
+'jeton' : jeton inattendu, attendu '}' ou un identificateur
+
+Lorsque vous définissez une propriété, un jeton non valide a été rencontré. Supprimez le jeton non valide.

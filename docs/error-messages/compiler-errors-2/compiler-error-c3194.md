@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3194 | Documents Microsoft
+title: Erreur du compilateur C3194 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6fad304dc4e400d6ca25c7e835b2d0a6935117
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 923e4d5535a1be4f4c8a3f7b60730eb6a656ac33
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247798"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077098"
 ---
 # <a name="compiler-error-c3194"></a>Erreur du compilateur C3194
-'membre' : un type valeur ne peut pas avoir un opérateur d’assignation  
-  
- Fonctions membres spéciales qui exigent un appel automatique par le compilateur, tel qu’un constructeur de copie ou un opérateur d’assignation de copie ne sont pas pris en charge dans une classe value.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C3194.  
-  
-```  
-// C3194.cpp  
-// compile with: /clr /c  
-value struct MyStruct {  
-   MyStruct& operator= (const MyStruct& i) { return *this; }   // C3194  
-};  
-  
-ref struct MyStruct2 {  
-   MyStruct2% operator= (const MyStruct2% i) { return *this; }   // OK  
-};  
+
+'membre' : un type valeur ne peut pas avoir un opérateur d’assignation
+
+Les fonctions membres spéciales qui nécessitent l’appel automatique par le compilateur, tel qu’un constructeur de copie ou l’opérateur d’assignation de copie ne sont pas pris en charge dans une classe value.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère C3194.
+
+```
+// C3194.cpp
+// compile with: /clr /c
+value struct MyStruct {
+   MyStruct& operator= (const MyStruct& i) { return *this; }   // C3194
+};
+
+ref struct MyStruct2 {
+   MyStruct2% operator= (const MyStruct2% i) { return *this; }   // OK
+};
 ```

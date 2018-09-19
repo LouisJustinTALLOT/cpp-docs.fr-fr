@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604b58f7f8f6074c16effa3220d17bc00c44f5b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 872644533a0fab73768392efa2c5cd016b6bb980
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214312"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095651"
 ---
 # <a name="algorithms-modern-c"></a>Algorithmes (Modern C++)
 
@@ -31,13 +31,13 @@ Pour la programmation C++ moderne, nous vous recommandons d’utiliser les algor
 
 Pour écrire un comparateur, utilisez strict **<** et utiliser *expressions lambda nommés* lorsque vous le pouvez.
 
-```cpp  
+```cpp
 auto comp = [](const widget& w1, const widget& w2)
      { return w1.weight() < w2.weight(); }
 
 sort( v.begin(), v.end(), comp );
 
-auto i = lower_bound( v.begin(), v.end(), comp );  
+auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
 ## <a name="loops"></a>Boucles
@@ -46,26 +46,26 @@ Si possible, utilisez basé sur une plage **pour** boucles ou des appels d’alg
 
 À la place de l’ancien C++ comme suit :
 
-```cpp  
+```cpp
 for ( auto i = strings.begin(); i != strings.end(); ++i ) {
-    /* ... */  
+    /* ... */
 }
 
 auto i = v.begin();
 
 for ( ; i != v.end(); ++i ) {
-    if (*i > x && *i < y) break;  
-}  
+    if (*i > x && *i < y) break;
+}
 ```
 
 Utilisez le C++ moderne comme suit :
 
-```cpp  
+```cpp
 for_each( begin(strings), end(strings), [](string& s) {
-  // ...  
+  // ...
 } );
 
-auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
+auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ```
 
 ### <a name="range-based-for-loops"></a>Plage de boucles for basées

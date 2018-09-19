@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4541 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4541 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d1f750ad9362f868b29ba93ea383b60156e648d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c5b8959d7bdfb92c2813e4c7d81de652625942b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098977"
 ---
 # <a name="compiler-warning-level-1-c4541"></a>Avertissement du compilateur (niveau 1) C4541
-'identificateur' utilisé sur un type polymorphe 'type' avec/GR ; un comportement imprévisible  
-  
- Vous avez tenté d’utiliser une fonctionnalité qui requiert des informations de type au moment de l’exécution sans activer les informations de type au moment de l’exécution. Recompilez avec [/GR](../../build/reference/gr-enable-run-time-type-information.md).
+
+'identificateur' utilisé sur un type polymorphe 'type' avec/GR ; un comportement imprévisible
+
+Vous avez essayé d’utiliser une fonctionnalité qui requiert des informations de type au moment de l’exécution sans activer les informations de type au moment de l’exécution. Recompilez avec [/GR](../../build/reference/gr-enable-run-time-type-information.md).

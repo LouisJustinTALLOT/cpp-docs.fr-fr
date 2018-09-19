@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 076ccfcf164eb17e2a855f175c8714cd63a91817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093041"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,16 +56,16 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>Paramètres
 
-*size*  
+*size*<br/>
 Taille de l'allocation de mémoire demandée.
 
-*Alignement*  
+*Alignement*<br/>
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
-*filename*  
+*filename*<br/>
 Pointeur vers le nom du fichier source qui a demandé l'opération d'allocation ou NULL.
 
-*linenumber*  
+*linenumber*<br/>
 Numéro de ligne dans le fichier source où l'opération d'allocation a été demandée ou NULL.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -96,4 +96,4 @@ Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-run
 
 ## <a name="see-also"></a>Voir aussi
 
-[Routines de débogage](../../c-runtime-library/debug-routines.md)  
+[Routines de débogage](../../c-runtime-library/debug-routines.md)

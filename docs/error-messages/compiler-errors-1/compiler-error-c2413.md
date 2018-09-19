@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2413 | Documents Microsoft
+title: Erreur du compilateur C2413 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abc4ceb9468edd79adcde34a255f487763684c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1529b2b33e143c2df9eb56db9e7e79c3c5ce6baa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114187"
 ---
 # <a name="compiler-error-c2413"></a>Erreur du compilateur C2413
-'jeton' : taille d’alignement non conforme  
-  
- La taille utilisée avec la `ALIGN` la directive est manquante ou en dehors de la plage valide.
+
+'jeton' : taille d’alignement non conforme
+
+La taille utilisée avec la `ALIGN` directive est manquante ou en dehors de la plage valide.

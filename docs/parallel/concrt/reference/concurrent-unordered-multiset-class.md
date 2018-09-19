@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32f71ea2536c4cb9b2c9c42f5625a64c986497bb
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0cfe0c64a0029282cfe157e525886279d8d60cb9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101681"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset, classe
 Le `concurrent_unordered_multiset` classe est un conteneur d’accès concurrentiel sécurisé qui contrôle une séquence de longueur variable constituée d’éléments de type K. La séquence est représentée d’une façon qui permet l’accès concurrentiel sécurisé Ajout, l’accès à un élément, itérateurs et opérations de traversée d’itérateur.  
@@ -51,17 +51,17 @@ template <typename K,
 ```   
   
 #### <a name="parameters"></a>Paramètres  
- `K`  
- Type de clé.  
+*K*<br/>
+Type de clé.  
   
- `_Hasher`  
- Type d'objet de la fonction de hachage. Cet argument est facultatif et sa valeur par défaut est `std::hash<K>`.  
+*_Hasher*<br/>
+Type d'objet de la fonction de hachage. Cet argument est facultatif et sa valeur par défaut est `std::hash<K>`.  
   
- `key_equality`  
- Type d’objet de fonction de comparaison d’égalité. Cet argument est facultatif et sa valeur par défaut est `std::equal_to<K>`.  
+*key_equality*<br/>
+Type d’objet de fonction de comparaison d’égalité. Cet argument est facultatif et sa valeur par défaut est `std::equal_to<K>`.  
   
- `_Allocator_type`  
- Type qui représente l’objet allocateur stocké qui encapsule des informations détaillées sur l’allocation et la désallocation de mémoire pour le vecteur simultané. Cet argument est facultatif et sa valeur par défaut est `std::allocator<K>`.  
+*_Allocator_type*<br/>
+Type qui représente l’objet allocateur stocké qui encapsule des informations détaillées sur l’allocation et la désallocation de mémoire pour le vecteur simultané. Cet argument est facultatif et sa valeur par défaut est `std::allocator<K>`.  
   
 ## <a name="members"></a>Membres  
   
@@ -199,25 +199,25 @@ concurrent_unordered_multiset(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Iterator`  
- Type de l'itérateur d'entrée.  
+*_Iterator*<br/>
+Type de l'itérateur d'entrée.  
   
- `_Number_of_buckets`  
- Nombre initial de compartiments pour cette multiset non triée.  
+*_Number_of_buckets*<br/>
+Nombre initial de compartiments pour cette multiset non triée.  
   
- `_Hasher`  
- La fonction de hachage pour cette multiset non triée.  
+*_Hasher*<br/>
+La fonction de hachage pour cette multiset non triée.  
   
- `key_equality`  
- La fonction de comparaison d’égalité pour cette multiset non triée.  
+*key_equality*<br/>
+La fonction de comparaison d’égalité pour cette multiset non triée.  
   
- `_Allocator`  
- L’allocateur pour cette multiset non triée.  
+*_Allocator*<br/>
+L’allocateur pour cette multiset non triée.  
   
- `first`  
- `last`  
- `_Uset`  
- La source `concurrent_unordered_multiset` objet à déplacer des éléments à partir de.  
+*first*<br/>
+*last*<br/>
+*_Uset*<br/>
+La source `concurrent_unordered_multiset` objet à déplacer des éléments à partir de.  
   
 ### <a name="remarks"></a>Notes  
  Tous les constructeurs stockent un objet allocateur `_Allocator` et initialiser le multiset non trié.  
@@ -241,8 +241,8 @@ size_type count(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `KVal`  
- Clé à rechercher.  
+*KVal*<br/>
+Clé à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de fois le nombre de fois où que la clé s’affiche dans le conteneur.  
@@ -289,8 +289,8 @@ std::pair<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `KVal`  
- La valeur de clé à rechercher.  
+*KVal*<br/>
+La valeur de clé à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un [paire](../../../standard-library/pair-structure.md) où le premier élément est un itérateur au début et le deuxième élément est un itérateur à la fin de la plage.  
@@ -309,8 +309,8 @@ const_iterator find(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `KVal`  
- La valeur de clé à rechercher.  
+*KVal*<br/>
+La valeur de clé à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur qui pointe vers l’emplacement du premier élément correspondant à la clé fournie, ou l’itérateur `end()` si cet élément n’existe.  
@@ -366,23 +366,23 @@ typename std::enable_if<!std::is_same<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Iterator`  
- Le type d’itérateur utilisé pour l’insertion.  
+*_Iterator*<br/>
+Le type d’itérateur utilisé pour l’insertion.  
   
- `V`  
- Le type de la valeur insérée.  
+*V*<br/>
+Le type de la valeur insérée.  
   
- `value`  
- La valeur à insérer.  
+*valeur*<br/>
+La valeur à insérer.  
   
- `_Where`  
- L’emplacement de départ pour rechercher un point d’insertion.  
+*_WHERE*<br/>
+L’emplacement de départ pour rechercher un point d’insertion.  
   
- `first`  
- Début de la plage à insérer.  
+*first*<br/>
+Début de la plage à insérer.  
   
- `last`  
- La fin de la plage à insérer.  
+*last*<br/>
+La fin de la plage à insérer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur qui pointe vers l’emplacement d’insertion.  
@@ -459,8 +459,8 @@ concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset)
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Uset`  
- Objet `concurrent_unordered_multiset` source.  
+*_Uset*<br/>
+Objet `concurrent_unordered_multiset` source.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à cet `concurrent_unordered_multiset` objet.  
@@ -477,8 +477,8 @@ void rehash(size_type _Buckets);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Buckets`  
- Le nombre de compartiments souhaité.  
+*_Buckets*<br/>
+Le nombre de compartiments souhaité.  
   
 ### <a name="remarks"></a>Notes  
  La fonction membre modifie le nombre de compartiments pour qu’il soit au moins égal à `_Buckets` et régénère la table de hachage en fonction des besoins. Le nombre de compartiments doit être une puissance de 2. Si pas une puissance de 2, elle sera arrondie à la plus grande puissance de 2 suivante.  
@@ -508,8 +508,8 @@ void swap(concurrent_unordered_multiset& _Uset);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Uset`  
- Le `concurrent_unordered_multiset` objet à échanger.  
+*_Uset*<br/>
+Le `concurrent_unordered_multiset` objet à échanger.  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
@@ -522,8 +522,8 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Bucket`  
- L’index de compartiment.  
+*_Nombre*<br/>
+L’index de compartiment.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur pointant vers le début du compartiment.  
@@ -537,8 +537,8 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `KVal`  
- La clé de l’élément recherchée.  
+*KVal*<br/>
+La clé de l’élément recherchée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’index de compartiment pour la clé dans ce conteneur.  
@@ -563,8 +563,8 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Bucket`  
- Le compartiment à rechercher.  
+*_Nombre*<br/>
+Le compartiment à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre actuel de compartiments dans ce conteneur.  
@@ -578,8 +578,8 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Bucket`  
- L’index de compartiment.  
+*_Nombre*<br/>
+L’index de compartiment.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur pointant vers le début du compartiment.  
@@ -593,8 +593,8 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Bucket`  
- L’index de compartiment.  
+*_Nombre*<br/>
+L’index de compartiment.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur pointant vers le début du compartiment.  
@@ -610,8 +610,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Bucket`  
- L’index de compartiment.  
+*_Nombre*<br/>
+L’index de compartiment.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur qui pointe vers la fin du compartiment.  
@@ -633,13 +633,13 @@ size_type unsafe_erase(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Where`  
- La position de l’itérateur à effacer à partir de.  
+*_WHERE*<br/>
+La position de l’itérateur à effacer à partir de.  
   
- `first`  
- `last`  
- `KVal`  
- La valeur de clé à effacer.  
+*first*<br/>
+*last*<br/>
+*KVal*<br/>
+La valeur de clé à effacer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Les deux premières fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [fin](#end)() si cet élément n’existe. La troisième fonction membre retourne le nombre d’éléments, qu'il le supprime.  

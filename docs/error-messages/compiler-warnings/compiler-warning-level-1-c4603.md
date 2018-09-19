@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 1) C4603 | Documents Microsoft
+title: Compilateur avertissement (niveau 1) C4603 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54247238e522afb057c19fc407e0c3951e6b30cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c5100bdac5589747d948597baa35658df9da4ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087855"
 ---
 # <a name="compiler-warning-level-1-c4603"></a>Avertissement du compilateur (niveau 1) C4603
-'\<identificateur >' : macro n’est pas définie ou la définition est différente après utilisation de l’en-tête précompilé  
-  
- La macro spécifiée par l’espace réservé *identificateur* est différente ou n’est plus définie après l’utilisation de l’en-tête précompilé.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)
+
+'\<identificateur >' : macro n’est pas définie ou la définition est différente après utilisation d’un en-tête précompilé
+
+La macro spécifiée par l’espace réservé *identificateur* est différente ou n’est plus définie après l’utilisation de l’en-tête précompilé.
+
+## <a name="see-also"></a>Voir aussi
+
+[Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)

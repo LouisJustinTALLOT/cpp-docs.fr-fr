@@ -1,5 +1,5 @@
 ---
-title: Lock::try_acquire | Documents Microsoft
+title: Lock::try_acquire | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9e13e56728216c4a4b16246d4e99117199878c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115955"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 Acquiert un verrou sur un objet, en attente pour un laps de temps et en retournant un `bool` pour signaler la réussite de l’acquisition au lieu de lever une exception.  
@@ -43,8 +43,8 @@ bool try_acquire(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_timeout`  
- Valeur de délai d’attente en millisecondes, ou comme un <xref:System.TimeSpan>.  
+*_délai*<br/>
+Valeur de délai d’attente en millisecondes, ou comme un <xref:System.TimeSpan>.  
   
 ## <a name="return-value"></a>Valeur de retour  
  `true` Si le verrou a été acquis, `false` dans le cas contraire.  
@@ -53,7 +53,7 @@ bool try_acquire(
  Si un verrou a déjà été acquis, cette fonction ne fait rien.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principale utilise un verrou sur la même instance de la classe à vérifier régulièrement si les threads de travail existent toujours, et attend de quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
+ Cet exemple utilise une seule instance d’une classe entre plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread principal de l’application utilise un verrou sur la même instance de la classe pour vérifier périodiquement pour voir si les threads de travail existent toujours et attentes pour quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
   
 ```  
 // msl_lock_try_acquire.cpp  
@@ -141,7 +141,7 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\lock.h >  
   
  **Namespace** msclr  

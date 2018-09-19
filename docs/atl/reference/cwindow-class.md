@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b27036ffe84ff915bfcda0205469ef79e00255
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109682"
 ---
 # <a name="cwindow-class"></a>CWindow, classe
 
@@ -410,7 +410,7 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndNew*  
+*hWndNew*<br/>
 [in] Handle de fenêtre.
 
 ### <a name="example"></a>Exemple
@@ -459,7 +459,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndCenter*  
+*hWndCenter*<br/>
 [in] Le handle vers la fenêtre par rapport à laquelle centrer. Si ce paramètre est NULL (la valeur par défaut), la méthode définira *hWndCenter* à la fenêtre parente dans le cas d’une fenêtre enfant. Sinon, elle sera définie *hWndCenter* à la fenêtre de propriétaire de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -566,28 +566,28 @@ HWND Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpstrWndClass*  
+*lpstrWndClass*<br/>
 [in] Un pointeur vers classe de la fenêtre.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Le handle vers la fenêtre parente ou propriétaire.
 
-*Rect*  
+*Rect*<br/>
 [in] Une variable de type [_U_RECT](../../atl/reference/u-rect-class.md) spécifiant la position de la fenêtre. La valeur par défaut est NULL. Lorsque ce paramètre est NULL, la valeur de `CWindow::rcDefault` est utilisé.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Spécifie le nom de la fenêtre. La valeur par défaut est NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Le style de la fenêtre. La valeur par défaut est 0, ce qui signifie qu’aucun style n’est spécifié. Pour obtenir la liste des valeurs possibles, consultez [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Le style de fenêtre étendus. La valeur par défaut est 0, ce qui signifie qu’aucun style étendu est spécifié. Pour obtenir la liste des valeurs possibles, consultez [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dans le SDK Windows.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Une variable de type [_U_MENUorID](../../atl/reference/u-menuorid-class.md) spécifiant un handle à un menu ou un identificateur de la fenêtre. La valeur par défaut est 0 u.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 Un pointeur vers les données de création de la fenêtre contenues dans un [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) structure.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -652,7 +652,7 @@ CWindow(HWND hWnd = NULL) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle de fenêtre.
 
 ### <a name="remarks"></a>Notes
@@ -911,7 +911,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nID*  
+*nID*<br/>
 [in] L’identificateur de la fenêtre descendante à récupérer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -935,13 +935,13 @@ HRESULT GetDlgControl(
 
 ### <a name="parameters"></a>Paramètres
 
-*nID*  
+*nID*<br/>
 [in] L’ID de ressource du contrôle en cours de récupération.
 
-*IID*  
+*IID*<br/>
 [in] L’ID de l’interface que vous souhaitez obtenir à partir du contrôle.
 
-*ppCtrl*  
+*ppCtrl*<br/>
 [out] Pointeur vers l’interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -977,13 +977,13 @@ HRESULT GetDlgHost(
 
 ### <a name="parameters"></a>Paramètres
 
-*nID*  
+*nID*<br/>
 [in] L’ID de ressource du contrôle en cours de récupération.
 
-*IID*  
+*IID*<br/>
 [in] L’ID de l’interface que vous souhaitez obtenir à partir du contrôle.
 
-*ppHost*  
+*ppHost*<br/>
 [out] Pointeur vers l’interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1098,7 +1098,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] La valeur True (valeur par défaut) la méthode retourne la grande icône. Sinon, elle retourne la petite icône.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1448,16 +1448,16 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 Mémoire tampon dans laquelle écrire le texte de la fenêtre.
 
-*nMaxCount*  
+*nMaxCount*<br/>
 Taille de la mémoire tampon en caractères ; également le nombre maximal de caractères à écrire.
 
-*bstrText*  
+*bstrText*<br/>
 BSTR dans lequel stocker le texte de la fenêtre.
 
-*strText*  
+*strText*<br/>
 Un `CString` dans lequel stocker le texte de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1761,7 +1761,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Bloc*  
+*Bloc*<br/>
 [in] Si TRUE (valeur par défaut), la fenêtre sera verrouillée. Sinon, il sera déverrouillé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1833,13 +1833,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>Paramètres
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Spécifie les styles de fenêtre doit être supprimé lors de la modification du style.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Spécifie les styles de fenêtre à ajouter lors de la modification du style.
 
-*nIndicateurs*  
+*nIndicateurs*<br/>
 [in] Indicateurs de positionnement de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) fonction dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1879,13 +1879,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Spécifie les styles étendus à supprimer lors de la modification du style.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Spécifie les styles étendus à ajouter lors de la modification du style.
 
-*nIndicateurs*  
+*nIndicateurs*<br/>
 [in] Indicateurs de positionnement de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) fonction dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1963,7 +1963,7 @@ Consultez [ouverture du Presse-papiers](/windows/desktop/api/winuser/nf-winuser-
 
 Convertit un `CWindow` objet en un HWND.
 
-```  
+```
 operator HWND() const throw();
 ```
 
@@ -2018,10 +2018,10 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*hDC*  
+*hDC*<br/>
 [in] Handle vers un contexte de périphérique.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Spécifie les options de dessins. Vous pouvez combiner un ou plusieurs des indicateurs suivants :
 
 - PRF_CHECKVISIBLE dessiner la fenêtre uniquement s’il est visible.
@@ -2046,10 +2046,10 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*hDC*  
+*hDC*<br/>
 [in] Handle vers un contexte de périphérique.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Spécifie les options de dessins. Vous pouvez combiner un ou plusieurs des indicateurs suivants :
 
 - PRF_CHECKVISIBLE dessiner la fenêtre uniquement s’il est visible.
@@ -2122,13 +2122,13 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>Paramètres
 
-*nWidth*  
+*nWidth*<br/>
 Nouvelle largeur de la fenêtre en pixels.
 
-*nHeight*  
+*nHeight*<br/>
 Nouvelle hauteur de la fenêtre en pixels.
 
-*bRedraw*  
+*bRedraw*<br/>
 Un indicateur indiquant s’il faut redessiner les modifications. Valeur par défaut est FALSE, indiquant que la fenêtre ne redessine pas de modifications.
 
 ##  <a name="screentoclient"></a>  CWindow::ScreenToClient
@@ -2236,16 +2236,16 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Paramètres
 
-*message*  
+*message*<br/>
 [in] Le message à envoyer.
 
-*wParam*  
+*wParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*lParam*  
+*lParam*<br/>
 [in] Informations supplémentaires spécifiques au message.
 
-*bDeep*  
+*bDeep*<br/>
 [in] La valeur True (valeur par défaut), le message sera envoyé à toutes les fenêtres descendantes ; Sinon, il sera envoyé uniquement pour les fenêtres enfants immédiats.
 
 ### <a name="remarks"></a>Notes
@@ -2319,7 +2319,7 @@ int SetDlgCtrlID(int nID) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nID*  
+*nID*<br/>
 [in] La nouvelle valeur à définir pour l’identificateur de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2379,10 +2379,10 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*hFont*  
+*hFont*<br/>
 [in] Le handle vers la nouvelle police.
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Si TRUE (valeur par défaut), la fenêtre est redessinée. Sinon, il n’est pas.
 
 ##  <a name="sethotkey"></a>  CWindow::SetHotKey
@@ -2395,10 +2395,10 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*wVirtualKeyCode*  
+*wVirtualKeyCode*<br/>
 [in] Le code de touche virtuelle de la touche d’accès rapide. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h.
 
-*wModifiers*  
+*wModifiers*<br/>
 [in] Les modificateurs de la touche d’accès rapide. Pour obtenir la liste des valeurs possibles, consultez le message WM_SETHOTKEY dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2415,10 +2415,10 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*hIcon*  
+*hIcon*<br/>
 [in] Le handle vers une nouvelle icône.
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] Si TRUE (valeur par défaut), la méthode définit une grande icône. Sinon, il définit une petite icône.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2467,7 +2467,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Spécifie l’état de l’indicateur de renouvellement. Si TRUE (valeur par défaut), l’indicateur de renouvellement est défini ; Si la valeur est FALSE, l’indicateur est désactivé.
 
 ### <a name="remarks"></a>Notes

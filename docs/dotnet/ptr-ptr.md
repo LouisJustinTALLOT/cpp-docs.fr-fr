@@ -1,5 +1,5 @@
 ---
-title: PTR::PTR | Documents Microsoft
+title: PTR::PTR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f4df3e8059a56b137b2a4750177af1269cb6a5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107024"
 ---
 # <a name="ptrptr"></a>ptr::ptr
 Construit un `com::ptr` pour encapsuler un objet COM.  
@@ -40,15 +40,15 @@ ptr(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `P`  
- Pointeur d'interface COM.  
+*P*<br/>
+Pointeur d'interface COM.  
   
 ## <a name="remarks"></a>Notes  
- Le constructeur sans argument affecte `nullptr` au handle d’objet sous-jacent. Les appels suivants à la `com::ptr` valide l’objet interne et échoueront jusqu'à ce qu’un objet est réellement créé ou attaché.  
+ Le constructeur sans argument assigne `nullptr` au handle d’objet sous-jacent. Les appels suivants à la `com::ptr` validera l’objet interne et échoueront jusqu'à ce qu’un objet est en fait créé ou attaché.  
   
- Le constructeur d’un argument ajoute une référence à l’objet COM, mais ne libère pas de référence de l’appelant, l’appelant doit appeler `Release` sur l’objet COM réellement abandonne le contrôle. Lorsque le `com::ptr`du destructeur est appelé il publiera automatiquement ses références sur l’objet COM.  
+ Le constructeur d’un argument ajoute une référence à l’objet COM, mais ne libère pas de référence de l’appelant, donc l’appelant doit appeler `Release` sur l’objet COM pour réellement abandonner le contrôle. Lorsque le `com::ptr`du destructeur est appelé il publiera automatiquement ses références sur l’objet COM.  
   
- Passage `NULL` à ce constructeur est identique à l’appel de la version sans argument.  
+ En passant `NULL` à ce constructeur est identique à l’appel de la version sans argument.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. Il illustre l’utilisation des deux versions du constructeur.  
@@ -112,7 +112,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  

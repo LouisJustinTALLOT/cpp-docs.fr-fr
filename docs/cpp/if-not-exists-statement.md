@@ -16,50 +16,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee63ace276863a30c4ec81d970ba3bf5fd29e40
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66999d99e7809a3588dc3c92cae822bb4295ee07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405283"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073354"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists, instruction
-Le **__if_not_exists** instruction teste si l’identificateur spécifié existe. S'il n'existe pas, le bloc d'instructions spécifié est exécuté.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-__if_not_exists ( identifier ) {   
-statements  
-};  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
-  
-|Paramètre|Description|  
-|---------------|-----------------|  
-|*identifier*|Identificateur dont vous voulez tester l'existence.|  
-|*Instructions*|Une ou plusieurs instructions à exécuter si *identificateur* n’existe pas.|  
-  
-## <a name="remarks"></a>Notes  
-  
+
+Le **__if_not_exists** instruction teste si l’identificateur spécifié existe. S'il n'existe pas, le bloc d'instructions spécifié est exécuté.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+__if_not_exists ( identifier ) { 
+statements
+};
+```
+
+#### <a name="parameters"></a>Paramètres
+
+|Paramètre|Description|
+|---------------|-----------------|
+|*identifier*|Identificateur dont vous voulez tester l'existence.|
+|*Instructions*|Une ou plusieurs instructions à exécuter si *identificateur* n’existe pas.|
+
+## <a name="remarks"></a>Notes
+
 > [!CAUTION]
->  Pour obtenir des résultats plus fiables, utilisez le **__if_not_exists** instruction sous les contraintes suivantes.  
-  
--   Appliquer le **__if_not_exists** instruction uniquement aux types simples, et non des modèles.  
-  
--   Appliquer le **__if_not_exists** instruction aux identificateurs à la fois à l’intérieur ou en dehors d’une classe. N’appliquez pas le **__if_not_exists** instruction aux variables locales.  
-  
--   Utilisez le **__if_not_exists** instruction uniquement dans le corps d’une fonction. En dehors du corps d’une fonction, le **__if_not_exists** instruction peut tester uniquement les types entièrement définis.  
-  
--   Lorsque vous vérifiez la présence de fonctions surchargées, vous ne pouvez pas effectuer le test sur une forme spécifique de la surcharge.  
-  
- Le complément de la **__if_not_exists** instruction est la [__if_exists](../cpp/if-exists-statement.md) instruction.  
-  
-## <a name="example"></a>Exemple  
- Pour obtenir un exemple illustrant comment utiliser **__if_not_exists**, consultez [__if_exists, instruction](../cpp/if-exists-statement.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Instructions de sélection](../cpp/selection-statements-cpp.md)   
- [Mots clés](../cpp/keywords-cpp.md)   
- [__if_exists, instruction](../cpp/if-exists-statement.md)
+>  Pour obtenir des résultats plus fiables, utilisez le **__if_not_exists** instruction sous les contraintes suivantes.
+
+- Appliquer le **__if_not_exists** instruction uniquement aux types simples, et non des modèles.
+
+- Appliquer le **__if_not_exists** instruction aux identificateurs à la fois à l’intérieur ou en dehors d’une classe. N’appliquez pas le **__if_not_exists** instruction aux variables locales.
+
+- Utilisez le **__if_not_exists** instruction uniquement dans le corps d’une fonction. En dehors du corps d’une fonction, le **__if_not_exists** instruction peut tester uniquement les types entièrement définis.
+
+- Lorsque vous vérifiez la présence de fonctions surchargées, vous ne pouvez pas effectuer le test sur une forme spécifique de la surcharge.
+
+Le complément de la **__if_not_exists** instruction est la [__if_exists](../cpp/if-exists-statement.md) instruction.
+
+## <a name="example"></a>Exemple
+
+Pour obtenir un exemple illustrant comment utiliser **__if_not_exists**, consultez [__if_exists, instruction](../cpp/if-exists-statement.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Instructions de sélection](../cpp/selection-statements-cpp.md)<br/>
+[Mots clés](../cpp/keywords-cpp.md)<br/>
+[__if_exists, instruction](../cpp/if-exists-statement.md)

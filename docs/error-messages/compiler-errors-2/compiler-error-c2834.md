@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2834 | Documents Microsoft
+title: Erreur du compilateur C2834 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb4fb992f9213c4a4b456f786fd8f81308cec12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b94e1a3fba9bc3589af020340651b4546347cf1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089344"
 ---
 # <a name="compiler-error-c2834"></a>Erreur du compilateur C2834
-'operator opérateur' doit être globalement qualifié  
-  
- Le `new` et `delete` opérateurs sont liés à la classe où elles résident. Résolution de portée ne peut pas être utilisée pour sélectionner une version de `new` ou `delete` à partir d’une autre classe. Pour implémenter plusieurs formes de le `new` ou `delete` (opérateur), créez une version de l’opérateur avec des paramètres formels supplémentaires.
+
+'operator opérateur' doit être globalement qualifié
+
+Le `new` et `delete` opérateurs sont liées à la classe dans laquelle ils résident. Résolution de portée ne peut pas être utilisée pour sélectionner une version de `new` ou `delete` d’une autre classe. Pour implémenter plusieurs formes de la `new` ou `delete` opérateur, créer une version de l’opérateur avec des paramètres formels supplémentaires.

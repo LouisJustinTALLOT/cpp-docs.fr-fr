@@ -1,5 +1,5 @@
 ---
-title: Task, classe (Runtime d’accès concurrentiel) | Documents Microsoft
+title: Task, classe (Runtime d’accès concurrentiel) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3cd783baafec4171618a6994ac4fde13dfe41f56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097495"
 ---
 # <a name="task-class-concurrency-runtime"></a>task (Concurrency Runtime), classe
-Classe `task` de la bibliothèque de modèles parallèles (PPL, Parallel Patterns Library). Un objet `task` représente le travail qui peut être exécuté de manière asynchrone et simultanément avec d'autres tâches et le travail parallèle produit par des algorithmes parallèles dans le runtime d'accès concurrentiel. Il génère un résultat de type `_ResultType` quand il s'exécute correctement. Les tâches de type `task<void>` ne génèrent aucun résultat. Une tâche peut être mise en attente et annulée indépendamment des autres tâches. Elle peut également être composée avec d’autres tâches à l’aide de continuations ( `then`) et de jointure ( `when_all`) et un choix ( `when_any`) des modèles.  
+Classe `task` de la bibliothèque de modèles parallèles (PPL, Parallel Patterns Library). Un objet `task` représente le travail qui peut être exécuté de manière asynchrone et simultanément avec d'autres tâches et le travail parallèle produit par des algorithmes parallèles dans le runtime d'accès concurrentiel. Il génère un résultat de type `_ResultType` quand il s'exécute correctement. Les tâches de type `task<void>` ne génèrent aucun résultat. Une tâche peut être mise en attente et annulée indépendamment des autres tâches. Il peut également être composée avec d’autres tâches à l’aide de continuations ( `then`) et de jointure ( `when_all`) et un choix ( `when_any`) modèles.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,10 +48,12 @@ class task;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `T`  
- `T`  
- `_ReturnType`  
- Type de résultat de cette tâche.  
+
+*T*<br/>
+Le type d’objet de tâche.
+
+*_ReturnType*<br/>
+Type de résultat de cette tâche.  
   
 ## <a name="members"></a>Membres  
   
@@ -75,7 +77,7 @@ class task;
 |[is_apartment_aware](#is_apartment_aware)|Détermine si la tâche désencapsule une interface `IAsyncInfo` Windows Runtime ou descend de cette tâche.|  
 |[is_done](#is_done)|Détermine si la tâche est terminée.|  
 |[Planificateur](#scheduler)|Retourne le planificateur pour cette tâche.|  
-|[puis](#then)|Surchargé. Ajoute une tâche de continuation à cette tâche.|  
+|[Puis](#then)|Surchargé. Ajoute une tâche de continuation à cette tâche.|  
 |[attente](#wait)|Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n'a pas déjà été sélectionnée pour être exécutée par un processus de travail d'arrière-plan.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
@@ -92,7 +94,7 @@ class task;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `task`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ppltasks.h  
   
  **Espace de noms :** concurrency  
@@ -114,7 +116,7 @@ void get() const;
  Si la tâche est annulée, un appel à `get` lèvera une [task_canceled](task-canceled-class.md) exception. Si la tâche rencontre une exception différente ou si une exception est propagée à cette tâche à partir d'une tâche précédente, un appel à `get` lève cette exception.  
   
 > [!IMPORTANT]
->  Dans une application de plateforme Windows universelle (UWP), n’appelez pas [Concurrency::Task :: wait](#wait) ou `get` ( `wait` appelle `get`) dans le code qui s’exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](invalid-operation-class.md) , car ces méthodes bloque le thread actuel et peut entraîner l’application de ne plus répondre. Toutefois, vous pouvez appeler la `get` méthode pour recevoir le résultat de la tâche précédente dans une continuation basée sur des tâches, car le résultat est immédiatement disponible.  
+>  Dans une application Universal Windows Platform (UWP), n’appelez pas [Concurrency::Task :: wait](#wait) ou `get` ( `wait` appels `get`) dans le code qui s’exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](invalid-operation-class.md) , car ces méthodes bloque le thread actuel et peut entraîner l’application à cesser de répondre. Toutefois, vous pouvez appeler la `get` méthode pour recevoir le résultat de la tâche antécédente dans une continuation basée sur des tâches, car le résultat est immédiatement disponible.  
   
 ##  <a name="is_apartment_aware"></a> is_apartment_aware 
 
@@ -135,7 +137,7 @@ bool is_done() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- True si la tâche est terminée, false dans le cas contraire.  
+ True si la tâche est terminée, false sinon.  
   
 ### <a name="remarks"></a>Notes  
  La fonction retourne la valeur true si la tâche est terminée ou annulée (avec ou sans exception utilisateur).  
@@ -151,7 +153,8 @@ bool operator!= (const task<void>& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Rhs`  
+*_Rhs*<br/>
+La tâche à comparer.
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` si les objets font référence à différentes tâches sous-jacentes ; sinon `false`.  
@@ -167,8 +170,8 @@ task& operator= (task&& _Other);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Objet `task` source.  
+*_Autre*<br/>
+Objet `task` source.  
   
 ### <a name="return-value"></a>Valeur de retour  
   
@@ -186,7 +189,8 @@ bool operator== (const task<void>& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Rhs`  
+*_Rhs*<br/>
+La tâche à comparer.
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` si les objets font référence à la même tâche sous-jacente ; sinon, `false`.  
@@ -224,20 +228,20 @@ task(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `T`  
- Type du paramètre à partir duquel la tâche doit être construite.  
+*T*<br/>
+Type du paramètre à partir duquel la tâche doit être construite.  
   
- `_Param`  
- Paramètre à partir duquel la tâche doit être construite. Cela peut être une expression lambda, un objet de fonction, un `task_completion_event<result_type>` objet ou une interface Windows::Foundation :: iasyncinfo si vous utilisez des tâches dans votre application Windows Runtime. L’objet lambda ou de fonction doit être un type équivalent à `std::function<X(void)>`, où X peut être une variable de type `result_type`, `task<result_type>`, ou une interface Windows::Foundation :: iasyncinfo dans les applications Windows Runtime.  
+*_Param*<br/>
+Paramètre à partir duquel la tâche doit être construite. Cela peut être une expression lambda, un objet de fonction, un `task_completion_event<result_type>` objet ou une interface Windows::Foundation :: iasyncinfo si vous utilisez des tâches dans votre application Windows Runtime. L’objet lambda ou fonction doit être un type équivalent à `std::function<X(void)>`, où X peut être une variable de type `result_type`, `task<result_type>`, ou une interface Windows::Foundation :: iasyncinfo dans les applications Windows Runtime.  
   
- `_TaskOptions`  
- Les options de tâche incluent le jeton d’annulation, le planificateur, etc.  
+*_TaskOptions*<br/>
+Les options de tâche incluent le jeton d’annulation, le planificateur, etc.  
   
- `_Other`  
- Objet `task` source.  
+*_Autre*<br/>
+Objet `task` source.  
   
 ### <a name="remarks"></a>Notes  
- Le constructeur par défaut pour `task` est uniquement présent pour permettre l'utilisation des tâches dans des conteneurs. Une tâche créée par défaut ne peut pas être utilisée tant que vous ne lui assignez pas une tâche valide. Les méthodes telles que `get`, `wait` ou `then` lèvera une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception lorsqu’elle est appelée sur une tâche créée par défaut.  
+ Le constructeur par défaut pour `task` est uniquement présent pour permettre l'utilisation des tâches dans des conteneurs. Une tâche créée par défaut ne peut pas être utilisée tant que vous ne lui assignez pas une tâche valide. Méthodes telles que `get`, `wait` ou `then` lèvera une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception lorsqu’elle est appelée sur une tâche créée par défaut.  
   
  Une tâche créée à partir d'un objet `task_completion_event` s'achève (et ses continuations sont planifiées) lorsque l'événement d'achèvement de tâche est défini.  
   
@@ -251,7 +255,7 @@ task(
   
  Pour plus d’informations, consultez [parallélisme des tâches](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="then"></a> puis 
+##  <a name="then"></a> Puis 
 
  Ajoute une tâche de continuation à cette tâche.  
   
@@ -289,28 +293,28 @@ __declspec(
 ```   
   
 ### <a name="parameters"></a>Paramètres  
- `_Function`  
- Type de l’objet fonction qui sera appelé par cette tâche.  
+*_Function*<br/>
+Type de l’objet fonction qui sera appelé par cette tâche.  
   
- `_Func`  
- Fonction de continuation à exécuter lorsque cette tâche se termine. Cette fonction de continuation doit accepter comme entrée une variable `result_type` ou `task<result_type>`, où `result_type` correspond au type du résultat produit par cette tâche.  
+*_Func*<br/>
+Fonction de continuation à exécuter lorsque cette tâche se termine. Cette fonction de continuation doit accepter comme entrée une variable `result_type` ou `task<result_type>`, où `result_type` correspond au type du résultat produit par cette tâche.  
   
- `_TaskOptions`  
- Les options de la tâche incluent le jeton d’annulation, le planificateur et le contexte de continuation. Par défaut, les 3 options précédentes sont héritées de la tâche précédente.  
+*_TaskOptions*<br/>
+Les options de la tâche incluent le jeton d’annulation, le planificateur et le contexte de continuation. Par défaut, les 3 options précédentes sont héritées de la tâche précédente.  
   
- `_CancellationToken`  
- Jeton d’annulation à associer à la tâche de continuation. Une tâche de continuation créée sans jeton d’annulation hérite du jeton de son antécédent.  
+*_CancellationToken*<br/>
+Jeton d’annulation à associer à la tâche de continuation. Une tâche de continuation créée sans jeton d’annulation hérite du jeton de son antécédent.  
   
- `_ContinuationContext`  
- Variable qui spécifie où la continuation doit s'exécuter. Cette variable n’est utile lorsqu’il est utilisé dans une application UWP. Pour plus d’informations, consultez [task_continuation_context](task-continuation-context-class.md)  
+*_ContinuationContext*<br/>
+Variable qui spécifie où la continuation doit s'exécuter. Cette variable est uniquement utile lorsqu’il est utilisé dans une application UWP. Pour plus d’informations, consultez [task_continuation_context](task-continuation-context-class.md)  
   
 ### <a name="return-value"></a>Valeur de retour  
  Tâche de continuation récemment créée. Le type de résultat de la tâche retournée est déterminé par l'élément retourné par `_Func`.  
   
 ### <a name="remarks"></a>Notes  
- Les surcharges de `then` qui prend une expression lambda ou une fonction qui retourne une interface Windows::Foundation :: iasyncinfo, sont uniquement disponibles pour les applications Windows Runtime.  
+ Les surcharges de `then` qui prennent un lambda ou un functor qui retourne une interface Windows::Foundation :: iasyncinfo, sont disponibles uniquement pour les applications Windows Runtime.  
   
- Pour plus d’informations sur l’utilisation de continuations de tâches pour composer le travail asynchrone, consultez [parallélisme des tâches](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Pour plus d’informations sur l’utilisation des continuations de tâches pour créer un travail asynchrone, consultez [parallélisme des tâches](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
 ##  <a name="wait"></a> attente 
 
@@ -326,7 +330,7 @@ task_status wait() const;
 ### <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]
->  Dans une application de plateforme Windows universelle (UWP), n’appelez pas `wait` dans le code qui s’exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](invalid-operation-class.md) , car cette méthode bloque le thread actuel et peut entraîner l’application de ne plus répondre. Toutefois, vous pouvez appeler la [Concurrency::Task :: Get](#get) méthode pour recevoir le résultat de la tâche précédente dans une continuation basée sur des tâches.  
+>  Dans une application Universal Windows Platform (UWP), n’appelez pas `wait` dans le code qui s’exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](invalid-operation-class.md) , car cette méthode bloque le thread actuel et peut entraîner l’application à cesser de répondre. Toutefois, vous pouvez appeler la [Concurrency::Task :: Get](#get) méthode pour recevoir le résultat de la tâche antécédente dans une continuation basée sur la tâche.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)

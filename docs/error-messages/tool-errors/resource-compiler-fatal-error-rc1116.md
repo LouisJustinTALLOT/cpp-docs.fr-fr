@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable RC1116 du compilateur de ressources | Documents Microsoft
+title: Erreur irrécupérable RC1116 du compilateur de ressources | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9494f81c01a0bbad01015ecc7d0c171eedd637e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4aff49918751e94e08cd7d6c229bfa1d27116210
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110586"
 ---
 # <a name="resource-compiler-fatal-error-rc1116"></a>Erreur irrécupérable RC1116 du compilateur de ressources 
-Arrêt du RC après erreurs du pré-processeur  
-  
- Le compilateur de ressources est interrompue en raison d’autres erreurs. Corrigez les autres erreurs, puis recompilez.
+
+Arrêt du RC après erreurs du pré-processeur
+
+Le compilateur de ressources s’est arrêté en raison d’autres erreurs. Corrigez les autres erreurs, puis recompilez.

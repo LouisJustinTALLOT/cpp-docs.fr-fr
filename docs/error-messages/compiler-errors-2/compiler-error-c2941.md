@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2941 | Documents Microsoft
+title: Erreur du compilateur C2941 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9904bd4f4d6a48169590ff43e7b229dc3a3eb2f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46fc923c058c59d64bf1fca37ffff97554d645e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091411"
 ---
 # <a name="compiler-error-c2941"></a>Erreur du compilateur C2941
-'class' : type-class-id redéfini comme 'item' local  
-  
- Vous ne pouvez pas utiliser une classe générique ni de modèle comme élément.
+
+'class' : type-class-id redéfini comme 'item' local
+
+Vous ne pouvez pas utiliser une classe générique ni de modèle comme élément.

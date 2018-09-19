@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087953"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog, classe
 
@@ -35,7 +35,7 @@ Cette classe implémente une boîte de dialogue modale base.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 L’ID de ressource de la ressource de modèle de boîte de dialogue.
 
-*t_bCenter*  
+*t_bCenter*<br/>
 TRUE si l’objet de la boîte de dialogue doit être centrée sur la fenêtre propriétaire ; Sinon, FALSE.
 
 ## <a name="members"></a>Membres
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle vers le parent de la boîte de dialogue. Si aucune valeur n’est fournie, le parent est défini à la fenêtre actuellement active.
 
 ### <a name="return-value"></a>Valeur de retour

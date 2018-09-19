@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2544 | Documents Microsoft
+title: Erreur du compilateur C2544 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ff4922e592ef717c51057cae75453422a5df7df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad66377aef7be43cc929ce4612284356597a4022
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227174"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109223"
 ---
 # <a name="compiler-error-c2544"></a>Erreur du compilateur C2544
-attendu ')' pour l’opérateur '()'  
-  
- Il manque une parenthèse gauche de l’opérateur d’appel de fonction.  
-  
- Cette erreur peut être dû à une expansion macro.
+
+attendu ')' pour l’opérateur « () »
+
+Il manque une parenthèse de gauche de l’opérateur d’appel de fonction.
+
+Cette erreur peut être due à une expansion macro.

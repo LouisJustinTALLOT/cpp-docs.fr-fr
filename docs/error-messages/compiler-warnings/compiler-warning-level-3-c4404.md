@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 3) C4404 | Documents Microsoft
+title: Compilateur avertissement (niveau 3) C4404 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23eccd4d8735d6a6d2b5d1c6af7e65613ed46c4c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48b17dfc96ba041e92ac88c5fd7af7238b20933
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078294"
 ---
 # <a name="compiler-warning-level-3-c4404"></a>Avertissement du compilateur (niveau 3) C4404
-période sur directive ignoré  
-  
- Le point facultatif précédant la directive est ignoré.
+
+période sur directive ignoré
+
+Le point facultatif précédant la directive est ignoré.

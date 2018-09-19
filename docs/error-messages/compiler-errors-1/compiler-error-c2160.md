@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2160 | Documents Microsoft
+title: Erreur du compilateur C2160 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6667a88c7cfd202938a4956d981d4fc2c399f57f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e823d841eabb4494d549721320f8f29d5cd8774
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111483"
 ---
 # <a name="compiler-error-c2160"></a>Erreur du compilateur C2160
-'##' ne peut se trouver au début de la définition d'une macro  
-  
- La définition d’une macro a commencé par un opérateur de collage de jeton (##).  
-  
- L’exemple suivant génère l’erreur C2160 :  
-  
-```  
-// C2160.cpp  
-// compile with: /c  
-#define mac(a,b) #a   // OK  
-#define mac(a,b) ##a   // C2160  
+
+'##' ne peut se trouver au début de la définition d'une macro
+
+La définition d’une macro a commencé par un opérateur de collage de jeton (##).
+
+L’exemple suivant génère l’erreur C2160 :
+
+```
+// C2160.cpp
+// compile with: /c
+#define mac(a,b) #a   // OK
+#define mac(a,b) ##a   // C2160
 ```

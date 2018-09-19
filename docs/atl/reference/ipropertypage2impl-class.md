@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e0059c88d7aa99340568405150244152800684a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9329888f9a97c9bf5fad0d3834bde33845943edd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751834"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093301"
 ---
 # <a name="ipropertypage2impl-class"></a>Classe de IPropertyPage2Impl
 
@@ -37,13 +37,13 @@ Cette classe implémente `IUnknown` et hérite de l’implémentation par défau
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class T>  
+template<class T>
 class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Votre classe, dérivée de `IPropertyPage2Impl`.
 
 ## <a name="members"></a>Membres
@@ -94,6 +94,6 @@ Consultez [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Iperpropertybrowsingimpl, classe](../../atl/reference/iperpropertybrowsingimpl-class.md)   
-[ISpecifyPropertyPagesImpl, classe](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[IPerPropertyBrowsingImpl, classe](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl, classe](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

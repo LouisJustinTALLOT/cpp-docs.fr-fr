@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085281"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -64,13 +64,13 @@ Nombre complexe.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_cabs** renvoie la valeur absolue de son argument en cas de réussite. De dépassement de capacité, **_cabs** retourne **HUGE_VAL** et définit **errno** à **ERANGE**. Vous pouvez modifier la gestion des erreurs avec [_matherr](matherr.md).
+**_cabs** retourne la valeur absolue de son argument en cas de réussite. En cas de dépassement, **_cabs** retourne **HUGE_VAL** et définit **errno** à **ERANGE**. Vous pouvez modifier la gestion des erreurs avec [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
 Le **_cabs** fonction calcule la valeur absolue d’un nombre complexe, qui doit être une structure de type [_complex](../../c-runtime-library/standard-types.md). La structure *z* est composé d’un composant réel *x* et un composant imaginaire *y*. Un appel à **_cabs** génère une valeur équivalente à celle de l’expression `sqrt( z.x * z.x + z.y * z.y )`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -107,4 +107,4 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)   
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

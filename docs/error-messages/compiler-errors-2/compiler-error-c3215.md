@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3215 | Documents Microsoft
+title: Erreur du compilateur C3215 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2612441a5a7da7757bce4c2c8005720bf10eafd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ea9b7cb22f5a3d61a661d7344673bf567f7d629
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093894"
 ---
 # <a name="compiler-error-c3215"></a>Erreur du compilateur C3215
-'type1' : paramètre de type générique déjà limité à 'type2'  
-  
- Une contrainte a été spécifiée plusieurs fois.  
-  
- Pour plus d’informations sur les types génériques, consultez [Generics](../../windows/generics-cpp-component-extensions.md).  
-  
- L’exemple suivant génère l’erreur C3215 :  
-  
-```  
-// C3215.cpp  
-// compile with: /clr  
-interface struct A {};  
-  
-generic <class T>  
-where T : A,A  
-ref class C {};   // C3215  
-```  
-  
- Résolution possible :  
-  
-```  
-// C3215b.cpp  
-// compile with: /clr /c  
-interface struct A {};  
-  
-generic <class T>  
-where T : A  
-ref class C {};  
+
+'type1' : paramètre de type générique déjà limité à 'type2'
+
+Une contrainte a été spécifiée plusieurs fois.
+
+Pour plus d’informations sur les types génériques, consultez [Generics](../../windows/generics-cpp-component-extensions.md).
+
+L’exemple suivant génère l’erreur C3215 :
+
+```
+// C3215.cpp
+// compile with: /clr
+interface struct A {};
+
+generic <class T>
+where T : A,A
+ref class C {};   // C3215
+```
+
+Résolution possible :
+
+```
+// C3215b.cpp
+// compile with: /clr /c
+interface struct A {};
+
+generic <class T>
+where T : A
+ref class C {};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3536 | Documents Microsoft
+title: Erreur du compilateur C3536 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f88e656b0d63b6a7a4d60ace2f4cd5e2347d188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7585a75ebe9733c228756e92d8e5ae57699aca27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088577"
 ---
 # <a name="compiler-error-c3536"></a>Erreur du compilateur C3536
-'symbole' : ne peut pas être utilisée avant d’être initialisée  
-  
- Le symbole indiqué ne peut pas être utilisé avant d’être initialisée. Dans la pratique, cela signifie qu'une variable ne peut pas être utilisée pour s'initialiser.  
-  
-### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
-  
-1.  N’initialisez pas de variable avec elle-même.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère C3536, car chaque variable est initialisée avec elle-même.  
-  
-```  
-// C3536.cpp  
-// Compile with /Zc:auto  
-int main()  
-{  
-   auto a = a;     //C3536  
-   auto b = &b;    //C3536  
-   auto c = c + 1; //C3536  
-   auto* d = &d;   //C3536  
-   auto& e = e;    //C3536  
-   return 0;  
-};  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [auto, mot clé](../../cpp/auto-keyword.md)
+
+'symbol' : ne peut pas être utilisé avant d’être initialisée
+
+Le symbole indiqué ne peut pas être utilisé avant d’être initialisée. Dans la pratique, cela signifie qu'une variable ne peut pas être utilisée pour s'initialiser.
+
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur
+
+1. N’initialisez pas une variable avec lui-même.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant donne C3536 parce que chaque variable est initialisée avec lui-même.
+
+```
+// C3536.cpp
+// Compile with /Zc:auto
+int main()
+{
+   auto a = a;     //C3536
+   auto b = &b;    //C3536
+   auto c = c + 1; //C3536
+   auto* d = &d;   //C3536
+   auto& e = e;    //C3536
+   return 0;
+};
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[auto, mot clé](../../cpp/auto-keyword.md)

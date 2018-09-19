@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d3db2a3d7f673c8e81b1077bcb45e9b8241d37
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751859"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113134"
 ---
 # <a name="com-map-global-functions"></a>Fonctions globales de mappage COM
 
@@ -51,16 +51,16 @@ HRESULT AtlInternalQueryInterface(
 
 ### <a name="parameters"></a>Paramètres
 
-*pThis*  
+*pThis*<br/>
 [in] Un pointeur vers l’objet qui contient le mappage COM des interfaces exposées à `QueryInterface`.
 
-*pEntries*  
+*pEntries*<br/>
 [in] Un tableau de `_ATL_INTMAP_ENTRY` structures qui accèdent à une carte des interfaces disponibles.
 
-*IID*  
+*IID*<br/>
 [in] Le GUID de l’interface demandée.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un pointeur vers le pointeur d’interface spécifié dans *iid*, ou NULL si l’interface est introuvable.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -85,10 +85,10 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 
 ### <a name="parameters"></a>Paramètres
 
-*rguid1*  
+*rguid1*<br/>
 [in] Le GUID à comparer à `IID_IUnknown`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions](../../atl/reference/atl-functions.md)   
+[Fonctions](../../atl/reference/atl-functions.md)<br/>
 [Macros de mappage COM](../../atl/reference/com-map-macros.md)

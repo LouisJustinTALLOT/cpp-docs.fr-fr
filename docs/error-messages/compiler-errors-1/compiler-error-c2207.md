@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2207 | Documents Microsoft
+title: Erreur du compilateur C2207 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d62494aca47f0ad52c9abbe8e3b897c58c327d9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab9d89d66efed3cfa687d17b8a9efd406bf1bec7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082636"
 ---
 # <a name="compiler-error-c2207"></a>Erreur du compilateur C2207
-'membre' : un membre d'un modèle de classe ne peut pas acquérir un type de fonction  
-  
- Le `member` du modèle de classe a été précédemment analysé en tant que membre de données non static. Il ne peut pas être redéfini en tant que fonction membre.
+
+'membre' : un membre d'un modèle de classe ne peut pas acquérir un type de fonction
+
+Le `member` du modèle de classe a été précédemment analysé en tant que membre de données non static. Il ne peut pas être redéfini en tant que fonction membre.

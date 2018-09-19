@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer une table des messages pour une classe de modèle | Documents Microsoft'
+title: 'Comment : créer une table des messages pour une classe de modèle | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,54 +15,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7867cc40ae837da5fad957b6a1d584fb7c2c4ce
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 701e6f2912c3f9a8b5f138d8f188003f9db43021
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096134"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>Comment : créer une table des messages pour une classe de modèle
 La création d'une table des messages dans MFC est un moyen efficace pour diriger les messages Windows vers une instance d'objet appropriée C++. Les exemples de cibles de table des messages MFC comprennent des classes d'application, des classes de document et de vue, des classes de contrôle, etc.  
   
- Tables des messages MFC classiques sont déclarés à l’aide de la [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro pour déclarer le début de la table des messages, une entrée de macro pour chaque méthode de classe de gestionnaire de messages et enfin la [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)macro pour déclarer la fin de la table des messages.  
+ Tables des messages MFC traditionnelles sont déclarées à l’aide de la [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro pour déterminer le début de la table des messages, une entrée macro pour chaque méthode de classe de gestionnaire de messages et enfin la [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)macro pour déclarer la fin de la table des messages.  
   
- Une limitation avec le [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro se produit lorsqu’il est utilisé conjointement avec une classe contenant les arguments de modèle. Si elle est utilisée avec une classe de modèle, la macro entraînera une erreur au moment de la compilation en raison des paramètres de modèle manquants pendant l’expansion macro. Le [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) macro a été conçu pour les classes contenant un argument unique de modèle pour déclarer leurs propres messages mappe.  
+ Une limitation avec les [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro se produit lorsqu’il est utilisé conjointement avec une classe contenant les arguments template. Si elle est utilisée avec une classe de modèle, la macro entraînera une erreur au moment de la compilation en raison des paramètres de modèle manquants pendant l’expansion macro. Le [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) macro a été conçue pour permettre la mappe des classes qui contiennent un seul argument de modèle pour déclarer leurs propres messages.  
   
 ## <a name="example"></a>Exemple  
  Prenons un exemple où la bibliothèque MFC [CListBox](../mfc/reference/clistbox-class.md) classe est étendue pour assurer la synchronisation avec une source de données externe. Le fictive `CSyncListBox` classe est déclarée comme suit :  
   
  [!code-cpp[NVC_MFC_CListBox#42](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_1.h)]  
   
- La `CSyncListBox` classe est basé sur un modèle sur un seul type qui décrit le synchronise avec la source de données. Elle déclare également trois méthodes qui participeront à la table des messages de la classe : `OnPaint`, `OnDestroy`, et `OnSynchronize`. Le `OnSynchronize` méthode est implémentée comme suit :  
+ Le `CSyncListBox` classe est basé sur un modèle sur un seul type qui décrit la source de données il se synchronisera avec. Elle déclare également trois méthodes qui participeront à la table des messages de la classe : `OnPaint`, `OnDestroy`, et `OnSynchronize`. Le `OnSynchronize` méthode est implémentée comme suit :  
   
  [!code-cpp[NVC_MFC_CListBox#43](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_2.cpp)]  
   
- L’implémentation ci-dessus le `CSyncListBox` classe spécialisés sur n’importe quel type de classe qui implémente le `GetCount` (méthode), tel que `CArray`, `CList`, et `CMap`. Le `StringizeElement` fonction est une fonction de modèle prototypée par ce qui suit :  
+ L’implémentation ci-dessus permet le `CSyncListBox` classe à spécialiser sur n’importe quel type de classe qui implémente le `GetCount` (méthode), tel que `CArray`, `CList`, et `CMap`. Le `StringizeElement` fonction est une fonction de modèle prototypée par ce qui suit :  
   
  [!code-cpp[NVC_MFC_CListBox#44](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_3.cpp)]  
   
  Normalement, la table des messages pour cette classe est définie comme suit :  
   
- `BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)`  
-  
- `ON_WM_PAINT()`  
-  
- `ON_WM_DESTROY()`  
-  
- `ON_MESSAGE(LBN_SYNCHRONIZE, OnSynchronize)`  
-  
- `END_MESSAGE_MAP()`  
+```cpp
+BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)
+  ON_WM_PAINT()
+  ON_WM_DESTROY()
+  ON_MESSAGE(LBN_SYNCHRONIZE, OnSynchronize)
+END_MESSAGE_MAP()
+```
   
  où **LBN_SYNCHRONIZE** est un message utilisateur personnalisé défini par l’application, telles que :  
   
  [!code-cpp[NVC_MFC_CListBox#45](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_4.cpp)]  
   
- La carte de macro ci-dessus ne compilera pas, dû au fait que la spécification du modèle pour la `CSyncListBox` classe sera manquant pendant l’expansion macro. Le **BEGIN_TEMPLATE_MESSAGE_MAP** (macro) résout le problème en incorporant le paramètre de modèle dans la carte de macro développée. La table des messages pour cette classe est :  
+ La carte de macro ci-dessus ne compilera pas, dû au fait que la spécification du modèle pour la `CSyncListBox` classe seront manquante pendant l’expansion macro. Le **BEGIN_TEMPLATE_MESSAGE_MAP** macro résout le problème en incorporant le paramètre de modèle spécifié dans la carte de macro développée. La table des messages pour cette classe est :  
   
  [!code-cpp[NVC_MFC_CListBox#46](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_5.cpp)]  
   
- Ce qui suit illustre l’exemple d’utilisation de la `CSyncListBox` à l’aide de la classe une `CStringList` objet :  
+ Les éléments suivants montrent des exemples d’utilisation de la `CSyncListBox` à l’aide de la classe un `CStringList` objet :  
   
  [!code-cpp[NVC_MFC_CListBox#47](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_6.cpp)]  
   

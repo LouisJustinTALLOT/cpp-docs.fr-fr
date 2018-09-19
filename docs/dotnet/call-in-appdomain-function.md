@@ -1,5 +1,5 @@
 ---
-title: call_in_appdomain, fonction | Documents Microsoft
+title: call_in_appdomain, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105243"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain, fonction
 Exécute une fonction dans un domaine d’application spécifié.  
@@ -49,17 +49,17 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `appdomainId`  
- Appdomain dans lequel appeler la fonction.  
+*appdomainId*<br/>
+Appdomain dans lequel appeler la fonction.  
   
- `voidFunc`  
- Pointeur vers un `void` fonction qui accepte des paramètres de N (0 < = N < = 15).  
+*voidFunc*<br/>
+Pointeur vers un `void` fonction qui accepte des paramètres de N (0 < = N < = 15).  
   
- `nonvoidFunc`  
- Pointeur vers non -`void` fonction qui accepte des paramètres de N (0 < = N < = 15).  
+*nonvoidFunc*<br/>
+Pointeur vers non -`void` fonction qui accepte des paramètres de N (0 < = N < = 15).  
   
- `arg1...argN`  
- Zéro à 15 de paramètres à passer au `voidFunc` ou `nonvoidFunc` dans l’autre appdomain.  
+*Arg1... argN*<br/>
+Zéro à 15 paramètres à passer à `voidFunc` ou `nonvoidFunc` dans l’autre appdomain.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le résultat de l’exécution `voidFunc` ou `nonvoidFunc` dans le domaine d’application spécifié.  
@@ -122,7 +122,7 @@ default appdomain id = 1
 appDomain1 id = 2  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\appdomain.h >  
   
  **Namespace** msclr

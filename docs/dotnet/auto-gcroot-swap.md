@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::swap | Documents Microsoft
+title: auto_gcroot::swap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78ab5f8385f404a6db2c9919c39c17d1442b49a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 785480c10aff65d02280a9338e79e76cd430a57b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104917"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098080"
 ---
 # <a name="autogcrootswap"></a>auto_gcroot::swap
 Échange les objets avec un autre `auto_gcroot`.  
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `_right`  
- Le `auto_gcroot` pour échanger des objets.  
+*à d_roite*<br/>
+Le `auto_gcroot` avec lequel échanger des objets.  
   
 ## <a name="example"></a>Exemple  
   
@@ -69,7 +69,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  

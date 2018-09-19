@@ -19,28 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cc11c12efc2beb8ec70c9081619c799f0c8c0d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5c7f3f3ac62de6e04b3fd1fd54bde656a12a55d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073718"
 ---
 # <a name="varianttclear"></a>_variant_t::Clear
-**Section spécifique à Microsoft**  
-  
- Efface le texte encapsulé `VARIANT` objet.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void Clear( );  
-```  
-  
-## <a name="remarks"></a>Notes  
- Appels `VariantClear` sur encapsulé `VARIANT` objet.  
-  
- **FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [_variant_t, classe](../cpp/variant-t-class.md)
+
+**Section spécifique à Microsoft**
+
+Efface le texte encapsulé `VARIANT` objet.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void Clear( );
+```
+
+## <a name="remarks"></a>Notes
+
+Appels `VariantClear` sur encapsulé `VARIANT` objet.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[_variant_t, classe](../cpp/variant-t-class.md)

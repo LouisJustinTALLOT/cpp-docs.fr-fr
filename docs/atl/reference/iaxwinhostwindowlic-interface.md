@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849f5269a715013431da2d8b91997c577008bf68
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8c6b2537f4a4c7ba92a87bfeff2765c3c5e1b274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088707"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic, Interface
 
@@ -74,7 +74,7 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="parameters"></a>Paramètres
 
-*bstrLic*  
+*bstrLic*<br/>
 [in] BSTR contenant la clé de licence pour le contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -104,7 +104,7 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="parameters"></a>Paramètres
 
-*bstrLic*  
+*bstrLic*<br/>
 [in] BSTR contenant la clé de licence pour le contrôle.
 
 ### <a name="remarks"></a>Notes

@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3632 | Documents Microsoft
+title: Erreur du compilateur C3632 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7f41465cf8181b7f19aa4267fd680e49a04b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdacb6463e99d4cb125199a32dfc5ef01ea76e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269065"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110079"
 ---
 # <a name="compiler-error-c3632"></a>Erreur du compilateur C3632
-'événement' : style d’événement pour une construction non conforme  
-  
- [__event](../../cpp/event.md) déclarations ne sont pas valides dans toutes les constructions.  
-  
- C3632 est uniquement accessible à l’aide de l’option du compilateur obsolète **oldSyntax ;**.  
+
+'event' : style d’événement pour la construction non conforme
+
+[__event](../../cpp/event.md) déclarations ne sont pas valides dans toutes les constructions.
+
+C3632 est uniquement accessible à l’aide de l’option de compilateur obsolète **/CLR : oldSyntax**.

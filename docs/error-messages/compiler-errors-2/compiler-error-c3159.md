@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C3159 | Documents Microsoft
+title: Erreur du compilateur C3159 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e77311823977522952d4fe1ca79c41f7edc6b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc9cd34233fdc508d24a295495c4442ab16b7a9c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105009"
 ---
 # <a name="compiler-error-c3159"></a>Erreur du compilateur C3159
-'pointeur' : Impossible de déclarer un tableau de pointeurs vers le type de valeur  
-  
- Impossible de déclarer un tableau de pointeurs vers un type valeur.  
-  
- C3159 est uniquement accessible à l’aide de l’option du compilateur obsolète **oldSyntax ;**.  
+
+'pointeur' : Impossible de déclarer un tableau de pointeurs vers type valeur
+
+Un tableau de pointeurs vers un type valeur ne peut pas être déclaré.
+
+C3159 est uniquement accessible à l’aide de l’option de compilateur obsolète **/CLR : oldSyntax**.

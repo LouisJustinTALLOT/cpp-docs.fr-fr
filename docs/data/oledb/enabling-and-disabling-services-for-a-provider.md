@@ -16,14 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36cb39b467cb413cdf74bef52430cf8caf746199
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a5db612c836e4b902e7cad83017661246f4b649e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079386"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Activation et désactivation de services pour un fournisseur
+
 Des services OLE DB peuvent être activées ou désactivées par défaut pour toutes les applications qui accèdent à un seul fournisseur. Cela s’effectue en ajoutant une entrée de Registre OLEDB_SERVICES sous le CLSID du fournisseur, avec un `DWORD` valeur spécifiant les services pour activer ou désactiver, comme illustré dans le tableau suivant.  
   
 |Services activés par défaut|Valeur de mot clé|  
@@ -36,4 +37,5 @@ Des services OLE DB peuvent être activées ou désactivées par défaut pour to
 |Aucune agrégation, tous les services désactivés|\<clé manquante >|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Activation et désactivation des services OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+
+[Activation et désactivation des services OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

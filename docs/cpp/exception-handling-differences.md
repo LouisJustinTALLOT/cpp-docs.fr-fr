@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1fcfd485b5865b9125e23c6f300b77a1babf1d1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 48acd13aced14bfd8acbeb4c306a5749010636d7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086034"
 ---
 # <a name="handle-structured-exceptions-in-c"></a>Gérer les exceptions structurées en C++
 
@@ -155,4 +155,4 @@ nSE = 0xc0000094
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mélange d’exceptions C (structurées) et des exceptions C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)  
+[Mélange d’exceptions C (structurées) et des exceptions C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)

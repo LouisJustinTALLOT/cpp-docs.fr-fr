@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097794"
 ---
 # <a name="catlarray-class"></a>CAtlArray, classe
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>Paramètres
 
-*E*  
+*E*<br/>
 Type de données à stocker dans le tableau.
 
-*ETraits*  
+*ETraits*<br/>
 Le code utilisé pour copier ou déplacer des éléments.
 
 ## <a name="members"></a>Membres
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Paramètres
 
-*Élément*  
+*Élément*<br/>
 L’élément à ajouter au tableau.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Paramètres
 
-*aSrc*  
+*aSrc*<br/>
 Le tableau à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Paramètres
 
-*aSrc*  
+*aSrc*<br/>
 La source des éléments à copier dans un tableau.
 
 ### <a name="remarks"></a>Notes
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*iElement*  
+*iElement*<br/>
 La valeur d’index de l’élément de tableau à retourner.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>Paramètres
 
-*iStart*  
+*iStart*<br/>
 Index auquel le tableau doit être inséré.
 
-*paNew*  
+*paNew*<br/>
 Le tableau doit être inséré.
 
 ### <a name="remarks"></a>Notes
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>Paramètres
 
-*iElement*  
+*iElement*<br/>
 Index où l’ou les éléments doivent être insérés.
 
-*Élément*  
+*Élément*<br/>
 La valeur de l’élément ou les éléments à insérer.
 
-*nCount*  
+*nCount*<br/>
 Le nombre d’éléments à ajouter.
 
 ### <a name="remarks"></a>Notes
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*iElement*  
+*iElement*<br/>
 La valeur d’index de l’élément de tableau à retourner.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>Paramètres
 
-*iElement*  
+*iElement*<br/>
 L’index du premier élément à supprimer.
 
-*nCount*  
+*nCount*<br/>
 Nombre d'éléments à supprimer.
 
 ### <a name="remarks"></a>Notes
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Paramètres
 
-*iElement*  
+*iElement*<br/>
 L’index qui pointe vers l’élément de tableau à définir.
 
-*Élément*  
+*Élément*<br/>
 La nouvelle valeur de l’élément spécifié.
 
 ### <a name="remarks"></a>Notes
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>Paramètres
 
-*nNewSize*  
+*nNewSize*<br/>
 La taille requise du tableau.
 
-*nGrowBy*  
+*nGrowBy*<br/>
 Une valeur utilisée pour déterminer la taille de la mémoire tampon. La valeur -1 entraîne une valeur calculée en interne à utiliser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Paramètres
 
-*iElement*  
+*iElement*<br/>
 L’index qui pointe vers l’élément de tableau à définir.
 
-*Élément*  
+*Élément*<br/>
 La nouvelle valeur de l’élément spécifié.
 
 ### <a name="remarks"></a>Notes
@@ -559,9 +559,9 @@ Remplace la valeur de l’élément vers lequel pointé l’index. Si *iElement*
 
 ## <a name="see-also"></a>Voir aussi
 
-[MMXSwarm, exemple](../../visual-cpp-samples.md)   
-[Exemple DynamicConsumer](../../visual-cpp-samples.md)   
-[Exemple UpdatePV](../../visual-cpp-samples.md)   
-[Exemple de texte défilant](../../visual-cpp-samples.md)   
-[CArray (classe)](../../mfc/reference/carray-class.md)   
+[MMXSwarm, exemple](../../visual-cpp-samples.md)<br/>
+[Exemple DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Exemple UpdatePV](../../visual-cpp-samples.md)<br/>
+[Exemple de texte défilant](../../visual-cpp-samples.md)<br/>
+[CArray, classe](../../mfc/reference/carray-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

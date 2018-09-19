@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2626 | Documents Microsoft
+title: Erreur du compilateur C2626 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b7b2ea1473b4226382e9aa3bd17b0bfc092f5cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9929da1f0cf9ffd9c70048017fdef1d854c1fcc9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074680"
 ---
 # <a name="compiler-error-c2626"></a>Erreur du compilateur C2626
-'identificateur' : une donnée membre privé ou protégé n'est pas autorisé dans un struct ou union anonyme  
-  
- Un membre d'un struct ou d'une union anonyme doit avoir un accès public.  
-  
- L'exemple suivant génère l'erreur C2626 :  
-  
-```  
-// C2626.cpp  
-int main() {  
-   union {  
-   protected:  
-      int j;     // C2626, j is protected  
-   private:  
-      int k;     // C2626, k is private  
-   };  
-}  
-```  
-  
- Pour résoudre ce problème, supprimez toutes les balises privées ou protégées :  
-  
-```  
-// C2626b.cpp  
-int main() {  
-   union {  
-   public:  
-      int i;   // OK, i is public  
-   };  
-}  
+
+'identificateur' : une donnée membre privé ou protégé n'est pas autorisé dans un struct ou union anonyme
+
+Un membre d'un struct ou d'une union anonyme doit avoir un accès public.
+
+L'exemple suivant génère l'erreur C2626 :
+
+```
+// C2626.cpp
+int main() {
+   union {
+   protected:
+      int j;     // C2626, j is protected
+   private:
+      int k;     // C2626, k is private
+   };
+}
+```
+
+Pour résoudre ce problème, supprimez toutes les balises privées ou protégées :
+
+```
+// C2626b.cpp
+int main() {
+   union {
+   public:
+      int i;   // OK, i is public
+   };
+}
 ```

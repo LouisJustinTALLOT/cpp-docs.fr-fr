@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116745"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Appel à des fonctions natives à partir de code managé
 Le common language runtime fournit des Services d’appel de plateforme, ou PInvoke, qui permet au code managé appelle des fonctions de style C dans les bibliothèques dynamiques liées (DLL) natives. Les même marshaling de données sont utilisées que pour l’interopérabilité COM avec le runtime et pour le « It Just Works », mécanisme IJW.  
@@ -105,7 +105,7 @@ int main() {
   
  Dans cet exemple, un programme Visual C++ interagit avec la fonction MessageBox qui fait partie de l’API Win32.  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -132,16 +132,17 @@ int main() {
   
  Si nous utilisons PInvoke dans une application Visual C++, nous pouvons écrire quelque chose de similaire à ce qui suit :  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  La difficulté, ici est que nous ne pouvons pas supprimer la mémoire pour la chaîne non managée retournée par MakeSpecial. Autres fonctions appelées via PInvoke retournent un pointeur vers une mémoire tampon interne qui n’a pas d’être libérée par l’utilisateur. Dans ce cas, à l’aide de la fonctionnalité IJW est le choix évident.  
   
 ## <a name="limitations-of-pinvoke"></a>Limitations de PInvoke  
  Vous ne pouvez pas retourner exactement le même pointeur à partir d’une fonction native que vous avez suivies en tant que paramètre. Si une fonction native retourne le pointeur qui a été marshalé à celui-ci par PInvoke, exceptions et la corruption de la mémoire peuvent survenir.  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  

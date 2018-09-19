@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bebc10481c446edfa29d09663ac3139ecc5391b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dee005091c95bbac5fca64851f631b443bd33cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106766"
 ---
 # <a name="accelerator-class"></a>accelerator, classe
 Un accélérateur est une fonctionnalité de matériel qui est optimisée pour le calcul parallèle de données. Un accélérateur pourrait être un périphérique connecté à un bus de PCIe (tel qu’un GPU), ou il peut être une instruction étendue définie sur le processeur principal.  
@@ -164,11 +164,11 @@ accelerator(const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Device_path`  
- Le chemin d’accès de l’appareil physique.  
+*_Device_path*<br/>
+Le chemin d’accès de l’appareil physique.  
   
- `_Other`  
- L’accélérateur à copier.  
+*_Autre*<br/>
+L’accélérateur à copier.  
   
 ##  <a name="cpu_accelerator"></a> cpu_accelerator 
 
@@ -187,8 +187,8 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `qmode`  
- Le mode de file d’attente.  
+*qmode*<br/>
+Le mode de file d’attente.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un nouveau `accelerator_view` objet sur cet accélérateur, l’utilisation du mode de file d’attente spécifié.  
@@ -470,8 +470,8 @@ bool operator!= (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `accelerator` objet à comparer avec celle-ci.  
+*_Autre*<br/>
+Le `accelerator` objet à comparer avec celle-ci.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `false` Si les deux `accelerator` objets sont identiques ; sinon, `true`.  
@@ -485,8 +485,8 @@ accelerator& operator= (const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `accelerator` objet à copier.  
+*_Autre*<br/>
+Le `accelerator` objet à copier.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à cet `accelerator` objet.  
@@ -502,8 +502,8 @@ bool operator== (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `accelerator` objet à comparer avec celle-ci.  
+*_Autre*<br/>
+Le `accelerator` objet à comparer avec celle-ci.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si l’autre `accelerator` objet est identique à ce `accelerator` objet ; sinon, `false`.  
@@ -517,8 +517,8 @@ static inline bool set_default(std::wstring _Path);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Path`  
- Le chemin d’accès à l’accélérateur.  
+*_Chemin d’accès*<br/>
+Le chemin d’accès à l’accélérateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si l’appel aboutit au paramètre de l’accélérateur par défaut. Sinon, `false`.  
@@ -532,8 +532,8 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Default_cpu_access_type`  
- L’access_type d’UC par défaut à utiliser pour les allocations de mémoire array/array_view sur cet accélérateur.  
+*_Default_cpu_access_type*<br/>
+L’access_type d’UC par défaut à utiliser pour les allocations de mémoire array/array_view sur cet accélérateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur booléenne indiquant si l’access_type d’UC par défaut pour l’accélérateur a été correctement défini.  
@@ -597,8 +597,8 @@ accelerator_view(const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `accelerator_view` objet à copier.  
+*_Autre*<br/>
+Le `accelerator_view` objet à copier.  
   
 ##  <a name="create_marker"></a> create_marker 
 
@@ -714,8 +714,8 @@ bool operator!= (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `accelerator_view` objet à comparer avec celle-ci.  
+*_Autre*<br/>
+Le `accelerator_view` objet à comparer avec celle-ci.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `false` si les deux objets sont identiques ; sinon, `true`.  
@@ -729,8 +729,8 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `accelerator_view` objet à copier.  
+*_Autre*<br/>
+Le `accelerator_view` objet à copier.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à la modification `accelerator_view` objet.  
@@ -746,8 +746,8 @@ bool operator== (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `_Other`  
- Le `accelerator_view` objet à comparer avec celle-ci.  
+*_Autre*<br/>
+Le `accelerator_view` objet à comparer avec celle-ci.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` si les deux objets sont identiques ; sinon, `false`.  

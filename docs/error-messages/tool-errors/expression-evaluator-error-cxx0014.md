@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0014 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0014 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fbe19ef2073f86a7cb19af105244a370272a62d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dda39de8c4803346c8727b018021f71ca080e4d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115814"
 ---
 # <a name="expression-evaluator-error-cxx0014"></a>Évaluateur d'expression, erreur CXX0014
-opérande manquant  
-  
- Un opérateur a été spécifié sans un opérande obligatoire. Vérifiez la syntaxe de l’expression.  
-  
- Cette erreur est identique à CAN0014.
+
+opérande manquant
+
+Un opérateur a été spécifié sans un opérande obligatoire. Vérifiez la syntaxe de l’expression.
+
+Cette erreur est identique à CAN0014.

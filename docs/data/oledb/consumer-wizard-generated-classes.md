@@ -21,27 +21,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a4ffcb231824c120c90eaae1751a016ef63b8211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338737"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106179"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes de consommateur générées par l’Assistant
+
 Quand vous utilisez l’Assistant Consommateur OLE DB ATL pour générer un consommateur, vous avez le choix entre utiliser soit des modèles OLE DB, soit des attributs OLE DB. Dans les deux cas, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande contient du code destiné à ouvrir la source de données et le rowset que vous avez spécifié dans l’Assistant. La classe d’enregistrement utilisateur contient un mappage de colonnes pour la table de base de données que vous avez sélectionnée. Cependant, le code généré est différent dans chaque cas :  
   
--   Si vous sélectionnez un consommateur basé sur un modèle, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande prend le nom que vous entrez dans la zone Classe de l’Assistant (par exemple, `CProducts`), tandis que la classe d’enregistrement utilisateur prend un nom sous la forme «*NomClasse*Accessor » (par exemple, `CProductsAccessor`). Les deux classes sont placées dans le fichier d’en-tête du consommateur.  
+- Si vous sélectionnez un consommateur basé sur un modèle, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande prend le nom que vous entrez dans la zone Classe de l’Assistant (par exemple, `CProducts`), tandis que la classe d’enregistrement utilisateur prend un nom sous la forme «*NomClasse*Accessor » (par exemple, `CProductsAccessor`). Les deux classes sont placées dans le fichier d’en-tête du consommateur.  
   
--   Si vous sélectionnez un consommateur avec attributs, la classe d’enregistrement utilisateur prend un nom sous la forme « _*NomClasse*Accessor » avant d’être injectée. Autrement dit, vous pouvez afficher uniquement la classe de commande dans l’éditeur de texte ; vous pouvez afficher uniquement la classe d’enregistrement utilisateur en tant que code injecté. Pour plus d’informations sur l’affichage de code injecté, consultez [Débogage de code injecté](/visualstudio/debugger/how-to-debug-injected-code).  
+- Si vous sélectionnez un consommateur avec attributs, la classe d’enregistrement utilisateur prend un nom sous la forme « _*NomClasse*Accessor » avant d’être injectée. Autrement dit, vous pouvez afficher uniquement la classe de commande dans l’éditeur de texte ; vous pouvez afficher uniquement la classe d’enregistrement utilisateur en tant que code injecté. Pour plus d’informations sur l’affichage de code injecté, consultez [Débogage de code injecté](/visualstudio/debugger/how-to-debug-injected-code).  
   
- Les exemples suivants utilisent une classe de commande créée dans la table Products de la base de données Northwind pour illustrer le code de consommateur généré par l’Assistant pour la classe de commande et la classe d’enregistrement utilisateur.  
+Les exemples suivants utilisent une classe de commande créée dans la table Products de la base de données Northwind pour illustrer le code de consommateur généré par l’Assistant pour la classe de commande et la classe d’enregistrement utilisateur.  
   
 ## <a name="templated-user-record-classes"></a>Classes d’enregistrement utilisateur basées sur un modèle  
- Si vous créez un consommateur OLE DB à l’aide des modèles OLE DB (et non des attributs OLE DB), l’Assistant génère du code comme décrit dans cette section.  
+
+Si vous créez un consommateur OLE DB à l’aide des modèles OLE DB (et non des attributs OLE DB), l’Assistant génère du code comme décrit dans cette section.  
   
 ### <a name="column-data-members"></a>Membres de données de colonne  
- La première partie de la classe d’enregistrement utilisateur comprend les déclarations des membres de données et les membres de données d’état et de longueur pour chaque colonne liée aux données. Pour plus d’informations sur ces membres de données, consultez [Membres de données d’état des champs dans les accesseurs générés par l’Assistant](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+
+La première partie de la classe d’enregistrement utilisateur comprend les déclarations des membres de données et les membres de données d’état et de longueur pour chaque colonne liée aux données. Pour plus d’informations sur ces membres de données, consultez [Membres de données d’état des champs dans les accesseurs générés par l’Assistant](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
 > [!NOTE]
 >  Si vous modifiez la classe d’enregistrement utilisateur ou écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
@@ -93,7 +96,8 @@ public:
 ```  
   
 ### <a name="rowset-properties"></a>Propriétés du rowset  
- Ensuite, l’Assistant définit les propriétés du rowset. Si vous avez sélectionné **Modifier**, **Insérer**ou **Supprimer** dans l’Assistant Consommateur OLE DB ATL, les propriétés appropriées sont définies ici (DBPROP_IRowsetChange est toujours défini, puis une ou plusieurs propriétés parmi DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT et/ou DBPROPVAL_UP_DELETE, respectivement).  
+
+Ensuite, l’Assistant définit les propriétés du rowset. Si vous avez sélectionné **Modifier**, **Insérer**ou **Supprimer** dans l’Assistant Consommateur OLE DB ATL, les propriétés appropriées sont définies ici (DBPROP_IRowsetChange est toujours défini, puis une ou plusieurs propriétés parmi DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT et/ou DBPROPVAL_UP_DELETE, respectivement).  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -106,7 +110,8 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ```  
   
 ### <a name="command-or-table-class"></a>Classe de commande ou de table  
- Si vous spécifiez une classe de commande, l’Assistant déclare la classe de commande ; pour le code basé sur un modèle, la commande se présente comme suit :  
+
+Si vous spécifiez une classe de commande, l’Assistant déclare la classe de commande ; pour le code basé sur un modèle, la commande se présente comme suit :  
   
 ```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
@@ -125,7 +130,8 @@ SELECT \
 ```  
   
 ### <a name="column-map"></a>Mappage de colonnes  
- L’Assistant génère ensuite les liaisons de colonnes ou le mappage de colonnes. Pour corriger plusieurs problèmes rencontrés avec certains fournisseurs, le code ci-dessous peut lier les colonnes dans un ordre différent de celui indiqué par le fournisseur.  
+
+L’Assistant génère ensuite les liaisons de colonnes ou le mappage de colonnes. Pour corriger plusieurs problèmes rencontrés avec certains fournisseurs, le code ci-dessous peut lier les colonnes dans un ordre différent de celui indiqué par le fournisseur.  
   
 ```  
    BEGIN_COLUMN_MAP(CProductsAccessor)  
@@ -144,18 +150,20 @@ SELECT \
 ```  
   
 ### <a name="class-declaration"></a>Déclaration de classe  
- Enfin, l’Assistant génère une déclaration de classe de commande semblable à la suivante :  
+
+Enfin, l’Assistant génère une déclaration de classe de commande semblable à la suivante :  
   
 ```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
 ## <a name="attribute-injected-user-record-classes"></a>Classes d'enregistrement utilisateur injectées par les attributs  
- Si vous créez un consommateur OLE DB en utilisant les attributs de base de données ([db_command](../../windows/db-command.md) ou [db_table](../../windows/db-table.md)), les attributs injectent une classe d’enregistrement utilisateur dont le nom prend la forme « _*NomClasse*Accessor ». Par exemple, si vous avez nommé votre classe de commande `COrders`, la classe d’enregistrement utilisateur s’intitule `_COrdersAccessor`. Bien que la classe d’enregistrement utilisateur s’affiche dans Affichage de classes, le fait de double-cliquer dessus donne accès à la classe de commande ou de table dans le fichier d’en-tête. Dans ce cas, vous ne pouvez voir la déclaration réelle de la classe d’enregistrement utilisateur qu’en affichant le code injecté par les attributs.  
+
+Si vous créez un consommateur OLE DB en utilisant les attributs de base de données ([db_command](../../windows/db-command.md) ou [db_table](../../windows/db-table.md)), les attributs injectent une classe d’enregistrement utilisateur dont le nom prend la forme « _*NomClasse*Accessor ». Par exemple, si vous avez nommé votre classe de commande `COrders`, la classe d’enregistrement utilisateur s’intitule `_COrdersAccessor`. Bien que la classe d’enregistrement utilisateur s’affiche dans Affichage de classes, le fait de double-cliquer dessus donne accès à la classe de commande ou de table dans le fichier d’en-tête. Dans ce cas, vous ne pouvez voir la déclaration réelle de la classe d’enregistrement utilisateur qu’en affichant le code injecté par les attributs.  
   
- Vous pouvez rencontrer des complications si vous ajoutez ou substituez des méthodes dans des consommateurs avec attributs. Par exemple, vous pouvez décider d’ajouter un constructeur `_COrdersAccessor` à la déclaration `COrders` . Or, en réalité, le constructeur est ajouté à la classe `COrdersAccessor` injectée. Un constructeur de ce type peut initialiser les colonnes/paramètres, mais vous ne pouvez pas créer un constructeur de copie de cette façon, car il ne peut pas instancier directement l’objet `COrdersAccessor` . Si vous avez besoin d’un constructeur (ou autre méthode) directement dans la classe `COrders` , il est recommandé de définir une nouvelle classe dérivant de `COrders` et d’y ajouter les méthodes nécessaires.  
+Vous pouvez rencontrer des complications si vous ajoutez ou substituez des méthodes dans des consommateurs avec attributs. Par exemple, vous pouvez décider d’ajouter un constructeur `_COrdersAccessor` à la déclaration `COrders` . Or, en réalité, le constructeur est ajouté à la classe `COrdersAccessor` injectée. Un constructeur de ce type peut initialiser les colonnes/paramètres, mais vous ne pouvez pas créer un constructeur de copie de cette façon, car il ne peut pas instancier directement l’objet `COrdersAccessor` . Si vous avez besoin d’un constructeur (ou autre méthode) directement dans la classe `COrders` , il est recommandé de définir une nouvelle classe dérivant de `COrders` et d’y ajouter les méthodes nécessaires.  
   
- Dans l’exemple suivant, l’Assistant génère une déclaration pour la classe `COrders`, mais la classe d’enregistrement utilisateur `COrdersAccessor` n’apparaît pas, car elle est injectée par les attributs.  
+Dans l’exemple suivant, l’Assistant génère une déclaration pour la classe `COrders`, mais la classe d’enregistrement utilisateur `COrdersAccessor` n’apparaît pas, car elle est injectée par les attributs.  
   
 ```cpp  
 #define _ATL_ATTRIBUTES  
@@ -177,15 +185,16 @@ public:
    };  
 ```  
   
- La déclaration de classe de commande injectée se présente comme ceci :  
+La déclaration de classe de commande injectée se présente comme ceci :  
   
 ```  
 class CProducts : public CCommand<CAccessor<_CProductsAccessor>>  
 ```  
   
- Le code injecté est pour l’essentiel identique ou similaire à la version basée sur un modèle. Les principales différences résident dans les méthodes injectées, qui sont décrites dans [Méthodes générées par l’Assistant Consommateur](../../data/oledb/consumer-wizard-generated-methods.md).  
+Le code injecté est pour l’essentiel identique ou similaire à la version basée sur un modèle. Les principales différences résident dans les méthodes injectées, qui sont décrites dans [Méthodes générées par l’Assistant Consommateur](../../data/oledb/consumer-wizard-generated-methods.md).  
   
- Pour plus d’informations sur l’affichage de code injecté, consultez [Débogage de code injecté](/visualstudio/debugger/how-to-debug-injected-code).  
+Pour plus d’informations sur l’affichage de code injecté, consultez [Débogage de code injecté](/visualstudio/debugger/how-to-debug-injected-code).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

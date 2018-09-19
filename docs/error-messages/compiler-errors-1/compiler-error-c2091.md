@@ -1,5 +1,5 @@
 ---
-title: Erreur du compilateur C2091 | Documents Microsoft
+title: Erreur du compilateur C2091 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c115ea47f87a59c7412ed057675ccf893467cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c47d7e99099632313fd561a4e08af52644693c95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166359"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077007"
 ---
 # <a name="compiler-error-c2091"></a>Erreur du compilateur C2091
-fonction retourne (fonction)  
-  
- Une fonction ne peut pas retourner une fonction. Retourne un pointeur vers une fonction à la place.
+
+fonction retourne (fonction)
+
+Une fonction ne peut pas retourner une fonction. Retourner un pointeur vers une fonction à la place.

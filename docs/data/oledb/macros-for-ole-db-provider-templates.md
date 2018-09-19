@@ -62,14 +62,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b2728c88e320fab192563f21ebcdde934be9da84
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8953b277ff5512e71b3821d6f1f32bc897322d8c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100498"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros pour les modèles du fournisseur OLE DB
+
 Les macros de fournisseur de modèles OLE DB offrent des fonctionnalités dans les catégories suivantes :  
   
 ## <a name="property-set-map-macros"></a>Macros de mappage de propriété Set  
@@ -109,9 +110,11 @@ Les macros de fournisseur de modèles OLE DB offrent des fonctionnalités dans l
 |[SCHEMA_ENTRY](#schema_entry)|Associe un GUID à une classe.|  
 
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** atldb.h  
+
+**En-tête :** atldb.h  
 
 ### <a name="begin_property_set"></a> BEGIN_PROPERTY_SET
+
 Mappage d’ensemble de marque le début d’une propriété défini dans une propriété.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -121,13 +124,16 @@ BEGIN_PROPERTY_SET(guid)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *guid*  
- [in] La propriété GUID.  
+
+*guid*<br/>
+[in] La propriété GUID.  
   
 #### <a name="example"></a>Exemple  
- Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
+
 Mappage d’ensemble de marque le début d’une propriété défini dans une propriété.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -137,16 +143,19 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *guid*  
- [in] La propriété GUID.  
+
+*guid*<br/>
+[in] La propriété GUID.  
   
- *flags*  
- [in] UPROPSET_HIDDEN pour les jeux de propriétés que vous ne souhaitez pas exposer ou UPROPSET_PASSTHROUGH pour un fournisseur d’exposer des propriétés définies en dehors de la portée du fournisseur.  
+*flags*<br/>
+[in] UPROPSET_HIDDEN pour les jeux de propriétés que vous ne souhaitez pas exposer ou UPROPSET_PASSTHROUGH pour un fournisseur d’exposer des propriétés définies en dehors de la portée du fournisseur.  
   
 #### <a name="example"></a>Exemple  
- Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
+
 Marque le début de la propriété définie des entrées de mappage.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -156,21 +165,24 @@ BEGIN_PROPSET_MAP(Class)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Classe*  
- [in] La classe dans laquelle cette propriété la valeur est spécifiée. Un jeu de propriétés peut être spécifié dans les objets OLE DB suivants :  
+
+*Classe*<br/>
+[in] La classe dans laquelle cette propriété la valeur est spécifiée. Un jeu de propriétés peut être spécifié dans les objets OLE DB suivants :  
   
--   [Objets Source de données](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
+- [Objets Source de données](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
   
--   [Objets de session](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
+- [Objets de session](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
   
--   [Commandes](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
+- [Commandes](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
   
 #### <a name="example"></a>Exemple  
- Voici un exemple de mappage de jeu de propriétés :  
+
+Voici un exemple de mappage de jeu de propriétés :  
   
- [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
+[!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
 
 ### <a name="chain_property_set"></a> CHAIN_PROPERTY_SET
+
 Cette macro chaîne ensemble les groupes de propriétés.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -180,16 +192,19 @@ CHAIN_PROPERTY_SET(ChainClass)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *ChainClass*  
- [in] Le nom de la classe à des propriétés de chaîne. Il s’agit d’une classe générée par l’Assistant Projet ATL qui contient déjà un mappage (par exemple, une session, de commande ou de données source classe d’objet).  
+
+*ChainClass*<br/>
+[in] Le nom de la classe à des propriétés de chaîne. Il s’agit d’une classe générée par l’Assistant Projet ATL qui contient déjà un mappage (par exemple, une session, de commande ou de données source classe d’objet).  
   
 #### <a name="remarks"></a>Notes  
- Vous pouvez chaîner un jeu de propriétés à partir d’une autre classe à votre propre classe, puis accéder aux propriétés directement à partir de votre classe.  
+
+Vous pouvez chaîner un jeu de propriétés à partir d’une autre classe à votre propre classe, puis accéder aux propriétés directement à partir de votre classe.  
   
 > [!CAUTION]
 >  Utilisez cette macro avec parcimonie. Utilisation incorrecte peut entraîner un consommateur à échouer les tests de compatibilité OLE DB.  
 
 ### <a name="end_property_set"></a> END_PROPERTY_SET
+
 Marque la fin d’un jeu de propriétés.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -199,13 +214,16 @@ END_PROPERTY_SET(guid)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *guid*  
- [in] La propriété GUID.  
+
+*guid*<br/>
+[in] La propriété GUID.  
   
 #### <a name="example"></a>Exemple  
- Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="end_propset_map"></a> END_PROPSET_MAP
+
 Marque la fin de la propriété définie des entrées de mappage.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -215,9 +233,11 @@ END_PROPSET_MAP()
 ```  
   
 #### <a name="example"></a>Exemple  
- Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
+
 Représente une propriété spécifique dans un jeu de propriétés.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -227,16 +247,20 @@ PROPERTY_INFO_ENTRY(dwPropID)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *dwPropID*  
- [in] Un [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) qui peut être utilisé conjointement avec la propriété la valeur GUID pour identifier une propriété.  
+
+*dwPropID*<br/>
+[in] Un [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) qui peut être utilisé conjointement avec la propriété la valeur GUID pour identifier une propriété.  
   
 #### <a name="remarks"></a>Notes  
- Cette macro attribue à la propriété de type `DWORD` une valeur par défaut définie dans ATLDB.H. Pour attribuer à la propriété une valeur de votre choix, utilisez [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Pour définir le `VARTYPE` et [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) pour la propriété en même temps, utilisez [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+
+Cette macro attribue à la propriété de type `DWORD` une valeur par défaut définie dans ATLDB.H. Pour attribuer à la propriété une valeur de votre choix, utilisez [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Pour définir le `VARTYPE` et [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) pour la propriété en même temps, utilisez [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Exemple  
- Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
+
 Représente une propriété spécifique dans un jeu de propriétés.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -246,28 +270,32 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *dwPropID*  
- [in] Un [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) qui peut être utilisé conjointement avec la propriété la valeur GUID pour identifier une propriété.  
+
+*dwPropID*<br/>
+[in] Un [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) qui peut être utilisé conjointement avec la propriété la valeur GUID pour identifier une propriété.  
   
- *vt*  
- [in] Le `VARTYPE` de cette entrée de propriété. (Défini dans wtypes.h)  
+*vt*<br/>
+[in] Le `VARTYPE` de cette entrée de propriété. (Défini dans wtypes.h)  
   
- *dwFlags*  
- [in] Un [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) valeur décrivant cette entrée de propriété.  
+*dwFlags*<br/>
+[in] Un [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) valeur décrivant cette entrée de propriété.  
   
- *valeur*  
- [in] Valeur de propriété de type `DWORD`.  
+*valeur*<br/>
+[in] Valeur de propriété de type `DWORD`.  
   
- *options*  
- DBPROPOPTIONS_REQUIRED ou DBPROPOPTIONS_SETIFCHEAP. En règle générale, un fournisseur sans devoir définir *options* dans la mesure où elle est définie par le consommateur.  
+*options*<br/>
+DBPROPOPTIONS_REQUIRED ou DBPROPOPTIONS_SETIFCHEAP. En règle générale, un fournisseur sans devoir définir *options* dans la mesure où elle est définie par le consommateur.  
   
 #### <a name="remarks"></a>Notes  
- Avec cette macro, vous pouvez spécifier directement la valeur de propriété de type `DWORD` , ainsi que les options et les indicateurs. Pour affecter simplement à une propriété une valeur par défaut définie dans ATLDB.H, utilisez [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Pour affecter à une propriété une valeur de votre choix, sans définir aucune option ou indicateur, utilisez [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).  
+
+Avec cette macro, vous pouvez spécifier directement la valeur de propriété de type `DWORD` , ainsi que les options et les indicateurs. Pour affecter simplement à une propriété une valeur par défaut définie dans ATLDB.H, utilisez [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Pour affecter à une propriété une valeur de votre choix, sans définir aucune option ou indicateur, utilisez [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).  
   
 #### <a name="example"></a>Exemple  
- Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
+
 Représente une propriété spécifique dans un jeu de propriétés.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -277,19 +305,23 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *dwPropID*  
- [in] Un [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) qui peut être utilisé conjointement avec la propriété la valeur GUID pour identifier une propriété.  
+
+*dwPropID*<br/>
+[in] Un [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) qui peut être utilisé conjointement avec la propriété la valeur GUID pour identifier une propriété.  
   
- *valeur*  
- [in] Valeur de propriété de type `DWORD`.  
+*valeur*<br/>
+[in] Valeur de propriété de type `DWORD`.  
   
 #### <a name="remarks"></a>Notes  
- Avec cette macro, vous pouvez spécifier directement la valeur de propriété de type `DWORD`. Pour définir la propriété valeur par défaut définie dans ATLDB. H, utilisez [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Pour définir la valeur, les indicateurs et les options de la propriété, utilisez [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+
+Avec cette macro, vous pouvez spécifier directement la valeur de propriété de type `DWORD`. Pour définir la propriété valeur par défaut définie dans ATLDB. H, utilisez [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Pour définir la valeur, les indicateurs et les options de la propriété, utilisez [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Exemple  
- Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
+
 Marque le début des entrées de mappage de colonne de fournisseur.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -299,15 +331,18 @@ BEGIN_PROVIDER_COLUMN_MAP(theClass)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *theClass*  
- [in] Le nom de la classe à que laquelle appartient ce mappage.  
+
+*theClass*<br/>
+[in] Le nom de la classe à que laquelle appartient ce mappage.  
   
 #### <a name="example"></a>Exemple  
- Voici un exemple de mappage de colonne fournisseur :  
+
+Voici un exemple de mappage de colonne fournisseur :  
   
- [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]  
+[!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]  
 
 ### <a name="end_provider_column_map"></a> END_PROVIDER_COLUMN_MAP
+
 Marque la fin des entrées de mappage de colonne de fournisseur.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -317,9 +352,11 @@ END_PROVIDER_COLUMN_MAP()
 ```  
   
 #### <a name="example"></a>Exemple  
- Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
+
+Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
 
 ### <a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
+
 Représente une colonne spécifique est pris en charge par le fournisseur.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -329,16 +366,18 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *name*  
- [in] Le nom de colonne.  
+
+*name*<br/>
+[in] Le nom de colonne.  
   
- *Ordinal*  
- [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
+*Ordinal*<br/>
+[in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
- *Membre*  
- [in] La variable de membre dans `dataClass` correspondant à la colonne.  
+*Membre*<br/>
+[in] La variable de membre dans `dataClass` correspondant à la colonne.  
 
 ### <a name="provider_column_entry_fixed"></a> PROVIDER_COLUMN_ENTRY_FIXED
+
 Représente une colonne spécifique est pris en charge par le fournisseur.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -348,25 +387,29 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *name*  
- [in] Le nom de colonne.  
+
+*name*<br/>
+[in] Le nom de colonne.  
   
- *Ordinal*  
- [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
+*Ordinal*<br/>
+[in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
- *DbType*  
- [in] Le type de données dans [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+*DbType*<br/>
+[in] Le type de données dans [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
- *Membre*  
- [in] La variable de membre dans `dataClass` qui stocke les données.  
+*Membre*<br/>
+[in] La variable de membre dans `dataClass` qui stocke les données.  
   
 #### <a name="remarks"></a>Notes  
- Vous permet de spécifier le type de données de colonne.  
+
+Vous permet de spécifier le type de données de colonne.  
   
 #### <a name="example"></a>Exemple  
- Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
+
+Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
 
 ### <a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
+
 Représente une colonne spécifique est pris en charge par le fournisseur.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -376,34 +419,37 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *name*  
- [in] Le nom de colonne.  
+
+*name*<br/>
+[in] Le nom de colonne.  
   
- *Ordinal*  
- [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
+*Ordinal*<br/>
+[in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
- *flags*  
- [in] Spécifie la façon dont les données sont retournées. Consultez le `dwFlags` description dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+*flags*<br/>
+[in] Spécifie la façon dont les données sont retournées. Consultez le `dwFlags` description dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
- *colSize*  
- [in] La taille de la colonne.  
+*colSize*<br/>
+[in] La taille de la colonne.  
   
- *DbType*  
- [in] Indique le type de données de la valeur. Consultez le `wType` description dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+*DbType*<br/>
+[in] Indique le type de données de la valeur. Consultez le `wType` description dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
- *precision*  
- [in] Indique la précision à utiliser lors de l’obtention des données si *dbType* soit DBTYPE_NUMERIC DBTYPE_DECIMAL. Consultez le `bPrecision` description dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+*precision*<br/>
+[in] Indique la précision à utiliser lors de l’obtention des données si *dbType* soit DBTYPE_NUMERIC DBTYPE_DECIMAL. Consultez le `bPrecision` description dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
- *Mise à l’échelle*  
- [in] Indique l’échelle à utiliser lors de l’obtention des données si dbType est DBTYPE_NUMERIC ou DBTYPE_DECIMAL. Consultez le `bScale` description dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+*Mise à l’échelle*<br/>
+[in] Indique l’échelle à utiliser lors de l’obtention des données si dbType est DBTYPE_NUMERIC ou DBTYPE_DECIMAL. Consultez le `bScale` description dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
- *guid*  
- Un GUID de lignes du schéma. Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) dans le *de référence du programmeur OLE DB* pour obtenir la liste des ensembles de lignes de schéma et de leurs GUID.  
+*guid*<br/>
+Un GUID de lignes du schéma. Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) dans le *de référence du programmeur OLE DB* pour obtenir la liste des ensembles de lignes de schéma et de leurs GUID.  
   
 #### <a name="remarks"></a>Notes  
- Vous permet de spécifier la taille de la colonne, type de données, précision, échelle et GUID du jeu de lignes de schéma.  
+
+Vous permet de spécifier la taille de la colonne, type de données, précision, échelle et GUID du jeu de lignes de schéma.  
 
 ### <a name="provider_column_entry_length"></a> PROVIDER_COLUMN_ENTRY_LENGTH
+
 Représente une colonne spécifique est pris en charge par le fournisseur.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -413,25 +459,29 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *name*  
- [in] Le nom de colonne.  
+
+*name*<br/>
+[in] Le nom de colonne.  
   
- *Ordinal*  
- [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
+*Ordinal*<br/>
+[in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
- *size*  
- [in] La taille de la colonne en octets.  
+*size*<br/>
+[in] La taille de la colonne en octets.  
   
- *Membre*  
- [in] La variable de membre dans `dataClass` qui stocke les données de colonne.  
+*Membre*<br/>
+[in] La variable de membre dans `dataClass` qui stocke les données de colonne.  
   
 #### <a name="remarks"></a>Notes  
- Vous permet de spécifier la taille de la colonne.  
+
+Vous permet de spécifier la taille de la colonne.  
   
 #### <a name="example"></a>Exemple  
- Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md). 
+
+Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md). 
 
 ### <a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
+
 Représente une colonne spécifique est pris en charge par le fournisseur.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -441,22 +491,26 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *name*  
- [in] Le nom de colonne.  
+
+*name*<br/>
+[in] Le nom de colonne.  
   
- *Ordinal*  
- [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
+*Ordinal*<br/>
+[in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
- *Membre*  
- [in] La variable de membre de la classe de données qui stocke les données.  
+*Membre*<br/>
+[in] La variable de membre de la classe de données qui stocke les données.  
   
 #### <a name="remarks"></a>Notes  
- Utilisez cette macro, lorsque les données de colonne sont supposées être [DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+
+Utilisez cette macro, lorsque les données de colonne sont supposées être [DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
 #### <a name="example"></a>Exemple  
- Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).   
+
+Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).   
 
 ### <a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+
 Représente une colonne spécifique est pris en charge par le fournisseur.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -466,25 +520,28 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *name*  
- [in] Le nom de colonne.  
+
+*name*<br/>
+[in] Le nom de colonne.  
   
- *Ordinal*  
- [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
+*Ordinal*<br/>
+[in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
- *DbType*  
- [in] Le type de données dans [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+*DbType*<br/>
+[in] Le type de données dans [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
- *size*  
- [in] La taille de la colonne en octets.  
+*size*<br/>
+[in] La taille de la colonne en octets.  
   
- *Membre*  
- [in] La variable de membre de la classe de données qui stocke les données.  
+*Membre*<br/>
+[in] La variable de membre de la classe de données qui stocke les données.  
   
 #### <a name="remarks"></a>Notes  
- Semblable à [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , mais vous permet également de spécifier le type de données de la colonne, ainsi que la taille.  
+
+Semblable à [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , mais vous permet également de spécifier le type de données de la colonne, ainsi que la taille.  
 
 ### <a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
+
 Représente une colonne spécifique est pris en charge par le fournisseur.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -494,19 +551,22 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *name*  
- [in] Le nom de colonne.  
+
+*name*<br/>
+[in] Le nom de colonne.  
   
- *Ordinal*  
- [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
+*Ordinal*<br/>
+[in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
- *Membre*  
- [in] La variable de membre de la classe de données qui stocke les données.  
+*Membre*<br/>
+[in] La variable de membre de la classe de données qui stocke les données.  
   
 #### <a name="remarks"></a>Notes  
- Utilisez cette macro, lorsque les données de la colonne sont une chaîne de caractères Unicode, de nul [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+
+Utilisez cette macro, lorsque les données de la colonne sont une chaîne de caractères Unicode, de nul [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
+
 Indique le début d’un mappage de schéma.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -516,13 +576,16 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *F*  
- La classe qui contient le mappage. En général, il s’agit de la classe session.  
+
+*F*<br/>
+La classe qui contient le mappage. En général, il s’agit de la classe session.  
   
 #### <a name="remarks"></a>Notes  
- Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) dans le SDK Windows pour plus d’informations sur les ensembles de lignes de schéma.  
+
+Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) dans le SDK Windows pour plus d’informations sur les ensembles de lignes de schéma.  
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
+
 Indique la fin du mappage de schéma.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -532,9 +595,11 @@ END_SCHEMA_MAP()
 ```  
   
 #### <a name="see-also"></a>Voir aussi  
- [IDBSchemaRowsetImpl, classe](../../data/oledb/idbschemarowsetimpl-class.md)
+
+[IDBSchemaRowsetImpl, classe](../../data/oledb/idbschemarowsetimpl-class.md)
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
+
 Associe un GUID à une classe.  
   
 #### <a name="syntax"></a>Syntaxe  
@@ -545,14 +610,16 @@ SCHEMA_ENTRY(guid,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *guid*  
- Un GUID de lignes du schéma. Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) dans le *de référence du programmeur OLE DB* pour obtenir la liste des ensembles de lignes de schéma et de leurs GUID.  
+
+*guid*<br/>
+Un GUID de lignes du schéma. Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) dans le *de référence du programmeur OLE DB* pour obtenir la liste des ensembles de lignes de schéma et de leurs GUID.  
   
- *rowsetClass*  
- La classe qui sera créée pour représenter l’ensemble de lignes de schéma.  
+*rowsetClass*<br/>
+La classe qui sera créée pour représenter l’ensemble de lignes de schéma.  
   
 #### <a name="remarks"></a>Notes  
- [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) pouvez ensuite interroger la carte pour obtenir la liste de GUID, ou il peut créer un ensemble de lignes s’il est doté d’un GUID. L’ensemble de lignes de schéma `IDBSchemaRowsetImpl` crée est similaire à une norme `CRowsetImpl`-classe dérivée, à ceci près qu’il doit fournir un `Execute` méthode qui a la signature suivante :  
+
+[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) pouvez ensuite interroger la carte pour obtenir la liste de GUID, ou il peut créer un ensemble de lignes s’il est doté d’un GUID. L’ensemble de lignes de schéma `IDBSchemaRowsetImpl` crée est similaire à une norme `CRowsetImpl`-classe dérivée, à ceci près qu’il doit fournir un `Execute` méthode qui a la signature suivante :  
   
 ```cpp  
 HRESULT Execute (LONG* pcRowsAffected,  
@@ -560,19 +627,20 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);  
 ```  
   
- Cela `Execute` fonction remplit les données de l’ensemble de lignes. L’Assistant Projet ATL crée, comme décrit dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) dans le *de référence du programmeur OLE DB*, trois initiale des ensembles de lignes de schéma dans le projet pour chacun des trois schémas OLE DB obligatoires :  
+Cela `Execute` fonction remplit les données de l’ensemble de lignes. L’Assistant Projet ATL crée, comme décrit dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) dans le *de référence du programmeur OLE DB*, trois initiale des ensembles de lignes de schéma dans le projet pour chacun des trois schémas OLE DB obligatoires :  
   
--   DBSCHEMA_TABLES  
+- DBSCHEMA_TABLES  
   
--   DBSCHEMA_COLUMNS  
+- DBSCHEMA_COLUMNS  
   
--   DBSCHEMA_PROVIDER_TYPES  
+- DBSCHEMA_PROVIDER_TYPES  
   
- L’Assistant ajoute également trois entrées correspondantes dans le mappage de schéma. Consultez [création d’un fournisseur OLE DB modèle](../../data/oledb/creating-an-ole-db-provider.md) pour plus d’informations sur l’utilisation de l’Assistant pour créer un fournisseur.  
+L’Assistant ajoute également trois entrées correspondantes dans le mappage de schéma. Consultez [création d’un fournisseur OLE DB modèle](../../data/oledb/creating-an-ole-db-provider.md) pour plus d’informations sur l’utilisation de l’Assistant pour créer un fournisseur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)   
- [Référence de modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)    
- [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>
+[Référence des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   

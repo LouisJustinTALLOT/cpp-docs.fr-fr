@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 4) C4673 | Documents Microsoft
+title: Compilateur avertissement (niveau 4) C4673 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aecb4b3590a3cb1a1b055cd1e3377d00c5d0e5bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ab61a71a747b1fd917db579a57700107d12da87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085814"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Avertissement du compilateur (niveau 4) C4673
-lever des types suivants de 'identificateur' ne sera plus utilisé que sur le site catch  
-  
- Un objet levé ne peut pas être traité dans le **catch** bloc. Chaque type qui ne peut pas être gérée est répertorié dans la sortie d’erreur immédiatement après la ligne contenant cet avertissement. Chaque type non gérée a son propre avertissement. Lisez l’avertissement pour chaque type spécifique pour plus d’informations.  
-  
- L’exemple suivant génère l’erreur C4673 :  
-  
-```  
-// C4673.cpp  
-// compile with: /EHsc /W4  
-class Base {  
-private:  
-   char * m_chr;  
-public:  
-   Base() {  
-      m_chr = 0;  
-   }  
-  
-   ~Base() {  
-      if(m_chr)  
-         delete m_chr;  
-   }  
-};  
-  
-class Derv : private Base {  
-public:  
-   Derv() {}  
-   ~Derv() {}  
-};  
-  
-int main() {  
-   try {  
-      Derv D1;  
-      // delete previous line, uncomment the next line to resolve  
-      // Base D1;  
-      throw D1;   // C4673  
-   }  
-  
-   catch(...) {}  
-}  
+
+lever des types suivants de 'identificateur' ne sera plus utilisé que sur le site catch
+
+Un objet levé ne peut pas être traité dans le **catch** bloc. Chaque type qui ne peut pas être gérée est répertorié dans la sortie d’erreur immédiatement après la ligne contenant cet avertissement. Chaque type non gérée a son propre avertissement. Lisez l’avertissement pour chaque type spécifique pour plus d’informations.
+
+L’exemple suivant génère l’erreur C4673 :
+
+```
+// C4673.cpp
+// compile with: /EHsc /W4
+class Base {
+private:
+   char * m_chr;
+public:
+   Base() {
+      m_chr = 0;
+   }
+
+   ~Base() {
+      if(m_chr)
+         delete m_chr;
+   }
+};
+
+class Derv : private Base {
+public:
+   Derv() {}
+   ~Derv() {}
+};
+
+int main() {
+   try {
+      Derv D1;
+      // delete previous line, uncomment the next line to resolve
+      // Base D1;
+      throw D1;   // C4673
+   }
+
+   catch(...) {}
+}
 ```

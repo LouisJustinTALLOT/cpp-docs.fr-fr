@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 156a0a827a67e80369ca8b834b62bcf0e431ab14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754616"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076344"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig, Interface
 
@@ -71,7 +71,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Paramètres
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Adresse de la variable qui, en cas de réussite, reçoit le nombre de threads dans le pool.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -92,7 +92,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Paramètres
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Adresse de la variable recevant, en cas de réussite, la durée maximale en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -113,7 +113,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Paramètres
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Le nombre demandé de threads dans le pool.
 
 Si *nNumThreads* est négatif, sa valeur absolue sera multipliée par le nombre de processeurs sur l’ordinateur pour obtenir le nombre total de threads.
@@ -138,7 +138,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 La durée maximale demandée en millisecondes pendant lequel le pool de threads doit attendre un thread à arrêter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -151,5 +151,5 @@ Consultez [IThreadPoolConfig::GetSize](#getsize).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classes](../../atl/reference/atl-classes.md)   
+[Classes](../../atl/reference/atl-classes.md)<br/>
 [CThreadPool, classe](../../atl/reference/cthreadpool-class.md)

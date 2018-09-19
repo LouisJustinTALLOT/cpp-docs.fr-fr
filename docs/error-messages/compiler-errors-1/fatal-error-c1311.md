@@ -1,5 +1,5 @@
 ---
-title: Erreur irrécupérable 1311 | Documents Microsoft
+title: Erreur irrécupérable C1311 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b3759a5fec4b072f9a9b300670d61cb0d101c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d93aa28d0cef3c07fd469349d485c4009fa4771d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091060"
 ---
 # <a name="fatal-error-c1311"></a>Erreur irrécupérable 1311
-Le format COFF ne peut pas initialiser de manière statique 'var' avec un nombre octet (s) d’une adresse  
-  
- Une adresse dont la valeur n’est pas connue au moment de la compilation ne peut pas être affectée de manière statique à une variable dont le type possède un stockage inférieur à quatre octets.  
-  
- Cette erreur peut se produire sur du code qui est sinon C++ valide.  
-  
- L’exemple suivant montre une condition susceptibles de provoquer 1311.  
-  
-```  
-char c = (char)"Hello, world";   // C1311  
-char *d = (char*)"Hello, world";   // OK  
+
+Le format COFF ne peut pas initialiser de manière statique 'var' avec numéro octet (s) d’une adresse
+
+Une adresse dont la valeur n’est pas connue au moment de la compilation ne peut pas être affectée de manière statique à une variable dont le type possède un stockage moins de quatre octets.
+
+Cette erreur peut se produire sur du code qui est sinon C++ valide.
+
+L’exemple suivant montre une condition qui peut générer l’erreur C1311.
+
+```
+char c = (char)"Hello, world";   // C1311
+char *d = (char*)"Hello, world";   // OK
 ```

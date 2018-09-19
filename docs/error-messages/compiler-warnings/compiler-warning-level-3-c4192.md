@@ -1,5 +1,5 @@
 ---
-title: Compilateur avertissement (niveau 3) C4192 | Documents Microsoft
+title: Compilateur avertissement (niveau 3) C4192 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bae9b7af95de94b8f667cb09710af21044f8b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 671a8c83dcadcaa89372e53b6c3d677c5810b4a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114408"
 ---
 # <a name="compiler-warning-level-3-c4192"></a>Compilateur avertissement (niveau 3) C4192
-exclusion automatique de 'name' lors de l’importation de bibliothèque de types 'library'  
-  
- A `#import` bibliothèque contient un élément, *nom*, qui est également défini dans les en-têtes systèmes Win32. En raison des limitations des bibliothèques de types, des noms tels que **IUnknown** ou GUID sont souvent définis dans une bibliothèque de types, dupliquant la définition provenant des en-têtes système. `#import` détectera ces éléments et refuser les incorporer dans les fichiers d’en-tête .tlh et .tli.  
-  
- Pour remplacer ce comportement, utilisez `#import` attributs [no_auto_exclude](../../preprocessor/no-auto-exclude.md) et [include()](../../preprocessor/include-parens.md).
+
+exclusion automatique de « name » lors de l’importation de bibliothèque de types 'library'
+
+Un `#import` bibliothèque contient un élément, *nom*, qui est également défini dans les en-têtes systèmes Win32. En raison des limitations des bibliothèques de types, des noms tels que **IUnknown** ou GUID sont souvent définis dans une bibliothèque de types, duplication de la définition des en-têtes système. `#import` détectera ces éléments et refuser de les incorporer dans les fichiers d’en-tête .tlh et .tli.
+
+Pour remplacer ce comportement, utilisez `#import` attributs [no_auto_exclude](../../preprocessor/no-auto-exclude.md) et [include()](../../preprocessor/include-parens.md).

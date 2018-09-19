@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073667"
 ---
 # <a name="ole-db-programming"></a>Programmation OLE DB
+
 Microsoft OLE DB est une technologie héritée ; pour les nouvelles applications, il est l’API accès aux données requises pour les serveurs SQL liés. Toutes les autres nouvelles applications doivent utiliser ODBC. Le fournisseur OLE DB actuel pour SQL Server est SQLNCLI11. DLL. Le fournisseur est toujours transaction dans SQL Server 2016. Cette documentation s’adresse aux développeurs chargés de la maintenant des applications existantes qui utilisent déjà OLE DB.
   
- Les modèles OLE DB sont des modèles C++ qui facilitent l'utilisation de la technologie de base de données OLE DB haute performance en fournissant des classes qui implémentent de nombreuses interfaces OLE DB couramment utilisées. Cette bibliothèque de modèles est divisée en modèles de consommateurs et en modèles de fournisseurs.  
+Les modèles OLE DB sont des modèles C++ qui facilitent l'utilisation de la technologie de base de données OLE DB haute performance en fournissant des classes qui implémentent de nombreuses interfaces OLE DB couramment utilisées. Cette bibliothèque de modèles est divisée en modèles de consommateurs et en modèles de fournisseurs.  
   
- Visual C++ prend également en charge des Assistants pour créer des applications de départ OLE DB.  
+Visual C++ prend également en charge des Assistants pour créer des applications de départ OLE DB.  
   
- En outre, vous pouvez utiliser des attributs pour implémenter les modèles de consommateurs OLE DB.  
+En outre, vous pouvez utiliser des attributs pour implémenter les modèles de consommateurs OLE DB.  
   
 |Pour en savoir plus sur|Voir|  
 |-------------------------|---------|  
@@ -45,4 +46,5 @@ Microsoft OLE DB est une technologie héritée ; pour les nouvelles application
 |Rubriques sur les concepts d'ODBC|[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
 ## <a name="see-also"></a>Voir aussi  
- [Accès aux données](../data-access-in-cpp.md)
+
+[Accès aux données](../data-access-in-cpp.md)
