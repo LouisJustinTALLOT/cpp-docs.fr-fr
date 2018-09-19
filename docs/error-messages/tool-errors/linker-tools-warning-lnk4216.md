@@ -1,5 +1,5 @@
 ---
-title: LNK4216 d’avertissement des outils Éditeur de liens | Documents Microsoft
+title: Avertissement LNK4216 des outils Éditeur de liens | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3face9db98fcf2fc727d2bf8713a014f28ca5ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b55ede76c41f4832854d1c4b4c4c4fc2793a5e71
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118867"
 ---
 # <a name="linker-tools-warning-lnk4216"></a>Avertissement des outils Éditeur de liens LNK4216
-Entrée de point d’entrée exporté  
-  
- Un point d’entrée a été exporté à partir d’une DLL. Le point d’entrée d’une DLL n’a pas besoin à exporter.
+
+Entrée de point d’entrée exporté
+
+Un point d’entrée a été exporté à partir d’une DLL. Le point d’entrée d’une DLL n’a pas besoin être exportées.

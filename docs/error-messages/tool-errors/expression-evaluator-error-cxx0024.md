@@ -1,5 +1,5 @@
 ---
-title: Évaluateur d’expression, erreur CXX0024 | Documents Microsoft
+title: Évaluateur d’expression, erreur CXX0024 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a07297ddabf269b003a1f14d967d1187fea96d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2816be7bb1d33757d9722d605d461ac6fb34fadd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118191"
 ---
 # <a name="expression-evaluator-error-cxx0024"></a>Évaluateur d'expression, erreur CXX0024
-l’opération requiert l-value  
-  
- Une expression qui ne correspond pas à une l-value a été spécifiée pour une opération qui requiert une l-value.  
-  
- Une l-value (appelée ainsi parce qu’elle apparaît sur le côté gauche d’une instruction d’assignation) est une expression qui fait référence à un emplacement de mémoire.  
-  
- Par exemple, `buffer[count]` est une l-value valide car elle pointe vers un emplacement mémoire spécifique. La comparaison logique `zed != 0` n’est pas une l-value valide, car il prend la valeur TRUE ou FALSE, pas une adresse mémoire.  
-  
- Cette erreur est identique à CAN0024.
+
+opération nécessite une l-value
+
+Une expression qui ne correspond pas à une l-value a été spécifiée pour une opération qui nécessite une l-value.
+
+Une l-value (appelée ainsi car il s’affiche sur le côté gauche d’une instruction d’assignation) est une expression qui fait référence à un emplacement de mémoire.
+
+Par exemple, `buffer[count]` est une l-value valide car elle pointe vers un emplacement de mémoire spécifique. La comparaison logique `zed != 0` n’est pas une l-value valide, car il a la valeur TRUE ou FALSE, non à une adresse mémoire.
+
+Cette erreur est identique à CAN0024.
