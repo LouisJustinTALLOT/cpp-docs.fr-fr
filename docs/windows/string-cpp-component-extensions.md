@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e37a3a934fbc66af62a30fd2fc2c23e1c659ef2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692096"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408399"
 ---
 # <a name="string--c-component-extensions"></a>Chaîne  (extensions du composant C++)
 
@@ -277,6 +277,6 @@ System.String
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)  
-[Littéraux de chaîne et de caractère](../cpp/string-and-character-literals-cpp.md)  
+[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Littéraux de chaîne et de caractère](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

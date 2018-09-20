@@ -1,5 +1,5 @@
 ---
-title: À l’aide de vos anciennes barres d’outils | Documents Microsoft
+title: À l’aide de vos anciennes barres d’outils | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbf3b276aa7a229f7d0611ee2a289edc77ebf485
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab5f743b2584733bc8d2bc1edf4c212ba40210f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385120"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417603"
 ---
 # <a name="using-your-old-toolbars"></a>Utilisation de vos anciennes barres d'outils
-Si vous avez utilisé les versions précédentes de Visual C++ pour créer des barres d’outils personnalisées, la nouvelle implémentation de la classe [CToolBar](../mfc/reference/ctoolbar-class.md) peut entraîner des problèmes. Afin que vous n’êtes pas obligé d’abandonner vos anciennes barres d’outils à utiliser les nouvelles fonctionnalités, l’ancienne implémentation est toujours prise en charge.  
-  
- L’exemple DOCKTOOL n’utilise pas les barres d’outils de style ancien, seules les barres d’outils de nouveau style.  
-  
- Vous ne pouvez pas modifier les barres d’outils de l’ancienne avec l’éditeur de ressources de barre d’outils.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
-  
--   [Notions de base de barre d’outils](../mfc/toolbar-fundamentals.md)  
-  
--   [Ancrer et rendre flottantes les barres d’outils](../mfc/docking-and-floating-toolbars.md)  
-  
--   [Barre d’outils info-bulles](../mfc/toolbar-tool-tips.md)  
-  
--   [Utilisation du contrôle de barre d’outils](../mfc/working-with-the-toolbar-control.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Implémentation de la barre d’outils MFC](../mfc/mfc-toolbar-implementation.md)
+
+Si vous avez utilisé des versions antérieures de Visual C++ pour créer des barres d’outils personnalisées, la nouvelle implémentation de classe [CToolBar](../mfc/reference/ctoolbar-class.md) peut entraîner des problèmes. Afin que vous n’êtes pas obligé d’abandonner vos anciennes barres d’outils à utiliser les nouvelles fonctionnalités, l’ancienne implémentation est toujours pris en charge.
+
+L’exemple DOCKTOOL n’utilise pas les barres d’outils de style ancien, seules les barres d’outils de nouveau style.
+
+Vous ne pouvez pas modifier les barres d’outils de style ancien avec l’éditeur de ressources de barre d’outils.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+- [Principes de base de barre d’outils](../mfc/toolbar-fundamentals.md)
+
+- [Ancrer et rendre flottantes les barres d’outils](../mfc/docking-and-floating-toolbars.md)
+
+- [Info-bulles de barre d’outils](../mfc/toolbar-tool-tips.md)
+
+- [Utilisation du contrôle de barre d’outils](../mfc/working-with-the-toolbar-control.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Implémentation de la barre d’outils MFC](../mfc/mfc-toolbar-implementation.md)
 

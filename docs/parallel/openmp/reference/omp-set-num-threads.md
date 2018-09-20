@@ -16,34 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849bdade5c6abfad07ebed262fb367487d3e1415
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5ae9dbe52dba47208844b73175f20edcc591a3ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047887"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444942"
 ---
 # <a name="ompsetnumthreads"></a>omp_set_num_threads
-Définit le nombre de threads dans des régions parallèles suivantes, sauf substitution par une [num_threads](../../../parallel/openmp/reference/num-threads.md) clause.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void omp_set_num_threads(  
-   int num_threads  
-);  
-```  
-  
+
+Définit le nombre de threads dans des régions parallèles suivantes, sauf substitution par une [num_threads](../../../parallel/openmp/reference/num-threads.md) clause.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void omp_set_num_threads(
+   int num_threads
+);
+```
+
 ### <a name="parameters"></a>Paramètres
-  
+
 *num_threads*<br/>
-Le nombre de threads dans la région parallèle.  
-  
-## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [3.1.1 fonction omp_set_num_threads](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md).  
-  
-## <a name="example"></a>Exemple  
- Consultez [omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md) pour obtenir un exemple d’utilisation de `omp_set_num_threads`.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions](../../../parallel/openmp/reference/openmp-functions.md)
+Le nombre de threads dans la région parallèle.
+
+## <a name="remarks"></a>Notes
+
+Pour plus d’informations, consultez [3.1.1 fonction omp_set_num_threads](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md).
+
+## <a name="example"></a>Exemple
+
+Consultez [omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md) pour obtenir un exemple d’utilisation de `omp_set_num_threads`.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions](../../../parallel/openmp/reference/openmp-functions.md)

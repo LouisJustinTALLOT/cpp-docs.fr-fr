@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dab76460dcbbb70f55dac864292ad9a6f1fca99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607818"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422400"
 ---
 # <a name="make-function"></a>Make, fonction
 
@@ -174,61 +174,61 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Une classe spécifiée par l’utilisateur qui hérite de `WRL::RuntimeClass`.
 
-*TArg1*  
+*TArg1*<br/>
 Type d’argument 1 qui est passé à la classe runtime spécifié.
 
-*TArg2*  
+*TArg2*<br/>
 Type d’argument 2 qui est passé à la classe runtime spécifié.
 
-*TArg3*  
+*TArg3*<br/>
 Type d’argument 3 est passée à la classe runtime spécifié.
 
-*TArg4*  
+*TArg4*<br/>
 Type d’argument 4 qui est passé à la classe runtime spécifié.
 
-*TArg5*  
+*TArg5*<br/>
 Type d’argument 5 est passé à la classe runtime spécifié.
 
-*TArg6*  
+*TArg6*<br/>
 Type d’argument 6 est passée à la classe runtime spécifié.
 
-*TArg7*  
+*TArg7*<br/>
 Type d’argument 7 est passé à la classe runtime spécifié.
 
-*TArg8*  
+*TArg8*<br/>
 Type d’argument 8 est passé à la classe runtime spécifié.
 
-*TArg9*  
+*TArg9*<br/>
 Type d’argument 9 est passé à la classe runtime spécifié.
 
-*arg1*  
+*arg1*<br/>
 Argument 1 qui est passé à la classe runtime spécifié.
 
-*Arg2*  
+*Arg2*<br/>
 Argument 2 qui est passé à la classe runtime spécifié.
 
-*Arg3*  
+*Arg3*<br/>
 Argument 3 qui est passé à la classe runtime spécifié.
 
-*Arg4*  
+*Arg4*<br/>
 Argument 4 qui est passé à la classe runtime spécifié.
 
-*Arg5*  
+*Arg5*<br/>
 Argument 5 qui est passé à la classe runtime spécifié.
 
-*Arg6*  
+*Arg6*<br/>
 Argument 6 est passée à la classe runtime spécifié.
 
-*Arg7*  
+*Arg7*<br/>
 Argument 7 qui est passé à la classe runtime spécifié.
 
-*Arg8*  
+*Arg8*<br/>
 Argument 8 qui est passé à la classe runtime spécifié.
 
-*Arg9*  
+*Arg9*<br/>
 Argument 9 qui est passé à la classe runtime spécifié.
 
 ## <a name="return-value"></a>Valeur de retour

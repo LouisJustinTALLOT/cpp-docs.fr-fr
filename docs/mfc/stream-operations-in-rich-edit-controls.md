@@ -19,21 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f418156fb5be4837bc0dbe9b05b3ad26d7ac02dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f34417d765151adbd7a6c02b7a76ef9d5732994f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196856"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441989"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Opérations de flux dans les contrôles RichEdit
-Vous pouvez utiliser des flux pour transférer des données dans ou hors d’un contrôle RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Un flux de données est défini par un [structure EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) structure qui spécifie une mémoire tampon et une fonction de rappel définie par l’application.  
-  
- Pour lire les données dans une riche contrôle d’édition (autrement dit, le flux de données dans), utilisez le [fonction membre StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) fonction membre. Le contrôle appelle à plusieurs reprises la fonction de rappel défini par l’application, qui transfère une partie des données dans la mémoire tampon chaque fois.  
-  
- Pour enregistrer le contenu d’une riche contrôle d’édition (autrement dit, le flux sortant de données), vous pouvez utiliser la [fonction membre StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) fonction membre. Le contrôle à plusieurs reprises écrit dans la mémoire tampon, puis appelle la fonction de rappel définie par l’application. Pour chaque appel, la fonction de rappel enregistre le contenu de la mémoire tampon.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+
+Vous pouvez utiliser des flux pour transférer des données dans ou hors d’un contrôle RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Un flux de données est défini par un [structure EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) structure qui spécifie une mémoire tampon et une fonction de rappel définie par l’application.
+
+Pour lire les données dans une riche contrôle d’édition (autrement dit, le flux de données dans), utilisez le [fonction membre StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) fonction membre. Le contrôle appelle à plusieurs reprises la fonction de rappel défini par l’application, qui transfère une partie des données dans la mémoire tampon chaque fois.
+
+Pour enregistrer le contenu d’une riche contrôle d’édition (autrement dit, le flux sortant de données), vous pouvez utiliser la [fonction membre StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) fonction membre. Le contrôle à plusieurs reprises écrit dans la mémoire tampon, puis appelle la fonction de rappel définie par l’application. Pour chaque appel, la fonction de rappel enregistre le contenu de la mémoire tampon.
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Contrôles](../mfc/controls-mfc.md)
 

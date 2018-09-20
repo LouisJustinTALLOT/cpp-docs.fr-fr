@@ -18,34 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
-ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
+ms.openlocfilehash: ed3c7ce85d416e1933b79fc618e6bf748eb32b2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "33383307"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446308"
 ---
 # <a name="using-crebarctrl"></a>Utilisation de CReBarCtrl
-Un contrôle rebar agit comme un conteneur pour les fenêtres enfants. Ces fenêtres enfants, souvent d’autres contrôles, sont affectés à une bande de contrôle rebar. Un contrôle rebar peut contenir une ou plusieurs bandes, chaque bande ayant n’importe quelle combinaison d’une barre de redimensionnement, une image bitmap, une étiquette de texte et une fenêtre enfant. Toutefois, les bandes ne peut pas contenir plus d’une fenêtre enfant.  
-  
- L’illustration suivante montre un contrôle rebar avec deux bandes. Une contient une barre de redimensionnement, une étiquette de texte (« Address ») et une fenêtre enfant de zone de liste déroulante. L’autre bande contient une barre de redimensionnement, une étiquette de texte et une barre d’outils plat (implémentée avec une fenêtre enfant).  
-  
- ![Contrôle rebar avec deux bandes](../mfc/media/vc4ruz1.gif "vc4ruz1")  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur  
-  
--   [CReBar et CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)  
-  
--   [Création d’un contrôle rebar](../mfc/creating-a-rebar-control.md)  
-  
--   [Contrôles rebar et bandes](../mfc/rebar-controls-and-bands.md)  
-  
--   [Utilisation d’une liste d’images avec un contrôle rebar](../mfc/using-an-image-list-with-a-rebar-control.md)  
-  
--   [Utilisation d’une barre de boîte de dialogue avec un contrôle rebar](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
-  
--   [Traitement des messages de notification dans un contrôle rebar](../mfc/processing-notification-messages-in-a-rebar-control.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+
+Un contrôle rebar agit comme un conteneur pour les fenêtres enfants. Ces fenêtres enfants, souvent d’autres contrôles, sont affectés à une bande de contrôle rebar. Un contrôle rebar peut contenir une ou plusieurs bandes, chaque bande ayant n’importe quelle combinaison d’une barre de redimensionnement, une image bitmap, une étiquette de texte et une fenêtre enfant. Toutefois, les bandes ne peut pas contenir plus d’une fenêtre enfant.
+
+L’illustration suivante montre un contrôle rebar avec deux bandes. Une contient une barre de redimensionnement, une étiquette de texte (« Address ») et une fenêtre enfant de zone de liste déroulante. L’autre bande contient une barre de redimensionnement, une étiquette de texte et une barre d’outils plat (implémentée avec une fenêtre enfant).
+
+![Contrôle rebar avec deux bandes](../mfc/media/vc4ruz1.gif "vc4ruz1")
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+- [CReBar et CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)
+
+- [Création d’un contrôle rebar](../mfc/creating-a-rebar-control.md)
+
+- [Contrôles rebar et bandes](../mfc/rebar-controls-and-bands.md)
+
+- [Utilisation d’une liste d’images avec un contrôle rebar](../mfc/using-an-image-list-with-a-rebar-control.md)
+
+- [Utilisation d’une barre de boîte de dialogue avec un contrôle rebar](../mfc/using-a-dialog-bar-with-a-rebar-control.md)
+
+- [Traitement des messages de notification dans un contrôle rebar](../mfc/processing-notification-messages-in-a-rebar-control.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Contrôles](../mfc/controls-mfc.md)
 

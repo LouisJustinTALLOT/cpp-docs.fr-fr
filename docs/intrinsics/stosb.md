@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a685633b6e23a21d46ad3256188fea3ee16ccc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 34f7c2624bb0431e2fcbd76694f7781087ff362d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700777"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396959"
 ---
 # <a name="stosb"></a>__stosb
 
@@ -74,9 +74,9 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 #include <stdio.h>
 #include <intrin.h>
 
-#pragma intrinsic(__stosb)  
+#pragma intrinsic(__stosb)
 
-int main()  
+int main()
 {
     unsigned char c = 0x40; /* '@' character */
     unsigned char s[] = "*********************************";
@@ -86,12 +86,12 @@ int main()
     printf_s("%s\n", s);
 
 }
-```  
+```
 
 ```Output
-*********************************  
-*@@@@@@**************************  
-```  
+*********************************
+*@@@@@@**************************
+```
 
 **FIN de la section spécifique à Microsoft**
 

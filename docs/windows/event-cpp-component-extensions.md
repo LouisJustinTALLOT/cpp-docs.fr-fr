@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724758"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442589"
 ---
 # <a name="event--c-component-extensions"></a>événement  (extensions du composant C++)
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Paramètres
 
-*Modificateur*  
+*Modificateur*<br/>
 Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont **statique** et **virtuel**.
 
-*delegate*  
+*delegate*<br/>
 Le [déléguer](../windows/delegate-cpp-component-extensions.md), dont le Gestionnaire d’événements doit correspondre à la signature.
 
-*EVENT_NAME*  
+*EVENT_NAME*<br/>
 Nom de l'événement.
 
-*return_value*  
+*return_value*<br/>
 Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être **void**.
 
-*Paramètres*  
+*Paramètres*<br/>
 (facultatif) Paramètres pour le `raise` (méthode), qui correspond à la signature de la *déléguer* paramètre.
 
 ### <a name="remarks"></a>Notes
@@ -71,10 +71,10 @@ Un événement est une association entre un délégué et une fonction membre (g
 
 Il existe deux types de déclarations d'événements :
 
-*membre de données d’événement*  
+*membre de données d’événement*<br/>
 Le compilateur crée automatiquement le stockage de l'événement sous la forme d'un membre du type délégué et crée des fonctions membres `add()`, `remove()` et `raise()` internes. Un membre de données d'événement doit être déclaré à l'intérieur d'une classe. Le type de retour du délégué doit correspondre à celui du gestionnaire d’événements.
 
-*bloc d’événement*  
+*bloc d’événement*<br/>
 Un bloc d'événement vous permet de déclarer et personnaliser explicitement le comportement des méthodes `add()`, `remove()` et `raise()`.
 
 Vous pouvez utiliser **opérateurs +=** et **opérateur-=** pour ajouter et supprimer un événement gestionnaire, ou appelez le `add()` et `remove()` méthodes explicitement.
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Paramètres
 
-*Modificateur*  
+*Modificateur*<br/>
 Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont **statique** et **virtuel**.
 
-*delegate*  
+*delegate*<br/>
 Le [déléguer](../windows/delegate-cpp-component-extensions.md), dont le Gestionnaire d’événements doit correspondre à la signature.
 
-*EVENT_NAME*  
+*EVENT_NAME*<br/>
 Nom de l'événement.
 
-*return_value*  
+*return_value*<br/>
 Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être **void**.
 
-*Paramètres*  
+*Paramètres*<br/>
 (facultatif) Paramètres pour le `raise` (méthode), qui correspond à la signature de la *déléguer* paramètre.
 
 ### <a name="remarks"></a>Notes
@@ -137,10 +137,10 @@ Le délégué peut avoir une ou plusieurs méthodes associées qui sont appelée
 
 Il existe deux types de déclarations d'événements :
 
-*membres de données d’événement*  
+*membres de données d’événement*<br/>
 Le stockage de l'événement, sous la forme d'un membre du type délégué, est créé par le compilateur pour les événements de membre de données.  Un membre de données d'événement doit être déclaré à l'intérieur d'une classe. Cet événement est également connu sous le nom d'événement trivial (consultez l'exemple de code ci-dessous).
 
-*blocs d’événement*  
+*blocs d’événement*<br/>
 Les blocs d'événement vous permettent de personnaliser le comportement des méthodes add, remove et raise, en implémentant ces méthodes. La signature des méthodes add, remove et raise doivent correspondre à la signature du délégué.  Les événements de bloc d'événement ne sont pas membres de données et toute utilisation en tant que membre de données génère une erreur du compilateur.
 
 Le type de retour du gestionnaire d’événements doit correspondre à celui du délégué.

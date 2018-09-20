@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 4a3e262567927b818072c1e05acd18aa64cbaa6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691443"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446508"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (classe)
 
@@ -39,7 +39,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>Paramètres
 
-*base de*  
+*base de*<br/>
 Une classe de base.
 
 ## <a name="remarks"></a>Notes
@@ -102,15 +102,15 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>Paramètres
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Doit être `nullptr`; sinon, la valeur de retour est CLASS_E_NOAGGREGATION.
 
 SimpleClassFactory ne prend pas en charge d’agrégation. Si l’agrégation ont été prise en charge et de l’objet en cours de création faisait partie d’un agrégat, *pUnkOuter* serait un pointeur vers le contrôle `IUnknown` interface de l’agrégat.
 
-*riid*  
+*riid*<br/>
 ID d’interface de l’objet à créer.
 
-*ppvObject*  
+*ppvObject*<br/>
 Lorsque cette opération se termine, pointeur vers une instance de l’objet spécifié par le *riid* paramètre.
 
 ### <a name="return-value"></a>Valeur de retour

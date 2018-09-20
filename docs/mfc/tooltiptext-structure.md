@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c06b98acec18e845fd1353875c1453c4bee8b1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eeee8c7b0b3cd4977688b627cb27f73e39c7ea89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097157"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437090"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT, structure
-Écrit votre [Gestionnaire de notification d’info-bulle outil](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), vous devez utiliser le **TOOLTIPTEXT** structure. Les membres de la **TOOLTIPTEXT** structure sont :  
-  
+
+Écrit votre [Gestionnaire de notification d’info-bulle outil](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), vous devez utiliser le **TOOLTIPTEXT** structure. Les membres de la **TOOLTIPTEXT** structure sont :
+
 ```cpp
 typedef struct {
     NMHDR     hdr;        // required for all WM_NOTIFY messages
@@ -38,27 +39,28 @@ typedef struct {
                           // that is included in the structure
 } TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
 ```
-  
- *HDR*  
- Identifie l’outil qui a besoin de texte. Le seul membre de cette structure, que vous devrez peut-être est l’ID de commande. du contrôle ID de commande du contrôle sera dans le *idFrom* membre de la **NMHDR** structure, accédé avec la syntaxe `hdr.idFrom`. Consultez [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) pour une description des membres de la **NMHDR** structure.  
-  
- *lpszText*  
- Adresse d’une chaîne qui recevra le texte pour un outil.  
-  
- *szText*  
- Mémoire tampon qui reçoit le texte info-bulle. Une application peut copier le texte à cette mémoire tampon comme alternative à la spécification d’une adresse de la chaîne.  
-  
- *HINST*  
- Handle de l’instance qui contient une chaîne à utiliser en tant que le texte info-bulle. Si *lpszText* est l’adresse du texte info-bulle, ce membre a la valeur NULL.  
-  
-Lorsque vous gérez le `TTN_NEEDTEXT` notification de message, spécifiez la chaîne à afficher dans une des manières suivantes :  
-  
--   Copiez le texte dans la mémoire tampon spécifiée par le *szText* membre.  
-  
--   Copiez l’adresse de la mémoire tampon qui contient le texte à la *lpszText* membre.  
-  
--   Copiez l’identificateur de ressource de chaîne à la *lpszText* membre et copie le handle de l’instance qui contient la ressource à la *hinst* membre.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Info-bulles dans les fenêtres non dérivées de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+*HDR*<br/>
+Identifie l’outil qui a besoin de texte. Le seul membre de cette structure, que vous devrez peut-être est l’ID de commande. du contrôle ID de commande du contrôle sera dans le *idFrom* membre de la **NMHDR** structure, accédé avec la syntaxe `hdr.idFrom`. Consultez [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) pour une description des membres de la **NMHDR** structure.
+
+*lpszText*<br/>
+Adresse d’une chaîne qui recevra le texte pour un outil.
+
+*szText*<br/>
+Mémoire tampon qui reçoit le texte info-bulle. Une application peut copier le texte à cette mémoire tampon comme alternative à la spécification d’une adresse de la chaîne.
+
+*HINST*<br/>
+Handle de l’instance qui contient une chaîne à utiliser en tant que le texte info-bulle. Si *lpszText* est l’adresse du texte info-bulle, ce membre a la valeur NULL.
+
+Lorsque vous gérez le `TTN_NEEDTEXT` notification de message, spécifiez la chaîne à afficher dans une des manières suivantes :
+
+- Copiez le texte dans la mémoire tampon spécifiée par le *szText* membre.
+
+- Copiez l’adresse de la mémoire tampon qui contient le texte à la *lpszText* membre.
+
+- Copiez l’identificateur de ressource de chaîne à la *lpszText* membre et copie le handle de l’instance qui contient la ressource à la *hinst* membre.
+
+## <a name="see-also"></a>Voir aussi
+
+[Info-bulles dans les fenêtres non dérivées de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

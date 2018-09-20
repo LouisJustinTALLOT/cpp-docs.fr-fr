@@ -1,5 +1,5 @@
 ---
-title: 'TN055 : Migration des Applications de classe de base de données ODBC MFC vers des Classes DAO de MFC | Documents Microsoft'
+title: 'TN055 : Migration des Applications de classe de base de données ODBC MFC vers les Classes DAO MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/20/2018
 ms.technology:
@@ -24,23 +24,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 808f0f470e99b95502891552ade7b8c677dfdf17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957388"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396829"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055 : Migration des applications de classe de base de données ODBC MFC vers des classes DAO MFC
 
 > [!NOTE]
-> Les Assistants et l’environnement Visual C++ ne prennent pas en charge les DAO (bien que les classes DAO sont incluses et vous pouvez toujours les utiliser). Microsoft recommande d’utiliser [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous devez uniquement utiliser DAO dans la maintenance des applications existantes.
+> Les Assistants et l’environnement Visual C++ ne prennent pas en charge les DAO (bien que les classes DAO sont incluses et vous pouvez toujours les utiliser). Microsoft recommande d’utiliser [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous devez uniquement utiliser DAO à la gestion des applications existantes.
 
 ## <a name="overview"></a>Vue d'ensemble
 
 Dans de nombreux cas, il peut être souhaitable de migrer les applications qui utilisent les classes de la base de données ODBC de MFC vers les classes de bases de données DAO de MFC. Cette note technique détaillera la plupart des différences entre les classes ODBC et DAO de MFC. Avec les différences à l'esprit, il ne doit pas être très difficile de migrer des applications depuis les classes ODBC vers les classes de MFC si vous le souhaitez.
 
-## <a name="why-migrate-from-odbc-to-dao"></a>Pourquoi effectuer la migration à partir d’ODBC vers DAO
+## <a name="why-migrate-from-odbc-to-dao"></a>Pourquoi migrer à partir d’ODBC vers DAO
 
 Il y a plusieurs raisons pour lesquelles vous pouvez migrer des applications depuis les classes de base de données ODBC vers les classes de base de données DAO, mais la décision n'est pas nécessairement simple ou évidente. Une chose à prendre en compte est le fait que le moteur de base de données Microsoft Jet utilisé par DAO peut indiquer une source de données ODBC pour laquelle vous avez un pilote ODBC. Il peut être plus efficace d'utiliser les classes de base de données ODBC ou d'appeler vous-même ODBC directement, mais le moteur de base de données Microsoft Jet peut lire des données ODBC.
 
@@ -109,14 +109,14 @@ Les principales modifications apportées aux fonctionnalités qui peuvent affect
 
 - Les fonctions membres de la transaction des classes ODBC sont membres de `CDatabase` et agissent au niveau de la base de données. Dans les classes DAO, les fonctions membres de transaction sont membres d'une classe de niveau supérieur (`CDaoWorkspace`) et peuvent avoir un impact sur plusieurs objets `CDaoDatabase` qui partagent le même espace de travail (espace de transaction).
 
-- La classe d'exception a été modifiée. `CDBExceptions` levées dans les classes ODBC et `CDaoExceptions` dans les classes DAO.
+- La classe d'exception a été modifiée. `CDBExceptions` sont levées dans les classes ODBC et `CDaoExceptions` dans les classes DAO.
 
-- `RFX_Date` utilise `CTime` et `TIMESTAMP_STRUCT` objets lors de la `DFX_Date` utilise `COleDateTime`. Le `COleDateTime` est presque identique à `CTime`, mais est basée sur un OLE de 8 octets **DATE** au lieu de 4 octets **time_t** et donc une plus large de données peut contenir.
+- `RFX_Date` utilise `CTime` et `TIMESTAMP_STRUCT` objets alors que `DFX_Date` utilise `COleDateTime`. Le `COleDateTime` est presque identique à `CTime`, mais est basé sur un OLE de 8 octets **DATE** au lieu de 4 octets **time_t** afin de pouvoir contenir une plage beaucoup plus volumineuse de données.
 
    > [!NOTE]
    > Les instantanés (`CDaoRecordset`) DAO sont en lecture seule alors que les instantanés (`CRecordset`) ODBC peuvent être modifiés selon le pilote et l'utilisation de la bibliothèque de curseurs ODBC. Si vous utilisez la bibliothèque de curseurs, les instantanés `CRecordset` sont modifiables. Si vous utilisez des pilotes Microsoft issus de Desktop Driver Pack 3.0 sans bibliothèque de curseurs ODBC, les instantanés `CRecordset` sont en lecture seule. Si vous utilisez un autre pilote, consultez la documentation du pilote pour voir si des captures instantanées (`STATIC_CURSORS`) sont en lecture seule.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes techniques par numéro](../mfc/technical-notes-by-number.md)  
-[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)  
+[Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
+[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)

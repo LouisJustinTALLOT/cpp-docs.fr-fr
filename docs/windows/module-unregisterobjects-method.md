@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ee7e6deeda17d2ac374b39edf70ab28fa1457fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87fb8ece3e1897a3ba460403d273bd649784ad44
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603379"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400424"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects, méthode
 
@@ -38,10 +38,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Paramètres
 
-*module*  
+*module*<br/>
 Pointeur vers un module.
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Nom de qualification qui spécifie un sous-ensemble d’objets affectés par cette opération.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -55,4 +55,5 @@ S_OK si cette opération est réussie ; Sinon, une erreur HRESULT qui indique l
 **Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
+
 [Module, classe](../windows/module-class.md)

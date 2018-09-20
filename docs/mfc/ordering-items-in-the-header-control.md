@@ -1,5 +1,5 @@
 ---
-title: Ordre des éléments dans le contrôle Header | Documents Microsoft
+title: Organisation des éléments dans le contrôle Header | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,26 +22,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aac3c9ba284abc634af2fbeb25633b812e07f926
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f446eb557fab4f4ff6396042e832e4584546bd96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928568"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416816"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Organisation des éléments dans le contrôle Header
-Une fois que vous avez [ajouté des éléments à un contrôle header](../mfc/adding-items-to-the-header-control.md), vous pouvez manipuler ou obtenir des informations sur leur ordre avec les fonctions suivantes :  
-  
--   [CHeaderCtrl::GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) et [CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)  
-  
-     Extrait et définit l’ordre de gauche à droite des éléments d’en-tête.  
-  
--   [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).  
-  
-     Récupère la valeur d’index pour un élément d’en-tête spécifique.  
-  
- Outre les fonctions de membre précédent, le style HDS_DRAGDROP permet à l’utilisateur à glisser -déplacer des éléments d’en-tête dans le contrôle header. Pour plus d’informations, consultez [prise en charge du glisser-déplacer pour les éléments d’en-tête](../mfc/providing-drag-and-drop-support-for-header-items.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+Une fois que vous avez [ajouté des éléments à un contrôle header](../mfc/adding-items-to-the-header-control.md), vous pouvez manipuler ou obtenir des informations sur leur ordre avec les fonctions suivantes :
+
+- [CHeaderCtrl::GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) et [CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)
+
+     Récupère et définit l’ordre de gauche à droite des éléments d’en-tête.
+
+- [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).
+
+     Récupère la valeur d’index pour un élément d’en-tête spécifique.
+
+Outre les fonctions de membre précédent, le style HDS_DRAGDROP permet à l’utilisateur à glisser -déplacer des éléments d’en-tête dans le contrôle header. Pour plus d’informations, consultez [prise en charge du glisser-déplacer pour les éléments d’en-tête](../mfc/providing-drag-and-drop-support-for-header-items.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

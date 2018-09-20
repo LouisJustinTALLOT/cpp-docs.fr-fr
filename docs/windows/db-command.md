@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6140b6764efe530664a1904940f3a8426e6fee02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709902"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445854"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -43,7 +43,7 @@ Crée une commande OLE DB.
 
 ### <a name="parameters"></a>Paramètres
 
-*command*  
+*command*<br/>
 Chaîne de commande contenant le texte d’une commande OLE DB. Voici un exemple simple :
 
 ```cpp
@@ -64,15 +64,15 @@ où :
 
 - **\[** *bindtype* **]** est une des chaînes de non-respect de la casse suivantes :
 
-  -   **\[db_column]** lie chacune des variables de membres à une colonne dans un ensemble de lignes.
+  - **\[db_column]** lie chacune des variables de membres à une colonne dans un ensemble de lignes.
 
-  -   **\[BindTo]** (même en tant que  **\[db_column]**).
+  - **\[BindTo]** (même en tant que  **\[db_column]**).
 
-  -   **\[dans]** lie les variables de membre en tant que paramètres d’entrée.
+  - **\[dans]** lie les variables de membre en tant que paramètres d’entrée.
 
-  -   **\[out]** lie les variables de membre en tant que paramètres de sortie.
+  - **\[out]** lie les variables de membre en tant que paramètres de sortie.
 
-  -   **\[in, out]** lie les variables de membre en tant que paramètres d’entrée/sortie.
+  - **\[in, out]** lie les variables de membre en tant que paramètres d’entrée/sortie.
 
 - *szVarX*, *nVarX* correspond à une variable de membre dans la portée actuelle.
 
@@ -99,25 +99,25 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name*  
+*name*<br/>
 (Facultatif) Le nom de la poignée que vous utilisez pour travailler avec l’ensemble de lignes. Si vous spécifiez *name*, **db_command** génère une classe avec l’objet *name*spécifié, qui peut être utilisée pour parcourir l’ensemble de lignes ou pour exécuter plusieurs requêtes d’action. Si vous ne spécifiez pas *name*, vous ne pouvez pas retourner plusieurs lignes de résultats à l’utilisateur.
 
-*source_name*  
+*source_name*<br/>
 (Facultatif) Le `CSession` variable ou une instance d’une classe qui a le `db_source` attribut appliqué à ce dernier sur lequel la commande s’exécute. Voir [db_source](../windows/db-source.md).
 
 **db_command** vérifie que la variable utilisée pour *source_name* est valide. La variable spécifiée doit donc être dans la portée globale ou dans la portée de fonction.
 
-*HRESULT*  
+*HRESULT*<br/>
 (Facultatif) Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
 
-*liaisons*  
+*liaisons*<br/>
 (Facultatif) Vous permet de séparer les paramètres de liaison de la commande OLE DB.
 
 Si vous spécifiez une valeur pour *liaisons*, **db_command** analysera la valeur associée et n’analyse pas le \[ *bindtype*] paramètre. Cette utilisation vous permet d’utiliser la syntaxe du fournisseur OLE DB. Pour désactiver l’analyse, sans paramètres de liaison, spécifiez `Bindings=""`.
 
 Si vous ne spécifiez pas une valeur pour *liaisons*, **db_command** analyse le bloc de paramètres de liaison, recherchez «**(**», suivi par **\[** _bindtype_**]** entre crochets, suivi par un ou plusieurs déclaré précédemment C++ variables membres, suivi par '**)**». Tout le texte entre parenthèses est supprimé de la commande obtenue, et ces paramètres sont utilisés pour construire des liaisons de colonnes et de paramètres pour cette commande.
 
-*bulk_fetch*  
+*bulk_fetch*<br/>
 (Facultatif) Valeur entière qui spécifie le nombre de lignes à extraire.
 
 La valeur par défaut est 1. Elle spécifie l’extraction d’une seule ligne (l’ensemble de lignes sera de type [CRowset](../data/oledb/crowset-class.md)).
@@ -266,5 +266,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du consommateur OLE DB](../windows/ole-db-consumer-attributes.md)  
+[Attributs du consommateur OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
 [Attributs autonomes](../windows/stand-alone-attributes.md)  

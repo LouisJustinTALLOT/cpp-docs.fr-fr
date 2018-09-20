@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdea558f1c9a56e68a8e2e61703b92ea569a0629
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d34bdfd2d80690efae8efbc1f95ba0c50a530af3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709889"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425780"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (spécifier un fichier winmd)
 
@@ -45,6 +45,6 @@ Utilisez la valeur spécifiée dans `filename` pour remplacer le nom de fichier 
 
 ## <a name="see-also"></a>Voir aussi
 
-[/ WINMD (générer des métadonnées de Windows)](../../build/reference/winmd-generate-windows-metadata.md)
-[définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[/WINMD (Générer des métadonnées Windows)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)

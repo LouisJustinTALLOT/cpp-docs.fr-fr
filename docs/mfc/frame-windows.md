@@ -1,5 +1,5 @@
 ---
-title: Fenêtres frame | Documents Microsoft
+title: Frame Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,70 +25,74 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515df19bcc11f7a6706985014fc44bc4ff315f36
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77035b50070478f5117635738f13c7bfd43edec2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352061"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431019"
 ---
 # <a name="frame-windows"></a>Fenêtres frame
-Lorsqu’une application s’exécute sous Windows, l’utilisateur interagit avec les documents affichés dans des fenêtres frame. Une fenêtre frame de document présente deux composants majeurs : le frame et le contenu encadré. Une fenêtre frame de document peut être un [interface monodocument](../mfc/sdi-and-mdi.md) fenêtre frame (SDI) ou un [interface multidocument](../mfc/sdi-and-mdi.md) fenêtre enfant (MDI). Windows gère la majeure partie de l’interaction utilisateur avec la fenêtre frame : déplacement et redimensionnement de la fenêtre, fermeture, en réduisant et agrandissement. Vous gérez le contenu à l’intérieur du cadre.  
-  
-## <a name="frame-windows-and-views"></a>Vues et fenêtres frame  
- L’infrastructure MFC utilise des fenêtres frame pour contenir des vues. Les deux composants — frame et contenu — sont représentés et gérés par deux classes différentes de MFC. Une classe de fenêtre frame gère le frame et une classe d’affichage gère le contenu. La fenêtre d’affichage est un enfant de la fenêtre frame. Dessin et toute autre interaction utilisateur avec le document ont lieu dans la zone cliente de la vue, pas la zone fenêtre frame du client. La fenêtre frame fournit un frame visible autour de la vue, avec une barre de légende et les contrôles de fenêtre standard tels que d’un menu de contrôle, les boutons réduire et agrandir la fenêtre et les contrôles de redimensionnement de la fenêtre. Le « contenu » se comprendre de la zone cliente de la fenêtre, qui est entièrement occupée par une fenêtre enfant, la vue. L’illustration suivante montre la relation entre une fenêtre frame et une vue.  
-  
- ![Affichage de la fenêtre de frame](../mfc/media/vc37fx1.gif "vc37fx1")  
-Affichage et fenêtre frame  
-  
-## <a name="frame-windows-and-splitter-windows"></a>Fenêtres frame et fenêtres fractionnées  
- Une autre disposition fréquente est pour la fenêtre frame encadrer plusieurs vues en utilisant généralement un [fenêtre fractionnée](../mfc/multiple-document-types-views-and-frame-windows.md). Dans une fenêtre fractionnée, la zone cliente de la fenêtre frame est occupée par une fenêtre fractionnée, qui à son tour possède plusieurs fenêtres enfants, appelées volets, qui sont des vues.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
- **Rubriques relatives aux fenêtres de Frame général**  
-  
--   [Objets fenêtres](../mfc/window-objects.md)  
-  
--   [Classes de fenêtre frame](../mfc/frame-window-classes.md)  
-  
--   [Les classes de fenêtre Frame créées par l’Assistant Application](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
-  
--   [Styles de fenêtre frame](../mfc/frame-window-styles-cpp.md)  
-  
--   [Les fenêtres frame](../mfc/what-frame-windows-do.md)  
-  
- **Rubriques sur l’utilisation de fenêtres Frame**  
-  
--   [Utilisation de fenêtres frame](../mfc/using-frame-windows.md)  
-  
--   [Création de fenêtres frame de document](../mfc/creating-document-frame-windows.md)  
-  
--   [Détruire des fenêtres frame](../mfc/destroying-frame-windows.md)  
-  
--   [Gestion des fenêtres enfants MDI](../mfc/managing-mdi-child-windows.md)  
-  
--   [Gestion de l’affichage actuel](../mfc/managing-the-current-view.md) dans une fenêtre frame contenant plusieurs vues  
-  
--   [Gestion des menus, barres de contrôles et des raccourcis (autres objets qui partagent l’espace de la fenêtre frame)](../mfc/managing-menus-control-bars-and-accelerators.md)  
-  
- **Rubriques sur les fonctions de fenêtre Frame spécial**  
-  
--   [Glisser -déplacer des fichiers](../mfc/dragging-and-dropping-files-in-a-frame-window.md) à partir de l’Explorateur de fichiers ou le Gestionnaire de fichiers dans une fenêtre frame  
-  
--   [Répondre à l’échange dynamique de données (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
-  
--   [États semi-modaux : aide Windows contextuelle (orchestration d’autres actions Windows)](../mfc/orchestrating-other-window-actions.md)  
-  
--   [États semi-modaux : impression et Aperçu avant impression (orchestration d’autres actions Windows)](../mfc/orchestrating-other-window-actions.md)  
-  
- **Rubriques sur les autres types de fenêtres**  
-  
--   [Utilisation de vues](../mfc/using-views.md)  
-  
--   [Boîtes de dialogue](../mfc/dialog-boxes.md)  
-  
--   [Contrôles](../mfc/controls-mfc.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fenêtres](../mfc/windows.md)
+
+Lorsqu’une application s’exécute sous Windows, l’utilisateur interagit avec les documents affichés dans des fenêtres frame. Une fenêtre frame de document comporte deux composants principaux : le frame et le contenu qui il encadre. Une fenêtre frame de document peut être un [interface monodocument](../mfc/sdi-and-mdi.md) fenêtre frame (SDI) ou un [interface multidocument](../mfc/sdi-and-mdi.md) fenêtre enfant (MDI). Windows gère la majeure partie de l’interaction utilisateur avec la fenêtre frame : déplacement et redimensionnement de la fenêtre fermée et en réduisant et agrandissement. Vous gérez le contenu à l’intérieur du cadre.
+
+## <a name="frame-windows-and-views"></a>Vues et image Windows
+
+L’infrastructure MFC utilise des fenêtres frame qui contient des vues. Les deux composants — frame et contenu — sont représentées et gérées par deux classes différentes de MFC. Une classe de fenêtre frame gère le frame, et une classe de vue gère le contenu. La fenêtre d’affichage est un enfant de la fenêtre frame. Dessin et toute autre interaction utilisateur avec le document ont lieu dans la zone cliente de la vue pas la zone fenêtre frame du client. La fenêtre frame fournit un cadre visible autour d’une vue, avec une barre de légende et les contrôles de fenêtre standard tel qu’un menu de contrôle, boutons réduire et agrandir la fenêtre et les contrôles de redimensionnement de la fenêtre. Le « contenu » se composent de la zone cliente de la fenêtre qui est entièrement occupée par une fenêtre enfant, la vue. La figure suivante montre la relation entre une fenêtre frame et une vue.
+
+![Affichage de la fenêtre de frame](../mfc/media/vc37fx1.gif "vc37fx1") fenêtre Frame et vue
+
+## <a name="frame-windows-and-splitter-windows"></a>Frame Windows et Windows de séparateur
+
+Une autre disposition fréquente concerne la fenêtre frame encadrer plusieurs vues, généralement à l’aide un [fenêtre fractionnée](../mfc/multiple-document-types-views-and-frame-windows.md). Dans une fenêtre fractionnée, la zone cliente de la fenêtre frame est occupée par une fenêtre fractionnée, qui à son tour possède plusieurs fenêtres enfants, appelées volets, qui sont des vues.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+**Rubriques de la fenêtre de Frame générale**
+
+- [Objets fenêtres](../mfc/window-objects.md)
+
+- [Classes de fenêtre frame](../mfc/frame-window-classes.md)
+
+- [Les classes de fenêtre Frame créées par l’Assistant Application](../mfc/frame-window-classes-created-by-the-application-wizard.md)
+
+- [Styles de fenêtre frame](../mfc/frame-window-styles-cpp.md)
+
+- [Les fenêtres frame](../mfc/what-frame-windows-do.md)
+
+**Rubriques sur l’utilisation de Windows de Frame**
+
+- [Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
+
+- [Création de fenêtres frame de document](../mfc/creating-document-frame-windows.md)
+
+- [Destruction des fenêtres frame](../mfc/destroying-frame-windows.md)
+
+- [La gestion des fenêtres enfants MDI](../mfc/managing-mdi-child-windows.md)
+
+- [Gestion de l’affichage actuel](../mfc/managing-the-current-view.md) dans une fenêtre frame contenant plusieurs vues
+
+- [Gestion des menus, barres de contrôle et accélérateurs (autres objets qui partagent l’espace de la fenêtre frame)](../mfc/managing-menus-control-bars-and-accelerators.md)
+
+**Rubriques sur les fonctionnalités de fenêtre Frame spécial**
+
+- [Faire glisser et déposer des fichiers](../mfc/dragging-and-dropping-files-in-a-frame-window.md) à partir de l’Explorateur de fichiers ou le Gestionnaire de fichiers dans une fenêtre frame
+
+- [Répondre à l’échange dynamique de données (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
+
+- [États semi-modaux : aide Windows contextuelle (orchestration d’autres actions de la fenêtre)](../mfc/orchestrating-other-window-actions.md)
+
+- [États semi-modaux : impression et Aperçu avant impression (orchestration d’autres actions de la fenêtre)](../mfc/orchestrating-other-window-actions.md)
+
+**Rubriques sur les autres types de Windows**
+
+- [Utilisation de vues](../mfc/using-views.md)
+
+- [Boîtes de dialogue](../mfc/dialog-boxes.md)
+
+- [Contrôles](../mfc/controls-mfc.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Fenêtres](../mfc/windows.md)
 

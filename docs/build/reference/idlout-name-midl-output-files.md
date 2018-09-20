@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6749b59a1c12b5d7c3116a925adc727ad6f7ab5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6ef4f8b418edcdb903fa8f807cb5e08d63eaeeed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721836"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441627"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Nommer les fichiers de sortie MIDL)
 
@@ -82,6 +82,6 @@ Si vous spécifiiez /TLBOUT, l’éditeur de liens crée vc70.tlb, vc70.idl, vc7
 
 [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/MIDL (spécifier les Options de ligne de commande MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)
-[générer un programmes par attributs](../../windows/building-an-attributed-program.md)
+[/IGNOREIDL (Ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (Spécifier des options de ligne de commande MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Générer un programmes par attributs](../../windows/building-an-attributed-program.md)

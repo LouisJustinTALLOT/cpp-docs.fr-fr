@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 01785329b23ced8dd9ea5b22387f418173815ac8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6fd8a4b6781008b80be1b0c8fd33bc7f1eece7f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314974"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431318"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>Recherche d'une entrée dans une table d'accélérateurs
 
@@ -44,5 +44,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modification des tables d’accélérateurs](../windows/editing-accelerator-tables.md)  
+[Modification des tables d’accélérateurs](../windows/editing-accelerator-tables.md)<br/>
 [Éditeur d’accélérateurs](../windows/accelerator-editor.md)

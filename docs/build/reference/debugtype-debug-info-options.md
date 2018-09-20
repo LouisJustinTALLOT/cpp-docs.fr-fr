@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98edb5945c2cf01d90cd5dae1a750c0fdd37757f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1255c92a7de4a0f1707cd20f91e8b9f1de640942
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723279"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440457"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (options d'informations de débogage)
 
@@ -54,7 +54,7 @@ Pour déboguer le code en mode utilisateur, qui est généralement utilisé pour
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Debug (Generate Debug Info)](../../build/reference/debug-generate-debug-info.md)
-[/DRIVER (pilote de Mode noyau de Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)
-[/PROFILE (Profiler d’outils de performances)](../../build/reference/profile-performance-tools-profiler.md) 
- [Outils de débogage pour Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
+[/DEBUG (Générer les informations de débogage)](../../build/reference/debug-generate-debug-info.md)<br/>
+[/DRIVER (Pilote Windows NT en mode noyau)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (Profileur des outils d’analyse des performances)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[Outils de débogage pour Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)

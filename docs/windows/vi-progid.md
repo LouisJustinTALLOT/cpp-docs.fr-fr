@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8924f7b22ed86adf7721018c4df3094a2069c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4798cf5c283fc4a663da0e1af7110df63496a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200693"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408243"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -38,7 +38,7 @@ Spécifie un formulaire indépendant de la version du ProgID.
 
 ### <a name="parameters"></a>Paramètres
 
-*name*  
+*name*<br/>
 Le ProgID indépendants de la version qui représente l’objet.
 
 ProgID présentent une version explicite de l’identificateur de classe (CLSID) utilisé pour identifier les objets COM/ActiveX.
@@ -72,7 +72,7 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Attributs de classe](../windows/class-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributs de classe](../windows/class-attributes.md)<br/>
 [Clé de progID](/windows/desktop/com/-progid--key)  
