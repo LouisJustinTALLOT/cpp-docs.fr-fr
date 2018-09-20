@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2792b49d7d3d3f107e39931ff62e6c4137c9c5ca
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3fd4bdeb73a2b2979a93a051c3ee490659b5248b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723266"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392504"
 ---
 # <a name="building-cc-programs"></a>Génération de programmes C/C++
 
@@ -34,20 +34,28 @@ Vous pouvez générer des projets Visual C++ dans Visual Studio ou sur la ligne 
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Génération de projets C++ dans Visual Studio](../ide/building-cpp-projects-in-visual-studio.md) explique comment utiliser l’IDE Visual Studio pour générer votre projet C/C++.
+[Génération de projets C++ dans Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)<br/>
+Explique comment utiliser l'IDE de Visual Studio pour générer un projet en C/C++.
 
-[Générer du code C/C++ sur la ligne de commande](../build/building-on-the-command-line.md) explique comment utiliser le compilateur de ligne de commande C/C++ et outils de génération qui sont inclus dans Visual Studio.
+[Générer du code C/C++ sur la ligne de commande](../build/building-on-the-command-line.md)<br/>
+Explique comment utiliser le compilateur en ligne de commande et les outils de génération C/C++ intégrés à Visual Studio.
 
-[Création d’Applications isolées C/C++ et les assemblys côte à côte](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) décrit le modèle de déploiement pour les applications de bureau de Windows, basée sur l’idée d’applications isolées et assemblys côte à côte.
+[Génération d’applications isolées et d’assemblys côte à côte C/C++](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)<br/>
+Décrit le modèle de déploiement pour des applications de bureau Windows en partant du principe qu'il s'agit d'applications isolées et d'assemblys côte à côte.
 
-[Référence de génération C/C++](../build/reference/c-cpp-building-reference.md) fournit des liens vers des articles de référence sur la génération de programmes en C++, du compilateur et les options de l’éditeur de liens, et divers outils de génération.
+[Référence de la génération C/C++](../build/reference/c-cpp-building-reference.md)<br/>
+Fournit des liens vers des articles de référence sur la génération de programmes en C++, les options de compilateur et d'éditeur de liens, ainsi que divers outils de génération.
 
-[Configurer Visual C++ pour x64 64 64 bits, cibles](../build/configuring-programs-for-64-bit-visual-cpp.md) décrit comment configurer Visual Studio et la ligne de commande pour utiliser l’ensemble d’outils 64 bits et cibler des architectures 64 bits et aborde les problèmes courants de migration quand du code est transposé à 64 bits architectures.
+[Configurer Visual C++ pour des cibles x64 64 bits](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+Explique comment configurer Visual Studio et la ligne de commande pour utiliser l'ensemble d'outils 64 bits et cibler des architectures 64 bits, et traite des problèmes de migration souvent rencontrés quand du code est transposé sur des architectures 64 bits.
 
-[Configurer Visual C++ pour les processeurs ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md) décrit les conventions utilisées par les processeurs ARM et traite des problèmes courants de migration lorsque le code est transposé sur les architectures ARM.
+[Configurer Visual C++ pour les processeurs ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)<br/>
+Décrit les conventions utilisées par les processeurs ARM et traite des problèmes de migration souvent rencontrés lors du transfert de code sur des architectures ARM.
 
-[Configuration des programmes pour Windows XP](../build/configuring-programs-for-windows-xp.md) explique comment définir l’ensemble d’outils de plateforme pour le développement de Windows XP.
+[Configuration des programmes pour Windows XP](../build/configuring-programs-for-windows-xp.md)<br/>
+Explique comment définir l’ensemble d’outils de plateforme pour cibler un développement Windows XP.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Compilation et génération](/visualstudio/ide/compiling-and-building-in-visual-studio) décrit le de génération Visual Studio système et les outils.
+[Compilation et génération](/visualstudio/ide/compiling-and-building-in-visual-studio)<br/>
+Décrit les outils et le système de génération Visual Studio.

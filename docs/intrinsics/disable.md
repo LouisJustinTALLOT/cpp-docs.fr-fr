@@ -19,40 +19,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2748d0412c9ee0f7e7684d35a38f3c2b5d133754
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2e0eb09934847c2f7b67c9e4961b02d31c68df2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545826"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382412"
 ---
 # <a name="disable"></a>_disable
-**Section spécifique à Microsoft**  
-  
- Désactive les interruptions.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void _disable(void);  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`_disable`|x86, ARM, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- `_disable` fait en sorte que le processeur efface l'indicateur d'interruption. Sur les systèmes x86, cette fonction génère l'instruction d'effacement de l'indicateur d'interruption (`cli`).  
-  
- Cette fonction est disponible uniquement en mode noyau. Si vous l'utilisez en mode utilisateur, une exception Instruction privilégiée est levée au moment de l'exécution.  
-  
- Sur les plateformes ARM, cette routine est disponible uniquement en tant qu'intrinsèque.  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+
+**Section spécifique à Microsoft**
+
+Désactive les interruptions.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void _disable(void);
+```
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`_disable`|x86, ARM, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+`_disable` fait en sorte que le processeur efface l'indicateur d'interruption. Sur les systèmes x86, cette fonction génère l'instruction d'effacement de l'indicateur d'interruption (`cli`).
+
+Cette fonction est disponible uniquement en mode noyau. Si vous l'utilisez en mode utilisateur, une exception Instruction privilégiée est levée au moment de l'exécution.
+
+Sur les plateformes ARM, cette routine est disponible uniquement en tant qu'intrinsèque.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

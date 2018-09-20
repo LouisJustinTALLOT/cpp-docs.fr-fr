@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c2b0ee4d2648a1cc43d0baca9f30146184e78
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 8071fdf5e18542273dddfacecca913130e7bdea6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541228"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381229"
 ---
 # <a name="noregistry"></a>no_registry
 **no_registry** indique au compilateur de ne pas rechercher le Registre pour les bibliothèques de types importés avec `#import`.  
@@ -48,5 +48,5 @@ Lorsque `auto_search` est spécifié, supplémentaires `#import`s sera généré
   
 ## <a name="see-also"></a>Voir aussi  
  
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directive #import](../preprocessor/hash-import-directive-cpp.md)

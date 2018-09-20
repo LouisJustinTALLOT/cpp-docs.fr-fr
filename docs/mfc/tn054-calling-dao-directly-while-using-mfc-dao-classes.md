@@ -1,5 +1,5 @@
 ---
-title: 'TN054 : Appel de DAO directement pendant l’utilisation des Classes DAO MFC | Documents Microsoft'
+title: 'TN054 : Appel de DAO directement pendant l’utilisation des Classes DAO MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -23,39 +23,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f060364a8c08a32acae49a0386911486251b0e31
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b53eaa618f06ab7644edf454e097286a3ce3cc71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122449"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393111"
 ---
 # <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054 : appel de DAO directement pendant l'utilisation des classes DAO MFC
 
 > [!NOTE]
-> Les Assistants et l’environnement Visual C++ ne prennent pas en charge les DAO (bien que les classes DAO sont incluses et vous pouvez toujours les utiliser). Microsoft recommande d’utiliser [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous devez uniquement utiliser DAO dans la maintenance des applications existantes.
+> Les Assistants et l’environnement Visual C++ ne prennent pas en charge les DAO (bien que les classes DAO sont incluses et vous pouvez toujours les utiliser). Microsoft recommande d’utiliser [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous devez uniquement utiliser DAO à la gestion des applications existantes.
 
-Lorsque vous utilisez les classes de base de données DAO MFC, il peut arriver lorsqu’il est nécessaire d’utiliser DAO directement. En règle générale, cela ne sera pas le cas, mais MFC a fourni des mécanismes d’assistance pour faciliter les direct DAO appels simple lors de la combinaison de l’utilisation des classes MFC avec des appels directs de DAO. Apporter directement DAO appels aux méthodes d’un objet DAO de MFC gérés doivent nécessitent uniquement quelques lignes de code. Si vous devez créer et utiliser des objets DAO sont *pas* géré par MFC, vous devez faire un peu plus de travail en appelant réellement `Release` sur l’objet. Cette note technique explique où vous voudriez appeler DAO directement, ce que les programmes d’assistance MFC peuvent faire pour vous aider à et comment utiliser les interfaces OLE DAO. Enfin, cette note fournit quelques exemples de fonctions montrant comment appeler DAO directement pour les fonctionnalités de sécurité DAO.
+Lorsque vous utilisez les classes de base de données DAO MFC, il peut arriver lorsqu’il est nécessaire d’utiliser DAO directement. En règle générale, cela ne sera pas le cas, mais MFC a fourni des mécanismes d’assistance pour faciliter les direct DAO appels simple lors de la combinaison de l’utilisation des classes MFC avec des appels directs DAO. Rendre DAO direct appels aux méthodes d’un objet DAO de MFC géré doivent nécessitent que quelques lignes de code. Si vous avez besoin créer et utiliser des objets DAO sont *pas* géré par MFC, vous devez faire un peu plus de travail en appelant réellement `Release` sur l’objet. Cette note technique explique où vous voudriez appeler DAO directement, ce que les programmes d’assistance MFC peuvent faire pour vous aider à et comment utiliser les interfaces OLE DAO. Enfin, cette note fournit quelques exemples de fonctions montrant comment appeler DAO directement pour les fonctionnalités de sécurité DAO.
 
-## <a name="when-to-make-direct-dao-calls"></a>Quand effectuer des appels DAO directement
+## <a name="when-to-make-direct-dao-calls"></a>Quand effectuer des appels DAO Direct
 
-Les situations les plus courantes pour DAO appels directs se produisent lorsque les collections doivent être actualisés, ou lorsque vous implémentez des fonctionnalités non encapsulées par MFC. La fonction la plus importante ne pas exposée par MFC est la sécurité. Si vous souhaitez implémenter des fonctionnalités de sécurité, vous devrez utiliser directement des objets DAO ou les utilisateurs et groupes. Outre la sécurité, il existe seulement quelques autres DAO fonctionnalités non prises en charge par MFC. Notamment les fonctionnalités de réplication le clonage et la base de données de jeu d’enregistrements, ainsi que quelques ajouts à liaison tardive vers DAO.
+Les situations les plus courantes pour DAO appels directs se produisent lorsque les collections doivent être actualisées ou lorsque vous implémentez des fonctionnalités non encapsulées par MFC. La fonctionnalité la plus importante ne pas exposée par MFC est la sécurité. Si vous souhaitez implémenter des fonctionnalités de sécurité, vous devrez utiliser les objets DAO ou les utilisateurs et groupes directement. Outre la sécurité, il existe uniquement quelques autres DAO fonctionnalités non prises en charge par MFC. Citons, les fonctionnalités de jeu d’enregistrements de clonage et de la base de données de réplication, ainsi que quelques ajouts de liaison tardive vers DAO.
 
-## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>Une vue d’ensemble de l’implémentation DAO de MFC
+## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>Une brève présentation de l’implémentation de DAO et MFC
 
-Habillage de MFC facilite DAO à l’aide de DAO plus facile à gérer de nombreux détails pour ne pas avoir à vous soucier les petites choses. Cela inclut l’initialisation d’OLE, la création et la gestion des objets DAO (en particulier les objets de collection), erreur de vérifier et en fournissant une interface fortement typée, le plus simple (sans **VARIANT** ou `BSTR` arguments). Vous pouvez effectuer des appels directs de DAO et tirer parti de ces fonctionnalités. Tout votre code doit faire est d’appel `Release` pour tous les objets créés par DAO direct appelle et *pas* modifiez pas les pointeurs d’interface MFC dépendent en interne. Par exemple, ne modifiez pas le *m_pDAORecordset* membre ouvert `CDaoRecordset` de l’objet, sauf si vous comprenez *tous les* les ramifications internes. Toutefois, vous pouvez utiliser la *m_pDAORecordset* interface pour appeler DAO directement pour obtenir la collection de champs. Dans ce cas le *m_pDAORecordset* membre n’est pas modifié. Vous devez simplement appeler `Release` sur l’objet de collection de champs lorsque vous avez terminé avec l’objet.
+Habillage de MFC de rend DAO à l’aide de DAO plus facile à gérer de nombreux détails pour ne pas avoir à vous soucier des petites choses. Cela inclut l’initialisation d’OLE, la création et la gestion des objets DAO (en particulier les objets de collection), erreur de vérification et en fournissant une interface fortement typée et plus simple (aucun **VARIANT** ou `BSTR` arguments). Vous pouvez effectuer des appels directs de DAO et quand même tirer parti de ces fonctionnalités. Tout votre code doit faire est d’appel `Release` pour tous les objets créés par DAO direct appelle et *pas* modifier les pointeurs d’interface MFC peut s’appuyer sur en interne. Par exemple, ne modifiez pas le *m_pDAORecordset* membre ouvert `CDaoRecordset` de l’objet, sauf si vous comprenez *tous les* les ramifications internes. Vous pouvez, toutefois, utiliser le *m_pDAORecordset* interface à appeler DAO directement pour obtenir la collection de champs. Dans ce cas le *m_pDAORecordset* membre ne serait pas modifié. Vous devez simplement appeler `Release` sur l’objet de collection de champs lorsque vous avez terminé avec l’objet.
 
 ## <a name="description-of-helpers-to-make-dao-calls-easier"></a>Description de programmes d’assistance pour rendre DAO appelle plus facile
 
-Les programmes d’assistance fournies pour que l’appel de DAO plus facile même d’assistance sont le qui est utilisée en interne dans les classes de base de données DAO de MFC. Ces programmes d’assistance utilisées pour rechercher les codes de retour lors d’un appel direct de DAO, la journalisation de la sortie du débogage, la vérification des erreurs attendues et lever des exceptions appropriées si nécessaire. Il existe deux fonctions d’assistance sous-jacent et quatre macros qui correspondent à un de ces deux programmes d’assistance. La meilleure explication serait simplement lire le code. Consultez **DAO_CHECK**, **DAO_CHECK_ERROR**, **DAO_CHECK_MEM**, et **DAO_TRACE** dans AFXDAO. H pour voir les macros, consultez **AfxDaoCheck** et **AfxDaoTrace** dans DAOCORE. CPP.
+Les programmes d’assistance fournies pour rendre l’appel de DAO plus facilement sont les programmes d’assistance mêmes qui sont utilisées en interne dans les classes de base de données DAO de MFC. Ces programmes d’assistance sont utilisés pour vérifier les codes de retour lors d’un appel direct de DAO, la sortie de débogage, de journalisation recherchant les erreurs attendues et lever des exceptions appropriées si nécessaire. Il existe deux fonctions d’assistance sous-jacent et quatre macros qui mappent à un de ces deux programmes d’assistance. La meilleure explication consisterait à lire simplement le code. Consultez **DAO_CHECK**, **DAO_CHECK_ERROR**, **DAO_CHECK_MEM**, et **DAO_TRACE** dans AFXDAO. H pour voir les macros et **AfxDaoCheck** et **AfxDaoTrace** dans DAOCORE. CPP.
 
 ## <a name="using-the-dao-ole-interfaces"></a>À l’aide des Interfaces OLE DAO
 
 Les interfaces OLE pour chaque objet dans la hiérarchie d’objets DAO sont définies dans le fichier d’en-tête DBDAOINT. H, qui se trouve dans le répertoire \Program Files\Microsoft 2003\VC7\include de Visual Studio .NET. Ces interfaces fournissent des méthodes qui vous permettent de manipuler l’ensemble de la hiérarchie DAO.
 
-Pour la plupart des méthodes dans les interfaces DAO, vous devez manipuler un `BSTR` objet (une chaîne préfixée par sa longueur utilisée dans OLE automation). Le `BSTR` objet généralement est encapsulé dans la **VARIANT** type de données. La classe MFC `COleVariant` elle-même hérite de la **VARIANT** type de données. Selon que vous générez votre projet pour ANSI ou Unicode, les interfaces DAO retournera ANSI ou Unicode `BSTR`s. Deux macros, V_BSTR et V_BSTRT, sont utiles pour s’assurer que l’interface DAO Obtient le `BSTR` du type attendu.
+Pour la plupart des méthodes dans les interfaces DAO, vous devez manipuler un `BSTR` objet (une chaîne préfixée par sa longueur utilisée dans OLE automation). Le `BSTR` objet est généralement encapsulé dans la **VARIANT** type de données. La classe MFC `COleVariant` elle-même hérite de la **VARIANT** type de données. Selon si vous générez votre projet pour ANSI ou Unicode, les interfaces DAO retournera ANSI ou Unicode `BSTR`s. Deux macros, V_BSTR et V_BSTRT, sont utiles pour s’assurer que l’interface DAO Obtient le `BSTR` du type attendu.
 
-V_BSTR extrait la *bstrVal* membre d’un `COleVariant`. Cette macro est généralement utilisée lorsque vous devez passer le contenu d’un `COleVariant` à une méthode d’une interface DAO. Le fragment de code suivant montre les déclarations et l’utilisation réelle pour les deux méthodes de l’interface DAO DAOUser qui tirent parti de la macro V_BSTR :
+V_BSTR extraira les *bstrVal* membre d’un `COleVariant`. Cette macro est généralement utilisée lorsque vous devez transmettre le contenu d’un `COleVariant` à une méthode d’une interface DAO. Le fragment de code suivant montre les déclarations et l’utilisation réelle pour les deux méthodes de l’interface DAO DAOUser qui tirent parti de la macro V_BSTR :
 
 ```cpp
 COleVariant varOldName;
@@ -72,20 +72,20 @@ DAO_CHECK(pUser->get_Name(&V_BSTR (&varOldName)));
 DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
 ```
 
-Notez que la `VT_BSTRT` argument spécifié dans le `COleVariant` constructeur ci-dessus permet de s’assurer qu’il y aura un ANSI `BSTR` dans les `COleVariant` si vous générez une version ANSI de votre application et Unicode `BSTR` pour une version Unicode de votre application. C’est ce qu’attend DAO.
+Notez que le `VT_BSTRT` argument spécifié dans le `COleVariant` constructeur ci-dessus permet de s’assurer qu’il y aura un ANSI `BSTR` dans le `COleVariant` si vous générez une version ANSI de votre application et Unicode `BSTR` pour une version Unicode de votre application. C’est ce qu’attend DAO.
 
-Extrait la macro autres, V_BSTRT, ANSI ou Unicode *bstrVal* membre `COleVariant` selon le type de build (ANSI ou Unicode). Le code suivant montre comment extraire le `BSTR` valeur un `COleVariant` dans un `CString`:
+Extrait la macro autres, V_BSTRT, ANSI ou Unicode *bstrVal* membre `COleVariant` selon le type de build (ANSI ou Unicode). Le code suivant montre comment extraire le `BSTR` valeur à partir d’un `COleVariant` dans un `CString`:
 
 ```cpp
 COleVariant varName(_T("MyName"), VT_BSTRT);
 CString str = V_BSTRT(&varName);
 ```
 
-La macro V_BSTRT, ainsi que d’autres techniques pour ouvrir d’autres types qui sont stockés dans `COleVariant`, est illustré dans l’exemple DAOVIEW. Plus précisément, cette traduction est effectuée dans le `CCrack::strVARIANT` (méthode). Cette méthode, si possible, convertit la valeur d’un `COleVariant` dans une instance de `CString`.
+La macro V_BSTRT, ainsi que d’autres techniques pour ouvrir d’autres types qui sont stockés dans `COleVariant`, est illustrée dans l’exemple DAOVIEW. Plus précisément, cette traduction est effectuée dans le `CCrack::strVARIANT` (méthode). Cette méthode, si possible, convertit la valeur d’un `COleVariant` dans une instance de `CString`.
 
-## <a name="simple-example-of-a-direct-call-to-dao"></a>Exemple simple d’un appel Direct de DAO
+## <a name="simple-example-of-a-direct-call-to-dao"></a>Exemple simple d’un appel Direct à DAO
 
-Certaines situations peuvent lorsqu’il est nécessaire d’actualiser les objets de collection DAO sous-jacente. Normalement, cela ne doit pas être nécessaire, mais il est une procédure simple s’il est nécessaire. Un exemple de lorsqu’une collection devra peut-être être actualisé est lors du fonctionnement dans un environnement multi-utilisateur avec plusieurs utilisateurs de la création de nouveaux tabledefs. Dans ce cas, votre collection tabledefs peut devenir obsolète. Pour actualiser la collection, vous devez simplement appeler le `Refresh` méthode de l’objet de collection particulière et de la vérification des erreurs :
+Certaines situations peuvent lorsqu’il est nécessaire d’actualiser les objets de collection DAO sous-jacent. Normalement, cela ne devrait pas être nécessaire, mais il est une procédure simple s’il est nécessaire. Un exemple de quand une collection devra peut-être être actualisé est lors du fonctionnement dans un environnement multi-utilisateur avec plusieurs utilisateurs création tabledefs de nouveau. Dans ce cas, votre collection tabledefs peut devenir obsolète. Pour actualiser la collection, vous devez simplement appeler le `Refresh` méthode de l’objet de collection particulière et de la vérification des erreurs :
 
 ```cpp
 DAO_CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
@@ -147,7 +147,7 @@ void ChangeUserPassword()
 
 Les quatre exemples montrent comment :
 
-- Définir la base de données DAO système (. Fichier MDW).
+- Définir la base de données système DAO (. Fichier MDW).
 
 - Définir l’utilisateur par défaut et le mot de passe.
 
@@ -157,7 +157,7 @@ Les quatre exemples montrent comment :
 
 ### <a name="setting-the-system-database"></a>Définition de la base de données système
 
-Voici un exemple de fonction pour définir la base de données système qui sera utilisé par une application. Cette fonction doit être appelée avant que tous les autres appels DAO sont effectuées.
+Voici un exemple de fonction pour définir la base de données système qui sera utilisé par une application. Cette fonction doit être appelée avant que tout autre appel DAO est effectuées.
 
 ```cpp
 // Set the system database that the
@@ -202,7 +202,7 @@ void SetDefaultUser(CString& strUserName,
 
 ### <a name="changing-a-users-password"></a>Modification de mot de passe d’un utilisateur
 
-Pour modifier le mot de passe d’un utilisateur, utilisez la fonction suivante :
+Pour modifier un mot de passe utilisateur, utilisez la fonction suivante :
 
 ```cpp
 void ChangePassword(CString &strUserName,
@@ -294,5 +294,5 @@ void SetDBPassword(LPCTSTR pDB,
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes techniques par numéro](../mfc/technical-notes-by-number.md)  
-[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)  
+[Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
+[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)

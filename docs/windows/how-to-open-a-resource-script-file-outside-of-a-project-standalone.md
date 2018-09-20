@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6972d76127bccf839c7778e9050e11ec10b6ac2f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1e52d78de0026fa4a589877ee0a591da26107fde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315247"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391532"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-c-project-standalone"></a>Comment : ouvrir un fichier de Script de ressources en dehors d’un projet C++ (autonome)
 
@@ -74,5 +74,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers de ressources](../windows/resource-files-visual-studio.md)  
+[Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Éditeurs de ressources](../windows/resource-editors.md)

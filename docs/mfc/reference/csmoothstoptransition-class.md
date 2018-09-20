@@ -1,5 +1,5 @@
 ---
-title: CSmoothStopTransition, classe | Documents Microsoft
+title: CSmoothStopTransition, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,101 +24,113 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f0c9802077b89ca5555dc476b1066f61e6c593
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: db43e550b38778dbbdc34fb6e696129ca767d28f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121488"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377747"
 ---
 # <a name="csmoothstoptransition-class"></a>CSmoothStopTransition, classe
-Encapsule une transition d'arrêt en douceur.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CSmoothStopTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Construit une transition d’arrêt en douceur et initialise sa durée maximale et la valeur finale.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CSmoothStopTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Membres de données publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable à la fin de la transition de l’animation.|  
-|[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|La durée maximale de la transition.|  
-  
-## <a name="remarks"></a>Notes  
- Une transition d’arrêt en douceur ralentit, car il s’approche d’une valeur finale donnée et atteint avec une vitesse égale à zéro. La durée de la transition est déterminée par la rapidité initiale, la différence entre les valeurs initiales et finales et la durée maximale spécifiée. S’il n’existe aucune solution consistant en un arc parabolique unique, cette méthode crée une transition cubique. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CSmoothStopTransition](../../mfc/reference/csmoothstoptransition-class.md)  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** afxanimationcontroller.h  
-  
-##  <a name="create"></a>  CSmoothStopTransition::Create  
- Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.  
-  
-```  
+
+Encapsule une transition d'arrêt en douceur.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CSmoothStopTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Construit une transition d’arrêt en douceur et initialise sa durée maximale et la valeur finale.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[CSmoothStopTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Membres de données publics
+
+|Nom|Description|
+|----------|-----------------|
+|[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable à la fin de la transition de l’animation.|
+|[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|La durée maximale de la transition.|
+
+## <a name="remarks"></a>Notes
+
+Une transition d’arrêt en douceur ralentit lorsqu’il approche d’une valeur finale donnée et atteint avec une vitesse de zéro. La durée de la transition est déterminée par la rapidité initiale, la différence entre les valeurs initiales et finales et la durée maximale spécifiée. S’il n’existe aucune solution consistant en un arc parabolique unique, cette méthode crée une transition cubique. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+[CSmoothStopTransition](../../mfc/reference/csmoothstoptransition-class.md)
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxanimationcontroller.h
+
+##  <a name="create"></a>  CSmoothStopTransition::Create
+
+Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionLibrary* pLibrary,
     IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *pLibrary*  
- Pointeur vers la bibliothèque de transitions qui est responsable de la création de transitions standards.  
-  
-### <a name="return-value"></a>Valeur de retour  
- TRUE si la transition est créée avec succès ; Sinon, FALSE.  
-  
-##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition  
- Construit une transition d’arrêt en douceur et initialise sa durée maximale et la valeur finale.  
-  
-```  
+```
+
+### <a name="parameters"></a>Paramètres
+
+*pLibrary*<br/>
+Pointeur vers la bibliothèque de transitions qui est responsable de la création de transitions standards.
+
+### <a name="return-value"></a>Valeur de retour
+
+TRUE si la transition est créée avec succès ; Sinon, FALSE.
+
+##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition
+
+Construit une transition d’arrêt en douceur et initialise sa durée maximale et la valeur finale.
+
+```
 CSmoothStopTransition(
-    UI_ANIMATION_SECONDS maximumDuration,  
+    UI_ANIMATION_SECONDS maximumDuration,
     DOUBLE dblFinalValue);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *maximumDuration*  
- La durée maximale de la transition.  
-  
- *dblFinalValue*  
- La valeur de la variable à la fin de la transition de l’animation.  
-  
-##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue  
- La valeur de la variable à la fin de la transition de l’animation.  
-  
-```  
-DOUBLE m_dblFinalValue;  
-```  
-  
-##  <a name="m_maximumduration"></a>  CSmoothStopTransition::m_maximumDuration  
- La durée maximale de la transition.  
-  
-```  
-UI_ANIMATION_SECONDS m_maximumDuration;  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classes](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Paramètres
+
+*maximumDuration*<br/>
+La durée maximale de la transition.
+
+*dblFinalValue*<br/>
+La valeur de la variable à la fin de la transition de l’animation.
+
+##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue
+
+La valeur de la variable à la fin de la transition de l’animation.
+
+```
+DOUBLE m_dblFinalValue;
+```
+
+##  <a name="m_maximumduration"></a>  CSmoothStopTransition::m_maximumDuration
+
+La durée maximale de la transition.
+
+```
+UI_ANIMATION_SECONDS m_maximumDuration;
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Classes](../../mfc/reference/mfc-classes.md)

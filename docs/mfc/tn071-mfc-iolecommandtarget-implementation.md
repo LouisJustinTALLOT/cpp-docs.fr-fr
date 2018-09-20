@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d8d4b0f740e69b57944cb35f2213ae0fd54b511
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221392"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386286"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071 : Implémentation IOleCommandTarget MFC
 
@@ -59,11 +59,11 @@ Cette macro est envoyé dans la déclaration de classe (généralement dans le f
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*theClass*  
- Nom de la classe qui contient le mappage de la commande.
+*theClass*<br/>
+Nom de la classe qui contient le mappage de la commande.
 
-*classe de base*  
- Nom de la classe de base de la classe qui contient le mappage de la commande.
+*classe de base*<br/>
+Nom de la classe de base de la classe qui contient le mappage de la commande.
 
 Cette macro marque le début de la carte de la commande. Utilisez cette macro dans le fichier d’implémentation pour la classe qui contient le mappage de la commande.
 
@@ -77,14 +77,14 @@ Cette macro marque la fin de la carte de la commande. Utilisez cette macro dans 
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- Pointeur vers le GUID de groupe de commandes de la commande OLE. Ce paramètre est **NULL** pour le groupe de commandes OLE standard.
+*pguid*<br/>
+Pointeur vers le GUID de groupe de commandes de la commande OLE. Ce paramètre est **NULL** pour le groupe de commandes OLE standard.
 
-*olecmdid*  
- ID de commande OLE de la commande à appeler.
+*olecmdid*<br/>
+ID de commande OLE de la commande à appeler.
 
-*ID*  
- ID du message WM_COMMAND à envoyer à l’application contenant le mappage de la commande lors de cette commande OLE est appelée.
+*ID*<br/>
+ID du message WM_COMMAND à envoyer à l’application contenant le mappage de la commande lors de cette commande OLE est appelée.
 
 Utiliser l’on_olecmd (macro) dans le mappage de commande pour ajouter des entrées pour les commandes OLE que vous souhaitez gérer. Lorsque les commandes OLE sont reçus, ils seront convertis au message WM_COMMAND spécifié et acheminés via le mappage de message de l’application à l’aide de l’architecture de routage des commandes MFC standard.
 
@@ -158,5 +158,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes techniques par numéro](../mfc/technical-notes-by-number.md)  
-[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)  
+[Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
+[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)

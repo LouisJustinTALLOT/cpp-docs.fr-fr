@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2bda23b6847c08096b27516fcc955e4bf68c38ba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385831"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Nouvelle &lt;appareil&gt; Image boîte de dialogue de Type (C++) (Éditeur d’images pour les icônes)
 
@@ -54,6 +54,6 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Menu image](../windows/image-menu-image-editor-for-icons.md)  
+[Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Menu image](../windows/image-menu-image-editor-for-icons.md)<br/>
 [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

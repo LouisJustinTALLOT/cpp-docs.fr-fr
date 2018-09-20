@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49fada071661bd647e012bfdfac2aeedabba68fa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47afe841a2a8e4a1c41baf68dfd139a70b320c7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206600"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394463"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -38,7 +38,7 @@ Spécifie l’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.
 
 ### <a name="parameters"></a>Paramètres
 
-*contextID*  
+*contextID*<br/>
 Un identificateur de contexte d’aide 32 bits dans le **aide** fichier.
 
 ## <a name="remarks"></a>Notes
@@ -79,8 +79,8 @@ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs d’interface](../windows/interface-attributes.md)  
-[Attributs de classe](../windows/class-attributes.md)  
-[Attributs de méthode](../windows/method-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs d’interface](../windows/interface-attributes.md)<br/>
+[Attributs de classe](../windows/class-attributes.md)<br/>
+[Attributs de méthode](../windows/method-attributes.md)<br/>
 [module](../windows/module-cpp.md)  

@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 554cccba1d45cf172645c46e00fdb20c19ea42d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712528"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389601"
 ---
 # <a name="indword"></a>__indword
-**Section spécifique à Microsoft**  
-  
- Lit des données d’un mot double du port spécifié à l’aide de la `in` instruction.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unsigned long __indword(  
-   unsigned short Port  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+**Section spécifique à Microsoft**
+
+Lit des données d’un mot double du port spécifié à l’aide de la `in` instruction.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+unsigned long __indword(
+   unsigned short Port
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *Port*<br/>
-[in] Le port à lire.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Le mot lire à partir du port.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`__indword`|x86, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- Cette routine est disponible uniquement en tant qu'intrinsèque.  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[in] Le port à lire.
+
+## <a name="return-value"></a>Valeur de retour
+
+Le mot lire à partir du port.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`__indword`|x86, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+Cette routine est disponible uniquement en tant qu'intrinsèque.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

@@ -1,5 +1,5 @@
 ---
-title: Constantes d’espace de noms d’accès concurrentiel (AMP) | Documents Microsoft
+title: Constantes d’espace de noms d’accès concurrentiel (AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,31 +13,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc9aefd059be2932b6903f5c33ada05305d9ed1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7b36f9b34e67e3846c367d468d5a362826fea256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695848"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395672"
 ---
 # <a name="concurrency-namespace-constants-amp"></a>Constantes d’espace de noms d’accès concurrentiel (AMP)
-|||  
-|-|-|  
-|[HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[MODULENAME_MAX_LENGTH](#modulename_max_length)|  
-  
-##  <a name="hlsl_max_num_buffers"></a>  Hlsl_max_num_buffers, constante  
- Le nombre maximal de mémoires tampons allouées par DirectX.  
-  
-```  
-static const UINT HLSL_MAX_NUM_BUFFERS = 64 + 128;  
-```  
-  
-##  <a name="modulename_max_length"></a>  MODULENAME_MAX_LENGTH (constante)  
- Stocke la longueur maximale du nom du module. Cette valeur doit être le même sur le compilateur et le runtime.  
-  
-```  
-static const UINT MODULENAME_MAX_LENGTH = 1024;  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
+
+|||
+|-|-|
+|[HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[MODULENAME_MAX_LENGTH](#modulename_max_length)|
+
+##  <a name="hlsl_max_num_buffers"></a>  Hlsl_max_num_buffers, constante
+
+Le nombre maximal de mémoires tampons allouées par DirectX.
+
+```
+static const UINT HLSL_MAX_NUM_BUFFERS = 64 + 128;
+```
+
+##  <a name="modulename_max_length"></a>  MODULENAME_MAX_LENGTH (constante)
+
+Stocke la longueur maximale du nom du module. Cette valeur doit être identique sur le compilateur et le runtime.
+
+```
+static const UINT MODULENAME_MAX_LENGTH = 1024;
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)

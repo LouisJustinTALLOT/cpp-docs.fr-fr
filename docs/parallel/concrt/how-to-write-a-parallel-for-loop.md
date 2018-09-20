@@ -1,5 +1,5 @@
 ---
-title: 'Comment : écrire une boucle parallel_for | Documents Microsoft'
+title: 'Comment : écrire une boucle parallel_for | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,47 +15,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4f3121130cd4b2871e3e3df73dd4117f946caca
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0cd9f10f473ae72c32b11fe648abe693568b34a6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689816"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395451"
 ---
 # <a name="how-to-write-a-parallelfor-loop"></a>Comment : écrire une boucle parallel_for
-Cet exemple montre comment utiliser [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) pour calculer le produit de deux matrices.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant montre le `matrix_multiply` (fonction), qui calcule le produit de deux matrices carrées.  
-  
- [!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_1.cpp)]  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant illustre la `parallel_matrix_multiply` (fonction), qui utilise le `parallel_for` algorithme pour la boucle externe en parallèle.  
-  
- [!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_2.cpp)]  
-  
- Cet exemple parallélise la boucle externe uniquement car elle exécute suffisamment de travail pour tirer parti de la surcharge de traitement parallèle. Si vous parallélisez la boucle interne, vous ne recevrez pas un gain de performances, car la petite quantité de travail qui effectue de la boucle interne ne justifie pas la surcharge de traitement parallèle. Par conséquent, paralléliser uniquement la boucle externe est la meilleure façon d'optimiser les avantages offerts par l'accès concurrentiel sur la plupart des systèmes.  
-  
-## <a name="example"></a>Exemple  
- Les éléments suivants exemple plus complet compare les performances de la `matrix_multiply` fonctionner par rapport à la `parallel_matrix_multiply` (fonction).  
-  
- [!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_3.cpp)]  
-  
- L'exemple de sortie suivant concerne un ordinateur équipé de quatre processeurs.  
-  
-```Output  
-serial: 3853  
-parallel: 1311  
-```  
-  
-## <a name="compiling-the-code"></a>Compilation du code  
- Pour compiler le code, copiez-le et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `parallel-matrix-multiply.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
-  
- **/EHsc CL.exe parallel-matrix-multiply.cpp**  
-  
-## <a name="see-also"></a>Voir aussi  
- [Algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md)   
- [parallel_for (fonction)](reference/concurrency-namespace-functions.md#parallel_for)
 
+Cet exemple montre comment utiliser [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) pour calculer le produit de deux matrices.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant montre le `matrix_multiply` (fonction), qui calcule le produit de deux matrices carrées.
+
+[!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_1.cpp)]
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant montre le `parallel_matrix_multiply` (fonction), qui utilise le `parallel_for` algorithme pour effectuer la boucle externe en parallèle.
+
+[!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_2.cpp)]
+
+Cet exemple parallélise la boucle externe uniquement car elle exécute suffisamment de travail pour tirer parti de la surcharge de traitement parallèle. Si vous parallélisez la boucle interne, vous recevra pas un gain de performances, car la petite quantité de travail qui exécute la boucle interne ne justifie pas la surcharge de traitement parallèle. Par conséquent, paralléliser uniquement la boucle externe est la meilleure façon d'optimiser les avantages offerts par l'accès concurrentiel sur la plupart des systèmes.
+
+## <a name="example"></a>Exemple
+
+Les éléments suivants exemple plus complet compare les performances de la `matrix_multiply` fonctionner par rapport à la `parallel_matrix_multiply` (fonction).
+
+[!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_3.cpp)]
+
+L'exemple de sortie suivant concerne un ordinateur équipé de quatre processeurs.
+
+```Output
+serial: 3853
+parallel: 1311
+```
+
+## <a name="compiling-the-code"></a>Compilation du code
+
+Pour compiler le code, copiez-le et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `parallel-matrix-multiply.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
+
+**/EHsc CL.exe parallel-matrix-multiply.cpp**
+
+## <a name="see-also"></a>Voir aussi
+
+[Algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md)<br/>
+[parallel_for (fonction)](reference/concurrency-namespace-functions.md#parallel_for)
 
