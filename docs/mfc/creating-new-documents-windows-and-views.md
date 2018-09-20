@@ -1,5 +1,5 @@
 ---
-title: Création de nouveaux Documents, fenêtres et vues | Documents Microsoft
+title: Création de nouveaux Documents, Windows et des vues | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,37 +34,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0abc53e1a24d822605c9e5bfd7ab8276b32f82
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0b4ccddbed0d347468331218614cad70cfd49a62
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931204"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427236"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Création de documents, fenêtres et vues
-Les illustrations suivantes donnent une vue d’ensemble du processus de création de documents, vues et fenêtres frame. Autres articles qui vous concentrer sur les objets participants fournissent davantage d’informations.  
-  
- À la fin de ce processus, les objets contributif existent et stockent les pointeurs vers les uns des autres. Les figures suivantes montrent la séquence dans laquelle les objets sont créés. Vous pouvez suivre la séquence d’illustration à.  
-  
- ![Procédure de création d’un document](../mfc/media/vc387l1.gif "vc387l1")  
-Séquence de création d’un Document  
-  
- ![Séquence de création de fenêtre de frame](../mfc/media/vc387l2.png "vc387l2")  
-Séquence de création d’une fenêtre Frame  
-  
- ![Procédure de création d’une vue](../mfc/media/vc387l3.gif "vc387l3")  
-Séquence de création d’une vue  
-  
- Pour plus d’informations sur la façon dont le framework initialise du nouveau document, vue et les objets de la fenêtre frame, voir les classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), et [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) dans la référence de la bibliothèque MFC. Consultez également [Note technique 22](../mfc/tn022-standard-commands-implementation.md), qui explique les processus de création et d’initialisation plus sous la discussion des commandes standard de l’infrastructure pour le **nouveau** et **ouvrir** sur les éléments de la **fichier** menu.  
-  
-##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> L’initialisation de vos propres ajouts à ces Classes  
- Les illustrations précédentes indiquent également les points à laquelle vous pouvez substituer des fonctions membres pour initialiser des objets de votre application. Une substitution de `OnInitialUpdate` dans votre vue de la classe est le meilleur endroit pour initialiser la vue. Le `OnInitialUpdate` appel se produit immédiatement après la création de la fenêtre frame et la vue dans la fenêtre frame est attachée à son document. Par exemple, si votre vue est une vue de défilement (dérivée de `CScrollView` plutôt que `CView`), vous devez définir la taille d’affichage en fonction de la taille du document dans votre `OnInitialUpdate` remplacer. (Ce processus est décrit dans la description de la classe [CScrollView](../mfc/reference/cscrollview-class.md).) Vous pouvez remplacer le `CDocument` fonctions membres `OnNewDocument` et `OnOpenDocument` pour fournir l’initialisation spécifique à l’application du document. En règle générale, vous devez substituer les deux dans la mesure où un document peut être créé de deux manières.  
-  
- Dans la plupart des cas, votre substitution doit appeler la version classe de base. Pour plus d’informations, consultez les fonctions membres nommées des classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), et [CWinApp](../mfc/reference/cwinapp-class.md) dans la bibliothèque MFC Référence de la bibliothèque.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Modèles de document et le processus de création de Document/Vue](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Création de modèle de document](../mfc/document-template-creation.md)   
- [La création de document/vue](../mfc/document-view-creation.md)   
- [Relations entre les objets MFC](../mfc/relationships-among-mfc-objects.md)
+
+Les illustrations suivantes donnent une vue d’ensemble du processus de création de documents, vues et fenêtres frame. Autres articles qui vous concentrer sur les objets qui participent fournissent d’autres informations.
+
+À la fin de ce processus, les objets coopérant existent et stockent les pointeurs vers les uns des autres. Les figures suivantes illustrent la séquence dans laquelle les objets sont créés. Vous pouvez suivre la séquence à partir d’une illustration à.
+
+![Séquence de création d’un document](../mfc/media/vc387l1.gif "vc387l1") séquence de création d’un Document
+
+![Séquence de création de fenêtre de frame](../mfc/media/vc387l2.png "vc387l2") séquence de création d’une fenêtre Frame
+
+![Séquence de création d’une vue](../mfc/media/vc387l3.gif "vc387l3") séquence de création d’une vue
+
+Pour plus d’informations sur la façon dont le framework initialise le nouveau document, vue et les objets de fenêtre frame, consultez la section classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), et [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) dans la référence de la bibliothèque MFC. Consultez également [Note technique 22](../mfc/tn022-standard-commands-implementation.md), qui explique les processus de création et d’initialisation supplémentaires sous sa discussion des commandes standard de l’infrastructure pour le **New** et **ouvrir** éléments sur le **fichier** menu.
+
+##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> L’initialisation de vos propres ajouts à ces Classes
+
+Les figures précédentes indiquent également les points à partir duquel vous pouvez substituer des fonctions membres pour initialiser des objets de votre application. Une substitution de `OnInitialUpdate` dans votre vue de la classe est le meilleur endroit pour initialiser la vue. Le `OnInitialUpdate` appel se produit immédiatement après la fenêtre frame est créée et la vue dans la fenêtre frame est attachée à son document. Par exemple, si votre vue est une vue de défilement (dérivée de `CScrollView` plutôt que `CView`), vous devez définir la taille d’affichage en fonction de la taille du document dans votre `OnInitialUpdate` remplacer. (Ce processus est décrit dans la description de la classe [CScrollView](../mfc/reference/cscrollview-class.md).) Vous pouvez remplacer le `CDocument` fonctions membres `OnNewDocument` et `OnOpenDocument` pour fournir l’initialisation spécifique à l’application du document. En règle générale, vous devez substituer les deux dans la mesure où un document peut être créé de deux manières.
+
+Dans la plupart des cas, votre substitution doit appeler la version de la classe de base. Pour plus d’informations, consultez les fonctions membres nommées des classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), et [CWinApp](../mfc/reference/cwinapp-class.md) dans la bibliothèque MFC Référence de la bibliothèque.
+
+## <a name="see-also"></a>Voir aussi
+
+[Modèles de document et le processus de création de Document/Vue](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
+[Création de modèle de document](../mfc/document-template-creation.md)<br/>
+[Création d’un document/vue](../mfc/document-view-creation.md)<br/>
+[Relations entre les objets MFC](../mfc/relationships-among-mfc-objects.md)
 

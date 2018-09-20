@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 966759acdac3cf78625cfd072471245a6e42ad63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cb8eb8fbc4199ccdaf5717e465f202c0e4ec296e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597113"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437642"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits (structure)
 
@@ -44,10 +44,10 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 ### <a name="parameters"></a>Paramètres
 
-*I0*  
+*I0*<br/>
 Le nom d’une interface.
 
-*CloakedType*  
+*CloakedType*<br/>
 Pour `RuntimeClass`, `Implements` et `ChainInterfaces`, une interface qui ne sera pas dans la liste de prise en charge les ID d’interface.
 
 ## <a name="remarks"></a>Notes
