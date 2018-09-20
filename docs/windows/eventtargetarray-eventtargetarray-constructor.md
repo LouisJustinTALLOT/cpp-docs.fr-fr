@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc59b9c93cebb622f40881d961709079abcd9166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590650"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388627"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray, constructeur
 
@@ -39,7 +39,7 @@ EventTargetArray(
 
 ### <a name="parameters"></a>Paramètres
 
-*ressources humaines*  
+*ressources humaines*<br/>
 Après les opérations de ce constructeur, paramètre *hr* indique si l’allocation du tableau a réussi ou échoué. Le tableau suivant répertorie les valeurs possibles pour *hr*.
 
 S_OK, l’opération a réussi.
@@ -48,7 +48,7 @@ E_OUTOFMEMORY mémoire n’a pas pu être alloué pour le tableau.
 
 Paramètre de S_FALSE *éléments* est inférieure ou égale à zéro.
 
-*éléments*  
+*éléments*<br/>
 Le nombre d’éléments de tableau à allouer.
 
 ## <a name="remarks"></a>Notes
@@ -65,5 +65,5 @@ Initialise une nouvelle instance de la **EventTargetArray** classe.
 
 ## <a name="see-also"></a>Voir aussi
 
-[EventTargetArray, classe](../windows/eventtargetarray-class.md)  
+[EventTargetArray, classe](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

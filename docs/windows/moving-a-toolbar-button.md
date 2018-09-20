@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf8cec4505c7b981920ed8af946e668d3d0f16ca
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: bace548d72829229d40a9b890d686efb132e0e87
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315715"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388462"
 ---
 # <a name="moving-a-toolbar-button"></a>Déplacement d'un bouton de barre d'outils
 
@@ -37,5 +37,5 @@ MFC ou ATL
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création, déplacement et modification de boutons de barre d’outils](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Création, déplacement et modification de boutons de barre d’outils](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Éditeur de barres d’outils](../windows/toolbar-editor.md)

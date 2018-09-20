@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcad153145432997841753828b3b01b728ff365d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 985629f224f199d1b1f095847e64cc67fa5a97f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608171"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388461"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared, méthode
 
@@ -39,7 +39,7 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 
 ### <a name="parameters"></a>Paramètres
 
-*lock*  
+*lock*<br/>
 Pointeur vers un **SRWLock** objet.
 
 ## <a name="return-value"></a>Valeur de retour

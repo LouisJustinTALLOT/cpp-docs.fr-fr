@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 326974e935608c9b41866e61e72b7a85fc8cb0b2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 016f6c5effeb964d5682f0a83ef63a4884b324c6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598529"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388496"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper (structure)
 
@@ -44,7 +44,7 @@ struct DerefHelper<T*>;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Un paramètre de modèle.
 
 ## <a name="remarks"></a>Notes

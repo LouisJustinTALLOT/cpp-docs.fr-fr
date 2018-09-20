@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6bf8f299ef46166c5b09a716e5bed21fd3b9b01
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215174"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387098"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038 : implémentation IUnknown MFC/OLE
 
@@ -414,7 +414,7 @@ CAggrExample::CAggrExample()
 }
 
 BOOL CAggrExample::OnCreateAggregates()
-{ 
+{
     // wire up aggregate with correct controlling unknown
     m_lpAggrInner = CoCreateInstance(CLSID_Example,
         GetControllingUnknown(), CLSCTX_INPROC_SERVER,
@@ -471,10 +471,10 @@ DWORD ExternalQueryInterface(
 
 #### <a name="parameters"></a>Paramètres
 
-*lpIID*  
+*lpIID*<br/>
 Pointeur lointain vers un IID (premier argument à destination de QueryInterface)
 
-*ppvObj*  
+*ppvObj*<br/>
 Pointeur vers une interface IUnknown* (deuxième argument à destination de QueryInterface)
 
 #### <a name="remarks"></a>Notes
@@ -520,10 +520,10 @@ END_INTERFACE_PART(localClass)
 
 #### <a name="parameters"></a>Paramètres
 
-*localClass*  
+*localClass*<br/>
 Nom de la classe qui implémente l'interface
 
-*iface*  
+*iface*<br/>
 Nom de l'interface que cette classe implémente
 
 #### <a name="remarks"></a>Notes
@@ -560,10 +560,10 @@ END_INTERFACE_MAP
 
 #### <a name="parameters"></a>Paramètres
 
-*theClass*  
+*theClass*<br/>
 Classe dans laquelle la table d'interface doit être définie.
 
-*classe de base*  
+*classe de base*<br/>
 La classe à partir de laquelle *theClass* dérive.
 
 #### <a name="remarks"></a>Notes
@@ -578,13 +578,13 @@ INTERFACE_PART(theClass, iid, localClass)
 
 #### <a name="parameters"></a>Paramètres
 
-*theClass*  
+*theClass*<br/>
 Nom de la classe qui contient la table d'interface.
 
-*IID*  
+*IID*<br/>
 `IID` qui doit être mappé à la classe incorporée.
 
-*localClass*  
+*localClass*<br/>
 Nom de la classe locale (sans le « X »).
 
 #### <a name="remarks"></a>Notes
@@ -626,10 +626,10 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="parameters"></a>Paramètres
 
-*theClass*  
+*theClass*<br/>
 Nom de la classe qui contient la table d'interface.
 
-*theAggr*  
+*theAggr*<br/>
 Nom de la variable membre qui doit être agrégée.
 
 #### <a name="remarks"></a>Notes
@@ -638,5 +638,5 @@ Cette macro est utilisée pour indiquer à l'infrastructure que la classe utilis
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes techniques par numéro](../mfc/technical-notes-by-number.md)  
-[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)  
+[Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
+[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)

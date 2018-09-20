@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1eecedca8988c95466a3f257fbc77768b7c67b3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219950"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392864"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -38,7 +38,7 @@ Spécifie le nom de la DLL à utiliser pour effectuer la recherche de chaîne de
 
 ### <a name="parameters"></a>Paramètres
 
-*string*  
+*string*<br/>
 La DLL à utiliser pour effectuer la recherche de chaîne de document.
 
 ## <a name="remarks"></a>Notes
@@ -75,7 +75,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs d’interface](../windows/interface-attributes.md)  
-[Attributs de classe](../windows/class-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs d’interface](../windows/interface-attributes.md)<br/>
+[Attributs de classe](../windows/class-attributes.md)<br/>
 [Attributs de méthode](../windows/method-attributes.md)  

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711085"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377264"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum, classe (extensions du composant C++)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Paramètres
 
-*access*  
+*access*<br/>
 L’accessibilité de l’énumération, qui peut être **public** ou **privé**.
 
-*enumeration-identifier*  
+*enumeration-identifier*<br/>
 Nom de l’énumération.
 
-*underlying-type*  
+*underlying-type*<br/>
 (Facultatif) Type sous-jacent de l’énumération.
 
 (Facultatif, Windows Runtime uniquement) le type sous-jacent de l’énumération, qui peut être **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, ou `uint64`.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Liste délimitée par des virgules de noms d’énumérateurs.
 
 La valeur de chaque énumérateur est une expression constante définie implicitement par le compilateur ou explicitement par la notation, *enumerator*`=`*constant-expression*. Par défaut, la valeur du premier énumérateur est égale à zéro si elle est définie implicitement. La valeur de chaque énumérateur défini implicitement suivant est égale à la valeur de l’énumérateur précédent + 1.
 
-*var*  
+*var*<br/>
 (Facultatif) Nom d’une variable du type de l’énumération.
 
 ### <a name="remarks"></a>Notes
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Paramètres
 
-*access*  
+*access*<br/>
 Accessibilité de l’énumération. Peut être **public** ou **privé**.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Liste délimitée par des virgules des identificateurs (énumérateurs) contenus dans l'énumération.
 
-*name*  
+*name*<br/>
 Nom de l’énumération. Les énumérations managées anonymes ne sont pas autorisées.
 
-*type*  
+*type*<br/>
 (Facultatif) Le type sous-jacent de la *identificateurs*. Cela peut être tout type scalaire, telles que les versions signés ou de **int**, **court**, ou **long**.  **bool** ou **char** est également autorisé.
 
-*var*  
+*var*<br/>
 (Facultatif) Nom d’une variable du type de l’énumération.
 
 ### <a name="remarks"></a>Notes

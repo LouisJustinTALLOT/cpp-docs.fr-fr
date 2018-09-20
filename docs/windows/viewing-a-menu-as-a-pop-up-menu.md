@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ef855c4ba73b1f5595568a8b7e61d1a286a0c04
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71e1bfaf47a901cc57c1280194c4209d94356aac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313628"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377485"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Affichage d'un menu sous la forme d'un menu contextuel
 
@@ -42,5 +42,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création de menus contextuels](../windows/creating-pop-up-menus.md)  
+[Création de menus contextuels](../windows/creating-pop-up-menus.md)<br/>
 [Éditeur de menus](../windows/menu-editor.md)  
