@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16de276478485cb52b11b3f1bbb869c5b75d05a4
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 718766a8fc475f20bcbcc328973b38e486769d9c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389074"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Association de commandes de menu au texte de la barre d'état dans des applications MFC
 
@@ -39,6 +39,6 @@ MFC
 
 ## <a name="see-also"></a>Voir aussi
 
-[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
-[Ajout de commandes à un menu](../windows/adding-commands-to-a-menu.md)  
+[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Ajout de commandes à un menu](../windows/adding-commands-to-a-menu.md)<br/>
 [Éditeur de menus](../windows/menu-editor.md)

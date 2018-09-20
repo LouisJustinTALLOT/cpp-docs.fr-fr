@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f226018d1c3cae6dd3dbab34537d7ada50140a92
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b8ac3bcb256c4a54f3b967405e7f2c0699e715d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610290"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377160"
 ---
 # <a name="modulebaseincrementobjectcount-method"></a>ModuleBase::IncrementObjectCount, méthode
 
@@ -50,5 +50,5 @@ En cas d’implémentation, incrémente le nombre d’objets suivis par le modul
 
 ## <a name="see-also"></a>Voir aussi
 
-[ModuleBase, classe](../windows/modulebase-class.md)  
+[ModuleBase, classe](../windows/modulebase-class.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

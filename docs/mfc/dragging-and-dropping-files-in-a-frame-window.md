@@ -1,5 +1,5 @@
 ---
-title: Glisser -déplacer des fichiers dans une fenêtre Frame | Documents Microsoft
+title: Glisser -déplacer des fichiers dans une fenêtre Frame | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa326dba7772ddcdccb304900df4460ce9754665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fc68923de531240a2d59336c79e54f6562b369c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345569"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380527"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Glisser-déposer des fichiers dans une fenêtre frame
-La fenêtre frame gère une relation avec l’Explorateur de fichiers ou le Gestionnaire de fichiers.  
-  
- Par ajout de l’initialisation de plusieurs appels de la substitution de la `CWinApp` fonction membre `InitInstance`, comme décrit dans [CWinApp : la classe d’Application](../mfc/cwinapp-the-application-class.md), vous pouvez ouvrir votre fenêtre frame indirectement fichiers fait glisser à partir du fichier L’Explorateur ou le Gestionnaire de fichiers et la suppression dans la fenêtre frame. Consultez [le Gestionnaire de fichiers glisser -déplacer](../mfc/special-cwinapp-services.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
+
+La fenêtre frame gère une relation avec l’Explorateur de fichiers ou le Gestionnaire de fichiers.
+
+En ajoutant quelques initialisation appelle dans la substitution de la `CWinApp` fonction membre `InitInstance`, comme décrit dans [CWinApp : la classe d’Application](../mfc/cwinapp-the-application-class.md), vous pouvez ouvrir votre fenêtre frame indirectement les fichiers déplacés à partir du fichier Explorateur ou le Gestionnaire de fichier et supprimé dans la fenêtre frame. Consultez [fichier gestionnaire glisser -déplacer](../mfc/special-cwinapp-services.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
 

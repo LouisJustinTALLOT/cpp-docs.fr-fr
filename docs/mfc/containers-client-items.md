@@ -1,5 +1,5 @@
 ---
-title: 'Conteneurs : Éléments clients | Documents Microsoft'
+title: 'Conteneurs : Éléments clients | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a7b498ed1ddc3a3d040abde6ebcb7e27615b801
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ae9a37aaeb9df3241cf48d3fc62db046682a7a1b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929341"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387066"
 ---
 # <a name="containers-client-items"></a>Conteneurs : éléments clients
-Cet article décrit les éléments clients et à partir de quelles classes votre application doit dériver ses éléments clients.  
-  
- Éléments clients sont des éléments de données appartenant à une autre application qui sont contenues dans ou référencé par document d’une application conteneur OLE. Éléments clients dont les données sont contenues dans le document sont incorporés ; ceux dont les données sont stockées dans un autre emplacement référencé par le document conteneur sont liés.  
-  
- La classe de document dans une application OLE est dérivée de la classe [COleDocument](../mfc/reference/coledocument-class.md) plutôt qu’à partir de `CDocument`. Le `COleDocument` hérite de la classe `CDocument` toutes les fonctionnalités nécessaires à l’utilisation de l’architecture document/vue dans le MFC sont basées les applications. `COleDocument` définit également une interface qui traite un document comme une collection de `CDocItem` objets. Plusieurs `COleDocument` des fonctions de membre sont fournies pour l’ajout, de la récupération et de suppression d’éléments de cette collection.  
-  
- Chaque application de conteneur doit dériver au moins une classe à partir de `COleClientItem`. Objets de cette classe représentent les éléments, incorporées ou liées, dans le document OLE. Ces objets existent pour la durée de vie du document qui les contiennent, sauf si elles sont supprimées du document.  
-  
- `CDocItem` est la classe de base pour `COleClientItem` et `COleServerItem`. Objets de classes dérivées de ces deux agissent comme intermédiaires entre l’élément OLE et les applications clientes et serveur, respectivement. Chaque fois qu’un nouvel élément OLE est ajouté au document, l’infrastructure MFC ajoute un nouvel objet de votre application cliente `COleClientItem`-classe dérivée à la collection du document de `CDocItem` objets.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Conteneurs](../mfc/containers.md)   
- [Conteneurs : Fichiers composés](../mfc/containers-compound-files.md)   
- [Conteneurs : Problèmes d’Interface utilisateur](../mfc/containers-user-interface-issues.md)   
- [Conteneurs : Fonctionnalités avancées](../mfc/containers-advanced-features.md)   
- [Classe de COleClientItem](../mfc/reference/coleclientitem-class.md)   
- [COleServerItem, classe](../mfc/reference/coleserveritem-class.md)
+
+Cet article décrit les éléments clients et que les classes votre application doit dériver ses éléments clients.
+
+Éléments clients sont des éléments de données appartenant à une autre application qui sont contenues dans ou référencé par le document d’une application conteneur OLE. Éléments clients dont les données sont contenues dans le document sont incorporés ; ceux dont les données sont stockées dans un autre emplacement référencé par le document conteneur sont liés.
+
+La classe de document dans une application OLE est dérivée de la classe [COleDocument](../mfc/reference/coledocument-class.md) plutôt qu’à partir `CDocument`. Le `COleDocument` hérite de la classe `CDocument` toutes les fonctionnalités nécessaires à l’utilisation de l’architecture document/vue sur le MFC sont basées les applications. `COleDocument` définit également une interface qui traite un document comme une collection de `CDocItem` objets. Plusieurs `COleDocument` des fonctions de membre sont fournies pour l’ajout, la récupération et la suppression d’éléments de cette collection.
+
+Chaque application de conteneur doit dériver au moins une classe à partir de `COleClientItem`. Objets de cette classe représentent les éléments, incorporées ou liées, dans le document OLE. Ces objets existent pour la durée de vie du document qui les contient, sauf si elles sont supprimées du document.
+
+`CDocItem` est la classe de base pour `COleClientItem` et `COleServerItem`. Objets de classes dérivées de ces deux agissent comme intermédiaire entre l’élément OLE et les applications clientes et serveur, respectivement. Chaque fois qu’un nouvel élément OLE est ajouté au document, l’infrastructure MFC ajoute un nouvel objet de votre application cliente `COleClientItem`-classe dérivée à la collection du document de `CDocItem` objets.
+
+## <a name="see-also"></a>Voir aussi
+
+[Conteneurs](../mfc/containers.md)<br/>
+[Conteneurs : fichiers composés](../mfc/containers-compound-files.md)<br/>
+[Conteneurs : problèmes d’interface utilisateur](../mfc/containers-user-interface-issues.md)<br/>
+[Conteneurs : fonctionnalités avancées](../mfc/containers-advanced-features.md)<br/>
+[COleClientItem, classe](../mfc/reference/coleclientitem-class.md)<br/>
+[COleServerItem, classe](../mfc/reference/coleserveritem-class.md)

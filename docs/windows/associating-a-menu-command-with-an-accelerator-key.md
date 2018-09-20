@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b55535e9306d272d47f098e7cf15d28a764f3620
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: da9807e552590513116a7a09a58609b2b576efcc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316287"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379734"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key-c"></a>Association d’une commande de Menu à une touche accélérateur (C++)
 
@@ -56,5 +56,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ajout de commandes à un menu](../windows/adding-commands-to-a-menu.md)  
+[Ajout de commandes à un menu](../windows/adding-commands-to-a-menu.md)<br/>
 [Éditeur de menus](../windows/menu-editor.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307024980c0d7e338030563507d17ebfd561d2e0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9d12392da00561239665859cf7fe26b13cccf8db
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317626"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384063"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Affichage ou masquage de la fenêtre Couleurs (Éditeur d'images pour les icônes)
 
@@ -49,5 +49,5 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)  
+[Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)<br/>
 [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

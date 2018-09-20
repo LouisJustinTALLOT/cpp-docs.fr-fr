@@ -1,5 +1,5 @@
 ---
-title: En fournissant l’Activation sans scintillement | Documents Microsoft
+title: En fournissant l’Activation sans scintillement | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9d9c0108ce4afd2e65678280248488181ad34f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd9f780472b8256f6d8332ecbde08138d85c8ebd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356552"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378320"
 ---
 # <a name="providing-flicker-free-activation"></a>Mise à disposition de l'activation sans scintillement
-Si votre contrôle se dessine lui-même de façon identique dans les états inactifs et actifs (et n’utilise pas l’activation sans fenêtre), vous pouvez éliminer les opérations de dessin et le scintillement accompagne normalement se produire lors d’une transition entre inactifs États et actif. Pour cela, incluez le **noFlickerActivate** indicateur dans le jeu d’indicateurs retourné par [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Par exemple :  
-  
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-flicker-free-activation_3.cpp)]  
-  
- Le code permettant d’inclure cet indicateur est automatiquement généré si vous sélectionnez le **activation sans scintillement** option sur le [paramètres de contrôle](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page lors de la création de votre contrôle avec l’Assistant contrôle ActiveX MFC.  
-  
- Si vous utilisez l’activation sans fenêtre, cette optimisation n’a aucun effet.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Contrôles ActiveX MFC : optimisation](../mfc/mfc-activex-controls-optimization.md)
+
+Si votre contrôle se dessine lui-même de façon identique dans des états actifs et inactifs (et n’utilise pas l’activation sans fenêtre), vous pouvez éliminer les opérations de dessin et le scintillement accompagne normalement se produire lors d’une transition entre l’inactif États et actif. Pour cela, incluez le **noFlickerActivate** indicateur dans le jeu d’indicateurs retournés par [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Exemple :
+
+[!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-flicker-free-activation_3.cpp)]
+
+Le code pour inclure cet indicateur est automatiquement généré si vous sélectionnez le **l’activation sans scintillement** option sur le [paramètres de contrôle](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page lors de la création de votre contrôle avec l’Assistant de contrôle ActiveX MFC.
+
+Si vous utilisez l’activation sans fenêtre, cette optimisation n’a aucun effet.
+
+## <a name="see-also"></a>Voir aussi
+
+[Contrôles ActiveX MFC : optimisation](../mfc/mfc-activex-controls-optimization.md)
 

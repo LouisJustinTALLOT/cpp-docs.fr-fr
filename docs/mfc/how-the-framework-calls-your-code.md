@@ -1,5 +1,5 @@
 ---
-title: Comment le Framework appelle votre Code | Documents Microsoft
+title: Comment le Framework appelle votre Code | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,24 +22,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f746ce3c3d658ab1dccc098939410b52d91b1188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68db9107a8d2d113e9118c9cf125acb2798edcd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348177"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373868"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Méthode d'appel de votre code par le Framework
-Il est essentiel de comprendre la relation entre votre code source et le code dans l’infrastructure MFC. Lorsque votre application s’exécute, la plupart des flux de contrôle se trouve dans le code de l’infrastructure. Le framework gère la boucle de messages qui Récupère les messages à partir de Windows que l’utilisateur choisit des commandes et modifie des données dans une vue. Événements de l’infrastructure peut gérer en lui-même ne comptent pas du tout sur votre code. Par exemple, l’infrastructure sait comment fermer les fenêtres et quitter l’application en réponse aux commandes de l’utilisateur. Quand elle gère ces tâches, l’infrastructure utilise des gestionnaires de messages et des fonctions virtuelles C++ pour vous donner la possibilité de répondre à ces événements. Votre code n’est pas dans le contrôle est de l’infrastructure.  
-  
- L’infrastructure appelle votre code pour les événements spécifiques à l’application. Par exemple, lorsque l’utilisateur choisit une commande de menu, l’infrastructure achemine la commande le long d’une séquence d’objets C++ : la fenêtre de vue et frame actuelle, le document associé à la vue, le modèle de document et l’objet d’application. Si un de ces objets peut gérer la commande, elle fait, en appelant la fonction gestionnaire de messages approprié. Pour une commande particulière, le code appelé peut être le vôtre, ou il peut être de l’infrastructure.  
-  
- Cette disposition est quelque peu familier aux programmeurs expérimentés en programmation classique pour Windows ou de la programmation pilotée par événements.  
-  
- Rubriques connexes, lit ce que l’infrastructure telle qu’elle initialise exécute l’application et nettoie ensuite que l’application se termine. Vous comprendrez aussi où le code que vous écrivez se situe.  
-  
- Pour plus d’informations, consultez [classe CWinApp : la classe d’Application](../mfc/cwinapp-the-application-class.md) et [modèles de Document et le processus de création de Document/vue](../mfc/document-templates-and-the-document-view-creation-process.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Génération à partir du Framework](../mfc/building-on-the-framework.md)
+
+Il est essentiel de comprendre la relation entre votre code source et le code dans l’infrastructure MFC. Lorsque votre application s’exécute, la plupart des flux de contrôle se trouve dans le code de l’infrastructure. Le framework gère la boucle de message qui obtient des messages à partir de Windows quand l’utilisateur choisit des commandes et modifie des données dans une vue. Événements de l’infrastructure peut gérer lui-même ne comptent pas du tout sur votre code. Par exemple, le framework sait comment fermer les fenêtres et quitter l’application en réponse aux commandes de l’utilisateur. Comme il gère ces tâches, l’infrastructure utilise des gestionnaires de messages et des fonctions virtuelles C++ pour vous donner la possibilité de répondre à ces événements. Votre code n’est pas dans le contrôle, toutefois ; l’infrastructure est.
+
+L’infrastructure appelle votre code pour les événements spécifiques à l’application. Par exemple, quand l’utilisateur choisit une commande de menu, l’infrastructure achemine la commande le long d’une séquence d’objets C++ : la fenêtre de vue et frame actuelle, le document associé à la vue, le modèle de document et l’objet d’application. Si un de ces objets peut gérer la commande, il fait, en appelant la fonction de gestionnaire de messages approprié. Pour toute commande donnée, le code appelé peut être la vôtre, ou il peut être de l’infrastructure.
+
+Cette disposition est quelque peu familier aux programmeurs ayant l’expérience programmation traditionnelle pour Windows ou de la programmation pilotée par événements.
+
+Rubriques connexes, lit ce que l’infrastructure telle qu’elle initialise et exécute l’application et puis nettoie comme l’application se termine. Vous comprendrez également où intègre le code que vous écrivez.
+
+Pour plus d’informations, consultez [classe CWinApp : la classe d’Application](../mfc/cwinapp-the-application-class.md) et [modèles de Document et le processus de création de Document/vue](../mfc/document-templates-and-the-document-view-creation-process.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Génération à partir du Framework](../mfc/building-on-the-framework.md)
 

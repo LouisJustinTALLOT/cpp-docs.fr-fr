@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aa64b7b4785f8865a372a256ecc5c9d3f8738dcb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717117"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385857"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -41,16 +41,16 @@ Ouvre une table OLE DB.
 
 #### <a name="parameters"></a>Paramètres
 
-*db_table*  
+*db_table*<br/>
 Chaîne spécifiant le nom d’une table de base de données (par exemple, « produits »).
 
-*name*  
+*name*<br/>
 (Facultatif) Le nom de la poignée que vous utilisez pour travailler avec la table. Vous devez spécifier ce paramètre si vous souhaitez retourner plusieurs lignes de résultats. **db_table** génère une variable avec la valeur *nom* qui peut être utilisé pour parcourir l’ensemble de lignes ou d’exécuter plusieurs requêtes d’action.
 
-*source_name*  
+*source_name*<br/>
 (Facultatif) Le `CSession` variable ou une instance d’une classe qui a le `db_source` attribut appliqué à ce dernier sur lequel la commande s’exécute. Voir [db_source](../windows/db-source.md).
 
-*HRESULT*  
+*HRESULT*<br/>
 (Facultatif) Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
 
 ## <a name="remarks"></a>Notes

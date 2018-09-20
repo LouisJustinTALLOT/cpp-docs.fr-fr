@@ -1,5 +1,5 @@
 ---
-title: Quand initialiser les objets CWnd | Documents Microsoft
+title: Quand initialiser les objets CWnd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee10a4632809a224028bfa482f80ed9e8a9334a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6445190ab3da6ed84dbdd83cd0acab0ba98691f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382871"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388431"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>Quand initialiser les objets CWnd
-Vous ne peut pas créer votre propre enfant windows ou appeler des fonctions API Windows dans le constructeur d’un `CWnd`-objet dérivé. C’est parce que le `HWND` pour la `CWnd` objet n’a pas encore été créé. L’initialisation de Windows plus spécifiques, telles que l’ajout de fenêtres enfants, doit être effectuée dans un [OnCreate](../mfc/reference/cwnd-class.md#oncreate) Gestionnaire de messages.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
-  
--   [Création de fenêtres frame de document](../mfc/creating-document-frame-windows.md)  
-  
--   [La création de document/vue](../mfc/document-view-creation.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
+
+Vous ne pouvez pas créer vos propres enfants windows ou appeler toutes les fonctions API de Windows dans le constructeur d’un `CWnd`-objet dérivé. Il s’agit, car le `HWND` pour le `CWnd` objet n’a pas encore été créé. L’initialisation de Windows plus spécifiques, telles que l’ajout de fenêtres enfants, doit être effectuée dans un [OnCreate](../mfc/reference/cwnd-class.md#oncreate) Gestionnaire de messages.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+- [Création de fenêtres frame de document](../mfc/creating-document-frame-windows.md)
+
+- [Création d’un document/vue](../mfc/document-view-creation.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
 

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ebc8632d273e650cf11e70177bbfbeb0e90e8601
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610159"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394853"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference, méthode
 
@@ -41,13 +41,13 @@ template<unsigned int sizeDest>
 
 ### <a name="parameters"></a>Paramètres
 
-*sizeDest*  
+*sizeDest*<br/>
 Un paramètre de modèle qui spécifie la taille de la destination `HStringReference` mémoire tampon.
 
-*str*  
+*str*<br/>
 Une référence à une chaîne à caractères larges.
 
-*Len*  
+*Len*<br/>
 La longueur maximale de la *str* mémoire tampon de paramètre à utiliser dans cette opération. Si le *len* paramètre n’est pas spécifié, l’intégralité de *str* paramètre est utilisé.
 
 ## <a name="return-value"></a>Valeur de retour

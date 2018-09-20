@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6609bba6d7adbddda152007e4db45c82f8039bc0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ab0219c8893ff7ad35e29f9dd8b18be18caf8eb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603676"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378122"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail, méthode
 
@@ -38,7 +38,7 @@ void AddTail(
 
 ### <a name="parameters"></a>Paramètres
 
-*Élément*  
+*Élément*<br/>
 Pointeur vers le Gestionnaire d’événements à ajouter.
 
 ## <a name="remarks"></a>Notes
@@ -55,5 +55,5 @@ Ajoute le Gestionnaire d’événements spécifié à la fin du tableau interne 
 
 ## <a name="see-also"></a>Voir aussi
 
-[EventTargetArray, classe](../windows/eventtargetarray-class.md)  
+[EventTargetArray, classe](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

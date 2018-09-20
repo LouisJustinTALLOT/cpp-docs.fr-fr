@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591729"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392760"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +51,16 @@ Un *pointeur épingle* est un pointeur intérieur qui empêche l’objet pointé
 
 ### <a name="parameters"></a>Paramètres
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **const** ou **volatile** qualificateurs. Par défaut, un pointeur épingle est **volatile**. Elle est redondante, mais pas incorrect de déclarer un pointeur épingle **volatile**.
 
-*type*  
+*type*<br/>
 Le type de *initialiseur*.
 
-*var*  
+*var*<br/>
 Le nom de la **pin_ptr** variable.
 
-*initializer*  
+*initializer*<br/>
 Un membre d’un type référence, un élément d’un tableau managé ou tout autre objet que vous pouvez affecter à un pointeur natif.
 
 ### <a name="remarks"></a>Notes

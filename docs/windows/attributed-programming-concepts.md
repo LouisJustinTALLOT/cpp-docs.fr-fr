@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317262"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394645"
 ---
 # <a name="attributed-programming-concepts"></a>Concepts de programmation par attributs
 
@@ -32,27 +32,27 @@ Si les attributs de faciliter le codage détaillé nécessaire pour écrire des 
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Objectif des attributs](../windows/purpose-of-attributes.md)  
+[Objectif des attributs](../windows/purpose-of-attributes.md)<br/>
 Présente une vue d’ensemble de la programmation avec attributs.
 
-[Mécanismes de base des attributs](../windows/basic-mechanics-of-attributes.md)  
+[Mécanismes de base des attributs](../windows/basic-mechanics-of-attributes.md)<br/>
 Décrit le fonctionnement des attributs dans votre projet.
 
-[Générer un programmes par attributs](../windows/building-an-attributed-program.md)  
+[Générer un programmes par attributs](../windows/building-an-attributed-program.md)<br/>
 Fournit des informations sur l’utilisation des options du compilateur C++ dans votre projet.
 
-[Catégories d’attribut](../windows/attribute-categories.md)  
+[Catégories d’attribut](../windows/attribute-categories.md)<br/>
 Fournit des liens vers les catégories d’attributs utilisés dans Visual C++.
 
-[Attribut Forum Forum aux questions](../windows/attribute-programming-faq.md)  
+[Attribut Forum Forum aux questions](../windows/attribute-programming-faq.md)<br/>
 Réponses aux questions fréquentes sur la programmation avec attributs.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Référence des attributs](../windows/cpp-attributes-reference.md)  
+[Référence des attributs](../windows/cpp-attributes-reference.md)<br/>
 Fournit des liens vers les rubriques de référence décrivant les différents attributs et leur utilisation.
 
-[Débogage de Code injecté](/visualstudio/debugger/how-to-debug-injected-code)  
+[Débogage de Code injecté](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 Décrit le débogage de programmes par attributs.
 
 [__super](../cpp/super.md)et [__interface](../cpp/interface.md)  

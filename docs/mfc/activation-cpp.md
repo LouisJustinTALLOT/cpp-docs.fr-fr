@@ -1,5 +1,5 @@
 ---
-title: Activation (C++) | Documents Microsoft
+title: L’activation (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,31 +28,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34b6d6e9313092a8f9a0a11967c7c6a62ed15e15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0f6207d91fa3816ab17462f62bd39551f7961e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334481"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383972"
 ---
 # <a name="activation-c"></a>Activation (C++)
-Cet article explique le rôle de l'activation dans la modification visuelle des éléments OLE. Une fois qu'un utilisateur a incorporé un élément OLE dans un document conteneur, il peut être amené à l'utiliser. Pour ce faire, il double-clique sur l'élément, ce qui l'active. L'activité la plus fréquente pour l'activation est la modification. De nombreux éléments OLE actuels, une fois activés pour la modification, provoquent la modification des menus et barres d'outils de la fenêtre frame actuelle pour refléter ceux appartenant à l'application serveur qui a créé l'élément. Ce comportement, appelé activation sur place, permet à l'utilisateur de modifier un élément incorporé dans un document composite sans quitter la fenêtre du document conteneur.  
-  
- Il est également possible de modifier des éléments OLE incorporés dans une fenêtre distincte. Cela se produit si l'application conteneur ou serveur ne prend pas en charge l'activation sur place. Dans ce cas, lorsque l'utilisateur double-clique sur un élément incorporé, l'application serveur est lancée dans une fenêtre distincte et l'élément incorporé apparaît comme son propre document. L'utilisateur modifie l'élément dans cette fenêtre. Une fois la modification terminée, l'utilisateur ferme l'application serveur et retourne à l'application conteneur.  
-  
- En guise d’alternative, l’utilisateur peut choisir « modification ouverte » avec la  **\<objet > Ouvrir** commande sur le **modifier** menu. Cela ouvre l'objet dans une fenêtre distincte.  
-  
+
+Cet article explique le rôle de l'activation dans la modification visuelle des éléments OLE. Une fois qu'un utilisateur a incorporé un élément OLE dans un document conteneur, il peut être amené à l'utiliser. Pour ce faire, il double-clique sur l'élément, ce qui l'active. L'activité la plus fréquente pour l'activation est la modification. De nombreux éléments OLE actuels, une fois activés pour la modification, provoquent la modification des menus et barres d'outils de la fenêtre frame actuelle pour refléter ceux appartenant à l'application serveur qui a créé l'élément. Ce comportement, appelé activation sur place, permet à l'utilisateur de modifier un élément incorporé dans un document composite sans quitter la fenêtre du document conteneur.
+
+Il est également possible de modifier des éléments OLE incorporés dans une fenêtre distincte. Cela se produit si l'application conteneur ou serveur ne prend pas en charge l'activation sur place. Dans ce cas, lorsque l'utilisateur double-clique sur un élément incorporé, l'application serveur est lancée dans une fenêtre distincte et l'élément incorporé apparaît comme son propre document. L'utilisateur modifie l'élément dans cette fenêtre. Une fois la modification terminée, l'utilisateur ferme l'application serveur et retourne à l'application conteneur.
+
+Comme alternative, l’utilisateur peut choisir « modification ouverte » avec la  **\<objet > Ouvrez** commande sur le **modifier** menu. Cela ouvre l'objet dans une fenêtre distincte.
+
 > [!NOTE]
->  La modification des éléments incorporés dans une fenêtre distincte était un comportement standard d'OLE version 1, et certaines applications OLE ne peuvent prendre en charge que ce style de modification.  
-  
- L'activation sur place utilise une approche centrée sur le document pour documenter la création. L'utilisateur peut traiter un document composite comme une entité unique et l'utiliser sans basculer entre les applications. Toutefois, l'activation sur place n'est utilisée que pour les éléments incorporés, pas pour les éléments liés qui doivent être modifiés dans une fenêtre distincte. Cela est dû au fait qu'un élément lié est en réalité stocké dans un emplacement différent. La modification d'un élément lié a lieu dans le contexte réel des données, c'est-à-dire, l'emplacement de stockage des données. La modification d'un élément lié dans une fenêtre distincte rappelle à l'utilisateur que les données appartiennent à un autre document.  
-  
- MFC ne prend pas en charge l'activation sur place imbriquée. Si vous créez une application conteneur ou serveur et si ce conteneur ou serveur est incorporé dans un autre conteneur et activé sur place, il ne peut pas activer sur place les objets qui y sont incorporés.  
-  
- Ce qui arrive à un élément incorporé lorsque l'utilisateur double-clique dessus dépend des verbes définis pour l'élément. Pour plus d’informations, consultez [Activation : verbes](../mfc/activation-verbs.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [OLE](../mfc/ole-in-mfc.md)   
- [Conteneurs](../mfc/containers.md)   
- [Serveurs](../mfc/servers.md)
+>  La modification des éléments incorporés dans une fenêtre distincte était un comportement standard d'OLE version 1, et certaines applications OLE ne peuvent prendre en charge que ce style de modification.
+
+L'activation sur place utilise une approche centrée sur le document pour documenter la création. L'utilisateur peut traiter un document composite comme une entité unique et l'utiliser sans basculer entre les applications. Toutefois, l'activation sur place n'est utilisée que pour les éléments incorporés, pas pour les éléments liés qui doivent être modifiés dans une fenêtre distincte. Cela est dû au fait qu'un élément lié est en réalité stocké dans un emplacement différent. La modification d'un élément lié a lieu dans le contexte réel des données, c'est-à-dire, l'emplacement de stockage des données. La modification d'un élément lié dans une fenêtre distincte rappelle à l'utilisateur que les données appartiennent à un autre document.
+
+MFC ne prend pas en charge l'activation sur place imbriquée. Si vous créez une application conteneur ou serveur et si ce conteneur ou serveur est incorporé dans un autre conteneur et activé sur place, il ne peut pas activer sur place les objets qui y sont incorporés.
+
+Ce qui arrive à un élément incorporé lorsque l'utilisateur double-clique dessus dépend des verbes définis pour l'élément. Pour plus d’informations, consultez [Activation : verbes](../mfc/activation-verbs.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Conteneurs](../mfc/containers.md)<br/>
+[Serveurs](../mfc/servers.md)
 

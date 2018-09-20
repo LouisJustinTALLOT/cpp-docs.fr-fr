@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e5aff6796804d7868b4d61c94e4a181b88e9ab6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8376db7eb824856d84e8c742d8a187604f939455
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704833"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384712"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Image personnalisée, boîte de dialogue (C++) (Éditeur d’images pour les icônes)
 
@@ -41,8 +41,10 @@ Vous permet de créer une nouvelle image avec une taille personnalisée et le no
    Fournit un espace vous permettant de choisir le nombre de couleurs pour l’image personnalisée : 2, 16 ou 256.
   
 ## <a name="requirements"></a>Configuration requise
- Aucun.
+
+Aucun.
   
 ## <a name="see-also"></a>Voir aussi
- [Nouvelle \<appareil > boîte de dialogue Type d’Image](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)  
- [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
+
+[Nouvelle \<appareil > boîte de dialogue Type d’Image](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)<br/>
+[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

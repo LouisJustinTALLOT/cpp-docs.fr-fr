@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69aecab15ffb1914dbc8a6a6ae15fca307bc77ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213975"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386247"
 ---
 # <a name="tn006-message-maps"></a>TN006 : tables des messages
 
@@ -87,7 +87,7 @@ Une signature de fonction standard a été définie pour décompresser les param
 > [!NOTE]
 > ClassWizard exige que vous utilisiez le **afx_msg** mot clé dans les déclarations de gestionnaire de mappage de message.
 
- Ces signatures de fonction sont dérivés à l’aide d’une convention simple. Le nom de la fonction commence toujours par `"On`». Cela est suivi par le nom du message Windows avec « WM_ » supprimé et la première lettre de chaque mot en majuscule. L’ordre des paramètres est *wParam* suivie `LOWORD`(*lParam*) puis `HIWORD`(*lParam*). Les paramètres inutilisés ne sont pas transmis. Tous les handles qui sont encapsulés par les classes MFC sont convertis en pointeurs vers les objets MFC appropriés. L’exemple suivant montre comment gérer le message WM_PAINT et provoquer le `CMyWnd::OnPaint` fonction à appeler :
+Ces signatures de fonction sont dérivés à l’aide d’une convention simple. Le nom de la fonction commence toujours par `"On`». Cela est suivi par le nom du message Windows avec « WM_ » supprimé et la première lettre de chaque mot en majuscule. L’ordre des paramètres est *wParam* suivie `LOWORD`(*lParam*) puis `HIWORD`(*lParam*). Les paramètres inutilisés ne sont pas transmis. Tous les handles qui sont encapsulés par les classes MFC sont convertis en pointeurs vers les objets MFC appropriés. L’exemple suivant montre comment gérer le message WM_PAINT et provoquer le `CMyWnd::OnPaint` fonction à appeler :
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,7 +97,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- Le tableau de mappage de message doit être défini en dehors de l’étendue d’une définition de fonction ou une classe. Il ne doit pas être placé dans un bloc d’extern « C ».
+Le tableau de mappage de message doit être défini en dehors de l’étendue d’une définition de fonction ou une classe. Il ne doit pas être placé dans un bloc d’extern « C ».
 
 > [!NOTE]
 > ClassWizard modifiera les entrées de mappage de message qui se produisent entre les / / {{et / /}} crochet de commentaire.
@@ -223,7 +223,7 @@ Exemples de ces formes :
     }
     ```
 
- Les utilisateurs expérimentés peuvent gérer un éventail de commandes en utilisant un gestionnaire de commande unique : [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) ou ON_COMMAND_RANGE_EX. Consultez la documentation du produit pour plus d’informations sur ces macros.
+Les utilisateurs expérimentés peuvent gérer un éventail de commandes en utilisant un gestionnaire de commande unique : [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) ou ON_COMMAND_RANGE_EX. Consultez la documentation du produit pour plus d’informations sur ces macros.
 
 > [!NOTE]
 > ClassWizard prend en charge la création des gestionnaires ON_COMMAND et ON_UPDATE_COMMAND_UI, mais il ne prend pas en charge la création gestionnaires ON_COMMAND_EX ou ON_COMMAND_RANGE. Toutefois, Assistant classe analyse et vous permet de consulter toutes les variantes de gestionnaire de commande de quatre.
@@ -251,5 +251,5 @@ Les contrôles communs Windows utilisent le plus puissant [WM_NOTIFY](https://ms
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes techniques par numéro](../mfc/technical-notes-by-number.md)  
-[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)  
+[Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
+[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)

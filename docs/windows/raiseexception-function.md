@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49024e903237160cc26a9c095cf9f313b43ccb6f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12032318f898b2986b64d5cd8a1e611a31d1fc8c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600763"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372390"
 ---
 # <a name="raiseexception-function"></a>RaiseException (fonction)
 
@@ -38,10 +38,10 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Paramètres
 
-*ressources humaines*  
+*ressources humaines*<br/>
 Le code d’exception de l’exception est levée ; Autrement dit, la valeur HRESULT d’échec d’une opération.
 
-*dwExceptionFlags*  
+*dwExceptionFlags*<br/>
 Un indicateur qui indique une exception non bloquantes (la valeur de l’indicateur est égal à zéro), ou une exception noncontinuable (la valeur de l’indicateur est différent de zéro). Par défaut, l’exception est qui empêchait celle-ci.
 
 ## <a name="remarks"></a>Notes

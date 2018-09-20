@@ -16,103 +16,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa6ed95cf0deb2bbaf296da38a6cbee312685bd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f5ff8c2a58e9459b601d2cbbf7e46676f1c05fda
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082155"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373423"
 ---
 # <a name="ompinitlock"></a>omp_init_lock
-Initialise un verrou simple.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void omp_init_lock(  
-   omp_lock_t *lock  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+Initialise un verrou simple.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void omp_init_lock(
+   omp_lock_t *lock
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *lock*<br/>
-Une variable de type [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
-  
-## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [3.2.1 fonctions omp_init_lock et omp_init_nest_lock fonctions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// omp_init_lock.cpp  
-// compile with: /openmp  
-#include <stdio.h>  
-#include <omp.h>  
-  
-omp_lock_t my_lock;  
-  
-int main() {  
-   omp_init_lock(&my_lock);  
-  
-   #pragma omp parallel num_threads(4)  
-   {  
-      int tid = omp_get_thread_num( );  
-      int i, j;  
-  
-      for (i = 0; i < 5; ++i) {  
-         omp_set_lock(&my_lock);  
-         printf_s("Thread %d - starting locked region\n", tid);  
-         printf_s("Thread %d - ending locked region\n", tid);  
-         omp_unset_lock(&my_lock);  
-      }  
-   }  
-  
-   omp_destroy_lock(&my_lock);  
-}  
-```  
-  
-```Output  
-Thread 0 - starting locked region  
-Thread 0 - ending locked region  
-Thread 0 - starting locked region  
-Thread 0 - ending locked region  
-Thread 0 - starting locked region  
-Thread 0 - ending locked region  
-Thread 0 - starting locked region  
-Thread 0 - ending locked region  
-Thread 0 - starting locked region  
-Thread 0 - ending locked region  
-Thread 1 - starting locked region  
-Thread 1 - ending locked region  
-Thread 1 - starting locked region  
-Thread 1 - ending locked region  
-Thread 1 - starting locked region  
-Thread 1 - ending locked region  
-Thread 1 - starting locked region  
-Thread 1 - ending locked region  
-Thread 1 - starting locked region  
-Thread 1 - ending locked region  
-Thread 2 - starting locked region  
-Thread 2 - ending locked region  
-Thread 2 - starting locked region  
-Thread 2 - ending locked region  
-Thread 2 - starting locked region  
-Thread 2 - ending locked region  
-Thread 2 - starting locked region  
-Thread 2 - ending locked region  
-Thread 2 - starting locked region  
-Thread 2 - ending locked region  
-Thread 3 - starting locked region  
-Thread 3 - ending locked region  
-Thread 3 - starting locked region  
-Thread 3 - ending locked region  
-Thread 3 - starting locked region  
-Thread 3 - ending locked region  
-Thread 3 - starting locked region  
-Thread 3 - ending locked region  
-Thread 3 - starting locked region  
-Thread 3 - ending locked region  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions](../../../parallel/openmp/reference/openmp-functions.md)
+Une variable de type [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).
+
+## <a name="remarks"></a>Notes
+
+Pour plus d’informations, consultez [3.2.1 fonctions omp_init_lock et omp_init_nest_lock fonctions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).
+
+## <a name="example"></a>Exemple
+
+```
+// omp_init_lock.cpp
+// compile with: /openmp
+#include <stdio.h>
+#include <omp.h>
+
+omp_lock_t my_lock;
+
+int main() {
+   omp_init_lock(&my_lock);
+
+   #pragma omp parallel num_threads(4)
+   {
+      int tid = omp_get_thread_num( );
+      int i, j;
+
+      for (i = 0; i < 5; ++i) {
+         omp_set_lock(&my_lock);
+         printf_s("Thread %d - starting locked region\n", tid);
+         printf_s("Thread %d - ending locked region\n", tid);
+         omp_unset_lock(&my_lock);
+      }
+   }
+
+   omp_destroy_lock(&my_lock);
+}
+```
+
+```Output
+Thread 0 - starting locked region
+Thread 0 - ending locked region
+Thread 0 - starting locked region
+Thread 0 - ending locked region
+Thread 0 - starting locked region
+Thread 0 - ending locked region
+Thread 0 - starting locked region
+Thread 0 - ending locked region
+Thread 0 - starting locked region
+Thread 0 - ending locked region
+Thread 1 - starting locked region
+Thread 1 - ending locked region
+Thread 1 - starting locked region
+Thread 1 - ending locked region
+Thread 1 - starting locked region
+Thread 1 - ending locked region
+Thread 1 - starting locked region
+Thread 1 - ending locked region
+Thread 1 - starting locked region
+Thread 1 - ending locked region
+Thread 2 - starting locked region
+Thread 2 - ending locked region
+Thread 2 - starting locked region
+Thread 2 - ending locked region
+Thread 2 - starting locked region
+Thread 2 - ending locked region
+Thread 2 - starting locked region
+Thread 2 - ending locked region
+Thread 2 - starting locked region
+Thread 2 - ending locked region
+Thread 3 - starting locked region
+Thread 3 - ending locked region
+Thread 3 - starting locked region
+Thread 3 - ending locked region
+Thread 3 - starting locked region
+Thread 3 - ending locked region
+Thread 3 - starting locked region
+Thread 3 - ending locked region
+Thread 3 - starting locked region
+Thread 3 - ending locked region
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctions](../../../parallel/openmp/reference/openmp-functions.md)

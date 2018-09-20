@@ -1,5 +1,5 @@
 ---
-title: FILETIME (Structure) | Documents Microsoft
+title: FILETIME, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0d1128442300d3f6fc153733be8b23b9d69444d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4377daa0b8a1420e4f1b5afe1f36fa0fd18d581d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375880"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384596"
 ---
 # <a name="filetime-structure"></a>FILETIME, structure
-Le `FILETIME` structure est une valeur 64 bits représentant le nombre d’intervalles de 100 nanosecondes depuis le 1er janvier 1601.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-typedef struct _FILETIME {  
-    DWORD dwLowDateTime;   /* low 32 bits */  
-    DWORD dwHighDateTime;  /* high 32 bits */  
-} FILETIME, *PFILETIME, *LPFILETIME;  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *dwLowDateTime*  
- Spécifie la faible 32 bits de l’heure de fichier.  
-  
- *FILETIME*  
- Spécifie la haute 32 bits de l’heure de fichier.  
-  
-## <a name="requirements"></a>Spécifications  
- **En-tête :** windef.h  
-  
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
+
+Le `FILETIME` structure est une valeur 64 bits représentant le nombre d’intervalles de 100 nanosecondes depuis le 1er janvier 1601.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+typedef struct _FILETIME {
+    DWORD dwLowDateTime;   /* low 32 bits */
+    DWORD dwHighDateTime;  /* high 32 bits */
+} FILETIME, *PFILETIME, *LPFILETIME;
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*dwLowDateTime*<br/>
+Spécifie le faible 32 bits de l’heure du fichier.
+
+*FILETIME*<br/>
+Spécifie la haute 32 bits de l’heure du fichier.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** windef.h
+
+## <a name="see-also"></a>Voir aussi
+
+[Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
 

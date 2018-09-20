@@ -1,5 +1,5 @@
 ---
-title: 'Sérialisation : Sérialisation et. Base de données d’entrée-sortie | Documents Microsoft'
+title: 'Sérialisation : Sérialisation et. Base de données d’entrée-sortie | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d43c0259dd394a7dbbe7ef5b2ed558c9351e73a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67621d44766e6f4b726c8553024933fd0e904a17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379575"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381541"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>Sérialisation : Sérialisation et. Base de données d’entrée/sortie
-Cet article explique quand utiliser des objets du document et la sérialisation pour les fichiers d’entrée/sortie (e/s) et lorsque des autres techniques d’e/s sont nécessaires, car l’application lit et écrit des données sur une base par transaction, comme dans les applications de base de données. Si vous n’utilisez pas de sérialisation ne sont pas besoin de l’ouvrir, enregistrer, de vous enregistrer sous forme de commandes. Les sujets abordés sont les suivantes :  
-  
--   [Recommandations pour la gestion des entrées/sorties](../mfc/recommendations-for-handling-input-output.md)  
-  
--   [Gestion du menu fichier dans les applications de base de données](../mfc/file-menu-in-an-mfc-database-application.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Sérialisation](../mfc/serialization-in-mfc.md)
+
+Cet article explique quand utiliser des objets de document et la sérialisation pour les fichiers d’entrée/sortie (e/s) et lorsque d’autres techniques d’e/s sont appropriés, étant donné que l’application lit et écrit des données sur une base par transaction, comme dans les applications de base de données. Si vous n’utilisez pas sérialisation, vous également ne devez l’ouvrir, enregistrer, commandes et enregistrer sous. Les sujets abordés incluent :
+
+- [Recommandations pour la gestion des entrées/sorties](../mfc/recommendations-for-handling-input-output.md)
+
+- [Gestion du menu fichier dans les applications de base de données](../mfc/file-menu-in-an-mfc-database-application.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Sérialisation](../mfc/serialization-in-mfc.md)
 

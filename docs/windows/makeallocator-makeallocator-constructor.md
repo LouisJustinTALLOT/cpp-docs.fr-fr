@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9de1db618375257f3465a9b3683a9ca47b470123
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0bc6f23a17ff15955fe6dd47372ce6d69e3bde73
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599559"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384310"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>MakeAllocator::MakeAllocator, constructeur
 
@@ -46,5 +46,5 @@ Initialise une nouvelle instance de la **MakeAllocator** classe.
 
 ## <a name="see-also"></a>Voir aussi
 
-[MakeAllocator, classe](../windows/makeallocator-class.md)  
+[MakeAllocator, classe](../windows/makeallocator-class.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

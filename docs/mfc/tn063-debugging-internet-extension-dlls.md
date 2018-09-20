@@ -1,5 +1,5 @@
 ---
-title: 'TN063 : Débogage des DLL d’extension Internet MFC | Documents Microsoft'
+title: 'TN063 : Débogage des DLL d’extension Internet de MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68bb9ad7a16d35f7a5529bd82bb4d6547eec2e0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb432bf77e9095473d25c3ffc686660567c034bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380463"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395373"
 ---
 # <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063 : Débogage des DLL d’extension Internet MFC
-Cette information est obsolète et a été supprimée.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Notes techniques par numéro](../mfc/technical-notes-by-number.md)   
- [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
+
+Ces informations sont obsolètes et a été supprimées.
+
+## <a name="see-also"></a>Voir aussi
+
+[Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
+[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
 

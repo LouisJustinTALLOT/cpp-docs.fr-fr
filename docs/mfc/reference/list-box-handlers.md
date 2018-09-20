@@ -1,5 +1,5 @@
 ---
-title: Gestionnaires de zone de liste | Documents Microsoft
+title: Gestionnaires de zone de liste | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,24 +25,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1725521fd710f70f36feb321d9bd019eeebb8116
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87edc4691c01da199540cb2dcb96c8ce2d34cb9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369653"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383033"
 ---
 # <a name="list-box-handlers"></a>Gestionnaires de zones de liste
-Les entrées de mappage suivantes ont le prototype de fonction correspondants.  
-  
-|Entrée de mappage|Prototype de fonction|  
-|---------------|------------------------|  
-|ON_LBN_DBLCLK ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_LBN_ERRSPACE ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_LBN_KILLFOCUS ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_LBN_SELCHANGE ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_LBN_SETFOCUS ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Tables des messages](../../mfc/reference/message-maps-mfc.md)
+
+Les entrées de mappage suivantes ont le prototype de fonction correspondant.
+
+|Entrée de mappage|Prototype de fonction|
+|---------------|------------------------|
+|ON_LBN_DBLCLK ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_LBN_ERRSPACE ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_LBN_KILLFOCUS ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_LBN_SELCHANGE ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_LBN_SETFOCUS ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+
+## <a name="see-also"></a>Voir aussi
+
+[Tables des messages](../../mfc/reference/message-maps-mfc.md)
 

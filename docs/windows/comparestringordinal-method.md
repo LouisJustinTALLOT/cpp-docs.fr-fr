@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 952de0ca136d29eb0b170856410b18a1d65120c1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fba5ff2db133d7a510499bd79de8bb77119eb79
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612886"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387209"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal, méthode
 
@@ -36,10 +36,10 @@ inline INT32 CompareStringOrdinal(
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*  
+*LHS*<br/>
 La première HSTRING à comparer.
 
-*terme de droite*  
+*terme de droite*<br/>
 Le deuxième HSTRING à comparer.
 
 ## <a name="return-value"></a>Valeur de retour
