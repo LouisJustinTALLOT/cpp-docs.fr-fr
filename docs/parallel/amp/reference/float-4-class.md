@@ -278,413 +278,410 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd4de23a4395d8e09a51e8df4a8c101132b4ae7f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ed16f627cefa12c0fe48c26b8efc24bdc9bd0b57
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104814"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447061"
 ---
 # <a name="float4-class"></a>float_4, classe
-Représente un vecteur court de quatre valeurs en virgule flottante.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class float_4;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-typedefs"></a>Typedefs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[float_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|float_4::get_w||  
-|float_4::get_wx||  
-|float_4::get_wxy||  
-|float_4::get_wxyz||  
-|float_4::get_wxz||  
-|float_4::get_wxzy||  
-|float_4::get_wy||  
-|float_4::get_wyx||  
-|float_4::get_wyxz||  
-|float_4::get_wyz||  
-|float_4::get_wyzx||  
-|float_4::get_wz||  
-|float_4::get_wzx||  
-|float_4::get_wzxy||  
-|float_4::get_wzy||  
-|float_4::get_wzyx||  
-|float_4::get_x||  
-|float_4::get_xw||  
-|float_4::get_xwy||  
-|float_4::get_xwyz||  
-|float_4::get_xwz||  
-|float_4::get_xwzy||  
-|float_4::get_xy||  
-|float_4::get_xyw||  
-|float_4::get_xywz||  
-|float_4::get_xyz||  
-|float_4::get_xyzw||  
-|float_4::get_xz||  
-|float_4::get_xzw||  
-|float_4::get_xzwy||  
-|float_4::get_xzy||  
-|float_4::get_xzyw||  
-|float_4::get_y||  
-|float_4::get_yw||  
-|float_4::get_ywx||  
-|float_4::get_ywxz||  
-|float_4::get_ywz||  
-|float_4::get_ywzx||  
-|float_4::get_yx||  
-|float_4::get_yxw||  
-|float_4::get_yxwz||  
-|float_4::get_yxz||  
-|float_4::get_yxzw||  
-|float_4::get_yz||  
-|float_4::get_yzw||  
-|float_4::get_yzwx||  
-|float_4::get_yzx||  
-|float_4::get_yzxw||  
-|float_4::get_z||  
-|float_4::get_zw||  
-|float_4::get_zwx||  
-|float_4::get_zwxy||  
-|float_4::get_zwy||  
-|float_4::get_zwyx||  
-|float_4::get_zx||  
-|float_4::get_zxw||  
-|float_4::get_zxwy||  
-|float_4::get_zxy||  
-|float_4::get_zxyw||  
-|float_4::get_zy||  
-|float_4::get_zyw||  
-|float_4::get_zywx||  
-|float_4::get_zyx||  
-|float_4::get_zyxw||  
-|float_4::ref_a||  
-|float_4::ref_b||  
-|float_4::ref_g||  
-|float_4::ref_r||  
-|float_4::ref_w||  
-|float_4::ref_x||  
-|float_4::ref_y||  
-|float_4::ref_z||  
-|float_4::set_w||  
-|float_4::set_wx||  
-|float_4::set_wxy||  
-|float_4::set_wxyz||  
-|float_4::set_wxz||  
-|float_4::set_wxzy||  
-|float_4::set_wy||  
-|float_4::set_wyx||  
-|float_4::set_wyxz||  
-|float_4::set_wyz||  
-|float_4::set_wyzx||  
-|float_4::set_wz||  
-|float_4::set_wzx||  
-|float_4::set_wzxy||  
-|float_4::set_wzy||  
-|float_4::set_wzyx||  
-|float_4::set_x||  
-|float_4::set_xw||  
-|float_4::set_xwy||  
-|float_4::set_xwyz||  
-|float_4::set_xwz||  
-|float_4::set_xwzy||  
-|float_4::set_xy||  
-|float_4::set_xyw||  
-|float_4::set_xywz||  
-|float_4::set_xyz||  
-|float_4::set_xyzw||  
-|float_4::set_xz||  
-|float_4::set_xzw||  
-|float_4::set_xzwy||  
-|float_4::set_xzy||  
-|float_4::set_xzyw||  
-|float_4::set_y||  
-|float_4::set_yw||  
-|float_4::set_ywx||  
-|float_4::set_ywxz||  
-|float_4::set_ywz||  
-|float_4::set_ywzx||  
-|float_4::set_yx||  
-|float_4::set_yxw||  
-|float_4::set_yxwz||  
-|float_4::set_yxz||  
-|float_4::set_yxzw||  
-|float_4::set_yz||  
-|float_4::set_yzw||  
-|float_4::set_yzwx||  
-|float_4::set_yzx||  
-|float_4::set_yzxw||  
-|float_4::set_z||  
-|float_4::set_zw||  
-|float_4::set_zwx||  
-|float_4::set_zwxy||  
-|float_4::set_zwy||  
-|float_4::set_zwyx||  
-|float_4::set_zx||  
-|float_4::set_zxw||  
-|float_4::set_zxwy||  
-|float_4::set_zxy||  
-|float_4::set_zxyw||  
-|float_4::set_zy||  
-|float_4::set_zyw||  
-|float_4::set_zywx||  
-|float_4::set_zyx||  
-|float_4::set_zyxw||  
-  
-### <a name="public-operators"></a>Op&#233;rateurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|float_4::operator-||  
-|float_4::operator--||  
-|float_4::operator*=||  
-|float_4::operator/=||  
-|float_4::operator++||  
-|float_4::operator+=||  
-|float_4::operator=||  
-|float_4::operator-=||  
-  
-### <a name="public-constants"></a>Constantes publiques  
-  
-|Name|Description|  
-|----------|-----------------|  
-|[taille (constante)](#float_4__size)||  
-  
-### <a name="public-data-members"></a>Membres de données publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|float_4::a||  
-|float_4::AB||  
-|float_4::abg||  
-|float_4::abgr||  
-|float_4::ABR||  
-|float_4::abrg||  
-|float_4::AG||  
-|float_4::agb||  
-|float_4::agbr||  
-|float_4::AGR||  
-|float_4::agrb||  
-|float_4::ar||  
-|float_4::arb||  
-|float_4::arbg||  
-|float_4::arg||  
-|float_4::ARGB||  
-|float_4::b||  
-|float_4::BA||  
-|float_4::bag||  
-|float_4::bagr||  
-|float_4::bar||  
-|float_4::barg||  
-|float_4::BG||  
-|float_4::BGA||  
-|float_4::bgar||  
-|float_4::BGR||  
-|float_4::bgra||  
-|float_4::br||  
-|float_4::BRA||  
-|float_4::brag||  
-|float_4::brg||  
-|float_4::brga||  
-|float_4::g||  
-|float_4::GA||  
-|float_4::GAB||  
-|float_4::gabr||  
-|float_4::gar||  
-|float_4::garb||  
-|float_4::GB||  
-|float_4::GBA||  
-|float_4::gbar||  
-|float_4::GBR||  
-|float_4::GBRA||  
-|float_4::GR||  
-|float_4::gra||  
-|float_4::Grab||  
-|float_4::grb||  
-|float_4::grba||  
-|float_4::r||  
-|float_4::ra||  
-|float_4::rab||  
-|float_4::rabg||  
-|float_4::RAG||  
-|float_4::ragb||  
-|float_4::RB||  
-|float_4::rba||  
-|float_4::rbag||  
-|float_4::rbg||  
-|float_4::rbga||  
-|float_4::RG||  
-|float_4::rga||  
-|float_4::rgab||  
-|float_4::RGB||  
-|float_4::rgba||  
-|float_4::w||  
-|float_4::wx||  
-|float_4::WXY||  
-|float_4::wxyz||  
-|float_4::wxz||  
-|float_4::wxzy||  
-|float_4::wY||  
-|float_4::wyx||  
-|float_4::wyxz||  
-|float_4::wyz||  
-|float_4::wyzx||  
-|float_4::wz||  
-|float_4::wzx||  
-|float_4::wzxy||  
-|float_4::wzy||  
-|float_4::wzyx||  
-|float_4::x||  
-|float_4::XW||  
-|float_4::xwy||  
-|float_4::xwyz||  
-|float_4::xwz||  
-|float_4::xwzy||  
-|float_4::XY||  
-|float_4::xyw||  
-|float_4::xywz||  
-|float_4::XYZ||  
-|float_4::xyzw||  
-|float_4::xz||  
-|float_4::xzw||  
-|float_4::xzwy||  
-|float_4::xzy||  
-|float_4::xzyw||  
-|float_4::y||  
-|float_4::yw||  
-|float_4::ywx||  
-|float_4::ywxz||  
-|float_4::ywz||  
-|float_4::ywzx||  
-|float_4::yx||  
-|float_4::yxw||  
-|float_4::yxwz||  
-|float_4::yxz||  
-|float_4::yxzw||  
-|float_4::yz||  
-|float_4::yzw||  
-|float_4::yzwx||  
-|float_4::yzx||  
-|float_4::yzxw||  
-|float_4::z||  
-|float_4::zw||  
-|float_4::zwx||  
-|float_4::zwxy||  
-|float_4::zwy||  
-|float_4::zwyx||  
-|float_4::ZX||  
-|float_4::zxw||  
-|float_4::zxwy||  
-|float_4::zxy||  
-|float_4::zxyw||  
-|float_4::ZY||  
-|float_4::zyw||  
-|float_4::zywx||  
-|float_4::zyx||  
-|float_4::zyxw||  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `float_4`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** amp_short_vectors.h  
-  
- **Namespace :** Concurrency::graphics  
-  
-##  <a name="ctor"></a> float_4 
 
- Par défaut constructeur initialise tous les éléments par 0.  
-  
-```  
+Représente un vecteur court de quatre valeurs en virgule flottante.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class float_4;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-typedefs"></a>Typedefs publics
+
+|Nom|Description|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[float_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|float_4::get_w||
+|float_4::get_wx||
+|float_4::get_wxy||
+|float_4::get_wxyz||
+|float_4::get_wxz||
+|float_4::get_wxzy||
+|float_4::get_wy||
+|float_4::get_wyx||
+|float_4::get_wyxz||
+|float_4::get_wyz||
+|float_4::get_wyzx||
+|float_4::get_wz||
+|float_4::get_wzx||
+|float_4::get_wzxy||
+|float_4::get_wzy||
+|float_4::get_wzyx||
+|float_4::get_x||
+|float_4::get_xw||
+|float_4::get_xwy||
+|float_4::get_xwyz||
+|float_4::get_xwz||
+|float_4::get_xwzy||
+|float_4::get_xy||
+|float_4::get_xyw||
+|float_4::get_xywz||
+|float_4::get_xyz||
+|float_4::get_xyzw||
+|float_4::get_xz||
+|float_4::get_xzw||
+|float_4::get_xzwy||
+|float_4::get_xzy||
+|float_4::get_xzyw||
+|float_4::get_y||
+|float_4::get_yw||
+|float_4::get_ywx||
+|float_4::get_ywxz||
+|float_4::get_ywz||
+|float_4::get_ywzx||
+|float_4::get_yx||
+|float_4::get_yxw||
+|float_4::get_yxwz||
+|float_4::get_yxz||
+|float_4::get_yxzw||
+|float_4::get_yz||
+|float_4::get_yzw||
+|float_4::get_yzwx||
+|float_4::get_yzx||
+|float_4::get_yzxw||
+|float_4::get_z||
+|float_4::get_zw||
+|float_4::get_zwx||
+|float_4::get_zwxy||
+|float_4::get_zwy||
+|float_4::get_zwyx||
+|float_4::get_zx||
+|float_4::get_zxw||
+|float_4::get_zxwy||
+|float_4::get_zxy||
+|float_4::get_zxyw||
+|float_4::get_zy||
+|float_4::get_zyw||
+|float_4::get_zywx||
+|float_4::get_zyx||
+|float_4::get_zyxw||
+|float_4::ref_a||
+|float_4::ref_b||
+|float_4::ref_g||
+|float_4::ref_r||
+|float_4::ref_w||
+|float_4::ref_x||
+|float_4::ref_y||
+|float_4::ref_z||
+|float_4::set_w||
+|float_4::set_wx||
+|float_4::set_wxy||
+|float_4::set_wxyz||
+|float_4::set_wxz||
+|float_4::set_wxzy||
+|float_4::set_wy||
+|float_4::set_wyx||
+|float_4::set_wyxz||
+|float_4::set_wyz||
+|float_4::set_wyzx||
+|float_4::set_wz||
+|float_4::set_wzx||
+|float_4::set_wzxy||
+|float_4::set_wzy||
+|float_4::set_wzyx||
+|float_4::set_x||
+|float_4::set_xw||
+|float_4::set_xwy||
+|float_4::set_xwyz||
+|float_4::set_xwz||
+|float_4::set_xwzy||
+|float_4::set_xy||
+|float_4::set_xyw||
+|float_4::set_xywz||
+|float_4::set_xyz||
+|float_4::set_xyzw||
+|float_4::set_xz||
+|float_4::set_xzw||
+|float_4::set_xzwy||
+|float_4::set_xzy||
+|float_4::set_xzyw||
+|float_4::set_y||
+|float_4::set_yw||
+|float_4::set_ywx||
+|float_4::set_ywxz||
+|float_4::set_ywz||
+|float_4::set_ywzx||
+|float_4::set_yx||
+|float_4::set_yxw||
+|float_4::set_yxwz||
+|float_4::set_yxz||
+|float_4::set_yxzw||
+|float_4::set_yz||
+|float_4::set_yzw||
+|float_4::set_yzwx||
+|float_4::set_yzx||
+|float_4::set_yzxw||
+|float_4::set_z||
+|float_4::set_zw||
+|float_4::set_zwx||
+|float_4::set_zwxy||
+|float_4::set_zwy||
+|float_4::set_zwyx||
+|float_4::set_zx||
+|float_4::set_zxw||
+|float_4::set_zxwy||
+|float_4::set_zxy||
+|float_4::set_zxyw||
+|float_4::set_zy||
+|float_4::set_zyw||
+|float_4::set_zywx||
+|float_4::set_zyx||
+|float_4::set_zyxw||
+
+### <a name="public-operators"></a>Op&#233;rateurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|float_4::operator-||
+|float_4::operator--||
+|float_4::operator*=||
+|float_4::operator/=||
+|float_4::operator++||
+|float_4::operator+=||
+|float_4::operator=||
+|float_4::operator-=||
+
+### <a name="public-constants"></a>Constantes publiques
+
+|Name|Description|
+|----------|-----------------|
+|[taille (constante)](#float_4__size)||
+
+### <a name="public-data-members"></a>Membres de données publics
+
+|Nom|Description|
+|----------|-----------------|
+|float_4::a||
+|float_4::AB||
+|float_4::abg||
+|float_4::abgr||
+|float_4::ABR||
+|float_4::abrg||
+|float_4::AG||
+|float_4::agb||
+|float_4::agbr||
+|float_4::AGR||
+|float_4::agrb||
+|float_4::ar||
+|float_4::arb||
+|float_4::arbg||
+|float_4::arg||
+|float_4::ARGB||
+|float_4::b||
+|float_4::BA||
+|float_4::bag||
+|float_4::bagr||
+|float_4::bar||
+|float_4::barg||
+|float_4::BG||
+|float_4::BGA||
+|float_4::bgar||
+|float_4::BGR||
+|float_4::bgra||
+|float_4::br||
+|float_4::BRA||
+|float_4::brag||
+|float_4::brg||
+|float_4::brga||
+|float_4::g||
+|float_4::GA||
+|float_4::GAB||
+|float_4::gabr||
+|float_4::gar||
+|float_4::garb||
+|float_4::GB||
+|float_4::GBA||
+|float_4::gbar||
+|float_4::GBR||
+|float_4::GBRA||
+|float_4::GR||
+|float_4::gra||
+|float_4::Grab||
+|float_4::grb||
+|float_4::grba||
+|float_4::r||
+|float_4::ra||
+|float_4::rab||
+|float_4::rabg||
+|float_4::RAG||
+|float_4::ragb||
+|float_4::RB||
+|float_4::rba||
+|float_4::rbag||
+|float_4::rbg||
+|float_4::rbga||
+|float_4::RG||
+|float_4::rga||
+|float_4::rgab||
+|float_4::RGB||
+|float_4::rgba||
+|float_4::w||
+|float_4::wx||
+|float_4::WXY||
+|float_4::wxyz||
+|float_4::wxz||
+|float_4::wxzy||
+|float_4::wY||
+|float_4::wyx||
+|float_4::wyxz||
+|float_4::wyz||
+|float_4::wyzx||
+|float_4::wz||
+|float_4::wzx||
+|float_4::wzxy||
+|float_4::wzy||
+|float_4::wzyx||
+|float_4::x||
+|float_4::XW||
+|float_4::xwy||
+|float_4::xwyz||
+|float_4::xwz||
+|float_4::xwzy||
+|float_4::XY||
+|float_4::xyw||
+|float_4::xywz||
+|float_4::XYZ||
+|float_4::xyzw||
+|float_4::xz||
+|float_4::xzw||
+|float_4::xzwy||
+|float_4::xzy||
+|float_4::xzyw||
+|float_4::y||
+|float_4::yw||
+|float_4::ywx||
+|float_4::ywxz||
+|float_4::ywz||
+|float_4::ywzx||
+|float_4::yx||
+|float_4::yxw||
+|float_4::yxwz||
+|float_4::yxz||
+|float_4::yxzw||
+|float_4::yz||
+|float_4::yzw||
+|float_4::yzwx||
+|float_4::yzx||
+|float_4::yzxw||
+|float_4::z||
+|float_4::zw||
+|float_4::zwx||
+|float_4::zwxy||
+|float_4::zwy||
+|float_4::zwyx||
+|float_4::ZX||
+|float_4::zxw||
+|float_4::zxwy||
+|float_4::zxy||
+|float_4::zxyw||
+|float_4::ZY||
+|float_4::zyw||
+|float_4::zywx||
+|float_4::zyx||
+|float_4::zyxw||
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`float_4`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** amp_short_vectors.h
+
+**Namespace :** Concurrency::graphics
+
+##  <a name="ctor"></a> float_4
+
+Par défaut constructeur initialise tous les éléments par 0.
+
+```
 float_4() restrict(amp,
     cpu);
 
- 
 float_4(
-    float _V0,  
-    float _V1,  
-    float _V2,  
+    float _V0,
+    float _V1,
+    float _V2,
     float _V3) restrict(amp,
     cpu);
 
- 
 float_4(
     float _V) restrict(amp,
     cpu);
 
- 
 float_4(
     const float_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_4(
     const uint_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_4(
     const int_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_4(
     const unorm_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_4(
     const norm_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_4(
     const double_4& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*_V0*<br/>
-La valeur pour initialiser l’élément 0.  
-  
-*_V1*<br/>
-La valeur pour initialiser l’élément 1.  
-  
-*_V2*<br/>
-La valeur pour initialiser l’élément 2.  
-  
-*_V3*<br/>
-La valeur pour initialiser l’élément 3.  
-  
-*_V*<br/>
-La valeur pour l’initialisation.  
-  
-*_Autre*<br/>
-L’objet utilisé pour initialiser.  
-  
-##  <a name="float_4__size"></a> Taille 
+```
 
-```  
-static const int size = 4;  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Paramètres
+
+*_V0*<br/>
+La valeur pour initialiser l’élément 0.
+
+*_V1*<br/>
+La valeur pour initialiser l’élément 1.
+
+*_V2*<br/>
+La valeur pour initialiser l’élément 2.
+
+*_V3*<br/>
+La valeur pour initialiser l’élément 3.
+
+*_V*<br/>
+La valeur pour l’initialisation.
+
+*_Autre*<br/>
+L’objet utilisé pour initialiser.
+
+##  <a name="float_4__size"></a> Taille
+
+```
+static const int size = 4;
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

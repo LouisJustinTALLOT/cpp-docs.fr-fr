@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d93bfe44fab0400ce4c3c173473601745f85196c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6e1da84c3a4ec481d3af2880a80f5923bf0c50cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721524"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438078"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (activer la plupart des optimisations de vitesse)
 
@@ -77,6 +77,6 @@ Pour appliquer toutes les optimisations au niveau des fichiers disponibles pour 
 
 ## <a name="see-also"></a>Voir aussi
 
-[/O (optimiser le Code), options](../../build/reference/o-options-optimize-code.md)
+[/O, options (Optimiser le code)](../../build/reference/o-options-optimize-code.md)<br/>
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

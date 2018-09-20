@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57d1a3adc160323726bcdd31808cf82bc8da2e7f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19bb77128eee9cc8af514e60730c3a39115695cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609252"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426536"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback, fonction (bibliothèque de modèles Windows Runtime C++)
 
@@ -201,49 +201,49 @@ ComPtr<TDelegateInterface> Callback(
 
 ### <a name="parameters"></a>Paramètres
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Paramètre de modèle qui spécifie l'interface du délégué à appeler lorsqu'un événement se produit.
 
-*TCallback*  
+*TCallback*<br/>
 Paramètre de modèle qui spécifie le type d'un objet qui représente un objet et sa fonction membre de rappel.
 
-*TCallbackObject*  
+*TCallbackObject*<br/>
 Paramètre de modèle qui spécifie l'objet dont la fonction membre est la méthode à appeler lorsqu'un événement se produit.
 
-*TArg1*  
+*TArg1*<br/>
 Paramètre de modèle qui spécifie le type du premier argument de la méthode de rappel.
 
-*TArg2*  
+*TArg2*<br/>
 Paramètre de modèle qui spécifie le type du second argument de la méthode de rappel.
 
-*TArg3*  
+*TArg3*<br/>
 Paramètre de modèle qui spécifie le type du troisième argument de la méthode de rappel.
 
-*TArg4*  
+*TArg4*<br/>
 Paramètre de modèle qui spécifie le type du quatrième argument de la méthode de rappel.
 
-*TArg5*  
+*TArg5*<br/>
 Paramètre de modèle qui spécifie le type du cinquième argument de la méthode de rappel.
 
-*TArg6*  
+*TArg6*<br/>
 Paramètre de modèle qui spécifie le type du sixième argument de la méthode de rappel.
 
-*TArg7*  
+*TArg7*<br/>
 Paramètre de modèle qui spécifie le type du septième argument de la méthode de rappel.
 
-*TArg8*  
+*TArg8*<br/>
 Paramètre de modèle qui spécifie le type du huitième argument de la méthode de rappel.
 
-*TArg9*  
+*TArg9*<br/>
 Paramètre de modèle qui spécifie le type du neuvième argument de la méthode de rappel.
 
-*rappel*  
+*rappel*<br/>
 Objet qui représente l'objet de rappel et sa fonction membre.
 
-*object*  
+*object*<br/>
 Objet dont la fonction membre est appelée lorsqu'un événement se produit.
 
-*(Méthode)*  
+*(Méthode)*<br/>
 Fonction membre à appeler lorsqu'un événement se produit.
 
 ## <a name="return-value"></a>Valeur de retour

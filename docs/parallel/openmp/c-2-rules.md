@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755019"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404772"
 ---
 # <a name="c2-rules"></a>C.2 Règles
+
 La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammaire montre les extensions à la grammaire du langage de base pour les directives OpenMP C et C++.
 
 **/\* en C++ (ISO/IEC 14882:1998) \*/**
@@ -100,7 +101,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
 &nbsp;&nbsp;&nbsp;&nbsp;**planification (** *genre de planification* **,** *expression* **)**
 
 *genre de planification*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Statique**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Dynamique**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**guidée**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Runtime**
@@ -194,7 +195,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
 
 **/\* déclarations standards \*/**
 
-*déclaration*:<br/>
+*declaration* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*directive threadprivate*
 
 *la directive threadprivate*:<br/>
@@ -217,7 +218,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
 **/\* en C \*/**
 
 *liste de la variable*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*liste de la variable* **,** *identificateur*
 
 **/\* en C++ \*/**

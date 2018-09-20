@@ -1,5 +1,5 @@
 ---
-title: Utilisation de CHotKeyCtrl | Documents Microsoft
+title: Utilisation de CHotKeyCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3678d95ff0748c1854e509d898dfa89778c9a5f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd966b74590d0e7641f2f789b5c45f901a3cf8c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381801"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421503"
 ---
 # <a name="using-chotkeyctrl"></a>Utilisation de CHotKeyCtrl
-Un contrôle hot key, représenté par la classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), est une fenêtre qui affiche une représentation textuelle de la combinaison de touches l’utilisateur tape, telles que CTRL + MAJ + Q. Il gère également une représentation interne de cette touche sous la forme d’un code de touche virtuelle et un ensemble d’indicateurs qui représentent l’état du décalage. Le contrôle de touche à chaud ne définit pas la touche d’accès rapide, ce qui revient à votre programme. (Pour une liste des codes de touches virtuelles, consultez Winuser.h.)  
-  
- Utilisez un contrôle de touche d’accès rapide pour obtenir une entrée utilisateur touche d’accès rapide à associer à une fenêtre ou un thread. Contrôles Hot key sont souvent utilisés dans les boîtes de dialogue, par exemple celle qui s’affiche lors de la demande de l’utilisateur auquel affecter une touche d’accès rapide. Il incombe de votre programme pour récupérer les valeurs décrivant la touche d’accès rapide à partir du contrôle de clé à chaud et à appeler les fonctions appropriées pour associer la touche d’accès rapide par une fenêtre ou un thread.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
-  
--   [Utilisation d’un contrôle de touche d’accès rapide](../mfc/using-a-hot-key-control.md)  
-  
--   [Définition d’une touche d’accès rapide](../mfc/setting-a-hot-key.md)  
-  
--   [Touches globales d’accès rapide](../mfc/global-hot-keys.md)  
-  
--   [Touches d’accès rapide propres aux threads](../mfc/thread-specific-hot-keys.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+
+Un contrôle hot key, représenté par la classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), est une fenêtre qui affiche une représentation textuelle de la combinaison de touches que l’utilisateur tape dans celui-ci, telles que CTRL + MAJ + Q. Il maintient également une représentation interne de cette clé sous la forme d’un code de touche virtuelle et un jeu d’indicateurs qui représentent l’état du décalage. Le contrôle de touche d’accès rapide ne définit pas la touche d’accès rapide, ce qui revient à votre programme. (Pour une liste des codes de touches virtuelles, consultez Winuser.h.)
+
+Utilisez un contrôle de touche d’accès rapide pour obtenir une entrée utilisateur touche d’accès rapide à associer à une fenêtre ou d’un thread. Contrôles Hot key sont souvent utilisés dans les boîtes de dialogue, telles que vous pouvez afficher lors de la demande de l’utilisateur pour affecter une touche d’accès rapide. Il incombe de votre programme pour récupérer les valeurs décrivant la touche d’accès rapide à partir du contrôle de clé à chaud et à appeler les fonctions appropriées pour associer la touche d’accès rapide avec une fenêtre ou d’un thread.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+- [Utilisation d’un contrôle de touche d’accès rapide](../mfc/using-a-hot-key-control.md)
+
+- [Définition d’une touche d’accès rapide](../mfc/setting-a-hot-key.md)
+
+- [Touches globales d’accès rapide](../mfc/global-hot-keys.md)
+
+- [Touches d’accès rapide propres aux threads](../mfc/thread-specific-hot-keys.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Contrôles](../mfc/controls-mfc.md)
 

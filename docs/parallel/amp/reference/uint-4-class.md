@@ -278,402 +278,405 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa93e1b7c406e1799946b56e29b9fa32a39b1996
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3fdc2ac0c637074095b1cb52550032bfe0b22d58
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106296"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447087"
 ---
 # <a name="uint4-class"></a>uint_4, classe
-Représente un vecteur court de quatre entiers non signés.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class uint_4;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-typedefs"></a>Typedefs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[uint_4 constructeur](#uint_4__ctor) |Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
 
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|uint_4::get_w||  
-|uint_4::get_wx||  
-|uint_4::get_wxy||  
-|uint_4::get_wxyz||  
-|uint_4::get_wxz||  
-|uint_4::get_wxzy||  
-|uint_4::get_wy||  
-|uint_4::get_wyx||  
-|uint_4::get_wyxz||  
-|uint_4::get_wyz||  
-|uint_4::get_wyzx||  
-|uint_4::get_wz||  
-|uint_4::get_wzx||  
-|uint_4::get_wzxy||  
-|uint_4::get_wzy||  
-|uint_4::get_wzyx||  
-|uint_4::get_x||  
-|uint_4::get_xw||  
-|uint_4::get_xwy||  
-|uint_4::get_xwyz||  
-|uint_4::get_xwz||  
-|uint_4::get_xwzy||  
-|uint_4::get_xy||  
-|uint_4::get_xyw||  
-|uint_4::get_xywz||  
-|uint_4::get_xyz||  
-|uint_4::get_xyzw||  
-|uint_4::get_xz||  
-|uint_4::get_xzw||  
-|uint_4::get_xzwy||  
-|uint_4::get_xzy||  
-|uint_4::get_xzyw||  
-|uint_4::get_y||  
-|uint_4::get_yw||  
-|uint_4::get_ywx||  
-|uint_4::get_ywxz||  
-|uint_4::get_ywz||  
-|uint_4::get_ywzx||  
-|uint_4::get_yx||  
-|uint_4::get_yxw||  
-|uint_4::get_yxwz||  
-|uint_4::get_yxz||  
-|uint_4::get_yxzw||  
-|uint_4::get_yz||  
-|uint_4::get_yzw||  
-|uint_4::get_yzwx||  
-|uint_4::get_yzx||  
-|uint_4::get_yzxw||  
-|uint_4::get_z||  
-|uint_4::get_zw||  
-|uint_4::get_zwx||  
-|uint_4::get_zwxy||  
-|uint_4::get_zwy||  
-|uint_4::get_zwyx||  
-|uint_4::get_zx||  
-|uint_4::get_zxw||  
-|uint_4::get_zxwy||  
-|uint_4::get_zxy||  
-|uint_4::get_zxyw||  
-|uint_4::get_zy||  
-|uint_4::get_zyw||  
-|uint_4::get_zywx||  
-|uint_4::get_zyx||  
-|uint_4::get_zyxw||  
-|uint_4::ref_a||  
-|uint_4::ref_b||  
-|uint_4::ref_g||  
-|uint_4::ref_r||  
-|uint_4::ref_w||  
-|uint_4::ref_x||  
-|uint_4::ref_y||  
-|uint_4::ref_z||  
-|uint_4::set_w||  
-|uint_4::set_wx||  
-|uint_4::set_wxy||  
-|uint_4::set_wxyz||  
-|uint_4::set_wxz||  
-|uint_4::set_wxzy||  
-|uint_4::set_wy||  
-|uint_4::set_wyx||  
-|uint_4::set_wyxz||  
-|uint_4::set_wyz||  
-|uint_4::set_wyzx||  
-|uint_4::set_wz||  
-|uint_4::set_wzx||  
-|uint_4::set_wzxy||  
-|uint_4::set_wzy||  
-|uint_4::set_wzyx||  
-|uint_4::set_x||  
-|uint_4::set_xw||  
-|uint_4::set_xwy||  
-|uint_4::set_xwyz||  
-|uint_4::set_xwz||  
-|uint_4::set_xwzy||  
-|uint_4::set_xy||  
-|uint_4::set_xyw||  
-|uint_4::set_xywz||  
-|uint_4::set_xyz||  
-|uint_4::set_xyzw||  
-|uint_4::set_xz||  
-|uint_4::set_xzw||  
-|uint_4::set_xzwy||  
-|uint_4::set_xzy||  
-|uint_4::set_xzyw||  
-|uint_4::set_y||  
-|uint_4::set_yw||  
-|uint_4::set_ywx||  
-|uint_4::set_ywxz||  
-|uint_4::set_ywz||  
-|uint_4::set_ywzx||  
-|uint_4::set_yx||  
-|uint_4::set_yxw||  
-|uint_4::set_yxwz||  
-|uint_4::set_yxz||  
-|uint_4::set_yxzw||  
-|uint_4::set_yz||  
-|uint_4::set_yzw||  
-|uint_4::set_yzwx||  
-|uint_4::set_yzx||  
-|uint_4::set_yzxw||  
-|uint_4::set_z||  
-|uint_4::set_zw||  
-|uint_4::set_zwx||  
-|uint_4::set_zwxy||  
-|uint_4::set_zwy||  
-|uint_4::set_zwyx||  
-|uint_4::set_zx||  
-|uint_4::set_zxw||  
-|uint_4::set_zxwy||  
-|uint_4::set_zxy||  
-|uint_4::set_zxyw||  
-|uint_4::set_zy||  
-|uint_4::set_zyw||  
-|uint_4::set_zywx||  
-|uint_4::set_zyx||  
-|uint_4::set_zyxw||  
-  
-### <a name="public-operators"></a>Op&#233;rateurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|uint_4::operator-||  
-|uint_4::operator--||  
-|uint_4::operator*=||  
-|uint_4::operator/=||  
-|uint_4::operator++||  
-|uint_4::operator+=||  
-|uint_4::operator=||  
-|uint_4::operator-=||  
-  
-### <a name="public-constants"></a>Constantes publiques  
-  
-|Name|Description|  
-|----------|-----------------|  
-|[taille (constante)](#size)||  
+Représente un vecteur court de quatre entiers non signés.
 
-  
-### <a name="public-data-members"></a>Membres de données publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|uint_4::a||  
-|uint_4::AB||  
-|uint_4::abg||  
-|uint_4::abgr||  
-|uint_4::ABR||  
-|uint_4::abrg||  
-|uint_4::ag||  
-|uint_4::agb||  
-|uint_4::agbr||  
-|uint_4::AGR||  
-|uint_4::agrb||  
-|uint_4::ar||  
-|uint_4::arb||  
-|uint_4::arbg||  
-|uint_4::arg||  
-|uint_4::ARGB||  
-|uint_4::b||  
-|uint_4::BA||  
-|uint_4::bag||  
-|uint_4::bagr||  
-|uint_4::bar||  
-|uint_4::barg||  
-|uint_4::BG||  
-|uint_4::BGA||  
-|uint_4::bgar||  
-|uint_4::BGR||  
-|uint_4::bgra||  
-|uint_4::br||  
-|uint_4::BRA||  
-|uint_4::brag||  
-|uint_4::brg||  
-|uint_4::brga||  
-|uint_4::g||  
-|uint_4::ga||  
-|uint_4::GAB||  
-|uint_4::gabr||  
-|uint_4::gar||  
-|uint_4::garb||  
-|uint_4::GB||  
-|uint_4::gba||  
-|uint_4::gbar||  
-|uint_4::GBR||  
-|uint_4::GBRA||  
-|uint_4::GR||  
-|uint_4::gra||  
-|uint_4::Grab||  
-|uint_4::grb||  
-|uint_4::grba||  
-|uint_4::r||  
-|uint_4::ra||  
-|uint_4::rab||  
-|uint_4::rabg||  
-|uint_4::RAG||  
-|uint_4::ragb||  
-|uint_4::rb||  
-|uint_4::rba||  
-|uint_4::rbag||  
-|uint_4::rbg||  
-|uint_4::rbga||  
-|uint_4::rg||  
-|uint_4::rga||  
-|uint_4::rgab||  
-|uint_4::RGB||  
-|uint_4::rgba||  
-|uint_4::w||  
-|uint_4::wx||  
-|uint_4::WXY||  
-|uint_4::wxyz||  
-|uint_4::wxz||  
-|uint_4::wxzy||  
-|uint_4::wY||  
-|uint_4::wyx||  
-|uint_4::wyxz||  
-|uint_4::wyz||  
-|uint_4::wyzx||  
-|uint_4::wz||  
-|uint_4::wzx||  
-|uint_4::wzxy||  
-|uint_4::wzy||  
-|uint_4::wzyx||  
-|uint_4::x||  
-|uint_4::XW||  
-|uint_4::xwy||  
-|uint_4::xwyz||  
-|uint_4::xwz||  
-|uint_4::xwzy||  
-|uint_4::XY||  
-|uint_4::xyw||  
-|uint_4::xywz||  
-|uint_4::XYZ||  
-|uint_4::xyzw||  
-|uint_4::xz||  
-|uint_4::xzw||  
-|uint_4::xzwy||  
-|uint_4::xzy||  
-|uint_4::xzyw||  
-|uint_4::y||  
-|uint_4::yw||  
-|uint_4::ywx||  
-|uint_4::ywxz||  
-|uint_4::ywz||  
-|uint_4::ywzx||  
-|uint_4::yx||  
-|uint_4::yxw||  
-|uint_4::yxwz||  
-|uint_4::yxz||  
-|uint_4::yxzw||  
-|uint_4::yz||  
-|uint_4::yzw||  
-|uint_4::yzwx||  
-|uint_4::yzx||  
-|uint_4::yzxw||  
-|uint_4::z||  
-|uint_4::zw||  
-|uint_4::zwx||  
-|uint_4::zwxy||  
-|uint_4::zwy||  
-|uint_4::zwyx||  
-|uint_4::ZX||  
-|uint_4::zxw||  
-|uint_4::zxwy||  
-|uint_4::zxy||  
-|uint_4::zxyw||  
-|uint_4::ZY||  
-|uint_4::zyw||  
-|uint_4::zywx||  
-|uint_4::ZYX||  
-|uint_4::zyxw||  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `uint_4`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** amp_short_vectors.h  
-  
- **Namespace :** Concurrency::graphics  
-  
-## <a name="uint_4__ctor"></a> uint_4 
+## <a name="syntax"></a>Syntaxe
+
+```
+class uint_4;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-typedefs"></a>Typedefs publics
+
+|Nom|Description|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[uint_4 constructeur](#uint_4__ctor) |Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|uint_4::get_w||
+|uint_4::get_wx||
+|uint_4::get_wxy||
+|uint_4::get_wxyz||
+|uint_4::get_wxz||
+|uint_4::get_wxzy||
+|uint_4::get_wy||
+|uint_4::get_wyx||
+|uint_4::get_wyxz||
+|uint_4::get_wyz||
+|uint_4::get_wyzx||
+|uint_4::get_wz||
+|uint_4::get_wzx||
+|uint_4::get_wzxy||
+|uint_4::get_wzy||
+|uint_4::get_wzyx||
+|uint_4::get_x||
+|uint_4::get_xw||
+|uint_4::get_xwy||
+|uint_4::get_xwyz||
+|uint_4::get_xwz||
+|uint_4::get_xwzy||
+|uint_4::get_xy||
+|uint_4::get_xyw||
+|uint_4::get_xywz||
+|uint_4::get_xyz||
+|uint_4::get_xyzw||
+|uint_4::get_xz||
+|uint_4::get_xzw||
+|uint_4::get_xzwy||
+|uint_4::get_xzy||
+|uint_4::get_xzyw||
+|uint_4::get_y||
+|uint_4::get_yw||
+|uint_4::get_ywx||
+|uint_4::get_ywxz||
+|uint_4::get_ywz||
+|uint_4::get_ywzx||
+|uint_4::get_yx||
+|uint_4::get_yxw||
+|uint_4::get_yxwz||
+|uint_4::get_yxz||
+|uint_4::get_yxzw||
+|uint_4::get_yz||
+|uint_4::get_yzw||
+|uint_4::get_yzwx||
+|uint_4::get_yzx||
+|uint_4::get_yzxw||
+|uint_4::get_z||
+|uint_4::get_zw||
+|uint_4::get_zwx||
+|uint_4::get_zwxy||
+|uint_4::get_zwy||
+|uint_4::get_zwyx||
+|uint_4::get_zx||
+|uint_4::get_zxw||
+|uint_4::get_zxwy||
+|uint_4::get_zxy||
+|uint_4::get_zxyw||
+|uint_4::get_zy||
+|uint_4::get_zyw||
+|uint_4::get_zywx||
+|uint_4::get_zyx||
+|uint_4::get_zyxw||
+|uint_4::ref_a||
+|uint_4::ref_b||
+|uint_4::ref_g||
+|uint_4::ref_r||
+|uint_4::ref_w||
+|uint_4::ref_x||
+|uint_4::ref_y||
+|uint_4::ref_z||
+|uint_4::set_w||
+|uint_4::set_wx||
+|uint_4::set_wxy||
+|uint_4::set_wxyz||
+|uint_4::set_wxz||
+|uint_4::set_wxzy||
+|uint_4::set_wy||
+|uint_4::set_wyx||
+|uint_4::set_wyxz||
+|uint_4::set_wyz||
+|uint_4::set_wyzx||
+|uint_4::set_wz||
+|uint_4::set_wzx||
+|uint_4::set_wzxy||
+|uint_4::set_wzy||
+|uint_4::set_wzyx||
+|uint_4::set_x||
+|uint_4::set_xw||
+|uint_4::set_xwy||
+|uint_4::set_xwyz||
+|uint_4::set_xwz||
+|uint_4::set_xwzy||
+|uint_4::set_xy||
+|uint_4::set_xyw||
+|uint_4::set_xywz||
+|uint_4::set_xyz||
+|uint_4::set_xyzw||
+|uint_4::set_xz||
+|uint_4::set_xzw||
+|uint_4::set_xzwy||
+|uint_4::set_xzy||
+|uint_4::set_xzyw||
+|uint_4::set_y||
+|uint_4::set_yw||
+|uint_4::set_ywx||
+|uint_4::set_ywxz||
+|uint_4::set_ywz||
+|uint_4::set_ywzx||
+|uint_4::set_yx||
+|uint_4::set_yxw||
+|uint_4::set_yxwz||
+|uint_4::set_yxz||
+|uint_4::set_yxzw||
+|uint_4::set_yz||
+|uint_4::set_yzw||
+|uint_4::set_yzwx||
+|uint_4::set_yzx||
+|uint_4::set_yzxw||
+|uint_4::set_z||
+|uint_4::set_zw||
+|uint_4::set_zwx||
+|uint_4::set_zwxy||
+|uint_4::set_zwy||
+|uint_4::set_zwyx||
+|uint_4::set_zx||
+|uint_4::set_zxw||
+|uint_4::set_zxwy||
+|uint_4::set_zxy||
+|uint_4::set_zxyw||
+|uint_4::set_zy||
+|uint_4::set_zyw||
+|uint_4::set_zywx||
+|uint_4::set_zyx||
+|uint_4::set_zyxw||
+
+### <a name="public-operators"></a>Op&#233;rateurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|uint_4::operator-||
+|uint_4::operator--||
+|uint_4::operator*=||
+|uint_4::operator/=||
+|uint_4::operator++||
+|uint_4::operator+=||
+|uint_4::operator=||
+|uint_4::operator-=||
+
+### <a name="public-constants"></a>Constantes publiques
+
+|Name|Description|
+|----------|-----------------|
+|[taille (constante)](#size)||
+
+### <a name="public-data-members"></a>Membres de données publics
+
+|Nom|Description|
+|----------|-----------------|
+|uint_4::a||
+|uint_4::AB||
+|uint_4::abg||
+|uint_4::abgr||
+|uint_4::ABR||
+|uint_4::abrg||
+|uint_4::ag||
+|uint_4::agb||
+|uint_4::agbr||
+|uint_4::AGR||
+|uint_4::agrb||
+|uint_4::ar||
+|uint_4::arb||
+|uint_4::arbg||
+|uint_4::arg||
+|uint_4::ARGB||
+|uint_4::b||
+|uint_4::BA||
+|uint_4::bag||
+|uint_4::bagr||
+|uint_4::bar||
+|uint_4::barg||
+|uint_4::BG||
+|uint_4::BGA||
+|uint_4::bgar||
+|uint_4::BGR||
+|uint_4::bgra||
+|uint_4::br||
+|uint_4::BRA||
+|uint_4::brag||
+|uint_4::brg||
+|uint_4::brga||
+|uint_4::g||
+|uint_4::ga||
+|uint_4::GAB||
+|uint_4::gabr||
+|uint_4::gar||
+|uint_4::garb||
+|uint_4::GB||
+|uint_4::gba||
+|uint_4::gbar||
+|uint_4::GBR||
+|uint_4::GBRA||
+|uint_4::GR||
+|uint_4::gra||
+|uint_4::Grab||
+|uint_4::grb||
+|uint_4::grba||
+|uint_4::r||
+|uint_4::ra||
+|uint_4::rab||
+|uint_4::rabg||
+|uint_4::RAG||
+|uint_4::ragb||
+|uint_4::rb||
+|uint_4::rba||
+|uint_4::rbag||
+|uint_4::rbg||
+|uint_4::rbga||
+|uint_4::rg||
+|uint_4::rga||
+|uint_4::rgab||
+|uint_4::RGB||
+|uint_4::rgba||
+|uint_4::w||
+|uint_4::wx||
+|uint_4::WXY||
+|uint_4::wxyz||
+|uint_4::wxz||
+|uint_4::wxzy||
+|uint_4::wY||
+|uint_4::wyx||
+|uint_4::wyxz||
+|uint_4::wyz||
+|uint_4::wyzx||
+|uint_4::wz||
+|uint_4::wzx||
+|uint_4::wzxy||
+|uint_4::wzy||
+|uint_4::wzyx||
+|uint_4::x||
+|uint_4::XW||
+|uint_4::xwy||
+|uint_4::xwyz||
+|uint_4::xwz||
+|uint_4::xwzy||
+|uint_4::XY||
+|uint_4::xyw||
+|uint_4::xywz||
+|uint_4::XYZ||
+|uint_4::xyzw||
+|uint_4::xz||
+|uint_4::xzw||
+|uint_4::xzwy||
+|uint_4::xzy||
+|uint_4::xzyw||
+|uint_4::y||
+|uint_4::yw||
+|uint_4::ywx||
+|uint_4::ywxz||
+|uint_4::ywz||
+|uint_4::ywzx||
+|uint_4::yx||
+|uint_4::yxw||
+|uint_4::yxwz||
+|uint_4::yxz||
+|uint_4::yxzw||
+|uint_4::yz||
+|uint_4::yzw||
+|uint_4::yzwx||
+|uint_4::yzx||
+|uint_4::yzxw||
+|uint_4::z||
+|uint_4::zw||
+|uint_4::zwx||
+|uint_4::zwxy||
+|uint_4::zwy||
+|uint_4::zwyx||
+|uint_4::ZX||
+|uint_4::zxw||
+|uint_4::zxwy||
+|uint_4::zxy||
+|uint_4::zxyw||
+|uint_4::ZY||
+|uint_4::zyw||
+|uint_4::zywx||
+|uint_4::ZYX||
+|uint_4::zyxw||
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`uint_4`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** amp_short_vectors.h
+
+**Namespace :** Concurrency::graphics
+
+## <a name="uint_4__ctor"></a> uint_4
 
 Par défaut constructeur initialise tous les éléments par 0.
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-uint_4() restrict(amp,cpu);  
-uint_4(  
-   unsigned int _V0,  
-   unsigned int _V1,  
-   unsigned int _V2,  
-   unsigned int _V3  
-) restrict(amp,cpu);  
-uint_4(  
-   unsigned int _V  
-) restrict(amp,cpu);  
-uint_4(  
-   const uint_4& _Other  
-) restrict(amp,cpu);  
-explicit inline uint_4(  
-   const int_4& _Other  
-) restrict(amp,cpu);  
-explicit inline uint_4(  
-   const float_4& _Other  
-) restrict(amp,cpu);  
-explicit inline uint_4(  
-   const unorm_4& _Other  
-) restrict(amp,cpu);  
-explicit inline uint_4(  
-   const norm_4& _Other  
-) restrict(amp,cpu);  
-explicit inline uint_4(  
-   const double_4& _Other  
-) restrict(amp,cpu);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+## <a name="syntax"></a>Syntaxe
+
+```
+uint_4() restrict(amp,cpu);
+uint_4(
+   unsigned int _V0,
+   unsigned int _V1,
+   unsigned int _V2,
+   unsigned int _V3
+) restrict(amp,cpu);
+uint_4(
+   unsigned int _V
+) restrict(amp,cpu);
+uint_4(
+   const uint_4& _Other
+) restrict(amp,cpu);
+explicit inline uint_4(
+   const int_4& _Other
+) restrict(amp,cpu);
+explicit inline uint_4(
+   const float_4& _Other
+) restrict(amp,cpu);
+explicit inline uint_4(
+   const unorm_4& _Other
+) restrict(amp,cpu);
+explicit inline uint_4(
+   const norm_4& _Other
+) restrict(amp,cpu);
+explicit inline uint_4(
+   const double_4& _Other
+) restrict(amp,cpu);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.  
-  
+La valeur pour initialiser l’élément 0.
+
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.  
-  
+La valeur pour initialiser l’élément 1.
+
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.  
-  
+La valeur pour initialiser l’élément 2.
+
 *_V3*<br/>
-La valeur pour initialiser l’élément 3.  
-  
+La valeur pour initialiser l’élément 3.
+
 *_V*<br/>
-La valeur pour l’initialisation.  
-  
+La valeur pour l’initialisation.
+
 *_Autre*<br/>
-L’objet utilisé pour initialiser.  
-  
-## <a name=""></a> Taille 
+L’objet utilisé pour initialiser.
 
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-static const int size = 4;  
-```  
+## <a name=""></a> Taille
 
-## <a name="see-also"></a>Voir aussi  
- [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
+## <a name="syntax"></a>Syntaxe
+
+```
+static const int size = 4;
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

@@ -21,92 +21,97 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6d316c272a2db1bdb3351aa54f72db46dd66583
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8057653188d46fd627ba5d031be8b50d2d8e7108
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713204"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418227"
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
-**Section spécifique à Microsoft**  
-  
-Génère l'instruction `bt`, qui examine le bit à la position `b` de l'adresse `a` et retourne la valeur de ce bit.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unsigned char _bittest(  
-   long const *a,  
-   long b  
-);  
-unsigned char _bittest64(  
-   __int64 const *a,  
-   __int64 b  
-);  
-```  
-  
-### <a name="parameters"></a>Paramètres  
+
+**Section spécifique à Microsoft**
+
+Génère l'instruction `bt`, qui examine le bit à la position `b` de l'adresse `a` et retourne la valeur de ce bit.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+unsigned char _bittest(
+   long const *a,
+   long b
+);
+unsigned char _bittest64(
+   __int64 const *a,
+   __int64 b
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
 *a*<br/>
-[in] Pointeur vers la mémoire à examiner.  
-  
+[in] Pointeur vers la mémoire à examiner.
+
 *b*<br/>
-[in] La position de bit à tester.  
-  
-### <a name="return-value"></a>Valeur de retour  
-Bit à la position spécifiée.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|Header|  
-|---------------|------------------|------------|  
-|`_bittest`|x86, ARM, x64|\<intrin.h>|  
-|`_bittest64`|ARM, x64|\<intrin.h>|  
-  
-## <a name="remarks"></a>Notes  
-Cette routine est disponible uniquement en tant qu'intrinsèque.  
-  
-## <a name="example"></a>Exemple  
-  
-```cpp  
-// bittest.cpp  
-// processor: x86, ARM, x64  
-  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-long num = 78002;  
-  
-int main()  
-{  
-    unsigned char bits[32];  
-    long nBit;  
-  
-    printf_s("Number: %d\n", num);  
-  
-    for (nBit = 0; nBit < 31; nBit++)  
-    {  
-        bits[nBit] = _bittest(&num, nBit);  
-    }  
-  
-    printf_s("Binary representation:\n");  
-    while (nBit--)  
-    {  
-        if (bits[nBit])  
-            printf_s("1");  
-        else  
-            printf_s("0");  
-    }  
-}  
-```  
-  
-```Output  
-Number: 78002  
-Binary representation:  
-0000000000000010011000010110010  
-```  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
+[in] La position de bit à tester.
+
+### <a name="return-value"></a>Valeur de retour
+
+Bit à la position spécifiée.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|Header|
+|---------------|------------------|------------|
+|`_bittest`|x86, ARM, x64|\<intrin.h>|
+|`_bittest64`|ARM, x64|\<intrin.h>|
+
+## <a name="remarks"></a>Notes
+
+Cette routine est disponible uniquement en tant qu'intrinsèque.
+
+## <a name="example"></a>Exemple
+
+```cpp
+// bittest.cpp
+// processor: x86, ARM, x64
+
+#include <stdio.h>
+#include <intrin.h>
+
+long num = 78002;
+
+int main()
+{
+    unsigned char bits[32];
+    long nBit;
+
+    printf_s("Number: %d\n", num);
+
+    for (nBit = 0; nBit < 31; nBit++)
+    {
+        bits[nBit] = _bittest(&num, nBit);
+    }
+
+    printf_s("Binary representation:\n");
+    while (nBit--)
+    {
+        if (bits[nBit])
+            printf_s("1");
+        else
+            printf_s("0");
+    }
+}
+```
+
+```Output
+Number: 78002
+Binary representation:
+0000000000000010011000010110010
+```
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
 [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

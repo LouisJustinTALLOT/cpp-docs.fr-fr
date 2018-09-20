@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd645adc3ab37c2838a9abeadf4ee6eb62cc96dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 883f573100c31fab8cc0142d371f6a8a14f8783f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539427"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428718"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
 **Spécifique à C++**  
@@ -46,5 +46,5 @@ Par défaut, les propriétés de gestion des erreurs et les méthodes de niveau 
   
 ## <a name="see-also"></a>Voir aussi  
  
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directive #import](../preprocessor/hash-import-directive-cpp.md)
