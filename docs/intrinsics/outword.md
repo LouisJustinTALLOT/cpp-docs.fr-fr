@@ -17,46 +17,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5abaccb4adc9e642458669535cff369d963cfd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eac50ba9c4c1b4bc14ebb847b283b5c2da11605e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712575"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388796"
 ---
 # <a name="outword"></a>__outword
-**Section spécifique à Microsoft**  
-  
- Génère le `out` instruction, qui envoie le mot `Data` le port d’e/s spécifié par `Port`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __outword(   
-   unsigned short Port,   
-   unsigned short Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+**Section spécifique à Microsoft**
+
+Génère le `out` instruction, qui envoie le mot `Data` le port d’e/s spécifié par `Port`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __outword( 
+   unsigned short Port, 
+   unsigned short Data 
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *Port*<br/>
-[in] Le port pour envoyer les données.  
-  
+[in] Le port pour envoyer les données.
+
 *Données*<br/>
-[in] Les données à envoyer.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`__outword`|x86, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- Cette routine est disponible uniquement en tant qu'intrinsèque.  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[in] Les données à envoyer.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`__outword`|x86, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+Cette routine est disponible uniquement en tant qu'intrinsèque.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

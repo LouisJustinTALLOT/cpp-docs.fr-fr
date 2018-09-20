@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df27ec7ca4cccb278fee524aab9d0d2dc5a25134
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c75e02136c626d72215a2af79d1391863e9f494c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589757"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382660"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>InterfaceTraits::CastToUnknown, méthode
 
@@ -39,10 +39,10 @@ static __forceinline IUnknown* CastToUnknown(
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Le type de paramètre *ptr*.
 
-*ptr*  
+*ptr*<br/>
 Pointeur vers le type *T*.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -63,5 +63,5 @@ Pour plus d’informations sur `Base`, consultez la section Typedefs publics dan
 
 ## <a name="see-also"></a>Voir aussi
 
-[InterfaceTraits, structure](../windows/interfacetraits-structure.md)  
+[InterfaceTraits, structure](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

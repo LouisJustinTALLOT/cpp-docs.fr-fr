@@ -1,5 +1,5 @@
 ---
-title: 'Conteneurs : États d’élément Client | Documents Microsoft'
+title: 'Conteneurs : États d’élément Client | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e482123207c287c33a36406ba961747545af7c73
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929716"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378049"
 ---
 # <a name="containers-client-item-states"></a>Conteneurs : états d'élément client
-Cet article explique les différents états par lesquels passe un élément client pendant son cycle de vie.  
-  
- Un élément client passe par plusieurs états lorsqu'il est créé, activé, modifié et enregistré. Chaque fois qu’état change l’élément, le framework appelle [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) avec la **OLE_CHANGED_STATE** notification. Le deuxième paramètre est une valeur à partir de la `COleClientItem::ItemState` énumération. Il peut avoir l'une des valeurs suivantes :  
-  
--   *COleClientItem::emptyState*  
-  
--   *COleClientItem::loadedState*  
-  
--   *COleClientItem::openState*  
-  
--   *COleClientItem::activeState*  
-  
--   *COleClientItem::activeUIState*  
-  
- Dans l'état vide, un élément client n'est pas encore complètement un élément. De la mémoire lui a été allouée, mais elle n'a pas encore été initialisée avec les données de l'élément OLE. Il s’agit d’état est un élément client lorsqu’il a été créé via un appel à **nouveau** mais n’a ne pas encore passé la deuxième étape de la création en deux étapes.  
-  
- Dans la deuxième étape, effectuée via un appel à `COleClientItem::CreateFromFile` ou un autre `CreateFrom` *xxxx* (fonction), l’élément est complètement créé. Les données OLE (d'un fichier ou d'une autre source, telle que le Presse-papiers) ont été associées à l'objet dérivé de `COleClientItem`. Maintenant l'élément se trouve dans l'état chargé.  
-  
- Lorsqu'un élément a été ouvert dans la fenêtre du serveur au lieu d'être ouvert sur place dans le document du conteneur, il se trouve dans l'état ouvert (ou entièrement ouvert). Dans cet état, une hachure croisée est généralement dessinée sur la représentation de l'élément dans la fenêtre du conteneur pour indiquer que l'élément est actif ailleurs.  
-  
- Lorsqu'un élément a été activé sur place, il ne passe généralement que brièvement par l'état actif. Il passe ensuite à l’état actif de l’interface utilisateur, dans lequel le serveur a fusionné ses menus, barres d’outils et autres composants d’interface utilisateur avec ceux du conteneur. La présence de ces composants d'interface utilisateur fait la distinction entre l'état actif de l'interface utilisateur et l'état actif. Sinon, l'état actif s'apparente à l'état actif de l'interface utilisateur. Si le serveur prend en charge l'annulation, il doit conserver les informations d'état d'annulation de l'élément OLE jusqu'à ce que ce dernier atteigne l'état chargé ou ouvert.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Conteneurs](../mfc/containers.md)   
- [Activation](../mfc/activation-cpp.md)   
- [Conteneurs : Notifications d’élément Client](../mfc/containers-client-item-notifications.md)   
- [Dispositifs de suivi](../mfc/trackers.md)   
- [CRectTracker, classe](../mfc/reference/crecttracker-class.md)
+
+Cet article explique les différents états par lesquels passe un élément client pendant son cycle de vie.
+
+Un élément client passe par plusieurs états lorsqu'il est créé, activé, modifié et enregistré. Chaque fois qu’état change l’élément, le framework appelle [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) avec la **OLE_CHANGED_STATE** notification. Le deuxième paramètre est une valeur comprise entre le `COleClientItem::ItemState` énumération. Il peut avoir l'une des valeurs suivantes :
+
+- *COleClientItem::emptyState*
+
+- *COleClientItem::loadedState*
+
+- *COleClientItem::openState*
+
+- *COleClientItem::activeState*
+
+- *COleClientItem::activeUIState*
+
+Dans l'état vide, un élément client n'est pas encore complètement un élément. De la mémoire lui a été allouée, mais elle n'a pas encore été initialisée avec les données de l'élément OLE. Il s’agit d’état est un élément client lorsqu’il a été créé via un appel à **nouveau** mais n’a ne pas encore passé la deuxième étape de la création en deux étapes.
+
+Dans la deuxième étape, effectuée via un appel à `COleClientItem::CreateFromFile` ou un autre `CreateFrom` *xxxx* (fonction), l’élément est complètement créé. Les données OLE (d'un fichier ou d'une autre source, telle que le Presse-papiers) ont été associées à l'objet dérivé de `COleClientItem`. Maintenant l'élément se trouve dans l'état chargé.
+
+Lorsqu'un élément a été ouvert dans la fenêtre du serveur au lieu d'être ouvert sur place dans le document du conteneur, il se trouve dans l'état ouvert (ou entièrement ouvert). Dans cet état, une hachure croisée est généralement dessinée sur la représentation de l'élément dans la fenêtre du conteneur pour indiquer que l'élément est actif ailleurs.
+
+Lorsqu'un élément a été activé sur place, il ne passe généralement que brièvement par l'état actif. Il passe ensuite à l’état actif de l’interface utilisateur, dans lequel le serveur a fusionné ses menus, barres d’outils et autres composants d’interface utilisateur avec ceux du conteneur. La présence de ces composants d'interface utilisateur fait la distinction entre l'état actif de l'interface utilisateur et l'état actif. Sinon, l'état actif s'apparente à l'état actif de l'interface utilisateur. Si le serveur prend en charge l'annulation, il doit conserver les informations d'état d'annulation de l'élément OLE jusqu'à ce que ce dernier atteigne l'état chargé ou ouvert.
+
+## <a name="see-also"></a>Voir aussi
+
+[Conteneurs](../mfc/containers.md)<br/>
+[Activation](../mfc/activation-cpp.md)<br/>
+[Conteneurs : notifications d’élément client](../mfc/containers-client-item-notifications.md)<br/>
+[Dispositifs de suivi](../mfc/trackers.md)<br/>
+[CRectTracker, classe](../mfc/reference/crecttracker-class.md)

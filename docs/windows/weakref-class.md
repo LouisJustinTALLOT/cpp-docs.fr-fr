@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691534"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386975"
 ---
 # <a name="weakref-class"></a>WeakRef, classe
 
@@ -141,10 +141,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>Paramètres
 
-*U*  
+*U*<br/>
 ID d’interface.
 
-*ptr*  
+*ptr*<br/>
 Lorsque cette opération se termine, un objet qui représente le paramètre *U*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -176,10 +176,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>Paramètres
 
-*riid*  
+*riid*<br/>
 ID d’interface.
 
-*ptr*  
+*ptr*<br/>
 Lorsque cette opération se termine, un objet qui représente le paramètre *riid*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -220,13 +220,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Paramètres
 
-*U*  
+*U*<br/>
 Pointeur un `IInspectable` interface. Une erreur est générée si *U* n’est pas dérivé `IInspectable`.
 
-*riid*  
+*riid*<br/>
 ID d’interface. Une erreur est générée si *riid* n’est pas dérivé `IWeakReference`.
 
-*ptr*  
+*ptr*<br/>
 Un pointeur doublement indirect vers `IInspectable` ou `IWeakReference`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -284,7 +284,7 @@ WeakRef(
 
 ### <a name="parameters"></a>Paramètres
 
-*ptr*  
+*ptr*<br/>
 Un pointeur, une référence ou une référence rvalue à un objet existant qui initialise actuel `WeakRef` objet.
 
 ### <a name="remarks"></a>Notes

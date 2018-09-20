@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314771"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379786"
 ---
 # <a name="attribute"></a>Attribut
 
@@ -43,13 +43,13 @@ Vous permet de créer un attribut personnalisé.
 
 ### <a name="parameters"></a>Paramètres
 
-*AllowOn*  
+*AllowOn*<br/>
 Spécifie les éléments de langage auquel l’attribut personnalisé peut être appliqué. Valeur par défaut est `System::AttributeTargets::All` (consultez [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 Spécifie si l’attribut personnalisé peut être appliqué à plusieurs reprises d’une construction. Valeur par défaut est FALSE.
 
-*Héritée*  
+*Héritée*<br/>
 Indique si l’attribut doit être héritées par les sous-classes. Le compilateur ne fournit aucune prise en charge spéciale pour cette fonctionnalité ; C’est le travail des consommateurs de l’attribut (`Reflection`, par exemple) afin de respecter ces informations. Si *Inherited* a la valeur TRUE, l’attribut est hérité. Si *AllowMultiple* a la valeur TRUE, l’attribut s’accumulent sur le membre dérivé ; si *AllowMultiple* est FALSE, l’attribut remplace (ou remplacez) dans l’héritage. Si *Inherited* est FALSE, l’attribut ne sera pas être hérité. Valeur par défaut est TRUE.
 
 ## <a name="remarks"></a>Notes

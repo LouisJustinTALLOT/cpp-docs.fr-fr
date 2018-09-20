@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213bfd9dc5c07ad1b3ef811b9333cb12bf9c2b7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755595"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378219"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT, classe
 
@@ -141,7 +141,7 @@ Vous devez être conscient que les exceptions peuvent se produire chaque fois qu
 
 ## <a name="see-also"></a>Voir aussi
 
-[CStringT, classe](../../atl-mfc-shared/reference/cstringt-class.md)   
-[Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+[CStringT, classe](../../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes partagées ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

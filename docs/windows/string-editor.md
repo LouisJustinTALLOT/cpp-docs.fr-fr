@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94f4aaeae3acb225c2fdc457af135e3534f8d381
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02248c7c6f61823649d9643a7321677e23a4afbf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313258"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382906"
 ---
 # <a name="string-editor-c"></a>Éditeur de chaînes (C++)
 
@@ -63,7 +63,7 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeurs de ressources](../windows/resource-editors.md)  
-[Chaînes](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
+[Éditeurs de ressources](../windows/resource-editors.md)<br/>
+[Chaînes](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)<br/>
 [À propos des chaînes](/windows/desktop/menurc/about-strings)
 

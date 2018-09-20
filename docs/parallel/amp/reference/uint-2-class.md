@@ -38,167 +38,164 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 375e9c8ce4c2060e41fbebc51f6512d293a15517
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee6c51a084b3fca7a5665fe943cfeaff3a48afce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059301"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391850"
 ---
 # <a name="uint2-class"></a>uint_2, classe
-Représente un vecteur court de deux entiers non signés.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class uint_2;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-typedefs"></a>Typedefs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[uint_2 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|uint_2::get_x||  
-|uint_2::get_xy||  
-|uint_2::get_y||  
-|uint_2::get_yx||  
-|uint_2::ref_g_Method||  
-|uint_2::ref_r_Method||  
-|uint_2::ref_x_Method||  
-|uint_2::ref_y_Method||  
-|uint_2::set_x||  
-|uint_2::set_xy||  
-|uint_2::set_y||  
-|uint_2::set_yx||  
-  
-### <a name="public-operators"></a>Op&#233;rateurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|uint_2::operator--||  
-|uint_2::operator % =||  
-|uint_2::operator & =||  
-|uint_2::operator * =||  
-|/ = uint_2::operator||  
-|uint_2::operator ^ =||  
-|uint_2::operator&#124;=||  
-|uint_2::operator ~||  
-|uint_2::operator ++||  
-|uint_2::operator +=||  
-|uint_2::operator <\<=||  
-|uint_2::operator =||  
-|uint_2::operator =||  
-|uint_2::operator >> =||  
-  
-### <a name="public-constants"></a>Constantes publiques  
-  
-|Name|Description|  
-|----------|-----------------|  
-|[taille (constante)](#uint_2__size)||  
-  
-### <a name="public-data-members"></a>Membres de données publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|uint_2::g||  
-|uint_2::GR||  
-|uint_2::r||  
-|uint_2::RG||  
-|uint_2::x||  
-|uint_2::XY||  
-|uint_2::y||  
-|uint_2::YX||  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `uint_2`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** amp_short_vectors.h  
-  
- **Namespace :** Concurrency::graphics  
-  
-##  <a name="ctor"></a> uint_2 
 
- Par défaut constructeur initialise tous les éléments par 0.  
-  
-```  
+Représente un vecteur court de deux entiers non signés.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class uint_2;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-typedefs"></a>Typedefs publics
+
+|Nom|Description|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[uint_2 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|uint_2::get_x||
+|uint_2::get_xy||
+|uint_2::get_y||
+|uint_2::get_yx||
+|uint_2::ref_g_Method||
+|uint_2::ref_r_Method||
+|uint_2::ref_x_Method||
+|uint_2::ref_y_Method||
+|uint_2::set_x||
+|uint_2::set_xy||
+|uint_2::set_y||
+|uint_2::set_yx||
+
+### <a name="public-operators"></a>Op&#233;rateurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|uint_2::operator--||
+|uint_2::operator % =||
+|uint_2::operator & =||
+|uint_2::operator * =||
+|/ = uint_2::operator||
+|uint_2::operator ^ =||
+|uint_2::operator&#124;=||
+|uint_2::operator ~||
+|uint_2::operator ++||
+|uint_2::operator +=||
+|uint_2::operator <\<=||
+|uint_2::operator =||
+|uint_2::operator =||
+|uint_2::operator >> =||
+
+### <a name="public-constants"></a>Constantes publiques
+
+|Name|Description|
+|----------|-----------------|
+|[taille (constante)](#uint_2__size)||
+
+### <a name="public-data-members"></a>Membres de données publics
+
+|Nom|Description|
+|----------|-----------------|
+|uint_2::g||
+|uint_2::GR||
+|uint_2::r||
+|uint_2::RG||
+|uint_2::x||
+|uint_2::XY||
+|uint_2::y||
+|uint_2::YX||
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`uint_2`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** amp_short_vectors.h
+
+**Namespace :** Concurrency::graphics
+
+##  <a name="ctor"></a> uint_2
+
+Par défaut constructeur initialise tous les éléments par 0.
+
+```
 uint_2() restrict(amp,
     cpu);
 
- 
 uint_2(
-    unsigned int _V0,  
+    unsigned int _V0,
     unsigned int _V1) restrict(amp,
     cpu);
 
- 
 uint_2(
     unsigned int _V) restrict(amp,
     cpu);
 
- 
 uint_2(
     const uint_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline uint_2(
     const int_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline uint_2(
     const float_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline uint_2(
     const unorm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline uint_2(
     const norm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline uint_2(
     const double_2& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*_V0*<br/>
-La valeur pour initialiser l’élément 0.  
-  
-*_V1*<br/>
-La valeur pour initialiser l’élément 1.  
-  
-*_V*<br/>
-La valeur pour l’initialisation.  
-  
-*_Autre*<br/>
-L’objet utilisé pour initialiser.  
-  
-##  <a name="uint_2__size"></a> Taille 
+```
 
-```  
-static const int size = 2;  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Paramètres
+
+*_V0*<br/>
+La valeur pour initialiser l’élément 0.
+
+*_V1*<br/>
+La valeur pour initialiser l’élément 1.
+
+*_V*<br/>
+La valeur pour l’initialisation.
+
+*_Autre*<br/>
+L’objet utilisé pour initialiser.
+
+##  <a name="uint_2__size"></a> Taille
+
+```
+static const int size = 2;
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

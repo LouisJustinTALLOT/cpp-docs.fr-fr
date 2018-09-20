@@ -1,5 +1,5 @@
 ---
-title: Dessin et impression des Classes | Documents Microsoft
+title: Dessin et l’impression de Classes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930075a459424e5ffac00d4e620e18cd2c318273
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 331fabe63a3abad1ea19fe4440f8eec0c05481d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344778"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380327"
 ---
 # <a name="drawing-and-printing-classes"></a>Dessin et impression de classes
-Dans Windows, toute la sortie graphique est dessinée dans une zone de dessin virtuelle appelée un contexte de périphérique (DC). MFC fournit des classes pour encapsuler les différents types de contrôleurs de domaine, ainsi qu’encapsulations les outils de dessin de Windows tels que des images bitmap, des pinceaux, des palettes et des stylets.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+
+Dans Windows, toute la sortie graphique est dessinée sur une zone de dessin virtuelle appelée un contexte de périphérique (DC). MFC fournit des classes pour encapsuler les différents types de contrôleurs de domaine, mais aussi aux encapsulations les outils de dessin de Windows tels que des bitmaps, des pinceaux, des palettes et des stylos.
+
+## <a name="see-also"></a>Voir aussi
+
+[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
 

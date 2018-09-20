@@ -1,5 +1,5 @@
 ---
-title: Énumérations d’espace de noms Concurrency::Graphics | Documents Microsoft
+title: Énumérations d’espace de noms Concurrency::Graphics | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,33 +13,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbb02becbcfebf935107acb85ae3991476b67796
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b5c66771c9b27d568e32f7d4a361586ff5a62da9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695445"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384973"
 ---
-# <a name="concurrencygraphics-namespace-enums"></a>Concurrency::Graphics, espace de noms les enums
-|||  
-|-|-|  
-|[énumération de _mode](#address_mode)|[filter_mode, énumération](#filter_mode)|  
-  
-##  <a name="address_mode"></a>  address_mode, énumération  
- Type d’énumération permet de désigner les modes d’adresse pris en charge pour l’échantillonnage de texture.  
-  
-```  
-enum address_mode;  
-```  
-  
-##  <a name="filter_mode"></a>  filter_mode, énumération  
- Type d’énumération permet de désigner les modes de filtre pris en charge pour l’échantillonnage de texture.  
-  
-```  
-enum filter_mode;  
-```  
-## <a name="requirements"></a>Spécifications
+# <a name="concurrencygraphics-namespace-enums"></a>Énumérations d’espace de noms Concurrency::Graphics
+
+|||
+|-|-|
+|[mode _De énumération](#address_mode)|[filter_mode, énumération](#filter_mode)|
+
+##  <a name="address_mode"></a>  address_mode, énumération
+
+Type d’énumération permet de désigner des modes d’adresse pris en charge pour l’échantillonnage de texture.
+
+```
+enum address_mode;
+```
+
+##  <a name="filter_mode"></a>  filter_mode, énumération
+
+Type d’énumération permet de désigner des modes de filtre pris en charge pour l’échantillonnage de texture.
+
+```
+enum filter_mode;
+```
+## <a name="requirements"></a>Configuration requise
+
 **En-tête :** amp_graphics.h **Namespace :** Concurrency::graphics
 
-## <a name="see-also"></a>Voir aussi  
- [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
+## <a name="see-also"></a>Voir aussi
+
+[Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

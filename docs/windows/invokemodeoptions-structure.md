@@ -1,5 +1,5 @@
 ---
-title: Structure de InvokeModeOptions | Documents Microsoft
+title: Invokemodeoptions, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b1eb0e7f6cf49a7c6ac12a4810ae1622e263e2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea549db29f7fcb67e4d59e341bf7d5ad085b6d7f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882835"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392708"
 ---
-# <a name="invokemodeoptions-structure"></a>Structure de InvokeModeOptions
+# <a name="invokemodeoptions-structure"></a>Invokemodeoptions, Structure
 
-Spécifie s’il faut déclencher tous les événements dans la file d’attente de délégué ou de se déclencher après qu’une erreur est générée. Les valeurs autorisées sont spécifiés dans le `InvokeMode` enum.
+Spécifie s’il faut déclencher tous les événements dans la file d’attente de délégué, ou arrêter le déclenchement d’après qu’une erreur est générée. Les valeurs autorisées sont spécifiés dans le `InvokeMode` enum.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,7 +43,7 @@ struct InvokeModeOptions
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** event.h
 
@@ -51,5 +51,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::wrl Namespace](../windows/microsoft-wrl-namespace.md)
-[Microsoft::WRL::AgileEventSource classe](../windows/agileeventsource-class.md)
+[Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)<br/>
+[Classe de Microsoft::wrl::AgileEventSource](../windows/agileeventsource-class.md)
