@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce0e7e1f7c0936daed0fa6a51f6e254403205e0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fbdf882367deb34570dd5b5ebb1b4001be739297
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714959"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373855"
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>Configurer Visual C++ pour les processeurs ARM
 
@@ -25,16 +25,22 @@ Cette section de la documentation contient des informations sur l'utilisation de
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Vue d’ensemble des Conventions d’ABI ARM](../build/overview-of-arm-abi-conventions.md) décrit l’interface binaire d’application utilisé par Windows sur ARM pour l’utilisation des registres, conventions d’appel et la gestion des exceptions.
+[Vue d’ensemble des conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+Décrit l’interface binaire d’application utilisée par Windows on ARM pour l’utilisation des registres, les conventions d’appel et la gestion des exceptions.
 
-[Vue d’ensemble des Conventions ABI de ARM64](../build/arm64-windows-abi-conventions.md) décrit l’interface binaire d’application utilisé par Windows sur ARM64 pour l’utilisation des registres, conventions d’appel et la gestion des exceptions.
+[Vue d’ensemble des conventions ABI ARM64](../build/arm64-windows-abi-conventions.md)<br/>
+Décrit l’interface binaire d’application utilisé par Windows sur ARM64 pour l’utilisation des registres, conventions d’appel et la gestion des exceptions.
 
-[Problèmes courants de Visual C++ ARM Migration](../build/common-visual-cpp-arm-migration-issues.md) des éléments de code C++ décrit qui sont généralement considérés comme étant portables entre les architectures, mais qui produisent des résultats différents pour ARM que pour x86 et x64.
+[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+Décrit les éléments de code C++ généralement considérés comme étant portables entre les architectures, mais qui produisent sur ARM des résultats différents de ceux constatés sur x86 et x64.
 
-[Gestion des exceptions de ARM](../build/arm-exception-handling.md) décrit le schéma d’encodage pour le déroulement pendant structurée des exceptions dans Windows sur ARM de la pile.
+[Gestion des exceptions ARM](../build/arm-exception-handling.md)<br/>
+Décrit le schéma d'encodage pour le déroulement de la pile pendant le traitement des exceptions structurées dans Windows on ARM.
 
-[Gestion des exceptions de ARM64](../build/arm64-exception-handling.md) décrit le schéma d’encodage pour stack déroulement pendant structurée des exceptions dans Windows sur ARM64.
+[Gestion des exceptions ARM64](../build/arm64-exception-handling.md)<br/>
+Décrit le schéma d’encodage pour le déroulement au cours de la gestion structurée des exceptions dans Windows sur ARM64 de la pile.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Fonctions intrinsèques ARM](../intrinsics/arm-intrinsics.md) décrit les fonctions intrinsèques du compilateur pour les processeurs qui utilisent l’architecture ARM.
+[ARM, fonctions intrinsèques](../intrinsics/arm-intrinsics.md)<br/>
+Décrit les intrinsèques du compilateur pour les processeurs qui utilisent l’architecture ARM.

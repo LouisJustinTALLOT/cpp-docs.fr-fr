@@ -16,51 +16,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2819faa25e2dbd41d6578d60780d13011bb645c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338810"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388392"
 ---
 # <a name="msg-structure1"></a>MSG, Structure1
-Le `MSG` structure contient des informations de message à partir de la file d’attente des messages d’un thread.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-typedef struct tagMSG {     // msg    
-    HWND hwnd;  
-    UINT message;  
-    WPARAM wParam;  
-    LPARAM lParam;  
-    DWORD time;  
-    POINT pt;  
-} MSG;  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *HWND*  
- Identifie la fenêtre dont la procédure de fenêtre reçoit le message.  
-  
- *message*  
- Spécifie le numéro du message.  
-  
- *wParam*  
- Spécifie des informations supplémentaires sur le message. La signification exacte dépend de la valeur de la `message` membre.  
-  
- *lParam*  
- Spécifie des informations supplémentaires sur le message. La signification exacte dépend de la valeur de la `message` membre.  
-  
- *time*  
- Spécifie l’heure à laquelle le message a été publié.  
-  
- *pt*  
- Spécifie la position du curseur, en coordonnées d’écran, lorsque le message a été publié.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** winuser.h  
-  
-## <a name="see-also"></a>Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+Le `MSG` structure contient des informations de message à partir de la file d’attente des messages d’un thread.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+typedef struct tagMSG {     // msg
+    HWND hwnd;
+    UINT message;
+    WPARAM wParam;
+    LPARAM lParam;
+    DWORD time;
+    POINT pt;
+} MSG;
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*HWND*<br/>
+Identifie la fenêtre dont la procédure de fenêtre reçoit le message.
+
+*message*<br/>
+Spécifie le numéro du message.
+
+*wParam*<br/>
+Spécifie des informations supplémentaires sur le message. La signification exacte dépend de la valeur de la `message` membre.
+
+*lParam*<br/>
+Spécifie des informations supplémentaires sur le message. La signification exacte dépend de la valeur de la `message` membre.
+
+*time*<br/>
+Spécifie l’heure à laquelle le message a été publié.
+
+*pt*<br/>
+Spécifie la position du curseur, en coordonnées d’écran, lorsque le message a été publié.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** winuser.h
+
+## <a name="see-also"></a>Voir aussi
+
+[Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

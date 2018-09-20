@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0600f3a6f220d54085ff7c2ff8d60c2148ced625
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 504909cba41588c0ccefccabfbd541a39d4327b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593308"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387341"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args, constante
 
@@ -50,5 +50,5 @@ Lorsque **args** est égal à -1 indique qu’il ne peut y avoir aucune correspo
 
 ## <a name="see-also"></a>Voir aussi
 
-[ArgTraits, structure](../windows/argtraits-structure.md)  
+[ArgTraits, structure](../windows/argtraits-structure.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

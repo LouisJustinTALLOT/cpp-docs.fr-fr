@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 997b8bc01424b102551815f19ff9a487113e5f6b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e4aaef2cca5146291f7d3708a995a116768e0467
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601011"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382932"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -38,7 +38,7 @@ Exécute le script d’inscription personnalisé spécifié.
 
 ### <a name="parameters"></a>Paramètres
 
-*script*  
+*script*<br/>
 Le chemin d’accès complet à un fichier de script (d’inscription.rgs) d’inscription personnalisé. La valeur **aucun**, tel que `script = "none"`, indique ne qu’aucune exigence de l’inscription de la coclasse.
 
 ## <a name="remarks"></a>Notes
@@ -85,6 +85,6 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs COM](../windows/com-attributes.md)  
-[Attributs de classe](../windows/class-attributes.md)  
+[Attributs COM](../windows/com-attributes.md)<br/>
+[Attributs de classe](../windows/class-attributes.md)<br/>
 [rdx](../windows/rdx.md)  

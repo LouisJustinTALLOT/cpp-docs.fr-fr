@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539416"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384037"
 ---
 # <a name="preprocessor-operators"></a>Opérateurs de préprocesseur
 Quatre opérateurs propres au préprocesseur sont utilisés dans le contexte de la `#define` directive (voir la liste suivante pour obtenir un résumé de chaque). Les opérateurs de chaîne, de charizing et de collage de jeton sont traités dans les trois sections suivantes. Pour plus d’informations sur la `defined` opérateur, voir [le #if, #elif #else et #endif Directives](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
@@ -34,6 +34,6 @@ Quatre opérateurs propres au préprocesseur sont utilisés dans le contexte de 
   
 ## <a name="see-also"></a>Voir aussi  
  
-[Directives de préprocesseur](../preprocessor/preprocessor-directives.md)   
-[Macros prédéfinies](../preprocessor/predefined-macros.md)   
+[Directives de préprocesseur](../preprocessor/preprocessor-directives.md)<br/>
+[Macros prédéfinies](../preprocessor/predefined-macros.md)<br/>
 [Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

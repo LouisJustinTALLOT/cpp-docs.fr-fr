@@ -130,868 +130,905 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec78ed92829f8a8ac33e796687f812dc7ad444a1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba6c46871a74a1c90de94621a81e46d320388221
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701569"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388099"
 ---
 # <a name="cpanecontainer-class"></a>Cpanecontainer, classe
-Le `CPaneContainer` classe est un composant de base du modèle d’ancrage implémenté par MFC. Un objet de cette classe stocke des pointeurs vers deux volets d'ancrage ou deux instances `CPaneContainer.` . Il stocke aussi un pointeur vers le séparateur qui sépare les volets (ou les conteneurs). En imbriquant des conteneurs dans des conteneurs, l’infrastructure peut générer un arbre binaire qui représente des dispositions d’ancrage complexes. La racine de l’arborescence binaire est stockée dans un [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objet.  
 
- Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
- 
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CPaneContainer : public CObject    
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CPaneContainer::CPaneContainer](#cpanecontainer)|Constructeur par défaut.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CPaneContainer::AddPane](#addpane)||  
-|[CPaneContainer::AddRef](#addref)||  
-|[CPaneContainer::AddSubPaneContainer](#addsubpanecontainer)||  
-|[CPaneContainer::CalcAvailablePaneSpace](#calcavailablepanespace)||  
-|[CPaneContainer::CalcAvailableSpace](#calcavailablespace)||  
-|[CPaneContainer::CalculateRecentSize](#calculaterecentsize)||  
-|[CPaneContainer::CheckPaneDividerVisibility](#checkpanedividervisibility)||  
-|[CPaneContainer::Copy](#copy)||  
-|[CPaneContainer::DeletePane](#deletepane)||  
-|[CPaneContainer::FindSubPaneContainer](#findsubpanecontainer)||  
-|[CPaneContainer::FindTabbedPane](#findtabbedpane)||  
-|[CPaneContainer::GetAssociatedSiblingPaneIDs](#getassociatedsiblingpaneids)||  
-|[CPaneContainer::GetLeftPane](#getleftpane)||  
-|[CPaneContainer::GetLeftPaneContainer](#getleftpanecontainer)||  
-|[CPaneContainer::GetMinSize](#getminsize)||  
-|[CPaneContainer::GetMinSizeLeft](#getminsizeleft)||  
-|[CPaneContainer::GetMinSizeRight](#getminsizeright)||  
-|[CPaneContainer::GetNodeCount](#getnodecount)||  
-|[CPaneContainer::GetPaneDivider](#getpanedivider)||  
-|[CPaneContainer::GetParentPaneContainer](#getparentpanecontainer)||  
-|[CPaneContainer::GetRecentPaneDividerRect](#getrecentpanedividerrect)||  
-|[CPaneContainer::GetRecentPaneDividerStyle](#getrecentpanedividerstyle)||  
-|[CPaneContainer::GetRecentPercent](#getrecentpercent)||  
-|[CPaneContainer::GetRefCount](#getrefcount)||  
-|[CPaneContainer::GetResizeStep](#getresizestep)||  
-|[CPaneContainer::GetRightPane](#getrightpane)||  
-|[CPaneContainer::GetRightPaneContainer](#getrightpanecontainer)||  
-|[CPaneContainer::GetTotalReferenceCount](#gettotalreferencecount)||  
-|[CPaneContainer::GetWindowRect](#getwindowrect)||  
-|[CPaneContainer::IsDisposed](#isdisposed)||  
-|[CPaneContainer::IsEmpty](#isempty)||  
-|[CPaneContainer::IsLeftPane](#isleftpane)||  
-|[CPaneContainer::IsLeftPaneContainer](#isleftpanecontainer)||  
-|[CPaneContainer::IsLeftPartEmpty](#isleftpartempty)||  
-|[CPaneContainer::IsRightPartEmpty](#isrightpartempty)||  
-|[CPaneContainer::IsVisible](#isvisible)||  
-|[CPaneContainer::Move](#move)||  
-|[CPaneContainer::OnDeleteHidePane](#ondeletehidepane)||  
-|[CPaneContainer::OnMoveInternalPaneDivider](#onmoveinternalpanedivider)||  
-|[CPaneContainer::OnShowPane](#onshowpane)||  
-|[CPaneContainer::Release](#release)||  
-|[CPaneContainer::ReleaseEmptyPaneContainer](#releaseemptypanecontainer)||  
-|[CPaneContainer::RemoveNonValidPanes](#removenonvalidpanes)||  
-|[CPaneContainer::RemovePane](#removepane)||  
-|[CPaneContainer::Resize](#resize)||  
-|[CPaneContainer::ResizePane](#resizepane)||  
-|[CPaneContainer::ResizePartOfPaneContainer](#resizepartofpanecontainer)||  
-|[CPaneContainer::Serialize](#serialize)|Lit ou écrit cet objet dans une archive. (Substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
-|[CPaneContainer::SetPane](#setpane)||  
-|[CPaneContainer::SetPaneContainer](#setpanecontainer)||  
-|[CPaneContainer::SetPaneDivider](#setpanedivider)||  
-|[CPaneContainer::SetParentPaneContainer](#setparentpanecontainer)||  
-|[CPaneContainer::SetRecentPercent](#setrecentpercent)||  
-|[CPaneContainer::SetUpByID](#setupbyid)||  
-|[CPaneContainer::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
-|[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||  
-  
-### <a name="remarks"></a>Notes  
- `CPaneContainer` objets sont créés automatiquement par l’infrastructure.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment construire une instance de la `CPaneContainer` classe. Cet extrait de code fait partie de la [exemple de définir la taille du volet](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]  
-[!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CPaneContainer](../../mfc/reference/cpanecontainer-class.md)  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** afxpanecontainer.h  
-  
-##  <a name="addpane"></a>  CPaneContainer::AddPane  
+Le `CPaneContainer` classe est un composant de base du modèle d’ancrage implémenté par MFC. Un objet de cette classe stocke des pointeurs vers deux volets d'ancrage ou deux instances `CPaneContainer.` . Il stocke aussi un pointeur vers le séparateur qui sépare les volets (ou les conteneurs). En imbriquant des conteneurs dans des conteneurs, l’infrastructure peut générer un arbre binaire qui représente des dispositions d’ancrage complexes. La racine de l’arborescence binaire est stockée dans un [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objet.
 
-  
-```  
+Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CPaneContainer : public CObject
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[CPaneContainer::CPaneContainer](#cpanecontainer)|Constructeur par défaut.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[CPaneContainer::AddPane](#addpane)||
+|[CPaneContainer::AddRef](#addref)||
+|[CPaneContainer::AddSubPaneContainer](#addsubpanecontainer)||
+|[CPaneContainer::CalcAvailablePaneSpace](#calcavailablepanespace)||
+|[CPaneContainer::CalcAvailableSpace](#calcavailablespace)||
+|[CPaneContainer::CalculateRecentSize](#calculaterecentsize)||
+|[CPaneContainer::CheckPaneDividerVisibility](#checkpanedividervisibility)||
+|[CPaneContainer::Copy](#copy)||
+|[CPaneContainer::DeletePane](#deletepane)||
+|[CPaneContainer::FindSubPaneContainer](#findsubpanecontainer)||
+|[CPaneContainer::FindTabbedPane](#findtabbedpane)||
+|[CPaneContainer::GetAssociatedSiblingPaneIDs](#getassociatedsiblingpaneids)||
+|[CPaneContainer::GetLeftPane](#getleftpane)||
+|[CPaneContainer::GetLeftPaneContainer](#getleftpanecontainer)||
+|[CPaneContainer::GetMinSize](#getminsize)||
+|[CPaneContainer::GetMinSizeLeft](#getminsizeleft)||
+|[CPaneContainer::GetMinSizeRight](#getminsizeright)||
+|[CPaneContainer::GetNodeCount](#getnodecount)||
+|[CPaneContainer::GetPaneDivider](#getpanedivider)||
+|[CPaneContainer::GetParentPaneContainer](#getparentpanecontainer)||
+|[CPaneContainer::GetRecentPaneDividerRect](#getrecentpanedividerrect)||
+|[CPaneContainer::GetRecentPaneDividerStyle](#getrecentpanedividerstyle)||
+|[CPaneContainer::GetRecentPercent](#getrecentpercent)||
+|[CPaneContainer::GetRefCount](#getrefcount)||
+|[CPaneContainer::GetResizeStep](#getresizestep)||
+|[CPaneContainer::GetRightPane](#getrightpane)||
+|[CPaneContainer::GetRightPaneContainer](#getrightpanecontainer)||
+|[CPaneContainer::GetTotalReferenceCount](#gettotalreferencecount)||
+|[CPaneContainer::GetWindowRect](#getwindowrect)||
+|[CPaneContainer::IsDisposed](#isdisposed)||
+|[CPaneContainer::IsEmpty](#isempty)||
+|[CPaneContainer::IsLeftPane](#isleftpane)||
+|[CPaneContainer::IsLeftPaneContainer](#isleftpanecontainer)||
+|[CPaneContainer::IsLeftPartEmpty](#isleftpartempty)||
+|[CPaneContainer::IsRightPartEmpty](#isrightpartempty)||
+|[CPaneContainer::IsVisible](#isvisible)||
+|[CPaneContainer::Move](#move)||
+|[CPaneContainer::OnDeleteHidePane](#ondeletehidepane)||
+|[CPaneContainer::OnMoveInternalPaneDivider](#onmoveinternalpanedivider)||
+|[CPaneContainer::OnShowPane](#onshowpane)||
+|[CPaneContainer::Release](#release)||
+|[CPaneContainer::ReleaseEmptyPaneContainer](#releaseemptypanecontainer)||
+|[CPaneContainer::RemoveNonValidPanes](#removenonvalidpanes)||
+|[CPaneContainer::RemovePane](#removepane)||
+|[CPaneContainer::Resize](#resize)||
+|[CPaneContainer::ResizePane](#resizepane)||
+|[CPaneContainer::ResizePartOfPaneContainer](#resizepartofpanecontainer)||
+|[CPaneContainer::Serialize](#serialize)|Lit ou écrit cet objet dans une archive. (Substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
+|[CPaneContainer::SetPane](#setpane)||
+|[CPaneContainer::SetPaneContainer](#setpanecontainer)||
+|[CPaneContainer::SetPaneDivider](#setpanedivider)||
+|[CPaneContainer::SetParentPaneContainer](#setparentpanecontainer)||
+|[CPaneContainer::SetRecentPercent](#setrecentpercent)||
+|[CPaneContainer::SetUpByID](#setupbyid)||
+|[CPaneContainer::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
+|[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||
+
+### <a name="remarks"></a>Notes
+
+`CPaneContainer` objets sont créés automatiquement par l’infrastructure.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant montre comment construire une instance de la `CPaneContainer` classe. Cet extrait de code fait partie de la [exemple de définir la taille du volet](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]
+[!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxpanecontainer.h
+
+##  <a name="addpane"></a>  CPaneContainer::AddPane
+
+
+```
 CDockablePane* AddPane(CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="addref"></a>  CPaneContainer::AddRef  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *pBar*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="addref"></a>  CPaneContainer::AddRef
+
+
+```
 void AddRef();
-```  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="addsubpanecontainer"></a>  CPaneContainer::AddSubPaneContainer  
+```
 
-  
-```  
+### <a name="remarks"></a>Notes
+
+##  <a name="addsubpanecontainer"></a>  CPaneContainer::AddSubPaneContainer
+
+
+```
 BOOL AddSubPaneContainer(
-    CPaneContainer* pContainer,  
+    CPaneContainer* pContainer,
     BOOL bRightNodeNew);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*pContainer*<br/>
-[in] [in] *bRightNodeNew*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="calcavailablepanespace"></a>  CPaneContainer::CalcAvailablePaneSpace  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+*pContainer*<br/>
+[in] [in] *bRightNodeNew*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="calcavailablepanespace"></a>  CPaneContainer::CalcAvailablePaneSpace
+
+
+```
 virtual int CalcAvailablePaneSpace(
-    int nRequiredOffset,  
-    CPane* pBar,  
-    CPaneContainer* pContainer,  
+    int nRequiredOffset,
+    CPane* pBar,
+    CPaneContainer* pContainer,
     BOOL bLeftBar);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *nRequiredOffset*<br/>
-[in] [in] *pBar*  
+[in] [in] *pBar*
 *pContainer*<br/>
-[in] [in] *bLeftBar*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="calcavailablespace"></a>  CPaneContainer::CalcAvailableSpace  
+[in] [in] *bLeftBar*
 
-  
-```  
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="calcavailablespace"></a>  CPaneContainer::CalcAvailableSpace
+
+
+```
 virtual CSize CalcAvailableSpace(
-    CSize sizeStretch,  
+    CSize sizeStretch,
     BOOL bLeftBar);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *sizeStretch*<br/>
-[in] [in] *bLeftBar*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="calculaterecentsize"></a>  CPaneContainer::CalculateRecentSize  
+[in] [in] *bLeftBar*
 
-  
-```  
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="calculaterecentsize"></a>  CPaneContainer::CalculateRecentSize
+
+
+```
 void CalculateRecentSize();
-```  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="checkpanedividervisibility"></a>  CPaneContainer::CheckPaneDividerVisibility  
+```
 
-  
-```  
+### <a name="remarks"></a>Notes
+
+##  <a name="checkpanedividervisibility"></a>  CPaneContainer::CheckPaneDividerVisibility
+
+
+```
 void CheckPaneDividerVisibility();
-```  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="copy"></a>  CPaneContainer::Copy  
+```
 
-  
-```  
+### <a name="remarks"></a>Notes
+
+##  <a name="copy"></a>  CPaneContainer::Copy
+
+
+```
 virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *pParentContainer*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="cpanecontainer"></a>  CPaneContainer::CPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *pParentContainer*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="cpanecontainer"></a>  CPaneContainer::CPaneContainer
+
+
+```
 CPaneContainer(
-    CPaneContainerManager* pManager = NULL,  
-    CDockablePane* pLeftBar = NULL,  
-    CDockablePane* pRightBar = NULL,  
+    CPaneContainerManager* pManager = NULL,
+    CDockablePane* pLeftBar = NULL,
+    CDockablePane* pRightBar = NULL,
     CPaneDivider* pSlider = NULL);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pManager*<br/>
-[in] [in] *pLeftBar*  
+[in] [in] *pLeftBar*
 *pRightBar*<br/>
-[in] [in] *pSlider*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="deletepane"></a>  CPaneContainer::DeletePane  
+[in] [in] *pSlider*
 
-  
-```  
+### <a name="remarks"></a>Notes
+
+##  <a name="deletepane"></a>  CPaneContainer::DeletePane
+
+
+```
 virtual void DeletePane(
-    CDockablePane* pBar,  
+    CDockablePane* pBar,
     BC_FIND_CRITERIA barType);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*pBar*<br/>
-[in] [in] *barType*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="findsubpanecontainer"></a>  CPaneContainer::FindSubPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+*pBar*<br/>
+[in] [in] *barType*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="findsubpanecontainer"></a>  CPaneContainer::FindSubPaneContainer
+
+
+```
 CPaneContainer* FindSubPaneContainer(
-    const CObject* pObject,  
+    const CObject* pObject,
     BC_FIND_CRITERIA findCriteria);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pObject*<br/>
-[in] [in] *findCriteria*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="findtabbedpane"></a>  CPaneContainer::FindTabbedPane  
+[in] [in] *findCriteria*
 
-  
-```  
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="findtabbedpane"></a>  CPaneContainer::FindTabbedPane
+
+
+```
 CDockablePane* FindTabbedPane(UINT nID);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *nID*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getassociatedsiblingpaneids"></a>  CPaneContainer::GetAssociatedSiblingPaneIDs  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *nID*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getassociatedsiblingpaneids"></a>  CPaneContainer::GetAssociatedSiblingPaneIDs
+
+
+```
 CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getleftpane"></a>  CPaneContainer::GetLeftPane  
+```
 
-  
-```  
-const CDockablePane* GetLeftPane() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getleftpanecontainer"></a>  CPaneContainer::GetLeftPaneContainer  
+### <a name="parameters"></a>Paramètres
 
-  
-```  
-const CPaneContainer* GetLeftPaneContainer() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getminsize"></a>  CPaneContainer::GetMinSize  
+[in] *pBar*
 
-  
-```  
-virtual void GetMinSize(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *taille*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getminsizeleft"></a>  CPaneContainer::GetMinSizeLeft  
+### <a name="return-value"></a>Valeur de retour
 
-  
-```  
-virtual void GetMinSizeLeft(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *taille*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getminsizeright"></a>  CPaneContainer::GetMinSizeRight  
+### <a name="remarks"></a>Notes
 
-  
-```  
-virtual void GetMinSizeRight(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *taille*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getnodecount"></a>  CPaneContainer::GetNodeCount  
+##  <a name="getleftpane"></a>  CPaneContainer::GetLeftPane
 
-  
-```  
-int GetNodeCount() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getpanedivider"></a>  CPaneContainer::GetPaneDivider  
 
-  
-```  
-const CPaneDivider* GetPaneDivider() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getparentpanecontainer"></a>  CPaneContainer::GetParentPaneContainer  
+```
+const CDockablePane* GetLeftPane() const;
+```
 
-  
-```  
-CPaneContainer* GetParentPaneContainer() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getrecentpanedividerrect"></a>  CPaneContainer::GetRecentPaneDividerRect  
+### <a name="return-value"></a>Valeur de retour
 
-  
-```  
-CRect GetRecentPaneDividerRect() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getrecentpanedividerstyle"></a>  CPaneContainer::GetRecentPaneDividerStyle  
+### <a name="remarks"></a>Notes
 
-  
-```  
-DWORD GetRecentPaneDividerStyle() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getrecentpercent"></a>  CPaneContainer::GetRecentPercent  
+##  <a name="getleftpanecontainer"></a>  CPaneContainer::GetLeftPaneContainer
 
-  
-```  
+
+```
+const CPaneContainer* GetLeftPaneContainer() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getminsize"></a>  CPaneContainer::GetMinSize
+
+
+```
+virtual void GetMinSize(CSize& size) const;
+```
+
+### <a name="parameters"></a>Paramètres
+
+[in] *taille*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getminsizeleft"></a>  CPaneContainer::GetMinSizeLeft
+
+
+```
+virtual void GetMinSizeLeft(CSize& size) const;
+```
+
+### <a name="parameters"></a>Paramètres
+
+[in] *taille*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getminsizeright"></a>  CPaneContainer::GetMinSizeRight
+
+
+```
+virtual void GetMinSizeRight(CSize& size) const;
+```
+
+### <a name="parameters"></a>Paramètres
+
+[in] *taille*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getnodecount"></a>  CPaneContainer::GetNodeCount
+
+
+```
+int GetNodeCount() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getpanedivider"></a>  CPaneContainer::GetPaneDivider
+
+
+```
+const CPaneDivider* GetPaneDivider() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getparentpanecontainer"></a>  CPaneContainer::GetParentPaneContainer
+
+
+```
+CPaneContainer* GetParentPaneContainer() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getrecentpanedividerrect"></a>  CPaneContainer::GetRecentPaneDividerRect
+
+
+```
+CRect GetRecentPaneDividerRect() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getrecentpanedividerstyle"></a>  CPaneContainer::GetRecentPaneDividerStyle
+
+
+```
+DWORD GetRecentPaneDividerStyle() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getrecentpercent"></a>  CPaneContainer::GetRecentPercent
+
+
+```
 int GetRecentPercent();
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getrefcount"></a>  CPaneContainer::GetRefCount  
+```
 
-  
-```  
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getrefcount"></a>  CPaneContainer::GetRefCount
+
+
+```
 LONG GetRefCount();
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getresizestep"></a>  CPaneContainer::GetResizeStep  
+```
 
-  
-```  
-virtual int GetResizeStep() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getrightpane"></a>  CPaneContainer::GetRightPane  
+### <a name="return-value"></a>Valeur de retour
 
-  
-```  
-const CDockablePane* GetRightPane() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getrightpanecontainer"></a>  CPaneContainer::GetRightPaneContainer  
+### <a name="remarks"></a>Notes
 
-  
-```  
-const CPaneContainer* GetRightPaneContainer() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="gettotalreferencecount"></a>  CPaneContainer::GetTotalReferenceCount  
+##  <a name="getresizestep"></a>  CPaneContainer::GetResizeStep
 
-  
-```  
-int GetTotalReferenceCount() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getwindowrect"></a>  CPaneContainer::GetWindowRect  
 
-  
-```  
+```
+virtual int GetResizeStep() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getrightpane"></a>  CPaneContainer::GetRightPane
+
+
+```
+const CDockablePane* GetRightPane() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getrightpanecontainer"></a>  CPaneContainer::GetRightPaneContainer
+
+
+```
+const CPaneContainer* GetRightPaneContainer() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="gettotalreferencecount"></a>  CPaneContainer::GetTotalReferenceCount
+
+
+```
+int GetTotalReferenceCount() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getwindowrect"></a>  CPaneContainer::GetWindowRect
+
+
+```
 virtual void GetWindowRect(
-    CRect& rect,  
-    BOOL bIgnoreVisibility = FALSE) const;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
+    CRect& rect,
+    BOOL bIgnoreVisibility = FALSE) const;
+```
+
+### <a name="parameters"></a>Paramètres
+
 *Rect*<br/>
-[in] [in] *bIgnoreVisibility*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="isdisposed"></a>  CPaneContainer::IsDisposed  
+[in] [in] *bIgnoreVisibility*
 
-  
-```  
-BOOL IsDisposed() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="isempty"></a>  CPaneContainer::IsEmpty  
+### <a name="remarks"></a>Notes
 
-  
-```  
-BOOL IsEmpty() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="isleftpane"></a>  CPaneContainer::IsLeftPane  
+##  <a name="isdisposed"></a>  CPaneContainer::IsDisposed
 
-  
-```  
-BOOL IsLeftPane(CDockablePane* pBar) const;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="isleftpanecontainer"></a>  CPaneContainer::IsLeftPaneContainer  
 
-  
-```  
-BOOL IsLeftPaneContainer() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="isleftpartempty"></a>  CPaneContainer::IsLeftPartEmpty  
+```
+BOOL IsDisposed() const;
+```
 
-  
-```  
-BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *bCheckVisibility*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="isrightpartempty"></a>  CPaneContainer::IsRightPartEmpty  
+### <a name="return-value"></a>Valeur de retour
 
-  
-```  
-BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *bCheckVisibility*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="isvisible"></a>  CPaneContainer::IsVisible  
+### <a name="remarks"></a>Notes
 
-  
-```  
-BOOL IsVisible() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="move"></a>  CPaneContainer::Move  
+##  <a name="isempty"></a>  CPaneContainer::IsEmpty
 
-  
-```  
+
+```
+BOOL IsEmpty() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="isleftpane"></a>  CPaneContainer::IsLeftPane
+
+
+```
+BOOL IsLeftPane(CDockablePane* pBar) const;
+```
+
+### <a name="parameters"></a>Paramètres
+
+[in] *pBar*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="isleftpanecontainer"></a>  CPaneContainer::IsLeftPaneContainer
+
+
+```
+BOOL IsLeftPaneContainer() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="isleftpartempty"></a>  CPaneContainer::IsLeftPartEmpty
+
+
+```
+BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
+```
+
+### <a name="parameters"></a>Paramètres
+
+[in] *bCheckVisibility*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="isrightpartempty"></a>  CPaneContainer::IsRightPartEmpty
+
+
+```
+BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
+```
+
+### <a name="parameters"></a>Paramètres
+
+[in] *bCheckVisibility*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="isvisible"></a>  CPaneContainer::IsVisible
+
+
+```
+BOOL IsVisible() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="move"></a>  CPaneContainer::Move
+
+
+```
 virtual void Move(CPoint ptNewLeftTop);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *ptNewLeftTop*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="ondeletehidepane"></a>  CPaneContainer::OnDeleteHidePane  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *ptNewLeftTop*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="ondeletehidepane"></a>  CPaneContainer::OnDeleteHidePane
+
+
+```
 void OnDeleteHidePane(
-    CDockablePane* pBar,  
+    CDockablePane* pBar,
     BOOL bHide);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*pBar*<br/>
-[in] [in] *bHide*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="onmoveinternalpanedivider"></a>  CPaneContainer::OnMoveInternalPaneDivider  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+*pBar*<br/>
+[in] [in] *bHide*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="onmoveinternalpanedivider"></a>  CPaneContainer::OnMoveInternalPaneDivider
+
+
+```
 virtual int OnMoveInternalPaneDivider(
-    int nOffset,  
+    int nOffset,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*nOffset*<br/>
-[in] [in] *hdwp*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="onshowpane"></a>  CPaneContainer::OnShowPane  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+*nOffset*<br/>
+[in] [in] *hdwp*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="onshowpane"></a>  CPaneContainer::OnShowPane
+
+
+```
 virtual void OnShowPane(
-    CDockablePane* pBar,  
+    CDockablePane* pBar,
     BOOL bShow);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*pBar*<br/>
-[in] [in] *bShow*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="release"></a>  CPaneContainer::Release  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+*pBar*<br/>
+[in] [in] *bShow*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="release"></a>  CPaneContainer::Release
+
+
+```
 DWORD Release();
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="releaseemptypanecontainer"></a>  CPaneContainer::ReleaseEmptyPaneContainer  
+```
 
-  
-```  
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="releaseemptypanecontainer"></a>  CPaneContainer::ReleaseEmptyPaneContainer
+
+
+```
 void ReleaseEmptyPaneContainer();
-```  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="removenonvalidpanes"></a>  CPaneContainer::RemoveNonValidPanes  
+```
 
-  
-```  
+### <a name="remarks"></a>Notes
+
+##  <a name="removenonvalidpanes"></a>  CPaneContainer::RemoveNonValidPanes
+
+
+```
 void RemoveNonValidPanes();
-```  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="removepane"></a>  CPaneContainer::RemovePane  
+```
 
-  
-```  
+### <a name="remarks"></a>Notes
+
+##  <a name="removepane"></a>  CPaneContainer::RemovePane
+
+
+```
 virtual void RemovePane(CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="resize"></a>  CPaneContainer::Resize  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *pBar*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="resize"></a>  CPaneContainer::Resize
+
+
+```
 virtual void Resize(
-    CRect rect,  
-    HDWP& hdwp,  
+    CRect rect,
+    HDWP& hdwp,
     BOOL bRedraw = FALSE);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *Rect*<br/>
-[in] [in] *hdwp*  
- [in] *bRedraw*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="resizepane"></a>  CPaneContainer::ResizePane  
+[in] [in] *hdwp* [in] *bRedraw*
 
-  
-```  
+### <a name="remarks"></a>Notes
+
+##  <a name="resizepane"></a>  CPaneContainer::ResizePane
+
+
+```
 virtual void ResizePane(
-    int nOffset,  
-    CPane* pBar,  
-    CPaneContainer* pContainer,  
-    BOOL bHorz,  
-    BOOL bLeftBar,  
+    int nOffset,
+    CPane* pBar,
+    CPaneContainer* pContainer,
+    BOOL bHorz,
+    BOOL bLeftBar,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*nOffset*<br/>
-[in] [in] *pBar*  
-*pContainer*<br/>
-[in] [in] *bHorz*  
-*bLeftBar*<br/>
-[in] [in] *hdwp*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="resizepartofpanecontainer"></a>  CPaneContainer::ResizePartOfPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+*nOffset*<br/>
+[in] [in] *pBar*
+*pContainer*<br/>
+[in] [in] *bHorz*
+*bLeftBar*<br/>
+[in] [in] *hdwp*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="resizepartofpanecontainer"></a>  CPaneContainer::ResizePartOfPaneContainer
+
+
+```
 virtual void ResizePartOfPaneContainer(
-    int nOffset,  
-    BOOL bLeftPart,  
+    int nOffset,
+    BOOL bLeftPart,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*nOffset*<br/>
-[in] [in] *bLeftPart*  
- [in] *hdwp*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="serialize"></a>  CPaneContainer::Serialize  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+*nOffset*<br/>
+[in] [in] *bLeftPart* [in] *hdwp*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="serialize"></a>  CPaneContainer::Serialize
+
+
+```
 void Serialize(CArchive& ar);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *ar*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="setpane"></a>  CPaneContainer::SetPane  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *ar*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="setpane"></a>  CPaneContainer::SetPane
+
+
+```
 void SetPane(
-    CDockablePane* pBar,  
+    CDockablePane* pBar,
     BOOL bLeft);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pBar*<br/>
-[in] [in] *bLeft*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="setpanecontainer"></a>  CPaneContainer::SetPaneContainer  
+[in] [in] *bLeft*
 
-  
-```  
+### <a name="remarks"></a>Notes
+
+##  <a name="setpanecontainer"></a>  CPaneContainer::SetPaneContainer
+
+
+```
 void SetPaneContainer(
-    CPaneContainer* pContainer,  
+    CPaneContainer* pContainer,
     BOOL bLeft);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pContainer*<br/>
-[in] [in] *bLeft*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="setpanedivider"></a>  CPaneContainer::SetPaneDivider  
+[in] [in] *bLeft*
 
-  
-```  
+### <a name="remarks"></a>Notes
+
+##  <a name="setpanedivider"></a>  CPaneContainer::SetPaneDivider
+
+
+```
 void SetPaneDivider(CPaneDivider* pSlider);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *pSlider*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="setparentpanecontainer"></a>  CPaneContainer::SetParentPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *pSlider*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="setparentpanecontainer"></a>  CPaneContainer::SetParentPaneContainer
+
+
+```
 void SetParentPaneContainer(CPaneContainer* p);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *p*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="setrecentpercent"></a>  CPaneContainer::SetRecentPercent  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *p*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="setrecentpercent"></a>  CPaneContainer::SetRecentPercent
+
+
+```
 void SetRecentPercent(int nRecentPercent);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *nRecentPercent*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="setupbyid"></a>  CPaneContainer::SetUpByID  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *nRecentPercent*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="setupbyid"></a>  CPaneContainer::SetUpByID
+
+
+```
 BOOL SetUpByID(
-    UINT nID,  
+    UINT nID,
     CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *nID*<br/>
-[in] [in] *pBar*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="storerecentdocksiteinfo"></a>  CPaneContainer::StoreRecentDockSiteInfo  
+[in] [in] *pBar*
 
-  
-```  
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="storerecentdocksiteinfo"></a>  CPaneContainer::StoreRecentDockSiteInfo
+
+
+```
 virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *pBar*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="stretchpanecontainer"></a>  CPaneContainer::StretchPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Paramètres
+
+[in] *pBar*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="stretchpanecontainer"></a>  CPaneContainer::StretchPaneContainer
+
+
+```
 virtual int StretchPaneContainer(
-    int nOffset,  
-    BOOL bStretchHorz,  
-    BOOL bLeftBar,  
-    BOOL bMoveSlider,  
+    int nOffset,
+    BOOL bStretchHorz,
+    BOOL bLeftBar,
+    BOOL bMoveSlider,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *nOffset*<br/>
-[in] [in] *bStretchHorz*  
+[in] [in] *bStretchHorz*
 *bLeftBar*<br/>
-[in] [in] *bMoveSlider*  
- [in] *hdwp*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-## <a name="see-also"></a>Voir aussi  
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
- [CPaneContainerManager, classe](../../mfc/reference/cpanecontainermanager-class.md)
+[in] [in] *bMoveSlider* [in] *hdwp*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+## <a name="see-also"></a>Voir aussi
+
+[Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[CPaneContainerManager, classe](../../mfc/reference/cpanecontainermanager-class.md)

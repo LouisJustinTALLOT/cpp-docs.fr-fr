@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708db2b20cdbbe2e322075789f64433ff70612a2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4fdf0980b8994c313349fd30f05e667b9c0cd461
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025514"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377096"
 ---
 # <a name="c-language-reference"></a>Référence du langage C++
 
@@ -38,60 +38,85 @@ Consultez les tableaux suivants pour rechercher rapidement un mot clé ou un op�
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Conventions lexicales](../cpp/lexical-conventions.md) éléments lexicaux fondamentaux d’un programme C++ : jetons, commentaires, opérateurs, mots clés, signes de ponctuation, littéraux. En outre, traduction de fichier, priorité/associativité des opérateurs.
+[Conventions lexicales](../cpp/lexical-conventions.md)<br/>
+Éléments lexicaux fondamentaux de programme C++ : jetons, commentaires, opérateurs, mots clés, signes de ponctuation, littéraux. En outre, traduction de fichier, priorité/associativité des opérateurs.
 
-[Concepts de base](../cpp/basic-concepts-cpp.md) étendue, une liaison, démarrage du programme et l’arrêt, classes de stockage et types.
+[Concepts de base](../cpp/basic-concepts-cpp.md)<br/>
+Portée, liaison, démarrage et arrêt de programme, classes de stockage et types.
 
-[Conversions standard](../cpp/standard-conversions.md) conversions entre types intégrés, ou « fondamentaux » de Type. Et aussi les conversions arithmétiques et les conversions entre le pointeur, la référence et les types pointeur vers membre.
+[Conversions standard](../cpp/standard-conversions.md)<br/>
+Conversions de type entre types intégrés ou fondamentaux. Et aussi les conversions arithmétiques et les conversions entre le pointeur, la référence et les types pointeur vers membre.
 
-[Opérateurs, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) les opérateurs en C++.
+[Opérateurs, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+Les opérateurs dans C++.
 
-[Expressions](../cpp/expressions-cpp.md) Types d’expressions, sémantique des expressions, des rubriques sur les opérateurs, cast et opérateurs de cast, informations de type au moment de l’exécution de référence.
+[Expressions](../cpp/expressions-cpp.md)<br/>
+Types d'expressions, sémantique des expressions, rubriques de référence sur les opérateurs, exécution de cast et opérateurs de cast, informations de type à l'exécution.
 
-[Expressions lambda](../cpp/lambda-expressions-in-cpp.md) une technique de programmation qui implicitement définit une classe d’objet de fonction et construit un objet de fonction de ce type de classe.
+[Expressions lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
+Technique de programmation qui définit implicitement une classe d'objets de fonction et construit un objet de fonction de ce type de classe.
 
-[Instructions](../cpp/statements-cpp.md) Expression, null, composée, la sélection, itération, rapide et déclaration des instructions.
+[Instructions](../cpp/statements-cpp.md)<br/>
+Instructions d'expression, Null, composite, de sélection, d'itération et de déclaration.
 
-[Déclarations et définitions](declarations-and-definitions-cpp.md) spécificateurs de classe de stockage, définitions de fonction, initialisations, énumérations, **classe**, **struct**, et **union** déclarations, et **typedef** déclarations. En outre, **inline** fonctions, **const** mot clé, les espaces de noms.
+[Déclarations et définitions](declarations-and-definitions-cpp.md)<br/>
+Spécificateurs de classe de stockage, définitions de fonction, initialisations, énumérations, **classe**, **struct**, et **union** déclarations, et **(typedef)**  déclarations. En outre, **inline** fonctions, **const** mot clé, les espaces de noms.
 
-[Classes, Structures et Unions](../cpp/classes-and-structs-cpp.md) Introduction aux classes, structures et unions. En outre, fonctions membres, les fonctions membres spéciales, les membres de données de champs de bits, **cela** pointeur, classes imbriquées.
+[Classes, Structures et Unions](../cpp/classes-and-structs-cpp.md)<br/>
+Introduction aux classes, structures et unions. En outre, fonctions membres, les fonctions membres spéciales, les membres de données de champs de bits, **cela** pointeur, classes imbriquées.
 
-[Les Classes dérivées](../cpp/inheritance-cpp.md) héritage unique et multiple, **virtuels** fonctions, plusieurs classes de base, **abstraite** des classes, règles de portée. En outre, le **__super** et **__interface** mots clés.
+[Classes dérivées](../cpp/inheritance-cpp.md)<br/>
+Héritage unique et multiple, **virtuels** fonctions, plusieurs classes de base, **abstraite** des classes, règles de portée. En outre, le **__super** et **__interface** mots clés.
 
-[Contrôle d’accès au membre](../cpp/member-access-control-cpp.md) contrôler l’accès aux membres de classe : **public**, **privé**, et **protégé** mots clés. Fonctions et classes Friend.
+[Contrôle d’accès de membre](../cpp/member-access-control-cpp.md)<br/>
+Contrôler l’accès aux membres de classe : **public**, **privé**, et **protégé** mots clés. Fonctions et classes Friend.
 
-[La surcharge](operator-overloading.md) les opérateurs surchargés, règles de surcharge d’opérateur.
+[La surcharge](operator-overloading.md)<br/>
+Opérateurs surchargés, règles de surcharge d’opérateur.
 
-[Gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md) gestion des exceptions C++, les structurée des exceptions (SEH), les mots clés utilisés dans l’écriture des instructions de gestion des exceptions.
+[Gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md)<br/>
+La gestion des exceptions C++, la gestion structurée des exceptions (SEH) et les mots clés utilisés pour écrire des instructions de gestion des exceptions.
 
-[Assertion et Messages de User-Supplied](../cpp/assertion-and-user-supplied-messages-cpp.md) 
- `#error` directive, le **static_assert** mot clé, le `assert` (macro).
+[Messages d’assertion et messages fournis par l’utilisateur](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
+`#error` la directive, le **static_assert** mot clé, le `assert` (macro).
 
-[Modèles](../cpp/templates-cpp.md) spécifications de modèle, les modèles de fonction, les modèles de classe, **typename** mot clé, les modèles et macros, modèles et pointeurs intelligents.
+[Modèles](../cpp/templates-cpp.md)<br/>
+Spécifications de modèle, les modèles de fonction, les modèles de classe, **typename** mot clé, les modèles et macros, modèles et pointeurs intelligents.
 
-[Gestion des événements](../cpp/event-handling.md) déclarer des événements et gestionnaires d’événements.
+[Gestion des événements](../cpp/event-handling.md)<br/>
+Déclaration d'événements et gestionnaires d'événements.
 
-[Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md) modificateurs spécifiques à Microsoft C++. Mémoire d’adressage, conventions d’appel, **naked** fonctions, des attributs de classe de stockage étendus (**__declspec**), **__w64**.
+[Modificateurs propres à Microsoft](../cpp/microsoft-specific-modifiers.md)<br/>
+Modificateurs spécifiques à Microsoft C++. Mémoire d’adressage, conventions d’appel, **naked** fonctions, des attributs de classe de stockage étendus (**__declspec**), **__w64**.
 
-[Assembleur inline](../assembler/inline/inline-assembler.md) à l’aide du langage assembleur et C++ dans **__asm** blocs.
+[Assembleur inline](../assembler/inline/inline-assembler.md)<br/>
+À l’aide du langage assembleur et C++ dans **__asm** blocs.
 
-[Prise en charge de COM du compilateur](../cpp/compiler-com-support.md) une référence à des classes spécifiques à Microsoft et les fonctions globales utilisées pour prendre en charge les types COM.
+[Prise en charge COM du compilateur](../cpp/compiler-com-support.md)<br/>
+Référence aux classes spécifiques de Microsoft et aux fonctions globales utilisées pour prendre en charge les types COM.
 
-[Extensions Microsoft](../cpp/microsoft-extensions.md) extensions Microsoft pour C++.
+[Extensions Microsoft](../cpp/microsoft-extensions.md)<br/>
+Extensions Microsoft en C++.
 
-[Comportement non standard](../cpp/nonstandard-behavior.md) plus d’informations sur le comportement non standard du compilateur Visual C++.
+[Comportement non standard](../cpp/nonstandard-behavior.md)<br/>
+Informations sur le comportement non standard du compilateur Visual C++.
 
-[Bienvenue dans C++](welcome-back-to-cpp-modern-cpp.md) une vue d’ensemble de la programmation C++ moderne pratiques pour l’écriture de programmes sécurisés, corrects et efficaces.
+[Bienvenue dans C++](welcome-back-to-cpp-modern-cpp.md)<br/>
+Vue d’ensemble de pratiques pour l’écriture de programmes sécurisées et correctes de programmation C++ modernes.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Extensions du composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md) documents sur l’utilisation de Visual C++ pour cibler le common language runtime de référence.
+[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
+Documents de référence sur l'utilisation de Visual C++ pour cibler le Common Language Runtime.
 
-[Référence à la génération C/C++](../build/reference/c-cpp-building-reference.md) du compilateur options, options de l’éditeur de liens et d’autres outils de génération.
+[Référence de la génération C/C++](../build/reference/c-cpp-building-reference.md)<br/>
+Options du compilateur, options de l'éditeur de liens et autres outils de génération.
 
-[Référence du préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md) documents sur les pragmas, les directives de préprocesseur, les macros prédéfinies et le préprocesseur de référence.
+[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+Documents de référence sur les pragmas, les directives de préprocesseur, les macros prédéfinies et le préprocesseur.
 
-[Bibliothèques Visual C++](../standard-library/cpp-standard-library-reference.md) une liste de liens à la référence de démarrer les pages pour les différentes bibliothèques Visual C++.
+[Bibliothèques Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
+Liste de liens vers des pages de démarrage de référence pour les différentes bibliothèques Visual C++.
 
 ## <a name="see-also"></a>Voir aussi
 

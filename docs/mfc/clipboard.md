@@ -1,5 +1,5 @@
 ---
-title: Presse-papiers | Documents Microsoft
+title: Presse-papiers | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2ad21bcbff31335f6ec79a4527ef7d99e07e547
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48315b3608a5e66c2f94e1b06a038772dbb25bb4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341102"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380488"
 ---
 # <a name="clipboard"></a>Presse-papiers
-Cette famille d’articles explique comment implémenter la prise en charge du Presse-papiers Windows dans les applications MFC. Le Presse-papiers Windows est utilisé de deux manières :  
-  
--   Implémentation de commandes du menu Edition standards, telles que couper, copier et coller.  
-  
--   Mise en œuvre de données uniforme transférer par glisser-déplacer (OLE).  
-  
- Le Presse-papiers est la méthode Windows standard de transfert de données entre une source et une destination. Il peut également être très utile pour les opérations OLE. Avec l’arrivée de OLE, il existe deux mécanismes de Presse-papiers dans Windows. L’API de Presse-papiers standard de Windows est toujours disponible, mais il a été complétée par le mécanisme de transfert de données OLE. Transfert de données uniforme OLE (UDT) prend en charge les opérations couper, copier et coller avec le Presse-papiers et glisser -déplacer.  
-  
- Le Presse-papiers est un service système partagé par la session entière de Windows, afin qu’il n’a pas d’un handle ou une classe qui lui sont propres. Vous gérez le Presse-papiers via les fonctions membres de classe [CWnd](../mfc/reference/cwnd-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
-  
--   [Quand utiliser chaque mécanisme de Presse-papiers](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
-  
--   [À l’aide de l’API du Presse-papiers Windows traditionnel](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
--   [À l’aide du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [Copier et coller des données](../mfc/clipboard-copying-and-pasting-data.md)  
-  
--   [Ajout d’autres formats](../mfc/clipboard-adding-other-formats.md)  
-  
--   [Le Presse-papiers Windows](https://msdn.microsoft.com/library/ms648709)  
-  
--   [Implémentation de glisser -déplacer (OLE)](../mfc/drag-and-drop-ole.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)
+
+Cette série d’articles explique comment implémenter la prise en charge pour le Presse-papiers Windows dans les applications MFC. Le Presse-papiers de Windows est utilisé de deux manières :
+
+- Implémentation de commandes du menu Edition standards, telles que couper, copier et coller.
+
+- Implémentation de données uniforme transférer avec glisser et déposer (OLE).
+
+Le Presse-papiers est la méthode Windows standard de transfert de données entre une source et une destination. Il peut également être très utile pour les opérations OLE. Avec l’avènement des OLE, il existe deux mécanismes de Presse-papiers de Windows. L’API de Presse-papiers standard de Windows est toujours disponible, mais elle a été complétée avec le mécanisme de transfert de données OLE. Transfert de données uniforme OLE (UDT) prend en charge les opérations couper, copier et coller avec le Presse-papiers et glisser -déplacer.
+
+Le Presse-papiers est un service système partagé par la session Windows entière, donc il n’a pas un handle ou une classe de son propre. Vous gérez le Presse-papiers via les fonctions membres de classe [CWnd](../mfc/reference/cwnd-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+- [Quand utiliser chaque mécanisme de Presse-papiers](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)
+
+- [À l’aide de l’API du Presse-papiers Windows traditionnel](../mfc/clipboard-using-the-windows-clipboard.md)
+
+- [À l’aide du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [Copier et coller des données](../mfc/clipboard-copying-and-pasting-data.md)
+
+- [Ajout d’autres formats](../mfc/clipboard-adding-other-formats.md)
+
+- [Le Presse-papiers Windows](https://msdn.microsoft.com/library/ms648709)
+
+- [Implémentation du glisser- déposer (OLE)](../mfc/drag-and-drop-ole.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)

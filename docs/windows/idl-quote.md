@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a79f731ef0080e38e2c1b60d8e4924a5bf75089e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fdea60808118ecd7caa04fab3421c481d908e833
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600293"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391811"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -38,7 +38,7 @@ Vous permet d’utiliser des constructions IDL qui ne sont pas pris en charge da
 
 ### <a name="parameters"></a>Paramètres
 
-*texte*  
+*texte*<br/>
 Le nom d’attribut que vous avez l’intention le compilateur Visual C++ à passer au fichier .idl généré sans retourner une erreur du compilateur.
 
 ## <a name="remarks"></a>Notes
@@ -99,5 +99,5 @@ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
 [Attributs autonomes](../windows/stand-alone-attributes.md)  

@@ -17,46 +17,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc66784a9f5b6c953516bb30271c973779340e09
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f543fa6c1b1f41040cc6cf13bf2c97cda5b69daf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722850"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383345"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
-**Section spécifique à Microsoft**  
-  
- Stocke un sous-ensemble de l’état du processeur dans le bloc de contrôle de machine virtuelle spécifiée (VMCB).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __svm_vmsave(  
-   size_t VmcbPhysicalAddress  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
-  
-|Paramètre|Description|  
-|---------------|-----------------|  
-|*VmcbPhysicalAddress*|[in] L’adresse physique de la VMCB.|  
-  
-## <a name="remarks"></a>Notes  
- Le `__svm_vmsave` fonction est équivalente à la `VMSAVE` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : programmation du système, « numéro 24593, révision 3.11 ou version ultérieure, à la [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) site.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`__svm_vmsave`|x86, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
- [__svm_vmrun](../intrinsics/svm-vmrun.md)   
- [__svm_vmload](../intrinsics/svm-vmload.md)
+
+**Section spécifique à Microsoft**
+
+Stocke un sous-ensemble de l’état du processeur dans le bloc de contrôle de machine virtuelle spécifiée (VMCB).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __svm_vmsave(
+   size_t VmcbPhysicalAddress
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
+|Paramètre|Description|
+|---------------|-----------------|
+|*VmcbPhysicalAddress*|[in] L’adresse physique de la VMCB.|
+
+## <a name="remarks"></a>Notes
+
+Le `__svm_vmsave` fonction est équivalente à la `VMSAVE` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : programmation du système, « numéro 24593, révision 3.11 ou version ultérieure, à la [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) site.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`__svm_vmsave`|x86, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
+[__svm_vmload](../intrinsics/svm-vmload.md)

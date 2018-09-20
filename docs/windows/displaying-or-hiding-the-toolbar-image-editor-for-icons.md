@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d11fdea6e85bf542a00b497b311494ba6133e1d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318926"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376588"
 ---
 # <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>Affichage ou masquage de la barre d’outils (Éditeur d’images C++ pour les icônes)
 
@@ -43,6 +43,6 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)  
-[Barre d’outils](../windows/toolbar-image-editor-for-icons.md)  
+[Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)<br/>
+[Barre d’outils](../windows/toolbar-image-editor-for-icons.md)<br/>
 [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

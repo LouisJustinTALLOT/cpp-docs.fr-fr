@@ -1,5 +1,5 @@
 ---
-title: Styles de bouton toupie | Documents Microsoft
+title: Styles de bouton toupie | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223b7e0875a5382edf5f4d350c9343d117768c41
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 71da44858ea018d0393af6267e4bb522a2c57391
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953776"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393592"
 ---
 # <a name="spin-button-styles"></a>Styles de bouton toupie
-Nombre des paramètres pour un bouton de sélection numérique ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) sont contrôlées par les styles. Vous pouvez définir les styles suivants à l’aide de la **propriétés** fenêtre dans l’éditeur de boîte de dialogue.  
-  
--   **Orientation** verticale ou horizontale. Contrôle l’orientation des flèches. Associé au style UDS_HORZ.  
-  
--   **Alignement** détachés, gauche ou droite. Contrôle l’emplacement du bouton de sélection numérique. Droite et gauche placent le bouton de sélection numérique en regard de la fenêtre associée. La largeur de la fenêtre associée est diminuée en fonction de la toupie. Associé avec les styles UDS_ALIGNLEFT et UDS_ALIGNRIGHT.  
-  
--   **Auto Buddy** sélectionne automatiquement la fenêtre précédente dans l’ordre de plan comme fenêtre associée au bouton toupie (spin). Dans un modèle de boîte de dialogue, il s’agit du contrôle qui précède la toupie dans l’ordre de tabulation. Associé au style UDS_AUTOBUDDY.  
-  
--   **Définir Buddy Integer** provoque le contrôle de sélection numérique incrémenter et décrémenter la légende de la fenêtre associée lors du changement de position actuelle. Associé au style UDS_SETBUDDYINT.  
-  
--   **Aucun des milliers** n’insère pas de milliers séparateur dans la valeur de la légende de la fenêtre associée. Associé au style UDS_NOTHOUSANDS.  
-  
+
+Nombre des paramètres pour un bouton toupie (spin) ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) sont contrôlées par les styles. Vous pouvez définir les styles suivants à l’aide de la **propriétés** fenêtre dans l’éditeur de boîtes de dialogue.
+
+- **Orientation** verticale ou horizontale. Contrôle l’orientation des boutons fléchés. Associé au style UDS_HORZ.
+
+- **Alignement** non attachés, gauche ou droite. Contrôle l’emplacement du bouton toupie (spin). Left et Right positionnent le bouton de sélection numérique en regard de la fenêtre associée. La largeur de la fenêtre associée est diminuée en fonction du bouton spin. Associé avec les styles UDS_ALIGNLEFT et UDS_ALIGNRIGHT.
+
+- **Auto Buddy** sélectionne automatiquement la fenêtre précédente dans l’ordre de plan comme fenêtre associée au bouton toupie (spin). Dans un modèle de boîte de dialogue, il s’agit du contrôle qui précède le bouton de sélection numérique dans l’ordre de tabulation. Associé au style UDS_AUTOBUDDY.
+
+- **Définissez Buddy Integer** provoque l’incrémentation et décrémentation de la légende de la fenêtre associée lors du changement de position actuelle du contrôle spin. Associé au style UDS_SETBUDDYINT.
+
+- **Aucun des milliers** n’insère pas les milliers séparateur dans la valeur dans la légende de la fenêtre associée. Associé au style UDS_NOTHOUSANDS.
+
     > [!NOTE]
-    >  Définissez ce style si vous souhaitez utiliser l’échange de données de boîtes de dialogue (DDX) pour obtenir la valeur entière du contrôle associé. `DDX_Text` n’accepte pas les séparateurs de milliers incorporés.  
-  
--   **Retour à la ligne** entraîne à la « ligne », car la valeur est incrémenté ou décrémenté au-delà de la plage du contrôle. Associé au style UDS_WRAP.  
-  
--   **Touches de direction** le bouton de sélection numérique incrémenter ou décrémenter la position lorsque les touches de direction haut et bas sont utilisées. Associé au style UDS_ARROWKEYS.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+    >  Définissez ce style si vous souhaitez utiliser l’échange de données de boîtes de dialogue (DDX) pour obtenir la valeur entière du contrôle associé. `DDX_Text` n’accepte pas les séparateurs de milliers incorporés.
+
+- **Encapsuler** provoque la position pour « encapsuler » que la valeur est incrémenté ou décrémenté au-delà de la plage du contrôle. Associé au style UDS_WRAP.
+
+- **Touches de direction** provoque le bouton de sélection numérique incrémenter ou décrémenter la position lorsque les touches de direction haut et bas sont utilisées. Associé au style UDS_ARROWKEYS.
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
+[Contrôles](../mfc/controls-mfc.md)
 

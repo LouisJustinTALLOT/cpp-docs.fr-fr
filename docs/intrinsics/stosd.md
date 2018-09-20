@@ -18,81 +18,85 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f019a0c2c62b991b2799f1a5d6d89402054c0260
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8bb0d75cc4af033bf1bc942a918beecf2aedf911
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723383"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396140"
 ---
 # <a name="stosd"></a>__stosd
-**Section spécifique à Microsoft**  
-  
- Génère une instruction de chaîne de magasin (`rep stosd`).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __stosd(   
-   unsigned long* Dest,   
-   unsigned long Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+**Section spécifique à Microsoft**
+
+Génère une instruction de chaîne de magasin (`rep stosd`).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __stosd( 
+   unsigned long* Dest, 
+   unsigned long Data, 
+   size_t Count 
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *dest*<br/>
-[out] La destination de l’opération.  
-  
+[out] La destination de l’opération.
+
 *Données*<br/>
-[in] Les données à stocker.  
-  
+[in] Les données à stocker.
+
 *Nombre*<br/>
-[in] La longueur du bloc de mots doubles à écrire.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`__stosd`|x86, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- Le résultat est que le mot double `Data` est écrit dans un bloc de `Count` mots doubles à l’emplacement de la mémoire vers laquelle pointe `Dest`.  
-  
- Cette routine est disponible uniquement en tant qu'intrinsèque.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// stosd.c  
-// processor: x86, x64  
-  
-#include <stdio.h>  
-#include <memory.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__stosd)  
-  
-int main()  
-{  
-    unsigned long val = 99999;  
-    unsigned long a[10];  
-  
-    memset(a, 0, sizeof(a));  
-    __stosd(a+1, val, 2);  
-  
-printf_s( "%u %u %u %u",  
-              a[0], a[1], a[2], a[3]);   
-}  
-```  
-  
-```Output  
-0 99999 99999 0  
-```  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[in] La longueur du bloc de mots doubles à écrire.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`__stosd`|x86, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+Le résultat est que le mot double `Data` est écrit dans un bloc de `Count` mots doubles à l’emplacement de la mémoire vers laquelle pointe `Dest`.
+
+Cette routine est disponible uniquement en tant qu'intrinsèque.
+
+## <a name="example"></a>Exemple
+
+```
+// stosd.c
+// processor: x86, x64
+
+#include <stdio.h>
+#include <memory.h>
+#include <intrin.h>
+
+#pragma intrinsic(__stosd)
+
+int main()
+{
+    unsigned long val = 99999;
+    unsigned long a[10];
+
+    memset(a, 0, sizeof(a));
+    __stosd(a+1, val, 2);
+
+printf_s( "%u %u %u %u",
+              a[0], a[1], a[2], a[3]);
+}
+```
+
+```Output
+0 99999 99999 0
+```
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

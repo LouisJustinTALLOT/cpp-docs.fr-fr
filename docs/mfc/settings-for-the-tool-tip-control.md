@@ -1,5 +1,5 @@
 ---
-title: Paramètres de l’outil de contrôle ToolTip | Documents Microsoft
+title: Paramètres de l’outil de contrôle ToolTip | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39de60d17dae5a6d7b2965350162117d049c29c8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6d0adfd1c7a7ae1e1f36fa8dd53610d19ad8e7b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951112"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379552"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Paramètres du contrôle d’info-bulle
-Vous pouvez définir le contrôle d’info-bulle ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) de sorte qu’il soit actif ou inactif. Quand vous le définissez comme étant actif, le contrôle d’info-bulle s’affiche quand le curseur se trouve sur un outil. Quand vous le définissez comme étant inactif, le contrôle d’info-bulle ne s’affiche pas, même si le curseur se trouve sur un outil. Appelez [Activate](../mfc/reference/ctooltipctrl-class.md#activate) pour activer ou désactiver un contrôle d’info-bulle.  
-  
- Vous pouvez définir une info-bulle active pour afficher l’info-bulle lorsque le curseur se trouve sur un outil ou non de fenêtre propriétaire du contrôle info-bulle est active ou inactive, en utilisant le style du contrôle. Si vous n’utilisez pas ce style, le contrôle d’info-bulle s’affiche quand la fenêtre de propriétaire de l’outil est active, mais pas quand elle est inactive.  
-  
- La plupart des applications contiennent des barres d’outils qui correspondent à des commandes de menu. Pour ces outils, il est pratique que le contrôle d’info-bulle affiche le même texte que l’élément de menu correspondant. Le système supprime automatiquement l’esperluette (&) caractères accélérateur de toutes les chaînes passées à un contrôle info-bulle, sauf si le contrôle a le style TTS_NOPREFIX.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+
+Vous pouvez définir le contrôle d’info-bulle ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) de sorte qu’il soit actif ou inactif. Quand vous le définissez comme étant actif, le contrôle d’info-bulle s’affiche quand le curseur se trouve sur un outil. Quand vous le définissez comme étant inactif, le contrôle d’info-bulle ne s’affiche pas, même si le curseur se trouve sur un outil. Appelez [Activate](../mfc/reference/ctooltipctrl-class.md#activate) pour activer ou désactiver un contrôle d’info-bulle.
+
+Vous pouvez définir une info-bulle active pour afficher l’info-bulle lorsque le curseur se trouve sur un outil, fenêtre de propriétaire du contrôle info-bulle est active ou inactive, en utilisant le style TTS_ALWAYSTIP ou non. Si vous n’utilisez pas ce style, le contrôle d’info-bulle s’affiche quand la fenêtre de propriétaire de l’outil est active, mais pas quand elle est inactive.
+
+La plupart des applications contiennent des barres d’outils qui correspondent à des commandes de menu. Pour ces outils, il est pratique que le contrôle d’info-bulle affiche le même texte que l’élément de menu correspondant. Le système supprime automatiquement l’esperluette (&) caractères accélérateur de toutes les chaînes passées à un contrôle info-bulle, sauf si le contrôle a le style TTS_NOPREFIX.
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Contrôles](../mfc/controls-mfc.md)
 

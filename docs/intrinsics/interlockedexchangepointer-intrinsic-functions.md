@@ -30,78 +30,83 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa2aa8fb79a0590c437699bcf887f2a7e1c1bb21
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 881d8dbdb7563197beaea66c4c83d7dbc7921a3f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705014"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390940"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer, fonctions intrinsèques
-**Section spécifique à Microsoft**  
-  
- Effectuer une opération d’échange atomique, qui copie l’adresse passée comme deuxième argument au premier et retourne l’adresse d’origine du premier.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void * _InterlockedExchangePointer(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_acq(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_rel(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_nf(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_HLEAcquire(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_HLERelease(  
-   void * volatile * Target,  
-   void * Value  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+**Section spécifique à Microsoft**
+
+Effectuer une opération d’échange atomique, qui copie l’adresse passée comme deuxième argument au premier et retourne l’adresse d’origine du premier.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void * _InterlockedExchangePointer(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_acq(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_rel(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_nf(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_HLEAcquire(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_HLERelease(
+   void * volatile * Target,
+   void * Value
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *Target*<br/>
-[in, out] Pointeur vers le pointeur vers la valeur à échanger. La fonction définit la valeur sur `Value` et retourne sa valeur précédente.  
-  
+[in, out] Pointeur vers le pointeur vers la valeur à échanger. La fonction définit la valeur sur `Value` et retourne sa valeur précédente.
+
 *Valeur*<br/>
-[in] Valeur à échanger avec la valeur vers laquelle pointe `Target`.  
-  
-## <a name="return-value"></a>Valeur de retour  
- La fonction renvoie la valeur initiale indiquée par `Target`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|Header|  
-|---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h>|  
-|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 avec prise en charge HLE|\<immintrin.h>|  
-  
- Sur l'architecture x86, `_InterlockedExchangePointer` est une macro qui appelle `_InterlockedExchange`.  
-  
-## <a name="remarks"></a>Notes  
- Sur un système 64 bits, les paramètres sont 64 bits et doivent être alignés sur les limites 64 bits ; dans le cas contraire, la fonction échoue. Sur un système 32 bits, les paramètres sont 32 bits et doivent être alignés sur les limites 32 bits. Pour plus d’informations, consultez [aligner](../cpp/align-cpp.md).  
-  
- Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d'une section critique. La fonction intrinsèque avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agit pas comme une barrière mémoire.  
-  
- Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les fonctions intrinsèques avec les suffixes `_HLEAcquire` et `_HLERelease` comprennent une indication pour le processeur qui peut accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des plateformes qui ne prennent pas en charge HLE, l'indication est ignorée.  
-  
- Ces routines sont disponibles seulement comme fonctions intrinsèques.  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
- [Conflits avec le compilateur x86](../build/conflicts-with-the-x86-compiler.md)
+[in] Valeur à échanger avec la valeur vers laquelle pointe `Target`.
+
+## <a name="return-value"></a>Valeur de retour
+
+La fonction renvoie la valeur initiale indiquée par `Target`.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|Header|
+|---------------|------------------|------------|
+|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 avec prise en charge HLE|\<immintrin.h>|
+
+Sur l'architecture x86, `_InterlockedExchangePointer` est une macro qui appelle `_InterlockedExchange`.
+
+## <a name="remarks"></a>Notes
+
+Sur un système 64 bits, les paramètres sont 64 bits et doivent être alignés sur les limites 64 bits ; dans le cas contraire, la fonction échoue. Sur un système 32 bits, les paramètres sont 32 bits et doivent être alignés sur les limites 32 bits. Pour plus d’informations, consultez [aligner](../cpp/align-cpp.md).
+
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d'une section critique. La fonction intrinsèque avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agit pas comme une barrière mémoire.
+
+Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les fonctions intrinsèques avec les suffixes `_HLEAcquire` et `_HLERelease` comprennent une indication pour le processeur qui peut accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des plateformes qui ne prennent pas en charge HLE, l'indication est ignorée.
+
+Ces routines sont disponibles seulement comme fonctions intrinsèques.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Conflits avec le compilateur x86](../build/conflicts-with-the-x86-compiler.md)

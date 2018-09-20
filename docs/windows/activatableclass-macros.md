@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5c97d69bbca685ca64245d5d784452029c14f73f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606985"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393624"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass, macros
 
@@ -53,13 +53,13 @@ ActivatableClassWithFactoryEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*nom de classe*  
+*nom de classe*<br/>
 Nom de la classe à créer.
 
-*fabrique*  
+*fabrique*<br/>
 Fabrique qui crée une instance de la classe spécifiée.
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Nom qui spécifie un sous-ensemble des fabriques de dans le module.
 
 ## <a name="remarks"></a>Notes

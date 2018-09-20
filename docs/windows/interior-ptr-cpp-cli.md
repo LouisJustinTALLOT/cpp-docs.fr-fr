@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2745ed1a17311f92fda6fc61743fed65882b952
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b7633c1fb695e99e7d653d2afd26014c2ffe9004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601106"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381905"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -54,16 +54,16 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 ### <a name="parameters"></a>Paramètres
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **const** ou **volatile** qualificateurs.
 
-*type*  
+*type*<br/>
 Le type de *initialiseur*.
 
-*var*  
+*var*<br/>
 Le nom de la **interior_ptr** variable.
 
-*initializer*  
+*initializer*<br/>
 Un membre d’un type référence, un élément d’un tableau managé ou tout autre objet que vous pouvez affecter à un pointeur natif.
 
 ### <a name="remarks"></a>Notes

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1193af2891a2cd3150fdb1cee9dd6957a1fe271
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 409d56699334d6e62294768f3c6b5f4890ea503c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704065"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379487"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/ UTF-8 (définir la Source et le fichier exécutable jeux de caractères UTF-8)
 
@@ -54,6 +54,6 @@ Par défaut, Visual Studio détecte une marque d’ordre d’octet pour détermi
 
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[/ EXECUTION-CharSet (définir l’exécution du jeu de caractères)](../../build/reference/execution-charset-set-execution-character-set.md)
-[/source-CharSet (définir jeu de caractères Source)](../../build/reference/source-charset-set-source-character-set.md)
- [ /Validate-CharSet (valider les caractères compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/ EXECUTION-CharSet (définir l’exécution du jeu de caractères)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source-charset (Définir le jeu de caractères source)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/validate-charset (Valider les caractères compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

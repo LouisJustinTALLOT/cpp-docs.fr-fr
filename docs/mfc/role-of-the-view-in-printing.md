@@ -1,5 +1,5 @@
 ---
-title: Rôle de la vue de l’impression | Documents Microsoft
+title: Rôle de la vue dans l’impression | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5735a718e353764ad8578548c965ae8a4dcd1843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c78756ea84df66b77f71d8f8ad8d0b9dfa1a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379253"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377524"
 ---
 # <a name="role-of-the-view-in-printing"></a>Rôle de la vue dans l'impression
-Votre vue joue également deux rôles importants dans l’impression son document associé.  
-  
- La vue :  
-  
--   Utilise le même [OnDraw](../mfc/reference/cview-class.md#ondraw) code pour dessiner sur l’imprimante à dessiner sur l’écran.  
-  
--   Gère la division des documents en pages pour l’impression.  
-  
- Pour plus d’informations sur l’impression et sur le rôle de la vue dans l’impression, consultez [l’impression et Aperçu avant impression](../mfc/printing-and-print-preview.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de vues](../mfc/using-views.md)
+
+Votre vue joue également deux rôles importants dans l’impression de son document associé.
+
+La vue :
+
+- Utilise le même [OnDraw](../mfc/reference/cview-class.md#ondraw) code pour dessiner sur l’imprimante que pour dessiner sur l’écran.
+
+- Gère les diviser le document en pages pour l’impression.
+
+Pour plus d’informations sur l’impression et sur le rôle de la vue dans l’impression, consultez [l’impression et Aperçu avant impression](../mfc/printing-and-print-preview.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de vues](../mfc/using-views.md)
 

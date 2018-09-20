@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d10c025c22523e6329f051fcfbe76988337992a2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318146"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396545"
 ---
 # <a name="type-forwarding-ccli"></a>Transfert de type (C++/CLI)
 
@@ -51,10 +51,10 @@ L’exemple de code suivant montre comment utiliser le transfert de type.
 
 ### <a name="parameters"></a>Paramètres
 
-*new*  
+*new*<br/>
 L’assembly dans lequel vous déplacez la définition de type.
 
-*type*  
+*type*<br/>
 Le type dont la définition vous déplacez dans un autre assembly.
 
 ### <a name="remarks"></a>Notes

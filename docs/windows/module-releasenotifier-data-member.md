@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15e52ce46236080d29f3fb2896e5233d4547f90c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a61b3c010ad733b13413dfca5ae7a4ef985850d7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598665"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387345"
 ---
 # <a name="modulereleasenotifier-data-member"></a>Module::releaseNotifier_, données de membre
 
@@ -41,4 +41,5 @@ ReleaseNotifier *releaseNotifier_;
 **Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
+
 [Module, classe](../windows/module-class.md)

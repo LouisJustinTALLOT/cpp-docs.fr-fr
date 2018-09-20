@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18377d423ab150773ef5438f39c8e74914b5c425
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317418"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389733"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026 : routines DDX et DDV
 
@@ -242,5 +242,5 @@ Chaque champ est délimitée par un caractère « ; ». Les champs et leur obj
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes techniques par numéro](../mfc/technical-notes-by-number.md)  
-[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)  
+[Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
+[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
