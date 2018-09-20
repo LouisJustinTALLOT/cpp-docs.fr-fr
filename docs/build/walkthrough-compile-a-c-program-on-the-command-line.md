@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1390259838302a56e58397afa79fa8c458b939
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2da1b645e85542631ce3e656ccaebdfbccf01137
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710331"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397896"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Procédure pas à pas : Compilation d’un programme C sur la ligne de commande
 
@@ -169,7 +169,7 @@ Le compilateur Visual C++ C est généralement compatible avec la norme ISO C99,
 
 ## <a name="see-also"></a>Voir aussi
 
-[Procédure pas à pas : Création d’un programme C++ Standard (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)
-[référence du langage C](../c-language/c-language-reference.md)<br/>
+[Procédure pas à pas : création d’un programme C++ standard (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
+[Informations de référence sur le langage C](../c-language/c-language-reference.md)<br/>
 [Génération de programmes C/C++](../build/building-c-cpp-programs.md)<br/>
 [Compatibilité](../c-runtime-library/compatibility.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106806"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446606"
 ---
 # <a name="event-maps"></a>Tables d'événements
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Paramètres
 
-*theClass*  
+*theClass*<br/>
 Spécifie le nom de la classe de contrôle dont l’événement mapper.
 
-*classe de base*  
+*classe de base*<br/>
 Spécifie le nom de la classe de base de *theClass*.
 
 ### <a name="remarks"></a>Notes
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Paramètres
 
-*pszName*  
+*pszName*<br/>
 Nom de l'événement.
 
-*pfnFire*  
+*pfnFire*<br/>
 Le nom de l’événement de fonction de déclenchement.
 
-*vtsParams*  
+*vtsParams*<br/>
 Une liste séparée par des espaces d’une ou plusieurs constantes spécifiant la liste des paramètres de la fonction.
 
 ### <a name="remarks"></a>Notes
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszName*  
+*pszName*<br/>
 Nom de l'événement.
 
-*DISPID*  
+*DISPID*<br/>
 ID de distribution utilisé par le contrôle lors du déclenchement de l’événement.
 
-*pfnFire*  
+*pfnFire*<br/>
 Le nom de l’événement de fonction de déclenchement.
 
-*vtsParams*  
+*vtsParams*<br/>
 Une liste de variables de paramètres transmis au conteneur du contrôle lorsque l’événement est déclenché.
 
 ### <a name="remarks"></a>Notes
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>Paramètres
 
-*iVerb*  
+*iVerb*<br/>
 Index du verbe standard pour le verbe qui est substitué.
 
-*memberFxn*  
+*memberFxn*<br/>
 La fonction appelée par le framework lorsque le verbe est appelé.
 
 ### <a name="remarks"></a>Notes

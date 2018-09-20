@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725034"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438572"
 ---
 # <a name="errlook-reference"></a>Référence d'ERRLOOK
 
@@ -30,14 +30,19 @@ Touches de l’accélérateur pour copier (CTRL + C), Couper (CTRL + X) et Colle
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Valeur de contrôle Edit](../../build/reference/value-edit-control.md) décrit le contrôle d’édition de la valeur dans ERRLOOK.
+[Valeur, contrôle d’édition](../../build/reference/value-edit-control.md)<br/>
+Décrit le contrôle d’édition de la valeur dans ERRLOOK.
 
-[Contrôle de modifier des Message d’erreur](../../build/reference/error-message-edit-control.md) décrit le contrôle de modification du Message d’erreur dans ERRLOOK.
+[Message d’erreur, contrôle d’édition](../../build/reference/error-message-edit-control.md)<br/>
+Décrit le contrôle de modification du Message d’erreur dans ERRLOOK.
 
-[Modules (bouton)](../../build/reference/modules-button.md) décrit le bouton Modules dans ERRLOOK.
+[Modules, bouton](../../build/reference/modules-button.md)<br/>
+Décrit le bouton Modules dans ERRLOOK.
 
-[Bouton Rechercher](../../build/reference/look-up-button.md) décrit le bouton Rechercher dans ERRLOOK.
+[Rechercher, bouton](../../build/reference/look-up-button.md)<br/>
+Décrit le bouton Rechercher dans ERRLOOK.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Outils de génération C/C++](../../build/reference/c-cpp-build-tools.md) fournit des liens vers des rubriques décrivant le C/C++ générer des outils fournis dans Visual C++.
+[Outils de génération C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+Fournit des liens vers des rubriques décrivant le C/C++ créer des outils fournis dans Visual C++.

@@ -24,35 +24,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1a3d4e224b1bcbc9a808387860a07c8ec85a0a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ae7773d46d93f0f2c5a237f833da4c81679084c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213598"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414379"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Traitement des messages de notification dans les contrôles de sélecteur de date et heure
-Quand les utilisateurs interagissent avec la date et le contrôle de sélecteur de temps, le contrôle (`CDateTimeCtrl`) envoie des messages de notification à sa fenêtre parente, généralement un objet d’affichage ou de la boîte de dialogue. Vous devez gérer ces messages si vous voulez faire quelque chose en réponse. Par exemple, lorsque l’utilisateur ouvre le sélecteur de date et d’heure pour afficher le contrôle de calendrier mensuel incorporé, la notification DTN_DROPDOWN est envoyée.  
-  
- Utilisez la fenêtre Propriétés pour ajouter des gestionnaires de notification à la classe parente pour les messages que vous voulez implémenter.  
-  
- La liste suivante décrit les différentes notifications envoyées par le contrôle de sélecteur de date et d’heure.  
-  
--   DTN_DROPDOWN Notifie le parent que le contrôle month calendar incorporé est sur le point d’être affiché. Cette notification est envoyée uniquement lorsque le style DTS_UPDOWN n’a pas été défini. Pour plus d’informations sur cette notification, consultez [contrôle Month Calendar incorporé de l’accès à](../mfc/accessing-the-embedded-month-calendar-control.md).  
-  
--   DTN_CLOSEUP notifie le parent que le contrôle month calendar incorporé est sur le point d’être fermé. Cette notification est envoyée uniquement lorsque le style DTS_UPDOWN n’a pas été défini.  
-  
--   DTN_DATETIMECHANGE notifie le parent qu’une modification a eu lieu dans le contrôle.  
-  
--   DTN_FORMAT Notifie le parent que le texte est nécessaire pour être affiché dans un champ de rappel. Pour plus d’informations sur cette notification et les champs de rappel, consultez [à l’aide des champs de rappel dans une Date et d’un contrôle de sélecteur de temps](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).  
-  
--   DTN_FORMATQUERY demande au parent de fournir la taille maximale autorisée de la chaîne qui sera affichée dans un champ de rappel. La gestion de cette notification permet le contrôle pour afficher correctement la sortie à tout moment, réduire le scintillement dans l’affichage du contrôle. Pour plus d’informations sur cette notification, consultez [à l’aide des champs de rappel dans une Date et d’un contrôle de sélecteur de temps](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).  
-  
--   DTN_USERSTRING Notifie le parent que l’utilisateur a fini de modifier le contenu du contrôle de sélecteur de date et d’heure. Cette notification est envoyée uniquement lorsque le style DTS_APPCANPARSE a été défini.  
-  
--   DTN_WMKEYDOWN Notifie le parent lorsque l’utilisateur tape dans un champ de rappel. Gérer cette notification pour émuler la même réponse clavier pris en charge pour les champs non rappel dans un contrôle de sélecteur de date et d’heure. Pour plus d’informations sur cette notification, consultez [prenant en charge les champs de rappel dans un contrôle DTP](/windows/desktop/Controls/date-and-time-picker-controls) dans le SDK Windows.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+
+Quand les utilisateurs interagissent avec la date et le contrôle de sélecteur de temps, le contrôle (`CDateTimeCtrl`) envoie des messages de notification à sa fenêtre parente, généralement un objet d’affichage ou de la boîte de dialogue. Vous devez gérer ces messages si vous voulez faire quelque chose en réponse. Par exemple, lorsque l’utilisateur ouvre le sélecteur de date et d’heure pour afficher le contrôle de calendrier mensuel incorporé, la notification DTN_DROPDOWN est envoyée.
+
+Utilisez la fenêtre Propriétés pour ajouter des gestionnaires de notification à la classe parente pour les messages que vous voulez implémenter.
+
+La liste suivante décrit les différentes notifications envoyées par le contrôle de sélecteur de date et d’heure.
+
+- DTN_DROPDOWN Notifie le parent que le contrôle month calendar incorporé est sur le point d’être affiché. Cette notification est envoyée uniquement lorsque le style DTS_UPDOWN n’a pas été défini. Pour plus d’informations sur cette notification, consultez [contrôle Month Calendar incorporé de l’accès à](../mfc/accessing-the-embedded-month-calendar-control.md).
+
+- DTN_CLOSEUP notifie le parent que le contrôle month calendar incorporé est sur le point d’être fermé. Cette notification est envoyée uniquement lorsque le style DTS_UPDOWN n’a pas été défini.
+
+- DTN_DATETIMECHANGE notifie le parent qu’une modification a eu lieu dans le contrôle.
+
+- DTN_FORMAT Notifie le parent que le texte est nécessaire pour être affiché dans un champ de rappel. Pour plus d’informations sur cette notification et les champs de rappel, consultez [à l’aide des champs de rappel dans une Date et d’un contrôle de sélecteur de temps](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+
+- DTN_FORMATQUERY demande au parent de fournir la taille maximale autorisée de la chaîne qui sera affichée dans un champ de rappel. La gestion de cette notification permet le contrôle pour afficher correctement la sortie à tout moment, réduire le scintillement dans l’affichage du contrôle. Pour plus d’informations sur cette notification, consultez [à l’aide des champs de rappel dans une Date et d’un contrôle de sélecteur de temps](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+
+- DTN_USERSTRING Notifie le parent que l’utilisateur a fini de modifier le contenu du contrôle de sélecteur de date et d’heure. Cette notification est envoyée uniquement lorsque le style DTS_APPCANPARSE a été défini.
+
+- DTN_WMKEYDOWN Notifie le parent lorsque l’utilisateur tape dans un champ de rappel. Gérer cette notification pour émuler la même réponse clavier pris en charge pour les champs non rappel dans un contrôle de sélecteur de date et d’heure. Pour plus d’informations sur cette notification, consultez [prenant en charge les champs de rappel dans un contrôle DTP](/windows/desktop/Controls/date-and-time-picker-controls) dans le SDK Windows.
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
+[Contrôles](../mfc/controls-mfc.md)
 

@@ -1,5 +1,5 @@
 ---
-title: marshal_context::marshal_context | Documents Microsoft
+title: marshal_context::marshal_context | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,34 +20,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1e8838864c4ec1c6414401608b848cb12b01c16e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02f238a8d9b9d484073794b9a75888325d95107b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33140118"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399442"
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
-Construit un `marshal_context` objet à utiliser pour la conversion de données entre les types de données managés et natifs.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-marshal_context();  
-```  
-  
-## <a name="remarks"></a>Notes  
- Certaines conversions de données nécessitent un contexte de marshaler. Consultez [vue d’ensemble du Marshaling dans C++](../dotnet/overview-of-marshaling-in-cpp.md) pour plus d’informations sur les traductions nécessitent un contexte et le marshaling du fichier doit être inclus dans votre application.  
-  
-## <a name="example"></a>Exemple  
- Consultez l’exemple de [marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md).  
-  
-## <a name="requirements"></a>Spécifications  
- **Fichier d’en-tête :** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, ou \<msclr\marshal_atl.h >  
-  
- **Namespace :** msclr::interop  
-  
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du Marshaling dans C++](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal_as](../dotnet/marshal-as.md)   
- [marshal_context Class](../dotnet/marshal-context-class.md)
+
+Construit un `marshal_context` objet à utiliser pour la conversion des données entre les types de données managés et natifs.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+marshal_context();
+```
+
+## <a name="remarks"></a>Notes
+
+Certaines conversions de données nécessitent un contexte de marshaler. Consultez [vue d’ensemble du Marshaling dans C++](../dotnet/overview-of-marshaling-in-cpp.md) pour plus d’informations sur les traductions nécessitent un contexte et quel fichier marshaling doit être inclus dans votre application.
+
+## <a name="example"></a>Exemple
+
+Consultez l’exemple de [marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md).
+
+## <a name="requirements"></a>Configuration requise
+
+**Fichier d’en-tête :** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, ou \<msclr\marshal_atl.h >
+
+**Namespace :** msclr::interop
+
+## <a name="see-also"></a>Voir aussi
+
+[Vue d’ensemble du marshaling en C++](../dotnet/overview-of-marshaling-in-cpp.md)<br/>
+[marshal_as](../dotnet/marshal-as.md)<br/>
+[marshal_context Class](../dotnet/marshal-context-class.md)

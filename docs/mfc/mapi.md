@@ -1,5 +1,5 @@
 ---
-title: MAPI | Documents Microsoft
+title: MAPI | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b2ca182da3a0300604415b790c0aba138c8fd7a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930672"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439105"
 ---
 # <a name="mapi"></a>MAPI
-Cet article décrit le Microsoft MAPI Messaging Application Programming Interface () pour les développeurs d’applications client message. MFC prend en charge un sous-ensemble de MAPI dans la classe `CDocument` mais n’encapsule ne pas l’intégralité de l’API. Pour plus d’informations, consultez [prise en charge MAPI dans MFC](../mfc/mapi-support-in-mfc.md).  
-  
- MAPI est un ensemble de fonctions qui utilisent des applications de messagerie et prenant en charge les messages pour créer, manipuler, transférer et stocker des messages électroniques. Elle offre aux développeurs d’applications les outils pour définir l’objectif et le contenu des messages électroniques et la flexibilité à la gestion des messages électroniques stockés. MAPI fournit également une interface commune que les développeurs d’applications peuvent utiliser pour créer la messagerie et les applications prenant en charge les messages indépendamment du système de messagerie sous-jacent.  
-  
- Les clients de messagerie fournissent une interface humaine pour l’interaction avec Microsoft Windows Messaging System (WMS). Cette interaction comprend les demandes de services à partir des fournisseurs compatible MAPI tels que les banques de messages et de carnets d’adresses.  
-  
- Pour plus d’informations sur MAPI, consultez les articles sous Guide dans Win32 MAPI (Messaging) du Kit de développement Windows.  
-  
-## <a name="in-this-section"></a>Dans cette section  
- [Prise en charge MAPI dans les MFC](../mfc/mapi-support-in-mfc.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)   
- [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)   
- [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
+
+Cet article décrit le Microsoft MAPI Messaging Application Programming Interface () pour les développeurs d’applications client message. MFC fournit la prise en charge pour un sous-ensemble de MAPI dans la classe `CDocument` mais n’encapsule ne pas l’ensemble de l’API. Pour plus d’informations, consultez [prise en charge MAPI dans MFC](../mfc/mapi-support-in-mfc.md).
+
+MAPI est un ensemble de fonctions que les applications de messagerie et de messagerie prenant en charge utilisent pour créer, manipuler, transférer et stocker des messages électroniques. Il offre aux développeurs d’applications les outils pour définir l’objectif et le contenu des messages électroniques et la flexibilité à la gestion des messages électroniques stockés. MAPI fournit également une interface commune que les développeurs d’applications peuvent utiliser pour créer la messagerie et les applications prenant en charge la messagerie indépendantes du système de messagerie sous-jacent.
+
+Les clients de messagerie fournissent une interface humaine pour l’interaction avec Microsoft Windows Messaging System (WMS). Cette interaction comprend les demandes de services à partir des fournisseurs compatible MAPI tels que les banques de messages et les carnets d’adresses.
+
+Pour plus d’informations sur MAPI, consultez les articles sous Guide dans Win32 MAPI (Messaging) du Kit de développement Windows.
+
+## <a name="in-this-section"></a>Dans cette section
+
+[Prise en charge MAPI dans les MFC](../mfc/mapi-support-in-mfc.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)<br/>
+[CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)<br/>
+[COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
 

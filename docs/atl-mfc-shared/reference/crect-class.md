@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e54ef7a173dca0e261143af788e95ed3347d20d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b0abe16bc12052601f86cb18677b52af9b40ad15
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757176"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428490"
 ---
 # <a name="crect-class"></a>CRect, classe
 
@@ -1586,7 +1586,7 @@ int nWid = rect.Width();
 ```
 ## <a name="see-also"></a>Voir aussi
 
-[CPoint, classe](cpoint-class.md)   
-[CSize, classe](csize-class.md)   
+[CPoint, classe](cpoint-class.md)<br/>
+[CSize, classe](csize-class.md)<br/>
 [RECT](../../mfc/reference/rect-structure1.md)
 

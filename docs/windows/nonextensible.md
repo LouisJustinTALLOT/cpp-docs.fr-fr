@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f24aa8b1aa6b4e2e996ec22062263f785d730d0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f40fb890166417a42c1893d99079a57b8875320
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222578"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411350"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -74,5 +74,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
 [Attributs d’interface](../windows/interface-attributes.md)  

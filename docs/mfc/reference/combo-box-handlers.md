@@ -1,5 +1,5 @@
 ---
-title: Gestionnaires de zone de liste déroulante | Documents Microsoft
+title: Gestionnaires de zone de liste déroulante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -37,30 +37,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1dcd48bfadcc4ed5a4b64fd0dcdee334c1f1b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5751fbdd4bff0cf3d42231ad00bef0c3483ccfb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368072"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424259"
 ---
 # <a name="combo-box-handlers"></a>Gestionnaires de zone de liste déroulante
-Les entrées de mappage suivantes correspondent aux prototypes de fonction.  
-  
-|Entrée de mappage|Prototype de fonction|  
-|---------------|------------------------|  
-|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|afx_msg, void memberFxn)|  
-|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|afx_msg, void memberFxn () ;|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Tables des messages](../../mfc/reference/message-maps-mfc.md)
+
+Les entrées de mappage suivantes correspondent aux prototypes de fonction.
+
+|Entrée de mappage|Prototype de fonction|
+|---------------|------------------------|
+|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|afx_msg, void memberFxn)|
+|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|void memberFxn d’afx_msg () ;|
+
+## <a name="see-also"></a>Voir aussi
+
+[Tables des messages](../../mfc/reference/message-maps-mfc.md)
 

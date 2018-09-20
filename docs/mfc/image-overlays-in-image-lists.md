@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4369fe312669f75eb8217be7a6a09c4287f7cc8b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c4052e06fe8aae1d149c3c09e88715d8270b361
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210711"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426560"
 ---
 # <a name="image-overlays-in-image-lists"></a>Superpositions d'images dans les listes d'images
-Chaque liste d’images ([CImageList](../mfc/reference/cimagelist-class.md)) inclut une liste d’images à utiliser comme masques de superposition. Un masque de « superposition » est une image dessinée en toute transparence sur une autre image. N’importe quelle image peut être utilisée comme un masque de superposition. Vous pouvez spécifier jusqu'à quatre masques de superposition par liste d’images.  
-  
- Vous ajoutez l’index d’une image à la liste des masques de superposition à l’aide de la [fonction membre SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) fonction membre, l’index d’une image et l’index d’un masque de superposition. Notez que les index pour les masques de superposition sont basé sur un lieu de 0.  
-  
- Vous dessinez un masque de superposition sur une image à l’aide d’un seul appel à `Draw`. Les paramètres comprennent l’index de l’image à dessiner et l’index d’un masque de superposition. Vous devez utiliser le [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) macro pour spécifier l’index du masque de superposition. Vous pouvez également spécifier une image de superposition lors de l’appel le [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) fonction membre.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de CImageList](../mfc/using-cimagelist.md)   
- [Contrôles](../mfc/controls-mfc.md)
+
+Chaque liste d’images ([CImageList](../mfc/reference/cimagelist-class.md)) inclut une liste d’images à utiliser comme masques de superposition. Un masque de « superposition » est une image dessinée en toute transparence sur une autre image. N’importe quelle image peut être utilisée comme un masque de superposition. Vous pouvez spécifier jusqu'à quatre masques de superposition par liste d’images.
+
+Vous ajoutez l’index d’une image à la liste des masques de superposition à l’aide de la [fonction membre SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) fonction membre, l’index d’une image et l’index d’un masque de superposition. Notez que les index pour les masques de superposition sont basé sur un lieu de 0.
+
+Vous dessinez un masque de superposition sur une image à l’aide d’un seul appel à `Draw`. Les paramètres comprennent l’index de l’image à dessiner et l’index d’un masque de superposition. Vous devez utiliser le [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) macro pour spécifier l’index du masque de superposition. Vous pouvez également spécifier une image de superposition lors de l’appel le [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) fonction membre.
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de CImageList](../mfc/using-cimagelist.md)<br/>
+[Contrôles](../mfc/controls-mfc.md)
 

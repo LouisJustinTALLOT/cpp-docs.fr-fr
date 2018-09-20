@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 096658359ba46744a233d73bba52823dd9997841
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2f63a29e416a0b3331cdc9e5a2153435d765aaa0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315728"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407724"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item-c"></a>Association d’une touche accélérateur à un élément de Menu (C++)
 
@@ -33,5 +33,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur d’accélérateurs](../windows/accelerator-editor.md)  
+[Éditeur d’accélérateurs](../windows/accelerator-editor.md)<br/>
 [Éditeurs de ressources](../windows/resource-editors.md)

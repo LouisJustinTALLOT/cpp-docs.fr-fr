@@ -21,161 +21,172 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 03bf785ddd5885558045f0394870e114b81e0cfe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053646"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400456"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source, classe
-La classe `cancellation_token_source` représente la capacité d'annulation d'une opération annulable.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+La classe `cancellation_token_source` représente la capacité d'annulation d'une opération annulable.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class cancellation_token_source;
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[cancellation_token_source](#ctor)|Surchargé. Construit une nouvelle classe `cancellation_token_source`. La source peut être utilisée pour signaler l'annulation d'une opération annulable.|  
-|[~ cancellation_token_source, destructeur](#dtor)||  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[cancel](#cancel)|Annule le jeton. N'importe quel `task_group`, `structured_task_group` ou `task` qui utilise le jeton sera annulé lors de cet appel et lèvera une exception au point d'interruption suivant.|  
-|[create_linked_source](#create_linked_source)|Surchargé. Crée une classe `cancellation_token_source` qui est annulée lorsque le jeton fourni est annulé.|  
-|[get_token](#get_token)|Retourne un jeton d'annulation associé à cette source. Le jeton retourné peut être interrogé pour l'annulation ou fournir un rappel si et quand l'annulation se produit.|  
-  
-### <a name="public-operators"></a>Op&#233;rateurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[operator!=](#operator_neq)||  
-|[operator=](#operator_eq)||  
-|[operator==](#operator_eq_eq)||  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `cancellation_token_source`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** pplcancellation_token.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="dtor"></a> ~ cancellation_token_source 
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[cancellation_token_source](#ctor)|Surchargé. Construit une nouvelle classe `cancellation_token_source`. La source peut être utilisée pour signaler l'annulation d'une opération annulable.|
+|[~ cancellation_token_source, destructeur](#dtor)||
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[cancel](#cancel)|Annule le jeton. N'importe quel `task_group`, `structured_task_group` ou `task` qui utilise le jeton sera annulé lors de cet appel et lèvera une exception au point d'interruption suivant.|
+|[create_linked_source](#create_linked_source)|Surchargé. Crée une classe `cancellation_token_source` qui est annulée lorsque le jeton fourni est annulé.|
+|[get_token](#get_token)|Retourne un jeton d'annulation associé à cette source. Le jeton retourné peut être interrogé pour l'annulation ou fournir un rappel si et quand l'annulation se produit.|
+
+### <a name="public-operators"></a>Op&#233;rateurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[operator!=](#operator_neq)||
+|[operator=](#operator_eq)||
+|[operator==](#operator_eq_eq)||
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`cancellation_token_source`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** pplcancellation_token.h
+
+**Espace de noms :** concurrency
+
+##  <a name="dtor"></a> ~ cancellation_token_source
 
 ```
 ~cancellation_token_source();
-```  
-  
-##  <a name="cancel"></a> Annuler 
+```
 
- Annule le jeton. N'importe quel `task_group`, `structured_task_group` ou `task` qui utilise le jeton sera annulé lors de cet appel et lèvera une exception au point d'interruption suivant.  
-  
+##  <a name="cancel"></a> Annuler
+
+Annule le jeton. N'importe quel `task_group`, `structured_task_group` ou `task` qui utilise le jeton sera annulé lors de cet appel et lèvera une exception au point d'interruption suivant.
+
 ```
 void cancel() const;
-```  
-  
-##  <a name="ctor"></a> cancellation_token_source 
+```
 
- Construit une nouvelle classe `cancellation_token_source`. La source peut être utilisée pour signaler l'annulation d'une opération annulable.  
-  
+##  <a name="ctor"></a> cancellation_token_source
+
+Construit une nouvelle classe `cancellation_token_source`. La source peut être utilisée pour signaler l'annulation d'une opération annulable.
+
 ```
 cancellation_token_source();
 
 cancellation_token_source(const cancellation_token_source& _Src);
 
 cancellation_token_source(cancellation_token_source&& _Src);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*_Src*<br/>
-Objet à copier ou déplacer.  
-  
-##  <a name="create_linked_source"></a> create_linked_source 
+```
 
- Crée une classe `cancellation_token_source` qui est annulée lorsque le jeton fourni est annulé.  
-  
+### <a name="parameters"></a>Paramètres
+
+*_Src*<br/>
+Objet à copier ou déplacer.
+
+##  <a name="create_linked_source"></a> create_linked_source
+
+Crée une classe `cancellation_token_source` qui est annulée lorsque le jeton fourni est annulé.
+
 ```
 static cancellation_token_source create_linked_source(
     cancellation_token& _Src);
 
 template<typename _Iter>
 static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Iter*<br/>
 Type d’itérateur.
 
 *_Src*<br/>
-Jeton dont l'annulation provoque l'annulation de la source du jeton retourné. Notez que la source du jeton retourné peut également être annulée indépendamment de la source contenue dans ce paramètre.  
-  
-*_Commencer l'*<br/>
-Itérateur de bibliothèque Standard C++ correspondant au début de la plage de jetons à écouter pour l’annulation.  
-  
-*_Mettre fin à*<br/>
-Itérateur de bibliothèque C++ Standard correspondant à la fin de la plage de jetons à écouter pour l’annulation.  
-  
-### <a name="return-value"></a>Valeur de retour  
- `cancellation_token_source` qui est annulée lorsque le jeton fourni par le paramètre `_Src` est annulé.  
-  
-##  <a name="get_token"></a> get_token 
+Jeton dont l'annulation provoque l'annulation de la source du jeton retourné. Notez que la source du jeton retourné peut également être annulée indépendamment de la source contenue dans ce paramètre.
 
- Retourne un jeton d'annulation associé à cette source. Le jeton retourné peut être interrogé pour l'annulation ou fournir un rappel si et quand l'annulation se produit.  
-  
+*_Commencer l'*<br/>
+Itérateur de bibliothèque Standard C++ correspondant au début de la plage de jetons à écouter pour l’annulation.
+
+*_Mettre fin à*<br/>
+Itérateur de bibliothèque C++ Standard correspondant à la fin de la plage de jetons à écouter pour l’annulation.
+
+### <a name="return-value"></a>Valeur de retour
+
+`cancellation_token_source` qui est annulée lorsque le jeton fourni par le paramètre `_Src` est annulé.
+
+##  <a name="get_token"></a> get_token
+
+Retourne un jeton d'annulation associé à cette source. Le jeton retourné peut être interrogé pour l'annulation ou fournir un rappel si et quand l'annulation se produit.
+
 ```
 cancellation_token get_token() const;
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Jeton d'annulation associé à cette source.  
-  
-##  <a name="operator_neq"></a> opérateur ! = 
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Jeton d'annulation associé à cette source.
+
+##  <a name="operator_neq"></a> opérateur ! =
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Src*<br/>
 Opérande.
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-##  <a name="operator_eq"></a> opérateur = 
+
+### <a name="return-value"></a>Valeur de retour
+
+##  <a name="operator_eq"></a> opérateur =
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
 
 cancellation_token_source& operator= (cancellation_token_source&& _Src);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Src*<br/>
 Opérande.
 
-### <a name="return-value"></a>Valeur de retour  
-  
-##  <a name="operator_eq_eq"></a> opérateur == 
+### <a name="return-value"></a>Valeur de retour
+
+##  <a name="operator_eq_eq"></a> opérateur ==
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Src*<br/>
 Opérande.
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)
+
+### <a name="return-value"></a>Valeur de retour
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)

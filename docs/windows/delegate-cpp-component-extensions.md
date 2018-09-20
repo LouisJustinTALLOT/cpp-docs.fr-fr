@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602932"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432403"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (extensions du composant C++)
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Paramètres
 
-*access*  
+*access*<br/>
 (facultatif) L’accessibilité du délégué, qui peut être **public** (la valeur par défaut) ou **privé**. Le prototype de fonction peut également être qualifié avec le **const** ou **volatile** mots clés.
 
-*type de retour*  
+*type de retour*<br/>
 Le type de retour du prototype de fonction.
 
-*identificateur de type de délégué*  
+*identificateur de type de délégué*<br/>
 Le nom du type délégué déclaré.
 
-*Paramètres*  
+*Paramètres*<br/>
 (Facultatif) Les types et les identificateurs du prototype de fonction.
 
 ### <a name="remarks"></a>Notes
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>Paramètres
 
-*access*  
+*access*<br/>
 (facultatif) L’accessibilité du délégué en dehors de l’assembly peut être public ou privé.  La valeur par défaut est privé.  À l’intérieur d’une classe, un délégué peut avoir n’importe quelle accessibilité.
 
-*function_declaration*  
+*function_declaration*<br/>
 La signature de la fonction qui peut être liée au délégué. Le type de retour d’un délégué peut être n’importe quel type managé. Pour des raisons de l’interopérabilité, il est recommandé que le type de retour d’un délégué d’être un type CLS.
 
 Pour définir un délégué indépendant, le premier paramètre dans *function_declaration* doivent être du type de la **cela** pointeur pour l’objet.

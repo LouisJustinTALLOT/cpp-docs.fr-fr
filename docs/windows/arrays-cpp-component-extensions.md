@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714445"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402848"
 ---
 # <a name="arrays-c-component-extensions"></a>Tableaux (extensions du composant C++)
 
@@ -65,16 +65,16 @@ Le premier exemple de la syntaxe de la **ref nouvelle** mot clé d’agrégation
 *qualificateurs*<br/>
 (Facultatif) Un ou plusieurs de ces spécificateurs de classe de stockage : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statique](../cpp/static-members-cpp.md).
 
-*type de tableau*  
+*type de tableau*<br/>
 Le type de la variable de tableau. Les types valides sont les classes Windows Runtime et types fondamentaux, les classes ref structs, les classes de valeur et les structures et des pointeurs natifs (`type*`).
 
 *rank*<br/>
 (Facultatif) Le nombre de dimensions du tableau. Doit être 1.
 
-*identifier*  
+*identifier*<br/>
 Le nom de la variable de tableau.
 
-*type de l’initialisation*  
+*type de l’initialisation*<br/>
 Le type des valeurs qui initialiser le tableau. En règle générale, *de type tableau* et *-type d’initialisation* sont du même type. Toutefois, les types peuvent être différents s’il existe une conversion à partir de *-type d’initialisation* à *de type tableau*— par exemple, si *-type d’initialisation* est dérivée de *de type tableau*.
 
 *liste d’initialisation*<br/>
@@ -121,19 +121,19 @@ Le premier exemple de la syntaxe de la **gcnew** mot clé pour allouer un tablea
 *qualificateurs*<br/>
 (Facultatif) Un ou plusieurs de ces spécificateurs de classe de stockage : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statique](../cpp/static-members-cpp.md).
 
-*type de tableau*  
+*type de tableau*<br/>
 Le type de la variable de tableau. Les types valides sont les classes Windows Runtime et les types fondamentaux, les classes ref et les structs, valeur classes et structs, les pointeurs natifs (`type*`) et les types POD (anciennes données brutes) natifs.
 
 *rank*<br/>
 (Facultatif) Le nombre de dimensions du tableau. La valeur par défaut est 1 ; la valeur maximale est 32. Chaque dimension du tableau lui-même est un tableau.
 
-*identifier*  
+*identifier*<br/>
 Le nom de la variable de tableau.
 
-*type de l’initialisation*  
+*type de l’initialisation*<br/>
 Le type des valeurs qui initialiser le tableau. En règle générale, *de type tableau* et *-type d’initialisation* sont du même type. Toutefois, les types peuvent être différents s’il existe une conversion à partir de *-type d’initialisation* à *de type tableau*— par exemple, si *-type d’initialisation* est dérivée de *de type tableau*.
 
-*liste de taille de rang*  
+*liste de taille de rang*<br/>
 Une liste délimitée par des virgules de la taille de chaque dimension du tableau. Ou bien, si le *-liste d’initialisation* paramètre est spécifié, le compilateur peut déduire la taille de chaque dimension et *liste de taille de rang* peut être omis.
 
 *liste d’initialisation*<br/>

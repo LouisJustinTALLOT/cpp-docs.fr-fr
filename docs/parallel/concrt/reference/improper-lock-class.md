@@ -18,58 +18,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 655776543a0c368bf5d13719d10b507c941a0fa9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106192"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404694"
 ---
 # <a name="improperlock-class"></a>improper_lock, classe
-Cette classe décrit une exception levée quand un verrou est incorrectement acquis.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Cette classe décrit une exception levée quand un verrou est incorrectement acquis.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class improper_lock : public std::exception;
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[improper_lock](#ctor)|Surchargé. Construit un objet `improper_lock exception`.|  
-  
-## <a name="remarks"></a>Notes  
- En règle générale, cette exception est levée lorsqu’une tentative est faite pour acquérir un verrou non réentrant de manière récursive sur le même contexte.  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `exception`  
-  
- `improper_lock`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** concrt.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="ctor"></a> improper_lock 
+```
 
- Construit un objet `improper_lock exception`.  
-  
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[improper_lock](#ctor)|Surchargé. Construit un objet `improper_lock exception`.|
+
+## <a name="remarks"></a>Notes
+
+En règle générale, cette exception est levée lorsqu’une tentative est faite pour acquérir un verrou non réentrant de manière récursive sur le même contexte.
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`exception`
+
+`improper_lock`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** concrt.h
+
+**Espace de noms :** concurrency
+
+##  <a name="ctor"></a> improper_lock
+
+Construit un objet `improper_lock exception`.
+
 ```
 explicit _CRTIMP improper_lock(_In_z_ const char* _Message) throw();
 
 improper_lock() throw();
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Message*<br/>
-Message descriptif de l'erreur.  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)   
- [critical_section, classe](critical-section-class.md)   
- [reader_writer_lock, classe](reader-writer-lock-class.md)
+Message descriptif de l'erreur.
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[critical_section, classe](critical-section-class.md)<br/>
+[reader_writer_lock, classe](reader-writer-lock-class.md)

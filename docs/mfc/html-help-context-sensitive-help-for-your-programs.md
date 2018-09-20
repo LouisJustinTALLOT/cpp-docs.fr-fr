@@ -1,5 +1,5 @@
 ---
-title: 'Aide HTML : Aide contextuelle pour vos programmes | Documents Microsoft'
+title: 'HTML : Aide contextuelle pour vos programmes | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d698a0350a8a61f4247f79b40f3f070c4885eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21b4d93d5a6d7a31f7f305f8530f734f023753d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346313"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406835"
 ---
 # <a name="html-help-context-sensitive-help-for-your-programs"></a>Aide HTML : aide contextuelle pour vos programmes
+
 > [!IMPORTANT]
->  HTML (aide) n’est pas pris en charge dans cette version de MFC.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)
+>  Aide HTML n’est pas pris en charge dans cette version de MFC.
+
+## <a name="see-also"></a>Voir aussi
+
+[Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)

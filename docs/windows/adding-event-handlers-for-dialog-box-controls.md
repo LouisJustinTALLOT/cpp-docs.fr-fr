@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 156908a1611f8a1c8b22df61e6b789468753d25d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317054"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443083"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue (C++)
 
@@ -76,11 +76,11 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Événements de contrôle par défaut](../windows/default-control-events.md)  
-[Définition de variables membres pour les contrôles de boîte de dialogue](../windows/defining-member-variables-for-dialog-controls.md)  
-[Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)  
-[Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)  
-[Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)  
-[Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)  
-[Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Événements de contrôle par défaut](../windows/default-control-events.md)<br/>
+[Définition de variables membres pour les contrôles de boîte de dialogue](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)<br/>
+[Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

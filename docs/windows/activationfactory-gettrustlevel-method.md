@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfec8bfa6940fd4a702334f0d3068c6d936ea8c1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: eba02bea09784e3431b3697eb9ac9a47de978348
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607312"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424558"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel, méthode
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Paramètres
 
-*trustLvl*  
+*trustLvl*<br/>
 Lorsque cette opération est terminée, le niveau de confiance du runtime de classe qui le **ActivationFactory** instancie.
 
 ## <a name="return-value"></a>Valeur de retour

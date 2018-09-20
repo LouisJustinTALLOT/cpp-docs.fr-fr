@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55a4d7487be5b3565ba3945630cab4388f287a68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 473656f25c4ba08e011bef8f938cea54bdc51d6d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611822"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424898"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase, méthode
 
@@ -39,10 +39,10 @@ static __forceinline Base* CastToBase(
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Le type de paramètre *ptr*.
 
-*ptr*  
+*ptr*<br/>
 Pointeur vers un type *T*.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -63,5 +63,5 @@ Pour plus d’informations sur `Base`, consultez la section Typedefs publics dan
 
 ## <a name="see-also"></a>Voir aussi
 
-[InterfaceTraits, structure](../windows/interfacetraits-structure.md)  
+[InterfaceTraits, structure](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4b231aa38b0146e40f779e0fa8d75c71ec5d0a6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0a7583fe9cc73320b56ccb53903f5c2c4edcb57b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606331"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421997"
 ---
 # <a name="creatormapfactorycache-data-member"></a>CreatorMap::factoryCache, données de membre
 
@@ -46,5 +46,5 @@ Stocke le pointeur vers le cache de fabrication pour le **CreatorMap**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CreatorMap, structure](../windows/creatormap-structure.md)  
+[CreatorMap, structure](../windows/creatormap-structure.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

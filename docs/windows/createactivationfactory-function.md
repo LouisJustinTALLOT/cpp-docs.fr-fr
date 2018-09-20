@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd43102eb3a3b4e7bb14e65e0c710b814fc10cff
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aed52e5ba209a826130b1a85aa866fe024174818
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593830"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424636"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory (fonction)
 
@@ -40,16 +40,16 @@ template<typename Factory>
 
 ### <a name="parameters"></a>Paramètres
 
-*flags*  
+*flags*<br/>
 Une combinaison d’une ou plusieurs [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valeurs d’énumération.
 
-*entry*  
+*entry*<br/>
 Pointeur vers un [CreatorMap](../windows/creatormap-structure.md) qui contient des informations d’initialisation et d’inscription sur le paramètre *riid*.
 
-*riid*  
+*riid*<br/>
 Référence à un ID d’interface.
 
-*ppFactory*  
+*ppFactory*<br/>
 Si cette opération termine avec succès, un pointeur vers une fabrique d’activation.
 
 ## <a name="return-value"></a>Valeur de retour

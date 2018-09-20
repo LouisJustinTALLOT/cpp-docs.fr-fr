@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6fc209158afc21872df869e81296b94159c5bc4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f880449dcc3839d0ce0f5532b7b7bc84324568d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613558"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428211"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>EventTargetArray::~EventTargetArray, destructeur
 
@@ -46,5 +46,5 @@ Annule l’initialisation en cours **EventTargetArray** classe.
 
 ## <a name="see-also"></a>Voir aussi
 
-[EventTargetArray, classe](../windows/eventtargetarray-class.md)  
+[EventTargetArray, classe](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

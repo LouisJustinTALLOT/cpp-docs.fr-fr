@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2353b952964ffe6b8078f688b4ac8e129d891d7
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 258875f488dd0d3460513ba285b894f114093077
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314681"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448218"
 ---
 # <a name="attributes-alphabetical-reference"></a>Référence alphabétique des attributs
 
@@ -138,7 +138,7 @@ Les attributs suivants sont disponibles dans Visual C++.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence des attributs C++](../windows/cpp-attributes-reference.md)  
-[Concepts](../windows/attributed-programming-concepts.md)  
-[Attributs par groupe](../windows/attributes-by-group.md)  
+[Référence des attributs C++](../windows/cpp-attributes-reference.md)<br/>
+[Concepts](../windows/attributed-programming-concepts.md)<br/>
+[Attributs par groupe](../windows/attributes-by-group.md)<br/>
 [Attributs par utilisation](../windows/attributes-by-usage.md)

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73edbed02a665d7e66478052c0fee13a227658aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0e804aa48752d1f100e4c843fae9c0d5c70ae8b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720529"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423153"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Nom du fichier #using imposé)
 
@@ -62,6 +62,6 @@ Pour plus d’informations sur la création d’un assembly ou un module pour le
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichier de sortie (/ F) Options](../../build/reference/output-file-f-options.md)
+[Options du fichier de sortie (/F)](../../build/reference/output-file-f-options.md)<br/>
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

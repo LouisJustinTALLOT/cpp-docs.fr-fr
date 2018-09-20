@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200144"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445176"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (classe)
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Paramètres
 
-*pPage*  
+*pPage*<br/>
 Pointe vers la page à ajouter à la feuille de propriétés. Ne peut pas être Null.
 
 ### <a name="remarks"></a>Notes
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIDCaption*  
+*nIDCaption*<br/>
 ID de la légende à utiliser pour la feuille de propriétés.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Pointeur vers la fenêtre parente de la feuille de propriétés. Si NULL, la fenêtre parente sera la fenêtre principale de l’application.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 L’index de la page qui sera initialement en haut. Valeur par défaut est la première page ajoutée à la feuille.
 
-*pszCaption*  
+*pszCaption*<br/>
 Pointeur vers une chaîne qui contient la légende à utiliser pour la feuille de propriétés. Ne peut pas être Null.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Handle de la bitmap de filigrane de la page de propriétés.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Handle vers la palette de la bitmap de filigrane et/ou le bitmap de l’en-tête.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Handle de la bitmap de l’en-tête de la page de propriétés.
 
 ### <a name="remarks"></a>Notes
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIDCaption*  
+*nIDCaption*<br/>
 ID de la légende à utiliser pour la feuille de propriétés.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Pointe vers la fenêtre parente de la feuille de propriétés. Si NULL, la fenêtre parente sera la fenêtre principale de l’application.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 L’index de la page qui sera initialement en haut. Valeur par défaut est la première page ajoutée à la feuille.
 
-*pszCaption*  
+*pszCaption*<br/>
 Pointe vers une chaîne qui contient la légende à utiliser pour la feuille de propriétés. Ne peut pas être Null.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Handle vers la bitmap d’arrière-plan de la feuille de propriétés.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Un handle vers la palette de la bitmap de filigrane et/ou le bitmap de l’en-tête.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Handle vers la bitmap de l’en-tête de la page de propriétés.
 
 ### <a name="remarks"></a>Notes
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>Paramètres
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Pointe vers la fenêtre parente. Si NULL, le bureau est parent.
 
-*dwStyle*  
+*dwStyle*<br/>
 Styles de fenêtre pour la feuille de propriétés. Pour obtenir une liste complète des styles disponibles, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Styles de fenêtre étendus pour la feuille de propriétés. Pour obtenir une liste complète des styles disponibles, consultez [Styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>Valeur de retour
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>Paramètres
 
-*bStacked*  
+*bStacked*<br/>
 Indique si les onglets empilées sont activées dans la feuille de propriétés. Désactiver les lignes empilées de balises en définissant *bStacked* sur FALSE.
 
 ### <a name="remarks"></a>Notes
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>Paramètres
 
-*nEndID*  
+*nEndID*<br/>
 Identificateur à utiliser comme valeur de retour de la feuille de propriétés.
 
 ### <a name="remarks"></a>Notes
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nPage*  
+*nPage*<br/>
 Index de la page souhaitée, en commençant à 0. Doit être entre 0 et inférieur au nombre de pages dans la feuille de propriétés, inclusive.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Paramètres
 
-*pPage*  
+*pPage*<br/>
 Pointe vers la page avec l’index doit être recherché. Ne peut pas être Null.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*lpRect*  
+*lpRect*<br/>
 Pointe vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou [CRect](../../atl-mfc-shared/reference/crect-class.md) coordonne d’objet qui contient la boîte de dialogue à convertir.
 
 ### <a name="remarks"></a>Notes
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Paramètres
 
-*Nbouton*  
+*Nbouton*<br/>
 Nbouton : identifie du bouton. Ce paramètre peut être une des valeurs suivantes :
 
 - PSBTN_BACK choisit le bouton précédent.
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Paramètres
 
-*pPage*  
+*pPage*<br/>
 Pointe vers la page à supprimer de la feuille de propriétés. Ne peut pas être Null.
 
-*nPage*  
+*nPage*<br/>
 Index de la page à supprimer. Doit être entre 0 et inférieur au nombre de pages dans la feuille de propriétés, inclusive.
 
 ### <a name="remarks"></a>Notes
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Paramètres
 
-*nPage*  
+*nPage*<br/>
 Index de la page à définir. Doit être comprise entre 0 et un de moins que le nombre de pages dans la feuille de propriétés, inclusive.
 
-*pPage*  
+*pPage*<br/>
 Pointe vers la page pour définir dans la feuille de propriétés. Il ne peut pas être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszText*  
+*lpszText*<br/>
 Pointe vers le texte à afficher sur le bouton de commande de terminer.
 
 ### <a name="remarks"></a>Notes
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>Paramètres
 
-*nStyle*  
+*nStyle*<br/>
 Spécifie le style de titre de la feuille de propriété. Le style doit être spécifié à 0 ou en tant que PSH_PROPTITLE. Si le style est défini en tant que PSH_PROPTITLE, le mot « Propriétés » s’affiche après le texte spécifié en tant que la légende. Par exemple, l’appel `SetTitle`(« Simple », PSH_PROPTITLE) entraîne une légende de feuille de propriété de « Propriétés Simple ».
 
-*lpszText*  
+*lpszText*<br/>
 Pointe vers le texte à utiliser comme la légende dans la barre de titre de la feuille de propriétés.
 
 ### <a name="remarks"></a>Notes
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwFlags*  
+*dwFlags*<br/>
 Un jeu d’indicateurs qui personnalisent la fonction et l’apparence des boutons d’Assistant. Ce paramètre peut être une combinaison des valeurs suivantes :
 
 - Bouton PSWIZB_BACK précédent
@@ -847,9 +847,9 @@ Appelez `SetWizardMode` avant d’appeler [DoModal](#domodal). Après avoir appe
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC exemple CMNCTRL1](../../visual-cpp-samples.md)  
-[MFC exemple CMNCTRL2](../../visual-cpp-samples.md)  
-[Exemple MFC PROPDLG](../../visual-cpp-samples.md)  
-[Exemple MFC SNAPVW](../../visual-cpp-samples.md)  
-[CWnd, classe](../../mfc/reference/cwnd-class.md)  
-[Graphique hiérarchique](../../mfc/hierarchy-chart.md)  
+[MFC exemple CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC exemple CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[Exemple MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[Exemple MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
+[Graphique hiérarchique](../../mfc/hierarchy-chart.md)

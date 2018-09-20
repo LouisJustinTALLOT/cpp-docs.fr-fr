@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54c370029b4e6fc90d1f210164de7d7ecb22f3a5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e279728ce1176dc6c65bc9fad7f3c881d8df96dd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595417"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441185"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T*, opérateur
 
@@ -46,5 +46,5 @@ Retourne la valeur de la [ptr_](../windows/comptrrefbase-ptr-data-member.md) mem
 
 ## <a name="see-also"></a>Voir aussi
 
-[ComPtrRef, classe](../windows/comptrref-class.md)  
+[ComPtrRef, classe](../windows/comptrref-class.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

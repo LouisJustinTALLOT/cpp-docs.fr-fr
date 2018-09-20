@@ -1,5 +1,5 @@
 ---
-title: Gestion des Messages réfléchis | Documents Microsoft
+title: Gestion des Messages réfléchis | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b317f4c1b55e04f61aa0639bbd6953e5f36187a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 99fc9c30ea85ba3f94fa811464f023da0eeea37e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931838"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438676"
 ---
 # <a name="handling-reflected-messages"></a>Gestion des messages réfléchis
-Message réflexion vous permet de gérer les messages pour un contrôle, tel que **WM_CTLCOLOR**, **WM_COMMAND**, et **WM_NOTIFY**, dans le contrôle lui-même. Cela rend le contrôle plus autonome et portable. Le mécanisme fonctionne avec les contrôles communs Windows ainsi qu’avec les contrôles ActiveX (anciennement appelés contrôles OLE).  
-  
- Message réflexion vous permet de réutiliser vos `CWnd`-plus facilement les classes dérivées. Fonctionnement par le biais de la réflexion de message [CWnd::OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), à l’aide de spécial **ON_XXX_REFLECT** les entrées de mappage de message : par exemple, **ON_CTLCOLOR_REFLECT** et **ON_CONTROL_REFLECT**. [Technical Note 62](../mfc/tn062-message-reflection-for-windows-controls.md) explique la réflexion de message plus en détail.  
-  
-## <a name="what-do-you-want-to-do"></a>Tu veux faire quoi  
-  
--   [En savoir plus sur la réflexion de message](../mfc/tn062-message-reflection-for-windows-controls.md)  
-  
--   [Implémenter le renvoi de message pour un contrôle commun](../mfc/tn062-message-reflection-for-windows-controls.md)  
-  
--   [Implémenter le renvoi de message pour un contrôle ActiveX](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Déclaration des fonctions de gestionnaire de messages](../mfc/declaring-message-handler-functions.md)
+
+Message de la réflexion vous permet de traiter les messages pour un contrôle, tel que **WM_CTLCOLOR**, **WM_COMMAND**, et **WM_NOTIFY**, dans le contrôle lui-même. Cela rend le contrôle plus autonome et portable. Le mécanisme fonctionne avec les contrôles communs Windows ainsi qu’avec des contrôles ActiveX (anciennement contrôles OLE).
+
+Message de la réflexion vous permet de réutiliser votre `CWnd`-plus facilement les classes dérivées. Message fonctionne de la réflexion via [CWnd::OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), à l’aide de spécial **ON_XXX_REFLECT** les entrées de mappage du message : par exemple, **ON_CTLCOLOR_REFLECT** et **ON_CONTROL_REFLECT**. [Note technique 62](../mfc/tn062-message-reflection-for-windows-controls.md) explique la réflexion de message plus en détail.
+
+## <a name="what-do-you-want-to-do"></a>Tu veux faire quoi
+
+- [En savoir plus sur la réflexion de message](../mfc/tn062-message-reflection-for-windows-controls.md)
+
+- [Implémenter la réflexion de message pour un contrôle commun](../mfc/tn062-message-reflection-for-windows-controls.md)
+
+- [Implémenter la réflexion de message pour un contrôle ActiveX](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Déclaration des fonctions de gestionnaire de messages](../mfc/declaring-message-handler-functions.md)

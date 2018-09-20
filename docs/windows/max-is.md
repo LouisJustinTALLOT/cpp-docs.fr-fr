@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2aa0b6e3928affbd30e08030f41a0b0183e46d8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8a66a849dceb5ba28eb6630b513a121e219a3588
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200679"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432955"
 ---
 # <a name="maxis"></a>max_is
 
@@ -38,7 +38,7 @@ Désigne la valeur maximale pour un index de tableau valide.
 
 ### <a name="parameters"></a>Paramètres
 
-*Expression*  
+*Expression*<br/>
 Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.
 
 ## <a name="remarks"></a>Notes
@@ -64,10 +64,10 @@ Consultez [first_is](../windows/first-is.md) pour obtenir un exemple montrant co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Attributs de paramètres](../windows/parameter-attributes.md)  
-[first_is](../windows/first-is.md)  
-[last_is](../windows/last-is.md)  
-[length_is](../windows/length-is.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributs de paramètres](../windows/parameter-attributes.md)<br/>
+[first_is](../windows/first-is.md)<br/>
+[last_is](../windows/last-is.md)<br/>
+[length_is](../windows/length-is.md)<br/>
 [size_is](../windows/size-is.md)  

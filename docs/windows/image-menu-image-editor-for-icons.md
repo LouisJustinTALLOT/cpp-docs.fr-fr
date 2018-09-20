@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ca37981352ddcef639b3e8ed5bbd00a14f56f126
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 07541c31b99959616320d0b4a9526eb2ec5493a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700711"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425546"
 ---
 # <a name="image-menu-c-image-editor-for-icons"></a>Menu image (Éditeur d’images C++ pour les icônes)
 
@@ -102,5 +102,5 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

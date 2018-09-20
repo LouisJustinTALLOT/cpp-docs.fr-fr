@@ -16,55 +16,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd5bf96706b94ffbba8cb1b9aeeee8701b266e5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 507067be30db019536ef222a62335244eabfaada
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115038"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413859"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
-Modifie le comportement de la [planification](../../../parallel/openmp/reference/schedule.md) clause lorsque `schedule(runtime)` est spécifié dans un `for` ou `parallel for` directive.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-set OMP_SCHEDULE[=type[,size]]  
-```  
-  
+
+Modifie le comportement de la [planification](../../../parallel/openmp/reference/schedule.md) clause lorsque `schedule(runtime)` est spécifié dans un `for` ou `parallel for` directive.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+set OMP_SCHEDULE[=type[,size]]
+```
+
 ## <a name="arguments"></a>Arguments
 
 *size*<br/>
-(Facultatif) Spécifie la taille d’itérations. `size` Doit être un entier positif. La valeur par défaut est 1, sauf quand `type` est statique. Non valide quand `type` est `runtime`.  
-  
+(Facultatif) Spécifie la taille d’itérations. `size` Doit être un entier positif. La valeur par défaut est 1, sauf quand `type` est statique. Non valide quand `type` est `runtime`.
+
 *type*<br/>
-Le type de planification :  
-  
--   `dynamic`  
-  
--   `guided`  
-  
--   `runtime`  
-  
--   `static`  
-  
-## <a name="remarks"></a>Notes  
- La valeur par défaut dans l’implémentation Visual C++ de la norme OpenMP est `OMP_SCHEDULE=static,0`.  
-  
- Pour plus d’informations, consultez [OMP_SCHEDULE 4.1](../../../parallel/openmp/4-1-omp-schedule.md).  
-  
-## <a name="example"></a>Exemple  
- La commande suivante définit le **OMP_SCHEDULE** variable d’environnement :  
-  
-```  
-set OMP_SCHEDULE="guided,2"  
-```  
-  
- La commande suivante affiche le paramètre actuel de la **OMP_SCHEDULE** variable d’environnement :  
-  
-```  
-set OMP_SCHEDULE  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Variables d’environnement](../../../parallel/openmp/reference/openmp-environment-variables.md)
+Le type de planification :
+
+- `dynamic`
+
+- `guided`
+
+- `runtime`
+
+- `static`
+
+## <a name="remarks"></a>Notes
+
+La valeur par défaut dans l’implémentation Visual C++ de la norme OpenMP est `OMP_SCHEDULE=static,0`.
+
+Pour plus d’informations, consultez [OMP_SCHEDULE 4.1](../../../parallel/openmp/4-1-omp-schedule.md).
+
+## <a name="example"></a>Exemple
+
+La commande suivante définit le **OMP_SCHEDULE** variable d’environnement :
+
+```
+set OMP_SCHEDULE="guided,2"
+```
+
+La commande suivante affiche le paramètre actuel de la **OMP_SCHEDULE** variable d’environnement :
+
+```
+set OMP_SCHEDULE
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Variables d’environnement](../../../parallel/openmp/reference/openmp-environment-variables.md)

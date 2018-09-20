@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51904ac06ae6c2db5586f8dc405f85145c5b1f30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec080e556b57afadbc3d958f4dba5ac6393108aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343058"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408906"
 ---
 # <a name="do-i-have-to-derive-new-classes-from-cobject"></a>Dois-je dériver les nouvelles classes de CObject ?
-Non, vous n’avez pas.  
-  
- Dérivez une classe de [CObject](../mfc/reference/cobject-class.md) lorsque vous avez besoin des fonctionnalités qu’il fournit, telles que la sérialisation ou de la création dynamique d’objets. De nombreuses classes de données doivent être sérialisés dans des fichiers, il est souvent judicieux de les dériver de `CObject`. Pour obtenir un exemple d’une classe dérivée de `CObject`, consultez la [exemple Scribble](../visual-cpp-samples.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classe CObject : Forum Aux Questions](../mfc/cobject-class-frequently-asked-questions.md)
+
+Non, vous n’avez pas.
+
+Dérivez une classe de [CObject](../mfc/reference/cobject-class.md) lorsque vous avez besoin des fonctionnalités qu’il fournit, telles que la sérialisation ou de la création dynamique d’objets. De nombreuses classes de données doivent être sérialisés dans des fichiers, il est souvent judicieux de les dériver de `CObject`. Pour un exemple d’une classe dérivée de `CObject`, consultez le [exemple Scribble](../visual-cpp-samples.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Classe CObject : Forum Aux Questions](../mfc/cobject-class-frequently-asked-questions.md)

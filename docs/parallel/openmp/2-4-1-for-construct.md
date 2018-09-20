@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cb9a554d9141223be7a5f6bc741c86b8f03511e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216535"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428540"
 ---
 # <a name="241-for-construct"></a>2.4.1 Construction for
 
@@ -115,28 +115,28 @@ Il existe une barrière implicite à la fin d’un **pour** construire, sauf si 
 
 Restrictions pour le **pour** directive sont les suivantes :
 
--   Le **pour** boucle doit être un bloc structuré et, en outre, son exécution ne doit pas se terminer par un **saut** instruction.
+- Le **pour** boucle doit être un bloc structuré et, en outre, son exécution ne doit pas se terminer par un **saut** instruction.
 
--   Les valeurs de la boucle contrôlent les expressions de la **pour** boucle associé à un **pour** directive doit être le même pour tous les threads dans l’équipe.
+- Les valeurs de la boucle contrôlent les expressions de la **pour** boucle associé à un **pour** directive doit être le même pour tous les threads dans l’équipe.
 
--   Le **pour** variable d’itération de boucle doit avoir un type entier signé.
+- Le **pour** variable d’itération de boucle doit avoir un type entier signé.
 
--   Un seul **planification** clause peut apparaître sur un **pour** la directive.
+- Un seul **planification** clause peut apparaître sur un **pour** la directive.
 
--   Un seul **classés** clause peut apparaître sur un **pour** la directive.
+- Un seul **classés** clause peut apparaître sur un **pour** la directive.
 
--   Un seul **nowait** clause peut apparaître sur un **pour** la directive.
+- Un seul **nowait** clause peut apparaître sur un **pour** la directive.
 
--   Il s’agit if non spécifiée ou la fréquence à laquelle des effets dans n’importe quel côté le *chunk_size*, *lb*, *b*, ou *incr* expressions se produisent.
+- Il s’agit if non spécifiée ou la fréquence à laquelle des effets dans n’importe quel côté le *chunk_size*, *lb*, *b*, ou *incr* expressions se produisent.
 
--   La valeur de la *chunk_size* expression doit être identiques pour tous les threads dans l’équipe.
+- La valeur de la *chunk_size* expression doit être identiques pour tous les threads dans l’équipe.
 
 ## <a name="cross-references"></a>Références externes :
 
--   **privé**, **firstprivate**, **lastprivate**, et **réduction** clauses, consultez [Section 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) page 25.
+- **privé**, **firstprivate**, **lastprivate**, et **réduction** clauses, consultez [Section 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) page 25.
 
--   **OMP_SCHEDULE** voir variable d’environnement [Section 4.1](../../parallel/openmp/4-1-omp-schedule.md) page 48.
+- **OMP_SCHEDULE** voir variable d’environnement [Section 4.1](../../parallel/openmp/4-1-omp-schedule.md) page 48.
 
--   **classés** construire, consultez [Section 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) à la page 22.
+- **classés** construire, consultez [Section 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) à la page 22.
 
--   [Annexe D](../../parallel/openmp/d-using-the-schedule-clause.md), page 93, donne plus d’informations sur l’utilisation de la clause schedule.
+- [Annexe D](../../parallel/openmp/d-using-the-schedule-clause.md), page 93, donne plus d’informations sur l’utilisation de la clause schedule.

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3670924bace1d76f02da816dc061616a4c39e199
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e46bcd45040ffb50ec8bbd10d8d583211d0a3316
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719210"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400495"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -38,7 +38,7 @@ Indique que la classe prend en charge l’agrégation.
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur*  
+*valeur*<br/>
 (Facultatif) Un paramètre pour indiquer quand l’objet COM peut être agrégée :
 
 - `never` L’objet COM ne peut pas être agrégée.
@@ -94,7 +94,7 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs de classe](../windows/class-attributes.md)  
-[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs de classe](../windows/class-attributes.md)<br/>
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Aggregation](/windows/desktop/com/aggregation)  

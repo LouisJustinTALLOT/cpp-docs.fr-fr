@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236923732a193830fe3fad643570666db56cddac
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 553574981f445f19605d7a076594054670f2d685
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707354"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431006"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
@@ -59,6 +59,6 @@ Le `__AVX__` symbole de préprocesseur est défini lors de la **/arch : AVX** o
 
 ## <a name="see-also"></a>Voir aussi
 
-[/arch (Architecture d’UC minimale)](../../build/reference/arch-minimum-cpu-architecture.md)
+[/arch (Architecture d’UC minimale)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

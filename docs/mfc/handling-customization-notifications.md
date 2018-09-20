@@ -57,34 +57,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c9931ae6bb83cb6801ac1bcc89359d9d7f468f2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 34d9a0fad325c95b9de43e28269b00ad7ced4b95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706041"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416706"
 ---
 # <a name="handling-customization-notifications"></a>Gestion des notifications de personnalisation
-Un contrôle commun de barre d’outils Windows a des fonctionnalités de personnalisation intégrées, notamment une boîte de dialogue de personnalisation définie par le système, qui permettent à l’utilisateur d’insérer, de supprimer ou de réorganiser les boutons de barre d’outils. L’application détermine si les fonctionnalités de personnalisation sont disponibles et contrôle l’étendue selon laquelle l’utilisateur peut personnaliser la barre d’outils.  
-  
- Vous pouvez proposer ces fonctionnalités de personnalisation à l’utilisateur en donnant la barre d’outils le **CCS_ADJUSTABLE** style. Les fonctionnalités de personnalisation permettent à l’utilisateur de faire glisser un bouton à un nouvel emplacement ou de supprimer un bouton en le faisant glisser en dehors de la barre d’outils. En outre, l’utilisateur peut double-cliquer sur la barre d’outils pour afficher la boîte de dialogue **Personnaliser la barre d’outils** , qui lui permet d’ajouter, de supprimer et de réorganiser les boutons de barre d’outils. L’application peut afficher la boîte de dialogue en utilisant la fonction membre [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) .  
-  
- Le contrôle de barre d’outils envoie des messages de notification à la fenêtre parente à chaque étape du processus de personnalisation. Si l’utilisateur maintient enfoncée la touche Maj et commence à faire glisser un bouton, la barre d’outils gère automatiquement l’opération glisser. La barre d’outils envoie le message de notification **TBN_QUERYDELETE** à la fenêtre parente pour déterminer si le bouton peut être supprimé. L’opération glisser se termine si la fenêtre parente retourne **FALSE**. Dans le cas contraire, la barre d’outils capture l’entrée de la souris et attend que l’utilisateur relâche le bouton de la souris.  
-  
- Quand l’utilisateur relâche le bouton de la souris, le contrôle de barre d’outils détermine l’emplacement du curseur de la souris. Si le curseur se trouve en dehors de la barre d’outils, le bouton est supprimé. Si le curseur se trouve sur un autre bouton de barre d’outils, la barre d’outils envoie le message de notification **TBN_QUERYINSERT** à la fenêtre parente pour déterminer si un bouton peut être inséré à gauche du bouton concerné. Le bouton est inséré si la fenêtre parente retourne **TRUE**; sinon, il n’est pas inséré. La barre d’outils envoie le message de notification **TBN_TOOLBARCHANGE** pour signaler la fin de l’opération glisser.  
-  
- Si l’utilisateur commence une opération glisser sans maintenir la touche Maj enfoncée, le contrôle de barre d’outils envoie le message de notification **TBN_BEGINDRAG** à la fenêtre propriétaire. Une application qui implémente son propre code de déplacement des boutons peut utiliser ce message comme signal pour commencer une opération glisser. La barre d’outils envoie le message de notification **TBN_ENDDRAG** pour signaler la fin de l’opération glisser.  
-  
- Un contrôle de barre d’outils envoie des messages de notification quand l’utilisateur personnalise une barre d’outils en utilisant la boîte de dialogue **Personnaliser la barre d’outils** . La barre d’outils envoie le message de notification **TBN_BEGINADJUST** une fois que l’utilisateur a double-cliqué sur la barre d’outils, mais avant la création de la boîte de dialogue. Ensuite, la barre d’outils commence à envoyer une série de messages de notification **TBN_QUERYINSERT** pour déterminer si la barre d’outils autorise l’insertion de boutons. Quand la fenêtre parente retourne **TRUE**, la barre d’outils cesse d’envoyer des messages de notification **TBN_QUERYINSERT** . Si la fenêtre parente ne retourne pas **TRUE** pour un bouton, la barre d’outils détruit la boîte de dialogue.  
-  
- Ensuite, le contrôle de barre d’outils détermine si des boutons peuvent être supprimés de la barre d’outils en envoyant un message de notification **TBN_QUERYDELETE** pour chaque bouton de la barre d’outils. La fenêtre parente retourne **TRUE** pour indiquer qu’un bouton peut être supprimé ; sinon, elle retourne **FALSE**. La barre d’outils ajoute tous les boutons de barre d’outils à la boîte de dialogue, mais affiche en grisé ceux qui ne peuvent pas être supprimés.  
-  
- Chaque fois que le contrôle de barre d’outils a besoin d’informations sur un bouton dans la boîte de dialogue Personnaliser la barre d’outils, il envoie le message de notification **TBN_GETBUTTONINFO** , en spécifiant l’index du bouton pour lequel il a besoin d’informations et l’adresse d’une structure **TBNOTIFY** . La fenêtre parente doit remplir la structure avec les informations appropriées.  
-  
- La boîte de dialogue **Personnaliser la barre d’outils** comprend un bouton Aide et un bouton Réinitialiser. Quand l’utilisateur choisit le bouton Aide, le contrôle de barre d’outils envoie le message de notification **TBN_CUSTHELP** . La fenêtre parente doit répondre en affichant des informations d’aide. La boîte de dialogue envoie le message de notification **TBN_RESET** quand l’utilisateur sélectionne le bouton Réinitialiser. Ce message signale que la barre d’outils va réinitialiser la boîte de dialogue.  
-  
- Ces messages sont tous des messages **WM_NOTIFY** , et ils peuvent être gérés dans votre fenêtre propriétaire en ajoutant des entrées de table des messages sous la forme suivante à la table des messages de votre fenêtre propriétaire :  
-  
+
+Un contrôle commun de barre d’outils Windows a des fonctionnalités de personnalisation intégrées, notamment une boîte de dialogue de personnalisation définie par le système, qui permettent à l’utilisateur d’insérer, de supprimer ou de réorganiser les boutons de barre d’outils. L’application détermine si les fonctionnalités de personnalisation sont disponibles et contrôle l’étendue selon laquelle l’utilisateur peut personnaliser la barre d’outils.
+
+Vous pouvez proposer ces fonctionnalités de personnalisation à l’utilisateur en donnant la barre d’outils le **CCS_ADJUSTABLE** style. Les fonctionnalités de personnalisation permettent à l’utilisateur de faire glisser un bouton à un nouvel emplacement ou de supprimer un bouton en le faisant glisser en dehors de la barre d’outils. En outre, l’utilisateur peut double-cliquer sur la barre d’outils pour afficher la boîte de dialogue **Personnaliser la barre d’outils** , qui lui permet d’ajouter, de supprimer et de réorganiser les boutons de barre d’outils. L’application peut afficher la boîte de dialogue en utilisant la fonction membre [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) .
+
+Le contrôle de barre d’outils envoie des messages de notification à la fenêtre parente à chaque étape du processus de personnalisation. Si l’utilisateur maintient enfoncée la touche Maj et commence à faire glisser un bouton, la barre d’outils gère automatiquement l’opération glisser. La barre d’outils envoie le message de notification **TBN_QUERYDELETE** à la fenêtre parente pour déterminer si le bouton peut être supprimé. L’opération glisser se termine si la fenêtre parente retourne **FALSE**. Dans le cas contraire, la barre d’outils capture l’entrée de la souris et attend que l’utilisateur relâche le bouton de la souris.
+
+Quand l’utilisateur relâche le bouton de la souris, le contrôle de barre d’outils détermine l’emplacement du curseur de la souris. Si le curseur se trouve en dehors de la barre d’outils, le bouton est supprimé. Si le curseur se trouve sur un autre bouton de barre d’outils, la barre d’outils envoie le message de notification **TBN_QUERYINSERT** à la fenêtre parente pour déterminer si un bouton peut être inséré à gauche du bouton concerné. Le bouton est inséré si la fenêtre parente retourne **TRUE**; sinon, il n’est pas inséré. La barre d’outils envoie le message de notification **TBN_TOOLBARCHANGE** pour signaler la fin de l’opération glisser.
+
+Si l’utilisateur commence une opération glisser sans maintenir la touche Maj enfoncée, le contrôle de barre d’outils envoie le message de notification **TBN_BEGINDRAG** à la fenêtre propriétaire. Une application qui implémente son propre code de déplacement des boutons peut utiliser ce message comme signal pour commencer une opération glisser. La barre d’outils envoie le message de notification **TBN_ENDDRAG** pour signaler la fin de l’opération glisser.
+
+Un contrôle de barre d’outils envoie des messages de notification quand l’utilisateur personnalise une barre d’outils en utilisant la boîte de dialogue **Personnaliser la barre d’outils** . La barre d’outils envoie le message de notification **TBN_BEGINADJUST** une fois que l’utilisateur a double-cliqué sur la barre d’outils, mais avant la création de la boîte de dialogue. Ensuite, la barre d’outils commence à envoyer une série de messages de notification **TBN_QUERYINSERT** pour déterminer si la barre d’outils autorise l’insertion de boutons. Quand la fenêtre parente retourne **TRUE**, la barre d’outils cesse d’envoyer des messages de notification **TBN_QUERYINSERT** . Si la fenêtre parente ne retourne pas **TRUE** pour un bouton, la barre d’outils détruit la boîte de dialogue.
+
+Ensuite, le contrôle de barre d’outils détermine si des boutons peuvent être supprimés de la barre d’outils en envoyant un message de notification **TBN_QUERYDELETE** pour chaque bouton de la barre d’outils. La fenêtre parente retourne **TRUE** pour indiquer qu’un bouton peut être supprimé ; sinon, elle retourne **FALSE**. La barre d’outils ajoute tous les boutons de barre d’outils à la boîte de dialogue, mais affiche en grisé ceux qui ne peuvent pas être supprimés.
+
+Chaque fois que le contrôle de barre d’outils a besoin d’informations sur un bouton dans la boîte de dialogue Personnaliser la barre d’outils, il envoie le message de notification **TBN_GETBUTTONINFO** , en spécifiant l’index du bouton pour lequel il a besoin d’informations et l’adresse d’une structure **TBNOTIFY** . La fenêtre parente doit remplir la structure avec les informations appropriées.
+
+La boîte de dialogue **Personnaliser la barre d’outils** comprend un bouton Aide et un bouton Réinitialiser. Quand l’utilisateur choisit le bouton Aide, le contrôle de barre d’outils envoie le message de notification **TBN_CUSTHELP** . La fenêtre parente doit répondre en affichant des informations d’aide. La boîte de dialogue envoie le message de notification **TBN_RESET** quand l’utilisateur sélectionne le bouton Réinitialiser. Ce message signale que la barre d’outils va réinitialiser la boîte de dialogue.
+
+Ces messages sont tous des messages **WM_NOTIFY** , et ils peuvent être gérés dans votre fenêtre propriétaire en ajoutant des entrées de table des messages sous la forme suivante à la table des messages de votre fenêtre propriétaire :
+
 ```cpp
 ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 ```
@@ -99,20 +100,20 @@ ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 
 - **memberFxn**
 
-   La fonction membre à appeler quand cette notification est reçue.  
-  
-Votre fonction membre doit être déclarée avec le prototype suivant :  
-  
+   La fonction membre à appeler quand cette notification est reçue.
+
+Votre fonction membre doit être déclarée avec le prototype suivant :
+
 ```cpp
 afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );
 ```
 
- Si le gestionnaire de messages de notification retourne une valeur, elle doit être placée dans le **LRESULT** vers lequel pointe *result*.  
-  
- Pour chaque message, `pNotifyStruct` pointe vers une structure **NMHDR** ou vers une structure **TBNOTIFY** . Ces structures sont décrites ci-dessous :  
-  
- La structure **NMHDR** contient les membres suivants :  
-  
+Si le gestionnaire de messages de notification retourne une valeur, elle doit être placée dans le **LRESULT** vers lequel pointe *result*.
+
+Pour chaque message, `pNotifyStruct` pointe vers une structure **NMHDR** ou vers une structure **TBNOTIFY** . Ces structures sont décrites ci-dessous :
+
+La structure **NMHDR** contient les membres suivants :
+
 ```cpp
 typedef struct tagNMHDR {
     HWND hwndFrom;  // handle of control sending message
@@ -123,34 +124,34 @@ typedef struct tagNMHDR {
 
 - **hwndFrom**
 
-   Handle de fenêtre du contrôle qui envoie la notification. Pour convertir ce handle en un pointeur `CWnd` , utilisez [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).  
-  
+   Handle de fenêtre du contrôle qui envoie la notification. Pour convertir ce handle en un pointeur `CWnd` , utilisez [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).
+
 - **idFrom**
 
-   Identificateur du contrôle qui envoie la notification.  
-  
+   Identificateur du contrôle qui envoie la notification.
+
 - **code**
 
-   Code de la notification. Ce membre peut être une valeur spécifique à un type de contrôle, comme **TBN_BEGINADJUST** ou **TTN_NEEDTEXT**, ou il peut être une des valeurs de notification courantes répertoriées ci-dessous :  
-  
-   - **NM_CLICK** L’utilisateur a cliqué dans le contrôle avec le bouton gauche de la souris.  
-  
-   - **NM_DBLCLK** L’utilisateur a double-cliqué dans le contrôle avec le bouton gauche de la souris.  
-  
-   - **NM_KILLFOCUS** Le contrôle n’a plus le focus d’entrée.  
-  
-   - **NM_OUTOFMEMORY** Le contrôle n’a pas pu terminer une opération, car la mémoire disponible n’est pas suffisante.  
-  
-   - **NM_RCLICK** L’utilisateur a cliqué dans le contrôle avec le bouton droit de la souris.  
-  
-   - **NM_RDBLCLK** L’utilisateur a double-cliqué dans le contrôle avec le bouton droit de la souris.  
-  
-   - **NM_RETURN** Le contrôle a le focus d’entrée et l’utilisateur a appuyé sur la touche Entrée.  
-  
-   - **NM_SETFOCUS** Le contrôle a reçu le focus d’entrée.  
-  
-La structure **TBNOTIFY** contient les membres suivants :  
-  
+   Code de la notification. Ce membre peut être une valeur spécifique à un type de contrôle, comme **TBN_BEGINADJUST** ou **TTN_NEEDTEXT**, ou il peut être une des valeurs de notification courantes répertoriées ci-dessous :
+
+   - **NM_CLICK** L’utilisateur a cliqué dans le contrôle avec le bouton gauche de la souris.
+
+   - **NM_DBLCLK** L’utilisateur a double-cliqué dans le contrôle avec le bouton gauche de la souris.
+
+   - **NM_KILLFOCUS** Le contrôle n’a plus le focus d’entrée.
+
+   - **NM_OUTOFMEMORY** Le contrôle n’a pas pu terminer une opération, car la mémoire disponible n’est pas suffisante.
+
+   - **NM_RCLICK** L’utilisateur a cliqué dans le contrôle avec le bouton droit de la souris.
+
+   - **NM_RDBLCLK** L’utilisateur a double-cliqué dans le contrôle avec le bouton droit de la souris.
+
+   - **NM_RETURN** Le contrôle a le focus d’entrée et l’utilisateur a appuyé sur la touche Entrée.
+
+   - **NM_SETFOCUS** Le contrôle a reçu le focus d’entrée.
+
+La structure **TBNOTIFY** contient les membres suivants :
+
 ```cpp
 typedef struct {
     NMHDR hdr; // information common to all WM_NOTIFY messages
@@ -160,70 +161,71 @@ typedef struct {
     LPSTR lpszText;// address of button text
 } TBNOTIFY, FAR* LPTBNOTIFY;
 ```
-  
+
 - **hdr**
 
-   Informations communes à tous les messages **WM_NOTIFY** .  
-  
+   Informations communes à tous les messages **WM_NOTIFY** .
+
 - **iItem**
 
-   Index du bouton associé à la notification.  
-  
+   Index du bouton associé à la notification.
+
 - **tbButton**
 
-   **TBBUTTON** structure qui contient des informations sur le bouton de barre d’outils associé à la notification.  
-  
+   **TBBUTTON** structure qui contient des informations sur le bouton de barre d’outils associé à la notification.
+
 - **cchText**
 
-   Nombre de caractères dans le texte du bouton.  
-  
+   Nombre de caractères dans le texte du bouton.
+
 - **lpszText**
 
-   Pointeur vers le texte du bouton.  
-  
-Les notifications envoyées par la barre d’outils sont les suivantes :  
-  
+   Pointeur vers le texte du bouton.
+
+Les notifications envoyées par la barre d’outils sont les suivantes :
+
 - **TBN_BEGINADJUST**
 
-   Envoyé lorsque l’utilisateur commence la personnalisation d’un contrôle de barre d’outils. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur la notification. Le gestionnaire ne doit retourner aucune valeur spécifique.  
-  
+   Envoyé lorsque l’utilisateur commence la personnalisation d’un contrôle de barre d’outils. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur la notification. Le gestionnaire ne doit retourner aucune valeur spécifique.
+
 - **TBN_BEGINDRAG**
 
-   Envoyé lorsque l’utilisateur commence à faire glisser un bouton dans un contrôle de barre d’outils. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** contient l’index de base zéro du bouton qui est glissé. Le gestionnaire ne doit retourner aucune valeur spécifique.  
-  
+   Envoyé lorsque l’utilisateur commence à faire glisser un bouton dans un contrôle de barre d’outils. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** contient l’index de base zéro du bouton qui est glissé. Le gestionnaire ne doit retourner aucune valeur spécifique.
+
 - **TBN_CUSTHELP**
 
-   Envoyé lorsque l’utilisateur choisit le bouton Aide dans la boîte de dialogue Personnaliser la barre d’outils. Pas de valeur de retour. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur le message de notification. Le gestionnaire ne doit retourner aucune valeur spécifique.  
-  
+   Envoyé lorsque l’utilisateur choisit le bouton Aide dans la boîte de dialogue Personnaliser la barre d’outils. Pas de valeur de retour. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur le message de notification. Le gestionnaire ne doit retourner aucune valeur spécifique.
+
 - **TBN_ENDADJUST**
 
-   Envoyé lorsque l’utilisateur arrête la personnalisation d’un contrôle de barre d’outils. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur le message de notification. Le gestionnaire ne doit retourner aucune valeur spécifique.  
-  
+   Envoyé lorsque l’utilisateur arrête la personnalisation d’un contrôle de barre d’outils. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur le message de notification. Le gestionnaire ne doit retourner aucune valeur spécifique.
+
 - **TBN_ENDDRAG**
 
-   Envoyé lorsque l’utilisateur arrête de faire glisser un bouton dans un contrôle de barre d’outils. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** contient l’index de base zéro du bouton qui est glissé. Le gestionnaire ne doit retourner aucune valeur spécifique.  
-  
+   Envoyé lorsque l’utilisateur arrête de faire glisser un bouton dans un contrôle de barre d’outils. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** contient l’index de base zéro du bouton qui est glissé. Le gestionnaire ne doit retourner aucune valeur spécifique.
+
 - **TBN_GETBUTTONINFO**
 
-   Envoyé lorsque l’utilisateur personnalise un contrôle de barre d’outils. La barre d’outils utilise ce message de notification pour extraire les informations nécessaires à la boîte de dialogue Personnaliser la barre d’outils. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** membre spécifie l’index de base zéro d’un bouton. Les membres **pszText** et **cchText** spécifient l’adresse et la longueur en caractères du texte du bouton. Une application doit remplir la structure avec des informations sur le bouton. Retourne **TRUE** si les informations sur le bouton ont été copiées vers la structure ; sinon, **FALSE** .  
-  
+   Envoyé lorsque l’utilisateur personnalise un contrôle de barre d’outils. La barre d’outils utilise ce message de notification pour extraire les informations nécessaires à la boîte de dialogue Personnaliser la barre d’outils. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** membre spécifie l’index de base zéro d’un bouton. Les membres **pszText** et **cchText** spécifient l’adresse et la longueur en caractères du texte du bouton. Une application doit remplir la structure avec des informations sur le bouton. Retourne **TRUE** si les informations sur le bouton ont été copiées vers la structure ; sinon, **FALSE** .
+
 - **TBN_QUERYDELETE**
 
-   Envoyé lorsque l’utilisateur personnalise une barre d’outils pour déterminer si un bouton peut être supprimé à partir d’un contrôle de barre d’outils. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** contient l’index de base zéro du bouton à supprimer. Retourne **TRUE** pour autoriser la suppression du bouton ou **FALSE** pour empêcher la suppression du bouton.  
-  
+   Envoyé lorsque l’utilisateur personnalise une barre d’outils pour déterminer si un bouton peut être supprimé à partir d’un contrôle de barre d’outils. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** contient l’index de base zéro du bouton à supprimer. Retourne **TRUE** pour autoriser la suppression du bouton ou **FALSE** pour empêcher la suppression du bouton.
+
 - **TBN_QUERYINSERT**
 
-   Envoyé lorsque l’utilisateur personnalise un contrôle de barre d’outils pour déterminer si un bouton peut être inséré à gauche du bouton concerné. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** contient l’index de base zéro du bouton à insérer. Retourne **TRUE** pour autoriser l’insertion d’un bouton devant le bouton concerné, ou **FALSE** pour empêcher l’insertion du bouton.  
-  
+   Envoyé lorsque l’utilisateur personnalise un contrôle de barre d’outils pour déterminer si un bouton peut être inséré à gauche du bouton concerné. Le pointeur pointe vers une structure **TBNOTIFY** . Le membre **iItem** contient l’index de base zéro du bouton à insérer. Retourne **TRUE** pour autoriser l’insertion d’un bouton devant le bouton concerné, ou **FALSE** pour empêcher l’insertion du bouton.
+
 - **TBN_RESET**
 
-   Envoyé lorsque l’utilisateur réinitialise le contenu de la boîte de dialogue Personnaliser la barre d’outils. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur le message de notification. Le gestionnaire ne doit retourner aucune valeur spécifique.  
-  
+   Envoyé lorsque l’utilisateur réinitialise le contenu de la boîte de dialogue Personnaliser la barre d’outils. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur le message de notification. Le gestionnaire ne doit retourner aucune valeur spécifique.
+
 - **TBN_TOOLBARCHANGE**
 
-   Envoyé une fois que l’utilisateur a personnalisé un contrôle de barre d’outils. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur le message de notification. Le gestionnaire ne doit retourner aucune valeur spécifique.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+   Envoyé une fois que l’utilisateur a personnalisé un contrôle de barre d’outils. Le pointeur pointe vers une structure **NMHDR** qui contient des informations sur le message de notification. Le gestionnaire ne doit retourner aucune valeur spécifique.
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Contrôles](../mfc/controls-mfc.md)
 

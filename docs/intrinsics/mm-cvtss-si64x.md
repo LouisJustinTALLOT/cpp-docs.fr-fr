@@ -17,82 +17,87 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cba221f0944f840f9cdf76da86ec7ce37f37ca8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 928cd812df87fef20a6ba551bd596c4214bfdd9f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713776"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417007"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
-**Section spécifique à Microsoft**  
-  
- Génère le x64 étendu version de la convertir scalaire unique précision nombre à virgule flottante en entier 64 bits (`cvtss2si`) instruction.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+**Section spécifique à Microsoft**
+
+Génère le x64 étendu version de la convertir scalaire unique précision nombre à virgule flottante en entier 64 bits (`cvtss2si`) instruction.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+__int64 _mm_cvtss_si64x( 
+   __m128 value 
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *valeur*<br/>
-[in] Un `__m128` structure contenant les valeurs à virgule flottante-.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Un entier 64 bits, le résultat de la conversion de la première valeur à virgule flottante en entier.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`_mm_cvtss_si64x`|X64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- Le premier élément de la valeur de la structure est converti en un entier et retourné. Les bits de contrôle arrondi dans MXCSR servent à déterminer le comportement d’arrondi. La valeur par défaut de mode d’arrondi est arrondi à la plus proche, arrondi au nombre pair si la partie décimale est égale à 0,5. Étant donné que le `__m128` structure représente un registre XMM, cette intrinsèque prend une valeur du registre XMM et l’écrit dans la mémoire système.  
-  
- Cette routine est disponible uniquement en tant qu'intrinsèque.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// _mm_cvtss_si64x.cpp  
-// processor: x64  
-#include <intrin.h>  
-#include <stdio.h>  
-  
-#pragma intrinsic(_mm_cvtss_si64x)  
-  
-int main()  
-{  
-    __m128 a;  
-    __int64 b = 54;  
-  
-    // _mm_load_ps requires an aligned buffer.  
-    __declspec(align(16)) float af[4] =  
-                           { 101.25, 200.75, 300.5, 400.5 };  
-  
-    // Load a with the floating point values.  
-    // The values will be copied to the XMM registers.  
-    a = _mm_load_ps(af);  
-  
-    // Extract the first element of a and convert to an integer  
-    b = _mm_cvtss_si64x(a);  
-  
-    printf_s("%I64d\n", b);  
-}  
-```  
-  
-```Output  
-101  
-```  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [__m128d](../cpp/m128d.md)   
- [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[in] Un `__m128` structure contenant les valeurs à virgule flottante-.
+
+## <a name="return-value"></a>Valeur de retour
+
+Un entier 64 bits, le résultat de la conversion de la première valeur à virgule flottante en entier.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`_mm_cvtss_si64x`|X64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+Le premier élément de la valeur de la structure est converti en un entier et retourné. Les bits de contrôle arrondi dans MXCSR servent à déterminer le comportement d’arrondi. La valeur par défaut de mode d’arrondi est arrondi à la plus proche, arrondi au nombre pair si la partie décimale est égale à 0,5. Étant donné que le `__m128` structure représente un registre XMM, cette intrinsèque prend une valeur du registre XMM et l’écrit dans la mémoire système.
+
+Cette routine est disponible uniquement en tant qu'intrinsèque.
+
+## <a name="example"></a>Exemple
+
+```
+// _mm_cvtss_si64x.cpp
+// processor: x64
+#include <intrin.h>
+#include <stdio.h>
+
+#pragma intrinsic(_mm_cvtss_si64x)
+
+int main()
+{
+    __m128 a;
+    __int64 b = 54;
+
+    // _mm_load_ps requires an aligned buffer.
+    __declspec(align(16)) float af[4] =
+                           { 101.25, 200.75, 300.5, 400.5 };
+
+    // Load a with the floating point values.
+    // The values will be copied to the XMM registers.
+    a = _mm_load_ps(af);
+
+    // Extract the first element of a and convert to an integer
+    b = _mm_cvtss_si64x(a);
+
+    printf_s("%I64d\n", b);
+}
+```
+
+```Output
+101
+```
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[__m128d](../cpp/m128d.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

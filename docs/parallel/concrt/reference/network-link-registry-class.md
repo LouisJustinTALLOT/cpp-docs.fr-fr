@@ -22,127 +22,141 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae551c934c4286a321772fb01a21260c36dfccff
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2798c4abe33e49d2ac6199ad6f9a1013805fde7b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080322"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424415"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry, classe
-La classe de base abstraite `network_link_registry` gère les liens entre les blocs sources et cibles.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+La classe de base abstraite `network_link_registry` gère les liens entre les blocs sources et cibles.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template<class _Block>
 class network_link_registry;
-```  
-  
-#### <a name="parameters"></a>Paramètres  
-*_Bloc*<br/>
-Le bloc type de données sont stockées dans le `network_link_registry`.  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-typedefs"></a>Typedefs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`const_pointer`|Un type qui fournit un pointeur vers un `const` élément dans un `network_link_registry` objet.|  
-|`const_reference`|Type qui fournit une référence à un `const` élément stocké dans un `network_link_registry` objet pour la lecture et exécution d’opérations const.|  
-|`iterator`|Un type qui fournit un itérateur qui peut lire ou modifier tout élément dans un `network_link_registry` objet.|  
-|`type`|Un type qui représente le type de bloc stocké dans le `network_link_registry` objet.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[add](#add)|En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.|  
-|[begin](#begin)|En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.|  
-|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet pour un bloc spécifié.|  
-|[count](#count)|En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.|  
-|[remove](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.|  
-  
-## <a name="remarks"></a>Notes  
- Le `network link registry` n’est pas sécurisé pour l’accès simultané.  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `network_link_registry`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** agents.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="add"></a> Ajouter 
+```
 
- En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.  
-  
+#### <a name="parameters"></a>Paramètres
+
+*_Bloc*<br/>
+Le bloc type de données sont stockées dans le `network_link_registry`.
+
+## <a name="members"></a>Membres
+
+### <a name="public-typedefs"></a>Typedefs publics
+
+|Nom|Description|
+|----------|-----------------|
+|`const_pointer`|Un type qui fournit un pointeur vers un `const` élément dans un `network_link_registry` objet.|
+|`const_reference`|Type qui fournit une référence à un `const` élément stocké dans un `network_link_registry` objet pour la lecture et exécution d’opérations const.|
+|`iterator`|Un type qui fournit un itérateur qui peut lire ou modifier tout élément dans un `network_link_registry` objet.|
+|`type`|Un type qui représente le type de bloc stocké dans le `network_link_registry` objet.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[add](#add)|En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.|
+|[begin](#begin)|En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.|
+|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet pour un bloc spécifié.|
+|[count](#count)|En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.|
+|[remove](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.|
+
+## <a name="remarks"></a>Notes
+
+Le `network link registry` n’est pas sécurisé pour l’accès simultané.
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`network_link_registry`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** agents.h
+
+**Espace de noms :** concurrency
+
+##  <a name="add"></a> Ajouter
+
+En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.
+
 ```
 virtual void add(_EType _Link) = 0;
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*_Lier*<br/>
-Pointeur vers un bloc à ajouter.  
-  
-##  <a name="begin"></a> commencer 
+```
 
- En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.  
-  
+### <a name="parameters"></a>Paramètres
+
+*_Lier*<br/>
+Pointeur vers un bloc à ajouter.
+
+##  <a name="begin"></a> commencer
+
+En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.
+
 ```
 virtual iterator begin() = 0;
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Un itérateur qui traite le premier élément dans le `network_link_registry` objet.  
-  
-### <a name="remarks"></a>Notes  
- L’état final de l’itérateur est indiqué par un `NULL` lien.  
-  
-##  <a name="contains"></a> contient 
+```
 
- En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet pour un bloc spécifié.  
-  
+### <a name="return-value"></a>Valeur de retour
+
+Un itérateur qui traite le premier élément dans le `network_link_registry` objet.
+
+### <a name="remarks"></a>Notes
+
+L’état final de l’itérateur est indiqué par un `NULL` lien.
+
+##  <a name="contains"></a> contient
+
+En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet pour un bloc spécifié.
+
 ```
 virtual bool contains(_EType _Link) = 0;
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*_Lier*<br/>
-Un pointeur désignant un bloc qui est recherché dans le `network_link_registry` objet.  
-  
-### <a name="return-value"></a>Valeur de retour  
- `true` Si le bloc a été trouvé, `false` dans le cas contraire.  
-  
-##  <a name="count"></a> Nombre 
+```
 
- En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.  
-  
+### <a name="parameters"></a>Paramètres
+
+*_Lier*<br/>
+Un pointeur désignant un bloc qui est recherché dans le `network_link_registry` objet.
+
+### <a name="return-value"></a>Valeur de retour
+
+`true` Si le bloc a été trouvé, `false` dans le cas contraire.
+
+##  <a name="count"></a> Nombre
+
+En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.
+
 ```
 virtual size_t count() = 0;
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Le nombre d’éléments dans le `network_link_registry` objet.  
-  
-##  <a name="remove"></a> Supprimer 
+```
 
- En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.  
-  
+### <a name="return-value"></a>Valeur de retour
+
+Le nombre d’éléments dans le `network_link_registry` objet.
+
+##  <a name="remove"></a> Supprimer
+
+En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.
+
 ```
 virtual bool remove(_EType _Link) = 0;
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Lier*<br/>
-Un pointeur vers un bloc à supprimer, si trouvé.  
-  
-### <a name="return-value"></a>Valeur de retour  
- `true` Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)   
- [single_link_registry, classe](single-link-registry-class.md)   
- [multi_link_registry, classe](multi-link-registry-class.md)
+Un pointeur vers un bloc à supprimer, si trouvé.
+
+### <a name="return-value"></a>Valeur de retour
+
+`true` Si le lien a été trouvé et supprimé, `false` dans le cas contraire.
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[single_link_registry, classe](single-link-registry-class.md)<br/>
+[multi_link_registry, classe](multi-link-registry-class.md)

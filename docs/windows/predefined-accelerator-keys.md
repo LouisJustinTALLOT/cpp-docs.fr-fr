@@ -19,18 +19,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e6498e0b0722b5de28b5569c5f3565b0f033ea9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 70392d5654c5ed550e61bccf460d641bd4995349
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315676"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430603"
 ---
 # <a name="predefined-accelerator-keys-c"></a>Touches accélérateur prédéfinies (C++)
 
 Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent faire partie d'un projet d'application Windows. Certaines de ces touches virtuelles sont destinées à l'environnement Windows. D'autres sont destinées aux navigateurs ou aux applications Unicode. Vous pouvez utiliser ces touches en tant que touches d'accès rapide.
 
-|Key|Description|
+|Touche|Description|
 |---------|-----------------|
 |VK_ACCEPT|Acceptation IME|
 |VK_BROWSER_BACK|Windows : touche de page précédente du navigateur|
@@ -92,5 +92,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur d’accélérateurs](../windows/accelerator-editor.md)  
+[Éditeur d’accélérateurs](../windows/accelerator-editor.md)<br/>
 [Éditeurs de ressources](../windows/resource-editors.md)

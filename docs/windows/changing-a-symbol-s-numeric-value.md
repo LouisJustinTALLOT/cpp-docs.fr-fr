@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eef16275bcd563a258347f8853a3c705594df99d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a7b16bb7563bcba3781982952d97b744c0ff86c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318669"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403825"
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>Modification d’un symbole&#39;valeur numérique s
 
@@ -53,5 +53,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Restrictions relatives à la valeur d’un symbole](../windows/symbol-value-restrictions.md)  
+[Restrictions relatives à la valeur d’un symbole](../windows/symbol-value-restrictions.md)<br/>
 [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)

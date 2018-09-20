@@ -1,5 +1,5 @@
 ---
-title: OnCmdMsg (gestionnaire) | Documents Microsoft
+title: OnCmdMsg, Gestionnaire | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0657b05619a966ed171630d00adcd9303af7e18b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6691e4935d46b32bc8f433823888bb7f53a36890
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347027"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398831"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg, gestionnaire
-Pour effectuer le routage des commandes, chaque cible de la commande appelle la `OnCmdMsg` fonction membre de la cible de la commande suivante dans la séquence. Utilisation de cibles de commandes `OnCmdMsg` pour déterminer si elles peuvent gérer une commande et pour le router vers une autre cible de commande si elles ne peuvent pas le gérer.  
-  
- Chaque classe cible de commande peut remplacer le `OnCmdMsg` fonction membre. Les remplacements permettent à chaque classe router les commandes vers une cible suivante particulière. Une fenêtre frame, par exemple, route toujours les commandes à sa fenêtre enfant Active ou une vue, comme indiqué dans le tableau [routage des commandes Standard](../mfc/command-routing.md).  
-  
- La valeur par défaut `CCmdTarget` implémentation de `OnCmdMsg` utilise la table des messages de la classe cible de commande pour rechercher une fonction gestionnaire pour chaque message de commande reçu, de la même façon que les messages standard sont recherchés. S’il trouve une correspondance, il appelle le gestionnaire. Recherche de la table des messages est expliquée dans [comment le Framework recherche les tables des messages](../mfc/how-the-framework-searches-message-maps.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Méthode d’appel d’un gestionnaire par le Framework](../mfc/how-the-framework-calls-a-handler.md)
+
+Pour effectuer le routage des commandes, chaque cible de commande appelle le `OnCmdMsg` fonction membre de la cible de la commande suivante dans la séquence. Utilisation de cibles de commandes `OnCmdMsg` pour déterminer si elles peuvent traiter une commande et à acheminer vers une autre cible de commande si elles ne peuvent pas le gérer.
+
+Chaque classe de cible de commande peut remplacer le `OnCmdMsg` fonction membre. Les remplacements permettent à chaque classe router les commandes vers une cible suivante particulière. Une fenêtre frame, par exemple, toujours achemine les commandes à sa fenêtre enfant Active ou la vue, comme indiqué dans le tableau [itinéraire de commande Standard](../mfc/command-routing.md).
+
+La valeur par défaut `CCmdTarget` implémentation de `OnCmdMsg` utilise la table des messages de la classe cible de commande pour rechercher une fonction gestionnaire pour chaque message de commande qu’elle reçoit, de la même façon que les messages standard sont recherchés. S’il trouve une correspondance, il appelle le gestionnaire. Recherche de la table des messages est expliquée dans [comment le Framework recherches tables des messages](../mfc/how-the-framework-searches-message-maps.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Méthode d’appel d’un gestionnaire par le Framework](../mfc/how-the-framework-calls-a-handler.md)
 

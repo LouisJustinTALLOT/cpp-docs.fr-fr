@@ -18,54 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc6467a66163eeef5916580181005cac1a0a4b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5a061ca3c7bb39d90608685e04b62da9b2e83fb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016935"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410414"
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference, classe
-Cette classe décrit une exception levée quand la méthode `Reference` est appelée sur un objet `Scheduler` en cours d'arrêt, à partir d'un contexte qui ne fait pas partie de ce planificateur.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Cette classe décrit une exception levée quand la méthode `Reference` est appelée sur un objet `Scheduler` en cours d'arrêt, à partir d'un contexte qui ne fait pas partie de ce planificateur.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class improper_scheduler_reference : public std::exception;
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[improper_scheduler_reference](#ctor)|Surchargé. Construit un objet `improper_scheduler_reference`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `exception`  
-  
- `improper_scheduler_reference`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** concrt.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="ctor"></a> improper_scheduler_reference 
+```
 
- Construit un objet `improper_scheduler_reference`.  
-  
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[improper_scheduler_reference](#ctor)|Surchargé. Construit un objet `improper_scheduler_reference`.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`exception`
+
+`improper_scheduler_reference`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** concrt.h
+
+**Espace de noms :** concurrency
+
+##  <a name="ctor"></a> improper_scheduler_reference
+
+Construit un objet `improper_scheduler_reference`.
+
 ```
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
 
 improper_scheduler_reference() throw();
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Message*<br/>
-Message descriptif de l'erreur.  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)   
- [Scheduler, classe](scheduler-class.md)
+Message descriptif de l'erreur.
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Scheduler, classe](scheduler-class.md)
