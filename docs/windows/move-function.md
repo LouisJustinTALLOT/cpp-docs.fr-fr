@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc1d0c7ed8655037eebfc12097789253b3027e9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6284ae68ef1c83a00a4d74488c48d4ea81a153ba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603893"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439703"
 ---
 # <a name="move-function"></a>Move (fonction)
 
@@ -39,10 +39,10 @@ inline typename RemoveReference<T>::Type&& Move(
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Type de l’argument.
 
-*arg*  
+*arg*<br/>
 Un argument à déplacer.
 
 ## <a name="return-value"></a>Valeur de retour

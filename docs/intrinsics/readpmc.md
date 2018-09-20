@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0a5a172a7b0f8a309f1d8fd0762e098dc5d416a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4574ac1c5ff1ab45dfdf935e5eba3a14a76b948a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720029"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419844"
 ---
 # <a name="readpmc"></a>__readpmc
-**Section spécifique à Microsoft**  
-  
- Génère le `rdpmc` instruction, qui lit les performances d’analyse de compteur spécifié par `counter`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unsigned __int64 __readpmc(   
-   unsigned long counter   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+**Section spécifique à Microsoft**
+
+Génère le `rdpmc` instruction, qui lit les performances d’analyse de compteur spécifié par `counter`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+unsigned __int64 __readpmc( 
+   unsigned long counter 
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *counter*<br/>
-[in] Le compteur de performances à lire.  
-  
-## <a name="return-value"></a>Valeur de retour  
- La valeur du compteur de performance spécifié.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`__readpmc`|x86, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- Cette intrinsèque est disponible en mode noyau uniquement, et la routine est uniquement disponible comme intrinsèque.  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[in] Le compteur de performances à lire.
+
+## <a name="return-value"></a>Valeur de retour
+
+La valeur du compteur de performance spécifié.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`__readpmc`|x86, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+Cette intrinsèque est disponible en mode noyau uniquement, et la routine est uniquement disponible comme intrinsèque.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

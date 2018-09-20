@@ -16,43 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b559edf26c847404d718440e86037cab4026297b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5fd9bd5145947711c245f552672843d604160d06
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704949"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402170"
 ---
 # <a name="writedr"></a>__writedr
-Écrit la valeur spécifiée dans le Registre de débogage spécifié.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __writedr(unsigned DebugRegister, unsigned DebugValue);  
-void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+Écrit la valeur spécifiée dans le Registre de débogage spécifié.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __writedr(unsigned DebugRegister, unsigned DebugValue);
+void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *DebugRegister*<br/>
-[in] Un nombre entre 0 et 7 identifiant le débogage s’inscrire.  
-  
+[in] Un nombre entre 0 et 7 identifiant le débogage s’inscrire.
+
 *DebugValue*<br/>
-[in] Inscription d’une valeur à écrire dans le débogage.  
-  
-## <a name="remarks"></a>Notes  
- Ces fonctions intrinsèques sont disponibles uniquement en mode noyau, et les routines sont disponibles uniquement comme fonctions intrinsèques.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`__writedr`|x86, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
- [__readdr](../intrinsics/readdr.md)
+[in] Inscription d’une valeur à écrire dans le débogage.
+
+## <a name="remarks"></a>Notes
+
+Ces fonctions intrinsèques sont disponibles uniquement en mode noyau, et les routines sont disponibles uniquement comme fonctions intrinsèques.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`__writedr`|x86, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[__readdr](../intrinsics/readdr.md)

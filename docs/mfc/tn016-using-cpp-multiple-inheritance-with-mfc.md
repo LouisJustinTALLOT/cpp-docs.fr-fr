@@ -1,5 +1,5 @@
 ---
-title: 'TN016 : Utilisation de l’héritage Multiple C++ avec MFC | Documents Microsoft'
+title: 'TN016 : Utilisation de l’héritage Multiple C++ avec MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059e239f549f8da79207e5ff6a485643252d6d6b
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 4c0ed5c1bc73f58bec1f9ad0d6a790fe3d3c0239
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123355"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444682"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016 : utilisation de l'héritage multiple C++ avec MFC
 
@@ -39,7 +39,7 @@ La persistance et les mécanismes de création d’objet dynamique de MFC utilis
 
 L'implémentation actuelle de `CRuntimeClass` ne prend pas en charge les informations de type héritage multiple lors de l'exécution. Cela ne signifie pas que vous ne pouvez pas utiliser l'héritage multiple dans votre application MFC. Toutefois, vous avez certaines responsabilités lorsque vous utilisez des objets qui ont plusieurs classes de base.
 
-Le [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) méthode pas correctement détermine le type d’un objet s’il a plusieurs classes de base. Par conséquent, vous ne pouvez pas utiliser [CObject](../mfc/reference/cobject-class.md) en tant que classe de base virtuelle et tous les appels à `CObject` telles que les fonctions membres [CObject::Serialize](../mfc/reference/cobject-class.md#serialize) et [denouveauCObject::operator](../mfc/reference/cobject-class.md#operator_new)doit avoir des qualificateurs de portée afin que C++ peut lever l’ambiguïté de l’appel de fonction appropriée. Lorsqu'un programme utilise l'héritage multiple dans MFC, la classe qui contient la classe de base `CObject` doit être la classe de gauche dans la liste des classes de base.
+Le [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) méthode pas correctement détermine le type d’un objet s’il a plusieurs classes de base. Par conséquent, vous ne pouvez pas utiliser [CObject](../mfc/reference/cobject-class.md) en tant que classe de base virtuelle et tous les appels à `CObject` telles que les fonctions membres [CObject::Serialize](../mfc/reference/cobject-class.md#serialize) et [NouveauCObject::operator](../mfc/reference/cobject-class.md#operator_new)doit avoir des qualificateurs d’étendue afin que C++ puisse lever toute ambiguïté de l’appel de fonction approprié. Lorsqu'un programme utilise l'héritage multiple dans MFC, la classe qui contient la classe de base `CObject` doit être la classe de gauche dans la liste des classes de base.
 
 Une alternative consiste à utiliser l'opérateur `dynamic_cast`. Le cast d'un objet avec l'héritage multiple en une de ses classes de base force le compilateur à utiliser les fonctions de la classe de base fournie. Pour plus d’informations, consultez [opérateur dynamic_cast](../cpp/dynamic-cast-operator.md).
 
@@ -55,7 +55,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;
 ```
 
-Dans ce cas, `CObject` est inclus deux fois. Cela signifie que vous avez besoin d'une méthode pour lever l'ambiguïté dans toute référence à des méthodes ou des opérateurs `CObject`. Le **new, opérateur** et [opérateur delete](../mfc/reference/cobject-class.md#operator_delete) sont deux opérateurs qui doivent être de lever l’ambiguïté. Autre exemple, le code suivant génère une erreur de compilation :
+Dans ce cas, `CObject` est inclus deux fois. Cela signifie que vous avez besoin d'une méthode pour lever l'ambiguïté dans toute référence à des méthodes ou des opérateurs `CObject`. Le **opérateur new** et [opérateur delete](../mfc/reference/cobject-class.md#operator_delete) sont deux opérateurs doivent être éviter toute ambiguïtés. Autre exemple, le code suivant génère une erreur de compilation :
 
 ```cpp
 myListWnd.Dump(afxDump); // compile time error, CFrameWnd::Dump or CObList::Dump
@@ -63,7 +63,7 @@ myListWnd.Dump(afxDump); // compile time error, CFrameWnd::Dump or CObList::Dump
 
 ## <a name="reimplementing-cobject-methods"></a>Réimplémentation des méthodes CObject
 
-Lorsque vous créez une classe qui contient au moins deux classes de base dérivées de `CObject`, vous devez réimplémenter les méthodes `CObject` que vous voulez que d'autres personnes utilisent. Opérateurs **nouveau** et **supprimer** sont obligatoires et [Dump](../mfc/reference/cobject-class.md#dump) est recommandé. L’exemple suivant réimplémente les **nouveau** et **supprimer** opérateurs et le `Dump` méthode :
+Lorsque vous créez une classe qui contient au moins deux classes de base dérivées de `CObject`, vous devez réimplémenter les méthodes `CObject` que vous voulez que d'autres personnes utilisent. Opérateurs **nouveau** et **supprimer** sont obligatoires et [Dump](../mfc/reference/cobject-class.md#dump) est recommandé. L’exemple suivant réimplémente la **nouveau** et **supprimer** opérateurs et le `Dump` méthode :
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -92,9 +92,9 @@ Il peut sembler qu'hériter virtuellement `CObject` résoudrait le problème de 
 
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf et saisie à l'exécution
 
-Le mécanisme de saisie exécution pris en charge par MFC dans `CObject` utilise les macros DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL et IMPLEMENT_SERIAL. Ces macros peuvent effectuer une vérification de type d'exécution pour vous assurer que les conversions en aval sont sécurisées.
+Le mécanisme de saisie de runtime pris en charge par MFC dans `CObject` utilise les macros DECLARE_DYNAMIC IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL et IMPLEMENT_SERIAL. Ces macros peuvent effectuer une vérification de type d'exécution pour vous assurer que les conversions en aval sont sécurisées.
 
-Les macros prennent en charge une seule classe de base et s'exécutent de façon limitée pour multiplier les classes héritées. La classe de base que vous spécifiez dans IMPLEMENT_DYNAMIC ou IMPLEMENT_SERIAL doit être la classe de base premier (ou la plus à gauche). Ce positionnement vous permet de faire une vérification de type de la classe de base à gauche uniquement. Le système de types d'exécution ne sait rien des classes de base supplémentaires. Dans l'exemple suivant, les systèmes d'exécution font la vérification de type sur `CFrameWnd`, mais ne savent rien de `CObList`.
+Les macros prennent en charge une seule classe de base et s'exécutent de façon limitée pour multiplier les classes héritées. La classe de base que vous spécifiez dans IMPLEMENT_DYNAMIC ou IMPLEMENT_SERIAL doit être la classe de base premier (ou plus à gauche). Ce positionnement vous permet de faire une vérification de type de la classe de base à gauche uniquement. Le système de types d'exécution ne sait rien des classes de base supplémentaires. Dans l'exemple suivant, les systèmes d'exécution font la vérification de type sur `CFrameWnd`, mais ne savent rien de `CObList`.
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -194,5 +194,5 @@ CHelloAppAndFrame theHelloAppAndFrame;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes techniques par numéro](../mfc/technical-notes-by-number.md)  
-[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)  
+[Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
+[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)

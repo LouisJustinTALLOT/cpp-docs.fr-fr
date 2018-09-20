@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ff7af5ceac971bc230addf81dbd7131a455ada1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bcfce810dff7862c60fca853b216eeb05d09dd0f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687861"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414899"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT, structure
 
@@ -37,7 +37,7 @@ friend struct Details::RuntimeClassBaseT;
 
 ### <a name="parameters"></a>Paramètres
 
-*RuntimeClassTypeT*  
+*RuntimeClassTypeT*<br/>
 Un champ d’indicateurs qui spécifie un ou plusieurs [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) énumérateurs.
 
 ## <a name="remarks"></a>Notes

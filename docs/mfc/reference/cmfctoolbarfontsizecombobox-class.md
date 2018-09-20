@@ -24,116 +24,131 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6d520ab6bed3cfe30cbc7742265dc1461afe5a1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9942f0d9ca4f890965aaf7d05383beae6fa24af9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701634"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429446"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Cmfctoolbarfontsizecombobox, classe
-Un bouton de barre d’outils qui contient un contrôle de zone de liste déroulante qui permet à l’utilisateur à sélectionner une taille de police.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="protected-constructors"></a>Constructeurs protégés  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|Construit un objet `CMFCToolBarFontSizeComboBox`.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Retourne la taille de police sélectionnée en twips.|  
-|[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|Remplit la zone de liste modifiable avec toutes les tailles de police pris en charge d’une police spécifiée.|  
-|[CMFCToolBarFontSizeComboBox::SetTwipSize](#settwipsize)|Définit la taille de police en twips.|  
-  
-## <a name="remarks"></a>Notes  
- Vous pouvez utiliser un `CMFCToolBarFontSizeComboBox` de l’objet avec un [cmfctoolbarfontcombobox, classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md) objet pour permettre aux utilisateurs de sélectionner une police et la taille de police.  
-  
- Vous pouvez ajouter un bouton de zone de liste déroulante Police taille à une barre d’outils comme vous ajoutez un bouton de zone de liste déroulante de police. Pour plus d’informations, consultez [cmfctoolbarfontcombobox, classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
-  
- Lorsque l’utilisateur sélectionne une nouvelle police dans un `CMFCToolBarFontComboBox` de l’objet, vous pouvez remplir la zone de liste déroulante de taille de police avec les tailles prises en charge pour cette police à l’aide de la [CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes) (méthode).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarFontSizeComboBox` classe permettant de configurer un `CMFCToolBarFontSizeComboBox` objet. L’exemple illustre comment récupérer la taille de police, en twips, dans la zone de texte, remplir la zone de liste déroulante de taille de police avec toutes les tailles valides de la police donnée et spécifier la taille de police en twips. Cet extrait de code fait partie de l’ [exemple Word Pad](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
-  
- [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)  
-  
- [CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** afxtoolbarfontcombobox.h  
-  
-##  <a name="cmfctoolbarfontsizecombobox"></a>  CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
- Construit un objet `CMFCToolBarFontSizeComboBox`.  
-  
-```  
+
+Un bouton de barre d’outils qui contient un contrôle de zone de liste déroulante qui permet à l’utilisateur à sélectionner une taille de police.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
+```
+
+## <a name="members"></a>Membres
+
+### <a name="protected-constructors"></a>Constructeurs protégés
+
+|Nom|Description|
+|----------|-----------------|
+|[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|Construit un objet `CMFCToolBarFontSizeComboBox`.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Retourne la taille de police sélectionnée en twips.|
+|[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|Remplit la zone de liste modifiable avec toutes les tailles de police pris en charge d’une police spécifiée.|
+|[CMFCToolBarFontSizeComboBox::SetTwipSize](#settwipsize)|Définit la taille de police en twips.|
+
+## <a name="remarks"></a>Notes
+
+Vous pouvez utiliser un `CMFCToolBarFontSizeComboBox` de l’objet avec un [cmfctoolbarfontcombobox, classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md) objet pour permettre aux utilisateurs de sélectionner une police et la taille de police.
+
+Vous pouvez ajouter un bouton de zone de liste déroulante Police taille à une barre d’outils comme vous ajoutez un bouton de zone de liste déroulante de police. Pour plus d’informations, consultez [cmfctoolbarfontcombobox, classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md).
+
+Lorsque l’utilisateur sélectionne une nouvelle police dans un `CMFCToolBarFontComboBox` de l’objet, vous pouvez remplir la zone de liste déroulante de taille de police avec les tailles prises en charge pour cette police à l’aide de la [CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes) (méthode).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarFontSizeComboBox` classe permettant de configurer un `CMFCToolBarFontSizeComboBox` objet. L’exemple illustre comment récupérer la taille de police, en twips, dans la zone de texte, remplir la zone de liste déroulante de taille de police avec toutes les tailles valides de la police donnée et spécifier la taille de police en twips. Cet extrait de code fait partie de l’ [exemple Word Pad](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
+
+[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
+
+[CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxtoolbarfontcombobox.h
+
+##  <a name="cmfctoolbarfontsizecombobox"></a>  CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox
+
+Construit un objet `CMFCToolBarFontSizeComboBox`.
+
+```
 CMFCToolBarFontSizeComboBox();
-```  
-  
-##  <a name="gettwipsize"></a>  CMFCToolBarFontSizeComboBox::GetTwipSize  
- Récupère la taille de police, en twips, à partir de la zone de texte d’une zone de liste déroulante de taille de police.  
-  
-```  
-int GetTwipSize() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Si la valeur de retour est positive, il est la taille de police en twips. Il est -1 si la zone de texte de la zone de liste déroulante est vide. Il est -2 si une erreur se produit.  
-  
-##  <a name="rebuildfontsizes"></a>  CMFCToolBarFontSizeComboBox::RebuildFontSizes  
- Remplit une zone de liste déroulante de taille de police avec toutes les tailles valides de la police donnée.  
-  
-```  
+```
+
+##  <a name="gettwipsize"></a>  CMFCToolBarFontSizeComboBox::GetTwipSize
+
+Récupère la taille de police, en twips, à partir de la zone de texte d’une zone de liste déroulante de taille de police.
+
+```
+int GetTwipSize() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Si la valeur de retour est positive, il est la taille de police en twips. Il est -1 si la zone de texte de la zone de liste déroulante est vide. Il est -2 si une erreur se produit.
+
+##  <a name="rebuildfontsizes"></a>  CMFCToolBarFontSizeComboBox::RebuildFontSizes
+
+Remplit une zone de liste déroulante de taille de police avec toutes les tailles valides de la police donnée.
+
+```
 void RebuildFontSizes(const CString& strFontName);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *strFontName*<br/>
-[in] Spécifie un nom de police.  
-  
-### <a name="remarks"></a>Notes  
- Appelez cette fonction lorsque vous souhaitez synchroniser entre la sélection dans une zone de liste déroulante de police et une zone de liste déroulante de taille de police, comme un [cmfctoolbarfontcombobox, classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
-  
-##  <a name="settwipsize"></a>  CMFCToolBarFontSizeComboBox::SetTwipSize  
- Arrondit spécifié de taille (en twips) à la taille plus proche en points, puis définit la taille sélectionnée dans la zone de liste déroulante pour cette valeur.  
-  
-```  
+[in] Spécifie un nom de police.
+
+### <a name="remarks"></a>Notes
+
+Appelez cette fonction lorsque vous souhaitez synchroniser entre la sélection dans une zone de liste déroulante de police et une zone de liste déroulante de taille de police, comme un [cmfctoolbarfontcombobox, classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md).
+
+##  <a name="settwipsize"></a>  CMFCToolBarFontSizeComboBox::SetTwipSize
+
+Arrondit spécifié de taille (en twips) à la taille plus proche en points, puis définit la taille sélectionnée dans la zone de liste déroulante pour cette valeur.
+
+```
 void SetTwipSize(int nSize);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *nSize*<br/>
-[in] Spécifie la taille de police (en twips) pour définir.  
-  
-### <a name="remarks"></a>Notes  
- Vous pouvez récupérer la taille de police valide précédent ultérieurement en appelant le [CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize) (méthode).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [Cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md)   
- [Cmfctoolbarbutton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [Cmfctoolbarcomboboxbutton, classe](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
- [Cmfcfontinfo, classe](../../mfc/reference/cmfcfontinfo-class.md)   
- [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[in] Spécifie la taille de police (en twips) pour définir.
+
+### <a name="remarks"></a>Notes
+
+Vous pouvez récupérer la taille de police valide précédent ultérieurement en appelant le [CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize) (méthode).
+
+## <a name="see-also"></a>Voir aussi
+
+[Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCToolBar, classe](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[CMFCToolBarButton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
+[CMFCToolBarComboBoxButton, classe](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
+[CMFCFontInfo, classe](../../mfc/reference/cmfcfontinfo-class.md)<br/>
+[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
+[Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212810"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420502"
 ---
 # <a name="property--c-component-extensions"></a>propriété  (extensions du composant C++)
 
@@ -33,15 +33,15 @@ Déclare un *propriété*, qui est une fonction membre qui se comporte et est ac
 
 Vous pouvez déclarer un des types de propriétés suivants.
 
-*propriété simple*  
+*propriété simple*<br/>
 Par défaut, crée un *accesseur set* qui assigne la valeur de propriété, un *accesseur get* qui Récupère la valeur de propriété et un membre généré par le compilateur les données privées qui contient la valeur de propriété.
 
-*bloc de propriété*  
+*bloc de propriété*<br/>
 Utilisez-le pour créer des accesseurs get et/ou set définis par l’utilisateur. La propriété est en lecture/écriture si les accesseurs get et set sont définis, en lecture seule si seul l'accesseur get est défini et en écriture seule si seul l'accesseur set est défini.
 
 Vous devez déclarer explicitement un membre de données pour qu'il contienne la valeur de la propriété.
 
-*propriété indexée*  
+*propriété indexée*<br/>
 Bloc de propriété que vous pouvez utiliser pour obtenir et définir une valeur de propriété qui est spécifiée par un ou plusieurs index.
 
 Vous pouvez créer une propriété indexée qui a un nom de propriété défini par l’utilisateur ou un *par défaut* nom de la propriété. Le nom d'une propriété d'index par défaut correspond au nom de la classe dans laquelle la propriété est définie. Pour déclarer une propriété par défaut, spécifiez la **par défaut** mot-clé au lieu d’un nom de propriété.
@@ -71,27 +71,27 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Paramètres
 
-*type*  
+*type*<br/>
 Type de données de la valeur de la propriété et donc la propriété proprement dite.
 
-*property_name*  
+*property_name*<br/>
 Nom de la propriété.
 
-*modificateur d’accès*  
+*modificateur d’accès*<br/>
 Qualificateur d'accès. Qualificateurs valides sont **statique** et **virtuel**.
 
 La méthode get ou les accesseurs set n’accordent pas sur le **virtuel** qualificateur, mais ils doivent s’accorder sur le **statique** qualificateur.
 
-*modificateur d’héritage*  
+*modificateur d’héritage*<br/>
 Qualificateur d'héritage. Qualificateurs valides sont **abstraite** et **sealed**.
 
-*index_list*  
+*index_list*<br/>
 Liste délimitée par des virgules d'un ou plusieurs index. Chaque index se compose d'un type d'index et d'un identificateur facultatif qui peut être utilisé dans le corps de la méthode de propriété.
 
-*valeur*  
+*valeur*<br/>
 Valeur à affecter à la propriété dans une opération set ou à récupérer dans une opération get.
 
-*property_body*  
+*property_body*<br/>
 Corps de la méthode de propriété de l’accesseur set ou get. Le *property_body* pouvez utiliser la *index_list* pour accéder au membre de données de propriété sous-jacent, ou en tant que paramètres lors du traitement défini par l’utilisateur.
 
 ## <a name="windows-runtime"></a>Windows Runtime
@@ -123,16 +123,16 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Paramètres
 
-*Modificateur*  
+*Modificateur*<br/>
 Modificateur qui peut être utilisé sur une déclaration de propriété ou une méthode d’accesseur get/set. Les valeurs possibles sont **statique** et **virtuel**.
 
-*type*  
+*type*<br/>
 Type de la valeur représentée par la propriété.
 
-*property_name*  
+*property_name*<br/>
 Paramètre(s) de la méthode raise ; doit correspondre à la signature du délégué.
 
-*index_list*  
+*index_list*<br/>
 Liste délimitée par des virgules d'un ou plusieurs index, spécifiés entre crochets (opérateur d'indice, ([])). Pour chaque index, spécifiez un type et éventuellement un identificateur qui peut être utilisé dans le corps de la méthode de propriété.
 
 ### <a name="remarks"></a>Notes

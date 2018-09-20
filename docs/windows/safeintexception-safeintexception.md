@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 749ef965520732c37457613f44e0a23e213023db
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 24138db5ab772990f050fc8fcb6e5dad640a662d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700971"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396777"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
 
@@ -63,6 +63,6 @@ Les valeurs possibles pour *code* sont définis dans le fichier Safeint.h. Pour 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bibliothèque SafeInt](../windows/safeint-library.md)  
-[SafeIntException Class](../windows/safeintexception-class.md)  
+[Bibliothèque SafeInt](../windows/safeint-library.md)<br/>
+[SafeIntException Class](../windows/safeintexception-class.md)<br/>
 [SafeInt, classe](../windows/safeint-class.md)

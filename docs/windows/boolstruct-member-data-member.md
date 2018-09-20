@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46e2a87515e2b129c31f68e31b3231eb1699e844
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 69f9d3eed4a357df38e2c62e2f49e33f579b952a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591106"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402796"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member, données de membre
 
@@ -46,5 +46,5 @@ Spécifie qu’un [ComPtr](../windows/comptr-class.md) est ou n’est pas le cas
 
 ## <a name="see-also"></a>Voir aussi
 
-[BoolStruct, structure](../windows/boolstruct-structure.md)  
+[BoolStruct, structure](../windows/boolstruct-structure.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

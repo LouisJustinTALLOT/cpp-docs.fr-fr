@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c90367a1db313de1935e119c2efb8e9713b3d282
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 73a773a5633ceb38173a4181e5e3effe2329fce0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603601"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419579"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Sélection d'une zone d'une image (Éditeur d'images pour les icônes)
 
@@ -58,6 +58,6 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

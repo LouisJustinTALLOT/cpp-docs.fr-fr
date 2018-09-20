@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2080aae34a69b18286953bfa48a269b81a5a5e65
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d6feb80c93298d5fe3d2cb23f9b34727bced57d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761811"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442225"
 ---
 # <a name="atlmfc-shared-classes"></a>Classes partagées ATL/MFC
 
@@ -44,16 +44,16 @@ Ces classes de l’utilitaire peuvent être utilisées dans n’importe quel pro
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Classes partagées entre MFC et ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
+[Classes partagées entre MFC et ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
 Fournit des liens vers les classes partagées entre MFC et ATL.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Référence Active Template Library (ATL)](../atl/atl-com-desktop-components.md)  
+[Référence Active Template Library (ATL)](../atl/atl-com-desktop-components.md)<br/>
 Fournit les documents de référence pour l'ATL Library, un jeu de classes C++ basées sur modèle qui simplifient la programmation d'objets COM.
 
-[Microsoft Foundation Class Library (MFC) Reference](../mfc/mfc-desktop-applications.md)  
+[Microsoft Foundation Class Library (MFC) Reference](../mfc/mfc-desktop-applications.md)<br/>
 Fournit des documents de référence pour la bibliothèque MFC, un ensemble de classes qui constituent une infrastructure d’application, qui est l’infrastructure d’une application écrite pour l’API Windows.
 
-[Débogage](/visualstudio/debugger/debugging-in-visual-studio)  
+[Débogage](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Fournit des liens vers l'utilisation du débogueur Visual Studio pour corriger des erreurs de logique dans vos application ou procédures stockées.

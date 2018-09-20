@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702531"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440873"
 ---
 # <a name="generic-delegates-visual-c"></a>Délégués génériques (Visual C++)
 
@@ -39,25 +39,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Paramètres
 
-*Attributs*  
+*Attributs*<br/>
 (Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.
 
-*type-paramètre-identificateur (s)*  
+*type-paramètre-identificateur (s)*<br/>
 Liste séparée par des virgules d’identificateurs pour les paramètres de type.
 
-*type de paramètre contraintes clauses*  
+*type de paramètre contraintes clauses*<br/>
 Prend la forme spécifiée dans [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modificateurs d’accessibilité*  
+*modificateurs d’accessibilité*<br/>
 (Facultatif) Les modificateurs d’accessibilité (par exemple, **public**, **privé**).
 
-*result-type*  
+*result-type*<br/>
 Le type de retour du délégué.
 
-*identifier*  
+*identifier*<br/>
 Le nom du délégué.
 
-*paramètres-formels*  
+*paramètres-formels*<br/>
 (Facultatif) La liste de paramètres du délégué.
 
 ## <a name="example"></a>Exemple

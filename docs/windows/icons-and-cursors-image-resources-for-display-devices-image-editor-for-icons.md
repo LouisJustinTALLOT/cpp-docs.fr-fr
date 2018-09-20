@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03c3b64cfbf93260c1195fa028d05bb8085c9b09
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d3a34613d3a8d88166cbfca123c2318e87f024e6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313583"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436765"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-c-image-editor-for-icons"></a>Icônes et curseurs : ressources Image pour les périphériques d’affichage (Éditeur d’images C++ pour les icônes)
 
@@ -84,6 +84,6 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)  
-[Icônes](https://msdn.microsoft.com/library/windows/desktop/ms646973)  
+[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)<br/>
+[Icônes](https://msdn.microsoft.com/library/windows/desktop/ms646973)<br/>
 [Curseurs](https://msdn.microsoft.com/library/windows/desktop/ms646970)

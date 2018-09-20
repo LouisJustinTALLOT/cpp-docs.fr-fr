@@ -1,5 +1,5 @@
 ---
-title: Énumération UICheckState | Documents Microsoft
+title: Énumération UICheckState | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2017
 ms.technology:
@@ -16,30 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c326de6b30668265ff57de73021bcd526baa5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc09dcb36d7d1ec1abd2f51fd13b6daadd74601f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375420"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403849"
 ---
 # <a name="uicheckstate-enumeration"></a>Énumération UICheckState
-Décrit l’état d’activation d’un élément d’interface utilisateur pour la commande.  
-   
-### <a name="syntax"></a>Syntaxe   
-```  
-public enum class 
-{  
-   [DefaultValue(typeid<Microsoft::VisualC::MFC::UICheckState>, "Checked")]  
-   Unchecked,   
-   Checked,   
-   Indeterminate 
-};  
-```  
-   
-### <a name="remarks"></a>Notes  
- [ICommandUI::Check](icommandui-interface.md#check) utilise ces valeurs pour décrire l’état d’un élément d’interface utilisateur.    
- Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
-   
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)  
+Décrit l’état d’activation d’un élément d’interface utilisateur pour la commande.
+
+### <a name="syntax"></a>Syntaxe
+
+```
+public enum class
+{
+   [DefaultValue(typeid<Microsoft::VisualC::MFC::UICheckState>, "Checked")]
+   Unchecked,
+   Checked,
+   Indeterminate
+};
+```
+
+### <a name="remarks"></a>Notes
+
+[ICommandUI::Check](icommandui-interface.md#check) utilise ces valeurs pour décrire l’état d’un élément d’interface utilisateur.
+Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+
+### <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)

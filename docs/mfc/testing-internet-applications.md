@@ -1,5 +1,5 @@
 ---
-title: Test des Applications Internet | Documents Microsoft
+title: Test des Applications Internet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ffc5b11783806555b210b8561cbe6cdd2878ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 518fbe754b676798c6d2acc2a3e26ea1d3e3d4ac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380067"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444152"
 ---
 # <a name="testing-internet-applications"></a>Test des applications Internet
-Il existe des défis de tests uniques sur Internet, en particulier pour les applications qui s’exécutent sur un serveur Web. Le test initial est probablement effectué à l’aide d’un client de mono-utilisateur se connectant à un serveur de test. Cela sera utile pour le débogage de votre code.  
-  
- Vous devez également tester dans les conditions réelles : avec plusieurs clients connectés via des connexions haut débit, ainsi que des lignes de série de faible débit, y compris les connexions de modem. Il peut être difficile de simuler des conditions réelles, mais il est certainement à temps concevoir des scénarios possibles de dépense et de les exécuter. Si possible, vous devez également utiliser les outils à la capacité d’et le test de stress. Certaines classes de bogues, tels que les bogues de temporisation, sont difficiles à détecter et à reproduire.  
-  
- Un des défis de la programmation Internet est sa visibilité. Nombre d’accès à votre site peuvent ralentir votre serveur. Vous souhaitez que votre serveur dégradation normale. Vous souhaitez éviter tout ce qui peut être dans l’ordinateur d’un utilisateur si votre application échoue (par exemple, une altération des données lors de l’écriture dans le Registre ou lors de l’écriture des cookies sur le client).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Tâches de programmation Internet MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)
+
+Il existe des défis uniques de tests sur Internet, en particulier pour les applications qui s’exécutent sur un serveur Web. Le test initial sera probablement effectué à l’aide d’un client d’utilisateur unique qui se connecte à un serveur de test. Cela sera utile pour déboguer votre code.
+
+Vous souhaitez également tester dans les conditions réelles : avec plusieurs clients connectés via des connexions haut débit, ainsi que des lignes de série de faible vitesse, y compris les connexions de modem. Il peut être difficile de simuler des conditions réelles, mais il vaut sans aucun doute les dépenses heure concevoir des scénarios possibles et les exécuter. Si possible, vous devez également utiliser des outils pour la capacité de faire et le test de contrainte. Certaines classes de bogues, tels que les bogues de temporisation, sont difficiles à trouver et à reproduire.
+
+Un des défis de la programmation Internet est sa visibilité. Nombre d’accès à votre site peuvent ralentir votre serveur. Vous voulez que votre serveur pour une dégradation normale. Vous souhaitez empêcher tout code qui peut être à l’ordinateur d’un utilisateur si votre application échoue (par exemple, une altération des données lors de l’écriture dans le Registre ou lors de l’écriture des cookies sur le client).
+
+## <a name="see-also"></a>Voir aussi
+
+[Tâches de programmation Internet MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
+[Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)
 

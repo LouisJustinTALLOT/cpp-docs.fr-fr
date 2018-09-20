@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204540"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439573"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Initialisation d'assemblys mixtes
 
 Les développeurs Windows doivent toujours être prudents de verrouillage du chargeur lors de l’exécution de code pendant `DllMain`. Toutefois, il existe d’autres considérations entrent en jeu lors du traitement de C++ / c++ / clr des assemblys en mode mixte.
 
 Le code situé dans [DllMain](/windows/desktop/Dlls/dllmain) ne doit pas accéder au CLR. Cela signifie que `DllMain` ne doit pas appeler de fonctions managées, directement ou indirectement ; qu’aucun code managé ne doit être déclaré ou implémenté dans `DllMain`; et qu’aucun garbage collection ou chargement de bibliothèque automatique ne doit avoir lieu dans `DllMain`.
-  
+
 ## <a name="causes-of-loader-lock"></a>Causes du verrouillage du chargeur
 
 Avec l’introduction de la plateforme .NET, il existe deux mécanismes distincts pour charger un module d’exécution (EXE ou DLL) : un pour Windows qui est utilisé pour les modules non managés et un pour le Common Language Runtime (CLR) .NET qui charge les assemblys .NET. Le problème du chargement de DLL mixtes se concentre autour du chargeur du système d’exploitation Microsoft Windows.
@@ -130,7 +130,7 @@ Avant Visual Studio 2005, l’éditeur de liens choisit simplement la plus impor
 À titre de commodité pour les utilisateurs confrontés au verrouillage du chargeur, l’éditeur de liens choisit l’implémentation native par rapport à l’implémentation managée en cas de présentation des deux implémentations. Cela évite les problèmes précités. Toutefois, il y a deux exceptions à cette règle dans cette version en raison de deux problèmes non résolus avec le compilateur :
 
 - L’appel de la fonction inline s’effectue à travers un pointeur de fonction statique globale. Ce scénario est particulièrement intéressant, parce que les fonctions virtuelles sont appelées à travers des pointeurs de fonction globale. Par exemple :
-  
+
 ```cpp
 #include "definesmyObject.h"
 #include "definesclassC.h"
@@ -170,15 +170,15 @@ Pour identifier la fonction MSIL spécifique qui a été appelée pendant le ver
    Pour ce faire, ouvrez le **propriétés** grille pour le projet de démarrage dans la solution. Sélectionnez **propriétés de Configuration** > **débogage**. Définir le **Type de débogueur** à **natif uniquement**.
 
 1. Démarrez le débogueur (F5).
-  
+
 1. Lorsque le **/CLR** diagnostic est généré, choisissez **de nouvelle tentative** , puis **rompre**.
-  
+
 1. Ouvrez la fenêtre Pile des appels. (Dans la barre de menus, choisissez **déboguer** > **Windows** > **pile des appels**.) Incriminé `DllMain` ou de l’initialiseur statique est identifié avec une flèche verte. Si la fonction incriminée n’est pas identifiée, vous devez effectuer les étapes suivantes pour la rechercher.
 
 1. Ouvrez le **immédiat** fenêtre (dans la barre de menus, choisissez **déboguer** > **Windows** > **immédiat**.)
 
 1. Tapez .load sos.dll dans le **immédiat** fenêtre pour charger le service de débogage SOS.
-  
+
 1. Type ! dumpstack dans la **immédiat** fenêtre pour obtenir une liste complète des interne **/CLR** pile.
 
 1. Recherchez la première instance (la plus proche du bas de la pile) de _CorDllMain (si `DllMain` provoque le problème) ou de _VTableBootstrapThunkInitHelperStub ou GetTargetForVTableEntry (si un initialiseur statique provoque le problème). L’entrée de la pile juste en dessous de cet appel est l’appel de la fonction MSIL implémentée qui a tenté de s’exécuter pendant le verrouillage du chargeur.

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5816c62749c889cdd926ff1551f4849fd039f1f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4f2c4e41b97f8ce8224d656c9ba525d807bfa270
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42585262"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423882"
 ---
 # <a name="coclass"></a>coclasse
 
@@ -153,8 +153,8 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs COM](../windows/com-attributes.md)  
-[Attributs de classe](../windows/class-attributes.md)  
-[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs COM](../windows/com-attributes.md)<br/>
+[Attributs de classe](../windows/class-attributes.md)<br/>
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [appobject](../windows/appobject.md)

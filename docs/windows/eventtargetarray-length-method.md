@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88f8402cb6a01bc46aa25f99b2b8c60151a698ce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6a23945ae4489ace4d2017d9418f719da0849f95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604034"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400274"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length, méthode
 
@@ -50,5 +50,5 @@ Obtient le nombre actuel d’éléments dans le tableau interne des gestionnaire
 
 ## <a name="see-also"></a>Voir aussi
 
-[EventTargetArray, classe](../windows/eventtargetarray-class.md)  
+[EventTargetArray, classe](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

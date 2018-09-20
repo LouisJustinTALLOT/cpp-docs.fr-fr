@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bfd96962cebd4b94e9b1b50ca588ada9af69779
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719099"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418383"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -44,10 +44,10 @@ Associe la variable de membre spécifié avec un paramètre d’entrée ou de so
 
 ### <a name="parameters"></a>Paramètres
 
-*Ordinal*  
+*Ordinal*<br/>
 Le numéro de colonne (ordinal DBCOLUMNINFO) correspondant à un champ dans l’ensemble de lignes à laquelle lier des données.
 
-*ParamType*  
+*ParamType*<br/>
 (Facultatif) Le type à définir pour le paramètre. Fournisseurs prennent en charge uniquement les types de d’e/s de paramètres qui sont pris en charge par la source de données sous-jacente. Le type est une combinaison d’une ou plusieurs valeurs DBPARAMIOENUM :
 
 - DBPARAMIO_INPUT un paramètre d’entrée.
@@ -56,19 +56,19 @@ Le numéro de colonne (ordinal DBCOLUMNINFO) correspondant à un champ dans l’
 
 - DBPARAMIO_NOTPARAM l’accesseur n’a aucun paramètre. Paramètre `eParamIO` à cette valeur dans la ligne accesseurs rappelle à l’utilisateur que les paramètres sont ignorés.
 
-*DbType*  
+*DbType*<br/>
 (Facultatif) OLE DB [indicateur de Type](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) pour l’entrée de la colonne.
 
-*precision*  
+*precision*<br/>
 (Facultatif) La précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bPrecision` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Mise à l’échelle*  
+*Mise à l’échelle*<br/>
 (Facultatif) La mise à l’échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Facultatif) Une variable de membre permet de conserver l’état de cette colonne. L’état indique si la valeur de colonne est une valeur de données ou une autre valeur, comme NULL. Pour connaître les valeurs possibles, consultez [état](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
 
-*length*  
+*length*<br/>
 (Facultatif) Une variable de membre utilisée pour conserver la taille de la colonne en octets.
 
 ## <a name="remarks"></a>Notes

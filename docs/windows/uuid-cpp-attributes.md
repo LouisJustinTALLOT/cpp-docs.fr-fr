@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36b438662fb42cdeeb894906753a38168208f5ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 37e5db99d97bc65f1f4a75e2e56e1f0e719dd9ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218817"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427171"
 ---
 # <a name="uuid-c-attributes"></a>uuid (attributs C++)
 
@@ -38,7 +38,7 @@ Spécifie l’ID unique pour une classe ou interface.
 
 ### <a name="parameters"></a>Paramètres
 
-*uuid*  
+*uuid*<br/>
 Identificateur unique de 128 bits.
 
 ## <a name="remarks"></a>Notes
@@ -70,8 +70,8 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs d’interface](../windows/interface-attributes.md)  
-[Attributs de classe](../windows/class-attributes.md)  
-[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs d’interface](../windows/interface-attributes.md)<br/>
+[Attributs de classe](../windows/class-attributes.md)<br/>
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [uuid](/windows/desktop/Midl/uuid)  

@@ -1,5 +1,5 @@
 ---
-title: affinity_partitioner, classe | Documents Microsoft
+title: affinity_partitioner, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2242346bda717117e2b43ba108d86fd2a77a3b58
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9b1254b316a52bd3e61b3cafd81ba2e89ee88b62
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691129"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444643"
 ---
 # <a name="affinitypartitioner-class"></a>affinity_partitioner, classe
-La classe `affinity_partitioner` est similaire à la classe `static_partitioner`, mais elle améliore l'affinité du cache par son choix de mapper les sous-plages aux threads de travail. Elle peut améliorer considérablement les performances quand une boucle est réexécutée sur le même jeu de données et que les données tiennent dans le cache. Notez que le même objet `affinity_partitioner` doit être utilisé avec les itérations suivantes d'une boucle parallèle exécutée sur un jeu de données particulier, pour bénéficier de la localité des données.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+La classe `affinity_partitioner` est similaire à la classe `static_partitioner`, mais elle améliore l'affinité du cache par son choix de mapper les sous-plages aux threads de travail. Elle peut améliorer considérablement les performances quand une boucle est réexécutée sur le même jeu de données et que les données tiennent dans le cache. Notez que le même objet `affinity_partitioner` doit être utilisé avec les itérations suivantes d'une boucle parallèle exécutée sur un jeu de données particulier, pour bénéficier de la localité des données.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class affinity_partitioner;
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[affinity_partitioner](#ctor)|Construit un objet `affinity_partitioner`.|  
-|[~ affinity_partitioner, destructeur](#dtor)|Détruit un `affinity_partitioner` objet.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `affinity_partitioner`  
-  
-## <a name="requirements"></a>Spécifications  
- **En-tête :** ppl.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="dtor"></a> ~ affinity_partitioner 
+```
 
- Détruit un `affinity_partitioner` objet.  
-  
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[affinity_partitioner](#ctor)|Construit un objet `affinity_partitioner`.|
+|[~ affinity_partitioner, destructeur](#dtor)|Détruit un `affinity_partitioner` objet.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`affinity_partitioner`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** ppl.h
+
+**Espace de noms :** concurrency
+
+##  <a name="dtor"></a> ~ affinity_partitioner
+
+Détruit un `affinity_partitioner` objet.
+
 ```
 ~affinity_partitioner();
-```  
-  
-##  <a name="ctor"></a> affinity_partitioner 
+```
 
- Construit un objet `affinity_partitioner`.  
-  
+##  <a name="ctor"></a> affinity_partitioner
+
+Construit un objet `affinity_partitioner`.
+
 ```
 affinity_partitioner();
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)

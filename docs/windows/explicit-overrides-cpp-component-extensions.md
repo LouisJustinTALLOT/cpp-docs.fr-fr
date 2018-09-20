@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601210"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408945"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Substitutions explicites  (extensions du composant C++)
 
@@ -37,16 +37,16 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>Paramètres
 
-*substitution de déclarateur de fonction*  
+*substitution de déclarateur de fonction*<br/>
 La liste de type, le nom et argument de retour de la fonction de substitution.  Notez que la fonction de substitution n’a pas d’avoir le même nom que la fonction qui est substitué.
 
-*type*  
+*type*<br/>
 Le type de base qui contient une fonction à remplacer.
 
-*function*  
+*function*<br/>
 Une liste délimitée par des virgules d’un ou plusieurs noms de fonction à remplacer.
 
-*substitution de définition de fonction*  
+*substitution de définition de fonction*<br/>
 Les instructions de corps de fonction qui définissent la fonction de substitution.
 
 ### <a name="remarks"></a>Notes

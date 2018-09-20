@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e00b898fc60953896a9c0d2b7a124e195d3bcbf1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8c8567a63a3ae7e2ffb0c23e99715d63fe7b20a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593166"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427093"
 ---
 # <a name="srwlocksharedtraitsunlock-method"></a>SRWLockSharedTraits::Unlock, méthode
 
@@ -38,7 +38,7 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Paramètres
 
-*SRWLOCK*  
+*SRWLOCK*<br/>
 Un handle vers un `SRWLock` objet.
 
 ## <a name="return-value"></a>Valeur de retour

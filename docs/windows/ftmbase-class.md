@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e8a1dcd96ab42f48c91bbed2057475fa412c8925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601455"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432800"
 ---
 # <a name="ftmbase-class"></a>FtmBase (classe)
 
@@ -106,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Paramètres
 
-*GIT*  
+*GIT*<br/>
 Lorsque cette opération se termine, un pointeur vers un tableau global d’interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -129,7 +129,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*dwReserved*  
+*dwReserved*<br/>
 Réservé pour une future utilisation ; doit être nul.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -161,26 +161,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>Paramètres
 
-*riid*  
+*riid*<br/>
 Référence à l’identificateur de l’interface doivent être marshalées.
 
-*PV*  
+*PV*<br/>
 Pointeur d’interface doivent être marshalées ; peut être NULL.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contexte de destination où l’interface spécifiée doit être marshalé.
 
 Spécifiez une ou plusieurs valeurs d’énumération MSHCTX.
 
 Actuellement, unmarshaling peut se produire dans un autre cloisonnement du processus en cours (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Réservé pour une utilisation ultérieure ; doit être NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Indicateur qui spécifie si les données doivent être marshalées doit être transmise au processus client, le cas par défaut, ou écrites dans une table globale, où il peut être extrait par plusieurs clients. Spécifiez une ou plusieurs valeurs d’énumération MSHLFLAGS.
 
-*pSize*  
+*pSize*<br/>
 Lorsque cette opération se termine, pointeur vers la limite supérieure de la quantité de données à écrire dans le flux de marshaling.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -204,23 +204,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>Paramètres
 
-*riid*  
+*riid*<br/>
 Référence à l’identificateur de l’interface doivent être marshalées.
 
-*PV*  
+*PV*<br/>
 Pointeur vers l’interface doivent être marshalées ; peut d’être NULL si l’appelant n’a pas un pointeur vers l’interface souhaitée.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contexte de destination où l’interface spécifiée doit être marshalé.
 
 Spécifiez une ou plusieurs valeurs d’énumération MSHCTX.
 
 Unmarshaling peut se produire dans un autre cloisonnement du processus en cours (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Réservé pour une utilisation ultérieure ; doit être NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Lorsque cette opération se termine, pointeur vers le CLSID à utiliser pour créer un proxy dans le processus client.
 
 *pCid*
@@ -246,26 +246,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStm*  
+*pStm*<br/>
 Pointeur vers le flux à utiliser pendant le marshaling.
 
-*riid*  
+*riid*<br/>
 Référence à l’identificateur de l’interface doivent être marshalées. Cette interface doit être dérivée du `IUnknown` interface.
 
-*PV*  
+*PV*<br/>
 Pointeur vers le pointeur d’interface doivent être marshalées ; peut d’être NULL si l’appelant n’a pas un pointeur vers l’interface souhaitée.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contexte de destination où l’interface spécifiée doit être marshalé.
 
 Spécifiez une ou plusieurs valeurs d’énumération MSHCTX.
 
 Unmarshaling peut se produire dans un autre cloisonnement du processus en cours (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Réservé pour une future utilisation ; doit être nul.
 
-*mshlflags*  
+*mshlflags*<br/>
 Spécifie si les données doivent être marshalées doit être transmise au processus client, le cas par défaut, ou écrites dans une table globale, où il peut être extrait par plusieurs clients.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -298,7 +298,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStm*  
+*pStm*<br/>
 Pointeur vers un flux qui contient le paquet de données d’être détruit.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -319,13 +319,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStm*  
+*pStm*<br/>
 Pointeur vers le flux à partir duquel le pointeur d’interface doit être marshalé.
 
-*riid*  
+*riid*<br/>
 Référence à l’identificateur de l’interface pour être marshalé.
 
-*PPV*  
+*PPV*<br/>
 Lorsque cette opération se termine, l’adresse d’une variable pointeur qui reçoit le pointeur d’interface demandé dans *riid*. Si cette opération est réussie, **ppv* contient le pointeur d’interface requis de l’interface pour être marshalé.
 
 ### <a name="return-value"></a>Valeur de retour

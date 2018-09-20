@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 254d7532b83a4f30c0029b2488bb0b2111cce31d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c634f9eac562be2b22f79e6a71c3010e3ea3e24
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219395"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435231"
 ---
 # <a name="setting-a-hot-key"></a>Définition d'une touche d'accès rapide
-Votre application peut utiliser les informations fournies par une touche d’accès rapide ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) contrôle de deux manières :  
-  
--   Configurer une touche d’accès rapide pour activer une fenêtre non-enfant en envoyant un [message WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) message dans la fenêtre à activer.  
-  
--   Définissez une touche d’accès rapide spécifiques aux threads en appelant la fonction Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+
+Votre application peut utiliser les informations fournies par une touche d’accès rapide ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) contrôle de deux manières :
+
+- Configurer une touche d’accès rapide pour activer une fenêtre non-enfant en envoyant un [message WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) message dans la fenêtre à activer.
+
+- Définissez une touche d’accès rapide spécifiques aux threads en appelant la fonction Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
+[Contrôles](../mfc/controls-mfc.md)
 
