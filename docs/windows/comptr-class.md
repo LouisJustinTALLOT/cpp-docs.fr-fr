@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a20dd5e2fb43dd5caae7a5185260d8c88637d33
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88d3af154993bea6df509a69b832223aede7ad81
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597960"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386507"
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 
@@ -40,10 +40,10 @@ friend class ComPtr;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 L’interface qui le **ComPtr** représente.
 
-*U*  
+*U*<br/>
 Une classe à laquelle actuel **ComPtr** soit un assembly friend. (Le modèle qui utilise ce paramètre est protégé).
 
 ## <a name="remarks"></a>Notes

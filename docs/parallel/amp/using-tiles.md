@@ -1,5 +1,5 @@
 ---
-title: Utilisation des mosaïques | Documents Microsoft
+title: Utilisation des mosaïques | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -12,34 +12,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c02b5d558ccf2c1353e96dd1990b6d4178457aa
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: df2f449cce01dc2d0903ff802ffb94914b68bceb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121947"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386262"
 ---
 # <a name="using-tiles"></a>Utilisation des mosaïques
 
-Vous pouvez utiliser la disposition en mosaïque pour optimiser l’accélération de votre application. Mosaïque divise les threads en sous-ensembles rectangulaires égales ou *vignettes*. Si vous utilisez une taille de la vignette appropriée et un algorithme en mosaïque, vous pouvez obtenir davantage d’accélération à partir de votre code C++ AMP. Les composants de la mosaïque de base sont :
+Vous pouvez utiliser la mosaïque pour optimiser l’accélération de votre application. Mosaïques divisent les threads en sous-ensembles rectangulaires égaux ou *vignettes*. Si vous utilisez une taille appropriée de mosaïque et un algorithme en mosaïque, vous pouvez obtenir davantage d’accélération à partir de votre code C++ AMP. Les composants de base de disposition en mosaïque sont :
 
-- `tile_static` Variables. Le principal avantage de mosaïque est le gain de performances à partir de `tile_static` accès. Accès aux données dans `tile_static` mémoire peut être considérablement plus rapide que l’accès aux données dans l’espace global (`array` ou `array_view` objets). Une instance d’un `tile_static` variable est créée pour chaque mosaïque, et tous les threads dans la vignette ont accès à la variable. Dans un algorithme en mosaïque par défaut, les données sont copiées dans `tile_static` mémoire qu’une seule fois à partir de la mémoire globale et ensuite accessibles autant de fois depuis le `tile_static` mémoire.
+- `tile_static` variables. Le principal avantage de la mosaïque est le gain de performances à partir de `tile_static` accès. Accès aux données dans `tile_static` mémoire peut être considérablement plus rapide que l’accès aux données dans l’espace global (`array` ou `array_view` objets). Une instance d’un `tile_static` variable est créée pour chaque mosaïque et tous les threads dans la mosaïque ont accès à la variable. Dans un algorithme en mosaïque classique, les données sont copiées dans `tile_static` mémoire à partir de la mémoire globale, puis accédées ensuite plusieurs fois à partir de la `tile_static` mémoire.
 
-- [tile_barrier::wait, méthode](reference/tile-barrier-class.md#wait). Un appel à `tile_barrier::wait` suspend l’exécution du thread actuel jusqu'à ce que tous les threads dans la vignette même atteint l’appel de `tile_barrier::wait`. Vous ne pouvez pas garantir l’ordre que les threads s’exécuteront, seulement qu’aucun thread de la vignette ne s’exécute après l’appel à `tile_barrier::wait` jusqu'à ce que tous les threads ont atteint l’appel. Cela signifie qu’à l’aide de la `tile_barrier::wait` (méthode), vous pouvez effectuer des tâches sur une base par vignette de vignette plutôt que sur une base par thread de threads. Un algorithme de disposition en mosaïque classique comporte du code pour initialiser le `tile_static` mémoire de la vignette entier suivi par un appel à `tile_barrer::wait`. Le code qui suit `tile_barrier::wait` contient des calculs qui requièrent l’accès à tous les `tile_static` valeurs.
+- [tile_barrier::wait, méthode](reference/tile-barrier-class.md#wait). Un appel à `tile_barrier::wait` suspend l’exécution du thread actuel jusqu'à ce que tous les threads de la même mosaïque atteignent l’appel à `tile_barrier::wait`. Vous ne pouvez pas garantir l’ordre que les threads s’exécuteront, uniquement qu’aucun thread dans la mosaïque ne s’exécutera après l’appel à `tile_barrier::wait` jusqu'à ce que tous les threads aient atteint l’appel. Cela signifie qu’en utilisant le `tile_barrier::wait` (méthode), vous pouvez effectuer des tâches sur une base de mosaïque par mosaïque plutôt que sur un thread par thread. Un algorithme classique de pavage a le code pour initialiser le `tile_static` mémoire pour l’ensemble de la mosaïque, suivi par un appel à `tile_barrer::wait`. Le code qui suit `tile_barrier::wait` contient des calculs qui requièrent l’accès à toutes les `tile_static` valeurs.
 
-- L’indexation local et global. Vous avez accès à l’index du thread par rapport à l’ensemble du `array_view` ou `array` objet et l’index par rapport à la vignette. À l’aide de l’index local peut rendre votre code plus facile à lire et à déboguer. En général, vous utilisez l’indexation local pour accéder à `tile_static` variables et à l’indexation globale pour accéder à `array` et `array_view` variables.
+- Indexation locale et globale. Vous avez accès à l’index du thread par rapport à l’intégralité de `array_view` ou `array` objet et l’index relatif à la vignette. À l’aide de l’index local peut rendre votre code plus facile à lire et à déboguer. En général, vous utilisez l’indexation locale pour accéder à `tile_static` variables et l’indexation globale pour accès `array` et `array_view` variables.
 
 - [tiled_extent, classe](../../parallel/amp/reference/tiled-extent-class.md) et [tiled_index, classe](../../parallel/amp/reference/tiled-index-class.md). Vous utilisez un `tiled_extent` au lieu de l’objet une `extent` de l’objet dans le `parallel_for_each` appeler. Vous utilisez un `tiled_index` au lieu de l’objet une `index` de l’objet dans le `parallel_for_each` appeler.
 
-Pour tirer parti de mosaïque, votre algorithme doit être le domaine de calcul de la partition en mosaïques et puis copiez les données de mosaïque dans `tile_static` variables pour un accès plus rapide.
+Pour tirer parti des mosaïques, votre algorithme doit partitionner le domaine de calcul en vignettes et puis copier les données de mosaïque dans `tile_static` variables pour un accès plus rapide.
 
-## <a name="example-of-global-tile-and-local-indices"></a>Exemple de Global, mosaïque et Indices Local
+## <a name="example-of-global-tile-and-local-indices"></a>Exemple de Global, vignette et index Local
 
-Le diagramme suivant représente une matrice 8 x 9 de données qui sont organisées en mosaïques 2 x 3.
+Le diagramme suivant représente une matrice 8 x 9 des données qui sont organisées en mosaïques 2 x 3.
 
 ![8&#45;par&#45;matrice 9 divisée en 2&#45;par&#45;3 vignettes](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
 
-L’exemple suivant affiche la vignette globale, et des indices locales de cet affichage en mosaïque des matrice. Un `array_view` objet est créé à l’aide des éléments de type `Description`. Le `Description` contient global, vignette, local et des index et l’élément dans la matrice. Le code dans l’appel à `parallel_for_each` définit les valeurs des globale, une vignette et un index local de chaque élément. La sortie affiche les valeurs dans le `Description` structures.
+L’exemple suivant affiche la vignette globale, et matrice en mosaïque des indices locales de ce. Un `array_view` objet est créé à l’aide des éléments de type `Description`. Le `Description` contient global, vignette et des index locales de l’élément dans la matrice. Le code dans l’appel à `parallel_for_each` définit les valeurs de global, vignette et des index locales de chaque élément. La sortie affiche les valeurs dans le `Description` structures.
 
 ```cpp
 #include <iostream>
@@ -73,11 +73,11 @@ void SetConsoleColor(int color) {
 // A helper function for formatting the output.
 void SetConsoleSize(int height, int width) {
     COORD coord;
-    
+
     coord.X = width;
     coord.Y = height;
     SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-    
+
     SMALL_RECT* rect = new SMALL_RECT();
     rect->Left = 0;
     rect->Top = 0;
@@ -151,35 +151,35 @@ void main() {
 }
 ```
 
-Le travail principal de l’exemple est dans la définition de la `array_view` objet et l’appel à `parallel_for_each`.
+Le travail principal de l’exemple figurant dans la définition de la `array_view` objet et l’appel à `parallel_for_each`.
 
 1. Le vecteur de `Description` structures est copié dans un 8 x 9 `array_view` objet.
 
-2. Le `parallel_for_each` méthode est appelée avec un `tiled_extent` objet en tant que le domaine de calcul. Le `tiled_extent` objet est créé en appelant le `extent::tile()` méthode de la `descriptions` variable. Les paramètres de type de l’appel à `extent::tile()`, `<2,3>`, spécifiez que les mosaïques 2 x 3 sont créés. Par conséquent, la matrice 8 x 9 est affichée en mosaïque dans les 12 vignettes, quatre lignes et trois colonnes.
+2. Le `parallel_for_each` méthode est appelée avec un `tiled_extent` objet en tant que le domaine de calcul. Le `tiled_extent` objet est créé en appelant le `extent::tile()` méthode de la `descriptions` variable. Les paramètres de type de l’appel à `extent::tile()`, `<2,3>`, spécifier que les mosaïques 2 x 3 sont créées. Par conséquent, la matrice 8 x 9 est disposée en mosaïque de 12 morceaux, quatre lignes et trois colonnes.
 
 3. Le `parallel_for_each` méthode est appelée en utilisant un `tiled_index<2,3>` objet (`t_idx`) en tant que l’index. Les paramètres de type de l’index (`t_idx`) doivent correspondre les paramètres de type du domaine de calcul (`descriptions.extent.tile< 2, 3>()`).
 
-4. Lors de l’exécution de chaque thread, l’index `t_idx` renvoie des informations sur la mosaïque, le thread est dans (`tiled_index::tile` propriété) et l’emplacement du thread dans la vignette (`tiled_index::local` propriété).
+4. Lorsque chaque thread est exécuté, l’index `t_idx` retourne des informations sur la mosaïque qui le thread se trouve dans (`tiled_index::tile` propriété) et l’emplacement du thread dans la vignette (`tiled_index::local` propriété).
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Vignette de synchronisation : tile_static et tile_barrier::wait
+## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Synchronisation de mosaïque – tile_static et tile_barrier::wait
 
-L’exemple précédent illustre la disposition en mosaïque et des index, mais n’est pas en soi très utiles.  Mosaïque devient utile quand les vignettes font partie intégrante de l’algorithme et les exploiter `tile_static` variables. Étant donné que tous les threads dans une vignette ont accès à `tile_static` variables, les appels à `tile_barrier::wait` sont utilisés pour synchroniser l’accès à la `tile_static` variables. Bien que tous les threads dans une vignette ont accès à la `tile_static` variables, il n’existe aucun ordre garanti d’exécution des threads dans la vignette. L’exemple suivant montre comment utiliser `tile_static` variables et la `tile_barrier::wait` méthode pour calculer la valeur moyenne de chaque vignette. Voici les clés à la compréhension de l’exemple :
+L’exemple précédent illustre la mise en forme tile et un index, mais n’est pas en soi très utile.  Mosaïque est utile lorsque les mosaïques sont intégrales à l’algorithme et exploitent `tile_static` variables. Étant donné que tous les threads dans une mosaïque ont accès à `tile_static` variables, les appels à `tile_barrier::wait` sont utilisés pour synchroniser l’accès à la `tile_static` variables. Bien que tous les threads dans une mosaïque ont accès à la `tile_static` variables, il n’existe aucun ordre garanti d’exécution des threads dans la vignette. L’exemple suivant montre comment utiliser `tile_static` variables et la `tile_barrier::wait` méthode pour calculer la valeur moyenne de chaque vignette. Voici les clés pour comprendre l’exemple :
 
 1. Le rawData est stocké dans une matrice 8 x 8.
 
-2. La taille de la vignette est 2 x 2. Cette opération crée une 4x4 grille de vignettes et les moyennes peuvent être stockées dans une matrice 4 x 4 en utilisant un `array` objet. Il existe uniquement un nombre limité de types que vous pouvez capturer par référence dans une fonction restreinte à AMP. La `array` classe est un d’eux.
+2. La taille de la mosaïque est 2 x 2. Cette opération crée une 4x4 grille de vignettes et les moyennes peuvent être stockées dans une matrice 4 x 4 en utilisant un `array` objet. Il existe uniquement un nombre limité de types que vous pouvez capturer par référence dans une fonction restreinte à AMP. Le `array` classe est un d’eux.
 
-3. La taille de la matrice et de la taille de l’échantillon sont définis à l’aide de `#define` instructions, car les paramètres de type à `array`, `array_view`, `extent`, et `tiled_index` doivent être des valeurs de constantes. Vous pouvez également utiliser `const int static` déclarations. Offre un autre avantage, c’est facile à modifier la taille d’échantillon pour calculer les vignettes de plus de 4 x 4 moyenne.
+3. La taille de la matrice et de la taille d’échantillon sont définis à l’aide de `#define` instructions, étant donné que les paramètres de type à `array`, `array_view`, `extent`, et `tiled_index` doivent être des valeurs constantes. Vous pouvez également utiliser `const int static` déclarations. En tant qu’avantage supplémentaire, il est aisé de modifier la taille d’échantillon pour calculer les vignettes de plus de 4 x 4 moyenne.
 
-4. A `tile_static` tableau 2 x 2 de valeurs float est déclaré pour chaque mosaïque. Bien que la déclaration est dans le chemin d’accès du code pour chaque thread, un seul groupe est créé pour chaque mosaïque dans la matrice.
+4. Un `tile_static` tableau 2 x 2 de valeurs float est déclaré pour chaque mosaïque. Bien que la déclaration se trouve dans le chemin d’accès du code pour chaque thread, un seul groupe est créé pour chaque mosaïque dans la matrice.
 
 5. Il existe une ligne de code pour copier les valeurs dans chaque vignette pour le `tile_static` tableau. Pour chaque thread, une fois que la valeur est copiée dans le tableau, l’exécution sur le thread s’arrête en raison de l’appel à `tile_barrier::wait`.
 
-6. Lorsque tous les threads dans une vignette ont atteint le cloisonnement, la moyenne peut être calculée. Étant donné que le code s’exécute pour chaque thread, il existe un `if` instruction uniquement calculer la moyenne sur un thread. La moyenne est stockée dans la variable de moyennes. Le cloisonnement est essentiellement la construction qui contrôle les calculs en mosaïque, que vous pouvez utiliser un `for` boucle.
+6. Lorsque tous les threads dans une mosaïque ont atteint le cloisonnement, la moyenne peut être calculée. Le code s’exécute pour chaque thread, étant donné un `if` instruction uniquement pour calculer la moyenne sur un thread. La moyenne est stockée dans la variable des moyennes. La barrière est essentiellement la construction qui contrôle les calculs par mosaïque, autant que vous pouvez utiliser un `for` boucle.
 
-7. Les données dans le `averages` variable, car il s’agit d’un `array` d’objet, doivent être copiés vers l’hôte. Cet exemple utilise l’opérateur de conversion de vecteur.
+7. Les données dans le `averages` variable, car il s’agit une `array` de l’objet, doivent être copiés vers l’hôte. Cet exemple utilise l’opérateur de conversion de vecteur.
 
-8. Dans l’exemple complet, vous pouvez modifier SAMPLESIZE à 4, et le code s’exécute correctement, sans aucune autre modification.
+8. Dans l’exemple complet, vous pouvez changer SAMPLESIZE en 4 et le code s’exécute correctement sans aucune autre modification.
 
 ```cpp
 #include <iostream>
@@ -262,7 +262,7 @@ int main() {
 
 ## <a name="race-conditions"></a>Conditions de concurrence
 
-Il peut être tentant de créer un `tile_static` variable nommée `total` et incrémente cette variable pour chaque thread, comme suit :
+Il peut être tentant de créer un `tile_static` variable nommée `total` et incrémenter cette variable pour chaque thread, comme ceci :
 
 ```cpp
 // Do not do this.
@@ -273,7 +273,7 @@ t_idx.barrier.wait();
 averages(t_idx.tile[0],t_idx.tile[1]) /= (float) (SAMPLESIZE* SAMPLESIZE);
 ```
 
-Le premier problème avec cette approche est que `tile_static` variables ne peuvent pas avoir d’initialiseurs. Le deuxième problème est qu’il existe une condition de concurrence sur l’affectation à `total`, car tous les threads dans la vignette ont accès à la variable dans aucun ordre particulier. Vous pouviez programmer un algorithme pour autoriser uniquement un seul thread accéder à chaque barrière, comme le montre l’illustration suivante. Toutefois, cette solution n’est pas extensible.
+Le premier problème avec cette approche est que `tile_static` variables ne peuvent pas avoir d’initialiseurs. Le deuxième problème est qu’il est une condition de concurrence sur l’assignation à `total`, car tous les threads dans la mosaïque ont accès à la variable dans aucun ordre particulier. Vous pouvez programmer un algorithme pour autoriser uniquement un seul thread d’accéder au total à chaque cloisonnement, comme indiqué ci-après. Toutefois, cette solution n’est pas extensible.
 
 ```cpp
 // Do not do this.
@@ -291,27 +291,27 @@ t_idx.barrier.wait();
 // etc.
 ```
 
-## <a name="memory-fences"></a>Limites de mémoire
+## <a name="memory-fences"></a>Frontières de mémoire
 
-Il existe deux types d’accès à la mémoire qui doivent être synchronisées : accès à la mémoire globale et `tile_static` accès à la mémoire. A `concurrency::array` objet alloue uniquement la mémoire globale. A `concurrency::array_view` peut faire référence à la mémoire globale, `tile_static` mémoire, ou les deux, selon la façon dont il a été construit.  Il existe deux types de mémoire qui doivent être synchronisés :
+Il existe deux types d’accès mémoire qui doivent être synchronisés, les accès mémoire globaux et `tile_static` accès à la mémoire. Un `concurrency::array` objet alloue uniquement la mémoire globale. Un `concurrency::array_view` peut faire référence à la mémoire globale, `tile_static` mémoire, ou les deux, selon la façon dont il a été construit.  Il existe deux types de mémoire qui doivent être synchronisés :
 
 - mémoire globale
 
 - `tile_static`
 
-A *limite de mémoire* garantit que les accès sont disponibles à d’autres threads dans la vignette de thread de la mémoire et que les accès sont exécutées en fonction de l’ordre du programme de la mémoire. Pour ce faire, les compilateurs et les processeurs ne pas réordonnancer les lectures et écritures sur la plage de gestion. En C++ AMP, une limite de mémoire est créée par un appel à une des méthodes suivantes :
+Un *barrière mémoire* garantit que les accès mémoire sont disponibles à d’autres threads dans la mosaïque de threads et cet accès mémoire sont exécutés en fonction de l’ordre du programme. Pour ce faire, les compilateurs et les processeurs ne pas réordonnancer les lectures et écritures sur la plage de gestion. En C++ AMP, une barrière mémoire est créée par un appel à une des méthodes suivantes :
 
-- [tile_barrier::wait, méthode](reference/tile-barrier-class.md#wait): crée une limite autour de deux global et `tile_static` mémoire.
+- [tile_barrier::wait, méthode](reference/tile-barrier-class.md#wait): crée une frontière de sécurité autour de la global et `tile_static` mémoire.
 
-- [tile_barrier::wait_with_all_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_all_memory_fence): crée une limite autour de deux global et `tile_static` mémoire.
+- [tile_barrier::wait_with_all_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_all_memory_fence): crée une frontière de sécurité autour de la global et `tile_static` mémoire.
 
-- [tile_barrier::wait_with_global_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_global_memory_fence): crée une clôture autour uniquement la mémoire globale.
+- [tile_barrier::wait_with_global_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_global_memory_fence): crée une frontière de sécurité autour uniquement la mémoire globale.
 
-- [tile_barrier::wait_with_tile_static_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crée une clôture autour du seul `tile_static` mémoire.
+- [tile_barrier::wait_with_tile_static_memory_fence, méthode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crée une frontière de sécurité autour uniquement `tile_static` mémoire.
 
-Appel de la plage de gestion spécifique dont vous avez besoin peut améliorer les performances de votre application. Le type de cloisonnement affecte la façon dont le compilateur et le matériel de réorganiser les instructions. Par exemple, si vous utilisez une limite de mémoire globale, il applique l’accès à la mémoire uniquement globaux et par conséquent, le compilateur et le matériel peuvent réorganiser les lit et écrit dans `tile_static` variables sur les deux côtés de la clôture.
+Appel de délimitation spécifique dont vous avez besoin peut améliorer les performances de votre application. Le type de barrière affecte la façon dont le compilateur et le matériel réorganisent les instructions. Par exemple, si vous utilisez une barrière de mémoire globale, elle s’applique uniquement aux accès mémoire globaux et par conséquent, le compilateur et le matériel peuvent réorganiser lit et écrit dans `tile_static` variables sur les deux côtés de la clôture.
 
-Dans l’exemple suivant, le cloisonnement synchronise les écritures `tileValues`, un `tile_static` variable. Dans cet exemple, `tile_barrier::wait_with_tile_static_memory_fence` est appelée à la place de `tile_barrier::wait`.
+Dans l’exemple suivant, la barrière synchronise les écritures sur `tileValues`, un `tile_static` variable. Dans cet exemple, `tile_barrier::wait_with_tile_static_memory_fence` est appelée au lieu de `tile_barrier::wait`.
 
 ```cpp
 // Using a tile_static memory fence.
@@ -341,5 +341,5 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 
 ## <a name="see-also"></a>Voir aussi
 
-[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
-[tile_static, mot clé](../../cpp/tile-static-keyword.md)  
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
+[tile_static, mot clé](../../cpp/tile-static-keyword.md)

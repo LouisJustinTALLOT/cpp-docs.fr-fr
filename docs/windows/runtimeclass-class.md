@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118906"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379409"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass, classe
 
@@ -61,10 +61,10 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>Paramètres
 
-*classFlags*  
+*classFlags*<br/>
 Paramètre facultatif. Une combinaison d’une ou plusieurs [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valeurs d’énumération. Le `__WRL_CONFIGURATION_LEGACY__` macro peut être définie pour modifier la valeur par défaut classFlags pour toutes les classes de runtime dans le projet. S’il est défini, les instances de RuntimeClass sont non agiles par défaut. Lorsque ne pas défini, RuntimeClass instances sont agiles par défaut. Pour éviter toute ambiguïté toujours spécifier le `Microsoft::WRL::FtmBase` dans `TInterfaces` ou `RuntimeClassType::InhibitFtmBase`. Notez que, si InhibitFtmBase et FtmBase sont que tous deux utilisés de l’objet sera agile.
 
-*TInterfaces*  
+*TInterfaces*<br/>
 La liste des interfaces de l’objet implémente au-delà `IUnknown`, `IInspectable` ou d’autres interfaces contrôlés par [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Il peut également répertorier les autres classes à être dérivé, notamment `Microsoft::WRL::FtmBase` pour rendre l’objet agile et le rendre implémenter `IMarshal`.
 
 ## <a name="members"></a>Membres
@@ -152,10 +152,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Paramètres
 
-*iidCount*  
+*iidCount*<br/>
 Lorsque cette opération se termine, le nombre total d’éléments du tableau *IID*.
 
-*IID*  
+*IID*<br/>
 Lorsque cette opération se termine, un pointeur vers un tableau d’ID d’interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -174,7 +174,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>Paramètres
 
-*runtimeName*  
+*runtimeName*<br/>
 Lorsque cette opération se termine, le nom de la classe runtime.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -197,7 +197,7 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>Paramètres
 
-*trustLvl*  
+*trustLvl*<br/>
 Lorsque cette opération se termine, le niveau de confiance de l’actuel `RuntimeClass` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -220,7 +220,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Paramètres
 
-*weakReference*  
+*weakReference*<br/>
 Lorsque cette opération se termine, un pointeur vers un objet de référence faible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -253,10 +253,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Paramètres
 
-*riid*  
+*riid*<br/>
 ID d’interface.
 
-*ppvObject*  
+*ppvObject*<br/>
 Quand cette opereation est terminée, un pointeur vers l’interface spécifiée par le *riid* paramètre.
 
 ### <a name="return-value"></a>Valeur de retour

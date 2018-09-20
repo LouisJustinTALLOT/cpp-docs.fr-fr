@@ -36,213 +36,244 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 27fec3420343b5b6af240f89bb922256cee52a7b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711982"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375561"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar, classe
-Implémente un contrôle qui affiche l'avancement d'une opération de longue durée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CMFCRibbonProgressBar : public CMFCRibbonBaseElement  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|Construit et initialise un objet `CMFCRibbonProgressBar`.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CMFCRibbonProgressBar::GetPos](#getpos)|Retourne l’état d’avancement.|  
-|[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Retourne la valeur maximale de la plage actuelle.|  
-|[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|Retourne la valeur minimale de la plage actuelle.|  
-|[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|Retourne la taille normale de l'élément de ruban. (Substitue [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
-|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Spécifie si la barre de progression fonctionne en mode infini.|  
-|[CMFCRibbonProgressBar::OnDraw](#ondraw)|Appelé par l'infrastructure pour dessiner l'élément de ruban. (Substitue [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
-|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Définit la barre de progression pour fonctionner en mode infini.|  
-|[CMFCRibbonProgressBar::SetPos](#setpos)|Définit la progression actuelle.|  
-|[CMFCRibbonProgressBar::SetRange](#setrange)|Définit les valeurs minimales et maximales.|  
-  
-## <a name="remarks"></a>Notes  
- Un `CMFCRibbonProgressBar` peut fonctionner dans deux modes : normal et infinie. En mode normal, la barre de progression est remplie de gauche à droite et s’arrête lorsqu’il atteint la valeur maximale. En mode infini, la barre de progression est remplie à plusieurs reprises à partir de la valeur minimale à la valeur maximale. Vous pouvez utiliser le mode infini pour indiquer qu’une opération est en cours, mais que l’heure d’achèvement est inconnu.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonProgressBar` classe. L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définissez les valeurs minimales et maximales pour la barre de progression et définissez la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
-  
- [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** afxRibbonProgressBar.h  
-  
-##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar  
- Crée et initialise un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) objet.  
-  
-```  
+
+Implémente un contrôle qui affiche l'avancement d'une opération de longue durée.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|Construit et initialise un objet `CMFCRibbonProgressBar`.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[CMFCRibbonProgressBar::GetPos](#getpos)|Retourne l’état d’avancement.|
+|[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Retourne la valeur maximale de la plage actuelle.|
+|[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|Retourne la valeur minimale de la plage actuelle.|
+|[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|Retourne la taille normale de l'élément de ruban. (Substitue [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Spécifie si la barre de progression fonctionne en mode infini.|
+|[CMFCRibbonProgressBar::OnDraw](#ondraw)|Appelé par l'infrastructure pour dessiner l'élément de ruban. (Substitue [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Définit la barre de progression pour fonctionner en mode infini.|
+|[CMFCRibbonProgressBar::SetPos](#setpos)|Définit la progression actuelle.|
+|[CMFCRibbonProgressBar::SetRange](#setrange)|Définit les valeurs minimales et maximales.|
+
+## <a name="remarks"></a>Notes
+
+Un `CMFCRibbonProgressBar` peut fonctionner dans deux modes : normal et infinie. En mode normal, la barre de progression est remplie de gauche à droite et s’arrête lorsqu’il atteint la valeur maximale. En mode infini, la barre de progression est remplie à plusieurs reprises à partir de la valeur minimale à la valeur maximale. Vous pouvez utiliser le mode infini pour indiquer qu’une opération est en cours, mais que l’heure d’achèvement est inconnu.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonProgressBar` classe. L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définissez les valeurs minimales et maximales pour la barre de progression et définissez la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
+
+[CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxRibbonProgressBar.h
+
+##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar
+
+Crée et initialise un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) objet.
+
+```
 CMFCRibbonProgressBar();
 
- 
+
 CMFCRibbonProgressBar(
-    UINT nID,  
-    int nWidth = 90,  
+    UINT nID,
+    int nWidth = 90,
     int nHeight = 22);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *nID*<br/>
-[in] Spécifie l’ID de commande pour la barre de progression du ruban.  
-  
+[in] Spécifie l’ID de commande pour la barre de progression du ruban.
+
 *nWidth*<br/>
-[in] Spécifie la largeur, en pixels, de la barre de progression du ruban.  
-  
+[in] Spécifie la largeur, en pixels, de la barre de progression du ruban.
+
 *nHeight*<br/>
-[in] Spécifie la hauteur, en pixels, de la barre de progression du ruban.  
-  
-##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
- Retourne la position actuelle de la barre de progression.  
-  
-```  
-int GetPos () const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- Valeur représentant la position actuelle de la barre de progression.  
-  
-### <a name="remarks"></a>Notes  
- La plage définie doit être dans la plage spécifiée par la [CMFCRibbonProgressBar::SetRange](#setrange) (méthode).  
-  
-##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax  
- Retourne la barre de progression actuelle de le valeur maximale.  
-  
-```  
-int GetRangeMax() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- La valeur maximale de la plage actuelle.  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin  
- Retourne la barre de progression actuelle de le valeur de plage minimale.  
-  
-```  
-int GetRangeMin() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- La valeur minimale de la plage actuelle.  
-  
-##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize  
- Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
-  
-```  
+[in] Spécifie la hauteur, en pixels, de la barre de progression du ruban.
+
+##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos
+
+Retourne la position actuelle de la barre de progression.
+
+```
+int GetPos () const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Valeur représentant la position actuelle de la barre de progression.
+
+### <a name="remarks"></a>Notes
+
+La plage définie doit être dans la plage spécifiée par la [CMFCRibbonProgressBar::SetRange](#setrange) (méthode).
+
+##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax
+
+Retourne la barre de progression actuelle de le valeur maximale.
+
+```
+int GetRangeMax() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+La valeur maximale de la plage actuelle.
+
+### <a name="remarks"></a>Notes
+
+##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin
+
+Retourne la barre de progression actuelle de le valeur de plage minimale.
+
+```
+int GetRangeMin() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+La valeur minimale de la plage actuelle.
+
+##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize
+
+Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+
+```
 virtual CSize GetRegularSize(CDC* pDC);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode  
- Spécifie si la barre de progression fonctionne en mode infini.  
-  
-```  
-BOOL IsInfiniteMode() const;  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
- TRUE si la barre de progression est en mode infini ; Sinon, FALSE.  
-  
-### <a name="remarks"></a>Notes  
- En mode infini, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale. Vous pouvez utiliser le mode infini pour indiquer qu’une opération est en cours, mais que l’heure d’achèvement est inconnu.  
-  
-##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
- Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.  
-  
-```  
+```
+
+### <a name="parameters"></a>Paramètres
+
+[in] *pDC*
+
+### <a name="return-value"></a>Valeur de retour
+
+### <a name="remarks"></a>Notes
+
+##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode
+
+Spécifie si la barre de progression fonctionne en mode infini.
+
+```
+BOOL IsInfiniteMode() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+TRUE si la barre de progression est en mode infini ; Sinon, FALSE.
+
+### <a name="remarks"></a>Notes
+
+En mode infini, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale. Vous pouvez utiliser le mode infini pour indiquer qu’une opération est en cours, mais que l’heure d’achèvement est inconnu.
+
+##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw
+
+Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+
+```
 virtual void OnDraw(CDC* pDC);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- [in] *pDC*  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode  
- Définit la barre de progression pour fonctionner en mode infini.  
-  
-```  
+```
+
+### <a name="parameters"></a>Paramètres
+
+[in] *pDC*
+
+### <a name="remarks"></a>Notes
+
+##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode
+
+Définit la barre de progression pour fonctionner en mode infini.
+
+```
 void SetInfiniteMode(BOOL bSet = TRUE);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *bSet*<br/>
-[in] TRUE pour spécifier que la barre de progression est en mode infini ; Sinon, FALSE.  
-  
-### <a name="remarks"></a>Notes  
- En règle générale, si la barre de progression est en mode infini, il signale à l’utilisateur qu’une opération est en cours, mais que l’heure d’achèvement est inconnu. Par conséquent, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale.  
-  
-##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos  
- Définit la position actuelle de la barre de progression.  
-  
-```  
+[in] TRUE pour spécifier que la barre de progression est en mode infini ; Sinon, FALSE.
+
+### <a name="remarks"></a>Notes
+
+En règle générale, si la barre de progression est en mode infini, il signale à l’utilisateur qu’une opération est en cours, mais que l’heure d’achèvement est inconnu. Par conséquent, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale.
+
+##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos
+
+Définit la position actuelle de la barre de progression.
+
+```
 void SetPos(
-    int nPos,  
+    int nPos,
     BOOL bRedraw = TRUE);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *nPos*<br/>
-[in] Spécifie la position à laquelle la barre de progression est définie.  
-  
+[in] Spécifie la position à laquelle la barre de progression est définie.
+
 *bRedraw*<br/>
-[in] Spécifie si la barre de progression doit être redessinée.  
-  
-### <a name="remarks"></a>Notes  
- La plage définie doit être dans la plage spécifiée par la [CMFCRibbonProgressBar::SetRange](#setrange) (méthode).  
-  
-##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange  
- Définit les valeurs minimales et maximales pour la barre de progression.  
-  
-```  
+[in] Spécifie si la barre de progression doit être redessinée.
+
+### <a name="remarks"></a>Notes
+
+La plage définie doit être dans la plage spécifiée par la [CMFCRibbonProgressBar::SetRange](#setrange) (méthode).
+
+##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange
+
+Définit les valeurs minimales et maximales pour la barre de progression.
+
+```
 void SetRange(
-    int nMin,  
+    int nMin,
     int nMax);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *nMin*<br/>
-[in] Spécifie la valeur minimale de la plage.  
-  
+[in] Spécifie la valeur minimale de la plage.
+
 *nombre maximal*<br/>
-[in] Spécifie la valeur maximale de la plage.  
-  
-### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour définir la plage de la barre de progression en définissant les valeurs minimales et maximales.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [Cmfcribbonbaseelement, classe](../../mfc/reference/cmfcribbonbaseelement-class.md)   
- [CMFCRibbonBar, classe](../../mfc/reference/cmfcribbonbar-class.md)
+[in] Spécifie la valeur maximale de la plage.
+
+### <a name="remarks"></a>Notes
+
+Utilisez cette méthode pour définir la plage de la barre de progression en définissant les valeurs minimales et maximales.
+
+## <a name="see-also"></a>Voir aussi
+
+[Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCRibbonBaseElement, classe](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
+[CMFCRibbonBar, classe](../../mfc/reference/cmfcribbonbar-class.md)

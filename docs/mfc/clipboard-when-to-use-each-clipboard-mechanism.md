@@ -1,5 +1,5 @@
 ---
-title: 'Presse-papiers : Quand utiliser chaque mécanisme de Presse-papiers | Documents Microsoft'
+title: 'Presse-papiers : Quand utiliser chaque mécanisme de Presse-papiers | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d7ab966eb0fcb5592f55a1b24f1558946dbd16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b8a772dd58cf9623d4076665e7859d191bb27e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341924"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379812"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Presse-papiers : quand utiliser chaque mécanisme de Presse-papiers
-Suivez ces instructions pour utiliser le Presse-papiers :  
-  
--   Utiliser le mécanisme de Presse-papiers OLE maintenant pour activer les nouvelles fonctionnalités dans le futur. Alors que l’API standard du Presse-papiers est conservé, le mécanisme OLE est l’avenir de transfert de données.  
-  
--   Utiliser le mécanisme de Presse-papiers OLE si vous écrivez une application OLE ou si vous souhaitez que les fonctionnalités OLE, tels que glisser -déposez.  
-  
--   Utiliser le mécanisme de Presse-papiers OLE si vous fournissez des formats d’OLE.  
-  
-## <a name="what-do-you-want-to-do"></a>Tu veux faire quoi  
-  
--   [Utiliser le mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [Utiliser le mécanisme de Presse-papiers Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Presse-papiers](../mfc/clipboard.md)
+
+Suivez ces instructions dans l’utilisation du Presse-papiers :
+
+- Utilisez le mécanisme de Presse-papiers OLE maintenant pour activer les nouvelles fonctionnalités à l’avenir. Tandis que l’API de Presse-papiers standard sera maintenue du mécanisme OLE est l’avenir de transfert de données.
+
+- Utilisez le mécanisme de Presse-papiers OLE si vous écrivez une application OLE ou si vous souhaitez que les fonctionnalités OLE, tel que glisser -déposez.
+
+- Utilisez le mécanisme de Presse-papiers OLE si vous fournissez des formats d’OLE.
+
+## <a name="what-do-you-want-to-do"></a>Tu veux faire quoi
+
+- [Utiliser le mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [Utiliser le mécanisme de Presse-papiers de Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Presse-papiers](../mfc/clipboard.md)
 

@@ -18,53 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5298f7d8e6a998fb7841a6c3429a4240876c7cf1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 326695b389fe72f7d4e5bdafecc43d51c08e5b98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016531"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378915"
 ---
 # <a name="unsupportedos-class"></a>unsupported_os, classe
-Cette classe décrit une exception levée quand un système d'exploitation non pris en charge est utilisé.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Cette classe décrit une exception levée quand un système d'exploitation non pris en charge est utilisé.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class unsupported_os : public std::exception;
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[unsupported_os](#ctor)|Surchargé. Construit un objet `unsupported_os`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `exception`  
-  
- `unsupported_os`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** concrt.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="ctor"></a> unsupported_os 
+```
 
- Construit un objet `unsupported_os`.  
-  
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[unsupported_os](#ctor)|Surchargé. Construit un objet `unsupported_os`.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`exception`
+
+`unsupported_os`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** concrt.h
+
+**Espace de noms :** concurrency
+
+##  <a name="ctor"></a> unsupported_os
+
+Construit un objet `unsupported_os`.
+
 ```
 explicit _CRTIMP unsupported_os(_In_z_ const char* _Message) throw();
 
 unsupported_os() throw();
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Message*<br/>
-Message descriptif de l'erreur.  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)
+Message descriptif de l'erreur.
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)

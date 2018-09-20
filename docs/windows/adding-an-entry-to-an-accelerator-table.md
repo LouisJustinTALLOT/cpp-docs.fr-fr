@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7055c21a2b9e7d0e32f3dac56641513b19953e18
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0e0017e0c4d5462ef985b70b44120ff20066f626
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315578"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391798"
 ---
 # <a name="adding-an-entry-to-an-accelerator-table-c"></a>Ajout d’une entrée à une Table d’accélérateurs (C++)
 
@@ -51,5 +51,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modification des tables d’accélérateurs](../windows/editing-accelerator-tables.md)  
+[Modification des tables d’accélérateurs](../windows/editing-accelerator-tables.md)<br/>
 [Éditeur d’accélérateurs](../windows/accelerator-editor.md)

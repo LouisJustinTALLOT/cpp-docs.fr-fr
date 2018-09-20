@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cecffa8505aaead738007e2a0872c3f1bc5a6d6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1d7c3741af7f5a0ea3a66d491f4aecc2afc8cb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593646"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392188"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory (fonction)
 
@@ -42,16 +42,16 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>Paramètres
 
-*flags*  
+*flags*<br/>
 Une combinaison d’une ou plusieurs [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valeurs d’énumération.
 
-*entry*  
+*entry*<br/>
 Pointeur vers un [CreatorMap](../windows/creatormap-structure.md) qui contient des informations d’initialisation et d’inscription sur le paramètre *riid*.
 
-*riid*  
+*riid*<br/>
 Référence à un ID d’interface.
 
-*ppFactory*  
+*ppFactory*<br/>
 Si cette opération termine avec succès, un pointeur vers une fabrique de classe.
 
 ## <a name="return-value"></a>Valeur de retour

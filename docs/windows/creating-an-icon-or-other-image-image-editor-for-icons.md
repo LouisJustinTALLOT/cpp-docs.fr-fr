@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 82479dab780fce677eeee84c4ccde880fe19d2bc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 43ba8086481ea2a8dde20d06b1dc143b297138f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314909"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378304"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Création d'une icône ou d'une autre image (Éditeur d'images pour les icônes)
 
@@ -67,8 +67,8 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Conversion de bitmaps en barres d’outils](../windows/converting-bitmaps-to-toolbars.md)  
-[Création de nouvelles barres d’outils](../windows/creating-new-toolbars.md)  
-[Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Icônes et curseurs : ressources Image pour les périphériques d’affichage](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Conversion de bitmaps en barres d’outils](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[Création de nouvelles barres d’outils](../windows/creating-new-toolbars.md)<br/>
+[Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

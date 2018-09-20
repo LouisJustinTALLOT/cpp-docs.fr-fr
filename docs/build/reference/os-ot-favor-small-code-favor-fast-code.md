@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a6e2f6c8b18f2af6a78857225e153cf57365fa9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d74f313caec7ecb98faa3988e8e0dd59847917d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699828"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381515"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Favoriser la taille du code, Favoriser la vitesse du code)
 
@@ -110,6 +110,6 @@ sub    eax, ecx
 
 ## <a name="see-also"></a>Voir aussi
 
-[/O (optimiser le Code), options](../../build/reference/o-options-optimize-code.md)
+[/O, options (Optimiser le code)](../../build/reference/o-options-optimize-code.md)<br/>
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

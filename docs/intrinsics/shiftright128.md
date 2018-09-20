@@ -16,57 +16,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 10e848321f105f60643f579c12772f6a40edebeb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714205"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383517"
 ---
 # <a name="shiftright128"></a>__shiftright128
-**Section spécifique à Microsoft**  
-  
- Décale une quantité de 128 bits, représentée par deux quantités de 64 bits `LowPart` et `HighPart`, vers la droite d'un nombre de bits spécifié par `Shift` et retourne les 64 bits de poids faible du résultat.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unsigned __int64 __shiftright128(   
-   unsigned __int64 LowPart,   
-   unsigned __int64 HighPart,   
-   unsigned char Shift   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+**Section spécifique à Microsoft**
+
+Décale une quantité de 128 bits, représentée par deux quantités de 64 bits `LowPart` et `HighPart`, vers la droite d'un nombre de bits spécifié par `Shift` et retourne les 64 bits de poids faible du résultat.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+unsigned __int64 __shiftright128( 
+   unsigned __int64 LowPart, 
+   unsigned __int64 HighPart, 
+   unsigned char Shift 
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *LowPart*<br/>
-[in] 64 bits de poids faibles de la quantité de 128 bits à décaler.  
-  
+[in] 64 bits de poids faibles de la quantité de 128 bits à décaler.
+
 *HighPart*<br/>
-[in] 64 bits de poids fort de la quantité de 128 bits à décaler.  
-  
+[in] 64 bits de poids fort de la quantité de 128 bits à décaler.
+
 *Maj*<br/>
-[in] Le nombre de bits de décalage.  
-  
-## <a name="return-value"></a>Valeur de retour  
- 64 bits de poids faible du résultat.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`__shiftright128`|X64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- La valeur `Shift` est toujours modulo 64 pour que, par exemple, si vous appelez `__shiftright128(0, 1, 64)`, la fonction décale les `0` bits de la partie supérieure vers la droite et renvoie une partie faible de `0` et non `1` comme on pourrait s'y attendre.  
-  
-## <a name="example"></a>Exemple  
- Pour obtenir un exemple, consultez [__shiftleft128](../intrinsics/shiftleft128.md).  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [__shiftleft128](../intrinsics/shiftleft128.md)   
- [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[in] Le nombre de bits de décalage.
+
+## <a name="return-value"></a>Valeur de retour
+
+64 bits de poids faible du résultat.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`__shiftright128`|X64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+La valeur `Shift` est toujours modulo 64 pour que, par exemple, si vous appelez `__shiftright128(0, 1, 64)`, la fonction décale les `0` bits de la partie supérieure vers la droite et renvoie une partie faible de `0` et non `1` comme on pourrait s'y attendre.
+
+## <a name="example"></a>Exemple
+
+Pour obtenir un exemple, consultez [__shiftleft128](../intrinsics/shiftleft128.md).
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
