@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 341333b0c4f51c42004ad638a5a8f4fcb7d7e466
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 17f79830cf50d83058ee2f2665b94f86a53acd78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596489"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428978"
 ---
 # <a name="eventtargetarrayend-method"></a>EventTargetArray::End, méthode
 
@@ -50,5 +50,5 @@ Obtient l’adresse du dernier élément dans le tableau interne de gestionnaire
 
 ## <a name="see-also"></a>Voir aussi
 
-[EventTargetArray, classe](../windows/eventtargetarray-class.md)  
+[EventTargetArray, classe](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

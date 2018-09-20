@@ -34,38 +34,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16411db184b568051484554548cdfcc6119002f1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 555183de13728cc01509b87e8eca8c3340d2d68b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688074"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424055"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texte et chaînes en Visual C++
-Un aspect important du développement d’applications pour les marchés internationaux est la représentation adéquate des jeux de caractères local. Le jeu de caractères ASCII définit les caractères dans la plage 0 x 00 à 0x7F. Voici les autres jeux de caractères, principalement européens, qui définissent les caractères dans la plage 0 x 00 à 0x7F de façon identique au jeu de caractères ASCII et également définir un étendue jeu de caractères à partir de 0 x 80 à 0xFF. Par conséquent, un ensemble de 8 bits, en caractères sur un octet (SBCS) est suffisant pour représenter le jeu de caractères ASCII, ainsi que les jeux de caractères de nombreuses langues européennes. Toutefois, certains jeux de caractères non européens, tels que les Kanji japonais, comprennent plus de caractères qu’un schéma de codage d’un octet peut représenter et nécessitent donc le jeu de caractères multioctets (MBCS) encodage.  
-  
-## <a name="in-this-section"></a>Dans cette section  
- [Unicode et MBCS](../text/unicode-and-mbcs.md)  
- Décrit la prise en charge de Visual C++ pour la programmation Unicode et MBCS.  
-  
- [Prise en charge pour Unicode](../text/support-for-unicode.md)  
- Décrit l’Unicode, une spécification pour prendre en charge tous les jeux de caractères, y compris les jeux de caractères qui ne peuvent pas être représentés dans un seul octet.  
-  
- [Prise en charge des jeux de caractères multioctets (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)  
- Explique MBCS, une alternative au format Unicode pour prendre en charge les jeux de caractères japonais et chinois, qui ne peut pas être représentée dans un seul octet.  
-  
- [Mappages de texte générique dans Tchar.h](../text/generic-text-mappings-in-tchar-h.md)  
- Fournit des mappages de texte générique spécifiques à Microsoft pour nombreux types de données, routines et autres objets.  
-  
- [Guide pratique pour effectuer une conversion entre différents types de chaînes](../text/how-to-convert-between-various-string-types.md)  
- Montre comment convertir différents types de chaînes Visual C++ en d’autres chaînes.  
-  
-## <a name="related-sections"></a>Rubriques connexes  
- [Internationalisation](../c-runtime-library/internationalization.md)  
- Décrit la prise en charge internationale dans la bibliothèque Runtime C.  
-  
- [Exemples internationaux](https://github.com/Microsoft/VCSamples)  
- Fournit des liens vers des exemples illustrant l’internationalisation dans Visual C++.  
-  
- [Chaînes de langue et de pays/région](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
- Fournit les chaînes de langue et de pays/région dans la bibliothèque Runtime C.
+
+Un aspect important du développement d’applications pour les marchés internationaux est la représentation adéquate des jeux de caractères local. Le jeu de caractères ASCII définit les caractères dans la plage 0 x 00 à 0x7F. Voici les autres jeux de caractères, principalement européens, qui définissent les caractères dans la plage 0 x 00 à 0x7F de façon identique au jeu de caractères ASCII et également définir un étendue jeu de caractères à partir de 0 x 80 à 0xFF. Par conséquent, un ensemble de 8 bits, en caractères sur un octet (SBCS) est suffisant pour représenter le jeu de caractères ASCII, ainsi que les jeux de caractères de nombreuses langues européennes. Toutefois, certains jeux de caractères non européens, tels que les Kanji japonais, comprennent plus de caractères qu’un schéma de codage d’un octet peut représenter et nécessitent donc le jeu de caractères multioctets (MBCS) encodage.
+
+## <a name="in-this-section"></a>Dans cette section
+
+[Unicode et MBCS](../text/unicode-and-mbcs.md)<br/>
+Décrit la prise en charge de Visual C++ pour la programmation Unicode et MBCS.
+
+[Prise en charge pour Unicode](../text/support-for-unicode.md)<br/>
+Décrit l’Unicode, une spécification pour prendre en charge tous les jeux de caractères, y compris les jeux de caractères qui ne peuvent pas être représentés dans un seul octet.
+
+[Prise en charge des jeux de caractères multioctets (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
+Explique MBCS, une alternative au format Unicode pour prendre en charge les jeux de caractères japonais et chinois, qui ne peut pas être représentée dans un seul octet.
+
+[Mappages de texte générique dans Tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
+Fournit des mappages de texte générique spécifiques à Microsoft pour nombreux types de données, routines et autres objets.
+
+[Guide pratique pour effectuer une conversion entre différents types de chaînes](../text/how-to-convert-between-various-string-types.md)<br/>
+Montre comment convertir différents types de chaînes Visual C++ en d’autres chaînes.
+
+## <a name="related-sections"></a>Rubriques connexes
+
+[Internationalisation](../c-runtime-library/internationalization.md)<br/>
+Décrit la prise en charge internationale dans la bibliothèque Runtime C.
+
+[Exemples internationaux](https://github.com/Microsoft/VCSamples)<br/>
+Fournit des liens vers des exemples illustrant l’internationalisation dans Visual C++.
+
+[Chaînes de langue et de pays/région](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+Fournit les chaînes de langue et de pays/région dans la bibliothèque Runtime C.
