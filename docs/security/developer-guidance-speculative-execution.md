@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384954"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422662"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Guide du développeur de C++ pour les canaux du côté l’exécution spéculative
 
@@ -31,7 +31,7 @@ Cet article contient des conseils pour les développeurs aider à identifier et 
 
 Les instructions fournies par cet article concerne les classes de vulnérabilités représentées par :
 
-1. CVE-2017-5753, également connu sous le variante Spectre 1. Cette classe de vulnérabilité de matériel est liée à des canaux du côté qui peuvent se produire en raison de l’exécution spéculative qui se produit suite à une mauvaise prédiction de branchement conditionnel. Le compilateur Visual C++ dans Visual Studio 2017 (à partir de la version 15.5.5) prend en charge la `/Qspectre` commutateur qui fournit une atténuation de la compilation pour un ensemble limité de modèles de codage potentiellement vulnérables liés à CVE-2017-5753. Le `/Qspectre` commutateur est également disponible dans Visual Studio 2015 Update 3 via [Ko 4338871](https://support.microsoft.com/help/4338871). La documentation relative à la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) indicateur fournit plus d’informations sur l’utilisation et ses effets. 
+1. CVE-2017-5753, également connu sous le variante Spectre 1. Cette classe de vulnérabilité de matériel est liée à des canaux du côté qui peuvent se produire en raison de l’exécution spéculative qui se produit suite à une mauvaise prédiction de branchement conditionnel. Le compilateur Visual C++ dans Visual Studio 2017 (à partir de la version 15.5.5) prend en charge la `/Qspectre` commutateur qui fournit une atténuation de la compilation pour un ensemble limité de modèles de codage potentiellement vulnérables liés à CVE-2017-5753. Le `/Qspectre` commutateur est également disponible dans Visual Studio 2015 Update 3 via [Ko 4338871](https://support.microsoft.com/help/4338871). La documentation relative à la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) indicateur fournit plus d’informations sur l’utilisation et ses effets.
 
 2. CVE-2018-3639, également appelé [spéculative Store contournement (SSB)](https://aka.ms/sescsrdssb). Cette classe de vulnérabilité de matériel est liée à des canaux du côté qui peuvent se produire en raison de l’exécution spéculative d’une charge avance un magasin dépendant à la suite d’une mauvaise prédiction de l’accès mémoire.
 
@@ -55,9 +55,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-Dans cet exemple, `ReadByte` est fourni une mémoire tampon, une taille de mémoire tampon et un index dans le tampon. Le paramètre d’index, comme spécifié par `untrusted_index`, est fourni par un inférieur contexte privilégié, telles que d’un processus non administratifs. Si `untrusted_index` est inférieure à `buffer_size`, puis le caractère situé à cet index est en lecture à partir de `buffer` et utilisé pour l’index dans une région partagée de mémoire référencé par `shared_buffer`. 
+Dans cet exemple, `ReadByte` est fourni une mémoire tampon, une taille de mémoire tampon et un index dans le tampon. Le paramètre d’index, comme spécifié par `untrusted_index`, est fourni par un inférieur contexte privilégié, telles que d’un processus non administratifs. Si `untrusted_index` est inférieure à `buffer_size`, puis le caractère situé à cet index est en lecture à partir de `buffer` et utilisé pour l’index dans une région partagée de mémoire référencé par `shared_buffer`.
 
-À partir d’un point de vue architectural, cette séquence de code est parfaitement sûr car il est garanti que `untrusted_index` sera toujours inférieur à `buffer_size`. Toutefois, en présence de l’exécution spéculative, il est possible que le processeur sera prédiction incorrecte la branche conditionnelle et exécuter le corps d’if instruction même lorsque `untrusted_index` est supérieur ou égal à `buffer_size`. Par conséquent, le processeur peut lire spéculant d’un octet ayant les limites de `buffer` (qui peut être un secret) et vous pouvez ensuite utiliser cette valeur d’octet pour calculer l’adresse d’un chargement ultérieur via `shared_buffer`. 
+À partir d’un point de vue architectural, cette séquence de code est parfaitement sûr car il est garanti que `untrusted_index` sera toujours inférieur à `buffer_size`. Toutefois, en présence de l’exécution spéculative, il est possible que le processeur sera prédiction incorrecte la branche conditionnelle et exécuter le corps d’if instruction même lorsque `untrusted_index` est supérieur ou égal à `buffer_size`. Par conséquent, le processeur peut lire spéculant d’un octet ayant les limites de `buffer` (qui peut être un secret) et vous pouvez ensuite utiliser cette valeur d’octet pour calculer l’adresse d’un chargement ultérieur via `shared_buffer`.
 
 Tandis que le processeur détecte finalement cette mauvaise prédiction, des effets secondaires qui sont restées peut rester dans le cache du processeur qui révèlent des informations sur la valeur d’octet qui a été lu en dehors des limites de `buffer`. Ces effets peuvent être détectées par un inférieur contexte privilégié en cours d’exécution sur le système en recherchant la vitesse à laquelle chaque cache dans ligne `shared_buffer` est accessible. Les étapes qui peuvent être prises pour effectuer cette opération sont :
 
@@ -73,14 +73,14 @@ Les étapes ci-dessus fournissent un exemple d’utilisation d’une technique a
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Quels scénarios de logiciels peuvent être affectées ?
 
-Développement de logiciels sécurisés à l’aide d’un processus comme le [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) requiert en général, les développeurs à identifier les limites de confiance qui existent dans leur application. Il existe une limite d’approbation dans les endroits où une application peut interagir avec les données fournies par un contexte de confiance moindre, comme un autre processus sur le système ou un processus de mode utilisateur non administrateur dans le cas d’un pilote de périphérique en mode noyau. La nouvelle classe de vulnérabilités impliquant des canaux du côté l’exécution spéculative s’applique à de nombreuses frontières d’approbation dans les modèles de sécurité logiciels existants qui isolent le code et les données sur un appareil. 
+Développement de logiciels sécurisés à l’aide d’un processus comme le [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) requiert en général, les développeurs à identifier les limites de confiance qui existent dans leur application. Il existe une limite d’approbation dans les endroits où une application peut interagir avec les données fournies par un contexte de confiance moindre, comme un autre processus sur le système ou un processus de mode utilisateur non administrateur dans le cas d’un pilote de périphérique en mode noyau. La nouvelle classe de vulnérabilités impliquant des canaux du côté l’exécution spéculative s’applique à de nombreuses frontières d’approbation dans les modèles de sécurité logiciels existants qui isolent le code et les données sur un appareil.
 
 Le tableau suivant fournit un résumé des modèles de sécurité logicielle où les développeurs devront peut-être être préoccupé par ces vulnérabilités qui se produisent :
 
 |Limite d’approbation|Description|
 |----------------|----------------|
-|Limites de la machine virtuelle|Les applications qui isolent les charges de travail dans des machines virtuelles distinctes qui reçoivent des données non fiables à partir d’une autre machine virtuelle peuvent être menacée.| 
-|Limite du noyau|Un pilote de périphérique en mode noyau qui reçoit des données non fiables à partir d’un processus de mode utilisateur non-administrateur peut être menacée.| 
+|Limites de la machine virtuelle|Les applications qui isolent les charges de travail dans des machines virtuelles distinctes qui reçoivent des données non fiables à partir d’une autre machine virtuelle peuvent être menacée.|
+|Limite du noyau|Un pilote de périphérique en mode noyau qui reçoit des données non fiables à partir d’un processus de mode utilisateur non-administrateur peut être menacée.|
 |Limite de processus|Une application qui reçoit des données non fiables à partir d’un autre processus en cours d’exécution sur le système local, telles que via un appel de procédure distante (RPC), de mémoire partagée ou d’autres communications entre processus (IPC) mécanismes peuvent être menacée.|
 |Limites de l’enclave|Une application qui s’exécute au sein d’une enclave sécurisée (par exemple, Intel SGX) qui reçoit des données non approuvées provenant en dehors de l’enclave soit compromise.|
 |Barrière de langage|Une application qui interprète ou un juste à temps (JIT) compile et exécute le code non fiable écrit un langage de niveau supérieur peut être menacée.|
@@ -133,7 +133,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 
 ### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Tableau hors limites charger une branche indirecte de l’alimentation
 
-Ce modèle de codage implique le cas où une mauvaise prédiction de branchement conditionnel peut entraîner un dépassement accès à un tableau de pointeurs de fonction qui entraîne ensuite une branche indirecte à la cible d’adresses qui a été lu hors limites. L’extrait de code suivant fournit un exemple illustrant cette approche. 
+Ce modèle de codage implique le cas où une mauvaise prédiction de branchement conditionnel peut entraîner un dépassement accès à un tableau de pointeurs de fonction qui entraîne ensuite une branche indirecte à la cible d’adresses qui a été lu hors limites. L’extrait de code suivant fournit un exemple illustrant cette approche.
 
 Dans cet exemple, un identificateur de message non approuvé est fourni à DispatchMessage via le `untrusted_message_id` paramètre. Si `untrusted_message_id` est inférieure à `MAX_MESSAGE_ID`, il est utilisé pour indexer dans un tableau de pointeurs de fonction et créer une branche vers la cible de branche correspondante. Ce code est sécurisé de point de vue architectural, mais si l’UC prévisions incorrectes de la branche conditionnelle, cela peut entraîner `DispatchTable` indexées par `untrusted_message_id` lorsque sa valeur est supérieure ou égale à `MAX_MESSAGE_ID`, ce qui conduit à un accès hors limites. Cela peut entraîner l’exécution spéculative à partir d’une adresse de cible de branche est dérivée au-delà des limites du tableau, ce qui peut entraîner la divulgation d’informations en fonction du code qui est exécutée de manière spéculative.
 
@@ -188,7 +188,7 @@ Il convient de noter que ces deux exemples impliquent la modification spéculati
 
 ## <a name="speculative-type-confusion"></a>Toute confusion type spéculative
 
-Cette catégorie porte sur les modèles qui peuvent donner lieu à une confusion spéculative type de codage. Cela se produit lorsque la mémoire est accessible à l’aide d’un type incorrect sur un tracé non architecturales pendant l’exécution spéculative. Mauvaise prédiction de branchement conditionnel et magasin spéculative contournement susceptibles d’entraîner une confusion type spéculative. 
+Cette catégorie porte sur les modèles qui peuvent donner lieu à une confusion spéculative type de codage. Cela se produit lorsque la mémoire est accessible à l’aide d’un type incorrect sur un tracé non architecturales pendant l’exécution spéculative. Mauvaise prédiction de branchement conditionnel et magasin spéculative contournement susceptibles d’entraîner une confusion type spéculative.
 
 Contournement de magasin spéculative, cela peut se produire dans les scénarios où un compilateur réutilise un emplacement de pile pour les variables de plusieurs types. Il s’agit, car le magasin architectural d’une variable de type `A` peut être contourné, autorisant ainsi la charge de type `A` spéculant exécuter avant que la variable est assignée. Si la variable précédemment stockée est d’un type différent, cela peut créer les conditions pour une confusion type spéculative.
 
@@ -368,6 +368,5 @@ Une autre technique qui peut être utilisée pour atténuer les vulnérabilités
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conseils pour atténuer les vulnérabilités par canal latéral l’exécution spéculative](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
-
+[Conseils pour atténuer les vulnérabilités par canal latéral l’exécution spéculative](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [Atténuer les vulnérabilités de matériel de l’exécution spéculative côté canal](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

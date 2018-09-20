@@ -16,105 +16,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbddd9181f48477de285e65b966aea354a55fa74
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1bfa8867f405b5a3fa67046a1341d5b4848b8a72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059591"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423064"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock, classe
-Wrapper RAII pour un verrou d’accès D3D sur un objet accelerator_view.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```  
-class scoped_d3d_access_lock;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[scoped_d3d_access_lock constructeur](#ctor)|Surchargé. Construit un objet `scoped_d3d_access_lock`. Le verrou est libéré lorsque cet objet est hors de portée.|  
-|[~ scoped_d3d_access_lock destructeur](#dtor)|Libère le verrou d’accès D3D sur associé `accelerator_view` objet.|  
-  
-### <a name="public-operators"></a>Op&#233;rateurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[operator=](#operator_eq)|Prend possession d’un verrou d’un autre `scoped_d3d_access_lock`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `scoped_d3d_access_lock`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** amprt.h  
-  
- **Namespace :** concurrency::direct3d  
 
-##  <a name="ctor"></a> scoped_d3d_access_lock 
+Wrapper RAII pour un verrou d’accès D3D sur un objet accelerator_view.
 
- Construit un objet `scoped_d3d_access_lock`. Le verrou est libéré lorsque cet objet est hors de portée.  
- 
-```  
-explicit scoped_d3d_access_lock(// [1] constructor  
+### <a name="syntax"></a>Syntaxe
+
+```
+class scoped_d3d_access_lock;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[scoped_d3d_access_lock constructeur](#ctor)|Surchargé. Construit un objet `scoped_d3d_access_lock`. Le verrou est libéré lorsque cet objet est hors de portée.|
+|[~ scoped_d3d_access_lock destructeur](#dtor)|Libère le verrou d’accès D3D sur associé `accelerator_view` objet.|
+
+### <a name="public-operators"></a>Op&#233;rateurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[operator=](#operator_eq)|Prend possession d’un verrou d’un autre `scoped_d3d_access_lock`.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`scoped_d3d_access_lock`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** amprt.h
+
+**Namespace :** concurrency::direct3d
+
+##  <a name="ctor"></a> scoped_d3d_access_lock
+
+Construit un objet `scoped_d3d_access_lock`. Le verrou est libéré lorsque cet objet est hors de portée.
+
+```
+explicit scoped_d3d_access_lock(// [1] constructor
     accelerator_view& _Av);
 
- 
-explicit scoped_d3d_access_lock(// [2] constructor  
-    accelerator_view& _Av,  
+explicit scoped_d3d_access_lock(// [2] constructor
+    accelerator_view& _Av,
     adopt_d3d_access_lock_t _T);
 
- 
-scoped_d3d_access_lock(// [3] move constructor  
+scoped_d3d_access_lock(// [3] move constructor
     scoped_d3d_access_lock&& _Other);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Av*<br/>
-Le `accelerator_view` du verrou à adopter.  
-  
+Le `accelerator_view` du verrou à adopter.
+
 *_T*<br/>
-Objet `adopt_d3d_access_lock_t`.  
-  
+Objet `adopt_d3d_access_lock_t`.
+
 *_Autre*<br/>
-Le `scoped_d3d_access_lock` objet à partir duquel déplacer un verrou existant.  
-  
-## <a name="construction"></a>Construction  
- [1] constructeur  
- Acquiert un verrou d’accès D3D sur la donnée [accelerator_view](accelerator-view-class.md) objet. Blocs de construction jusqu'à ce que le verrou est acquis.  
-  
- [2] constructeur  
- Adoptez un verrou d’accès D3D à partir de la donnée [accelerator_view](accelerator-view-class.md) objet.  
-  
- [3] constructeur de déplacement  
- Prend un verrou d’accès D3D existant d’un autre `scoped_d3d_access_lock` objet. Construction ne bloque pas.  
+Le `scoped_d3d_access_lock` objet à partir duquel déplacer un verrou existant.
 
-  
-##  <a name="dtor"></a> ~ scoped_d3d_access_lock 
+## <a name="construction"></a>Construction
 
- Libère le verrou d’accès D3D sur associé `accelerator_view` objet.  
-  
-```  
+[1] constructeur acquiert un verrou d’accès D3D sur la donnée [accelerator_view](accelerator-view-class.md) objet. Blocs de construction jusqu'à ce que le verrou est acquis.
+
+[2] constructeur adopter un verrou d’accès D3D à partir de la donnée [accelerator_view](accelerator-view-class.md) objet.
+
+[3] constructeur de déplacement prend un verrou d’accès D3D existant d’un autre `scoped_d3d_access_lock` objet. Construction ne bloque pas.
+
+##  <a name="dtor"></a> ~ scoped_d3d_access_lock
+
+Libère le verrou d’accès D3D sur associé `accelerator_view` objet.
+
+```
 ~scoped_d3d_access_lock();
-```  
-## <a name="operator_eq"></a> opérateur = 
+```
+## <a name="operator_eq"></a> opérateur =
 
-Prend possession d’un verrou d’accès D3D à partir d’un autre `scoped_d3d_access_lock` objet, en libérant le verrou précédent.  
- 
-```  
+Prend possession d’un verrou d’accès D3D à partir d’un autre `scoped_d3d_access_lock` objet, en libérant le verrou précédent.
+
+```
 scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*_Autre*<br/>
-L’accelerator_view à partir duquel déplacer le verrou d’accès D3D.  
-  
-### <a name="return-value"></a>Valeur de retour  
- Une référence à cet `scoped_accelerator_view_lock`.  
+```
 
-## <a name="see-also"></a>Voir aussi  
- [Concurrency::direct3d, espace de noms](concurrency-direct3d-namespace.md)
+### <a name="parameters"></a>Paramètres
+
+*_Autre*<br/>
+L’accelerator_view à partir duquel déplacer le verrou d’accès D3D.
+
+### <a name="return-value"></a>Valeur de retour
+
+Une référence à cet `scoped_accelerator_view_lock`.
+
+## <a name="see-also"></a>Voir aussi
+
+[Concurrency::direct3d, espace de noms](concurrency-direct3d-namespace.md)

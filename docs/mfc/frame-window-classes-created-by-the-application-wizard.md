@@ -1,5 +1,5 @@
 ---
-title: Classes de fenêtre frame créées par l’Assistant Application | Documents Microsoft
+title: Classes de fenêtre frame créées par l’Assistant Application | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,25 +24,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3446de072266fdf7661d2e8d8ca0fc968279646
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aff98636c723de17056f4bef337b46f4a686ddec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345040"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420606"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classes de fenêtre frame créées par l'Assistant Application
-Lorsque vous utilisez la [Assistant Application](../ide/creating-desktop-projects-by-using-application-wizards.md) pour créer une application squelette, outre l’application, document et affichage de classes, l’Assistant Application crée une classe dérivée de fenêtre frame de fenêtre frame principale de votre application. La classe est appelée `CMainFrame` par défaut et les fichiers qui le contiennent sont nommés MAINFRM. H et MAINFRM. CPP.  
-  
- Si votre application SDI, votre `CMainFrame` classe est dérivée de la classe [CFrameWnd](../mfc/reference/cframewnd-class.md).  
-  
- Si votre application MDI, `CMainFrame` est dérivé de la classe [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). Dans ce cas `CMainFrame` implémente le frame principal, qui contient les barres de menus, barre d’outils et l’état. L’Assistant Application ne dérive pas une nouvelle classe de fenêtre frame de document pour vous. En revanche, il utilise l’implémentation par défaut dans [CMDIChildWnd (classe)](../mfc/reference/cmdichildwnd-class.md). L’infrastructure MFC crée une fenêtre enfant pour contenir chaque vue (qui peut être de type `CScrollView`, `CEditView`, `CTreeView`, `CListView`, et ainsi de suite) requises par l’application. Si vous avez besoin personnaliser votre fenêtre frame de document, vous pouvez créer une nouvelle classe de fenêtre frame de document (consultez [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)).  
-  
- Si vous choisissez de prendre en charge une barre d’outils, la classe a également les variables de membre de type [CToolBar](../mfc/reference/ctoolbar-class.md) et [CStatusBar](../mfc/reference/cstatusbar-class.md) et un `OnCreate` fonction gestionnaire de messages pour initialiser les deux [ barres de contrôles](../mfc/control-bars.md).  
-  
- Ces classes de fenêtres frames fonctionnent telles quelles, mais pour renforcer leurs fonctionnalités, vous devez ajouter des variables membres et les fonctions membres. Vous pouvez souhaiter également avoir vos classes de fenêtre à traiter les autres messages Windows. Pour plus d’informations, consultez [modification des Styles d’une fenêtre créée par MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classes de fenêtre frame](../mfc/frame-window-classes.md)   
- [Fichiers d’en-tête et fichiers sources de contrôle ou de programme MFC](../ide/mfc-program-or-control-source-and-header-files.md)
+
+Lorsque vous utilisez le [Assistant Application](../ide/creating-desktop-projects-by-using-application-wizards.md) pour créer une application squelette, outre l’application, document et affichage de classes, l’Assistant Application crée une classe dérivée de fenêtre frame de fenêtre frame principale de votre application. La classe est appelée `CMainFrame` par défaut et les fichiers qui le contiennent sont nommés MAINFRM. H et MAINFRM. CPP.
+
+Si votre application SDI, votre `CMainFrame` classe est dérivée de la classe [CFrameWnd](../mfc/reference/cframewnd-class.md).
+
+Si votre application MDI, `CMainFrame` est dérivé de la classe [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). Dans ce cas `CMainFrame` implémente le frame principal, qui contient les barres de menu, barre d’outils et l’état. L’Assistant Application ne dérive pas d’une nouvelle classe de fenêtre frame de document pour vous. Au lieu de cela, elle utilise l’implémentation par défaut dans [CMDIChildWnd (classe)](../mfc/reference/cmdichildwnd-class.md). L’infrastructure MFC crée une fenêtre enfant pour contenir chaque vue (qui peut être de type `CScrollView`, `CEditView`, `CTreeView`, `CListView`, et ainsi de suite) requis par l’application. Si vous avez besoin personnaliser votre fenêtre frame de document, vous pouvez créer une nouvelle classe de fenêtre frame de document (voir [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)).
+
+Si vous choisissez de prendre en charge une barre d’outils, la classe a également des variables de membre de type [CToolBar](../mfc/reference/ctoolbar-class.md) et [CStatusBar](../mfc/reference/cstatusbar-class.md) et un `OnCreate` fonction de gestionnaire de messages pour initialiser les deux [ les barres de contrôle](../mfc/control-bars.md).
+
+Ces classes de fenêtre frame fonctionnent comme créé, mais pour améliorer leurs fonctionnalités, vous devez ajouter des variables membres et les fonctions membres. Vous souhaiterez également avoir vos classes de fenêtre Gérer les autres messages Windows. Pour plus d’informations, consultez [modification des Styles d’une fenêtre créée par MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Classes de fenêtre frame](../mfc/frame-window-classes.md)<br/>
+[Fichiers d’en-tête et fichiers sources de contrôle ou de programme MFC](../ide/mfc-program-or-control-source-and-header-files.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0680ac7b926e3956efdadfa9342cfc5cd5f1239
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ca5e8cfc2a08b01d7917d540c61e04837169a457
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314610"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438598"
 ---
 # <a name="testing-a-dialog-box-c"></a>Test d’une boîte de dialogue (C++)
 
@@ -55,6 +55,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)  
-[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)  
+[Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)<br/>
+[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)<br/>
 [Affichage ou masquage de la barre d’outils Éditeur de boîtes de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
