@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31ede898e2b1976bc16be7cf89c0223c3709193
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 559d461a996789986dcc445d6ef510c7b179542c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221541"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381294"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -75,5 +75,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
 [Attributs de classe](../windows/class-attributes.md)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc4679d9e6d3a4fdfc112d8a8b471ceb2646ecc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c5163ea5922141faf0c4b28deb147672938997a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583726"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375424"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid, méthode
 
@@ -39,10 +39,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Paramètres
 
-*index*  
+*index*<br/>
 Pointeur vers un champ qui contient une valeur d’index de base zéro.
 
-*IID*  
+*IID*<br/>
 Tableau d’ID d’interface.
 
 ## <a name="remarks"></a>Notes
@@ -61,5 +61,5 @@ Pour plus d’informations sur `Base`, consultez la section Typedefs publics dan
 
 ## <a name="see-also"></a>Voir aussi
 
-[InterfaceTraits, structure](../windows/interfacetraits-structure.md)  
+[InterfaceTraits, structure](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7569c7034184adecf6bb452d7c406a762af4e20b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6e8b2fc0420862be3dd46eca09614ded57f06b7e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711657"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372262"
 ---
 # <a name="inbytestring"></a>__inbytestring
-**Section spécifique à Microsoft**  
-  
- Lit les données du port spécifié à l’aide de la `rep insb` instruction.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __inbytestring(  
-   unsigned short Port,  
-   unsigned char* Buffer,  
-   unsigned long Count  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+**Section spécifique à Microsoft**
+
+Lit les données du port spécifié à l’aide de la `rep insb` instruction.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __inbytestring(
+   unsigned short Port,
+   unsigned char* Buffer,
+   unsigned long Count
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *Port*<br/>
-[in] Le port à lire.  
-  
+[in] Le port à lire.
+
 *mémoire tampon*<br/>
-[out] Les données lues à partir du port sont écrit ici.  
-  
+[out] Les données lues à partir du port sont écrit ici.
+
 *Nombre*<br/>
-[in] Le nombre d’octets de données à lire.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`__inbytestring`|x86, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- Cette routine est disponible uniquement en tant qu'intrinsèque.  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[in] Le nombre d’octets de données à lire.
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`__inbytestring`|x86, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+Cette routine est disponible uniquement en tant qu'intrinsèque.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

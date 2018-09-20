@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef471f5e06e770d79f67e4630c004e14d2aff968
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c85b58c05f7602c216b23166b74b7748e2603c42
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317029"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378408"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symboles de programmation Windows MFC
 
@@ -72,5 +72,5 @@ MFC
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symboles MFC prédéfinis](../windows/mfc-predefined-symbols.md)  
+[Symboles MFC prédéfinis](../windows/mfc-predefined-symbols.md)<br/>
 [Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)

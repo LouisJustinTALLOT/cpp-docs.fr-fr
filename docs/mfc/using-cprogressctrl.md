@@ -1,5 +1,5 @@
 ---
-title: Utilisation de CProgressCtrl | Documents Microsoft
+title: Utilisation de CProgressCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a3d222ed4f3de143182cf0a413e4160b68356cc
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 04fdca189d31c5a13712a65780025fd9d8aa9123
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951151"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372442"
 ---
 # <a name="using-cprogressctrl"></a>Utilisation de CProgressCtrl
-Vous pouvez utiliser le contrôle de progression pour indiquer la progression d’une opération longue. Il s’agit d’un rectangle qui se remplit progressivement avec la couleur de surbrillance système en tant que l’exécution de l’opération.  
-  
- Le contrôle de progression est représenté dans MFC par la classe [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).  
-  
- Lorsque vous créez initialement le contrôle de progression, vous spécifiez sa taille et position, la fenêtre du parent (généralement une boîte de dialogue) et son ID. À l’aide de la *dwStyle* paramètre, vous pouvez d’également spécifier divers styles de fenêtre pour le contrôle et les styles pour le mode de remplissage.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
-  
--   [Styles du contrôle Progress](../mfc/styles-for-the-progress-control.md)  
-  
--   [Paramètres du contrôle Progress](../mfc/settings-for-the-progress-control.md)  
-  
--   [Manipulation du contrôle Progress](../mfc/manipulating-the-progress-control.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+
+Vous pouvez utiliser le contrôle de progression pour indiquer la progression d’une opération longue. Il est un rectangle qui se remplit progressivement avec la couleur de surbrillance du système en tant que l’opération progresse.
+
+Le contrôle de progression est représenté dans MFC par la classe [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).
+
+Lorsque vous créez initialement le contrôle de progression, vous spécifiez sa taille et la position, la fenêtre parente (généralement une boîte de dialogue) et son ID. À l’aide de la *dwStyle* paramètre, vous pouvez d’également spécifier différents styles de fenêtre pour le contrôle et les styles de mode de remplissage.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+- [Styles du contrôle Progress](../mfc/styles-for-the-progress-control.md)
+
+- [Paramètres du contrôle Progress](../mfc/settings-for-the-progress-control.md)
+
+- [Manipulation du contrôle Progress](../mfc/manipulating-the-progress-control.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Contrôles](../mfc/controls-mfc.md)
 
