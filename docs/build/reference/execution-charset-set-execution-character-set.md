@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd7acf018930c013f477cf4c3a8b3260a8d53ec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b5a2e2c690b9e827992ca79f861e40452c071d42
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714618"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420983"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ EXECUTION-CharSet (définir l’exécution du jeu de caractères)
 
@@ -66,6 +66,6 @@ Si vous souhaitez définir le jeu de caractères source et le jeu de caractères
 
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[/ source-CharSet (définir jeu de caractères Source)](../../build/reference/source-charset-set-source-character-set.md)
-[/UTF-8 (définir la Source et exécutable jeux au format UTF-8 de caractères)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
- [ /Validate-CharSet (valider les caractères compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/source-charset (Définir le jeu de caractères source)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf-8 (Définir les jeux de caractères sources et exécutables sur UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset (Valider les caractères compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

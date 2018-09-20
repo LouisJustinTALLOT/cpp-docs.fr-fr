@@ -14,118 +14,131 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a12af3bf99075b2a2a77e0dc2c17d28e80849e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f7dccc4fec79ad11d7d4667c93b1b9ae8362ed92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028257"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437077"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options, classe (runtime d’accès concurrentiel)
-Représente les options autorisées pour la création d’une tâche.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Représente les options autorisées pour la création d’une tâche.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class task_options;
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[task_options::task_options, constructeur (Runtime d’accès concurrentiel)](#ctor)|Surchargé. Liste des options de création de tâche par défaut|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[task_options::get_cancellation_token, méthode (Runtime d’accès concurrentiel)](#get_cancellation_token)|Retourne le jeton d'annulation|  
-|[task_options::get_continuation_context, méthode (Runtime d’accès concurrentiel)](#get_continuation_context)|Retourne le contexte de continuation|  
-|[task_options::get_scheduler, méthode (Runtime d’accès concurrentiel)](#get_scheduler)|Retourne le planificateur|  
-|[task_options::has_cancellation_token, méthode (Runtime d’accès concurrentiel)](#has_cancellation_token)|Indique si un jeton d'annulation a été spécifié par l'utilisateur|  
-|[task_options::has_scheduler, méthode (Runtime d’accès concurrentiel)](#has_scheduler)|Indique si un planificateur n a été spécifié par l'utilisateur|  
-|[task_options::set_cancellation_token, méthode (Runtime d’accès concurrentiel)](#set_cancellation_token)|Définit le jeton donné dans les options|  
-|[task_options::set_continuation_context, méthode (Runtime d’accès concurrentiel)](#set_continuation_context)|Définit le contexte de continuation donné dans les options|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `task_options`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** ppltasks.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="get_cancellation_token"></a>  task_options::get_cancellation_token, méthode (Runtime d’accès concurrentiel)  
- Retourne le jeton d'annulation  
-  
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[task_options::task_options, constructeur (Runtime d’accès concurrentiel)](#ctor)|Surchargé. Liste des options de création de tâche par défaut|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[task_options::get_cancellation_token, méthode (Runtime d’accès concurrentiel)](#get_cancellation_token)|Retourne le jeton d'annulation|
+|[task_options::get_continuation_context, méthode (Runtime d’accès concurrentiel)](#get_continuation_context)|Retourne le contexte de continuation|
+|[task_options::get_scheduler, méthode (Runtime d’accès concurrentiel)](#get_scheduler)|Retourne le planificateur|
+|[task_options::has_cancellation_token, méthode (Runtime d’accès concurrentiel)](#has_cancellation_token)|Indique si un jeton d'annulation a été spécifié par l'utilisateur|
+|[task_options::has_scheduler, méthode (Runtime d’accès concurrentiel)](#has_scheduler)|Indique si un planificateur n a été spécifié par l'utilisateur|
+|[task_options::set_cancellation_token, méthode (Runtime d’accès concurrentiel)](#set_cancellation_token)|Définit le jeton donné dans les options|
+|[task_options::set_continuation_context, méthode (Runtime d’accès concurrentiel)](#set_continuation_context)|Définit le contexte de continuation donné dans les options|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`task_options`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** ppltasks.h
+
+**Espace de noms :** concurrency
+
+##  <a name="get_cancellation_token"></a>  task_options::get_cancellation_token, méthode (Runtime d’accès concurrentiel)
+
+Retourne le jeton d'annulation
+
 ```
 cancellation_token get_cancellation_token() const;
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-##  <a name="get_continuation_context"></a>  task_options::get_continuation_context, méthode (Runtime d’accès concurrentiel)  
- Retourne le contexte de continuation  
-  
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+##  <a name="get_continuation_context"></a>  task_options::get_continuation_context, méthode (Runtime d’accès concurrentiel)
+
+Retourne le contexte de continuation
+
 ```
 task_continuation_context get_continuation_context() const;
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-##  <a name="get_scheduler"></a>  task_options::get_scheduler, méthode (Runtime d’accès concurrentiel)  
- Retourne le planificateur  
-  
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+##  <a name="get_scheduler"></a>  task_options::get_scheduler, méthode (Runtime d’accès concurrentiel)
+
+Retourne le planificateur
+
 ```
 scheduler_ptr get_scheduler() const;
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-##  <a name="has_cancellation_token"></a>  task_options::has_cancellation_token, méthode (Runtime d’accès concurrentiel)  
- Indique si un jeton d'annulation a été spécifié par l'utilisateur  
-  
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+##  <a name="has_cancellation_token"></a>  task_options::has_cancellation_token, méthode (Runtime d’accès concurrentiel)
+
+Indique si un jeton d'annulation a été spécifié par l'utilisateur
+
 ```
 bool has_cancellation_token() const;
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-##  <a name="has_scheduler"></a>  task_options::has_scheduler, méthode (Runtime d’accès concurrentiel)  
- Indique si un planificateur n a été spécifié par l'utilisateur  
-  
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+##  <a name="has_scheduler"></a>  task_options::has_scheduler, méthode (Runtime d’accès concurrentiel)
+
+Indique si un planificateur n a été spécifié par l'utilisateur
+
 ```
 bool has_scheduler() const;
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
-  
-##  <a name="set_cancellation_token"></a>  task_options::set_cancellation_token, méthode (Runtime d’accès concurrentiel)  
- Définit le jeton donné dans les options  
-  
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+##  <a name="set_cancellation_token"></a>  task_options::set_cancellation_token, méthode (Runtime d’accès concurrentiel)
+
+Définit le jeton donné dans les options
+
 ```
 void set_cancellation_token(cancellation_token _Token);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- `_Token`  
-  
-##  <a name="set_continuation_context"></a>  task_options::set_continuation_context, méthode (Runtime d’accès concurrentiel)  
- Définit le contexte de continuation donné dans les options  
-  
+```
+
+### <a name="parameters"></a>Paramètres
+
+`_Token`
+
+##  <a name="set_continuation_context"></a>  task_options::set_continuation_context, méthode (Runtime d’accès concurrentiel)
+
+Définit le contexte de continuation donné dans les options
+
 ```
 void set_continuation_context(task_continuation_context _ContinuationContext);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- `_ContinuationContext`  
-  
-##  <a name="ctor"></a>  task_options::task_options, constructeur (Runtime d’accès concurrentiel)  
- Liste des options de création de tâche par défaut  
-  
+```
+
+### <a name="parameters"></a>Paramètres
+
+`_ContinuationContext`
+
+##  <a name="ctor"></a>  task_options::task_options, constructeur (Runtime d’accès concurrentiel)
+
+Liste des options de création de tâche par défaut
+
 ```
 task_options();
 
@@ -151,18 +164,20 @@ task_options(
 
 task_options(
     const task_options& _TaskOptions);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- `_SchedType`  
+```
 
- `_Token`  
+### <a name="parameters"></a>Paramètres
 
- `_ContinuationContext`  
+`_SchedType`
 
- `_Scheduler`  
+`_Token`
 
- `_TaskOptions`  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)
+`_ContinuationContext`
+
+`_Scheduler`
+
+`_TaskOptions`
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e993c58ea6fc84e0b4001b488632858e5251d67b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c9519fb79bf8229578319fc1f3890f5d2e19442a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583969"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448275"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock, méthode
 
@@ -38,7 +38,7 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Paramètres
 
-*h*  
+*h*<br/>
 Handle vers un **sémaphore** objet.
 
 ## <a name="remarks"></a>Notes

@@ -344,14 +344,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050097"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435530"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
+
 Classe de base puissante pour développer des contrôles OLE.
 
 ## <a name="syntax"></a>Syntaxe
@@ -1440,15 +1441,13 @@ void FireReadyStateChange();
 
 L’état prêt peut prendre la valeur de l’une des valeurs suivantes :
 
-État de l’initialisation READYSTATE_UNINITIALIZED par défaut
-
-Contrôle de READYSTATE_LOADING charge actuellement ses propriétés
-
-READYSTATE_LOADED contrôle a été initialisé
-
-READYSTATE_INTERACTIVE contrôle a suffisamment de données de manière interactive, mais pas tous les asynchrone des données sont encore chargées
-
-Contrôle de READYSTATE_COMPLETE a toutes ses données
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|État de l’initialisation par défaut|
+|READYSTATE_LOADING|Contrôle charge actuellement ses propriétés|
+|READYSTATE_LOADED|Contrôle a été initialisé.|
+|READYSTATE_INTERACTIVE|Contrôle a suffisamment de données de manière interactive, mais pas tous les asynchrone des données sont encore chargées|
+|READYSTATE_COMPLETE|Contrôle a toutes ses données|
 
 Utilisez [GetReadyState](#getreadystate) pour déterminer le niveau de préparation actuel du contrôle.
 
@@ -1466,11 +1465,11 @@ virtual DWORD GetActivationPolicy();
 
 Une combinaison d’indicateurs de l’énumération POINTERINACTIVE. Indicateurs possibles sont :
 
-POINTERINACTIVE_ACTIVATEONENTRY l’objet doit être activé lorsque la souris pénètre dans pendant une opération de déplacement de la souris sur place.
-
-Opération de déplacement POINTERINACTIVE_DEACTIVATEONLEAVE l’objet doit être désactivé lorsque la souris quitte l’objet au cours de la souris.
-
-POINTERINACTIVE_ACTIVATEONDRAG l’objet doit être activé lors de la souris est glissée pendant une opération de glissement sur place et l’opération de suppression.
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|L’objet doit être activé lorsque la souris pénètre dans pendant une opération de déplacement de la souris sur place.|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|L’objet doit être désactivé lorsque la souris quitte l’objet pendant une opération de déplacement de la souris.|
+|POINTERINACTIVE_ACTIVATEONDRAG|L’objet doit être activé lors de la souris est glissée pendant une opération de glissement sur place et l’opération de suppression.|
 
 ### <a name="remarks"></a>Notes
 
@@ -1915,15 +1914,13 @@ long GetReadyState();
 
 État de préparation du contrôle, une des valeurs suivantes :
 
-État de l’initialisation READYSTATE_UNINITIALIZED par défaut
-
-Contrôle de READYSTATE_LOADING charge actuellement ses propriétés
-
-READYSTATE_LOADED contrôle a été initialisé
-
-READYSTATE_INTERACTIVE contrôle a suffisamment de données de manière interactive, mais pas tous les asynchrone des données sont encore chargées
-
-Contrôle de READYSTATE_COMPLETE a toutes ses données
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|État de l’initialisation par défaut|
+|READYSTATE_LOADING|Contrôle charge actuellement ses propriétés|
+|READYSTATE_LOADED|Contrôle a été initialisé.|
+|READYSTATE_INTERACTIVE|Contrôle a suffisamment de données de manière interactive, mais pas tous les asynchrone des données sont encore chargées|
+|READYSTATE_COMPLETE|Contrôle a toutes ses données|
 
 ### <a name="remarks"></a>Notes
 
@@ -2065,15 +2062,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 L’état de préparation à définir pour le contrôle, une des valeurs suivantes :
 
-État de l’initialisation READYSTATE_UNINITIALIZED par défaut
-
-Contrôle de READYSTATE_LOADING charge actuellement ses propriétés
-
-READYSTATE_LOADED contrôle a été initialisé
-
-READYSTATE_INTERACTIVE contrôle a suffisamment de données de manière interactive, mais pas tous les asynchrone des données sont encore chargées
-
-Contrôle de READYSTATE_COMPLETE a toutes ses données
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|État de l’initialisation par défaut|
+|READYSTATE_LOADING|Contrôle charge actuellement ses propriétés|
+|READYSTATE_LOADED|Contrôle a été initialisé.|
+|READYSTATE_INTERACTIVE|Contrôle a suffisamment de données de manière interactive, mais pas tous les asynchrone des données sont encore chargées|
+|READYSTATE_COMPLETE|Contrôle a toutes ses données|
 
 ### <a name="remarks"></a>Notes
 
@@ -2848,13 +2843,12 @@ virtual DWORD OnGetViewStatus();
 
 Une des valeurs de l’énumération de double en cas de réussite ; sinon 0. Les valeurs possibles sont n’importe quelle combinaison des éléments suivants :
 
-Objet de VIEWSTATUS_OPAQUE est complètement opaque. Si ce bit n’est pas défini, l’objet contient les parties transparentes. Ce bit s’applique uniquement pour les aspects liés au contenu et pas DVASPECT_ICON ou DVASPECT_DOCPRINT.
-
-Objet de VIEWSTATUS_SOLIDBKGND a un arrière-plan uni (composé dans une couleur unie, pas un motif de pinceau). Ce bit est significatif uniquement si VIEWSTATUS_OPAQUE est définie et s’applique uniquement pour les aspects liés au contenu et pas DVASPECT_ICON ou DVASPECT_DOCPRINT.
-
-VIEWSTATUS_DVASPECTOPAQUE objet prend en charge DVASPECT_OPAQUE. Toutes les méthodes IViewObjectEx qui prennent un aspect de dessin comme un paramètre peut être appelé avec cet aspect.
-
-VIEWSTATUS_DVASPECTTRANSPARENT objet prend en charge DVASPECT_TRANSPARENT. Tous les `IViewObjectEx` méthodes qui prennent un aspect de dessin comme un paramètre peut être appelé avec cet aspect.
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|L’objet est complètement opaque. Si ce bit n’est pas défini, l’objet contient les parties transparentes. Ce bit s’applique uniquement pour les aspects liés au contenu et pas DVASPECT_ICON ou DVASPECT_DOCPRINT.|
+|VIEWSTATUS_SOLIDBKGND|Objet a un arrière-plan uni (composé dans une couleur unie, pas un motif de pinceau). Ce bit est significatif uniquement si VIEWSTATUS_OPAQUE est définie et s’applique uniquement pour les aspects liés au contenu et pas DVASPECT_ICON ou DVASPECT_DOCPRINT.|
+|VIEWSTATUS_DVASPECTOPAQUE|Objet prend en charge DVASPECT_OPAQUE. Toutes les méthodes IViewObjectEx qui prennent un aspect de dessin comme un paramètre peut être appelé avec cet aspect.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|Objet prend en charge DVASPECT_TRANSPARENT. Tous les `IViewObjectEx` méthodes qui prennent un aspect de dessin comme un paramètre peut être appelé avec cet aspect.|
 
 ### <a name="remarks"></a>Notes
 

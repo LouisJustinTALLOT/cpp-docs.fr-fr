@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6226b583b60bb458d75ba82ac1fd0b758028dca8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c1fc2d9f816e5487f5d89f9c429db85f2592731f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315494"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439534"
 ---
 # <a name="dialog-editor-c"></a>Éditeur de boîtes de dialogue (C++)
 
@@ -71,8 +71,8 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeurs de ressources](../windows/resource-editors.md)  
-[Contrôles](../mfc/controls-mfc.md)  
-[Classes de contrôle](../mfc/control-classes.md)  
-[Classes de boîte de dialogue](../mfc/dialog-box-classes.md)  
+[Éditeurs de ressources](../windows/resource-editors.md)<br/>
+[Contrôles](../mfc/controls-mfc.md)<br/>
+[Classes de contrôle](../mfc/control-classes.md)<br/>
+[Classes de boîte de dialogue](../mfc/dialog-box-classes.md)<br/>
 [Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8d226f508f5f5e8c717bd671413f21377c0ae01
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7b8de310f8abb3b417abbe96576d910513e25717
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202288"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398675"
 ---
 # <a name="restricted"></a>restricted
 
@@ -38,7 +38,7 @@ Spécifie qu’un membre d’un module, une interface ou une dispinterface ne pe
 
 ### <a name="parameters"></a>Paramètres
 
-*interfaces*  
+*interfaces*<br/>
 Une ou plusieurs interfaces qui ne peuvent pas être appelées arbitrairement sur un objet COM. Ce paramètre est uniquement valide lorsqu’il est appliqué à une classe.
 
 ## <a name="remarks"></a>Notes
@@ -87,6 +87,6 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs d’interface](../windows/interface-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs d’interface](../windows/interface-attributes.md)<br/>
 [Attributs de méthode](../windows/method-attributes.md)  

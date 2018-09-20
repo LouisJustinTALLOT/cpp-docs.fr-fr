@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCVisualManagerOfficeXP | Documents Microsoft
+title: CMFCVisualManagerOfficeXP, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8450df47de5f7947aaf1a94e0f5022ac9fc66516
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 879854d820c0baae9f2a078ed5b136e985be8ed2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368645"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440509"
 ---
-# <a name="cmfcvisualmanagerofficexp-class"></a>Classe de CMFCVisualManagerOfficeXP
-Le `CMFCVisualManagerOfficeXP` donne à une application une apparence Microsoft Office XP.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CMFCVisualManagerOfficeXP : public CMFCVisualManager  
-```  
-  
-## <a name="members"></a>Membres  
- Tous les membres de cette classe sont des fonctions virtuelles qui sont dérivées de l’ancêtre de cette classe, [CMFCVisualManager classe](../../mfc/reference/cmfcvisualmanager-class.md).  
-  
-## <a name="remarks"></a>Notes  
- Vous utilisez la `CMFCVisualManagerOfficeXP` classe pour modifier l’apparence visuelle de votre application sont similaires à celles de Microsoft Office XP.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser `CMFCVisualManagerOfficeXP`. Cet extrait de code fait partie de la [exemple de démonstration d’alerte bureau](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
-  
- [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)  
-  
- [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
-  
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxvisualmanagerofficexp.h  
-  
-## <a name="see-also"></a>Voir aussi  
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCVisualManager, classe](../../mfc/reference/cmfcvisualmanager-class.md)
+# <a name="cmfcvisualmanagerofficexp-class"></a>CMFCVisualManagerOfficeXP, classe
+
+Le `CMFCVisualManagerOfficeXP` donne à une application une apparence Microsoft Office XP.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CMFCVisualManagerOfficeXP : public CMFCVisualManager
+```
+
+## <a name="members"></a>Membres
+
+Tous les membres de cette classe sont des fonctions virtuelles qui sont dérivées de l’ancêtre de cette classe, [cmfcvisualmanager, classe](../../mfc/reference/cmfcvisualmanager-class.md).
+
+## <a name="remarks"></a>Notes
+
+Vous utilisez la `CMFCVisualManagerOfficeXP` classe pour modifier l’apparence visuelle de votre application pour ressembler à celle de Microsoft Office XP.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant montre comment utiliser `CMFCVisualManagerOfficeXP`. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+
+[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
+
+[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxvisualmanagerofficexp.h
+
+## <a name="see-also"></a>Voir aussi
+
+[Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCVisualManager, classe](../../mfc/reference/cmfcvisualmanager-class.md)

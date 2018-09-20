@@ -1,5 +1,5 @@
 ---
-title: --Commentaire de constructeurs | Documents Microsoft
+title: --Constructors, commentaire | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,22 +21,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58c8410de51a4692dd0e7f018d40eaa28c0dae8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f03a65c3f870b1e7648f03b70efe7242c35a21f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929580"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429354"
 ---
 # <a name="-constructors-comment"></a>// Constructeurs, commentaire
-La `// Constructors` section d’une déclaration de classe MFC déclare des constructeurs (dans le sens C++), ainsi que toutes les fonctions d’initialisation requises pour utiliser réellement l’objet. Par exemple, `CWnd::Create` est dans la section des constructeurs car avant d’utiliser le `CWnd` de l’objet, il doit être « entièrement construit » en appelant le constructeur C++ d’abord, puis le `Create` (fonction). En règle générale, ces membres sont publics.  
-  
- Par exemple, la classe `CStdioFile` a trois constructeurs, dont est indiqué dans la liste sous [un exemple des commentaires](../mfc/an-example-of-the-comments.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation des fichiers sources MFC](../mfc/using-the-mfc-source-files.md)   
- [Commentaire sur l’implémentation](../mfc/decrement-implementation-comment.md)   
- [Commentaire d’attributs](../mfc/decrement-attributes-comment.md)   
- [Commentaire d’opérations](../mfc/decrement-operations-comment.md)   
- [Remplaçable commentaire](../mfc/decrement-overridables-comment.md)
+
+La `// Constructors` section d’une déclaration de classe MFC déclare des constructeurs (dans le sens C++), ainsi que toutes les fonctions d’initialisation requises pour utiliser réellement l’objet. Par exemple, `CWnd::Create` est dans la section de constructeurs car avant d’utiliser le `CWnd` de l’objet, il doit être « entièrement construit » en appelant tout d’abord le constructeur C++, puis le `Create` (fonction). En règle générale, ces membres sont publics.
+
+Par exemple, la classe `CStdioFile` a trois constructeurs, un d'entre eux est indiqué dans la liste sous [un exemple des commentaires](../mfc/an-example-of-the-comments.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation des fichiers sources MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[Commentaire sur l’implémentation](../mfc/decrement-implementation-comment.md)<br/>
+[Commentaire d’attributs](../mfc/decrement-attributes-comment.md)<br/>
+[Commentaire d’opérations](../mfc/decrement-operations-comment.md)<br/>
+[Remplaçable (commentaire)](../mfc/decrement-overridables-comment.md)
 

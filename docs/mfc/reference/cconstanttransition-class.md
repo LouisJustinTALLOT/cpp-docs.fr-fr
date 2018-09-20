@@ -22,88 +22,99 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc7e4104e6555ada88483336917708db943be2a0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d35234c6f39c95a879ae092f79b6357065216f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210577"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446281"
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition, classe
-Encapsule une transition constante.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CConstantTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CConstantTransition::CConstantTransition](#cconstanttransition)|Construit un objet de transition et initialise sa durée.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CConstantTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Membres de données publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CConstantTransition::m_duration](#m_duration)|La durée de la transition.|  
-  
-## <a name="remarks"></a>Notes  
- Pendant une transition constante, la valeur d’une variable d’animation conserve la valeur initiale pendant la durée de la transition. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- `CConstantTransition`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** afxanimationcontroller.h  
-  
-##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
- Construit un objet de transition et initialise sa durée.  
-  
-```  
-CConstantTransition (UI_ANIMATION_SECONDS duration);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *durée*  
- La durée de la transition.  
-  
-##  <a name="create"></a>  CConstantTransition::Create  
- Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.  
-  
-```  
-virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
-    IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *pLibrary*  
- Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.  
 
-### <a name="return-value"></a>Valeur de retour  
- TRUE si la transition est créée avec succès ; Sinon, FALSE.  
-  
-##  <a name="m_duration"></a>  CConstantTransition::m_duration  
- La durée de la transition.  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classes](../../mfc/reference/mfc-classes.md)
+Encapsule une transition constante.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CConstantTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[CConstantTransition::CConstantTransition](#cconstanttransition)|Construit un objet de transition et initialise sa durée.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[CConstantTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Membres de données publics
+
+|Nom|Description|
+|----------|-----------------|
+|[CConstantTransition::m_duration](#m_duration)|La durée de la transition.|
+
+## <a name="remarks"></a>Notes
+
+Pendant une transition constante, la valeur d’une variable d’animation conserve la valeur initiale pendant la durée de la transition. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+`CConstantTransition`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxanimationcontroller.h
+
+##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition
+
+Construit un objet de transition et initialise sa durée.
+
+```
+CConstantTransition (UI_ANIMATION_SECONDS duration);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*durée*<br/>
+La durée de la transition.
+
+##  <a name="create"></a>  CConstantTransition::Create
+
+Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.
+
+```
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,
+    IUIAnimationTransitionFactory* \*not used*\);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*pLibrary*<br/>
+Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.
+
+### <a name="return-value"></a>Valeur de retour
+
+TRUE si la transition est créée avec succès ; Sinon, FALSE.
+
+##  <a name="m_duration"></a>  CConstantTransition::m_duration
+
+La durée de la transition.
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Classes](../../mfc/reference/mfc-classes.md)

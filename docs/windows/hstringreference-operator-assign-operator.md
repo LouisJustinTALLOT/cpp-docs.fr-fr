@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7045229cc15304a88253f97e1ad3c9f171f139a0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 933d332ce2653fd8ea907a5fafda524ae0220906
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597126"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408997"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator=, opérateur
 
@@ -34,7 +34,7 @@ HStringReference& operator=(HStringReference&& other) throw()
 
 ### <a name="parameters"></a>Paramètres
 
-*other*  
+*other*<br/>
 Un existant **HStringReference** objet.
 
 ## <a name="remarks"></a>Notes

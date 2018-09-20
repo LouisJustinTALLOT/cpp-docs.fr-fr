@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9586c0f15dc098688020acae0fb96c0e363ad285
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ad98923c21a28976b54c2251f2da83eb0ec4cf5f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756374"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408139"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr, classe
 
@@ -193,6 +193,6 @@ Appelez [IAtlStringMgr::Free](#free) pour libérer la mémoire allouée par cett
 
 ## <a name="see-also"></a>Voir aussi
 
-[Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+[Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes partagées ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0b9c290cb8e5ced7537fb377d6e7ac52f20d089
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5abae461b4298d8a6300f5d7ad9f3e162a5b21c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314545"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447386"
 ---
 # <a name="creating-a-dialog-box-c-that-users-cannot-exit"></a>Création d’une boîte de dialogue (C++) que les utilisateurs ne peuvent pas quitter
 
@@ -51,6 +51,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour créer une ressource](../windows/how-to-create-a-resource.md)  
-[Fichiers de ressources](../windows/resource-files-visual-studio.md)  
+[Guide pratique pour créer une ressource](../windows/how-to-create-a-resource.md)<br/>
+[Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)

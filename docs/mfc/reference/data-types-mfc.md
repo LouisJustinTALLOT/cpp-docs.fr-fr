@@ -34,24 +34,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 560db57282f42b28f274b0498073e512e0ec33d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199867"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434516"
 ---
 # <a name="data-types-mfc"></a>Types de données (MFC)
-Cette rubrique répertorie les types de données couramment utilisés dans la bibliothèque Microsoft Foundation Class. La plupart des types de données est les mêmes que celles dans la plateforme logicielle Kit de développement (SDK), tandis que d’autres sont propres à MFC.  
-  
- Pour plus d’informations sur les types de données utilisés dans le Kit de développement logiciel Windows et MFC, consultez [les Types de données Windows](/windows/desktop/WinProg/windows-data-types).  
-  
- Types de données uniques à la bibliothèque Microsoft Foundation Class sont les suivants :  
-  
--   POSITIONNER une valeur utilisée pour indiquer la position d’un élément dans une collection ; utilisé par les classes de collection MFC.  
-  
--   Pointeur 32 bits LPCRECT à une constante (non modifiable) `RECT` structure.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la classe](../../mfc/class-library-overview.md)   
- [Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)
+
+Cette rubrique répertorie les types de données couramment utilisés dans la bibliothèque Microsoft Foundation Class. La plupart des types de données est les mêmes que celles dans la plateforme logicielle Kit de développement (SDK), tandis que d’autres sont propres à MFC.
+
+Pour plus d’informations sur les types de données utilisés dans le Kit de développement logiciel Windows et MFC, consultez [les Types de données Windows](/windows/desktop/WinProg/windows-data-types).
+
+Types de données uniques à la bibliothèque Microsoft Foundation Class sont les suivants :
+
+- POSITIONNER une valeur utilisée pour indiquer la position d’un élément dans une collection ; utilisé par les classes de collection MFC.
+
+- Pointeur 32 bits LPCRECT à une constante (non modifiable) `RECT` structure.
+
+## <a name="see-also"></a>Voir aussi
+
+[Vue d’ensemble de la classe](../../mfc/class-library-overview.md)<br/>
+[Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)

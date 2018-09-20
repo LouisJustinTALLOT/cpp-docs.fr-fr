@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535351"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434724"
 ---
 # <a name="implements-structure"></a>Implements (structure)
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>Paramètres
 
-*I0*  
+*I0*<br/>
 L’ID d’interface de zéro. (Obligatoire)
 
-*I1*  
+*I1*<br/>
 Le premier ID d’interface. (facultatif)
 
-*I2*  
+*I2*<br/>
 Le deuxième ID d’interface. (facultatif)
 
-*I3*  
+*I3*<br/>
 Le troisième ID d’interface. (facultatif)
 
-*I4*  
+*I4*<br/>
 La quatrième ID d’interface. (facultatif)
 
-*I5*  
+*I5*<br/>
 Le cinquième ID d’interface. (facultatif)
 
-*I6*  
+*I6*<br/>
 Le sixième ID d’interface. (facultatif)
 
-*I7*  
+*I7*<br/>
 Le septième ID d’interface. (facultatif)
 
-*I8*  
+*I8*<br/>
 L’ID d’interface huitième. (facultatif)
 
-*I9*  
+*I9*<br/>
 Le neuvième ID d’interface. (facultatif)
 
-*flags*  
+*flags*<br/>
 Indicateurs de configuration pour la classe. Un ou plusieurs [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) énumérations qui sont spécifiées dans un [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) structure.
 
 ## <a name="remarks"></a>Notes
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Paramètres
 
-*riid*  
+*riid*<br/>
 Une référence à un ID d’interface.
 
-*PPV*  
+*PPV*<br/>
 Si réussie, un pointeur vers l’interface spécifiée par *riid*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Paramètres
 
-*index*  
+*index*<br/>
 Index de base zéro qui indique l’élément de tableau de départ pour cette opération. Lorsque cette opération se termine, *index* est incrémentée de 1.
 
-*IID*  
+*IID*<br/>
 Tableau de type IID.
 
 ### <a name="remarks"></a>Notes

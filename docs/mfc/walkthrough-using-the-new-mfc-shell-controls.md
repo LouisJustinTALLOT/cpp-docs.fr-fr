@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbf10ef749df0ce5e5984ac773e0d2c00106b82
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81925cfa31c394a1b307a184388fb0d331d31fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541243"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432488"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procédure pas à pas : utilisation des nouveaux contrôles d'environnement MFC
 
@@ -186,4 +186,4 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio à ut
 
 ## <a name="see-also"></a>Voir aussi
 
-[Procédures pas à pas](../mfc/walkthroughs-mfc.md)  
+[Procédures pas à pas](../mfc/walkthroughs-mfc.md)

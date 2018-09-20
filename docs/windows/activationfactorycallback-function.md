@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7979dd21d68c5b1e2606573a5271fc8deafdfb07
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 62efb2b1aa2cd2caa0c5701696689ea3df19f962
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604178"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443609"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (fonction)
 
@@ -39,10 +39,10 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 
 ### <a name="parameters"></a>Paramètres
 
-*activationId*  
+*activationId*<br/>
 Handle vers une chaîne qui spécifie un nom de classe runtime.
 
-*ppFactory*  
+*ppFactory*<br/>
 Lorsque cette opération se termine, une fabrique d’activation qui correspond au paramètre *activationId*.
 
 ## <a name="return-value"></a>Valeur de retour

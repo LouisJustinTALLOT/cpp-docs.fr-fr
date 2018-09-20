@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe9e54dbafbcbd27763060dc9d81b21bac2503d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8f69a4ab16956924e3bcfd785c6a86c7ac238b36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709390"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431552"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (prétraiter le nom du fichier de sortie)
 
@@ -59,5 +59,5 @@ CL /P /FiMYPROCESS.I PROGRAM.CPP
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[/P (Prétraiter jusqu'à un fichier)](../../build/reference/p-preprocess-to-a-file.md)
-[en spécifiant le chemin d’accès](../../build/reference/specifying-the-pathname.md)
+[/P (Prétraiter jusqu’à un fichier)](../../build/reference/p-preprocess-to-a-file.md)<br/>
+[Spécification du nom de chemin](../../build/reference/specifying-the-pathname.md)
