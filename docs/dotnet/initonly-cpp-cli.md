@@ -1,5 +1,5 @@
 ---
-title: initonly (C + c++ / CLI) | Documents Microsoft
+title: initonly (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 49c52c4c17c3e54bfba0ac7188b3300b132213cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c98c2ab1391f65d31e64a60bf0bd86485776ad6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130553"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429955"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
-**initonly** est un mot clé contextuel indiquant cette attribution de variable peut se produire uniquement dans le cadre de la déclaration ou dans un constructeur static dans la même classe.  
-  
- L'exemple suivant montre comment utiliser `initionly` :  
-  
-```  
-// mcpp_initonly.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   initonly  
-   static int staticConst1;  
-  
-   initonly  
-   static int staticConst2 = 0;  
-  
-   static Y1() {  
-      staticConst1 = 0;  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)
+
+**initonly** est un mot clé contextuel indiquant cette attribution de variable peut se produire uniquement dans le cadre de la déclaration ou dans un constructeur statique de la même classe.
+
+L'exemple suivant montre comment utiliser `initionly` :
+
+```
+// mcpp_initonly.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   initonly
+   static int staticConst1;
+
+   initonly
+   static int staticConst2 = 0;
+
+   static Y1() {
+      staticConst1 = 0;
+   }
+};
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)

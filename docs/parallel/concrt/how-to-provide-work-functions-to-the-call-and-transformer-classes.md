@@ -1,5 +1,5 @@
 ---
-title: 'Comment : fournir des fonctions de travail aux Classes call et transformer | Documents Microsoft'
+title: 'Comment : fournir des fonctions de travail aux Classes call et transformer | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,57 +16,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7948a1258ac1b5193d379dd37f426360edc42e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3102947009780f6f4e735b70506c5b2dc02f416b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438962"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Comment : fournir des fonctions de travail aux classes call et transformer
-Cette rubrique illustre plusieurs méthodes pour fournir des fonctions de travail pour le [concurrency::call](../../parallel/concrt/reference/call-class.md) et [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) classes.  
-  
- Le premier exemple montre comment passer une expression lambda à une `call` objet. Le deuxième exemple montre comment passer un objet de fonction à un `call` objet. Le troisième exemple montre comment lier une méthode de classe pour un `call` objet.  
-  
- À titre d’illustration, tous les exemples dans cette rubrique utilise le `call` classe. Pour obtenir un exemple qui utilise le `transformer` de classe, consultez [Comment : utiliser la classe transformer dans un Pipeline de données](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant montre une façon courante d’utiliser la `call` classe. Cet exemple passe une fonction lambda à la `call` constructeur.  
-  
- [!code-cpp[concrt-call-lambda#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_1.cpp)]  
-  
- Cet exemple produit la sortie suivante.  
-  
-```Output  
-13 squared is 169.  
-```  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant ressemble au précédent, sauf qu’elle utilise le `call` classe avec un objet de fonction (functor).  
-  
- [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]  
-  
-## <a name="example"></a>Exemple  
 
- L’exemple suivant ressemble au précédent, sauf qu’elle utilise le [std::bind1st](../../standard-library/functional-functions.md#bind1st) et [std::mem_fun](../../standard-library/functional-functions.md#mem_fun) fonctions pour lier un `call` objet à une méthode de classe.  
+Cette rubrique illustre plusieurs méthodes pour fournir des fonctions de travail pour le [concurrency::call](../../parallel/concrt/reference/call-class.md) et [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) classes.
 
-  
- Utilisez cette technique si vous avez besoin de lier un `call` ou `transformer` objet à une méthode de classe spécifique au lieu de l’opérateur d’appel de fonction `operator()`.  
-  
- [!code-cpp[concrt-call-method#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_3.cpp)]  
-  
- Vous pouvez également affecter le résultat de la `bind1st` de fonction à un [std::function](../../standard-library/function-class.md) ou d’utiliser le `auto` (mot clé), comme indiqué dans l’exemple suivant.  
-  
- [!code-cpp[concrt-call-method#2](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_4.cpp)]  
-  
-## <a name="compiling-the-code"></a>Compilation du code  
- Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `call.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
-  
- **CL.exe /EHsc call.cpp**  
-  
-## <a name="see-also"></a>Voir aussi  
- [Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)   
- [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Comment : utiliser la classe transformer dans un Pipeline de données](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)   
- [Call, classe](../../parallel/concrt/reference/call-class.md)   
- [transformer, classe](../../parallel/concrt/reference/transformer-class.md)
+Le premier exemple montre comment passer une expression lambda à une `call` objet. Le deuxième exemple montre comment passer un objet de fonction à un `call` objet. Le troisième exemple montre comment lier une méthode de classe pour un `call` objet.
+
+À titre d’illustration, chaque exemple dans cette rubrique utilise le `call` classe. Pour obtenir un exemple qui utilise le `transformer` de classe, consultez [Comment : utiliser la classe transformer dans un Pipeline de données](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant montre une façon courante d’utiliser la `call` classe. Cet exemple passe une fonction lambda à la `call` constructeur.
+
+[!code-cpp[concrt-call-lambda#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_1.cpp)]
+
+Cet exemple produit la sortie suivante.
+
+```Output
+13 squared is 169.
+```
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant ressemble au précédent, sauf qu’elle utilise le `call` classe avec un objet de fonction (functor).
+
+[!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant ressemble au précédent, sauf qu’elle utilise le [std::bind1st](../../standard-library/functional-functions.md#bind1st) et [std::mem_fun](../../standard-library/functional-functions.md#mem_fun) fonctions pour lier un `call` objet à une méthode de classe.
+
+Utilisez cette technique si vous avez besoin de lier un `call` ou `transformer` objet à une méthode de classe spécifique au lieu de l’opérateur d’appel de fonction, `operator()`.
+
+[!code-cpp[concrt-call-method#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_3.cpp)]
+
+Vous pouvez également affecter le résultat de la `bind1st` fonctionner à un [std::function](../../standard-library/function-class.md) ou d’utiliser le `auto` mot clé, comme illustré dans l’exemple suivant.
+
+[!code-cpp[concrt-call-method#2](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_4.cpp)]
+
+## <a name="compiling-the-code"></a>Compilation du code
+
+Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `call.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
+
+**CL.exe /EHsc call.cpp**
+
+## <a name="see-also"></a>Voir aussi
+
+[Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Guide pratique pour utiliser la classe transformer dans un pipeline de données](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
+[call, classe](../../parallel/concrt/reference/call-class.md)<br/>
+[transformer, classe](../../parallel/concrt/reference/transformer-class.md)

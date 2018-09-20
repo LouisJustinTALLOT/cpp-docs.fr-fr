@@ -1,5 +1,5 @@
 ---
-title: 'Wm, Messages : S | Documents Microsoft'
+title: 'Wm, Messages : S | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,36 +47,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3b7918b74db4e7720f935bcfdf3bf3ffd3d950
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e554fb119d8476761f612bb021d6ca17d1baeb1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380384"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410219"
 ---
 # <a name="wm-messages-s"></a>WM_ Messages: S
-Les entrées de mappage suivantes correspondent aux prototypes de fonction.  
-  
-|Entrée de mappage|Prototype de fonction|  
-|---------------|------------------------|  
-|(DE ON_WM_SETCURSOR)|afx_msg BOOL [OnSetCursor](../../mfc/reference/cwnd-class.md#onsetcursor)(CWnd *, UINT, UINT) ;|  
-|(DE ON_WM_SETFOCUS)|afx_msg void [OnSetFocus](../../mfc/reference/cwnd-class.md#onsetfocus)(CWnd *) ;|  
-|(DE ON_WM_SETTINGCHANGE)|afx_msg void [OnSettingChange](../../mfc/reference/cwnd-class.md#onsettingchange)(UINT uFlags, LPCTSTR lpszSection) ;|  
-|(DE ON_WM_SHOWWINDOW)|afx_msg void [OnShowWindow](../../mfc/reference/cwnd-class.md#onshowwindow)(BOOL, UINT) ;|  
-|(DE ON_WM_SIZE)|afx_msg void [OnSize](../../mfc/reference/cwnd-class.md#onsize)(UINT, int, int) ;|  
-|(DE ON_WM_SIZECLIPBOARD)|afx_msg void [OnSizeClipboard](../../mfc/reference/cwnd-class.md#onsizeclipboard)(CWnd *, HANDLE) ;|  
-|(DE ON_WM_SIZING)|afx_msg void [OnSizing](../../mfc/reference/cwnd-class.md#onsizing)(UINT, LPRECT) ;|  
-|(DE ON_WM_SPOOLERSTATUS)|afx_msg void [OnSpoolerStatus](../../mfc/reference/cwnd-class.md#onspoolerstatus)(UINT, UINT) ;|  
-|(DE ON_WM_STYLECHANGED)|afx_msg void [OnStyleChanged](../../mfc/reference/cwnd-class.md#onstylechanged)(int, LPSTYLESTRUCT) ;|  
-|(DE ON_WM_STYLECHANGING)|afx_msg void [OnStyleChanging](../../mfc/reference/cwnd-class.md#onstylechanging)(int, LPSTYLESTRUCT) ;|  
-|(DE ON_WM_SYSCHAR)|afx_msg void [OnSysChar](../../mfc/reference/cwnd-class.md#onsyschar)(UINT, UINT, UINT) ;|  
-|(DE ON_WM_SYSCOLORCHANGE)|afx_msg void [OnSysColorChange](../../mfc/reference/cwnd-class.md#onsyscolorchange)() ;|  
-|(DE ON_WM_SYSCOMMAND)|afx_msg void [OnSysCommand](../../mfc/reference/cwnd-class.md#onsyscommand)(UINT, LONG) ;|  
-|(DE ON_WM_SYSDEADCHAR)|afx_msg void [OnSysDeadChar](../../mfc/reference/cwnd-class.md#onsysdeadchar)(UINT, UINT, UINT) ;|  
-|(DE ON_WM_SYSKEYDOWN)|afx_msg void [OnSysKeyDown](../../mfc/reference/cwnd-class.md#onsyskeydown)(UINT, UINT, UINT) ;|  
-|(DE ON_WM_SYSKEYUP)|afx_msg void [OnSysKeyUp](../../mfc/reference/cwnd-class.md#onsyskeyup)(UINT, UINT, UINT) ;|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Tables des messages](../../mfc/reference/message-maps-mfc.md)   
- [Gestionnaires de messages WM_](../../mfc/reference/handlers-for-wm-messages.md)
+
+Les entrées de mappage suivantes correspondent aux prototypes de fonction.
+
+|Entrée de mappage|Prototype de fonction|
+|---------------|------------------------|
+|() ON_WM_SETCURSOR|afx_msg BOOL [OnSetCursor](../../mfc/reference/cwnd-class.md#onsetcursor)(CWnd *, UINT, UINT) ;|
+|() ON_WM_SETFOCUS|afx_msg void [OnSetFocus](../../mfc/reference/cwnd-class.md#onsetfocus)(CWnd *) ;|
+|() ON_WM_SETTINGCHANGE|afx_msg void [OnSettingChange](../../mfc/reference/cwnd-class.md#onsettingchange)(UINT uFlags, LPCTSTR lpszSection) ;|
+|() ON_WM_SHOWWINDOW|afx_msg void [OnShowWindow](../../mfc/reference/cwnd-class.md#onshowwindow)(BOOL, UINT) ;|
+|() ON_WM_SIZE|afx_msg void [OnSize](../../mfc/reference/cwnd-class.md#onsize)(UINT, int, int) ;|
+|() ON_WM_SIZECLIPBOARD|afx_msg void [OnSizeClipboard](../../mfc/reference/cwnd-class.md#onsizeclipboard)(CWnd *, HANDLE) ;|
+|() ON_WM_SIZING|afx_msg void [OnSizing](../../mfc/reference/cwnd-class.md#onsizing)(UINT, LPRECT) ;|
+|() ON_WM_SPOOLERSTATUS|afx_msg void [OnSpoolerStatus](../../mfc/reference/cwnd-class.md#onspoolerstatus)(UINT, UINT) ;|
+|() ON_WM_STYLECHANGED|afx_msg void [OnStyleChanged](../../mfc/reference/cwnd-class.md#onstylechanged)(int, LPSTYLESTRUCT) ;|
+|() ON_WM_STYLECHANGING|afx_msg void [OnStyleChanging](../../mfc/reference/cwnd-class.md#onstylechanging)(int, LPSTYLESTRUCT) ;|
+|() ON_WM_SYSCHAR|afx_msg void [OnSysChar](../../mfc/reference/cwnd-class.md#onsyschar)(UINT, UINT, UINT) ;|
+|() ON_WM_SYSCOLORCHANGE|afx_msg void [OnSysColorChange](../../mfc/reference/cwnd-class.md#onsyscolorchange)() ;|
+|() ON_WM_SYSCOMMAND|afx_msg void [OnSysCommand](../../mfc/reference/cwnd-class.md#onsyscommand)(UINT, LONG) ;|
+|() ON_WM_SYSDEADCHAR|afx_msg void [OnSysDeadChar](../../mfc/reference/cwnd-class.md#onsysdeadchar)(UINT, UINT, UINT) ;|
+|() ON_WM_SYSKEYDOWN|afx_msg void [OnSysKeyDown](../../mfc/reference/cwnd-class.md#onsyskeydown)(UINT, UINT, UINT) ;|
+|() ON_WM_SYSKEYUP|afx_msg void [OnSysKeyUp](../../mfc/reference/cwnd-class.md#onsyskeyup)(UINT, UINT, UINT) ;|
+
+## <a name="see-also"></a>Voir aussi
+
+[Tables des messages](../../mfc/reference/message-maps-mfc.md)<br/>
+[Gestionnaires de messages WM_](../../mfc/reference/handlers-for-wm-messages.md)
 

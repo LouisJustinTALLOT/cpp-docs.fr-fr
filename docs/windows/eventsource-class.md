@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: cd9ab28ccce14c5ac0975b7050588ee6524cfcc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601494"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408347"
 ---
 # <a name="eventsource-class"></a>EventSource (classe)
 
@@ -53,7 +53,7 @@ class EventSource;
 
 ### <a name="parameters"></a>Paramètres
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 L’interface à un délégué qui représente un gestionnaire d’événements.
 
 ## <a name="members"></a>Membres
@@ -104,10 +104,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Paramètres
 
-*delegateInterface*  
+*delegateInterface*<br/>
 L’interface à un objet délégué, qui représente un gestionnaire d’événements.
 
-*Jeton*  
+*Jeton*<br/>
 Lorsque cette opération se termine, un handle qui représente l’événement. Utiliser ce jeton en tant que paramètre à la [Remove()](#remove) méthode pour ignorer le Gestionnaire d’événements.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -302,64 +302,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>Paramètres
 
-*T0*  
+*T0*<br/>
 Le type de l’argument de gestionnaire d’événements zeroth.
 
-*T1*  
+*T1*<br/>
 Le type du premier argument de gestionnaire d’événements.
 
-*T2*  
+*T2*<br/>
 Le type du deuxième argument de gestionnaire d’événements.
 
-*T3*  
+*T3*<br/>
 Le type du troisième argument de gestionnaire d’événements.
 
-*T4*  
+*T4*<br/>
 Le type du quatrième argument de gestionnaire d’événements.
 
-*T5*  
+*T5*<br/>
 Le type du cinquième argument de gestionnaire d’événements.
 
-*T6*  
+*T6*<br/>
 Le type du sixième argument de gestionnaire d’événements.
 
-*T7*  
+*T7*<br/>
 Le type du septième argument de gestionnaire d’événements.
 
-*T8*  
+*T8*<br/>
 Le type de l’argument de gestionnaire d’événements huitième.
 
-*T9*  
+*T9*<br/>
 Le type du neuvième argument de gestionnaire d’événements.
 
-*arg0*  
+*arg0*<br/>
 L’argument Gestionnaire d’événement zeroth.
 
-*arg1*  
+*arg1*<br/>
 Le premier argument de gestionnaire de l’événement.
 
-*Arg2*  
+*Arg2*<br/>
 Le deuxième argument de gestionnaire de l’événement.
 
-*Arg3*  
+*Arg3*<br/>
 Le troisième argument de gestionnaire de l’événement.
 
-*Arg4*  
+*Arg4*<br/>
 Le quatrième argument de gestionnaire de l’événement.
 
-*Arg5*  
+*Arg5*<br/>
 Le cinquième argument de gestionnaire de l’événement.
 
-*Arg6*  
+*Arg6*<br/>
 Sixième argument de gestionnaire d’événements.
 
-*Arg7*  
+*Arg7*<br/>
 Septième argument de gestionnaire d’événements.
 
-*Arg8*  
+*Arg8*<br/>
 Argument d’événement huitième gestionnaire.
 
-*Arg9*  
+*Arg9*<br/>
 Neuvième argument de gestionnaire d’événements.
 
 ## <a name="remove"></a>EventSource::Remove
@@ -374,7 +374,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>Paramètres
 
-*Jeton*  
+*Jeton*<br/>
 Handle qui représente un gestionnaire d’événements. Ce jeton a été retourné lorsque le Gestionnaire d’événements a été inscrit par le [Add()](#add) (méthode).
 
 ### <a name="return-value"></a>Valeur de retour

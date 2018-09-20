@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 528c66da24c4cbf6c22af5b1b5f8dd3afffff64f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b5cf858ae3fb3974898428b8437784ac3ce324e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604644"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416277"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper, constructeur
 
@@ -34,7 +34,7 @@ RoInitializeWrapper(   RO_INIT_TYPE flags)
 
 ### <a name="parameters"></a>Paramètres
 
-*flags*  
+*flags*<br/>
 Une des énumérations RO_INIT_TYPE, qui spécifie la prise en charge fournie par le Runtime de Windows.
 
 ## <a name="remarks"></a>Notes

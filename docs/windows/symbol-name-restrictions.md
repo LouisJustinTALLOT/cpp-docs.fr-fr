@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67527717319c4b571ff4b72b83d718c0ac149586
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a2370a2f47e358358ed2c870f8fffcbe135a116f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313323"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406683"
 ---
 # <a name="symbol-name-restrictions"></a>Restrictions relatives au nom de symbole
 
@@ -49,7 +49,7 @@ Les noms de symboles comportent des préfixes descriptifs qui indiquent le genre
 |--------------|------------|---------|
 |Ressources|IDR_ IDD_ IDC_ IDI_ IDB_|Accélérateur ou menu (et ressources associées ou personnalisées), boîte de dialogue, curseur, icône, image bitmap|
 |Éléments de menu|ID_|Menu Item|
-|Commandes|ID_|Command|
+|Commandes|ID_|Commande|
 |Contrôles et fenêtres enfants|IDC_|Contrôle|
 |Chaînes|IDS_|Chaîne dans la table de chaînes|
 |MFC|AFX_|Réservé aux symboles MFC prédéfinis|
@@ -60,6 +60,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modification d’un symbole ou d’un nom de symbole (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)  
-[Restrictions relatives à la valeur d’un symbole](../windows/symbol-value-restrictions.md)  
+[Modification d’un symbole ou d’un nom de symbole (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Restrictions relatives à la valeur d’un symbole](../windows/symbol-value-restrictions.md)<br/>
 [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)

@@ -1,5 +1,5 @@
 ---
-title: Énumérations d’espace de noms d’accès concurrentiel (AMP) | Documents Microsoft
+title: Énumérations d’espace de noms d’accès concurrentiel (AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,47 +13,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a67b5e77b8ab8c52e55dea96e64a3f16a4d70e39
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d4f842b799a81179fa1a612e652aae391ca3375d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695666"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435660"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Énumérations d’espace de noms d’accès concurrentiel (AMP)
-|||  
-|-|-|  
-|[access_type, énumération](#access_type)|[Énumération queuing_mode](#queuing_mode)|  
-  
-##  <a name="access_type"></a>  access_type, énumération  
- Type d’énumération utilisé pour désigner les différents types d’accès aux données.  
-  
-```  
-enum access_type;  
-```  
-### <a name="values"></a>Valeurs  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`access_type_auto`|Choisir automatiquement le meilleur `access_type` pour l’accélérateur.|  
-|`access_type_none`|Dédié. L’allocation est uniquement accessible sur l’accélérateur et non sur l’UC.|  
-|`access_type_read`|Partagé. L’allocation est accessible sur l’accélérateur et est accessible en lecture sur l’UC.|  
-|`access_type_read_write`|Partagé. L’allocation est accessible sur l’accélérateur et est accessible en écriture sur l’UC.|  
-|`access_type_write`|Partagé. L’allocation est accessible sur l’accélérateur et est accessible en lecture et en écriture sur le processeur.|  
 
-  
-##  <a name="queuing_mode"></a>  Énumération queuing_mode  
- Spécifie les modes de files d’attente qui sont pris en charge sur l’accélérateur.  
-  
-```  
-enum queuing_mode;  
-``` 
-### <a name="values"></a>Valeurs  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`queuing_mode_immediate`|Un mode de files d’attente qui spécifie tous les commandes, par exemple, [parallel_for_each, fonction (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), sont envoyés à l’appareil d’accélérateur correspondant dès qu’elles sont retournées à l’appelant.|  
-|`queuing_mode_automatic`|Un mode de files d’attente qui spécifie que commandes mises en attente une file d’attente de la commande qui correspond à la [accelerator_view](accelerator-view-class.md) objet. Les commandes sont envoyées à l’appareil lors de la [accelerator_view::flush](accelerator-view-class.md#flush) est appelée.|   
-  
-## <a name="see-also"></a>Voir aussi  
- [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
+|||
+|-|-|
+|[access_type, énumération](#access_type)|[Énumération queuing_mode](#queuing_mode)|
+
+##  <a name="access_type"></a>  access_type, énumération
+
+Type d’énumération utilisé pour identifier les différents types d’accès aux données.
+
+```
+enum access_type;
+```
+### <a name="values"></a>Valeurs
+
+|Nom|Description|
+|----------|-----------------|
+|`access_type_auto`|Choisissez automatiquement le meilleur `access_type` pour l’accélérateur.|
+|`access_type_none`|Dédié. L’allocation est uniquement accessible sur l’accélérateur et non sur l’UC.|
+|`access_type_read`|Partagé. L’allocation est accessible sur l’accélérateur et est accessible en lecture sur l’UC.|
+|`access_type_read_write`|Partagé. L’allocation est accessible sur l’accélérateur et est accessible en écriture sur l’UC.|
+|`access_type_write`|Partagé. L’allocation est accessible sur l’accélérateur et est accessible en lecture et en écriture sur le processeur.|
+
+##  <a name="queuing_mode"></a>  Énumération queuing_mode
+
+Spécifie les modes de file d’attente qui sont pris en charge sur l’accélérateur.
+
+```
+enum queuing_mode;
+```
+### <a name="values"></a>Valeurs
+
+|Nom|Description|
+|----------|-----------------|
+|`queuing_mode_immediate`|Un mode de file d’attente qui spécifie que toutes les commandes, par exemple, [parallel_for_each, fonction (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), sont envoyées au périphérique accélérateur correspondant dès qu’elles renvoient à l’appelant.|
+|`queuing_mode_automatic`|Un mode de file d’attente qui spécifie que commandes être la file d’attente sur une file d’attente de commande qui correspond à la [accelerator_view](accelerator-view-class.md) objet. Les commandes sont envoyées à l’appareil lorsque [accelerator_view::flush](accelerator-view-class.md#flush) est appelée.|
+
+## <a name="see-also"></a>Voir aussi
+
+[Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)

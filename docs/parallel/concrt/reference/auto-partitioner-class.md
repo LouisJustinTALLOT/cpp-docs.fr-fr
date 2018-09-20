@@ -1,5 +1,5 @@
 ---
-title: auto_partitioner, classe | Documents Microsoft
+title: auto_partitioner, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05232aa954a9ded7d2ab3a26ae4e1524610c3d04
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2bb62d76733e77c2528a80dfc4e9ef358878895
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705443"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425400"
 ---
 # <a name="autopartitioner-class"></a>auto_partitioner, classe
-La classe `auto_partitioner` représente la méthode par défaut que `parallel_for`, `parallel_for_each` et `parallel_transform` utilisent pour partitionner la plage au sein de laquelle ils itèrent. Cette méthode de partitionnement utilise un vol de plage pour équilibrer la charge et annuler par itération.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+La classe `auto_partitioner` représente la méthode par défaut que `parallel_for`, `parallel_for_each` et `parallel_transform` utilisent pour partitionner la plage au sein de laquelle ils itèrent. Cette méthode de partitionnement utilise un vol de plage pour équilibrer la charge et annuler par itération.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class auto_partitioner;
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[auto_partitioner](#ctor)|Construit un objet `auto_partitioner`.|  
-|[~ auto_partitioner, destructeur](#dtor)|Détruit un objet `auto_partitioner`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `auto_partitioner`  
-  
-## <a name="requirements"></a>Spécifications  
- **En-tête :** ppl.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="dtor"></a> ~auto_partitioner 
+```
 
- Détruit un objet `auto_partitioner`.  
-  
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[auto_partitioner](#ctor)|Construit un objet `auto_partitioner`.|
+|[~ auto_partitioner, destructeur](#dtor)|Détruit un objet `auto_partitioner`.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`auto_partitioner`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** ppl.h
+
+**Espace de noms :** concurrency
+
+##  <a name="dtor"></a> ~auto_partitioner
+
+Détruit un objet `auto_partitioner`.
+
 ```
 ~auto_partitioner();
-```  
-  
-##  <a name="ctor"></a> auto_partitioner 
+```
 
- Construit un objet `auto_partitioner`.  
-  
+##  <a name="ctor"></a> auto_partitioner
+
+Construit un objet `auto_partitioner`.
+
 ```
 auto_partitioner();
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)

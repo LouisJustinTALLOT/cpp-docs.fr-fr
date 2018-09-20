@@ -1,5 +1,5 @@
 ---
-title: Gestion de l’affichage actuel | Documents Microsoft
+title: Gestion de l’affichage actuel | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09d29f4bc0b62e5824209759d45e63c1d9e2daa6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ca9738f9b6083ef88c2f72e1608121f849f8e909
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928738"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425363"
 ---
 # <a name="managing-the-current-view"></a>Gestion de l'affichage actuel
-Dans le cadre de l’implémentation par défaut des fenêtres frame, une fenêtre frame effectue le suivi d’une vue actuellement active. Si la fenêtre frame contient plusieurs vues, comme par exemple dans une fenêtre fractionnée, la vue actuelle est la vue la plus récente en cours d’utilisation. La vue active est indépendante de la fenêtre active de Windows ou le focus d’entrée actuel.  
-  
- Lorsque la vue active change, le framework informe l’affichage actuel en appelant son [OnActivateView](../mfc/reference/cview-class.md#onactivateview) fonction membre. Vous pouvez indiquer si la vue est activée ou désactivée en examinant `OnActivateView`de *bActivate* paramètre. Par défaut, `OnActivateView` définit le focus sur l’affichage actuel sur l’activation. Vous pouvez substituer `OnActivateView` pour effectuer un traitement spécial lors de la vue est activée ou désactivée. Par exemple, vous souhaiterez fournissent des signaux visuels spéciaux pour distinguer la vue active à partir d’autres vues.  
-  
- Une fenêtre frame transfère des commandes pour son affichage actuel (actif), comme décrit dans [routage des commandes](../mfc/command-routing.md), en tant que partie du routage des commandes standard.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
+
+Dans le cadre de l’implémentation par défaut des fenêtres frame, une fenêtre frame des conserve une vue actuellement active. Si la fenêtre frame contient plusieurs vues, comme par exemple dans une fenêtre fractionnée, la vue actuelle est la vue la plus récente en cours d’utilisation. La vue active est indépendante de la fenêtre active dans Windows ou le focus d’entrée actuel.
+
+Lorsque la vue active change, le framework informe l’affichage actuel en appelant son [OnActivateView](../mfc/reference/cview-class.md#onactivateview) fonction membre. Vous pouvez indiquer si la vue est activée ou désactivée en examinant `OnActivateView`de *bActivate* paramètre. Par défaut, `OnActivateView` définit le focus à la vue actuelle sur l’activation. Vous pouvez remplacer `OnActivateView` pour effectuer un traitement spécial lors de la vue est activée ou désactivée. Par exemple, vous pouvez souhaiter fournir des aides visuelles spéciaux pour distinguer la vue active d’autres vues.
+
+Une fenêtre frame transfère des commandes pour son affichage actuel (actif), comme décrit dans [routage des commandes](../mfc/command-routing.md), en tant que partie du routage des commandes standard.
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
 

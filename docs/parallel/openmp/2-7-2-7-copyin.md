@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.7 copyin | Documents Microsoft
+title: 2.7.2.7 copyin | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ee711bfb24e7a2a1cbada1a7e01a243e204f4a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 94b4c529b7ad6fd717be1e1dee0edd3ff9ac3ff5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689374"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426885"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
-Le **copyin** clause fournit un mécanisme pour attribuer la même valeur pour **threadprivate** variables pour chaque thread dans l’équipe de l’exécution de la région parallèle. Pour chaque variable spécifiée dans un **copyin** clause, la valeur de la variable dans le thread principal de l’équipe est copiée, comme lors d’affectation, pour les copies de thread privé au début de la région parallèle. La syntaxe de la **copyin** clause est comme suit :  
-  
-```  
-  
-copyin(  
-variable-list  
-)  
-  
-```  
-  
- Les restrictions à le **copyin** clause sont les suivantes :  
-  
--   Une variable qui est spécifiée dans le **copyin** clause doit avoir un opérateur d’assignation de copie accessible et non équivoque.  
-  
--   Une variable qui est spécifiée dans le **copyin** clause doit être un **threadprivate** variable.
+
+Le **copyin** clause fournit un mécanisme pour affecter la même valeur pour **threadprivate** variables pour chaque thread dans l’équipe de l’exécution de la région parallèle. Pour chaque variable spécifiée dans un **copyin** clause, la valeur de la variable dans le thread principal de l’équipe est copié, comme si, par assignation, dans les copies privées de thread au début de la région parallèle. La syntaxe de la **copyin** clause se présente comme suit :
+
+```
+
+copyin(
+variable-list
+)
+
+```
+
+Les restrictions à le **copyin** clause sont les suivantes :
+
+- Une variable qui est spécifiée dans le **copyin** clause doit avoir un opérateur d’assignation de copie accessible et non équivoque.
+
+- Une variable qui est spécifiée dans le **copyin** clause doit être un **threadprivate** variable.

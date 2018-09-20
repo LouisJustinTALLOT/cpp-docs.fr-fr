@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068518"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405242"
 ---
 # <a name="agileeventsource-class"></a>Agileeventsource, classe
 
@@ -83,10 +83,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Paramètres
 
-*delegateInterface*  
+*delegateInterface*<br/>
 L’interface à un objet délégué, qui représente un gestionnaire d’événements.
 
-*Jeton*  
+*Jeton*<br/>
 Lorsque cette opération se termine, un handle qui représente l’événement. Utiliser ce jeton en tant que paramètre à la `Remove()` méthode pour ignorer le Gestionnaire d’événements.
 
 ### <a name="return-value"></a>Valeur de retour

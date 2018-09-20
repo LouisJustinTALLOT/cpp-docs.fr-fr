@@ -15,19 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 89a6b3392491ad36a0b0c9d542ffac4738b7c0f6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: eb3f501a2653c4d25adb195e9de9abf082179f3a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421906"
 ---
 # <a name="id-property"></a>ID, propriété
+
 La propriété ID fait référence à chaque entrée de table d’accélérateurs dans le code de programme. Il s’agit de la valeur de la commande que le programme reçoit lorsqu’un utilisateur appuie sur la touche accélérateur ou une combinaison de touches. Pour rendre un accélérateur identique à un élément de menu, que leurs ID de la même (tant que l’ID de la table d’accélérateurs est identique à l’ID de la ressource de menu).
   
 ## <a name="requirements"></a>Configuration requise
- Win32
+
+Win32
   
 ## <a name="see-also"></a>Voir aussi
- [Définition des propriétés d’un accélérateur](../windows/setting-accelerator-properties.md)  
- [Éditeur d’accélérateurs](../windows/accelerator-editor.md)
+
+[Définition des propriétés d’un accélérateur](../windows/setting-accelerator-properties.md)<br/>
+[Éditeur d’accélérateurs](../windows/accelerator-editor.md)

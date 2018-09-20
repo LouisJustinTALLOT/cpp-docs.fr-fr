@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1addd96456a33b30259182e4490df70335d0d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584319"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408360"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke, méthode
 
@@ -65,31 +65,31 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Paramètres
 
-*arg1*  
+*arg1*<br/>
 Argument 1.
 
-*Arg2*  
+*Arg2*<br/>
 Argument 2.
 
-*Arg3*  
+*Arg3*<br/>
 Argument 3.
 
-*Arg4*  
+*Arg4*<br/>
 Argument 4.
 
-*Arg5*  
+*Arg5*<br/>
 Argument 5.
 
-*Arg6*  
+*Arg6*<br/>
 Argument 6.
 
-*Arg7*  
+*Arg7*<br/>
 Argument 7.
 
-*Arg8*  
+*Arg8*<br/>
 Argument 8.
 
-*Arg9*  
+*Arg9*<br/>
 Argument 9.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -108,5 +108,5 @@ Appelle le Gestionnaire d’événements dont la signature contient le nombre sp
 
 ## <a name="see-also"></a>Voir aussi
 
-[InvokeHelper, structure](../windows/invokehelper-structure.md)  
+[InvokeHelper, structure](../windows/invokehelper-structure.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

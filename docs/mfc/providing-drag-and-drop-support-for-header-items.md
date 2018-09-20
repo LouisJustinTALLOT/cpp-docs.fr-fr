@@ -1,5 +1,5 @@
 ---
-title: Prise en charge du glisser-déplacer pour les éléments d’en-tête | Documents Microsoft
+title: Prise en charge du glisser-déplacer pour les éléments d’en-tête | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf21021e204a6caf298453bab42db2aedff409c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b2eaa5040d34a442868a8fa6cb9f2aae08b0a6f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928418"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407697"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Prise en charge du glisser-déposer pour les éléments d’en-tête
-Pour fournir la prise en charge du glisser-déplacer pour les éléments d’en-tête, spécifiez le style HDS_DRAGDROP. Prise en charge du glisser-déplacer pour les éléments d’en-tête donne à l’utilisateur la possibilité de réorganiser les éléments d’un contrôle header. Le comportement par défaut fournit une image translucide de l’élément d’en-tête déplacé et un indicateur visuel de la nouvelle position, si l’élément d’en-tête est supprimée.  
-  
- Comme avec les fonctionnalités communes de glisser-déplacer, vous pouvez étendre le comportement de glisser-déplacer par défaut en gérant les notifications standard et HDN_ENDDRAG. Vous pouvez également personnaliser l’apparence de l’image glisser en substituant le [fonction membre CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) fonction membre.  
-  
+
+Pour fournir la prise en charge du glisser-déplacer pour les éléments d’en-tête, spécifiez le style HDS_DRAGDROP. Prise en charge de glisser-déplacer des éléments d’en-tête donne à l’utilisateur la possibilité de réorganiser les éléments d’un contrôle d’en-tête. Le comportement par défaut fournit une image translucide de l’élément d’en-tête qui est glissé et un indicateur visuel de la nouvelle position, si l’élément d’en-tête est supprimée.
+
+Avec des fonctionnalités communes glisser-déplacer, vous pouvez étendre le comportement de glisser-déplacer par défaut en gérant les notifications standard et HDN_ENDDRAG. Vous pouvez également personnaliser l’apparence de l’image glisser en substituant le [fonction membre CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) fonction membre.
+
 > [!NOTE]
->  Si vous fournissez la prise en charge du glisser-déplacer pour un contrôle header incorporé dans un contrôle de liste, consultez la section Styles étendus dans le [la modification des Styles de contrôle liste](../mfc/changing-list-control-styles.md) rubrique.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)
+>  Si vous fournissez la prise en charge du glisser-déplacer pour un contrôle header incorporé dans un contrôle de liste, consultez la section de Style étendu dans le [modification des Styles de contrôle liste](../mfc/changing-list-control-styles.md) rubrique.
+
+## <a name="see-also"></a>Voir aussi
+
+[Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

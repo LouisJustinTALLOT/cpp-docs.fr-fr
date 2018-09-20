@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e218002171b7ad2d141be227ab277851487f0f5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3835d3c3d2900b97c16bc82963df2d08f35a879d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678798"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416290"
 ---
 # <a name="preprocessor-directives"></a>Directives de préprocesseur
 
@@ -43,6 +43,6 @@ Les directives de préprocesseur peuvent apparaître n'importe où dans un fichi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Opérateurs de préprocesseur](../preprocessor/preprocessor-operators.md)  
-[Macros prédéfinies](../preprocessor/predefined-macros.md)  
+[Opérateurs de préprocesseur](../preprocessor/preprocessor-operators.md)<br/>
+[Macros prédéfinies](../preprocessor/predefined-macros.md)<br/>
 [Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)  

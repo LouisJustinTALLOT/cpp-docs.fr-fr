@@ -38,171 +38,166 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f49d51fc939df8fc26000627552afc19a0208d4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3762218b6171ba26d637e209e818b703db9ee5ed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106205"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410323"
 ---
 # <a name="unorm2-class"></a>unorm_2, classe
-Représente un vecteur court de deux nombres normaux non signés.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class unorm_2;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-typedefs"></a>Typedefs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[unorm_2 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|unorm_2::get_x||  
-|unorm_2::get_xy||  
-|unorm_2::get_y||  
-|unorm_2::get_yx||  
-|unorm_2::ref_g||  
-|unorm_2::ref_r||  
-|unorm_2::ref_x||  
-|unorm_2::ref_y||  
-|unorm_2::set_x||  
-|unorm_2::set_xy||  
-|unorm_2::set_y||  
-|unorm_2::set_yx||  
-  
-### <a name="public-operators"></a>Op&#233;rateurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|unorm_2::operator--||  
-|unorm_2::operator * =||  
-|/ = unorm_2::operator||  
-|unorm_2::operator ++||  
-|unorm_2::operator +=||  
-|unorm_2::operator =||  
-|unorm_2::operator =||  
-  
-### <a name="public-constants"></a>Constantes publiques  
-  
-|Name|Description|  
-|----------|-----------------|  
-|unorm_2::size, constante||  
-  
-### <a name="public-data-members"></a>Membres de données publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|unorm_2::g||  
-|unorm_2::GR||  
-|unorm_2::r||  
-|unorm_2::RG||  
-|unorm_2::x||  
-|unorm_2::XY||  
-|unorm_2::y||  
-|unorm_2::yx||  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `unorm_2`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** amp_short_vectors.h  
-  
- **Namespace :** Concurrency::graphics  
-  
-##  <a name="ctor"></a> unorm_2 
 
- Par défaut constructeur initialise tous les éléments par 0.  
-  
-```  
+Représente un vecteur court de deux nombres normaux non signés.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class unorm_2;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-typedefs"></a>Typedefs publics
+
+|Nom|Description|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[unorm_2 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|unorm_2::get_x||
+|unorm_2::get_xy||
+|unorm_2::get_y||
+|unorm_2::get_yx||
+|unorm_2::ref_g||
+|unorm_2::ref_r||
+|unorm_2::ref_x||
+|unorm_2::ref_y||
+|unorm_2::set_x||
+|unorm_2::set_xy||
+|unorm_2::set_y||
+|unorm_2::set_yx||
+
+### <a name="public-operators"></a>Op&#233;rateurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|unorm_2::operator--||
+|unorm_2::operator * =||
+|/ = unorm_2::operator||
+|unorm_2::operator ++||
+|unorm_2::operator +=||
+|unorm_2::operator =||
+|unorm_2::operator =||
+
+### <a name="public-constants"></a>Constantes publiques
+
+|Name|Description|
+|----------|-----------------|
+|unorm_2::size, constante||
+
+### <a name="public-data-members"></a>Membres de données publics
+
+|Nom|Description|
+|----------|-----------------|
+|unorm_2::g||
+|unorm_2::GR||
+|unorm_2::r||
+|unorm_2::RG||
+|unorm_2::x||
+|unorm_2::XY||
+|unorm_2::y||
+|unorm_2::yx||
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`unorm_2`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** amp_short_vectors.h
+
+**Namespace :** Concurrency::graphics
+
+##  <a name="ctor"></a> unorm_2
+
+Par défaut constructeur initialise tous les éléments par 0.
+
+```
 unorm_2() restrict(amp,
     cpu);
 
- 
 unorm_2(
-    unorm _V0,  
+    unorm _V0,
     unorm _V1) restrict(amp,
     cpu);
 
- 
 unorm_2(
-    float _V0,  
+    float _V0,
     float _V1) restrict(amp,
     cpu);
 
- 
 unorm_2(
     unorm _V) restrict(amp,
     cpu);
 
- 
 explicit unorm_2(
     float _V) restrict(amp,
     cpu);
 
- 
 unorm_2(
     const unorm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_2(
     const uint_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_2(
     const int_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_2(
     const float_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_2(
     const norm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_2(
     const double_2& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*_V0*<br/>
-La valeur pour initialiser l’élément 0.  
-  
-*_V1*<br/>
-La valeur pour initialiser l’élément 1.  
-  
-*_V*<br/>
-La valeur pour l’initialisation.  
-  
-*_Autre*<br/>
-L’objet utilisé pour initialiser.  
-  
-##  <a name="unorm_2__size"></a> Taille 
+```
 
-```  
-static const int size = 2;  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Paramètres
+
+*_V0*<br/>
+La valeur pour initialiser l’élément 0.
+
+*_V1*<br/>
+La valeur pour initialiser l’élément 1.
+
+*_V*<br/>
+La valeur pour l’initialisation.
+
+*_Autre*<br/>
+L’objet utilisé pour initialiser.
+
+##  <a name="unorm_2__size"></a> Taille
+
+```
+static const int size = 2;
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

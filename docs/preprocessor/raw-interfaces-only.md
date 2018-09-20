@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63097c9ac47f3b791ff7fd5949cece4d85e5ca1f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 8f217c0dad3bf74ab930cf1f66392fe22d9df832
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42545755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446547"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
 **Spécifique à C++**  
@@ -44,5 +44,5 @@ Cet attribut vous permet d'exposer uniquement le contenu de bas niveau de la bib
   
 ## <a name="see-also"></a>Voir aussi  
  
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directive #import](../preprocessor/hash-import-directive-cpp.md)

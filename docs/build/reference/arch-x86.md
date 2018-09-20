@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f255c8c178d063c040dca4ed6da52c65370c96b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 819d95883cecb4d219fd11c4ab83e18afa2dbbd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702662"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444929"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -90,6 +90,6 @@ r = t + d;     // This should produce the same overall result
 
 ## <a name="see-also"></a>Voir aussi
 
-[/arch (Architecture d’UC minimale)](../../build/reference/arch-minimum-cpu-architecture.md)
+[/arch (Architecture d’UC minimale)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

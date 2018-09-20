@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90367a21d76fe7fe735d1174bc9b9d40900dec78
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12d4fdd415ab37c9af0b0b34651e7cd2f00cf31b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600828"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405279"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator, données de membre
 
@@ -35,21 +35,21 @@ HRESULT (*factoryCreator)(
    unsigned int* currentflags,
    const CreatorMap* entry,
    REFIID iidClassFactory,
- IUnknown** factory);
+IUnknown** factory);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*currentflags*  
+*currentflags*<br/>
 Parmi les [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) énumérateurs.
 
-*entry*  
+*entry*<br/>
 Un CreatorMap.
 
-*iidClassFactory*  
+*iidClassFactory*<br/>
 L’ID d’interface d’une fabrique de classe.
 
-*fabrique*  
+*fabrique*<br/>
 Lorsque l’opération terminée, l’adresse d’une fabrique de classe.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -68,5 +68,5 @@ Crée une fabrique pour la CreatorMap spécifié.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CreatorMap, structure](../windows/creatormap-structure.md)  
+[CreatorMap, structure](../windows/creatormap-structure.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

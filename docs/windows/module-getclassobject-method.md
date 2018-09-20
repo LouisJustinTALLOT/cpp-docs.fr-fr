@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e0c8996823de35bbfd85d595556db933f34238a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90a1b527d12e581c42fc9519e56d453f845e0b63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599220"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419715"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject, méthode
 
@@ -31,7 +31,7 @@ Récupère un cache des fabriques de classes.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
- HRESULT GetClassObject(
+HRESULT GetClassObject(
    REFCLSID clsid,
    REFIID riid,
    _Deref_out_ void **ppv,
@@ -41,16 +41,16 @@ Récupère un cache des fabriques de classes.
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*  
+*clsid*<br/>
 ID de classe.
 
-*riid*  
+*riid*<br/>
 ID d’interface que vous demandez.
 
-*PPV*  
+*PPV*<br/>
 Pointeur vers l’objet retourné.
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Le nom du serveur qui est spécifié dans le `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, ou `ActivatableClass` macro ; ou **nullptr** pour obtenir le nom du serveur par défaut.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -66,4 +66,5 @@ Utilisez cette méthode uniquement pour COM, pas l’exécution de Windows. Cett
 **Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
+
 [Module, classe](../windows/module-class.md)

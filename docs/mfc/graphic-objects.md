@@ -51,66 +51,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd8fc67f7cdc11328c4da9643f57b65a1cc6bfd0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b62acb002c9035dfa7fa63aaf5efb23f9939c25b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197183"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415190"
 ---
 # <a name="graphic-objects"></a>Objets graphiques
-Windows propose divers outils de dessin à utiliser dans des contextes de périphériques. On trouve des stylets pour tracer des lignes, des pinceaux pour remplir des intérieurs et des polices pour dessiner du texte. MFC propose des classes d'objets graphiques équivalentes aux outils de dessin de Windows. Le tableau ci-dessous présente les classes disponibles et les types de handle GDI (Graphics Device Interface) Windows équivalents.  
-  
+
+Windows propose divers outils de dessin à utiliser dans des contextes de périphériques. On trouve des stylets pour tracer des lignes, des pinceaux pour remplir des intérieurs et des polices pour dessiner du texte. MFC propose des classes d'objets graphiques équivalentes aux outils de dessin de Windows. Le tableau ci-dessous présente les classes disponibles et les types de handle GDI (Graphics Device Interface) Windows équivalents.
+
 > [!NOTE]
->  Pour plus d’informations, consultez la documentation du Kit de développement logiciel GDI + à : [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
-  
- Cet article explique l'utilisation de ces classes d'objets graphiques :  
-  
-### <a name="classes-for-windows-gdi-objects"></a>Classes pour objets Windows GDI  
-  
-|Classe|Type de handle Windows|  
-|-----------|-------------------------|  
-|[CPen](../mfc/reference/cpen-class.md)|`HPEN`|  
-|[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|  
-|[CFont](../mfc/reference/cfont-class.md)|**HFONT**|  
-|[CBitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|  
-|[CPalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|  
-|[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|  
-  
+>  Pour plus d’informations, consultez la documentation du Kit de développement logiciel GDI + à : [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+
+Cet article explique l'utilisation de ces classes d'objets graphiques :
+
+### <a name="classes-for-windows-gdi-objects"></a>Classes pour objets Windows GDI
+
+|Classe|Type de handle Windows|
+|-----------|-------------------------|
+|[CPen](../mfc/reference/cpen-class.md)|`HPEN`|
+|[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|
+|[CFont](../mfc/reference/cfont-class.md)|**HFONT**|
+|[CBitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|
+|[CPalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|
+|[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|
+
 > [!NOTE]
->  La classe [CImage](../atl-mfc-shared/reference/cimage-class.md) fournit la prise en charge améliorée des images bitmap.  
-  
- À chaque classe d'objets graphiques de la bibliothèque de classes correspond un constructeur qui vous permet de créer des objets graphiques de cette classe, que vous devez ensuite initialiser avec la fonction de création appropriée, comme `CreatePen`.  
-  
- À chaque classe d'objets graphiques de la bibliothèque de classes correspond un opérateur de conversion de type (transtypage) chargé de convertir un objet MFC en handle Windows associé. Le handle obtenu est valide tant que l'objet associé ne le détache pas. Utilisez l’objet `Detach` fonction membre pour détacher le handle.  
-  
- Le code suivant convertit un `CPen` objet en handle Windows :  
-  
- [!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/cpp/graphic-objects_1.cpp)]  
-  
-#### <a name="to-create-a-graphic-object-in-a-device-context"></a>Pour créer un objet graphique dans un contexte de périphérique  
-  
-1.  Définissez un objet graphique sur le frame de pile. Initialisez l'objet avec la fonction de création propre au type, par exemple, `CreatePen`. Vous pouvez aussi initialiser l'objet dans le constructeur. Consultez la rubrique sur [la création d’une étape et en deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md), qui fournit des exemples de code.  
-  
-2.  [Sélectionnez l’objet dans le contexte de périphérique en cours](../mfc/selecting-a-graphic-object-into-a-device-context.md), l’enregistrement de l’ancien objet graphique qui était sélectionné auparavant.  
-  
-3.  Quand vous en avez terminé avec l'objet graphique actuel, sélectionnez à nouveau l'ancien objet graphique dans le contexte de périphérique pour restaurer son état.  
-  
-4.  Autorisez la suppression automatique de l'objet graphique alloué par le frame dès qu'il est hors de portée.  
-  
+>  La classe [CImage](../atl-mfc-shared/reference/cimage-class.md) fournit la prise en charge améliorée des images bitmap.
+
+À chaque classe d'objets graphiques de la bibliothèque de classes correspond un constructeur qui vous permet de créer des objets graphiques de cette classe, que vous devez ensuite initialiser avec la fonction de création appropriée, comme `CreatePen`.
+
+À chaque classe d'objets graphiques de la bibliothèque de classes correspond un opérateur de conversion de type (transtypage) chargé de convertir un objet MFC en handle Windows associé. Le handle obtenu est valide tant que l'objet associé ne le détache pas. Utilisez l’objet `Detach` fonction membre pour détacher le handle.
+
+Le code suivant convertit un `CPen` objet en handle Windows :
+
+[!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/cpp/graphic-objects_1.cpp)]
+
+#### <a name="to-create-a-graphic-object-in-a-device-context"></a>Pour créer un objet graphique dans un contexte de périphérique
+
+1. Définissez un objet graphique sur le frame de pile. Initialisez l'objet avec la fonction de création propre au type, par exemple, `CreatePen`. Vous pouvez aussi initialiser l'objet dans le constructeur. Consultez la rubrique sur [la création d’une étape et en deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md), qui fournit des exemples de code.
+
+1. [Sélectionnez l’objet dans le contexte de périphérique en cours](../mfc/selecting-a-graphic-object-into-a-device-context.md), l’enregistrement de l’ancien objet graphique qui était sélectionné auparavant.
+
+1. Quand vous en avez terminé avec l'objet graphique actuel, sélectionnez à nouveau l'ancien objet graphique dans le contexte de périphérique pour restaurer son état.
+
+1. Autorisez la suppression automatique de l'objet graphique alloué par le frame dès qu'il est hors de portée.
+
 > [!NOTE]
->  Si vous prévoyez d'utiliser un objet graphique de façon récurrente, vous pouvez l'allouer une fois et le sélectionner dans un contexte de périphérique chaque fois que vous en avez besoin. Veillez à supprimer cet objet dès que vous n'en avez plus besoin.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur  
-  
--   [Construction d’objets graphiques en une et en deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
-  
--   [Exemple de construction d’un stylet dans une ou deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
-  
--   [Sélection d’un objet graphique dans un contexte d’appareil](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
-  
--   [Contextes de périphérique](../mfc/device-contexts.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Objets fenêtre](../mfc/window-objects.md)
+>  Si vous prévoyez d'utiliser un objet graphique de façon récurrente, vous pouvez l'allouer une fois et le sélectionner dans un contexte de périphérique chaque fois que vous en avez besoin. Veillez à supprimer cet objet dès que vous n'en avez plus besoin.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+- [Construction d’objets graphiques en une et en deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+
+- [Exemple de construction d’un stylet dans une ou deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+
+- [Sélection d’un objet graphique dans un contexte d’appareil](../mfc/selecting-a-graphic-object-into-a-device-context.md)
+
+- [Contextes de périphérique](../mfc/device-contexts.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Objets fenêtre](../mfc/window-objects.md)
 

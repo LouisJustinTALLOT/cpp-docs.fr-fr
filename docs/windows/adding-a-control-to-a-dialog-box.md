@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e60c64777ea4b5726721a267bcdd700cd71b4214
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9ad87e80d3301eaeda7a0599c3e484046092ed60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446463"
 ---
 # <a name="adding-a-control-to-a-dialog-box-c"></a>Ajout d’un contrôle à une boîte de dialogue (C++)
 
@@ -52,6 +52,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)  
-[Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)<br/>
+[Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)

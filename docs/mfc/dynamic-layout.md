@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6976669127dca79be59b85efbd15273b0f580a1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132060"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413248"
 ---
 # <a name="dynamic-layout"></a>Disposition dynamique
 
@@ -153,8 +153,8 @@ La procédure précédente permet de spécifier les propriétés de disposition 
 
 ## <a name="see-also"></a>Voir aussi
 
-[CMFCDynamicLayout, classe](../mfc/reference/cmfcdynamiclayout-class.md)  
-[Classes de contrôle](../mfc/control-classes.md)  
-[Classes de boîte de dialogue](../mfc/dialog-box-classes.md)  
-[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)  
+[CMFCDynamicLayout, classe](../mfc/reference/cmfcdynamiclayout-class.md)<br/>
+[Classes de contrôle](../mfc/control-classes.md)<br/>
+[Classes de boîte de dialogue](../mfc/dialog-box-classes.md)<br/>
+[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)<br/>
 [Mise en page de boîte de dialogue dynamique de MFC dans Visual C++ 2015](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

@@ -1,5 +1,5 @@
 ---
-title: 'TN057 : Localisation des composants MFC | Documents Microsoft'
+title: 'TN057 : Localisation des composants MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec786277432ab1ce47614c3afac627733edc4985
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 8dcd3117d50d2d8905e5382cf226ba487c13a7c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121155"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414210"
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057 : localisation des composants MFC
 
@@ -45,7 +45,7 @@ De plus, votre composant doit être en mesure de s'exécuter dans son environnem
 
 ## <a name="localizing-your-components-resources"></a>Recherche des ressources du composant
 
-Localiser votre application ou DLL doit impliquer simplement de remplacer les ressources par d'autres qui correspondent à la langue cible. Pour vos propres ressources, il est relativement simple de modifier les ressources dans l'éditeur de ressources et de générer votre application. Si votre code est écrit correctement, il n’y aura aucune des chaînes ou le texte que vous souhaitez localiser codé en dur dans le code source C++ - toute localisation est possible en modifiant simplement certaines ressources. En fait, vous pouvez implémenter votre composant de telle sorte que ce qui est fourni par une version localisée n'implique même pas une génération du code d'origine. Cette méthode est plus complexe, mais elle en vaut la peine et correspond au mécanisme sélectionné pour l'application MFC elle-même. Il est également possible de trouver une application en chargeant le fichier EXE ou le fichier .dll dans l'éditeur de ressources et en modifiant les ressources. Si possible, cela requiert la réapplication de modifications chaque fois que vous créez une version de votre application.
+Localiser votre application ou DLL doit impliquer simplement de remplacer les ressources par d'autres qui correspondent à la langue cible. Pour vos propres ressources, il est relativement simple de modifier les ressources dans l'éditeur de ressources et de générer votre application. Si votre code est écrit correctement, il n’y aura aucune chaînes ou le texte que vous souhaitez localiser codées en dur dans votre code source C++ - toute localisation est possible en modifiant simplement certaines ressources. En fait, vous pouvez implémenter votre composant de telle sorte que ce qui est fourni par une version localisée n'implique même pas une génération du code d'origine. Cette méthode est plus complexe, mais elle en vaut la peine et correspond au mécanisme sélectionné pour l'application MFC elle-même. Il est également possible de trouver une application en chargeant le fichier EXE ou le fichier .dll dans l'éditeur de ressources et en modifiant les ressources. Si possible, cela requiert la réapplication de modifications chaque fois que vous créez une version de votre application.
 
 Une façon d'éviter cela est de rechercher toutes les ressources dans une DLL distincte, parfois appelée DLL satellite. Cette DLL est alors chargée dynamiquement pendant l'exécution et les ressources sont chargées à partir de cette DLL au lieu du module principal avec tout votre code. MFC gère directement cette méthode. Prenez pour exemple une application appelée MYAPP.EXE ; elle peut contenir toutes ses ressources localisées dans un fichier DLL intitulé MYRES.DLL. Dans `InitInstance` de l'application, elle doit effectuer les opérations suivantes pour charger cette DLL et pour que MFC charge les ressources à partir de cet emplacement :
 
@@ -65,7 +65,7 @@ CMyApp::InitInstance()
 
 À partir de là, MFC charge les ressources de cette DLL au lieu du fichier myapp.exe. Toutes les ressources, toutefois, doivent être présentes dans cette DLL ; MFC n'accèdera pas l'instance de l'application à la recherche d'une ressource donnée. Cette technique s’applique aussi bien aux régulière DLL MFC ainsi que des contrôles OLE. Le programme d'installation copierait la version appropriée de MYRES.DLL en fonction des paramètres régionaux de la ressource que l'utilisateur souhaiterait.
 
-Il est relativement facile de créer une DLL de ressource uniquement. Créez un projet DLL, ajoutez-y votre fichier .RC, puis ajoutez les ressources nécessaires. Si vous avez un projet existant qui n'utilise pas cette technique, vous pouvez copier les ressources de ce projet. Après avoir ajouté le fichier de ressources au projet, vous êtes presque prêt à générer le projet. La seule chose à faire est de définir des options permettant d’inclure l’éditeur de liens **/NOENTRY**. Cela indique à l’éditeur de liens que la DLL n’a aucun point d’entrée - car il ne dispose pas de code, ne qu’aucun point d’entrée.
+Il est relativement facile de créer une DLL de ressource uniquement. Créez un projet DLL, ajoutez-y votre fichier .RC, puis ajoutez les ressources nécessaires. Si vous avez un projet existant qui n'utilise pas cette technique, vous pouvez copier les ressources de ce projet. Après avoir ajouté le fichier de ressources au projet, vous êtes presque prêt à générer le projet. La seule chose à faire est de définir des options permettant d’inclure l’éditeur de liens **/NOENTRY**. Ce code indique à l’éditeur de liens que la DLL n’a aucun point d’entrée - dans la mesure où il n’a aucun code, il n’a aucun point d’entrée.
 
 > [!NOTE]
 > L'éditeur de ressources dans Visual C++ 4.0 et toute version ultérieure prend en charge plusieurs langues par fichier .RC. Cela peut faciliter la gestion de votre localisation au sein d'un projet. Les ressources de chaque langue sont contrôlées par les directives du préprocesseur générées par l'éditeur de ressources.
@@ -74,7 +74,7 @@ Il est relativement facile de créer une DLL de ressource uniquement. Créez un 
 
 Toutes les applications MFC que vous créez réutilisent deux choses de MFC : le code et les ressources. Autrement dit, MFC a plusieurs messages d'erreur, boîtes de dialogue prédéfinies et d'autres ressources utilisées par les classes MFC. Pour localiser entièrement votre application, vous devez rechercher non seulement les ressources de votre application, mais également les ressources provenant directement de MFC. MFC fournit automatiquement de nombreux fichiers de ressources de langue différentes, de sorte que si la langue que vous visez est une des langues déjà prises en charge par MFC, vous devrez simplement vérifier que vous utilisez ces ressources localisées.
 
-Au moment de la rédaction de ce document, MFC prend en charge les langues suivantes : l'allemand, le chinois, le coréen, l'espagnol, le français, l'italien et le japonais. Les fichiers qui contiennent ces versions localisées se trouvent dans les répertoires MFC\INCLUDE\L.* ("L" signifie "localisé"). Par exemple, les fichiers allemands figurent dans le répertoire MFC\INCLUDE\L.DEU. Pour que votre application pour utiliser ces fichiers RC à la place les fichiers situés dans MFC\INCLUDE, ajoutez un `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` à votre ligne de commande RC (il s’agit d’un exemple, vous devez substituer les paramètres régionaux de choix, ainsi que le répertoire où vous avez installé Visual C ++).
+Au moment de la rédaction de ce document, MFC prend en charge les langues suivantes : l'allemand, le chinois, le coréen, l'espagnol, le français, l'italien et le japonais. Les fichiers qui contiennent ces versions localisées se trouvent dans les répertoires MFC\INCLUDE\L.* ("L" signifie "localisé"). Par exemple, les fichiers allemands figurent dans le répertoire MFC\INCLUDE\L.DEU. Pour que votre application pour utiliser ces fichiers RC au lieu des fichiers situés dans MFC\INCLUDE, ajoutez un `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` à votre ligne de commande RC (il s’agit d’un exemple ; vous devez remplacer les paramètres régionaux de choix, ainsi que le répertoire dans lequel vous avez installé Visual C ++).
 
 L'instruction ci-dessus fonctionne si vos applications se lient statiquement à MFC. La plupart des applications se lient dynamiquement (parce que c'est la valeur par défaut de l'Assistant Application). Dans ce scénario, non seulement le code est dynamiquement lié -, mais les ressources. Par conséquent, vous pouvez localiser vos ressources dans votre application, mais les ressources d'implémentation MFC seront encore chargées de MFC7x.DLL (ou version ultérieure) ou de MFC7xLOC.DLL, si existant. Vous pouvez considérer ceci sous deux différents angles.
 
@@ -84,5 +84,5 @@ L'approche la plus simple et la plus sûre consiste à inclure les ressources MF
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes techniques par numéro](../mfc/technical-notes-by-number.md)  
-[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)  
+[Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
+[Notes techniques par catégorie](../mfc/technical-notes-by-category.md)

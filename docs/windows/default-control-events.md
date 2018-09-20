@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a57cb6c72d7d444c345140f4a738a3d4a3232c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 95c3d15414dbb312c60029a86707c1d32df56adc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315611"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405513"
 ---
 # <a name="default-control-events"></a>Événements de contrôle par défaut
 
@@ -63,9 +63,9 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition de variables membres pour les contrôles de boîte de dialogue](../windows/defining-member-variables-for-dialog-controls.md)  
-[Types de messages associés aux objets interface utilisateur](../mfc/reference/message-types-associated-with-user-interface-objects.md)  
-[Modification d’un gestionnaire de messages](../mfc/reference/editing-a-message-handler.md)  
-[Définition d’un gestionnaire de messages pour un message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)  
-[Déclaration d’une variable basée sur votre nouvelle classe de contrôle](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)  
+[Définition de variables membres pour les contrôles de boîte de dialogue](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Types de messages associés aux objets interface utilisateur](../mfc/reference/message-types-associated-with-user-interface-objects.md)<br/>
+[Modification d’un gestionnaire de messages](../mfc/reference/editing-a-message-handler.md)<br/>
+[Définition d’un gestionnaire de messages pour un message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)<br/>
+[Déclaration d’une variable basée sur votre nouvelle classe de contrôle](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)<br/>
 [Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Configuration requise pour les éléments de conteneur STL/CLR | Documents Microsoft
+title: Exigences pour les éléments de conteneur STL/CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 523b3e8d3f9c04a933f37032fcea670d75dafccf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcba36fdf280cef31efb9a84288475fcbb82b291
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33162434"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400419"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>Exigences pour les éléments de conteneur STL/CLR
-Tous les types de référence sont insérées dans des conteneurs STL/CLR doivent avoir au minimum, les éléments suivants :  
-  
--   Un constructeur de copie public.  
-  
--   Un opérateur d’assignation de public.  
-  
--   Un destructeur public.  
-  
- En outre, les conteneurs associatifs comme [définir](../dotnet/set-stl-clr.md) et [carte](../dotnet/map-stl-clr.md) doivent avoir un opérateur de comparaison public défini, qui est `operator<` par défaut. Certaines opérations sur les conteneurs peuvent également nécessiter un constructeur public par défaut et un opérateur d’équivalence public à définir.  
-  
- Comme les types référence, les types valeur et les descripteurs pour faire référence aux types qui doivent être insérés dans un conteneur associatif de doivent avoir un opérateur de comparaison tel que `operator<` défini. La configuration requise pour un constructeur de copie public, opérateur d’assignation public et un destructeur public n’existe pas pour les types valeur ou des handles vers des types référence.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence de bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+
+Tous les types de référence sont insérées dans des conteneurs STL/CLR doivent avoir au minimum, les éléments suivants :
+
+- Un constructeur de copie public.
+
+- Un opérateur d’assignation publique.
+
+- Un destructeur public.
+
+En outre, les conteneurs associatifs comme [définir](../dotnet/set-stl-clr.md) et [carte](../dotnet/map-stl-clr.md) doit avoir un opérateur de comparaison public défini, qui est `operator<` par défaut. Certaines opérations sur les conteneurs peuvent également nécessiter un constructeur public par défaut et un opérateur d’équivalence public à définir.
+
+Comme les types référence, les types valeur et les descripteurs pour faire référence à types qui doivent être insérés dans un conteneur associatif doivent avoir un opérateur de comparaison tels que `operator<` défini. La configuration requise pour un constructeur de copie public, opérateur d’assignation publique et un destructeur public n’existe pas pour les types valeur ou les handles aux types référence.
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence de bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

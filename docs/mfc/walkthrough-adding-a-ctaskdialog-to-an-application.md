@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Ajout d’une classe CTaskDialog à une Application | Documents Microsoft'
+title: 'Procédure pas à pas : Ajout d’un classe CTaskDialog à une Application | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0a3d93815a740be59960e6d3e0f9e9ed690923
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122952"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420478"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procédure pas à pas : ajout d'une classe CTaskDialog à une application
 
@@ -47,13 +47,13 @@ La procédure suivante illustre la façon la plus élémentaire d’utiliser `CT
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Pour remplacer une boîte de message Windows par un CTaskDialog
 
-1. Créez un projet d’application MFC avec les paramètres par défaut. Appelez-le *MyProject*.
+1. Créez un projet d’application MFC avec les paramètres par défaut. Appelez-le *MonProjet*.
 
 2. Ouvrez le fichier MyProject.cpp dans l’ **Explorateur de solutions** .
 
 3. Ajoutez `#include "afxtaskdialog.h"` après la liste d’includes.
 
-4. Recherchez la méthode `CMyProjectApp::InitInstance`. Insérez les lignes de code suivantes avant l’instruction `return TRUE;` . Ce code crée les chaînes que nous utilisons dans la boîte de message Windows ou dans `CTaskDialog`.  
+4. Recherchez la méthode `CMyProjectApp::InitInstance`. Insérez les lignes de code suivantes avant l’instruction `return TRUE;` . Ce code crée les chaînes que nous utilisons dans la boîte de message Windows ou dans `CTaskDialog`.
 
     ```cpp
     CString message("My message to the user");
@@ -201,6 +201,6 @@ Ces exemples ne montrent pas toutes les options accessibles à un `CTaskDialog`,
 
 ## <a name="see-also"></a>Voir aussi
 
-[Boîtes de dialogue](../mfc/dialog-boxes.md)  
-[CTaskDialog, classe](../mfc/reference/ctaskdialog-class.md)  
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)  
+[Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
+[CTaskDialog, classe](../mfc/reference/ctaskdialog-class.md)<br/>
+[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c2de62df47e46183c1169956a18ddc10822b22a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99e82de06f64816521c47c78648108a9ae815279
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611919"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443226"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new, opérateur
 
@@ -39,10 +39,10 @@ void* operator new(
 
 ### <a name="parameters"></a>Paramètres
 
-*__unnamed0*  
+*__unnamed0*<br/>
 Un paramètre sans nom qui spécifie le nombre d’octets de mémoire à allouer.
 
-*sélection élective*  
+*sélection élective*<br/>
 Le type doit être allouée.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -61,5 +61,5 @@ Surcharge d’opérateur **nouveau** et empêche l’utilisation dans `RuntimeCl
 
 ## <a name="see-also"></a>Voir aussi
 
-[DontUseNewUseMake, classe](../windows/dontusenewusemake-class.md)  
+[DontUseNewUseMake, classe](../windows/dontusenewusemake-class.md)<br/>
 [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

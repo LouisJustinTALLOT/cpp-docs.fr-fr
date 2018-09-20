@@ -1,5 +1,5 @@
 ---
-title: Dhtmlurleventmapentry, Structure | Documents Microsoft
+title: Dhtmlurleventmapentry, Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee629d9dcffc80ce20306989cad72d466722af87
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: bbac4b372f06f288eede8c578372d45334a5d707
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427522"
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>DHtmlUrlEventMapEntry, structure
-Le `DHtmlUrlEventMapEntry` structure fournit la prise en charge des cartes URL plusieurs événements.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-struct DHtmlUrlEventMapEntry  
-{  
-LPCTSTR szUrl;  
-const DHtmlEventMapEntry *pEventMap;  
-};  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *szUrl*  
- L’URL.  
-  
- *pEventMap*  
- La table d’événements associée à l’URL.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** afxdhtml.h  
-  
-## <a name="see-also"></a>Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+Le `DHtmlUrlEventMapEntry` structure fournit la prise en charge des cartes avec plusieurs URL événement.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+struct DHtmlUrlEventMapEntry
+{
+LPCTSTR szUrl;
+const DHtmlEventMapEntry *pEventMap;
+};
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*szUrl*<br/>
+L’URL.
+
+*pEventMap*<br/>
+La table d’événements associée à l’URL.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxdhtml.h
+
+## <a name="see-also"></a>Voir aussi
+
+[Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

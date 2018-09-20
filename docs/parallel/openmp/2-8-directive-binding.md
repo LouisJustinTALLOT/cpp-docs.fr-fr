@@ -1,5 +1,5 @@
 ---
-title: 2.8 liaison de directives | Documents Microsoft
+title: 2.8 liaison de directives | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02492b228b4bb47a800955f078a59ce680312a87
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dc5b702b17e01bb8d4625a837abdb71086113e68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689452"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415900"
 ---
 # <a name="28-directive-binding"></a>2.8 Liaison de directives
-Liaison dynamique des directives doit respecter les règles suivantes :  
-  
--   Le **pour**, **sections**, **unique**, **master**, et **barrière** directives lier à la dynamique englobant **parallèles**, s’il en existe, quelle que soit la valeur de n’importe quel **si** clause pouvant être présent sur cette directive. Si aucune région parallèle n’est en cours d’exécution, les directives sont exécutées par une équipe composée d’uniquement sur le thread principal.  
-  
--   Le **classés** la directive est liée à la dynamique englobante **pour**.  
-  
--   Le **atomique** directive applique un accès exclusif au niveau **atomique** directives dans tous les threads, et pas seulement l’équipe actuelle.  
-  
--   Le **critique** directive applique un accès exclusif au niveau **critique** directives dans tous les threads, et pas seulement l’équipe actuelle.  
-  
--   Une directive ne peut jamais lier dynamiquement à aucune directive en dehors de la plus proche englobant **parallèles**.
+
+Liaison dynamique des directives doit respecter les règles suivantes :
+
+- Le **pour**, **sections**, **unique**, **master**, et **barrière** directives lier à la dynamiquement englobant **parallèles**, s’il en existe, quelle que soit la valeur de n’importe quel **si** clause qui doivent être présent dans cette directive. Si aucune région parallèle n’est en cours d’exécution, les directives sont exécutées par une équipe composée du thread principal uniquement.
+
+- Le **classés** directive lie à dynamiquement englobante **pour**.
+
+- Le **atomique** directive applique un accès exclusif au niveau **atomique** directives dans tous les threads, pas seulement l’équipe actuelle.
+
+- Le **critique** directive applique un accès exclusif au niveau **critique** directives dans tous les threads, pas seulement l’équipe actuelle.
+
+- Une directive ne peut jamais lier dynamiquement à n’importe quelle directive en dehors de la plus proche englobante **parallèles**.

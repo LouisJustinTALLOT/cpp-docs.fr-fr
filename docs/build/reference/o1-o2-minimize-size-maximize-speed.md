@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ea689b2db9a34b55664b695747079ac277bae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 24e57be50c2138cb9e772f6e6a2527300c9296ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702557"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446476"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Réduire la taille, augmenter la vitesse)
 
@@ -69,7 +69,7 @@ Le **/O1** et **/O2** options du compilateur constituent un moyen rapide pour d�
 
 ## <a name="see-also"></a>Voir aussi
 
-[/O (optimiser le Code), options](../../build/reference/o-options-optimize-code.md)
+[/O, options (Optimiser le code)](../../build/reference/o-options-optimize-code.md)<br/>
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
 [/EH (Modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md)

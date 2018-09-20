@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: faa2a3be7260eecb16599db967336bcb7b774c99
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ed603a416e7f56e4415ce36ad4b3fd8059d311f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200124"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415744"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -38,7 +38,7 @@ type
 
 ### <a name="parameters"></a>Paramètres
 
-*type*  
+*type*<br/>
 Le type de commutateur, peut être un type entier, caractère, booléen ou d’énumération.
 
 ## <a name="remarks"></a>Notes
@@ -83,6 +83,6 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [export](../windows/export.md)  

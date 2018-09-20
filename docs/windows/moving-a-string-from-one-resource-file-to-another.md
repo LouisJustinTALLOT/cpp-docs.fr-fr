@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c99b5640d2ea855ade7f3f39ba233b3e5ff2ef04
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f1fbe498c5c255ec95772c9e75b6ce588ae4a4c3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318861"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401977"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>Déplacement d’une chaîne à partir d’un fichier de ressources à un autre (C++)
 
@@ -51,6 +51,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur de chaînes](../windows/string-editor.md)  
-[Fichiers de ressources](../windows/resource-files-visual-studio.md)  
+[Éditeur de chaînes](../windows/string-editor.md)<br/>
+[Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Personnalisation des dispositions de fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  

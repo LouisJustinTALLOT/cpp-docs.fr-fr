@@ -1,5 +1,5 @@
 ---
-title: Cfolderpickerdialog, classe | Documents Microsoft
+title: Cfolderpickerdialog, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,85 +18,92 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ded586e6d8ad5252d73e0972424915d174b8b1f3
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d80839fca18d62c5fa9a9432296777c546268c5b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956517"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411428"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog, classe
-Cfolderpickerdialog, classe implémente CFileDialog en mode de sélecteur de dossier.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CFolderPickerDialog : public CFileDialog;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CFolderPickerDialog :: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destructeur.|  
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Constructeur.|  
-  
-## <a name="remarks"></a>Notes  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CDialog](../../mfc/reference/cdialog-class.md)  
-  
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
-  
- [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
-  
- `CFolderPickerDialog`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** afxdlgs.h  
-  
-##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
- Constructeur.  
-  
-```  
+
+Cfolderpickerdialog, classe implémente CFileDialog en mode de sélecteur de dossier.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CFolderPickerDialog : public CFileDialog;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[CFolderPickerDialog :: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destructeur.|
+|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Constructeur.|
+
+## <a name="remarks"></a>Notes
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CDialog](../../mfc/reference/cdialog-class.md)
+
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+
+[CFileDialog](../../mfc/reference/cfiledialog-class.md)
+
+`CFolderPickerDialog`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxdlgs.h
+
+##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog
+
+Constructeur.
+
+```
 explicit CFolderPickerDialog(
-    LPCTSTR lpszFolder = NULL,  
-    DWORD dwFlags = 0,  
-    CWnd* pParentWnd = NULL,  
+    LPCTSTR lpszFolder = NULL,
+    DWORD dwFlags = 0,
+    CWnd* pParentWnd = NULL,
     DWORD dwSize = 0);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *lpszFolder*  
- Dossier initial.  
-  
- *dwFlags*  
- Une combinaison d’un ou plusieurs indicateurs qui vous permettent de personnaliser la boîte de dialogue.  
-  
- *pParentWnd*  
- Pointeur vers la fenêtre parente ou propriétaire de l’objet de boîte de dialogue.  
-  
- *dwSize*  
- La taille de la structure OPENFILENAME.  
-  
-### <a name="remarks"></a>Notes  
-  
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog :: ~ CFolderPickerDialog  
- Destructeur.  
-  
-```  
+```
+
+### <a name="parameters"></a>Paramètres
+
+*lpszFolder*<br/>
+Dossier initial.
+
+*dwFlags*<br/>
+Une combinaison d’un ou plusieurs indicateurs qui vous permettent de personnaliser la boîte de dialogue.
+
+*pParentWnd*<br/>
+Pointeur vers la fenêtre parente ou propriétaire de l’objet de boîte de dialogue.
+
+*dwSize*<br/>
+La taille de la structure OPENFILENAME.
+
+### <a name="remarks"></a>Notes
+
+##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog :: ~ CFolderPickerDialog
+
+Destructeur.
+
+```
 virtual ~CFolderPickerDialog();
-```  
-  
-### <a name="remarks"></a>Notes  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classes](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="remarks"></a>Notes
+
+## <a name="see-also"></a>Voir aussi
+
+[Classes](../../mfc/reference/mfc-classes.md)

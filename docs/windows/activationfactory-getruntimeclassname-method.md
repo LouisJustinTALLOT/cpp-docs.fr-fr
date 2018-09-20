@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8847083fe134c36f506e7080772b1e5f0e2a873c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fbae13c6ce70533b8338d47893b6007a3032abab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590180"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416303"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName, méthode
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Paramètres
 
-*runtimeName*  
+*runtimeName*<br/>
 Lorsque cette opération se termine, un handle vers une chaîne qui contient le nom de classe runtime de l’objet qui actuel **ActivationFactory** instancie.
 
 ## <a name="return-value"></a>Valeur de retour

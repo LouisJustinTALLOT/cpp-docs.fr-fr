@@ -17,42 +17,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c0e2e21b18b806a63a2d6ea331a84ab144a6ec
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 86d9b970453e33aa12590f935689361d239025af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539026"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440366"
 ---
 # <a name="readwritebarrier"></a>_ReadWriteBarrier
-**Section spécifique à Microsoft**  
-  
- Limite les optimisations du compilateur qui peuvent réordonnancer les accès à la mémoire sur le point de l'appel.  
-  
+
+**Section spécifique à Microsoft**
+
+Limite les optimisations du compilateur qui peuvent réordonnancer les accès à la mémoire sur le point de l'appel.
+
 > [!CAUTION]
->  Les intrinsèques `_ReadBarrier`, `_WriteBarrier` et `_ReadWriteBarrier` du compilateur et la macro `MemoryBarrier` sont tous déconseillés et ne doivent pas être utilisés. Pour la communication entre threads, utilisez des mécanismes tels que [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) et [std::atomic\<T >](../standard-library/atomic.md), qui sont définies dans le [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md). Pour accéder au matériel, utilisez le [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) option du compilateur avec la [volatile](../cpp/volatile-cpp.md) mot clé.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void _ReadWriteBarrier(void);  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Intrinsèque|Architecture|  
-|---------------|------------------|  
-|`_ReadWriteBarrier`|x86, x64|  
-  
- **Fichier d’en-tête** \<intrin.h >  
-  
-## <a name="remarks"></a>Notes  
- L'intrinsèque `_ReadWriteBarrier` limite les optimisations du compilateur qui peuvent supprimer ou réordonnancer les accès à la mémoire sur le point de l'appel.  
-  
-**FIN de la section spécifique à Microsoft**  
-  
-## <a name="see-also"></a>Voir aussi  
- [_ReadBarrier](../intrinsics/readbarrier.md)   
- [_WriteBarrier](../intrinsics/writebarrier.md)   
- [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
- [Mots clés](../cpp/keywords-cpp.md)
+>  Les intrinsèques `_ReadBarrier`, `_WriteBarrier` et `_ReadWriteBarrier` du compilateur et la macro `MemoryBarrier` sont tous déconseillés et ne doivent pas être utilisés. Pour la communication entre threads, utilisez des mécanismes tels que [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) et [std::atomic\<T >](../standard-library/atomic.md), qui sont définies dans le [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md). Pour accéder au matériel, utilisez le [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) option du compilateur avec la [volatile](../cpp/volatile-cpp.md) mot clé.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void _ReadWriteBarrier(void);
+```
+
+## <a name="requirements"></a>Configuration requise
+
+|Intrinsèque|Architecture|
+|---------------|------------------|
+|`_ReadWriteBarrier`|x86, x64|
+
+**Fichier d’en-tête** \<intrin.h >
+
+## <a name="remarks"></a>Notes
+
+L'intrinsèque `_ReadWriteBarrier` limite les optimisations du compilateur qui peuvent supprimer ou réordonnancer les accès à la mémoire sur le point de l'appel.
+
+**FIN de la section spécifique à Microsoft**
+
+## <a name="see-also"></a>Voir aussi
+
+[_ReadBarrier](../intrinsics/readbarrier.md)<br/>
+[_WriteBarrier](../intrinsics/writebarrier.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Mots clés](../cpp/keywords-cpp.md)

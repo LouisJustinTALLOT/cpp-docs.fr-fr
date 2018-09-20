@@ -1,5 +1,5 @@
 ---
-title: Exemple de liste de contrôle commun | Documents Microsoft
+title: Liste d’exemples de contrôle commun | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,22 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3175463de0539f56aba3f38f373e19f11cf2388f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9108f2fbc7196a5c3110cf4a12bf4f225e454e9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341037"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417317"
 ---
 # <a name="common-control-sample-list"></a>Liste d'exemples de contrôle commun
-Consultez les exemples de programmes suivants qui illustrent des contrôles communs :  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
--   [CTRLTEST](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+
+Consultez les exemples de programmes suivants qui illustrent des contrôles communs :
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+- [CTRLTEST](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Contrôles](../mfc/controls-mfc.md)
 

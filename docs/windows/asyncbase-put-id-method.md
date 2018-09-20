@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df6d5209980842e4fe5a2f2919d24ba291815e5e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 65d36c76ca05343084b709096d38014d802628c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595909"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439001"
 ---
 # <a name="asyncbaseputid-method"></a>AsyncBase::put_Id, méthode
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*  
+*ID*<br/>
 Un handle différente de zéro.
 
 ## <a name="return-value"></a>Valeur de retour

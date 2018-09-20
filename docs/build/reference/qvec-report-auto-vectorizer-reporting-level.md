@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c11beb3f8a5b9b189fff237012580765f8858fc0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f7ee7ed9fbbe48477aecb51ca489fe2ad9609e41
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717559"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408101"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (Niveau de rapport du vectoriseur automatique)
 
@@ -53,7 +53,7 @@ Pour plus d’informations sur les codes motif et les messages, consultez [Messa
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Q (opérations de bas niveau), options](../../build/reference/q-options-low-level-operations.md)
+[/Q, options (Opérations de bas niveau)](../../build/reference/q-options-low-level-operations.md)<br/>
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
 [Programmation parallèle en Code natif](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

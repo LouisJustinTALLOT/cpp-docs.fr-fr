@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 308222ab1276979bc839799f2f2d3fa393e606f9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b81a8aeaf2b4475a95421853c4ab5822bc06abb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767827"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437766"
 ---
 # <a name="cfiletime-class"></a>Cfiletime, classe
 
@@ -485,8 +485,8 @@ Consultez l’exemple de [CFileTime::Millisecond](#millisecond).
 
 ## <a name="see-also"></a>Voir aussi
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
-[Cfiletimespan, classe](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
-[Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[CFileTimeSpan, classe](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
+[Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes partagées ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

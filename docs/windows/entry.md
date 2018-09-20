@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95875eaea7206cbfb4ded271e329f10d7aee13fe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a40ad39b089ea68209bfef2997f015c355ca6893
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221889"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414041"
 ---
 # <a name="entry"></a>entry
 
@@ -38,7 +38,7 @@ Spécifie une fonction exportée ou une constante dans un module en identifiant 
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*  
+*ID*<br/>
 L’ID du point d’entrée.
 
 ## <a name="remarks"></a>Notes

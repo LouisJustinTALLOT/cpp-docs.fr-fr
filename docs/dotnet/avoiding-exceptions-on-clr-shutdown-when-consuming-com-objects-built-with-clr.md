@@ -1,5 +1,5 @@
 ---
-title: Éviter les Exceptions levées par les objets COM générés avec - clr | Documents Microsoft
+title: Éviter les Exceptions levées par les objets COM générés avec /CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0efd2af7eb4bf8a70bff983d627f802f1976c6ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687585d0b25c64f5575646de3cd4823e0a89988e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103510"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408970"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>Éviter des exceptions à l'arrêt du CLR lors de l'utilisation d'objets COM générés avec /clr
-Une fois que le common language runtime (CLR) entre en mode arrêt, les fonctions natives ont un accès limité aux services CLR. Lorsque vous tentez d’appeler Release sur un objet COM compilé avec **/CLR**, le CLR passe en code natif, puis revient en code managé pour répondre à l’appel IUnknown::Release (qui est définie dans le code managé). Le CLR empêche l’appel en code managé, car il est en mode arrêt.  
-  
- Pour résoudre ce problème, assurez-vous que destructeurs appelés à partir des méthodes de mise en production ne doivent contenir du code natif.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)
+
+Une fois que le common language runtime (CLR) entre en mode arrêt, des fonctions natives ont un accès limité aux services CLR. Lorsque vous tentez d’appeler la version sur un objet COM compilé avec **/CLR**, le CLR passe en code natif, puis revient en code managé pour répondre à l’appel IUnknown::Release (qui est définie dans le code managé). Le CLR empêche l’appel en code managé, car il est en mode arrêt.
+
+Pour résoudre ce problème, assurez-vous que les destructeurs appelés à partir de méthodes de mise en production contiennent uniquement le code natif.
+
+## <a name="see-also"></a>Voir aussi
+
+[Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)

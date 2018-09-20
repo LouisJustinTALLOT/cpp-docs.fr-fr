@@ -18,57 +18,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8cd35b53db37d51a9feec567fe66c53b1381b4d9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037474"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431331"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced, classe
-Cette classe décrit une exception levée quand des appels aux méthodes `Block` et `Unblock` d'un objet `Context` ne sont pas correctement associés.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class context_unblock_unbalanced : public std::exception;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[context_unblock_unbalanced](#ctor)|Surchargé. Construit un objet `context_unblock_unbalanced`.|  
-  
-## <a name="remarks"></a>Notes  
- Les appels à la `Block` et `Unblock` méthodes d’un `Context` objet doit toujours être associé correctement. Le Runtime d’accès concurrentiel autorise les opérations se produire dans les deux sens. Par exemple, un appel à `Block` peut être suivie d’un appel à `Unblock`, ou vice versa. Cette exception serait levée si, par exemple, deux appels à la `Unblock` méthode ont été apportées dans une ligne, sur un `Context` objet qui n’a pas été bloqué.  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `exception`  
-  
- `context_unblock_unbalanced`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** concrt.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="ctor"></a> context_unblock_unbalanced 
 
- Construit un objet `context_unblock_unbalanced`.  
-  
-```  
+Cette classe décrit une exception levée quand des appels aux méthodes `Block` et `Unblock` d'un objet `Context` ne sont pas correctement associés.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class context_unblock_unbalanced : public std::exception;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[context_unblock_unbalanced](#ctor)|Surchargé. Construit un objet `context_unblock_unbalanced`.|
+
+## <a name="remarks"></a>Notes
+
+Les appels à la `Block` et `Unblock` méthodes d’un `Context` objet doit toujours être associé correctement. Le Runtime d’accès concurrentiel autorise les opérations se produire dans les deux sens. Par exemple, un appel à `Block` peut être suivie d’un appel à `Unblock`, ou vice versa. Cette exception serait levée si, par exemple, deux appels à la `Unblock` méthode ont été apportées dans une ligne, sur un `Context` objet qui n’a pas été bloqué.
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`exception`
+
+`context_unblock_unbalanced`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** concrt.h
+
+**Espace de noms :** concurrency
+
+##  <a name="ctor"></a> context_unblock_unbalanced
+
+Construit un objet `context_unblock_unbalanced`.
+
+```
 explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
 
- 
 context_unblock_unbalanced() throw();
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Message*<br/>
-Message descriptif de l'erreur.  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)
+Message descriptif de l'erreur.
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)

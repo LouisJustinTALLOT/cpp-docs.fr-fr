@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47925bcc647d253775e4dd61f6a7f5d5fb586dde
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2083992bcb444a10b495b7007c698499f9cd9628
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599281"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419163"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock, méthode
 
@@ -43,10 +43,10 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Paramètres
 
-*millisecondes*  
+*millisecondes*<br/>
 L’intervalle de délai d’attente, en millisecondes. La valeur par défaut est INFINITE, qui attend indéfiniment.
 
-*h*  
+*h*<br/>
 Un handle vers un **sémaphore** objet.
 
 ## <a name="return-value"></a>Valeur de retour

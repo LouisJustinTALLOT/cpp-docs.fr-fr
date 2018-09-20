@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 193f4d26f7e163707092f3d0bc8f981a02611a22
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 792f9f6c6d76097459498c43068f46d86b2e2349
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603700"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401483"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus, méthode
 
@@ -38,7 +38,7 @@ inline void CurrentStatus(
 
 ### <a name="parameters"></a>Paramètres
 
-*status*  
+*status*<br/>
 L’emplacement où cette opération stocke l’état actuel.
 
 ## <a name="remarks"></a>Notes
@@ -53,5 +53,5 @@ Cette opération est thread-safe.
 
 ## <a name="see-also"></a>Voir aussi
 
-[AsyncBase, classe](../windows/asyncbase-class.md)  
+[AsyncBase, classe](../windows/asyncbase-class.md)<br/>
 [AsyncStatusInternal, énumération](../windows/asyncstatusinternal-enumeration.md)

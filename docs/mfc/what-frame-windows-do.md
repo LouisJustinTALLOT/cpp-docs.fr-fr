@@ -1,5 +1,5 @@
 ---
-title: Que faire les fenêtres Frame | Documents Microsoft
+title: Que faire Frame Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ed903238a812188d73093211265c9c8c028b0ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b86b65d43fee16a0a2a8f03353c9700d6f0a5428
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382565"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423596"
 ---
 # <a name="what-frame-windows-do"></a>Fonctionnement des fenêtres frame
-Outre l’encadrement simplement d’une vue, fenêtres frame sont responsables de plusieurs tâches de coordination entre le frame avec sa vue et l’application. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) et [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) hériter [CFrameWnd](../mfc/reference/cframewnd-class.md), afin qu’ils puissent `CFrameWnd` fonctionnalités ainsi que des nouvelles fonctionnalités qu’ils ajouter. Exemples de fenêtres enfants incluent les vues, les contrôles tels que des boutons et des zones de liste et des barres de contrôles, y compris les barres d’outils, barres d’état et des barres de boîte de dialogue.  
-  
- La fenêtre frame est chargée de gérer la disposition de ses fenêtres enfants. Dans l’infrastructure MFC, une fenêtre frame positionne les barres de contrôles, des vues et des autres fenêtres enfants à l’intérieur de sa zone cliente.  
-  
- La fenêtre frame envoie également des commandes à ses vues et peut répondre aux messages de notification des fenêtres de contrôle.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
-  
--   [Barres de contrôles (leur place dans la fenêtre frame)](../mfc/control-bars.md)  
-  
--   [Gestion des menus, barres de contrôle et accélérateurs (leur place dans la fenêtre frame)](../mfc/managing-menus-control-bars-and-accelerators.md)  
-  
--   [Routage des commandes (à partir de la fenêtre frame à sa vue et autres cibles de commande)](../mfc/command-routing.md)  
-  
--   [Architecture de /View de document](../mfc/document-view-architecture.md)  
-  
--   [Barres de contrôles](../mfc/control-bars.md)  
-  
--   [Contrôles](../mfc/controls-mfc.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fenêtres frame](../mfc/frame-windows.md)
+
+Outre le tramage simplement une vue, fenêtres frame sont responsables de nombreuses tâches de coordination entre le frame avec sa vue et l’application. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) et [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) héritent [CFrameWnd](../mfc/reference/cframewnd-class.md), afin qu’ils aient `CFrameWnd` fonctionnalités ainsi que les nouvelles fonctionnalités qu’ils ajouter. Exemples de fenêtres enfants incluent les vues, les contrôles tels que des boutons et des zones de liste et des barres de contrôle, y compris les barres d’outils, des barres d’état et des barres de boîte de dialogue.
+
+La fenêtre frame est chargée de gérer la disposition de ses fenêtres enfants. Dans l’infrastructure MFC, une fenêtre frame positionne les barres de contrôles, des vues et des autres fenêtres enfants à l’intérieur de sa zone cliente.
+
+La fenêtre frame envoie également des commandes à ses vues et peut répondre aux messages de notification à partir de windows de contrôle.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+
+- [Barres de contrôles (leur place dans la fenêtre frame)](../mfc/control-bars.md)
+
+- [Gestion des menus, barres de contrôle et accélérateurs (leur place dans la fenêtre frame)](../mfc/managing-menus-control-bars-and-accelerators.md)
+
+- [Routage de commande (à partir de la fenêtre frame à sa vue et d’autres cibles de commande)](../mfc/command-routing.md)
+
+- [Document /View Architecture](../mfc/document-view-architecture.md)
+
+- [Barres de contrôles](../mfc/control-bars.md)
+
+- [Contrôles](../mfc/controls-mfc.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Fenêtres frame](../mfc/frame-windows.md)
 

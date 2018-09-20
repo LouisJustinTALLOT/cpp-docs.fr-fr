@@ -1,5 +1,5 @@
 ---
-title: Directives uniques à l’aide A.9 | Documents Microsoft
+title: A.9 Utilisation de Directives simples | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0e0e08b0b7bdea05bf4c627ae33cc42298c6dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5a3a201450d54355aa96f0ea712ad9fa0f70f63f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690379"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448088"
 ---
 # <a name="a9---using-single-directives"></a>A.9   Utilisation de directives simples
-L’exemple suivant illustre la `single` directive ([Section 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) page 15). Dans l’exemple, un seul thread (généralement le premier thread qui rencontre le `single` directive) imprime le message de progression. L’utilisateur ne doit pas faire d’hypothèses comme pour le thread s’exécute le `single` section. Tous les autres threads ignorera la `single` section et s’arrêter à la barrière à la fin de la `single` construire. Si les autres threads peuvent continuer sans attendre que le thread qui exécute le `single` section, un `nowait` clause peut être spécifiée sur le `single` la directive.  
-  
-```  
-#pragma omp parallel  
-{  
-    #pragma omp single  
-        printf_s("Beginning work1.\n");  
-    work1();  
-    #pragma omp single  
-        printf_s("Finishing work1.\n");  
-    #pragma omp single nowait  
-        printf_s("Finished work1 and beginning work2.\n");  
-    work2();  
-}  
+
+L’exemple suivant montre le `single` directive ([Section 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) page 15). Dans l’exemple, un seul thread (généralement le premier thread qui rencontre le `single` directive) imprime le message de progression. L’utilisateur ne doit pas faire d’hypothèses comme pour le thread qui exécutera le `single` section. Tous les autres threads ignorera la `single` section et arrêter à la barrière à la fin de la `single` construire. Si les autres threads puissent poursuivre sans attendre que le thread s’exécutant le `single` section, un `nowait` clause peut être spécifiée sur la `single` directive.
+
+```
+#pragma omp parallel
+{
+    #pragma omp single
+        printf_s("Beginning work1.\n");
+    work1();
+    #pragma omp single
+        printf_s("Finishing work1.\n");
+    #pragma omp single nowait
+        printf_s("Finished work1 and beginning work2.\n");
+    work2();
+}
 ```

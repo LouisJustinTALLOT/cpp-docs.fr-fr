@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0539275a09a64e31a9ecad17cab899368701e353
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715531"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412210"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -46,31 +46,31 @@ function declaration
 
 ### <a name="parameters"></a>Paramètres
 
-*name*  
+*name*<br/>
 Un nom défini par l’utilisateur du bloc de code qui s’affiche dans le fichier .idl.
 
-*dllname*  
+*dllname*<br/>
 (Facultatif) Le fichier .dll qui contient l’exportation.
 
-*uuid*  
+*uuid*<br/>
 (Facultatif) Un ID unique.
 
-*helpstring*  
+*helpstring*<br/>
 (Facultatif) Une chaîne de caractères utilisée pour décrire la bibliothèque de types.
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (Facultatif) L’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.
 
-*helpcontext*  
+*helpcontext*<br/>
 (Facultatif) L’ID d’aide pour cette bibliothèque de types.
 
-*hidden*  
+*hidden*<br/>
 (Facultatif) Un paramètre qui empêche l’affichage de la bibliothèque. Consultez le [masqué](/windows/desktop/Midl/hidden) attribut MIDL pour plus d’informations.
 
-*restricted*  
+*restricted*<br/>
 (Facultatif) Membres de la bibliothèque ne peut pas être appelées arbitrairement. Consultez le [restreint](/windows/desktop/Midl/restricted) attribut MIDL pour plus d’informations.
 
-*déclaration de fonction*  
+*déclaration de fonction*<br/>
 La fonction que vous définirez.
 
 ## <a name="remarks"></a>Notes
@@ -111,6 +111,6 @@ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
-[Attributs autonomes](../windows/stand-alone-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
+[Attributs autonomes](../windows/stand-alone-attributes.md)<br/>
 [entry](../windows/entry.md)  

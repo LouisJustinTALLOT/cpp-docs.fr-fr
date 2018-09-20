@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d395053231f54570e1bf86ba79f6237b89681fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c44223dad2ac4d6306bf3896cd8ec7be84a5a2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315546"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407762"
 ---
 # <a name="stand-alone-attributes"></a>Attributs autonomes
 Un attribut autonome ne fonctionne pas sur un mot clé C++, mais plutôt d’une ligne de code. Les instructions d’attribut autonome nécessitent un point-virgule à la fin de la ligne.
@@ -45,4 +45,5 @@ Un attribut autonome ne fonctionne pas sur un mot clé C++, mais plutôt d’une
 |[pragma](../windows/pragma.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier .idl généré.|
   
 ## <a name="see-also"></a>Voir aussi
- [Attributs par utilisation](../windows/attributes-by-usage.md)
+
+[Attributs par utilisation](../windows/attributes-by-usage.md)

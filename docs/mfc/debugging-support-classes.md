@@ -1,5 +1,5 @@
 ---
-title: Classes de prise en charge du débogage | Documents Microsoft
+title: Classes de prise en charge du débogage | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,22 +22,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942302a07a55adf7d7a1a89ac2b518e3dcaefe2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d513eb8d51f5161e70b168bb541fe899b74f41c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342603"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419072"
 ---
 # <a name="debugging-support-classes"></a>Classes de prise en charge du débogage
-MFC fournit les classes suivantes pour vous aider à déboguer les problèmes d’allocation de mémoire dynamique.  
-  
- [CDumpContext](../mfc/reference/cdumpcontext-class.md)  
- Indique la destination des dumps des Diagnostics.  
-  
- [CMemoryState](../mfc/reference/cmemorystate-structure.md)  
- Structure qui fournit des instantanés de l’utilisation de la mémoire. Également utilisé pour comparer les instantanés de mémoire antérieures ou ultérieures.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+
+MFC fournit les classes suivantes pour vous aider à déboguer les problèmes d’allocation de mémoire dynamique.
+
+[CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
+Fournit une destination pour les dumps des Diagnostics.
+
+[CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
+Structure qui offre un instantané de l’utilisation de la mémoire. Également utilisé pour comparer les instantanés de mémoire antérieures et versions ultérieures.
+
+## <a name="see-also"></a>Voir aussi
+
+[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
 
