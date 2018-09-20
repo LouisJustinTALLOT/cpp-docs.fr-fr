@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92fd30b0b420080d33f9938bec4891ac80ac660d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 340323d2b540c74e600b76129edd360b73d0db23
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597076"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372134"
 ---
 # <a name="partial--c-component-extensions"></a>partial (extensions de composant C++)
 
@@ -53,10 +53,10 @@ class-key identifier {
 
 ### <a name="parameters"></a>Paramètres
 
-*clé de classe*  
+*clé de classe*<br/>
 Un mot clé qui déclare une classe ou un struct qui est pris en charge par le Runtime de Windows. Soit **classe ref**, **classe value**, **ref struct**, ou **struct value**.
 
-*identifier*  
+*identifier*<br/>
 Le nom du type défini.
 
 ### <a name="remarks"></a>Notes

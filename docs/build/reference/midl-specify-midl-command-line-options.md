@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9d9ecfada513e16ce10bab37bb38b6ce6d67f907
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706938"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397622"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Spécification d'options de ligne de commande MIDL)
 
@@ -63,7 +63,7 @@ Le fichier doit contenir une option de ligne de commande MIDL par ligne.
 
 [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
-[/IDLOUT (nommer les fichiers de sortie MIDL)](../../build/reference/idlout-name-midl-output-files.md)
-[/IGNOREIDL (ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/TLBOUT (nom. Fichier TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
-[générer un programmes par attributs](../../windows/building-an-attributed-program.md)
+[/IDLOUT (Nommer les fichiers de sortie MIDL)](../../build/reference/idlout-name-midl-output-files.md)<br/>
+[/IGNOREIDL (Ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/TLBOUT (Nommer le fichier .TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
+[Générer un programmes par attributs](../../windows/building-an-attributed-program.md)

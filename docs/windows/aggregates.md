@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf6ca06ffbd3912ac3545bc3c014224412c01bc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4bbb5c62fb53d1246c1b8cc282b4ee36f0fcf58e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221168"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377316"
 ---
 # <a name="aggregates"></a>agrégats
 
@@ -42,10 +42,10 @@ Indique que l’objet agrège l’objet spécifié par le CLSID.
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*  
+*clsid*<br/>
 Spécifie le CLSID de l’objet qui peut être agrégé.
 
-*nom_variable*  
+*nom_variable*<br/>
 Nom de la variable à insérer. Cette variable contient le `IUnknown` de l’objet en cours d’agrégation.
 
 ## <a name="remarks"></a>Notes
@@ -106,9 +106,9 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs COM](../windows/com-attributes.md)  
-[Attributs de classe](../windows/class-attributes.md)  
-[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Aggregation](/windows/desktop/com/aggregation)  
-[Peut être agrégé](/windows/desktop/Midl/aggregatable)  
+[Attributs COM](../windows/com-attributes.md)<br/>
+[Attributs de classe](../windows/class-attributes.md)<br/>
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Aggregation](/windows/desktop/com/aggregation)<br/>
+[Peut être agrégé](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  

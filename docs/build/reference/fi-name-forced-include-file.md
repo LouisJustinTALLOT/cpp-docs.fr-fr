@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa06eaf8f16a80b849ce911468fc0001366b9e29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3f4517125121c0129da028437bc7ce367f9f96b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725463"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373920"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Nom du fichier Include imposé)
 
@@ -59,7 +59,7 @@ Cette option a le même effet que si vous définissiez le fichier avec des guill
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichier de sortie (/ F) Options](../../build/reference/output-file-f-options.md)
+[Options du fichier de sortie (/F)](../../build/reference/output-file-f-options.md)<br/>
 [Options du compilateur](../../build/reference/compiler-options.md)<br/>
 [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
 [Spécification du nom de chemin](../../build/reference/specifying-the-pathname.md)

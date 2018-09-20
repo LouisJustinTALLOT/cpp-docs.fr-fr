@@ -32,424 +32,458 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 01b24996e04efe9c5f3dd0301d3f2135c89d496c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706626"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375240"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
-Encapsule les fonctions API Windows, fournissant une interface orientée objet que vous utilisez pour accéder au Registre.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CSettingsStore : public CObject  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CSettingsStore::CSettingsStore](#csettingsstore)|Construit un objet `CSettingsStore`.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CSettingsStore::Close](#close)|Ferme la clé de Registre ouverte.|  
-|[CSettingsStore::CreateKey](#createkey)|Ouvre la clé spécifiée ou la crée si elle n’existe pas.|  
-|[CSettingsStore::DeleteKey](#deletekey)|Supprime la clé spécifiée et tous ses enfants.|  
-|[CSettingsStore::DeleteValue](#deletevalue)|Supprime la valeur spécifiée de la clé ouverte.|  
-|[CSettingsStore::Open](#open)|Ouvre la clé spécifiée.|  
-|[CSettingsStore::Read](#read)|Récupère les données pour une valeur de clé spécifiée.|  
-|[CSettingsStore::Write](#write)|Écrit une valeur dans le Registre sous la clé open.|  
-  
-## <a name="remarks"></a>Notes  
- Les fonctions membres `CreateKey` et `Open` sont très similaires. Si la clé de Registre existe déjà, `CreateKey` et `Open` fonction de la même façon. Toutefois, si la clé de Registre n’existe pas, `CreateKey` créera alors que `Open` retournera une valeur d’erreur.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser les méthodes d’ouverture et la lecture de la `CSettingsStore` classe. Cet extrait de code fait partie de la [exemple de démonstration de conseil outil](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- `CSettingsStore`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** afxsettingsstore.h  
-  
-##  <a name="close"></a>  CSettingsStore::Close  
- Ferme la clé de Registre ouverte.  
-  
-```  
+
+Encapsule les fonctions API Windows, fournissant une interface orientée objet que vous utilisez pour accéder au Registre.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CSettingsStore : public CObject
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[CSettingsStore::CSettingsStore](#csettingsstore)|Construit un objet `CSettingsStore`.|
+
+### <a name="public-methods"></a>M&#233;thodes publiques
+
+|Nom|Description|
+|----------|-----------------|
+|[CSettingsStore::Close](#close)|Ferme la clé de Registre ouverte.|
+|[CSettingsStore::CreateKey](#createkey)|Ouvre la clé spécifiée ou la crée si elle n’existe pas.|
+|[CSettingsStore::DeleteKey](#deletekey)|Supprime la clé spécifiée et tous ses enfants.|
+|[CSettingsStore::DeleteValue](#deletevalue)|Supprime la valeur spécifiée de la clé ouverte.|
+|[CSettingsStore::Open](#open)|Ouvre la clé spécifiée.|
+|[CSettingsStore::Read](#read)|Récupère les données pour une valeur de clé spécifiée.|
+|[CSettingsStore::Write](#write)|Écrit une valeur dans le Registre sous la clé open.|
+
+## <a name="remarks"></a>Notes
+
+Les fonctions membres `CreateKey` et `Open` sont très similaires. Si la clé de Registre existe déjà, `CreateKey` et `Open` fonction de la même façon. Toutefois, si la clé de Registre n’existe pas, `CreateKey` créera alors que `Open` retournera une valeur d’erreur.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant montre comment utiliser les méthodes d’ouverture et la lecture de la `CSettingsStore` classe. Cet extrait de code fait partie de la [exemple de démonstration de conseil outil](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+`CSettingsStore`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxsettingsstore.h
+
+##  <a name="close"></a>  CSettingsStore::Close
+
+Ferme la clé de Registre ouverte.
+
+```
 virtual void Close();
-```  
-  
-### <a name="remarks"></a>Notes  
- Par défaut, cette méthode est appelée à partir du destructeur de la [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
-  
-##  <a name="createkey"></a>  CSettingsStore::CreateKey  
- Ouvre une clé de Registre ou le crée s’il n’existe pas.  
-  
-```  
+```
+
+### <a name="remarks"></a>Notes
+
+Par défaut, cette méthode est appelée à partir du destructeur de la [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).
+
+##  <a name="createkey"></a>  CSettingsStore::CreateKey
+
+Ouvre une clé de Registre ou le crée s’il n’existe pas.
+
+```
 virtual BOOL CreateKey(LPCTSTR pszPath);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pszPath*<br/>
-[in] Spécifie le nom d’une clé pour être créé ou ouvert.  
-  
-### <a name="return-value"></a>Valeur de retour  
- 0 en cas de réussite ; Sinon, une valeur différente de zéro.  
-  
-### <a name="remarks"></a>Notes  
- `CreateKey` utilise `m_hKey` comme racine de recherches de Registre. Il recherche *pszPath* une sous-clé de `m_hKey`. Si la clé n’existe pas, `CreateKey` le crée. Sinon, il ouvre la clé. `CreateKey` définit ensuite `m_hKey` à la clé créée ou ouverte.  
-  
-##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
- Crée un objet `CSettngsStore`.  
-  
-```  
+[in] Spécifie le nom d’une clé pour être créé ou ouvert.
+
+### <a name="return-value"></a>Valeur de retour
+
+0 en cas de réussite ; Sinon, une valeur différente de zéro.
+
+### <a name="remarks"></a>Notes
+
+`CreateKey` utilise `m_hKey` comme racine de recherches de Registre. Il recherche *pszPath* une sous-clé de `m_hKey`. Si la clé n’existe pas, `CreateKey` le crée. Sinon, il ouvre la clé. `CreateKey` définit ensuite `m_hKey` à la clé créée ou ouverte.
+
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore
+
+Crée un objet `CSettngsStore`.
+
+```
 CSettingsStore(
-    BOOL bAdmin,  
+    BOOL bAdmin,
     BOOL bReadOnly);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *bCheminAdmin*<br/>
-[in] Paramètre booléen qui spécifie si le `CSettingsStore` objet agit en mode administrateur.  
-  
+[in] Paramètre booléen qui spécifie si le `CSettingsStore` objet agit en mode administrateur.
+
 *bReadOnly*<br/>
-[in] Paramètre booléen qui spécifie si le `CSettingsStore` objet est créé dans le mode lecture seule.  
-  
-### <a name="remarks"></a>Notes  
- Si *bCheminAdmin* est définie sur TRUE, le `m_hKey` variable de membre est définie sur **HKEY_LOCAL_MACHINE**. Si vous définissez *bCheminAdmin* sur FALSE, `m_hKey` a la valeur **HKEY_CURRENT_USER**.  
-  
- L’accès de sécurité varie selon le *bReadOnly* paramètre. Si *bReadonly* est FALSE, l’accès de sécurité est défini sur **KEY_ALL_ACCESS**. Si *bReadyOnly* a la valeur TRUE, l’accès de sécurité est défini sur une combinaison de **KEY_QUERY_VALUE, KEY_NOTIFY** et **KEY_ENUMERATE_SUB_KEYS**. Pour plus d’informations sur l’accès de sécurité ainsi que le Registre, consultez [sécurité de clé de Registre et les droits d’accès](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
-  
- Le destructeur de `CSettingsStore` libère `m_hKey` automatiquement.  
-  
-##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
- Supprime une clé et tous ses enfants à partir du Registre.  
-  
-```  
+[in] Paramètre booléen qui spécifie si le `CSettingsStore` objet est créé dans le mode lecture seule.
+
+### <a name="remarks"></a>Notes
+
+Si *bCheminAdmin* est définie sur TRUE, le `m_hKey` variable de membre est définie sur **HKEY_LOCAL_MACHINE**. Si vous définissez *bCheminAdmin* sur FALSE, `m_hKey` a la valeur **HKEY_CURRENT_USER**.
+
+L’accès de sécurité varie selon le *bReadOnly* paramètre. Si *bReadonly* est FALSE, l’accès de sécurité est défini sur **KEY_ALL_ACCESS**. Si *bReadyOnly* a la valeur TRUE, l’accès de sécurité est défini sur une combinaison de **KEY_QUERY_VALUE, KEY_NOTIFY** et **KEY_ENUMERATE_SUB_KEYS**. Pour plus d’informations sur l’accès de sécurité ainsi que le Registre, consultez [sécurité de clé de Registre et les droits d’accès](/windows/desktop/SysInfo/registry-key-security-and-access-rights).
+
+Le destructeur de `CSettingsStore` libère `m_hKey` automatiquement.
+
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey
+
+Supprime une clé et tous ses enfants à partir du Registre.
+
+```
 virtual BOOL DeleteKey(
-    LPCTSTR pszPath,  
+    LPCTSTR pszPath,
     BOOL bAdmin = FALSE);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pszPath*<br/>
-[in] Le nom de la clé à supprimer.  
-  
+[in] Le nom de la clé à supprimer.
+
 *bCheminAdmin*<br/>
-[in] Commutateur qui spécifie l’emplacement de la clé à supprimer.  
-  
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
-  
-### <a name="remarks"></a>Notes  
- Cette méthode échoue si le `CSettingsStore` objet est en mode en lecture seule.  
-  
- Si le paramètre *bCheminAdmin* est égal à zéro, `DeleteKey` recherche la clé à supprimer sous **HKEY_CURRENT_USER**. Si *bCheminAdmin* est différent de zéro, `DeleteKey` recherche la clé à supprimer sous **HKEY_LOCAL_MACHINE**.  
-  
-##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
- Supprime une valeur à partir de `m_hKey`.  
-  
-```  
+[in] Commutateur qui spécifie l’emplacement de la clé à supprimer.
+
+### <a name="return-value"></a>Valeur de retour
+
+Valeur différente de zéro cas de réussite ; sinon, 0.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode échoue si le `CSettingsStore` objet est en mode en lecture seule.
+
+Si le paramètre *bCheminAdmin* est égal à zéro, `DeleteKey` recherche la clé à supprimer sous **HKEY_CURRENT_USER**. Si *bCheminAdmin* est différent de zéro, `DeleteKey` recherche la clé à supprimer sous **HKEY_LOCAL_MACHINE**.
+
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue
+
+Supprime une valeur à partir de `m_hKey`.
+
+```
 virtual BOOL DeleteValue(LPCTSTR pszValue);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pszValue*<br/>
-[in] Spécifie le champ de valeur à supprimer.  
-  
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
-  
-##  <a name="open"></a>  CSettingsStore::Open  
- Ouvre une clé de Registre.  
-  
-```  
+[in] Spécifie le champ de valeur à supprimer.
+
+### <a name="return-value"></a>Valeur de retour
+
+Valeur différente de zéro cas de réussite ; sinon, 0.
+
+##  <a name="open"></a>  CSettingsStore::Open
+
+Ouvre une clé de Registre.
+
+```
 virtual BOOL Open(LPCTSTR pszPath);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pszPath*<br/>
-[in] Le nom d’une clé de Registre.  
-  
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
-  
-### <a name="remarks"></a>Notes  
- Une fois que cette méthode ouvre correctement la clé spécifiée, il définit `m_hKey` au handle de cette clé.  
-  
-##  <a name="read"></a>  CSettingsStore::Read  
- Lit une valeur à partir d’une clé dans le Registre.  
-  
-```  
+[in] Le nom d’une clé de Registre.
+
+### <a name="return-value"></a>Valeur de retour
+
+Valeur différente de zéro cas de réussite ; sinon, 0.
+
+### <a name="remarks"></a>Notes
+
+Une fois que cette méthode ouvre correctement la clé spécifiée, il définit `m_hKey` au handle de cette clé.
+
+##  <a name="read"></a>  CSettingsStore::Read
+
+Lit une valeur à partir d’une clé dans le Registre.
+
+```
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     int& iVal);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     DWORD& dwVal);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CString& sVal);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CStringList& scStringList);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CStringArray& scArray);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CDWordArray& dwcArray);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CWordArray& wcArray);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CByteArray& bcArray);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     LPPOINT& lpPoint);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CRect& rect);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
-    BYTE** ppData,  
+    LPCTSTR pszKey,
+    BYTE** ppData,
     UINT* pBytes);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CObList& list);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CObject& obj);
 
- 
+
 virtual BOOL Read(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CObject*& pObj);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pszKey*<br/>
-[in] Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur à lire à partir du Registre.  
-  
+[in] Pointeur vers une chaîne se terminant par null qui contient le nom de la valeur à lire à partir du Registre.
+
 *iVal*<br/>
-[out] Référence à une variable de type entier qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à une variable de type entier qui reçoit la valeur lue à partir de la clé de Registre.
+
 *dwVal*<br/>
-[out] Référence à une variable 32 bits double mot qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à une variable 32 bits double mot qui reçoit la valeur lue à partir de la clé de Registre.
+
 *sVal*<br/>
-[out] Référence à une variable de chaîne qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à une variable de chaîne qui reçoit la valeur lue à partir de la clé de Registre.
+
 *scStringList*<br/>
-[out] Référence à une variable de liste de chaîne qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à une variable de liste de chaîne qui reçoit la valeur lue à partir de la clé de Registre.
+
 *scArray*<br/>
-[out] Référence à une variable de tableau de chaîne qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à une variable de tableau de chaîne qui reçoit la valeur lue à partir de la clé de Registre.
+
 *dwcArray*<br/>
-[out] Référence à une variable de tableau de 32 bits double mot qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à une variable de tableau de 32 bits double mot qui reçoit la valeur lue à partir de la clé de Registre.
+
 *wcArray*<br/>
-[out] Référence à une variable de tableau de mot de 16 bits qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à une variable de tableau de mot de 16 bits qui reçoit la valeur lue à partir de la clé de Registre.
+
 *bcArray*<br/>
-[out] Référence à une variable de tableau d’octets qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à une variable de tableau d’octets qui reçoit la valeur lue à partir de la clé de Registre.
+
 *lpPoint*<br/>
-[out] Référence à un pointeur vers un `POINT` structure qui reçoit la valeur de lire à partir de la clé de Registre.  
-  
+[out] Référence à un pointeur vers un `POINT` structure qui reçoit la valeur de lire à partir de la clé de Registre.
+
 *Rect*<br/>
-[out] Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.
+
 *ppData*<br/>
-[out] Pointeur vers un pointeur vers les données qui reçoit la valeur lus à partir de la clé de Registre.  
-  
+[out] Pointeur vers un pointeur vers les données qui reçoit la valeur lus à partir de la clé de Registre.
+
 *Pétaoctets*<br/>
-[out] Pointeur vers une variable d’entier non signé. Cette variable reçoit la taille de la mémoire tampon qui *ppData* pointe vers.  
-  
+[out] Pointeur vers une variable d’entier non signé. Cette variable reçoit la taille de la mémoire tampon qui *ppData* pointe vers.
+
 *list*<br/>
-[out] Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.
+
 *obj*<br/>
-[out] Référence à un [CObject](../../mfc/reference/cobject-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.  
-  
+[out] Référence à un [CObject](../../mfc/reference/cobject-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.
+
 *pObj*<br/>
-[out] Référence à un pointeur vers un `CObject` variable qui reçoit la valeur lue à partir de la clé de Registre.  
-  
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
-  
-### <a name="remarks"></a>Notes  
- `Read` vérifie les *pszKey* une sous-clé de `m_hKey`.  
-  
-##  <a name="write"></a>  CSettingsStore::Write  
- Écrit une valeur dans le Registre sous la clé open.  
-  
-```  
+[out] Référence à un pointeur vers un `CObject` variable qui reçoit la valeur lue à partir de la clé de Registre.
+
+### <a name="return-value"></a>Valeur de retour
+
+Valeur différente de zéro cas de réussite ; sinon, 0.
+
+### <a name="remarks"></a>Notes
+
+`Read` vérifie les *pszKey* une sous-clé de `m_hKey`.
+
+##  <a name="write"></a>  CSettingsStore::Write
+
+Écrit une valeur dans le Registre sous la clé open.
+
+```
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     int iVal);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     DWORD dwVal);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     LPCTSTR pszVal);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CStringList& scStringList);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CByteArray& bcArray);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CStringArray& scArray);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CDWordArray& dwcArray);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CWordArray& wcArray);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     const CRect& rect);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     LPPOINT& lpPoint);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
-    LPBYTE pData,  
+    LPCTSTR pszKey,
+    LPBYTE pData,
     UINT nBytes);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CObList& list);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CObject& obj);
 
- 
+
 virtual BOOL Write(
-    LPCTSTR pszKey,  
+    LPCTSTR pszKey,
     CObject* pObj);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *pszKey*<br/>
-[in] Pointeur vers une chaîne qui contient le nom de la valeur à définir.  
-  
+[in] Pointeur vers une chaîne qui contient le nom de la valeur à définir.
+
 *iVal*<br/>
-[in] Référence à une variable de type entier qui contient les données à stocker.  
-  
+[in] Référence à une variable de type entier qui contient les données à stocker.
+
 *dwVal*<br/>
-[in] Référence à une variable 32 bits double mot contenant les données à stocker.  
-  
+[in] Référence à une variable 32 bits double mot contenant les données à stocker.
+
 *strVal*<br/>
-[in] Pointeur vers une variable de chaîne se terminant par null qui contient les données à stocker.  
-  
+[in] Pointeur vers une variable de chaîne se terminant par null qui contient les données à stocker.
+
 *scStringList*<br/>
-[in] Référence à un [CStringList](../../mfc/reference/cstringlist-class.md) variable qui contient les données à stocker.  
-  
+[in] Référence à un [CStringList](../../mfc/reference/cstringlist-class.md) variable qui contient les données à stocker.
+
 *bcArray*<br/>
-[in] Référence à une variable de tableau d’octets qui contient les données à stocker.  
-  
+[in] Référence à une variable de tableau d’octets qui contient les données à stocker.
+
 *scArray*<br/>
-[in] Référence à une variable de tableau de chaîne qui contient les données à stocker.  
-  
+[in] Référence à une variable de tableau de chaîne qui contient les données à stocker.
+
 *dwcArray*<br/>
-[in] Référence à une variable de tableau de 32 bits double mot contenant les données à stocker.  
-  
+[in] Référence à une variable de tableau de 32 bits double mot contenant les données à stocker.
+
 *wcArray*<br/>
-[in] Référence à une variable de tableau de mot de 16 bits qui contient les données à stocker.  
-  
+[in] Référence à une variable de tableau de mot de 16 bits qui contient les données à stocker.
+
 *Rect*<br/>
-[in] Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui contient les données à stocker.  
-  
+[in] Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui contient les données à stocker.
+
 *lpPoint*<br/>
-[in] Référence à un pointeur vers un `POINT` variable qui contient les données à stocker.  
-  
+[in] Référence à un pointeur vers un `POINT` variable qui contient les données à stocker.
+
 *pData*<br/>
-[in] Pointeur vers une mémoire tampon qui contient les données à stocker.  
-  
+[in] Pointeur vers une mémoire tampon qui contient les données à stocker.
+
 *nBytes*<br/>
-[in] Spécifie la taille, en octets, des données à laquelle le *pData* paramètre pointe.  
-  
+[in] Spécifie la taille, en octets, des données à laquelle le *pData* paramètre pointe.
+
 *list*<br/>
-[in] Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui contient les données à stocker.  
-  
+[in] Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui contient les données à stocker.
+
 *obj*<br/>
-[in] Référence à un [CObject](../../mfc/reference/cobject-class.md) variable qui contient les données à stocker.  
-  
+[in] Référence à un [CObject](../../mfc/reference/cobject-class.md) variable qui contient les données à stocker.
+
 *pObj*<br/>
-[in] Pointeur vers un pointeur vers un `CObject` variable qui contient les données à stocker.  
-  
-### <a name="return-value"></a>Valeur de retour  
- TRUE en cas de réussite, sinon FALSE.  
-  
-### <a name="remarks"></a>Notes  
- Pour écrire dans le Registre, vous devez définir *bReadOnly* une valeur différente de zéro lorsque vous créez un [CSettingsStore](../../mfc/reference/csettingsstore-class.md) objet. Pour plus d’informations, consultez [CSettingsStore::CSettingsStore](#csettingsstore).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CWinAppEx, classe](../../mfc/reference/cwinappex-class.md)
+[in] Pointeur vers un pointeur vers un `CObject` variable qui contient les données à stocker.
+
+### <a name="return-value"></a>Valeur de retour
+
+TRUE en cas de réussite, sinon FALSE.
+
+### <a name="remarks"></a>Notes
+
+Pour écrire dans le Registre, vous devez définir *bReadOnly* une valeur différente de zéro lorsque vous créez un [CSettingsStore](../../mfc/reference/csettingsstore-class.md) objet. Pour plus d’informations, consultez [CSettingsStore::CSettingsStore](#csettingsstore).
+
+## <a name="see-also"></a>Voir aussi
+
+[Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CWinAppEx, classe](../../mfc/reference/cwinappex-class.md)
