@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abbe93f5359171c88134ff61759e9edc63db2451
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7cccebf6e1c6004a2416f4fdeb254369f9aa7b72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610431"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410310"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject, méthode
 
@@ -42,19 +42,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Nom qualifié complet d’un serveur.
 
-*CLSID*  
+*CLSID*<br/>
 Tableau de CLSID à inscrire.
 
-*fabriques*  
+*fabriques*<br/>
 Tableau d’interfaces IUnknown des objets de classe dont la disponibilité est en cours de publication.
 
-*Cookies*  
+*Cookies*<br/>
 Lorsque l’opération se termine, un tableau de pointeurs vers des valeurs qui identifient la classe des objets qui ont été enregistrés. Ces valeurs sont utilisées ultérieurement révoque l’inscription.
 
-*count*  
+*count*<br/>
 Le nombre de CLSID à inscrire.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -74,4 +74,5 @@ Le type de connexion pour les objets inscrits est spécifié par une combinaison
 **Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
+
 [Module, classe](../windows/module-class.md)

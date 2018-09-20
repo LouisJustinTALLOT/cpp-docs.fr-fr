@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a92e7904b3b42422bebf5a80e0f1b03dd818f86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2e2939c7f0a68401b4c1a8c43b5c6335a0acfcb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314577"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403940"
 ---
 # <a name="creating-a-new-custom-or-data-resource-c"></a>Création d’une ressource personnalisée ou la ressource de données (C++)
 
@@ -40,9 +40,9 @@ Vous pouvez créer une nouvelle ressource personnalisée ou de données en plaç
 
 3. Dans le **Directives de compilation** , tapez un `#include` instruction qui fournit le nom du fichier contenant la ressource personnalisée. Exemple :
 
-```cpp
+    ```cpp
     #include mydata.rc
- ```
+    ```
 
    Assurez-vous que la syntaxe et l’orthographe de ce que vous tapez sont correctes. Le contenu de la zone **Directives de compilation** est inséré dans le fichier de script de ressources exactement comme vous l’avez tapé.
 

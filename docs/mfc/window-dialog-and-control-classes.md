@@ -1,5 +1,5 @@
 ---
-title: Classes de fenêtre, boîte de dialogue et contrôle | Documents Microsoft
+title: Classes de fenêtre, boîte de dialogue et contrôle | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a5e197909a55e5c634bd31ec359a848293c001
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 690166ad8c7a823cc4d8dab76894add6aae973a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381844"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431929"
 ---
 # <a name="window-dialog-and-control-classes"></a>Classes de fenêtre, de boîte de dialogue et de contrôle
-Classe `CWnd` et ses classes dérivées encapsulent un `HWND`, un handle de fenêtre de Windows. `CWnd` utilisables par lui-même ou comme base pour dériver de nouvelles classes. Les classes dérivées fournies par la bibliothèque de classes représentent différents types de windows.  
-  
- [CWnd](../mfc/reference/cwnd-class.md)  
- La classe de base pour toutes les fenêtres. Vous pouvez utiliser une des classes dérivées de `CWnd` ou en dériver vos propres classes directement.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+
+Classe `CWnd` et ses classes dérivées encapsulent un `HWND`, un handle vers une fenêtre de Windows. `CWnd` utilisable par lui-même ou comme base pour dériver de nouvelles classes. Les classes dérivées fournies par la bibliothèque de classes représentent les différents types de fenêtres.
+
+[CWnd](../mfc/reference/cwnd-class.md)<br/>
+La classe de base pour toutes les fenêtres. Vous pouvez utiliser une des classes dérivées de `CWnd` ou dériver vos propres classes directement à partir de celui-ci.
+
+## <a name="see-also"></a>Voir aussi
+
+[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
 

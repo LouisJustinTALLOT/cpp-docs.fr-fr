@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 899c41a65a651f7464b11639d2106b3eaa51e21b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8ab2699781526ee12784f7c048cd9a833526fd30
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708654"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414994"
 ---
 # <a name="threading-c"></a>thread (C++)
 
@@ -80,8 +80,8 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs COM](../windows/com-attributes.md)  
-[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Attributs de classe](../windows/class-attributes.md)  
-[Prise en charge du multithreading pour le code plus ancien (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)  
+[Attributs COM](../windows/com-attributes.md)<br/>
+[Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributs de classe](../windows/class-attributes.md)<br/>
+[Prise en charge du multithreading pour le code plus ancien (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
 [Cloisonnements neutres](/windows/desktop/cossdk/neutral-apartments)  

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6d6bd580faf8c242ca5ac5e9b4b29ded9a7750a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612208"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441926"
 ---
 # <a name="key-wrl-apis-by-category"></a>API WRL principales par catégorie
 Les tableaux suivants répertorient les principaux classes, structs, fonctions et macros bibliothèque de modèles C++ Windows Runtime. Constructions dans les classes et les espaces de noms d’assistance sont omises. Ces listes complètent la documentation de l’API, organisée par espace de noms.
@@ -76,4 +76,5 @@ Les tableaux suivants répertorient les principaux classes, structs, fonctions e
 |[InspectableClass, macro](../windows/inspectableclass-macro.md)|Définit le niveau de confiance et de nom de la classe runtime.|
   
 ## <a name="see-also"></a>Voir aussi
- [Bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+
+[Bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

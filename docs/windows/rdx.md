@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 566b21c911ba99d19fb16b564d0748cfcfd1eb71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719718"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435972"
 ---
 # <a name="rdx"></a>rdx
 
@@ -40,13 +40,13 @@ Crée une clé de Registre ou modifie une clé de Registre existante.
 
 ### <a name="parameters"></a>Paramètres
 
-*key*  
+*key*<br/>
 Le nom de la clé à être créé ou ouvert.
 
-*nom de valeur*  
+*nom de valeur*<br/>
 (Facultatif) Spécifie le champ de valeur à définir. Si un champ de valeur portant ce nom n’existe pas déjà dans la clé, il est ajouté.
 
-*regtype*  
+*regtype*<br/>
 Le type de clé de Registre en cours d’ajout. Peut prendre l’une des opérations suivantes : `text`, `dword`, `binary`, ou `CString`.
 
 ## <a name="remarks"></a>Notes
@@ -93,5 +93,5 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs COM](../windows/com-attributes.md)  
+[Attributs COM](../windows/com-attributes.md)<br/>
 [registration_script](../windows/registration-script.md)  

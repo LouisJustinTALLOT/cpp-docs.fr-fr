@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156191d09c88d8f19b3fe73108bcbca390b23f6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab2c857451e399e56e69d79240d4ace023a8b301
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760201"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424078"
 ---
 # <a name="basic-cstring-operations"></a>Opérations CString de base
 
@@ -112,8 +112,8 @@ Sans le cast, `cs` est traité comme un `void*` et `wcout` imprime l’adresse d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[CStringT, classe](../atl-mfc-shared/reference/cstringt-class.md)   
-[Spécialisation de modèle](../cpp/template-specialization-cpp.md)   
+[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[CStringT, classe](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Spécialisation de modèle](../cpp/template-specialization-cpp.md)<br/>
 [Guide pratique pour effectuer une conversion entre différents types de chaînes](../text/how-to-convert-between-various-string-types.md)
 

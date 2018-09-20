@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093c994de24b947c53bfc19d33213e77f3ec2593
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 02133e6b9d884fa8e0a175dd01845035ec8b96a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540565"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435946"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
 **Spécifique à C++**  
@@ -42,5 +42,5 @@ Si cet attribut n'est pas spécifié, seuls sont générés les wrappers de nive
   
 ## <a name="see-also"></a>Voir aussi  
  
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directive #import](../preprocessor/hash-import-directive-cpp.md)

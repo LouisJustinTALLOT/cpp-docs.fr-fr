@@ -1,5 +1,5 @@
 ---
-title: 3.1.6 fonction omp_in_parallel | Documents Microsoft
+title: 3.1.6 fonction omp_in_parallel | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,19 +12,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b491695d2ae49336d7d8998af64e724f344d87
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9ba6c35d42f8497869894bd5ec95b83f0c8793f1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686280"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404616"
 ---
 # <a name="316-ompinparallel-function"></a>3.1.6 Fonction omp_in_parallel
-Le **omp_in_parallel** fonction retourne une valeur différente de zéro si elle est appelée dans l’étendue dynamique d’une région parallèle s’exécutant en parallèle ; sinon, retourne 0. Le format est le suivant :  
-  
-```  
-#include <omp.h>  
-int omp_in_parallel(void);  
-```  
-  
- Cette fonction retourne une valeur différente de zéro lors de l’appelé à partir d’une région s’exécutant en parallèle, notamment des zones imbriquées qui sont sérialisés.
+
+Le **omp_in_parallel** fonction retourne une valeur différente de zéro si elle est appelée dans l’étendue dynamique d’une région parallèle s’exécutaient en parallèle ; sinon, elle retourne 0. Le format est le suivant :
+
+```
+#include <omp.h>
+int omp_in_parallel(void);
+```
+
+Cette fonction retourne une valeur différente de zéro lorsque appelé à partir d’une région s’exécutant en parallèle, y compris des zones imbriquées qui sont sérialisés.

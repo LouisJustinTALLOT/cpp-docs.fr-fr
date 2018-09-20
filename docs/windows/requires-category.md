@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a1a7d656d307f6f0fcba446d3b58a625adfb8bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e81b6f9dd40e84e0e6bb5af71a76b3ac9163e72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612767"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434386"
 ---
 # <a name="requirescategory"></a>requires_category
 
@@ -38,7 +38,7 @@ Spécifie les catégories de composant requis de la classe cible.
 
 ### <a name="parameters"></a>Paramètres
 
-*requires_category*  
+*requires_category*<br/>
 ID de la catégorie obligatoire.
 
 ## <a name="remarks"></a>Notes
@@ -80,5 +80,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs COM](../windows/com-attributes.md)  
+[Attributs COM](../windows/com-attributes.md)<br/>
 [implements_category](../windows/implements-category.md)  

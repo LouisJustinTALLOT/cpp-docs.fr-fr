@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fc65d2aeab01de022e23d0645682800a7d555d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88ddd3dd59000b629f6e72933b1a0b02cc582c89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602363"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409869"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (structure)
 
@@ -63,43 +63,43 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 
 ### <a name="parameters"></a>Paramètres
 
-*I0*  
+*I0*<br/>
 (Obligatoire) ID d’interface 0.
 
-*I1*  
+*I1*<br/>
 (Obligatoire) ID d’interface 1.
 
-*I2*  
+*I2*<br/>
 (Facultatif) ID d’interface 2.
 
-*I3*  
+*I3*<br/>
 (Facultatif) ID d’interface 3.
 
-*I4*  
+*I4*<br/>
 (Facultatif) ID d’interface 4.
 
-*I5*  
+*I5*<br/>
 (Facultatif) ID d’interface 5.
 
-*I6*  
+*I6*<br/>
 (Facultatif) ID d’interface 6.
 
-*I7*  
+*I7*<br/>
 (Facultatif) ID d’interface 7.
 
-*I8*  
+*I8*<br/>
 (Facultatif) ID d’interface 8.
 
-*I9*  
+*I9*<br/>
 (Facultatif) ID d’interface 9.
 
-*DerivedType*  
+*DerivedType*<br/>
 Un type dérivé.
 
-*BaseType*  
+*BaseType*<br/>
 Le type de base d’un type dérivé.
 
-*hasImplements*  
+*hasImplements*<br/>
 Une valeur booléenne qu’if **true**, signifie que vous ne pouvez pas utiliser un [MixIn](../windows/mixin-structure.md) structure avec une classe qui ne dérive pas de la [implémente](../windows/implements-structure.md) structure.
 
 ## <a name="members"></a>Membres

@@ -1,5 +1,5 @@
 ---
-title: Classe de CD2DEllipse | Documents Microsoft
+title: Classe de CD2DEllipse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,64 +18,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44da620750fd9fcb241da3a195e294e24143acaa
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6acec41bcae08f5585eb521dc90ff12d082fd5ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953581"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418682"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse, classe
-Wrapper pour `D2D1_ELLIPSE`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CD2DEllipse : public D2D1_ELLIPSE;  
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Surchargé. Construit un `CD2DEllipse` à partir de l’objet `D2D1_ELLIPSE` objet.|  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `D2D1_ELLIPSE`  
-  
- `CD2DEllipse`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** afxrendertarget.h  
-  
-##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse  
- Construit un objet CD2DEllipse à partir de l’objet de CD2DRectF.  
-  
-```  
-CD2DEllipse(const CD2DRectF& rect);  
-CD2DEllipse(const D2D1_ELLIPSE& ellipse);  
+
+Wrapper pour `D2D1_ELLIPSE`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CD2DEllipse : public D2D1_ELLIPSE;
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Surchargé. Construit un `CD2DEllipse` à partir de l’objet `D2D1_ELLIPSE` objet.|
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`D2D1_ELLIPSE`
+
+`CD2DEllipse`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** afxrendertarget.h
+
+##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse
+
+Construit un objet CD2DEllipse à partir de l’objet de CD2DRectF.
+
+```
+CD2DEllipse(const CD2DRectF& rect);
+CD2DEllipse(const D2D1_ELLIPSE& ellipse);
   CD2DEllipse(const D2D1_ELLIPSE* ellipse);
 
- 
+
 CD2DEllipse(
-    const CD2DPointF& ptCenter,  
+    const CD2DPointF& ptCenter,
     const CD2DSizeF& sizeRadius);
-```  
-  
-### <a name="parameters"></a>Paramètres  
- *Rect*  
- rectangle source  
-  
- *ellipse*  
- sélection de la source  
-  
- *ptCenter*  
- Le point central de l’ellipse.  
-  
- *sizeRadius*  
- Le rayon X et le rayon Y de l’ellipse.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classes](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Rect*<br/>
+rectangle source
+
+*ellipse*<br/>
+ellipse de source
+
+*ptCenter*<br/>
+Le point central de l’ellipse.
+
+*sizeRadius*<br/>
+Le rayon X et le rayon Y de l’ellipse.
+
+## <a name="see-also"></a>Voir aussi
+
+[Classes](../../mfc/reference/mfc-classes.md)

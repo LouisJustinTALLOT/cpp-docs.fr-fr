@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63a2c8f57f7031f63f6e5b0d4d20c2c69b5f4934
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1daf9d33b3eb21bf7d196a4263b5f2f7009b183
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592336"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435400"
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (Extensions de composant C++)
 
@@ -39,7 +39,7 @@ T::typeid
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Un nom de type.
 
 ## <a name="windows-runtime"></a>Windows Runtime
@@ -52,7 +52,7 @@ Platform::Type^ type = T::typeid;
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Un nom de type.
 
 ### <a name="remarks"></a>Notes
@@ -73,7 +73,7 @@ type::typeid
 
 ### <a name="parameters"></a>Paramètres
 
-*type*  
+*type*<br/>
 Le nom d’un type (déclarateur abstrait) pour lequel vous souhaitez le `System::Type` objet.
 
 ### <a name="remarks"></a>Notes

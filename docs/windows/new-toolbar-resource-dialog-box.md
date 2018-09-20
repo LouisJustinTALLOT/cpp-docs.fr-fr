@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: cc933905cf4056d2be6c692728c621913687a6fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316300"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425533"
 ---
 # <a name="new-toolbar-resource-dialog-box-c"></a>Nouvelle boîte de dialogue ressource barre d’outils (C++)
 
@@ -46,6 +46,6 @@ MFC ou ATL
 
 ## <a name="see-also"></a>Voir aussi
 
-[propriétés d’un bouton de barre d’outils](../windows/toolbar-button-properties.md)  
-[Conversion de bitmaps en barres d’outils](../windows/converting-bitmaps-to-toolbars.md)  
+[propriétés d’un bouton de barre d’outils](../windows/toolbar-button-properties.md)<br/>
+[Conversion de bitmaps en barres d’outils](../windows/converting-bitmaps-to-toolbars.md)<br/>
 [Éditeur de barres d’outils](../windows/toolbar-editor.md)

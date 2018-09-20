@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 285444b5f9bfa29ab00fc6a2ca1b644208bc95a8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fae55d0b4ce4a766952afcec7f78ec6b20fbb258
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315793"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426638"
 ---
 # <a name="creating-a-new-dialog-box-c"></a>Création d’une boîte de dialogue (C++)
 
@@ -50,6 +50,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour créer une ressource](../windows/how-to-create-a-resource.md)  
-[Fichiers de ressources](../windows/resource-files-visual-studio.md)  
+[Guide pratique pour créer une ressource](../windows/how-to-create-a-resource.md)<br/>
+[Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)

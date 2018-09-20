@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f1ed792407160c1d025dabb3b8cc01a2ebc7330
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8de12d1b421fd78fb9ed2a45cc14826541f72757
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314324"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441692"
 ---
 # <a name="creating-a-new-toolbar-button-c"></a>Création d’un nouveau bouton de barre d’outils (C++)
 
@@ -71,6 +71,6 @@ MFC ou ATL
 
 ## <a name="see-also"></a>Voir aussi
 
-[propriétés d’un bouton de barre d’outils](../windows/toolbar-button-properties.md)  
-[Création, déplacement et modification de boutons de barre d’outils](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[propriétés d’un bouton de barre d’outils](../windows/toolbar-button-properties.md)<br/>
+[Création, déplacement et modification de boutons de barre d’outils](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Éditeur de barres d’outils](../windows/toolbar-editor.md)

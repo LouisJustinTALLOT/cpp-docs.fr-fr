@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e919e48b79c9fe98a7a33257ebd0f70061d788
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 4eb26790a46f46638e4a4180ee2209efefda201c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541184"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432215"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
 **Spécifique à C++**  
@@ -42,5 +42,5 @@ Normalement, le wrapper appelle la méthode via la table de fonctions virtuelles
   
 ## <a name="see-also"></a>Voir aussi  
  
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directive #import](../preprocessor/hash-import-directive-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Exemple de liste de menu | Documents Microsoft
+title: Exemple de liste de menu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9b1cc957dbc32978902d6efd072f032ae7508a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb28fb0b842cb551f3a53f126122b1ccddad4a75
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344306"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422023"
 ---
 # <a name="menu-sample-list"></a>Exemple de liste de menu
-Consultez les exemples de programmes suivants qui illustrent la création, la modification et la mise à jour de menus :  
-  
- *MDI, exemple : Activer et désactiver des éléments de Menu*  
-  
--   [DESSIN À MAIN LEVÉE](../visual-cpp-samples.md)  
-  
- *Modifier dynamiquement les Menus*  
-  
--   [DYNAMENU](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Menus](../mfc/menus-mfc.md)
+
+Consultez les exemples de programmes suivants qui illustrent la création, modification et la mise à jour de menus :
+
+*Exemple MDI : Activer et désactiver des éléments de Menu*
+
+- [DESSIN À MAIN LEVÉE](../visual-cpp-samples.md)
+
+*Modifier dynamiquement les Menus*
+
+- [DYNAMENU](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Menus](../mfc/menus-mfc.md)
 

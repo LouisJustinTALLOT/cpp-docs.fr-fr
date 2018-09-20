@@ -18,54 +18,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf803fbd35071a7a7100e3267dcf1bfa8b91e9f7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1622dc78e0629bb90a6b646e4910cfb362be721e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059592"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398428"
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration, classe
-La classe `cancellation_token_registration` représente une notification de rappel de `cancellation_token`. Quand la méthode `register` sur une classe `cancellation_token` est utilisée pour recevoir une notification relative à la date d'annulation, un objet `cancellation_token_registration` est retourné comme handle au rappel afin que l'appelant puisse demander qu'un rappel spécifique ne soit plus effectué via l'utilisation de la méthode `deregister`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+La classe `cancellation_token_registration` représente une notification de rappel de `cancellation_token`. Quand la méthode `register` sur une classe `cancellation_token` est utilisée pour recevoir une notification relative à la date d'annulation, un objet `cancellation_token_registration` est retourné comme handle au rappel afin que l'appelant puisse demander qu'un rappel spécifique ne soit plus effectué via l'utilisation de la méthode `deregister`.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class cancellation_token_registration;
-```  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[cancellation_token_registration](#ctor)||  
-|[~ cancellation_token_registration, destructeur](#dtor)||  
-  
-### <a name="public-operators"></a>Op&#233;rateurs publics  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|[operator!=](#operator_neq)||  
-|[operator=](#operator_eq)||  
-|[operator==](#operator_eq_eq)||  
-  
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
- `cancellation_token_registration`  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** pplcancellation_token.h  
-  
- **Espace de noms :** concurrency  
-  
-##  <a name="dtor"></a> ~ cancellation_token_registration 
+```
+
+## <a name="members"></a>Membres
+
+### <a name="public-constructors"></a>Constructeurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[cancellation_token_registration](#ctor)||
+|[~ cancellation_token_registration, destructeur](#dtor)||
+
+### <a name="public-operators"></a>Op&#233;rateurs publics
+
+|Nom|Description|
+|----------|-----------------|
+|[operator!=](#operator_neq)||
+|[operator=](#operator_eq)||
+|[operator==](#operator_eq_eq)||
+
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+
+`cancellation_token_registration`
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** pplcancellation_token.h
+
+**Espace de noms :** concurrency
+
+##  <a name="dtor"></a> ~ cancellation_token_registration
 
 ```
 ~cancellation_token_registration();
-```  
-  
-##  <a name="ctor"></a> cancellation_token_registration 
+```
+
+##  <a name="ctor"></a> cancellation_token_registration
 
 ```
 cancellation_token_registration();
@@ -73,49 +76,54 @@ cancellation_token_registration();
 cancellation_token_registration(const cancellation_token_registration& _Src);
 
 cancellation_token_registration(cancellation_token_registration&& _Src);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Src*<br/>
 Le `cancellation_token_registration` pour copier ou déplacer.
- 
-##  <a name="operator_neq"></a> opérateur ! = 
+
+##  <a name="operator_neq"></a> opérateur ! =
 
 ```
 bool operator!= (const cancellation_token_registration& _Rhs) const;
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Rhs*<br/>
 `cancellation_token_registration` à comparer.
- 
-### <a name="return-value"></a>Valeur de retour  
-  
-##  <a name="operator_eq"></a> opérateur = 
+
+### <a name="return-value"></a>Valeur de retour
+
+##  <a name="operator_eq"></a> opérateur =
 
 ```
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
 
 cancellation_token_registration& operator= (cancellation_token_registration&& _Src);
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Src*<br/>
 Le `cancellation_token_registration` à affecter.
- 
-### <a name="return-value"></a>Valeur de retour  
-  
-##  <a name="operator_eq_eq"></a> opérateur == 
+
+### <a name="return-value"></a>Valeur de retour
+
+##  <a name="operator_eq_eq"></a> opérateur ==
 
 ```
 bool operator== (const cancellation_token_registration& _Rhs) const;
-```  
-  
-### <a name="parameters"></a>Paramètres  
+```
+
+### <a name="parameters"></a>Paramètres
+
 *_Rhs*<br/>
 `cancellation_token_registration` à comparer.
- 
-### <a name="return-value"></a>Valeur de retour  
-  
-## <a name="see-also"></a>Voir aussi  
- [accès concurrentiel Namespace](concurrency-namespace.md)
+
+### <a name="return-value"></a>Valeur de retour
+
+## <a name="see-also"></a>Voir aussi
+
+[accès concurrentiel Namespace](concurrency-namespace.md)

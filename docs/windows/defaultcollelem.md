@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 396043d78ae1b93f7089d1518c26e982d0ad3974
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8b65cb8c9fb5f46568d5449b3e54157f63a16b3e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422530"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -72,5 +72,5 @@ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](../windows/idl-attributes.md)  
+[Attributs IDL](../windows/idl-attributes.md)<br/>
 [Attributs de méthode](../windows/method-attributes.md)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318186"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430551"
 ---
 # <a name="working-with-resource-files"></a>Utilisation des fichiers de ressources
 
@@ -39,24 +39,24 @@ Pour plus d’informations sur l’ajout de ressources aux projets managés, con
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Fichiers de ressources](../windows/resource-files-visual-studio.md)  
+[Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 Décrit les fichiers de ressources et la façon dont ils sont utilisés dans les applications de bureau Windows. Propose également des liens vers des rubriques qui expliquent comment utiliser les fichiers de ressources.
 
-[Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)  
+[Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)<br/>
 Décrit les symboles et fournit des informations sur l'utilisation de la boîte de dialogue **Symboles des ressources** pour gérer les symboles dans vos projets.
 
-[Éditeurs de ressources](../windows/resource-editors.md)  
+[Éditeurs de ressources](../windows/resource-editors.md)<br/>
 Décrit les éditeurs de ressources fournis dans Visual Studio, les types de ressources que vous pouvez modifier avec chaque éditeur, et propose des liens vers des informations détaillées sur l'utilisation de chaque éditeur.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 Fournit des liens vers la documentation Visual C++.
 
-[Nous contacter](/visualstudio/ide/talk-to-us)  
+[Nous contacter](/visualstudio/ide/talk-to-us)<br/>
 Propose des liens vers des informations sur l'utilisation de l'ensemble de documentation, sur la sollicitation du support technique et sur l'emploi de fonctionnalités d'accessibilité.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md)  
+[Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menus et autres ressources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
