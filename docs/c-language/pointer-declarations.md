@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752721"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095935"
 ---
 # <a name="pointer-declarations"></a>Déclarations de pointeur
 
@@ -59,6 +59,7 @@ Le *type-qualifier* peut être **const** ou **volatile** ou les deux. Ils spéci
 Vous pouvez déclarer un pointeur vers une structure, une union ou un type d'énumération avant de définir la structure, l'union ou le type d'énumération. Vous devez déclarer le pointeur à l'aide de la balise structure ou union comme indiqué dans les exemples ci-dessous. Ces déclarations sont autorisées car le compilateur n'a pas besoin de connaître la taille de la structure ou de l'union pour allouer l'espace pour la variable pointeur.
 
 ## <a name="examples"></a>Exemples
+
 Les exemples suivants illustrent les déclarations de pointeur.
 
 ```
