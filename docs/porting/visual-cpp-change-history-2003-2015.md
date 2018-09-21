@@ -14,23 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b7184e2eebcea83770aff55a5e9f75242aa1c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04e331da219f0c7a3996dda69d53769ea443b55e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206169"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319095"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
-Cet article décrit tous les changements cassants dans Visual Studio 2015 en remontant jusqu’à Visual Studio 2003 et, dans cet article, les termes « nouveau comportement », « désormais » et « maintenant » font référence à Visual Studio 2015 et versions ultérieures. Les termes « ancien comportement » et « avant » font référence à Visual Studio 2013 et aux versions antérieures.
+Cet article décrit toutes les modifications avec rupture dans Visual Studio 2015 en remontant jusqu’à Visual Studio 2003 et, dans cet article, les termes « nouveau comportement » ou « maintenant » font référence à Visual Studio 2015 et versions ultérieures. Les termes « ancien comportement » et « avant » font référence à Visual Studio 2013 et aux versions antérieures.
 
 Pour plus d’informations sur Visual Studio 2017, consultez [Nouveautés de Visual C++ dans Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) et [Améliorations de la conformité de Visual C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
 
 > [!NOTE]
-> Aucune changement cassant n’a été apporté au niveau des binaires entre Visual Studio 2015 et Visual Studio 2017.
+> Aucune modification importante n’a été apportée au niveau des binaires entre Visual Studio 2015 et Visual Studio 2017.
 
-Quand vous effectuez une mise à niveau avec une nouvelle version de Visual Studio, vous pouvez rencontrer des erreurs de compilation et/ou d’exécution dans du code qui pouvait auparavant être compilé et exécuté correctement. Les changements introduits dans la nouvelle version qui génèrent de tels problèmes sont appelés *changements cassants*et sont généralement requis par des modifications apportées à la norme du langage C++, aux signatures des fonctions ou à la disposition des objets en mémoire.
+Quand vous effectuez une mise à niveau avec une nouvelle version de Visual Studio, vous pouvez rencontrer des erreurs de compilation et/ou d’exécution dans du code qui pouvait auparavant être compilé et exécuté correctement. Les modifications introduites dans la nouvelle version qui génèrent de tels problèmes sont appelées *modifications avec rupture*et elles sont généralement requises par des modifications apportées à la norme du langage C++, aux signatures des fonctions ou à la disposition des objets en mémoire.
 
 Pour éviter les erreurs d'exécution qui sont difficiles à détecter et diagnostiquer, nous vous recommandons de ne jamais établir de lien statique à des binaires qui ont été compilés à l'aide de différentes versions du compilateur. En outre, lorsque vous mettez à niveau un projet EXE ou DLL, veillez à mettre à niveau les bibliothèques auxquelles il est lié. Si vous utilisez des types de bibliothèques C++ standard ou Runtime C (CRT), ne les transmettez pas entre des fichiers binaires (dont des DLL) qui ont été compilés à l’aide de différentes versions du compilateur. Pour plus d’informations, consultez [Erreurs potentielles de passage d’objets CRT entre frontières DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   
@@ -39,13 +39,13 @@ Nous vous recommandons également de ne jamais rédiger de code dépendant d'une
 En outre, les améliorations suivies de la conformité du compilateur peuvent parfois modifier la façon dont le compilateur comprend votre code source existant. Dans ce cas, vous pouvez être confronté à des erreurs nouvelles ou différentes pendant la génération, ou même à des différences de comportement dans le code qui auparavant était généré et paraissait s’exécuter correctement. Même s’il ne s’agit pas là de changements cassants tels que ceux présentés dans ce document, des changements du code source peuvent être nécessaires pour résoudre ces problèmes :  
   
   
-- [Changements cassants de la bibliothèque C Runtime (CRT)](#BK_CRT)  
+- [Modifications avec rupture de la bibliothèque C Runtime (CRT)](#BK_CRT)  
   
-- [Changements cassants de la bibliothèque C++ standard](#BK_STL)  
+- [Modifications avec rupture de la bibliothèque C++ standard](#BK_STL)  
   
-- [Changements cassants des bibliothèques MFC et ATL](#BK_MFC)  
+- [Modifications avec rupture des bibliothèques MFC et ATL](#BK_MFC)  
   
-- [Changements cassants du runtime d’accès concurrentiel](#BK_ConcRT)  
+- [Modifications avec rupture du runtime d’accès concurrentiel](#BK_ConcRT)  
   
 ## <a name="VC_2015"></a> Modifications de la mise en conformité de Visual C++ 2015  
   
@@ -65,7 +65,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
   
 - **Surcharges C++ des fonctions mathématiques de la bibliothèque** Dans les versions précédentes, \<math.h> définissait certaines surcharges C++ pour les fonctions mathématiques de la bibliothèque. \<cmath> définissait les surcharges restantes, si bien que pour obtenir toutes les surcharges, il était nécessaire d’inclure l’en-tête \<cmath>. Cela conduisait à des problèmes de résolution de surcharge de fonction dans un code incluant uniquement \<math.h>. À présent, toutes les surcharges C++ ont été supprimées de \<math.h> et sont désormais présentes uniquement dans \<cmath>.  
   
-     Pour résoudre les erreurs, incluez <cmath> pour obtenir les déclarations des fonctions qui ont été supprimées de \<math.h>. Le tableau ci-dessous répertorie les fonctions qui ont été déplacées.  
+     Pour résoudre les erreurs, incluez \<cmath> pour obtenir les déclarations des fonctions qui ont été supprimées de \<math.h>. Le tableau ci-dessous répertorie les fonctions qui ont été déplacées.  
   
      Fonctions déplacées :  
   
@@ -105,7 +105,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
   
 #### <a name="stdioh-and-conioh"></a>\<stdio.h> et \<conio.h>  
   
-- **Les familles de fonctions printf et scanf sont maintenant définies inline.** Les définitions de toutes les fonctions printf et scanf ont été placées inline dans \<stdio.h>, \<conio.h> et les autres en-têtes CRT. C’est un changement cassant qui conduit à une erreur de l'éditeur de liens (LNK2019, symbole externe non résolu) pour tous les programmes ayant déclaré ces fonctions localement sans inclure les en-têtes CRT appropriés. Si possible, mettez à jour le code pour inclure les en-têtes CRT (c’est-à-dire, ajouter `#include <stdio.h>`) et les fonctions inline, mais si vous ne voulez pas modifier votre code pour inclure ces fichiers d’en-tête, une autre solution consiste à ajouter une bibliothèque supplémentaire à votre entrée d’éditeur de liens, legacy_stdio_definitions.lib.  
+- **Les familles de fonctions printf et scanf sont maintenant définies inline.** Les définitions de toutes les fonctions printf et scanf ont été placées inline dans \<stdio.h>, \<conio.h> et les autres en-têtes CRT. Ceci est une modification avec rupture qui conduit à une erreur de l'éditeur de liens (LNK2019, symbole externe non résolu) pour tous les programmes ayant déclaré ces fonctions localement sans inclure les en-têtes CRT appropriés. Si possible, mettez à jour le code pour inclure les en-têtes CRT (c’est-à-dire, ajouter `#include <stdio.h>`) et les fonctions inline, mais si vous ne voulez pas modifier votre code pour inclure ces fichiers d’en-tête, une autre solution consiste à ajouter une bibliothèque supplémentaire à votre entrée d’éditeur de liens, legacy_stdio_definitions.lib.  
   
      Pour ajouter cette bibliothèque à votre entrée d’éditeur de liens dans l’environnement IDE, ouvrez le menu contextuel du nœud du projet, choisissez **Propriétés**, puis dans la boîte de dialogue **Propriétés du projet**, choisissez **Éditeur de liens**. Ensuite, modifiez **l’entrée de l’éditeur de liens** afin d’ajouter `legacy_stdio_definitions.lib` à la liste délimitée par des points-virgules.
      Si votre projet est lié à des bibliothèques statiques qui ont été compilées avec une version de Visual Studio antérieure à 2015, l’éditeur de liens peut signaler un symbole externe non résolu. Ces erreurs peuvent référencer des définitions stdio internes pour _iob, _iob_func ou des importations associées pour certaines fonctions stdio de la forme _imp\_*. Microsoft recommande de recompiler toutes les bibliothèques statiques avec la dernière version des bibliothèques et du compilateur C++ quand vous mettez à niveau un projet. Si la bibliothèque est une bibliothèque tierce dont la source n’est pas disponible, vous devez demander un fichier binaire mis à jour auprès de la tierce partie ou encapsuler votre utilisation de cette bibliothèque dans une DLL distincte que vous compilez à l’aide de l’ancienne version des bibliothèques et du compilateur.
@@ -187,7 +187,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
   
      La fonction [_setmode](../c-runtime-library/reference/setmode.md) signale désormais correctement le mode pour les flux ouverts en mode _O_U8TEXT. Dans les versions précédentes de la bibliothèque, elle signalait ces flux de données comme étant ouverts dans _O_WTEXT.  
   
-     Il s'agit d'un changement cassant si votre code interprète le mode _O_WTEXT pour des flux dont l'encodage est UTF-8. Si votre application ne prend pas en charge UTF_8, envisagez d'ajouter la prise en charge pour cet encodage de plus en plus courant.  
+     Il s'agit d'une modification avec rupture si votre code interprète le mode _O_WTEXT pour des flux dont l'encodage est UTF-8. Si votre application ne prend pas en charge UTF_8, envisagez d'ajouter la prise en charge pour cet encodage de plus en plus courant.  
   
 - **snprintf et vsnprintf** Les fonctions [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) et [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) sont à présent implémentées. Du code plus ancien fournissait souvent des versions macro de définitions de ces fonctions, car elles n'étaient pas implémentées par la bibliothèque CRT, mais celles-ci ne sont plus nécessaires dans les versions plus récentes. Si [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) ou [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) est défini comme macro avant l’inclusion de \<stdio.h>, la compilation échoue désormais avec une erreur qui indique où la macro a été définie.  
   
@@ -201,9 +201,9 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
   
 #### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h> et \<sys/stat.h>  
   
-- **strtof et wcstof** Les fonctions `strtof` et `wcstof` ne pouvaient pas assigner la valeur ERANGE à errno quand la valeur n’était pas représentable en valeur float. Ce problème a été corrigé. (Notez que cette erreur concernait uniquement ces deux fonctions et que les fonctions `strtod`, `wcstod`, `strtold` et `wcstold` n’étaient pas impactées.) Il s'agit d'un changement cassant à l'exécution.  
+- **strtof et wcstof** Les fonctions `strtof` et `wcstof` ne pouvaient pas assigner la valeur ERANGE à errno quand la valeur n’était pas représentable en valeur float. Ce problème a été corrigé. (Notez que cette erreur concernait uniquement ces deux fonctions et que les fonctions `strtod`, `wcstod`, `strtold` et `wcstold` n’étaient pas impactées.) Il s'agit d'une modification avec rupture à l'exécution.  
   
-- **Fonctions d’allocation alignée** Dans les versions précédentes, les fonctions d’allocation alignée (`_aligned_malloc`, `_aligned_offset_malloc`, etc.) acceptaient silencieusement les demandes pour un bloc avec un alignement de 0. L'alignement demandé doit être une puissance de deux, ce que zéro n'est pas. Ce problème a été résolu et un alignement demandé de 0 est désormais traité comme un paramètre non valide. Il s'agit d'un changement cassant à l'exécution.  
+- **Fonctions d’allocation alignée** Dans les versions précédentes, les fonctions d’allocation alignée (`_aligned_malloc`, `_aligned_offset_malloc`, etc.) acceptaient silencieusement les demandes pour un bloc avec un alignement de 0. L'alignement demandé doit être une puissance de deux, ce que zéro n'est pas. Ce problème a été résolu et un alignement demandé de 0 est désormais traité comme un paramètre non valide. Il s'agit d'une modification avec rupture à l'exécution.  
   
 - **Fonctions de tas** Les fonctions `_heapadd`, `_heapset` et `_heapused` ont été supprimées. Ces fonctions ne fonctionnaient plus depuis que la bibliothèque CRT a été mise à jour pour utiliser le segment de mémoire de Windows.  
   
@@ -235,7 +235,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
   
      Le spécificateur de format %c est spécifié comme générant une « représentation appropriée de date et heure » pour les paramètres régionaux actuels. Dans les paramètres régionaux C, cette représentation doit être identique à %a %b %e %T %Y. Il s'agit de la même forme que celle produite par asctime. Dans les versions précédentes, le spécificateur de format %c formatait de façon incorrecte les heures à l'aide d'une représentation MM/DD/YY HH:MM:SS. Ce problème a été corrigé.  
   
-- **timespec et TIME_UTC** L’en-tête \<time.h> définit à présent le type `timespec` et la fonction `timespec_get` issus de la norme C11. En outre, la macro TIME_UTC, à utiliser avec la fonction `timespec_get`, est maintenant définie. Il s'agit d'un changement cassant pour le code qui présente une définition en conflit pour l'un de ces éléments.  
+- **timespec et TIME_UTC** L’en-tête \<time.h> définit à présent le type `timespec` et la fonction `timespec_get` issus de la norme C11. En outre, la macro TIME_UTC, à utiliser avec la fonction `timespec_get`, est maintenant définie. Il s'agit d'une modification avec rupture pour un code qui possède une définition en conflit pour l'un de ces éléments.  
   
 - **CLOCKS_PER_SEC** La macro CLOCKS_PER_SEC s’étend désormais à un entier de type `clock_t`, comme cela est requis par le langage C.  
   
@@ -324,7 +324,7 @@ Dans Visual Studio 2015, les améliorations suivies de la conformité du compila
   
 Heureusement, ces différences n’ont que peu ou pas d’impact sur la plus grande partie de votre code source et, quand le code source ou d’autres modifications sont nécessaires pour résoudre ces différences, les corrections sont généralement mineures et simples. Nous avons inclus de nombreux exemples de code source précédemment acceptable qui devront peut-être être changés *(avant)* et les corrections pour les modifier *(après)*.  
   
-Même si ces différences peuvent affecter votre code source ou d’autres artefacts de build, elles n’affectent pas la compatibilité binaire entre les mises à jour des versions de Visual Studio. Type plus sérieux de changement, le *changement cassant* peut affecter la compatibilité binaire, mais ces types d’incompatibilités binaires se produisent uniquement entre les versions principales de Visual Studio, par exemple entre Visual Studio 2013 et Visual Studio 2015. Pour plus d’informations sur les changements cassants qui se sont produits entre Visual Studio 2013 et Visual Studio 2015, consultez [Modifications de la mise en conformité de Visual Studio 2015](#VC_2015).  
+Même si ces différences peuvent affecter votre code source ou d’autres artefacts de build, elles n’affectent pas la compatibilité binaire entre les mises à jour des versions de Visual Studio. Type plus sérieux de modification, la *modification avec rupture* peut affecter la compatibilité binaire, mais ces types d’incompatibilités binaires se produisent uniquement entre les versions principales de Visual Studio, par exemple entre Visual Studio 2013 et Visual Studio 2015. Pour plus d’informations sur les modifications avec rupture qui se sont produites entre Visual Studio 2013 et Visual Studio 2015, consultez [Modifications de la mise en conformité de Visual Studio 2015](#VC_2015).  
   
 - [Améliorations de la conformité dans Visual Studio 2015](#VS_RTM)  
   
@@ -2907,7 +2907,7 @@ Le compilateur C++ dans Visual Studio 2013 détecte des incompatibilités dans _
   
 - L’outil ATL/MFC Trace Tool est supprimé avec la DLL ATL, et le mécanisme de traçage est simplifié. Le constructeur `CTraceCategory` accepte maintenant un paramètre (nom de catégorie), et les macros TRACE appellent des fonctions de création de rapports de débogage CRT.  
   
-## <a name="visual-c-2012-breaking-changes"></a>Changements cassants dans Visual C++ 2012  
+## <a name="visual-c-2012-breaking-changes"></a>Modifications avec rupture dans Visual C++ 2012  
   
 ### <a name="compiler"></a>Compilateur  
   
@@ -3140,7 +3140,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
   
 - Renommage de `CPane::GetDockSiteRow(CDockingPanesRow *)` en `CPane::SetDockSiteRow`.  
   
-## <a name="visual-c-2010-breaking-changes"></a>Changements cassants dans Visual C++ 2010  
+## <a name="visual-c-2010-breaking-changes"></a>Modifications avec rupture dans Visual C++ 2010  
   
 ### <a name="compiler"></a>Compilateur  
   
@@ -3182,7 +3182,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
   
 ### <a name="libraries"></a>Bibliothèques  
   
-- La classe SafeInt est incluse dans Visual C++ et n’est plus disponible en téléchargement séparé. Il s’agit d’un changement cassant uniquement si vous avez développé une classe qui est également nommée « SafeInt ».  
+- La classe SafeInt est incluse dans Visual C++ et n’est plus disponible en téléchargement séparé. Il s’agit d’une modification avec rupture uniquement si vous avez développé une classe qui est également nommée « SafeInt ».  
   
 - Le modèle de déploiement de bibliothèques n’utilise plus les manifestes pour rechercher une version particulière d’une bibliothèque de liens dynamiques. Au lieu de cela, le nom de chaque bibliothèque de liens dynamiques contient son numéro de version, et vous utilisez ce nom pour trouver la bibliothèque.  
   
@@ -3218,7 +3218,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
   
 - Plusieurs directives ont été supprimées du compilateur Référence de Microsoft Macro Assembler. Il s’agit de .186, .286, .286P, .287,.8086, .8087 et .NO87.  
   
-## <a name="visual-c-2008-breaking-changes"></a>Changements cassants dans Visual C++ 2008  
+## <a name="visual-c-2008-breaking-changes"></a>Modifications avec rupture dans Visual C++ 2008  
   
 ### <a name="compiler"></a>Compilateur  
   
@@ -3332,7 +3332,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
   
 - API ANSI dépréciées : les versions ANSI de plusieurs méthodes MFC sont dépréciées. Utilisez les versions Unicode de ces méthodes dans vos futures applications. Pour plus d’informations, consultez **Configuration requise pour les contrôles communs Windows Vista**.  
   
-## <a name="visual-c-2005-breaking-changes"></a>Changements cassants dans Visual C++ 2005  
+## <a name="visual-c-2005-breaking-changes"></a>Modifications avec rupture dans Visual C++ 2005  
   
 ### <a name="crt"></a>CRT  
   
@@ -3384,7 +3384,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
   
 - Itérateurs de débogage : les applications générées avec une version debug de la bibliothèque Runtime C et qui utilisent des itérateurs de façon incorrecte peuvent commencer à voir des assertions au moment de l’exécution. Pour désactiver ces assertions, vous devez affecter à _HAS_ITERATOR_DEBUGGING (remplacé par [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) après Visual Studio 2010) la valeur 0. Pour plus d’informations, consultez [Itérateurs de débogage, prise en charge](../standard-library/debug-iterator-support.md)  
   
-## <a name="visual-c-net-2003-breaking-changes"></a>Changements cassants dans Visual C++ .NET 2003  
+## <a name="visual-c-net-2003-breaking-changes"></a>Modifications avec rupture dans Visual C++ .NET 2003  
   
 ### <a name="compiler"></a>Compilateur  
   

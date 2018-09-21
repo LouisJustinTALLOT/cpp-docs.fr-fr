@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a391ee0ee21925c59e5a95cb060f9897b3ef223c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e63fae717fc3e5c223ad512b5cd2eae82160431
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214864"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754636"
 ---
 # <a name="summary-of-declarations"></a>Résumé des déclarations
 
@@ -115,7 +115,8 @@ ms.locfileid: "43214864"
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
 *struct-or-union-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union identifier*<sub>opt</sub> **{** *struct-declaration-list* **}** *struct-or-union identifier*
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-ou-union* *identificateur*<sub>opt</sub> **{** *liste-déclarations-struct* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-ou-union* *identificateur*
 
 *struct-or-union* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
