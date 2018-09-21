@@ -1,7 +1,7 @@
 ---
 title: 'Comment : migrer vers / clr | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 818b6e102d9da759aa8889779515917b96e22c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412962"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494463"
 ---
 # <a name="how-to-migrate-to-clr"></a>Comment : effectuer une migration vers /clr
 
-Cette rubrique traite des problèmes qui surviennent lors de la compilation de code natif avec **/CLR** (consultez [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) pour plus d’informations). **/ CLR** permet aux modules Visual C++ d’appeler et d’être appelées à partir d’assemblys .NET tout en conservant la compatibilité avec les modules non managés. Consultez [assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md) et [natif et l’interopérabilité .NET](../dotnet/native-and-dotnet-interoperability.md) pour plus d’informations sur les avantages de la compilation avec **/CLR**.
+Cette rubrique traite des problèmes qui surviennent lors de la compilation de code natif avec **/CLR** (consultez [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) pour plus d’informations). **/ CLR** permet à du code C++ natif à appeler et d’être appelés à partir des assemblys .NET en plus de tout autre code C++ natif. Consultez [assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md) et [natif et l’interopérabilité .NET](../dotnet/native-and-dotnet-interoperability.md) pour plus d’informations sur les avantages de la compilation avec **/CLR**.
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>Connus problèmes de compilation de projets de bibliothèque avec/CLR
 
@@ -132,7 +132,7 @@ Différentes versions de types de données peuvent entraîner d’échouer car l
 
 ### <a name="loader-lock-deadlock"></a>Blocage du verrou du chargeur
 
-Dans Visual Studio 2010 et versions ultérieures, le « blocage du verrou du chargeur » peut encore se produire que dans les versions antérieures, mais il s’agit déterministe et est détecté et signalé lors de l’exécution. Consultez [l’initialisation des assemblys mixtes](../dotnet/initialization-of-mixed-assemblies.md) pour des informations détaillées, des conseils et des solutions.
+Le « blocage du verrou du chargeur » peut se produire, mais est déterministe et est détecté et signalé lors de l’exécution. Consultez [l’initialisation des assemblys mixtes](../dotnet/initialization-of-mixed-assemblies.md) pour des informations détaillées, des conseils et des solutions.
 
 ### <a name="data-exports"></a>Exportations de données
 

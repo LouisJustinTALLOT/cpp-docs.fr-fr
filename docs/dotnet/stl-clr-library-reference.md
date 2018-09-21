@@ -1,7 +1,7 @@
 ---
 title: Référence de la bibliothèque STL/CLR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018"
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78dc5c57ca000dfa03dba640c46cec16aaca133f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 14217396801731505753be121e98f0aebf5b5f22
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429472"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494385"
 ---
 # <a name="stlclr-library-reference"></a>Référence de bibliothèque STL/CLR
 
-La bibliothèque STL/CLR est un package d’un sous-ensemble de la bibliothèque C++ Standard pour une utilisation avec C++ et le common language runtime (CLR) du .NET Framework. Avec STL/CLR, vous pouvez utiliser tous les conteneurs, itérateurs et algorithmes de la bibliothèque standard dans un environnement géré.
+La bibliothèque STL/CLR fournit une interface similaire pour les conteneurs de bibliothèque C++ Standard pour une utilisation avec C++ et le common language runtime (CLR) du .NET Framework. STL/CLR est entièrement distinct de l’implémentation Microsoft de la bibliothèque C++ Standard. STL/CLR est conservé pour la prise en charge héritée, mais n’est pas mis à jour avec la norme C++. Nous vous recommandons fortement d’à l’aide de natif [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md) conteneurs au lieu de STL/CLR chaque fois que possible.
 
 Pour utiliser STL/CLR :
 
@@ -34,7 +34,7 @@ Pour utiliser STL/CLR :
 
 - Qualifier les noms de bibliothèque avec `cliext::` au lieu de `std::`.
 
-STL/CLR expose les types génériques et les interfaces qu’il utilise dans les scénarios d’assembly croisé dans l’assembly .NET **Microsoft.VisualC.STLCLR.dll**. Cette DLL est incluse dans .NET Framework 3.5. Si vous redistribuez une application qui utilise STL/CLR, vous devez inclure le .NET Framework 3.5, ainsi que d’autres bibliothèques Visual C++ qui utilise de votre projet, dans la section des dépendances de votre projet d’installation.
+La bibliothèque STL/CLR fournit une interface STL pour une utilisation avec C++ et le common language runtime (CLR) du .NET Framework. Cette bibliothèque est conservée pour la prise en charge héritée, mais n’est pas mises à jour avec la norme C++. Nous vous recommandons fortement d’à l’aide de natif [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md) conteneurs au lieu de STL/CLR.
 
 ## <a name="in-this-section"></a>Dans cette section
 

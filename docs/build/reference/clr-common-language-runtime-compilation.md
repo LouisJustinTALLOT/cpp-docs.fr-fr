@@ -1,7 +1,7 @@
 ---
 title: -clr (Common Language Runtime Compilation) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dcd5739f2fb0663609ce7bcabc920cc3aa20d8e1
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703818"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494411"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilation pour le Common Language Runtime)
 
@@ -45,15 +45,15 @@ Un ou plusieurs des commutateurs suivants, séparés par des virgules.
 
 - none
 
-   Aucune option, **/CLR** crée les métadonnées pour l’application. Ces métadonnées peuvent être utilisées par d'autres applications CLR et permettent à votre application d'utiliser les types et données des métadonnées appartenant à d'autres composants CLR. Pour plus d’informations, consultez [assemblys mixtes (natif et managé)](../../dotnet/mixed-native-and-managed-assemblies.md) et [Comment : migrer vers/CLR](../../dotnet/how-to-migrate-to-clr.md).
+   Aucune option, **/CLR** crée les métadonnées pour l’application. Ces métadonnées peuvent être utilisées par d'autres applications CLR et permettent à votre application d'utiliser les types et données des métadonnées appartenant à d'autres composants CLR. Pour plus d’informations, consultez [assemblys mixtes (natif et managé)](../../dotnet/mixed-native-and-managed-assemblies.md).
 
 - **pur**
 
-   **/ CLR : pure est déconseillé**. Une prochaine version du compilateur risque de ne plus prendre en charge cette option. Nous vous recommandons de porter vers C# du code devant être écrit en MSIL pur.
+   **/ CLR : pure est déconseillé**. L’option est supprimée dans Visual Studio 2017. Nous vous recommandons de porter vers C# du code devant être écrit en MSIL pur.
 
 - **safe**
 
-   **/ CLR : safe est déconseillé**. Une prochaine version du compilateur risque de ne plus prendre en charge cette option. Nous vous recommandons de porter le code qui doit être MSIL sécurisé en c#.
+   **/ CLR : safe est déconseillé**. L’option est supprimée dans Visual Studio 2017. Nous vous recommandons de porter le code qui doit être MSIL sécurisé en c#.
 
 - **noAssembly**
 
@@ -112,31 +112,6 @@ class {} x;
 ```
 
 Utilisez ildasm.exe pour afficher les métadonnées.
-
-## <a name="managed-extensions-for-c"></a>Extensions managées pour C++
-
-Visual C++ ne prend plus en charge l’option **/clr:oldsyntax** . Cette option était déconseillée dans Visual Studio 2015. La syntaxe prise en charge pour l'écriture de code managé en C++ est C++/CLI. Pour plus d'informations, consultez [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md).
-
-Si vous possédez du code qui utilise les extensions managées pour C++, nous vous recommandons de le porter pour utiliser la syntaxe C++/CLI. Pour plus d’informations sur la façon de porter votre code, consultez [C++/CLI Migration Primer](../../dotnet/cpp-cli-migration-primer.md).
-
-#### <a name="to-set-this-compiler-option-in-visual-studio"></a>Pour définir cette option de compilateur dans Visual Studio
-
-1. Dans l' **Explorateur de solutions**, cliquez avec le bouton droit sur le nom du projet, puis cliquez sur **Propriétés** pour ouvrir la boîte de dialogue **Pages de propriétés** du projet.
-
-1. Sélectionnez le **propriétés de Configuration** > **général** page de propriétés.
-
-1. Modifier le **prise en charge du Common Language Runtime** propriété.
-
-   > [!NOTE]
-   > Quand l’option **/clr** est activée dans la boîte de dialogue **Pages de propriétés** , les propriétés des options du compilateur qui ne sont pas compatibles avec **/clr** sont également ajustées selon les besoins. Par exemple, si l’option **/RTC** est définie, puis l’option **/clr** activée, l’option **/RTC** est désactivée.
-   >
-   >  De plus, quand vous déboguez une application **/clr** , affectez à la propriété **Type de débogueur** la valeur **Mixte** ou **Managé uniquement**. Pour plus d’informations, consultez [paramètres de projet pour une Configuration Debug C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).
-
-   Pour plus d’informations sur la façon de créer un module, consultez [/NOASSEMBLY (créer un Module MSIL)](../../build/reference/noassembly-create-a-msil-module.md).
-
-#### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
-
-- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>.
 
 ## <a name="see-also"></a>Voir aussi
 

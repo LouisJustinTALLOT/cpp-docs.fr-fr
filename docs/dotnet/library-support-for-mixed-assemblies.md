@@ -1,7 +1,7 @@
 ---
-title: Prise en charge pour les assemblys mixtes | Documents Microsoft
+title: Prise en charge de la bibliothèque pour les assemblys mixtes | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -18,29 +18,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4b584e0bacb1cb93cad33efdff807bb5fa9c8e2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 868cae6701e17c79c9856b3a16c63c1e25b67bda
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704109"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494515"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>Prise en charge de bibliothèque pour les assemblys mixtes
 
-Visual C++ prend en charge l’utilisation de la bibliothèque C++ Standard, la bibliothèque de runtime C (CRT), ATL et MFC pour les applications compilées avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Ainsi, les applications existantes qui utilisent ces bibliothèques à utiliser aussi bien les fonctionnalités de .NET Framework.
+Visual C++ prend en charge l’utilisation de la bibliothèque Standard C++, la bibliothèque de runtime C (CRT), ATL et MFC pour les applications compilées avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Ainsi, les applications existantes qui utilisent ces bibliothèques à utiliser également les fonctionnalités de .NET Framework.
 
 > [!IMPORTANT]
 > Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 
 Cette prise en charge inclut les bibliothèques DLL et d’importation suivantes :
 
-- Msvcmrt [d] .lib si vous compilez avec **/CLR**. Assemblys mixtes un lien vers cette bibliothèque d’importation.
+- Msvcmrt [d] .lib si vous compilez avec **/CLR**. Lien d’assemblys mixtes vers cette bibliothèque d’importation.
 
 Cette prise en charge offre que plusieurs avantages connexes :
 
-- Le CRT et la bibliothèque C++ Standard sont disponibles pour le code mixte. Le CRT et la bibliothèque C++ Standard fournis ne sont pas vérifiables ; Finalement, vos appels sont encore routés aux mêmes CRT et bibliothèque C++ Standard que vous utilisez du code natif.
+- La bibliothèque CRT et la bibliothèque C++ Standard sont disponibles pour le code mixte. La bibliothèque CRT et la bibliothèque C++ Standard fournis ne sont pas vérifiables ; au final, vos appels sont toujours acheminés vers le CRT et la bibliothèque C++ Standard même que celles que vous utilisez à partir du code natif.
 
-- Corriger la gestion des exceptions unifiée dans les images mixtes.
+- Unifiée de gestion des exceptions dans les images mixtes.
 
 - Initialisation statique de variables C++ dans les images mixtes.
 
@@ -50,9 +50,8 @@ Cette prise en charge offre que plusieurs avantages connexes :
 
 En outre, cette prise en charge présente les limitations suivantes :
 
-- Seul le modèle de la DLL CRT est pris en charge pour le code compilé avec **/CLR**. Aucune bibliothèque CRT statique qui prennent en charge **/CLR** génère.
+- Uniquement le modèle de la DLL CRT est pris en charge pour le code compilé avec **/CLR**. Aucune bibliothèque CRT statique qui prennent en charge **/CLR** génère.
 
-Vous devez mettre à jour votre langage CLR (common runtime) vers la version actuelle comme il n’est pas garanti pour travailler avec les versions antérieures. Code généré avec ces modifications ne s’exécutera pas sur CLR version 1.x.
 
 ## <a name="see-also"></a>Voir aussi
 
