@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: cd68e4488857708d119399df8bbc0da467983115
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894446"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100745"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -37,16 +37,16 @@ La balise \<include> vous permet de faire référence à des commentaires dans u
 
 #### <a name="parameters"></a>Paramètres
 
-`filename`  
+*filename*<br/>
 Nom du fichier contenant la documentation. Le nom de fichier peut être qualifié avec un chemin.  Mettez le nom entre guillemets simples ou doubles.  Le compilateur émet un avertissement s'il ne trouve pas `filename`.
 
-`tagpath`  
+*tagpath*<br/>
 Expression XPath valide qui sélectionne la collection de nœuds souhaitée contenue dans le fichier.
 
-`name`  
+*name*<br/>
 Spécificateur de nom contenu dans la balise qui précède les commentaires ; `name` possède un `id`.
 
-`id`  
+*ID*<br/>
 ID de la balise qui précède les commentaires.  Mettez le nom entre guillemets simples ou doubles.
 
 ## <a name="remarks"></a>Notes

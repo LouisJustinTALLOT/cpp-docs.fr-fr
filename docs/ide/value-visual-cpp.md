@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a194e45fd79ae59dc91abb21a9fb038d3ec4008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325394"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041686"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
 La balise \<value> vous permet de décrire une propriété et des méthodes d’accesseur de propriété. Notez que, quand vous ajoutez une propriété avec un Assistant Code dans l’environnement de développement intégré (IDE) de Visual Studio, cela ajoute une balise [\<summary>](../ide/summary-visual-cpp.md) pour la nouvelle propriété. Vous devez ensuite ajouter manuellement une balise \<value> pour décrire la valeur représentée par la propriété.  
@@ -35,8 +35,8 @@ La balise \<value> vous permet de décrire une propriété et des méthodes d’
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `property-description`  
- Description de la propriété.  
+*property-description*<br/>
+Description de la propriété.  
   
 ## <a name="remarks"></a>Notes  
  Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  

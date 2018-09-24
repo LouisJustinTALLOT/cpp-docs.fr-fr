@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: caf28f01778bea31bc84a57fa74fed3221673dec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039957"
 ---
 # <a name="xdcmake-reference"></a>Référence XDCMake
 xdcmake.exe est un programme qui compile les fichiers .xdc en fichier .xml. Un fichier .xdc est créé par le compilateur Visual C++ pour chaque fichier de code source quand le code source est compilé avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) et que le fichier de code source contient des commentaires de documentation marqués avec des balises XML.  
@@ -41,13 +41,12 @@ xdcmake.exe est un programme qui compile les fichiers .xdc en fichier .xml. Un f
  xdcmake `input_filename options`  
   
 ## <a name="parameters"></a>Paramètres  
- où :  
   
- `input_filename`  
- Nom de fichier des fichiers .xdc utilisés comme entrée pour xdcmake.exe. Spécifiez un ou plusieurs fichiers .xdc, ou utilisez *.xdc pour employer tous les fichiers .xdc dans le répertoire actif.  
+*input_filename*<br/>
+Nom de fichier des fichiers .xdc utilisés comme entrée pour xdcmake.exe. Spécifiez un ou plusieurs fichiers .xdc, ou utilisez *.xdc pour employer tous les fichiers .xdc dans le répertoire actif.  
   
- `options`  
- Zéro ou plusieurs des éléments suivants :  
+*options*<br/>
+Zéro ou plusieurs des éléments suivants :  
   
 |Option|Description|  
 |------------|-----------------|  
