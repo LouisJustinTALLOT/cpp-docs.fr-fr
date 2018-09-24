@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00110a0e821077231c0f386a0656dc2214b0267d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325115"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034718"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 La balise \<para> est prévue pour une utilisation à l’intérieur d’une balise, telle que [ \<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) ou [ \<returns>](../ide/returns-visual-cpp.md), et vous permet d’ajouter une structure au texte.  
@@ -35,8 +35,8 @@ La balise \<para> est prévue pour une utilisation à l’intérieur d’une bal
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `content`  
- Texte du paragraphe.  
+*content*<br/>
+Texte du paragraphe.  
   
 ## <a name="remarks"></a>Notes  
  Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  

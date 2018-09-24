@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 508f6b41c791cdb3a62e7c6e3de8a8a633dff3e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038878"
 ---
 # <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
 La balise \<code> vous permet d’indiquer une ou plusieurs lignes comme étant du code.  
@@ -35,8 +35,8 @@ La balise \<code> vous permet d’indiquer une ou plusieurs lignes comme étant 
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `content`  
- Texte à marquer comme étant du code.  
+*content*<br/>
+Texte à marquer comme étant du code.  
   
 ## <a name="remarks"></a>Notes  
  Utilisez [\<c>](../ide/c-visual-cpp.md) pour indiquer qu’une partie du texte doit être marquée comme étant du code.  

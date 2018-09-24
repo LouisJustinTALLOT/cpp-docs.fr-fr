@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 15133673a33930222d5bf4c621c9ec9361e31f24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046405"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 Le bloc \<listheader> permet de définir la ligne d’en-tête d’une table ou d’une liste de définitions. Au moment de définir une table, il vous suffit de fournir une entrée pour le terme figurant dans l’en-tête.  
@@ -44,11 +44,11 @@ Le bloc \<listheader> permet de définir la ligne d’en-tête d’une table ou 
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- `term`  
- Terme à définir, qui est défini dans `description`.  
+*term*<br/>
+Terme à définir, qui est défini dans `description`.  
   
- `description`  
- Élément contenu dans une puce ou une liste numérotée ou définition d’un `term`.  
+*description*<br/>
+Élément contenu dans une puce ou une liste numérotée ou définition d’un `term`.  
   
 ## <a name="remarks"></a>Notes  
  Chaque élément de la liste est spécifié avec un bloc \<item>. Au moment de créer une liste de définitions, vous devez spécifier à la fois `term` et `description`. Cependant, pour une table, une liste à puces ou une liste numérotée, il vous suffit de fournir une entrée pour `description`.  
@@ -59,7 +59,7 @@ Le bloc \<listheader> permet de définir la ligne d’en-tête d’une table ou 
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // xml_list_tag.cpp  
 // compile with: /doc /LD  
 // post-build command: xdcmake xml_list_tag.dll  
