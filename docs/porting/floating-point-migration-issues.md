@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578281"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421984"
 ---
 # <a name="floating-point-migration-issues"></a>Problèmes de migration de virgule flottante  
+
   
 Quand vous mettez à niveau vos projets avec une version plus récente de Visual Studio, vous constaterez peut-être parfois que les résultats de certaines opérations à virgule flottante ont changé. Cela est généralement dû à des modifications de génération de code qui tirent mieux parti du processeur disponible et des correctifs de bogue ou à des modifications apportées aux algorithmes utilisés dans les fonctions mathématiques au sein de la bibliothèque runtime C (CRT). En général, les nouveaux résultats sont corrects dans les limites spécifiées par la norme du langage. Poursuivez votre lecture pour découvrir ce qui a changé et, si c’est important, pour savoir comment obtenir les mêmes résultats que ceux que vos fonctions fournissaient auparavant.  
 
@@ -41,6 +42,6 @@ Dans la plupart des cas, les modifications apportées aux opérations à virgule
   
 ## <a name="see-also"></a>Voir aussi  
   
-[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md)  

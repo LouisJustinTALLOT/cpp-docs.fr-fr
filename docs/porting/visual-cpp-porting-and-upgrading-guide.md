@@ -1,7 +1,7 @@
 ---
 title: Guide du portage et de la mise à niveau de Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06350e851501cfa26d1ea4d326c26d7a37270889
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1b573a22b9502548cc84f2bd459cda72d071cf68
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578278"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494398"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guide du portage et de la mise à niveau de Visual C++
+
 Cette rubrique est destinée à vous guider lors de la mise à niveau du code Visual C++. Elle explique comment convertir le code pour qu'il se compile et s'exécute correctement sur une version plus récente des outils, et comment tirer parti des nouvelles fonctionnalités de langage et de Visual Studio. Cette rubrique inclut également des informations sur la migration des applications héritées vers des plateformes plus récentes.  
   
 ## <a name="reasons-to-upgrade-visual-c-code"></a>Raisons justifiant la mise à niveau du code Visual C++  
@@ -92,7 +93,6 @@ Ou bien, vous avez peut-être maintenant de nouvelles exigences à respecter, ou
 |[Portage vers la plateforme universelle Windows](porting-to-the-universal-windows-platform-cpp.md)|Contient des informations sur le déplacement de code vers Windows 10|  
 |[Introduction à Visual C++ pour les utilisateurs UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fournit des informations aux utilisateurs UNIX qui débutent avec Visual C++ et souhaitent être plus productifs.|  
 |[Portage d’UNIX vers Win32](porting-from-unix-to-win32.md)|Présente les différentes options pour migrer des applications UNIX vers Windows.|  
-|[Initiation à la migration de C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Explique en détail comment mettre à niveau la syntaxe de vos extensions managées pour C++ par rapport à la nouvelle syntaxe. Pour plus d’informations, consultez [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
 

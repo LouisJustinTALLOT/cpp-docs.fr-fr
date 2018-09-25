@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cec232bb4e4f2f6ac1ab9af703b368eec0ba5dd
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eec1620d9ae84e5c0b957b7426ad388c70626813
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331517"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379214"
 ---
 # <a name="linker-property-pages"></a>pages de propriétés de l'Éditeur de liens
 
@@ -65,5 +65,5 @@ Pour plus d’informations sur l’accès à la page de propriétés **Général
 
 ## <a name="see-also"></a>Voir aussi
 
-[Paramètres du projet VC++, Projets et solutions, boîte de dialogue Options](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)  
-[Pages de propriétés](../ide/property-pages-visual-cpp.md)  
+[Paramètres du projet VC++, Projets et solutions, boîte de dialogue Options](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)<br>
+[Pages de propriétés](../ide/property-pages-visual-cpp.md)

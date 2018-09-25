@@ -26,49 +26,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 11c7d4b437e77e5acfe363fd3b4125477eceb0f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197958"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394962"
 ---
 # <a name="midl-property-pages-advanced"></a>Pages de propriétés MIDL : Avancé
-La page de propriétés **Avancé** du dossier **MIDL** spécifie les options du compilateur MIDL suivantes :  
-  
--   Activation de la vérification d’erreurs ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   Vérification des allocations ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   Vérification des limites ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   Vérification de la plage Enum ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   Vérification des pointeurs de référence ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   Vérification des données stub ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   Validation des paramètres ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
-  
--   Alignement des membres de la structure ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
-  
--   Redirection de la sortie ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
-  
--   Options de préprocesseur C ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
-  
--   Définitions de préprocesseur non définies ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
-  
- \* /robust peut être utilisé uniquement lors de la génération sur un ordinateur Windows 2000 ou ultérieur. Si vous générez un projet ATL et souhaitez utiliser /robust, modifiez cette ligne dans le fichier dlldatax.c :  
-  
-```  
-#define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  
-to   
-#define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM  
-```  
-  
- Pour plus d’informations sur l’accès à la page de propriétés **Avancé** dans le dossier **MIDL**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
-  
- Pour plus d’informations sur l’accès par programmation aux options MIDL des projets C++, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [MIDL, page de propriétés](../ide/midl-property-pages.md)
+
+La page de propriétés **Avancé** du dossier **MIDL** spécifie les options du compilateur MIDL suivantes :
+
+- Activation de la vérification d’erreurs ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- Vérification des allocations ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- Vérification des limites ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- Vérification de la plage Enum ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- Vérification des pointeurs de référence ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- Vérification des données stub ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- Validation des paramètres ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*
+
+- Alignement des membres de la structure ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))
+
+- Redirection de la sortie ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))
+
+- Options de préprocesseur C ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))
+
+- Définitions de préprocesseur non définies ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))
+
+\* /robust peut être utilisé uniquement lors de la génération sur un ordinateur Windows 2000 ou ultérieur. Si vous générez un projet ATL et souhaitez utiliser /robust, modifiez cette ligne dans le fichier dlldatax.c :
+
+```
+#define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM
+to
+#define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM
+```
+
+Pour plus d’informations sur l’accès à la page de propriétés **Avancé** dans le dossier **MIDL**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+
+Pour plus d’informations sur l’accès par programmation aux options MIDL des projets C++, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.
+
+## <a name="see-also"></a>Voir aussi
+
+[MIDL, page de propriétés](../ide/midl-property-pages.md)

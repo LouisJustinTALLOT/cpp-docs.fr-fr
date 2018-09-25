@@ -19,36 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149facb5ed934b68d3407f9acc17238482021f06
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf3fe573ff2a71c2a53e946655300219f190b4c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716306"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447711"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Général, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de &lt;NomProjet&gt;
-Utilisez cette boîte de dialogue pour spécifier des options générales pour [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
-  
- Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pages de propriétés de votre projet ou votre feuille de propriétés. Développez le nœud **Outil Manifeste** sous **Propriétés de configuration**, puis sélectionnez **Général**.  
-  
-## <a name="uielement-list"></a>Liste des éléments d’interface  
+
+Utilisez cette boîte de dialogue pour spécifier des options générales pour [Mt.exe](https://msdn.microsoft.com/library/aa375649).
+
+Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pages de propriétés de votre projet ou votre feuille de propriétés. Développez le nœud **Outil Manifeste** sous **Propriétés de configuration**, puis sélectionnez **Général**.
+
+## <a name="uielement-list"></a>Liste des éléments d’interface
+
 - **Suppression de la bannière de démarrage**
 
-   **Oui (/nologo)** spécifie que les données de copyright standard de Microsoft n’apparaîtront pas au démarrage de l’outil Manifeste. Utilisez cette option pour supprimer les sorties dont vous ne voulez pas dans les fichiers journaux, quand vous exécutez mt.exe dans le cadre d’un processus de génération ou à partir d’un environnement de génération.  
-  
+   **Oui (/nologo)** spécifie que les données de copyright standard de Microsoft n’apparaîtront pas au démarrage de l’outil Manifeste. Utilisez cette option pour supprimer les sorties dont vous ne voulez pas dans les fichiers journaux, quand vous exécutez mt.exe dans le cadre d’un processus de génération ou à partir d’un environnement de génération.
+
 - **Sortie des commentaires**
 
-   **Oui (/verbose)** spécifie que des informations de build supplémentaires seront affichées pendant la génération du manifeste.  
-  
+   **Oui (/verbose)** spécifie que des informations de build supplémentaires seront affichées pendant la génération du manifeste.
+
 - **Identité d’assembly**
 
-   Utilise l’option /identity afin de spécifier une chaîne d’identité qui comprend les attributs pour [l’élément \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Une chaîne d’identité commence par la valeur de l’attribut `name`, suivie des paires *attribut* = *valeur*. Les attributs dans une chaîne d’identité sont délimités par une virgule.  
-  
-   Voici un exemple de chaîne d’identité :  
-  
-   `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
-  
-## <a name="see-also"></a>Voir aussi  
- [Manifeste d’application ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Pages de propriétés de l’outil Manifeste](../ide/manifest-tool-property-pages.md)   
- [Utilisation des propriétés de projet](../ide/working-with-project-properties.md)   
+   Utilise l’option /identity afin de spécifier une chaîne d’identité qui comprend les attributs pour [l’élément \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Une chaîne d’identité commence par la valeur de l’attribut `name`, suivie des paires *attribut* = *valeur*. Les attributs dans une chaîne d’identité sont délimités par une virgule.
+
+   Voici un exemple de chaîne d’identité :
+
+   `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+
+## <a name="see-also"></a>Voir aussi
+
+[Manifeste d’application ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br>
+[Outil Manifeste, page de propriétés](../ide/manifest-tool-property-pages.md)<br>
+[Utilisation des propriétés de projet](../ide/working-with-project-properties.md)

@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dfdedf01c6203c483c1aa30d5d2934caa66e76d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334962"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375966"
 ---
 # <a name="specifying-build-events"></a>Spécification d’événements de build
 
@@ -64,6 +64,6 @@ Pour obtenir des informations générales sur les événements de build, consult
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation des étapes de génération personnalisée et des événements de build](../ide/understanding-custom-build-steps-and-build-events.md)  
-[Macros courantes pour les propriétés et les commandes de génération](../ide/common-macros-for-build-commands-and-properties.md)  
-[Dépannage des personnalisations de génération](../ide/troubleshooting-build-customizations.md)  
+[Présentation des étapes de génération personnalisée et des événements de build](../ide/understanding-custom-build-steps-and-build-events.md)<br>
+[Macros courantes pour les propriétés et les commandes de génération](../ide/common-macros-for-build-commands-and-properties.md)<br>
+[Dépannage des personnalisations de génération](../ide/troubleshooting-build-customizations.md)

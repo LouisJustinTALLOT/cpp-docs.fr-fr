@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 234ae9a67bcbc60ea156fbacb5169d0bd1573a91
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328024"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442758"
 ---
 # <a name="implement-pure-virtuals"></a>Implémenter les virtuels purs
-**Quoi :** vous permet de générer immédiatement le code requis pour implémenter toutes les méthodes virtuelles pures dans une classe. 
+**Quoi :** vous permet de générer immédiatement le code requis pour implémenter toutes les méthodes virtuelles pures dans une classe.
 
-**Quand :** vous voulez hériter d’une classe avec des fonctions virtuelles pures.  
+**Quand :** vous voulez hériter d’une classe avec des fonctions virtuelles pures.
 
 **Pourquoi :** vous pouvez implémenter manuellement toutes les fonctions virtuelles pures une par une, mais cette fonctionnalité génère automatiquement toutes les signatures de méthode.
 

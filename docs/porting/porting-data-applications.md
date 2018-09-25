@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20b9b6e8c1e96736485f302203156f627ef6794
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: bc789cb37b51f89022a83d1ba34bb67ae32a206e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578203"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391590"
 ---
 # <a name="porting-data-applications"></a>Portage d’applications de données
 Au fil des années, Visual C++ a permis de travailler de différentes façons avec les bases de données. En 2011, Microsoft a annoncé son alignement à ODBC, comme technologie recommandée pour l’accès aux produits SQL Server à partir du code natif. ODBC est un standard industriel. En l’utilisant, vous obtenez une portabilité maximale de votre code sur différentes plateformes et sources de données. La majorité des produits de base de données SQL ainsi que de nombreux produits NoSQL prennent en charge ODBC. Vous pouvez utiliser ODBC directement en appelant les API ODBC de bas niveau, ou utiliser les classes wrapper ODBC MFC et même une bibliothèque de wrappers C++ tierce. 
@@ -42,6 +42,6 @@ Pour plus d’informations sur l’historique des technologies d’accès aux do
 
 ## <a name="see-also"></a>Voir aussi  
  
-[Accès aux données dans Visual C++](../data/data-access-in-cpp.md)  
-[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
+[Accès aux données dans Visual C++](../data/data-access-in-cpp.md)<br/>
+[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
 [Feuille de route des technologies d’accès aux données](https://msdn.microsoft.com/library/ms810810.aspx)  

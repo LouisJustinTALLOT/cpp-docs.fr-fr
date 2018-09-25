@@ -18,33 +18,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 508f6b41c791cdb3a62e7c6e3de8a8a633dff3e9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bb68594ad5f8b845d05d57b0599a969ef4cdf0ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038878"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443759"
 ---
 # <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
-La balise \<code> vous permet d’indiquer une ou plusieurs lignes comme étant du code.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-<code>content</code>  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+
+La balise \<code> vous permet d’indiquer une ou plusieurs lignes comme étant du code.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+<code>content</code>
+```
+
+#### <a name="parameters"></a>Paramètres
+
 *content*<br/>
-Texte à marquer comme étant du code.  
-  
-## <a name="remarks"></a>Notes  
- Utilisez [\<c>](../ide/c-visual-cpp.md) pour indiquer qu’une partie du texte doit être marquée comme étant du code.  
-  
- Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
-  
-## <a name="example"></a>Exemple  
- Consultez la rubrique [\<example>](../ide/example-visual-cpp.md) pour obtenir un exemple d’utilisation de la balise \<code>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Documentation XML](../ide/xml-documentation-visual-cpp.md)
+Texte à marquer comme étant du code.
+
+## <a name="remarks"></a>Notes
+
+Utilisez [\<c>](../ide/c-visual-cpp.md) pour indiquer qu’une partie du texte doit être marquée comme étant du code.
+
+Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+
+## <a name="example"></a>Exemple
+
+Consultez la rubrique [\<example>](../ide/example-visual-cpp.md) pour obtenir un exemple d’utilisation de la balise \<code>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Documentation XML](../ide/xml-documentation-visual-cpp.md)
