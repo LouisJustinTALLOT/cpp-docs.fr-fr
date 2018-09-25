@@ -5,7 +5,7 @@ ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705781"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029591"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Générer et exécuter un projet d’application console C++
 
@@ -45,7 +45,7 @@ Si Visual Studio ressemble à ceci, vous êtes prêt à générer et exécuter v
 
    ![Démarrer le projet](../build/media/vscpp-start-without-debugging.gif "démarrer le projet")
 
-    Une fenêtre de console s’ouvre, puis exécute votre application. Lorsque vous démarrez une application console dans Visual Studio, elle s’exécute votre code, puis imprime « appuyez sur n’importe quelle touche pour continuer. . ." Pour vous donner une chance pour afficher la sortie.
+   Une fenêtre de console s’ouvre, puis exécute votre application. Lorsque vous démarrez une application console dans Visual Studio, elle s’exécute votre code, puis imprime « appuyez sur n’importe quelle touche pour continuer. . ." Pour vous donner une chance pour afficher la sortie.
 
 Félicitations ! Vous avez créé votre premier « Hello, world ! » application de console dans Visual Studio ! Appuyez sur une touche pour fermer la fenêtre de console et revenir à Visual Studio.
 
