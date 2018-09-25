@@ -1,7 +1,7 @@
 ---
 title: 'Procédure pas à pas : Création d’un programme C++ Standard (C++) | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff4a2078bef03127507d1da35599ea391904bee7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382633"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029617"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procédure pas à pas : Création d’un programme C++ Standard (C++)
 
@@ -45,41 +45,48 @@ Pour compléter cette procédure pas à pas, vous devez comprendre les notions d
 
 1. Créer un projet en pointant sur **New** sur le **fichier** menu, puis en cliquant sur **projet**.
 
-2. Dans le **Visual C++** volet des types de projets, cliquez sur **Windows Desktop**, puis cliquez sur **Application de Console Windows**.
+1. Dans le **Visual C++** volet des types de projets, cliquez sur **Windows Desktop**, puis cliquez sur **Application de Console Windows**. 
 
-3. Tapez un nom pour le projet.
+   > [!NOTE]
+   > Pour les versions de Visual Studio antérieures à 2017, dans le **nouveau projet** boîte de dialogue, développez **installé** > **modèles**  >  **Visual C++**, puis sélectionnez **Win32**. Dans le volet central, sélectionnez **Application console Win32**. 
+
+   Tapez un nom pour le projet.
 
    Par défaut, la solution qui contient le projet a le même nom que le projet, mais vous pouvez taper un nom différent. Vous pouvez également taper un autre emplacement pour le projet.
 
    Cliquez sur **OK** pour créer le projet.
 
-4. Si **l’Explorateur de solutions** n’apparaît pas, dans le **vue** menu, cliquez sur **l’Explorateur de solutions**.
+   > [!NOTE]
+   > Pour les versions de Visual Studio antérieures à 2017, effectuez la **Assistant Application Win32**. Cliquez sur **suivant**, puis assurez-vous que **Application Console** est sélectionnée et décochez le **en-têtes précompilés** boîte. Cliquez sur **Terminer**.
 
-5. Ajoutez un nouveau fichier source au projet, comme suit.
+1. Si **l’Explorateur de solutions** n’apparaît pas, dans le **vue** menu, cliquez sur **l’Explorateur de solutions**.
+
+1. Ajoutez un nouveau fichier source au projet, comme suit.
 
    1. Dans **l’Explorateur de solutions**, avec le bouton droit le **fichiers sources** dossier, pointez sur **ajouter**, puis cliquez sur **un nouvel élément**.
 
-   2. Dans le **Code** nœud, cliquez sur **fichier C++ (.cpp)**, tapez un nom pour le fichier, puis cliquez sur **ajouter**.
+   1. Dans le **Code** nœud, cliquez sur **fichier C++ (.cpp)**, tapez un nom pour le fichier, puis cliquez sur **ajouter**.
 
    Le fichier .cpp apparaît dans le **fichiers sources** dossier **l’Explorateur de solutions**, et le fichier est ouvert dans l’éditeur Visual Studio.
 
-6. Dans le fichier dans l’éditeur, tapez un programme C++ valid qui utilise la bibliothèque C++ Standard, ou copiez un des exemples de programmes et collez-le dans le fichier.
+1. Dans le fichier dans l’éditeur, tapez un programme C++ valid qui utilise la bibliothèque C++ Standard, ou copiez un des exemples de programmes et collez-le dans le fichier.
 
-7. Enregistrez le fichier.
+1. Enregistrez le fichier.
 
-8. Dans le menu **Générer** , cliquez sur **Générer la solution**.
+1. Dans le menu **Générer** , cliquez sur **Générer la solution**.
 
    Le **sortie** fenêtre affiche des informations sur la progression de la compilation, par exemple, l’emplacement du journal de génération et un message qui indique l’état de la build.
 
-9. Dans le menu **Déboguer**, cliquez sur **Démarrer sans débogage**.
+1. Dans le menu **Déboguer**, cliquez sur **Démarrer sans débogage**.
 
    Si vous avez utilisé l’exemple de programme, une fenêtre de commande s’affiche et indique si certains entiers ont été trouvés dans le jeu.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-**Précédent :** [dans Visual C++, les Applications de Console](../windows/console-applications-in-visual-cpp.md). **Étape suivante :**[procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+**Précédent :** [Console des Applications dans Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
+**Étape suivante :** [procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)
+[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>

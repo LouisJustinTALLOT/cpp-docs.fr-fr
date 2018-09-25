@@ -1,7 +1,7 @@
 ---
 title: 'Contrôles ActiveX MFC : À l’aide de la liaison de données dans un contrôle ActiveX | Microsoft Docs'
 ms.custom: ''
-ms.date: 12/09/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 440e78b85f3dc1bef87f86ab37719fd3cdca4901
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ecd2cea655536ab12751a169793273c27b7d8f7
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407658"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029565"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX
 
