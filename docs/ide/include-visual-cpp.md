@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd68e4488857708d119399df8bbc0da467983115
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 95a336319861ef44f65f0573389f09c3e9a45573
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100745"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425845"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -31,9 +31,9 @@ La balise \<include> vous permet de faire référence à des commentaires dans u
 
 ## <a name="syntax"></a>Syntaxe
 
-```  
+```
 <include file='filename' path='tagpath' />
-```  
+```
 
 #### <a name="parameters"></a>Paramètres
 
@@ -75,7 +75,7 @@ public ref class Test2 {
    void Test() {
    }
 };
-```  
+```
 
 Le deuxième, xml_include_tag.doc, contient les commentaires de la documentation suivants :
 
@@ -95,7 +95,7 @@ The summary for this other type.
 </MyMembers>
 
 </MyDocs>
-```  
+```
 
 ## <a name="program-output"></a>Sortie du programme
 

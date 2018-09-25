@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0007cf50eafa7b61e48b550172eb2d316270c61f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335089"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448320"
 ---
 # <a name="change-signature"></a>Changer la signature
 **Quoi :** vous permet de modifier les paramètres d’une fonction.
 
-**Quand :** vous souhaitez réorganiser, ajouter, supprimer ou modifier les paramètres d’une fonction actuellement utilisés dans différents emplacements.  
+**Quand :** vous souhaitez réorganiser, ajouter, supprimer ou modifier les paramètres d’une fonction actuellement utilisés dans différents emplacements.
 
 **Pourquoi :** vous pourriez manuellement changer ces paramètres vous-même, puis rechercher tous les appels à cette fonction et les modifier un par un, mais cela peut entraîner des erreurs.  Cet outil de refactorisation effectuera automatiquement cette tâche.
 

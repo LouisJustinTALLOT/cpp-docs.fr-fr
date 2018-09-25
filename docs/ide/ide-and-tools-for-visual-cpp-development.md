@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132018"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412520"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE et outils de développement Visual C++
 
@@ -29,7 +29,7 @@ En plus des outils partagés dans l’IDE Visual Studio, MSVC propose plusieurs 
 
 ## <a name="creating-a-solution-and-projects"></a>Création d'une solution et de projets
 
-Un *projet* est essentiellement un ensemble de fichiers de code source et des ressources comme des images ou des fichiers de données qui sont intégrés dans un fichier exécutable. 
+Un *projet* est essentiellement un ensemble de fichiers de code source et des ressources comme des images ou des fichiers de données qui sont intégrés dans un fichier exécutable.
 
 Visual Studio 2015 prend en charge les projets MSBuild. Vous pouvez télécharger des extensions Visual Studio pour d’autres systèmes de build tels que Qt ou CMake.
 
@@ -109,7 +109,7 @@ Vous pouvez également utiliser le compilateur (cl.exe) et de nombreux autres ou
 
 Visual Studio inclut une infrastructure de tests unitaires pour le code C++ natif et pour C++/CLI. Pour plus d’informations, consultez [Vérification du code à l’aide de tests unitaires](/visualstudio/test/unit-test-your-code) et [Écriture de tests unitaires pour C/C++ avec le framework de tests unitaires Microsoft pour C++](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)
 
-## <a name="analyze"></a>Analyser
+## <a name="analyze"></a>Analyze
 
 Visual Studio inclut des outils d’analyse de code statique pour C++, notamment une implémentation des vérificateurs de règles [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Pour plus d’informations, consultez [Vue d’ensemble de l’analyse de code pour C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
 
@@ -119,7 +119,7 @@ Vous pouvez déboguer votre programme en appuyant sur **F5** quand votre configu
 
 ## <a name="deploy-completed-applications"></a>Déployer des applications terminées
 
-Vous déployez une application UWP pour les clients par le biais du Microsoft Store en accédant à l’option de menu **Projet** > **Store**. Le déploiement de la bibliothèque CRT est géré automatiquement en arrière-plan. Pour plus d’informations, consultez [Publier des applications et des jeux Windows](/windows/uwp/publish/). 
+Vous déployez une application UWP pour les clients par le biais du Microsoft Store en accédant à l’option de menu **Projet** > **Store**. Le déploiement de la bibliothèque CRT est géré automatiquement en arrière-plan. Pour plus d’informations, consultez [Publier des applications et des jeux Windows](/windows/uwp/publish/).
 
 Quand vous déployez une application de bureau C++ native sur un autre ordinateur, vous devez installer l'application elle-même et tous les fichiers bibliothèques dont elle dépend. Il existe trois façons de déployer le runtime universel C++ (UCRT) avec une application : le déploiement central, le déploiement local ou la liaison statique. Pour plus d’informations, consultez [Déploiement d’applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

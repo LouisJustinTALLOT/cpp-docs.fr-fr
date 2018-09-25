@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 45b62d5ce8f49b023721cf7323dc42e1c65c2109
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339980"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396686"
 ---
 # <a name="visual-c-project-types"></a>Types de projets Visual C++
 
 Vous pouvez utiliser un modèle de projet pour créer la structure de base du programme, les menus, les barres d’outils, les icônes, les références et les instructions `#include` adaptés au type de projet que vous voulez créer. Visual Studio intègre plusieurs types de modèles de projet Visual C++ qui s’accompagnent pour la plupart d’Assistants qui vous permettent de personnaliser vos projets au moment de les créer. Dès que vous avez créé un projet, vous pouvez le générer et exécuter l’application. Une bonne pratique est d’effectuer des générations intermittentes à mesure que vous développez votre application.
 
-Vous n’êtes pas tenu d’utiliser un modèle pour créer un projet. Cependant, dans la plupart des cas, c’est un choix judicieux, car il est plus facile de modifier les fichiers et la structure de projet fournis que de les créer entièrement.  
-  
+Vous n’êtes pas tenu d’utiliser un modèle pour créer un projet. Cependant, dans la plupart des cas, c’est un choix judicieux, car il est plus facile de modifier les fichiers et la structure de projet fournis que de les créer entièrement.
+
 > [!NOTE]
 > Vous pouvez créer un projet en langage C à partir de modèles de projet C++. Dans le projet généré, recherchez les fichiers ayant une extension de nom de fichier .cpp et remplacez-la par .c. Ensuite, dans la page **Propriétés du projet** du projet (et non de la solution), développez **Propriétés de configuration**, **C/C++** , puis sélectionnez **Avancé**. Modifiez le paramètre **Compilation sous** en choisissant **Compiler comme code C (/TC)**.
 
@@ -42,8 +42,8 @@ Les modèles de projet inclus dans Visual Studio dépendent de la version du pro
 
 ### <a name="windows-desktop"></a>Bureau Windows
 
-|Modèle de projet|Description|  
-|----------------------|-----------------------------| 
+|Modèle de projet|Description|
+|----------------------|-----------------------------|
 |[Application console Windows](../windows/creating-a-console-application.md)|Projet de création d’une application console Windows.|
 |[Application de bureau Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Projet de création d’une application de bureau Windows (Win32).|
 |[Bibliothèque de liens dynamiques](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Projet de création d’une DLL (bibliothèque de liens dynamiques).|
@@ -104,4 +104,4 @@ La plupart des fichiers générés par un modèle de projet contiennent des comm
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création de projets de bureau à l’aide des Assistants Application](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[Création de projets de bureau à l’aide des Assistants Application](../ide/creating-desktop-projects-by-using-application-wizards.md)

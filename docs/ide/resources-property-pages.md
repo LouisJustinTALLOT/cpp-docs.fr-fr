@@ -21,19 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b5160061233f9d0a474385bccd324333ed9549a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 132b2e069c42d1835d6736024fc4c609d313e544
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686285"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440704"
 ---
 # <a name="resources-property-pages"></a>pages de propriétés Ressources
-Pour plus d’informations sur l’utilisation du compilateur de ressources, consultez [Utilisation de RC (ligne de commande RC)](/windows/desktop/menurc/using-rc-the-rc-command-line-).  
-  
- Pour plus d’informations sur l’accès aux pages de propriétés **Ressources**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
-  
- Pour accéder par programmation à ces propriétés, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Pages de propriétés](../ide/property-pages-visual-cpp.md)
+
+Pour plus d’informations sur l’utilisation du compilateur de ressources, consultez [Utilisation de RC (ligne de commande RC)](/windows/desktop/menurc/using-rc-the-rc-command-line-).
+
+Pour plus d’informations sur l’accès aux pages de propriétés **Ressources**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+
+Pour accéder par programmation à ces propriétés, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Pages de propriétés](../ide/property-pages-visual-cpp.md)

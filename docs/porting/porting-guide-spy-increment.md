@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019e63009706fd5d0ab22044642449c5bce3c3a6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84aded46176c1c286ce5270254a0455dfce39d5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222379"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427874"
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
+
 Cette étude de cas de portage vise à vous donner une idée de ce qu'est un projet de portage classique et des types de problèmes que vous êtes susceptible de rencontrer. Elle fournit également quelques conseils et astuces généraux qui vous aideront à résoudre certains problèmes liés au portage. Elle n'est pas destinée à être un guide du portage exhaustif, car le déroulement du portage d'un projet dépend beaucoup des spécificités du code.  
   
 ## <a name="spy"></a>Spy++  
@@ -74,7 +75,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
   
 Microsoft n’assure plus le support de Windows XP. Le ciblage de cette version est autorisé dans Visual Studio 2015, mais nous vous recommandons d’abandonner progressivement la prise en charge de cette version cible dans vos applications, et d’inciter les utilisateurs à installer les nouvelles versions de Windows.  
   
- Pour résoudre cette erreur, définissez WINVER en mettant à jour le paramètre **Propriétés du projet** vers la plus ancienne version de Windows que vous voulez cibler. Pour obtenir un tableau des valeurs correspondant aux différentes versions de Windows, cliquez [ici](/windows/desktop/WinProg/using-the-windows-headers).  
+Pour résoudre cette erreur, définissez WINVER en mettant à jour le paramètre **Propriétés du projet** vers la plus ancienne version de Windows que vous voulez cibler. Pour obtenir un tableau des valeurs correspondant aux différentes versions de Windows, cliquez [ici](/windows/desktop/WinProg/using-the-windows-headers).  
   
 Le fichier stdafx.h contenait certaines de ces définitions de macros.  
   
@@ -551,7 +552,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
   
 Avec la macro _T, un littéral de chaîne se compile en chaîne **char** ou **wchar_t**, selon le paramètre MBCS ou UNICODE choisi. Pour remplacer toutes les chaînes par _T dans Visual Studio, ouvrez d’abord la zone **Remplacement rapide** (raccourci clavier : **Ctrl**+**F**) ou **Remplacer dans les fichiers** (raccourci clavier : **Ctrl**+**Maj**+**H**), puis cochez la case **Utiliser des expressions régulières**. Entrez le texte recherché `((\".*?\")|('.+?'))` et le texte de remplacement `_T($1)`. Si la macro _T existe déjà autour de certaines chaînes, cette procédure en ajoute une nouvelle. Pour les cas où la macro _T n’est pas nécessaire (par exemple, avec `#include`), utilisez **Suivant** plutôt que **Remplacer tout**.  
   
- Cette fonction spécifique, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), est définie dans les en-têtes Windows, mais la documentation la concernant recommande de ne pas l’utiliser, en raison d’un risque de dépassement de mémoire. Aucune taille n'étant spécifiée pour la mémoire tampon `szTmp`, la fonction n'est pas en mesure de vérifier si la mémoire tampon sera suffisante pour contenir toutes les données qui y seront écrites. Consultez la section suivante sur le portage vers les fonctions CRT sécurisées, où nous verrons comment résoudre d'autres problèmes similaires. Nous l’avons finalement remplacée par [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
+Cette fonction spécifique, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), est définie dans les en-têtes Windows, mais la documentation la concernant recommande de ne pas l’utiliser, en raison d’un risque de dépassement de mémoire. Aucune taille n'étant spécifiée pour la mémoire tampon `szTmp`, la fonction n'est pas en mesure de vérifier si la mémoire tampon sera suffisante pour contenir toutes les données qui y seront écrites. Consultez la section suivante sur le portage vers les fonctions CRT sécurisées, où nous verrons comment résoudre d'autres problèmes similaires. Nous l’avons finalement remplacée par [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
   
 Voici un autre problème courant lié à la conversion en Unicode.  
   
@@ -680,5 +681,5 @@ Il nous a fallu environ 20 heures de codage pendant une semaine pour porter la 
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Portage et mise à niveau : exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[Portage et mise à niveau : exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Étude de cas précédente : COMSpy](../porting/porting-guide-com-spy.md)

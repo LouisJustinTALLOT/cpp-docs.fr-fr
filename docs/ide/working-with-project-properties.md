@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211661"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398662"
 ---
 # <a name="working-with-project-properties"></a>Utilisation des propriétés de projet
 
@@ -141,11 +141,11 @@ Une macro définie par l’utilisateur est stockée dans une feuille de proprié
 
 ##### <a name="to-create-a-user-defined-macro"></a>Pour créer une macro définie par l’utilisateur
 
-1.  Dans la fenêtre **Gestionnaire de propriétés** (dans la barre de menus, choisissez **Affichage**, **Gestionnaire de propriétés**), ouvrez le menu contextuel d’une feuille de propriétés (son nom se termine par .user), puis choisissez Propriétés. La boîte de dialogue **Pages de propriétés** pour cette feuille de propriétés s’ouvre.
+1. Dans la fenêtre **Gestionnaire de propriétés** (dans la barre de menus, choisissez **Affichage**, **Gestionnaire de propriétés**), ouvrez le menu contextuel d’une feuille de propriétés (son nom se termine par .user), puis choisissez Propriétés. La boîte de dialogue **Pages de propriétés** pour cette feuille de propriétés s’ouvre.
 
-2.  Dans le volet gauche de la boîte de dialogue, sélectionnez **Macros utilisateur**. Dans le volet droit, choisissez le bouton **Ajouter une macro** pour ouvrir la boîte de dialogue **Ajouter une macro utilisateur**.
+1. Dans le volet gauche de la boîte de dialogue, sélectionnez **Macros utilisateur**. Dans le volet droit, choisissez le bouton **Ajouter une macro** pour ouvrir la boîte de dialogue **Ajouter une macro utilisateur**.
 
-3.  Dans la boîte de dialogue, spécifiez un nom et une valeur pour la macro. Vous pouvez aussi cocher la case **Définir cette macro comme variable d’environnement dans l’environnement de génération**.
+1. Dans la boîte de dialogue, spécifiez un nom et une valeur pour la macro. Vous pouvez aussi cocher la case **Définir cette macro comme variable d’environnement dans l’environnement de génération**.
 
 ## <a name="property-editor"></a>Éditeur de propriétés
 

@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 54a9f68c1cd750cd3d0e5c638d1ab101a8588a61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327809"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416888"
 ---
 # <a name="command-line-property-pages"></a>pages de propriétés Ligne de commande
-La plupart des dossiers des pages de propriétés contiennent une page de propriétés **Ligne de commande**. Cette page affiche les propriétés définies dans le dossier. La page de propriétés **Ligne de commande** contient également une zone **Options supplémentaires** dans laquelle vous pouvez spécifier les propriétés valides pour l’outil, mais pour lesquelles aucune propriété n’existe dans le dossier.  
-  
- Les commandes que vous entrez dans la zone d’édition sont passées à l’outil pour le dossier. L’entrée n’est soumise à aucune vérification et les dépendances ne sont pas non plus contrôlées.  
-  
- Pour plus d’informations sur l’accès aux pages de propriétés **Ligne de commande**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Pages de propriétés](../ide/property-pages-visual-cpp.md)   
- [Fichiers .lib en tant qu’entrée dans l’Éditeur de liens](../build/reference/dot-lib-files-as-linker-input.md)
+
+La plupart des dossiers des pages de propriétés contiennent une page de propriétés **Ligne de commande**. Cette page affiche les propriétés définies dans le dossier. La page de propriétés **Ligne de commande** contient également une zone **Options supplémentaires** dans laquelle vous pouvez spécifier les propriétés valides pour l’outil, mais pour lesquelles aucune propriété n’existe dans le dossier.
+
+Les commandes que vous entrez dans la zone d’édition sont passées à l’outil pour le dossier. L’entrée n’est soumise à aucune vérification et les dépendances ne sont pas non plus contrôlées.
+
+Pour plus d’informations sur l’accès aux pages de propriétés **Ligne de commande**, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Pages de propriétés](../ide/property-pages-visual-cpp.md)<br>
+[Fichiers .lib en tant qu’entrée dans l’Éditeur de liens](../build/reference/dot-lib-files-as-linker-input.md)
