@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091907"
 ---
 # <a name="array-declarations"></a>Déclarations de tableau
 
@@ -48,9 +48,9 @@ Une « déclaration de tableau » nomme le tableau et spécifie le type de ses
 
 Étant donné que *constant-expression* est facultatif, la syntaxe a deux formes :
 
--   La première forme définit une variable tableau. L’argument *constant-expression* entre crochets spécifie le nombre d’éléments du tableau. Si *constant-expression* est présent, il doit être de type intégral et sa valeur doit être supérieure à zéro. Le type de chaque élément est donné par *type-specifier*. Il peut s'agir de n'importe quel type, à l'exception de `void`. Un élément de tableau ne peut pas être un type de fonction.
+- La première forme définit une variable tableau. L’argument *constant-expression* entre crochets spécifie le nombre d’éléments du tableau. Si *constant-expression* est présent, il doit être de type intégral et sa valeur doit être supérieure à zéro. Le type de chaque élément est donné par *type-specifier*. Il peut s'agir de n'importe quel type, à l'exception de `void`. Un élément de tableau ne peut pas être un type de fonction.
 
--   La deuxième forme déclare une variable définie ailleurs. L’argument *constant-expression* entre crochets est omis, mais pas les crochets. Vous pouvez utiliser cette forme uniquement si vous avez précédemment initialisé le tableau, si vous l'avez déclaré comme paramètre ou si vous l'avez déclaré comme référence à un tableau explicitement défini ailleurs dans le programme.
+- La deuxième forme déclare une variable définie ailleurs. L’argument *constant-expression* entre crochets est omis, mais pas les crochets. Vous pouvez utiliser cette forme uniquement si vous avez précédemment initialisé le tableau, si vous l'avez déclaré comme paramètre ou si vous l'avez déclaré comme référence à un tableau explicitement défini ailleurs dans le programme.
 
 Dans les deux formes, *direct-declarator* nomme la variable et peut modifier le type de la variable. Les crochets (**[ ]**) qui suivent *direct-declarator* modifient le déclarateur en type tableau.
 
@@ -75,6 +75,7 @@ Les trois colonnes de la première ligne sont stockées en premier, suivies des 
 Pour faire référence à un élément individuel d'un tableau, utilisez une expression d'indice, comme décrit dans la section [Opérateurs suffixés](../c-language/postfix-operators.md).
 
 ## <a name="examples"></a>Exemples
+
 Les exemples suivants illustrent des déclarations de tableau :
 
 ```C
