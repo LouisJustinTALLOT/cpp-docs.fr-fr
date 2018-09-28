@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c9483cb6e556d5a8b174377c0dad666834c9e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48ddb3724e4c93135be57d1404ec51d5e885d4fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069818"
 ---
 # <a name="function-call-c"></a>Appel de fonction (C)
-Un appel de fonction est une expression qui inclut le nom de la fonction appelée ou la valeur d’un pointeur fonction et, éventuellement, les arguments passés à la fonction.  
-  
-## <a name="syntax"></a>Syntaxe  
- *postfix-expression* :  
- *postfix-expression*  **(**  *argument-expression-list* opt **)**  
-  
- *argument-expression-list* :  
- *assignment-expression*  
-  
- *argument-expression-list*  **,**  *assignment-expression*  
-  
- *postfix-expression* doit prendre la valeur d’une adresse de fonction (par exemple, un identificateur de fonction ou la valeur d’un pointeur fonction), et *argument-expression-list* est une liste d’expressions (séparées par des virgules) dont les valeurs (les arguments) sont passées à la fonction. L’argument *argument-expression-list* peut être vide.  
-  
- Une expression de fonction d'appel a la valeur et le type de la valeur de retour de la fonction. Une fonction ne peut pas retourner d'objet de type tableau. Si le type de retour de la fonction est `void` (autrement dit si la fonction n'a jamais été déclarée pour retourner une valeur), l'expression d'appel de fonction a également le type `void`. (Pour plus d'informations, consultez [Appels de fonction](../c-language/function-calls.md).)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Opérateur d’appel de fonction](../cpp/function-call-operator-parens.md)
+
+Un *appel de fonction* est une expression qui inclut le nom de la fonction appelée ou la valeur d’un pointeur fonction et, éventuellement, les arguments passés à la fonction.
+
+## <a name="syntax"></a>Syntaxe
+
+*postfix-expression* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **(**  *argument-expression-list*<sub>opt</sub> **)**
+
+*argument-expression-list* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list* **,** *assignment-expression*
+
+*postfix-expression* doit prendre la valeur d’une adresse de fonction (par exemple, un identificateur de fonction ou la valeur d’un pointeur fonction), et *argument-expression-list* est une liste d’expressions (séparées par des virgules) dont les valeurs (les arguments) sont passées à la fonction. L’argument *argument-expression-list* peut être vide.
+
+Une expression de fonction d'appel a la valeur et le type de la valeur de retour de la fonction. Une fonction ne peut pas retourner d'objet de type tableau. Si le type de retour de la fonction est `void` (autrement dit si la fonction n'a jamais été déclarée pour retourner une valeur), l'expression d'appel de fonction a également le type `void`. (Pour plus d'informations, consultez [Appels de fonction](../c-language/function-calls.md).)
+
+## <a name="see-also"></a>Voir aussi
+
+[Opérateur d’appel de fonction](../cpp/function-call-operator-parens.md)
