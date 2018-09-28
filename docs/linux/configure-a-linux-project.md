@@ -1,7 +1,7 @@
 ---
 title: Configurer un projet Linux C++ dans Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 09/05/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,17 +14,19 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207900"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895199"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
+
 Cette rubrique décrit comment configurer un projet Linux C++ dans Visual Studio. Pour plus d’informations sur les projets CMake Linux dans Visual Studio, consultez [Configurer un projet CMake Linux](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Paramètres généraux
+
 Différentes options peuvent être configurées pour un projet Linux avec Visual Studio.  Pour afficher ces options, sélectionnez le menu **Projet > Propriétés** ou cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions** et sélectionnez **Propriétés** dans le menu contextuel. Les paramètres généraux s’affichent dans la section **Général**.
 
 ![Configuration générale](media/settings_general.png)
@@ -32,13 +34,14 @@ Différentes options peuvent être configurées pour un projet Linux avec Visual
 Par défaut, un fichier exécutable (.out) est créé avec l’outil.  Pour générer une bibliothèque statique ou dynamique, ou utiliser un fichier makefile existant, utilisez la sélection **Type de configuration**.
 
 ## <a name="remote-settings"></a>Paramètres distants
+
 Pour changer les paramètres relatifs à l’ordinateur Linux distant, configurez les options distantes affichées dans la section de paramètres **Général** :
 
-* Pour changer l’ordinateur Linux cible, utilisez l’entrée **Machine de build distante**.  Cela vous permet de sélectionner l’une des connexions créées précédemment.  Pour créer une entrée, consultez la section [Connexion à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md).
+- Pour changer l’ordinateur Linux cible, utilisez l’entrée **Machine de build distante**.  Cela vous permet de sélectionner l’une des connexions créées précédemment.  Pour créer une entrée, consultez la section [Connexion à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md).
 
-* L’entrée **Répertoire racine de build distant** définit l’emplacement racine de l’endroit où le projet est généré sur l’ordinateur Linux distant.  Par défaut et en l’absence de modification, il s’agit de **~/projects**.
+- L’entrée **Répertoire racine de build distant** définit l’emplacement racine de l’endroit où le projet est généré sur l’ordinateur Linux distant.  Par défaut et en l’absence de modification, il s’agit de **~/projects**.
 
-* L’entrée **Répertoire de projet de build distant** définit l’emplacement où ce projet spécifique est généré sur l’ordinateur Linux distant.  Par défaut, il s’agit de **$(RemoteRootDir)/$(ProjectName)**, qui se développe jusqu’à un répertoire nommé d’après le projet actuel, sous le répertoire racine défini ci-dessus.
+- L’entrée **Répertoire de projet de build distant** définit l’emplacement où ce projet spécifique est généré sur l’ordinateur Linux distant.  Par défaut, il s’agit de **$(RemoteRootDir)/$(ProjectName)**, qui se développe jusqu’à un répertoire nommé d’après le projet actuel, sous le répertoire racine défini ci-dessus.
 
 > [!NOTE]
 > Pour changer les compilateurs C et C++ par défaut, ou l’éditeur de liens et le programme d’archivage utilisés pour générer le projet, utilisez les entrées appropriées dans les sections **C/C++ > Général** et **Éditeur de liens > Général**.  Vous pouvez les définir pour utiliser une version spécifique de GCC ou même le compilateur Clang, par exemple.
@@ -61,17 +64,19 @@ Une fois que les fichiers sont copiés, utilisez l’élément **Répertoires VC
 **Visual Studio 2017 15.7 et ultérieur :** Consultez [Gérer les en-têtes distants pour IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Copier les sources
+
 Lors de la génération, les fichiers sources sur votre PC de développement sont copiés sur l’ordinateur Linux où ils sont compilés.  Par défaut, toutes les sources dans le projet Visual Studio sont copiées aux emplacements définis dans les paramètres ci-dessus.  Toutefois, des sources supplémentaires peuvent également être ajoutées à la liste, ou la copie des sources peut être entièrement désactivée, ce qui est le paramètre par défaut d’un projet Makefile.
 
-* L’option **Sources à copier** détermine quelles sources sont copiées sur l’ordinateur distant.  Par défaut, **@(SourcesToCopyRemotely)** est défini par défaut sur tous les fichiers de code source dans le projet, mais n’inclut pas les fichiers d’actifs/de ressources, comme les images.
+- L’option **Sources à copier** détermine quelles sources sont copiées sur l’ordinateur distant.  Par défaut, **\@ (SourcesToCopyRemotely)** est défini par défaut sur tous les fichiers de code source dans le projet, mais n’inclut pas les fichiers d’actifs/de ressources, comme les images.
 
-* L’option **Copier les sources** peut être activée et désactivée pour activer et désactiver la copie des fichiers sources sur l’ordinateur distant.
+- L’option **Copier les sources** peut être activée et désactivée pour activer et désactiver la copie des fichiers sources sur l’ordinateur distant.
 
-* L’option **Sources supplémentaires à copier** vous permet d’ajouter des fichiers sources supplémentaires qui seront copiés sur le système distant.  Vous pouvez spécifier une liste délimitée par des points-virgules ou utiliser la syntaxe **:=** pour spécifier un nom local et distant à utiliser :
+- L’option **Sources supplémentaires à copier** vous permet d’ajouter des fichiers sources supplémentaires qui seront copiés sur le système distant.  Vous pouvez spécifier une liste délimitée par des points-virgules ou utiliser la syntaxe **:=** pour spécifier un nom local et distant à utiliser :
 
-  `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
+`C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>Événements de build
+
 Étant donné que toute la compilation se produit sur un ordinateur distant, plusieurs événements de build supplémentaires ont été ajoutés à la section Événements de build dans les propriétés de projet.  Il s’agit des événements suivants : **Événement prébuild distant**, **Événement de préédition des liens distant** et **Événement post-build distant**. Ils se produisent sur l’ordinateur distant avant ou après les différentes étapes du processus.
 
 ![Événements de build](media/settings_buildevents.png)
@@ -91,6 +96,7 @@ Pour gérer votre cache d’en-têtes, accédez à **Outils > Options, Multiplat
 ![IntelliSense pour les en-têtes distants](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Voir aussi
+
 [Utilisation des propriétés de projet](../ide/working-with-project-properties.md)  
 [Général C++, propriétés (Linux C++)](../linux/prop-pages/general-linux.md)  
 [Répertoires VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)  

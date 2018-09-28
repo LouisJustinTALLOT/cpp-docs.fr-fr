@@ -12,26 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab516edc5cb30d777eb42cc96e2932e526f20772
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a94d575ee36f38b56f64fb6298eb6f6f6e43567e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385817"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762741"
 ---
 # <a name="summary-of-string-literals"></a>Résumé des littéraux de chaîne
-*string-literal*:  
- **'** *s-char-sequence* opt **'**  
+
+*string-literal*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**'** *s-char-sequence*<sub>opt</sub> **'**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L'** *s-char-sequence*sub>opt</sub> **'**  
   
- **L'** *s-char-sequence* opt **'**  
+*s-char-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*  
   
- *s-char-sequence*:  
- *s-char*  
-  
- *s-char-sequence s-char*  
-  
- *s-char* :  
- tout membre du jeu de caractères de code source sauf le guillemet double (''), la barre oblique inverse (\\) ou la séquence d'échappement (*escape-sequence*) de caractère de saut de ligne  
-  
-## <a name="see-also"></a>Voir aussi  
- [Grammaire lexicale](../c-language/lexical-grammar.md)
+*s-char* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;tout membre du jeu de caractères de code source sauf le guillemet double (''), la barre oblique inverse (\\) ou la séquence d'échappement du caractère de saut de ligne  
+
+## <a name="see-also"></a>Voir aussi
+
+[Grammaire lexicale](../c-language/lexical-grammar.md)

@@ -15,33 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14a23da2e8ed41954bd6faa2803d6e6c7dfb37a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 338e518d1939cb6ea32aaf200c54b6c352287561
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384383"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760261"
 ---
 # <a name="postfix-operators"></a>Opérateurs suffixés
 Les opérateurs suffixés ont la priorité la plus élevée (la liaison la plus étroite) dans l’évaluation de l’expression.  
-  
-## <a name="syntax"></a>Syntaxe  
- *postfix-expression* :  
- *primary-expression*  
-  
- *postfix-expression*  **[**  *expression*  **]**  
-  
- *postfix-expression*  **(**  *argument-expression-list* opt **)**  
-  
- *postfix-expression*  **.**  *identifier*  
-  
- *postfix-expression*  **->**  *identifier*  
-  
- *postfix-expression*  **++**  
-  
- *postfix-expression*  **--**  
-  
- Dans ce niveau de priorité, les opérateurs sont les indices de tableau, les appels de fonction, les membres de structure et d'union, et les opérateurs d'incrémentation et de décrémentation suffixés.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Opérateurs C](../c-language/c-operators.md)
+
+## <a name="syntax"></a>Syntaxe
+
+*postfix-expression* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*primary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **[**  *expression*  **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **(**  *argument-expression-list*<sub>opt</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **.**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **->**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **--**
+
+Dans ce niveau de priorité, les opérateurs sont les indices de tableau, les appels de fonction, les membres de structure et d'union, et les opérateurs d'incrémentation et de décrémentation suffixés.
+
+## <a name="see-also"></a>Voir aussi
+
+[Opérateurs C](../c-language/c-operators.md)

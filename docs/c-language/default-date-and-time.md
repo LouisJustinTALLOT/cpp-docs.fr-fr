@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d66059ddabac7edb2001f154173e6367355815
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8646e612505099476b39109c3ef5f9084f7403ab
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382739"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752153"
 ---
 # <a name="default-date-and-time"></a>Date et heure par défaut
-**ANSI 3.8.8** Définitions de _DATE\_ et _TIME\_ lorsque, respectivement, la date et l'heure de la traduction ne sont pas disponibles  
+
+**ANSI 3.8.8** Définitions de `__DATE__` et `__TIME__` lorsque, respectivement, la date et l'heure de la traduction ne sont pas disponibles  
   
- Lorsque le système d'exploitation ne fournit pas la date et l'heure de la traduction, les valeurs par défaut de _DATE\_ et _TIME\_ sont `May 03 1957` et `17:00:00"`.  
+Lorsque le système d'exploitation ne fournit pas la date et l'heure de la traduction, les valeurs par défaut de `__DATE__` et `__TIME__` sont `May 03 1957` et `17:00:00`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Directives de prétraitement](../c-language/preprocessing-directives.md)
+## <a name="see-also"></a>Voir aussi
+
+[Directives de prétraitement](../c-language/preprocessing-directives.md)

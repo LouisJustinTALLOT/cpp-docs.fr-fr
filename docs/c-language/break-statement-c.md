@@ -16,25 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 194e4c836f0423e20bb747cc6c3b06645c38a5fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aeec33d61f21c34e52d582ebc3c0ef7313bb511f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381348"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755032"
 ---
 # <a name="break-statement-c"></a>break, instruction (C)
 L'instruction `break` termine l'exécution de l'instruction `do`, `for`, `switch` ou `while` englobante la plus proche dans laquelle elle figure. Le contrôle est transmis à l'instruction qui suit l'instruction terminée.  
   
-## <a name="syntax"></a>Syntaxe  
- *saut-instruction* :  
- `break;`  
+## <a name="syntax"></a>Syntaxe
+
+*saut-instruction* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**break ;**
   
- L'instruction `break` est fréquemment utilisée pour mettre fin au traitement d'un cas particulier dans une instruction `switch`. L'absence d'une instruction itérative ou `switch` englobante génère une erreur.  
+L'instruction `break` est fréquemment utilisée pour mettre fin au traitement d'un cas particulier dans une instruction `switch`. L'absence d'une instruction itérative ou `switch` englobante génère une erreur.  
   
- Dans les instructions imbriquées, l'instruction `break` met un terme uniquement à l'instruction `do`, `for`, `switch` ou `while` qui l'englobe immédiatement. Vous pouvez utiliser une instruction `return` ou `goto` pour transférer le contrôle hors de la structure imbriquée.  
+Dans les instructions imbriquées, l'instruction `break` met un terme uniquement à l'instruction `do`, `for`, `switch` ou `while` qui l'englobe immédiatement. Vous pouvez utiliser une instruction `return` ou `goto` pour transférer le contrôle hors de la structure imbriquée.  
   
- L'exemple suivant illustre l'instruction `break` :  
+L'exemple suivant illustre l'instruction `break` :  
   
 ```  
 #include <stdio.h>  
@@ -52,4 +53,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instruction break](../cpp/break-statement-cpp.md)
+[Instruction break](../cpp/break-statement-cpp.md)
