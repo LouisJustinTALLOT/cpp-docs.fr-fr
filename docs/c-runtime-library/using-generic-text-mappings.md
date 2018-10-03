@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9435076bdc02f9f0b8a909ffdbc60dd06e1a388
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4aeee73cb065e40d345dcbfe35ac2d6a7be03d90
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097521"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234656"
 ---
 # <a name="using-generic-text-mappings"></a>Utilisation des mappages de texte générique
 
@@ -105,7 +105,7 @@ RetVal = strrev(szString);
 
 Par conséquent, vous pouvez écrire, maintenir et compiler un fichier de code source unique à exécuter avec des routines qui sont spécifiques à un des trois types de jeu de caractères.
 
- **FIN de la section spécifique à Microsoft**
+**FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
