@@ -1,28 +1,36 @@
 ---
 title: Synclockwithstatust, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::GetStatus
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::IsLocked
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT
 dev_langs:
 - C++
 helpviewer_keywords:
-- SyncLockWithStatusT class
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT class
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::GetStatus method
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::IsLocked method
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69676651c77175b55f4363b525a3ca3acb9be46d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7473c5f0417ab214101459c9621644b97c33a047
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437454"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235527"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT, classe
 
@@ -46,34 +54,34 @@ Un type qui peut prendre exclusif ou la propriété d’une ressource partagée.
 
 Représente un type qui peut prendre exclusif ou la propriété d’une ressource partagée.
 
-Le **SyncLockWithStatusT** classe est utilisée pour implémenter le [Mutex](../windows/mutex-class1.md) et [sémaphore](../windows/semaphore-class.md) classes.
+Le `SyncLockWithStatusT` classe est utilisée pour implémenter le [Mutex](../windows/mutex-class1.md) et [sémaphore](../windows/semaphore-class.md) classes.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
-|----------|-----------------|
-|[SyncLockWithStatusT::SyncLockWithStatusT, constructeur](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Initialise une nouvelle instance de la **SyncLockWithStatusT** classe.|
+Nom                                                             | Description
+---------------------------------------------------------------- | --------------------------------------------------------------
+[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | Initialise une nouvelle instance de la classe `SyncLockWithStatusT`.
 
 ### <a name="protected-constructors"></a>Constructeurs protégés
 
-|Nom|Description|
-|----------|-----------------|
-|[SyncLockWithStatusT::SyncLockWithStatusT, constructeur](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Initialise une nouvelle instance de la **SyncLockWithStatusT** classe.|
+Nom                                                             | Description
+---------------------------------------------------------------- | --------------------------------------------------------------
+[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | Initialise une nouvelle instance de la classe `SyncLockWithStatusT`.
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
-|----------|-----------------|
-|[SyncLockWithStatusT::GetStatus, méthode](../windows/synclockwithstatust-getstatus-method.md)|Récupère l’état d’attente de l’actuel **SyncLockWithStatusT** objet.|
-|[SyncLockWithStatusT::IsLocked, méthode](../windows/synclockwithstatust-islocked-method.md)|Indique si l’actuel **SyncLockWithStatusT** objet possède une ressource, c'est-à-dire, le **SyncLockWithStatusT** objet est *verrouillé*.|
+Nom                                         | Description
+-------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
+[SyncLockWithStatusT::GetStatus](#getstatus) | Récupère l’état d’attente de l’actuel `SyncLockWithStatusT` objet.
+[SyncLockWithStatusT::IsLocked](#islocked)   | Indique si l’actuel `SyncLockWithStatusT` objet possède une ressource, c'est-à-dire, le `SyncLockWithStatusT` objet est *verrouillé*.
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
-|----------|-----------------|
-|[SyncLockWithStatusT::status_, données de membre](../windows/synclockwithstatust-status-data-member.md)|Contient le résultat de l’opération d’attente sous-jacente après une opération de verrouillage sur un objet selon actuel **SyncLockWithStatusT** objet.|
+Name                                    | Description
+--------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
+[SyncLockWithStatusT::status_](#status) | Contient le résultat de l’opération d’attente sous-jacente après une opération de verrouillage sur un objet selon actuel `SyncLockWithStatusT` objet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -87,6 +95,80 @@ Le **SyncLockWithStatusT** classe est utilisée pour implémenter le [Mutex](../
 
 **Namespace :** Microsoft::WRL::Wrappers::Details
 
-## <a name="see-also"></a>Voir aussi
+## <a name="getstatus"></a>SyncLockWithStatusT::GetStatus
 
-[Microsoft::WRL::Wrappers::Details, espace de noms](../windows/microsoft-wrl-wrappers-details-namespace.md)
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+```cpp
+DWORD GetStatus() const;
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Le résultat d’une opération d’attente sur l’objet qui est basé sur le `SyncLockWithStatusT` de classe, comme un [Mutex](../windows/mutex-class1.md) ou [sémaphore](../windows/semaphore-class.md). Zéro (0) indique que l’opération d’attente a renvoyé l’état signalé ; Sinon, un autre état s’est produite, telles que la valeur de délai d’expiration est écoulé.
+
+### <a name="remarks"></a>Notes
+
+Récupère l’état d’attente de l’actuel `SyncLockWithStatusT` objet.
+
+La fonction GetStatus() récupère la valeur de l’objet sous-jacent [status_](#status) membre de données. Quand un objet basé sur la `SyncLockWithStatusT` classe effectue une opération de verrouillage, l’objet attend tout d’abord l’objet devienne disponible. Le résultat de cette opération d’attente est stocké dans le `status_` membre de données. Les valeurs possibles de le `status_` membre de données sont les valeurs de retour de l’opération d’attente. Pour plus d’informations, consultez les valeurs de retour de la `WaitForSingleObjectEx()` (fonction) dans MSDN Library.
+
+## <a name="islocked"></a>SyncLockWithStatusT::IsLocked
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+```cpp
+bool IsLocked() const;
+```
+
+### <a name="remarks"></a>Notes
+
+Indique si l’actuel `SyncLockWithStatusT` objet possède une ressource, c'est-à-dire, le `SyncLockWithStatusT` objet est *verrouillé*.
+
+### <a name="return-value"></a>Valeur de retour
+
+`true` Si le `SyncLockWithStatusT` objet est verrouillé ; sinon, `false`.
+
+## <a name="status"></a>SyncLockWithStatusT::status_
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+```cpp
+DWORD status_;
+```
+
+### <a name="remarks"></a>Notes
+
+Contient le résultat de l’opération d’attente sous-jacente après une opération de verrouillage sur un objet selon actuel `SyncLockWithStatusT` objet.
+
+## <a name="synclockwithstatust"></a>SyncLockWithStatusT::SyncLockWithStatusT
+
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+```cpp
+SyncLockWithStatusT(
+   _Inout_ SyncLockWithStatusT&& other
+);
+
+explicit SyncLockWithStatusT(
+   typename SyncTraits::Type sync,
+   DWORD status
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*other*<br/>
+Une référence rvalue à un autre `SyncLockWithStatusT` objet.
+
+*sync*<br/>
+Une référence à un autre `SyncLockWithStatusT` objet.
+
+*status*<br/>
+La valeur de la [status_](#status) membre de données de la *autres* paramètre ou le *synchronisation* paramètre.
+
+### <a name="remarks"></a>Notes
+
+Initialise une nouvelle instance de la classe `SyncLockWithStatusT`.
+
+Le premier constructeur initialise actuel `SyncLockWithStatusT` objet à partir d’un autre `SyncLockWithStatusT` spécifié par le paramètre *autres*et puis invalide l’autre `SyncLockWithStatusT` objet. Le deuxième constructeur est `protected`et l’initialise actuel `SyncLockWithStatusT` objet à un état non valide.

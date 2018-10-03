@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b8704d0bc64734a9edd4f3bfca50c2d1b2ecc37b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956503"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235618"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -241,34 +241,76 @@ Les sections suivantes répertorient les uniformes générateurs de nombres alé
 Pour l'instanciation des moteurs et adaptateurs de moteurs. Pour plus d’informations, consultez [Moteurs et distributions](#engdist).
 
 - `default_random_engine` : moteur par défaut.
- `typedef mt19937 default_random_engine;`
+
+    ```cpp
+    typedef mt19937 default_random_engine;
+    ```
 
 - `knuth_b` : moteur Knuth.
- `typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;`
+
+    ```cpp
+    typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;
+    ```
 
 - `minstd_rand0` : moteur standard minimal 1988 (Lewis, Goodman et Miller, 1969).
- `typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;`
+
+    ```cpp
+    typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
+    ```
 
 - `minstd_rand` : moteur standard minimal mis à jour `minstd_rand0` (Park, Miller et Stockmeyer, 1993).
- `typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;`
+
+    ```cpp
+    typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
+    ```
 
 - `mt19937` : moteur twister Mersenne 32 bits (Matsumoto et Nishimura, 1998).
- `typedef mersenne_twister_engine<unsigned int, 32, 624, 397,      31, 0x9908b0df,      11, 0xffffffff,      7, 0x9d2c5680,      15, 0xefc60000,      18, 1812433253> mt19937;`
+
+    ```cpp
+    typedef mersenne_twister_engine<
+        unsigned int, 32, 624, 397,
+        31, 0x9908b0df,
+        11, 0xffffffff,
+        7, 0x9d2c5680,
+        15, 0xefc60000,
+        18, 1812433253> mt19937;
+    ```
 
 - `mt19937_64` : moteur twister Mersenne 64 bits (Matsumoto et Nishimura, 2000).
- `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`
+
+    ```cpp
+    typedef mersenne_twister_engine<
+        unsigned long long, 64, 312, 156,
+        31, 0xb5026f5aa96619e9ULL,
+        29, 0x5555555555555555ULL,
+        17, 0x71d67fffeda60000ULL,
+        37, 0xfff7eee000000000ULL,
+        43, 6364136223846793005ULL> mt19937_64;
+    ```
 
 - `ranlux24` moteur RANLUX 24 bits (Martin Lüscher et Fred James, 1994).
- `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`
+
+    ```cpp
+    typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
+    ```
 
 - `ranlux24_base` : utilisé comme base pour `ranlux24`.
- `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
+
+    ```cpp
+    typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
+    ```
 
 - `ranlux48` moteur RANLUX de 48 bits (Martin Lüscher et Fred James, 1994).
- `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`
+
+    ```cpp
+    typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
+    ```
 
 - `ranlux48_base` : utilisé comme base pour `ranlux48`.
- `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
+
+    ```cpp
+    typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;
+    ```
 
 ####  <a name="eng"></a> Modèles de moteurs
 

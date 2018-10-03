@@ -1,28 +1,30 @@
 ---
 title: ArgTraitsHelper (Structure) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::ArgTraitsHelper
+- event/Microsoft::WRL::Details::ArgTraitsHelper::args
 dev_langs:
 - C++
 helpviewer_keywords:
-- ArgTraitsHelper structure
+- Microsoft::WRL::Details::ArgTraitsHelper structure
+- Microsoft::WRL::Details::ArgTraitsHelper::args constant
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 314853b103d74bd7907fb665b806f386ed7bd44e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b608f5da893019d7700891968dcdc06489c563ea
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397466"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234227"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper (structure)
 
@@ -48,16 +50,16 @@ Permet de définir les caractéristiques communes d’arguments du délégué.
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
-|----------|-----------------|
-|`methodType`|Synonyme de `decltype(&TDelegateInterface::Invoke)`.|
-|`Traits`|Synonyme de `ArgTraits<methodType>`.|
+Nom         | Description
+------------ | ------------------------------------------------------
+`methodType` | Synonyme de `decltype(&TDelegateInterface::Invoke)`.
+`Traits`     | Synonyme de `ArgTraits<methodType>`.
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
-|----------|-----------------|
-|[ArgTraitsHelper::args, constante](../windows/argtraitshelper-args-constant.md)|Vous aide à [ArgTraits::args](../windows/argtraits-args-constant.md) conserver le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.|
+Name                           | Description
+------------------------------ | ---------------------------------------------------------------------------------------------------------------------
+[ArgTraitsHelper::args](#args) | Vous aide à [ArgTraits::args](#args) conserver le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -69,6 +71,14 @@ Permet de définir les caractéristiques communes d’arguments du délégué.
 
 **Namespace :** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Voir aussi
+## <a name="args"></a>ArgTraitsHelper::args
 
-[Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+```cpp
+static const int args = Traits::args;
+```
+
+### <a name="remarks"></a>Notes
+
+Vous aide à `ArgTraitsHelper::args` conserver le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.

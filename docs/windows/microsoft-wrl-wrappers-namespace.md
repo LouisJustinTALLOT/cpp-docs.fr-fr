@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51964bb2d4cb13394f9efb0e36d572cf9309637d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2b1a63494e06ce3117e7e8fccd1d0cbca8cdb4d0
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605665"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250339"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers, espace de noms
 
@@ -47,11 +47,11 @@ namespace Microsoft::WRL::Wrappers;
 |Nom|Description|
 |----------|-----------------|
 |[CriticalSection, classe](../windows/criticalsection-class.md)|Représente un objet de section critique.|
-|[Event, classe (bibliothèque de modèles Windows Runtime C++)](../windows/event-class-windows-runtime-cpp-template-library.md)|Représente un événement.|
+|[Classe d’événements (WRL)](../windows/event-class-wrl.md)|Représente un événement.|
 |[HandleT, classe](../windows/handlet-class.md)|Représente un handle à un objet.|
 |[HString, classe](../windows/hstring-class.md)|Prend en charge des handles HSTRING.|
 |[HStringReference, classe](../windows/hstringreference-class.md)|Représente un HSTRING créé à partir d’une chaîne existante.|
-|[Mutex (classe)](../windows/mutex-class1.md)|Représente un objet de synchronisation qui contrôle exclusivement une ressource partagée.|
+|[Mutex (classe)](../windows/mutex-class.md)|Représente un objet de synchronisation qui contrôle exclusivement une ressource partagée.|
 |[RoInitializeWrapper, classe](../windows/roinitializewrapper-class.md)|Initialise le Runtime de Windows.|
 |[Semaphore, classe](../windows/semaphore-class.md)|Représente un objet de synchronisation qui contrôle une ressource partagée prenant en charge un nombre limité d’utilisateurs.|
 |[SRWLock, classe](../windows/srwlock-class.md)|Représente un verrou SRW.|

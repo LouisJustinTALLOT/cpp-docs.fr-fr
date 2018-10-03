@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169747"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235509"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Procédure pas à pas : placement de contrôles dans les barres d'outils
 
-Cette rubrique explique comment ajouter un bouton de barre d'outils qui contient un contrôle Windows. Dans MFC, un bouton de barre d’outils doit être un [cmfctoolbarbutton, classe](../mfc/reference/cmfctoolbarbutton-class.md)-classe dérivée, par exemple [cmfctoolbarcomboboxbutton, classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [cmfctoolbareditboxbutton, classe](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Cmfcdropdowntoolbarbutton, classe](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [cmfctoolbarmenubutton, classe](../mfc/reference/cmfctoolbarmenubutton-class.md).
+Cet article décrit comment ajouter un bouton de barre d’outils qui contient un contrôle Windows pour une barre d’outils. Dans MFC, un bouton de barre d’outils doit être un [cmfctoolbarbutton, classe](../mfc/reference/cmfctoolbarbutton-class.md)-classe dérivée, par exemple [cmfctoolbarcomboboxbutton, classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [cmfctoolbareditboxbutton, classe](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Cmfcdropdowntoolbarbutton, classe](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [cmfctoolbarmenubutton, classe](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
 ## <a name="adding-controls-to-toolbars"></a>Ajout de contrôles aux barres d'outils
 
 Pour ajouter un contrôle à une barre d'outils, suivez ces étapes :
 
-1. Réservez un ID de ressource factice pour le bouton dans la ressource de la barre d'outils parente. Pour plus d’informations sur la création de boutons à l’aide de la **barre d’outils Éditeur** dans Visual Studio, consultez le [barre d’outils Éditeur](../windows/toolbar-editor.md) rubrique.
+1. Réservez un ID de ressource factice pour le bouton dans la ressource de la barre d'outils parente. Pour plus d’informations sur la création de boutons à l’aide de la **barre d’outils Éditeur** dans Visual Studio, consultez le [barre d’outils Éditeur](../windows/toolbar-editor.md) article.
 
 1. Réservez une image de barre d'outils (icône bouton) pour le bouton dans toutes les images bitmap de la barre d'outils parente.
 
-1. Dans le gestionnaire de messages qui gère le message `AFX_WM_RESETTOOLBAR`, procédez comme suit :
+1. Dans le Gestionnaire de messages qui traite le `AFX_WM_RESETTOOLBAR` du message, procédez comme suit :
 
    1. Construisez le contrôle de bouton à l'aide d'une classe dérivée de `CMFCToolbarButton`.
 
@@ -51,7 +51,7 @@ Lorsque vous activez la personnalisation, vous créez le **personnaliser** boît
 
 ## <a name="example-creating-a-find-combo-box"></a>Exemple : création d'une zone de liste déroulante Rechercher
 
-Cette section décrit comment créer un **trouver** contrôle de zone de liste déroulante qui apparaît sur une barre d’outils et qui contient les chaînes de recherche récemment utilisés. L'utilisateur peut entrer une chaîne du contrôle puis appuyer sur la touche d'entrée pour rechercher un document, ou appuyer sur la touche Échap pour retourner le focus au frame principal. Cet exemple suppose que le document est affiché dans un [CEditView, classe](../mfc/reference/ceditview-class.md)-vue dérivée.
+Cette section décrit comment créer un **trouver** contrôle de zone de liste déroulante qui apparaît sur une barre d’outils et contient les chaînes de recherche récemment utilisés. L'utilisateur peut entrer une chaîne du contrôle puis appuyer sur la touche d'entrée pour rechercher un document, ou appuyer sur la touche Échap pour retourner le focus au frame principal. Cet exemple suppose que le document est affiché dans un [CEditView, classe](../mfc/reference/ceditview-class.md)-vue dérivée.
 
 ### <a name="creating-the-find-control"></a>Création du contrôle de recherche (Find)
 
@@ -72,7 +72,7 @@ Commencez par créer le **trouver** contrôle combo box :
 
 1. Dans la classe `CFindComboBox`, substituez la méthode virtuelle `PreTranslateMessage`. Cette méthode permet à la zone de liste déroulante traiter les [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) message. Si l'utilisateur appuie sur la touche Échap (`VK_ESCAPE`), retournez le focus sur la fenêtre frame principale. Si l'utilisateur appuie sur la touche Entrée (`VK_ENTER`), publiez dans la fenêtre frame principale un message `WM_COMMAND` contenant l'ID de commande `ID_EDIT_FIND_COMBO`.
 
-1. Créer une classe pour le **trouver** bouton de zone de liste déroulante, dérivée de [cmfctoolbarcomboboxbutton, classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). Dans cet exemple, cela est nommé `CFindComboButton`.
+1. Créer une classe pour le **trouver** bouton de zone de liste déroulante, dérivée de [cmfctoolbarcomboboxbutton, classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). Dans cet exemple, il est nommé `CFindComboButton`.
 
 1. Le constructeur de `CMFCToolbarComboBoxButton` prend trois paramètres : l'ID de commande du bouton, l'index d'image du bouton et le style de la zone de liste déroulante. Définissez ces paramètres comme suit :
 

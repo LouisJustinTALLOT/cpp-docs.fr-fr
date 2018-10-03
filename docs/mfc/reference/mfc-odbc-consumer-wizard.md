@@ -1,7 +1,7 @@
 ---
 title: Assistant Consommateur ODBC MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2df730c5ee38c41cc6f40ac7000802bbe0bbb30d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23a264c48f0a03888f8b6ac744129de75d8ad757
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400313"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250469"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Consommateur ODBC MFC (Assistant)
 
-Insérer « Résultats de la recherche « résumé ici.
+> [!WARNING]
+> Dans Visual Studio 2017 version 15.9 cet Assistant code est déconseillé et sera supprimé dans une future version de Visual Studio. Cet Assistant est rarement utilisé. Prise en charge générale pour ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette utilisation déconseillée, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires est important pour nous.
 
 Cet Assistant définit une classe de jeu d’enregistrements ODBC et les liaisons de données nécessaire pour accéder à la source de données spécifié.
 

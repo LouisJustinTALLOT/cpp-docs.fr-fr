@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029669"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235414"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procédure pas à pas : Créer une application de bureau de Windows traditionnelle (C++)
 
 Cette procédure pas à pas montre comment créer une application de bureau Windows classique dans Visual Studio. L’exemple d’application, vous allez créer utilise l’API Windows pour afficher « Hello, bureau de Windows ! » dans une fenêtre. Vous pouvez utiliser le code que vous développez dans cette procédure pas à pas comme modèle pour créer d’autres applications de bureau Windows.
 
-L’API Windows (également appelé l’API Win32, API de bureau Windows et API classique de Windows) est une infrastructure en fonction de langage C pour créer des applications Windows. Il a été existe depuis les années 1980 et a été utilisé pour créer des applications de Windows depuis des décennies. Plus les infrastructures avancées et plus facile à programme ont été construits par-dessus cette API, telles que MFC, ATL et .NET Framework. Code les plus moderne pour les applications UWP et Store écrites en C / c++ / WinRT utilise cette API en dessous. Pour plus d’informations sur l’API Windows, consultez [Index d’API Windows](/windows/desktop/apiindex/windows-api-list). Il existe plusieurs façons de créer des applications Windows, mais cela a été le premier.
+L’API Windows (également appelé l’API Win32, API de bureau Windows et API classique de Windows) est une infrastructure basée sur la langue de C pour créer des applications Windows. Il a été existe depuis les années 1980 et a été utilisé pour créer des applications de Windows depuis des décennies. Plus les infrastructures avancées et plus facile à programme ont été construits par-dessus l’API Windows, telles que MFC, ATL et .NET Framework. Code les plus moderne pour les applications UWP et Store écrites en C / c++ / WinRT utilise l’API Windows en dessous. Pour plus d’informations sur l’API Windows, consultez [Index d’API Windows](/windows/desktop/apiindex/windows-api-list). Il existe plusieurs façons de créer des applications Windows, mais le processus ci-dessus a été le premier.
 
 > [!IMPORTANT]
 > Par souci de concision, certaines instructions de code sont omises dans le texte. Le [générer le code](#build-the-code) section à la fin de ce document présente le code complet.
@@ -140,13 +140,13 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
    );
    ```
 
-   Dans cette fonction vous écrivez du code pour gérer les *messages* reçues par l’application à partir de Windows quand *événements* se produisent. Par exemple, si un utilisateur choisit un bouton OK dans votre application, Windows envoie un message à vous et vous pouvez écrire du code à l’intérieur de votre `WndProc` fonction qui effectue le travail approprié. Il s’agit *gestion* un événement. Vous gérez uniquement les événements qui sont pertinentes pour votre application.
+   Dans cette fonction, vous écrivez du code pour gérer les *messages* reçues par l’application à partir de Windows quand *événements* se produisent. Par exemple, si un utilisateur choisit un bouton OK dans votre application, Windows envoie un message à vous et vous pouvez écrire du code à l’intérieur de votre `WndProc` fonction qui effectue le travail approprié. Il est appelé *gestion* un événement. Vous gérez uniquement les événements qui sont pertinentes pour votre application.
 
    Pour plus d’informations, consultez [Window Procedures](https://msdn.microsoft.com/library/windows/desktop/ms632593).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Pour ajouter une fonctionnalité à la fonction WinMain
 
-1. Dans le `WinMain` (fonction), vous remplissez une structure de type [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Cette structure contient des informations sur la fenêtre, par exemple, l’icône d’application, la couleur d’arrière-plan de la fenêtre, le nom à afficher dans la barre de titre et plus important encore, un pointeur de fonction à votre procédure de fenêtre. L’exemple suivant montre une structure `WNDCLASSEX` type.
+1. Dans le `WinMain` (fonction), vous remplissez une structure de type [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). La structure contient des informations sur la fenêtre, par exemple, l’icône d’application, la couleur d’arrière-plan de la fenêtre, le nom à afficher dans la barre de titre et plus important encore, un pointeur de fonction à votre procédure de fenêtre. L’exemple suivant montre une structure `WNDCLASSEX` type.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -165,9 +165,9 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Pour plus d’informations sur les champs de cette structure, consultez [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
+   Pour plus d’informations sur les champs de la structure ci-dessus, consultez [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Vous devez inscrire le `WNDCLASSEX` avec Windows afin qu’il connaît votre fenêtre et comment lui envoyer des messages. Utilisez le [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) de fonction et passez la structure de classe de fenêtre comme argument. Le `_T` macro est utilisée, car nous utilisons le `TCHAR` type.
+1. Inscrire le `WNDCLASSEX` avec Windows afin qu’il connaît votre fenêtre et comment lui envoyer des messages. Utilisez le [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) de fonction et passez la structure de classe de fenêtre comme argument. Le `_T` macro est utilisée, car nous utilisons le `TCHAR` type.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -232,7 +232,7 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
    UpdateWindow(hWnd);
    ```
 
-   La fenêtre affichée ne contient pas grand chose, car vous n’avez pas encore implémenté le `WndProc` (fonction). En d’autres termes, l’application ne gère pas encore les messages Windows envoie désormais à celui-ci.
+   Quantité de contenu n’a pas la fenêtre affichée, car vous n’avez pas encore implémenté le `WndProc` (fonction). En d’autres termes, l’application ne n’est pas encore gère les messages que Windows envoie désormais à celui-ci.
 
 1. Pour gérer les messages, nous ajoutez tout d’abord une boucle de message pour écouter les messages envoyés par Windows. Lorsque l’application reçoit un message, cette boucle l’envoie à votre `WndProc` fonction à traiter. La boucle de message ressemble au code suivant.
 
@@ -340,9 +340,9 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
 
 1. Pour permettre à la fonction `WndProc` de traiter les messages reçus par l’application, implémentez une instruction switch.
 
-   Est un message important pour gérer la [WM_PAINT](/windows/desktop/gdi/wm-paint) message. L’application reçoit ce message quand une partie de sa fenêtre affichée doit être mise à jour. Cet événement peut se produire lorsqu’un utilisateur déplace une fenêtre devant votre fenêtre, puis le déplace à nouveau. Votre application ne sait pas quand les événements comme celui-ci se produisent ; Windows seulement sait, il vous avertit avec `WM_PAINT`. Lorsque la fenêtre s’affiche tout d’abord, tout cela doit être mis à jour.
+   Est un message important pour gérer la [WM_PAINT](/windows/desktop/gdi/wm-paint) message. L’application reçoit le `WM_PAINT` message lorsqu’il fait partie de sa fenêtre affichée doit être mis à jour. L’événement peut se produire lorsqu’un utilisateur déplace une fenêtre devant votre fenêtre, puis le déplace à nouveau, et que votre application ne sait pas lorsque ces événements se produisent. Windows seulement sait, il vous avertit avec `WM_PAINT`. Lorsque la fenêtre s’affiche tout d’abord, tout cela doit être mis à jour.
 
-   Pour gérer un `WM_PAINT` message, le premier appel [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), puis traitez toute la logique pour disposer le texte, boutons et autres contrôles dans la fenêtre, puis appelez [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Pour cette application, la logique entre l’appel de début et de l’appel de fin consiste à afficher la chaîne « Hello, bureau de Windows ! » dans la fenêtre. Dans le code suivant, notez que le [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) fonction est utilisée pour afficher la chaîne.
+   Pour gérer un `WM_PAINT` message, le premier appel [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), puis traitez toute la logique pour disposer le texte, boutons et autres contrôles dans la fenêtre, puis appelez [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Pour l’application, la logique entre l’appel de début et de l’appel de fin consiste à afficher la chaîne « Hello, bureau de Windows ! » dans la fenêtre. Dans le code suivant, notez que le [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) fonction est utilisée pour afficher la chaîne.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -367,7 +367,7 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
    }
    ```
 
-   `HDC` Dans ce code est un handle vers un contexte de périphérique, qui est une structure de données que Windows utilise pour permettre à votre application communiquer avec le sous-système graphique. Le `BeginPaint` et `EndPaint` fonctions garantissent que votre application se comporte comme un bon citoyen et n’utilise pas le contexte de périphérique pendant plus longtemps que nécessaire. Cela permet de garantir que le sous-système graphique est disponible pour une utilisation par d’autres applications.
+   `HDC` dans le code est un handle vers un contexte de périphérique, qui est une structure de données que Windows utilise pour permettre à votre application communiquer avec le sous-système graphique. Le `BeginPaint` et `EndPaint` fonctions que votre application se comporte comme un bon citoyen et n’utilise pas le contexte de périphérique pendant plus longtemps que nécessaire. Le fonctions contribuent à rendre le sous-système graphique est disponible pour une utilisation par d’autres applications.
 
 1. Une application gère généralement beaucoup d’autres messages, par exemple, [WM_CREATE](/windows/desktop/winmsg/wm-create) lors de la création d’une fenêtre, et [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) lorsque la fenêtre est fermée. Le code suivant illustre une fonction `WndProc` basique mais complète.
 

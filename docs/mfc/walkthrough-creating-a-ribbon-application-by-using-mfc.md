@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169578"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236021"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : création d'une application de ruban à l'aide de MFC
 
@@ -28,7 +28,7 @@ Cette procédure pas à pas montre comment utiliser le **Assistant Application M
 
 ## <a name="prerequisites"></a>Prérequis
 
-Cette procédure pas à pas suppose que vous avez défini Visual Studio à utiliser **paramètres de développement généraux**. Si vous utilisez des paramètres différents, certains éléments de l'interface utilisateur qui sont référencés dans les instructions suivantes peuvent ne pas s'afficher.
+Cette procédure pas à pas suppose que vous avez défini Visual Studio à utiliser **paramètres de développement généraux**. Si vous utilisez des paramètres différents, il se peut que certains éléments de l’utilisateur interface (UI) qui sont référencés dans les instructions suivantes peuvent ne pas afficher.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Pour créer une application MFC comportant un ruban
 
@@ -73,7 +73,7 @@ Cette procédure pas à pas suppose que vous avez défini Visual Studio à utili
 
 1. Il vous appartient maintenant de personnaliser le volet. Les volets sont utilisés pour regrouper des éléments qui sont liés de façon logique les uns aux autres. Par exemple, sur le **accueil** onglet de cette application, le **couper**, **copie**, et **coller** commandes se trouvent sur le  **Presse-papiers** Panneau de configuration. Pour personnaliser le panneau de configuration, avec le bouton droit **Panel1** puis cliquez sur **propriétés**. Dans le **propriétés** fenêtre, modification **légende** à *favoris*.
 
-    Vous pouvez spécifier le **Index d’Image** pour le panneau. Ce nombre spécifie l’icône qui s’affiche si le volet du ruban est ajouté à la **une barre d’outils Accès rapide**. L'icône n'est pas affichée sur le volet du ruban.
+    Vous pouvez spécifier le **Index d’Image** pour le panneau. Ce nombre spécifie l’icône qui s’affiche si le volet du ruban est ajouté à la **une barre d’outils Accès rapide**. L’icône n’est pas affichée dans le panneau de ruban lui-même.
 
 1. Pour vérifier que le volet et la catégorie de ruban ont été correctement créés, affichez un aperçu du contrôle de ruban. Sur le **barre d’outils Éditeur Ribbon**, cliquez sur le **Test ruban** bouton. Un **personnalisé** onglet et **favoris** panneau doit être affiché sur le ruban.
 
@@ -81,7 +81,7 @@ Cette procédure pas à pas suppose que vous avez défini Visual Studio à utili
 
 1. Pour ajouter des éléments au panneau que vous avez créé dans la procédure précédente, faites glisser des contrôles à partir de la **éditeur Ribbon** section de la **boîte à outils** au panneau en mode design.
 
-1. Tout d’abord, ajoutez un **impression** bouton. Le **impression** bouton aura un sous-menu contenant un **impression rapide** commande à l’aide de l’imprimante par défaut. Ces deux commandes sont déjà définies pour cette application. Elles se trouvent dans le menu de l'application.
+1. Tout d’abord, ajoutez un **impression** bouton. Le **impression** bouton aura un sous-menu contenant un **impression rapide** commande à l’aide de l’imprimante par défaut. Ces deux commandes sont déjà définies pour cette application. Ils se trouvent dans le menu de l’application.
 
     Pour créer le **impression** bouton, faites glisser un outil bouton vers le panneau.
 

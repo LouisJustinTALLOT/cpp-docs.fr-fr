@@ -1,7 +1,7 @@
 ---
 title: path, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725307"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235462"
 ---
 # <a name="path-class"></a>path, classe
 
-Le **chemin d’accès** classe stocke un objet de type `string_type`, appelée `myname` ici aux fins de démonstration, pouvant être utilisée comme un chemin d’accès. `string_type` est un synonyme de `basic_string<value_type>`, où `value_type` est un synonyme de **char** sous Windows ou **wchar_t** sous Posix.
+Le **chemin d’accès** classe stocke un objet de type `string_type`, appelée `myname` ici aux fins de démonstration, pouvant être utilisée comme un chemin d’accès. `string_type` est un synonyme de `basic_string<value_type>`, où `value_type` est un synonyme de **wchar_t** sur Windows ou **char** sur POSIX.
 
 Pour obtenir plus d’informations et des exemples de code, consultez [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md).
 

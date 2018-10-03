@@ -1,7 +1,7 @@
 ---
 title: Exécuter LIB | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff75c149ff3cfff5a360314386cc4828d00f4e8d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894601"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235415"
 ---
 # <a name="running-lib"></a>Exécution de LIB
 
@@ -62,25 +62,29 @@ Vous pouvez passer des arguments de ligne de commande à LIB dans un fichier de 
 
 Le fichier */commandfile* est un fichier texte. Aucun espace ou un onglet n’est autorisé entre le signe arobase (**\@**) et le nom de fichier. Il n’existe aucune extension par défaut ; Vous devez spécifier le nom de fichier complet, y compris n’importe quelle extension. Impossible d’utiliser des caractères génériques. Vous pouvez spécifier un chemin d’accès absolu ou relatif avec le nom de fichier.
 
-Dans le fichier de commandes, les arguments peuvent être séparés par des espaces ou des tabulations, que possible sur la ligne de commande ; elles peuvent également être séparées par des caractères de saut de ligne. Utilisez un point-virgule ( ;) pour marquer un commentaire. LIB ignore tout le texte du point-virgule à la fin de la ligne.
+Dans le fichier de commandes, les arguments peuvent être séparés par des espaces ou des tabulations, que possible sur la ligne de commande ; elles peuvent également être séparées par des caractères de saut de ligne. Utilisez un point-virgule (**;**) pour marquer un commentaire. LIB ignore tout le texte du point-virgule à la fin de la ligne.
 
 Vous pouvez spécifier tout ou partie de la ligne de commande dans un fichier de commandes, et vous pouvez utiliser plusieurs fichiers de commandes dans une commande LIB. LIB accepte l’entrée de fichier de commandes comme si elle était spécifiée à cet emplacement sur la ligne de commande. Fichiers de commandes ne peuvent pas être imbriquées. LIB renvoie le contenu des fichiers de commandes, sauf si l’option /NOLOGO est utilisée.
 
 ## <a name="using-lib-options"></a>À l’aide des Options de LIB
 
-Une option est constituée d’un spécificateur d’option, qui est un tiret (-) ou une barre oblique (/), suivie du nom de l’option. Noms d’options ne peuvent pas être abrégés. Certaines options acceptent un argument spécifié après le signe deux-points ( :)). Aucun espace ni les onglets ne sont autorisés au sein de la spécification d’une option. Utiliser un ou plusieurs espaces ou des tabulations pour séparer les spécifications des options sur la ligne de commande. Les noms des options et leurs arguments de nom de fichier ou le mot clé ne sont pas sensible à la casse, mais les identificateurs utilisés comme arguments respectent la casse. LIB traite les options dans l’ordre spécifié sur la ligne de commande et dans les fichiers de commandes. Si une option est répétée avec différents arguments, le dernier traitement est prioritaire.
+Une option est constituée d’un spécificateur d’option, qui est soit un tiret (**-**) ou une barre oblique (**/**), suivi du nom de l’option. Noms d’options ne peuvent pas être abrégés. Certaines options acceptent un argument spécifié après un signe deux-points (**:**). Aucun espace ni les onglets ne sont autorisés au sein de la spécification d’une option. Utiliser un ou plusieurs espaces ou des tabulations pour séparer les spécifications des options sur la ligne de commande. Les noms des options et leurs arguments de nom de fichier ou le mot clé ne sont pas sensible à la casse, mais les identificateurs utilisés comme arguments respectent la casse. LIB traite les options dans l’ordre spécifié sur la ligne de commande et dans les fichiers de commandes. Si une option est répétée avec différents arguments, le dernier traitement est prioritaire.
 
 Les options suivantes s’appliquent à tous les modes de LIB :
 
 > **/ ERRORREPORT** [**NONE** &AMP;#124; **INVITE** &AMP;#124; **FILE D’ATTENTE** &AMP;#124; **ENVOYER**]
 
-Si lib.exe échoue lors de l’exécution, vous pouvez utiliser /ERRORREPORT pour envoyer des informations à Microsoft concernant ces erreurs internes.
+Si lib.exe échoue lors de l’exécution, vous pouvez utiliser **/ERRORREPORT** pour envoyer des informations à Microsoft concernant ces erreurs internes.
 
-Pour plus d’informations sur /ERRORREPORT, consultez [/errorReport (signaler les erreurs du compilateur interne)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Pour plus d’informations sur **/ERRORREPORT**, consultez [/errorReport (signaler les erreurs du compilateur interne)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
-Provoque la bibliothèque à l’aide de la génération de code du moment de la liaison.  Pour plus d’informations, consultez [/LTCG](../../build/reference/ltcg-link-time-code-generation.md).
+L’acronyme de « LTCG » *génération de code lien*. Cette fonctionnalité requiert une coopération entre le compilateur ([cl.exe](compiler-options.md)), LIB et l’éditeur de liens ([lien](linker-options.md)) afin d’optimiser le code en dehors de ce que n’importe quel composant peut faire lui-même.
+
+Lib, le **/LTCG** option spécifie que les entrées à partir de cl.exe incluent les fichiers objets qui ont été générées à l’aide de la [/GL](gl-whole-program-optimization.md) option du compilateur. Si LIB rencontre ces entrées et **/LTCG** n’est pas spécifié, il redémarrera avec /LTCG activé après avoir affiché un message d’information. En d’autres termes, il n’est pas nécessaire de définir explicitement cette option, mais il accélère les performances de génération pour ce faire, car LIB n’a pas à redémarrer par lui-même.
+
+Dans le processus de génération, la sortie de LIB est envoyée au lien. LIEN a son propre distinct **/LTCG** option qui est utilisée pour effectuer différentes optimisations, y compris l’optimisation de la totalité du programme et l’instrumentation de l’optimisation guidée par profil (PGO). Pour plus d’informations sur l’option de liaison, consultez [/LTCG](ltcg-link-time-code-generation.md).
 
 > **/ MACHINE**
 

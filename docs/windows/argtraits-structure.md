@@ -1,28 +1,30 @@
 ---
 title: ArgTraits (Structure) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::ArgTraits
+- event/Microsoft::WRL::Details::ArgTraits::args
 dev_langs:
 - C++
 helpviewer_keywords:
-- ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b84658271793b5f8c48ad54df44aec27022ea5a1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418396"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236073"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (structure)
 
@@ -155,29 +157,29 @@ Le type du neuvième argument de la `Invoke` (méthode).
 
 ## <a name="remarks"></a>Notes
 
-Le **ArgTraits** structure déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.
+Le `ArgTraits` structure déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
-|----------|-----------------|
-|`Arg1Type`|Typedef pour TArg1.|
-|`Arg2Type`|Typedef pour TArg2.|
-|`Arg3Type`|Typedef pour TArg3.|
-|`Arg4Type`|Typedef pour TArg4.|
-|`Arg5Type`|Typedef pour TArg5.|
-|`Arg6Type`|Typedef pour TArg6.|
-|`Arg7Type`|Typedef pour TArg7.|
-|`Arg8Type`|Typedef pour TArg8.|
-|`Arg9Type`|Typedef pour TArg9.|
+Nom       | Description
+---------- | ----------------------
+`Arg1Type` | Typedef pour TArg1.
+`Arg2Type` | Typedef pour TArg2.
+`Arg3Type` | Typedef pour TArg3.
+`Arg4Type` | Typedef pour TArg4.
+`Arg5Type` | Typedef pour TArg5.
+`Arg6Type` | Typedef pour TArg6.
+`Arg7Type` | Typedef pour TArg7.
+`Arg8Type` | Typedef pour TArg8.
+`Arg9Type` | Typedef pour TArg9.
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
-|----------|-----------------|
-|[ArgTraits::args, constante](../windows/argtraits-args-constant.md)|Conserve le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.|
+Name                     | Description
+------------------------ | ---------------------------------------------------------------------------------------
+[ArgTraits::args](#args) | Conserve le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -189,6 +191,14 @@ Le **ArgTraits** structure déclare un délégué spécifié interface et une fo
 
 **Namespace :** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Voir aussi
+## <a name="args"></a>ArgTraits::args
 
-[Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+
+```cpp
+static const int args = -1;
+```
+
+### <a name="remarks"></a>Notes
+
+Conserve le nombre de paramètres sur le `Invoke` méthode d’une interface de délégué. Lorsque `args` est égal à -1, il ne peut y avoir aucune correspondance pour le `Invoke` signature de méthode.

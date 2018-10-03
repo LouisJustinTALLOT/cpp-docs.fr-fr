@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2355a5341259978e402ecc6f8de5c684c9435e3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433060"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234986"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hébergement d'un contrôle utilisateur Windows Form en tant que boîte de dialogue MFC
 
@@ -56,7 +56,7 @@ Pour un exemple d’application qui illustre Windows Forms avec MFC, consultez [
 
 1. Ajoutez une nouvelle classe qui sous-classe `CDialog`.
 
-     Cliquez avec le bouton droit sur le nom du projet et ajoutez une classe MFC (appelée CHostForWinForm) qui sous-classe `CDialog`. Étant donné que vous n’avez pas besoin de la ressource de boîte de dialogue, vous pouvez supprimer l’ID de ressource (sélectionnez Affichage des ressources, développez le dossier de boîte de dialogue et supprimez la ressource IDD_HOSTFORWINFORM.  Ensuite, supprimez toutes les références à l’ID dans le code.).
+     Cliquez avec le bouton droit sur le nom du projet et ajoutez une classe MFC (appelée CHostForWinForm) qui sous-classe `CDialog`. Étant donné que vous n’avez pas besoin de la ressource de boîte de dialogue, vous pouvez supprimer l’ID de ressource (sélectionnez **affichage des ressources**, développez le **boîte de dialogue** dossier et delete `IDD_HOSTFORWINFORM` ressource.  Ensuite, supprimez toutes les références à l’ID dans le code.).
 
 1. Remplacez `CDialog` dans les fichiers CHostForWinForm.h et CHostForWinForm.cpp avec `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 
