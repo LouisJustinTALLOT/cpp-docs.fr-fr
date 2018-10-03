@@ -1,7 +1,7 @@
 ---
 title: Assistant composant ATL COM + 1.0 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717903"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250404"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistant Composant COM+ 1.0 ATL
 
 Utilisez cet Assistant pour ajouter un objet à votre projet qui prend en charge les services COM + 1.0, notamment les transactions.
 
 Vous pouvez spécifier si l’objet prend en charge les interfaces doubles et l’automatisation. Vous pouvez également indiquer la prise en charge de l’interface d’informations d’erreur, contrôle de l’objet amélioré, transactions et asynchrone message queuing.
+
+> [!WARNING]
+> Dans Visual Studio 2017 version 15.9 cet Assistant code est déconseillé et sera supprimé dans une future version de Visual Studio. Cet Assistant est rarement utilisé. Prise en charge générale pour ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette utilisation déconseillée, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires est important pour nous.
 
 ## <a name="remarks"></a>Notes
 

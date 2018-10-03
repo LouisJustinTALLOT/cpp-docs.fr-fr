@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029656"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235449"
 ---
 # <a name="how-to-migrate-to-clr"></a>Comment : effectuer une migration vers /clr
 
@@ -118,7 +118,7 @@ En-têtes précompilés sont pris en charge sous **/CLR**. Toutefois, si vous ne
 
 Le moyen le plus simple de compiler un projet dont certains modules sont compilés **/CLR** consiste à désactiver complètement les en-têtes précompilés. (Dans la boîte de dialogue Pages de propriétés de projet, ouvrez le nœud C/C++ et sélectionnez les en-têtes précompilés. Puis remplacez la propriété créer/utiliser des en-têtes précompilés « Pas utiliser les en-têtes précompilés ».)
 
-Toutefois, en particulier pour les grands projets, en-têtes précompilés fournissent bien meilleure vitesse de compilation, afin de désactiver cette fonctionnalité n’est pas souhaitable. Dans ce cas, il est préférable de configurer le **/CLR** et non **/CLR** fichiers à utiliser séparément les en-têtes précompilés. Cela est possible en une seule étape en sélectionnant simultanément les modules à compiler **/CLR** à l’aide de l’Explorateur de solutions, en effectuant un clic droit sur le groupe et en sélectionnant Propriétés. Puis modifier les propriétés de la création/utilisation PCH via fichier et le fichier d’en-tête précompilé pour utiliser respectivement un nom de fichier d’en-tête différent et un fichier PCH.
+Toutefois, en particulier pour les grands projets, en-têtes précompilés fournissent bien meilleure vitesse de compilation, afin de désactiver cette fonctionnalité n’est pas souhaitable. Dans ce cas, il est préférable de configurer le **/CLR** et non **/CLR** fichiers à utiliser séparément les en-têtes précompilés. Cela est possible en une seule étape en sélectionnant simultanément les modules à compiler **/CLR** à l’aide de **l’Explorateur de solutions**, clic droit sur le groupe et sélectionnez Propriétés. Puis modifier les propriétés de la création/utilisation PCH via fichier et le fichier d’en-tête précompilé pour utiliser respectivement un nom de fichier d’en-tête différent et un fichier PCH.
 
 ## <a name="fixing-errors"></a>Correction des erreurs
 

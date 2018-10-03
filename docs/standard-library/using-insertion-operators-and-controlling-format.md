@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 60f82332f9dd0fa6d6e64beb2a5d793784471a1f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959805"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234593"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilisation des opérateurs d'insertion et contrôle du format
 
@@ -99,7 +99,7 @@ int main( )
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
    char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
-      cout << setw( 6 )  << names[i]
+      cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
 }
 ```
@@ -107,10 +107,10 @@ int main( )
 Le `width` fonction membre est déclarée dans \<iostream >. Si vous utilisez `setw` ou tout autre manipulateur avec des arguments, vous devez inclure \<iomanip>. Dans la sortie, les chaînes sont imprimées dans un champ de largeur 6 et les entiers dans un champ de largeur 10 :
 
 ```Output
-  Zoot      1.23
- Jimmy     35.36
-    Al     653.7
-  Stan   4358.24
+   Zoot      1.23
+  Jimmy     35.36
+     Al     653.7
+   Stan   4358.24
 ```
 
 Ni `setw` ni `width` tronque les valeurs. Si la sortie mise en forme dépasse la largeur, la valeur entière est imprimée, conformément au paramètre de précision du flux. Les deux `setw` et `width` affectent uniquement le champ suivant. La largeur de champ reprend son comportement par défaut (la largeur nécessaire) une fois qu'un champ a été imprimé. Toutefois, les autres options de format de flux restent en vigueur jusqu'à ce qu'elles soient modifiées.

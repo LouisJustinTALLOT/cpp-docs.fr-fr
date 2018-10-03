@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599299"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250443"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL, espace de noms
 
@@ -89,7 +89,7 @@ namespace Microsoft::WRL;
 |Nom|Description|
 |----------|-----------------|
 |[AsWeak, fonction](../windows/asweak-function.md)|Récupère une référence faible à une instance spécifiée.|
-|[Fonction de rappel](../windows/callback-function-windows-runtime-cpp-template-library.md)|Crée un objet dont la fonction membre est une méthode de rappel.|
+|[Fonction de rappel (WRL)](../windows/callback-function-wrl.md)|Crée un objet dont la fonction membre est une méthode de rappel.|
 |[CreateActivationFactory, fonction](../windows/createactivationfactory-function.md)|Crée une fabrique qui produit des instances de la classe spécifiée pouvant être activées par le Windows Runtime.|
 |[CreateClassFactory, fonction](../windows/createclassfactory-function.md)|Crée une fabrique produisant des instances de la classe spécifiée.|
 |[Make, fonction](../windows/make-function.md)|Initialise la classe Windows Runtime spécifiée.|

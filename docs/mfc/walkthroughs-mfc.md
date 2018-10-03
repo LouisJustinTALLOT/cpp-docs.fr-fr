@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05255f71f304b32de95faf96eaa23f5ce3da9f96
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 9d96ce9ade06c849716a680bd3c0c8bb6feeccc6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169409"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235657"
 ---
 # <a name="walkthroughs-mfc"></a>Procédures pas à pas (MFC)
 
@@ -28,7 +28,7 @@ Cette section contient des articles qui vous guident tout au long de différente
 ## <a name="in-this-section"></a>Dans cette section
 
 [Procédure pas à pas : utilisation des nouveaux contrôles d’environnement MFC](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
-Dans cette procédure pas à pas, vous allez créer une application qui ressemble à l’Explorateur de fichiers. Vous allez créer une fenêtre qui contient deux volets. Le volet gauche contiendra un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objet qui affiche votre poste de travail dans une vue hiérarchique. Le volet de droite contiendra un [CMFCShellListCtrl affichant](../mfc/reference/cmfcshelllistctrl-class.md) qui affiche les fichiers dans le dossier sélectionné dans le volet gauche.
+Dans cette procédure pas à pas, vous allez créer une application qui ressemble à l’Explorateur de fichiers. Vous allez créer une fenêtre qui contient deux volets. Le volet de gauche a un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objet qui affiche votre poste de travail dans une vue hiérarchique. Le volet de droite a un [CMFCShellListCtrl affichant](../mfc/reference/cmfcshelllistctrl-class.md) qui affiche les fichiers dans le dossier sélectionné dans le volet gauche.
 
 [Procédure pas à pas : placement de contrôles dans les barres d’outils](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 Modernes barres d’outils MFC peuvent héberger des contrôles autres que des boutons simples. Cet article explique comment procéder.

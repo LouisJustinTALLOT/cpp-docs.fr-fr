@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 899ddba8ee72039702f05b0d369b79e347f7db7e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169721"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235605"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procédure pas à pas : ajout d'une classe CTaskDialog à une application
 
@@ -43,7 +43,7 @@ Pour exécuter cette procédure pas à pas, vous devez disposer des composants s
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Remplacement d’une boîte de message Windows par un CTaskDialog
 
-La procédure suivante illustre la façon la plus élémentaire d’utiliser `CTaskDialog`, qui consiste à remplacer la boîte de message Windows. Cet exemple modifie aussi l’icône associée à la boîte de dialogue de tâche. Le fait de modifier l’icône donne à `CTaskDialog` la même apparence que la boîte de message Windows.
+La procédure suivante illustre la façon la plus élémentaire d’utiliser `CTaskDialog`, qui consiste à remplacer la boîte de message Windows. Cet exemple modifie aussi l’icône associée à la boîte de dialogue de tâche. Modification de l’icône rend le `CTaskDialog` apparaître même à la boîte de message Windows.
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Pour remplacer une boîte de message Windows par un CTaskDialog
 
@@ -61,7 +61,7 @@ La procédure suivante illustre la façon la plus élémentaire d’utiliser `CT
     CString emptyString;
     ```
 
-1. Ajoutez le code suivant à la suite du code de l’étape 4. Ce code garantit que l’ordinateur de l’utilisateur prend en charge `CTaskDialog`. Si la boîte de dialogue n’est pas prise en charge, l’application affiche à la place une boîte de message Windows.
+1. Ajoutez le code suivant à la suite du code de l’étape 4. Ce code garantit que l’ordinateur de l’utilisateur prend en charge `CTaskDialog`. Si la boîte de dialogue n’est pas pris en charge, l’application affiche une boîte de message Windows à la place.
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -92,7 +92,7 @@ La procédure suivante illustre la façon la plus élémentaire d’utiliser `CT
     taskDialog.DoModal();
     ```
 
-Vous pouvez omettre l’étape 7 si vous ne voulez pas que `CTaskDialog` affiche la même icône que celle de la boîte de message Windows. Si vous omettez cette étape, `CTaskDialog` ne présente aucune icône quand l’application l’affiche.
+Vous pouvez éviter l’étape 7 si vous ne souhaitez pas le `CTaskDialog` pour afficher l’icône de même que la boîte de message Windows. Si vous évitez cette étape, le `CTaskDialog` présente aucune icône quand l’application l’affiche.
 
 Compilez et exécutez l'application. L’application affiche la boîte de dialogue de tâche après avoir démarré.
 
@@ -102,7 +102,7 @@ La procédure suivante montre comment ajouter des fonctionnalités au `CTaskDial
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>Pour ajouter des fonctionnalités au CTaskDialog
 
-1. Accédez à l’ **Affichage des ressources**. Si vous ne voyez pas l’ **Affichage des ressources**, vous pouvez l’ouvrir à partir du menu **Affichage** .
+1. Accédez à l’ **Affichage des ressources**. Si vous ne voyez pas le **affichage des ressources**, vous pouvez l’ouvrir à partir de la **vue** menu.
 
 1. Développez l’ **Affichage des ressources** jusqu’à ce que vous puissiez sélectionner le dossier **Table de chaînes** . Développez-le et double-cliquez sur l’entrée **Table de chaînes** .
 
@@ -197,7 +197,7 @@ La procédure suivante montre comment afficher un `CTaskDialog` sans créer au p
 
 Compilez et exécutez l'application. L’application affiche deux boîtes de dialogue de tâche. Provient de la boîte de dialogue première le **ajouter des fonctionnalités au CTaskDialog** procédure ; la seconde boîte de dialogue est la procédure précédente.
 
-Ces exemples ne montrent pas toutes les options accessibles à un `CTaskDialog`, mais ils devraient vous aider à vous lancer. Pour obtenir une description complète de la classe, consultez [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
+Ces exemples ne montrent pas toutes les options disponibles pour un `CTaskDialog`, mais devraient vous aider à démarrer. Pour obtenir une description complète de la classe, consultez [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
 
 ## <a name="see-also"></a>Voir aussi
 

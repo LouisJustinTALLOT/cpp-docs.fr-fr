@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436882"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250391"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details, espace de noms
 
@@ -43,7 +43,7 @@ namespace Microsoft::WRL::Details;
 |[MakeAllocator, classe](../windows/makeallocator-class.md)|Alloue la mémoire pour une classe activable, avec ou sans prise en charge de la référence faible.|
 |[ModuleBase, classe](../windows/modulebase-class.md)|Représente la classe de base de la [Module](../windows/module-class.md) classes.|
 |[RemoveIUnknown, classe](../windows/removeiunknown-class.md)|Crée un type qui est équivalent à une `IUnknown`-type de base, a, mais non virtuelle `QueryInterface`, `AddRef`, et `Release` méthodes.|
-|[WeakReference (classe)](../windows/weakreference-class1.md)|Représente un *référence faible* qui peut être utilisé avec le Windows Runtime ou le COM classique. Une référence faible représente un objet qui peut être accessible ou non.|
+|[WeakReference (classe)](../windows/weakreference-class.md)|Représente un *référence faible* qui peut être utilisé avec le Windows Runtime ou le COM classique. Une référence faible représente un objet qui peut être accessible ou non.|
 
 ### <a name="structures"></a>Structures
 
@@ -84,7 +84,7 @@ namespace Microsoft::WRL::Details;
 |[ActivationFactoryCallback, fonction](../windows/activationfactorycallback-function.md)|Obtient la fabrique d’activation pour l’ID d’activation spécifié.|
 |[move, fonction](../windows/move-function.md)|Déplace l’argument spécifié à partir d’un emplacement vers un autre.|
 |[RaiseException, fonction](../windows/raiseexception-function.md)|Lève une exception dans le thread appelant.|
-|[Swap, fonction (bibliothèque de modèles Windows Runtime C++)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Échange les valeurs des deux arguments spécifiés.|
+|[Swap, fonction (WRL)](../windows/swap-function-wrl.md)|Échange les valeurs des deux arguments spécifiés.|
 |[TerminateMap, fonction](../windows/terminatemap-function.md)|Arrête les fabriques de classe dans le module spécifié.|
 
 ## <a name="requirements"></a>Configuration requise

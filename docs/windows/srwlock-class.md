@@ -1,28 +1,42 @@
 ---
 title: SRWLock (classe) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/25/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::SRWLock
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockExclusive
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockShared
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::SRWLock
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::SRWLock_
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::~SRWLock
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive
+- corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockShared
 dev_langs:
 - C++
 helpviewer_keywords:
-- SRWLock class
+- Microsoft::WRL::Wrappers::SRWLock class
+- Microsoft::WRL::Wrappers::SRWLock::LockExclusive method
+- Microsoft::WRL::Wrappers::SRWLock::LockShared method
+- Microsoft::WRL::Wrappers::SRWLock::SRWLock, constructor
+- Microsoft::WRL::Wrappers::SRWLock::SRWLock_ data member
+- Microsoft::WRL::Wrappers::SRWLock::~SRWLock, destructor
+- Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive method
+- Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb97a29796c287cfaadddc305f25807de5dcba2e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 771a375d46177bb3b9d263f0a5221039bb963bc2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604234"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233968"
 ---
 # <a name="srwlock-class"></a>SRWLock (classe)
 
@@ -42,32 +56,32 @@ Un verrou SRW est utilisé pour synchroniser l’accès entre plusieurs threads 
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|||
-|-|-|
-|`SyncLockExclusive`|Synonyme pour un **SRWLock** objet est acquis en mode exclusif.|
-|`SyncLockShared`|Synonyme pour un **SRWLock** objet est acquis en mode partagé.|
+Nom                | Description
+------------------- | -------------------------------------------------------------------
+`SyncLockExclusive` | Synonyme pour un `SRWLock` objet est acquis en mode exclusif.
+`SyncLockShared`    | Synonyme pour un `SRWLock` objet est acquis en mode partagé.
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
-|----------|-----------------|
-|[SRWLock::SRWLock, constructeur](../windows/srwlock-srwlock-constructor.md)|Initialise une nouvelle instance de la **SRWLock** classe.|
-|[SRWLock::~SRWLock, destructeur](../windows/srwlock-tilde-srwlock-destructor.md)|Annule l’initialisation d’une instance de la **SRWLock** classe.|
+Nom                                     | Description
+---------------------------------------- | --------------------------------------------------
+[SRWLock::SRWLock](#srwlock-constructor) | Initialise une nouvelle instance de la classe `SRWLock`.
+[SRWLock :: ~ SRWLock](#tilde-srwlock)      | Annule l’initialisation d’une instance de la `SRWLock` classe.
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
-|----------|-----------------|
-|[SRWLock::LockExclusive, méthode](../windows/srwlock-lockexclusive-method.md)|Acquiert un **SRWLock** objet en mode exclusif.|
-|[SRWLock::LockShared, méthode](../windows/srwlock-lockshared-method.md)|Acquiert un **SRWLock** objet en mode partagé.|
-|[SRWLock::TryLockExclusive, méthode](../windows/srwlock-trylockexclusive-method.md)|Tente d’acquérir un **SRWLock** objet en mode exclusif pour la valeur actuelle ou spécifiée **SRWLock** objet.|
-|[SRWLock::TryLockShared, méthode](../windows/srwlock-trylockshared-method.md)|Tente d’acquérir un **SRWLock** objet en mode partagé pour la valeur actuelle ou spécifiée **SRWLock** objet.|
+Nom                                           | Description
+---------------------------------------------- | -------------------------------------------------------------------------------------------------------
+[SRWLock::LockExclusive](#lockexclusive)       | Acquiert un `SRWLock` objet en mode exclusif.
+[SRWLock::LockShared](#lockshared)             | Acquiert un `SRWLock` objet en mode partagé.
+[SRWLock::TryLockExclusive](#trylockexclusive) | Tente d’acquérir un `SRWLock` objet en mode exclusif pour la valeur actuelle ou spécifiée `SRWLock` objet.
+[SRWLock::TryLockShared](#trylockshared)       | Tente d’acquérir un `SRWLock` objet en mode partagé pour la valeur actuelle ou spécifiée `SRWLock` objet.
 
 ### <a name="protected-data-member"></a>Membre de données protégées
 
-|Name|Description|
-|----------|-----------------|
-|[SRWLock::SRWLock_, données de membre](../windows/srwlock-srwlock-data-member.md)|Contient la variable sous-jacente de verrou actif **SRWLock** objet.|
+Name                                      | Description
+----------------------------------------- | -----------------------------------------------------------------------
+[SRWLock::SRWLock_](#srwlock-data-member) | Contient la variable sous-jacente de verrou actif `SRWLock` objet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -79,6 +93,109 @@ Un verrou SRW est utilisé pour synchroniser l’accès entre plusieurs threads 
 
 **Namespace :** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>Voir aussi
+## <a name="tilde-srwlock"></a>SRWLock :: ~ SRWLock
 
-[Microsoft::WRL::Wrappers, espace de noms](../windows/microsoft-wrl-wrappers-namespace.md)
+Annule l’initialisation d’une instance de la `SRWLock` classe.
+
+```cpp
+~SRWLock();
+```
+
+## <a name="lockexclusive"></a>SRWLock::LockExclusive
+
+Acquiert un `SRWLock` objet en mode exclusif.
+
+```cpp
+SyncLockExclusive LockExclusive();
+
+static SyncLockExclusive LockExclusive(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*lock*<br/>
+Pointeur vers un `SRWLock` objet.
+
+### <a name="return-value"></a>Valeur de retour
+
+Un `SRWLock` objet en mode exclusif.
+
+## <a name="lockshared"></a>SRWLock::LockShared
+
+Acquiert un `SRWLock` objet en mode partagé.
+
+```cpp
+SyncLockShared LockShared();
+
+static SyncLockShared LockShared(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*lock*<br/>
+Pointeur vers un `SRWLock` objet.
+
+### <a name="return-value"></a>Valeur de retour
+
+Un `SRWLock` objet en mode partagé.
+
+## <a name="srwlock-constructor"></a>SRWLock::SRWLock
+
+Initialise une nouvelle instance de la classe `SRWLock`.
+
+```cpp
+SRWLock();
+```
+
+## <a name="srwlock-data-member"></a>SRWLock::SRWLock_
+
+Contient la variable sous-jacente de verrou actif `SRWLock` objet.
+
+```cpp
+SRWLOCK SRWLock_;
+```
+
+## <a name="trylockexclusive"></a>SRWLock::TryLockExclusive
+
+Tente d’acquérir un `SRWLock` objet en mode exclusif pour la valeur actuelle ou spécifiée `SRWLock` objet. Si l’appel réussit, le thread appelant prend possession du verrou.
+
+```cpp
+SyncLockExclusive TryLockExclusive();
+
+static SyncLockExclusive TryLockExclusive(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*lock*<br/>
+Pointeur vers un `SRWLock` objet.
+
+### <a name="return-value"></a>Valeur de retour
+
+Si l’opération réussit, un `SRWLock` objet en mode exclusif et que le thread appelant prend possession du verrou. Sinon, un `SRWLock` objet dont l’état n’est pas valide.
+
+## <a name="trylockshared"></a>SRWLock::TryLockShared
+
+Tente d’acquérir un `SRWLock` objet en mode partagé pour la valeur actuelle ou spécifiée `SRWLock` objet.
+
+```cpp
+WRL_NOTHROW SyncLockShared TryLockShared();
+WRL_NOTHROW static SyncLockShared TryLockShared(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*lock*<br/>
+Pointeur vers un `SRWLock` objet.
+
+### <a name="return-value"></a>Valeur de retour
+
+Si l’opération réussit, un `SRWLock` objet dans le mode partagé et le thread appelant prend possession du verrou. Sinon, un `SRWLock` objet dont l’état n’est pas valide.

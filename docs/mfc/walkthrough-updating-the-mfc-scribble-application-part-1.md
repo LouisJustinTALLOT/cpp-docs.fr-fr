@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169773"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235502"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1)
 
@@ -54,7 +54,7 @@ Cette partie de la procédure pas à pas comporte les sections suivantes :
 
 ##  <a name="replaceclass"></a> En remplaçant les Classes de Base
 
-Pour convertir une application qui prend en charge un menu à une application qui prend en charge d’un ruban, vous devez dériver de l’application, fenêtre frame et les classes de barre d’outils à partir de classes de base mis à jour. (Nous vous suggérons que vous ne pas modifier l’exemple Scribble d’origine ; au lieu de cela, nettoyer le projet Scribble, copiez-le vers un autre répertoire et ensuite modifier la copie.)
+Pour convertir une application qui prend en charge un menu à une application qui prend en charge d’un ruban, vous devez dériver de l’application, fenêtre frame et les classes de barre d’outils à partir de classes de base mis à jour. (Nous vous suggérons de que vous ne modifiez pas l’exemple Scribble d’origine. Au lieu de cela, nettoyer le projet Scribble, copiez-le dans un autre répertoire, puis modifiez la copie.)
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Pour remplacer les classes de base dans l’application Scribble
 
@@ -115,9 +115,9 @@ Pour convertir une application qui prend en charge un menu à une application qu
 
 ##  <a name="addbitmap"></a> Ajout de Bitmaps au projet
 
-Les quatre étapes de cette procédure pas à pas qui nécessitent des ressources de la bitmap. Vous pouvez obtenir des bitmaps appropriés de différentes manières :
+Les quatre étapes de cette procédure pas à pas qui nécessitent des ressources de la bitmap. Vous pouvez obtenir les bitmaps appropriés de différentes manières :
 
-- Utilisez le [éditeurs de ressources](../windows/resource-editors.md) d’inventer vos propres images bitmap. Ou utiliser les éditeurs de ressources pour assembler les bitmaps d’images portable network graphics (.png) qui sont inclus avec Visual Studio et peuvent être téléchargé à partir de la [bibliothèque d’images Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Utilisez le [éditeurs de ressources](../windows/resource-editors.md) d’inventer vos propres images bitmap. Ou utiliser les éditeurs de ressources pour assembler les bitmaps d’images portable network graphics (.png) qui sont inclus avec Visual Studio et peuvent être téléchargées à partir de la [bibliothèque d’images Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
     Toutefois, le **ruban** interface utilisateur nécessite que certaines images bitmap prend en charge les images transparentes. Bitmaps transparentes utilisent des pixels de 32 bits, où 24 bits spécifier les composants rouges, vert et bleus de la couleur, et 8 bits définissent un *canal alpha* qui spécifie la transparence de la couleur. Les éditeurs de ressources actuel, vous peuvent afficher, mais pas modifier les images bitmap avec 32 bits de pixels. Par conséquent, utilisez un éditeur d’images externes au lieu des éditeurs de ressources pour manipuler des bitmaps transparentes.
 
@@ -165,7 +165,7 @@ Cette procédure pas à pas copie des fichiers de ressources à partir de l’ex
 
 ##  <a name="addribbon"></a> Ajout d’une ressource de ruban au projet
 
-Lorsque vous convertissez une application qui utilise les menus à une application qui utilise un ruban, il est inutile de supprimer ou désactiver des menus existants. Au lieu de cela, vous créez une ressource de ruban, ajoutez des boutons de ruban, puis associez les nouveaux boutons avec les éléments de menu existant. Bien que les menus ne sont plus visibles, les messages à partir de la barre du ruban sont routées via les menus. En outre, les raccourcis du menu continuent de fonctionner.
+Lorsque vous convertissez une application qui utilise les menus à une application qui utilise un ruban, vous n’êtes pas obligé de supprimer ou désactiver des menus existants. Simplement créer une ressource de ruban, ajoutez des boutons de ruban, puis associer les nouveaux boutons avec les éléments de menu existant. Bien que les menus ne sont plus visibles, les messages à partir de la barre du ruban sont routées via les menus et les raccourcis de menu continuent de fonctionner.
 
 Un ruban comporte la **Application** bouton, ce qui est le grand bouton sur le côté supérieur gauche du ruban et un ou plusieurs onglets de catégorie. Chaque onglet de catégorie contient un ou plusieurs panneaux qui agissent comme conteneurs pour les contrôles et les boutons de ruban. La procédure suivante montre comment créer une ressource de ruban, puis personnalisez la **Application** bouton.
 
@@ -221,14 +221,14 @@ Les étapes suivantes montrent comment créer une instance de la barre du ruban 
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Pour créer une instance de la barre du ruban
 
-1. Dans le fichier mainfrm.h, ajoutez un membre de données à la section protégée de `CMainFrame`, la définition de classe pour le frame principal. Ce membre représente la barre du ruban.
+1. Dans le fichier mainfrm.h, ajoutez un membre de données à la section protégée de `CMainFrame`, la définition de classe pour le frame principal. Ce membre est pour la barre du ruban.
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. Dans le fichier mainfrm.cpp, ajoutez le code suivant avant la dernière `return` instruction à la fin de la `CMainFrame::OnCreate` (fonction). Cette opération crée une instance de la barre du ruban.
+2. Dans le fichier mainfrm.cpp, ajoutez le code suivant avant la dernière `return` instruction à la fin de la `CMainFrame::OnCreate` (fonction). Il crée une instance de la barre du ruban.
 
     ```cpp
     // Create the ribbon bar
@@ -250,9 +250,9 @@ Maintenant que vous avez créé le **Application** bouton, vous pouvez ajouter d
 
 1. Le programme de dessin à main levée ne requiert qu’une seule catégorie. Dans la vue conception, dans le **boîte à outils**, double-cliquez sur **catégorie** pour ajouter un et afficher ses propriétés. Modifier les valeurs des propriétés comme suit : **légende** à `&Home`, **grandes Images** à `IDB_RIBBON_HOMELARGE`, **petites Images** à `IDB_RIBBON_HOMESMALL`.
 
-1. Chaque catégorie de ruban s’articule autour des panneaux nommées. Chaque panneau contient un ensemble de contrôles qui effectuent des opérations associées. Cette catégorie contient un panneau. Cliquez sur **panneau**, puis modifiez **légende** à `Edit`.
+1. Chaque catégorie de ruban s’articule autour des panneaux nommées. Chaque panneau contient un ensemble de contrôles que les opérations connexes terminée. Cette catégorie contient un panneau. Cliquez sur **panneau**, puis modifiez **légende** à `Edit`.
 
-1. Pour le **modifier** panneau, ajoutez un bouton qui est responsable de l’effacement du contenu du document. L’ID de message pour ce bouton a déjà été défini dans le `IDR_SCRIBBTYPE` ressource de menu. Spécifiez `Clear All` comme texte du bouton et l’index de la bitmap qui décore le bouton. Ouvrez le **boîte à outils**, puis faites glisser un **bouton** à la **modifier** panneau. Cliquez sur le bouton et redéfinissez **légende** à `Clear All`, **ID** à `ID_EDIT_CLEAR_ALL`, **Index d’Image** à `0`, **Large Image Index**  à `0`.
+1. Pour le **modifier** panneau, ajoutez un bouton responsable de l’effacement du contenu du document. L’ID de message pour ce bouton a déjà été défini dans le `IDR_SCRIBBTYPE` ressource de menu. Spécifiez `Clear All` comme texte du bouton et l’index de la bitmap qui décore le bouton. Ouvrez le **boîte à outils**, puis faites glisser un **bouton** à la **modifier** panneau. Cliquez sur le bouton et redéfinissez **légende** à `Clear All`, **ID** à `ID_EDIT_CLEAR_ALL`, **Index d’Image** à `0`, **Large Image Index**  à `0`.
 
 1. Enregistrer les modifications, puis générer et exécuter l’application. L’application Scribble doit être affichée, et il doit avoir une barre de ruban en haut de la fenêtre au lieu d’une barre de menus. La barre du ruban doit avoir une seule catégorie, **accueil**, et **accueil** doit avoir un panneau, **modifier**. Les boutons de ruban que vous avez ajouté doivent être associés avec les gestionnaires d’événements existant et le **Open**, **fermer**, **enregistrer**, **Print**, et **Effacer tout** boutons devraient fonctionner comme prévu.
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 30e843c6df70548257de1bf1af8c5f0e83555652
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764291"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234059"
 ---
 # <a name="implementing-a-dialog-box"></a>Implémentation d’une boîte de dialogue
 
@@ -30,7 +30,7 @@ Il existe deux façons d’ajouter une boîte de dialogue à votre projet ATL :
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Ajout d’une boîte de dialogue avec l’Assistant dialogue ATL
 
-Dans le [boîte de dialogue Ajouter une classe](../ide/add-class-dialog-box.md), sélectionnez l’objet de la boîte de dialogue ATL pour ajouter une boîte de dialogue à votre projet ATL. Complétez l’Assistant dialogue ATL comme il convient et cliquez sur **Terminer**. L’Assistant ajoute une classe dérivée de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) à votre projet. Ouvrez l’affichage des ressources à partir de la **vue** menu, recherchez votre boîte de dialogue et double-cliquez dessus pour l’ouvrir dans l’éditeur de ressources.
+Dans le [boîte de dialogue Ajouter une classe](../ide/add-class-dialog-box.md), sélectionnez l’objet de la boîte de dialogue ATL pour ajouter une boîte de dialogue à votre projet ATL. Complétez l’Assistant dialogue ATL comme il convient et cliquez sur **Terminer**. L’Assistant ajoute une classe dérivée de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) à votre projet. Ouvrez **affichage des ressources** à partir de la **vue** menu, recherchez votre boîte de dialogue et double-cliquez dessus pour l’ouvrir dans l’éditeur de ressources.
 
 > [!NOTE]
 >  Si votre boîte de dialogue est dérivée de `CAxDialogImpl`, il peut héberger les deux ActiveX et contrôles Windows. Si vous ne souhaitez pas la surcharge liée à la prise en charge du contrôle ActiveX dans votre classe de boîte de dialogue, utilisez [CSimpleDialog](../atl/reference/csimpledialog-class.md) ou [CDialogImpl](../atl/reference/cdialogimpl-class.md) à la place.

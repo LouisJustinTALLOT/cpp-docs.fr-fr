@@ -1,7 +1,7 @@
 ---
 title: Assistant Page de propriétés ATL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5a150a81ea26e34e05cbfb9199c734a1ccad9b7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 206fe83407421a7aabfd920214590a86e4727714
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094193"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250417"
 ---
 # <a name="atl-property-page-wizard"></a>Assistant Page de propriétés ATL
 
 Cet Assistant [ajoute une page de propriétés dans un projet ATL](../../atl/reference/adding-an-atl-property-page.md) ou à un projet MFC avec prise en charge ATL. Une page de propriétés ATL fournit une interface utilisateur pour définir les propriétés (ou en appelant les méthodes) d’un ou plusieurs objets COM.
+
+> [!WARNING]
+> Dans Visual Studio 2017 version 15.9 cet Assistant code est déconseillé et sera supprimé dans une future version de Visual Studio. Cet Assistant est rarement utilisé. Prise en charge générale pour ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette utilisation déconseillée, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires est important pour nous.
 
 ## <a name="remarks"></a>Notes
 

@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a95141aa97d7272970adaaa69f3f63de2a622780
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408425"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235644"
 ---
 # <a name="predefined-macros"></a>Macros prédéfinies
 
@@ -435,7 +435,7 @@ Microsoft Visual C++ prend en charge ces macros prédéfinies supplémentaires.
 
 - **&#95;WINRT&#95;DLL** défini en tant que 1 lorsque compilé en C++ et les deux [/ZW (Compilation pour le Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md) et [/LD ou /LDd](../build/reference/md-mt-ld-use-run-time-library.md) options du compilateur sont définies. Sinon, non défini.
 
- Macros de préprocesseur permet de déterminer la version de la bibliothèque ATL ou MFC ne sont pas prédéfinies par le compilateur. Ces macros sont définies dans les en-têtes de la bibliothèque, afin qu’ils ne sont pas définies dans les directives de préprocesseur avant de l’en-tête requis est inclus.
+Macros de préprocesseur permet de déterminer la version de la bibliothèque ATL ou MFC ne sont pas prédéfinies par le compilateur. Ces macros sont définies dans les en-têtes de la bibliothèque, afin qu’ils ne sont pas définies dans les directives de préprocesseur avant de l’en-tête requis est inclus.
 
 - **&#95;ATL&#95;VER** définies dans \<atldef.h > comme un littéral d’entier qui encode le numéro de version ATL.
 
