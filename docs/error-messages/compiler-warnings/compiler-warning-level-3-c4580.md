@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9d25a77b6936a3b5b741a1da927c6beb24cbb1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90cd0b401624ea6815b31b55a7da9c8796746ce8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072223"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789200"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Avertissement du compilateur (niveau 3) C4580
 
 [attribute] est déconseillé ; spécifiez System::Attribute ou Platform::Metadata comme classe de base à la place
 
-[[attribut](../../windows/attribute.md)] n’est plus la syntaxe par défaut pour la création d’attributs définis par l’utilisateur. Pour plus d'informations, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Pour le code CLR, dérivez les attributs à partir de `System::Attribute`. Pour le code Windows Runtime, dérivez les attributs à partir de `Platform::Metadata`.
+[[attribut](../../windows/attributes/attribute.md)] n’est plus la syntaxe par défaut pour la création d’attributs définis par l’utilisateur. Pour plus d'informations, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Pour le code CLR, dérivez les attributs à partir de `System::Attribute`. Pour le code Windows Runtime, dérivez les attributs à partir de `Platform::Metadata`.
 
 ## <a name="example"></a>Exemple
 
