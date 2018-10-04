@@ -15,30 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb8efba0146a0a230a85a7980f1e71381fcf4b2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 858612ebdda30e68972d11072b4c2ac7f4f88954
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208400"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235488"
 ---
 # <a name="iterators"></a>Iterators
 
 Un itérateur est un objet qui peut itérer sur les éléments dans un conteneur de bibliothèque standard C++ et fournir un accès à des éléments spécifiques. Les conteneurs de bibliothèque standard C++ fournissent tous des itérateurs permettant aux algorithmes d’accéder à leurs éléments de façon standard, sans avoir à se préoccuper du type de conteneur où les éléments sont stockés.
 
-Vous pouvez utiliser des itérateurs explicitement en utilisant des membres et des fonctions globales, comme begin() et end(), et des opérateurs, comme ++ et -- pour avancer ou pour reculer. Vous pouvez également utiliser des itérateurs implicitement avec une boucle for basée sur un intervalle ou (pour certains types d'itérateurs) avec l'opérateur d'indice [].
+Vous pouvez utiliser des itérateurs explicitement à l’aide de membre et les fonctions globales telles que `begin()` et `end()` et opérateurs tels que **++** et **--** d’avancer ou vers l’arrière. Vous pouvez également utiliser des itérateurs implicitement avec une plage-boucle for ou (pour certains types d’itérateurs) l’opérateur d’indice  **\[]**.
 
-Dans la bibliothèque standard C++, le début d’une séquence ou d’une plage est le premier élément. La fin d'une séquence ou d'une plage est toujours définie comme étant à l'emplacement suivant le dernier élément. Les fonctions globales begin et end retournent des itérateurs à un conteneur spécifié. La boucle d'itérateur explicite standard sur tous les éléments d'un conteneur ressemble à ceci :
+Dans la bibliothèque standard C++, le début d’une séquence ou d’une plage est le premier élément. La fin d'une séquence ou d'une plage est toujours définie comme étant à l'emplacement suivant le dernier élément. Les fonctions globales `begin` et `end` retournent des itérateurs à un conteneur spécifié. La boucle d'itérateur explicite standard sur tous les éléments d'un conteneur ressemble à ceci :
 
 ```cpp
 vector<int> vec{ 0,1,2,3,4 };
-for (auto it = begin(vec);
-
-it != end(vec);
-
-it++)
-{  // Access element using dereference operator
-    cout <<*it <<" ";
+for (auto it = begin(vec); it != end(vec); it++)
+{
+    // Access element using dereference operator
+    cout << *it << " ";
 }
 ```
 
@@ -46,22 +43,23 @@ La même chose peut être accomplie plus simplement avec une boucle for basée s
 
 ```cpp
 for (auto num : vec)
- {  // no deference operator
-    cout <<num <<" ";
- }
+{
+    // no deference operator
+    cout << num << " ";
+}
 ```
 
 Il existe cinq catégories d'itérateurs. Par ordre de puissance croissante, les catégories sont :
 
-- **Sortie**. Itérateur de sortie `X` peut itérer vers l’avant sur une séquence à l’aide de la ++ (opérateur) et peut écrire un élément qu’une seule fois, à l’aide de la \* opérateur.
+- **Sortie**. Un *itérateur de sortie* `X` peut itérer vers l’avant sur une séquence à l’aide de la **++** opérateur et peut écrire un élément qu’une seule fois, à l’aide de la **&ast;** opérateur.
 
-- **Entrée**. Un itérateur d’entrée `X` peut itérer vers l’avant sur une séquence à l’aide de la ++ (opérateur) et capable de lire un élément autant de fois à l’aide de la \* opérateur. Vous pouvez comparer des itérateurs d'entrée à l'aide des opérateurs ++ et !=. Une fois que vous incrémentez une copie d'un itérateur d'entrée, aucune des autres copies ne peut être comparée, déréférencée ou incrémentée de façon fiable par la suite.
+- **Entrée**. Un *itérateur d’entrée* `X` peut itérer vers l’avant sur une séquence à l’aide de la ++ (opérateur) et capable de lire un élément autant de fois à l’aide de la **&ast;** opérateur. Vous pouvez comparer des itérateurs d’entrée à l’aide de la **++** et **! =** opérateurs. Une fois que vous incrémentez une copie d'un itérateur d'entrée, aucune des autres copies ne peut être comparée, déréférencée ou incrémentée de façon fiable par la suite.
 
-- **Vers l’avant**. Itérateur vers l’avant `X` peut itérer vers l’avant sur une séquence avec le ++ opérateur et peut lire n’importe quel élément ou écrire des éléments non-const n’importe quel nombre de fois à l’aide de la \* opérateur. Vous pouvez accéder aux membres de l'élément avec l'opérateur -> et comparer les itérateurs vers l'avant avec les opérateurs == et !=. Vous pouvez effectuer plusieurs copies d'un itérateur vers l'avant, chacune d'elles pouvant être déréférencée et incrémentée indépendamment. Un itérateur vers l'avant qui est initialisé sans référence à aucun conteneur est appelé un itérateur vers l'avant null. La comparaison d'itérateurs vers l'avant null donne toujours une égalité.
+- **Vers l’avant**. Un *itérateur vers l’avant* `X` peut itérer vers l’avant sur une séquence avec le ++ opérateur et peut lire n’importe quel élément ou écrire des éléments non-const n’importe quel nombre de fois à l’aide de la **&ast;** opérateur. Vous pouvez accéder à des membres de l’élément à l’aide de la **->** opérateur et comparaison de transférer les itérateurs à l’aide de la **==** et **! =** opérateurs. Vous pouvez effectuer plusieurs copies d'un itérateur vers l'avant, chacune d'elles pouvant être déréférencée et incrémentée indépendamment. Itérateur vers l’avant qui est initialisé sans référence à n’importe quel conteneur est appelé un *itérateur vers l’avant null*. La comparaison d'itérateurs vers l'avant null donne toujours une égalité.
 
-- Bidirectionnel. Un itérateur bidirectionnel `X` peut remplacer un itérateur vers l'avant. Vous pouvez, toutefois, également décrémenter un itérateur bidirectionnel, comme dans--`X`, `X`--, ou (`V` = \*`X`--). Vous pouvez accéder aux membres de l'élément et comparer des itérateurs bidirectionnels de la même façon que pour des itérateurs vers l'avant.
+- **Bidirectionnel**. Un *itérateur bidirectionnel* `X` peut prendre la place d’un itérateur vers l’avant. Vous pouvez, toutefois, également décrémenter un itérateur bidirectionnel, comme dans `--X`, `X--`, ou `(V = *X--)`. Vous pouvez accéder aux membres de l'élément et comparer des itérateurs bidirectionnels de la même façon que pour des itérateurs vers l'avant.
 
-- **Accès aléatoire**. Un itérateur à accès aléatoire `X` peut remplacer un itérateur bidirectionnel. Avec un itérateur à accès aléatoire, vous pouvez utiliser l'opérateur d'indice [] pour accéder aux éléments. Vous pouvez utiliser les opérateurs +, -, += et -= pour avancer ou reculer d'un nombre spécifié d'éléments et pour calculer la distance entre des itérateurs. Vous pouvez comparer des itérateurs bidirectionnels avec ==, !=, \<, >, \<= et >=.
+- **Accès aléatoire**. Un *itérateur à accès aléatoire* `X` peut prendre la place d’un itérateur bidirectionnel. Avec un itérateur à accès aléatoire, vous pouvez utiliser l’opérateur d’indice  **\[]** pour accéder aux éléments. Vous pouvez utiliser la **+**, **-**, **+=** et **-=** opérateurs à déplacer avancer ou reculer un nombre spécifié d’éléments et pour calculer la distance entre les itérateurs. Vous pouvez comparer des itérateurs bidirectionnels à l’aide de **==**, **! =**, **\<**, **>**, **\< =**, et **>=**.
 
 Tous les itérateurs peuvent être affectés ou copiés. Ils sont censés être des objets légers et sont souvent passés et retournés par valeur, et non par référence. Notez également qu'aucune des opérations décrites précédemment ne peut lever une exception lorsqu'elle est effectuée sur un itérateur valide.
 
