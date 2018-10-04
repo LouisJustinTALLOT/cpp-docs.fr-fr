@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8eab51f41997eabf5999a976b178799fa750c4a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1c0c112d2fb95ad7f888afe923b5c49bee3da37e
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029804"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788472"
 ---
 # <a name="compiler-error-c3134"></a>Erreur du compilateur C3134
 
@@ -31,4 +31,4 @@ Une erreur de syntaxe a été détectée lorsqu’une valeur a été attribuée 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs par utilisation](../../windows/attributes-by-usage.md)
+[Attributs par utilisation](../../windows/attributes/attributes-by-usage.md)

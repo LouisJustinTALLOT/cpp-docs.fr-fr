@@ -1,7 +1,7 @@
 ---
 title: IsBaseOfStrict (Structure) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 137f572f01d4aa72b9141c3ca172426fdb575b48
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 9fc41bdccf9cce3d455d4effd3541731929e5de2
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169522"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789265"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict (structure)
 
@@ -33,15 +33,10 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <
-   typename Base,
-   typename Derived
->
-
+template <typename Base, typename Derived>
 struct IsBaseOfStrict;
-template <
-   typename Base
->
+
+template <typename Base>
 struct IsBaseOfStrict<Base, Base>;
 ```
 

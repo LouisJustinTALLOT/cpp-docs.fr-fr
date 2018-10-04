@@ -1,7 +1,7 @@
 ---
 title: Runtimeclassflags, Structure | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39a7684337e7666613bcd824b29417ca5ba0b021
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5bfd9fc6dd87c61149722e8ef7fed79f8f017da
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438052"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788836"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags (structure)
 
@@ -33,9 +33,7 @@ Contient le type d’une instance d’un [RuntimeClass](../windows/runtimeclass-
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <
-   unsigned int flags
->
+template <unsigned int flags>
 struct RuntimeClassFlags;
 ```
 

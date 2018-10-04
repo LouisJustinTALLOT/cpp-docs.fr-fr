@@ -1,7 +1,7 @@
 ---
 title: Erreur du compilateur C3136 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0439aa157a683065ccf7fff5b5f9d6d4d85e2f12
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 082a89b69092a8320f6bb4b930d01a7fd2de10c8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054218"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788381"
 ---
 # <a name="compiler-error-c3136"></a>Erreur du compilateur C3136
 
 'interface' : une interface COM ne peut hériter que d’une autre interface COM, 'interface' n’est pas une interface COM
 
-Une interface à laquelle vous avez appliqué une [attribut interface](../../windows/interface-attributes.md) hérite d’une interface qui n’est pas une interface COM. Finalement, une interface COM hérite `IUnknown`. N’importe quelle interface précédé par un attribut de l’interface est une interface COM.
+Une interface à laquelle vous avez appliqué une [attribut interface](../../windows/attributes/interface-attributes.md) hérite d’une interface qui n’est pas une interface COM. Finalement, une interface COM hérite `IUnknown`. N’importe quelle interface précédé par un attribut de l’interface est une interface COM.
 
 L’exemple suivant génère l’erreur C3136 :
 

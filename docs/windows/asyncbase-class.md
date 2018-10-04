@@ -1,7 +1,7 @@
 ---
 title: Asyncbase, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 09/28/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d74e3cb74634a83d9f03b74527f0965c7a79f016
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 6538d06c291bccc8764403b26f5c8d88f4afd781
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235949"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788797"
 ---
 # <a name="asyncbase-class"></a>AsyncBase (classe)
 
@@ -80,17 +80,15 @@ Implémente la machine d'état asynchrone du Windows Runtime.
 
 ```cpp
 template <
-   typename TComplete,
-   typename TProgress = Details::Nil,
-   AsyncResultType resultType = SingleResult
+    typename TComplete,
+    typename TProgress = Details::Nil,
+    AsyncResultType resultType = SingleResult
 >
 class AsyncBase : public AsyncBase<TComplete, Details::Nil, resultType>;
 
-template <
-   typename TComplete,
-   AsyncResultType resultType
->
-class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Implements<IAsyncInfo>;
+template <typename TComplete, AsyncResultType resultType>
+class AsyncBase<TComplete, Details::Nil, resultType> :
+    public Microsoft::WRL::Implements<IAsyncInfo>;
 ```
 
 ### <a name="parameters"></a>Paramètres

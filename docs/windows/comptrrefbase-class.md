@@ -1,7 +1,7 @@
 ---
 title: ComPtrRefBase (classe) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02e430184c5fa7418eb02ed6ef2f63951af89a5c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 79b7c3df2b6d3dc338ecda713b4ec406c8964cab
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48233955"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789252"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase (classe)
 
@@ -37,9 +37,7 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <
-   typename T
->
+template <typename T>
 class ComPtrRefBase;
 ```
 
