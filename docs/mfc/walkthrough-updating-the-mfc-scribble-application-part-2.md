@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169682"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235436"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)
 
@@ -116,17 +116,17 @@ L’application Scribble d’origine permet à l’utilisateur de sélectionner 
 
 1. Cliquez sur la deuxième zone de liste déroulante. Modification **légende** à `Thick Pen`, **ID** à `ID_PEN_THICK_WIDTH`, **Type** à `Drop List`, **données** à `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`, et **texte** à `5`.
 
-1. Zones de liste déroulante nouveau ne correspondent pas à tous les éléments de menu existants. Par conséquent, vous devez créer un élément de menu pour chaque option de stylet.
+1. Zones de liste déroulante nouveau ne correspondent pas à des éléments de menu existant, vous devez donc créer un élément de menu pour chaque option de stylet.
 
    1. Dans le **affichage des ressources** fenêtre, ouvrez le **IDR_SCRIBBTYPE** ressource de menu.
 
    1. Cliquez sur **stylet** pour ouvrir le menu de stylet. Puis cliquez sur **tapez ici** et type `Thi&n Pen`.
 
-   1. Cliquez sur le texte que vous venez de taper pour ouvrir le **propriétés** fenêtre, puis modifier l’ID de la propriété à `ID_PEN_THIN_WIDTH`.
+   1. Cliquez sur le texte que vous avez tapé pour ouvrir le **propriétés** fenêtre, puis modifier l’ID de la propriété à `ID_PEN_THIN_WIDTH`.
 
-   1. Vous devez également créer un gestionnaire d’événements pour chaque élément de menu de stylet. Avec le bouton droit le **Thi & n stylet** élément de menu que vous venez de créer, puis sur **ajouter un gestionnaire d’événements**. Le **Assistant Gestionnaire d’événements** s’affiche.
+   1. Créer un gestionnaire d’événements pour chaque élément de menu de stylet. Avec le bouton droit le **Thi & n stylet** élément de menu que vous avez créé et puis cliquez sur **ajouter un gestionnaire d’événements**. Le **Assistant Gestionnaire d’événements** s’affiche.
 
-   1. Dans le **liste de classe** zone dans l’Assistant, sélectionnez **CScribbleDoc** puis cliquez sur **ajouter et modifier des**. Cette opération crée un gestionnaire d’événements nommé `CScribbleDoc::OnPenThinWidth`.
+   1. Dans le **liste de classe** zone dans l’Assistant, sélectionnez **CScribbleDoc** puis cliquez sur **ajouter et modifier des**. La commande crée un gestionnaire d’événements nommé `CScribbleDoc::OnPenThinWidth`.
 
    1. Ajoutez le code suivant à `CScribbleDoc::OnPenThinWidth`.
 
@@ -156,11 +156,11 @@ L’application Scribble d’origine permet à l’utilisateur de sélectionner 
 
    1. Cliquez sur **stylet** pour ouvrir le menu de stylet. Puis cliquez sur **tapez ici** et type `Thic&k Pen`.
 
-   1. Cliquez sur le texte que vous venez de taper pour afficher le **propriétés** fenêtre. Affectez à la propriété ID `ID_PEN_THICK_WIDTH`.
+   1. Cliquez sur le texte que vous avez tapé pour afficher le **propriétés** fenêtre. Affectez à la propriété ID `ID_PEN_THICK_WIDTH`.
 
-   1. Avec le bouton droit le **Plume épaisse** élément de menu que vous venez de créer, puis sur **ajouter un gestionnaire d’événements**. Le **Assistant Gestionnaire d’événements** s’affiche.
+   1. Avec le bouton droit le **Plume épaisse** élément de menu que vous avez créé et puis cliquez sur **ajouter un gestionnaire d’événements**. Le **Assistant Gestionnaire d’événements** s’affiche.
 
-   1. Dans le **liste de classe** boîte de l’Assistant, sélectionnez **CScribbleDoc** puis cliquez sur **ajouter et modifier des**. Cette opération crée un gestionnaire d’événements nommé `CScribbleDoc::OnPenThickWidth`.
+   1. Dans le **liste de classe** boîte de l’Assistant, sélectionnez **CScribbleDoc** puis cliquez sur **ajouter et modifier des**. La commande crée un gestionnaire d’événements nommé `CScribbleDoc::OnPenThickWidth`.
 
    1. Ajoutez le code suivant à `CScribbleDoc::OnPenThickWidth`.
 
@@ -190,17 +190,17 @@ Ensuite, ajoutez un [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutt
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>Pour ajouter un bouton de couleur dans le panneau de stylet
 
-1. Avant d’ajouter le bouton de couleur, créez un élément de menu pour celui-ci. Dans le **affichage des ressources** fenêtre, ouvrez le **IDR_SCRIBBTYPE** ressource de menu. Cliquez sur le **stylet** élément de menu pour ouvrir le menu de stylet. Puis cliquez sur **tapez ici** et type `&Color`. Cliquez sur le texte que vous venez de taper pour afficher le **propriétés** fenêtre. Modifier l’ID à `ID_PEN_COLOR`.
+1. Avant d’ajouter le bouton de couleur, créez un élément de menu pour celui-ci. Dans le **affichage des ressources** fenêtre, ouvrez le **IDR_SCRIBBTYPE** ressource de menu. Cliquez sur le **stylet** élément de menu pour ouvrir le menu de stylet. Puis cliquez sur **tapez ici** et type `&Color`. Cliquez sur le texte que vous avez tapé pour afficher le **propriétés** fenêtre. Modifier l’ID à `ID_PEN_COLOR`.
 
 1. Ajoutez maintenant le bouton de couleur. À partir de la **boîte à outils**, faites glisser un **bouton de couleur** à la **stylet** Panneau de configuration.
 
 1. Cliquez sur le bouton de couleur. Modification **légende** à `Color`, **ID** à `ID_PEN_COLOR`, **Simple Look** à `True`, **grande Image Index** à `1`, et **Mode fractionné** à `False`.
 
-1. Enregistrer les modifications, puis générer et exécuter l’application. Le nouveau bouton de couleur doit s’afficher sur le **stylet** Panneau de configuration. Toutefois, il ne peut pas être utilisé, car il n’a pas encore d’un gestionnaire d’événements. Les étapes suivantes montrent comment ajouter un gestionnaire d’événements pour le bouton de couleur.
+1. Enregistrer les modifications, puis générer et exécuter l’application. Le nouveau bouton de couleur doit s’afficher sur le **stylet** Panneau de configuration. Toutefois, il ne peut pas être utilisé car il ne dispose pas encore un gestionnaire d’événements. Les étapes suivantes montrent comment ajouter un gestionnaire d’événements pour le bouton de couleur.
 
 ##  <a name="addcolormember"></a> Ajout d’un membre de la couleur à la classe de Document
 
-Étant donné que l’application Scribble d’origine n’a pas de stylets de couleur, vous devez écrire une implémentation pour eux. Pour stocker la couleur du stylet du document, ajouter un nouveau membre à la classe de document, `CscribbleDoc`.
+Étant donné que l’application Scribble d’origine n’a pas les stylets de couleur, vous devez écrire une implémentation pour eux. Pour stocker la couleur du stylet du document, ajouter un nouveau membre à la classe de document, `CscribbleDoc`.
 
 ### <a name="to-add-a-color-member-to-the-document-class"></a>Pour ajouter un membre de couleur à la classe de document
 
@@ -211,7 +211,7 @@ Ensuite, ajoutez un [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutt
    COLORREF m_penColor;
    ```
 
-1. Chaque document contient une liste de stokes que l’utilisateur a déjà dessiné. Chaque trait est défini par un `CStroke` objet. Le `CStroke` classe n’inclut pas d’informations sur la couleur du stylet. Par conséquent, vous devez modifier la classe. Dans scribdoc.h, dans le `CStroke` de classe, ajoutez les lignes de code suivantes après la définition de la `m_nPenWidth` membre de données.
+1. Chaque document contient une liste de stokes que l’utilisateur a déjà dessiné. Chaque trait est défini par un `CStroke` objet. Le `CStroke` classe n’inclut pas d’informations sur la couleur du stylet, vous devez modifier la classe. Dans scribdoc.h, dans le `CStroke` de classe, ajoutez les lignes de code suivantes après la définition de la `m_nPenWidth` membre de données.
 
    ```cpp
    // Pen color for the stroke
@@ -267,7 +267,7 @@ Ensuite, ajoutez un [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutt
 
    1. Cliquez sur le **couleur** élément de menu et cliquez sur **ajouter un gestionnaire d’événements**. Le **Assistant Gestionnaire d’événements** s’affiche.
 
-   1. Dans le **liste de classe** zone dans l’Assistant, sélectionnez **CScribbleDoc** puis cliquez sur le **ajouter et modifier des** bouton. Cette opération crée le `CScribbleDoc::OnPenColor` stub de gestionnaire d’événements.
+   1. Dans le **liste de classe** zone dans l’Assistant, sélectionnez **CScribbleDoc** puis cliquez sur le **ajouter et modifier des** bouton. La commande crée le `CScribbleDoc::OnPenColor` stub de gestionnaire d’événements.
 
 1. Remplacer le stub pour la `CScribbleDoc::OnPenColor` Gestionnaire d’événements par le code suivant.
 
@@ -287,7 +287,7 @@ Ensuite, ajoutez un [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutt
    }
    ```
 
-1. Enregistrer les modifications puis générer et exécuter l’application. Vous devez pouvoir d’appuyer sur le bouton de couleur et de modifier sa couleur.
+1. Enregistrer les modifications puis générer et exécuter l’application. Vous pouvez maintenant appuyer sur le bouton de couleur et modifier sa couleur.
 
 ##  <a name="initpensave"></a> Initialisation des stylets et l’enregistrement des préférences
 
