@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1dce40fd91f1b4345739f3dc38e13d2ee8d0997
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cafc3868d41dcf90baabbf05e0d5a4671c5b11fc
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426378"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820293"
 ---
 # <a name="initinstance-member-function"></a>InitInstance, fonction membre
 
@@ -45,7 +45,7 @@ La norme `InitInstance` implémentation créée par l’Assistant Application MF
 Vous pouvez ajouter votre propre code d’initialisation ou modifier le code écrit par l’Assistant.
 
 > [!NOTE]
->  Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` substituer, spécifiez COINIT_APARTMENTTHREADED (plutôt que COINIT_MULTITHREADED). Pour plus d’informations, consultez PRB : Application MFC cesse de répondre lorsque vous initialisez l’Application comme un multithread cloisonné (828643) à [ http://support.microsoft.com/default.aspxscid=kb; en-us ; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+>  Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` substituer, spécifiez COINIT_APARTMENTTHREADED (plutôt que COINIT_MULTITHREADED). Pour plus d’informations, consultez PRB : Application MFC cesse de répondre lorsque vous initialisez l’Application comme un multithread cloisonné (828643) à [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
 
 ## <a name="see-also"></a>Voir aussi
 

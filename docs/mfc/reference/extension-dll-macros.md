@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e23aa935cd0b0add664c1eeb3885181cb4e6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 320bbc9fde5888f75149d6f3f9fad60deb869924
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383751"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821419"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Macros et fonctions pour la gestion de DLL
 
@@ -34,7 +34,6 @@ ms.locfileid: "46383751"
 |[AfxInitExtensionModule]()#afxinitextensionmodule|Initialise la DLL.|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|définir l’indicateur d’état par module, ce qui affecte le comportement de WinSxS de MFC.|
 |[AfxTermExtensionModule]()#afxtermextensionmodule)|Permet de MFC nettoyer la DLL d’extension MFC lorsque chaque processus se détache de la DLL.|
-
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -68,6 +67,7 @@ Appelez cette macro pour protéger une fonction exportée dans une DLL.
 ```
 AFX_MANAGE_STATE(AFX_MODULE_STATE* pModuleState )
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *pModuleState*<br/>
@@ -77,15 +77,20 @@ Un pointeur vers un `AFX_MODULE_STATE` structure.
 
 Lorsque cette macro est appelée, *pModuleState* est l’état du module effectif pour le reste de l’exécution étendue contenante. En quittant la portée, l’état du module effectif précédent sera automatiquement rétablie.
 Le `AFX_MODULE_STATE` structure contient des données globales du module, autrement dit, la partie de l’état du module qui est envoyé ou dépilé.
+
 Par défaut, MFC utilise le handle de ressource d'application principale pour charger le modèle de ressources. Si vous avez une fonction exportée dans une DLL, tel que celui qui lance une boîte de dialogue dans la DLL, ce modèle est en fait stocké dans le module DLL. Vous devez basculer l’état du module pour le handle correct à utiliser. Vous pouvez le faire en ajoutant le code suivant au début de la fonction :
+
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
-
 ```
+
 Cela permute l’état actuel du module avec l’état retourné par [AfxGetStaticModuleState](#afxgetstaticmodulestate) jusqu'à la fin de la portée actuelle.
+
 Pour plus d’informations sur les États du module et MFC, consultez « La gestion de l’état de MFC Modules de données » dans [création de nouveaux Documents, Windows et des vues](../creating-new-documents-windows-and-views.md) et [Technical Note 58](../tn058-mfc-module-state-implementation.md).
+
 > [!NOTE]
 >  Lorsque MFC crée un contexte d’activation pour un assembly, il utilise [AfxWinInit](#afxwininit) pour créer le contexte et `AFX_MANAGE_STATE` pour activer et désactiver. Notez également que `AFX_MANAGE_STATE` est activé pour statique bibliothèques MFC, ainsi que les DLL MFC, afin d’autoriser le code MFC à exécuter dans le contexte d’activation approprié sélectionné par la DLL de l’utilisateur. Pour plus d’informations, consultez [prise en charge des contextes d’Activation dans l’état du Module MFC](../support-for-activation-contexts-in-the-mfc-module-state.md).
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxstat_.h
@@ -197,7 +202,6 @@ Par défaut, MFC utilise le handle de ressource d'application principale pour ch
 
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
-
 ```
 
 Cela permute l’état actuel du module avec l’état retourné par `AfxGetStaticModuleState` jusqu'à la fin de la portée actuelle.
@@ -207,7 +211,6 @@ Pour plus d’informations sur les États du module et MFC, consultez « La ges
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxstat_.h
-
 
 ## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
 
@@ -249,13 +252,16 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
         // MFC extension DLL one-time initialization
         if (!AfxInitExtensionModule(NVC_MFC_DLLDLL, hInstance))
             return 0;
-
+...
 ```
 
 `AfxInitExtensionModule` effectue une copie de HMODULE la DLL et capture des classes d’exécution de la DLL (`CRuntimeClass` structures), ainsi que ses fabriques d’objets (`COleObjectFactory` objets) pour une utilisation ultérieurement, lorsque le `CDynLinkLibrary` objet est créé.
 Extension MFC DLL devoir faire deux choses dans leur `DllMain` (fonction) :
+
 - Appelez [AfxInitExtensionModule](#_mfc_afxinitextensionmodule) et vérifiez la valeur de retournée.
+
 - Créer un `CDynLinkLibrary` de l’objet si la DLL exporterez [CRuntimeClass, Structure](cruntimeclass-structure.md) objets ou a ses propres ressources personnalisées.
+
 Vous pouvez appeler `AfxTermExtensionModule` pour nettoyer la DLL d’extension MFC lorsque chaque processus se détache de la DLL d’extension MFC (ce qui se produit lorsque le processus se termine, ou lorsque la DLL est déchargée à la suite d’un `AfxFreeLibrary` appeler).
 
 ### <a name="requirements"></a>Configuration requise
@@ -273,9 +279,8 @@ Utilisez cette fonction pour définir l’indicateur d’état par module, ce qu
 
 ### <a name="syntax"></a>Syntaxe
 
-  ```
-   void AFXAPI AfxSetAmbientActCtx( BOOL bSet
-);
+```
+void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 ### <a name="parameters"></a>Paramètres
 
@@ -295,6 +300,7 @@ BOOL CMFCListViewApp::InitInstance()
 {
    AfxSetAmbientActCtx(FALSE);
    // Remainder of function definition omitted.
+}
 ```
 
 ### <a name="requirements"></a>Configuration requise
@@ -314,9 +320,10 @@ Appelez cette fonction pour autoriser MFC pour nettoyer la DLL d’extension MFC
 
 ### <a name="syntax"></a>Syntaxe
 
-  ```
+```
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *state*<br/>
@@ -357,7 +364,6 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
     }
     return 1;   // ok
 }
-
 ```
 
 Si votre application charge et libère dynamiquement les DLL d’extension MFC, veillez à appeler `AfxTermExtensionModule`. Depuis la plupart des DLL ne sont pas chargées dynamiquement d’extension MFC (en règle générale, elles sont liées par le biais de leurs bibliothèques d’importation), l’appel à `AfxTermExtensionModule` n’est généralement pas nécessaire.
@@ -372,8 +378,3 @@ Extension MFC DLL doivent appeler [AfxInitExtensionModule](#afxinitextensionmodu
 
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [AfxInitExtensionModule](#afxinitextensionmodule)
-
-
-
-
-

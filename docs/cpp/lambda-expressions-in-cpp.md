@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc08e0807f1af6859587271ec48d2508b9d4bd6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7a9915c7ca6b9d2c3f01cea12e2979ef256f904
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048667"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821177"
 ---
 # <a name="lambda-expressions-in-c"></a>Expressions lambda en C++
 
@@ -349,7 +349,9 @@ Pour plus d’informations, consultez [generate_n](../standard-library/algorithm
         return [n] { return n + 1; }();
     }
 ```
+
 Une expression lambda est implicitement `constexpr` si son résultat satisfait aux exigences d’un `constexpr` (fonction) :
+
 ```cpp
     auto answer = [](int n)
     {
@@ -358,6 +360,7 @@ Une expression lambda est implicitement `constexpr` si son résultat satisfait a
 
     constexpr int response = answer(10);
 ```
+
 Si une expression lambda est implicitement ou explicitement `constexpr`, conversion pointeur fonction génère un `constexpr` (fonction) :
 
 ```cpp

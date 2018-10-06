@@ -1,7 +1,7 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (ajouter SuppressUnmanagedCodeSecurityAttribute) | Microsoft Docs
+title: /CLRUNMANAGEDCODECHECK (Supprimez SuppressUnmanagedCodeSecurityAttribute) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 9868f0c35f4a988ac8e0aee8076f232f86c04afd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429759"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820919"
 ---
-# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (ajouter SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Supprimez SuppressUnmanagedCodeSecurityAttribute)
 
-**/CLRUNMANAGEDCODECHECK** Spécifie si l’éditeur de liens applique <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> généré à l’éditeur de liens `PInvoke` appelle du code managé dans des DLL natives.
+**/CLRUNMANAGEDCODECHECK** Spécifie que l’éditeur de liens ne s’applique pas <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> généré à l’éditeur de liens `PInvoke` appelle du code managé dans des DLL natives.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,13 +34,13 @@ ms.locfileid: "47429759"
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, l’éditeur de liens applique le **SuppressUnmanagedCodeSecurityAttribute** généré à l’éditeur de liens `PInvoke` appels. Lorsque **/CLRUNMANAGEDCODECHECK** est en effet, **SuppressUnmanagedCodeSecurityAttribute** n’est pas appliqué.
+Par défaut, l’éditeur de liens applique le **SuppressUnmanagedCodeSecurityAttribute** généré à l’éditeur de liens `PInvoke` appels. Lorsque **/CLRUNMANAGEDCODECHECK** est en effet, **SuppressUnmanagedCodeSecurityAttribute** est supprimé. Pour appliquer explicitement le **SuppressUnmanagedCodeSecurityAttribute** généré à l’éditeur de liens `PInvoke` appels, vous pouvez utiliser **/CLRUNMANAGEDCODECHECK:NO**.
 
-L’éditeur de liens ajoute seulement l’attribut aux objets compilés avec **/CLR** ou **/CLR : pure**. Toutefois, le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+L’éditeur de liens ajoute seulement l’attribut aux objets qui sont compilés à l’aide de **/CLR** ou **/CLR : pure**. Toutefois, le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 
 Un `PInvoke` appel est généré par l’éditeur de liens lors de l’éditeur de liens ne peut pas détecter de symbole managé pour répondre à une référence à partir d’un appelant managé, mais peut rechercher un symbole natif correspondant à cette référence. Pour plus d’informations sur `PInvoke`, consultez [appelant des fonctions natives à partir de Code managé](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Notez que si vous utilisez <xref:System.Security.AllowPartiallyTrustedCallersAttribute> dans votre code, vous devez définir explicitement **/CLRUNMANAGEDCODECHECK**. Il est une faille de sécurité potentielle si une image contient à la fois les attributs SuppressUnmanagedCodeSecurity et AllowPartiallyTrustedCallers.
+Notez que si vous utilisez <xref:System.Security.AllowPartiallyTrustedCallersAttribute> dans votre code, vous devez définir explicitement **/CLRUNMANAGEDCODECHECK** pour supprimer la **SuppressUnmanagedCodeSecurity** attribut. Il est une faille de sécurité potentielle si une image contient à la fois le **SuppressUnmanagedCodeSecurity** et **AllowPartiallyTrustedCallers** attributs.
 
 Consultez [instructions de codage sécurisé pour le Code non managé](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) pour plus d’informations sur les conséquences de l’utilisation de **SuppressUnmanagedCodeSecurityAttribute**.
 

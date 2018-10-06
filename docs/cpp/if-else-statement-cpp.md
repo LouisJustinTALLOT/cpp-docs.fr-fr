@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aee04052a0088ff95a41ccb6083abc334287ea2b
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031455"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820644"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 
 Contrôles création de branches conditionnelles. Les instructions dans le *bloc if* sont exécutés uniquement si la *-expression if* correspond à une valeur différente de zéro (ou la valeur TRUE). Si la valeur de *expression* est différent de zéro, *instruction1* et toutes les autres instructions dans le bloc sont exécutées et l’autre bloc, le cas échéant, est ignoré. Si la valeur de *expression* est égal à zéro, puis le bloc if est ignoré et l’autre bloc, le cas échéant, est exécuté. Sont des expressions qui correspondent à zéro
+
 - true
 - un pointeur non null,
 - toute valeur arithmétique non nulle, ou
@@ -36,7 +37,7 @@ Contrôles création de branches conditionnelles. Les instructions dans le *bloc
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 if ( expression )
 {
    statement1;
@@ -84,7 +85,7 @@ using namespace std;
 class C
 {
     public:
-    void do_somthing(){}
+    void do_something(){}
 };
 void init(C){}
 bool is_true() { return true; }
@@ -101,15 +102,14 @@ int main()
         cout << "b is false!\n";
     }
 
-  // no else statement
+    // no else statement
     if (x == 10)
     {
         x = 0;
     }
-    
 
     C* c;
-  init(c);
+    init(c);
     if (c)
     {
         c->do_something();
@@ -120,13 +120,14 @@ int main()
     }
 }
 ```
+
 ## <a name="if_with_init"></a> Si l’instruction avec un initialiseur
 
 **Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : un **si** instruction peut également contenir une expression qui déclare et initialise une variable nommée. Utilisez cette forme de l’instruction if lorsque la variable est nécessaire uniquement dans la portée du bloc-if.
 
-```cpp
-## Example
+## <a name="example"></a>Exemple
 
+```cpp
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -180,18 +181,18 @@ Le **else** clause d’une `if...else` instruction est associée à la plus proc
 template <class T, class... Rest>
 void f(T&& t, Rest&&... r)
 {
-// handle t
-   do_something(t);
+    // handle t
+    do_something(t);
 
-   // handle r conditionally
-   if constexpr (sizeof...(r))
-   {
-      f(r...);
-   }
-   else
-   {
-       g(r...);
-   }
+    // handle r conditionally
+    if constexpr (sizeof...(r))
+    {
+        f(r...);
+    }
+    else
+    {
+        g(r...);
+    }
 }
 ```
 

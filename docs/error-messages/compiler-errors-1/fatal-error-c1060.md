@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5288400b5c7303840dfef98c7e1a48e7cf5d06f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1961784efc61c3c31f87c76cd2bdfe00fe954c5d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032566"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820698"
 ---
 # <a name="fatal-error-c1060"></a>Erreur irrécupérable C1060
 
@@ -37,7 +37,7 @@ Le système d'exploitation ou la bibliothèque Runtime ne peut pas répondre à 
 
 1. Si vous compilez sur une plateforme 64 bits, utilisez l'ensemble d'outils de compilateur 64 bits. Pour plus d’informations, consultez [Comment : activer un 64 bits Visual C++ ensemble d’outils sur la ligne de commande](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
-1. Sur Windows 32 bits, essayez d’utiliser le [/3 GB](https://support.microsoft.com/en-us/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) commutateur boot.ini.
+1. Sur Windows 32 bits, essayez d’utiliser le [/3 GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) commutateur boot.ini.
 
 1. Augmentez la taille du fichier d'échange Windows.
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422662"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821398"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Guide du développeur de C++ pour les canaux du côté l’exécution spéculative
 
@@ -73,7 +73,7 @@ Les étapes ci-dessus fournissent un exemple d’utilisation d’une technique a
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Quels scénarios de logiciels peuvent être affectées ?
 
-Développement de logiciels sécurisés à l’aide d’un processus comme le [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) requiert en général, les développeurs à identifier les limites de confiance qui existent dans leur application. Il existe une limite d’approbation dans les endroits où une application peut interagir avec les données fournies par un contexte de confiance moindre, comme un autre processus sur le système ou un processus de mode utilisateur non administrateur dans le cas d’un pilote de périphérique en mode noyau. La nouvelle classe de vulnérabilités impliquant des canaux du côté l’exécution spéculative s’applique à de nombreuses frontières d’approbation dans les modèles de sécurité logiciels existants qui isolent le code et les données sur un appareil.
+Développement de logiciels sécurisés à l’aide d’un processus comme le [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) requiert en général, les développeurs à identifier les limites de confiance qui existent dans leur application. Il existe une limite d’approbation dans les endroits où une application peut interagir avec les données fournies par un contexte de confiance moindre, comme un autre processus sur le système ou un processus de mode utilisateur non administrateur dans le cas d’un pilote de périphérique en mode noyau. La nouvelle classe de vulnérabilités impliquant des canaux du côté l’exécution spéculative s’applique à de nombreuses frontières d’approbation dans les modèles de sécurité logiciels existants qui isolent le code et les données sur un appareil.
 
 Le tableau suivant fournit un résumé des modèles de sécurité logicielle où les développeurs devront peut-être être préoccupé par ces vulnérabilités qui se produisent :
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barrière de spéculation via l’instrumentation de compilateur-heure
 
-Le compilateur Visual C++ dans Visual Studio 2017 (à partir de la version 15.5.5) prend en charge la `/Qspectre` commutateur qui insère automatiquement une barrière de spéculation pour un ensemble limité de modèles de codage potentiellement vulnérables liés à CVE-2017-5753. La documentation relative à la [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) indicateur fournit plus d’informations sur l’utilisation et ses effets. Il est important de noter que cet indicateur ne couvre pas tous les modèles de codage potentiellement vulnérables et par conséquent les développeurs ne doivent pas y recourir comme une atténuation complète pour cette classe de vulnérabilités.
+Le compilateur Visual C++ dans Visual Studio 2017 (à partir de la version 15.5.5) prend en charge la `/Qspectre` commutateur qui insère automatiquement une barrière de spéculation pour un ensemble limité de modèles de codage potentiellement vulnérables liés à CVE-2017-5753. La documentation relative à la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) indicateur fournit plus d’informations sur l’utilisation et ses effets. Il est important de noter que cet indicateur ne couvre pas tous les modèles de codage potentiellement vulnérables et par conséquent les développeurs ne doivent pas y recourir comme une atténuation complète pour cette classe de vulnérabilités.
 
 ### <a name="masking-array-indices"></a>Masquage des indices de tableau
 

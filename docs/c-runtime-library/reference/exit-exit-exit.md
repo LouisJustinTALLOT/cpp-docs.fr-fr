@@ -40,19 +40,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26cc39039b95b8c12e429d333918e83628b2619
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: eb5bd1ef619c899a6b0faab33104a579fdb9f1d0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110602"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821272"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
 Termine le processus appelant. Le **quitter** fonction termine après nettoyage ; **_exit** et **_Exit** terminent immédiatement.
 
 > [!NOTE]
-> N’utilisez pas cette méthode pour arrêter une application Universal Windows Platform (UWP), à l’exception de test ou de scénarios de débogage. Méthodes de programmation ou l’interface utilisateur pour fermer une application de Store ne sont pas autorisées en fonction de la [les stratégies de Microsoft Store](/legal/windows/agreements/store-policies). Pour plus d’informations, consultez [cycle de vie application UWP](/windows/uwp/launch-resume/app-lifecycle). Pour plus d’informations sur les applications Windows 10, consultez [Guides de procédures pour les applications Windows 10](https://developer.microsoft.com/en-us/windows/apps).
+> N’utilisez pas cette méthode pour arrêter une application Universal Windows Platform (UWP), à l’exception de test ou de scénarios de débogage. Méthodes de programmation ou l’interface utilisateur pour fermer une application de Store ne sont pas autorisées en fonction de la [les stratégies de Microsoft Store](/legal/windows/agreements/store-policies). Pour plus d’informations, consultez [cycle de vie application UWP](/windows/uwp/launch-resume/app-lifecycle). Pour plus d’informations sur les applications Windows 10, consultez [Guides de procédures pour les applications Windows 10](https://developer.microsoft.com/windows/apps).
 
 ## <a name="syntax"></a>Syntaxe
 

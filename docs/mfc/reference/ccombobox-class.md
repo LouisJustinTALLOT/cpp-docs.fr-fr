@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447425"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821502"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -256,7 +256,7 @@ Si vous créez un `CComboBox` objet au sein d’une boîte de dialogue (via une 
 
 Si vous incorporez un `CComboBox` objet dans une autre fenêtre de l’objet, vous n’avez pas besoin de le détruire. Si vous créez le `CComboBox` de l’objet sur la pile, il est supprimé automatiquement. Si vous créez le `CComboBox` objet sur le tas à l’aide de la **nouveau** (fonction), vous devez appeler **supprimer** sur l’objet à détruire lors de la destruction de la zone de liste déroulante Windows.
 
-**Remarque** si vous souhaitez gérer les messages WM_KEYDOWN et WM_CHAR, vous devrez sous-classer la zone de liste déroulante Modifier et les contrôles de zone de liste, dériver des classes de `CEdit` et `CListBox`, et ajoutent des gestionnaires pour les messages aux classes dérivées. Pour plus d’informations, consultez [ http://support.microsoft.com/default.aspxscid=kb; en-us ; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) et [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Remarque** si vous souhaitez gérer les messages WM_KEYDOWN et WM_CHAR, vous devrez sous-classer la zone de liste déroulante Modifier et les contrôles de zone de liste, dériver des classes de `CEdit` et `CListBox`, et ajoutent des gestionnaires pour les messages aux classes dérivées. Pour plus d’informations, consultez [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) et [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 

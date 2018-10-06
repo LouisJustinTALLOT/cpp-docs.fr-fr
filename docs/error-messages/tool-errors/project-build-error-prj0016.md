@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6604bc0bf27b3d0192f602c4df88e5f01e4a161
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46135956"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820468"
 ---
 # <a name="project-build-error-prj0016"></a>Erreur de génération de projet PRJ0016
 
@@ -39,6 +39,6 @@ Une autre cause de cette erreur est que votre paramètre de stratégie n’inclu
 
 Pour plus d’informations, consultez :
 
-- Base de connaissances l’article 324153, qui est disponible sur [ http://support.microsoft.com/default.aspx?scid=kb; en-us ; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).
+- Base de connaissances l’article 324153, qui est disponible sur [ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153).
 
 - [Respect des paramètres de stratégie système](https://msdn.microsoft.com/library/aa372139), la section sur « Exécuter uniquement Windows applications autorisées ».
