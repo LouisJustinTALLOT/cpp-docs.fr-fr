@@ -1,7 +1,7 @@
 ---
 title: 'Procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++ | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8bb957f0ab1dd2ea7d05151257aee0e15561e8a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e8a1c45342cf1f5eb178764d6fd723950f52e7e0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609697"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821235"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++
 
@@ -59,7 +59,7 @@ Dans cette procédure pas à pas, vous allez créer un projet qui a un fichier s
 
 1. Créez un répertoire pour votre projet.
 
-2. Créez un fichier nommé main.cpp et ajoutez le code suivant à ce fichier :
+1. Créez un fichier nommé main.cpp et ajoutez le code suivant à ce fichier :
 
     ```cpp
     // main.cpp : the application source code.
@@ -72,7 +72,7 @@ Dans cette procédure pas à pas, vous allez créer un projet qui a un fichier s
     }
     ```
 
-3. Créez un fichier nommé main.h et ajoutez le code suivant à ce fichier :
+1. Créez un fichier nommé main.h et ajoutez le code suivant à ce fichier :
 
     ```cpp
     // main.h: the application header code.
@@ -81,24 +81,24 @@ Dans cette procédure pas à pas, vous allez créer un projet qui a un fichier s
 
 ## <a name="creating-the-xml-msbuild-project-file"></a>Création du fichier projet XML MSBuild
 
-Un fichier projet MSBuild est un fichier XML qui contient un élément racine du projet (\<projet >). Dans l’exemple de projet, le \<projet > élément contient sept éléments enfants :
+Un fichier projet MSBuild est un fichier XML qui contient un élément racine du projet (`<Project>`). Dans l’exemple de projet, le `<Project>` élément contient sept éléments enfants :
 
-- Trois balises du groupe d’éléments (\<ItemGroup >) qui spécifient la configuration de projet et de plateforme, nom du fichier source et nom de fichier d’en-tête.
+- Trois balises du groupe d’éléments (`<ItemGroup>`) qui spécifient la configuration de projet et de plateforme, nom du fichier source et nom de fichier d’en-tête.
 
-- Trois balises d’importation (\<Importer >) qui spécifient l’emplacement des paramètres de Microsoft Visual C++.
+- Trois balises d’importation (`<Import>`) qui spécifient l’emplacement des paramètres de Microsoft Visual C++.
 
-- Une balise de groupe de propriété (\<PropertyGroup >) qui spécifie les paramètres du projet.
+- Une balise de groupe de propriété (`<PropertyGroup>`) qui spécifie les paramètres du projet.
 
 ### <a name="to-create-the-msbuild-project-file"></a>Pour créer le fichier de projet MSBuild
 
-1. Utilisez un éditeur de texte pour créer un fichier de projet est nommé `myproject.vcxproj`, puis ajoutez la racine suivante \<projet > élément. Insérez les éléments dans les étapes suivantes entre la racine \<projet > balises :
+1. Utilisez un éditeur de texte pour créer un fichier de projet est nommé `myproject.vcxproj`, puis ajoutez la racine suivante `<Project>` élément. Insérez les éléments dans les étapes suivantes entre la racine `<Project>` balises :
 
     ```xml
     <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
-2. Ajoutez les deux \<ProjectConfiguration > éléments enfants dans un \<ItemGroup > élément. L’élément enfant spécifie debug et release de configurations pour un système d’exploitation de Windows 32 bits :
+1. Ajoutez les deux `<ProjectConfiguration>` éléments enfants dans un `<ItemGroup>` élément. L’élément enfant spécifie debug et release de configurations pour un système d’exploitation de Windows 32 bits :
 
     ```xml
     <ItemGroup>
@@ -113,13 +113,13 @@ Un fichier projet MSBuild est un fichier XML qui contient un élément racine du
     </ItemGroup>
     ```
 
-3. Ajoutez le code suivant \<Import / > élément qui spécifie le chemin d’accès des paramètres C++ par défaut pour ce projet :
+1. Ajoutez le code suivant `<Import>` élément qui spécifie le chemin d’accès des paramètres C++ par défaut pour ce projet :
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-4. Ajoutez l’élément de groupe de propriétés suivant (\<PropertyGroup >) qui spécifie deux propriétés du projet :
+1. Ajoutez l’élément de groupe de propriétés suivant (`<PropertyGroup>`) qui spécifie deux propriétés du projet :
 
     ```xml
     <PropertyGroup>
@@ -128,13 +128,13 @@ Un fichier projet MSBuild est un fichier XML qui contient un élément racine du
     </PropertyGroup>
     ```
 
-5. Ajoutez le code suivant \<Import / > élément qui spécifie le chemin d’accès des paramètres C++ actuels pour ce projet :
+1. Ajoutez le code suivant `<Import>` élément qui spécifie le chemin d’accès des paramètres C++ actuels pour ce projet :
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-6. Ajoutez le code suivant \<ClCompile > élément enfant dans un \<ItemGroup > élément. L’élément enfant spécifie le nom du fichier source C/C++ à compiler :
+1. Ajoutez le code suivant `<ClCompile>` élément enfant dans un `<ItemGroup>` élément. L’élément enfant spécifie le nom du fichier source C/C++ à compiler :
 
     ```xml
     <ItemGroup>
@@ -143,9 +143,9 @@ Un fichier projet MSBuild est un fichier XML qui contient un élément racine du
     ```
 
    > [!NOTE]
-   > \<ClCompile > est un *cible de génération* et est défini dans le **VCTargets** directory.
+   > `<ClCompile>` est un *cible de génération* et est défini dans le **VCTargets** directory.
 
-7. Ajoutez le code suivant \<ClInclude > élément enfant dans un \<ItemGroup > élément. L’élément enfant spécifie le nom du fichier d’en-tête pour le fichier source C/C++ :
+1. Ajoutez le code suivant `<ClInclude>` élément enfant dans un `<ItemGroup>` élément. L’élément enfant spécifie le nom du fichier d’en-tête pour le fichier source C/C++ :
 
     ```xml
     <ItemGroup>
@@ -153,7 +153,7 @@ Un fichier projet MSBuild est un fichier XML qui contient un élément racine du
     </ItemGroup>
     ```
 
-8. Ajoutez le code suivant \<importation > élément qui spécifie le chemin d’accès du fichier qui définit la cible pour ce projet :
+1. Ajoutez le code suivant `<Import>` élément qui spécifie le chemin d’accès du fichier qui définit la cible pour ce projet :
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
@@ -197,7 +197,7 @@ Tapez la commande suivante à l’invite de commandes pour générer votre appli
 
 `msbuild myproject.vcxproj /p:configuration=debug`
 
-MSBuild crée un répertoire pour les fichiers de sortie, puis compile et lie votre projet pour générer le programme Myproject.exe. Une fois le processus de génération est terminée, utilisez la commande suivante pour exécuter l’application :
+MSBuild crée un répertoire pour les fichiers de sortie, puis compile et lie votre projet pour générer le programme Myproject.exe. Une fois le processus de génération est terminée, utilisez la commande suivante pour exécuter l’application à partir du dossier de débogage :
 
 `myproject`
 
@@ -219,7 +219,7 @@ MSBuild permet d’exécuter des cibles de génération prédéfinies, appliquer
 
 ### <a name="using-msbuild-with-build-targets"></a>Utilisation de MSBuild avec des cibles de génération
 
-Un *cible de génération* est un jeu nommé de commandes prédéfinies ou définies par l’utilisateur qui peuvent être exécutées pendant la génération. Utilisez l’option de ligne de commande cible (**/t**) pour spécifier une cible de génération. Dans le cas de la `myproject` exemple de projet, prédéfinis **propre** cible supprime tous les fichiers dans le dossier de débogage et crée un nouveau fichier journal.
+Un *cible de génération* est un jeu nommé de commandes prédéfinies ou définies par l’utilisateur qui peuvent être exécutées pendant la génération. Utilisez l’option de ligne de commande cible (`/t`) pour spécifier une cible de génération. Pour le `myproject` exemple de projet, prédéfinis **propre** cible supprime tous les fichiers dans le dossier de débogage et crée un nouveau fichier journal.
 
 À l’invite de commandes, tapez la commande suivante pour nettoyer `myproject`.
 
@@ -227,7 +227,7 @@ Un *cible de génération* est un jeu nommé de commandes prédéfinies ou défi
 
 ### <a name="using-msbuild-with-build-properties"></a>Utilisation de MSBuild avec les propriétés de Build
 
-L’option de ligne de commande de propriété (**/p**) vous permet de substituer une propriété dans votre fichier de build de projet. Dans le `myproject` configuration de build de projet, la version ou le débogage exemple est spécifiée par le `Configuration` propriété. Et le système d’exploitation qui est destiné à exécuter l’application générée est spécifié par le `Platform` propriété.
+L’option de ligne de commande de propriété (`/p`) vous permet de substituer une propriété dans votre fichier de build de projet. Dans le `myproject` configuration de build de projet, la version ou le débogage exemple est spécifiée par le `Configuration` propriété. Et le système d’exploitation qui est destiné à exécuter l’application générée est spécifié par le `Platform` propriété.
 
 À l’invite de commandes, tapez la commande suivante pour créer une version debug de la `myproject` application est destinée à s’exécuter sur Windows de 32 bits.
 
@@ -259,7 +259,7 @@ Si vous avez installé Visual C++ sur Windows 64 bits, par défaut, le x64 64 64
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>Utilisation de MSBuild avec un autre ensemble d’outils
 
-Si vous avez les ensembles d’outils et les bibliothèques pour d’autres versions de Visual C++ est installé, MSBuild peut générer des applications pour la version Visual C++ actuelle ou pour les autres versions installées. Par exemple, si vous avez installé Visual Studio 2012, pour spécifier l’ensemble d’outils Visual C++ 11.0 pour Windows XP, ajoutez l’élément de groupe de propriétés suivant au fichier projet Myproject.vcxproj après le Microsoft.Cpp.props `<Import />` élément :
+Si vous avez les ensembles d’outils et les bibliothèques pour d’autres versions de Visual C++ est installé, MSBuild peut générer des applications pour la version Visual C++ actuelle ou pour les autres versions installées. Par exemple, si vous avez installé Visual Studio 2012, pour spécifier l’ensemble d’outils Visual C++ 11.0 pour Windows XP, ajoutez l’élément de groupe de propriétés suivant au fichier projet Myproject.vcxproj après le `Microsoft.Cpp.props` \<Import / > élément :
 
 ```xml
 <PropertyGroup>
@@ -267,11 +267,9 @@ Si vous avez les ensembles d’outils et les bibliothèques pour d’autres vers
 </PropertyGroup>
 ```
 
-Pour régénérer votre projet avec l’ensemble d’outils Visual C++ 11.0 Windows XP, tapez une des commandes suivantes :
+Pour régénérer votre projet avec l’ensemble d’outils Visual C++ 11.0 Windows XP, tapez les commandes suivantes :
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
-
-`msbuild myproject.vcxproj /t:rebuild`
 
 ### <a name="adding-msbuild-customizations"></a>Ajout de personnalisations MSBuild
 

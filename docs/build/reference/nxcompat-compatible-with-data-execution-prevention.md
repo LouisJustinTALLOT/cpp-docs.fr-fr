@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52cf47335c1bed55ca38d508789d65902b335f0f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 431cd954845041a7a186a967c83df7ffb1aac788
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707627"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821671"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatible avec la prévention de l'exécution des données)
 
@@ -40,7 +40,7 @@ Par défaut, **/NXCOMPAT** se trouve sur.
 
 Pour plus d’informations sur la prévention de l’exécution des données, consultez les articles suivants :
 
-- [Une description détaillée de la fonctionnalité de prévention de l’exécution des données (PED)](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
+- [Une description détaillée de la fonctionnalité de prévention de l’exécution des données (PED)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
 - [Prévention de l’exécution des données](/windows/desktop/Memory/data-execution-prevention)
 

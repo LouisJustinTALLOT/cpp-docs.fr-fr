@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a80aa365edf3e39c41ed73d815cc82de6ce9a52
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118165"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821073"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Erreur des outils Éditeur de liens LNK1168
 
@@ -35,7 +35,7 @@ Vous pouvez utiliser les utilitaires Windows SysInternals [gérer](http://techne
 
 Si le fichier est verrouillé par un antivirus, vous pouvez résoudre ce problème en excluant les répertoires de sortie de génération de l'analyse automatique de l'antivirus. Les scanners antivirus sont souvent déclenchés par la création de fichiers dans le système de fichiers. Par ailleurs, ils verrouillent les fichiers pendant l'analyse. Consultez la documentation de votre antivirus pour plus d'informations sur la façon d'exclure des répertoires spécifiques de l'analyse.
 
-Si le fichier est verrouillé par un service d'indexation de la recherche, vous pouvez résoudre ce problème en excluant les répertoires de sortie de génération de l'indexation automatique. Consultez la documentation du service d'indexation pour plus d'informations. Pour modifier la recherche Windows service d’indexation, utilisez **Options d’indexation** dans le Windows **le panneau de configuration**. Pour plus d’informations, consultez [Windows d’améliorer les recherches à l’aide de l’index : Forum aux questions](http://windows.microsoft.com/en-us/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
+Si le fichier est verrouillé par un service d'indexation de la recherche, vous pouvez résoudre ce problème en excluant les répertoires de sortie de génération de l'indexation automatique. Consultez la documentation du service d'indexation pour plus d'informations. Pour modifier la recherche Windows service d’indexation, utilisez **Options d’indexation** dans le Windows **le panneau de configuration**. Pour plus d’informations, consultez [Windows d’améliorer les recherches à l’aide de l’index : Forum aux questions](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
 
 Si votre exécutable ne peut pas être remplacé par le processus de génération, cela signifie qu'il est peut-être verrouillé par l'Explorateur de fichiers. Si le **Application expérience** service a été désactivé, l’Explorateur de fichiers peut conserver un verrou de handle de fichier exécutable pendant une période prolongée. Pour résoudre ce problème, exécutez **services.msc** , puis ouvrez le **propriétés** boîte de dialogue pour le **Application expérience** service. Modifier le **type de démarrage** à partir de **désactivé** à **manuel**.
 

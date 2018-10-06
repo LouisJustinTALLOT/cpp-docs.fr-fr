@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3a503528f5e12fbfafab8cb8e71711ba0650c6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f333a37972a31b5815a05797bfabb603f5a26947
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396842"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820676"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
@@ -56,7 +56,7 @@ unsigned char __vmx_vmwrite(
 
 ## <a name="remarks"></a>Notes
 
-Le `__vmx_vmwrite` fonction est équivalente à la `VMWRITE` instruction machine. La valeur de la `Field` paramètre est un index de champ encodé qui est décrite dans la documentation Intel. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) de site et recherchez annexe C document.
+Le `__vmx_vmwrite` fonction est équivalente à la `VMWRITE` instruction machine. La valeur de la `Field` paramètre est un index de champ encodé qui est décrite dans la documentation Intel. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) de site et recherchez annexe C document.
 
 ## <a name="requirements"></a>Configuration requise
 

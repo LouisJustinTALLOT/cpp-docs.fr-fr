@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705f4f0d41b98c46e2cd61962d84fe8412b9e296
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414054"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821359"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de table des messages (MFC)
 
@@ -81,7 +81,6 @@ Pour prendre en charge les tables des messages, la bibliothèque MFC fournit les
 |[ON_CONTROL_RANGE](#on_control_range)|Indique la fonction qui gérera les notifications à partir de la plage d’ID spécifiées dans les deuxième et troisième paramètres à la macro de contrôle. Le premier paramètre est un message de notification de contrôle, telles que BN_CLICKED.|
 
 Pour plus d’informations sur les tables des messages, la déclaration de la table des messages et les macros de démarcation et les macros de mappage des messages, consultez [tables des messages](../../mfc/reference/message-maps-mfc.md) et [rubriques de mappage et de gestion des messages](../../mfc/message-handling-and-mapping.md). Pour plus d’informations sur les plages de table des messages, consultez [gestionnaires pour les plages de la table des messages](../../mfc/handlers-for-message-map-ranges.md).
-
 
 ## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
@@ -125,15 +124,18 @@ Commence la définition d’une table des messages sur un type de classe contena
 
 ### <a name="syntax"></a>Syntaxe
 
-  ```
+```
 BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *theClass*<br/>
 Spécifie le nom de la classe dont le message mapper.
+
 *type_name*<br/>
 Le nom du paramètre de modèle spécifié pour la classe.
+
 *classe de base*<br/>
 Spécifie le nom de la classe de base de *theClass*.
 
@@ -181,7 +183,6 @@ class CMainFrame : public CMDIFrameWnd
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
-
 
 ## <a name="end_message_map"></a>  END_MESSAGE_MAP
 
@@ -245,9 +246,10 @@ END_MESSAGE_MAP()
 
 ### <a name="syntax"></a>Syntaxe
 
-  ```
+```
 ON_COMMAND_EX(id, memberFxn);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *ID*<br/>
@@ -267,6 +269,7 @@ Cette macro est mappé à un message de commande à une fonction membre de gesti
 ```
 ON_COMMAND_EX(id,  memberFxn);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *ID*<br/>
@@ -287,8 +290,7 @@ Fichier d’en-tête : afxmsg_.h
 ### <a name="see-also"></a>Voir aussi
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006 : tables des messages] tm006-message-maps.md)
-
+[TN006 : tables des messages](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -322,7 +324,6 @@ Pour plus d’informations et des exemples, consultez [gestion des messages et m
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmsg_.h
-
 
 ## <a name="on_message"></a>  ON_MESSAGE
 
@@ -382,7 +383,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 **En-tête :** afxmsg_.h
 
-## <a name="on_olecmd"></a>  ON_OLECMD  
+## <a name="on_olecmd"></a>  ON_OLECMD
 
 Achemine les commandes via l’interface de dispatch de commande `IOleCommandTarget`.
 
@@ -545,7 +546,6 @@ Pour plus d’informations et des exemples, consultez [gestion des messages et m
 ```cpp
 static UINT NEAR WM_FIND = RegisterWindowMessage(_T("COMMDLG_FIND"));
 
-
 BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
    ON_REGISTERED_MESSAGE(WM_FIND, OnFind)
 END_MESSAGE_MAP()
@@ -560,7 +560,7 @@ END_MESSAGE_MAP()
 [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
 [Gestionnaires définis par l’utilisateur](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
 
 Indique la fonction qui gérera le message enregistré par la fonction RegisterWindowMessage de Windows.
 
@@ -586,7 +586,7 @@ RegisterWindowMessage est utilisé pour définir un nouveau message de fenêtre 
 
 **En-tête :** afxmsg_.h
 
-## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE
 
 Indique la fonction qui gérera un message défini par l’utilisateur.
 
@@ -612,7 +612,7 @@ ON_THREAD_MESSAGE doit être utilisé au lieu de ON_MESSAGE lorsque vous avez un
 
 **En-tête :** afxole.h
 
-## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI
 
 Cette macro indique la fonction qui gérera un message de commande de mise à jour de l’interface utilisateur.
 
@@ -699,7 +699,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **En-tête :** afxmsg_.h
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE
 
 Mappe une plage contiguë d’ID de commande à une fonction de gestionnaire de messages de mise à jour unique.
 
@@ -730,7 +730,7 @@ Il n’existe aucune prise en charge automatique des plages de table de message,
 
 **En-tête :** afxmsg_.h
 
-## <a name="on_control_range"></a>  ON_CONTROL_RANGE    
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE
 
 Utilisez cette macro pour mapper une plage contiguë d’ID de contrôle à une fonction de gestionnaire de message unique pour un message de notification Windows spécifié, tel que BN_CLICKED.
 

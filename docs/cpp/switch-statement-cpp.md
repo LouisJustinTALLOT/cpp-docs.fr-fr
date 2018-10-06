@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbcc791d4e39f58146ed13bb41c8ec43941d3527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 32fcf4f8f99f80e44758c107a8941c51bd8a767f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087810"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821164"
 ---
 # <a name="switch-statement-c"></a>switch, instruction (C++)
 
@@ -119,14 +119,14 @@ int main()
 **Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : une instruction switch peut introduire et initialiser une variable dont la portée est limitée au bloc de l’instruction switch :
 
 ```cpp
-switch (Gadget gadget(args); auto s = gadget.get_status())
-        {
-        case status::good:
-            gadget.zip();
-            break;
-        case status::bad:
-            throw BadGadget();
-        };
+    switch (Gadget gadget(args); auto s = gadget.get_status())
+    {
+    case status::good:
+        gadget.zip();
+        break;
+    case status::bad:
+        throw BadGadget();
+    };
 ```
 
 Un bloc interne d’un **basculer** instruction peut contenir des définitions avec des initialisations tant qu’ils sont accessibles, c'est-à-dire non contournées par tous les chemins d’exécution possibles. Les noms présentés à l'aide de ces déclarations ont une portée locale. Exemple :
@@ -138,35 +138,35 @@ Un bloc interne d’un **basculer** instruction peut contenir des définitions a
 using namespace std;
 int main(int argc, char *argv[])
 {
-   switch( tolower( *argv[1] ) )
-   {
-       // Error. Unreachable declaration.
-       char szChEntered[] = "Character entered was: ";
+    switch( tolower( *argv[1] ) )
+    {
+        // Error. Unreachable declaration.
+        char szChEntered[] = "Character entered was: ";
 
-   case 'a' :
-       {
-       // Declaration of szChEntered OK. Local scope.
-       char szChEntered[] = "Character entered was: ";
-       cout << szChEntered << "a\n";
-       }
-       break;
+    case 'a' :
+        {
+        // Declaration of szChEntered OK. Local scope.
+        char szChEntered[] = "Character entered was: ";
+        cout << szChEntered << "a\n";
+        }
+        break;
 
-   case 'b' :
-       // Value of szChEntered undefined.
-       cout << szChEntered << "b\n";
-       break;
+    case 'b' :
+        // Value of szChEntered undefined.
+        cout << szChEntered << "b\n";
+        break;
 
-   default:
-       // Value of szChEntered undefined.
-       cout << szChEntered << "neither a nor b\n";
-       break;
-   }
+    default:
+        // Value of szChEntered undefined.
+        cout << szChEntered << "neither a nor b\n";
+        break;
+    }
 }
 ```
 
 Un **basculer** instruction peut être imbriquée. Dans ce cas, **cas** ou **par défaut** étiquettes associer la plus proche **basculer** instruction qui les entoure.
 
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+**Section spécifique à Microsoft**
 
 Microsoft C ne limite pas le nombre de valeurs de cas dans un **basculer** instruction. Le nombre est limité uniquement par la mémoire disponible. C ANSI requiert qu’au moins 257 étiquettes soient autorisées dans un **basculer** instruction.
 

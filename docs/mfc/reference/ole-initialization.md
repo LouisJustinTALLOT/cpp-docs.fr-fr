@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cd4318ac3d6b1da998e661da2a88f46cb84c8e9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0e9c86cbe93fe5eb10145a322a19a26be149b4c
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435829"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820488"
 ---
 # <a name="ole-initialization"></a>Initialisation d'OLE
 
@@ -79,7 +79,7 @@ Appelez cette fonction pour initialiser la prise en charge OLE pour une applicat
 >  Si **AfxOleInit** est appelée à partir d’une DLL MFC, l’appel échoue. L’échec se produit parce que la fonction suppose que, si elle est appelée à partir d’une DLL, le système OLE a été précédemment initialisé par l’application appelante.
 
 > [!NOTE]
->  Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` substituer, spécifiez COINIT_APARTMENTTHREADED (plutôt que COINIT_MULTITHREADED). Pour plus d’informations, consultez PRB : Application MFC cesse de répondre lorsque vous initialisez l’Application comme un multithread cloisonné (828643) à [ http://support.microsoft.com/default.aspxscid=kb; en-us ; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+>  Les applications MFC doivent être initialisées en tant que thread unique cloisonné (STA). Si vous appelez [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) dans votre `InitInstance` substituer, spécifiez COINIT_APARTMENTTHREADED (plutôt que COINIT_MULTITHREADED). Pour plus d’informations, consultez PRB : Application MFC cesse de répondre lorsque vous initialisez l’Application comme un multithread cloisonné (828643) à [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
 
 ### <a name="requirements"></a>Configuration requise
 

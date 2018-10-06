@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cca4818d0ace6270b986ddb9b99068ca9532f1b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c4a4327e1c3e4d65c5bdc3b822cf2cdfc1ec0353
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395509"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820592"
 ---
 # <a name="automation-clients"></a>Clients Automation
 
@@ -46,7 +46,7 @@ Vous spécifiez ensuite le fichier de bibliothèque de types décrivant les prop
 
 ### <a name="handling-events-in-automation-clients"></a>Gestion des événements dans les Clients Automation
 
-Si vous souhaitez gérer des événements dans votre client automation, vous devez ajouter une interface de récepteur. MFC fournit la prise en charge de l’Assistant pour ajouter des interfaces de récepteur pour les contrôles ActiveX, mais pas en charge pour les autres serveurs COM. Pour plus d’informations sur l’ajout d’une interface de récepteur dans un client MFC pour les interfaces sources décrite par des serveurs COM, consultez Comment : créer une Interface de récepteur dans MFC COM Client (181845 Ko) à [ http://support.microsoft.com/default.aspxscid=kb; en-us ; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).
+Si vous souhaitez gérer des événements dans votre client automation, vous devez ajouter une interface de récepteur. MFC fournit la prise en charge de l’Assistant pour ajouter des interfaces de récepteur pour les contrôles ActiveX, mais pas en charge pour les autres serveurs COM. Pour plus d’informations sur l’ajout d’une interface de récepteur dans un client MFC pour les interfaces sources décrite par des serveurs COM, consultez Comment : créer une Interface de récepteur dans MFC COM Client (181845 Ko) à [ http://support.microsoft.com/default.aspxscid=kb; 181845](http://support.microsoft.com/default.aspxscid=kb;181845).
 
 ## <a name="see-also"></a>Voir aussi
 

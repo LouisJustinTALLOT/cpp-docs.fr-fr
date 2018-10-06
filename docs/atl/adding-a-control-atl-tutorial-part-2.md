@@ -1,7 +1,7 @@
 ---
 title: Ajout d’un contrôle (didacticiel ATL, partie 2) | Microsoft Docs
 ms.custom: get-started-article
-ms.date: 06/18/2018
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4f3e1460dc4601e15065cb7b968153bd928c87
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2d4918887e36e405c5efb0d5280cea5976f14bb9
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762858"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821278"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Ajout d'un contrôle (Didacticiel ATL, Partie 2)
 
@@ -25,21 +25,21 @@ Dans cette étape, vous ajoutez un contrôle à votre projet, générez-le et te
 
 ## <a name="procedures"></a>Procédures
 
-#### <a name="to-add-an-object-to-an-atl-project"></a>Pour ajouter un objet à un projet ATL
+### <a name="to-add-an-object-to-an-atl-project"></a>Pour ajouter un objet à un projet ATL
 
-1. Dans **l’Explorateur de solutions**, cliquez sur le projet Polygon.
+1. Dans **l’Explorateur de solutions**, avec le bouton droit le `Polygon` projet.
 
-2. Pointez sur **ajouter** sur le menu contextuel, puis cliquez sur **un nouvel élément** dans le sous-menu.
+1. Pointez sur **ajouter** sur le menu contextuel, puis cliquez sur **un nouvel élément** dans le sous-menu.
 
-     La boîte de dialogue **Ajouter un nouvel élément** s’affiche. Les différentes catégories d’objet sont répertoriées dans l’arborescence sur la gauche.
+    La boîte de dialogue **Ajouter un nouvel élément** s’affiche. Les différentes catégories d’objet sont répertoriées dans l’arborescence sur la gauche.
 
-3. Cliquez sur le **ATL** dossier.
+1. Cliquez sur le **ATL** dossier.
 
-4. Dans la liste des modèles sur la droite, sélectionnez **contrôle ATL**. Cliquez sur **Ajouter**. L’Assistant contrôle ATL s’ouvre et vous pouvez configurer le contrôle.
+1. Dans la liste des modèles sur la droite, sélectionnez **contrôle ATL**. Cliquez sur **Ajouter**. Le **contrôle ATL** Assistant s’ouvre et vous pouvez configurer le contrôle.
 
-5. Type `PolyCtl` comme nom court et notez que les autres champs sont automatiquement complétés. Ne cliquez pas sur **Terminer** encore, le fait d’avoir à apporter des modifications.
+1. Type `PolyCtl` comme nom court et notez que les autres champs sont automatiquement complétés. Ne cliquez pas sur **Terminer** encore, le fait d’avoir à apporter des modifications.
 
-L’Assistant contrôle ATL **noms** page contient les champs suivants :
+Le **contrôle ATL** l’Assistant **noms** page contient les champs suivants :
 
 |Champ|Sommaire|
 |-----------|--------------|
@@ -52,31 +52,41 @@ L’Assistant contrôle ATL **noms** page contient les champs suivants :
 |**Type**|Une description pour le contrôle.|
 |**ProgID**|Nom lisible qui peut être utilisé pour rechercher le CLSID du contrôle.|
 
-Vous devez effectuer plusieurs paramètres supplémentaires dans l’Assistant contrôle ATL.
+Vous devez effectuer plusieurs paramètres supplémentaires dans le **contrôle ATL** Assistant.
 
-#### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>Pour activer la prise en charge pour les connexions et les informations d’erreur complètes points
+### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>Pour activer la prise en charge pour les connexions et les informations d’erreur complètes points
 
 1. Cliquez sur **Options** pour ouvrir le **Options** page.
 
-2. Sélectionnez le **points de connexion** case à cocher. Cela créera la prise en charge pour une interface sortante dans le fichier IDL.
+1. Sélectionnez le **points de connexion** case à cocher. Cela créera la prise en charge pour une interface sortante dans le fichier IDL.
+
+Vous pouvez également ajouter des interfaces pour étendre les fonctionnalités du contrôle.
+
+### <a name="to-extend-the-controls-functionality"></a>Pour étendre les fonctionnalités du contrôle
+
+1. Cliquez sur **Interfaces** pour ouvrir le **Interfaces** page.
+
+1. Sélectionnez `IProvideClassInfo2` et cliquez sur le **des** flèche pour la déplacer vers le **pris en charge** liste.
+
+1. Sélectionnez `ISpecifyPropertyPages` et cliquez sur le **des** flèche pour la déplacer vers le **pris en charge** liste.
 
 Vous pouvez également rendre le contrôle insérable, ce qui signifie qu’il peut être incorporé dans des applications qui prennent en charge les objets incorporés, tels qu’Excel ou Word.
 
-#### <a name="to-make-the-control-insertable"></a>Pour rendre le contrôle insérable
+### <a name="to-make-the-control-insertable"></a>Pour rendre le contrôle insérable
 
 1. Cliquez sur **apparence** pour ouvrir le **apparence** page.
 
-2. Sélectionnez le **Insertable** case à cocher.
+1. Sélectionnez le **Insertable** case à cocher.
 
 Le polygone affiché par l’objet aura une couleur de remplissage unie, vous devez donc ajouter une `Fill Color` propriété stock.
 
-#### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>Pour ajouter une propriété stock de couleur de remplissage et créer le contrôle
+### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>Pour ajouter une propriété stock de couleur de remplissage et créer le contrôle
 
 1. Cliquez sur **Propriétés Stock** pour ouvrir le **Propriétés Stock** page.
 
-2. Sous **ne pas pris en charge**, défiler la liste des propriétés stock possibles. Double-cliquez sur `Fill Color` pour le déplacer vers le **pris en charge** liste.
+1. Sous **ne pas pris en charge**, défiler la liste des propriétés stock possibles. Sélectionnez `Fill Color` et cliquez sur le **des** flèche pour la déplacer vers le **pris en charge** liste.
 
-3. Cela termine les options pour le contrôle. Cliquez sur **Terminer**.
+1. Cela termine les options pour le contrôle. Cliquez sur **Terminer**.
 
 Comme l’Assistant a créé le contrôle, plusieurs modifications de code et les ajouts de fichiers s’est produite. Les fichiers suivants ont été créés :
 
@@ -99,14 +109,17 @@ Vous pouvez maintenant générer le contrôle pour le voir en action.
 
 ## <a name="building-and-testing-the-control"></a>Création et test du contrôle
 
-#### <a name="to-build-and-test-the-control"></a>Pour générer et tester le contrôle
+### <a name="to-build-and-test-the-control"></a>Pour générer et tester le contrôle
 
 1. Sur le **Build** menu, cliquez sur **générer le polygone**.
 
-     Une fois que le contrôle a terminé la création, cliquez sur PolyCtl.htm dans **l’Explorateur de solutions** et sélectionnez **afficher dans le navigateur**. La page HTML Web contenant le contrôle s’affichera. Vous devez voir une page avec le titre « ATL 8.0 page de test pour l’objet PolyCtl » et le texte **PolyCtl**. Il s’agit de votre contrôle.
+    Une fois que le contrôle a terminé la création, cliquez sur PolyCtl.htm dans **l’Explorateur de solutions** et sélectionnez **afficher dans le navigateur**. La page HTML Web contenant le contrôle s’affichera. Vous devez voir une page avec le titre « ATL 8.0 page de test pour l’objet PolyCtl » et le texte PolyCtl. Il s’agit de votre contrôle.
 
 > [!NOTE]
->  Quand ils auront terminé ce didacticiel, si vous recevez un message d’erreur où le fichier DLL ne peut pas être créé, fermez le fichier PolyCtl.htm et l’ActiveX Control Test container et regénérez la solution. Si vous ne pouvez toujours pas créer la DLL, redémarrez l’ordinateur ou fermez la session (si vous utilisez des Services Terminal Server).
+> Si le contrôle n’est pas visible, savoir que certains navigateurs nécessitent des réglages de paramètres pour exécuter les contrôles ActiveX. Reportez-vous à la documentation du navigateur sur l’activation des contrôles ActiveX.
+
+> [!NOTE]
+> Quand ils auront terminé ce didacticiel, si vous recevez un message d’erreur où le fichier DLL ne peut pas être créé, fermez le fichier PolyCtl.htm et l’ActiveX Control Test container et regénérez la solution. Si vous ne pouvez toujours pas créer la DLL, redémarrez l’ordinateur ou fermez la session (si vous utilisez des Services Terminal Server).
 
 Ensuite, vous allez ajouter une propriété personnalisée au contrôle.
 
@@ -115,4 +128,3 @@ Ensuite, vous allez ajouter une propriété personnalisée au contrôle.
 ## <a name="see-also"></a>Voir aussi
 
 [Didacticiel](../atl/active-template-library-atl-tutorial.md)
-

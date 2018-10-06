@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078fcbfd42c64a0ec5d90a41e8ec3e4ae392f57d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b001bb4d8ad9f1b4895147e0507ea3b6fda97ee5
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433938"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820702"
 ---
 # <a name="ud2"></a>__ud2
 
@@ -40,7 +40,7 @@ void __ud2();
 
 Le processeur génère une exception de l’opcode non valide si vous exécutez une instruction non définie.
 
-Le `__ud2` fonction est équivalente à la `UD2` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : référence de jeu d’instructions, » à la [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) site.
+Le `__ud2` fonction est équivalente à la `UD2` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : référence de jeu d’instructions, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 ## <a name="requirements"></a>Configuration requise
 
