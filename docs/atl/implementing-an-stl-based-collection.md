@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116703"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861094"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implémentation d’une Collection de basée sur la bibliothèque Standard C++
 
@@ -57,15 +57,15 @@ Il s’agit de la forme standard pour une interface de collection en lecture seu
 
 1. Interfaces de collection sont généralement à doubles, car les clients Automation accède à la `_NewEnum` propriété via `IDispatch::Invoke`. Toutefois, les clients Automation peuvent accéder les méthodes restantes via la vtable, les interfaces doubles sont préférables aux dispinterfaces.
 
-2. Si une interface double ou une dispinterface n’est pas étendue au moment de l’exécution (autrement dit, vous ne fournissez des méthodes supplémentaires ou des propriétés via `IDispatch::Invoke`), vous devez appliquer le **nonextensible** à votre définition d’attribut. Cet attribut permet aux clients Automation d’effectuer la vérification du code complète au moment de la compilation. Dans ce cas, l’interface ne doit pas être étendu.
+1. Si une interface double ou une dispinterface n’est pas étendue au moment de l’exécution (autrement dit, vous ne fournissez des méthodes supplémentaires ou des propriétés via `IDispatch::Invoke`), vous devez appliquer le **nonextensible** à votre définition d’attribut. Cet attribut permet aux clients Automation d’effectuer la vérification du code complète au moment de la compilation. Dans ce cas, l’interface ne doit pas être étendu.
 
-3. Le DISPID correct est important si vous souhaitez que les clients Automation d’être en mesure d’utiliser cette propriété. (Notez qu’il n'existe qu’un seul trait de soulignement dans DISPID_NEWENUM.)
+1. Le DISPID correct est important si vous souhaitez que les clients Automation d’être en mesure d’utiliser cette propriété. (Notez qu’il n'existe qu’un seul trait de soulignement dans DISPID_NEWENUM.)
 
-4. Vous pouvez fournir n’importe quelle valeur en tant que le DISPID de la `Item` propriété. Toutefois, `Item` utilise DISPID_VALUE comme pour le rendre la propriété par défaut de la collection. Cela permet aux clients Automation de font référence à la propriété sans la nommer explicitement.
+1. Vous pouvez fournir n’importe quelle valeur en tant que le DISPID de la `Item` propriété. Toutefois, `Item` utilise DISPID_VALUE comme pour le rendre la propriété par défaut de la collection. Cela permet aux clients Automation de font référence à la propriété sans la nommer explicitement.
 
-5. Le type de données utilisé pour la valeur de retour de la `Item` propriété est le type de l’élément stocké dans la collection, comme les clients COM sont concernés. L’interface retourne des chaînes, vous devez utiliser le type de chaîne COM standard, BSTR. Vous pouvez stocker les données dans un format différent en interne comme vous le verrez bientôt.
+1. Le type de données utilisé pour la valeur de retour de la `Item` propriété est le type de l’élément stocké dans la collection, comme les clients COM sont concernés. L’interface retourne des chaînes, vous devez utiliser le type de chaîne COM standard, BSTR. Vous pouvez stocker les données dans un format différent en interne comme vous le verrez bientôt.
 
-6. La valeur utilisée pour le DISPID de la `Count` propriété est totalement aléatoires. Il n’existe aucun DISPID standard pour cette propriété.
+1. La valeur utilisée pour le DISPID de la `Count` propriété est totalement aléatoires. Il n’existe aucun DISPID standard pour cette propriété.
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> Création de Typedefs pour le stockage et l’exposition
 
@@ -114,4 +114,3 @@ Vous pouvez maintenant tester le code avec le client de votre choix.
 [Collections et énumérateurs](../atl/atl-collections-and-enumerators.md)<br/>
 [ATLCollections, exemple](../visual-cpp-samples.md)<br/>
 [Classes de stratégies de copie ATL](../atl/atl-copy-policy-classes.md)
-

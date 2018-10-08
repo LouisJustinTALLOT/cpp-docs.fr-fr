@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722369"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860743"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Différer le chargement de l'importation)
 
@@ -46,9 +46,9 @@ Le [/retarder](../../build/reference/delay-delay-load-import-settings.md) option
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
-2. Dans le **l’éditeur de liens** dossier, sélectionnez le **entrée** page de propriétés.
+1. Dans le **l’éditeur de liens** dossier, sélectionnez le **entrée** page de propriétés.
 
-3. Modifier le **chargement différé des DLL** propriété.
+1. Modifier le **chargement différé des DLL** propriété.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

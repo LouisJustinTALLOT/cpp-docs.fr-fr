@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c176e77a1704e3311d8c814d1c1b530b9f94f1ec
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 420fd702aa97d07e8aadb16a90c0a6a6636f6aa9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070052"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860262"
 ---
 # <a name="c-runtime-error-r6025"></a>Erreur Runtime C R6025
 
 appel de fonction virtuelle pure
 
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. La raison la plus courante de cette erreur est un bogue dans l’application ou une installation endommagée.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. La raison la plus courante de cette erreur est un bogue dans l’application ou une installation endommagée.
 >
->  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
+> Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
->  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
-> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
+> - Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
+> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
 
 **Informations pour les programmeurs**
 

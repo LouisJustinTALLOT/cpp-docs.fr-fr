@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae9ab3c2e8f077d943b69b419694fbf686ffdf38
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 22b79454b71f4908d71e683d8bebe4611da7cb14
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703857"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861853"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Exporter une fonction)
 
@@ -70,9 +70,9 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
 
-2. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
+1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
 
-3. Entrez l’option dans le **des Options supplémentaires** boîte.
+1. Entrez l’option dans le **des Options supplémentaires** boîte.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

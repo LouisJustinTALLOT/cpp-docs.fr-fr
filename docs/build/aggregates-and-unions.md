@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aac6da94a0786e5cdc2eee4d16f5927f66e0a8d5
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710019"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861185"
 ---
 # <a name="aggregates-and-unions"></a>Agrégats et unions
 
@@ -29,7 +29,7 @@ Autres types, tels que des tableaux, des structs et unions, ont des exigences pl
 
    Contient un groupe ordonné d’objets de données adjacents. Chaque objet est appelé un élément. Tous les éléments dans un tableau ont la même taille et type de données.
 
--  Structure
+- Structure
 
    Contient un groupe ordonné d’objets de données. Contrairement aux éléments d’un tableau, les objets de données au sein d’une structure peuvent avoir des tailles et types de données différents. Chaque objet de données dans une structure est appelé membre.
 

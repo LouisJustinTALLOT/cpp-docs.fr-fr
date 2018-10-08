@@ -17,62 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e896c1a00e45e5e7503837409903651ed2bdc3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024110"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861237"
 ---
 # <a name="pointers-c"></a>Pointeurs (C++)
 
 Les pointeurs sont déclarés à l'aide de la séquence ci-dessous.
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*spécificateurs de classe de stockage*] \[ *qualificateurs cv*] *spécificateurs de type* \[ *ms-modificateur*]  *déclarateur* **;**
 
-où tout déclarateur de pointeur valide peut être utilisé pour `declarator`. La syntaxe d'un déclarateur de pointeur simple est la suivante :
+où tout déclarateur de pointeur valide peut être utilisé pour *déclarateur*. La syntaxe d'un déclarateur de pointeur simple est la suivante :
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*qualificateurs CV*] *identificateur* \[ **=** *expression*]
 
 1. Les spécificateurs de déclaration :
 
-    - Spécificateur de classe de stockage facultatif. Pour plus d’informations, consultez [spécificateurs](../cpp/specifiers.md).
+   - Spécificateur de classe de stockage facultatif. Pour plus d’informations, consultez [spécificateurs](../cpp/specifiers.md).
 
-    - Facultatif **const** ou **volatile** mot clé appliqué au type de l’objet à pointer.
+   - Facultatif **const** ou **volatile** mot clé appliqué au type de l’objet à pointer.
 
-    - Le spécificateur de type : le nom d'un type représentant le type de l'objet à pointer.
+   - Le spécificateur de type : le nom d'un type représentant le type de l'objet à pointer.
 
-2. Déclarateur :
+1. Déclarateur :
 
-    - Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Modificateur spécifique à Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-    - opérateur `*`,
+   - Le __\*__ opérateur.
 
-    - Facultatif **const** ou **volatile** mot clé appliqué au pointeur lui-même.
+   - Facultatif **const** ou **volatile** mot clé appliqué au pointeur lui-même.
 
-    - Identificateur.
+   - Identificateur.
 
-    - Initialiseur facultatif.
+   - Initialiseur facultatif.
 
-     Le déclarateur d'un pointeur vers une fonction ressemble à ceci :
+Le déclarateur d'un pointeur vers une fonction ressemble à ceci :
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *qualificateurs cv*] *identificateur* **) (** *liste d’arguments* **)** \[ *cv-facultatifs*] \[ *spécification d’exception*] \[ **=** *expression*] **;**
 
-- Pour un tableau de pointeurs, la syntaxe ressemble à ceci :
+Pour un tableau de pointeurs, la syntaxe ressemble à ceci :
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *identificateur* **\[** \[ *expression constante*] **]**
 
-- Plusieurs déclarateurs et leurs initialiseurs peuvent apparaître simultanément dans une déclaration unique dans une liste séparée par des virgules suivant le spécificateur de déclaration.
+Plusieurs déclarateurs et leurs initialiseurs peuvent apparaître simultanément dans une déclaration unique dans une liste séparée par des virgules suivant le spécificateur de déclaration.
 
 Voici un exemple simple de déclaration de pointeur :
 

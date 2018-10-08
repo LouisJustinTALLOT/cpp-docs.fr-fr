@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae2a08431a29e4140e3a9af86e68ccfc9bff388a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069116"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861390"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
@@ -388,11 +388,11 @@ Un constructeur effectue son travail dans l'ordre suivant :
 
 1. Il appelle les constructeurs membres et de classe de base dans l'ordre de déclaration.
 
-2. Si la classe est dérivée de classes de base virtuelles, il initialise les pointeurs de base virtuels de l'objet.
+1. Si la classe est dérivée de classes de base virtuelles, il initialise les pointeurs de base virtuels de l'objet.
 
-3. Si la classe possède ou hérite des fonctions virtuelles, il initialise les pointeurs de fonction virtuelle de l'objet. Les pointeurs de fonction virtuelle pointent sur la table de fonctions virtuelles de la classe pour permettre la liaison correcte des appels de fonction virtuelle au code.
+1. Si la classe possède ou hérite des fonctions virtuelles, il initialise les pointeurs de fonction virtuelle de l'objet. Les pointeurs de fonction virtuelle pointent sur la table de fonctions virtuelles de la classe pour permettre la liaison correcte des appels de fonction virtuelle au code.
 
-4. Il exécute le code dans son corps de fonction.
+1. Il exécute le code dans son corps de fonction.
 
 L'exemple suivant montre l'ordre dans lequel les constructeurs de classe de base et membres sont appelés dans le constructeur pour une classe dérivée. D'abord, le constructeur de base est appelé, puis les membres de classe de base sont initialisés dans l'ordre dans lequel ils apparaissent dans la déclaration de classe, puis le constructeur dérivé est appelé.
 
@@ -593,7 +593,6 @@ public:
     //... rest of class as before
 };
 ```
-
 
 L'objet créé par les constructeurs est entièrement initialisé dès qu'un constructeur est terminé. Pour plus d’informations, consultez [d’initialisation uniforme et constructeurs de délégation](../cpp/uniform-initialization-and-delegating-constructors.md).
 

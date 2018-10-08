@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387014"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860561"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Opérations CString relatives aux chaînes de style C
 
@@ -67,7 +67,7 @@ Vous pouvez parfois avoir besoin d'une copie des données de `CString` pour les 
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  Le troisième argument de `strcpy_s` (ou la portable Unicode/MBCS `_tcscpy_s`) est soit un `const wchar_t*` (Unicode) ou un `const char*` (ANSI). L'exemple ci-dessus passe un objet `CString` pour cet argument. Le compilateur C++ applique automatiquement la fonction de conversion définie pour la classe `CString` qui convertit un objet `CString` en un pointeur `LPCTSTR`. La possibilité de définir des opérations de cast d’un type vers un autre type est une des fonctionnalités les plus pratiques de C++.
+> Le troisième argument de `strcpy_s` (ou la portable Unicode/MBCS `_tcscpy_s`) est soit un `const wchar_t*` (Unicode) ou un `const char*` (ANSI). L'exemple ci-dessus passe un objet `CString` pour cet argument. Le compilateur C++ applique automatiquement la fonction de conversion définie pour la classe `CString` qui convertit un objet `CString` en un pointeur `LPCTSTR`. La possibilité de définir des opérations de cast d’un type vers un autre type est une des fonctionnalités les plus pratiques de C++.
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Utilisation des fonctions de chaîne Standard Run-Time Library
 
@@ -83,13 +83,13 @@ Il existe cependant des situations où il est préférable de modifier directeme
 
 Les méthodes `GetBuffer` et `ReleaseBuffer` offrent un accès à la mémoire tampon de caractères interne d'un objet `CString` et vous permettent de le modifier directement. Les étapes suivantes montrent comment utiliser ces fonctions à cette fin.
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Pour utiliser GetBuffer et ReleaseBuffer pour accéder à la mémoire tampon de caractères interne d'un objet CString
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Pour utiliser GetBuffer et ReleaseBuffer pour accéder à la mémoire tampon de caractères interne d'un objet CString
 
 1. Appelez `GetBuffer` pour un objet `CString` et spécifiez la longueur de la mémoire tampon dont vous avez besoin.
 
-2. Utilisez le pointeur retourné par `GetBuffer` pour écrire des caractères directement dans l'objet `CString`.
+1. Utilisez le pointeur retourné par `GetBuffer` pour écrire des caractères directement dans l'objet `CString`.
 
-3. Appelez `ReleaseBuffer` pour l'objet `CString` pour mettre à jour toutes les informations d'état internes de `CString`, par exemple la longueur de la chaîne. Après avoir modifié directement le contenu d'un objet `CString`, vous devez appeler `ReleaseBuffer` avant d'appeler toute autre fonction de membre de `CString`.
+1. Appelez `ReleaseBuffer` pour l'objet `CString` pour mettre à jour toutes les informations d'état internes de `CString`, par exemple la longueur de la chaîne. Après avoir modifié directement le contenu d'un objet `CString`, vous devez appeler `ReleaseBuffer` avant d'appeler toute autre fonction de membre de `CString`.
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Utilisation d’objets CString avec des fonctions d’arguments variables
 
@@ -113,4 +113,3 @@ Pour les résultats de la plupart des fonctions, vous pouvez simplement retourne
 
 [Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Passage d’arguments CString](../atl-mfc-shared/cstring-argument-passing.md)
-

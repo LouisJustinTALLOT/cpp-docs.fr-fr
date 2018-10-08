@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f8fad0c4676e8dfedcf8e80332c0a239f230cb
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821190"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860405"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procédure pas à pas : compilation d'un programme C++ natif sur la ligne de commande
 
@@ -53,7 +53,7 @@ Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous dev
 
    Si vous utilisez une autre version de Visual Studio ou exécutez une version différente de Windows, recherchez dans votre menu Démarrer ou page pour un dossier d’outils de Visual Studio qui contient un raccourci d’invite de commandes développeur de démarrage. Vous pouvez également utiliser la fonction de recherche de Windows pour rechercher « invite de commande développeur » et choisissez celui qui correspond à votre version installée de Visual Studio. Utilisez le raccourci pour ouvrir la fenêtre d’invite de commandes.
 
-1. Ensuite, vérifiez que l’invite de commandes développeur Visual C++ est correctement configuré. Dans la fenêtre d’invite de commandes, entrez `cl` et vérifiez que la sortie ressemble à :
+1. Ensuite, vérifiez que l’invite de commandes développeur Visual C++ est correctement configuré. Dans la fenêtre d’invite de commandes, entrez `cl` et vérifiez que la sortie ressemble à ceci :
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -140,7 +140,7 @@ Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous dev
    > [!NOTE]
    > Si vous obtenez une erreur de l’éditeur de liens ou du compilateur différents ou un avertissement, passez en revue votre code source pour corriger les erreurs éventuelles, puis enregistrez-le et réexécutez le compilateur. Pour plus d’informations sur les erreurs spécifiques, utilisez la zone de recherche sur cette page MSDN pour rechercher le numéro d’erreur.
 
-7. Pour exécuter le programme hello.exe, à l’invite de commandes, entrez `hello`.
+1. Pour exécuter le programme hello.exe, à l’invite de commandes, entrez `hello`.
 
    Le programme affiche ce texte puis se ferme :
 

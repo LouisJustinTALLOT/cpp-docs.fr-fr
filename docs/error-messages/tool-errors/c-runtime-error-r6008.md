@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b06566f84003b08f5fe3869a021c4bf86dcf5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 604b54d1c1752c76e28680e3373913ca7e92a9bc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105127"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860431"
 ---
 # <a name="c-runtime-error-r6008"></a>Erreur Runtime C R6008
 
 pas assez d’espace pour les arguments
 
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème de mémoire interne. Il existe plusieurs raisons possibles à cette erreur, mais il est souvent dû à une condition de mémoire très faibles, trop de mémoire effectuée par les variables d’environnement, ou d’un bogue dans le programme.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème de mémoire interne. Il existe plusieurs raisons possibles à cette erreur, mais il est souvent dû à une condition de mémoire très faibles, trop de mémoire effectuée par les variables d’environnement, ou d’un bogue dans le programme.
 >
->  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
+> Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
->  -   Fermez les autres applications en cours d’exécution ou redémarrer votre ordinateur pour libérer la mémoire.
-> -   Réduire le nombre et la taille des arguments de ligne de commande à l’application.
-> -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
-> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Fermez les autres applications en cours d’exécution ou redémarrer votre ordinateur pour libérer la mémoire.
+> - Réduire le nombre et la taille des arguments de ligne de commande à l’application.
+> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
+> - Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
+> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
 
 **Informations pour les programmeurs**
 

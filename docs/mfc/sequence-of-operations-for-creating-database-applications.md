@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9c66324f886da27431a94a464554e2a8ddb00a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 483a36f62a147d9b71a489c2f611fc45c1b7fa54
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391570"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860730"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Ordre des opérations pour la création d'applications de base de données
 
@@ -36,7 +36,7 @@ Le tableau suivant indique votre rôle et l’infrastructure dans l’écriture 
 |Tâche|Ce que vous devez faire|Ce que le framework fait|
 |----------|------------|------------------------|
 |Décider s’il faut utiliser les classes MFC ODBC ou DAO.|Utiliser ODBC pour les nouveaux projets MFC. Utilisez DAO uniquement pour maintenir les applications existantes. Pour obtenir des informations générales, consultez l’article [Data Access programmation](../data/data-access-programming-mfc-atl.md).|Le framework fournit des classes qui prennent en charge d’accès de base de données.|
-|Créez votre application squelette avec les options de base de données.|Exécutez l’Assistant Application MFC. Sélectionnez les options sur la page de prise en charge de la base de données. Si vous choisissez une option qui crée une vue d’enregistrement, spécifiez également :<br /><br /> -Les données source et la table ou les noms<br />-Les noms des requêtes.|L’Assistant Application MFC crée des fichiers et spécifie qu'inclut nécessaires. Selon les options que vous spécifiez, les fichiers peuvent inclure une classe de jeu d’enregistrements.|
+|Créez votre application squelette avec les options de base de données.|Exécutez l’Assistant Application MFC. Sélectionnez les options sur la page de prise en charge de la base de données. Si vous choisissez une option qui crée une vue d’enregistrement, spécifiez également :<br /><br />-Les données source et la table ou les noms<br />-Les noms des requêtes.|L’Assistant Application MFC crée des fichiers et spécifie qu'inclut nécessaires. Selon les options que vous spécifiez, les fichiers peuvent inclure une classe de jeu d’enregistrements.|
 |Concevoir votre base de données ou les formes.|Utilisez l’éditeur de boîtes de dialogue Visual C++ pour placer des contrôles sur les ressources de modèle de boîte de dialogue pour vos classes d’affichage de l’enregistrement.|L’Assistant Application MFC crée une ressource de modèle de boîte de dialogue vide pour vous renseigner.|
 |Créer des classes d’affichage et le jeu d’enregistrements enregistrement supplémentaires en fonction des besoins.|Utilisez l’affichage de classes pour créer les classes et la boîte de dialogue Éditeur pour concevoir les vues.|Affichage de classes crée des fichiers supplémentaires pour vos nouvelles classes.|
 |Créer des objets de jeu d’enregistrements en fonction des besoins dans votre code. Chaque jeu d’enregistrements permet de manipuler des enregistrements...|Les jeux d’enregistrements est basées sur les classes dérivées de [CRecordset](../mfc/reference/crecordset-class.md) avec les Assistants.|ODBC utilise l’échange de champs d’enregistrements (RFX) pour échanger des données entre la base de données et les membres de données de champ de votre recordset. Si vous utilisez une vue d’enregistrement, échange de données de boîtes de dialogue (DDX) échange des données entre le jeu d’enregistrements et les contrôles sur la vue de l’enregistrement.|

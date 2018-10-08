@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75ec7271950a2aee28e55d4b7b9fdcf7c8c894d0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039372"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861445"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 
@@ -162,7 +162,7 @@ De nombreux opérateurs binaires (présentés dans [Expressions avec opérateurs
 |Des opérandes est de type **long double**.|Autre opérande est converti en type **long double**.|
 |Précédant la condition non remplie et des opérandes est de type **double**.|Autre opérande est converti en type **double**.|
 |Précédant les conditions non remplies et des opérandes est de type **float**.|Autre opérande est converti en type **float**.|
-|Conditions précédentes non remplies (aucun des opérandes n’est de type flottant).|Les promotions intégrales sont exécutées sur les opérandes comme suit :<br /><br /> -Si des opérandes est de type **long non signé**, l’autre opérande est converti en type **unsigned long**.<br />-Si la condition précédente non remplie et si des opérandes est de type **long** et l’autre de type **unsigned int**, les deux opérandes sont convertis en type **unsigned long**.<br />-Si les deux conditions précédentes ne sont pas remplies et si des opérandes est de type **long**, l’autre opérande est converti en type **long**.<br />-Si les trois conditions précédentes ne sont pas remplies et si des opérandes est de type **unsigned int**, l’autre opérande est converti en type **unsigned int**.<br />-Si aucune des conditions précédentes sont remplies, les deux opérandes sont convertis en type **int**.|
+|Conditions précédentes non remplies (aucun des opérandes n’est de type flottant).|Les promotions intégrales sont exécutées sur les opérandes comme suit :<br /><br />-Si des opérandes est de type **long non signé**, l’autre opérande est converti en type **unsigned long**.<br />-Si la condition précédente non remplie et si des opérandes est de type **long** et l’autre de type **unsigned int**, les deux opérandes sont convertis en type **unsigned long**.<br />-Si les deux conditions précédentes ne sont pas remplies et si des opérandes est de type **long**, l’autre opérande est converti en type **long**.<br />-Si les trois conditions précédentes ne sont pas remplies et si des opérandes est de type **unsigned int**, l’autre opérande est converti en type **unsigned int**.<br />-Si aucune des conditions précédentes sont remplies, les deux opérandes sont convertis en type **int**.|
 
 Le code suivant illustre les règles de conversion décrites dans le tableau :
 

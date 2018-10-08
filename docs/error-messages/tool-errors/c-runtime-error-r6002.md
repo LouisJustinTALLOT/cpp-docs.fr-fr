@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc23cf3c692eef37a86b5385d2e9e3a68340374e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cde499e919a7b222a41229576ef3b2d37d55d648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080920"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860640"
 ---
 # <a name="c-runtime-error-r6002"></a>Erreur Runtime C R6002
 
@@ -30,13 +30,13 @@ prise en charge à virgule flottante n’a ne pas chargé
 La bibliothèque à virgule flottante nécessaire n’était pas liée.
 
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Il existe plusieurs raisons possibles à cette erreur, mais souvent, elle est provoquée par un défaut dans le code de l’application, ou en essayant d’exécuter une application qui n’a pas été générée pour le processeur de votre ordinateur particulier.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Il existe plusieurs raisons possibles à cette erreur, mais souvent, elle est provoquée par un défaut dans le code de l’application, ou en essayant d’exécuter une application qui n’a pas été générée pour le processeur de votre ordinateur particulier.
 >
->  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
+> Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
->  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
-> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
+> - Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
+> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
 
 **Informations pour les programmeurs**
 

@@ -1,7 +1,7 @@
 ---
 title: Essayez-EXCEPT, instruction | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031435"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861926"
 ---
 # <a name="try-except-statement"></a>try-except, instruction
 
@@ -50,7 +50,14 @@ Le **essayez-sauf** instruction est une extension Microsoft C et langages C++ qu
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__try** {/ / service Guardian code} **__except** ( *expression* ) {/ / code de gestionnaire d’exception}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;code protégé<br/>
+> }<br/>
+> **__except** ( *expression* )<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;code du Gestionnaire d’exception<br/>
+> }<br/>
 
 ## <a name="remarks"></a>Notes
 
@@ -67,15 +74,15 @@ L’instruction composée après la **__try** clause est le corps ou la section 
 
 1. La section protégée est exécutée.
 
-2. Si aucune exception ne se produit pendant l’exécution de la section protégée, l’exécution se poursuit à l’instruction après le **__except** clause.
+1. Si aucune exception ne se produit pendant l’exécution de la section protégée, l’exécution se poursuit à l’instruction après le **__except** clause.
 
-3. Si une exception se produit pendant l’exécution de la section protégée ou dans toute routine de la section protégée, la **__except** *expression* (appelée la *filtre* expression) est évaluée et la valeur détermine comment l’exception est gérée. Il existe trois valeurs :
+1. Si une exception se produit pendant l’exécution de la section protégée ou dans toute routine de la section protégée, la **__except** *expression* (appelée la *filtre* expression) est évaluée et la valeur détermine comment l’exception est gérée. Il existe trois valeurs possibles :
 
-   Exception de EXCEPTION_CONTINUE_EXECUTION (-1) a été abandonnée. Poursuivre l'exécution au point où l'exception s'est produite.
+   - Exception de EXCEPTION_CONTINUE_EXECUTION (-1) a été abandonnée. Poursuivre l'exécution au point où l'exception s'est produite.
 
-   Exception de EXCEPTION_CONTINUE_SEARCH (0) n’est pas reconnue. Poursuivre la recherche d’un gestionnaire dans la pile, en premier pour qu’il contienne des instructions **try-except**, puis pour les gestionnaires avec la priorité la plus élevée suivante.
+   - Exception de EXCEPTION_CONTINUE_SEARCH (0) n’est pas reconnue. Poursuivre la recherche d’un gestionnaire dans la pile, en premier pour qu’il contienne des instructions **try-except**, puis pour les gestionnaires avec la priorité la plus élevée suivante.
 
-   Exception_execute_handler (1) l’Exception est reconnue. Transférer le contrôle au gestionnaire d’exceptions en exécutant la **__except** une instruction composée, puis poursuivre l’exécution après le **__except** bloc.
+   - Exception_execute_handler (1) l’Exception est reconnue. Transférer le contrôle au gestionnaire d’exceptions en exécutant la **__except** une instruction composée, puis poursuivre l’exécution après le **__except** bloc.
 
 Étant donné que le **__except** expression est évaluée comme une expression C, elle est limitée à une valeur unique, l’opérateur d’expression conditionnelle ou l’opérateur virgule. Si un traitement plus étendu est requis, l'expression peut appeler une routine qui retourne l'une des trois valeurs répertoriées ci-dessus.
 
@@ -83,9 +90,7 @@ Chaque application peut avoir son propre gestionnaire d'exceptions.
 
 Il n’est pas valide de sauter dans une **__try** mais valide de sauter hors d’une instruction. Le Gestionnaire d’exceptions n’est pas appelé si un processus est terminé au milieu de l’exécution un **essayez-sauf** instruction.
 
-Pour plus d'informations, consultez l'article de la Base de connaissances Q315937 : PROCÉDURE : interception du dépassement de capacité de la pile dans une application Visual C++.
-
-## <a name="the-leave-keyword"></a>Mot clé __leave
+### <a name="the-leave-keyword"></a>Mot clé __leave
 
 Le **__leave** mot clé est valide uniquement dans la section protégée d’un **essayez-sauf** instruction et son effet consiste à accéder à la fin de la section protégée. L'exécution se poursuit à la première instruction située après le gestionnaire d'exceptions.
 
@@ -170,7 +175,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+### <a name="output"></a>Sortie
 
 ```Output
 hello

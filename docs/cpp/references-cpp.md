@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bd01cf5c153fcd31bae1a73fead87fe480cdd2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a3a93d434907a2a3ff13053ee4b932201de22f3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030419"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861406"
 ---
 # <a name="references-c"></a>Références (C++)
 
@@ -32,41 +32,35 @@ Une référence, comme un pointeur, stocke l'adresse d'un objet situé ailleurs 
 
 Les références peuvent être déclarées à l'aide de la syntaxe suivante :
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator [= expression];
-```
+> \[*spécificateurs de classe de stockage*] \[ *qualificateurs cv*] *spécificateurs de type* \[ *ms-modificateur*]  *déclarateur* \[ **=** *expression*]**;**
 
 Tout déclarateur valide spécifiant une référence peut être utilisé. La syntaxe simplifiée suivante s'applique, sauf si la référence est une référence à un type de fonction ou à un type tableau :
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&] 
-[cv-qualifiers] identifier [= expression];
-```
+> \[*spécificateurs de classe de stockage*] \[ *qualificateurs cv*] *spécificateurs de type* \[ **&** ou **&&**] \[ *qualificateurs cv*] *identificateur* \[ **=** *expression*]**;**
 
 Les références sont déclarées à l'aide de la séquence suivante :
 
 1. Les spécificateurs de déclaration :
 
-- Spécificateur de classe de stockage facultatif.
+   - Spécificateur de classe de stockage facultatif.
 
-- Facultatif **const** et/ou **volatile** qualificateurs.
+   - Facultatif **const** et/ou **volatile** qualificateurs.
 
-- Spécificateur de type : nom d'un type.
+   - Spécificateur de type : nom d'un type.
 
-- 2. Déclarateur :
+1. Déclarateur :
 
-- Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-- Opérateur & ou &&
+   - Le **&** opérateur ou **&&** opérateur.
 
-- Facultatif **const** et/ou **volatile** facultatifs.
+   - Facultatif **const** et/ou **volatile** facultatifs.
 
-- Identificateur.
+   - Identificateur.
 
-3. Initialiseur facultatif.
+1. Initialiseur facultatif.
 
-Les formulaires de déclarateurs plus complexes pour des pointeurs vers des tableaux et aux fonctions s’appliquent également aux références à des tableaux et aux fonctions, consultez [pointeurs](../cpp/pointers-cpp.md).
+Les formulaires de déclarateurs plus complexes pour les pointeurs vers des tableaux et aux fonctions s’appliquent également aux références à des tableaux et aux fonctions. Pour plus d’informations, consultez [pointeurs](../cpp/pointers-cpp.md).
 
 Plusieurs déclarateurs et initialiseurs peuvent apparaître dans une liste séparée par des virgules après un spécificateur de déclaration unique. Exemple :
 
@@ -83,7 +77,7 @@ int &ref, *ptr, k;
 
 Une référence contient l'adresse d'un objet, mais se comporte syntaxiquement comme un objet.
 
-Dans le programme suivant, notez que le nom de l'objet, `Today`, et la référence à l'objet, `TodayRef`, peuvent être utilisés de la même manière dans les programmes :
+Dans le programme suivant, notez que le nom de l'objet, `s`, et la référence à l'objet, `SRef`, peuvent être utilisés de la même manière dans les programmes :
 
 ## <a name="example"></a>Exemple
 
@@ -120,4 +114,3 @@ int main() {
 [Arguments de fonction de type référence](../cpp/reference-type-function-arguments.md)<br/>
 [Retours de fonction de type référence](../cpp/reference-type-function-returns.md)<br/>
 [Références aux pointeurs](../cpp/references-to-pointers.md)
-

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d468e6e2770eca3bc01fca95fb585d1753210a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fec98fd785f5e99875c5f73b13ce1082c16add2b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039021"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861757"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Ajout d’une nouvelle Interface dans un projet ATL
 
@@ -32,23 +32,23 @@ Lorsque vous ajoutez une interface à votre contrôle ou un objet, vous créez d
 
 Vous pouvez ajouter une nouvelle interface à votre contrôle dans un des deux façons : manuellement ou à l’aide des Assistants code dans l’affichage de classes.
 
-### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Utilisation des Assistants de code dans l’affichage de classes pour ajouter une interface à un objet existant ou d’un contrôle
+## <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Utilisation des Assistants de code dans l’affichage de classes pour ajouter une interface à un objet existant ou d’un contrôle
 
 1. Dans [affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), cliquez sur le nom de classe d’un contrôle. Par exemple, un contrôle total ou contrôle composite ou toute autre classe de contrôle qui implémente une macro BEGIN_COM_MAP dans son fichier d’en-tête.
 
-2. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **implémenter l’Interface**.
+1. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **implémenter l’Interface**.
 
-3. Sélectionnez les interfaces à implémenter dans le [Assistant Implémentation d’Interface](../../ide/implement-interface-wizard.md). Si l’interface n’existe pas dans n’importe quel typelib disponible, puis vous devez ajouter il manuellement au fichier .idl.
+1. Sélectionnez les interfaces à implémenter dans le [Assistant Implémentation d’Interface](../../ide/implement-interface-wizard.md). Si l’interface n’existe pas dans n’importe quel typelib disponible, puis vous devez ajouter il manuellement au fichier .idl.
 
-### <a name="to-add-a-new-interface-manually"></a>Pour ajouter une nouvelle interface manuellement
+## <a name="to-add-a-new-interface-manually"></a>Pour ajouter une nouvelle interface manuellement
 
 1. Ajoutez la définition de la nouvelle interface au fichier .idl.
 
-2. Dérivez votre objet ou le contrôle à partir de l’interface.
+1. Dérivez votre objet ou le contrôle à partir de l’interface.
 
-3. Créer un nouveau [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) pour l’interface ou, si le projet est attribué, ajoutez le `coclass` attribut.
+1. Créer un nouveau [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) pour l’interface ou, si le projet est attribué, ajoutez le `coclass` attribut.
 
-4. Implémenter des méthodes sur l’interface.
+1. Implémenter des méthodes sur l’interface.
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -58,4 +58,3 @@ Vous pouvez ajouter une nouvelle interface à votre contrôle dans un des deux f
 [Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)
-

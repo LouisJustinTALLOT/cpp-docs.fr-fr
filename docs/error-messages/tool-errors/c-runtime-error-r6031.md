@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83dbcdc433ea731e6ddf0765b4b3a55d5707f429
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4a0ccd608baa2765ae355a16b9a71afbf3695d8f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059496"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859781"
 ---
 # <a name="c-runtime-error-r6031"></a>Erreur Runtime C R6031
 
 Tentative d’initialisation de la bibliothèque CRT plusieurs fois. Cela indique un bogue dans votre application.
 
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Cela peut être dû bogue dans l’application ou par un bogue dans un module complémentaire ou une extension qui utilise l’application.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Cela peut être dû bogue dans l’application ou par un bogue dans un module complémentaire ou une extension qui utilise l’application.
 >
->  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
+> Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
->  -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour supprimer, réparer ou réinstaller tous les programmes complémentaires ou extension utilisées par l’application.
-> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
-> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
+> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour supprimer, réparer ou réinstaller tous les programmes complémentaires ou extension utilisées par l’application.
+> - Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
+> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
 
 **Informations pour les programmeurs**
 

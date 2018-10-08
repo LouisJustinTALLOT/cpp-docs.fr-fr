@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5da401f940a39c135ba0b64571b6330a42fed796
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09cab9f0c7d94c3c51eb63008ec6b7cfb1292f89
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725502"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860574"
 ---
 # <a name="await-enable-coroutine-support"></a>/ await (activer la prise en charge des coroutine)
 
@@ -44,9 +44,9 @@ Le **/ await** option est disponible à compter de Visual Studio 2015.
 
 1. Ouvrez votre projet **Pages de propriétés** boîte de dialogue.
 
-2. Sous **propriétés de Configuration**, développez le **C/C++** dossier et choisissez le **ligne de commande** page de propriétés.
+1. Sous **propriétés de Configuration**, développez le **C/C++** dossier et choisissez le **ligne de commande** page de propriétés.
 
-3. Entrez le **/ await** option du compilateur dans le **des Options supplémentaires** boîte. Choisissez **OK** ou **appliquer** pour enregistrer vos modifications.
+1. Entrez le **/ await** option du compilateur dans le **des Options supplémentaires** boîte. Choisissez **OK** ou **appliquer** pour enregistrer vos modifications.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 

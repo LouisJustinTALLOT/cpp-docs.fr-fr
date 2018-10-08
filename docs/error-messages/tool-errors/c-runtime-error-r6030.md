@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63606624e1cbcc5ef2c5ea453ee6d346e3e686a8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9d25969a9ecb833c53b93135e65fa27b4f005a0d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038124"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861198"
 ---
 # <a name="c-runtime-error-r6030"></a>Erreur d’exécution C R6030
 
 CRT non initialisé
 
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Ce problème est souvent dû à certains programmes de logiciels de sécurité, ou rarement, par un bogue dans le programme.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Ce problème est souvent dû à certains programmes de logiciels de sécurité, ou rarement, par un bogue dans le programme.
 >
->  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
+> Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
->  -   Votre logiciel de sécurité peut avoir des instructions spécifiques pour atténuer ce problème. Consultez le site Web de votre fournisseur de logiciels de sécurité pour plus d’informations. Vous pouvez également vérifier les versions mises à jour de votre logiciel de sécurité, ou essayer le logiciel de sécurité différentes.
-> -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
-> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Votre logiciel de sécurité peut avoir des instructions spécifiques pour atténuer ce problème. Consultez le site Web de votre fournisseur de logiciels de sécurité pour plus d’informations. Vous pouvez également vérifier les versions mises à jour de votre logiciel de sécurité, ou essayer le logiciel de sécurité différentes.
+> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
+> - Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
+> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
 
 **Informations pour les programmeurs**
 

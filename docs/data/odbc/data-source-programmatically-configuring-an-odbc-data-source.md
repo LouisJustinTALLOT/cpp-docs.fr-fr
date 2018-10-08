@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36f8233d7d3683a885fc0f38468ad5a7b9b59c57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c9b9cb66e64f85ad8800faf11011e351a3f3539
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030766"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861354"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Source de données : configuration d'une source de données ODBC par programme
 
@@ -85,7 +85,7 @@ Description du pilote. Il s’agit du nom présenté aux utilisateurs plutôt qu
 *lpszAttributes*<br/>
 Liste d’attributs sous la forme « keyname = value ». Ces chaînes sont séparées par des marques de fin null avec deux indicateurs de fin null consécutives à la fin de la liste. Ces attributs sont principalement entrées par défaut spécifiques au pilote, qui transitent dans le Registre pour la nouvelle source de données. Une clé importante qui n’est pas mentionnée dans la référence d’API ODBC pour cette fonction est « DSN » (« data source name »), qui spécifie le nom de la nouvelle source de données. Le reste des entrées sont spécifiques au pilote pour la nouvelle source de données. Souvent, il n’est pas nécessaire de fournir toutes les entrées, car le pilote peut inviter l’utilisateur avec les boîtes de dialogue pour les nouvelles valeurs. (Définissez *hwndParent* avec la valeur NULL à l’origine.) Vous souhaiterez peut-être fournir explicitement des valeurs par défaut afin que l’utilisateur n’est pas invité.  
   
-###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Pour déterminer la description d’un pilote pour le paramètre lpszDriver à l’aide de l’administrateur ODBC  
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Pour déterminer la description d’un pilote pour le paramètre lpszDriver à l’aide de l’administrateur ODBC  
   
 1. Exécutez l’administrateur ODBC.  
   
@@ -97,23 +97,23 @@ Comme alternative, vous pouvez examiner le Registre (ou, pour les plateformes 16
   
 Une façon de trouver les noms de clés et valeurs pour le *lpszAttributes* paramètre consiste à examiner le fichier Odbc.ini d’une source de données déjà configurée (peut-être celui qui a été configuré par l’administrateur ODBC).  
   
-###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Pour rechercher les noms de clés et valeurs du paramètre lpszAttributes  
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Pour rechercher les noms de clés et valeurs du paramètre lpszAttributes  
   
 1. Exécutez l’Éditeur du Registre Windows (ou, pour les plateformes 16 bits, ouvrez le fichier Odbc.ini).  
   
 1. Rechercher les informations de sources de données ODBC à l’aide d’une des opérations suivantes :  
   
-    -   Pour 32 bits, recherchez la clé **HKEY_CURRENT_USER\Software\ODBC\ODBC. Sources de données INI\ODBC** dans le volet gauche.  
+   - Pour 32 bits, recherchez la clé **HKEY_CURRENT_USER\Software\ODBC\ODBC. Sources de données INI\ODBC** dans le volet gauche.  
   
-         Le volet droit répertorie les entrées au format : « pub : REG_SZ :*<data source name>*», où *<data source name>* est une source de données qui a déjà été configurée avec les paramètres souhaités pour le pilote que vous avez l’intention à utiliser. Sélectionnez la source de données, par exemple, SQL Server. Les éléments qui suivent la chaîne « pub : » sont, dans l’ordre, le nom de clé et la valeur à utiliser dans votre *lpszAttributes* paramètre.  
+      Le volet droit répertorie les entrées au format : « pub : REG_SZ :*<data source name>*», où *<data source name>* est une source de données qui a déjà été configurée avec les paramètres souhaités pour le pilote que vous avez l’intention à utiliser. Sélectionnez la source de données, par exemple, SQL Server. Les éléments qui suivent la chaîne « pub : » sont, dans l’ordre, le nom de clé et la valeur à utiliser dans votre *lpszAttributes* paramètre.  
   
-    -   Pour les plateformes 16 bits, recherchez la section dans le fichier Odbc.ini marqué par [*\<nom de source de données >*].  
+   - Pour les plateformes 16 bits, recherchez la section dans le fichier Odbc.ini marqué par [*\<nom de source de données >*].  
   
-         Les lignes suivant cette ligne sont de la forme « keyname = value ». Il s’agit exactement les entrées à utiliser dans votre *lpszAttributes* paramètre.  
+      Les lignes suivant cette ligne sont de la forme « keyname = value ». Il s’agit exactement les entrées à utiliser dans votre *lpszAttributes* paramètre.  
   
 Vous souhaiterez également examiner la documentation relative au pilote que vous vous apprêtez à utiliser. Vous trouverez des informations utiles dans l’aide en ligne pour le pilote, vous pouvez accéder en exécutant l’administrateur ODBC. Ces fichiers d’aide sont généralement placés dans le répertoire WINDOWS\SYSTEM pour Windows NT, Windows 3.1 ou Windows 95.  
   
-###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Pour obtenir une aide en ligne pour votre pilote ODBC  
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Pour obtenir une aide en ligne pour votre pilote ODBC  
   
 1. Exécutez l’administrateur ODBC.  
   

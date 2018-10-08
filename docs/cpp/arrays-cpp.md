@@ -16,44 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c88c1d0f4096017b8ffc48a92143a63d229c5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b2423355aa53abe52fffcd81ec847b41337efcbf
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017909"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861029"
 ---
 # <a name="arrays-c"></a>Tableaux (C++)
 
 Un tableau est une collection d’objets similaires. Le cas le plus simple d'un tableau est celui d'un vecteur, qui peut être déclaré par la séquence suivante :
 
-```
-decl-specifier identifier [ constant-expression ]
-decl-specifier identifier []
-decl-specifier identifer [][ constant-expression] . . .
-decl-specifier identifier [ constant-expression ]
-[ constant-expression ] . . .
-```
+> *decl-specifier* *identificateur* **\[** *expression constante* **]**<br/>
+> *decl-specifier* *identificateur*  **\[]**<br/>
+> *decl-specifier* *identificateur* **\[]\[** *expression constante* **]** . . .<br/>
+> *decl-specifier* *identificateur* **\[** *expression constante* **]** **\[** *expression constante* **]** . . .
 
 1. Spécificateur de déclaration :
 
-- Spécificateur de classe de stockage facultatif.
+   - Spécificateur de classe de stockage facultatif.
 
-- Facultatif **const** et/ou **volatile** spécificateurs.
+   - Facultatif **const** et/ou **volatile** spécificateurs.
 
-- Nom de type des éléments du tableau.
+   - Nom de type des éléments du tableau.
 
-2. Déclarateur :
+1. Déclarateur :
 
-- Identificateur.
+   - Identificateur.
 
-- Une expression constante de type intégral placée entouré crochets, **[]**. Si plusieurs dimensions sont déclarées à l’aide de crochets supplémentaires, l’expression constante peut être omise sur le premier jeu de crochets.
+   - Une expression constante de type intégral placée entouré crochets,  **\[]**. Si plusieurs dimensions sont déclarées à l’aide de crochets supplémentaires, l’expression constante peut être omise sur le premier jeu de crochets.
 
-- Crochets supplémentaires facultatifs englobant des expressions constantes.
+   - Crochets supplémentaires facultatifs englobant des expressions constantes.
 
-3. Initialiseur facultatif.  Consultez [initialiseurs](../cpp/initializers.md).
+1. Initialiseur facultatif. Pour plus d’informations, consultez [initialiseurs](../cpp/initializers.md).
 
-Le nombre d'éléments du tableau est fourni par l'expression constante. Le premier élément du tableau est l’élément 0, et le dernier élément est le (*n*-1) élément, où *n* est le nombre d’éléments que le tableau peut contenir. Le *expression constante* doit être de type intégral et doit être supérieure à 0. Un tableau de taille zéro est reconnu uniquement lorsque le tableau est le dernier champ dans un **struct** ou **union** et lorsque les extensions Microsoft (/Ze) sont activées.
+Le nombre d’éléments dans le tableau est fourni par le *expression constante*. Le premier élément du tableau est l’élément 0, et le dernier élément est le (*n*-1) élément, où *n* est le nombre d’éléments que le tableau peut contenir. Le *expression constante* doit être de type intégral et doit être supérieure à 0. Un tableau de taille zéro est reconnu uniquement lorsque le tableau est le dernier champ dans un **struct** ou **union** et lorsque les extensions Microsoft (/Ze) sont activées.
 
 L'exemple suivant montre comment définir un tableau au moment de l'exécution :
 

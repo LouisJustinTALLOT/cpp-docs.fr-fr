@@ -17,27 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 099844710080d2c500996d5918a32c6eb4426541
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 341d50d11992d001aeb17ed299a83e58adede7f1
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078138"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861770"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Ajout d’un composant ATL COM + 1.0
 
 Cet Assistant ajoute un objet à votre projet qui prend en charge les services COM + 1.0, notamment les transactions.
 
-### <a name="to-add-an-atl-com-10-component-to-your-project"></a>Pour ajouter un composant ATL COM + 1.0 à votre projet
+## <a name="to-add-an-atl-com-10-component-to-your-project"></a>Pour ajouter un composant ATL COM + 1.0 à votre projet
 
 1. Dans le **l’Explorateur de solutions** ou [affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), cliquez sur le nom du projet auquel vous souhaitez ajouter le composant ATL COM + 1.0.
 
-2. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une classe**.
+1. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une classe**.
 
-3. Dans le [ajouter une classe](../../ide/add-class-dialog-box.md) boîte de dialogue, dans le volet Modèles, cliquez sur **composant ATL COM + 1.0**, puis cliquez sur **Open** pour afficher le [Assistant composant ATL COM + 1.0 ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
+1. Dans le [ajouter une classe](../../ide/add-class-dialog-box.md) boîte de dialogue le **modèles** volet, cliquez sur **composant ATL COM + 1.0**, puis cliquez sur **Open** pour afficher le [ Assistant composant ATL COM + 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Ajout d’une méthode](../../ide/adding-a-method-visual-cpp.md)
-

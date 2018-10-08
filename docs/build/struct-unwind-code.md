@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726646"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861718"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 
@@ -112,17 +112,17 @@ Ce code de déroulement s’affiche toujours dans un prologue factice, ce qui n�
 
 1. Affiche l’adresse de retour de RIP à partir du haut de la pile dans *Temp*
 
-2. Push SS
+1. Push SS
 
-3. Push ancien RSP
+1. Push ancien RSP
 
-4. Push EFLAGS
+1. Push EFLAGS
 
-5. Push CS
+1. Push CS
 
-6. Push *Temp*
+1. Push *Temp*
 
-7. Envoyer le Code d’erreur (si l’information sur l’opération est égal à 1)
+1. Envoyer le Code d’erreur (si l’information sur l’opération est égal à 1)
 
 La simulation `UWOP_PUSH_MACHFRAME` décrémente d’opération RSP de 40 (information sur l’opération est égal à 0) ou 48 (information sur l’opération est égal à 1).
 

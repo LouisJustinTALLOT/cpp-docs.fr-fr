@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95bc763ab39df16c1cfc1b05689560edecf70570
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 13653f54551501d5e35bd1285dc3d3f1a74343f1
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093300"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861594"
 ---
 # <a name="c-runtime-error-r6019"></a>Erreur Runtime C R6019
 
 Impossible d’ouvrir le périphérique de la console
 
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car elle a tenté d’accéder à la console, mais il n’avait pas une autorisation suffisante. Il existe plusieurs raisons possibles à cette erreur, mais il est généralement parce que le programme doit être exécuté en tant qu’administrateur, ou il existe un bogue dans le programme.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car elle a tenté d’accéder à la console, mais il n’avait pas une autorisation suffisante. Il existe plusieurs raisons possibles à cette erreur, mais il est généralement parce que le programme doit être exécuté en tant qu’administrateur, ou il existe un bogue dans le programme.
 >
->  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
+> Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
->  -   Exécutez le programme en tant qu’administrateur.
-> -   Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> -   Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
-> -   Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Exécutez le programme en tant qu’administrateur.
+> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
+> - Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
+> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
 
 **Informations pour les programmeurs**
 

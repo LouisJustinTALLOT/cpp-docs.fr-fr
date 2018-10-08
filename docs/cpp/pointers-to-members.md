@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509181abc0d9b3e2f2c2d4c76275e635ba3a4477
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 971f3df56f049b919ebb1f3fb8f517c97b2829e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076071"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861276"
 ---
 # <a name="pointers-to-members"></a>Pointeurs vers membres
 
@@ -56,7 +56,7 @@ Les déclarations de pointeurs vers des membres sont des cas spéciaux de décla
   - Nom qualifié de la classe.
   - opérateur `::`,
   - Nom d'un membre non statique de la classe du type approprié.
-  -  Comme toujours, les déclarateurs multiples (et tout initialiseur associé) sont autorisés dans une même déclaration.
+  - Comme toujours, les déclarateurs multiples (et tout initialiseur associé) sont autorisés dans une même déclaration.
 
 Un pointeur vers un membre d'une classe diffère d'un pointeur normal, car il comporte des informations de type pour le type du membre et pour la classe à laquelle le membre appartient. Un pointeur normal identifie (a l'adresse de) un seul objet en mémoire. Un pointeur vers un membre d'une classe identifie ce membre dans toute instance de la classe. L'exemple suivant déclare une classe, `Window`, et certains pointeurs vers des données membres.
 

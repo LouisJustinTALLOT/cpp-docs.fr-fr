@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423830"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861614"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Définition des termes
 
@@ -43,7 +43,7 @@ Les termes suivants sont utilisés dans ce document :
 
    Instructions lexicalement contenues dans un *bloc structuré*.
 
--  thread principal
+- thread principal
 
    Le thread qui crée une équipe quand un *région parallèle* est entré.
 
@@ -75,7 +75,7 @@ Les termes suivants sont utilisés dans ce document :
 
    Un bloc structuré est une instruction (unique ou composée) qui a une seule entrée et une sortie unique. Aucune instruction n’est un bloc structuré s’il existe un saut dans ou hors de cette instruction (y compris un appel à **longjmp**(3C) ou l’utilisation de **lever**, mais un appel à **quitter** est autorisée). Une instruction composée est un bloc structuré si son exécution toujours commence à l’ouverture **{** et se termine toujours à la fermeture **}**. Une instruction d’expression, une instruction de sélection, une instruction d’itération, ou **essayez** bloc est un bloc structuré si l’instruction composée correspondante obtenue en le plaçant dans **{** et **}** serait un bloc structuré. Une instruction de saut, une instruction étiquetée ou une instruction de déclaration n’est pas un bloc structuré.
 
--  Équipe
+- Équipe
 
    Un ou plusieurs threads coopérant dans l’exécution d’une construction.
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b550cd0b76aa0a2e061536ae6bb0ea61063909
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 048589ecab367a3762764b627de11d72160c4602
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087745"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861302"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Tri partiel des modèles de fonction (C++)
 
@@ -31,23 +31,23 @@ Utilisez le processus suivant pour déterminer si un candidat de modèle de fonc
 
 1. Considérez deux modèles de fonction, T1 et T2.
 
-2. Remplacez les paramètres dans T1 par un type unique hypothétique X.
+1. Remplacez les paramètres dans T1 par un type unique hypothétique X.
 
-3. Avec la liste de paramètres dans T1, vérifiez si T2 est un modèle valide pour cette liste de paramètres. Ignorez toutes les conversions implicites.
+1. Avec la liste de paramètres dans T1, vérifiez si T2 est un modèle valide pour cette liste de paramètres. Ignorez toutes les conversions implicites.
 
-4. Répétez le même processus en inversant T1 et T2.
+1. Répétez le même processus en inversant T1 et T2.
 
-5. Si un modèle est une liste d’arguments template valide pour l’autre modèle, mais que l’inverse n’est pas vrai, ce modèle est considéré comme moins spécialisé que l’autre modèle. Si les deux modèles à l’aide des précédente étape formulaire les arguments valides pour eux, puis ils sont considérés comme également spécialisés et entraîne un appel ambigu lorsque vous tentez d’utiliser.
+1. Si un modèle est une liste d’arguments template valide pour l’autre modèle, mais que l’inverse n’est pas vrai, ce modèle est considéré comme moins spécialisé que l’autre modèle. Si les deux modèles à l’aide des précédente étape formulaire les arguments valides pour eux, puis ils sont considérés comme également spécialisés et entraîne un appel ambigu lorsque vous tentez d’utiliser.
 
-6. Grâce à ces règles :
+1. Grâce à ces règles :
 
-     1. Une spécialisation de modèle pour un type spécifique est plus spécialisée qu’une spécialisation acceptant un argument de type générique.
+   1. Une spécialisation de modèle pour un type spécifique est plus spécialisée qu’une spécialisation acceptant un argument de type générique.
 
-     2. Un modèle en prenant uniquement __T\*__  est plus spécialisé qu’un prenant uniquement __T__, car un hypothétique tapez __X\*__  est un argument valid pour un __T__ argument de modèle, mais __X__ n’est pas un argument valide pour un __T\*__  argument template.
+   1. Un modèle en prenant uniquement __T\*__  est plus spécialisé qu’un prenant uniquement __T__, car un hypothétique tapez __X\*__  est un argument valid pour un __T__ argument de modèle, mais __X__ n’est pas un argument valide pour un __T\*__  argument template.
 
-     3. __const T__ est plus spécialisé que __T__, car __const X__ est un argument valid pour un __T__ argument de modèle, mais __X__ est argument non valide pour un __const T__ argument template.
+   1. __const T__ est plus spécialisé que __T__, car __const X__ est un argument valid pour un __T__ argument de modèle, mais __X__ est argument non valide pour un __const T__ argument template.
 
-     4. __const T\*__  est plus spécialisé que __T\*__, car __const X\*__  est un argument valid pour un __T\*__  argument de modèle, mais __X\*__  n’est pas un argument valide pour un __const T\*__  argument template.
+   1. __const T\*__  est plus spécialisé que __T\*__, car __const X\*__  est un argument valid pour un __T\*__  argument de modèle, mais __X\*__  n’est pas un argument valide pour un __const T\*__  argument template.
 
 ## <a name="example"></a>Exemple
 
