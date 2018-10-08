@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8e560e46da06c4312ab4261016ccd5a5ddda68
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3da81f46514fbdd7d01ce9c2a9d8be6007301b45
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017845"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861575"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erreur des outils Éditeur de liens LNK2001
 
@@ -73,9 +73,9 @@ Cette erreur peut se produire si vous liez aux bibliothèques de mode de mise en
 
 Cette erreur peut se produire si votre code fait référence à un symbole d’une version d’une bibliothèque, mais que vous fournissez une version différente de la bibliothèque à l’éditeur de liens. En règle générale, vous ne pouvez pas mélanger des fichiers objets ou bibliothèques qui sont générées pour les différentes versions du compilateur. Les bibliothèques qui font partie d’une nouvelle version peut contenir des symboles est introuvable dans les bibliothèques incluses dans les versions précédentes et vice versa. Pour résoudre ce problème, créez tous les fichiers objets et bibliothèques avec la même version du compilateur avant de les lier entre elles.
 
--  Les outils &#124; Options &#124; projets &#124; boîte de dialogue répertoires VC ++, dans la sélection de fichiers de bibliothèque, vous permet de modifier l’ordre de recherche de bibliothèque. Le dossier de l’éditeur de liens dans la boîte de dialogue Pages de propriétés du projet peut également contenir des chemins d’accès qui peut être obsolètes.
+- Les outils &#124; Options &#124; projets &#124; boîte de dialogue répertoires VC ++, dans la sélection de fichiers de bibliothèque, vous permet de modifier l’ordre de recherche de bibliothèque. Le dossier de l’éditeur de liens dans la boîte de dialogue Pages de propriétés du projet peut également contenir des chemins d’accès qui peut être obsolètes.
 
--  Ce problème peut apparaître lorsqu’un nouveau SDK est installé (par exemple pour un autre emplacement), et l’ordre de recherche n’est pas mis à jour pour pointer vers le nouvel emplacement. En règle générale, vous devez placer le chemin d’accès au nouveau SDK include et lib répertoires devant l’emplacement de Visual C++ par défaut. En outre, un projet contenant des chemins incorporés peut pointer vers d’anciens chemins qui sont valides, mais il est obsolète pour les nouvelles fonctionnalités ajoutées par la nouvelle version qui est installée dans un autre emplacement.
+- Ce problème peut apparaître lorsqu’un nouveau SDK est installé (par exemple pour un autre emplacement), et l’ordre de recherche n’est pas mis à jour pour pointer vers le nouvel emplacement. En règle générale, vous devez placer le chemin d’accès au nouveau SDK include et lib répertoires devant l’emplacement de Visual C++ par défaut. En outre, un projet contenant des chemins incorporés peut pointer vers d’anciens chemins qui sont valides, mais il est obsolète pour les nouvelles fonctionnalités ajoutées par la nouvelle version qui est installée dans un autre emplacement.
 
 - Si vous générez à la ligne de commande et que vous avez créé vos propres variables d’environnement, vérifiez que les chemins d’accès aux outils, bibliothèques et fichiers d’en-tête accédez à une version cohérente. Pour plus d’informations, consultez [définir le chemin d’accès et les Variables d’environnement pour les générations de ligne de commande](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
 

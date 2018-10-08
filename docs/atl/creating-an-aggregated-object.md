@@ -15,29 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb69e05ead437ed5f6c1fe2bb19b07c31daf15
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f9e11db0a9752ae7f88c5b1b21b81f0bb4c8a20f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760274"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861224"
 ---
 # <a name="creating-an-aggregated-object"></a>Création d’un objet agrégé
 
 Les délégués d’agrégation `IUnknown` appels, en fournissant un pointeur vers l’objet externe `IUnknown` à l’objet interne.
 
-### <a name="to-create-an-aggregated-object"></a>Pour créer un objet agrégé
+## <a name="to-create-an-aggregated-object"></a>Pour créer un objet agrégé
 
 1. Ajouter un `IUnknown` pointeur à votre classe d’objet et l’initialiser avec la valeur NULL dans le constructeur.
 
-2. Substituer [FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct) pour créer l’agrégat.
+1. Substituer [FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct) pour créer l’agrégat.
 
-3. Utilisez le `IUnknown` pointeur, défini à l’étape 1, comme le deuxième paramètre pour le [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate) macros.
+1. Utilisez le `IUnknown` pointeur, défini à l’étape 1, comme le deuxième paramètre pour le [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate) macros.
 
-4. Substituer [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease) pour libérer le `IUnknown` pointeur.
+1. Substituer [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease) pour libérer le `IUnknown` pointeur.
 
 > [!NOTE]
->  Si vous utilisez et libérez une interface à partir de l’objet agrégée pendant `FinalConstruct`, vous devez ajouter le [macro DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct) macro à la définition de votre objet de classe.
+> Si vous utilisez et libérez une interface à partir de l’objet agrégée pendant `FinalConstruct`, vous devez ajouter le [macro DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct) macro à la définition de votre objet de classe.
 
 ## <a name="see-also"></a>Voir aussi
 

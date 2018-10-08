@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829afe53d5fde976b7877475cf577b6204be8aed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d0aa647f6f94d31f1a06bb09b143554dba51b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051085"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861744"
 ---
 # <a name="overview-of-file-translation"></a>Vue d'ensemble de la traduction de fichier
 
@@ -32,9 +32,9 @@ Les programmes C++, comme les programmes C, se composent d'un ou plusieurs fic
 
 1. Génération de jetons lexicaux. Le mappage de caractère et le traitement de trigraphe, la ligne épissant et la génération de jetons sont exécutés dans cette phase de traduction.
 
-2. Prétraitement. Cette phase de traduction apporte les fichiers sources auxiliaires référencés par `#include` directives, gère les « d’enchaînement » et « charizing » les directives et effectue l’expansion de macro et de collage de jeton (consultez [Directives de préprocesseur](../preprocessor/preprocessor-directives.md) dans le *référence du préprocesseur* pour plus d’informations). Le résultat de la phase de prétraitement est une séquence de jetons qui, une fois combinés, définissent une unité de traduction.
+1. Prétraitement. Cette phase de traduction apporte les fichiers sources auxiliaires référencés par `#include` directives, gère les « d’enchaînement » et « charizing » les directives et effectue l’expansion de macro et de collage de jeton (consultez [Directives de préprocesseur](../preprocessor/preprocessor-directives.md) dans le *référence du préprocesseur* pour plus d’informations). Le résultat de la phase de prétraitement est une séquence de jetons qui, une fois combinés, définissent une unité de traduction.
 
-     Directives de préprocesseur commencent toujours par le signe dièse (**#**) caractère (autrement dit, le premier caractère d’un espace blanc sur la ligne doit être un signe dièse). Une seule directive de préprocesseur peut apparaître sur une ligne donnée. Exemple :
+   Directives de préprocesseur commencent toujours par le signe dièse (**#**) caractère (autrement dit, le premier caractère d’un espace blanc sur la ligne doit être un signe dièse). Une seule directive de préprocesseur peut apparaître sur une ligne donnée. Exemple :
 
     ```cpp
     #include <iostream>  // Include text of iostream in
@@ -43,9 +43,9 @@ Les programmes C++, comme les programmes C, se composent d'un ou plusieurs fic
                          //  text string).
     ```
 
-3. Génération de code. Cette phase de traduction utilise les jetons générés dans la phase de prétraitement pour générer le code objet.
+1. Génération de code. Cette phase de traduction utilise les jetons générés dans la phase de prétraitement pour générer le code objet.
 
-     Pendant cette phase, l'activation syntaxique et sémantique du code source est exécutée.
+   Pendant cette phase, l'activation syntaxique et sémantique du code source est exécutée.
 
 Consultez [Phases de traduction](../preprocessor/phases-of-translation.md) dans le *référence du préprocesseur* pour plus d’informations.
 

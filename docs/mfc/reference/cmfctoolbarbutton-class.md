@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58bc8b4e8e857ff78a8231112d7478b23c168381
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 08f4c2e5497994cfcd7bf4aa4a0976f7dd3e0a3f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387449"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861666"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Cmfctoolbarbutton, classe
 
@@ -1092,7 +1092,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
 *sizeDefault*<br/>
@@ -1225,7 +1225,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
 *nCtlColor*<br/>
@@ -1301,7 +1301,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
 *Rect*<br/>
@@ -1342,7 +1342,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
 *Rect*<br/>

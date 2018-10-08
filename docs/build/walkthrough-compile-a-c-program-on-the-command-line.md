@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8361890c264e11fbd5817331e07ba9005da17240
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d8b48093641982f171a5d8b43fa70d7694122263
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821372"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861263"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Procédure pas à pas : Compilation d’un programme C sur la ligne de commande
 
@@ -49,7 +49,7 @@ Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous dev
 
    Si vous utilisez une autre version de Visual Studio ou exécutez une version différente de Windows, recherchez dans votre menu Démarrer ou page pour un dossier d’outils de Visual Studio qui contient un raccourci d’invite de commandes développeur de démarrage. Vous pouvez également utiliser la fonction de recherche de Windows pour rechercher « invite de commande développeur » et choisissez celui qui correspond à votre version installée de Visual Studio. Utilisez le raccourci pour ouvrir la fenêtre d’invite de commandes.
 
-1. Ensuite, vérifiez que l’invite de commandes développeur Visual C++ est correctement configuré. Dans la fenêtre d’invite de commandes, entrez `cl` et vérifiez que la sortie ressemble à :
+1. Ensuite, vérifiez que l’invite de commandes développeur Visual C++ est correctement configuré. Dans la fenêtre d’invite de commandes, entrez `cl` et vérifiez que la sortie ressemble à ceci :
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl

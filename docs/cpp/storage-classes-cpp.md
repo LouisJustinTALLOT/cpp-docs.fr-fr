@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107459"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861315"
 ---
 # <a name="storage-classes-c"></a>Classes de stockage (C++)
 
@@ -220,13 +220,13 @@ Choses à noter concernant le `thread_local` spécificateur :
 
 - Les variables locales de thread dynamiquement initialisés dans les DLL ne peuvent pas être initialisés correctement sur tous les threads appelants. Pour plus d’informations, consultez [thread](thread.md).
 
--  Le `thread_local` spécificateur peut-être être combiné avec **statique** ou **extern**.
+- Le `thread_local` spécificateur peut-être être combiné avec **statique** ou **extern**.
 
--  Vous pouvez appliquer `thread_local` uniquement aux déclarations de données et définitions ; `thread_local` ne peut pas être utilisé sur des définitions ou déclarations de fonction.
+- Vous pouvez appliquer `thread_local` uniquement aux déclarations de données et définitions ; `thread_local` ne peut pas être utilisé sur des définitions ou déclarations de fonction.
 
--  Vous pouvez spécifier `thread_local` uniquement sur les éléments de données ayant une durée de stockage statique. Cela inclut les objets de données globaux (à la fois **statique** et **extern**), les objets statiques locaux et les données membres statiques des classes. Toute variable locale déclarée `thread_local` est implicitement statique si aucune autre classe de stockage n’est fourni ; en d’autres termes, à la portée de bloc `thread_local` équivaut à `thread_local static`.
+- Vous pouvez spécifier `thread_local` uniquement sur les éléments de données ayant une durée de stockage statique. Cela inclut les objets de données globaux (à la fois **statique** et **extern**), les objets statiques locaux et les données membres statiques des classes. Toute variable locale déclarée `thread_local` est implicitement statique si aucune autre classe de stockage n’est fourni ; en d’autres termes, à la portée de bloc `thread_local` équivaut à `thread_local static`.
 
--  Vous devez spécifier `thread_local` à la fois pour la déclaration et la définition d'un objet local de thread, que la déclaration et la définition se produisent dans le même fichier ou dans des fichiers séparés.
+- Vous devez spécifier `thread_local` à la fois pour la déclaration et la définition d'un objet local de thread, que la déclaration et la définition se produisent dans le même fichier ou dans des fichiers séparés.
 
 Sur Windows, `thread_local` est fonctionnellement équivalent à [__declspec (thread)](../cpp/thread.md) , à ceci près que **__declspec (thread)** peut être appliqué à une définition de type et n’est valide dans le code C. Si possible, utilisez `thread_local`, car il fait partie de la norme C++ et est par conséquent plus portable.
 

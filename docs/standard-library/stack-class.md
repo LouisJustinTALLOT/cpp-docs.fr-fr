@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 166a0fe22669927e0b57f56fae61847eb950537f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110410"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861523"
 ---
 # <a name="stack-class"></a>stack, classe
 
@@ -221,7 +221,7 @@ After a pop, the element at the top of the stack is 20.
 
 ## <a name="push"></a>  stack::push
 
-Ajoute un élément tout en haut de l’objet stack.
+Ajoute un élément vers le haut de la pile.
 
 ```cpp
 void push(const Type& val);

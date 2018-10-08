@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bda23b6847c08096b27516fcc955e4bf68c38ba
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 81a5c4cac614f70aa422e56a3c1c61fa2b6bd24e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385831"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861913"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Nouvelle &lt;appareil&gt; Image boîte de dialogue de Type (C++) (Éditeur d’images pour les icônes)
 

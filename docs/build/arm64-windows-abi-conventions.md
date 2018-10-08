@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 585fd757c18c3a7c09645b64656e6ef77cde6dca
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716636"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861381"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI de ARM64
 
@@ -131,9 +131,9 @@ Cette étape est effectuée une seule fois, avant le début du traitement des ar
 
 1. Le prochain à usage général inscrire nombre (NGRN) est défini sur zéro.
 
-2. La prochaine SIMD et nombre inscrire des nombres à virgule flottante (NSRN) est définie sur zéro.
+1. La prochaine SIMD et nombre inscrire des nombres à virgule flottante (NSRN) est définie sur zéro.
 
-3. L’adresse d’argument empilées suivante (NSAA) est définie à la valeur de pointeur de pile (SP) actuelle.
+1. L’adresse d’argument empilées suivante (NSAA) est définie à la valeur de pointeur de pile (SP) actuelle.
 
 ### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Étape B – remplissage préalable et extension des arguments
 
@@ -141,11 +141,11 @@ Pour chaque argument dans la liste la première règle correspondante dans la li
 
 1. Si le type d’argument est un Type Composite dont la taille ne peut pas être statiquement déterminée par l’appelant et l’appelé, l’argument est copié vers la mémoire et l’argument est remplacé par un pointeur vers la copie. (Il en existe aucun de ces types en C/C++, mais ils existent dans d’autres langues ou dans les extensions de langage).
 
-2. Si le type d’argument est un HFA ou un HVA, l’argument est utilisé sans modification.
+1. Si le type d’argument est un HFA ou un HVA, l’argument est utilisé sans modification.
 
-3. Si le type d’argument est un Type Composite qui est supérieure à 16 octets, puis l’argument est copié vers la mémoire allouée par l’appelant et l’argument est remplacé par un pointeur vers la copie.
+1. Si le type d’argument est un Type Composite qui est supérieure à 16 octets, puis l’argument est copié vers la mémoire allouée par l’appelant et l’argument est remplacé par un pointeur vers la copie.
 
-4. Si le type d’argument est un Type Composite la taille de l’argument est arrondie au multiple plus proche de 8 octets.
+1. Si le type d’argument est un Type Composite la taille de l’argument est arrondie au multiple plus proche de 8 octets.
 
 ### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Étape C : assignation d’arguments aux registres et la pile
 
@@ -153,33 +153,33 @@ Pour chaque argument dans la liste les règles suivantes sont appliquées à son
 
 1. Si l’argument est un demi-, unique, Double ou quadruple-précision à virgule flottante ou Type vecteur court et le NSRN est inférieur à 8, puis l’argument est alloué pour les bits les moins significatifs v register [NSRN]. Le NSRN est incrémenté d’un. L’argument a maintenant été alloué.
 
-2. Si l’argument est un HFA ou un HVA et il existe suffisamment SIMD non alloué et les registres en virgule flottante (NSRN + nombre de membres ≤ 8), l’argument est alloué à SIMD et inscrit les nombres à virgule flottante (avec un Registre par un membre du HFA ou HVA). Le NSRN est incrémenté par le nombre de registres utilisés. L’argument a maintenant été alloué.
+1. Si l’argument est un HFA ou un HVA et il existe suffisamment SIMD non alloué et les registres en virgule flottante (NSRN + nombre de membres ≤ 8), l’argument est alloué à SIMD et inscrit les nombres à virgule flottante (avec un Registre par un membre du HFA ou HVA). Le NSRN est incrémenté par le nombre de registres utilisés. L’argument a maintenant été alloué.
 
-3. Si l’argument est un HFA ou un HVA le NSRN est défini sur 8, puis la taille de l’argument est arrondie au multiple plus proche de 8 octets.
+1. Si l’argument est un HFA ou un HVA le NSRN est défini sur 8, puis la taille de l’argument est arrondie au multiple plus proche de 8 octets.
 
-4. Si l’argument est un HFA, un HVA, un vecteur court ou à virgule flottante de précision de quatre cœurs tapez l’adresse NSAA est arrondi à la plus grande de 8 ou de l’alignement naturel de type de l’argument.
+1. Si l’argument est un HFA, un HVA, un vecteur court ou à virgule flottante de précision de quatre cœurs tapez l’adresse NSAA est arrondi à la plus grande de 8 ou de l’alignement naturel de type de l’argument.
 
-5. Si l’argument est un type virgule flottante de moitié ou simple précision, la taille de l’argument est définie à 8 octets. L’effet est comme si l’argument avait été copié vers les bits les moins significatifs d’un Registre 64 bits et les bits restants remplis avec des valeurs non spécifiées.
+1. Si l’argument est un type virgule flottante de moitié ou simple précision, la taille de l’argument est définie à 8 octets. L’effet est comme si l’argument avait été copié vers les bits les moins significatifs d’un Registre 64 bits et les bits restants remplis avec des valeurs non spécifiées.
 
-6. Si l’argument est un HFA, un HVA, un demi-, unique, Double - ou quadruple-précision à virgule flottante ou Type vecteur court, puis l’argument est copié dans la mémoire à l’adresse NSAA ajustée. L’adresse NSAA est incrémentée de la taille de l’argument. L’argument a maintenant été alloué.
+1. Si l’argument est un HFA, un HVA, un demi-, unique, Double - ou quadruple-précision à virgule flottante ou Type vecteur court, puis l’argument est copié dans la mémoire à l’adresse NSAA ajustée. L’adresse NSAA est incrémentée de la taille de l’argument. L’argument a maintenant été alloué.
 
-7. Si l’argument est un entier ou un Type pointeur, la taille de l’argument est inférieur ou égal à 8 octets et le NGRN est inférieur à 8, l’argument est copié dans les bits les moins significatifs dans x [NGRN]. Le NGRN est incrémenté d’un. L’argument a maintenant été alloué.
+1. Si l’argument est un entier ou un Type pointeur, la taille de l’argument est inférieur ou égal à 8 octets et le NGRN est inférieur à 8, l’argument est copié dans les bits les moins significatifs dans x [NGRN]. Le NGRN est incrémenté d’un. L’argument a maintenant été alloué.
 
-8. Si l’argument possède un alignement de 16 puis le NGRN est arrondi par excès au nombre pair suivant.
+1. Si l’argument possède un alignement de 16 puis le NGRN est arrondi par excès au nombre pair suivant.
 
-9. Si l’argument est un Type intégral, la taille de l’argument est égale à 16, et le NGRN est inférieure à 7, l’argument est copié à x [NGRN] et [NGRN + 1]. x [NGRN] contient la plus faible adressée-mot double de la représentation sous forme de mémoire de l’argument. Le NGRN est incrémenté par deux. L’argument a maintenant été alloué.
+1. Si l’argument est un Type intégral, la taille de l’argument est égale à 16, et le NGRN est inférieure à 7, l’argument est copié à x [NGRN] et [NGRN + 1]. x [NGRN] contient la plus faible adressée-mot double de la représentation sous forme de mémoire de l’argument. Le NGRN est incrémenté par deux. L’argument a maintenant été alloué.
 
-10. Si l’argument est un Type Composite et la taille en mots doubles de l’argument n’est pas plus de 8 moins NGRN, l’argument est copié dans les registres à caractère général consécutifs, en commençant à x [NGRN]. L’argument est passé comme si elles avaient été chargées dans les registres depuis une adresse alignée à double mot avec une séquence d’instructions de LDR le chargement des registres consécutives de la mémoire (le contenu de tous les composants non utilisés des registres n’est pas spécifié appropriée par cette norme). Le NGRN est incrémenté par le nombre de registres utilisés. L’argument a maintenant été alloué.
+1. Si l’argument est un Type Composite et la taille en mots doubles de l’argument n’est pas plus de 8 moins NGRN, l’argument est copié dans les registres à caractère général consécutifs, en commençant à x [NGRN]. L’argument est passé comme si elles avaient été chargées dans les registres depuis une adresse alignée à double mot avec une séquence d’instructions de LDR le chargement des registres consécutives de la mémoire (le contenu de tous les composants non utilisés des registres n’est pas spécifié appropriée par cette norme). Le NGRN est incrémenté par le nombre de registres utilisés. L’argument a maintenant été alloué.
 
-11. Le NGRN a la valeur 8.
+1. Le NGRN a la valeur 8.
 
-12. L’adresse NSAA est arrondie à la plus grande de 8 ou de l’alignement naturel de type de l’argument...
+1. L’adresse NSAA est arrondie à la plus grande de 8 ou de l’alignement naturel de type de l’argument...
 
-13. Si l’argument est un type composite l’argument est copié dans la mémoire à l’adresse NSAA ajustée. L’adresse NSAA est incrémentée de la taille de l’argument. L’argument a maintenant été alloué.
+1. Si l’argument est un type composite l’argument est copié dans la mémoire à l’adresse NSAA ajustée. L’adresse NSAA est incrémentée de la taille de l’argument. L’argument a maintenant été alloué.
 
-14. Si la taille de l’argument est inférieur à 8 octets la taille de l’argument est définie à 8 octets. L’effet est comme si l’argument a été copié dans les bits les moins significatifs d’un Registre 64 bits et les bits restants remplis avec des valeurs non spécifiées.
+1. Si la taille de l’argument est inférieur à 8 octets la taille de l’argument est définie à 8 octets. L’effet est comme si l’argument a été copié dans les bits les moins significatifs d’un Registre 64 bits et les bits restants remplis avec des valeurs non spécifiées.
 
-15. L’argument est copié dans la mémoire à l’adresse NSAA ajustée. L’adresse NSAA est incrémentée de la taille de l’argument. L’argument a maintenant été alloué.
+1. L’argument est copié dans la mémoire à l’adresse NSAA ajustée. L’adresse NSAA est incrémentée de la taille de l’argument. L’argument a maintenant été alloué.
 
 ### <a name="addendum-variadic-functions"></a>Addenda : Les fonctions Variadiques
 
@@ -187,7 +187,7 @@ Fonctions qui acceptent un nombre variable d’arguments sont gérées différem
 
 1. Composites tous les sont traités de la même façon ; aucun traitement spécial de HFAs ou Hva.
 
-2. SIMD et inscrit les nombres à virgule flottante ne sont pas utilisés.
+1. SIMD et inscrit les nombres à virgule flottante ne sont pas utilisés.
 
 Effectivement, cela revient aux règles suivantes C.12–C.15 pour allouer des arguments à une pile imaginaire, où les 64 premiers octets de la pile sont chargés dans x0-x7, et tous les autres arguments pile sont placés normalement.
 

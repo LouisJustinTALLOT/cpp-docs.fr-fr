@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317914"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860444"
 ---
 # <a name="menu-command-properties-c"></a>Propriétés de commande de menu (C++)
 
@@ -28,7 +28,7 @@ Les informations ci-dessous sont organisées en fonction de la **Menu** proprié
 
 |Propriété|Description|
 |--------------|-----------------|
-|**Break**|Peut avoir l'une des valeurs suivantes :<br /><br /> -   **Aucun** (par défaut) : aucun arrêt.<br />-   **Colonne**: pour les menus statiques, cette valeur permet de placer la commande de menu sur une nouvelle ligne. Pour les menus contextuels, cette valeur permet de placer la commande de menu dans une nouvelle colonne sans ligne de démarcation entre les colonnes. Cette propriété affecte l'apparence du menu uniquement au moment de l'exécution, pas dans l'éditeur de menus.<br />-   **Barre**: identique à **colonne** à l’exception, des menus contextuels, cette valeur sépare la nouvelle colonne de l’ancienne par une ligne verticale. Cette propriété affecte l’apparence du menu uniquement au moment de l’exécution, pas dans le **Menu** éditeur.|
+|**Break**|Peut avoir l'une des valeurs suivantes :<br /><br />- **Aucun** (par défaut) : aucun arrêt.<br />- **Colonne**: pour les menus statiques, cette valeur permet de placer la commande de menu sur une nouvelle ligne. Pour les menus contextuels, cette valeur permet de placer la commande de menu dans une nouvelle colonne sans ligne de démarcation entre les colonnes. Cette propriété affecte l'apparence du menu uniquement au moment de l'exécution, pas dans l'éditeur de menus.<br />- **Barre**: identique à **colonne** à l’exception, des menus contextuels, cette valeur sépare la nouvelle colonne de l’ancienne par une ligne verticale. Cette propriété affecte l’apparence du menu uniquement au moment de l’exécution, pas dans le **Menu** éditeur.|
 |**Légende**|Texte qui indique la commande de menu (nom du menu). Pour que l'une des lettres de la légende d'une commande de menu devienne une touche mnémonique, faites-la précéder d'une esperluette (&).|
 |**Activé**|Si **True**, la commande de menu est initialement activée. Type : **Bool**. Valeur par défaut : **False**.|
 |**Activé**|Si la valeur est **False**, l'élément de menu est désactivé.|

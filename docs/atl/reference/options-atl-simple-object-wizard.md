@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7a337ceffbbfb1577b58fea2f60213cd79052b00
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098782"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861367"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Options, Assistant Objet simple ATL
 
@@ -60,7 +60,7 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
    |Option|Description|
    |------------|-----------------|
    |**Double**|Spécifie que l’objet prend en charge une interface double (son vtable dispose des fonctions d’interface personnalisés, ainsi que la liaison tardive `IDispatch` méthodes). Permet les deux clients COM et [contrôleurs Automation](../../mfc/automation-clients.md) accéder à l’objet. Valeur par défaut.|
-   |**Personnalisé**|Spécifie que l’objet prend en charge une interface personnalisée (son vtable a des fonctions d’interface personnalisées). Une interface personnalisée peut être plus rapide qu’une interface double, en particulier les limites du processus.<br /><br /> -   **Compatible Automation** contrôleurs Automation permet d’accéder à un objet qui possède la prise en charge de l’interface personnalisée.|
+   |**Personnalisé**|Spécifie que l’objet prend en charge une interface personnalisée (son vtable a des fonctions d’interface personnalisées). Une interface personnalisée peut être plus rapide qu’une interface double, en particulier les limites du processus.<br /><br /> - **Compatible Automation** contrôleurs Automation permet d’accéder à un objet qui possède la prise en charge de l’interface personnalisée.|
 
 - **Prise en charge**
 

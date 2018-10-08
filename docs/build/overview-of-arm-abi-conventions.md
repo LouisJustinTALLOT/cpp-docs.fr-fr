@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4254506345ab72eccaa43968a0af9aab2dada3b9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721446"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861484"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Vue d’ensemble des Conventions ABI de ARM32
 
@@ -153,11 +153,11 @@ L’initialisation est exécutée une seule fois exactement, avant le début du 
 
 1. Le numéro NCRN (Next Core Register Number) est défini sur r0.
 
-2. Les registres VFP sont marqués comme non alloués.
+1. Les registres VFP sont marqués comme non alloués.
 
-3. L'adresse NSAA (Next Stacked Argument Address) est définie sur le pointeur de pile (SP) actif.
+1. L'adresse NSAA (Next Stacked Argument Address) est définie sur le pointeur de pile (SP) actif.
 
-4. Si une fonction qui retourne un résultat en mémoire est appelé, l'adresse du résultat est placée dans r0 et le numéro NCRN est défini sur r1.
+1. Si une fonction qui retourne un résultat en mémoire est appelé, l'adresse du résultat est placée dans r0 et le numéro NCRN est défini sur r1.
 
 ### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Étape b : remplissage préalable et extension des arguments
 
@@ -165,9 +165,9 @@ Pour chaque argument de la liste, la première règle correspondante de la liste
 
 1. Si l'argument est un type composite dont la taille ne peut pas être statiquement déterminée à la fois par l'appelant et l'appelé, l'argument est copié en mémoire et remplacé par un pointeur vers la copie.
 
-2. Si l'argument est un demi-mot d'un octet ou de 16 bits, il est étendu en mot complet de 32 bits avec des zéros ou des signes et est traité comme un argument de 4 octets.
+1. Si l'argument est un demi-mot d'un octet ou de 16 bits, il est étendu en mot complet de 32 bits avec des zéros ou des signes et est traité comme un argument de 4 octets.
 
-3. Si l’argument est un type composite, sa taille est arrondie au multiple de 4 supérieur le plus proche.
+1. Si l’argument est un type composite, sa taille est arrondie au multiple de 4 supérieur le plus proche.
 
 ### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Phase C: assignation d’arguments aux registres et la pile
 
@@ -175,17 +175,17 @@ Pour chaque argument de la liste, les règles suivantes sont appliquées tour à
 
 1. Si l'argument est de type VFP et qu'il y a suffisamment de registres VFP non alloués consécutifs du type approprié, l'argument est alloué à la séquence de registres ayant les numéros les plus petits.
 
-2. Si l'argument est un type VFP, tous les registres non alloués restants sont marqués comme non disponibles. L'adresse NSAA est ajustée vers le haut jusqu'à ce qu'elle soit correctement alignée par rapport au type d'argument et que l'argument soit copié dans la pile à l'adresse NSAA ajustée. L'adresse NSAA est ensuite incrémentée de la taille de l'argument.
+1. Si l'argument est un type VFP, tous les registres non alloués restants sont marqués comme non disponibles. L'adresse NSAA est ajustée vers le haut jusqu'à ce qu'elle soit correctement alignée par rapport au type d'argument et que l'argument soit copié dans la pile à l'adresse NSAA ajustée. L'adresse NSAA est ensuite incrémentée de la taille de l'argument.
 
-3. Si l'argument nécessite un alignement de 8 octets, le numéro NCRN est arrondi au numéro de registre pair supérieur.
+1. Si l'argument nécessite un alignement de 8 octets, le numéro NCRN est arrondi au numéro de registre pair supérieur.
 
-4. Si la taille de l'argument dans les mots de 32 bits n'est pas supérieure à r4 moins le numéro NCRN, l'argument est copié dans les registres principaux, à partir du numéro NCRN, les bits de poids faible occupant les registres ayant les numéros les plus petits. Le numéro NCRN est incrémenté du nombre de registres utilisés.
+1. Si la taille de l'argument dans les mots de 32 bits n'est pas supérieure à r4 moins le numéro NCRN, l'argument est copié dans les registres principaux, à partir du numéro NCRN, les bits de poids faible occupant les registres ayant les numéros les plus petits. Le numéro NCRN est incrémenté du nombre de registres utilisés.
 
-5. Si le numéro NCRN est inférieur à r4 et que l'adresse NSAA est égale au pointeur de pile (SP), l'argument est partagé entre les registres principaux et la pile. La première partie de l'argument est copiée dans les registres principaux, à partir du numéro NCRN, jusqu'à r3 inclus. Le reste de l'argument est copié dans la pile, à partir de l'adresse NSAA. Le numéro NCRN est défini sur r4 et l'adresse NSAA est incrémentée de la taille de l'argument moins le montant passé aux registres.
+1. Si le numéro NCRN est inférieur à r4 et que l'adresse NSAA est égale au pointeur de pile (SP), l'argument est partagé entre les registres principaux et la pile. La première partie de l'argument est copiée dans les registres principaux, à partir du numéro NCRN, jusqu'à r3 inclus. Le reste de l'argument est copié dans la pile, à partir de l'adresse NSAA. Le numéro NCRN est défini sur r4 et l'adresse NSAA est incrémentée de la taille de l'argument moins le montant passé aux registres.
 
-6. Si l'argument nécessite un alignement de 8 octets, l'adresse NSAA est arrondie à l'adresse alignée de 8 octets supérieure.
+1. Si l'argument nécessite un alignement de 8 octets, l'adresse NSAA est arrondie à l'adresse alignée de 8 octets supérieure.
 
-7. L'argument est copié en mémoire à l'adresse NSAA. L'adresse NSAA est incrémentée de la taille de l'argument.
+1. L'argument est copié en mémoire à l'adresse NSAA. L'adresse NSAA est incrémentée de la taille de l'argument.
 
 Les registres VFP ne sont pas utilisés pour les fonctions variadiques, et les règles 1 et 2 de la phase C sont ignorées. Autrement dit, une fonction variadique peut commencer par un push facultatif {r0-r3} pour ajouter les arguments de registre aux autres arguments éventuellement passés par l'appelant, puis accéder à la liste d'arguments entière directement à partir de la pile.
 

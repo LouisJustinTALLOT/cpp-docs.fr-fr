@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba4cb1411bca452de0f146626421315fa7dc177e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716586"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859859"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Spécifier les répertoires des métadonnées)
 
@@ -49,9 +49,9 @@ Un seul répertoire peut être passé à un **/AI** invocation. Spécifiez une *
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
-2. Sélectionnez le **propriétés de Configuration** > **C/C++** > **général** page de propriétés.
+1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **général** page de propriétés.
 
-3. Modifier le **supplémentaires #using répertoires** propriété.
+1. Modifier le **supplémentaires #using répertoires** propriété.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 

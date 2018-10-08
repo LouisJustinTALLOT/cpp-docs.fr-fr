@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020431"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861640"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
 
@@ -52,7 +52,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
       1. **Sélectionnez ou entrez un nom de serveur :** cliquez sur le menu de liste déroulante pour afficher tous les serveurs de données inscrites sur le réseau, puis sélectionnez un.
 
-      2. **Entrez les informations pour vous connecter au serveur :** Entrez un nom d’utilisateur et le mot de passe pour ouvrir une session le serveur de données.
+      1. **Entrez les informations pour vous connecter au serveur :** Entrez un nom d’utilisateur et le mot de passe pour ouvrir une session le serveur de données.
 
          > [!NOTE]
          > Il existe un problème de sécurité avec la fonctionnalité « Autoriser l’enregistrement du mot de passe » de la boîte de dialogue Propriétés des liaisons de données. Dans « Entrez les informations pour vous connecter au serveur », il existe deux cases d’option :
@@ -63,7 +63,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
          > Si vous sélectionnez **utiliser un nom d’utilisateur spécifique et un mot de passe**, vous avez la possibilité d’enregistrer le mot de passe (à l’aide de la case à cocher « Autoriser l’enregistrement du mot de passe ») ; Toutefois, cette option n’est pas sécurisée. Il est recommandé de sélectionner **utilisez Windows NT la sécurité intégrée**; cette option est sécurisée, car il chiffre le mot de passe.
          > Il peut y avoir des situations dans lesquelles vous souhaitez sélectionner « Autoriser l’enregistrement du mot de passe ». Par exemple, si vous lancez une bibliothèque avec une solution de base de données privée, vous devez pas accéder directement à la base de données mais à la place utiliser une application de couche intermédiaire pour vérifier que l’utilisateur (via les schémas d’authentification que vous choisissez), puis limiter le tri des données disponible pour l’utilisateur.
 
-      3. **Sélectionnez la base de données sur le serveur :** cliquez sur le menu de liste déroulante pour afficher les inscrits toutes les bases de données sur le serveur de données, puis sélectionnez un.
+      1. **Sélectionnez la base de données sur le serveur :** cliquez sur le menu de liste déroulante pour afficher les inscrits toutes les bases de données sur le serveur de données, puis sélectionnez un.
 
          \- ou -
 
@@ -80,13 +80,13 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
          **Utiliser la chaîne de connexion :** Entrez une chaîne de connexion que vous avez déjà obtenu, ou cliquez sur le **Build** bouton ; le **sélectionner une Source de données** boîte de dialogue s’affiche. Sélectionnez une source de données de fichier ou de la machine et cliquez sur **OK**.
 
          > [!NOTE]
-         > Vous pouvez obtenir une chaîne de connexion en affichant les propriétés d’une connexion existante dans l’Explorateur de serveurs, ou vous pouvez créer une connexion en double-cliquant sur **ajouter une connexion** dans l’Explorateur de serveurs.
+         > Vous pouvez obtenir une chaîne de connexion en affichant les propriétés d’une connexion existante dans **Explorateur de serveurs**, ou vous pouvez créer une connexion en double-cliquant sur **ajouter une connexion** dans **Server Explorer**.
 
-      2. **Entrez les informations pour vous connecter au serveur :** Entrez un nom d’utilisateur et le mot de passe pour ouvrir une session le serveur de données.
+      1. **Entrez les informations pour vous connecter au serveur :** Entrez un nom d’utilisateur et le mot de passe pour ouvrir une session le serveur de données.
 
-      3. Entrez le catalogue initial à utiliser.
+      1. Entrez le catalogue initial à utiliser.
 
-      4. Cliquez sur **tester la connexion**; si le test réussit, cliquez sur **OK**. Si ce n’est pas le cas, vérifiez vos informations d’ouverture de session, essayez une autre base de données ou un autre serveur de données.
+      1. Cliquez sur **tester la connexion**; si le test réussit, cliquez sur **OK**. Si ce n’est pas le cas, vérifiez vos informations d’ouverture de session, essayez une autre base de données ou un autre serveur de données.
 
    - **Advanced** onglet
 

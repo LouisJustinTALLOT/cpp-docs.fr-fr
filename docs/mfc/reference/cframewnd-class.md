@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12982c212cf8ff4fe502638a5c466306bfe15eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374286"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861731"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -1103,7 +1103,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nState*|[in] Spécifie s’il faut afficher ou masquer le menu. Le *nState* paramètre peut avoir les valeurs suivantes :<br /><br /> -AFX_MBS_VISIBLE (0 x 01) - affiche le menu si elle est masquée, mais n’a aucun effet s’il est visible.<br />-AFX_MBS_HIDDEN (0 x 02) - masque le contrôle menu si elle est visible, mais n’a aucun effet s’il est masqué.|
+|*nState*|[in] Spécifie s’il faut afficher ou masquer le menu. Le *nState* paramètre peut avoir les valeurs suivantes :<br /><br />-AFX_MBS_VISIBLE (0 x 01) - affiche le menu si elle est masquée, mais n’a aucun effet s’il est visible.<br />-AFX_MBS_HIDDEN (0 x 02) - masque le contrôle menu si elle est visible, mais n’a aucun effet s’il est masqué.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1125,7 +1125,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nStyle*|[in] Spécifie si le menu par défaut est masquée, ou n’est visible et a le focus. Le *nStyle* paramètre peut avoir les valeurs suivantes :<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01)-<br />     Le menu est affiché en permanence et par défaut n’a pas le focus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02)-<br />     Le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche ALT pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur ALT ou sur ÉCHAP pour masquer le menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (combinaison (OR)) - le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche F10 pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur la touche F10 pour activer/désactiver le focus ou désactiver le menu. Le menu s’affiche jusqu'à ce que vous appuyez sur la touche ALT ou sur ÉCHAP pour le masquer.|
+|*nStyle*|[in] Spécifie si le menu par défaut est masquée, ou n’est visible et a le focus. Le *nStyle* paramètre peut avoir les valeurs suivantes :<br /><br />-AFX_MBV_KEEPVISIBLE (0 X 01)-<br />     Le menu est affiché en permanence et par défaut n’a pas le focus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02)-<br />     Le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche ALT pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur ALT ou sur ÉCHAP pour masquer le menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (combinaison (OR)) - le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche F10 pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur la touche F10 pour activer/désactiver le focus ou désactiver le menu. Le menu s’affiche jusqu'à ce que vous appuyez sur la touche ALT ou sur ÉCHAP pour le masquer.|
 
 ### <a name="remarks"></a>Notes
 

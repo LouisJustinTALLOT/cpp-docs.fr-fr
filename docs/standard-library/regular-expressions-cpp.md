@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c64ff0eda298ba330f3f1e1ff6d953fd859234
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ca3d636b1dffdb3237fb94fade41c90057543b9d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209019"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861562"
 ---
 # <a name="regular-expressions-c"></a>Expressions régulières (C++)
 
@@ -58,17 +58,17 @@ Un élément peut être ce qui suit :
 
 - *Expression entre crochets* au format "[`expr`]", qui correspond à un caractère ou à un élément de classement dans la séquence cible qui se trouve également dans le jeu défini par l’expression `expr`, ou au format "[^`expr`]", qui correspond à un caractère ou à un élément de classement dans la séquence cible qui ne se trouve pas dans le jeu défini par l’expression `expr`.
 
-     L'expression `expr` peut contenir n'importe quelle combinaison des éléments suivants :
+   L'expression `expr` peut contenir n'importe quelle combinaison des éléments suivants :
 
-    -   Un caractère individuel. Ajoute ce caractère au jeu défini par `expr`.
+   - Un caractère individuel. Ajoute ce caractère au jeu défini par `expr`.
 
-    -   Une *plage de caractères* au format "`ch1`-`ch2`". Ajoute des caractères qui sont représentés par des valeurs dans la plage fermée [`ch1`, `ch2`] au jeu défini par `expr`.
+   - Une *plage de caractères* au format "`ch1`-`ch2`". Ajoute des caractères qui sont représentés par des valeurs dans la plage fermée [`ch1`, `ch2`] au jeu défini par `expr`.
 
-    -   Une *classe de caractères* au format "[:`name`:]". Ajoute les caractères de la classe nommée au jeu défini par `expr`.
+   - Une *classe de caractères* au format "[:`name`:]". Ajoute les caractères de la classe nommée au jeu défini par `expr`.
 
-    -   Une *classe d’équivalence* au format "[=`elt`=]". Ajoute les éléments de classement qui sont équivalents à `elt` au jeu défini par `expr`.
+   - Une *classe d’équivalence* au format "[=`elt`=]". Ajoute les éléments de classement qui sont équivalents à `elt` au jeu défini par `expr`.
 
-    -   Un *symbole de classement* au format "[.`elt`.]". Ajoute l'élément de classement `elt` au jeu défini par `expr`.
+   - Un *symbole de classement* au format "[.`elt`.]". Ajoute l'élément de classement `elt` au jeu défini par `expr`.
 
 - Une *ancre*. L'ancre '^' correspond au début de la séquence cible ; l'ancre '$' correspond à la fin de la séquence cible.
 
@@ -403,11 +403,11 @@ Un caractère ordinaire est un caractère valide qui n'a pas de signification sp
 
 Dans `ECMAScript`, les caractères suivants ont une signification particulière :
 
-- ^  $  \  .  \*  +  ?  (  )  [  ]  {  }  &#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
 
 Dans `basic` et `grep`, les caractères suivants ont une signification particulière :
 
-- .   [   \
+- .   \[   \
 
 Dans `basic` et `grep`, les caractères suivants ont une signification particulière lorsqu'ils sont utilisés dans un contexte spécifique :
 
@@ -419,7 +419,7 @@ Dans `basic` et `grep`, les caractères suivants ont une signification particuli
 
 Dans `extended`, `egrep` et `awk`, les caractères suivants ont une signification particulière :
 
-- .   [   \   (   \*   +   ?   {   &#124;
+- .   \[   \   (   \*   +   ?   {   &#124;
 
 Dans `extended`, `egrep` et `awk`, les caractères suivants ont une signification particulière lorsqu'ils sont utilisés dans un contexte spécifique.
 

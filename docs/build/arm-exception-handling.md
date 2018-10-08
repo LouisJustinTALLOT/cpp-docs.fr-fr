@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ae80e1f7f824f41f6bc0b3f979973f5867666354
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711228"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861653"
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
@@ -82,15 +82,15 @@ Ce tableau présente le format d'un enregistrement .pdata qui contient des donn�
 |Décalage de mot|Bits|Objectif|
 |-----------------|----------|-------------|
 |0|0-31|*Fonction RVA Démarrer* est l’adresse RVA 32 bits du début de la fonction. Si la fonction contient du code thumb, le bit inférieur de cette adresse doit être défini.|
-|1|0-1|*Indicateur* est un champ de 2 bits qui a ces significations :<br /><br /> -00 = compressé déroulement des données non utilisées ; bits restants pointent vers un enregistrement .xdata.<br />-01 = compressé données de déroulement.<br />-10 = compressé données où la fonction est censée pour avoir pas de prologue de déroulement. Ceci est utile pour décrire les fragments de fonction discontinus par rapport au début de la fonction.<br />-11 = réservée.|
+|1|0-1|*Indicateur* est un champ de 2 bits qui a ces significations :<br /><br />-00 = compressé déroulement des données non utilisées ; bits restants pointent vers un enregistrement .xdata.<br />-01 = compressé données de déroulement.<br />-10 = compressé données où la fonction est censée pour avoir pas de prologue de déroulement. Ceci est utile pour décrire les fragments de fonction discontinus par rapport au début de la fonction.<br />-11 = réservée.|
 |1|2-12|*Longueur de la fonction* est un champ de 11 bits qui fournit la longueur de la fonction entière en octets divisée par 2. Si la longueur de la fonction est supérieure à 4 K octets, un enregistrement .xdata complet doit être utilisé à la place.|
-|1|13-14|*RET* est un champ de 2 bits qui indique comment la fonction retourne :<br /><br /> -00 = retour via pop {pc} (le *L* bit indicateur doit être définie sur 1 dans ce cas).<br />-01 = retour via une branche de 16 bits.<br />-10 = retour via une branche de 32 bits.<br />-11 = absence d’épilogue du tout. Ceci est utile pour décrire un fragment de fonction discontinu qui peut ne contenir qu'un prologue, mais dont l'épilogue se trouve ailleurs.|
+|1|13-14|*RET* est un champ de 2 bits qui indique comment la fonction retourne :<br /><br />-00 = retour via pop {pc} (le *L* bit indicateur doit être définie sur 1 dans ce cas).<br />-01 = retour via une branche de 16 bits.<br />-10 = retour via une branche de 32 bits.<br />-11 = absence d’épilogue du tout. Ceci est utile pour décrire un fragment de fonction discontinu qui peut ne contenir qu'un prologue, mais dont l'épilogue se trouve ailleurs.|
 |1|15|*H* est un indicateur de 1 bit qui indique si la fonction « héberge » le paramètre entier inscrit (r0-r3) en les envoyant au début de la fonction et libère les 16 octets de pile avant de retourner. (0 = n'héberge pas les registres, 1 = héberge les registres.)|
 |1|16-18|*Reg* est un champ de 3 bits qui indique l’index du dernier enregistré non volatile register. Si le *R* bit est 0, uniquement des registres d’entiers sont enregistrés et sont supposés pour être dans la plage r4-RN, où N est égal à 4 + *Reg*. Si le *R* bit est 1, puis les registres en virgule flottante uniquement sont enregistrées et sont supposés pour être dans la plage d8-DN, où N est égal à 8 + *Reg*. La combinaison spéciale de *R* = 1 et *Reg* = 7 indique qu’aucun registre n’est enregistré.|
 |1|19|*R* est un indicateur de 1 bit qui indique si les registres non volatils enregistrés sont des registres d’entiers (0) ou registres en virgule flottante (1). Si *R* est défini sur 1 et le *Reg* champ est défini sur 7, les registres non volatils ont été envoyés.|
 |1|20|*L* est un indicateur de 1 bit qui indique si la fonction enregistre/restaure le Registre LR, ainsi que d’autres registres indiqués par le *Reg* champ. (0 = n'enregistre/ne restaure pas, 1 = enregistre/restaure.)|
 |1|21|*C* est un indicateur de 1 bit qui indique si la fonction inclut des instructions supplémentaires pour configurer une chaîne de frames pour l’exploration de pile rapide (1) ou non (0). Si ce bit est défini, le registre r11 est ajouté implicitement à la liste des registres non volatils d'entiers enregistrés. (Voir les restrictions ci-dessous si le *C* indicateur est utilisé.)|
-|1|22-31|*Ajuster la pile* est un champ de 10 bits qui indique le nombre d’octets de pile qui sont alloués pour cette fonction, divisée par 4. Cependant, seules les valeurs comprises entre 0x000 et 0x3F3 peuvent être directement encodées. Les fonctions qui allouent plus de 4 044 octets de pile doivent utiliser un enregistrement .xdata complet. Si le *ajuster Stack* champ est égal à 0x3F4 ou plus, alors les 4 bits inférieurs ont une signification particulière :<br /><br /> -Bits 0-1 indiquent le nombre de mots d’ajustement de pile (1-4) moins 1.<br />-Bit 2 est défini sur 1 si le prologue a combiné cet ajustement dans son opération push.<br />-Bit 3 est défini sur 1 si l’épilogue a combiné cet ajustement dans son opération pop.|
+|1|22-31|*Ajuster la pile* est un champ de 10 bits qui indique le nombre d’octets de pile qui sont alloués pour cette fonction, divisée par 4. Cependant, seules les valeurs comprises entre 0x000 et 0x3F3 peuvent être directement encodées. Les fonctions qui allouent plus de 4 044 octets de pile doivent utiliser un enregistrement .xdata complet. Si le *ajuster Stack* champ est égal à 0x3F4 ou plus, alors les 4 bits inférieurs ont une signification particulière :<br /><br />-Bits 0-1 indiquent le nombre de mots d’ajustement de pile (1-4) moins 1.<br />-Bit 2 est défini sur 1 si le prologue a combiné cet ajustement dans son opération push.<br />-Bit 3 est défini sur 1 si l’épilogue a combiné cet ajustement dans son opération pop.|
 
 Du fait des redondances possibles dans les encodages précédents, les restrictions suivantes s'appliquent :
 
@@ -187,7 +187,7 @@ Quand le format de déroulement compressé ne suffit pas à décrire le déroule
    |1|16-23|*Étendue des mots de Code* est un champ de 8 bits qui fournit davantage d’espace pour l’encodage d’un nombre exceptionnellement élevé de mots de code de déroulement. Le mot d’extension qui contient ce champ n’est présent que si le *épilogue nombre* et *Code mots* champs dans le premier mot d’en-tête sont toutes deux définies sur 0.|
    |1|24-31|Réservée|
 
-2. Une fois les données d’exception (si le *E* bit dans l’en-tête a été défini sur 0) est une liste d’informations sur les portées d’épilogue, qui sont compressées dans un mot et stockées par ordre croissant de décalage de départ. Chaque portée contient ces champs :
+1. Une fois les données d’exception (si le *E* bit dans l’en-tête a été défini sur 0) est une liste d’informations sur les portées d’épilogue, qui sont compressées dans un mot et stockées par ordre croissant de décalage de départ. Chaque portée contient ces champs :
 
    |Bits|Objectif|
    |----------|-------------|
@@ -196,9 +196,9 @@ Quand le format de déroulement compressé ne suffit pas à décrire le déroule
    |20-23|*Condition* est un champ de 4 bits qui dicte la condition sous laquelle l’épilogue est exécuté. Pour les épilogues inconditionnels, il doit avoir la valeur 0xE, ce qui indique « toujours ». (Un épilogue doit être entièrement conditionnel ou entièrement inconditionnel, et en mode Thumb-2, l'épilogue commence par la première instruction située après l'opcode IT.)|
    |24-31|*Index de début d’épilogue* est un champ de 8 bits qui indique l’index d’octet du premier code de déroulement qui décrit cet épilogue.|
 
-3. Après la liste des portées d'épilogue figure un tableau d'octets qui contient les codes de déroulement, qui sont décrits en détail dans la section Code de déroulement de cet article. Ce tableau est rempli à la fin jusqu'à la limite du mot complet le plus proche. Les octets sont stockés dans un ordre Little-Endian, ce qui permet de les récupérer directement en mode Little-Endian.
+1. Après la liste des portées d'épilogue figure un tableau d'octets qui contient les codes de déroulement, qui sont décrits en détail dans la section Code de déroulement de cet article. Ce tableau est rempli à la fin jusqu'à la limite du mot complet le plus proche. Les octets sont stockés dans un ordre Little-Endian, ce qui permet de les récupérer directement en mode Little-Endian.
 
-4. Si le *X* champ dans l’en-tête est 1, les octets de code de déroulement sont suivis par les informations de gestionnaire d’exception. Il s’agit d’un *RVA de gestionnaire d’Exception* qui contient l’adresse du Gestionnaire d’exceptions, immédiatement suivi de la quantité de (de longueur variable) de données requises par le Gestionnaire d’exceptions.
+1. Si le *X* champ dans l’en-tête est 1, les octets de code de déroulement sont suivis par les informations de gestionnaire d’exception. Il s’agit d’un *RVA de gestionnaire d’Exception* qui contient l’adresse du Gestionnaire d’exceptions, immédiatement suivi de la quantité de (de longueur variable) de données requises par le Gestionnaire d’exceptions.
 
 L’enregistrement .xdata est conçu pour permettre la récupération des 8 premiers octets et le calcul de la taille complète de l’enregistrement, à l’exclusion de la longueur des données d’exception de taille variable qui suivent. Cet extrait de code permet de calculer la taille de l'enregistrement :
 

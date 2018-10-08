@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5758dff128cd213442ec3738967ccd78e20e75af
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093959"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861133"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Ajout d’objets et des contrôles à un projet ATL
 
@@ -41,16 +41,16 @@ Vous pouvez utiliser un des Assistants code ATL pour ajouter un objet ou un cont
 > [!NOTE]
 > Avant d’ajouter un objet ATL à votre projet, vous devez examiner les détails et la configuration requise pour l’objet dans les rubriques d’aide connexes.
 
-### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Pour ajouter un objet ou un contrôle à l’aide de l’Assistant contrôle ATL
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Pour ajouter un objet ou un contrôle à l’aide de l’Assistant contrôle ATL
 
-1. Dans l’Explorateur de solutions, cliquez sur le nœud de projet, puis cliquez sur **ajouter** dans le menu contextuel. Cliquez sur **ajouter une classe**.
+1. Dans **l’Explorateur de solutions**, cliquez sur le nœud du projet et cliquez sur **ajouter** dans le menu contextuel. Cliquez sur **ajouter une classe**.
 
    Le [ajouter une classe](../../ide/add-class-dialog-box.md) boîte de dialogue s’affiche.
 
-2. Le dossier ATL sélectionné dans le volet des catégories, sélectionnez un objet à insérer dans le volet Modèles. Cliquez sur **Open**. L’Assistant de code pour l’objet sélectionné s’affiche.
+1. Avec le **ATL** dossier sélectionné dans le **catégories** volet, sélectionnez un objet à insérer à partir de la **modèles** volet. Cliquez sur **Open**. L’Assistant de code pour l’objet sélectionné s’affiche.
 
    > [!NOTE]
-   >  Si vous souhaitez ajouter un objet ATL à un projet MFC, vous devez ajouter la prise en charge ATL au projet existant. Vous pouvez le faire en suivant les instructions dans [Ajout de la prise en charge ATL à votre projet MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Si vous souhaitez ajouter un objet ATL à un projet MFC, vous devez ajouter la prise en charge ATL au projet existant. Vous pouvez le faire en suivant les instructions dans [Ajout de la prise en charge ATL à votre projet MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
    Ou bien, si vous essayez d’ajouter un objet ATL à votre projet MFC sans ajouter précédemment prise en charge ATL, Visual Studio vous invite à spécifier si vous souhaitez que la prise en charge ATL ajoutée à votre projet. Cliquez sur **Oui** pour ajouter la prise en charge ATL au projet et ouvrez l’Assistant ATL sélectionné.
 
@@ -62,4 +62,3 @@ Vous pouvez utiliser un des Assistants code ATL pour ajouter un objet ou un cont
 [Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)
-

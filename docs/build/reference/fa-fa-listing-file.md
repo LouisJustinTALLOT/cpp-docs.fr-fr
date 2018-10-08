@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f1d205eff155b628081c5bc615570c44a88f08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eea3159bff6f2c69c94ef31d01b1d6a85104ef13
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412806"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861852"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Fichier listing)
 
@@ -87,9 +87,9 @@ Un fichier listing nommé *nomfichier.extension* est placé dans le texte spéci
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
-2. Sélectionnez le **propriétés de Configuration** > **C/C++** > **fichiers de sortie** page de propriétés.
+1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **fichiers de sortie** page de propriétés.
 
-3. Modifier le **sortie de l’assembleur** propriété à définir le **/FAc** et **/FA** options assembleur, machine et code source. Modifier le **utiliser Unicode pour assembleur répertoriant** propriété à définir le **/FAu** option pour la sortie ANSI ou UTF-8. Modifier le **emplacement de la liste ASM** pour définir le **/Fa** option permettant de répertorier le nom de fichier et l’emplacement.
+1. Modifier le **sortie de l’assembleur** propriété à définir le **/FAc** et **/FA** options assembleur, machine et code source. Modifier le **utiliser Unicode pour assembleur répertoriant** propriété à définir le **/FAu** option pour la sortie ANSI ou UTF-8. Modifier le **emplacement de la liste ASM** pour définir le **/Fa** option permettant de répertorier le nom de fichier et l’emplacement.
 
 Notez que l’affectation à la fois **sortie de l’assembleur** et **utiliser Unicode pour assembleur répertoriant** propriétés peuvent entraîner [avertissement de ligne de commande D9025](../../error-messages/tool-errors/command-line-warning-d9025.md). Pour combiner ces options dans l’IDE, utilisez le **des Options supplémentaires** champ dans le **ligne de commande** page de propriétés à la place.
 

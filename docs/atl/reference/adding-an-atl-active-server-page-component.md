@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112991"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861510"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Ajout d’un composant ASP ATL
 
@@ -36,13 +36,13 @@ Les composants actives Server Pages font partie de l’architecture Internet Inf
 
 - Vous pouvez utiliser les fonctionnalités de gestion des erreurs ASP pour vos applications basées sur le Web.
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Pour ajouter un composant Active Server Page ATL à votre projet
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Pour ajouter un composant Active Server Page ATL à votre projet
 
 1. Dans **l’Explorateur de solutions** cliquez sur le nom du projet auquel vous souhaitez ajouter le composant Active Server Page ATL.
 
-2. Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une classe**.
+1. Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une classe**.
 
-3. Dans le [ajouter une classe](../../ide/add-class-dialog-box.md) boîte de dialogue, dans le volet Modèles, cliquez sur **composant ASP ATL**, puis cliquez sur **Open** pour afficher le [ASP ATL Assistant composant ASP](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. Dans le [ajouter une classe](../../ide/add-class-dialog-box.md) boîte de dialogue le **modèles** volet, cliquez sur **composant ASP ATL**, puis cliquez sur **Open** pour afficher le [Assistant composant ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -52,4 +52,3 @@ Les composants actives Server Pages font partie de l’architecture Internet Inf
 [Ajout d’une méthode](../../ide/adding-a-method-visual-cpp.md)<br/>
 [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Ajout d’une classe C++ générique](../../ide/adding-a-generic-cpp-class.md)
-

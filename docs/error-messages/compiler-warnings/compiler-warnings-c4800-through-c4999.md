@@ -105,12 +105,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f8e2c5e3feea1c7607b8303bc42cef5b2f21e0
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601611"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861419"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Avertissements du compilateur C4800 via C5999
 
@@ -153,6 +153,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 4) C4842|le résultat d '' offsetof' appliqué à un type à l’aide de l’héritage multiple n’est pas garanti pour être cohérente entre les versions du compilateur|
 |Avertissement C4843 du compilateur|«*type1*' : un gestionnaire d’exceptions de référence à un type tableau ou fonction est inaccessible, utilisez '*type2*' à la place|
 |Avertissement C4844 du compilateur|' exporter le module *nom_module*; » est désormais la syntaxe préférée pour déclarer une interface de module|
+|[Avertissement du compilateur (niveau 4) C4866](c4866.md)| compilateur ne peut pas appliquer l’ordre d’évaluation de gauche à droite pour l’appel à *nom_opérateur*|
 |[Avertissement (erreur) du compilateur C4867](compiler-warning-c4867.md)|'*fonction*' : appel manquant de liste d’arguments de fonction ; utilisez '*appeler*' pour créer un pointeur vers membre|
 |[Avertissement (niveau 4) du compilateur C4868](compiler-warning-c4868.md)|«_fichier_(*line_number*) « compilateur ne peut pas appliquer l’ordre d’évaluation de gauche à droite dans la liste d’initialisation entre accolades|
 |Avertissement du compilateur (niveau 2) C4872|flottante point de division par zéro détecté lors de la compilation du graphique des appels pour Concurrency::parallel_for_each à l’emplacement : '*emplacement*'|

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f80abd3b6270f105fecd7ef8b9988a379901b541
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069428"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860210"
 ---
 # <a name="specifying-property-pages"></a>Spécification des Pages de propriétés
 
@@ -32,12 +32,12 @@ Pour implémenter `ISpecifyPropertyPages` à l’aide d’ATL, procédez comme s
 
 1. Dérivez votre classe de [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).
 
-2. Ajoutez une entrée pour `ISpecifyPropertyPages` au mappage COM de votre classe.
+1. Ajoutez une entrée pour `ISpecifyPropertyPages` au mappage COM de votre classe.
 
-3. Ajouter un [PROP_PAGE](reference/property-map-macros.md#prop_page) entrée dans le mappage de propriété pour chaque page associée à votre contrôle.
+1. Ajouter un [PROP_PAGE](reference/property-map-macros.md#prop_page) entrée dans le mappage de propriété pour chaque page associée à votre contrôle.
 
 > [!NOTE]
->  Lors de la génération d’un contrôle standard en utilisant le [Assistant contrôle ATL](../atl/reference/atl-control-wizard.md), vous devez uniquement ajouter les entrées PROP_PAGE au mappage de propriété. L’Assistant génère le code nécessaire pour les autres étapes.
+> Lors de la génération d’un contrôle standard en utilisant le [Assistant contrôle ATL](../atl/reference/atl-control-wizard.md), vous devez uniquement ajouter les entrées PROP_PAGE au mappage de propriété. L’Assistant génère le code nécessaire pour les autres étapes.
 
 Les conteneurs valides affichent les pages de propriétés spécifié dans le même ordre que les entrées PROP_PAGE dans le mappage de propriété. En règle générale, vous devez placer les entrées de page de propriétés standard après les entrées pour vos pages personnalisées dans le mappage de propriété, afin que les utilisateurs voient les pages spécifiques à votre contrôle tout d’abord.
 
@@ -51,4 +51,3 @@ La classe suivante pour un calendrier de contrôles utilise le `ISpecifyProperty
 
 [Pages de propriétés](../atl/atl-com-property-pages.md)<br/>
 [Exemple ATLPages](../visual-cpp-samples.md)
-

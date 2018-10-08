@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75f629c8a9c8a06f02024e9d52ab13b2d12b234c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723305"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860387"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Génération d'une bibliothèque d'importation et d'un fichier d'exportation
 
@@ -52,9 +52,9 @@ Lorsque l’option /DEF est spécifiée, LIB crée les fichiers de sortie à par
 
 1. Un **__declspec (dllexport)** définition de la *objfiles* ou *bibliothèques*
 
-2. Une spécification de /EXPORT :*nom* sur la ligne de commande LIB
+1. Une spécification de /EXPORT :*nom* sur la ligne de commande LIB
 
-3. Une définition dans un **exportations** instruction dans un *deffile*
+1. Une définition dans un **exportations** instruction dans un *deffile*
 
 Ce sont les mêmes méthodes que vous utilisez pour spécifier des exportations lors de la liaison d’un programme exportateur. Un programme peut utiliser plusieurs méthodes. Vous pouvez spécifier les parties de la commande LIB (par exemple plusieurs *objfiles* ou des spécifications /EXPORT) dans un fichier de commandes dans la commande LIB, tout comme vous pouvez dans une commande de lien.
 

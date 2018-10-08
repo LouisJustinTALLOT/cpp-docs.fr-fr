@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714520"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860977"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -82,11 +82,11 @@ Il existe quatre méthodes pour exporter une définition, répertoriées dans l'
 
 1. Le [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) mot clé dans le code source
 
-2. Une instruction `EXPORTS` dans un fichier .DEF
+1. Une instruction `EXPORTS` dans un fichier .DEF
 
-3. Un [/EXPORT](../../build/reference/export-exports-a-function.md) spécification dans une commande LINK
+1. Un [/EXPORT](../../build/reference/export-exports-a-function.md) spécification dans une commande LINK
 
-4. Un [commentaire](../../preprocessor/comment-c-cpp.md) directive dans le code source, sous la forme `#pragma comment(linker, "/export: definition ")`. L’exemple suivant montre une directive de commentaire de #pragma avant une déclaration de fonction, où `PlainFuncName` est le nom non décoré, et `_PlainFuncName@4` est le nom décoré de la fonction :
+1. Un [commentaire](../../preprocessor/comment-c-cpp.md) directive dans le code source, sous la forme `#pragma comment(linker, "/export: definition ")`. L’exemple suivant montre une directive de commentaire de #pragma avant une déclaration de fonction, où `PlainFuncName` est le nom non décoré, et `_PlainFuncName@4` est le nom décoré de la fonction :
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

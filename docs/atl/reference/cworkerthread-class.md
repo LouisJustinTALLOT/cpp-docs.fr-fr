@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79855860b4d2d6bfee328f8fa07f2a3ba6cfd69c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040230"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861458"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread, classe
 
 Cette classe crée un thread de travail ou utilise un, attend sur un ou plusieurs handles d’objet de noyau et exécute une fonction cliente spécifiée lorsqu’une des poignées est signalée.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,7 +46,7 @@ template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *ThreadTraits*<br/>
 La classe de fournir la fonction de création de thread, tel que [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) ou [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
@@ -84,19 +84,19 @@ La classe de fournir la fonction de création de thread, tel que [CRTThreadTrait
 
 1. Créez une instance de cette classe.
 
-2. Appelez [CWorkerThread::Initialize](#initialize).
+1. Appelez [CWorkerThread::Initialize](#initialize).
 
-3. Appelez [CWorkerThread::AddHandle](#addhandle) avec le handle d’un objet de noyau et un pointeur vers une implémentation de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+1. Appelez [CWorkerThread::AddHandle](#addhandle) avec le handle d’un objet de noyau et un pointeur vers une implémentation de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-     - ou
+   \- ou -
 
-     Appelez [CWorkerThread::AddTimer](#addtimer) avec un pointeur vers une implémentation de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+   Appelez [CWorkerThread::AddTimer](#addtimer) avec un pointeur vers une implémentation de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-4. Implémentez [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) à prendre des mesures quand la poignée ou la minuterie est signalée.
+1. Implémentez [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) à prendre des mesures quand la poignée ou la minuterie est signalée.
 
-5. Pour supprimer un objet dans la liste des objets pouvant être attendus, appelez [CWorkerThread::RemoveHandle](#removehandle).
+1. Pour supprimer un objet dans la liste des objets pouvant être attendus, appelez [CWorkerThread::RemoveHandle](#removehandle).
 
-6. Pour mettre fin au thread, appelez [CWorkerThread::Shutdown](#shutdown).
+1. Pour mettre fin au thread, appelez [CWorkerThread::Shutdown](#shutdown).
 
 ## <a name="requirements"></a>Configuration requise
 

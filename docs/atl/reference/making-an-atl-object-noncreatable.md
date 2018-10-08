@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f0b20cbae3036ffecfa63f2e3ee6be8e2153fc8f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099536"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860912"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Rendre un objet ATL comme Noncreatable
 
 Vous pouvez modifier les attributs d’un objet COM basé sur ATL afin qu’un client ne peut pas créer directement de l’objet. Dans ce cas, l’objet serait être retournée via un appel de méthode sur un autre objet plutôt que directement créé.
 
-### <a name="to-make-an-object-noncreatable"></a>Pour rendre un objet comme noncreatable
+## <a name="to-make-an-object-noncreatable"></a>Pour rendre un objet comme noncreatable
 
 1. Supprimer le [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) pour l’objet. Si vous souhaitez que l’objet comme noncreatable mais le contrôle à inscrire, remplacez OBJECT_ENTRY_AUTO avec [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).
 
-2. Ajouter le [noncreatable](../../windows/noncreatable.md) attribut à la coclasse dans le fichier .idl. Exemple :
+1. Ajouter le [noncreatable](../../windows/noncreatable.md) attribut à la coclasse dans le fichier .idl. Exemple :
 
     ```  
     [uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851), 
@@ -52,4 +52,3 @@ Vous pouvez modifier les attributs d’un objet COM basé sur ATL afin qu’un c
 [Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)
-

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116098"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861783"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Assistant Composant COM+ 1.0 ATL
 
@@ -34,7 +34,7 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
    |Option|Description|
    |------------|-----------------|
    |**Double**|Spécifie que l’objet prend en charge une interface double (son vtable a des fonctions d’interface personnalisées et liaison tardive `IDispatch` méthodes). Permet aux clients COM et les contrôleurs Automation pour accéder à l’objet.|
-   |**Personnalisé**|Spécifie que l’objet prend en charge une interface personnalisée (son vtable a des fonctions d’interface personnalisées). Une interface personnalisée peut être plus rapide qu’une interface double, en particulier les limites du processus.<br /><br /> -   **Compatible Automation** ajoute la prise en charge automation à l’interface personnalisée. Pour les projets avec attributs, définit le **oleautomation** attribut dans la coclasse.|
+   |**Personnalisé**|Spécifie que l’objet prend en charge une interface personnalisée (son vtable a des fonctions d’interface personnalisées). Une interface personnalisée peut être plus rapide qu’une interface double, en particulier les limites du processus.<br /><br /> - **Compatible Automation** ajoute la prise en charge automation à l’interface personnalisée. Pour les projets avec attributs, définit le **oleautomation** attribut dans la coclasse.|
 
 - **Pouvant**
 
