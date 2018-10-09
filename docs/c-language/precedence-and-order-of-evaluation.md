@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e318687dfa3cc8e841643e5caf6fe1fbcc00d051
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 953473102a42792dc3ae3afa3b1a8caf507e5648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080764"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861497"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Priorité et ordre d'évaluation
 
@@ -53,7 +53,7 @@ Le tableau ci-dessous résume la priorité et l'associativité (l'ordre dans leq
 
 1. Les opérateurs sont répertoriés par ordre de priorité descendant. Si plusieurs opérateurs apparaissent sur la même ligne ou dans un groupe, ils ont la même priorité.
 
-2. Tous les opérateurs d'assignation simple et composée ont une même priorité.
+1. Tous les opérateurs d'assignation simple et composée ont une même priorité.
 
 Une expression peut contenir plusieurs opérateurs avec une même priorité. Lorsque plusieurs opérateurs de ce type apparaissent au même niveau dans une expression, l'évaluation se poursuit selon l'associativité de l'opérateur, de droite à gauche ou de gauche à droite. Le sens de l’évaluation n’affecte pas les résultats des expressions comprenant plusieurs opérateurs de multiplication (<strong>\*</strong>), plusieurs opérateurs d’addition (**+**) ou plusieurs opérateurs binaires au niveau du bit (**&**, **&#124;** ou **^**), à un même niveau. L'ordre des opérations n'est pas défini par le langage. Le compilateur est libre d'évaluer de telles expressions dans n'importe quel ordre, s'il peut garantir un résultat cohérent.
 
