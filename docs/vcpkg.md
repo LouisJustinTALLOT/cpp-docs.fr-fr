@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42583904"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821423"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg : Gestionnaire de package C++ pour Windows, Linux et MacOS
 
@@ -138,7 +138,7 @@ Exécutez **vcpkg integrate install** pour configurer Visual Studio Code sur Lin
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Cibler Linux à partir de Windows par le biais de WSL
 
-Vous pouvez produire des fichiers binaires Linux à partir d’un ordinateur Windows à l’aide du Sous-système Windows pour Linux (WSL). Suivez les instructions pour [configurer WSL sur Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10), puis configurez-le avec [l’extension Visual Studio pour Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Vous pouvez placer toutes vos bibliothèques générées pour Windows et Linux dans le même dossier et y accéder à partir de Windows et de WSL.
+Vous pouvez produire des fichiers binaires Linux à partir d’un ordinateur Windows à l’aide du Sous-système Windows pour Linux (WSL). Suivez les instructions pour [configurer WSL sur Windows 10](/windows/wsl/install-win10), puis configurez-le avec [l’extension Visual Studio pour Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Vous pouvez placer toutes vos bibliothèques générées pour Windows et Linux dans le même dossier et y accéder à partir de Windows et de WSL.
 
 
 ## <a name="export_binaries_per_project"></a> Exporter les fichiers binaires et les en-têtes compilés
@@ -243,4 +243,3 @@ Une instance de vcpkg comporte les éléments suivants :
 |---------|---------|
 |**--triplet \<t>**|Spécifier le triplet de l’architecture cible. (valeur par défaut : `%VCPKG_DEFAULT_TRIPLET%`, voir aussi **vcpkg help triplet**)|
 |**--vcpkg-root \<chemin>**|Spécifier le répertoire racine de vcpkg (valeur par défaut : `%VCPKG_ROOT%`)|
-

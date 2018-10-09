@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394436"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821216"
 ---
 # <a name="vc-directories-property-page-windows"></a>Répertoires VC++, page de propriétés (Windows)
 
@@ -76,11 +76,13 @@ Remarque : La liste est remplie à mesure que vous tapez. N’appuyez pas sur **
 
 Pour obtenir plus d’informations sur les macros et savoir pourquoi nous vous conseillons de les utiliser à la place des chemins codés de manière irréversible dans la mesure du possible, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Pour obtenir la liste des macros couramment utilisées, consultez [Macros courantes pour les propriétés et les commandes de génération](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
+Pour obtenir la liste des macros couramment utilisées, consultez [Macros courantes pour les propriétés et les commandes de génération](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties).
 
 Pour définir vos propres macros, deux options s’offrent à vous :
--   Définissez des variables d’environnement dans une invite de commandes développeur. Toutes les variables d’environnement sont traitées comme propriétés/macros MSBuild.
--   Définissez des macros utilisateur dans un fichier .props. Pour plus d’informations, consultez [Macros des pages de propriétés](working-with-project-properties.md#bkmkPropertiesVersusMacros).
+
+- Définissez des variables d’environnement dans une invite de commandes développeur. Toutes les variables d’environnement sont traitées comme propriétés/macros MSBuild.
+
+- Définissez des macros utilisateur dans un fichier .props. Pour plus d’informations, consultez [Macros des pages de propriétés](working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
 Pour plus d’informations, consultez ces billets de blog : [VC++ Directories](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [Inherited Properties and Property Sheets](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx) et [Visual Studio 2010 C++ Project Upgrade Guide](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
 

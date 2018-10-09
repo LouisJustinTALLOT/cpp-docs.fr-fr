@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20006118d4bf27c379b78b84dc8807a4fd6c5e6c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b7fe21753dc4310752c1081d17ddff942bcbd89f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34256268"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820995"
 ---
 # <a name="universal-crt-deployment"></a>Déploiement du CRT universel
 
@@ -29,7 +29,7 @@ Le CRT universel est un composant du système d’exploitation Microsoft Windows
 
 ## <a name="central-deployment"></a>Déploiement central
 
-La méthode par défaut pour installer le CRT universel de façon centralisée est d’utiliser Microsoft Windows Update. Comme le CRT universel fait partie des mises à jour recommandées de tous les systèmes d’exploitation Microsoft Windows pris en charge, par défaut, la plupart des machines l’installent dans le cadre du processus de mise à jour normal. La version initiale du CRT universel était [KB2999226](https://support.microsoft.com/en-us/kb/2999226). Une mise à jour ultérieure avec différents correctifs de bogue a été appliquée dans [KB3118401](https://support.microsoft.com/en-us/kb/3118401), et des mises à jour supplémentaires avec d’autres correctifs de bogues et de nouvelles fonctionnalités ont eu lieu par la suite. Pour connaître les dernières mises à jour, recherchez Runtime C universel ou CRT universel dans [support.microsoft.com](https://support.microsoft.com).
+La méthode par défaut pour installer le CRT universel de façon centralisée est d’utiliser Microsoft Windows Update. Comme le CRT universel fait partie des mises à jour recommandées de tous les systèmes d’exploitation Microsoft Windows pris en charge, par défaut, la plupart des machines l’installent dans le cadre du processus de mise à jour normal. La version initiale du CRT universel était [KB2999226](https://support.microsoft.com/kb/2999226). Une mise à jour ultérieure avec différents correctifs de bogue a été appliquée dans [KB3118401](https://support.microsoft.com/kb/3118401), et des mises à jour supplémentaires avec d’autres correctifs de bogues et de nouvelles fonctionnalités ont eu lieu par la suite. Pour connaître les dernières mises à jour, recherchez Runtime C universel ou CRT universel dans [support.microsoft.com](https://support.microsoft.com).
 
 Les ordinateurs Microsoft Windows n’installent pas tous régulièrement les mises à jour à l’aide de Windows Update et certains peuvent ne pas installer les mises à jour recommandées. Pour prendre en charge l’utilisation des applications générées à l’aide des ensembles d’outils Visual Studio 2015 et C++ ultérieurs sur ces ordinateurs, des redistribuables du CRT universel sont disponibles pour une distribution hors connexion. Ces redistribuables peuvent être téléchargés à partir d’un des liens de la Base de connaissances ci-dessus. Notez que les redistribuables du CRT universel nécessitent que l’ordinateur soit mis à jour pour le Service Pack actuel. Par exemple, le redistribuable pour Windows 7 s’installe uniquement sur Windows 7 SP1 et non sur Windows 7 RTM.
 
