@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821567"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890892"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -457,12 +457,6 @@ Contrôles d’affichage de liste peuvent afficher leur contenu de quatre maniè
 - Vue rapport
 
      Chaque élément apparaît sur sa propre ligne, avec des informations supplémentaires sont disposées en colonnes à droite. La colonne de gauche contient la petite icône et une étiquette et les colonnes suivantes contiennent des sous-éléments, comme spécifié par l’application. Un contrôle header incorporé (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implémente ces colonnes. Pour plus d’informations sur le contrôle d’en-tête et les colonnes dans une vue de rapport, consultez [utilisation de CListCtrl : ajout de colonnes au contrôle (vue rapport)](../../mfc/adding-columns-to-the-control-report-view.md).
-
-Voir aussi :
-
-- Article de la Base de connaissances Q250614 : Comment : trier les éléments dans un objet CListCtrl dans la vue rapport
-
-- Article de la Base de connaissances Q200054 : PRB : OnTimer() n’est pas appelée à plusieurs reprises pour un contrôle de liste
 
 Le style d’affichage de liste actuel du contrôle détermine l’affichage actuel. Pour plus d’informations sur ces styles et leur utilisation, consultez [utilisation de CListCtrl : modification des Styles de contrôle liste](../../mfc/changing-list-control-styles.md).
 

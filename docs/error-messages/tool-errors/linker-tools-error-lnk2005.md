@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a3dbb1d63e7d7c6f5e036fc0cde967277c91a40
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028309"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890125"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Erreur des outils Éditeur de liens LNK2005
 
@@ -121,14 +121,3 @@ Voici certaines causes courantes de cette erreur.
     ```
 
    Pour résoudre ce problème, ajoutez [multiple](../../build/reference/force-force-file-output.md) pour les options de ligne de commande de l’éditeur de liens et assurez-vous que uuid.lib est la première bibliothèque référencée.
-
-## <a name="additional-information"></a>Informations supplémentaires
-
-Si vous utilisez une version antérieure de l’ensemble d’outils, consultez les articles de la Base de connaissances pour plus d’informations sur les causes spécifiques de cette erreur :
-
-- [Une erreur LNK2005 se produit lorsque la bibliothèque CRT et les bibliothèques MFC sont liées dans un ordre incorrect dans Visual C++](https://support.microsoft.com/kb/148652)
-
-- [CORRECTIF : Delete surchargé Global opérateur Causes LNK2005](https://support.microsoft.com/kb/140440)
-
-- [Vous recevez des erreurs LNK2005 se produisent lorsque vous compilez un projet exécutable (.exe) de ATL dans Visual C++](https://support.microsoft.com/kb/184235).
-

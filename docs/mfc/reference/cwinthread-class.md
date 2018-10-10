@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c01336094077cc1f451f2e7b479ca4acf9fb77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441354"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890593"
 ---
 # <a name="cwinthread-class"></a>CWinThread (classe)
 
@@ -455,7 +455,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 Le message publié est mappé sur le Gestionnaire de message approprié par la macro de mappage de message ON_THREAD_MESSAGE.
 
 > [!NOTE]
->  Lors de l’appel de la Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) fonction au sein d’une application MFC, le message MFC gestionnaires ne sont pas appelés. Pour plus d’informations, consultez l’article de la Base de connaissances, « PRB : MFC Message Gestionnaire pas appelée avec PostThreadMessage() » (Q142415).
+> Lorsque vous appelez [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), le message est placé dans la file d’attente de messages du thread. Toutefois, étant donné que les messages publiés de cette façon ne sont pas associés à une fenêtre, MFC ne sera pas les répartir entre les gestionnaires de message ou une commande. Pour pouvoir traiter ces messages, remplacer le `PreTranslateMessage()` fonction de votre dérivée de CWinApp classe et gèrent les messages manuellement.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 
@@ -490,7 +490,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Paramètres
 
-*Code*<br/>
+*code*<br/>
 Spécifie un code de raccordement. Cette fonction membre utilise le code pour déterminer comment traiter *lpMsg.*
 
 *lpMsg*<br/>

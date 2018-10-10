@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ceb004cba243d6e2e9c44aadcaa40670ef7a0bbb
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820468"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890255"
 ---
 # <a name="project-build-error-prj0016"></a>Erreur de génération de projet PRJ0016
 
@@ -37,8 +37,4 @@ Pour résoudre cette erreur, supprimez la clé RestrictRun. Si cette clé de Reg
 
 Une autre cause de cette erreur est que votre paramètre de stratégie n’inclut pas VCSpawn.exe sous la clé de Registre HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun comme programme Windows autorisé pour ce compte d’utilisateur.
 
-Pour plus d’informations, consultez :
-
-- Base de connaissances l’article 324153, qui est disponible sur [ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153).
-
-- [Respect des paramètres de stratégie système](https://msdn.microsoft.com/library/aa372139), la section sur « Exécuter uniquement Windows applications autorisées ».
+Pour plus d’informations, consultez [adhérant aux paramètres de stratégie système](https://msdn.microsoft.com/library/aa372139), dans la section sur « Exécuter uniquement Windows applications autorisées ».

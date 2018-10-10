@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407534"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890555"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Contrôles ActiveX MFC : sous-classement d'un contrôle Windows
 
@@ -48,10 +48,8 @@ Pour sous-classer un contrôle Windows, effectuez les tâches suivantes :
 
 - [Gérer les messages de contrôle ActiveX (OCM Renvoyés) au contrôle](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  Cette opération est effectuée pour vous par l’Assistant contrôle ActiveX si vous sélectionnez le contrôle pour être sous-classé à l’aide de la **sélectionner une classe de fenêtre parente** liste déroulante sur le **paramètres de contrôle** page.
-
-Consultez l'article Q243454 de la Base de connaissances pour plus d'informations sur le sous-classement d'un contrôle.
+   > [!NOTE]
+   > Cette opération est effectuée pour vous par l’Assistant contrôle ActiveX si vous sélectionnez le contrôle pour être sous-classé à l’aide de la **sélectionner une classe de fenêtre parente** liste déroulante sur le **paramètres de contrôle** page.
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Remplacement de IsSubclassedControl et PreCreateWindow
 

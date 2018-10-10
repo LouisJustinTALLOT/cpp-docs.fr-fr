@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e1920b2163a318fbdba3b64d56bf74a8cd809f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5d9bb276ded32d8b263e64a8ea70f2c1953ee24b
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085898"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890294"
 ---
 # <a name="compiler-error-c2535"></a>Erreur du compilateur C2535
 
@@ -30,8 +30,6 @@ ms.locfileid: "46085898"
 Cette erreur peut être dû à l’aide de la même liste de paramètres formels dans plus d’une définition ou déclaration d’une fonction surchargée.
 
 Si vous obtenez C2535 en raison de la fonction Dispose, consultez [destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) pour plus d’informations.
-
-Si vous compilez un projet ATL, consultez l’article Q241852 de la Base de connaissances Microsoft.
 
 L’exemple suivant génère l’erreur C2535 :
 

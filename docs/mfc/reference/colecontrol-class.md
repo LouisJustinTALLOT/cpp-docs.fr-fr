@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435530"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890866"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -957,7 +957,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>Paramètres
 
 *pPX*<br/>
-Un pointeur vers un `CPropExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de propriété, notamment sa direction.
+Pointeur vers un objet `CPropExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de propriété, notamment sa direction.
 
 ### <a name="remarks"></a>Notes
 
@@ -977,7 +977,7 @@ void DoSuperclassPaint(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique du conteneur de contrôle.
 
 *rcBounds*<br/>
@@ -1001,7 +1001,7 @@ void DrawContent(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique.
 
 *rc*<br/>
@@ -1023,7 +1023,7 @@ void DrawMetafile(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique de métafichier.
 
 *rc*<br/>
@@ -1093,7 +1093,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>Paramètres
 
 *pPX*<br/>
-Un pointeur vers un `CPropExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de propriété, notamment sa direction.
+Pointeur vers un objet `CPropExchange` . L’infrastructure fournit cet objet pour établir le contexte de l’échange de propriété, notamment sa direction.
 
 *dwVersionDefault*<br/>
 Le numéro de version actuel du contrôle.
@@ -2158,7 +2158,7 @@ Différent de zéro si le contrôle a été initialisé ; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Implémentation de l’infrastructure de `IDispatch::Invoke` appels `IsInvokeAllowed` pour déterminer si une fonction donnée (identifié par `dispid`) peuvent être appelées. Le comportement par défaut pour un contrôle OLE consiste à autoriser les méthodes automation d’être appelée uniquement si le contrôle a été initialisé ; Toutefois, `IsInvokeAllowed` est une fonction virtuelle et ne peut être remplacée si nécessaire (par exemple, lorsque le contrôle est utilisé en tant que serveur automation). Pour plus d’informations, consultez l’article Q166472, de la Base de connaissances « Comment faire : utiliser un contrôle OLE en tant que serveur Automation. » Articles de la Base de connaissances sont disponibles dans [ http://support.microsoft.com ](http://support.microsoft.com/).
+Implémentation de l’infrastructure de `IDispatch::Invoke` appels `IsInvokeAllowed` pour déterminer si une fonction donnée (identifié par `dispid`) peuvent être appelées. Le comportement par défaut pour un contrôle OLE consiste à autoriser les méthodes automation d’être appelée uniquement si le contrôle a été initialisé ; Toutefois, `IsInvokeAllowed` est une fonction virtuelle et ne peut être remplacée si nécessaire (par exemple, lorsque le contrôle est utilisé en tant que serveur automation).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 
@@ -2393,7 +2393,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Le contexte de périphérique dans lequel le dessin se produit.
 
 *rcBounds*<br/>
@@ -2418,7 +2418,7 @@ virtual void OnDrawMetafile(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Le contexte de périphérique dans lequel le dessin se produit.
 
 *rcBounds*<br/>
@@ -3603,7 +3603,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Identifie le contexte de périphérique de conteneur doit être publié.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3709,7 +3709,7 @@ CFont* SelectFontObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers un objet de contexte de périphérique.
 
 *fontHolder*<br/>
@@ -3729,7 +3729,7 @@ CFont* SelectStockFont(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Le contexte de périphérique dans lequel la police est sélectionnée.
 
 ### <a name="return-value"></a>Valeur de retour

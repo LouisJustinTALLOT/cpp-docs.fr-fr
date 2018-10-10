@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ca5b649ba5d09d0406658112b8067ed804f7e70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 81ecc91d8c942a36920368bdb4054ffc2145478d
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423934"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890723"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 
@@ -470,8 +470,6 @@ Le type de sélection peut être n’importe quelle combinaison des indicateurs 
 L’implémentation par défaut retourne la valeur NULL. Il s’agit d’une avancée substituable.
 
 Pour plus d’informations, consultez [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) et [structure CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) dans le SDK Windows.
-
-Pour plus d’informations sur la `OLEOBJECT` de type, consultez l’article de Structures de données OLE et Allocation de la Structure dans le *Base de connaissances OLE*.
 
 ##  <a name="getdocument"></a>  CRichEditView::GetDocument
 
@@ -1058,7 +1056,7 @@ long PrintInsideRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers un contexte de périphérique pour la zone de sortie.
 
 *rectLayout*<br/>
@@ -1098,7 +1096,7 @@ long PrintPage(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers un contexte de périphérique pour la sortie de page.
 
 *nIndexStart*<br/>

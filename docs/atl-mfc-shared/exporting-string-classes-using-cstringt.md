@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444202"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889969"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Exporter des Classes de chaîne à l’aide de CStringT
 
@@ -29,7 +29,7 @@ Dans le passé, les développeurs MFC ont dérivé `CString` pour spécialiser l
 
 - Avec la nouvelle `CStringT` classe de modèle, vous pouvez personnaliser `CString` comportement à l’aide des paramètres de modèle qui spécifient les caractéristiques de caractère, similaires aux modèles dans la bibliothèque C++ Standard.
 
-- Lorsque vous exportez votre propre classe de chaîne à partir d’une DLL à l’aide `CStringT`, le compilateur exporte également automatiquement la `CString` classe de base. Dans la mesure où `CString` lui-même est une classe de modèle, elle peut être instanciée par le compilateur lorsqu’il est utilisé, à moins que le compilateur connaît qui `CString` est importée à partir d’une DLL. Si vous avez migré des projets à partir de Visual C++ 6.0 vers Visual C++ .NET, vous avez peut-être vu des erreurs de symbole de l’éditeur de liens pour un défini à plusieurs reprises `CString` en raison de la collision de la `CString` importées à partir d’une DLL et la version instanciée localement. La méthode appropriée pour ce faire est décrite ci-dessous. Pour plus d’informations sur ce problème, consultez l’article de la Base de connaissances, « erreurs de liaison lorsque vous importez des dérivées de CString Classes » (Q309801) à [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).
+- Lorsque vous exportez votre propre classe de chaîne à partir d’une DLL à l’aide `CStringT`, le compilateur exporte également automatiquement la `CString` classe de base. Dans la mesure où `CString` lui-même est une classe de modèle, elle peut être instanciée par le compilateur lorsqu’il est utilisé, à moins que le compilateur connaît qui `CString` est importée à partir d’une DLL. Si vous avez migré des projets à partir de Visual C++ 6.0 vers Visual C++ .NET, vous avez peut-être vu des erreurs de symbole de l’éditeur de liens pour un défini à plusieurs reprises `CString` en raison de la collision de la `CString` importées à partir d’une DLL et la version instanciée localement. La méthode appropriée pour ce faire est décrite ci-dessous.
 
 Le scénario suivant entraîne l’éditeur de liens produire des erreurs de symboles pour les classes définis à plusieurs reprises. Supposons que vous exportez un `CString`-classe dérivée (`CMyString`) à partir d’une DLL d’extension MFC :
 

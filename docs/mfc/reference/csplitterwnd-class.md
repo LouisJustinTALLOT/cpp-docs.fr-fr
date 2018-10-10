@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389538"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890671"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd, classe
 
@@ -181,11 +181,7 @@ Une fenêtre fractionnée prend en charge les barres de défilement spécial (mi
 
 Vous créez ces barres de défilement spéciaux lors de la création de la fenêtre de séparateur. Par exemple, un `CSplitterWnd` qui a une ligne, deux colonnes et le style WS_VSCROLL affiche une barre de défilement verticale qui est partagée par les deux volets. Lorsque l’utilisateur déplace la barre de défilement, WM_VSCROLL sont envoyés dans les deux volets. Lorsque les volets définir la position de la barre de défilement, la barre de défilement partagé est définie.
 
-Pour plus d’informations sur les fenêtres fractionnées, consultez :
-
-- [Note technique 29](../../mfc/tn029-splitter-windows.md)
-
-- Article de la Base de connaissances Q262024 : HOWTO : CPropertySheet utilisation comme un enfant de CSplitterWnd
+Pour plus d’informations sur les fenêtres fractionnées, consultez [Technical Note 29](../../mfc/tn029-splitter-windows.md).
 
 Pour plus d’informations sur la création de fenêtres fractionnées dynamiques, consultez :
 
@@ -818,7 +814,7 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique dans lequel dessiner. Si *pDC* est NULL, puis [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) est appelée par le framework et aucun fractionnement fenêtre est dessinée.
 
 *%nLes*<br/>
@@ -898,7 +894,7 @@ Si *pWnd* est NULL, spécifie la ligne dans le volet qui est actif.
 Si *pWnd* est NULL, spécifie la colonne dans le volet qui est actif.
 
 *pWnd*<br/>
-Un pointeur vers un `CWnd` objet. Si NULL, le volet spécifié par *ligne* et *col* a la valeur active. Si non NULL, spécifie le volet a la valeur actif.
+Pointeur vers un objet `CWnd` . Si NULL, le volet spécifié par *ligne* et *col* a la valeur active. Si non NULL, spécifie le volet a la valeur actif.
 
 ### <a name="remarks"></a>Notes
 
@@ -1043,7 +1039,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers un contexte de périphérique.
 
 ### <a name="remarks"></a>Notes

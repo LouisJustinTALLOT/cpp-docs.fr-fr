@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60397fea85e3fd121469ae4568dac18fa6b9ddb1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429745"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890320"
 ---
 # <a name="import-directive-c"></a>#import, directive (C++)
 **Spécifique à C++**  
@@ -185,11 +185,9 @@ Si une bibliothèque de types inclut des références aux types définis dans d'
 Le nom de fichier réel dans le **#import** commentaire est le chemin d’accès complet de la bibliothèque de types à références croisées, tel que stocké dans le Registre. Si vous rencontrez des erreurs dues à des définitions de type manquantes, vérifiez les commentaires au début du .TLH pour voir quelles bibliothèques de types dépendants doivent être importées en premier. Les erreurs possibles sont des erreurs de syntaxe, par exemple C2143, C2146, C2321, C2501 (decl-specifiers absents) ou C2433 (« inline » non autorisé dans la déclaration de données) lors de la compilation du fichier .TLI.  
   
 Vous devez déterminer quel de la dépendance commentaires ne sont pas fournis par les en-têtes systèmes et ensuite fournissent un **#import** directive à un moment donné avant le **#import** directive du dépendant bibliothèque de types pour résoudre les erreurs.  
-  
-Pour plus d'informations, consultez l'article de la Base de connaissances « Les méthodes de Wrapper #import peuvent provoquer une violation d'accès » (n° 242527) ou « Erreurs du compilateur lors de l'utilisation de #import avec XML » (n° 269194). Vous trouverez les articles de la Base de connaissances sur le média MSDN Library ou à [Support Microsoft](https://support.microsoft.com/).  
-  
-##  <a name="_predir_the_23import_directive_import_attributes"></a> attributs #import  
- 
+
+##  <a name="_predir_the_23import_directive_import_attributes"></a> attributs #import
+
 **#import** peut éventuellement inclure un ou plusieurs attributs. Ces attributs demandent au compilateur de modifier le contenu des en-têtes de bibliothèque de types. Une barre oblique inverse (**\\**) symbole peut être utilisé pour inclure des lignes supplémentaires dans un seul **#import** instruction. Exemple :  
   
 ```  
