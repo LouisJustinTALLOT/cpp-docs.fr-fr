@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa8370bb02e71c457f7967d5cb6b508e743333e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373933"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889986"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Contrôles ActiveX MFC : création d'un serveur Automation
 
@@ -33,7 +33,7 @@ Vous pouvez développer un contrôle ActiveX MFC en tant que serveur Automation 
 
 1. [Ajouter des méthodes](../mfc/mfc-activex-controls-methods.md).
 
-1. Substituer [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). Pour plus d’informations, consultez l’article Q146120 de la Base de connaissances.
+1. Substituer [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed).
 
 1. Générer le contrôle.
 

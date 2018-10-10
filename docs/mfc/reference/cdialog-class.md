@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419546"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890619"
 ---
 # <a name="cdialog-class"></a>CDialog (classe)
 
@@ -133,11 +133,7 @@ Une boîte de dialogue modale ferme automatiquement lorsque l’utilisateur appu
 
 Lorsque vous implémentez une boîte de dialogue non modale, vous devez toujours remplacer le `OnCancel` fonction membre et appelez `DestroyWindow` à partir de qu’il contient. N’appelez pas la classe de base `CDialog::OnCancel`, car il appelle `EndDialog`, qui rendent la boîte de dialogue invisibles mais pas détruira ce dernier. Vous devez également substituer `PostNcDestroy` pour les boîtes de dialogue non modale afin de pouvoir supprimer **cela**, étant donné que les boîtes de dialogue non modales sont généralement attribués avec **nouveau**. Boîtes de dialogue modales sont généralement construits sur le frame et n’avez pas besoin de `PostNcDestroy` nettoyage.
 
-Pour plus d’informations sur `CDialog`, consultez :
-
-- [Boîtes de dialogue](../../mfc/dialog-boxes.md)
-
-- Article de la Base de connaissances Q262954 : comment faire : créer une boîte de dialogue redimensionnables avec barres de défilement
+Pour plus d’informations sur `CDialog`, consultez [boîtes de dialogue](../../mfc/dialog-boxes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -281,7 +277,7 @@ Utiliser le style WS_VISIBLE dans le modèle de boîte de dialogue si la boîte 
 
 Utilisez le `CWnd::DestroyWindow` fonction pour détruire une boîte de dialogue créée par le `CreateIndirect` (fonction).
 
-Les boîtes de dialogue qui contiennent des contrôles ActiveX nécessitent des informations supplémentaires fournies dans une ressource DLGINIT. Pour plus d’informations, consultez l’article Q231591, de la Base de connaissances « Comment faire : utiliser un modèle de boîte de dialogue pour créer une boîte de dialogue MFC avec un contrôle ActiveX. » Articles de la Base de connaissances sont disponibles dans [ http://support.microsoft.com ](http://support.microsoft.com/).
+Les boîtes de dialogue qui contiennent des contrôles ActiveX nécessitent des informations supplémentaires fournies dans une ressource DLGINIT.
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -410,7 +406,7 @@ Différent de zéro si l’objet de la boîte de dialogue a été créé et init
 
 Pour créer une boîte de dialogue modale indirectement, tout d’abord d’allouer un bloc global de mémoire et de le remplir avec le modèle de boîte de dialogue. Appelez ensuite la vider `CDialog` constructeur pour construire l’objet de la boîte de dialogue. Ensuite, appelez `InitModalIndirect` pour stocker votre handle vers le modèle de boîte de dialogue en mémoire. La boîte de dialogue Windows est créée et affichée ensuite, lorsque le [DoModal](#domodal) fonction membre est appelée.
 
-Les boîtes de dialogue qui contiennent des contrôles ActiveX nécessitent des informations supplémentaires fournies dans une ressource DLGINIT. Pour plus d’informations, consultez l’article Q231591, de la Base de connaissances « Comment faire : utiliser un modèle de boîte de dialogue pour créer une boîte de dialogue MFC avec un contrôle ActiveX. » Articles de la Base de connaissances sont disponibles dans [ http://support.microsoft.com ](http://support.microsoft.com/).
+Les boîtes de dialogue qui contiennent des contrôles ActiveX nécessitent des informations supplémentaires fournies dans une ressource DLGINIT.
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

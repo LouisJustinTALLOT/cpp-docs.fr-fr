@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 038c3475a6041dfb719bb2270a87ac2898f8b958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e4bdc67e13db11949371e2f9e3d8a205b146d701
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036754"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890112"
 ---
 # <a name="compiler-error-c2872"></a>Erreur du compilateur C2872
 
@@ -31,7 +31,11 @@ Le compilateur ne peut pas déterminer quel symbole que vous faites référence.
 
 C2872 peut se produire si un fichier d’en-tête inclut un [à l’aide de la directive](../../cpp/namespaces-cpp.md#using_directives), et un fichier d’en-tête suivant est inclus qui contient un type qui se trouve également dans l’espace de noms spécifié dans la `using` directive. Spécifiez un `using` directive uniquement une fois que toutes vos fichiers d’en-tête sont spécifiés avec `#include`.
 
-Pour plus d’informations sur C2872, consultez les articles de Base de connaissances [PRB : du compilateur erreurs lorsque vous utilisez #import avec XML dans Visual C++ .NET](http://support.microsoft.com/kb/316317) et [« erreur C2872 : 'Plateforme' : symbole ambigu « message d’erreur lorsque vous utilisez le Espace de noms Windows::Foundation::Metadata dans Visual Studio 2013](https://support.microsoft.com/kb/2890859).
+C2872 peut se produire dans Visual Studio 2013 en raison d’un conflit entre la le `Windows::Foundation::Metadata::Platform` enum type et C++ / c++ / CX-défini `Platform` espace de noms. Pour contourner ce problème, procédez comme suit :
+
+- Supprimez la clause « à l’aide d’espace de noms Windows::Foundation::Metadata » à partir des fichiers projet.
+
+- Spécifiez le nom qualifié complet pour tout type qui est inclus dans cet espace de noms.
 
 ## <a name="example"></a>Exemple
 

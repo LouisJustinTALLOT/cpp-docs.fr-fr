@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 912bbd37d4d9afcb60158d41b82b7fa829eeb4ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821502"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890645"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -256,7 +256,7 @@ Si vous créez un `CComboBox` objet au sein d’une boîte de dialogue (via une 
 
 Si vous incorporez un `CComboBox` objet dans une autre fenêtre de l’objet, vous n’avez pas besoin de le détruire. Si vous créez le `CComboBox` de l’objet sur la pile, il est supprimé automatiquement. Si vous créez le `CComboBox` objet sur le tas à l’aide de la **nouveau** (fonction), vous devez appeler **supprimer** sur l’objet à détruire lors de la destruction de la zone de liste déroulante Windows.
 
-**Remarque** si vous souhaitez gérer les messages WM_KEYDOWN et WM_CHAR, vous devrez sous-classer la zone de liste déroulante Modifier et les contrôles de zone de liste, dériver des classes de `CEdit` et `CListBox`, et ajoutent des gestionnaires pour les messages aux classes dérivées. Pour plus d’informations, consultez [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) et [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Remarque** si vous souhaitez gérer les messages WM_KEYDOWN et WM_CHAR, vous devrez sous-classer la zone de liste déroulante Modifier et les contrôles de zone de liste, dériver des classes de `CEdit` et `CListBox`, et ajoutent des gestionnaires pour les messages aux classes dérivées. Pour plus d’informations, consultez [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -1070,7 +1070,7 @@ Index de base zéro de la position à laquelle la chaîne a été insérée. La 
 
 ### <a name="remarks"></a>Notes
 
-Contrairement à la [AddString](#addstring) fonction membre, le `InsertString` fonction membre n’entraîne pas une liste avec la [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style à trier.
+Contrairement à la fonction membre [AddString](#addstring) , la fonction membre `InsertString` n’entraîne pas le tri d’une liste associée au style [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
 > [!NOTE]
 >  Cette fonction n’est pas pris en charge par le Windows `ComboBoxEx` contrôle. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) dans le SDK Windows.

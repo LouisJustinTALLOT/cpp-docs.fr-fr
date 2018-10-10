@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409569"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890358"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Mise à niveau d'un contrôle ActiveX
 
@@ -56,7 +56,7 @@ Vous pouvez également ajouter des optimisations, comme décrit dans [contrôles
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Empaqueter le Code pour le téléchargement
 
-Pour plus d’informations sur ce sujet, consultez l’article de la Base de connaissances « Packaging MFC des contrôles pour utilisation sur Internet » (Q167158). Vous pouvez trouver des articles de la Base de connaissances à [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
+Pour plus d’informations sur ce sujet, consultez [empaquetage des contrôles ActiveX](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
 
 ### <a name="the-codebase-tag"></a>La balise CODEBASE
 
@@ -94,7 +94,7 @@ Fichiers CAB sont la méthode recommandée pour les contrôles ActiveX de packag
 
 ### <a name="creating-cab-files"></a>Création de fichiers CAB
 
-Vous pouvez télécharger le Kit de développement CAB à partir de l’article de la Base de connaissances [310618 : Kit de développement logiciel Microsoft Cabinet](http://go.microsoft.com/fwlink/p/?linkid=148204). Dans ce kit, vous trouverez les outils nécessaires pour créer des fichiers CAB.
+Outils pour créer des fichiers CAB sont désormais partie de la [SDK Windows 10](https://dev.windows.com/downloads/windows-10-sdk).
 
 Le fichier cab vers lequel pointe `CODEBASE` doit contenir le fichier .ocx pour votre contrôle ActiveX et un fichier .inf pour contrôler son installation. Vous créez le fichier CAB en spécifiant le nom de votre fichier de contrôle et un fichier .inf. N’incluez pas les DLL dépendantes qui existent déjà sur le système dans le fichier CAB. Par exemple, les DLL MFC sont empaquetées dans un fichier CAB distinct et référencés par le fichier .inf du contrôle.
 

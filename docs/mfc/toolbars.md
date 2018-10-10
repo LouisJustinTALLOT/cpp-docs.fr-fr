@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd7e0a1b2786a92d7a0e64b85417ddb82c82871
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437792"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890542"
 ---
 # <a name="toolbars"></a>Barres d'outils
 
@@ -38,10 +38,7 @@ La famille de la barre d’outils d’articles décrit les barres d’outils MFC
 
 - [Exemple](../mfc/toolbar-sample-list.md)
 
-Pour plus d’informations sur les barres d’outils MFC, consultez l’article Q232017, « Comment faire : ajouter à barre d’outils boutons de texte, » dans la Base de connaissances Microsoft à http://support.microsoft.com.
-
 ## <a name="see-also"></a>Voir aussi
 
 [Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
 [Éditeur de barres d’outils](../windows/toolbar-editor.md)
-

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df67a24fa9bae63bbaf1bba344aa7f684ec91123
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79da071b592a31ea3fe7ca486a7e02abc770f08e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081908"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890086"
 ---
 # <a name="compiler-error-c2989"></a>Erreur du compilateur C2989
 
@@ -29,11 +29,9 @@ ms.locfileid: "46081908"
 
 La classe générique ou un modèle redéfinit une classe sans modèle ou non générique. Vérifiez les fichiers d’en-tête pour les conflits.
 
-Si vous utilisez des spécialisations partielles de modèle de classe, consultez l’article Q240866 de la Base de connaissances.
-
 L’exemple suivant génère l’erreur C2989 :
 
-```
+```cpp
 // C2989.cpp
 // compile with: /c
 class C{};
@@ -45,7 +43,7 @@ class C2{};
 
 C2989 peut également se produire lors de l’utilisation de génériques :
 
-```
+```cpp
 // C2989b.cpp
 // compile with: /clr /c
 ref class GC1;

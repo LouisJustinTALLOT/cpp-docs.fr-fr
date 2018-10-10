@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd69813251a96051f844051f27155e1d4ed404d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393416"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890529"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -118,8 +118,6 @@ Pour plus d’informations sur `CControlBar`, consultez :
 - [Barres de contrôles](../../mfc/control-bars.md)
 
 - [Note technique 31 : Barres de contrôles](../../mfc/tn031-control-bars.md).
-
-- Article de la Base de connaissances Q242577 : PRB : mise à jour de commande interface utilisateur gestionnaires ne fonctionnent pas pour le Menu attaché à une boîte de dialogue
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -248,7 +246,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contexte de périphérique à utiliser pour le rendu de la bordure et la barre de redimensionnement de la barre de contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -269,7 +267,7 @@ virtual void DrawBorders(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contexte de périphérique à utiliser pour restituer les bordures de la barre de contrôle.
 
 *Rect*<br/>
@@ -291,7 +289,7 @@ virtual void DrawGripper(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contexte de périphérique à utiliser pour le rendu de la barre de redimensionnement de barre de contrôle.
 
 *Rect*<br/>
@@ -549,7 +547,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ### <a name="parameters"></a>Paramètres
 
 *pWnd*<br/>
-Un pointeur vers un `CWnd` objet.
+Pointeur vers un objet `CWnd` .
 
 ### <a name="remarks"></a>Notes
 

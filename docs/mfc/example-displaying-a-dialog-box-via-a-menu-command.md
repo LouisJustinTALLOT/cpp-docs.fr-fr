@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2869e936115317ff34183b55ba16fe8e9cdc4d2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378187"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890203"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Exemple : affichage d'une boîte de dialogue via une commande de menu
 
@@ -98,12 +98,7 @@ Les procédures utilisent les noms et valeurs suivants :
 
          [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
 
-En outre, consultez l’article suivant de la Base de connaissances :
-
-- Q251059 : Comment : fournir votre propre nom de classe de fenêtre pour une boîte de dialogue MFC
-
 ## <a name="see-also"></a>Voir aussi
 
 [Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
 [Boîtes de dialogue modales et non modales](../mfc/modal-and-modeless-dialog-boxes.md)
-

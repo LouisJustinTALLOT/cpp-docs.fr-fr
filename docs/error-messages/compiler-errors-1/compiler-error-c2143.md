@@ -16,20 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6352c87748bafa635d8d6dae29bf37b78ac6c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c729ecbdea13c36cf5df71efa16d12853fc4433
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041985"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890492"
 ---
 # <a name="compiler-error-c2143"></a>Erreur du compilateur C2143
 
 Erreur de syntaxe : manquant 'token1' avant 'token2'
 
 Le compilateur attendait un jeton spécifique (autrement dit, un élément de langage autres que des espaces blancs) et un autre jeton trouvé à la place.
-
-Pour plus d’informations sur cette erreur quand il se produit lorsque vous utilisez un bloc try de fonction, consultez [l’article de la Base de connaissances 241706](http://support.microsoft.com/kb/241706).
 
 Vérifier le [référence du langage C++](../../cpp/cpp-language-reference.md) pour déterminer où le code est syntaxiquement incorrect. Étant donné que le compilateur peut signaler cette erreur après avoir rencontré la ligne qui provoque le problème, vérifiez plusieurs lignes de code qui précèdent l’erreur.
 

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 575ba3786e6639e5d6801ec9555c4a85f9732b20
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13b71838bb4db152fb76fa1115a426e2711422ea
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415731"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890580"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (classe)
 
@@ -223,7 +223,7 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction membre dans le constructeur de votre `CCmdTarget`-objet dérivé s’il fournit des informations de type. Pour plus d’informations, consultez l’article de la Base de connaissances Q185720, « comment faire : fournir des informations de Type à partir d’un serveur d’Automation MFC. » Articles de la Base de connaissances sont disponibles dans [ http://support.microsoft.com ](http://support.microsoft.com/).
+Appelez cette fonction membre dans le constructeur de votre `CCmdTarget`-objet dérivé s’il fournit des informations de type.
 
 ##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor
 
@@ -303,8 +303,6 @@ TRUE en cas de réussite, sinon, FALSE. En cas de réussite, \* *pIID* est défi
 ### <a name="remarks"></a>Notes
 
 Les classes dérivées doivent remplacer cette fonction membre (si ne pas substituée, `GetDispatchIID` renvoie la valeur FALSE). Consultez [COleControl](../../mfc/reference/colecontrol-class.md).
-
-Pour plus d’informations, consultez l’article de la Base de connaissances Q185720, « comment faire : fournir des informations de Type à partir d’un serveur d’Automation MFC. » Articles de la Base de connaissances sont disponibles dans [ http://support.microsoft.com ](http://support.microsoft.com/).
 
 ##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch
 
@@ -407,7 +405,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un `CTypeLibCache` objet.
+Pointeur vers un objet `CTypeLibCache` .
 
 ### <a name="remarks"></a>Notes
 

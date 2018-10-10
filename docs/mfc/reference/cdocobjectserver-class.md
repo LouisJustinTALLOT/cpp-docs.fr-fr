@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f31d837b4b83a477d6b919f2d5bbd5efa00f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 552252c8826e167b4aaa21aa41e489bbc8179ec3
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381073"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890373"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer, classe
 
@@ -74,10 +74,6 @@ Un document de serveur DocObject peut contenir [CDocObjectServerItem](../../mfc/
 Pour personnaliser votre serveur DocObject, dérivez votre propre classe de `CDocObjectServer` et substituer ses fonctions d’installation de la vue, [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), et [OnSaveViewState ](#onsaveviewstate). Vous devez fournir une nouvelle instance de votre classe en réponse aux appels de framework.
 
 Pour plus d’informations sur DocObjects, consultez [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) et [COleCmdUI](../../mfc/reference/colecmdui-class.md) dans le *référence MFC*.
-
-Consultez également l’article suivant de la Base de connaissances :
-
-- Q247382 : PRB : info-bulles pour les contrôles dans le serveur de Document ActiveX sont masqués par le conteneur de Document ActiveX
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 

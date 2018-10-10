@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432815"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890334"
 ---
 # <a name="activex-controls-on-the-internet"></a>Contrôles ActiveX sur Internet
 
@@ -170,10 +170,6 @@ Des monikers asynchrones permettent de télécharger les données sur un réseau
 Par exemple, si seuls dix (10) octets sont disponibles et que la lecture est appelée de manière asynchrone dans un fichier de un (1) Ko, la lecture ne se bloquera pas, mais retournera les dix (10) octets disponibles.
 
 Vous implémentez [monikers asynchrones](../mfc/asynchronous-monikers-on-the-internet.md) à l’aide de la `CAsyncMonikerFile` classe. Toutefois, les contrôles ActiveX peuvent utiliser la classe `CDataPathProperty`, dérivée de `CAsyncMonikerFile`, pour implémenter des propriétés de contrôle asynchrones.
-
-L'exemple ASYNDOWN montre comment configurer une boucle asynchrone en utilisant des minuteries pour lire les données. ASYNDOWN est décrit en détail dans l'article de la Base de connaissances relatif à la "procédure : AsyncDown illustre le téléchargement asynchrone de données" (Q177244) et peut être téléchargé à partir du Centre de téléchargement Microsoft. (Pour plus d'informations sur le téléchargement de fichiers à partir du Centre de téléchargement Microsoft, consultez l'article relatif à la "procédure d'obtention des fichiers de support technique Microsoft depuis les services en ligne" (Q119591) dans la Base de connaissances Microsoft.) Vous pouvez trouver des articles de la Base de connaissances à [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
-
-La technique de base utilisée dans ASYNDOWN consiste à définir une minuterie dans **CDataPathProperty::OnDataAvailable** pour indiquer quand les données sont disponibles. Si le message de la minuterie est accepté, l'application lit des blocs de 128 octets de données et remplit un contrôle d'édition. Si les données ne sont pas disponibles lorsque le message de la minuterie est traité, la minuterie est désactivée. `OnDataAvailable` démarre la minuterie si davantage de données arrivent ultérieurement.
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Affichage d’un contrôle sur une page web
 

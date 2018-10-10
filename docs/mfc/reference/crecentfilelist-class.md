@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393306"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890606"
 ---
 # <a name="crecentfilelist-class"></a>Crecentfilelist, classe
 
@@ -78,10 +78,6 @@ class CRecentFileList
 ## <a name="remarks"></a>Notes
 
 Les fichiers peuvent être ajoutés ou supprimés à partir de la liste des fichiers des derniers fichiers utilisés, la liste des fichiers permettre être lues ou écrite dans le Registre ou un. Fichier INI et le menu Affichage de la liste des fichiers MRU peuvent être mis à jour.
-
-Pour plus d’informations sur les éléments de menu des derniers fichiers utilisés, consultez
-
-- Article de la Base de connaissances Q243751 : Comment : ajouter des gestionnaires de commandes pour les éléments de Menu des derniers fichiers utilisés dans une Application MFC
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b318c663bb036629086d0bca9a67641e3c4c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23bb1a6fcf64590670ede2eb6aca232a5a3b4f5c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093751"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889989"
 ---
 # <a name="compiler-error-c2668"></a>Erreur du compilateur C2668
 
@@ -31,15 +31,11 @@ L’appel de fonction surchargée spécifié n’a pas pu être résolu. Voulez-
 
 Vous pouvez également obtenir cette erreur à l’aide du modèle. Si, dans la même classe, vous avez une fonction membre régulière et une fonction membre basé sur un modèle avec la même signature, celui qui est basé sur un modèle doit figurer en premier. Il s’agit d’une limitation de l’implémentation actuelle de Visual C++.
 
-Consultez l’article Q240869 de la Base de connaissances Microsoft pour plus d’informations sur le classement partiel des modèles de fonction.
-
-Si vous générez un projet ATL contenant un objet COM prenant en charge `ISupportErrorInfo`, consultez l’article Q243298 de la Base de connaissances.
-
 ## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’erreur C2668 :
 
-```
+```cpp
 // C2668.cpp
 struct A {};
 struct B : A {};
@@ -59,7 +55,7 @@ int main() {
 
 Une autre façon de résoudre cette erreur est avec un [à l’aide de la déclaration](../../cpp/using-declaration.md):
 
-```
+```cpp
 // C2668b.cpp
 // compile with: /EHsc /c
 // C2668 expected
@@ -104,7 +100,7 @@ Cette erreur peut également être due à la mise en conformité du compilateur 
 
 Conversion sur un cast à l’aide de la constante 0 est ambiguë puisqu’elle nécessite une conversion en type long et au void *. Pour résoudre cette erreur, effectuez un cast de 0 au type de paramètre de la fonction, qu'il est utilisé afin qu’aucune conversion se déroulent (ce code sera valide dans les versions de Visual Studio .NET 2003 et Visual Studio .NET de Visual C++).
 
-```
+```cpp
 // C2668c.cpp
 #include "stdio.h"
 void f(long) {
@@ -126,7 +122,7 @@ int main() {
 
 Cette erreur peut se produire parce que la bibliothèque CRT a maintenant des formes flottante et double de toutes les fonctions mathématiques.
 
-```
+```cpp
 // C2668d.cpp
 #include <math.h>
 int main() {
@@ -141,7 +137,7 @@ int main() {
 
 Cette erreur peut se produire, car le pow (int, int) a été supprimé de math.h dans le CRT.
 
-```
+```cpp
 // C2668e.cpp
 #include <math.h>
 int main() {
@@ -154,8 +150,7 @@ int main() {
 
 Ce code réussit dans Visual Studio 2015, mais échoue dans Visual Studio 2017 et versions ultérieures avec l’erreur C2668. Dans Visual Studio 2015, le compilateur traitait à tort copy-list-initialization de la même façon que l’instruction copy-initialization ordinaire ; il envisageait uniquement de convertir les constructeurs pour résoudre la surcharge.
 
-```
-C++
+```cpp
 struct A {
     explicit A(int) {}
 };
