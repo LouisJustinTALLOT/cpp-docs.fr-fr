@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb1ea67a0b89a59ad8ee16ec3a3ee0993a0fdafc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79c02a36e0c19b0702a81281e626c60e016def32
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208319"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083279"
 ---
 # <a name="supporting-schema-rowsets"></a>Prise en charge des ensembles de lignes de schéma
 
-Ensembles de lignes de schéma permettent aux consommateurs d’obtenir des informations sur un magasin de données sans connaître sa structure sous-jacente, ou son schéma. Par exemple, un magasin de données peut avoir des tables organisées dans une hiérarchie définie par l’utilisateur, donc il n’y aurait aucun moyen d’être certain de connaître le schéma à l’exception en le lisant. (Un autre exemple, notez que les Assistants Visual C++ utilisent des ensembles de lignes de schéma pour générer des accesseurs pour le consommateur). Pour permettre au consommateur pour ce faire, objet de session du fournisseur expose des méthodes sur le [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) interface. Dans les applications Visual C++, vous utilisez le [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe pour implémenter `IDBSchemaRowset`.
+Ensembles de lignes de schéma permettent aux consommateurs d’obtenir des informations sur un magasin de données sans connaître sa structure sous-jacente, ou son schéma. Par exemple, un magasin de données peut avoir des tables organisées dans une hiérarchie définie par l’utilisateur, donc il n’y aurait aucun moyen d’être certain de connaître le schéma à l’exception en le lisant. (Un autre exemple, notez que les Assistants Visual C++ utilisent des ensembles de lignes de schéma pour générer des accesseurs pour le consommateur). Pour permettre au consommateur pour ce faire, objet de session du fournisseur expose des méthodes sur le [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) interface. Dans les applications Visual C++, vous utilisez le [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe pour implémenter `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` prend en charge les méthodes suivantes :
 
@@ -97,7 +97,7 @@ class CUpdateSessionTRSchemaRowset :
 
 Notez que `CUpdateSession` hérite `IDBSchemaRowsetImpl`, donc il possède toutes les restrictions des méthodes de gestion. À l’aide de `CSchemaRowsetImpl`, déclarez les trois classes enfant (énumérées dans le mappage du schéma ci-dessus) : `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, et `CUpdateSessionPTSchemaRowset`. Chacune de ces classes enfant a un `Execute` méthode qui gère son jeu de restrictions (critères de recherche) respectif. Chaque `Execute` méthode compare les valeurs de la `cRestrictions` et `rgRestrictions` paramètres. Consultez la description de ces paramètres dans [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma particulier, consultez le tableau de GUID du jeu de lignes de schéma dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) dans le *de référence du programmeur OLE DB* dans le Windows SDK.
+Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma particulier, consultez le tableau de GUID du jeu de lignes de schéma dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) dans le *de référence du programmeur OLE DB* dans le Windows SDK.
 
 Par exemple, si vous prenez en charge la **TABLE_NAME** restriction sur `DBSCHEMA_TABLES`, vous devez procédez comme suit :
 
@@ -270,7 +270,7 @@ Pour plus d’informations sur l’interface d’ensemble de lignes de schéma O
 
 Pour plus d’informations sur la façon dont les utilisateurs peuvent utiliser `IDBSchemaRowset` méthodes, consultez [récupération de métadonnées avec les ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
-Pour obtenir un exemple de fournisseur qui prend en charge les ensembles de lignes de schéma, consultez le [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) exemple.
+Pour obtenir un exemple de fournisseur qui prend en charge les ensembles de lignes de schéma, consultez l’exemple [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
 ## <a name="see-also"></a>Voir aussi
 

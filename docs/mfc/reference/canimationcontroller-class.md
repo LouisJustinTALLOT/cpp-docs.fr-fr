@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f64fce16201a15936cb97b1961827865c7b917b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ce23acf1988e88954279f3b8cdbc8fc3c9001af
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446346"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083643"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController, classe
 
@@ -882,7 +882,7 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CANCEL. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur la gestion des conflits (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CANCEL. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -912,7 +912,7 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_COMPRESS. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur la gestion des conflits (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_COMPRESS. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -942,7 +942,7 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CONCLUDE. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur la gestion des conflits (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CONCLUDE. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -972,7 +972,7 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_TRIM. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur la gestion des conflits (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_TRIM. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

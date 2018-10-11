@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd35c0879896ca7edfd6524c31a86765bbcce219
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448608"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084189"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -924,7 +924,7 @@ class CWnd : public CCmdTarget
 |[CWnd::get_accDescription](#get_accdescription)|Appelé par l'infrastructure pour récupérer une chaîne qui décrit l'aspect visuel de l'objet spécifié.|
 |[CWnd::get_accFocus](#get_accfocus)|Appelé par l'infrastructure pour récupérer l'objet qui a le focus clavier.|
 |[CWnd::get_accHelp](#get_acchelp)|Appelé par l’infrastructure pour récupérer d’un objet **aide** chaîne de propriété.|
-|[CWnd::get_accHelpTopic](#get_acchelptopic)|Appelé par l'infrastructure pour récupérer le chemin d'accès complet du fichier `WinHelp` associé à l'objet spécifié, ainsi que l'identificateur de la rubrique appropriée au sein de ce fichier.|
+|[CWnd::get_accHelpTopic](#get_acchelptopic)|Appelé par l’infrastructure pour récupérer le chemin d’accès complet du fichier `WinHelp` associé à l’objet spécifié, ainsi que l’identificateur de la rubrique appropriée au sein de ce fichier.|
 |[CWnd::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Appelé par l'infrastructure pour récupérer la touche de raccourci ou la touche d'accès rapide de l'objet spécifié.|
 |[CWnd::get_accName](#get_accname)|Appelé par l'infrastructure pour récupérer le nom de l'objet spécifié.|
 |[CWnd::get_accParent](#get_accparent)|Appelé par l'infrastructure pour récupérer l'interface `IDispatch` du parent de l'objet.|
@@ -1190,17 +1190,17 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcHitTest](#onnchittest)|Appelé par Windows chaque fois que la souris est déplacée si `CWnd` contient le curseur ou a capturé l'entrée de souris avec `SetCapture`.|
 |[CWnd::OnNcLButtonDblClk](#onnclbuttondblclk)|Appelé quand l'utilisateur double-clique avec le bouton gauche de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
 |[CWnd::OnNcLButtonDown](#onnclbuttondown)|Appelé quand l'utilisateur appuie sur le bouton gauche de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
-|[CWnd::OnNcLButtonUp](#onnclbuttonup)|Appelé quand l'utilisateur relâche le bouton gauche de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
+|[CWnd::OnNcLButtonUp](#onnclbuttonup)|Appelé quand l’utilisateur relâche le bouton gauche de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
 |[CWnd::OnNcMButtonDblClk](#onncmbuttondblclk)|Appelé quand l'utilisateur double-clique avec le bouton central de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
 |[CWnd::OnNcMButtonDown](#onncmbuttondown)|Appelé quand l'utilisateur appuie sur le bouton central de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
-|[CWnd::OnNcMButtonUp](#onncmbuttonup)|Appelé quand l'utilisateur relâche le bouton central de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
+|[CWnd::OnNcMButtonUp](#onncmbuttonup)|Appelé quand l’utilisateur relâche le bouton central de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
 |[CWnd::OnNcMouseHover](#onncmousehover)|Appelé lorsque le curseur pointe sur la zone non cliente de la fenêtre pendant la période de temps spécifiée dans un appel antérieur à [TrackMouseEvent](https://msdn.microsoft.com/library/windows/desktop/ms646265).|
 |[CWnd::OnNcMouseLeave](#onncmouseleave)|L’infrastructure appelle cette fonction membre quand le curseur quitte la zone non cliente de la fenêtre spécifiée dans un appel antérieur à [TrackMouseEvent](https://msdn.microsoft.com/library/windows/desktop/ms646265).|
 |[CWnd::OnNcMouseMove](#onncmousemove)|Appelé quand le curseur est déplacé dans une zone non cliente de `CWnd`.|
 |[CWnd::OnNcPaint](#onncpaint)|Appelé quand la zone non cliente doit être peinte.|
 |[CWnd::OnNcRButtonDblClk](#onncrbuttondblclk)|Appelé quand l'utilisateur double-clique avec le bouton droit de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
 |[CWnd::OnNcRButtonDown](#onncrbuttondown)|Appelé quand l'utilisateur appuie sur le bouton droit de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
-|[CWnd::OnNcRButtonUp](#onncrbuttonup)|Appelé quand l'utilisateur relâche le bouton droit de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
+|[CWnd::OnNcRButtonUp](#onncrbuttonup)|Appelé quand l’utilisateur relâche le bouton droit de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
 |[CWnd::OnNcRenderingChanged](#onncrenderingchanged)|Appelé quand la stratégie de rendu de la zone non cliente a changé.|
 |[CWnd::OnNcXButtonDblClk](#onncxbuttondblclk)|Appelé quand l'utilisateur double-clique sur le bouton XBUTTON1 ou XBUTTON2 pendant que le curseur se trouve dans la zone non cliente d'une fenêtre.|
 |[CWnd::OnNcXButtonDown](#onncxbuttondown)|Appelé quand l'utilisateur appuie sur le bouton XBUTTON1 ou XBUTTON2 de la souris pendant que le curseur se trouve dans la zone non cliente d'une fenêtre.|
@@ -1291,7 +1291,7 @@ La classe `CWnd` vous permet aussi de créer une fenêtre enfant Windows pour vo
 
 Une fenêtre enfant se crée en deux étapes. Tout d’abord, appelez le constructeur `CWnd` pour construire le `CWnd` de l’objet, puis appelez le [créer](#create) fonction membre pour créer la fenêtre enfant et l’attacher à la `CWnd` objet.
 
-Quand l'utilisateur ferme votre fenêtre enfant, détruisez l'objet `CWnd` ou appelez la fonction membre `DestroyWindow` pour supprimer la fenêtre et détruire ses structures de données.
+Quand l’utilisateur ferme votre fenêtre enfant, détruisez l’objet `CWnd` ou appelez la fonction membre `DestroyWindow` pour supprimer la fenêtre et détruire ses structures de données.
 
 Dans la bibliothèque MFC (Microsoft Foundation Class), d'autres classes sont dérivées de `CWnd` pour fournir des types de fenêtres spécifiques. Nombre de ces classes, y compris [CFrameWnd](../../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md), [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md), [CView](../../mfc/reference/cview-class.md), et [CDialog](../../mfc/reference/cdialog-class.md), sont conçus pour la dérivation supplémentaire. Les classes de contrôle dérivé `CWnd`, tel que [CButton](../../mfc/reference/cbutton-class.md), peut être utilisée directement ou peut être utilisé pour la dérivation de classes supplémentaire.
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 En outre, `BringWindowToTop` active les fenêtres contextuelles, les fenêtres de niveau supérieur et les fenêtres enfants MDI. La fonction membre `BringWindowToTop` doit être utilisée pour déterminer les fenêtres qui sont partiellement ou totalement masquées par d'autres fenêtres.
 
-Cette fonction appelle simplement Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx) (fonction). Appelez le [SetWindowPos](#setwindowpos) (fonction) pour modifier la position d’une fenêtre dans l’ordre de plan. La fonction `BringWindowToTop` ne modifie pas le style de la fenêtre pour en faire une fenêtre de niveau supérieur. Pour plus d’informations, consultez [quelle est la différence entre HWND_TOP et HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Cette fonction appelle simplement Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) (fonction). Appelez le [SetWindowPos](#setwindowpos) (fonction) pour modifier la position d’une fenêtre dans l’ordre de plan. La fonction `BringWindowToTop` ne modifie pas le style de la fenêtre pour en faire une fenêtre de niveau supérieur. Pour plus d’informations, consultez [quelle est la différence entre HWND_TOP et HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>Exemple
 
@@ -2724,7 +2724,7 @@ BOOL DrawCaption(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers un contexte de périphérique. La fonction Dessine la légende de fenêtre dans ce contexte de périphérique.
 
 *lprc*<br/>
@@ -3207,7 +3207,7 @@ Un HWND d’une fenêtre de Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un `CWnd` objet.
+Pointeur vers un objet `CWnd` .
 
 ### <a name="remarks"></a>Notes
 
@@ -4417,7 +4417,7 @@ CWnd* GetOwner() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un `CWnd` objet.
+Pointeur vers un objet `CWnd` .
 
 ### <a name="remarks"></a>Notes
 
@@ -4467,7 +4467,7 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un `CWnd` objet. Si aucun objet `CWnd` n'est attaché au handle, un objet `CWnd` temporaire est créé et attaché. Le pointeur peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
+Pointeur vers un objet `CWnd` . Si aucun objet `CWnd` n'est attaché au handle, un objet `CWnd` temporaire est créé et attaché. Le pointeur peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
 ### <a name="remarks"></a>Notes
 
@@ -4492,7 +4492,7 @@ void GetProperty(
 Identifie la propriété à récupérer.
 
 *vtProp*<br/>
-Spécifie le type de la propriété à récupérer. Pour connaître les valeurs possibles, consultez la section Notes pour [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Spécifie le type de la propriété à récupérer. Pour connaître les valeurs possibles, consultez la section Notes de [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvProp*<br/>
 Adresse de la variable qui sera qui recevra la valeur de propriété. Il doit correspondre au type spécifié par *vtProp*.
@@ -5363,7 +5363,7 @@ Identifie la méthode ou propriété à appeler.
 Indicateurs décrivant le contexte de l’appel à `IDispatch::Invoke`.
 
 *vtRet*<br/>
-Spécifie le type de la valeur de retour. Pour connaître les valeurs possibles, consultez la section Notes pour [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Spécifie le type de la valeur de retour. Pour connaître les valeurs possibles, consultez la section Notes de [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvRet*<br/>
 Adresse de la variable qui sera qui recevra la valeur de propriété ou valeur de retour. Il doit correspondre au type spécifié par *vtRet*.
@@ -5376,7 +5376,7 @@ Liste de variables de paramètres, des types spécifiés dans *pbParamInfo*.
 
 ### <a name="remarks"></a>Notes
 
-Le *pbParamInfo* paramètre spécifie les types des paramètres passés à la méthode ou propriété. La liste variable d’arguments est représentée par *...*  dans la déclaration de syntaxe.
+Le *pbParamInfo* paramètre spécifie les types des paramètres passés à la méthode ou propriété. La liste variable d’arguments est représentée par *...* dans la déclaration de syntaxe.
 
 Cette fonction convertit les paramètres VARIANTARG valeurs, puis appelle la `IDispatch::Invoke` méthode sur le contrôle ActiveX. Si l’appel à `IDispatch::Invoke` échoue, cette fonction lève une exception. Si le SCODE (code d’état) retourné par `IDispatch::Invoke` est DISP_E_EXCEPTION, cette fonction lève un [COleException](../../mfc/reference/coleexception-class.md) objet, sinon elle lève un [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
@@ -6490,7 +6490,7 @@ afx_msg HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Contient un pointeur vers le contexte d’affichage pour la fenêtre enfant. Peut être temporaire.
 
 *pWnd*<br/>
@@ -6910,7 +6910,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Spécifie l’objet de contexte de périphérique.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -7246,7 +7246,7 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Spécifie l’objet de contexte de périphérique de l’icône. Peut être temporaire et ne doivent pas être stockées pour une utilisation ultérieure.
 
 ### <a name="remarks"></a>Notes
@@ -8805,7 +8805,7 @@ afx_msg void OnPaintClipboard(
 Spécifie un pointeur vers la fenêtre d’application du Presse-papiers. Le pointeur peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
 *hPaintStruct*<br/>
-Identifie un [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) structure de données qui définit la partie de la zone cliente à peindre.
+Identifie une structure de données [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) qui définit la partie de la zone cliente à peindre.
 
 ### <a name="remarks"></a>Notes
 
@@ -10497,7 +10497,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Le contexte de périphérique sur lequel dessiner les contrôles sans fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -10602,7 +10602,7 @@ Cette fonction membre de substitution permet sous-classement dynamique de contr�
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows.
+Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -10629,7 +10629,7 @@ void Print(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers un contexte de périphérique.
 
 *dwFlags*<br/>
@@ -10675,7 +10675,7 @@ void PrintClient(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers un contexte de périphérique.
 
 *dwFlags*<br/>
@@ -10705,7 +10705,7 @@ BOOL PrintWindow(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique d’impression à.
 
 *nIndicateurs*<br/>
@@ -10855,7 +10855,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Identifie le contexte de périphérique à libérer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -11592,7 +11592,7 @@ void AFX_CDECL SetProperty(
 Identifie la propriété à définir.
 
 *vtProp*<br/>
-Spécifie le type de la propriété à définir. Pour connaître les valeurs possibles, consultez la section Notes pour [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Spécifie le type de la propriété à définir. Pour connaître les valeurs possibles, consultez la section Notes de [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Un seul paramètre de type spécifié par *vtProp*.

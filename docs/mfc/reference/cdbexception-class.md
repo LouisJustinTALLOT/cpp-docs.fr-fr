@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389547"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083110"
 ---
 # <a name="cdbexception-class"></a>CDBException, classe
 
@@ -142,7 +142,7 @@ Contient une chaîne décrivant l’erreur qui a provoqué l’exception.
 
 La chaîne est du formulaire « état : % s, natif : % ld, origine : % s », où les codes de format, dans l’ordre, sont remplacés par les valeurs qui décrivent :
 
-- La valeur SQLSTATE, une chaîne se terminant par null qui contient un code d’erreur à cinq caractères retournés dans le *szSqlState* paramètre de la fonction ODBC `SQLError`. Les valeurs SQLSTATE sont répertoriés dans l’annexe A, [Codes d’erreur ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\)), dans le *de référence du programmeur ODBC*. Exemple : « S0022 ».
+- La valeur SQLSTATE, une chaîne se terminant par null qui contient un code d’erreur à cinq caractères retournés dans le *szSqlState* paramètre de la fonction ODBC `SQLError`. Les valeurs SQLSTATE sont répertoriés dans l’annexe A, [Codes d’erreur ODBC](/previous-versions/windows/desktop/ms714687), dans le *de référence du programmeur ODBC*. Exemple : « S0022 ».
 
 - Le code d’erreur natif spécifique à la source de données retournées dans le *pfNativeError* paramètre de la `SQLError` (fonction). Exemple : 207.
 
@@ -150,7 +150,7 @@ La chaîne est du formulaire « état : % s, natif : % ld, origine : % s »
 
 Le framework interprète la chaîne d’erreur et met ses composants dans `m_strStateNativeOrigin`; si `m_strStateNativeOrigin` contient des informations pour plusieurs erreurs, les erreurs sont séparées par des sauts de ligne. Le framework met le texte d’erreur d’alphanumériques dans `m_strError`.
 
-Pour plus d’informations sur les codes utilisées pour créer cette chaîne, consultez la [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) fonctionner dans le *de référence du programmeur ODBC*.
+Pour plus d’informations sur les codes utilisées pour créer cette chaîne, consultez la [SQLError](/previous-versions/windows/desktop/ms716312) fonctionner dans le *de référence du programmeur ODBC*.
 
 ### <a name="example"></a>Exemple
 

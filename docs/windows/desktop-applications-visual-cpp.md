@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688257"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083344"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau (Visual C++)
 
 Un *application de bureau* en C++ est une application native qui peut accéder à l’ensemble des API de Windows et s’exécute dans une fenêtre ou dans la console système. Applications de bureau en C++ peuvent exécuter sur XP de Windows via Windows 10 (bien que Windows XP n’est ne sont plus officiellement pris en charge et il existe de nombreuses API Windows qui ont été introduites depuis).
 
-Une application de bureau est distincte à partir d’une application de plateforme universelle Windows (UWP), ce qui peut s’exécuter sur les PC exécutant Windows 10, ainsi que sur la XBox, Windows Phone, Surface Hub et autres appareils. Pour plus d’informations sur les postes de travail Visual Studio. Les applications UWP, consultez [choisir votre technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).
+Une application de bureau est distincte à partir d’une application de plateforme universelle Windows (UWP), ce qui peut s’exécuter sur les PC exécutant Windows 10, ainsi que sur la XBox, Windows Phone, Surface Hub et autres appareils. Pour plus d’informations sur les postes de travail Visual Studio. Les applications UWP, consultez [choisir votre technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993).
 
 
 ### <a name="desktop-bridge"></a>Pont du bureau
@@ -35,7 +35,7 @@ Dans Visual Studio 2017 version 15.4 ou ultérieure, vous pouvez créer un proje
 
 ### <a name="terminology"></a>Terminologie
 
-- Un *Win32* application est une application de bureau C++ qui peuvent rendre utiliser native de Windows [API C de Windows et/ou APIs COM](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT et API de bibliothèque Standard et des bibliothèques tierces 3e. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur à utiliser explicitement des messages de Windows à l’intérieur d’une fonction de procédure de Windows. Malgré son nom, une application Win32 peut être compilée comme un (x86) 32 bits ou 64 bits (x64) binaire. Dans l’IDE de Visual Studio, les conditions x86 Win32 sont synonymes.
+- Un *Win32* application est une application de bureau C++ qui peuvent rendre utiliser native de Windows [API C de Windows et/ou APIs COM](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT et API de bibliothèque Standard et des bibliothèques tierces 3e. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur à utiliser explicitement des messages de Windows à l’intérieur d’une fonction de procédure de Windows. Malgré son nom, une application Win32 peut être compilée comme un (x86) 32 bits ou 64 bits (x64) binaire. Dans l’IDE de Visual Studio, les conditions x86 Win32 sont synonymes.
 
 - Le [composant COM (Object Model)](/windows/desktop/com/the-component-object-model) est une spécification qui permet aux programmes écrits dans différents langages pour communiquer entre eux. Windows de nombreux composants sont implémentés en tant qu’objets COM et suivez les règles COM standard pour la création des objets interface destruction de découverte et d’objet.  À l’aide des objets COM à partir d’applications de bureau C++ est relativement simple, écrivez votre propre objet COM est toutefois plus avancée. Le [bibliothèque ATL (Active Template)](../atl/atl-com-desktop-components.md) fournit des macros et fonctions d’assistance qui simplifient le développement de COM.
 

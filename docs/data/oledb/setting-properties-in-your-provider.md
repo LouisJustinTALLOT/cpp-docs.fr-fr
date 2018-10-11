@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aef8b069e9f77b61ee0c6c26d8d9232ee139867d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7d8f7a55379707282fd5ea9ad2063d00392d7eb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098912"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082616"
 ---
 # <a name="setting-properties-in-your-provider"></a>Définition de propriétés dans votre fournisseur
 
-Recherchez le groupe de propriétés et l’ID de propriété pour la propriété qui que vous intéresse. Pour plus d’informations, consultez [propriétés OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Recherchez le groupe de propriétés et l’ID de propriété pour la propriété qui que vous intéresse. Pour plus d’informations, consultez [propriétés OLE DB](/previous-versions/windows/desktop/ms722734) dans le *de référence du programmeur OLE DB*.  
   
 Dans le code du fournisseur généré par l’Assistant, recherchez le mappage des propriétés correspondant au groupe de propriétés. Le nom du groupe de propriétés correspond généralement au nom de l’objet. Propriétés Command et rowset figurent dans la commande ou l’ensemble de lignes ; Vous trouverez les propriétés source et de l’initialisation des données dans l’objet de source de données.  
   
@@ -33,7 +33,7 @@ Dans le mappage des propriétés, ajoutez un [PROPERTY_INFO_ENTRY_EX](../../data
   
 - L’ID de propriété correspondant à votre propriété. Vous devez supprimer les sept premiers caractères (« DBPROP_ ») du début du nom de la propriété. Par exemple, si vous souhaitez ajouter `DBPROP_MAXROWS`, transmettez `MAXROWS` comme premier élément. S’il s’agit d’une propriété personnalisée, passez le nom complet de GUID (par exemple, `DBMYPROP_MYPROPERTY`).  
   
-- Le type variant de la propriété (dans [propriétés OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) dans le *de référence du programmeur OLE DB*). Entrez le type (par exemple, VT_BOOL ou VT_I2) VT_ correspondant au type de données.  
+- Le type variant de la propriété (dans [propriétés OLE DB](/previous-versions/windows/desktop/ms722734) dans le *de référence du programmeur OLE DB*). Entrez le type (par exemple, VT_BOOL ou VT_I2) VT_ correspondant au type de données.  
   
 - Indicateurs pour indiquer si la propriété est accessible en lecture et en écriture et le groupe auquel il appartient. Par exemple, le code suivant indique une propriété en lecture/écriture appartenant au groupe de l’ensemble de lignes :  
   

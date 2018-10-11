@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fb948efd63a8392661cc38a80393bc90d5e694
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396446"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083591"
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 
@@ -92,7 +92,7 @@ Pointeur vers une chaîne se terminant par null qui contient le nom de fonction,
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).
+Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -119,7 +119,7 @@ Pointeur vers une chaîne se terminant par null qui contient le nom de fonction,
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). Cette macro est la version Unicode de AFX_COMCTL32_IF_EXISTS.
+Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress). Cette macro est la version Unicode de AFX_COMCTL32_IF_EXISTS.
 
 ### <a name="requirements"></a>Configuration requise
 

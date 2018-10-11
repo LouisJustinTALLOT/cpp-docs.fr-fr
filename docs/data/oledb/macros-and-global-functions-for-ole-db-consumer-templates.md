@@ -111,12 +111,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 06b33f5003b073e854f68dc2083baee10a650b2d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0f6bb0949525bd844d4c9faf4a712a0b28f3fb23
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080543"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083877"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macros et fonctions globales pour les modèles du consommateur OLE DB
 
@@ -377,7 +377,7 @@ Voici un exemple de mappage de colonnes et de paramètres :
 
 ### <a name="blob_entry"></a> BLOB_ENTRY
 
-Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))).  
+Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511)).  
   
 #### <a name="syntax"></a>Syntaxe  
   
@@ -405,7 +405,7 @@ Consultez [comment récupérer un objet BLOB ?](../../data/oledb/retrieving-a-b
 
 ### <a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
-Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également la longueur en octets de la colonne BLOB.  
+Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511)). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également la longueur en octets de la colonne BLOB.  
   
 #### <a name="syntax"></a>Syntaxe  
   
@@ -436,7 +436,7 @@ Consultez [comment récupérer un objet BLOB ?](../../data/oledb/retrieving-a-b
 
 ### <a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
-Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également la longueur et l’état de la colonne BLOB.  
+Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511)). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également la longueur et l’état de la colonne BLOB.  
   
 #### <a name="syntax"></a>Syntaxe  
   
@@ -476,7 +476,7 @@ Consultez [comment récupérer un objet BLOB ?](../../data/oledb/retrieving-a-b
 
 ### <a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
-Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP ou BEGIN_ACCESSOR_MAP ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également l’état de la colonne BLOB.  
+Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP ou BEGIN_ACCESSOR_MAP ([BLOB](/previous-versions/windows/desktop/ms711511)). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également l’état de la colonne BLOB.  
   
 #### <a name="syntax"></a>Syntaxe  
   
@@ -507,7 +507,7 @@ Consultez [comment récupérer un objet BLOB ?](../../data/oledb/retrieving-a-b
 
 ### <a name="blob_name"></a> BLOB_NAME
 
-Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro accepte un nom de colonne au lieu d’un numéro de colonne.  
+Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511)). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro accepte un nom de colonne au lieu d’un numéro de colonne.  
   
 #### <a name="syntax"></a>Syntaxe  
   
@@ -535,7 +535,7 @@ Consultez [comment récupérer un objet BLOB ?](../../data/oledb/retrieving-a-b
 
 ### <a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
-Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Semblable à [nom_objet_blob](../../data/oledb/blob-name.md), sauf que cette macro obtient également la longueur en octets de la colonne de données BLOB.  
+Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511)). Semblable à [nom_objet_blob](../../data/oledb/blob-name.md), sauf que cette macro obtient également la longueur en octets de la colonne de données BLOB.  
   
 #### <a name="syntax"></a>Syntaxe  
   
@@ -562,7 +562,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 
 ### <a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
-Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Semblable à [nom_objet_blob](../../data/oledb/blob-name.md), sauf que cette macro obtient également la longueur et l’état de la colonne de données BLOB.  
+Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511)). Semblable à [nom_objet_blob](../../data/oledb/blob-name.md), sauf que cette macro obtient également la longueur et l’état de la colonne de données BLOB.  
   
 #### <a name="syntax"></a>Syntaxe  
   
@@ -592,7 +592,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 
 ### <a name="blob_name_status"></a> BLOB_NAME_STATUS
 
-Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Semblable à [nom_objet_blob](../../data/oledb/blob-name.md), sauf que cette macro obtient également l’état de la colonne de données BLOB.  
+Permet de lier un objet binaire volumineux avec BEGIN_COLUMN_MAP et END_COLUMN_MAP ([BLOB](/previous-versions/windows/desktop/ms711511)). Semblable à [nom_objet_blob](../../data/oledb/blob-name.md), sauf que cette macro obtient également l’état de la colonne de données BLOB.  
   
 #### <a name="syntax"></a>Syntaxe  
   
@@ -683,7 +683,7 @@ END_COLUMN_MAP()
 #### <a name="see-also"></a>Voir aussi  
 
 [CBookmark, classe](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728\(v=vs.85\))
+[DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728)
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -697,7 +697,7 @@ COLUMN_ENTRY(nOrdinal, data)
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Le numéro de colonne.  
@@ -731,7 +731,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Le numéro de colonne.  
@@ -783,7 +783,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Le numéro de colonne, en commençant par un. Signet correspond à la colonne zéro.  
@@ -816,7 +816,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Le numéro de colonne.  
@@ -852,7 +852,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Le numéro de colonne.  
@@ -888,7 +888,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Le numéro de colonne, en commençant par un. Signet correspond à la colonne zéro.  
@@ -927,7 +927,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Le numéro de colonne.  
@@ -969,7 +969,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Le numéro de colonne.  
@@ -1008,7 +1008,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Le numéro de colonne.  
@@ -1558,7 +1558,7 @@ BEGIN_PARAM_MAP(x)
   
 #### <a name="remarks"></a>Notes  
 
-Paramètres sont utilisés par [commandes](/previous-versions/windows/desktop/ms724608\(v=vs.85\)).  
+Paramètres sont utilisés par [commandes](/previous-versions/windows/desktop/ms724608).  
   
 #### <a name="example"></a>Exemple  
 
@@ -1595,7 +1595,7 @@ SET_PARAM_TYPE(type)
   
 #### <a name="remarks"></a>Notes  
 
-Les fournisseurs prennent en charge uniquement les types d’entrée/sortie de paramètres qui sont pris en charge par la source de données sous-jacente. Le type est une combinaison d’une ou plusieurs `DBPARAMIO` valeurs (voir [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB*) :  
+Les fournisseurs prennent en charge uniquement les types d’entrée/sortie de paramètres qui sont pris en charge par la source de données sous-jacente. Le type est une combinaison d’une ou plusieurs `DBPARAMIO` valeurs (voir [Structures DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB*) :  
   
 - `DBPARAMIO_NOTPARAM` L’accesseur n’a aucun paramètre. En règle générale, vous définissez `eParamIO` à cette valeur dans les accesseurs de ligne pour rappeler à l’utilisateur que les paramètres sont ignorés.  
   

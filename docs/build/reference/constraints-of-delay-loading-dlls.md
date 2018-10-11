@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e985b81072de306c818218e19bbb660e3e04a4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 497de9695e75810f2fe68101627f2ba3606aa048
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719731"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082007"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Contraintes relatives aux DLL à chargement différé
 
@@ -44,9 +44,9 @@ Des contraintes s'appliquent au chargement différé d'importations.
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de l’éditeur de liens pour les DLL à chargement différé](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
-[LoadLibrary (fonction)](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)<br/>
-[GetModuleHandle (fonction)](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)<br/>
-[GetProcAddress (fonction)](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)<br/>
+[LoadLibrary (fonction)](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
+[GetModuleHandle (fonction)](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
+[GetProcAddress (fonction)](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
 [Fonction TlsAlloc par](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
 [Fonction de TlsFree](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
 [TlsGetValue (fonction)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>

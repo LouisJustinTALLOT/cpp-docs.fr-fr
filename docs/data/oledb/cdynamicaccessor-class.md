@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b421bcc84152fede78ca985bbf2896f42a148fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b9d1982e1da6526c1c9db607062a66b163f912ce
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100451"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083669"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor, classe
 
@@ -167,7 +167,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|  
 |[AddBindEntry](#addbindentry)|Ajoute une entrée de liaison pour les colonnes de sortie lors de la substitution de l’accesseur par défaut.|  
 |[CDynamicAccessor](#cdynamicaccessor)|Instancie et initialise le `CDynamicAccessor` objet.|  
-|[Fermer](#close)|Annule la liaison de toutes les colonnes, libère la mémoire allouée et libère le [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) pointeur d’interface dans la classe.|  
+|[Fermer](#close)|Annule la liaison de toutes les colonnes, libère la mémoire allouée et libère le [IAccessor](/previous-versions/windows/desktop/ms719672) pointeur d’interface dans la classe.|  
 |[GetBlobHandling](#getblobhandling)|Récupère l’objet BLOB de valeur pour la ligne actuelle de gestion.|  
 |[GetBlobSizeLimit](#getblobsizelimit)|Récupère la taille d’objet BLOB maximale en octets.|  
 |[GetBookmark](#getbookmark)|Récupère le signet pour la ligne actuelle.|  
@@ -207,7 +207,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>Paramètres  
 
 *Info*<br/>
-[in] Un `DBCOLUMNINFO` structure contenant des informations de colonne. Consultez la section « Structures DBCOLUMNINFO » dans [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+[in] Un `DBCOLUMNINFO` structure contenant des informations de colonne. Consultez la section « Structures DBCOLUMNINFO » dans [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="return-value"></a>Valeur de retour  
 
@@ -244,7 +244,7 @@ Vous pouvez également spécifier comment `CDynamicAccessor` gère les données 
 
 ## <a name="close"></a> CDynamicAccessor::Close
 
-Annule la liaison de toutes les colonnes, libère la mémoire allouée et libère le [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) pointeur d’interface dans la classe.  
+Annule la liaison de toutes les colonnes, libère la mémoire allouée et libère le [IAccessor](/previous-versions/windows/desktop/ms719672) pointeur d’interface dans la classe.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -334,7 +334,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 [in] Le numéro de colonne. Les numéros de colonne commencent à 1. La valeur 0 fait référence à la colonne de signet, le cas échéant.  
   
 *pFlags*<br/>
-[out] Pointeur vers un masque de bits qui décrit les caractéristiques de la colonne. Consultez « Type d’énuméré DBCOLUMNFLAGS » dans [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+[out] Pointeur vers un masque de bits qui décrit les caractéristiques de la colonne. Consultez « Type d’énuméré DBCOLUMNFLAGS » dans [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="return-value"></a>Valeur de retour  
 
@@ -360,13 +360,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 #### <a name="parameters"></a>Paramètres  
 
 *pRowset*<br/>
-[in] Un pointeur vers le [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) interface.  
+[in] Un pointeur vers le [IRowset](/previous-versions/windows/desktop/ms720986) interface.  
   
 *pColumns*<br/>
 [out] Un pointeur vers la mémoire dans lequel retourner le nombre de colonnes dans l’ensemble de lignes ; Ce nombre inclut la colonne de signet, le cas échéant.  
   
 *ppColumnInfo*<br/>
-[out] Pointeur vers la mémoire dans lequel retourner un tableau de `DBCOLUMNINFO` structures. Consultez la section « Structures DBCOLUMNINFO » dans [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+[out] Pointeur vers la mémoire dans lequel retourner un tableau de `DBCOLUMNINFO` structures. Consultez la section « Structures DBCOLUMNINFO » dans [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) dans le *de référence du programmeur OLE DB*.  
   
 *ppStringsBuffer*<br/>
 [out] Pointeur vers la mémoire dans lequel retourner un pointeur vers le stockage pour toutes les valeurs de chaîne (noms utilisés au sein de *columnid* ou pour *pwszName*) au sein d’un bloc d’allocation unique.  
@@ -377,7 +377,7 @@ Une des valeurs HRESULT standards.
   
 ### <a name="remarks"></a>Notes  
 
-Consultez [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *de référence du programmeur OLE DB* pour plus d’informations sur les types de données `DBORDINAL`, `DBCOLUMNINFO`, et `OLECHAR`.  
+Consultez [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) dans le *de référence du programmeur OLE DB* pour plus d’informations sur les types de données `DBORDINAL`, `DBCOLUMNINFO`, et `OLECHAR`.  
 
 ## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
 
@@ -509,7 +509,7 @@ bool GetStatus(const WCHAR* pColumnName,
 [in] Pointeur vers une chaîne de caractères contenant le nom de colonne.  
   
 *pStatus*<br/>
-[out] Pointeur vers la variable qui contient l’état de la colonne. Consultez [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) dans le *de référence du programmeur OLE DB* pour plus d’informations.  
+[out] Pointeur vers la variable qui contient l’état de la colonne. Consultez [DBSTATUS](/previous-versions/windows/desktop/ms722617) dans le *de référence du programmeur OLE DB* pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
 
@@ -667,7 +667,7 @@ bool SetStatus(const WCHAR* pColumnName,
 [in] Le numéro de colonne. Les numéros de colonne commencent à 1. La valeur 0 fait référence à la colonne de signet, le cas échéant.  
   
 *status*<br/>
-[in] L’état de la colonne. Consultez [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) dans le *de référence du programmeur OLE DB* pour plus d’informations.  
+[in] L’état de la colonne. Consultez [DBSTATUS](/previous-versions/windows/desktop/ms722617) dans le *de référence du programmeur OLE DB* pour plus d’informations.  
   
 *pColumnName*<br/>
 [in] Pointeur vers une chaîne de caractères contenant le nom de colonne.  

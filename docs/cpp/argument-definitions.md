@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf75e1c0fe2b3ff0d883a8785e69aef489c0545
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0c42478e5e6ce3c9efe66c45ed32292f2040a83
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056389"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084150"
 ---
 # <a name="argument-definitions"></a>Définitions d’arguments
 
@@ -45,7 +45,7 @@ Tableau de chaînes terminées par le caractère NULL qui représentent les argu
 Le premier argument de ligne de commande est toujours `argv` **[1]** et le dernier `argv` **[** `argc` - 1 **]**.
 
 > [!NOTE]
->  Par convention, `argv`**[0]** est la commande avec laquelle le programme est appelé.  Toutefois, il est possible de générer un processus utilisant [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) et si vous utilisez le premier et le deuxième argument (*IpApplicationName* et *lpCommandLine*), `argv` **[0]** peut ne pas être le fichier exécutable nom ; utiliser [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) pour récupérer le nom de l’exécutable et son chemin d’accès qualifié complet.
+>  Par convention, `argv`**[0]** est la commande avec laquelle le programme est appelé.  Toutefois, il est possible de générer un processus utilisant [CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) et si vous utilisez le premier et le deuxième argument (*IpApplicationName* et *lpCommandLine*), `argv` **[0]** peut ne pas être le fichier exécutable nom ; utiliser [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) pour récupérer le nom de l’exécutable et son chemin d’accès qualifié complet.
 
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft
 

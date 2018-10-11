@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84050dcf4faed8bb99b871d3b797400c1ed5620e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f5071adcf12bde10a3fc67a5503875dfb264372
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086952"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081602"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl, classe
 
@@ -63,11 +63,11 @@ Votre classe, dérivée de `IOpenRowsetImpl`.
   
 ## <a name="remarks"></a>Notes  
 
-Le [IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) interface est obligatoire pour un objet de session. Il s’ouvre et retourne un ensemble de lignes qui inclut toutes les lignes à partir d’une seule table de base ou un index.  
+Le [IOpenRowset](/previous-versions/windows/desktop/ms716946) interface est obligatoire pour un objet de session. Il s’ouvre et retourne un ensemble de lignes qui inclut toutes les lignes à partir d’une seule table de base ou un index.  
   
 ## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
 
-Crée un objet d’ensemble de lignes. Pas appelée directement par l’utilisateur. Consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) dans le *de référence du programmeur OLE DB.*  
+Crée un objet d’ensemble de lignes. Pas appelée directement par l’utilisateur. Consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) dans le *de référence du programmeur OLE DB.*  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -91,7 +91,7 @@ Un membre de classe de modèle représentant la classe d’ensemble de lignes de
 *pRowsetObj*<br/>
 [out] Pointeur vers un objet d’ensemble de lignes. En général, ce paramètre n’est pas utilisé, mais il peut être utilisé si vous devez effectuer plus de travail sur l’ensemble de lignes avant de le transmettre à un objet COM. La durée de vie de *pRowsetObj* est liée par *ppRowset*.  
   
-Pour les autres paramètres, consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) dans le *de référence du programmeur OLE DB.*  
+Pour les autres paramètres, consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) dans le *de référence du programmeur OLE DB.*  
 
 ## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
 
@@ -111,7 +111,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
 

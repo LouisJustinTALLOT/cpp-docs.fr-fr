@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206066"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083565"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -93,7 +93,7 @@ Ces fonctions peuvent être utilisées pour valider et compléter une structure 
 
 - une valeur inférieure à zéro pour que le code de la bibliothèque Runtime C calcule si l'heure active est l'heure d'hiver ou l'heure d'été.
 
-La bibliothèque Runtime C détermine le comportement d’heure d’été à partir de la variable d’environnement [TZ](tzset.md). Si **TZ** n’est pas définie, l’appel d’API Win32 [GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx) est utilisée pour obtenir des informations au moment de l’heure d’été du système d’exploitation. En cas d'échec, la bibliothèque part du principe que les règles de calcul de l'heure d'été sont celles des États-Unis. **tm_isdst** est un champ obligatoire. S'il n'est pas défini, sa valeur est indéfinie et la valeur de retour de ces fonctions est imprévisible. Si *timeptr* pointe vers un **tm** structure retournée par un appel précédent à [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), ou [localtime](localtime-localtime32-localtime64.md) (ou des variantes de ces fonctions), le **tm_isdst** champ contient la valeur correcte.
+La bibliothèque Runtime C détermine le comportement d’heure d’été à partir de la variable d’environnement [TZ](tzset.md). Si **TZ** n’est pas définie, l’appel d’API Win32 [GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) est utilisée pour obtenir des informations au moment de l’heure d’été du système d’exploitation. En cas d'échec, la bibliothèque part du principe que les règles de calcul de l'heure d'été sont celles des États-Unis. **tm_isdst** est un champ obligatoire. S'il n'est pas défini, sa valeur est indéfinie et la valeur de retour de ces fonctions est imprévisible. Si *timeptr* pointe vers un **tm** structure retournée par un appel précédent à [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), ou [localtime](localtime-localtime32-localtime64.md) (ou des variantes de ces fonctions), le **tm_isdst** champ contient la valeur correcte.
 
 Notez que **gmtime** et **localtime** (et **_gmtime32**, **_gmtime64**, **_localtime32**, et **_localtime64**) utilisent une seule mémoire tampon par thread pour la conversion. Si vous fournissez cette mémoire tampon à **mktime**, **_mktime32** ou **_mktime64**, le contenu précédent est détruit.
 

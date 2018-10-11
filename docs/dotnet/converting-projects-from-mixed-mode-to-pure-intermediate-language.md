@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7f9cbfce7e04040f0e1618148a3c258f21bb84b8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222078"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083461"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Conversion de projets du mode mixte en langage intermédiaire pur
 
@@ -84,26 +84,26 @@ Si vous utilisez une version antérieure de l’ensemble d’outils du compilate
 
 3. Supprimer tous les types non managés :
 
-   Le cas échéant, remplacez les types non managés avec des références à des structures de la [système](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx) espace de noms. Les types managés courants sont répertoriés dans le tableau suivant :
+   Le cas échéant, remplacez les types non managés avec des références à des structures de la [système](/dotnet/api/system) espace de noms. Les types managés courants sont répertoriés dans le tableau suivant :
 
    |Structure|Description|
    |---------------|-----------------|
-   |[Boolean](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|Représente une valeur booléenne.|
-   |[Byte](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|Représente un entier non signé 8 bits.|
-   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|Représente un caractère Unicode.|
-   |[DateTime](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|Représente un instant, généralement exprimé sous la forme d'une date et d'une heure.|
-   |[Decimal](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|Représente un nombre décimal.|
-   |[Double](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|Représente un nombre à virgule flottante double précision.|
-   |[Guid](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|Représente un GUID (identificateur global unique).|
-   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|Représente un entier signé 16 bits.|
-   |[Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|Représente un entier signé 32 bits.|
-   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|Représente un entier signé 64 bits.|
-   |[IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|Type spécifique à la plateforme, utilisé pour représenter un pointeur ou un handle.|
-   |[SByte](https://msdn.microsoft.com/library/system.byte.aspx)|Représente un entier 8 bits signé.|
-   |[Single](https://msdn.microsoft.com/library/system.single.aspx)|Représente un nombre à virgule flottante simple précision.|
-   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|Représente un intervalle de temps.|
-   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|Représente un entier non signé 16 bits.|
-   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|Représente un entier non signé 32 bits.|
-   |[UInt64](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|Représente un entier non signé 64 bits.|
-   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|Type spécifique à la plateforme, utilisé pour représenter un pointeur ou un handle.|
-   |[Void](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|Indique une méthode qui ne retourne pas de valeur ; Autrement dit, la méthode a le type de retour void.|
+   |[Boolean](/dotnet/api/system.boolean)|Représente une valeur booléenne.|
+   |[Byte](/dotnet/api/system.byte)|Représente un entier non signé 8 bits.|
+   |[Char](/dotnet/api/system.char)|Représente un caractère Unicode.|
+   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Représente un instant, généralement exprimé sous la forme d'une date et d'une heure.|
+   |[Decimal](/dotnet/api/system.decimal)|Représente un nombre décimal.|
+   |[Double](/dotnet/api/system.double)|Représente un nombre à virgule flottante double précision.|
+   |[Guid](/dotnet/api/system.guid)|Représente un GUID (identificateur global unique).|
+   |[Int16](/dotnet/api/system.int16)|Représente un entier signé 16 bits.|
+   |[Int32](/dotnet/api/system.int32)|Représente un entier signé 32 bits.|
+   |[Int64](/dotnet/api/system.int64)|Représente un entier signé 64 bits.|
+   |[IntPtr](/dotnet/api/system.intptr)|Type spécifique à la plateforme, utilisé pour représenter un pointeur ou un handle.|
+   |[SByte](/dotnet/api/system.byte.aspx)|Représente un entier 8 bits signé.|
+   |[Single](/dotnet/api/system.single.aspx)|Représente un nombre à virgule flottante simple précision.|
+   |[TimeSpan](/dotnet/api/system.timespan)|Représente un intervalle de temps.|
+   |[UInt16](/dotnet/api/system.uint16)|Représente un entier non signé 16 bits.|
+   |[UInt32](/dotnet/api/system.uint32)|Représente un entier non signé 32 bits.|
+   |[UInt64](/dotnet/api/system.uint64)|Représente un entier non signé 64 bits.|
+   |[UIntPtr](/dotnet/api/system.uintptr)|Type spécifique à la plateforme, utilisé pour représenter un pointeur ou un handle.|
+   |[Void](/dotnet/api/system.void)|Indique une méthode qui ne retourne pas de valeur ; Autrement dit, la méthode a le type de retour void.|

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3c80b383c592d3eebf892981c088e26529c515
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 93e02ee27fb8b5a1f4f4f7b2e435a737e1c637a2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860938"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083838"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Génération d'assemblys côte à côte C/C++
 
@@ -30,7 +30,7 @@ Une application Visual C++ peut utiliser une ou plusieurs DLL dans différentes 
 Par défaut, lorsqu’une DLL est générée avec Visual Studio, elle a un [manifeste d’application](/windows/desktop/SbsCs/application-manifests) incorporé comme ressource RT_MANIFEST avec l’ID est égal à 2. Comme pour un fichier exécutable, ce manifeste décrit les dépendances de cette DLL avec d’autres assemblys. Cela suppose que la DLL ne fait pas partie d’un assembly côte à côte et les applications qui dépendent de cette DLL ne vont pas utiliser un manifeste d’application à charger, mais reposent plutôt sur le chargeur du système d’exploitation pour rechercher cette DLL dans le chemin d’accès système.
 
 > [!NOTE]
-> Il est important pour une DLL qui utilise un manifeste d’application pour que le manifeste incorporé en tant que ressource avec l’ID est égal à 2. Si la DLL est chargée dynamiquement pendant l’exécution (par exemple, à l’aide de la [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175) fonction), le chargeur du système d’exploitation charge les assemblys dépendants spécifiés dans le manifeste de la DLL. Un manifeste d’application externe pour les DLL n’est pas vérifié pendant un `LoadLibrary` appeler. Si le manifeste n’est pas incorporé, le chargeur peut tenter de charger des versions incorrectes des assemblys ou ne parviennent pas à trouver les assemblys dépendants.
+> Il est important pour une DLL qui utilise un manifeste d’application pour que le manifeste incorporé en tant que ressource avec l’ID est égal à 2. Si la DLL est chargée dynamiquement pendant l’exécution (par exemple, à l’aide de la [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) fonction), le chargeur du système d’exploitation charge les assemblys dépendants spécifiés dans le manifeste de la DLL. Un manifeste d’application externe pour les DLL n’est pas vérifié pendant un `LoadLibrary` appeler. Si le manifeste n’est pas incorporé, le chargeur peut tenter de charger des versions incorrectes des assemblys ou ne parviennent pas à trouver les assemblys dépendants.
 
 Une ou plusieurs connexes DLL peuvent être réorganisées dans un assembly côte à côte avec un correspondant [manifeste d’assembly](/windows/desktop/SbsCs/assembly-manifests), qui décrit les fichiers l’assembly, ainsi que la dépendance de l’assembly sur les autres côte à côte assemblys.
 

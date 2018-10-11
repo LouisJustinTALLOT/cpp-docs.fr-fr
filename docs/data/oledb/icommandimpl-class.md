@@ -63,16 +63,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41636a0ff93a247b33c3d7fb7c13a65c05e1aa1d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f04104aadc2897118a402a06d93db27a5a16079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041465"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082811"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl, classe
 
-Fournit l’implémentation pour le [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\)) interface.  
+Fournit l’implémentation pour le [ICommand](/previous-versions/windows/desktop/ms709737) interface.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -130,7 +130,7 @@ STDMETHOD(Cancel)();
   
 ### <a name="remarks"></a>Notes  
 
-Consultez [ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [ICommand::Cancel](/previous-versions/windows/desktop/ms714402) dans le *de référence du programmeur OLE DB*.  
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
@@ -189,7 +189,7 @@ Une valeur HRESULT standard. Consultez `ICommand::Execute` pour obtenir la liste
 
 Pour créer plus d’un ensemble de lignes, ou pour fournir vos propres conditions pour la création de différents ensembles de lignes, placez les différents appels à `CreateRowset` depuis `Execute`.  
   
-Consultez [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) dans le *de référence du programmeur OLE DB.*  
+Consultez [ICommand::Execute](/previous-versions/windows/desktop/ms718095) dans le *de référence du programmeur OLE DB.*  
 
 ## <a name="execute"></a> ICommandImpl::Execute
 
@@ -207,7 +207,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [ICommand::Execute](/previous-versions/windows/desktop/ms718095) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
 
@@ -228,7 +228,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
 

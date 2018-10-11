@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3461c4965dd40d0aecc7515185592a13f30c08c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423000"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084072"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Création d’opérations asynchrones en C++ pour les applications UWP
 
@@ -61,7 +61,7 @@ Le Runtime de Windows est une interface de programmation que vous pouvez utilise
 
 À l’aide de l’exécution de Windows, vous pouvez utiliser les meilleures fonctionnalités de divers langages de programmation et les combiner en une seule application. Par exemple, vous pouvez créer votre interface utilisateur dans JavaScript et exécuter la logique d'application nécessitant de nombreuses ressources de calcul dans un composant C++. La capacité à exécuter ces opérations nécessitant de nombreuses ressources de calcul en arrière-plan est un facteur clé pour que votre interface utilisateur reste réactive. Étant donné que la `task` classe est spécifique à C++, vous devez utiliser une interface Windows Runtime pour communiquer des opérations asynchrones à d’autres composants (qui peuvent être écrits dans d’autres langages que C++). Le Runtime Windows fournit quatre interfaces que vous pouvez utiliser pour représenter des opérations asynchrones :
 
-[Windows::Foundation :: iasyncaction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
 Représente une opération asynchrone.
 
 [Windows::Foundation :: iasyncactionwithprogress\<TProgress >](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -113,7 +113,7 @@ Ajoutez le code suivant au fichier source généré en C++ (cet exemple renomme 
 
 [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]
 
-Chaque méthode exécute d’abord la validation pour garantir que les paramètres d’entrée sont non négatif. Si une valeur d’entrée est négative, la méthode lève [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). La gestion des erreurs est expliquée plus loin dans cette section.
+Chaque méthode exécute d’abord la validation pour garantir que les paramètres d’entrée sont non négatif. Si une valeur d’entrée est négative, la méthode génère [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794.aspx). La gestion des erreurs est expliquée plus loin dans cette section.
 
 Pour utiliser ces méthodes depuis une application UWP, utilisez Visual c# **application vide (XAML)** modèle pour ajouter un deuxième projet à la solution Visual Studio. Cet exemple nomme le projet `Primes`. Ensuite, à partir du projet `Primes` , ajoutez une référence au projet `PrimesLibrary` .
 
@@ -136,7 +136,7 @@ L’illustration suivante montre l’application `Primes` après la sélection d
 
 ![Application du Windows Runtime Primes](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
 
-Pour obtenir des exemples qui utilisent `create_async` pour créer des tâches asynchrones qui peuvent être utilisés par d’autres langages, consultez [à l’aide de C++ dans l’exemple optimiseur de voyage Bing Maps](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) et [Windows 8 d’opérations asynchrones en C++ avec PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Pour obtenir des exemples qui utilisent `create_async` pour créer des tâches asynchrones qui peuvent être consommées par d’autres langages, consultez [Utilisation de C++ dans l’exemple de l’optimiseur de voyage Bing Maps](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) et [Windows 8 Asynchronous Operations in C++ with PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
 ##  <a name="exethread"></a> Contrôle du thread d'exécution
 
@@ -166,7 +166,7 @@ La section suivante présente une application qui lit un fichier sur le disque d
 
 ##  <a name="example-app"></a> Exemple : Contrôle de l’exécution dans une application de Runtime Windows avec C++ et XAML
 
-Considérez une application C++ XAML qui lit un fichier sur le disque, recherche les mots les plus courants dans ce fichier, et donne les résultats dans l'interface utilisateur. Pour créer cette application, Démarrer, dans Visual Studio, en créant un **application vide (Windows universel)** de projet et nommez-le `CommonWords`. Dans votre manifeste d'application, spécifiez la **Bibliothèque de documents** pour permettre à l'application d'accéder au dossier Documents. Ajoutez également le type de fichier texte (.txt) dans la section des déclarations du manifeste d'application. Pour plus d’informations sur les fonctionnalités de l’application et les déclarations, consultez [des packages d’application et de déploiement](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx).
+Considérez une application C++ XAML qui lit un fichier sur le disque, recherche les mots les plus courants dans ce fichier, et donne les résultats dans l'interface utilisateur. Pour créer cette application, Démarrer, dans Visual Studio, en créant un **application vide (Windows universel)** de projet et nommez-le `CommonWords`. Dans votre manifeste d'application, spécifiez la **Bibliothèque de documents** pour permettre à l'application d'accéder au dossier Documents. Ajoutez également le type de fichier texte (.txt) dans la section des déclarations du manifeste d'application. Pour plus d’informations sur les fonctionnalités et les déclarations des applications, consultez [Packages et déploiement d’applications](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx).
 
 Mettez l'élément `Grid` à jour dans MainPage.xaml pour inclure un élément `ProgressRing` et un élément `TextBlock` . Le `ProgressRing` indique que l'opération est en cours et le `TextBlock` donne les résultats du calcul.
 

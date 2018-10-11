@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037357"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084098"
 ---
 # <a name="composite-control-global-functions"></a>Fonctions globales de contrôle composite
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifie une instance du module dont le fichier exécutable contient le modèle de boîte de dialogue.
 
 *lpTemplateName*<br/>
-[in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro pour créer cette valeur.
+[in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macro pour créer cette valeur.
 
 *hWndParent*<br/>
 [in] Identifie la fenêtre propriétaire de la boîte de dialogue.
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifie une instance du module dont le fichier exécutable contient le modèle de boîte de dialogue.
 
 *lpTemplateName*<br/>
-[in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro pour créer cette valeur.
+[in] Identifie le modèle de boîte de dialogue. Ce paramètre est soit le pointeur vers une chaîne de caractères se terminant par null qui spécifie le nom du modèle de boîte de dialogue ou une valeur entière qui spécifie l’identificateur de ressource de modèle de boîte de dialogue. Si le paramètre spécifie un identificateur de ressource, son mot de poids fort doit être égal à zéro et son mot de poids faible doit contenir l’identificateur. Vous pouvez utiliser la [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macro pour créer cette valeur.
 
 *hWndParent*<br/>
 [in] Identifie la fenêtre propriétaire de la boîte de dialogue.
