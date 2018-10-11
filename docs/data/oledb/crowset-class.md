@@ -249,12 +249,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e99ba311251b1759e947a3739016718ae30ef2e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 320f81bf0502d892cbd56b4320a82a1e11cc745a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092165"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083610"
 ---
 # <a name="crowset-class"></a>CRowset, classe
 
@@ -284,7 +284,7 @@ Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
 |-|-|  
 |[AddRefRows](#addrefrows)|Incrémente le décompte de références associé à la ligne actuelle.|  
 |[Fermer](#close)|Libère les lignes et en cours `IRowset` interface.|  
-|[Compare](#compare)|Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)).|  
+|[Compare](#compare)|Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).|  
 |[CRowset](#crowset)|Crée un `CRowset` de l’objet et l’associe (éventuellement) une `IRowset` interface fournie en tant que paramètre.|  
 |[Supprimer](#delete)|Supprime des lignes de l’ensemble de lignes à l’aide [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|  
 |[FindNextRow](#findnextrow)|Recherche la ligne correspondante suivante après le signet spécifié.|  
@@ -293,7 +293,7 @@ Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
 |[GetDataHere](#getdatahere)|Récupère les données à partir de la mémoire tampon spécifiée.|  
 |[GetOriginalData](#getoriginaldata)|Récupère les données récemment extraite ou transmise à la source de données, en ignorant les modifications en attente.|  
 |[GetRowStatus](#getrowstatus)|Retourne l’état de toutes les lignes.|  
-|[Insert](#insert)|Crée et insère une nouvelle ligne à l’aide [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)).|  
+|[Insert](#insert)|Crée et insère une nouvelle ligne à l’aide [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921).|  
 |[IsSameRow](#issamerow)|Compare la ligne spécifiée avec la ligne actuelle.|  
 |[MoveFirst](#movefirst)|Repositionne l’emplacement de récupération suivant à la position initiale.|  
 |[MoveLast](#movelast)|Passe au dernier enregistrement.|  
@@ -301,8 +301,8 @@ Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
 |[MovePrev](#moveprev)|Se déplace vers l’enregistrement précédent.|  
 |[MoveToBookmark](#movetobookmark)|Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié à partir de ce signet.|  
 |[MoveToRatio](#movetoratio)|Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.|  
-|[ReleaseRows](#releaserows)|Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) pour libérer le handle de ligne actuelle.|  
-|[SetData](#setdata)|Définit les valeurs de données dans une ou plusieurs colonnes d’une ligne en utilisant [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)).|  
+|[ReleaseRows](#releaserows)|Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) pour libérer le handle de ligne actuelle.|  
+|[SetData](#setdata)|Définit les valeurs de données dans une ou plusieurs colonnes d’une ligne en utilisant [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232).|  
 |[Annulation](#undo)|Annule toutes les modifications apportées à une ligne depuis la dernière extraction ou [mise à jour](../../data/oledb/crowset-update.md).|  
 |[Mettre à jour](#update)|Transmet les modifications apportées à la ligne en cours depuis la dernière extraction ou de la mise à jour en attente.|  
 |[UpdateAll](#updateall)|Transmet les modifications apportées à toutes les lignes depuis la dernière extraction ou de la mise à jour en attente.|  
@@ -315,7 +315,7 @@ Cette classe n’est pas destinée à être instanciée mais plutôt passé comm
 
 ## <a name="addrefrows"></a> CRowset::AddRefRows
 
-Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) d’incrémentation (1) le décompte de références associé avec le descripteur de ligne actuelle.  
+Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) d’incrémentation (1) le décompte de références associé avec le descripteur de ligne actuelle.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -333,7 +333,7 @@ Cette méthode incrémente le décompte de références pour le handle de ligne 
 
 ## <a name="close"></a> CRowset::Close
 
-Libère les lignes et en cours [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) interface.  
+Libère les lignes et en cours [IRowset](/previous-versions/windows/desktop/ms720986) interface.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -347,7 +347,7 @@ Cette méthode libère toutes les lignes actuellement dans l’ensemble de ligne
 
 ## <a name="compare"></a> CRowset::Compare
 
-Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)).  
+Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -380,7 +380,7 @@ Pour plus d’informations sur l’utilisation de signets dans des consommateurs
 
 ## <a name="crowset"></a> CRowset::CRowset
 
-Crée un `CRowset` de l’objet et l’associe (éventuellement) une [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) interface fournie en tant que paramètre.  
+Crée un `CRowset` de l’objet et l’associe (éventuellement) une [IRowset](/previous-versions/windows/desktop/ms720986) interface fournie en tant que paramètre.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -429,22 +429,22 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 #### <a name="parameters"></a>Paramètres  
 
 *Op*<br/>
-[in] L’opération à utiliser pour comparer les valeurs de ligne. Pour les valeurs, consultez [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091\(v=vs.85\)).  
+[in] L’opération à utiliser pour comparer les valeurs de ligne. Pour les valeurs, consultez [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091).  
   
 *pData*<br/>
 [in] Pointeur vers la valeur à mettre en correspondance.  
   
 *wType*<br/>
-[in] Indique le type de données de la partie de la valeur de la mémoire tampon. Pour plus d’informations sur les indicateurs de type, consultez [Types de données](/previous-versions/windows/desktop/ms723969\(v=vs.85\)) dans le *de référence du programmeur OLE DB* dans le SDK Windows.  
+[in] Indique le type de données de la partie de la valeur de la mémoire tampon. Pour plus d’informations sur les indicateurs de type, consultez [Types de données](/previous-versions/windows/desktop/ms723969) dans le *de référence du programmeur OLE DB* dans le SDK Windows.  
   
 *nLength*<br/>
-[in] La longueur, en octets, de la structure de données de consommateur allouée pour la valeur de données. Pour plus d’informations, consultez la description de `cbMaxLen` dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) dans le *de référence du programmeur OLE DB.*  
+[in] La longueur, en octets, de la structure de données de consommateur allouée pour la valeur de données. Pour plus d’informations, consultez la description de `cbMaxLen` dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB.*  
   
 *bPrecision*<br/>
-[in] La précision maximale utilisée lors de l’obtention des données. Utilisé uniquement si *wType* est DBTYPE_NUMERIC. Pour plus d’informations, consultez [Conversions impliquant DBTYPE_NUMERIC ou DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+[in] La précision maximale utilisée lors de l’obtention des données. Utilisé uniquement si *wType* est DBTYPE_NUMERIC. Pour plus d’informations, consultez [Conversions impliquant DBTYPE_NUMERIC ou DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) dans le *de référence du programmeur OLE DB*.  
   
 *bScale*<br/>
-[in] L’échelle utilisée lors de l’obtention des données. Utilisé uniquement si *wType* soit DBTYPE_NUMERIC DBTYPE_DECIMAL. Pour plus d’informations, consultez [Conversions impliquant DBTYPE_NUMERIC ou DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+[in] L’échelle utilisée lors de l’obtention des données. Utilisé uniquement si *wType* soit DBTYPE_NUMERIC DBTYPE_DECIMAL. Pour plus d’informations, consultez [Conversions impliquant DBTYPE_NUMERIC ou DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) dans le *de référence du programmeur OLE DB*.  
   
 *bSkipCurrent*<br/>
 [in] Le nombre de lignes à partir du signet à partir duquel commencer une recherche.  
@@ -644,7 +644,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
   
 ### <a name="return-value"></a>Valeur de retour  
 
-Une valeur HRESULT standard. S_OK indique les lignes sont les mêmes. Pour les autres valeurs, consultez [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) dans le *de référence du programmeur OLE DB* dans le SDK Windows.  
+Une valeur HRESULT standard. S_OK indique les lignes sont les mêmes. Pour les autres valeurs, consultez [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629) dans le *de référence du programmeur OLE DB* dans le SDK Windows.  
 
 ## <a name="movefirst"></a> CRowset::MoveFirst
 
@@ -662,7 +662,7 @@ Une valeur HRESULT standard.
   
 ### <a name="remarks"></a>Notes  
 
-Appels [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) à repositionner l’emplacement de récupération suivant à la position initiale (la position qui était l’emplacement suivant-extraction lors de la création de l’ensemble de lignes) et récupère la ligne initiale.  
+Appels [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) à repositionner l’emplacement de récupération suivant à la position initiale (la position qui était l’emplacement suivant-extraction lors de la création de l’ensemble de lignes) et récupère la ligne initiale.  
 
 ## <a name="movelast"></a> CRowset::MoveLast
 
@@ -680,7 +680,7 @@ Une valeur HRESULT standard.
   
 ### <a name="remarks"></a>Notes  
 
-Appels [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) à repositionner l’emplacement de récupération suivant à la dernière position et récupère la dernière ligne.  
+Appels [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) à repositionner l’emplacement de récupération suivant à la dernière position et récupère la dernière ligne.  
   
 Cette méthode requiert que vous définissez `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes. (Pour de meilleures performances, vous pouvez également définir `DBPROP_QUICKRESTART` avec la valeur VARIANT_TRUE.)  
 
@@ -800,13 +800,13 @@ Une valeur HRESULT standard.
   
 `(nNumerator *  RowsetSize ) / nDenominator`  
   
-Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)).  
+Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602).  
   
 Cette méthode requiert l’interface facultative `IRowsetScroll`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetScroll` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
 
 ## <a name="releaserows"></a> CRowset::ReleaseRows
 
-Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) pour libérer le handle de ligne actuelle.  
+Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) pour libérer le handle de ligne actuelle.  
   
 ### <a name="syntax"></a>Syntaxe  
   

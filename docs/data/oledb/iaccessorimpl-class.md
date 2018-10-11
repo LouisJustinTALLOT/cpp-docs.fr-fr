@@ -48,16 +48,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0fd40d4cac87302a6a636693e0da4480720a2cf3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a5de49679652b04afa4df08ce9d4ea015ebd031d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098118"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082721"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl, classe
 
-Fournit une implémentation de la [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) interface.  
+Fournit une implémentation de la [IAccessor](/previous-versions/windows/desktop/ms719672) interface.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -102,7 +102,7 @@ Unité de stockage pour les informations de colonne. La valeur par défaut est [
   
 ## <a name="remarks"></a>Notes  
 
-Ce champ est obligatoire sur les ensembles de lignes et de commandes. OLE DB requiert des fournisseurs implémenter un HACCESSOR, qui est une balise à un tableau de [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) structures. HACCESSORs fournis par `IAccessorImpl` sont des adresses de la `BindType` structures. Par défaut, `BindType` est défini comme un `ATLBINDINGS` dans `IAccessorImpl`de définition de modèle. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son `DBBINDING` ainsi que d’un nombre et accesseur des indicateurs de référence de tableau.  
+Ce champ est obligatoire sur les ensembles de lignes et de commandes. OLE DB requiert des fournisseurs implémenter un HACCESSOR, qui est une balise à un tableau de [DBBINDING](/previous-versions/windows/desktop/ms716845) structures. HACCESSORs fournis par `IAccessorImpl` sont des adresses de la `BindType` structures. Par défaut, `BindType` est défini comme un `ATLBINDINGS` dans `IAccessorImpl`de définition de modèle. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son `DBBINDING` ainsi que d’un nombre et accesseur des indicateurs de référence de tableau.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 
@@ -127,7 +127,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 
@@ -146,7 +146,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969) dans le *de référence du programmeur OLE DB*.  
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
 
@@ -163,7 +163,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
+Consultez [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 
@@ -178,7 +178,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717) dans le *de référence du programmeur OLE DB*.
   
 ## <a name="see-also"></a>Voir aussi  
 

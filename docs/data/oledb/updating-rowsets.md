@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c662099f3e7c42b75dc0cf197117144790f9df1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108350"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083825"
 ---
 # <a name="updating-rowsets"></a>mettre à jour les jeux de lignes
 
 Une opération de base de données très simple consiste à mettre à jour ou à écrire des données dans le magasin de données. Dans OLE DB, le mécanisme de mise à jour est simple : votre application consommatrice définit les valeurs des membres de données liés, puis écrit ces valeurs dans le rowset ; le consommateur demande ensuite au fournisseur de mettre à jour le magasin de données.  
   
-Les consommateurs peuvent effectuer les types de mises à jour suivants sur les données du rowset : définition des valeurs des colonnes dans une ligne, insertion d’une ligne et suppression d’une ligne. Pour effectuer ces opérations, la classe de modèle OLE DB [CRowset](../../data/oledb/crowset-class.md) implémente le [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interface et substitue les méthodes d’interface suivantes :  
+Les consommateurs peuvent effectuer les types de mises à jour suivants sur les données du rowset : définition des valeurs des colonnes dans une ligne, insertion d’une ligne et suppression d’une ligne. Pour effectuer ces opérations, la classe de modèle OLE DB [CRowset](../../data/oledb/crowset-class.md) implémente l’interface [IRowsetChange](/previous-versions/windows/desktop/ms715790) et remplace les méthodes suivantes de l’interface :  
   
 - [SetData](../../data/oledb/crowset-setdata.md) change les valeurs des colonnes dans une ligne d’un rowset ; elle est équivalente à la commande SQL UPDATE.  
   
@@ -223,4 +223,4 @@ Enfin, une des principales raisons de différer des modifications est la possibi
 
 [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset, classe](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))
+[IRowsetChange](/previous-versions/windows/desktop/ms715790)

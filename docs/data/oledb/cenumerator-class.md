@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117476"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082447"
 ---
 # <a name="cenumerator-class"></a>CEnumerator, classe
 
-Utilise un objet énumérateur OLE DB, qui expose le [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interface à retourner un ensemble de lignes décrivant toutes les sources de données et les énumérateurs.  
+Utilise un objet énumérateur OLE DB, qui expose le [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interface à retourner un ensemble de lignes décrivant toutes les sources de données et les énumérateurs.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,7 +61,7 @@ class CEnumerator :
   
 |||  
 |-|-|  
-|[Rechercher](#find)|Recherches via des fournisseurs disponibles (sources de données) en recherchant une avec le nom spécifié.|  
+|[Find](#find)|Recherches via des fournisseurs disponibles (sources de données) en recherchant une avec le nom spécifié.|  
 |[GetMoniker](#getmoniker)|Récupère le `IMoniker` interface pour l’enregistrement en cours.|  
 |[Ouvrir](#open)|Ouvre l’énumérateur.|  
   
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
   
 ### <a name="remarks"></a>Notes  
 
-Ce nom ne correspond à la `SOURCES_NAME` membre de la [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interface.  
+Ce nom ne correspond à la `SOURCES_NAME` membre de la [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interface.  
   
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
 
@@ -119,7 +119,7 @@ Une valeur HRESULT standard.
 
 ## <a name="open"></a> CEnumerator::Open
 
-Lie le moniker de l’énumérateur, si un est spécifié, puis récupère l’ensemble de lignes de l’énumérateur en appelant [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
+Lie le moniker de l’énumérateur, si un est spécifié, puis récupère l’ensemble de lignes de l’énumérateur en appelant [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200).  
   
 ### <a name="syntax"></a>Syntaxe  
   

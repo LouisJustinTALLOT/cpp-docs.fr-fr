@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2555bdd9c1de130cd692131c12b7b2afc37537be
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861640"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083045"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
 
@@ -36,7 +36,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
 - **Source de données**
 
-   Le **Source de données** bouton vous permet de définir la source de données spécifié à l’aide du fournisseur OLE DB spécifié. Lorsque vous cliquez sur ce bouton, le **propriétés des liaisons de données** boîte de dialogue s’affiche. Pour plus d’informations sur la création de chaînes de connexion et le **propriétés des liaisons de données** boîte de dialogue, consultez [Data Link API Overview](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) dans la documentation du SDK Windows.
+   Le **Source de données** bouton vous permet de définir la source de données spécifié à l’aide du fournisseur OLE DB spécifié. Lorsque vous cliquez sur ce bouton, le **propriétés des liaisons de données** boîte de dialogue s’affiche. Pour plus d’informations sur la création de chaînes de connexion et le **propriétés des liaisons de données** boîte de dialogue, consultez [Data Link API Overview](/previous-versions/windows/desktop/ms718102) dans la documentation du SDK Windows.
 
    Les informations supplémentaires suivantes décrivent les onglets de la **propriétés des liaisons de données** boîte de dialogue.
 
@@ -177,7 +177,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
 - **Prise en charge**
 
-   Sélectionnez les cases à cocher pour spécifier les types de mises à jour pour être pris en charge dans le consommateur (la valeur par défaut est none). Chacun des éléments suivants définira [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) et les entrées appropriées pour [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) dans la jeu de propriétés carte.
+   Sélectionnez les cases à cocher pour spécifier les types de mises à jour pour être pris en charge dans le consommateur (la valeur par défaut est none). Chacun des éléments suivants définira [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) et les entrées appropriées pour [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) dans la jeu de propriétés carte.
 
    - **Modification**
 
@@ -195,4 +195,4 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
 [Consommateur ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Chaînes de connexion et des liaisons de données (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Chaînes de connexion et des liaisons de données (OLE DB)](/previous-versions/windows/desktop/ms718376)

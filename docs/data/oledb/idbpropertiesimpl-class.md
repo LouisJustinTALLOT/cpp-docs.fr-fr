@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c786783963bf2f3613228b87a7ede23eb75a450
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7f7662fabc53054b7a6712d271d89c2c3451067e
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025592"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083025"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl, classe
 
@@ -73,7 +73,7 @@ Votre classe, dérivée de `IDBPropertiesImpl`.
   
 ## <a name="remarks"></a>Notes  
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\)) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)), elle doit exposer `IDBProperties`. `IDBPropertiesImpl` implémente `IDBProperties` à l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+[IDBProperties](/previous-versions/windows/desktop/ms719607) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](/previous-versions/windows/desktop/ms713706), elle doit exposer `IDBProperties`. `IDBPropertiesImpl` implémente `IDBProperties` à l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 
@@ -90,7 +90,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344) dans le *de référence du programmeur OLE DB*.  
   
 Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBProperties::GetProperties`:  
   
@@ -121,7 +121,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175) dans le *de référence du programmeur OLE DB*.  
   
 Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBProperties::GetPropertyInfo`:  
   
@@ -147,7 +147,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
 

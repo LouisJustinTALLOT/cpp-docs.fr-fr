@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b650c2a20d18f3f638f924cce1e4b475f7e33a0d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860977"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084059"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -67,7 +67,7 @@ Pour rechercher les noms décorés produits par le compilateur, utilisez le [DUM
 
 Vous pouvez utiliser \@ *ordinale* pour spécifier qu’un nombre et non le nom de fonction, passe dans la table d’exportation de la DLL. De nombreuses DLL Windows exportent des ordinaux pour prendre en charge du code hérité. Il était courant d'utiliser des ordinaux dans le code Windows 16 bits, car cela peut aider à réduire la taille d'une DLL. Nous ne conseillons pas l'exportation de fonctions par ordinal à moins que vos clients de DLL en aient besoin pour une prise en charge héritée. Comme le fichier .LIB contiendra le mappage entre l'ordinal et la fonction, vous pouvez utiliser le nom de fonction comme vous le feriez normalement dans les projets qui utilisent la DLL.
 
-À l’aide de l’élément facultatif **NONAME** mot clé, vous pouvez exporter par ordinal uniquement et réduire la taille de la table d’exportation dans la DLL résultante. Toutefois, si vous souhaitez utiliser [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) sur la DLL, vous devez connaître l’ordinal, car le nom ne sera pas valid.
+À l’aide de l’élément facultatif **NONAME** mot clé, vous pouvez exporter par ordinal uniquement et réduire la taille de la table d’exportation dans la DLL résultante. Toutefois, si vous souhaitez utiliser [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) sur la DLL, vous devez connaître l’ordinal, car le nom ne sera pas valid.
 
 Le mot clé facultatif **privé** empêche *nom d’entrée* d’être inclus dans la bibliothèque d’importation générée par LINK. Il n'affecte pas l'exportation dans l'image également générée par LINK.
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18bbcf64bc76d26535f9a5c2c51229048422af56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021575"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082421"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modèles du consommateur OLE DB (C++)
 
@@ -35,7 +35,7 @@ Les modèles de consommateurs OLE DB prennent ne charge la spécification OLE DB
   
 - Des types de données C/C++ natifs pour la programmation OLE DB.  
   
-Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
+Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous ne connaissez pas bien OLE DB, consultez [Informations de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms718124).  
   
 Les modèles OLE DB prennent en charge le modèle objet OLE DB existant, au lieu d’ajouter un nouveau modèle objet. Les classes de la couche la plus élevée des modèles de consommateur OLE DB figurent en parallèle des composants définis dans la spécification OLE DB. La conception des modèles de consommateur OLE DB comprend des fonctionnalités avancées, comme les accesseurs multiples sur un ensemble de lignes. L’utilisation de modèles et de l’héritage multiple rend la bibliothèque souple et d’une taille réduite.  
   
@@ -71,5 +71,5 @@ Pour plus d’informations, consultez les rubriques suivantes :
 
 [Programmation OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Accès aux données](../data-access-in-cpp.md)<br/>
-[Documentation du Kit de développement OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[Référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[Documentation du Kit de développement logiciel (SDK) OLE DB](/previous-versions/windows/desktop/ms722784)   
+[Informations de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643)

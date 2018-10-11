@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71ada4927d1a29c2f4d9a95ed93554b0cbffc92d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790736"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083526"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -57,7 +57,7 @@ Définit le bloc de bibliothèque dans le fichier .idl.
 ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer le *uuid* de votre bloc de bibliothèque, vous pouvez ainsi faire en utilisant l’identificateur **__uuidof (** *nom_bibliothèque* **)**.
 
 *lcid*<br/>
-Paramètre de localisation. Consultez [lcid](/windows/desktop/Midl/lcid) pour plus d’informations.
+Paramètre de localisation. Pour plus d’informations, consultez [lcid](/windows/desktop/Midl/lcid) .
 
 *control*<br/>
 (Facultatif) Spécifie que toutes les coclasses dans la bibliothèque sont des contrôles.
@@ -66,7 +66,7 @@ Paramètre de localisation. Consultez [lcid](/windows/desktop/Midl/lcid) pour pl
 Spécifie la bibliothèque de types.
 
 *helpstringdll*<br/>
-(Facultatif) Définit le nom du fichier .dll à utiliser pour effectuer une recherche de chaîne du document. Consultez [helpstringdll](/windows/desktop/Midl/helpstringdll) pour plus d’informations.
+(Facultatif) Définit le nom du fichier .dll à utiliser pour effectuer une recherche de chaîne du document. Pour plus d’informations, consultez [helpstringdll](/windows/desktop/Midl/helpstringdll) .
 
 *helpfile*<br/>
 (Facultatif) Le nom de la **aide** fichier pour la bibliothèque de types.
@@ -78,10 +78,10 @@ Spécifie la bibliothèque de types.
 (Facultatif) Consultez [helpstringcontext](helpstringcontext.md) pour plus d’informations.
 
 *hidden*<br/>
-(Facultatif) Empêche l’affichage de la totalité de la bibliothèque. Cette utilisation est destinée aux contrôles. Les hôtes doivent créer une bibliothèque de types qui encapsule le contrôle avec des propriétés étendues. Consultez le [masqué](/windows/desktop/Midl/hidden) attribut MIDL pour plus d’informations.
+(Facultatif) Empêche l’affichage de la totalité de la bibliothèque. Cette utilisation est destinée aux contrôles. Les hôtes doivent créer une bibliothèque de types qui encapsule le contrôle avec des propriétés étendues. Pour plus d’informations, consultez l’attribut MIDL [hidden](/windows/desktop/Midl/hidden) .
 
 *restricted*<br/>
-(Facultatif) Membres de la bibliothèque ne peut pas être appelées arbitrairement. Consultez le [restreint](/windows/desktop/Midl/restricted) attribut MIDL pour plus d’informations.
+(Facultatif) Membres de la bibliothèque ne peut pas être appelées arbitrairement. Pour plus d’informations, consultez l’attribut MIDL [restricted](/windows/desktop/Midl/restricted) .
 
 *custom*<br/>
 (Facultatif) Un ou plusieurs attributs ; Ceci est similaire à la [personnalisé](custom-cpp.md) attribut. Le premier paramètre de *personnalisé* est le GUID de l’attribut. Exemple :
@@ -90,7 +90,7 @@ Spécifie la bibliothèque de types.
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
-*resource_name*<br/>
+*nom_ressource*<br/>
 ID de ressource de chaîne du fichier .rgs utilisé pour enregistrer l’ID d’application de la DLL, de l’exécutable ou du service. Quand le module est de type service, cet argument sert également à obtenir l’ID de la chaîne contenant le nom du service.
 
 > [!NOTE]
@@ -98,9 +98,9 @@ ID de ressource de chaîne du fichier .rgs utilisé pour enregistrer l’ID d’
 
 ## <a name="remarks"></a>Notes
 
-Sauf si vous spécifiez le *restreint* paramètre [emitidl](emitidl.md), **module** est obligatoire dans tout programme qui utilise des attributs C++.
+*module* est obligatoire dans tout programme qui utilise des attributs C++, sauf si vous spécifiez le paramètre [restricted](emitidl.md)pour **emitidl** .
 
-Un bloc de bibliothèque est créé si, outre le **module** attribut, le code source utilise également [dispinterface](dispinterface.md), [double](dual.md), [objet](object-cpp.md), ou un attribut qui implique [coclasse](coclass.md).
+Un bloc de bibliothèque est créé si, en plus de l’attribut **module** , le code source utilise également [dispinterface](dispinterface.md), [double](dual.md), [object](object-cpp.md)ou un attribut qui implique [coclass](coclass.md).
 
 Un seul bloc de bibliothèque est autorisé dans un fichier .idl. Les entrées de module multiples dans le code source sont fusionnées, les valeurs de paramètres les plus récentes étant implémentées.
 
@@ -108,15 +108,15 @@ Si vous utilisez cet attribut dans un projet qui utilise ATL, le comportement de
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) est utilisée comme classe de base et l’entrée DLL standard requis pour un serveur COM de points. Ces points d’entrée sont [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), et [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) est utilisé comme classe de base et comme points d’entrée de DLL standard requis pour un serveur COM. Ces points d’entrée sont [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)et [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) est utilisée comme classe de base et le point d’entrée d’exécutable standard [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) est utilisée comme classe de base et le point d’entrée d’exécutable standard [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **unspecified**
 
@@ -132,7 +132,7 @@ Le code suivant montre comment créer un bloc de bibliothèque dans le fichier .
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];
 ```
 
-Le code suivant montre que vous pouvez fournir votre propre implémentation d’une fonction qui s’affiche dans le code injecté suite à l’utilisation de **module**. Consultez [/Fx](../../build/reference/fx-merge-injected-code.md) pour plus d’informations sur l’affichage de code injecté. Pour substituer l’une des fonctions insérées par l’attribut **module** , créez une classe qui contiendra votre implémentation de la fonction et faites en sorte que l’attribut **module** s’applique à cette classe.
+Le code suivant montre que vous pouvez fournir votre propre implémentation d’une fonction qui s’affiche dans le code injecté suite à l’utilisation de **module**. Pour plus d’informations sur l’affichage de code injecté, consultez [/Fx](../../build/reference/fx-merge-injected-code.md) . Pour substituer l’une des fonctions insérées par l’attribut **module** , créez une classe qui contiendra votre implémentation de la fonction et faites en sorte que l’attribut **module** s’applique à cette classe.
 
 ```cpp
 // cpp_attr_ref_module2.cpp
@@ -168,7 +168,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 

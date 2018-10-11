@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116761"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082902"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset, classe
 
@@ -165,7 +165,7 @@ L’exemple suivant illustre l’utilisation de la `CBulkRowset` classe.
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) pour incrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
+Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) pour incrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -264,7 +264,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="return-value"></a>Valeur de retour  
 
-Consultez [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
+Consultez [IRowset::GetData](/previous-versions/windows/desktop/ms716988) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
@@ -295,11 +295,11 @@ Une valeur HRESULT standard.
   
 `(nNumerator *  RowsetSize ) / nDenominator`  
   
-Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.   
+Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) dans le *de référence du programmeur OLE DB*.   
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) pour décrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
+Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) pour décrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
   
 ### <a name="syntax"></a>Syntaxe  
   

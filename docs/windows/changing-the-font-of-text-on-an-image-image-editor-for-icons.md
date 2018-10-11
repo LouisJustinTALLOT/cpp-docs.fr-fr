@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a49cb4fa88b3a014d79969cc86fc03fa1136efa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5491f8a761eee80595265150ee0cb89c682b3079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405344"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084046"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Modification de la police du texte d'une image (Éditeur d'images pour les icônes)
 
@@ -32,7 +32,7 @@ La procédure suivante est un exemple montrant comment :
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Pour modifier la police du texte d’une image
 
-1. Créez une Application de formulaires Windows de C++. Pour plus d’informations, consultez [création d’un projet d’Application Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). Un `app.ico` fichier est ajouté à votre projet par défaut.
+1. Créez une Application de formulaires Windows de C++. Pour plus d’informations, consultez [création d’un projet d’Application Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). Un `app.ico` fichier est ajouté à votre projet par défaut.
 
 2. Dans **l’Explorateur de solutions**, double-cliquez sur le fichier app.ico. Le [Éditeur d’images](../windows/image-editor-for-icons.md) s’ouvre.
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374353"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083799"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 
@@ -591,7 +591,7 @@ Si la fonction réussit, la valeur de retour est un handle du module. Si la fonc
 
 ### <a name="remarks"></a>Notes
 
-Elle retourne un handle qui peut être utilisé dans [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) pour obtenir l’adresse d’une fonction DLL. `AfxLoadLibrary` peut également être utilisé pour mapper d’autres modules exécutables.
+Elle retourne un handle qui peut être utilisé dans [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) pour obtenir l’adresse d’une fonction DLL. `AfxLoadLibrary` peut également être utilisé pour mapper d’autres modules exécutables.
 
 Chaque processus conserve un décompte de références pour chaque module de bibliothèque chargée. Ce nombre de références est incrémenté chaque fois `AfxLoadLibrary` est appelée et est décrémenté à chaque fois `AfxFreeLibrary` est appelée. Lorsque le décompte de références atteint zéro, le module n’est pas mappé à partir de l’espace d’adressage du processus appelant et le handle n’est plus valide.
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Avant Windows Vista, applications qui ont accédé le Registre utilisé généralement la **HKEY_CLASSES_ROOT** nœud. Toutefois, avec Windows Vista ou versions ultérieures, vous devez exécuter une application en mode élevé pour écrire dans HKCR.
 
-Cette méthode permet à votre application lire et écrire dans le Registre sans exécuter en mode élevé en redirigeant l’accès au Registre dans HKCR dans HKCU. Pour plus d’informations, consultez [Pages de propriétés de l’éditeur de liens](../../ide/linker-property-pages.md).
+Cette méthode permet à votre application lire et écrire dans le Registre sans exécuter en mode élevé en redirigeant l’accès au Registre dans HKCR dans HKCU. Pour plus d'informations, consultez [Linker Property Pages](../../ide/linker-property-pages.md).
 
 Si vous activez la redirection du Registre, le framework redirige l’accès à partir de HKCR à **HKEY_CURRENT_USER\Software\Classes**. Uniquement les infrastructures MFC et ATL sont affectés par la redirection.
 

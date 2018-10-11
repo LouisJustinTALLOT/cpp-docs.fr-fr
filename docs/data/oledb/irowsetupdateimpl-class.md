@@ -63,16 +63,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67510ada7af557877f427d757200a48c0df95fe9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f13da3ed0b1f2193ab86e1644d401a6e4fb6b942
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054114"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082854"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl, classe
 
-L’implémentation de modèles OLE DB de la [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) interface.  
+L’implémentation de modèles OLE DB de la [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) interface.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -146,7 +146,7 @@ L’unité de stockage pour tous les handles de ligne détenus par le fournisseu
   
 ## <a name="remarks"></a>Notes  
 
-Vous devez tout d’abord lire et comprendre sa documentation [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)), car toutes les procédures décrites il s’applique également ici. Vous devez également lire le chapitre 6 de la *de référence du programmeur OLE DB* sur la définition de données.  
+Vous devez tout d’abord lire et comprendre sa documentation [IRowsetChange](/previous-versions/windows/desktop/ms715790), car toutes les procédures décrites il s’applique également ici. Vous devez également lire le chapitre 6 de la *de référence du programmeur OLE DB* sur la définition de données.  
   
 `IRowsetUpdateImpl` implémente la norme OLE DB `IRowsetUpdate` interface, ce qui permet aux consommateurs de retarder la transmission des modifications apportées avec `IRowsetChange` à source de données et annuler les modifications avant la transmission.  
   
@@ -173,7 +173,7 @@ STDMETHOD (SetData )(HROW hRow,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
 
@@ -193,7 +193,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.   
+Consultez [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947) dans le *de référence du programmeur OLE DB*.   
 
 ## <a name="getpendingrows"></a> IRowsetUpdateImpl::GetPendingRows
 
@@ -212,13 +212,13 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Paramètres  
 
 *hReserved*<br/>
-[in] Correspond à la *hChapter* paramètre dans [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)).  
+[in] Correspond à la *hChapter* paramètre dans [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626).  
   
-Pour les autres paramètres, consultez [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Pour les autres paramètres, consultez [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
 
-Pour plus d’informations, consultez [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Pour plus d’informations, consultez [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) dans le *de référence du programmeur OLE DB*.  
 
 ## <a name="getrowstatus"></a> IRowsetUpdateImpl::GetRowStatus
 
@@ -236,9 +236,9 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Paramètres  
 
 *hReserved*<br/>
-[in] Correspond à la *hChapter* paramètre dans [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)).  
+[in] Correspond à la *hChapter* paramètre dans [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377).  
   
-Pour les autres paramètres, consultez [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Pour les autres paramètres, consultez [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377) dans le *de référence du programmeur OLE DB*.  
 
 ## <a name="undo"></a> IRowsetUpdateImpl::Undo
 
@@ -258,15 +258,15 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Paramètres  
 
 *hReserved*<br/>
-[in] Correspond à la *hChapter* paramètre dans [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[in] Correspond à la *hChapter* paramètre dans [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
 *pcRowsUndone*<br/>
-[out] Correspond à la *pcRows* paramètre dans [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[out] Correspond à la *pcRows* paramètre dans [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
 *prgRowsUndone*<br/>
-[in] Correspond à la *prgRows* paramètre dans [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[in] Correspond à la *prgRows* paramètre dans [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
-Pour les autres paramètres, consultez [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
+Pour les autres paramètres, consultez [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="update"></a> IRowsetUpdateImpl::Update
 
@@ -286,13 +286,13 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Paramètres  
 
 *hReserved*<br/>
-[in] Correspond à la *hChapter* paramètre dans [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)).  
+[in] Correspond à la *hChapter* paramètre dans [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709).  
   
-Pour les autres paramètres, consultez [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Pour les autres paramètres, consultez [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
 
-Les modifications sont transmises en appelant [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Le consommateur doit appeler [CRowset::Update](../../data/oledb/crowset-update.md) pour que les modifications entrent en vigueur. Définissez *prgRowstatus* à une valeur appropriée, comme décrit dans [États des lignes](/previous-versions/windows/desktop/ms722752\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
+Les modifications sont transmises en appelant [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Le consommateur doit appeler [CRowset::Update](../../data/oledb/crowset-update.md) pour que les modifications entrent en vigueur. Définissez *prgRowstatus* à une valeur appropriée, comme décrit dans [États des lignes](/previous-versions/windows/desktop/ms722752) dans le *de référence du programmeur OLE DB*. 
   
 ## <a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
 
@@ -319,7 +319,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
   
 ### <a name="remarks"></a>Notes  
 
-Si vous déterminez qu’une mise à jour doit être autorisé, retourne S_OK ; Sinon, retourne E_FAIL. Si vous autorisez une mise à jour, vous devez également définir le `DBROWSTATUS` dans [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) un appropriés [état de la ligne](/previous-versions/windows/desktop/ms722752\(v=vs.85\)).  
+Si vous déterminez qu’une mise à jour doit être autorisé, retourne S_OK ; Sinon, retourne E_FAIL. Si vous autorisez une mise à jour, vous devez également définir le `DBROWSTATUS` dans [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) un appropriés [état de la ligne](/previous-versions/windows/desktop/ms722752).  
 
 ## <a name="mapcacheddata"></a> IRowsetUpdateImpl::m_mapCachedData
 

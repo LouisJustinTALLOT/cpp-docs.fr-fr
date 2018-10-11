@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb88721c64666cc5b74bb51c1f92bd612b66fc4c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038553"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083318"
 ---
 # <a name="string-and-character-literals--c"></a>Littéraux de chaîne et caractère (C++)
 
@@ -80,7 +80,7 @@ int main()
 }
 ```
 
-Il est possible que les littéraux de chaîne n’aient aucun préfixe, ou qu’ils aient les préfixes `u8`, `L`, `u`et  `U` pour désigner un caractère étroit (codé sur un ou plusieurs octets), UTF-8, un caractère large (UCS-2 ou UTF-16), ainsi que les encodages UTF-16 et UTF-32, respectivement. Un littéral de chaîne brut peut avoir les préfixes `R`, `u8R`, `LR`, `uR` et `UR` pour les équivalents en version brute de ces encodages.  Pour créer des valeurs std::string temporaires ou statiques, vous pouvez utiliser des littéraux de chaîne ou des littéraux de chaîne bruts avec un suffixe `s` . Pour plus d’informations, consultez la section Littéraux de chaîne ci-dessous. Pour plus d’informations sur les caractères sources de base définie, les noms de caractères universels et l’utilisation de caractères à partir de pages de codes étendues dans votre code source, consultez [jeux de caractères](../cpp/character-sets.md).
+Il est possible que les littéraux de chaîne n’aient aucun préfixe, ou qu’ils aient les préfixes `u8`, `L`, `u`et  `U` pour désigner un caractère étroit (codé sur un ou plusieurs octets), UTF-8, un caractère large (UCS-2 ou UTF-16), ainsi que les encodages UTF-16 et UTF-32, respectivement. Un littéral de chaîne brut peut avoir les préfixes `R`, `u8R`, `LR`, `uR` et `UR` pour les équivalents en version brute de ces encodages.  Pour créer des valeurs std::string temporaires ou statiques, vous pouvez utiliser des littéraux de chaîne ou des littéraux de chaîne bruts avec un suffixe `s` . Pour plus d’informations, consultez la section Littéraux de chaîne ci-dessous. Pour plus d’informations sur le jeu de caractères sources de base, les noms de caractères universels et l’utilisation de caractères de pages de codes étendues dans votre code source, consultez [Character Sets](../cpp/character-sets.md).
 
 ## <a name="character-literals"></a>Littéraux de caractère
 
@@ -211,7 +211,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Les noms de caractères universels ne peuvent pas encoder les valeurs dans la plage de points de code de substitution D800-DFFF. Pour les paires de substitution Unicode, spécifiez le nom de caractère universel à l’aide de `\UNNNNNNNN`, où NNNNNNNN représente le point de code à huit chiffres du caractère. Le compilateur génère une paire de substitution, si nécessaire.
 
-En C++03, le langage autorisait uniquement un sous-ensemble de caractères à être représentés par leurs noms de caractères universels. En outre, il autorisait certains noms de caractères universels qui ne représentaient pas en réalité des caractères Unicode valides. Ce problème a été corrigé dans la norme C++11. En C++11, les littéraux de caractère et de chaîne, ainsi que les identificateurs, peuvent utiliser des noms de caractères universels.  Pour plus d’informations sur les noms de caractères universels, consultez [jeux de caractères](../cpp/character-sets.md). Pour plus d’informations sur Unicode, consultez [Unicode](https://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Pour plus d’informations sur les paires de substitution, consultez [paires de substitution et caractères supplémentaires](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+En C++03, le langage autorisait uniquement un sous-ensemble de caractères à être représentés par leurs noms de caractères universels. En outre, il autorisait certains noms de caractères universels qui ne représentaient pas en réalité des caractères Unicode valides. Ce problème a été corrigé dans la norme C++11. En C++11, les littéraux de caractère et de chaîne, ainsi que les identificateurs, peuvent utiliser des noms de caractères universels.  Pour plus d’informations sur les noms de caractères universels, consultez [Character Sets](../cpp/character-sets.md). Pour plus d’informations sur Unicode, consultez [Unicode](https://msdn.microsoft.com/library/dd374081). Pour plus d’informations sur les paires de substitution, consultez [Paires de substitution et caractères supplémentaires](/windows/desktop/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Littéraux de chaîne
 
@@ -257,7 +257,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>Littéraux de chaîne bruts (C++11)
 
-Un littéral de chaîne brut est un tableau se terminant par null, de n’importe quel type de caractère, qui contient tout caractère graphique, y compris les guillemets doubles («), barre oblique inverse (\\), ou un caractère de saut de ligne. Les littéraux de chaîne bruts sont souvent utilisés dans les expressions régulières qui utilisent des classes de caractères et dans des chaînes XML et des chaînes HTML. Pour obtenir des exemples, consultez l’article suivant : [Forum aux questions de Bjarne Stroustrup sur C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
+Un littéral de chaîne brut est un tableau se terminant par null, de n’importe quel type de caractère, qui contient tout caractère graphique, y compris les guillemets doubles («), barre oblique inverse (\\), ou un caractère de saut de ligne. Les littéraux de chaîne bruts sont souvent utilisés dans les expressions régulières qui utilisent des classes de caractères et dans des chaînes XML et des chaînes HTML. Pour obtenir des exemples, consultez l’article du [FAQ de Bjarne Stroustrup sur C++11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character

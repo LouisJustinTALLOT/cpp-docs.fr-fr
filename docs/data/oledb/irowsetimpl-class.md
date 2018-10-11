@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b495a756cbccc88f00c42dc8de78bf80a39f4b7a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085548"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083358"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl, classe
 
@@ -173,7 +173,7 @@ Unité de stockage pour tous les handles de ligne détenus par le fournisseur.
   
 ## <a name="remarks"></a>Notes  
 
-[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) est l’interface de l’ensemble de lignes de base.  
+[IRowset](/previous-versions/windows/desktop/ms720986) est l’interface de l’ensemble de lignes de base.  
 
 ## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 
@@ -190,7 +190,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) dans le *de référence du programmeur OLE DB*.  
 
 ## <a name="createrow"></a> IRowsetImpl::CreateRow
 
@@ -233,7 +233,7 @@ STDMETHOD(GetData )(HROW hRow,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IRowset::GetData](/previous-versions/windows/desktop/ms716988) dans le *de référence du programmeur OLE DB*.  
   
 Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IRowset::GetData`:  
   
@@ -266,7 +266,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
   
 ### <a name="return-value"></a>Valeur de retour  
 
-Le [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) indicateurs de la colonne. 
+Le [DBSTATUS](/previous-versions/windows/desktop/ms722617) indicateurs de la colonne. 
 
 ## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 
@@ -284,7 +284,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) dans le *de référence du programmeur OLE DB*. 
+Consultez [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827) dans le *de référence du programmeur OLE DB*. 
 
 ## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 
@@ -316,7 +316,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="return-value"></a>Valeur de retour  
 
@@ -338,7 +338,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) dans le *de référence du programmeur OLE DB*.  
 
 ## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 
@@ -352,7 +352,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
   
 #### <a name="parameters"></a>Paramètres  
 
-Consultez [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.  
+Consultez [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) dans le *de référence du programmeur OLE DB*.  
   
 ### <a name="remarks"></a>Notes  
 
@@ -373,7 +373,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Paramètres  
 
 *statusFlags*<br/>
-Le [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) indicateurs à définir pour la colonne.  
+Le [DBSTATUS](/previous-versions/windows/desktop/ms722617) indicateurs à définir pour la colonne.  
   
 *currentRow*<br/>
 La ligne actuelle.  

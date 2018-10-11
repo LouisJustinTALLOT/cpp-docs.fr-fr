@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42545b24bff14daf66f719a78ba414f1ae86c5c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790933"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083607"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -45,23 +45,23 @@ Numéro de colonne ordinal (`DBCOLUMNINFO` ordinale) ou nom de colonne (chaîne 
 ```
 
 *DbType*<br/>
-(Facultatif) OLE DB [indicateur de Type](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) pour l’entrée de la colonne.
+(Facultatif) OLE DB [indicateur de Type](/previous-versions/windows/desktop/ms711251) pour l’entrée de la colonne.
 
 *precision*<br/>
-(Facultatif) La précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de la `bPrecision` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Facultatif) La précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de la `bPrecision` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845)
 
 *Mise à l’échelle*<br/>
-(Facultatif) La mise à l’échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Facultatif) La mise à l’échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845)
 
 *status*<br/>
-(Facultatif) Une variable de membre permet de conserver l’état de cette colonne. L’état indique si la valeur de colonne est une valeur de données ou une autre valeur, comme NULL. Pour connaître les valeurs possibles, consultez [état](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+(Facultatif) Une variable de membre permet de conserver l’état de cette colonne. L’état indique si la valeur de colonne est une valeur de données ou une autre valeur, comme NULL. Pour connaître les valeurs possibles, consultez [état](/previous-versions/windows/desktop/ms722617) dans le *de référence du programmeur OLE DB*.
 
 *length*<br/>
 (Facultatif) Une variable de membre utilisée pour conserver la taille de la colonne en octets.
 
 ## <a name="remarks"></a>Notes
 
-**db_column** lie la colonne de table spécifié à une variable dans l’ensemble de lignes. Délimite les données membres qui peuvent participer à OLE DB `IAccessor`-en fonction de liaison. Cet attribut définit le mappage de colonnes normalement défini par l’utilisation des macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), et [COLUMN_ENTRY](../../data/oledb/column-entry.md). Ces manipulent OLE DB [structure DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) pour lier la colonne spécifiée. Chaque membre que vous marquez avec le **db_column** attribut occupe une seule entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut où vous placeriez le mappage de colonnes, autrement dit, dans la classe de commande ou de table.
+**db_column** lie la colonne de table spécifié à une variable dans l’ensemble de lignes. Délimite les données membres qui peuvent participer à OLE DB `IAccessor`-en fonction de liaison. Cet attribut définit le mappage de colonnes normalement défini par l’utilisation des macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), et [COLUMN_ENTRY](../../data/oledb/column-entry.md). Ces manipulent OLE DB [structure DBBINDING](/previous-versions/windows/desktop/ms716845) pour lier la colonne spécifiée. Chaque membre que vous marquez avec le **db_column** attribut occupe une seule entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut où vous placeriez le mappage de colonnes, autrement dit, dans la classe de commande ou de table.
 
 Utilisez **db_column** conjointement avec soit le [db_table](db-table.md) ou [db_command](db-command.md) attributs.
 
@@ -120,7 +120,7 @@ class CProducts {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 

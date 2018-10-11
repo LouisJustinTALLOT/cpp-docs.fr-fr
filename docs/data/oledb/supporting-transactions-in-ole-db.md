@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76dc4cb86601be714e7ca1d442eb904d016e877b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47b869ffc6ad3dd1492ab052d648bcb8acde7e52
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102779"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083695"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Prise en charge des transactions dans OLE DB
 
@@ -33,11 +33,11 @@ Un [transaction](../../data/transactions-mfc-data-access.md) consiste à regroup
   
 OLE DB prend en charge les transactions avec les trois méthodes suivantes :  
   
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786)  
   
-- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008)  
   
-- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Relations des Sessions et Transactions  
 
@@ -59,7 +59,7 @@ Appel `ITransaction::Commit` ou `ITransaction::Abort` met fin à la transaction.
   
 ## <a name="nested-transactions"></a>Transactions imbriquées  
 
-Un [imbriqués transaction](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) se produit lorsque vous démarrez une nouvelle transaction locale lorsqu’une transaction active existe déjà sur la session. La nouvelle transaction est démarrée en tant que transaction imbriquée sous la transaction en cours. Si le fournisseur ne prend pas en charge les transactions imbriquées, l’appel `StartTransaction` lorsqu’il existe déjà une transaction active dans la session renvoie XACT_E_XTIONEXISTS.  
+Un [imbriqués transaction](/previous-versions/windows/desktop/ms716985) se produit lorsque vous démarrez une nouvelle transaction locale lorsqu’une transaction active existe déjà sur la session. La nouvelle transaction est démarrée en tant que transaction imbriquée sous la transaction en cours. Si le fournisseur ne prend pas en charge les transactions imbriquées, l’appel `StartTransaction` lorsqu’il existe déjà une transaction active dans la session renvoie XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Transactions distribuées  
 

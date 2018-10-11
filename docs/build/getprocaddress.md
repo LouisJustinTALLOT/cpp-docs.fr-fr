@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef48157d1f4efb467fd33270ff05271bedd1a563
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713718"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081888"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Les processus liés de manière explicite à une DLL appellent [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) pour obtenir l’adresse d’une fonction exportée dans la DLL. Vous utilisez le pointeur de fonction retourné pour appeler la fonction de la DLL. **GetProcAddress** prend comme paramètres le handle de module DLL (retourné par **LoadLibrary**, `AfxLoadLibrary`, ou **GetModuleHandle**) et soit le nom de la fonction que vous souhaitez à l’appel ou l’ordinal d’exportation de la fonction.
+Les processus liés de manière explicite à une DLL appellent [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) pour obtenir l’adresse d’une fonction exportée dans la DLL. Vous utilisez le pointeur de fonction retourné pour appeler la fonction de la DLL. **GetProcAddress** prend comme paramètres le handle de module DLL (retourné par **LoadLibrary**, `AfxLoadLibrary`, ou **GetModuleHandle**) et soit le nom de la fonction que vous souhaitez à l’appel ou l’ordinal d’exportation de la fonction.
 
 Étant donné que vous appelez la fonction DLL via un pointeur et qu’aucune vérification de type lors de la compilation, assurez-vous que les paramètres de la fonction sont corrects, afin que vous ne pas enfreindre la mémoire allouée sur la pile et provoquer une violation d’accès. Une méthodes permettant de fournir une sécurité de type consiste à examiner les prototypes des fonctions exportées et créer des typedefs correspondants pour les pointeurs de fonction. Exemple :
 
@@ -73,7 +73,7 @@ Vous ne pouvez obtenir l’ordinal d’exportation si la DLL que vous établisse
 
 - [LoadLibrary et AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [Exportation à partir d’une DLL à l’aide de fichiers DEF](../build/exporting-from-a-dll-using-def-files.md)
 
