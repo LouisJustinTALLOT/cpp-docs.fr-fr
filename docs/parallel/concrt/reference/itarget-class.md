@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412013"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163710"
 ---
 # <a name="itarget-class"></a>ITarget, classe
 
@@ -67,7 +67,7 @@ Le type de données de la charge utile dans les messages acceptés par le bloc c
 |----------|-----------------|
 |[propager](#propagate)|En cas de substitution dans une classe dérivée, passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|
 |[send](#send)|En cas de substitution dans une classe dérivée, passe de façon synchrone un message au bloc cible.|
-|[supports_anonymous_source](#supports_anonymous_source)|En cas de substitution dans une classe dérivée, retourne true ou false selon si le bloc de message accepte des messages offertes par une source qui n’est pas liée à celui-ci. Si la méthode substituée retourne `true`, la cible ne peut pas différer un message envoyé, car la consommation d’un message différé ultérieurement nécessite la source soit identifiée dans son Registre de lien sourse.|
+|[supports_anonymous_source](#supports_anonymous_source)|En cas de substitution dans une classe dérivée, retourne true ou false selon si le bloc de message accepte des messages offertes par une source qui n’est pas liée à celui-ci. Si la méthode substituée retourne **true**, la cible ne peut pas différer un message envoyé, car la consommation d’un message différé ultérieurement nécessite la source soit identifiée dans son Registre de lien sourse.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
@@ -174,7 +174,7 @@ Lorsque `send` est retournée, le message a déjà été accepté et transféré
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source
 
-En cas de substitution dans une classe dérivée, retourne true ou false selon si le bloc de message accepte des messages offertes par une source qui n’est pas liée à celui-ci. Si la méthode substituée retourne `true`, la cible ne peut pas différer un message envoyé, car la consommation d’un message différé ultérieurement nécessite la source soit identifiée dans son Registre de lien sourse.
+En cas de substitution dans une classe dérivée, retourne true ou false selon si le bloc de message accepte des messages offertes par une source qui n’est pas liée à celui-ci. Si la méthode substituée retourne **true**, la cible ne peut pas différer un message envoyé, car la consommation d’un message différé ultérieurement nécessite la source soit identifiée dans son Registre de lien sourse.
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le bloc peut accepter le message à partir d’une source qui n’est pas liée à ce dernier `false` dans le cas contraire.
+**true** si le bloc peut accepter le message à partir d’une source qui n’est pas liée à ce dernier **false** dans le cas contraire.
 
 ##  <a name="unlink_source"></a> unlink_source
 

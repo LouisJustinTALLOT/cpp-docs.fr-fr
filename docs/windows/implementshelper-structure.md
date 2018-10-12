@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 574d0dbf6a252f65dd6c15681a243ce0e4086f0e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d734e98d8d7713451be1a16e08e58676f2b0cde4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788498"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163684"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper (structure)
 
@@ -52,7 +52,7 @@ Un champ d’indicateurs qui spécifie un ou plusieurs [RuntimeClassType](../win
 Liste des ID d’interface.
 
 *IsDelegateToClass*<br/>
-Spécifiez `true` si l’instance actuelle de `Implements` est une classe de base de l’ID d’interface première dans *ILst*; sinon, `false`.
+Spécifiez **true** si l’instance actuelle de `Implements` est une classe de base de l’ID d’interface première dans *ILst*; sinon, **false**.
 
 ## <a name="remarks"></a>Notes
 

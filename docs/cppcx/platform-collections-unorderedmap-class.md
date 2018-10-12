@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b0b8a17cf83171a570f2ca3f6ff40c657d17164d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105833"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162345"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap, classe
 
@@ -58,7 +58,7 @@ Les types autorisés sont les suivants :
 
 - classe d'énumération publique
 
-**UnorderedMap** est essentiellement un wrapper pour [std::unordered_map](../standard-library/unordered-map-class.md) qui prend en charge le stockage des types Windows Runtime. Il est l’une implémentation concrète de la [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) et [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) interfaces de types qui sont passés à travers public Windows Runtime. Si vous tentez d'utiliser un type `Platform::Collections::UnorderedMap` dans une valeur de retour ou un paramètre public, l'erreur de compilateur C3986 est générée. Vous pouvez corriger l’erreur en modifiant le type de la valeur de paramètre ou de retour à [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** est essentiellement un wrapper pour [std::unordered_map](../standard-library/unordered-map-class.md) qui prend en charge le stockage des types Windows Runtime. Il est l’une implémentation concrète de la [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) et [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) interfaces de types qui sont passés à travers public Windows Runtime. Si vous tentez d'utiliser un type `Platform::Collections::UnorderedMap` dans une valeur de retour ou un paramètre public, l'erreur de compilateur C3986 est générée. Vous pouvez corriger l’erreur en modifiant le type du paramètre ou la valeur de retour par [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
 Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md).
 
@@ -163,7 +163,7 @@ Clé utilisée pour rechercher l'élément UnorderedMap. Le type de *clé* est t
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si la clé est trouvée ; sinon, `false`.
+**true** si la clé est trouvée ; sinon, **false**.
 
 ## <a name="insert"></a>  UnorderedMap::Insert Method
 
@@ -188,7 +188,7 @@ Partie de valeur de la paire clé-valeur. Le type de *valeur* est typename *V*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si la clé d’un élément existant dans l’objet Map actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. `false` Si aucun élément existant dans l’objet Map actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à l’objet UnorderedMap actif.
+**true** si la clé d’un élément existant dans l’objet Map actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. **false** si aucun élément existant dans l’objet Map actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à la UnorderedMap actif.
 
 ## <a name="lookup"></a>  Unorderedmap::Lookup, méthode
 

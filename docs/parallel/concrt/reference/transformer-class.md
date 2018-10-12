@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803cb474edbce6eb3d397e025ecc31bd5332cc92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e5c6b9d15ef2ca456fd91dbd7829d94e33e2c0a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427883"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162228"
 ---
 # <a name="transformer-class"></a>Classe transformer
 
@@ -61,7 +61,7 @@ Type de charge utile des messages stockés et propagée à la mémoire tampon.
 
 |Nom|Description|
 |----------|-----------------|
-|[transformateur](#ctor)|Surchargé. Construit un `transformer` bloc de messagerie.|
+|[transformateur](#ctor)|Surchargé. Construit un bloc de messagerie `transformer` .|
 |[~ transformer, destructeur](#dtor)|Détruit le `transformer` bloc de messagerie.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
@@ -205,11 +205,11 @@ Le `runtime_object_identity` de la `message` de l’objet en cours de réservati
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été réservé avec succès, `false` dans le cas contraire.
+**true** si le message a été réservé avec succès, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Après avoir `reserve` est appelée, si elle retourne `true`, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
+Après avoir `reserve` est appelée, si elle retourne **true**, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -251,11 +251,11 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Étant donné que le bloc de ne pas reporter des messages transmis.
+**true** , car le bloc de ne pas reporter des messages proposés.
 
 ##  <a name="ctor"></a> transformateur
 
-Construit un `transformer` bloc de messagerie.
+Construit un bloc de messagerie `transformer` .
 
 ```
 transformer(
@@ -302,10 +302,10 @@ Pointeur vers un bloc cible à lier avec le transformateur.
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
-Le `Scheduler` objet dans lequel la tâche de propagation pour le `transformer` bloc de messagerie est planifiée.
+Objet `Scheduler` dans lequel la tâche de propagation du bloc de messagerie `transformer` est planifiée.
 
 *_PScheduleGroup*<br/>
-Le `ScheduleGroup` objet dans lequel la tâche de propagation pour le `transformer` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
+Objet `ScheduleGroup` dans lequel la tâche de propagation du bloc de messagerie `transformer` est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
 
 ### <a name="remarks"></a>Notes
 

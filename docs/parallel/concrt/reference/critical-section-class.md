@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35a75f7401c436e14ccb4a7eff6fc88348a7412
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b6be352c936401ddae6dc3dd825280096e06a7be
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429048"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163918"
 ---
 # <a name="criticalsection-class"></a>critical_section, classe
 
@@ -175,7 +175,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le verrou a été acquis, la valeur `true`; sinon, la valeur `false`.
+Si le verrou a été acquis, la valeur **true**; sinon, la valeur **false**.
 
 ##  <a name="try_lock_for"></a> try_lock_for
 
@@ -192,7 +192,7 @@ Le nombre de millisecondes à attendre avant l’expiration.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le verrou a été acquis, la valeur `true`; sinon, la valeur `false`.
+Si le verrou a été acquis, la valeur **true**; sinon, la valeur **false**.
 
 ##  <a name="unlock"></a> Déverrouiller
 

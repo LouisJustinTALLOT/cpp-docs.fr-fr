@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 668365cf69fc3457efc615a5fa0da2c24b3cb02e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102549"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162384"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator, classe
 
@@ -124,7 +124,7 @@ La première syntaxe décrémente le VectorIterator actif puis le retourne. La d
 
 La première syntaxe VectorIterator prédécrémente le VectorIterator actif.
 
-La deuxième syntaxe post-décrémente le VectorIterator actif. Le `int` type dans la deuxième syntaxe indique une postdécrémentation, pas un opérande entier réel.
+La deuxième syntaxe post-décrémente le VectorIterator actif. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une postdécrémentation.
 
 ## <a name="operator-dereference"></a>  VectorIterator::operator\* opérateur
 
@@ -157,7 +157,7 @@ Autre objet VectorIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si l'objet VectorIterator actuel est égal à `other` ; sinon, `false`.
+**true** si le VectorIterator actif est égal à *autres*; sinon, **false**.
 
 ## <a name="operator-greater-than"></a>  VectorIterator::operator&gt; opérateur
 
@@ -176,7 +176,7 @@ Autre objet VectorIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le VectorIterator actif est supérieur à `other`; sinon, `false`.
+**true** si le VectorIterator actif est supérieur à *autres*; sinon, **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  VectorIterator::operator&gt;=, opérateur
 
@@ -195,7 +195,7 @@ Autre objet VectorIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si le VectorIterator actif est supérieur ou égal à `other` ; sinon, `false`.
+**true** si le VectorIterator actif est supérieur ou égal à *autres*; sinon, **false**.
 
 ## <a name="operator-increment"></a>  VectorIterator::operator ++ (opérateur)
 
@@ -216,7 +216,7 @@ La première syntaxe incrémente le VectorIterator actif puis le retourne. La de
 
 La première syntaxe VectorIterator préincrémente le VectorIterator actif.
 
-La deuxième syntaxe postincrémente le VectorIterator actif. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.
+La deuxième syntaxe postincrémente le VectorIterator actif. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une post-incrémentation.
 
 ## <a name="operator-inequality"></a>  VectorIterator::operator ! =, opérateur
 
@@ -235,7 +235,7 @@ Autre objet VectorIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le VectorIterator actif n’est pas égal à `other`; sinon, `false`.
+**true** si le VectorIterator actif n’est pas égal à *autres*; sinon, **false**.
 
 ## <a name="operator-less-than"></a>  VectorIterator::operator&lt; opérateur
 
@@ -254,7 +254,7 @@ Autre objet VectorIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si le VectorIterator actuel est inférieur à `other` ; sinon, `false`.
+**true** si le VectorIterator actif est inférieur à *autres*; sinon, **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  VectorIterator::operator&lt;=, opérateur
 
@@ -273,7 +273,7 @@ Autre objet VectorIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le VectorIterator actif est inférieur ou égal à `other`; sinon, `false`.
+**true** si le VectorIterator actif est inférieur ou égal à *autres*; sinon, **false**.
 
 ## <a name="operator-minus"></a>  VectorIterator::operator-(opérateur)
 
@@ -298,7 +298,7 @@ Autre objet VectorIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La première syntaxe d’opérateur retourne un objet VectorIterator `n` éléments en moins que le VectorIterator actif. La deuxième syntaxe d’opérateur retourne le nombre d’éléments entre actuel et le `other` VectorIterator.
+La première syntaxe d’opérateur retourne un objet VectorIterator qui a `n` éléments en moins que l’objet VectorIterator actif. La deuxième syntaxe d’opérateur retourne le nombre d’éléments entre l’objet actif et l’objet VectorIterator `other`.
 
 ## <a name="operator-plus-assign"></a>  VectorIterator::operator +=, opérateur
 

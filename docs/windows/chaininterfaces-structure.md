@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789019"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161812"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (structure)
 
@@ -117,7 +117,7 @@ Un type dérivé.
 Le type de base d’un type dérivé.
 
 *hasImplements*<br/>
-Une valeur booléenne qu’if `true`, signifie que vous ne pouvez pas utiliser un [MixIn](../windows/mixin-structure.md) structure avec une classe qui ne dérive pas de la [implémente](../windows/implements-structure.md) structure.
+Une valeur booléenne qu’if **true**, signifie que vous ne pouvez pas utiliser un [MixIn](../windows/mixin-structure.md) structure avec une classe qui ne dérive pas de la [implémente](../windows/implements-structure.md) structure.
 
 ## <a name="members"></a>Membres
 
@@ -169,7 +169,7 @@ Pointeur vers le dernier ID d’interface qui a été converti avec succès.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si toutes les opérations de cast a réussi ; Sinon, `false`.
+**true** si toutes les opérations de cast a réussi ; sinon, **false**.
 
 ## <a name="casttounknown"></a>ChainInterfaces::CastToUnknown
 

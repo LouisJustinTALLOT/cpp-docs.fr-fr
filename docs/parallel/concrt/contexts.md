@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378215"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163827"
 ---
 # <a name="contexts"></a>Contextes
 
@@ -67,7 +67,7 @@ Pour les opérations de calcul intensives, le surabonnement généralement n’�
 > [!NOTE]
 >  Activer le surabonnement uniquement à partir d’un thread qui a été créé par le Runtime d’accès concurrentiel. Le surabonnement n’a aucun effet lorsqu’elle est appelée à partir d’un thread qui n’a pas été créé par le runtime (y compris le thread principal).
 
-Pour activer le surabonnement dans le contexte actuel, appelez le [Concurrency::Context :: Oversubscribe](reference/context-class.md#oversubscribe) méthode avec le `_BeginOversubscription` paramètre défini sur `true`. Lorsque vous activez le surabonnement sur un thread qui a été créé par le Runtime d’accès concurrentiel, elle entraîne le runtime crée un thread supplémentaire. Une fois toutes les tâches qui requièrent le surabonnement sont terminées, appelez `Context::Oversubscribe` avec la `_BeginOversubscription` paramètre défini sur `false`.
+Pour activer le surabonnement dans le contexte actuel, appelez le [Concurrency::Context :: Oversubscribe](reference/context-class.md#oversubscribe) méthode avec le `_BeginOversubscription` paramètre défini sur **true**. Lorsque vous activez le surabonnement sur un thread qui a été créé par le Runtime d’accès concurrentiel, elle entraîne le runtime crée un thread supplémentaire. Une fois toutes les tâches qui requièrent le surabonnement sont terminées, appelez `Context::Oversubscribe` avec la `_BeginOversubscription` paramètre défini sur **false**.
 
 Vous pouvez activer le surabonnement plusieurs fois dans le contexte actuel, mais vous devez le désactiver le même nombre de fois que vous l’activez. Le surabonnement peut également être imbriqué ; Autrement dit, une tâche qui est créée par une autre tâche qui utilise le surabonnement pouvez sur-souscrire également son contexte. Toutefois, si une tâche imbriquée et son parent appartiennent au même contexte, seul l’appel extérieur à `Context::Oversubscribe` provoque la création d’un thread supplémentaire.
 

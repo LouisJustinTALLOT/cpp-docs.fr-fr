@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436986"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162280"
 ---
 # <a name="message-passing-functions"></a>Fonctions de passage de messages
 
@@ -41,9 +41,9 @@ Cette rubrique décrit les fonctions de passage de messages suivantes :
 
 Le [concurrency::send](reference/concurrency-namespace-functions.md#send) fonction envoie un message à la cible spécifiée de façon synchrone et le [concurrency::asend](reference/concurrency-namespace-functions.md#asend) fonction envoie un message à la cible spécifiée de manière asynchrone. À la fois le `send` et `asend` fonctions patienter jusqu'à ce que la cible indique qu’il accepte ou refuse le message.
 
-Le `send` fonction attend jusqu'à ce que la cible accepte ou refuse le message avant de retourner. Le `send` fonction renvoie `true` si le message a été remis et `false` dans le cas contraire. Étant donné que le `send` fonction fonctionne de façon synchrone, le `send` fonction attend que la cible recevoir le message avant de retourner.
+Le `send` fonction attend jusqu'à ce que la cible accepte ou refuse le message avant de retourner. Le `send` fonction renvoie **true** si le message a été remis et **false** dans le cas contraire. Étant donné que le `send` fonction fonctionne de façon synchrone, le `send` fonction attend que la cible recevoir le message avant de retourner.
 
-À l’inverse, le `asend` fonction n’attend pas que la cible accepte ou refuse le message avant de retourner. Au lieu de cela, le `asend` fonction renvoie `true` si la cible accepte le message et prendra par la suite. Sinon, `asend` retourne `false` pour indiquer que la cible a refusé le message ou différé la décision sur la nécessité de prendre le message.
+À l’inverse, le `asend` fonction n’attend pas que la cible accepte ou refuse le message avant de retourner. Au lieu de cela, le `asend` fonction renvoie **true** si la cible accepte le message et prendra par la suite. Sinon, `asend` retourne **false** pour indiquer que la cible a refusé le message ou différé la décision sur la nécessité de prendre le message.
 
 [[Haut](#top)]
 

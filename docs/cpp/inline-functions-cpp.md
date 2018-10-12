@@ -1,7 +1,7 @@
 ---
 title: Fonctions inline (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017819"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163586"
 ---
 # <a name="inline-functions-c"></a>Fonctions inline (C++)
 
@@ -84,7 +88,7 @@ L'utilisation des fonctions inline permet accélérer l'exécution de votre prog
 
 Le compilateur traite les options d'expansion inline et les mots clés comme des suggestions. Rien ne garantit que les fonctions seront incorporées. Vous ne pouvez pas forcer le compilateur à incorporer une fonction particulière, même avec le **__forceinline** mot clé. Lors de la compilation avec **/CLR**, le compilateur n’incorpore pas une fonction s’il existe des attributs de sécurité appliqués à la fonction.
 
-Le **inline** mot clé est disponible uniquement en C++. Le **__inline** et **__forceinline** mots clés sont disponibles en C et C++. Pour assurer la compatibilité avec les versions précédentes, **_inline** est un synonyme de **__inline**.
+Le **inline** mot clé est disponible uniquement en C++. Le **__inline** et **__forceinline** mots clés sont disponibles en C et C++. Pour assurer la compatibilité avec les versions précédentes, **_inline** et **_forceinline** sont synonymes de **__inline**, et **__forceinline** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
 
 Le **inline** mot clé indique au compilateur que l’expansion inline est recommandée. Toutefois, le compilateur peut créer une instance séparée de la fonction (instanciation) et créer des liaisons d'appel standard au lieu d'insérer le code inline. Les deux cas où cela peut se produire sont :
 
