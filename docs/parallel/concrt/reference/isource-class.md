@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f39b9fff9d5fad930123fc930afe1600cd259e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e53f8999b4559a221b335528ec20b6034de269d3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396478"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162202"
 ---
 # <a name="isource-class"></a>ISource, classe
 
@@ -158,7 +158,7 @@ Un pointeur vers le `message` que l’appelant a désormais la propriété de l�
 
 ### <a name="remarks"></a>Notes
 
-Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné `true`.
+Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné **true**.
 
 ##  <a name="dtor"></a> ~ ISource
 
@@ -236,7 +236,7 @@ Un pointeur vers le bloc cible qui appelle le `reserve` (méthode).
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été réservé avec succès, `false` dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a été déjà réservé ou accepté par une autre cible, la source peut refuser des réservations et ainsi de suite.
+**true** si le message a été réservé avec succès, **false** dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a été déjà réservé ou accepté par une autre cible, la source peut refuser des réservations et ainsi de suite.
 
 ### <a name="remarks"></a>Notes
 

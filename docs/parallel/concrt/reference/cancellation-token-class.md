@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414301"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162072"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token, classe
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Supprime un rappel précédemment enregistré à l'aide de la méthode `register` basée sur l'objet `cancellation_token_registration` retourné au moment de l'enregistrement.|
 |[is_cancelable](#is_cancelable)|Indique si ce jeton peut être annulé ou non.|
-|[is_canceled](#is_canceled)|Retourne `true` si le jeton a été annulé.|
+|[is_canceled](#is_canceled)|Retourne **true** si le jeton a été annulé.|
 |[none](#none)|Retourne un jeton d'annulation qui ne pourra jamais faire l'objet d'une annulation.|
 |[register_callback](#register_callback)|Enregistre une fonction de rappel avec le jeton. Le rappel est effectué si et lorsque le jeton est annulé. Notez que si le jeton est déjà annulé lorsque cette méthode est appelée, le rappel est effectué immédiatement et de manière synchrone.|
 
@@ -63,7 +63,7 @@ class cancellation_token;
 
 |Nom|Description|
 |----------|-----------------|
-|[operator!=](#operator_neq)||
+|[!=, opérateur](#operator_neq)||
 |[operator=](#operator_eq)||
 |[operator==](#operator_eq_eq)||
 
@@ -123,7 +123,7 @@ Indique si ce jeton peut être annulé ou non.
 
 ##  <a name="is_canceled"></a> is_canceled
 
-Retourne `true` si le jeton a été annulé.
+Retourne **true** si le jeton a été annulé.
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si le jeton a été annulé ; sinon `false`.
+La valeur **true** si le jeton a été annulée ; sinon, la valeur **false**.
 
 ##  <a name="none"></a> None
 

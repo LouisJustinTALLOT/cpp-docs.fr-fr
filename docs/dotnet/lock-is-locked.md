@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 130ffcb372e3791af74ae6ec70e7b9bcfaff9376
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64c0a3fbc197af66e8a57928cadc29c28b1ece1a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438091"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163762"
 ---
 # <a name="lockislocked"></a>lock::is_locked
 
@@ -40,13 +40,13 @@ bool is_locked();
 
 ## <a name="return-value"></a>Valeur de retour
 
-`true` Si un verrou est maintenu, `false` dans le cas contraire.
+**true** si un verrou est maintenu, **false** dans le cas contraire.
 
 ## <a name="example"></a>Exemple
 
 Cet exemple utilise une seule instance d’une classe entre plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread principal de l’application utilise un verrou sur la même instance de la classe pour vérifier périodiquement pour voir si les threads de travail existent toujours et attentes pour quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.
 
-```
+```cpp
 // msl_lock_is_locked.cpp
 // compile with: /clr
 #include <msclr/lock.h>

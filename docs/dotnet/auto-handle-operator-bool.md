@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: be9c1bc8125c30eb2208b389097eac7e1cf38e09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2534563ba85ec3d2d513c192637d3ae8b3beb971
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374384"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162358"
 ---
 # <a name="autohandleoperator-bool"></a>auto_handle::operator (bool)
 
@@ -40,11 +40,11 @@ operator bool();
 
 ## <a name="return-value"></a>Valeur de retour
 
-`true` Si l’objet encapsulé est valide ; `false` dans le cas contraire.
+**true** si l’objet encapsulé est valide ; **false** dans le cas contraire.
 
 ## <a name="remarks"></a>Notes
 
-Cet opérateur convertit effectivement `_detail_class::_safe_bool` qui est plus sûr que `bool` , car il ne peut pas être converti en un type intégral.
+Cet opérateur convertit effectivement `_detail_class::_safe_bool` qui est plus sûr que **bool** , car il ne peut pas être converti en un type intégral.
 
 ## <a name="example"></a>Exemple
 

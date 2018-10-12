@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489ff00571c79d89c9e807f0d8796989e7a0f84f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e9b8ee4c80310c4d94ed432d48ee9702c41f80bf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714986"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161786"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Activer la fonction de raccordement _pexit)
 
@@ -43,7 +43,7 @@ Le `_pexit` fonction ne fait pas partie d’une bibliothèque quelconque, et il 
 Sauf si vous envisagez d’appeler explicitement `_pexit`, vous n’avez pas besoin de fournir un prototype. La fonction doit apparaître comme si elle avait le prototype suivant, et il doit transférer le contenu de tous les registres sur entrée et affiche le contenu non modifié à la sortie :
 
 ```
-void __declspec(naked) _cdecl _pexit( void );
+void __declspec(naked) __cdecl _pexit( void );
 ```
 
 `_pexit` est similaire à `_penter`; consultez [/Gh (activer _penter la fonction de raccordement)](../../build/reference/gh-enable-penter-hook-function.md) pour obtenir un exemple montrant comment écrire un `_pexit` (fonction).

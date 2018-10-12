@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 9647e18af021caf67dea5d946c9e5bf00fb50807
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861952"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162930"
 ---
 # <a name="asyncbase-class"></a>AsyncBase (classe)
 
@@ -233,7 +233,7 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’état actuel de l’opération asynchrone est *démarré*, ce qui signifie que l’opération doit continuer. Sinon, `false`, ce qui signifie que l’opération doit s’arrêter.
+**true** si l’état actuel de l’opération asynchrone est *démarré*, ce qui signifie que l’opération doit continuer. Sinon, **false**, ce qui signifie que l’opération doit s’arrêter.
 
 ## <a name="currentstatus"></a>AsyncBase::CurrentStatus
 
@@ -528,7 +528,7 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’opération asynchrone est terminée ; Sinon, `false`.
+**true** si l’opération asynchrone est terminée ; sinon, **false**.
 
 ## <a name="trytransitiontoerror"></a>AsyncBase::TryTransitionToError
 
@@ -547,7 +547,7 @@ Une erreur HRESULT.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’état d’erreur interne a été modifié ; Sinon, `false`.
+**true** si l’état d’erreur interne a été modifié ; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 

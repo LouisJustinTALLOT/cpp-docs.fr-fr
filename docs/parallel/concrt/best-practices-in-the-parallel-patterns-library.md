@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396933"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163385"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Meilleures pratiques de la Bibliothèque de modèles parallèles
 
@@ -92,13 +92,13 @@ Pour obtenir un exemple similaire qui utilise un pipeline pour effectuer le trai
 
 ##  <a name="divide-and-conquer"></a> Utiliser parallel_invoke pour résoudre des problèmes de division pour mieux régner
 
-Un *diviser pour mieux régner* problème est une forme de la construction de bifurcation-jointure qui utilise la récursivité pour diviser une tâche en sous-tâches. Outre le [concurrency::task_group](reference/task-group-class.md) et [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classes, vous pouvez également utiliser le [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorithme à résoudre les problèmes de division pour mieux régner. L'algorithme `parallel_invoke` a une syntaxe plus succincte que les objets de groupes de tâches. Il s'avère utile quand vous avez un nombre fixe de tâches parallèles.
+Un *diviser pour mieux régner* problème est une forme de la construction de bifurcation-jointure qui utilise la récursivité pour diviser une tâche en sous-tâches. Outre le [concurrency::task_group](reference/task-group-class.md) et [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classes, vous pouvez également utiliser le [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorithme à résoudre les problèmes de division pour mieux régner. L’algorithme `parallel_invoke` a une syntaxe plus succincte que les objets de groupes de tâches. Il s’avère utile quand vous avez un nombre fixe de tâches parallèles.
 
 L'exemple suivant illustre l'utilisation de l'algorithme `parallel_invoke` pour implémenter l'algorithme de tri bitonique.
 
 [!code-cpp[concrt-parallel-bitonic-sort#12](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_6.cpp)]
 
-Pour réduire la surcharge, l'algorithme `parallel_invoke` effectue la dernière série de tâches sur le contexte d'appel.
+Pour réduire la surcharge, l’algorithme `parallel_invoke` effectue la dernière série de tâches sur le contexte d’appel.
 
 Pour obtenir la version complète de cet exemple, consultez [Comment : utiliser parallel_invoke pour écrire une Routine de tri parallèle](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Pour plus d’informations sur la `parallel_invoke` algorithme, consultez [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md).
 
@@ -118,7 +118,7 @@ Bien que la gestion des exceptions soit moins efficace pour annuler un travail p
 
 [!code-cpp[concrt-task-tree-search#6](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_8.cpp)]
 
-L'appelant de la méthode `tree::for_all` peut lever une exception s'il n'a pas besoin que la fonction de travail soit appelée sur chaque élément de l'arborescence. L'exemple suivant illustre la fonction `search_for_value`, qui recherche une valeur dans l'objet `tree` fourni. La fonction `search_for_value` utilise une fonction de travail qui lève une exception quand l'élément actuel de l'arborescence correspond à la valeur fournie. La fonction `search_for_value` utilise un bloc `try-catch` pour capturer l'exception et imprimer le résultat dans la console.
+L’appelant de la méthode `tree::for_all` peut lever une exception s’il n’a pas besoin que la fonction de travail soit appelée sur chaque élément de l’arborescence. L'exemple suivant illustre la fonction `search_for_value`, qui recherche une valeur dans l'objet `tree` fourni. La fonction `search_for_value` utilise une fonction de travail qui lève une exception quand l'élément actuel de l'arborescence correspond à la valeur fournie. La fonction `search_for_value` utilise un bloc `try-catch` pour capturer l'exception et imprimer le résultat dans la console.
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
@@ -180,13 +180,13 @@ Dans la mesure du possible, n’effectuez pas les opérations de blocage avant d
 
 Quand une tâche effectue une opération de blocage coopérative, le runtime peut effectuer un autre travail pendant que la première tâche attend des données. Le runtime replanifie la tâche qui attend quand elle se débloque. En général, le runtime replanifie les dernières tâches qui ont été débloquées avant de replanifier celles qui l'ont été auparavant. Ainsi, le runtime peut planifier du travail inutile lors de l'opération de blocage, ce qui entraîne une diminution des performances. En conséquence, quand vous effectuez une opération de blocage avant d'annuler un travail parallèle, celle-ci peut retarder l'appel à `cancel`. Cette opération amène d'autres tâches à effectuer du travail inutile.
 
-Prenons l'exemple suivant qui définit la fonction `parallel_find_answer`, qui recherche un élément du tableau fourni qui satisfait à la fonction de prédicat fournie. Quand la fonction de prédicat retourne `true`, la fonction de travail parallèle crée un objet `Answer` et annule la tâche globale.
+Prenons l’exemple suivant qui définit la fonction `parallel_find_answer`, qui recherche un élément du tableau fourni qui satisfait à la fonction de prédicat fournie. Lorsque la fonction de prédicat retourne **true**, la fonction de travail parallèle crée un `Answer` de l’objet et annule la tâche globale.
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 
 L'opérateur `new` effectue une allocation de tas, qui peut se bloquer. Le runtime effectue un autre travail uniquement lorsque la tâche effectue un appel, tel qu’un appel à de blocage de coopératif [Concurrency::critical_section :: lock](reference/critical-section-class.md#lock).
 
-L'exemple suivant montre comment empêcher le travail inutile et ainsi améliorer les performances. Cet exemple annule le groupe de tâches avant qu'il alloue le stockage pour l'objet `Answer`.
+L'exemple suivant montre comment empêcher le travail inutile et ainsi améliorer les performances. Cet exemple annule le groupe de tâches avant qu’il alloue le stockage pour l’objet `Answer`.
 
 [!code-cpp[concrt-blocking-cancel#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_14.cpp)]
 
@@ -202,7 +202,7 @@ Prenons l’exemple suivant utilise le [concurrency::parallel_for_each](referenc
 
 Cet exemple peut également entraîner une baisse des performances car l'opération de verrouillage fréquente sérialise efficacement la boucle. De plus, quand un objet de runtime d'accès concurrentiel effectue une opération de blocage, le planificateur peut créer un thread supplémentaire pour effectuer un autre travail pendant que le premier thread attend des données. Si le runtime crée de nombreux threads car de nombreuses tâches attendent des données partagées, l’application peut fonctionner difficilement ou entrer dans un état de ressources insuffisantes.
 
-La bibliothèque PPL définit la [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) (classe), ce qui vous permet d’éliminer l’état partagé en fournissant l’accès aux ressources partagées sans verrou. La classe `combinable` fournit un stockage local des threads qui vous permet d'effectuer des calculs affinés, puis de fusionner ces calculs dans un résultat final. Vous pouvez considérer un objet `combinable` comme une variable de réduction.
+La bibliothèque PPL définit la [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) (classe), ce qui vous permet d’éliminer l’état partagé en fournissant l’accès aux ressources partagées sans verrou. La classe `combinable` fournit un stockage local des threads qui vous permet d’effectuer des calculs affinés, puis de fusionner ces calculs dans un résultat final. Vous pouvez considérer un objet `combinable` comme une variable de réduction.
 
 L'exemple suivant modifie le précédent en utilisant un objet `combinable` au lieu d'un objet `critical_section` pour calculer la somme. Cet exemple évolue car chaque thread retient sa propre copie locale de la somme. Cet exemple utilise le [Concurrency::combinable :: combine](reference/combinable-class.md#combine) méthode pour fusionner les calculs locaux dans le résultat final.
 
@@ -238,7 +238,7 @@ Nous vous recommandons d’utiliser le [concurrency::combinable](../../parallel/
 
 Quand vous fournissez une expression lambda à un groupe de tâches ou à un algorithme parallèle, la clause de capture spécifie si le corps de l’expression lambda accède aux variables dans la portée englobante par valeur ou par référence. Quand vous passez des variables à une expression lambda par référence, vous devez vous assurer que la durée de vie de cette variable persiste jusqu'à ce que la tâche se termine.
 
-Prenons l'exemple suivant qui définit la classe `object` et la fonction `perform_action`. La fonction `perform_action` crée une variable `object` et effectue une action sur cette variable de façon asynchrone. Étant donné que la fin de la tâche n'est pas garantie avant le retour de la fonction `perform_action`, le programme se bloque ou adopte un comportement non spécifié si la variable `object` est détruite quand la tâche est en cours d'exécution.
+Prenons l'exemple suivant qui définit la classe `object` et la fonction `perform_action`. La fonction `perform_action` crée une variable `object` et effectue une action sur cette variable de façon asynchrone. Étant donné que la fin de la tâche n’est pas garantie avant le retour de la fonction `perform_action`, le programme se bloque ou adopte un comportement non spécifié si la variable `object` est détruite quand la tâche est en cours d’exécution.
 
 [!code-cpp[concrt-lambda-lifetime#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_20.cpp)]
 
@@ -256,7 +256,7 @@ L’exemple suivant utilise le [Concurrency::task_group :: wait](reference/task
 
 Étant donné que la tâche se termine désormais avant le retour de la fonction, la fonction `perform_action` ne se comporte plus de façon asynchrone.
 
-L'exemple suivant modifie la fonction `perform_action` pour prendre une référence à la variable `object`. L'appelant doit garantir que la durée de vie de la variable `object` est valide jusqu'à ce que la tâche se termine.
+L'exemple suivant modifie la fonction `perform_action` pour prendre une référence à la variable `object`. L’appelant doit garantir que la durée de vie de la variable `object` est valide jusqu’à ce que la tâche se termine.
 
 [!code-cpp[concrt-lambda-lifetime#4](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_23.cpp)]
 

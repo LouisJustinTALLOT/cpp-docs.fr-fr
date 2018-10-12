@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d8c8c3cc219f0cf658dc2669ccc10adf3aba55bd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715141"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163528"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Incorporer des informations sur le contrôle de compte d'utilisateur dans le manifeste)
 
@@ -50,7 +50,7 @@ Chaîne qui contient le `level` et `uiAccess` valeurs. Pour plus d’information
 Un des *asInvoker*, *highestAvailable*, ou *requireAdministrator*. La valeur par défaut est asInvoker. Pour plus d’informations, consultez la section Notes plus loin dans cette rubrique.
 
 *_uiAccess*<br/>
-`true` Si vous souhaitez que l’application ignore les niveaux de protection d’interface utilisateur et exécute l’entrée vers des fenêtres d’autorisations supérieures sur le bureau ; Sinon, `false`. La valeur par défaut est `false`. La valeur `true` uniquement pour les applications d’accessibilité d’interface utilisateur.
+**true** si vous souhaitez que l’application ignore les niveaux de protection d’interface utilisateur et exécute l’entrée vers des fenêtres d’autorisations supérieures sur le bureau ; sinon, **false**. Valeur par défaut est **false**. La valeur **true** uniquement pour les applications d’accessibilité d’interface utilisateur.
 
 ## <a name="remarks"></a>Notes
 

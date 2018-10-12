@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30efbfa9c7c9b4be0c9b92e4ec5300a9c4313cb4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f03e3366caaf6b18ecb8f401fb3209f859113ca0
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448313"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163632"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry, classe
 
@@ -125,7 +125,7 @@ Un pointeur désignant un bloc qui consiste à rechercher dans le `single_link_r
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le lien a été trouvé, `false` dans le cas contraire.
+**true** si le lien a été trouvé, **false** dans le cas contraire.
 
 ##  <a name="count"></a> Nombre
 
@@ -154,7 +154,7 @@ Un pointeur vers un bloc à supprimer, si trouvé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le lien a été trouvé et supprimé, `false` dans le cas contraire.
+**true** si le lien a été trouvé et supprimé, **false** dans le cas contraire.
 
 ##  <a name="ctor"></a> single_link_registry
 

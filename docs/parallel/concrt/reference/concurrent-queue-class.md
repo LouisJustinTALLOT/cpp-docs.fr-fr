@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e4c6f3a540f44f6cec0d94ffab74d65a1ffe52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f8f864dcbf412b9dea0d96f6a0ba046792d7827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386585"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162969"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue, classe
 
@@ -177,7 +177,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si la file d’attente simultanée était vide au moment où nous avons regardés, `false` dans le cas contraire.
+**true** si la file d’attente simultanée était vide au moment où nous avons regardés, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
@@ -229,11 +229,11 @@ Une référence à un emplacement pour stocker l’élément dépilé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si un élément a été dépilé, `false` dans le cas contraire.
+**true** si un élément a été dépilé, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Si un élément a été dépilé avec succès, le paramètre `_Dest` reçoit la valeur correspondante, la valeur d’origine contenue dans la file d’attente est détruite et cette fonction retourne `true`. S’il n’y avait aucun élément à la file d’attente, cette fonction retourne `false` sans blocage et le contenu de la `_Dest` paramètre ne sont pas définis.
+Si un élément a été dépilé avec succès, le paramètre `_Dest` reçoit la valeur correspondante, la valeur d’origine contenue dans la file d’attente est détruite et cette fonction retourne **true**. S’il n’y avait aucun élément à la file d’attente, cette fonction retourne `false` sans blocage et le contenu de la `_Dest` paramètre ne sont pas définis.
 
 `try_pop` est concurrentiel en ce qui concerne les appels aux méthodes `push`, `try_pop`, et `empty`.
 

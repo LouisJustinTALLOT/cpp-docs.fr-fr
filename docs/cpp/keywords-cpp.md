@@ -1,7 +1,7 @@
 ---
 title: Mots clés (C++) | Microsoft Docs
 ms.custom: index-page
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38808ea3874964db7983c0f7193c919b9df05391
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169604"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162449"
 ---
 # <a name="keywords-c"></a>Mots clés (C++)
 
@@ -31,19 +31,20 @@ Les mots clés sont des identificateurs réservés prédéfinis qui ont des sign
 
 |||||
 |-|-|-|-|
-|[__abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[__alignof, opérateur](alignof-operator.md)|[__asm](../assembler/inline/asm.md)|[__assume](../intrinsics/assume.md)|
-|[__based](based-pointers-cpp.md)|[__box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md)|[__declspec](declspec.md)|
-|[__delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md)|[__fastcall](fastcall.md)|
-|[__finally](try-finally-statement.md)|[__forceinline](inline-functions-cpp.md)|[__gc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__hook](hook.md) <sup>3</sup>|
-|[__identifier](../windows/identifier-cpp-cli.md)|[__if_exists](if-exists-statement.md)|[__if_not_exists](if-not-exists-statement.md)|[__inline](inline-functions-cpp.md)|
-|[__int16](int8-int16-int32-int64.md)|[__int32](int8-int16-int32-int64.md)|[__int64](int8-int16-int32-int64.md)|[__int8](int8-int16-int32-int64.md)|
-|[__interface](interface.md)|[__leave](try-finally-statement.md)|[__m128](m128.md)|[__m128d](m128d.md)|
-|[__m128i](m128i.md)|[__m64](m64.md)|[__multiple_inheritance](inheritance-keywords.md)|[__nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
-|[__noop](../intrinsics/noop.md)|**__pin** <sup>2</sup>|**__property** <sup>2</sup>|[__raise](raise.md)|
-|**__sealed** <sup>2</sup>|[__single_inheritance](inheritance-keywords.md)|[__stdcall](stdcall.md)|[__super](super.md)|
-|[__thiscall](thiscall.md)|[__try /\__except](try-except-statement.md)|[__try /\__finally](try-finally-statement.md)|[__try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|
-|[__unaligned](unaligned.md)|[__unhook](unhook.md) <sup>3</sup>|[__uuidof](uuidof-operator.md)|[__value](../dotnet/value-type-semantics.md) <sup>2</sup>|
-|[__virtual_inheritance](inheritance-keywords.md)|[__w64](w64.md)|[__wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
+|[__abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[__alignof, opérateur](alignof-operator.md) <sup>4</sup>|[__asm](../assembler/inline/asm.md) <sup>4</sup>|[__assume](../intrinsics/assume.md) <sup>4</sup>|
+|[__based](based-pointers-cpp.md) <sup>4</sup>|[__box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md) <sup>4</sup>|[__declspec](declspec.md) <sup>4</sup>|
+|[__delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md) <sup>4</sup>|[__fastcall](fastcall.md) <sup>4</sup>|
+|[__finally](try-finally-statement.md) <sup>4</sup>|[__forceinline](inline-functions-cpp.md) <sup>4</sup>|[__gc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__hook](hook.md) <sup>3</sup>|
+|[__identifier](../windows/identifier-cpp-cli.md)|[__if_exists](if-exists-statement.md)|[__if_not_exists](if-not-exists-statement.md)|[__inline](inline-functions-cpp.md) <sup>4</sup>|
+|[__int16](int8-int16-int32-int64.md) <sup>4</sup>|[__int32](int8-int16-int32-int64.md) <sup>4</sup>|[__int64](int8-int16-int32-int64.md) <sup>4</sup>|[__int8](int8-int16-int32-int64.md) <sup>4</sup>|
+|[__interface](interface.md)|[__leave](try-finally-statement.md) <sup>4</sup>|[__m128](m128.md)|[__m128d](m128d.md)|
+|[__m128i](m128i.md)|[__m64](m64.md)|[__multiple_inheritance](inheritance-keywords.md) <sup>4</sup>|[__nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
+|[__noop](../intrinsics/noop.md)|**__pin** <sup>2</sup>|**__property** <sup>2</sup>|[__ptr32](ptr32-ptr64.md) <sup>4</sup>|
+|[__ptr64](ptr32-ptr64.md)<sup>4</sup>|[__raise](raise.md)|[__restrict](extension-restrict.md) <sup>4</sup>|**__sealed** <sup>2</sup>|
+|[__single_inheritance](inheritance-keywords.md)<sup>4</sup>|[__sptr](sptr-uptr.md)<sup>4</sup>|[__stdcall](stdcall.md) <sup>4</sup>|[__super](super.md)|
+|[__thiscall](thiscall.md)|[__try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|[__unaligned](unaligned.md) <sup>4</sup>|[__unhook](unhook.md) <sup>3</sup>|
+|[__uptr](sptr-uptr.md) <sup>4</sup>|[__uuidof](uuidof-operator.md) <sup>4</sup>|[__value](../dotnet/value-type-semantics.md) <sup>2</sup>|[__vectorcall](vectorcall.md) <sup>4</sup>|
+|[__virtual_inheritance](inheritance-keywords.md) <sup>4</sup>|[__w64](w64.md) <sup>4</sup>|[__wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |[alignas](align-cpp.md)|[array](../windows/arrays-cpp-component-extensions.md)|[auto](auto-keyword.md)|[bool](bool-cpp.md)|
 |[break](break-statement-cpp.md)|[case](switch-statement-cpp.md)|[catch](try-throw-and-catch-statements-cpp.md)|[char](fundamental-types-cpp.md)|
 |[char16_t](char-wchar-t-char16-t-char32-t.md)|[char32_t](char-wchar-t-char16-t-char32-t.md)|[class](class-cpp.md)|[const](const-cpp.md)|
@@ -56,7 +57,7 @@ Les mots clés sont des identificateurs réservés prédéfinis qui ont des sign
 |[pour chacune d’elles dans](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |[Générique](../windows/generics-cpp-component-extensions.md)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
 |[inline](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[classe d’interface](../windows/interface-class-cpp-component-extensions.md)|[struct d’interface](../windows/interface-class-cpp-component-extensions.md)|
-|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[littéral](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|[mutable](mutable-data-members-cpp.md)|
+|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[literal](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|[mutable](mutable-data-members-cpp.md)|
 |[naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|[new](new-operator-cpp.md)|
 |[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
 |[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|[private](private-cpp.md)|
@@ -72,22 +73,21 @@ Les mots clés sont des identificateurs réservés prédéfinis qui ont des sign
 |[struct Value](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
 |[while](while-statement-cpp.md)|
 
+<sup>1</sup> étendu des attributs pour le **__declspec** mot clé.
 
-1 attributs étendus pour le **__declspec** mot clé.
+<sup>2</sup> applicable aux Extensions managées pour C++ uniquement. Cette syntaxe est maintenant déconseillée. Consultez [Extensions du composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md) pour plus d’informations.
 
-2 applicable aux Extensions managées pour C++ uniquement. Cette syntaxe est maintenant déconseillée.
+<sup>3</sup> fonction intrinsèque utilisée dans la gestion des événements.
 
-3 fonction intrinsèque utilisée dans la gestion des événements.
+<sup>4</sup> pour la compatibilité descendante avec les versions précédentes, ces mots clés sont disponibles à la fois avec deux traits de soulignement de début et un seul trait de soulignement lorsque les extensions Microsoft sont activées (valeur par défaut).
 
-Consultez [Extensions du composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md) pour plus d’informations.
-
-## <a name="microsoft-specific"></a>Section spécifique à Microsoft
+**Section spécifique à Microsoft**
 
 En Microsoft C++, les identificateurs avec deux traits de soulignement à gauche sont réservés aux implémentations du compilateur. Par conséquent, la convention Microsoft est de faire précéder ses mots clés spécifiques de deux traits de soulignement. Ces mots ne peuvent pas être utilisés en tant que noms d'identificateurs.
 
-Les extensions Microsoft sont activées par défaut. Pour vous assurer que vos programmes sont entièrement portables, vous pouvez désactiver les extensions Microsoft en spécifiant la compatibilité ANSI [/Za](../build/reference/za-ze-disable-language-extensions.md) option de ligne de commande (compilation pour compatibilité ANSI) pendant la compilation. Dans ce cas, les mots clés spécifiques à Microsoft sont désactivés.
+Les extensions Microsoft sont activées par défaut. Pour vous assurer que vos programmes sont entièrement portables, vous pouvez désactiver les extensions Microsoft en spécifiant le [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) option pendant la compilation. Lorsque vous effectuez cette opération, certains mots clés spécifiques à Microsoft sont désactivées.
 
-Lorsque les extensions Microsoft sont activées, vous pouvez utiliser les mots clés Microsoft spécifiques dans vos programmes. Pour la compatibilité ANSI, ces mots clés sont précédés d'un trait de soulignement double. Pour la compatibilité descendante, un trait de soulignement simple des versions de tous les mots-clés de soulignement double, à l’exception **__except**, **__finally**, **__leave**, et **_ _try** sont pris en charge. En outre, **__cdecl** est disponible avec sans trait de soulignement.
+Lorsque les extensions Microsoft sont activées, vous pouvez utiliser les mots clés Microsoft spécifiques dans vos programmes. Pour la compatibilité ANSI, ces mots clés sont précédés d'un trait de soulignement double. Pour la compatibilité descendante, un trait de soulignement simple versions d’un grand nombre des mots clés de soulignement double sont prises en charge. En outre, **__cdecl** est disponible avec sans trait de soulignement.
 
 Le **__asm** mot clé remplace C++ `asm` syntaxe. `asm` est réservé pour la compatibilité avec d'autres implémentations C++, mais n'est pas implémenté. Utilisez **__asm**.
 

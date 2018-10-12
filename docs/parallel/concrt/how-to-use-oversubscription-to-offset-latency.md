@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392960"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163567"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Comment : utiliser le surabonnement pour compenser la latence
 
@@ -30,7 +30,7 @@ Le surabonnement peut améliorer l’efficacité globale de certaines applicatio
 
 Cet exemple utilise le [bibliothèque d’Agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md) pour télécharger des fichiers à partir de serveurs HTTP. Le `http_reader` dérive de la classe [concurrency::agent](../../parallel/concrt/reference/agent-class.md) et utilise passage de message pour lire de façon asynchrone les noms d’URL à télécharger.
 
-Le `http_reader` classe utilise le [concurrency::task_group](reference/task-group-class.md) classe pour lire chaque fichier simultanément. Chaque tâche appelle le [Concurrency::Context :: Oversubscribe](reference/context-class.md#oversubscribe) méthode avec le `_BeginOversubscription` paramètre la valeur `true` pour activer le surabonnement dans le contexte actuel. Chaque tâche utilise ensuite Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) et [CHttpFile](../../mfc/reference/chttpfile-class.md) classes pour télécharger le fichier. Enfin, chaque tâche appelle `Context::Oversubscribe` avec la `_BeginOversubscription` paramètre la valeur `false` pour désactiver le surabonnement.
+Le `http_reader` classe utilise le [concurrency::task_group](reference/task-group-class.md) classe pour lire chaque fichier simultanément. Chaque tâche appelle le [Concurrency::Context :: Oversubscribe](reference/context-class.md#oversubscribe) méthode avec le `_BeginOversubscription` paramètre défini sur **true** pour activer le surabonnement dans le contexte actuel. Chaque tâche utilise ensuite Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) et [CHttpFile](../../mfc/reference/chttpfile-class.md) classes pour télécharger le fichier. Enfin, chaque tâche appelle `Context::Oversubscribe` avec la `_BeginOversubscription` paramètre défini sur **false** pour désactiver le surabonnement.
 
 Lorsque le surabonnement est activé, le runtime crée un thread supplémentaire dans lequel exécuter des tâches. Chacun de ces threads peut également augmenter le contexte actuel et ainsi créer des threads supplémentaires. Le `http_reader` classe utilise un [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objet pour limiter le nombre de threads utilisés par l’application. L’agent initialise la mémoire tampon avec un nombre fixe de valeurs de jeton. Pour chaque opération de téléchargement, l’agent lit une valeur de jeton à partir de la mémoire tampon avant l’opération démarre, puis réécrit cette valeur dans la mémoire tampon une fois l’opération terminée. Lorsque la mémoire tampon est vide, l’agent attend qu’une des opérations de téléchargement à écrire une valeur dans la mémoire tampon.
 
@@ -68,7 +68,7 @@ L’exemple peut s’exécuter plus rapidement lorsque le surabonnement est acti
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `download-oversubscription.cpp` et puis exécutent l’une de ces commandes dans une fenêtre d’invite de commandes Visual Studio.
+Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `download-oversubscription.cpp` et puis exécutez un de ces commandes dans un **invite de commandes Visual Studio** fenêtre.
 
 **CL.exe /EHsc /MD /D « _AFXDLL » download-oversubscription.cpp**
 

@@ -23,16 +23,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6df9afddc43980818439ee2c7bbd29ca2f848
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9e87ebd4523b5211c94955b5bec7905ed848946
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446073"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161682"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group, classe
 
-La classe `structured_task_group` représente une collection très structurée de travail parallèle. Vous pouvez mettre en file d'attente des tâches parallèles individuelles dans un `structured_task_group` à l'aide d'objets `task_handle`, attendre qu'elles se terminent ou annuler le groupe de tâches avant la fin de leur exécution, ce qui annule toutes les tâches dont l'exécution n'a pas commencé.
+La classe `structured_task_group` représente une collection très structurée de travail parallèle. Vous pouvez mettre en file d’attente des tâches parallèles individuelles dans un `structured_task_group` à l’aide d’objets `task_handle`, attendre qu’elles se terminent ou annuler le groupe de tâches avant la fin de leur exécution, ce qui annule toutes les tâches dont l’exécution n’a pas commencé.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,7 +54,7 @@ class structured_task_group;
 |Nom|Description|
 |----------|-----------------|
 |[cancel](#cancel)|Permet un meilleur effort essaie d’annuler la sous-arborescence de travail rattachée à ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches sera annulée de manière transitive si possible.|
-|[is_canceling](#is_canceling)|Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’en indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne `true`). Il peut arriver que le `structured_task_group` objet exécute inline et un groupe de tâches supplémentaire en haut de l’arborescence de travail a été annulé. Dans tels cas où le runtime peut déterminer avance annulation passera via cet `structured_task_group` objet, `true` s’affichera également.|
+|[is_canceling](#is_canceling)|Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’en indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne **true**). Il peut arriver que le `structured_task_group` objet exécute inline et un groupe de tâches supplémentaire en haut de l’arborescence de travail a été annulé. Dans tels cas où le runtime peut déterminer avance annulation passera via cet `structured_task_group` objet, **true** s’affichera également.|
 |[run](#run)|Surchargé. Planifie une tâche sur le `structured_task_group` objet. L’appelant gère la durée de vie de la `task_handle` objet passé dans le `_Task_handle` paramètre. La version qui prend le paramètre `_Placement` force la tâche à être orientées vers l’exécution à l’emplacement spécifié par ce paramètre.|
 |[run_and_wait](#run_and_wait)|Surchargé. Planifie une tâche à exécuter inline dans le contexte d’appel avec l’aide de la `structured_task_group` objet pour la prise en charge complète de l’annulation. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La fonction attend ensuite que tout le travail sur le `structured_task_group` objet est terminée ou annulé.|
 |[attente](#wait)|Attend que tout le travail sur le `structured_task_group` terminée ou est annulée.|
@@ -97,7 +97,7 @@ Pour plus d’informations, consultez [l’annulation](../../../parallel/concrt/
 
 ##  <a name="is_canceling"></a> is_canceling
 
-Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’en indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne `true`). Il peut arriver que le `structured_task_group` objet exécute inline et un groupe de tâches supplémentaire en haut de l’arborescence de travail a été annulé. Dans tels cas où le runtime peut déterminer avance annulation passera via cet `structured_task_group` objet, `true` s’affichera également.
+Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’en indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne **true**). Il peut arriver que le `structured_task_group` objet exécute inline et un groupe de tâches supplémentaire en haut de l’arborescence de travail a été annulé. Dans tels cas où le runtime peut déterminer avance annulation passera via cet `structured_task_group` objet, **true** s’affichera également.
 
 ```
 bool is_canceling();

@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f5b84020d9428066bdadfff53500d671233f07d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4a184e0fee76f3aa5bb8f7729250c03b10b9dfc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386722"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163489"
 ---
 # <a name="sourceblock-class"></a>source_block, classe
 
@@ -237,7 +237,7 @@ La méthode lève un [invalid_argument](../../../standard-library/invalid-argume
 
 La méthode lève un [bad_target](bad-target-class.md) exception si le paramètre `_PTarget` ne représente pas la cible qui a appelé `reserve`.
 
-Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné `true`.
+Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné **true**.
 
 ##  <a name="consume_message"></a> consume_message
 
@@ -427,7 +427,7 @@ Un pointeur vers le bloc cible qui appelle le `reserve` (méthode).
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été réservé avec succès, `false` dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a été déjà réservé ou accepté par une autre cible, la source peut refuser des réservations et ainsi de suite.
+**true** si le message a été réservé avec succès, **false** dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a été déjà réservé ou accepté par une autre cible, la source peut refuser des réservations et ainsi de suite.
 
 ### <a name="remarks"></a>Notes
 
@@ -450,11 +450,11 @@ Le `runtime_object_identity` de la `message` de l’objet en cours de réservati
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été réservé avec succès, `false` dans le cas contraire.
+**true** si le message a été réservé avec succès, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Après avoir `reserve` est appelée, si elle retourne `true`, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
+Après avoir `reserve` est appelée, si elle retourne **true**, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

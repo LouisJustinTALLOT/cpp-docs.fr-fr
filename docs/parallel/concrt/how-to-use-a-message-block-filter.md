@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93578f9d798e0c0bab0fe58a3211c20507dd99d4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411070"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162059"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Comment : utiliser un filtre de bloc de message
 
@@ -48,7 +48,7 @@ La fonction suivante, `count_primes_filter`, effectue la même tâche que le `co
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-Le `transformer` objet traite désormais uniquement les valeurs qui sont les premiers. Dans l’exemple précédent, `transformer` objet traite tous les messages. Par conséquent, l’exemple précédent doit recevoir le même nombre de messages qu’il envoie. Cet exemple utilise le résultat de la [concurrency::send](reference/concurrency-namespace-functions.md#send) fonction permettant de déterminer combien de messages à recevoir de le `transformer` objet. Le `send` fonction renvoie `true` lorsque le tampon de messages accepte le message et `false` lorsque le tampon de messages rejette le message. Par conséquent, le nombre de fois que le tampon de messages accepte le message correspond au nombre de nombres premiers.
+Le `transformer` objet traite désormais uniquement les valeurs qui sont les premiers. Dans l’exemple précédent, `transformer` objet traite tous les messages. Par conséquent, l’exemple précédent doit recevoir le même nombre de messages qu’il envoie. Cet exemple utilise le résultat de la [concurrency::send](reference/concurrency-namespace-functions.md#send) fonction permettant de déterminer combien de messages à recevoir de le `transformer` objet. Le `send` fonction renvoie **true** lorsque le tampon de messages accepte le message et **false** lorsque le tampon de messages rejette le message. Par conséquent, le nombre de fois que le tampon de messages accepte le message correspond au nombre de nombres premiers.
 
 ## <a name="example"></a>Exemple
 

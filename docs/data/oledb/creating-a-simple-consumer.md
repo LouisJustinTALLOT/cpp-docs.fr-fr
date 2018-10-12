@@ -1,7 +1,7 @@
 ---
 title: Création d’un consommateur Simple | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,46 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 120829b08ab65c10cca7ab922fc4f9be732ccc53
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860808"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163840"
 ---
 # <a name="creating-a-simple-consumer"></a>Création d'un consommateur simple
 
 Utilisez l’Assistant Projet ATL et l’Assistant Consommateur OLE DB ATL pour générer un consommateur des modèles OLE DB.
 
-### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Pour créer une application de console pour un consommateur OLE DB
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Pour créer une application de console pour un consommateur OLE DB
 
 1. Dans le menu **Fichier** , cliquez sur **Nouveau**, puis sur **Projet**.
 
    La boîte de dialogue **Nouveau projet** s’affiche.
 
-1. Dans le volet Types de projets, cliquez sur le **des projets Visual C++** dossier, puis cliquez sur le **projet Win32** icône dans le volet Modèles. Dans le **nom** , entrez le nom de votre projet, par exemple, **MyCons**.
+1. Dans le **Types de projets** volet, cliquez sur le **installé** > **modèles** > **Visual C++** dossier, et puis cliquez sur le **Application Console Win32** icône dans le **modèles** volet. Dans le **nom** , entrez le nom de votre projet, par exemple, *MyCons*.
 
 1. Cliquez sur **OK**.
 
-   L’Assistant de projet Win32 s’affiche.
+   L’Assistant Application Win32 s’affiche.
 
-1. Sur le **paramètres d’Application** page, sélectionnez **application Console**, puis sélectionnez **ajouter la prise en charge ATL**.
+1. Sur le **paramètres d’Application** page, sélectionnez **application Console**, puis sélectionnez **ajouter des fichiers d’en-tête courants pour ATL**.
 
 1. Cliquez sur **Terminer** pour fermer l’Assistant et générer le projet.
 
 Ensuite, utilisez l’Assistant Consommateur OLE DB ATL pour ajouter un objet du consommateur OLE DB.
 
-#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Pour créer un consommateur avec l’Assistant Consommateur OLE DB ATL
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Pour créer un consommateur avec l’Assistant Consommateur OLE DB ATL
 
-1. Dans l’affichage de classes, cliquez sur le `MyCons` projet.
+1. Dans **l’Explorateur de solutions**, avec le bouton droit le `MyCons` projet.
 
-1. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une classe**.
+1. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **classe**.
 
    Le **ajouter une classe** boîte de dialogue s’affiche.
 
-1. Dans le volet des catégories, cliquez sur **Visual C++**, cliquez sur le **consommateur ATL OLE DB** icône dans le volet Modèles, puis cliquez sur **Open**.
+1. Dans le **catégories** volet, cliquez sur **installé** > **Visual C++** > **ATL**, cliquez sur le **ATL OLEDB Consumer** icône dans le **modèles** volet, puis cliquez sur **ajouter**.
 
-   L’Assistant Consommateur OLE DB ATL s’affiche.
+   Assistant consommateur OLEDB ATL s’affiche.
 
 1. Cliquez sur le **Source de données** bouton.
 
@@ -64,7 +64,7 @@ Ensuite, utilisez l’Assistant Consommateur OLE DB ATL pour ajouter un objet du
 
    - Sur le **fournisseur** onglet, spécifiez un fournisseur OLE DB.
 
-   - Sur le **connexion** onglet, spécifiez le nom du serveur, les ID d’ouverture de session et mot de passe pour votre source de données et de la base de données sur le serveur.
+   - Sur le **connexion** onglet, spécifiez les informations requises, telles que le nom du serveur, nom d’utilisateur et mot de passe pour votre source de données et de la base de données sur le serveur.
 
    > [!NOTE]
    > Il existe un problème de sécurité avec le **autoriser l’enregistrement du mot de passe** fonctionnalité de la **propriétés des liaisons de données** boîte de dialogue. Dans **Entrez des informations pour vous connecter au serveur**, il existe deux boutons radio : **utilisez Windows NT la sécurité intégrée** et **utiliser un nom d’utilisateur spécifique et un mot de passe**.
@@ -79,7 +79,7 @@ Ensuite, utilisez l’Assistant Consommateur OLE DB ATL pour ajouter un objet du
 
    Le **sélectionner un objet de base de données** boîte de dialogue s’affiche.
 
-1. Utilisez le contrôle d’arborescence pour sélectionner une table, une vue ou une procédure stockée. Pour les besoins de cette procédure, sélectionnez la table Products dans la base de données Northwind.
+1. Utilisez le contrôle d’arborescence pour sélectionner une table, une vue ou une procédure stockée. Pour les besoins de cette procédure, sélectionnez le `Products` table à partir de la `Northwind` base de données.
 
 1. Cliquez sur **OK**. Cela vous ramène à l’Assistant Consommateur OLE DB ATL.
 

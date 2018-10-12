@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b821dcc3426c6e1d9f3cd2f2ff8eb057197ca8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37348fe92354d2ea7be3168dc5b3c9aee9fcd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416199"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163099"
 ---
 # <a name="timer-class"></a>Classe timer
 
@@ -193,11 +193,11 @@ Le `runtime_object_identity` de la `message` de l’objet en cours de réservati
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été réservé avec succès, `false` dans le cas contraire.
+**true** si le message a été réservé avec succès, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Après avoir `reserve` est appelée, si elle retourne `true`, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
+Après avoir `reserve` est appelée, si elle retourne **true**, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -267,11 +267,11 @@ Si la valeur est true, indique que la minuterie déclenche périodiquement chaqu
 Le `Scheduler` objet dans lequel la tâche de propagation pour le `timer` bloc de messagerie est planifiée est planifié.
 
 *_ScheduleGroup*<br/>
-Le `ScheduleGroup` objet dans lequel la tâche de propagation pour le `timer` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
+Objet `ScheduleGroup` dans lequel la tâche de propagation du bloc de messagerie `timer` est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
 
 ### <a name="remarks"></a>Notes
 
-Le runtime utilise le planificateur par défaut si vous ne spécifiez pas le `_Scheduler` ou `_ScheduleGroup` paramètres.
+Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les paramètres `_Scheduler` ou `_ScheduleGroup` .
 
 ##  <a name="dtor"></a> ~ timer
 

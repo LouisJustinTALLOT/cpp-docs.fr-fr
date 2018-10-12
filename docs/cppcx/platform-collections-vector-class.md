@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: acf3ae2fd16eb3aacbc0a2e681ae39aece1b4dd4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103930"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163216"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 
@@ -71,7 +71,7 @@ Les types autorisés sont les suivants :
 
 Le **vecteur** classe est l’implémentation concrète C++ de la [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) interface.
 
-Si vous essayez d’utiliser un **vecteur** type dans une valeur de retour public ou un paramètre, erreur de compilateur C3986 est générée. Vous pouvez corriger l’erreur en modifiant le paramètre ou valeur type de retour par [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+Si vous essayez d’utiliser un **vecteur** type dans une valeur de retour public ou un paramètre, erreur de compilateur C3986 est générée. Vous pouvez corriger l'erreur en modifiant le type du paramètre ou le type de la valeur de retour par [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membres
 
@@ -240,11 +240,11 @@ virtual bool IndexOf(T value, unsigned int* index);
 *index*<br/>
 Index de base zéro de l’élément si paramètre *valeur* est trouvé ; sinon, 0.
 
-Le *index* paramètre a la valeur 0 si l’élément est introuvable ou l’élément est le premier élément du vecteur. Si la valeur de retour est `true`, l'élément est trouvé et représente le premier élément ; sinon, l'élément est introuvable.
+Le *index* paramètre a la valeur 0 si l’élément est introuvable ou l’élément est le premier élément du vecteur. Si la valeur de retour est **true**, l’élément a été trouvé et il est le premier élément ; sinon, l’élément est introuvable.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si l'élément spécifié est trouvé ; sinon, `false`.
+**true** si l’élément spécifié est trouvé ; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 

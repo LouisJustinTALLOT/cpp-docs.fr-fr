@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 231eed17f155b9ec184e0cf4fe3bd91e7770a7f4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 608472f3133464137d2d0f96128453e4239b16a2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716851"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162085"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (Activer la fonction de raccordement _penter)
 
@@ -43,7 +43,7 @@ Le `_penter` fonction ne fait pas partie d’une bibliothèque quelconque, et il
 Sauf si vous envisagez d’appeler explicitement `_penter`, vous n’avez pas besoin de fournir un prototype. La fonction doit apparaître comme si elle avait le prototype suivant, et il doit transférer le contenu de tous les registres sur entrée et affiche le contenu non modifié à la sortie :
 
 ```
-void __declspec(naked) _cdecl _penter( void );
+void __declspec(naked) __cdecl _penter( void );
 ```
 
 Cette déclaration n’est pas disponible pour les projets 64 bits.
@@ -66,7 +66,7 @@ Cette déclaration n’est pas disponible pour les projets 64 bits.
 
 Le code suivant, lors de la compilation avec **/Gh**, montre comment `_penter` est appelée deux fois ; une fois lors de la saisie de la fonction `main` et une fois lors de la saisie de la fonction `x`.
 
-```
+```cpp
 // Gh_compiler_option.cpp
 // compile with: /Gh
 // processor: x86
@@ -77,7 +77,7 @@ int main() {
    x();
 }
 
-extern "C" void __declspec(naked) _cdecl _penter( void ) {
+extern "C" void __declspec(naked) __cdecl _penter( void ) {
    _asm {
       push eax
       push ebx

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102510"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163892"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView, classe
 
@@ -140,7 +140,7 @@ virtual unsigned int GetMany(
 L'index de base zéro du début des éléments à récupérer.
 
 *dest*<br/>
-Lorsque cette opération se termine, un tableau d’éléments qui commencent à l’élément spécifié par `startIndex` et se terminent au dernier élément du vectorview.
+Quand cette opération se termine, un tableau d’éléments qui commencent à l’élément spécifié par `startIndex` et se terminent au dernier élément du VectorView.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -168,11 +168,11 @@ virtual bool IndexOf(
 *index*<br/>
 Index de base zéro de l'élément si le paramètre `value` est détecté ; sinon, 0.
 
-Le paramètre `index` est égal à 0 si l'élément est le premier élément du VectorView ou que l'élément est introuvable. Si la valeur de retour est `true`, l'élément est trouvé et représente le premier élément ; sinon, l'élément est introuvable.
+Le *index* paramètre a la valeur 0 si l’élément ou est le premier élément de la `VectorView` ou l’élément est introuvable. Si la valeur de retour est **true**, l’élément a été trouvé et il est le premier élément ; sinon, l’élément est introuvable.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si l'élément spécifié est trouvé ; sinon, `false`.
+**true** si l’élément spécifié est trouvé ; sinon, **false**.
 
 ## <a name="size"></a>  Vectorview::Size, méthode
 

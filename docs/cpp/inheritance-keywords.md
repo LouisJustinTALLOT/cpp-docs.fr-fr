@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061173"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161799"
 ---
 # <a name="inheritance-keywords"></a>Mots clé d'héritage
 
@@ -83,6 +83,8 @@ indépendamment des options de ligne de commande ou des pragmas, les pointeurs v
 
 > [!NOTE]
 >  La même déclaration anticipée d'une représentation de pointeur de classe vers membre devrait se produire dans chaque unité de traduction qui déclare des pointeurs vers des membres de cette classe, et la déclaration devrait se produire avant que les pointeurs vers des membres soient déclarées.
+
+Pour assurer la compatibilité avec les versions précédentes, **_single_inheritance**, **_multiple_inheritance**, et **_virtual_inheritance** sont synonymes de **__ héritage unique**, **__multiple_inheritance**, et **__virtual_inheritance** , sauf si option du compilateur [/Za \(désactiver langue Extensions)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
 
 **FIN de la section spécifique à Microsoft**
 

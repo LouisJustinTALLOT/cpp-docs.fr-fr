@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2a0a49431b50157248d6a86c03fa5085d78dcd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2e8a06068d7a9bec4fd828941da409780eeed457
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387937"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163659"
 ---
 # <a name="multitypejoin-class"></a>multitype_join, classe
 
@@ -164,7 +164,7 @@ Un pointeur vers le `message` que l’appelant a désormais la propriété de l�
 
 ### <a name="remarks"></a>Notes
 
-Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné `true`.
+Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné **true**.
 
 ##  <a name="link_target"></a> link_target
 

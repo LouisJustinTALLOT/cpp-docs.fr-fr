@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bec396efa2d0a4191c67440e4ed3ed5d4bc083
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1d8a9340abf7ca16fe2f0e6d6660bf14f00bd594
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110790"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161227"
 ---
 # <a name="fundamental-types-ccx"></a>Types fondamentaux (C++/CX)
 
@@ -26,7 +26,7 @@ Le tableau suivant répertorie les types intégrés booléens et de caractère, 
 
 |Espace de noms|C++ / c++ / nom CX|Définition|Nom C++ standard|Plage de valeurs|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Plateforme|Booléen|Valeur booléenne de 8 bits.|bool|`true` (non nul) et `false` (nul)|
+|Plateforme|Booléen|Valeur booléenne de 8 bits.|bool|**true** (différent de zéro) et **false** (zéro)|
 |default|char16|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|wchar_t<br /><br /> - ou -<br /><br /> L’c’|(Spécifié par la norme Unicode)|
 
 ## <a name="numeric-types"></a>Types numériques

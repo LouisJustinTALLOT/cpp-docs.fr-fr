@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca17d81aa1712bcf6222b0ec0888f3a987269f03
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429959"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163118"
 ---
 # <a name="extent-class-c-amp"></a>extent, classe (C++ AMP)
 
@@ -110,7 +110,7 @@ Le `index` valeur à tester.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si spécifié `index` valeur est contenue dans le `extent` objet ; sinon, `false`.
+**true** si spécifié *index* valeur est contenue dans le `extent` objet ; sinon, **false**.
 
 ##  <a name="ctor"></a> étendue
 
@@ -208,7 +208,7 @@ Le `index` objet qui contient les éléments à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nouvel objet `extent`.
+Nouvel objet `extent` .
 
 ##  <a name="operator_add_add"></a> operator ++
 
@@ -263,7 +263,7 @@ Le `index` objet qui contient les éléments à soustraire.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nouvel objet `extent`.
+Nouvel objet `extent` .
 
 ##  <a name="operator_min_min"></a> operator--
 

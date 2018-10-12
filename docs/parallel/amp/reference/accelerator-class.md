@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a154d266ead19cfef00f30a5327c5b18809a4111
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375872"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163164"
 ---
 # <a name="accelerator-class"></a>accelerator, classe
 
@@ -102,9 +102,9 @@ class accelerator;
 
 |Nom|Description|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Compare cette `accelerator` objet avec un autre et retourne `false` si elles sont identiques ; sinon, retourne `true`.|
+|[!=, opérateur](#operator_neq)|Compare cette `accelerator` objet avec un autre et retourne **false** si elles sont identiques ; sinon, retourne **true**.|
 |[operator=](#operator_eq)|Copie le contenu de l’objet `accelerator` objet à celui-ci.|
-|[operator==](#operator_eq_eq)|Compare cette `accelerator` objet avec un autre et retourne `true` si elles sont identiques ; sinon, retourne `false`.|
+|[operator==](#operator_eq_eq)|Compare cette `accelerator` objet avec un autre et retourne **true** si elles sont identiques ; sinon, retourne **false**.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
@@ -362,7 +362,7 @@ bool get_has_display() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le `accelerator` peut sortir sur un écran ; sinon, `false`.
+**true** si le `accelerator` peut sortir sur un écran ; sinon, **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -375,7 +375,7 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le `accelerator` a la couche DEBUG activée pour le rapport d’erreurs étendu. Sinon, `false`.
+**true** si le `accelerator` a la couche DEBUG activée pour le rapport d’erreurs étendu. Sinon, **false**.
 
 ##  <a name="get_is_emulated"></a> get_is_emulated
 
@@ -388,7 +388,7 @@ bool get_is_emulated() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le `accelerator` est émulé. Sinon, `false`.
+**true** si le `accelerator` est émulé. Sinon, **false**.
 
 ##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
 
@@ -401,11 +401,11 @@ bool get_supports_cpu_shared_memory() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’accélérateur prend en charge la mémoire partagée d’UC ; Sinon, `false`.
+**true** si le composant processeur prend en charge de l’accélérateur partagé mémoire ; sinon, **false**.
 
 ##  <a name="get_supports_double_precision"></a> get_supports_double_precision
 
-Retourne une valeur booléenne qui indique si l’accélérateur prend en charge les mathématiques à double précision, y compris fused multiply ajouter (FMA), division, la réciproque et l’opération de cast entre `int` et `double`.
+Retourne une valeur booléenne qui indique si l’accélérateur prend en charge les mathématiques à double précision, y compris fused multiply ajouter (FMA), division, la réciproque et l’opération de cast entre **int** et **double**
 
 ```
 bool get_supports_double_precision() const;
@@ -414,11 +414,11 @@ bool get_supports_double_precision() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’accélérateur prend en charge les mathématiques à double précision ; Sinon, `false`.
+**true** si l’accélérateur prend en charge les mathématiques à double précision ; sinon, **false**.
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-Retourne une valeur booléenne qui indique si l’accélérateur a limité la prise en charge de mathématiques à double précision. Si l’accélérateur est uniquement prise en charge limitée, puis fused multiply ajouter (FMA), division, la réciproque et l’opération de cast entre `int` et `double` ne sont pas pris en charge.
+Retourne une valeur booléenne qui indique si l’accélérateur a limité la prise en charge de mathématiques à double précision. Si l’accélérateur est uniquement prise en charge limitée, puis fused multiply ajouter (FMA), division, la réciproque et l’opération de cast entre **int** et **double** ne sont pas pris en charge.
 
 ```
 bool get_supports_limited_double_precision() const;
@@ -427,7 +427,7 @@ bool get_supports_limited_double_precision() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’accélérateur a limité la prise en charge de mathématiques à double précision ; Sinon, `false`.
+**true** si l’accélérateur a limité la prise en charge de mathématiques à double précision ; sinon, **false**.
 
 ##  <a name="get_version"></a> get_version
 
@@ -468,7 +468,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ##  <a name="operator_neq"></a> opérateur ! =
 
-Compare cette `accelerator` objet avec un autre et retourne `false` si elles sont identiques ; sinon, retourne `true`.
+Compare cette `accelerator` objet avec un autre et retourne **false** si elles sont identiques ; sinon, retourne **true**.
 
 ```
 bool operator!= (const accelerator& _Other) const;
@@ -482,7 +482,7 @@ Le `accelerator` objet à comparer avec celle-ci.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`false` Si les deux `accelerator` objets sont identiques ; sinon, `true`.
+**false** si les deux `accelerator` objets sont identiques ; sinon, **true**.
 
 ##  <a name="operator_eq"></a> opérateur =
 
@@ -503,7 +503,7 @@ Une référence à cet `accelerator` objet.
 
 ##  <a name="operator_eq_eq"></a> opérateur ==
 
-Compare cette `accelerator` objet avec un autre et retourne `true` si elles sont identiques ; sinon, retourne `false`.
+Compare cette `accelerator` objet avec un autre et retourne **true** si elles sont identiques ; sinon, retourne **false**.
 
 ```
 bool operator== (const accelerator& _Other) const;
@@ -517,7 +517,7 @@ Le `accelerator` objet à comparer avec celle-ci.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’autre `accelerator` objet est identique à ce `accelerator` objet ; sinon, `false`.
+**true** si l’autre `accelerator` objet est identique à ce `accelerator` objet ; sinon, **false**.
 
 ##  <a name="set_default"></a> set_default
 
@@ -534,7 +534,7 @@ Le chemin d’accès à l’accélérateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’appel aboutit au paramètre de l’accélérateur par défaut. Sinon, `false`.
+**true** si l’appel aboutit au paramètre de l’accélérateur par défaut. Sinon, **false**.
 
 ##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
 
@@ -664,7 +664,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le runtime sélectionne automatiquement un accélérateur approprié ; Sinon, `false`.
+**true** si le runtime sélectionne automatiquement un accélérateur approprié ; sinon, **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -737,7 +737,7 @@ Le `accelerator_view` objet à comparer avec celle-ci.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`false` si les deux objets sont identiques ; sinon, `true`.
+**false** si les deux objets sont identiques ; sinon, **true**.
 
 ##  <a name="operator_eq"></a> opérateur =
 
@@ -758,7 +758,7 @@ Une référence à la modification `accelerator_view` objet.
 
 ##  <a name="operator_eq_eq"></a> opérateur ==
 
-Compare cette [accelerator_view](accelerator-view-class.md) objet avec un autre et retourne `true` si elles sont identiques ; sinon, retourne `false`.
+Compare cette [accelerator_view](accelerator-view-class.md) objet avec un autre et retourne **true** si elles sont identiques ; sinon, retourne **false**.
 
 ```
 bool operator== (const accelerator_view& _Other) const;
@@ -772,7 +772,7 @@ Le `accelerator_view` objet à comparer avec celle-ci.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si les deux objets sont identiques ; sinon, `false`.
+**true** si les deux objets sont identiques ; sinon, **false**.
 
 ##  <a name="queuing_mode"></a> queuing_mode
 

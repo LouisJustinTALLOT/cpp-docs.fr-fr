@@ -20,16 +20,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413768"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163255"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event, classe
 
-La classe `task_completion_event` vous permet de retarder l'exécution d'une tâche jusqu'à ce qu'une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe.
+La classe `task_completion_event` vous permet de retarder l’exécution d’une tâche jusqu’à ce qu’une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -96,11 +96,11 @@ Le résultat pour définir cet événement avec.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La méthode retourne `true` si elle a réussi à définir l’événement. Elle retourne `false` si l’événement est déjà défini.
+La méthode retourne **true** si elle a réussi à définir l’événement. Elle retourne **false** si l’événement est déjà défini.
 
 ### <a name="remarks"></a>Notes
 
-En présence de plusieurs ou d’appels simultanés à `set`, seul le premier appel réussira et son résultat (le cas échéant) est stocké dans l’événement d’achèvement de tâche. Les ensembles restants sont ignorés et la méthode retourne la valeur false. Lorsque vous définissez un événement d’achèvement de tâche, toutes les tâches créées à partir de qu’événement se termineront immédiatement, et ses continuations, le cas échéant, seront planifiées. Tâches des objets de saisie semi-automatique qui ont un `_ResultType` autre que `void` passe la valeur à leurs continuations.
+En présence de plusieurs ou d’appels simultanés à `set`, seul le premier appel réussira et son résultat (le cas échéant) est stocké dans l’événement d’achèvement de tâche. Les ensembles restants sont ignorés et la méthode retourne la valeur false. Lorsque vous définissez un événement d’achèvement de tâche, toutes les tâches créées à partir de qu’événement se termineront immédiatement, et ses continuations, le cas échéant, seront planifiées. Tâches des objets de saisie semi-automatique qui ont un `_ResultType` autre que **void** passe la valeur à leurs continuations.
 
 ##  <a name="set_exception"></a> set_exception
 

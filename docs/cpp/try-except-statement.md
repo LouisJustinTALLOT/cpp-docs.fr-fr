@@ -1,7 +1,7 @@
 ---
 title: Essayez-EXCEPT, instruction | Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861926"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162033"
 ---
 # <a name="try-except-statement"></a>try-except, instruction
 
@@ -89,6 +90,8 @@ L’instruction composée après la **__try** clause est le corps ou la section 
 Chaque application peut avoir son propre gestionnaire d'exceptions.
 
 Il n’est pas valide de sauter dans une **__try** mais valide de sauter hors d’une instruction. Le Gestionnaire d’exceptions n’est pas appelé si un processus est terminé au milieu de l’exécution un **essayez-sauf** instruction.
+
+Pour assurer la compatibilité avec les versions précédentes, **_try**, **_except**, et **_leave** sont synonymes de **__try**, **__except** , et **__leave** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
 
 ### <a name="the-leave-keyword"></a>Mot clé __leave
 

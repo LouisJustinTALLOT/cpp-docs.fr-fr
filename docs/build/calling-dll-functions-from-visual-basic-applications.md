@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 47504b7a471dc38f30e4ceb59b5feeffcc53db6d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894562"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161831"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Appel de fonctions de la DLL à partir d'applications Visual Basic
 
@@ -33,7 +33,7 @@ Pour les applications Visual Basic (ou des applications dans d’autres langages
 
 `__stdcall` crée la convention d’appel correcte pour la fonction (la fonction appelée nettoie le pile et les paramètres sont passés de droite à gauche) mais décore le nom de la fonction différemment. Donc, quand **__declspec (dllexport)** est utilisé sur une fonction exportée dans une DLL, le nom décoré est exporté.
 
-Le `__stdcall` décoration de nom précéder le nom de symbole par un trait de soulignement (_) et annexe au symbole avec un arobase (**\@**) caractère suivi du nombre d’octets dans la liste d’arguments (l’espace de pile requis). Par conséquent, lorsqu’elle est déclarée en tant que :
+Le `__stdcall` décoration de nom précéder le nom de symbole d’un trait de soulignement ( **\_** ) et annexe au symbole avec un arobase (**\@**) suivi par le nombre de octets dans la liste d’arguments (l’espace de pile requis). Par conséquent, lorsqu’elle est déclarée en tant que :
 
 ```C
 int __stdcall func (int a, double b)
@@ -45,7 +45,7 @@ La convention d’appel C (`__cdecl`) décore le nom en tant que `_func`.
 
 Pour obtenir le nom décoré, utilisez [/mapper](../build/reference/map-generate-mapfile.md). Utilisation de **__declspec (dllexport)** effectue les opérations suivantes :
 
-- Si la fonction est exportée avec la convention d’appel C (**_cdecl**), elle supprime le trait de soulignement (_) quand le nom est exporté.
+- Si la fonction est exportée avec la convention d’appel C (`__cdecl`), il supprime le trait de soulignement ( **\_** ) lorsque le nom est exporté.
 
 - Si la fonction exportée n’utilise pas la convention d’appel C (par exemple, `__stdcall`), elle exporte le nom décoré.
 

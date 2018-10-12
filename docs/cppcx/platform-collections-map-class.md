@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103877"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162553"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map, classe
 
@@ -173,7 +173,7 @@ Clé utilisée pour rechercher l’élément Map. Le type de *clé* est typename
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si la clé est trouvée ; sinon, `false`.
+**true** si la clé est trouvée ; sinon, **false**.
 
 ## <a name="insert"></a>  Map::INSERT, méthode
 
@@ -195,7 +195,7 @@ Partie de valeur de la paire clé-valeur. Le type de *valeur* est typename *V*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si la clé d’un élément existant dans l’objet Map actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. `false` Si aucun élément existant dans l’objet Map actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à l’objet Map actuel.
+**true** si la clé d’un élément existant dans l’objet Map actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. **false** si aucun élément existant dans l’objet Map actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à la Map actuel.
 
 ## <a name="lookup"></a>  Méthode Map::Lookup
 

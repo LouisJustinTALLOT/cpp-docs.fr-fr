@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04202b647910914de8ebe92397efe1373e9508be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6d91f312b028f44e0671c7960d4b06c2634928
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401366"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162507"
 ---
 # <a name="agent-class"></a>agent, classe
 
@@ -108,7 +108,7 @@ Le `ScheduleGroup` de l’objet dans lequel la tâche d’exécution de l’agen
 
 ### <a name="remarks"></a>Notes
 
-Le runtime utilise le planificateur par défaut si vous ne spécifiez pas le `_PScheduler` ou `_PGroup` paramètres.
+Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les paramètres `_PScheduler` ou `_PGroup` .
 
 ##  <a name="dtor"></a> ~ agent
 
@@ -132,7 +132,7 @@ bool cancel();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’agent a été annulée, `false` dans le cas contraire. Un agent ne peut pas être annulé si elle a déjà démarré ou est déjà terminée.
+**true** si l’agent a été annulée, **false** dans le cas contraire. Un agent ne peut pas être annulé si elle a déjà démarré ou est déjà terminée.
 
 ##  <a name="done"></a> Terminé
 
@@ -144,7 +144,7 @@ bool done();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’agent est déplacé vers le `agent_done` état, `false` dans le cas contraire. Impossible de déplacer un agent qui a été annulé à la `agent_done` état.
+**true** si l’agent est déplacé vers le `agent_done` état, **false** dans le cas contraire. Impossible de déplacer un agent qui a été annulé à la `agent_done` état.
 
 ### <a name="remarks"></a>Notes
 
@@ -172,7 +172,7 @@ bool start();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si l’agent a démarré correctement, `false` dans le cas contraire. Impossible de démarrer un agent qui a été annulé.
+**true** si l’agent a démarré correctement, **false** dans le cas contraire. Impossible de démarrer un agent qui a été annulé.
 
 ##  <a name="status"></a> État
 
