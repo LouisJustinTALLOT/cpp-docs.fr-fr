@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381671"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162503"
 ---
 # <a name="combinable-class"></a>combinable, classe
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Paramètres
 
 *_Exists*<br/>
-Une référence à une valeur booléenne. La valeur booléenne référencée par cet argument est fixée à `true` si le calcul secondaire existait déjà sur ce thread et la valeur `false` si c’était le premier calcul secondaire sur ce thread.
+Une référence à une valeur booléenne. La valeur booléenne référencée par cet argument est fixée à **true** si le calcul secondaire existait déjà sur ce thread et la valeur **false** si c’était le premier calcul secondaire sur ce thread.
 
 ### <a name="return-value"></a>Valeur de retour
 

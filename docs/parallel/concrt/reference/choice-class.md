@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039f69f31c5a92cf07f96442c30bd59b0cc6f40e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d38b8415b5ca214800c968d186f37c020dce6dc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414574"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163957"
 ---
 # <a name="choice-class"></a>Classe choice
 
@@ -85,7 +85,7 @@ Un `tuple`-en fonction du type qui représente les charges utiles des sources d�
 |[reserve](#reserve)|Réserve un message précédemment proposé par ce `choice` bloc de messagerie.|
 |[unlink_target](#unlink_target)|Dissocie un bloc cible de ce `choice` bloc de messagerie.|
 |[unlink_targets](#unlink_targets)|Dissocie toutes les cibles à partir de ce `choice` bloc de messagerie. (Substitue [ISource::unlink_targets](isource-class.md#unlink_targets).)|
-|[value](#value)|Obtient le message dont l’index a été sélectionnée par le `choice` bloc de messagerie.|
+|[valeur](#value)|Obtient le message dont l’index a été sélectionnée par le `choice` bloc de messagerie.|
 
 ## <a name="remarks"></a>Notes
 
@@ -216,7 +216,7 @@ Un pointeur vers le `message` que l’appelant a désormais la propriété de l�
 
 ### <a name="remarks"></a>Notes
 
-Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné `true`.
+Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné **true**.
 
 ##  <a name="has_value"></a> has_value
 
@@ -229,7 +229,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le bloc a reçu une valeur, `false` dans le cas contraire.
+**true** si le bloc a reçu une valeur, **false** dans le cas contraire.
 
 ##  <a name="index"></a> Index
 
@@ -315,7 +315,7 @@ Un pointeur vers le bloc cible qui appelle le `reserve` (méthode).
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été réservé avec succès, `false` dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a été déjà réservé ou accepté par une autre cible, la source peut refuser des réservations et ainsi de suite.
+**true** si le message a été réservé avec succès, **false** dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a été déjà réservé ou accepté par une autre cible, la source peut refuser des réservations et ainsi de suite.
 
 ### <a name="remarks"></a>Notes
 

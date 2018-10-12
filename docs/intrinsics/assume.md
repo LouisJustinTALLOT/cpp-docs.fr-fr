@@ -1,12 +1,13 @@
 ---
 title: __assume | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - __assume
+- _assume
 - __assume_cpp
 dev_langs:
 - C++
@@ -17,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c8c37bc46580db42bfa2a91d215b09bc1dbaf4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41542065a4fc7d3b90fd3159dca4c7a7d169c115
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405695"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163666"
 ---
 # <a name="assume"></a>__assume
 
@@ -57,6 +58,8 @@ Si l'instruction `__assume` est écrite sous la forme d'une contradiction (expre
 Utilisez `__assume` dans un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) uniquement lorsque l’assertion n’est pas récupérable. N'utilisez pas `__assume` dans une méthode assert pour laquelle vous avez du code de récupération d'erreur ultérieur, car le compilateur peut optimiser le code de gestion des erreurs.
 
 L'instruction `__assume(0)` est un cas spécial. Utilisez `__assume(0)` pour indiquer un chemin d'accès de code qui ne peut pas être atteint. L'exemple suivant montre comment utiliser `__assume(0)` pour indiquer que le cas par défaut d'une instruction switch ne peut pas être atteint. Il illustre l'utilisation la plus courante de `__assume(0)`.
+
+Pour assurer la compatibilité avec les versions précédentes, **_assume** est un synonyme de **__assume** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e62dc4ad1600b2e5cc7f955c4a419d27482bb557
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1728053c7b42afedb4cda9b2dc96a089750a866
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433216"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161695"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation, classe
 
-Cette classe décrit une exception levée quand la méthode `Context::Oversubscribe` est appelée avec le paramètre `_BeginOversubscription` défini sur `false` sans appel préalable à la méthode `Context::Oversubscribe` avec le paramètre `_BeginOversubscription` défini sur `true`.
+Cette classe décrit une exception levée quand le `Context::Oversubscribe` méthode est appelée avec le `_BeginOversubscription` paramètre défini sur **false** sans un appel antérieur à la `Context::Oversubscribe` méthode avec le `_BeginOversubscription` paramètre défini sur **true**.
 
 ## <a name="syntax"></a>Syntaxe
 
