@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6feef707d991d07fa4e086bc8535f32b991825
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c337ec94f863e6c19851bcf962db61f277491cf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716856"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163242"
 ---
 # <a name="msbuild-visual-c-overview"></a>Vue d'ensemble de MSBuild (Visual C++)
 
@@ -111,7 +111,7 @@ Par exemple, définissez la `PreferredToolArchitecture` propriété `x64` à uti
 
 ### <a name="useenv-property"></a>Propriété UseEnv
 
-Par défaut, les paramètres spécifiques à la plateforme pour le projet actuel substituent les variables d’environnement PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION et plateforme. Définir le `UseEnv` propriété `true` afin de garantir que les variables d’environnement ne sont pas remplacées.
+Par défaut, les paramètres spécifiques à la plateforme pour le projet actuel substituent les variables d’environnement PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION et plateforme. Définir le `UseEnv` propriété **true** afin de garantir que les variables d’environnement ne sont pas remplacées.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 

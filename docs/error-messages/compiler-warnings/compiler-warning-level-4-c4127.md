@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80f831d527e918fce0551f6a1336fd2fe994917d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094895"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161279"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Avertissement du compilateur (niveau 4) C4127
 
@@ -29,9 +29,9 @@ ms.locfileid: "46094895"
 
 ## <a name="remarks"></a>Notes
 
-L’expression de contrôle d’une instruction `if` ou d’une boucle `while` correspond à une constante. En raison de leur utilisation IDIOMATIQUE courants, à compter de Visual Studio 2015 update 3, constantes triviales par exemple, 1 ou `true` ne déclenchent pas l’avertissement, sauf s’ils sont le résultat d’une opération dans une expression.
+Expression de contrôle d’un **si** instruction ou **tandis que** boucle correspond à une constante. En raison de leur utilisation IDIOMATIQUE courants, à compter de Visual Studio 2015 update 3, constantes triviales par exemple, 1 ou **true** ne déclenchent pas l’avertissement, sauf s’ils sont le résultat d’une opération dans une expression.
 
-Si l’expression de contrôle d’un `while` boucle est une constante, car la boucle s’arrête au milieu, envisagez de remplacer le `while` boucle avec une `for` boucle. Vous pouvez omettre l’initialisation, le test de fin et l’incrément de boucle d’un `for` boucle, ce qui entraîne une boucle infinie, tout comme `while(1)`, et vous pouvez quitter la boucle à partir du corps de la `for` instruction.
+Si l’expression de contrôle d’un **tandis que** boucle est une constante, car la boucle s’arrête au milieu, envisagez de remplacer le **tandis que** boucle avec une **pour** boucle. Vous pouvez omettre l’initialisation, le test de fin et l’incrément de boucle d’un **pour** boucle, ce qui entraîne une boucle infinie, tout comme `while(1)`, et vous pouvez quitter la boucle à partir du corps de la **pour** instruction.
 
 ## <a name="example"></a>Exemple
 

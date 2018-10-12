@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430039"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163138"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy, structure
 
@@ -124,7 +124,7 @@ Si vous souhaitez vous abonner le thread actuel et le compte pendant l’allocat
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le `IExecutionResource` interface pour le thread actuel, si le paramètre `doSubscribeCurrentThread` a la valeur `true`. Si la valeur est `false`, la méthode retourne `NULL`.
+Le `IExecutionResource` interface pour le thread actuel, si le paramètre `doSubscribeCurrentThread` a la valeur **true**. Si la valeur est **false**, la méthode retourne la valeur NULL.
 
 ### <a name="remarks"></a>Notes
 
@@ -132,7 +132,7 @@ Avant qu’un planificateur exécute n’importe quel travail, il doit utiliser 
 
 Le Gestionnaire des ressources accorde des ressources à un planificateur en appelant la méthode [IScheduler::AddVirtualProcessors](ischeduler-structure.md#addvirtualprocessors) avec une liste de racines de processeur virtuel. La méthode est appelée en tant qu’un rappel dans le planificateur avant que cette méthode est retournée.
 
-Si le planificateur a demandé l’abonnement pour le thread actuel en définissant le paramètre `doSubscribeCurrentThread` à `true`, la méthode retourne un `IExecutionResource` interface. L’abonnement doit se terminer à un moment ultérieur à l’aide de la [IExecutionResource::Remove](iexecutionresource-structure.md#remove) (méthode).
+Si le planificateur a demandé l’abonnement pour le thread actuel en définissant le paramètre `doSubscribeCurrentThread` à **true**, la méthode retourne un `IExecutionResource` interface. L’abonnement doit se terminer à un moment ultérieur à l’aide de la [IExecutionResource::Remove](iexecutionresource-structure.md#remove) (méthode).
 
 Lors de la détermination des threads matériels sont sélectionnées, le Gestionnaire de ressources tente d’optimiser pour l’affinité de nœud de processeur. Si l’abonnement est demandé pour le thread actuel, il indique que le thread actuel a l’intention de participer au travail assigné à ce planificateur. Dans ce cas, les racines de processeur virtuel allouées se trouvent sur le nœud de processeur que le thread en cours s’exécute, si possible.
 

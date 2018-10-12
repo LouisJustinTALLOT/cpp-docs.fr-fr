@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e78542e016ab0ba8ef33a5655b72fcdff45ccc4
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 68f85794c8d70d642295f9125ac45311df29f16e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494450"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163515"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier, classe
 
@@ -112,14 +112,14 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>Paramètres
 
-*object*  
+*object*<br/>
 Objet dont la fonction membre est un gestionnaire d’événements.
 
-*(Méthode)*  
+*(Méthode)*<br/>
 La fonction membre de paramètre *objet* qui est le Gestionnaire d’événements.
 
-*release*  
-Spécifiez `true` pour activer l’appel sous-jacent [Module :: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release) méthode ; sinon, spécifiez `false`.
+*release*<br/>
+Spécifiez **true** pour activer l’appel sous-jacent [Module :: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release) méthode ; sinon, spécifiez **false**.
 
 ## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444331"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161266"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Comment : utiliser des événements de build dans des projets MSBuild
 
@@ -29,7 +29,7 @@ Un événement de build est une commande MSBuild exécute à un stade particulie
 
 Chacun des trois événements de build est représenté dans un groupe de définitions d’élément par un élément de commande (`<Command>`) qui est exécuté et un élément de message (`<Message>`) qui est affiché lorsque **MSBuild** exécute l’événement de build. Chaque élément est facultatif, et si vous spécifiez le même élément plusieurs fois, la dernière occurrence est prioritaire.
 
-Facultatif *utilisation dans la génération* élément (`<`*événement de build*`UseInBuild>`) peut être spécifié dans un groupe de propriétés pour indiquer si l’événement de build est exécuté. La valeur du contenu d’un *utilisation dans la génération* est l’élément `true` ou `false`. Par défaut, un événement de build est exécuté, sauf si son correspondant *utilisation dans la génération* élément est défini sur `false`.
+Facultatif *utilisation dans la génération* élément (`<`*événement de build*`UseInBuild>`) peut être spécifié dans un groupe de propriétés pour indiquer si l’événement de build est exécuté. La valeur du contenu d’un *utilisation dans la génération* est l’élément **true** ou **false**. Par défaut, un événement de build est exécuté, sauf si son correspondant *utilisation dans la génération* élément est défini sur `false`.
 
 Le tableau suivant répertorie chaque élément XML d’événement de build :
 

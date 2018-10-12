@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ddf5a303096d3244f6b8b59e58bcb41bafe91f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374260"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163086"
 ---
 # <a name="singleassignment-class"></a>Classe single_assignment
 
@@ -58,7 +58,7 @@ Le type de charge utile du message stocké et propagées par la mémoire tampon.
 
 |Nom|Description|
 |----------|-----------------|
-|[single_assignment](#ctor)|Surchargé. Construit un `single_assignment` bloc de messagerie.|
+|[single_assignment](#ctor)|Surchargé. Construit un bloc de messagerie `single_assignment` .|
 |[~ single_assignment, destructeur](#dtor)|Détruit le `single_assignment` bloc de messagerie.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
@@ -66,7 +66,7 @@ Le type de charge utile du message stocké et propagées par la mémoire tampon.
 |Nom|Description|
 |----------|-----------------|
 |[has_value](#has_value)|Vérifie si cela `single_assignment` bloc de messagerie a encore été initialisé avec une valeur.|
-|[value](#value)|Obtient une référence à la charge utile actuelle du message qui est stocké dans le `single_assignment` bloc de messagerie.|
+|[valeur](#value)|Obtient une référence à la charge utile actuelle du message qui est stocké dans le `single_assignment` bloc de messagerie.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
@@ -158,7 +158,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le bloc a reçu une valeur, `false` dans le cas contraire.
+**true** si le bloc a reçu une valeur, **false** dans le cas contraire.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -236,11 +236,11 @@ Le `runtime_object_identity` de la `message` de l’objet en cours de réservati
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été réservé avec succès, `false` dans le cas contraire.
+**true** si le message a été réservé avec succès, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Après avoir `reserve` est appelée, si elle retourne `true`, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
+Après avoir `reserve` est appelée, si elle retourne **true**, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -274,7 +274,7 @@ Un [message_status](concurrency-namespace-enums.md) indication de ce que la cibl
 
 ##  <a name="ctor"></a> single_assignment
 
-Construit un `single_assignment` bloc de messagerie.
+Construit un bloc de messagerie `single_assignment` .
 
 ```
 single_assignment();
@@ -303,10 +303,10 @@ single_assignment(
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
-Le `Scheduler` objet dans lequel la tâche de propagation pour le `single_assignment` bloc de messagerie est planifiée.
+Objet `Scheduler` dans lequel la tâche de propagation du bloc de messagerie `single_assignment` est planifiée.
 
 *_PScheduleGroup*<br/>
-Le `ScheduleGroup` objet dans lequel la tâche de propagation pour le `single_assignment` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
+Objet `ScheduleGroup` dans lequel la tâche de propagation du bloc de messagerie `single_assignment` est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
 
 ### <a name="remarks"></a>Notes
 

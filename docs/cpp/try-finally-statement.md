@@ -1,17 +1,19 @@
 ---
 title: Instruction try-finally | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __try
+- _try
 - __leave_cpp
 - __leave
 - __finally_cpp
 - __try_cpp
 - __finally
+- _finally
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3519cac370ac7595e0789eeab43c6488120fc8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024240"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161656"
 ---
 # <a name="try-finally-statement"></a>try-finally, instruction
 
@@ -81,6 +83,8 @@ Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à 
 
 > [!NOTE]
 >  Le comportement de try-finally est différent d’autres langages qui prennent en charge l’utilisation de **enfin**, tel que c#.  Un seul **__try** peut-être, mais pas les deux de **__finally** et **__except**.  Si les deux doivent être utilisés conjointement, une instruction try-except externe doit entourer l'instruction try-finally interne.  Les règles qui spécifient le moment d'exécution de chaque blocs sont également différentes.
+
+Pour assurer la compatibilité avec les versions précédentes, **_try**, **_finally**, et **_leave** sont synonymes de **__try**, **__ enfin**, et **__leave** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
 
 ## <a name="the-leave-keyword"></a>Mot clé __leave
 

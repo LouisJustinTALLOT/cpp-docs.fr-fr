@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45bd056bff41832a98c7936510d22a321891fd0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102037"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163697"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator, classe
 
@@ -123,7 +123,7 @@ La première syntaxe décrémente l’objet VectorViewIterator actif, puis le re
 
 La première syntaxe VectorViewIterator prédécrémente l’objet VectorViewIterator actif.
 
-La deuxième syntaxe postdécrémente l’objet VectorViewIterator actif. Le `int` type dans la deuxième syntaxe indique une postdécrémentation, pas un opérande entier réel.
+La deuxième syntaxe postdécrémente l’objet VectorViewIterator actif. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une postdécrémentation.
 
 ## <a name="operator-dereference"></a>  VectorViewIterator::operator\* opérateur
 
@@ -156,7 +156,7 @@ Un autre VectorViewIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le VectorViewIterator actif est égal à `other`; sinon, `false`.
+**true** si actuel `VectorViewIterator` est égal à *autres*; sinon, **false**.
 
 ## <a name="operator-greater-than"></a>  VectorViewIterator::operator&gt; opérateur
 
@@ -176,11 +176,11 @@ Un autre VectorViewIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si le VectorViewIterator actif est supérieur à `other` ; sinon, `false`.
+**true** si le VectorViewIterator actif est supérieur à *autres*; sinon, **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  VectorViewIterator::operator&gt;=, opérateur
 
-Indique si l'objet VectorViewIterator actuel est supérieur ou égal au VectorViewIterator spécifié.
+Indique si l’actuel `VectorViewIterator` est supérieur ou égal à spécifié `VectorViewIterator`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -196,7 +196,7 @@ Un autre VectorViewIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si le VectorViewIterator actif est supérieur ou égal à `other` ; sinon, `false`.
+**true** si actuel `VectorViewIterator` est supérieur ou égal à *autres*; sinon, **false**.
 
 ## <a name="operator-increment"></a>  VectorViewIterator::operator ++ (opérateur)
 
@@ -218,7 +218,7 @@ La première syntaxe incrémente l'objet VectorViewIterator actuel, puis le reto
 
 La première syntaxe VectorViewIterator préincrémente l'objet VectorViewIterator actuel.
 
-La deuxième syntaxe postincrémente l'objet VectorViewIterator actuel. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.
+La deuxième syntaxe postincrémente l'objet VectorViewIterator actuel. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une post-incrémentation.
 
 ## <a name="operator-inequality"></a>  VectorViewIterator::operator ! =, opérateur
 
@@ -237,7 +237,7 @@ Un autre VectorViewIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le VectorViewIterator actif n’est pas égal à `other`; sinon, `false`.
+**true** si actuel `VectorViewIterator` n’est pas égal à *autres*; sinon, **false**.
 
 ## <a name="operator-less-than"></a>  VectorViewIterator::operator&lt; opérateur
 
@@ -252,15 +252,15 @@ bool operator<(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Paramètres
 
 *other*<br/>
-Autre objet VectorIterator.
+Un autre `VectorIterator`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si le VectorIterator actuel est inférieur à `other` ; sinon, `false`.
+**true** si actuel `VectorIterator` est inférieure à *autres*; sinon, **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  VectorViewIterator::operator&lt;=, opérateur
 
-Indique si l'objet VectorIterator actuel est inférieur ou égal à un objet VectorIterator spécifié.
+Indique si l’actuel `VectorIterator` est inférieure ou égale à une certaine `VectorIterator`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -272,11 +272,11 @@ bool operator<=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Paramètres
 
 *other*<br/>
-Autre objet VectorIterator.
+Un autre `VectorIterator`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le VectorIterator actif est inférieur ou égal à `other`; sinon, `false`.
+**true** si actuel `VectorIterator` est inférieure ou égale à *autres*; sinon, **false**.
 
 ## <a name="operator-minus"></a>  VectorViewIterator::operator-(opérateur)
 
@@ -353,7 +353,7 @@ Dans la deuxième syntaxe, un VectorViewIterator.
 
 Dans la première syntaxe, VectorViewIterator qui fait référence à l’élément spécifié au décalage spécifié par rapport au VectorViewIterator actuel.
 
-Dans la deuxième syntaxe, VectorViewIterator qui fait référence à l’élément au décalage spécifié à partir du début du paramètre `i`.
+Dans la deuxième syntaxe, VectorViewIterator qui fait référence à l’élément au décalage spécifié par rapport au début du paramètre `i`.
 
 ## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-=, opérateur
 

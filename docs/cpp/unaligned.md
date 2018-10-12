@@ -1,12 +1,14 @@
 ---
 title: __unaligned | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __unaligned_cpp
+- __unaligned
+- _unaligned
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9593a0b3c6e6980f5be2ce9dcf13e505e94dcace
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 444bc3372b22676cacb3ee89b9c0ad92000cedcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040194"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161214"
 ---
 # <a name="unaligned"></a>__unaligned
 
@@ -32,6 +34,8 @@ ms.locfileid: "46040194"
 Ce modificateur décrit l’alignement des données adressées par le pointeur ; le pointeur lui-même est considéré comme aligné.
 
 La nécessité pour le **__unaligned** mot clé varie selon la plateforme et l’environnement. Échec pour marquer les données correctement peut entraîner des problèmes, allant de la dégradation des performances pour les défaillances matérielles. Le **__unaligned** modificateur n’est pas valide pour le x86 plateforme.
+
+Pour assurer la compatibilité avec les versions précédentes, **_unaligned** est un synonyme de **__unaligned** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
 
 Pour plus d'informations sur l'alignement, consultez :
 

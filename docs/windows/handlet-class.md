@@ -37,12 +37,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db772a5c6a1434032febe24560514c7e7086d798
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ae6e7c1ec602cb57df071ecac24a0ac084331c3c
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789291"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162319"
 ---
 # <a name="handlet-class"></a>HandleT (classe)
 
@@ -220,7 +220,7 @@ virtual bool InternalClose();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si actuel `HandleT` fermé avec succès ; sinon, `false`.
+**true** si actuel `HandleT` fermé avec succès ; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -236,7 +236,7 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le `HandleT` représente un handle ; sinon, `false`.
+**true** si le `HandleT` représente un handle ; sinon, **false**.
 
 ## <a name="operator-assign"></a>HandleT::operator =
 

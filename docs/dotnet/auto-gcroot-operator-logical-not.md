@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1cba64c079b423a05ff5760a90e1b06d269a1a90
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d470974a6f50f7040a46a3f64f9fd431e2796545
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381879"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161370"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator!
 
@@ -39,11 +39,11 @@ bool operator!() const;
 
 ## <a name="return-value"></a>Valeur de retour
 
-`true` Si l’objet encapsulé n’est pas valide ; `false` dans le cas contraire.
+**true** si l’objet encapsulé n’est pas valide ; **false** dans le cas contraire.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // msl_auto_gcroot_operator_not.cpp
 // compile with: /clr
 #include <msclr\auto_gcroot.h>

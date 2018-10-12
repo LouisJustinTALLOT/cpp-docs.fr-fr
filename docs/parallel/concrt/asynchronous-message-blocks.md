@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388483"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163424"
 ---
 # <a name="asynchronous-message-blocks"></a>Blocs de messages asynchrones
 
@@ -307,7 +307,7 @@ L’accès concurrentiel ::[classe timer](../../parallel/concrt/reference/timer
 
 Le `timer` classe envoie son message à simplement une cible. Si vous définissez la `_PTarget` paramètre dans le constructeur pour `NULL`, vous pouvez spécifier ultérieurement la cible en appelant le [Concurrency::ISource :: link_target](reference/source-block-class.md#link_target) méthode.
 
-Un `timer` objet peut être répété ou non extensible. Pour créer une minuterie répétitive, passez `true` pour le `_Repeating` paramètre lorsque vous appelez le constructeur. Sinon, passez `false` pour le `_Repeating` paramètre pour créer un minuteur non extensible. Si la minuterie est extensible, il envoie le même message à sa cible après chaque intervalle.
+Un `timer` objet peut être répété ou non extensible. Pour créer une minuterie répétitive, passez **true** pour le `_Repeating` paramètre lorsque vous appelez le constructeur. Sinon, passez **false** pour le `_Repeating` paramètre pour créer un minuteur non extensible. Si la minuterie est extensible, il envoie le même message à sa cible après chaque intervalle.
 
 Crée la bibliothèque d’Agents `timer` objets dans un état non démarré. Pour démarrer un objet timer, appelez le [Concurrency::Timer :: Start](reference/timer-class.md#start) (méthode). Pour arrêter un `timer` d’objet, détruire l’objet ou l’appel de la [concurrency::timer::stop](reference/timer-class.md#stop) (méthode). Pour suspendre une minuterie répétitive, appelez le [concurrency::timer::pause](reference/timer-class.md#pause) (méthode).
 

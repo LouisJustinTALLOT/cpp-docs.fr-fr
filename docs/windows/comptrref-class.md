@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788940"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162215"
 ---
 # <a name="comptrref-class"></a>ComPtrRef (classe)
 
@@ -176,11 +176,11 @@ Une référence à un autre `ComPtrRef` objet, ou un pointeur vers un type anony
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le premier produit opérateur `true` si objet *un* est égal à l’objet *b*; sinon, `false`.
+Le premier produit opérateur **true** si objet *un* est égal à l’objet *b*; sinon, **false**.
 
-Les deuxième et troisième opérateurs yield `true` si objet *un* est égal à `nullptr`; sinon, `false`.
+Les deuxième et troisième opérateurs yield **true** si objet *un* est égal à **nullptr**; sinon, **false**.
 
-Les quatrième et cinquième opérateurs yield `true` si objet *un* est égal à l’objet *b*; sinon, `false`.
+Les quatrième et cinquième opérateurs yield **true** si objet *un* est égal à l’objet *b*; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -227,11 +227,11 @@ Une référence à un autre `ComPtrRef` objet, ou un pointeur vers un objet anon
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le premier produit opérateur `true` si objet *un* n’est pas égal à l’objet *b*; sinon, `false`.
+Le premier produit opérateur **true** si objet *un* n’est pas égal à l’objet *b*; sinon, **false**.
 
-Les deuxième et troisième opérateurs yield `true` si objet *un* n’est pas égal à `nullptr`; sinon, `false`.
+Les deuxième et troisième opérateurs yield **true** si objet *un* n’est pas égal à **nullptr**; sinon, **false**.
 
-Les quatrième et cinquième opérateurs yield `true` si objet *un* n’est pas égal à l’objet *b*; sinon, `false`.
+Les quatrième et cinquième opérateurs yield **true** si objet *un* n’est pas égal à l’objet *b*; sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 

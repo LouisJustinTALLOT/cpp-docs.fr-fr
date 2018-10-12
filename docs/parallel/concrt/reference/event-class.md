@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e871255e3308450764e8f65cdb6acebe79df38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab586243df9b015c95f4a703744bfb02a54d064e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437740"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162189"
 ---
 # <a name="event-class"></a>event, classe
 
@@ -167,7 +167,7 @@ Un tableau d’événements à attendre. Le nombre d’événements dans le tabl
 Le nombre d’événements dans le tableau fourni dans le `_PPEvents` paramètre.
 
 *_FWaitAll*<br/>
-Si la valeur `true`, le paramètre spécifie que tous les événements dans le tableau fourni dans le `_PPEvents` paramètre doit être signalé pour satisfaire aux exigences de l’attente. Si la valeur `false`, il spécifie que n’importe quel événement dans le tableau fourni dans le `_PPEvents` paramètre ne soit signalé satisfait l’attente.
+Si la valeur **true**, le paramètre spécifie que tous les événements dans le tableau fourni dans le `_PPEvents` paramètre doit être signalé pour satisfaire aux exigences de l’attente. Si la valeur **false**, il spécifie que n’importe quel événement dans le tableau fourni dans le `_PPEvents` paramètre ne soit signalé satisfait l’attente.
 
 *_Délai*<br/>
 Indique le nombre de millisecondes avant l’attente expire. La valeur `COOPERATIVE_TIMEOUT_INFINITE` signifie qu’il n’existe aucun délai d’expiration.
@@ -181,7 +181,7 @@ Si l’attente a été satisfaite, l’index dans le tableau fourni dans le `_PP
 Si le paramètre `_FWaitAll` a la valeur `true` pour indiquer que tous les événements doivent être signalés pour répondre à l’attente, l’index retourné par la fonction véhicule aucune signification spéciale autre que le fait qu’il n’est pas la valeur `COOPERATIVE_WAIT_TIMEOUT`.
 
 > [!IMPORTANT]
->  Dans une application Universal Windows Platform (UWP), n’appelez pas `wait_for_multiple` sur l’ASTA thread, car cet appel peut bloquer le thread actuel et peut entraîner l’application à cesser de répondre.
+> Dans une application Universal Windows Platform (UWP), n’appelez pas `wait_for_multiple` sur l’ASTA thread, car cet appel peut bloquer le thread actuel et peut entraîner l’application à cesser de répondre.
 
 ## <a name="see-also"></a>Voir aussi
 

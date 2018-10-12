@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127f5ee876790fa3cfb8a052c2db6c41cc00f332
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 73a66bfbff2cd8ba59d0e4581134e6a9d23932db
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109017"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162878"
 ---
 # <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals, méthode
 
@@ -39,7 +39,7 @@ Objet à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si les objets sont identiques ; sinon, `false`.
+**true** si les objets sont égaux, sinon **false**.
 
 ### <a name="requirements"></a>Configuration requise
 

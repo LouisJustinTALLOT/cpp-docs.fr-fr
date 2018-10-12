@@ -1,12 +1,14 @@
 ---
 title: __declspec | Microsoft Docs
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
+- __declspec
+- _declspec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f413c56b665a1878fb1e948b975ab8e4cbc0daf4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111315"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163582"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -66,6 +68,8 @@ Un espace blanc sépare la séquence de modificateur de déclaration. Des exempl
 Grammaire des attributs étendus prend en charge ces attributs de classe de stockage spécifique de Microsoft : [aligner](../cpp/align-cpp.md), [allouer](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [déconseillée](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [processus](../cpp/process.md), [restreindre](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), et [thread](../cpp/thread.md). Il prend également en charge ces attributs d’objet COM : [propriété](../cpp/property-cpp.md) et [uuid](../cpp/uuid-cpp.md).
 
 Le **code_seg**, **dllexport**, **dllimport**, **naked**, **noalias**, **nothrow** , **propriété**, **restreindre**, **selectany**, **thread**, et **uuid**les attributs de classe de stockage sont des propriétés uniquement de la déclaration de l’objet ou la fonction à laquelle ils s’appliquent. Le **thread** attribut affecte des données et uniquement les objets. Le **naked** et **spectre** attributs affectent uniquement les fonctions. Le **dllimport** et **dllexport** attributs affectent les fonctions, les données et les objets. Le **propriété**, **selectany**, et **uuid** attributs affectent les objets COM.
+
+Pour assurer la compatibilité avec les versions précédentes, **_declspec** est un synonyme de **__declspec** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
 
 Le **__declspec** mots clés doivent être placés au début d’une déclaration simple. Le compilateur ignore sans avertissement les **__declspec** mots clés placés après * ou & et devant l’identificateur dans une déclaration de variable.
 

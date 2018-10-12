@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f549f0737d74829dbd79c280f3f6c1acd9bca6e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12afcfe09335082f873d88e1aa825b4eee3a1ae2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235995"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163229"
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 
@@ -539,9 +539,9 @@ Une référence à un autre `ComPtr` objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le premier produit opérateur `true` si objet *un* est égal à l’objet *b*; sinon, `false`.
+Le premier produit opérateur **true** si objet *un* est égal à l’objet *b*; sinon, **false**.
 
-Les deuxième et troisième opérateurs yield `true` si objet *un* est égal à `nullptr`; sinon, `false`.
+Les deuxième et troisième opérateurs yield **true** si objet *un* est égal à **nullptr**; sinon, **false**.
 
 ## <a name="operator-inequality"></a>ComPtr::operator ! =
 
@@ -574,9 +574,9 @@ Une référence à un autre `ComPtr` objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le premier produit opérateur `true` si objet *un* n’est pas égal à l’objet *b*; sinon, `false`.
+Le premier produit opérateur **true** si objet *un* n’est pas égal à l’objet *b*; sinon, **false**.
 
-Les deuxième et troisième opérateurs yield `true` si objet *un* n’est pas égal à `nullptr`; sinon, `false`.
+Les deuxième et troisième opérateurs yield **true** si objet *un* n’est pas égal à **nullptr**; sinon, **false**.
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr::operator Microsoft::WRL::Details::BoolType
 
@@ -588,7 +588,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si une interface est associée à ce `ComPtr`, l’adresse de la [BoolStruct::Member](../windows/boolstruct-member-data-member.md) membre de données ; sinon, `nullptr`.
+Si une interface est associée à ce `ComPtr`, l’adresse de la [BoolStruct::Member](../windows/boolstruct-member-data-member.md) membre de données ; sinon, **nullptr**.
 
 ## <a name="ptr"></a>ComPtr::ptr_
 

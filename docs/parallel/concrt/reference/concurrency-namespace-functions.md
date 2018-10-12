@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e07c5b985552fcf30b2acb18030ab3288efb9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1a3057e9753b99aaac837c903b6fd5f6d3ea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428146"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163346"
 ---
 # <a name="concurrency-namespace-functions"></a>fonctions d’espace de noms d’accès concurrentiel
 
@@ -118,7 +118,7 @@ Une référence à l’envoi des données.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été accepté avant que la méthode est retournée, `false` dans le cas contraire.
+**true** si le message a été accepté avant que la méthode est retournée, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
@@ -126,7 +126,7 @@ Pour plus d’informations, consultez [fonctions de passage de messages](../../.
 
 ##  <a name="cancel_current_task"></a>  cancel_current_task
 
-Annule la tâche en cours d’exécution. Cette fonction peut être appelée à partir du corps d'une tâche pour annuler l'exécution de la tâche et la faire passer à l'état `canceled`.
+Annule la tâche en cours d’exécution. Cette fonction peut être appelée à partir du corps d’une tâche pour annuler l’exécution de la tâche et la faire passer à l’état `canceled`.
 
 L'appel de cette fonction en dehors du corps d'un objet `task` n'est pas pris en charge. Cela entraînerait un comportement non défini tel qu'un blocage dans votre application.
 
@@ -151,7 +151,7 @@ void concurrent_queue<T, _Ax>::clear();
 
 ##  <a name="create_async"></a>  create_async
 
-Crée une construction asynchrone Windows Runtime basée sur un objet lambda ou de fonction fourni par l'utilisateur. Le type de retour de `create_async` est `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` ou `IAsyncOperationWithProgress<TResult, TProgress>^` selon la signature de l'objet lambda passée à la méthode.
+Crée une construction asynchrone Windows Runtime basée sur un objet lambda ou de fonction fourni par l'utilisateur. Le type de retour de `create_async` est `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` ou `IAsyncOperationWithProgress<TResult, TProgress>^` selon la signature de l’objet lambda passée à la méthode.
 
 ```
 template<typename _Function>
@@ -177,11 +177,11 @@ Le type de retour de l’objet lambda détermine si la construction est une acti
 
 Les objets lambda qui retournent void provoquent la création d'actions. Les objets lambda qui retournent un résultat de type `TResult` provoquent la création d'opérations TResult.
 
-L'objet lambda peut également retourner un résultat `task<TResult>` qui encapsule le travail asynchrone en lui-même ou qui est la continuation d'une chaîne de tâches représentant le travail asynchrone. Dans ce cas, l'objet lambda lui-même est exécuté en ligne, car les tâches sont celles exécutées de façon asynchrone et le type de retour de l'objet lambda est désencapsulé afin de produire la construction asynchrone retournée par `create_async`. Cela implique une expression lambda qui retourne une tâche\<void > provoque la création d’actions et une expression lambda qui retourne une tâche\<TResult > provoque la création d’opérations TResult.
+L'objet lambda peut également retourner un résultat `task<TResult>` qui encapsule le travail asynchrone en lui-même ou qui est la continuation d'une chaîne de tâches représentant le travail asynchrone. Dans ce cas, l’objet lambda lui-même est exécuté en ligne, car les tâches sont celles exécutées de façon asynchrone et le type de retour de l’objet lambda est désencapsulé afin de produire la construction asynchrone retournée par `create_async`. Cela implique une expression lambda qui retourne une tâche\<void > provoque la création d’actions et une expression lambda qui retourne une tâche\<TResult > provoque la création d’opérations TResult.
 
 L’objet lambda peut prendre zéro, un ou deux arguments. Les arguments valides sont `progress_reporter<TProgress>` et `cancellation_token`, dans cet ordre si les deux sont utilisés. Un objet lambda sans arguments provoque la création d’une construction asynchrone sans la capacité de créer un rapport de progression. Une expression lambda qui prend un argument progress_reporter\<TProgress > entraîne `create_async` retourne une construction asynchrone qui signale la progression de type TProgress chaque fois que le `report` méthode de l’objet progress_reporter est appelée. Un objet lambda qui prend un argument cancellation_token peut l’utiliser pour vérifier l’annulation, ou le passer aux tâches qu’il crée afin que l’annulation de la construction asynchrone provoque l’annulation de ces tâches.
 
-Si le corps de l’objet lambda ou fonction retourne un résultat (et pas une tâche\<TResult >), l’objet lambda sera exécuté de façon asynchrone dans le processus MTA, dans le contexte d’une tâche, le Runtime crée implicitement pour celle-ci. La méthode `IAsyncInfo::Cancel` provoquera l'annulation de la tâche implicite.
+Si le corps de l’objet lambda ou fonction retourne un résultat (et pas une tâche\<TResult >), l’objet lambda sera exécuté de façon asynchrone dans le processus MTA, dans le contexte d’une tâche, le Runtime crée implicitement pour celle-ci. La méthode `IAsyncInfo::Cancel` provoquera l’annulation de la tâche implicite.
 
 Si le corps de l'objet lambda retourne une tâche, l'objet lamba s'exécute en ligne, et si vous déclarez que l'objet lambda prend un argument de type `cancellation_token`, vous pouvez déclencher l'annulation de toutes les tâches que vous créez au sein de l'objet lambda en passant ce jeton lorsque vous créez les tâches. Vous pouvez également utiliser la méthode `register_callback` sur le jeton pour forcer le runtime à effectuer un rappel lorsque vous appelez `IAsyncInfo::Cancel` sur l'opération ou l'action asynchrone produite.
 
@@ -207,7 +207,7 @@ Plusieurs appels suivants à cette méthode retourne la même instance du Gestio
 
 ##  <a name="create_task"></a>  create_task
 
-Crée une bibliothèque de modèles parallèles [tâche](task-class.md) objet. `create_task` peut être utilisé partout où vous auriez utilisé un constructeur de tâche. Il est fourni principalement pour des raisons pratiques, car il permet d'utiliser le mot clé `auto` pendant la création de tâches.
+Crée une bibliothèque de modèles parallèles [tâche](task-class.md) objet. `create_task` peut être utilisé partout où vous auriez utilisé un constructeur de tâche. Il est fourni principalement pour des raisons pratiques, car il permet d’utiliser le mot clé `auto` pendant la création de tâches.
 
 ```
 template<typename T>
@@ -275,7 +275,7 @@ Si le traçage a été correctement lancé, `S_OK` est retourné ; sinon, `E_NO
 
 ##  <a name="free"></a>  Gratuit
 
-Libère un bloc de mémoire précédemment alloué par la méthode `Alloc` au sous-allocateur de mise en cache du runtime d'accès concurrentiel.
+Libère un bloc de mémoire précédemment alloué par la méthode `Alloc` au sous-allocateur de mise en cache du runtime d’accès concurrentiel.
 
 ```
 void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
@@ -416,7 +416,7 @@ Vous ne devez pas intercepter l’exception d’annulation interne levée par le
 
 ##  <a name="is_current_task_group_canceling"></a>  is_current_task_group_canceling
 
-Retourne une indication qui détermine si le groupe de tâches qui s’exécute actuellement inline sur le contexte actuel est au beau milieu d’une annulation active (ou le sera bientôt). Notez que si aucun groupe de tâches ne s'exécute actuellement inline sur le contexte actuel, `false` est retourné.
+Retourne une indication qui détermine si le groupe de tâches qui s’exécute actuellement inline sur le contexte actuel est au beau milieu d’une annulation active (ou le sera bientôt). Notez que si aucun groupe de tâches ne s’exécute actuellement inline sur le contexte actuel, `false` est retourné.
 
 ```
 bool __cdecl is_current_task_group_canceling();
@@ -424,7 +424,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le groupe de tâches est en cours d’exécution est l’annulation, `false` dans le cas contraire.
+**true** si le groupe de tâches est en cours d’exécution est l’annulation, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
@@ -687,7 +687,7 @@ Itérateur d’accès aléatoire ciblant la position juste après le dernier él
 Une instance d’un allocateur de mémoire compatible de bibliothèque C++ Standard.
 
 *_Func*<br/>
-Un objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans le classement. Un prédicat binaire accepte deux arguments et retourne `true` quand la condition est satisfaite et `false` quand elle ne l’est pas. Cette fonction de comparaison doit imposer un ordre faible strict sur les paires d’éléments de la séquence.
+Un objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans le classement. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas. Cette fonction de comparaison doit imposer un ordre faible strict sur les paires d’éléments de la séquence.
 
 *_Chunk_size*<br/>
 La taille au minimum d’un segment est fractionné en deux pour l’exécution parallèle.
@@ -783,7 +783,7 @@ Pour plus d’informations, consultez [algorithmes parallèles](../../../paralle
 
 ##  <a name="parallel_for_each"></a>  parallel_for_each
 
-`parallel_for_each` applique une fonction spécifiée à chaque élément dans une plage, en parallèle. Sémantiquement, elle équivaut à la fonction `for_each` dans l'espace de noms `std`, si ce n'est que l'itération des éléments est effectuée en parallèle et que l'ordre d'itération n'est pas spécifié. L'argument `_Func` doit prendre en charge un opérateur d'appel de fonction sous la forme de `operator()(T)` où le paramètre `T` est le type d'élément du conteneur en cours d'itération.
+`parallel_for_each` applique une fonction spécifiée à chaque élément dans une plage, en parallèle. Sémantiquement, elle équivaut à la fonction `for_each` dans l'espace de noms `std`, si ce n'est que l'itération des éléments est effectuée en parallèle et que l'ordre d'itération n'est pas spécifié. L’argument `_Func` doit prendre en charge un opérateur d’appel de fonction sous la forme de `operator()(T)` où le paramètre `T` est le type d’élément du conteneur en cours d’itération.
 
 ```
 template <typename _Iterator, typename _Function>
@@ -831,7 +831,7 @@ Pour plus d’informations, consultez [algorithmes parallèles](../../../paralle
 
 ##  <a name="parallel_invoke"></a>  parallel_invoke
 
-Exécute les objets de fonction fournis comme paramètres en parallèle et se bloque jusqu'à la fin de leur exécution. Chaque objet de fonction peut être une expression lambda, un pointeur vers une fonction ou tout objet qui prend en charge l'opérateur d'appel de fonction avec la signature `void operator()()`.
+Exécute les objets de fonction fournis comme paramètres en parallèle et se bloque jusqu'à la fin de leur exécution. Chaque objet de fonction peut être une expression lambda, un pointeur vers une fonction ou tout objet qui prend en charge l’opérateur d’appel de fonction avec la signature `void operator()()`.
 
 ```
 template <typename _Function1, typename _Function2>
@@ -1217,7 +1217,7 @@ Itérateur d’accès aléatoire ciblant la position du premier élément de la 
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier.
 
 *_Func*<br/>
-Un objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans le classement. Un prédicat binaire accepte deux arguments et retourne `true` quand la condition est satisfaite et `false` quand elle ne l’est pas. Cette fonction de comparaison doit imposer un ordre faible strict sur les paires d’éléments de la séquence.
+Un objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans le classement. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas. Cette fonction de comparaison doit imposer un ordre faible strict sur les paires d’éléments de la séquence.
 
 *_Chunk_size*<br/>
 La taille au minimum d’un segment est fractionné en deux pour l’exécution parallèle.
@@ -1351,7 +1351,7 @@ Itérateur de sortie qui traite la position située immédiatement après le der
 
 Pour les itérateurs ne prenant pas en charge aléatoire d’accès, uniquement [auto_partitioner](auto-partitioner-class.md) est pris en charge.
 
-Les surcharges prenant l'argument `_Unary_op` transforment la plage d'entrée en plage de sortie en appliquant le foncteur unaire à chaque élément de la plage d'entrée. `_Unary_op` doit prendre en charge l'opérateur d'appel de fonction avec la signature `operator()(T)` où `T` est le type de valeur de la plage à itérer.
+Les surcharges prenant l’argument `_Unary_op` transforment la plage d’entrée en plage de sortie en appliquant le foncteur unaire à chaque élément de la plage d’entrée. `_Unary_op` doit prendre en charge l'opérateur d'appel de fonction avec la signature `operator()(T)` où `T` est le type de valeur de la plage à itérer.
 
 Les surcharges prenant l'argument `_Binary_op` transforment deux plages d'entrée en une plage de sortie en appliquant le foncteur binaire à un élément de la première plage d'entrée et à un élément de la deuxième plage d'entrée. `_Binary_op` doit prendre en charge l'opérateur d'appel de fonction avec la signature `operator()(T, U)` où `T`, `U` sont des types de valeur des deux itérateurs d'entrée.
 
@@ -1460,7 +1460,7 @@ Une référence à l’envoi des données.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été accepté, `false` dans le cas contraire.
+**true** si le message a été accepté, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
@@ -1613,7 +1613,7 @@ Le nom de l’objet donné.
 
 ##  <a name="try_receive"></a>  try_receive
 
-Implémentation générale de la fonction try-receive, qui permet à un contexte de rechercher des données en provenance d'une seule source exactement et de filtrer les valeurs qui sont acceptées. Si les données ne sont pas prêtes, la méthode retourne false.
+Implémentation générale de la fonction try-receive, qui permet à un contexte de rechercher des données en provenance d'une seule source exactement et de filtrer les valeurs qui sont acceptées. Si les données ne sont pas prêtes, la méthode retourne **false**.
 
 ```
 template <class T>
@@ -1704,7 +1704,7 @@ Objet `task_options`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Tâche qui s’effectue correctement lorsque toutes les tâches d’entrée se sont correctement déroulées. Si les tâches d'entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>>`. Si les tâches d'entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
+Tâche qui s’effectue correctement lorsque toutes les tâches d’entrée se sont correctement déroulées. Si les tâches d'entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>>`. Si les tâches d’entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
 
 ### <a name="remarks"></a>Notes
 
@@ -1757,7 +1757,7 @@ Jeton d’annulation contrôlant l’annulation de la tâche retournée. Si vous
 
 ### <a name="return-value"></a>Valeur de retour
 
-Tâche qui s’effectue quand l’une des deux tâches d’entrée s’est correctement déroulée. Si les tâches d'entrée sont de type `T`, la sortie de cette fonction est une `task<std::pair<T, size_t>>>`, où le premier élément de la paire est le résultat de la fin de la tâche et le deuxième élément est l'index de la tâche terminée. Si les tâches d'entrée sont de type `void`, la sortie est une `task<size_t>`, où le résultat est l'index de fin de la tâche.
+Tâche qui s’effectue quand l’une des deux tâches d’entrée s’est correctement déroulée. Si les tâches d'entrée sont de type `T`, la sortie de cette fonction est une `task<std::pair<T, size_t>>>`, où le premier élément de la paire est le résultat de la fin de la tâche et le deuxième élément est l'index de la tâche terminée. Si les tâches d’entrée sont de type `void`, la sortie est une `task<size_t>`, où le résultat est l’index de fin de la tâche.
 
 ### <a name="remarks"></a>Notes
 

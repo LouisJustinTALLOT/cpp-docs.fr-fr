@@ -1,12 +1,15 @@
 ---
 title: __cdecl | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __cdecl_cpp
+- __cdecl
+- _cdecl
+- cdecl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37804aed04f998c6762cdbbc7012ae10c19a2529
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 085d8a49ed3c66f96bf8c2b8bdae7ca54cf3bef6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066817"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163775"
 ---
 # <a name="cdecl"></a>__cdecl
 
@@ -63,9 +66,11 @@ void CMyClass::mymethod() { return; }
 void __cdecl CMyClass::mymethod() { return; }
 ```
 
+Pour assurer la compatibilité avec les versions précédentes, **cdecl** et **_cdecl** sont un synonyme de **__cdecl** , sauf si option du compilateur [/Za \(désactiver extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
+
 ## <a name="example"></a>Exemple
 
-Dans l'exemple suivant, le compilateur est chargé d'utiliser les conventions de nommage et d'appel du langage C pour la fonction `system`.
+Dans l’exemple suivant, le compilateur est chargé d’utiliser les conventions de nommage et d’appel du langage C pour la fonction `system`.
 
 ```cpp
 // Example of the __cdecl keyword on function

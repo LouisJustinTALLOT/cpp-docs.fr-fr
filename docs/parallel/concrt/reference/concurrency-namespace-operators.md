@@ -13,18 +13,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb820b533b74d5634695ddabda26f081a35f95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8065be6cc53cad04d5d52bea91da05bb3125dd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436921"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162566"
 ---
 # <a name="concurrency-namespace-operators"></a>espace de noms d’accès concurrentiel opérateurs
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|
+|[!=, opérateur](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|
 
@@ -66,7 +66,7 @@ Seconde tâche à associer à la tâche obtenue.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une tâche qui s’effectue correctement lorsqu’une des tâches d’entrée est bien terminée. Si les tâches d'entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>`. Si les tâches d'entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
+Une tâche qui s’effectue correctement lorsqu’une des tâches d’entrée est bien terminée. Si les tâches d’entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>`. Si les tâches d’entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
 
 ### <a name="remarks"></a>Notes
 
@@ -115,11 +115,11 @@ Seconde tâche à associer à la tâche obtenue.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Tâche qui s’effectue correctement lorsque les deux tâches d’entrée se sont correctement déroulées. Si les tâches d'entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>>`. Si les tâches d'entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
+Tâche qui s’effectue correctement lorsque les deux tâches d’entrée se sont correctement déroulées. Si les tâches d'entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>>`. Si les tâches d’entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
 
 ### <a name="remarks"></a>Notes
 
-Si une des tâches est annulée ou lève une exception, la tâche retournée se terminera prématurément, à l'état Annulé, et l'exception, s'il y en a une, sera levée si vous appelez `get()` ou `wait()` pour cette tâche.
+Si une des tâches est annulée ou lève une exception, la tâche retournée se terminera prématurément, à l’état Annulé, et l’exception, s’il y en a une, sera levée si vous appelez `get()` ou `wait()` pour cette tâche.
 
 ##  <a name="operator_eq_eq"></a>  opérateur ==, opérateur
 
@@ -151,7 +151,7 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le vecteur simultané sur le côté gauche de l’opérateur est égal au vecteur simultané sur le côté droit de l’opérateur. sinon `false`.
+**true** si le vecteur simultané sur le côté gauche de l’opérateur est égal au vecteur simultané sur le côté droit de l’opérateur ; sinon **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -189,7 +189,7 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si les vecteurs simultanées ne sont pas égaux ; `false` si les vecteurs simultanés sont égaux.
+**true** si les vecteurs simultanées ne sont pas égaux ; **false** si les vecteurs simultanés sont égaux.
 
 ### <a name="remarks"></a>Notes
 
@@ -227,7 +227,7 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le vecteur simultané sur le côté gauche de l’opérateur est inférieur au vecteur simultané sur le côté droit de l’opérateur. sinon `false`.
+**true** si le vecteur simultané sur le côté gauche de l’opérateur est inférieur au vecteur simultané sur le côté droit de l’opérateur ; sinon **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -265,7 +265,7 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le vecteur simultané sur le côté gauche de l’opérateur est inférieur ou égal au vecteur simultané sur le côté droit de l’opérateur. sinon `false`.
+**true** si le vecteur simultané sur le côté gauche de l’opérateur est inférieur ou égal au vecteur simultané sur le côté droit de l’opérateur, ; sinon **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -303,7 +303,7 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le vecteur simultané sur le côté gauche de l’opérateur est supérieur au vecteur simultané sur le côté droit de l’opérateur. sinon `false`.
+**true** si le vecteur simultané sur le côté gauche de l’opérateur est supérieur au vecteur simultané sur le côté droit de l’opérateur ; sinon **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -341,7 +341,7 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le vecteur simultané sur le côté gauche de l’opérateur est supérieur ou égal au vecteur simultané sur le côté droit de l’opérateur. sinon `false`.
+**true** si le vecteur simultané sur le côté gauche de l’opérateur est supérieur ou égal au vecteur simultané sur le côté droit de l’opérateur ; sinon **false**.
 
 ### <a name="remarks"></a>Notes
 

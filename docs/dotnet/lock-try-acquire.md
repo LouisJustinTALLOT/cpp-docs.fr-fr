@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7782f59ae63c185995fe52f19bca739bc12fcaa1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f121ff9915e49c98bc9f32ff683f8d08914f560
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375847"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163463"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 
@@ -50,7 +50,7 @@ Valeur de délai d’attente en millisecondes, ou comme un <xref:System.TimeSpan
 
 ## <a name="return-value"></a>Valeur de retour
 
-`true` Si le verrou a été acquis, `false` dans le cas contraire.
+**true** si le verrou a été acquis, **false** dans le cas contraire.
 
 ## <a name="remarks"></a>Notes
 
@@ -60,7 +60,7 @@ Si un verrou a déjà été acquis, cette fonction ne fait rien.
 
 Cet exemple utilise une seule instance d’une classe entre plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread principal de l’application utilise un verrou sur la même instance de la classe pour vérifier périodiquement pour voir si les threads de travail existent toujours et attentes pour quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.
 
-```
+```cpp
 // msl_lock_try_acquire.cpp
 // compile with: /clr
 #include <msclr/lock.h>

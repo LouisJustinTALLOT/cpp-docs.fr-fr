@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67376497f3c0be84c0e24e403eaa3129ec38b255
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a0aa56c511ac5f7b98ffdd75aebd7f71ef9f21ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110777"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162020"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator, classe
 
@@ -137,7 +137,7 @@ Autre InputIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si l'InputIterator actif est égal à `other` ; sinon, `false`.
+**true** si l’InputIterator actif est égal à *autres*; sinon, **false**.
 
 ## <a name="operator-increment"></a>  InputIterator::operator ++ (opérateur)
 
@@ -158,7 +158,7 @@ La première syntaxe incrémente l'objet InputIterator actuel puis le retourne. 
 
 La première syntaxe InputIterator préincrémente l'objet InputIterator actuel.
 
-La deuxième syntaxe postincrémente l'objet InputIterator actuel. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.
+La deuxième syntaxe postincrémente l'objet InputIterator actuel. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une post-incrémentation.
 
 ## <a name="operator-inequality"></a>  InputIterator::operator ! =, opérateur
 
@@ -177,7 +177,7 @@ Autre InputIterator.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si l'InputIterator actif n'est pas égal à `other` ; sinon, `false`.
+**true** si l’InputIterator actif n’est pas égal à *autres*; sinon, **false**.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e59631592cd0bf9d147110e1a72d27d4bc781e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 36cee8d6f2cb41a22574f60c5cf86747228205bb
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789083"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163073"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT, classe
 
@@ -125,7 +125,7 @@ Indique si l’actuel `SyncLockWithStatusT` objet possède une ressource, c'est-
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le `SyncLockWithStatusT` objet est verrouillé ; sinon, `false`.
+**true** si le `SyncLockWithStatusT` objet est verrouillé ; sinon, **false**.
 
 ## <a name="status"></a>SyncLockWithStatusT::status_
 

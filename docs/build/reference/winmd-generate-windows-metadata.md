@@ -14,24 +14,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25b8b34e55fc0814653f4c44be50e545633be373
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 492be2c5510155ab0336070adc4b5ae96a9775c0
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705722"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162956"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (générer des métadonnées Windows)
 
 Active la génération d’un fichier de métadonnées de Runtime Windows (.winmd).
 
-```
-/WINMD[:{NO|ONLY}]
-```
+> **/ WINMD**\[**:**{**NON**\|**UNIQUEMENT**}]
 
-## <a name="remarks"></a>Notes
+## <a name="arguments"></a>Arguments
 
-**/ WINMD**<br/>
+**/WINMD**<br/>
 Le paramètre par défaut pour les applications de plateforme Windows universelle. L’éditeur de liens génère le fichier exécutable binaire et le fichier de métadonnées .winmd.
 
 **/WINMD:NO**<br/>
@@ -40,19 +38,27 @@ L’éditeur de liens génère le fichier exécutable binaire, mais pas un fichi
 **/ WINMD : UNIQUEMENT**<br/>
 L’éditeur de liens génère uniquement le fichier .winmd, mais pas le fichier exécutable binaire.
 
-Par défaut, le nom de fichier de sortie présente sous la forme `binaryname`.winmd. Pour spécifier un autre nom de fichier, utilisez le [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) option.
+## <a name="remarks"></a>Notes
+
+Le **/WINMD** option de l’éditeur de liens est utilisée pour les applications UWP et de composants Windows runtime pour contrôler la création d’un fichier de métadonnées (.winmd) Windows Runtime. Un fichier .winmd est un type de DLL qui contient les métadonnées pour les types de runtime Windows et, dans le cas de composants d’exécution, les implémentations de ces types. Les métadonnées suivent le [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
+
+Par défaut, le nom de fichier de sortie présente sous la forme *binaryname*.winmd. Pour spécifier un autre nom de fichier, utilisez le [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) option.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
-1. Sélectionnez le **l’éditeur de liens** dossier.
-
-1. Sélectionnez le **Windows métadonnées** page de propriétés.
+1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **Windows métadonnées** page de propriétés.
 
 1. Dans le **générer des métadonnées Windows** liste déroulante, sélectionnez l’option souhaitée.
 
 ## <a name="see-also"></a>Voir aussi
 
+[Procédure pas à pas : Création d’un composant Simple Windows Runtime et l’appeler à partir de JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)<br/>
+[Introduction à Microsoft Interface Definition Language 3.0](/uwp/midl-3/intro)<br/>
+[/WINMDFILE (Spécifier un fichier winmd)](winmdfile-specify-winmd-file.md)<br/>
+[/WINMDKEYFILE (Spécifier un fichier de clé winmd)](winmdkeyfile-specify-winmd-key-file.md)<br/>
+[/WINMDKEYCONTAINER (Spécifier un conteneur de clé de nom fort)](winmdkeycontainer-specify-key-container.md)<br/>
+[/WINMDDELAYSIGN (Signer partiellement un winmd)](winmddelaysign-partially-sign-a-winmd.md)<br/>
 [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)

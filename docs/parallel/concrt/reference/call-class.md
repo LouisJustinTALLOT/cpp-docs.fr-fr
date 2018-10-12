@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4f993c357ef3d4f66f9b2f22c9fb37a4e10c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a99de307ec64c3b6d4e49f4e0a6eef532314bf9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423895"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161864"
 ---
 # <a name="call-class"></a>call, classe
 
@@ -55,7 +55,7 @@ La signature des fonctions que ce bloc peut accepter.
 
 |Nom|Description|
 |----------|-----------------|
-|[call](#ctor)|Surchargé. Construit un `call` bloc de messagerie.|
+|[call](#ctor)|Surchargé. Construit un bloc de messagerie `call` .|
 |[~ call, destructeur](#dtor)|Détruit le `call` bloc de messagerie.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
@@ -88,7 +88,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 ##  <a name="ctor"></a> Appel
 
-Construit un `call` bloc de messagerie.
+Construit un bloc de messagerie `call` .
 
 ```
 call(
@@ -126,10 +126,10 @@ Une fonction qui sera appelée pour chaque message accepté.
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
-Le `Scheduler` objet dans lequel la tâche de propagation pour le `call` bloc de messagerie est planifiée.
+Objet `Scheduler` dans lequel la tâche de propagation du bloc de messagerie `call` est planifiée.
 
 *_PScheduleGroup*<br/>
-Le `ScheduleGroup` objet dans lequel la tâche de propagation pour le `call` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
+Objet `ScheduleGroup` dans lequel la tâche de propagation du bloc de messagerie `call` est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
 
 ### <a name="remarks"></a>Notes
 
@@ -227,7 +227,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Étant donné que le bloc de ne pas reporter des messages transmis.
+**true** , car le bloc de ne pas reporter des messages proposés.
 
 ## <a name="see-also"></a>Voir aussi
 

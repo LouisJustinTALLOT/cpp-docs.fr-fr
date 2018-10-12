@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eea3e1f54fa1c5e1c4313a9442e812770b0a6cdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0aee08fc59130e829d9448ba4f28a9823a461ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424727"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161773"
 ---
 # <a name="lockoperator-bool"></a>lock::operator bool
 
@@ -40,17 +40,17 @@ operator bool();
 
 ## <a name="return-value"></a>Valeur de retour
 
-`true` Si un verrou est maintenu, `false` dans le cas contraire.
+**true** si un verrou est maintenu, **false** dans le cas contraire.
 
 ## <a name="remarks"></a>Notes
 
-Cet opérateur convertit effectivement `_detail_class::_safe_bool` qui est plus sûr que `bool` , car il ne peut pas être converti en un type intégral.
+Cet opérateur convertit effectivement `_detail_class::_safe_bool` qui est plus sûr que **bool** , car il ne peut pas être converti en un type intégral.
 
 ## <a name="example"></a>Exemple
 
 Cet exemple utilise une seule instance d’une classe entre plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread principal de l’application utilise un verrou sur la même instance de la classe pour vérifier périodiquement pour voir si les threads de travail existent toujours et attentes pour quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.
 
-```
+```cpp
 // msl_lock_op_bool.cpp
 // compile with: /clr
 #include <msclr/lock.h>

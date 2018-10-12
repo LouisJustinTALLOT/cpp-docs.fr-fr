@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fea4f576e347ca03dda1142b3118bf605bc9f385
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235345"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163114"
 ---
 # <a name="hstring-class"></a>HString, classe
 
@@ -225,7 +225,7 @@ bool IsValid() const throw()
 
 ### <a name="parameters"></a>Paramètres
 
-`true` Si actuel `HString` objet n’est pas vide ; sinon, `false`.
+**true** si actuel `HString` objet n’est pas vide ; sinon, **false**.
 
 ## <a name="makereference"></a>HString::MakeReference
 
@@ -310,7 +310,7 @@ Le deuxième paramètre à comparer. *rhs* peut être un `HString` ou `HStringRe
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le *lhs* et *rhs* paramètres sont égaux ; sinon, `false`.
+**true** si le *lhs* et *rhs* paramètres sont égaux ; sinon, **false**.
 
 ## <a name="operator-inequality"></a>HString::operator ! =, opérateur
 
@@ -343,7 +343,7 @@ Le deuxième paramètre à comparer. *rhs* peut être un `HString` ou `HStringRe
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le *lhs* et *rhs* paramètres ne sont pas égales ; sinon, `false`.
+**true** si le *lhs* et *rhs* paramètres ne sont pas égales ; sinon, **false**.
 
 ## <a name="operator-less-than"></a>HString::operator&lt; opérateur
 
@@ -365,7 +365,7 @@ Le deuxième paramètre à comparer. *RHS* peut être une référence à un `HSt
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le *lhs* paramètre est inférieure à la *rhs* paramètre ; sinon, `false`.
+**true** si le *lhs* paramètre est inférieure à la *rhs* paramètre ; sinon, **false**.
 
 ## <a name="release"></a>HString::Release
 

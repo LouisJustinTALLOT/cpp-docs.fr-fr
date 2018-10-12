@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c960e73604a915dbb15c0efac958dc229c16b3b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 045cdeab321e9e3f88ee9bd50d337101e8512718
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379526"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163814"
 ---
 # <a name="join-class"></a>join, classe
 
@@ -60,7 +60,7 @@ Le genre de `join` bloc est `greedy` ou `non_greedy`
 
 |Nom|Description|
 |----------|-----------------|
-|[join](#ctor)|Surchargé. Construit un `join` bloc de messagerie.|
+|[join](#ctor)|Surchargé. Construit un bloc de messagerie `join` .|
 |[~ join, destructeur](#dtor)|Détruit le `join` bloc.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
@@ -138,7 +138,7 @@ Semblable à `accept`, mais est toujours précédé par un appel à `reserve`.
 
 ##  <a name="ctor"></a> jointure
 
-Construit un `join` bloc de messagerie.
+Construit un bloc de messagerie `join` .
 
 ```
 join(
@@ -176,10 +176,10 @@ Nombre d’entrées cela `join` bloc peuvent être utilisés.
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
-Le `Scheduler` objet dans lequel la tâche de propagation pour le `join` bloc de messagerie est planifiée.
+Objet `Scheduler` dans lequel la tâche de propagation du bloc de messagerie `join` est planifiée.
 
 *_PScheduleGroup*<br/>
-Le `ScheduleGroup` objet dans lequel la tâche de propagation pour le `join` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
+Objet `ScheduleGroup` dans lequel la tâche de propagation du bloc de messagerie `join` est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
 
 ### <a name="remarks"></a>Notes
 
@@ -261,11 +261,11 @@ Le `runtime_object_identity` de le proposé `message` objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` Si le message a été réservé avec succès, `false` dans le cas contraire.
+**true** si le message a été réservé avec succès, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Après avoir `reserve` est appelée, si elle retourne `true`, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
+Après avoir `reserve` est appelée, si elle retourne **true**, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

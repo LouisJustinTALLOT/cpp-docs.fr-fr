@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390257"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162397"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource, structure
 
@@ -79,7 +79,7 @@ Le niveau d’abonnement actuel.
 
 Le niveau d’abonnement vous indique le nombre de threads en cours d’exécution associé au thread matériel. Cela inclut uniquement les threads que le Gestionnaire de ressources est informé dans le formulaire de threads auxquels vous êtes abonnés et les racines de processeur virtuel qui exécutent activement des proxys de thread.
 
-Appel de la méthode [ISchedulerProxy::SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), ou la méthode [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) avec le paramètre `doSubscribeCurrentThread` défini sur la valeur `true`incrémente le niveau d’abonnement d’un thread matériel d’une unité. Elles retournent également une `IExecutionResource` interface représentant l’abonnement. Un appel correspondant à la [IExecutionResource::Remove](#remove) décrémente niveau d’abonnement du thread matériel d’une unité.
+Appel de la méthode [ISchedulerProxy::SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), ou la méthode [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) avec le paramètre `doSubscribeCurrentThread` défini sur la valeur **true** incrémente le niveau d’abonnement d’un thread matériel d’une unité. Elles retournent également une `IExecutionResource` interface représentant l’abonnement. Un appel correspondant à la [IExecutionResource::Remove](#remove) décrémente niveau d’abonnement du thread matériel d’une unité.
 
 L’acte d’activation d’une racine de processeur virtuel à l’aide de la méthode [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate) incrémente le niveau d’abonnement d’un thread matériel d’une unité. Les méthodes [IVirtualProcessorRoot::Deactivate](ivirtualprocessorroot-structure.md#deactivate), ou [IExecutionResource::Remove](#remove) décrémenter le niveau d’abonnement en cas d’appel sur une racine de processeur virtuel activée.
 

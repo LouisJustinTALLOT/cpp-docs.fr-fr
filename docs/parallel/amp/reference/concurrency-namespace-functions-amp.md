@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441913"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163411"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Fonctions d’accès concurrentiel de l’espace de noms (AMP)
 
@@ -92,7 +92,7 @@ La valeur à stocker à l’emplacement de mémoire spécifié dans par `_Dest` 
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true` si l'opération réussit ; sinon `false`.
+**true** si l’opération a réussi ; sinon, **false**.
 
 ##  <a name="atomic_exchange"></a>  atomic_exchange, fonction (C++ AMP)
 
@@ -554,7 +554,7 @@ Un `future<void>` qui peut être attendu.
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-Interrompt l’exécution d’une fonction avec la clause de restriction `restrict(amp)` . Lorsque le runtime AMP détecte l’appel, il déclenche une [runtime_exception](runtime-exception-class.md) exception avec le message d’erreur « le rastériseur de référence : Shader abort instruction atteint ».
+Interrompt l’exécution d’une fonction avec la clause de restriction `restrict(amp)` . Lorsque le runtime AMP détecte l’appel, il déclenche une exception [runtime_exception](runtime-exception-class.md) avec le message d’erreur « Reference Rasterizer: Shader abort instruction hit ».
 
 ```
 void direct3d_abort() restrict(amp);

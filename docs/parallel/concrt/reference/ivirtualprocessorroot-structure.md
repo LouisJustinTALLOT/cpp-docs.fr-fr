@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445982"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162917"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot, structure
 
@@ -111,7 +111,7 @@ Le contexte est actuellement distribué par cette racine.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur booléenne. La valeur `true` indique que le proxy de thread retourné à partir de la `Deactivate` méthode en réponse à un appel à la `Activate` (méthode). La valeur `false` indique que le proxy de thread retourné à partir de la méthode en réponse à un événement de notification dans le Gestionnaire de ressources. Sur un planificateur de threads (UMS) en mode utilisateur planifiable, cela indique que les éléments apparaissent dans la liste de saisie semi-automatique du planificateur et le planificateur est requis pour les gérer.
+Valeur booléenne. La valeur **true** indique que le proxy de thread retourné à partir de la `Deactivate` méthode en réponse à un appel à la `Activate` (méthode). La valeur `false` indique que le proxy de thread retourné à partir de la méthode en réponse à un événement de notification dans le Gestionnaire de ressources. Sur un planificateur de threads (UMS) en mode utilisateur planifiable, cela indique que les éléments apparaissent dans la liste de saisie semi-automatique du planificateur et le planificateur est requis pour les gérer.
 
 ### <a name="remarks"></a>Notes
 
@@ -119,9 +119,9 @@ Utilisez cette méthode pour arrêter temporairement l’exécution d’une raci
 
 Une racine de processeur virtuel désactivée peut être réveillée par un appel à la `Activate` (méthode), avec le même argument qui a été passé à la `Deactivate` (méthode). Le planificateur est chargé de s’assurer que les appels à la `Activate` et `Deactivate` méthodes sont associés, mais ils ne sont pas obligatoirement être reçus dans un ordre spécifique. Le Gestionnaire de ressources peut gérer la réception d’un appel à la `Activate` méthode avant qu’il reçoit un appel à la `Deactivate` méthode prévu.
 
-Si une racine de processeur virtuel déclenche et la valeur de retour à partir de la `Deactivate` méthode est la valeur `false`, le planificateur doit interroger la liste de saisie semi-automatique UMS via la `IUMSCompletionList::GetUnblockNotifications` (méthode), agir sur ces informations, puis appeler la `Deactivate`méthode à nouveau. Cela doit être répété jusqu'à ce que le `Deactivate` méthode retourne la valeur `true`.
+Si une racine de processeur virtuel déclenche et la valeur de retour à partir de la `Deactivate` méthode est la valeur **false**, le planificateur doit interroger la liste de saisie semi-automatique UMS via la `IUMSCompletionList::GetUnblockNotifications` méthode, act sur plus d’informations, puis Appelez ensuite la `Deactivate` méthode à nouveau. Cela doit être répété jusqu'à ce que le `Deactivate` méthode retourne la valeur `true`.
 
-`invalid_argument` est levée si l’argument `pContext` a la valeur `NULL`.
+`invalid_argument` est levée si l’argument `pContext` a la valeur NULL.
 
 `invalid_operation` est levé si la racine de processeur virtuel n’a jamais été activée, ou l’argument `pContext` ne représente pas le contexte d’exécution qui a été distribué le plus récemment par cette racine de processeur virtuel.
 
