@@ -1,7 +1,7 @@
 ---
-title: Boxing (Extensions du composant C++) | Microsoft Docs
+title: Boxing (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316716"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328010"
 ---
-# <a name="boxing--c-component-extensions"></a>Boxing  (extensions du composant C++)
+# <a name="boxing--ccli-and-ccx"></a>Boxing (C++ / c++ / CLI et c++ / CX)
 
-Le compilateur Visual C++ peut convertir des types valeur aux objets dans un processus appelé *boxing*et convertir des objets vers des types de valeur dans un processus appelé *unboxing*.
+La conversion des types valeur aux objets est appelée *boxing*, et la conversion d’objets à des types valeur est appelée *unboxing*.
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
@@ -86,11 +86,11 @@ Pour plus d’informations, consultez [Boxing (C++ / c++ / CX)](https://msdn.mic
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Le compilateur Visual C++ effectue maintenant un boxing des types valeur en <xref:System.Object>. Cette opération est possible en raison d'une conversion définie par le compilateur pour convertir des types valeur en <xref:System.Object>.
+Les zones du compilateur des types valeur en <xref:System.Object>. Cette opération est possible en raison d'une conversion définie par le compilateur pour convertir des types valeur en <xref:System.Object>.
 
 Les opérations boxing et unboxing permettent de traiter les types valeur en tant qu'objets. Les types valeur, y compris les types struct et les types intégrés comme int, peuvent être convertis en et à partir du type <xref:System.Object>.
 
-Pour plus d'informations, consultez :
+Pour plus d'informations, voir :
 
 - [Guide pratique pour demander explicitement le boxing](../dotnet/how-to-explicitly-request-boxing.md)
 
@@ -200,4 +200,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

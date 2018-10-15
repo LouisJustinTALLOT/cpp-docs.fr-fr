@@ -1,7 +1,7 @@
 ---
 title: __identifier (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,25 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 572767c2f85b07f201bef93578b14b731aa467e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a8b69402dbe3812bdd49f8944c979300209bff
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415016"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328270"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
-Permet d’utiliser des mots clés Visual C++ en tant qu’identificateurs.
+Permet l’utilisation de mots clés C++ comme identificateurs.
 
 ## <a name="all-platforms"></a>Toutes les plateformes
 
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-__identifier(
-Visual_C++_keyword
-)  
+__identifier(C++_keyword)  
 ```
 
 ### <a name="remarks"></a>Notes
@@ -53,7 +51,7 @@ Option du compilateur : `/ZW`
 
 **Exemple**
 
-Dans l’exemple suivant, une classe nommée **modèle** est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le **modèle** (classe), le **__identifier** mot clé dissimule le fait que **modèle** est un mot clé C++ standard.
+Dans l’exemple suivant, une classe nommée **modèle** est créé en c# et distribué en tant que DLL. En C / c++ / programme CLI qui utilise le **modèle** (classe), le **__identifier** mot clé dissimule le fait qui **modèle** est un mot clé C++ standard.
 
 ```cs
 // identifier_template.cs
@@ -85,7 +83,7 @@ Option du compilateur : `/clr`
 
 ### <a name="examples"></a>Exemples
 
-Dans l’exemple suivant, une classe nommée **modèle** est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le **modèle** (classe), le **__identifier** mot clé dissimule le fait que **modèle** est un mot clé C++ standard.
+Dans l’exemple suivant, une classe nommée **modèle** est créé en c# et distribué en tant que DLL. En C / c++ / programme CLI qui utilise le **modèle** (classe), le **__identifier** mot clé dissimule le fait qui **modèle** est un mot clé C++ standard.
 
 ```cs
 // identifier_template.cs
@@ -108,5 +106,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

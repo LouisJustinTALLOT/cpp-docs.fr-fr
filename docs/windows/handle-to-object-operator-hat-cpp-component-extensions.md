@@ -1,7 +1,7 @@
 ---
-title: Handle de l’opérateur Object (^) (Extensions du composant C++) | Microsoft Docs
+title: Handle de l’opérateur Object (^) (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d7fb74dcff370b314df5da5428ba3e406023acbe
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410856"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327971"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>Handle sur l’opérateur Object (^) (extensions du composant C++)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>Handle de l’opérateur Object (^) (C++ / c++ / CLI et c++ / CX)
 
 Le *déclarateur de handle* (`^`, prononcé « chapeau »), modifie le type [spécificateur](../cpp/overview-of-declarators.md) pour indiquer que l’objet déclaré doit être supprimé automatiquement lorsque le système détermine que l’objet est ne seront plus accessibles.
 
@@ -34,7 +34,7 @@ Une variable déclarée avec le déclarateur de handle se comporte comme un poin
 
 Le compilateur utilise le modèle COM *décompte* mécanisme pour déterminer si l’objet n’est plus utilisé et peut être supprimé. Ceci est possible car un objet dérivé d'une interface Windows Runtime est en fait un objet COM. Le nombre de références est incrémenté lorsque l'objet est créé ou copié et il est décrémenté lorsque l'objet prend la valeur null ou bascule hors de portée. Si le nombre de références atteint zéro, l'objet est supprimé automatiquement et immédiatement.
 
-L'avantage du déclarateur de handle est que dans COM vous devez gérer explicitement le nombre de références pour un objet, ce qui est un processus fastidieux et sujet aux erreurs. Autrement dit, pour incrémenter ou décrémenter le nombre de références, vous devez appeler les méthodes AddRef() et Release() de l’objet. Toutefois, si vous déclarez un objet avec le déclarateur de handle, le compilateur Visual C++ génère du code qui ajuste automatiquement le nombre de références.
+L'avantage du déclarateur de handle est que dans COM vous devez gérer explicitement le nombre de références pour un objet, ce qui est un processus fastidieux et sujet aux erreurs. Autrement dit, pour incrémenter ou décrémenter le nombre de références, vous devez appeler les méthodes AddRef() et Release() de l’objet. Toutefois, si vous déclarez un objet avec le déclarateur de handle, le compilateur génère du code qui s’ajuste automatiquement le décompte de références.
 
 Pour plus d’informations sur la façon d’instancier un objet, consultez [ref nouvelle](../windows/ref-new-gcnew-cpp-component-extensions.md).
 
@@ -47,8 +47,6 @@ Option du compilateur : `/ZW`
 Le système utilise le CLR *RÉCUPÉRATEUR de mémoire* mécanisme pour déterminer si l’objet n’est plus utilisé et peut être supprimé. Le Common Langage Runtime gère un tas sur lequel il alloue des objets et utilise des références managées (variables) dans votre programme pour indiquer l'emplacement des objets sur le tas. Lorsqu'un objet n'est plus utilisé, la mémoire qu'il occupait sur le tas est libérée. Régulièrement, le garbage collector compacte le tas pour mieux utiliser la mémoire libérée. Le compactage du tas peut déplacer des objets sur le tas, ce qui invalide les emplacements référencés par des références managées. Toutefois, le garbage collector connaît l'emplacement de toutes les références managées et il les met automatiquement à jour pour indiquer l'emplacement actuel des objets sur le tas.
 
 Les pointeurs (`*`) et les références (`&`) C++ natifs n'étant pas des références managées, le garbage collector ne peut pas mettre à jour automatiquement les adresses vers lesquelles ils pointent. Pour résoudre ce problème, utilisez le déclarateur de handle pour spécifier une variable que le garbage collector connaît et peut mettre à jour automatiquement.
-
-Dans Visual C++ 2002 et Visual C++ 2003, `__gc *` était utilisé pour déclarer un objet sur le tas managé.  `^` remplace `__gc *` dans la nouvelle syntaxe.
 
 Pour plus d’informations, consultez [Comment : déclarer des Handles dans les Types natifs](../dotnet/how-to-declare-handles-in-native-types.md).
 
@@ -235,5 +233,5 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md)

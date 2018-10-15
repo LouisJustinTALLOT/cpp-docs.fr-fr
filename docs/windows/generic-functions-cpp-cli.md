@@ -1,7 +1,7 @@
 ---
 title: Fonctions génériques (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d687dfbee48105001d3be04fd4918b9889e2d04
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398857"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327698"
 ---
 # <a name="generic-functions-ccli"></a>Fonctions génériques (C++/CLI)
 
@@ -91,7 +91,7 @@ Le corps de la méthode, qui peut faire référence aux identificateurs de param
 
 Fonctions génériques sont des fonctions déclarées avec un paramètre de type générique. Ils peuvent être des méthodes dans une classe ou un struct ou autonome des fonctions. Une déclaration générique unique déclare implicitement une famille de fonctions qui diffèrent uniquement par la substitution d’un autre type réel pour le paramètre de type générique.
 
-Dans Visual C++, les constructeurs de classe ou un struct ne peuvent pas être déclarés avec des paramètres de type générique.
+Un constructeur de classe ou un struct ne peut pas être déclaré avec des paramètres de type générique.
 
 Lorsqu’elle est appelée, le paramètre de type générique est remplacé par un type réel. Le type réel peut être spécifié explicitement dans les crochets angulaires à l’aide d’une syntaxe semblable à un appel de fonction de modèle. Si elle est appelée sans les paramètres de type, le compilateur tente de déduire le type réel à partir des paramètres fournis dans l’appel de fonction. Si l’argument de type prévu ne peut pas être déduit à partir des paramètres utilisés, le compilateur signale une erreur.
 
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Génériques](../windows/generics-cpp-component-extensions.md)

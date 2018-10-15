@@ -1,7 +1,7 @@
 ---
 title: Transfert de type (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396545"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328335"
 ---
 # <a name="type-forwarding-ccli"></a>Transfert de type (C++/CLI)
 
 *Transfert de type* vous permet de déplacer un type à partir d’un assembly (assembly A) dans un autre assembly (assembly B), tel qu’il n’est pas nécessaire de recompiler les clients qui utilisent l’assembly A.
 
-## <a name="all-platforms"></a>Toutes les plateformes
-
-Cette fonctionnalité n’est pas pris en charge dans tous les runtimes.
-
 ## <a name="windows-runtime"></a>Windows Runtime
 
 Cette fonctionnalité n’est pas pris en charge dans le Runtime de Windows.
-
-### <a name="requirements"></a>Configuration requise
-
-Option du compilateur : `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -44,7 +36,7 @@ L’exemple de code suivant montre comment utiliser le transfert de type.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
@@ -97,7 +89,7 @@ Par conséquent, si un fichier de code source qui est utilisé pour générer l�
 
 3. Supprimer le `MyClass` , type de définition à partir du code source utilisé pour générer A.dll et remplacez-le par le code suivant :
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

@@ -1,5 +1,5 @@
 ---
-title: substituer (Extensions du composant C++) | Microsoft Docs
+title: Remplacer (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6071cef3d5669fda86975bb0f27a2b9b87eeb011
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc124ffcdd0ff428c4ef696bf54a27eb9b0ee7d8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407268"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328452"
 ---
-# <a name="override--c-component-extensions"></a>substituer  (extensions du composant C++)
+# <a name="override--ccli-and-ccx"></a>Remplacer (C++ / c++ / CLI et c++ / CX)
 
 Le **remplacer** mot clé contextuel indique qu’un membre d’un type substitue une classe de base ou d’un membre d’interface de base.
 

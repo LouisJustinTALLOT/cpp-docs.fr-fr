@@ -1,7 +1,7 @@
 ---
-title: Vue d’ensemble des génériques dans Visual C++ | Microsoft Docs
+title: Vue d’ensemble des génériques en C / c++ / CLI | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,20 +22,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1a6e9b9734fbb836d9e061b15534e23b95b29c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e6240fd5e33f44c42d8a0d33302b9ef4cf9f8bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590936"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327854"
 ---
-# <a name="overview-of-generics-in-visual-c"></a>Vue d'ensemble de génériques dans Visual C++
+# <a name="overview-of-generics-in-ccli"></a>Vue d’ensemble des génériques en C / c++ / CLI
 
 Les génériques sont des types paramétrables pris en charge par le Common Language Runtime. Un type paramétrable est un type est défini avec un paramètre de type inconnu qui est spécifié lorsque le générique est utilisé.
 
 ## <a name="why-generics"></a>Pourquoi génériques ?
 
-C++ prend en charge les modèles, et les modèles comme les génériques prennent en charge les types paramétrables pour créer des classes de collections typées. Toutefois, les modèles fournissent le paramétrage au moment de la compilation. Vous ne pouvez pas référencer un assembly qui contient une définition de modèle et créer des spécialisations du modèle. Une fois compilé, un modèle spécialisé ressemble à n'importe quelle classe ou méthode. En revanche, les génériques sont émis dans le langage MSIL en tant que type paramétré connu par le runtime pour être un type paramétré ; le code source qui référence un assembly contenant un type générique peut créer des spécialisations de type générique. Pour plus d’informations sur la comparaison de modèles Visual C++ et les génériques, consultez [génériques et modèles (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+C++ prend en charge les modèles, et les modèles comme les génériques prennent en charge les types paramétrables pour créer des classes de collections typées. Toutefois, les modèles fournissent le paramétrage au moment de la compilation. Vous ne pouvez pas référencer un assembly qui contient une définition de modèle et créer des spécialisations du modèle. Une fois compilé, un modèle spécialisé ressemble à n'importe quelle classe ou méthode. En revanche, les génériques sont émis dans le langage MSIL en tant que type paramétré connu par le runtime pour être un type paramétré ; le code source qui référence un assembly contenant un type générique peut créer des spécialisations de type générique. Pour plus d’informations sur la comparaison des modèles C++ standard et les génériques, consultez [génériques et modèles (C++ / c++ / CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ## <a name="generic-functions-and-types"></a>Fonctions et types génériques
 
@@ -134,7 +134,7 @@ int main() {
 
 Ces restrictions s'appliquent aux opérateurs également. Un paramètre de type générique sans contrainte ne peut pas utiliser les opérateurs `==` et `!=` pour comparer deux instances du paramètre de type, au cas où le type ne prendrait pas en charge ces opérateurs. Ces contrôles sont nécessaires pour les génériques, mais pas pour les modèles, car les génériques peuvent être spécialisés pendant l'exécution avec n'importe quelle classe satisfaisant aux contraintes, lorsqu'il est trop tard pour vérifier l'utilisation de membres non valides.
 
-Une instance par défaut du paramètre de type peut être créée à l'aide de l'opérateur `()`. Exemple :
+Une instance par défaut du paramètre de type peut être créée à l’aide de l’opérateur `()`. Exemple :
 
 `T t = T();`
 

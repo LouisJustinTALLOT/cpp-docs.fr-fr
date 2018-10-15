@@ -1,7 +1,7 @@
 ---
-title: Prise en charge du compilateur pour les Type Traits (Extensions du composant C++) | Microsoft Docs
+title: Prise en charge du compilateur pour les Type Traits (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -71,16 +71,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5df33233f78eed1f3dc6c9403eb4b1740ccf1a70
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588280"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328532"
 ---
-# <a name="compiler-support-for-type-traits-c-component-extensions"></a>Prise en charge du compilateur pour les Type Traits (extensions du composant C++)
+# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Prise en charge du compilateur pour les Type Traits (C++ / c++ / CLI et c++ / CX)
 
-Le compilateur prend en charge *caractéristiques de type*, qui indiquent diverses caractéristiques d’un type au moment de la compilation.
+Le compilateur Microsoft C++ prend en charge *caractéristiques de type* pour C / c++ / CLI et c++ / extensions CX, qui indiquent diverses caractéristiques d’un type au moment de la compilation.
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
@@ -90,9 +90,9 @@ Les traits de type s'avèrent particulièrement utiles pour les programmeurs qui
 
 La liste suivante contient les traits de type qui sont pris en charge par le compilateur. Tous les traits de type retournent **false** si la condition spécifiée par le nom de la caractéristique de type n’est pas remplie.
 
-(Dans la liste suivante, les exemples de code sont écrits uniquement en C / c++ / CLI. Mais la caractéristique de type correspondant est également pris en charge dans les extensions du composant Visual C++ sauf indication contraire. Le terme « type de plateforme » fait référence à des types Windows Runtime ou types common language runtime.)
+(Dans la liste suivante, les exemples de code sont écrits uniquement en C / c++ / CLI. Mais la caractéristique de type correspondant est également pris en charge dans C++ / c++ / CX sauf indication contraire. Le terme « type de plateforme » fait référence à des types Windows Runtime ou types common language runtime.)
 
-- `__has_assign(` `type` `)`
+- `__has_assign(` *Type* `)`
 
    Retourne **true** si la plateforme ou un type natif possède un opérateur d’assignation de copie.
 
@@ -106,7 +106,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_copy(` `type` `)`
+- `__has_copy(` *Type* `)`
 
    Retourne **true** si la plateforme ou un type natif possède un constructeur de copie.
 
@@ -120,9 +120,9 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_finalizer(` `type` `)`
+- `__has_finalizer(` *Type* `)`
 
-   (Non pris en charge dans les extensions du composant Visual C++.) Retourne **true** si le type CLR a un finaliseur. Consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) pour plus d’informations.
+   (Non pris en charge en C / c++ / CX.) Retourne **true** si le type CLR a un finaliseur. Consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) pour plus d’informations.
 
     ```cpp
     using namespace System;
@@ -137,7 +137,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_nothrow_assign(` `type` `)`
+- `__has_nothrow_assign(` *Type* `)`
 
    Retourne **true** si un opérateur d’assignation de copie a une spécification d’exception vide.
 
@@ -153,7 +153,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_nothrow_constructor(` `type` `)`
+- `__has_nothrow_constructor(` *Type* `)`
 
    Retourne **true** si le constructeur par défaut a une spécification d’exception vide.
 
@@ -169,7 +169,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_nothrow_copy(` `type` `)`
+- `__has_nothrow_copy(` *Type* `)`
 
    Retourne **true** si le constructeur de copie a une spécification d’exception vide.
 
@@ -185,7 +185,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_trivial_assign(` `type` `)`
+- `__has_trivial_assign(` *Type* `)`
 
    Retourne **true** si le type a un opérateur d’assignation trivial, généré par le compilateur.
 
@@ -199,7 +199,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_trivial_constructor(` `type` `)`
+- `__has_trivial_constructor(` *Type* `)`
 
    Retourne **true** si le type a un constructeur trivial généré par le compilateur.
 
@@ -213,7 +213,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_trivial_copy(` `type` `)`
+- `__has_trivial_copy(` *Type* `)`
 
    Retourne **true** si le type a un constructeur de copie trivial généré par le compilateur.
 
@@ -227,7 +227,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_trivial_destructor(` `type` `)`
+- `__has_trivial_destructor(` *Type* `)`
 
    Retourne **true** si le type a un destructeur trivial, généré par le compilateur.
 
@@ -242,7 +242,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_user_destructor(` `type` `)`
+- `__has_user_destructor(` *Type* `)`
 
    Retourne **true** si la plateforme ou un type natif possède un destructeur déclaré par l’utilisateur.
 
@@ -259,7 +259,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__has_virtual_destructor(` `type` `)`
+- `__has_virtual_destructor(` *Type* `)`
 
    Retourne **true** si le type a un destructeur virtuel.
 
@@ -278,11 +278,11 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_abstract(` `type` `)`
+- `__is_abstract(` *Type* `)`
 
-   Retourne **true** si le type est un type abstrait. Pour plus d’informations sur les types abstraits natifs, consultez [abstraite](../windows/abstract-cpp-component-extensions.md).
+   Retourne **true** si le type est un type abstrait. Pour plus d’informations sur les types abstraits natifs, consultez [Classes abstraites](../cpp/abstract-classes-cpp.md).
 
-   `__is_abstract` fonctionne également pour les types de plateforme. Une interface avec au moins un membre est un type abstrait, à l'instar d'un type référence avec au moins un membre abstrait. Pour plus d’informations sur les types de plateforme abstraits, consultez [Classes abstraites](../cpp/abstract-classes-cpp.md)
+   `__is_abstract` fonctionne également pour les types de plateforme. Une interface avec au moins un membre est un type abstrait, à l'instar d'un type référence avec au moins un membre abstrait. Pour plus d’informations sur les types de plateforme abstraits, consultez [abstraite](../windows/abstract-cpp-component-extensions.md).
 
     ```cpp
     // is_abstract.cpp
@@ -318,7 +318,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_class(` `type` `)`
+- `__is_class(` *Type* `)`
 
    Retourne **true** si le type est une classe native ou un struct.
 
@@ -350,9 +350,9 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_delegate(` `type` `)`
+- `__is_delegate(` *Type* `)`
 
-   Retourne **true** si `type` est un délégué. Pour plus d’informations, consultez [delegate (Extensions du composant C++)](../windows/delegate-cpp-component-extensions.md).
+   Retourne **true** si `type` est un délégué. Pour plus d’informations, consultez [déléguer (C++ / c++ / CLI et c++ / CX)](../windows/delegate-cpp-component-extensions.md).
 
     ```cpp
     delegate void MyDel();
@@ -361,7 +361,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_empty(` `type` `)`
+- `__is_empty(` *Type* `)`
 
    Retourne **true** si le type ne possède aucun membre de données d’instance.
 
@@ -377,7 +377,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_enum(` `type` `)`
+- `__is_enum(` *Type* `)`
 
    Retourne **true** si le type est un enum natif.
 
@@ -399,7 +399,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_interface_class(` `type` `)`
+- `__is_interface_class(` *Type* `)`
 
    Retourne **true** si passé une interface de plateforme. Pour plus d’informations, consultez [classe d’interface](../windows/interface-class-cpp-component-extensions.md).
 
@@ -413,7 +413,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_pod(` `type` `)`
+- `__is_pod(` *Type* `)`
 
    Retourne **true** si le type est une classe ou union avec aucun constructeur ou les membres non statiques privés ou protégés, sans classes de base et sans fonctions virtuelles. Consultez la norme C++, sections 8.5.1/1, 9/4 et 3.9/10 pour plus d'informations sur les POD.
 
@@ -429,7 +429,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_polymorphic(` `type` `)`
+- `__is_polymorphic(` *Type* `)`
 
    Retourne **true** si un type natif possède des fonctions virtuelles.
 
@@ -445,7 +445,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_ref_array(` `type` `)`
+- `__is_ref_array(` *Type* `)`
 
    Retourne **true** si a passé un tableau de plateforme. Pour plus d’informations, consultez [tableaux](../windows/arrays-cpp-component-extensions.md).
 
@@ -457,7 +457,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_ref_class(` `type` `)`
+- `__is_ref_class(` *Type* `)`
 
    Retourne **true** si transmises à une classe de référence. Pour plus d’informations sur les types référence définis par l’utilisateur, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -470,7 +470,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_sealed(` `type` `)`
+- `__is_sealed(` *Type* `)`
 
    Retourne **true** si passé une plateforme ou un type natif marquée comme sealed. Pour plus d’informations, consultez [sealed](../windows/sealed-cpp-component-extensions.md).
 
@@ -481,7 +481,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_simple_value_class(` `type` `)`
+- `__is_simple_value_class(` *Type* `)`
 
    Retourne **true** si passé d’un type valeur qui ne contient aucune référence au tas de garbage collection. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -499,7 +499,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_union(` `type` `)`
+- `__is_union(` *Type* `)`
 
    Retourne **true** si un type est une union.
 
@@ -516,7 +516,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
     }
     ```
 
-- `__is_value_class(` `type` `)`
+- `__is_value_class(` *Type* `)`
 
    Retourne **true** si passé d’un type valeur. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -580,4 +580,4 @@ R is a ref class
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

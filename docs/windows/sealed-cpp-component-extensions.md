@@ -1,7 +1,7 @@
 ---
-title: sealed (Extensions du composant C++) | Microsoft Docs
+title: sealed (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439560"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327997"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed  (extensions du composant C++)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C++ / c++ / CLI et c++ / CX)
 
 **sealed** est un mot clé contextuel pour les classes ref qui indique qu’un membre virtuel ne peut pas être substitué, ou qu’un type ne peut pas être utilisé comme type de base.
 
 > [!NOTE]
-> La norme ISO C ++ 11 Standard langue a la [finale](../cpp/final-specifier.md) mot clé, qui est pris en charge dans Visual Studio. Utilisez **finale** sur les classes standard et **sealed** sur les classes ref.
+> La norme ISO C ++ 11 Standard langue a introduit le [finale](../cpp/final-specifier.md) mot clé. Utilisez **finale** sur les classes standard et **sealed** sur les classes ref.
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
@@ -53,7 +53,7 @@ Type retourné par une fonction.
 
 Dans le premier exemple de syntaxe, une classe est sealed. Dans le deuxième exemple, une fonction virtuelle est sealed.
 
-Le **sealed** mot clé est valide pour les cibles natives et également pour l’exécution de Windows et le common language runtime (CLR). Pour plus d’informations, consultez [des spécificateurs de substitution et Compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Utilisez le **sealed** mot clé pour les classes ref et leurs fonctions membres virtuelles. Pour plus d’informations, consultez [des spécificateurs de substitution et Compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 Vous pouvez détecter au moment de la compilation si un type est sealed à l’aide de la `__is_sealed(type)` trait de type. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -108,7 +108,7 @@ public:
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
