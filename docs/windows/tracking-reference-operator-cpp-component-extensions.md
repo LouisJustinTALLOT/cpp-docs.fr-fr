@@ -1,7 +1,7 @@
 ---
-title: Suivi de l’opérateur de référence (Extensions du composant C++) | Microsoft Docs
+title: Opérateur de référence de suivi (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da01a2dd7e871bb555b2b5711a59dbb5e65424a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ea8cec7a3cc2e24c55c9f8454b421f5488f1c89
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604074"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327919"
 ---
-# <a name="tracking-reference-operator-c-component-extensions"></a>Opérateur de référence de suivi (extensions du composant C++)
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>Opérateur de référence de suivi (C++ / c++ / CLI et c++ / CX)
 
 Un *référence de suivi* (`%`) se comporte comme une référence C++ ordinaire (`&`), à ceci près que lorsqu’un objet est assigné à une référence de suivi, le décompte de références de l’objet est incrémenté.
 

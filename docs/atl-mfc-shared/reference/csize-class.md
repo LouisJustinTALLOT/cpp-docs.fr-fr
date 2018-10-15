@@ -21,16 +21,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417540"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328536"
 ---
 # <a name="csize-class"></a>CSize, classe
 
-Similaire à la Windows [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui implémente une coordonnée relative ou une position.
+Semblable à la structure [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) Windows, qui implémente une coordonnée ou une position relative.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -100,7 +100,7 @@ Définit le `cy` membre pour le `CSize`.
 [TAILLE](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure ou `CSize` objet utilisé pour initialiser `CSize`.
 
 *initPt*  
-[POINT](../../mfc/reference/point-structure1.md) structure ou `CPoint` objet utilisé pour initialiser `CSize`.
+[POINT](../../mfc/reference/point-structure.md) structure ou `CPoint` objet utilisé pour initialiser `CSize`.
 
 *dwSize*  
 DWORD permettant d’initialiser `CSize`. Le mot de poids faible est le `cx` membre et le mot de poids fort est le `cy` membre.

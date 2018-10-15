@@ -1,7 +1,7 @@
 ---
-title: safe_cast (Extensions du composant C++) | Microsoft Docs
+title: safe_cast (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 76d53a1322024f1a56477de4e4b58bcdb88930ad
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404206"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328478"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast (extensions du composant C++)
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C++ / c++ / CLI et c++ / CX)
 
 Le **safe_cast** opération retourne l’expression spécifiée en tant que type spécifié, en cas de réussite ; sinon, lève `InvalidCastException`.
 
@@ -37,11 +37,7 @@ Le **safe_cast** opération retourne l’expression spécifiée en tant que type
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )  
 ```
 
 ## <a name="windows-runtime"></a>Windows Runtime
@@ -51,11 +47,7 @@ expression
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -115,11 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )  
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -132,7 +120,7 @@ Expression qui s'évalue en handle vers un type référence ou type valeur, type
 
 ### <a name="remarks"></a>Notes
 
-L’expression `safe_cast<` *id de type*`>(`*expression* `)` convertit l’expression d’opérande en un objet de type id de type.
+L’expression `safe_cast<` *id de type*`>(`*expression* `)` convertit l’opérande *expression* à un objet de type *id de type*.
 
 Le compilateur accepte un [static_cast](../cpp/static-cast-operator.md) dans la plupart des endroits qu’il accepte un **safe_cast**.  Toutefois, **safe_cast** garantit la génération du code MSIL vérifiable, alors qu’un **static_cast** risque de produire le code MSIL non vérifiable.  Consultez [Code pur et vérifiable (C++ / c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) et [Peverify.exe (outil PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) pour plus d’informations sur le code vérifiable.
 
@@ -188,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

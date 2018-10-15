@@ -1,7 +1,7 @@
 ---
-title: Classes et Structs (Extensions du composant C++) | Microsoft Docs
+title: classe ref et struct ref (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448374"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328068"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>Classes et structs  (extensions du composant C++)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref et struct ref (C++ / c++ / CLI et c++ / CX)
 
-Déclare une classe ou un struct dont *durée de vie* est automatiquement administrée. Quand l'objet n'est plus accessible ou qu'il est hors de portée, Visual C++ ignore automatiquement la mémoire allouée à cet objet.
+Le **classe ref** ou **ref struct** extensions déclarent une classe ou un struct dont *durée de vie* est automatiquement administrée. Lorsque l’objet n’est plus accessible ou est hors de portée, la mémoire est libérée.
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
@@ -61,7 +61,7 @@ Nom de la classe ou du struct.
 *base_type*<br/>
 (Facultatif) Un type de base. Toutefois, un type valeur ne peut pas agir comme un type de base.
 
-Pour plus d’informations, consultez les descriptions de spécifique à la langue de ce paramètre dans le Windows Runtime et le Common Language Runtimesections.
+Pour plus d’informations, consultez les descriptions de spécifique à la langue de ce paramètre dans les sections Windows Runtime et le Common Language Runtime.
 
 ### <a name="remarks"></a>Notes
 
@@ -129,4 +129,4 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

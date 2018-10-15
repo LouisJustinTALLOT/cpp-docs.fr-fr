@@ -1,7 +1,7 @@
 ---
-title: Génériques (Extensions du composant C++) | Microsoft Docs
+title: Génériques (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,37 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448348"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327673"
 ---
-# <a name="generics--c-component-extensions"></a>Génériques  (extensions du composant C++)
+# <a name="generics--ccli-and-ccx"></a>Génériques (C++ / c++ / CLI et c++ / CX)
 
-Les génériques sont des méthodes et des types paramétrables. Dans cette section, Découvrez les fonctionnalités génériques sont pris en charge par le Runtime Windows et le common language runtime, et qui sont pris en charge par uniquement le common language runtime. En outre, découvrez comment créer vos propres méthodes et types génériques dans Visual C++ et comment utiliser des types génériques créés dans un langage .NET Framework dans Visual C++. Enfin, cette section fournit une comparaison des modèles C++ et les génériques.
+Les génériques sont des méthodes et des types paramétrables. Dans cette section, Découvrez les fonctionnalités génériques sont pris en charge par le Runtime Windows et le common language runtime, et qui sont pris en charge par uniquement le common language runtime. En outre, découvrez comment créer vos propres méthodes et types génériques dans C++ / c++ / CLI et comment utiliser des types génériques créés dans un langage .NET Framework en C / c++ / CLI. Enfin, cette section fournit une comparaison des modèles C++ et les génériques.
 
 ## <a name="in-this-section"></a>Dans cette section
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Prise en charge par le Runtime Windows et le Common Language Runtime
 
-[Vue d’ensemble de génériques dans Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
+[Vue d’ensemble des génériques en C / c++ / CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Informations sur les génériques sont, la motivation de la fonctionnalité de langage, les définitions des termes utilisés pour décrire les génériques et les informations sur l’utilisation des types référence et les types valeur en tant que paramètres de type pour les génériques.
 
-[Interfaces génériques (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[Interfaces génériques (C++ / c++ / CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Informations sur la définition et à l’aide d’interfaces génériques.
 
-[Délégués génériques (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
+[Délégués génériques (C++ / c++ / CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 Informations sur la définition et à l’aide de délégués génériques.
 
 [Contraintes sur les paramètres de type générique (C++-CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Informations sur l’utilisation de contraintes dans des types génériques.
 
 [Utilisation de génériques (C++-CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
-Informations sur l’utilisation de génériques définies dans les assemblys .NET, éventuellement créés dans d’autres langages, dans Visual C++.
+Plus d’informations sur l’utilisation de génériques définies dans les assemblys .NET, éventuellement créés dans d’autres langues, en C / c++ / CLI.
 
-[Génériques et modèles (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[Génériques et modèles (C++ / c++ / CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Comparaison des génériques et les modèles, utilisez chaque, et comment les combiner de façon utile.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Prise en charge par le Common Language Runtime
@@ -66,4 +66,4 @@ Informations sur la définition et à l’aide des classes génériques.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

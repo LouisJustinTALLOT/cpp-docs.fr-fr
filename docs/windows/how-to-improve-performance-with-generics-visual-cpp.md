@@ -1,7 +1,7 @@
 ---
-title: 'Comment : améliorer les performances avec des génériques (Visual C++) | Microsoft Docs'
+title: 'Comment : améliorer les performances avec des génériques (C++ / c++ / CLI) | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318523"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327817"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>Comment : améliorer les performances avec des génériques (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Comment : améliorer les performances avec des génériques (C++ / c++ / CLI)
 
-Avec les génériques, vous pouvez créer du code réutilisable basé sur un paramètre de type. Le type réel du paramètre de type est différé jusqu'à ce qu’appelé par le code client. Pour plus d’informations sur les types génériques, consultez [génériques](../windows/generics-cpp-component-extensions.md).
+Avec les génériques, vous pouvez créer du code réutilisable basé sur un paramètre de type. Le type réel du paramètre de type est différé jusqu'à ce qu’appelé par le code client. Pour plus d’informations sur les types génériques, consultez [Generics](../windows/generics-cpp-component-extensions.md).
 
 Cet article explique comment les génériques permettent d’augmenter les performances d’une application qui utilise des regroupements.
 

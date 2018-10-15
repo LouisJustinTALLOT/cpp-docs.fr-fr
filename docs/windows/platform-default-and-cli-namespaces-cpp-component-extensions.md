@@ -1,7 +1,7 @@
 ---
-title: Plateforme, par défaut et cli (Extensions du composant C++) d’espaces de noms | Microsoft Docs
+title: La plateforme, par défaut et espaces de noms cli (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194647"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328023"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Plateforme, valeurs par défaut et espaces de noms CLI (extensions du composant C++)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>La plateforme, par défaut et espaces de noms cli (C++ / c++ / CLI et c++ / CX)
 
 Un espace de noms qualifie les noms des éléments du langage afin que les noms n'entrent pas en conflit avec des noms sinon identiques ailleurs dans le code source. Par exemple, une collision de nom peut empêcher le compilateur de reconnaître [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md). Les espaces de noms sont utilisés par le compilateur mais ne sont pas conservés dans l'assembly compilé.
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
-Visual C++ offre un espace de noms par défaut pour votre projet lorsque vous créez le projet. Vous pouvez renommer manuellement l’espace de noms, bien que dans Windows Runtime, le nom du fichier .winmd doit correspondre au nom de l’espace de noms racine.
+Visual Studio fournit un espace de noms par défaut pour votre projet lorsque vous créez le projet. Vous pouvez renommer manuellement l’espace de noms, même si en C / c++ / CX, le nom du fichier .winmd doit correspondre au nom de l’espace de noms racine.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

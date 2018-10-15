@@ -1,7 +1,7 @@
 ---
-title: Attribut cibles (Extensions du composant C++) | Microsoft Docs
+title: Cibles d’attribut (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589414"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327778"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>Cibles d’attribut (extensions du composant C++)
+# <a name="attribute-targets-ccli-and-ccx"></a>Cibles d’attribut (C++ / c++ / CLI et c++ / CX)
 
 Spécificateurs de l’utilisation d’attributs vous permettent de spécifier les cibles d’attribut.  Chaque attribut est défini pour s’appliquent à certains éléments de langage. Par exemple, un attribut peut être défini pour s’appliquent uniquement aux classes et structs.  La liste suivante montre les éléments syntaxiques possible sur lequel un attribut personnalisé peut être utilisé. Combinaisons de ces valeurs (à l’aide de la logique ou) peut être utilisé.
 

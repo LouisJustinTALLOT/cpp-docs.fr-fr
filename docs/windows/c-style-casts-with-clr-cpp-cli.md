@@ -1,7 +1,7 @@
 ---
 title: Effectue un cast de Style C avec /CLR (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28a92f115e2d5fdd3185285f245abf6d282efa7a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc51d330e771d9861d510b77d1fbd69a9a790c7d
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595004"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327984"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Casts de style C avec /clr (C++/CLI)
 
@@ -172,4 +172,4 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

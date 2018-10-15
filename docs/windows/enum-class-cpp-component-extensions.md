@@ -1,7 +1,7 @@
 ---
-title: classe Enum (Extensions du composant C++) | Microsoft Docs
+title: enum, classe (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377264"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328140"
 ---
-# <a name="enum-class--c-component-extensions"></a>enum, classe (extensions du composant C++)
+# <a name="enum-class--ccli-and-ccx"></a>enum, classe (C++ / c++ / CLI et c++ / CX)
 
 Déclare une énumération dans la portée espace de noms, qui est un type défini par l’utilisateur composé d’un ensemble de constantes nommées appelées « énumérateurs ».
 
@@ -65,7 +65,7 @@ La valeur de chaque énumérateur est une expression constante définie implicit
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations et d’exemples, consultez [Enums](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Pour plus d’informations et d’exemples, consultez [Énumérations](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
 
 Notez que le compilateur émet des messages d’erreur si l’expression constante qui définit la valeur d’un énumérateur ne peut pas être représentée par *underlying-type*.  Cependant, le compilateur ne signale pas d’erreur pour une valeur non appropriée pour le type sous-jacent. Exemple :
 
@@ -146,13 +146,13 @@ Les noms d’énumérateurs managés (*identificateurs*) ne sont pas injectés d
 
 Les énumérateurs d’une énumération standard sont fortement injectés dans la portée englobante.  Autrement dit, si un autre symbole a le même nom qu’un énumérateur dans la portée englobante, le compilateur génère une erreur.
 
-Dans Visual C++ 2002 et Visual C++ 2003, les énumérateurs étaient faiblement injectés (visibles dans la portée englobante, sauf en présence d’un autre identificateur de même nom).
+Dans Visual Studio 2002 et Visual Studio 2003, les énumérateurs étaient faiblement injectés (visibles dans la portée englobante, sauf si un autre identificateur portant le même nom est survenu).
 
-Si une énumération C++ standard est définie (sans **classe** ou **struct**) et que vous compilez avec `/clr` entraîne l’énumération sera compilée en tant qu’une énumération gérée.  L’énumération conserve la sémantique d’une énumération non managée.  Notez que le compilateur injecte un attribut, `Microsoft::VisualC::NativeEnumAttribute`, qui est reconnu par le compilateur Visual C++, pour montrer que le programmeur souhaite faire de l’énumération une énumération native.  Les autres compilateurs considèrent simplement l’énumération standard comme une énumération gérée.
+Si une énumération C++ standard est définie (sans **classe** ou **struct**) et que vous compilez avec `/clr` entraîne l’énumération sera compilée en tant qu’une énumération gérée.  L’énumération conserve la sémantique d’une énumération non managée.  Notez que le compilateur injecte un attribut, `Microsoft::VisualC::NativeEnumAttribute` pour identifier l’intention du programmeur de l’énumération une énumération native.  Les autres compilateurs considèrent simplement l’énumération standard comme une énumération gérée.
 
 A nommé, énumération standard compilée avec `/clr` seront visibles dans l’assembly en tant qu’une énumération gérée et peuvent être utilisées par n’importe quel autre compilateur managé.   En revanche, une énumération standard sans nom n’est pas visible publiquement à partir de l’assembly.
 
-Dans Visual C++ 2002 et Visual C++ 2003, une énumération standard utilisée comme type dans un paramètre de fonction :
+Dans Visual Studio 2002 et Visual Studio 2003, une énumération standard utilisée comme type dans un paramètre de fonction :
 
 ```cpp
 // mcppv2_enum.cpp
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

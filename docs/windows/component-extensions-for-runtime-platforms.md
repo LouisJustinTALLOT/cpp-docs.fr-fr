@@ -1,7 +1,7 @@
 ---
-title: Extensions du composant pour les plateformes Runtime | Microsoft Docs
+title: Extensions de composant pour .NET et UWP | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386747"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328413"
 ---
-# <a name="component-extensions-for-runtime-platforms"></a>Extensions de composant pour les plateformes Runtime
+# <a name="component-extensions-for-net-and-uwp"></a>Extensions de composant pour .NET et UWP
 
-Visual C++ fournit des extensions de langage pour vous aider à programmer par rapport à des plateformes d’exécution. À l’aide de C++ / c++ / CX, vous pouvez programmer des applications de plateforme Windows universelle et des composants qui se compilent en code natif. Bien que vous pouvez créer des applications de plateforme Windows universelle par programmation directement sur les interfaces COM de Runtime de Windows, à l’aide de C++ / c++ / CX, vous pouvez travailler avec les constructeurs, les exceptions et les autres langages de programmation de C++ moderne. Pour activer la programmation en C++ dans un environnement d’exécution managé sur la plateforme .NET, vous pouvez utiliser C++ / c++ / CLI.
+La norme C++ permet aux fournisseurs de compilateur fournir des extensions non standards du langage. Microsoft fournit des extensions pour vous aider à vous connecter native C++ code pour le code qui s’exécute sur le .NET Framework ou de la plateforme universelle Windows (UWP). Les extensions .NET sont appelées C + c++ / CLI et produire le code qui s’exécute dans le .NET gérés de l’environnement d’exécution qui est appelé le Common Language Runtime (CLR). Les extensions UWP sont appelées C + c++ / CX et ils produisent en code machine natif.
+
+> [!NOTE]
+> Pour les nouvelles applications, nous vous recommandons d’utiliser C++ / c++ / WinRT plutôt que C++ / c++ / CX. C++ / c++ / WinRT est une nouvelle, standard C ++ 17 projection de langage pour Windows Runtime APIs. Nous continuerons à prendre en charge de C++ / c++ / CX et WRL, mais vous recommandons vivement que les nouvelles applications utiliser C++ / c++ / WinRT. Pour plus d’informations, consultez [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>Deux runtimes, un ensemble d’extensions
 
-C++ / c++ / CX est un sous-ensemble de C / c++ / CLI. Pour les extensions qui sont communes à C++ / c++ / CX et c++ / CLI, la sémantique dépend de votre choix de cibler le common language runtime (CLR) ou l’exécution de Windows. Pour compiler votre application s’exécute sur le Windows Runtime, spécifiez la `/ZW` option du compilateur. Pour la compiler pour qu'elle s'exécute sur le CLR, spécifiez l'option de compilateur `/clr`. Ces commutateurs sont définis automatiquement quand vous utilisez Visual Studio pour créer un projet.
-
-Pour plus d’informations sur la création d’applications de plateforme Windows universelle en C++, consultez [les applications de feuille de route pour le Windows Runtime en C++](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
-
 C++ / c++ / CLI étend la norme ISO/ANSI C++ et est défini sous Ecma C++ / c++ / CLI Standard. Pour plus d’informations, consultez [programmation .NET avec C++ / c++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+
+C++ / c++ / extensions CX sont un sous-ensemble de C / c++ / CLI. Bien que la syntaxe d’extension est identique dans la plupart des cas, le code généré varie selon que vous spécifiez la `/ZW` cible UWP, l’option du compilateur ou le `/clr` option pour .NET. Ces commutateurs sont définis automatiquement quand vous utilisez Visual Studio pour créer un projet.
 
 ## <a name="data-type-keywords"></a>Mots clés de type de données
 
-Les extensions de langage incluent *agréger les mots clés*, qui sont des mots clés qui se composent de deux jetons séparés par un espace blanc. Les jetons peuvent avoir une signification précise quand ils sont utilisés séparément et une autre signification quand ils sont utilisés ensemble. Par exemple, le mot « ref » est un identificateur ordinaire et le mot « class » est un mot clé qui déclare une classe native. Mais quand ces mots sont combinés pour former **classe ref**, le mot clé d’agrégation qui en résulte déclare une entité qui est appelée un *classe runtime*.
+Les extensions de langage incluent *agréger les mots clés*, qui se composent de deux jetons séparés par un espace blanc. Les jetons peuvent avoir une signification précise quand ils sont utilisés séparément et une autre signification quand ils sont utilisés ensemble. Par exemple, le mot « ref » est un identificateur ordinaire et le mot « class » est un mot clé qui déclare une classe native. Mais quand ces mots sont combinés pour former **classe ref**, le mot clé d’agrégation qui en résulte déclare une entité qui est appelée un *classe runtime*.
 
 Les extensions incluent également *contextuelle* mots clés. Un mot clé est considéré comme contextuel en fonction du type d'instruction qui le contient et de son positionnement dans cette instruction. Par exemple, le jeton « property » peut être un identificateur ou il peut déclarer un type spécial de membre de classe publique.
 
@@ -53,7 +54,7 @@ Le tableau suivant répertorie les mots clés de l'extension du langage C++.
 |**classe d’interface**<br /><br /> **struct d’interface**|Non|Déclare une interface.|[classe d’interface](../windows/interface-class-cpp-component-extensions.md)|
 |**enum, classe**<br /><br /> **enum struct**|Non|Déclare une énumération.|[enum, classe](../windows/enum-class-cpp-component-extensions.md)|
 |**propriété**|Oui|Déclare une propriété.|[propriété](../windows/property-cpp-component-extensions.md)|
-|**delegate**|Oui|Déclare un délégué.|[delegate (extensions du composant C++)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|Oui|Déclare un délégué.|[délégué (C++ / c++ / CLI et c++ / CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Oui|Déclare un événement.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Spécificateurs de substitution
@@ -87,7 +88,7 @@ Les mots clés suivants ont été ajoutés aux extensions C++.
 |**gcnew**|Non|Alloue des types sur le tas récupéré par le garbage collector. Utilisez à la place de **nouveau** et **supprimer**.|[gcnew nouvelle, ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**ref nouveau**|Oui|Alloue un type Windows Runtime. Utilisez à la place de **nouveau** et **supprimer**.|[gcnew nouvelle, ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Oui|Indique qu’un membre peut uniquement être initialisé lors de la déclaration ou dans un constructeur statique.|[initonly (C++-CLI)](../dotnet/initonly-cpp-cli.md)|
-|**littéral**|Oui|Crée une variable littérale.|[littéral](../windows/literal-cpp-component-extensions.md)|
+|**literal**|Oui|Crée une variable littérale.|[literal](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|Non|Indique qu'un handle ou pointeur ne pointe pas vers un objet.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Constructions de modèle

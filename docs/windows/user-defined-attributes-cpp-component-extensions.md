@@ -1,7 +1,7 @@
 ---
-title: Attributs (Extensions du composant C++) défini par l’utilisateur | Microsoft Docs
+title: Attributs définis par l’utilisateur (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,26 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789226"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328439"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>Attributs définis par l'utilisateur  (extensions du composant C++)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Attributs définis par l’utilisateur (C++ / c++ / CLI et c++ / CX)
 
-Attributs personnalisés permettent d’étendre les métadonnées d’une interface, classe ou structure, méthode, paramètre ou énumération.
-
-## <a name="all-runtimes"></a>Tous les runtimes
-
-Tous les Runtimes prend en charge les attributs personnalisés.
+C++ / c++ / CLI et c++ / CX permettent de créer des attributs spécifiques à la plateforme qui étendent les métadonnées d’une interface, classe ou structure, méthode, paramètre ou énumération. Ces attributs sont distincts de la [des attributs C++ standards](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-C++ / c++ / attributs CX prend en charge uniquement les propriétés, mais pas d’attribut constructeurs ou méthodes.
-
-### <a name="remarks"></a>Notes
+Vous pouvez appliquer C + c++ / attributs CX aux propriétés, mais pas de constructeurs ou méthodes.
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -43,17 +37,11 @@ Option du compilateur : `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Attributs personnalisés vous permettent d’étendre les métadonnées d’un élément géré. Pour plus d’informations, consultez [Attributs](/dotnet/standard/attributes/index).
-
-### <a name="remarks"></a>Notes
-
 Les informations et la syntaxe présentée dans cette rubrique est destiné à remplacer les informations présentées dans [attribut](attributes/attribute.md).
 
 Vous pouvez définir un attribut personnalisé en définissant un type et en rendant <xref:System.Attribute> une classe de base pour le type et éventuellement appliquer la <xref:System.AttributeUsageAttribute> attribut.
 
-Par exemple, dans Microsoft Transaction Server (MTS) 1.0, le comportement en ce qui concerne les transactions, la synchronisation, l’équilibrage de charge, et ainsi de suite a été spécifié par le biais des GUID personnalisées insérées dans la bibliothèque de types à l’aide de l’attribut personnalisé ODL. Par conséquent, un client d’un serveur MTS pu déterminer ses caractéristiques en lisant la bibliothèque de types. Dans le .NET Framework, l’équivalent de la bibliothèque de types est des métadonnées, et l’équivalent de l’attribut personnalisé ODL est attributs personnalisés. En outre, la lecture de la bibliothèque de types est analogue à l’aide de la réflexion sur les types.
-
-Pour plus d'informations, consultez
+Pour plus d'informations, voir :
 
 - [Cibles d’attribut](attribute-targets-cpp-component-extensions.md)
 
@@ -216,4 +204,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: propriété (Extensions du composant C++) | Microsoft Docs
+title: propriété (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420502"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328231"
 ---
-# <a name="property--c-component-extensions"></a>propriété  (extensions du composant C++)
+# <a name="property--ccli-and-ccx"></a>propriété (C++ / c++ / CLI et c++ / CX)
 
 Déclare un *propriété*, qui est une fonction membre qui se comporte et est accessible comme un membre de données ou un élément de tableau.
 
@@ -161,7 +161,7 @@ La méthode get et la méthode set pour une propriété doit s’accorder sur le
 
 Une propriété est scalaire si ses méthodes get et set correspondent à la description suivante :
 
-- La méthode get n'a aucun paramètre et son type de retour est `T`.
+- La méthode get n’a aucun paramètre et son type de retour est `T`.
 
 - La méthode set possède un paramètre de type `T`et le type de retour **void**.
 
@@ -226,4 +226,4 @@ test
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
 title: Utilisation de génériques (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c17e8212b01ad2cf80c74f80de26209d00f6d1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6bccfc4ab3e5df690c6fdb5ddb04c458756a4cd7
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589854"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327750"
 ---
 # <a name="consuming-generics-ccli"></a>Utilisation de génériques (C++/CLI)
 
-Génériques créés dans un langage .NET peuvent être utilisés dans d’autres langages .NET. Contrairement aux modèles, un générique dans un assembly compilé reste générique. Par conséquent, un peut instancier le type générique dans un autre assembly et même dans une langue autre que celle de l’assembly dans lequel le type générique a été défini.
+Génériques créés dans un langage .NET (ou UWP) peuvent être utilisés dans d’autres langages. Contrairement aux modèles, un générique dans un assembly compilé reste générique. Par conséquent, un peut instancier le type générique dans un autre assembly et même dans une langue autre que celle de l’assembly dans lequel le type générique a été défini.
 
 ## <a name="example"></a>Exemple
 

@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39dac1bda25a66ecd67feac167e0029931a204e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790945"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328179"
 ---
 # <a name="attributes-by-usage"></a>Attributs par utilisation
 
 Cette rubrique répertorie les attributs selon les éléments de langage C++ auquel elles s’appliquent.
 
-Si un attribut précède un élément de Visual C++ qui n’est pas dans la portée de l’attribut, le bloc d’attributs est traité comme un commentaire.
+Si un attribut précède un élément qui n’est pas dans la portée de l’attribut, le bloc d’attributs est traité comme un commentaire.
 
 |Attribut|Description|
 |---------------|-----------------|
@@ -89,6 +89,6 @@ Lorsque vous ne spécifiez ne pas le [uuid](uuid-cpp-attributes.md) d’attribut
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs de C++ pour COM et .NET](cpp-attributes-com-net.md)<br/>
+[Attributs C++ pour COM et .NET](cpp-attributes-com-net.md)<br/>
 [Attributs par groupe](attributes-by-group.md)<br/>
 [Référence alphabétique des attributs](attributes-alphabetical-reference.md)

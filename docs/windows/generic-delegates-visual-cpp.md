@@ -1,5 +1,5 @@
 ---
-title: Délégués génériques (Visual C++) | Microsoft Docs
+title: Délégués génériques (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1177b3c09649affc781a8c247a109f8efd8088d2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440873"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328283"
 ---
-# <a name="generic-delegates-visual-c"></a>Délégués génériques (Visual C++)
+# <a name="generic-delegates-ccli"></a>Délégués génériques (C++ / c++ / CLI)
 
-Vous pouvez utiliser les paramètres de type générique avec les délégués. Pour plus d’informations sur les délégués, consultez [delegate (Extensions du composant C++)](../windows/delegate-cpp-component-extensions.md).
+Vous pouvez utiliser les paramètres de type générique avec les délégués. Pour plus d’informations sur les délégués, consultez [déléguer (C++ / c++ / CLI et c++ / CX)](../windows/delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntaxe
 

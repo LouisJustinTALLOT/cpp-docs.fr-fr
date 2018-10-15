@@ -1,7 +1,7 @@
 ---
-title: Génériques et modèles (Visual C++) | Microsoft Docs
+title: Génériques et modèles (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8a58e26b571c119d45cb981c582ebec335eface
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591000"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328218"
 ---
-# <a name="generics-and-templates-visual-c"></a>Génériques et modèles (Visual C++)
+# <a name="generics-and-templates-ccli"></a>Génériques et modèles (C++ / c++ / CLI)
 
 Génériques et les modèles sont des fonctionnalités de langage qui prennent en charge des types paramétrables. Cependant, ils sont différents et des utilisations différentes. Cette rubrique fournit une vue d’ensemble des nombreuses différences.
 
@@ -61,7 +61,7 @@ La principale différence dans les génériques a des implications en matière d
 
 L’exemple suivant montre un exemple simple de l’utilisation conjointe de modèles et les génériques. Dans cet exemple, la classe de modèle transmet son paramètre via au type générique. L’inverse n’est pas possible.
 
-Cet idiome pourrait être utilisé lorsque vous voulez créer sur une API générique existante avec le code du modèle qui est local à un assembly Visual C++, ou lorsque vous avez besoin ajouter une couche supplémentaire de paramétrage à un type générique, pour tirer parti de certaines fonctionnalités des modèles non prises en charge d par génériques.
+Cet idiome peut être utilisé lorsque vous souhaitez générer sur une API générique existante avec le code du modèle qui est local C + c++ / assembly CLI, ou lorsque vous avez besoin ajouter une couche supplémentaire de paramétrage à un type générique, pour tirer parti de certaines fonctionnalités des modèles de ne pas de la prise en charge de b y génériques.
 
 ### <a name="code"></a>Code
 

@@ -1,7 +1,7 @@
 ---
-title: événement (Extensions du composant C++) | Microsoft Docs
+title: événements (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 85a3e2cb92df4396f607db920c3dfd280530c7e9
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442589"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328504"
 ---
-# <a name="event--c-component-extensions"></a>événement  (extensions du composant C++)
+# <a name="event--ccli-and-ccx"></a>événements (C++ / c++ / CLI et c++ / CX)
 
 Le **événement** mot clé déclare une *événement*, qui est une notification aux abonnés inscrits (*gestionnaires d’événements*) qui s’est produite quelque chose de significatif.
 
@@ -282,4 +282,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

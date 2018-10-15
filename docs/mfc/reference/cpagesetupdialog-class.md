@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd285760027c35ae93d89ec5bb3fde6e9ba11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86dc19600dc8cbb452db585993dec85c3f7b8591
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413445"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328387"
 ---
 # <a name="cpagesetupdialog-class"></a>Cpagesetupdialog, classe
 
@@ -272,7 +272,7 @@ void GetMargins(
 ### <a name="parameters"></a>Paramètres
 
 *lpRectMargins*<br/>
-Pointeur vers un [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) structure ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui décrit les marges d’impression pour l’imprimante actuellement sélectionnée (en pouces de 1/1000 ou 1/100 mm). Passez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
+Pointeur vers un [RECT](rect-structure.md) structure ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui décrit les marges d’impression pour l’imprimante actuellement sélectionnée (en pouces de 1/1000 ou 1/100 mm). Passez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
 
 *lpRectMinMargins*<br/>
 Pointeur vers un `RECT` structure ou `CRect` objet qui décrit les marges d’impression minimale pour l’imprimante actuellement sélectionnée (en pouces de 1/1000 ou 1/100 mm). Passez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
@@ -332,7 +332,7 @@ virtual UINT OnDrawPage(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique d’imprimante.
 
 *nMessage*<br/>
@@ -351,7 +351,7 @@ Spécifie un message indiquant la zone de la page en cours de saisie. Il peut s'
 - Zone WM_PSD_YAFULLPAGERECT pour obtenir une représentation de l’adresse de retour. Cette zone s’étend sur les bords de la zone de page d’exemple.
 
 *lpRect*<br/>
-Pointeur vers un [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) objet contenant les coordonnées de la zone de dessin.
+Pointeur vers un [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](rect-structure.md) objet contenant les coordonnées de la zone de dessin.
 
 ### <a name="return-value"></a>Valeur de retour
 
