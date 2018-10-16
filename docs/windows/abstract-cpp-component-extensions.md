@@ -1,7 +1,7 @@
 ---
-title: abstract (Extensions du composant C++) | Microsoft Docs
+title: abstract (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 463848ea5f01bf232850d548c9f4255c07409254
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78a5b42de6b0ac54d060bb6369566aa446863289
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610997"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328192"
 ---
-# <a name="abstract--c-component-extensions"></a>abstract  (extensions du composant C++)
+# <a name="abstract--ccli-and-ccx"></a>abstract (C++ / c++ / CLI et c++ / CX)
 
 Le **abstraite** mot clé déclare :
 
@@ -37,12 +37,9 @@ Le **abstraite** mot clé déclare :
 
 ### <a name="syntax"></a>Syntaxe
 
-```cpp
-      class-declaration
-      class-identifier
-      abstract {}
-virtualreturn-typemember-function-identifier() abstract ;
-```
+*déclaration de classe* *identificateur de classe* **abstraite {}**
+
+**virtuel** *type de retour* *identificateur de fonction membre* **() abstraite ;**
 
 ### <a name="remarks"></a>Notes
 
@@ -115,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
