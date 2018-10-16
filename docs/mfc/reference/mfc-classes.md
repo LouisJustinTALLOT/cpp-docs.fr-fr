@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb0cfa6d3657c0cce01e91c94cb23bce8886a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403141"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328608"
 ---
 # <a name="mfc-classes"></a>Classes MFC
 
@@ -34,7 +34,7 @@ Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Micros
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[CAccelerateDecelerateTransition (classe)](../../mfc/reference/cacceleratedeceleratetransition-class1.md)<br/>
+[CAccelerateDecelerateTransition (classe)](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 Implémente une transition accélérer-ralentir.
 
 [CAnimateCtrl, classe](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -1022,7 +1022,7 @@ Utilisée pour les serveurs d'édition visuelle OLE, les serveurs Automation et 
 Utilisée pour un cas particulier de la boîte de dialogue OLE Modifier les liens, qui doit être utilisée lorsque vous devez mettre à jour uniquement les objets liés ou incorporés d'un document.
 
 [COleVariant, classe](../../mfc/reference/colevariant-class.md)<br/>
-Encapsule le [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) type de données.
+Encapsule le type de données [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
 
 [CPagerCtrl, classe](../../mfc/reference/cpagerctrl-class.md)<br/>
 La classe `CPagerCtrl` inclut dans un wrapper le contrôle pager Windows, qui peut afficher une fenêtre contenue qui ne tient pas dans la fenêtre conteneur.
@@ -1109,7 +1109,7 @@ Représente un ensemble d'enregistrements sélectionnés à partir d'une source 
 Vue qui affiche des enregistrements de base de données dans des contrôles.
 
 [CRect, classe](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Similaire à un Windows [structure RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us).
+Similaire à un Windows [structure RECT](rect-structure.md).
 
 [CRectTracker, classe](../../mfc/reference/crecttracker-class.md)<br/>
 Active un élément à afficher, déplacer et redimensionner de différentes manières.
@@ -1175,7 +1175,7 @@ Encapsule une transition de plage sinusoïdale comportant une plage d'oscillatio
 Encapsule une transition de vitesse sinusoïdale dont l’amplitude est déterminée par la rapidité initiale de la variable de l’animation.
 
 [CSize, classe](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Similaire à la Windows [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui implémente une coordonnée relative ou une position.
+Semblable à la structure [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) Windows, qui implémente une coordonnée ou une position relative.
 
 [CSliderCtrl, classe](../../mfc/reference/csliderctrl-class.md)<br/>
 Fournit les fonctionnalités du contrôle commun de curseur Windows.
