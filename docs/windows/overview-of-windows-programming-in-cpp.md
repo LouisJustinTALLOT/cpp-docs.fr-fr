@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
+ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083084"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347226"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
@@ -35,7 +35,7 @@ Il existe plusieurs grandes catégories d'applications Windows que vous pouvez d
 
 Les applications UWP sont en mesure d’exécuter sur tous les appareils Windows 10 tels que des tablettes et téléphones mobiles, ainsi que sur le bureau. Sur le bureau, elles peuvent s'exécuter sous la forme d'une fenêtre du bureau au lieu de toujours s'exécuter en mode plein écran. Ces applications peuvent également s'exécuter sur la Xbox et sur les appareils futurs.  Applications UWP s’exécutent sur le Windows Runtime, qui fournit les éléments d’interface utilisateur, services et une interface pour les divers périphériques matériels qui sont pris en charge sur Windows.
 
-Vous pouvez écrire des applications UWP en C / c++ / CX, un dialecte de C++, vous pouvez utiliser la [C++ / c++ / WinRT bibliothèque](https://moderncpp.com/)pour certains scénarios. Les applications UWP compilent en code natif et interface utilisateur XAML ou utilisent DirectX. Composants Windows Runtime qui sont écrits en code natif que les applications UWP écrites dans d’autres langages peuvent consommer. Pour plus d’informations, consultez [créer une application de plateforme Windows universelle en C++](http://go.microsoft.com/fwlink/?LinkID=534976), [créer votre premier jeu UWP à l’aide de DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), et [création Windows de composants Runtime en C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+Vous pouvez écrire des applications UWP en C / c++ / CX, un dialecte de C++, vous pouvez utiliser la [C++ / c++ / WinRT bibliothèque](https://moderncpp.com/) pour certains scénarios. Les applications UWP compilent en code natif et interface utilisateur XAML ou utilisent DirectX. Composants Windows Runtime qui sont écrits en code natif que les applications UWP écrites dans d’autres langages peuvent consommer. Pour plus d’informations, consultez [créer une application de plateforme Windows universelle en C++](http://go.microsoft.com/fwlink/?LinkID=534976), [créer votre premier jeu UWP à l’aide de DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), et [création Windows de composants Runtime en C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
    Cette catégorie inclut également l'utilisation de C++ pour les composants principaux et le code de calcul dans le contexte de la programmation serveur et cloud. Parfois, le code exigeant en performances situé au cœur d'une application serveur ou cloud est écrit en C++ pour optimiser les performances. Vous pouvez compiler ce code dans une DLL et l'utiliser à partir de C# ou de Visual Basic.
 
