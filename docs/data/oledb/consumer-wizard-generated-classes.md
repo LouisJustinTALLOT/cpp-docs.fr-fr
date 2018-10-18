@@ -1,7 +1,7 @@
 ---
 title: Classes de consommateur générées par l’Assistant | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/15/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -21,22 +21,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4ffcb231824c120c90eaae1751a016ef63b8211
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7498f15072f3b9687476ba7f6c291ebf5ff88cd
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106179"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410771"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes de consommateur générées par l’Assistant
 
-Quand vous utilisez l’Assistant Consommateur OLE DB ATL pour générer un consommateur, vous avez le choix entre utiliser soit des modèles OLE DB, soit des attributs OLE DB. Dans les deux cas, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande contient du code destiné à ouvrir la source de données et le rowset que vous avez spécifié dans l’Assistant. La classe d’enregistrement utilisateur contient un mappage de colonnes pour la table de base de données que vous avez sélectionnée. Cependant, le code généré est différent dans chaque cas :  
+Lorsque vous utilisez le **Assistant Consommateur OLE DB ATL** pour générer un consommateur, vous avez le choix de l’utilisation de modèles OLE DB et attributs OLE DB. Dans les deux cas, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande contient du code destiné à ouvrir la source de données et le rowset que vous avez spécifié dans l’Assistant. La classe d’enregistrement utilisateur contient un mappage de colonnes pour la table de base de données que vous avez sélectionnée. Cependant, le code généré est différent dans chaque cas :  
   
-- Si vous sélectionnez un consommateur basé sur un modèle, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande prend le nom que vous entrez dans la zone Classe de l’Assistant (par exemple, `CProducts`), tandis que la classe d’enregistrement utilisateur prend un nom sous la forme «*NomClasse*Accessor » (par exemple, `CProductsAccessor`). Les deux classes sont placées dans le fichier d’en-tête du consommateur.  
+- Si vous sélectionnez un consommateur basé sur un modèle, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande aura le nom que vous entrez dans le **classe** zone dans l’Assistant (par exemple, `CProducts`), et la classe d’enregistrement utilisateur aura un nom sous la forme «*ClassName*accesseur » (par exemple, `CProductsAccessor`). Les deux classes sont placées dans le fichier d’en-tête du consommateur.  
   
 - Si vous sélectionnez un consommateur avec attributs, la classe d’enregistrement utilisateur prend un nom sous la forme « _*NomClasse*Accessor » avant d’être injectée. Autrement dit, vous pouvez afficher uniquement la classe de commande dans l’éditeur de texte ; vous pouvez afficher uniquement la classe d’enregistrement utilisateur en tant que code injecté. Pour plus d’informations sur l’affichage de code injecté, consultez [Débogage de code injecté](/visualstudio/debugger/how-to-debug-injected-code).  
   
-Les exemples suivants utilisent une classe de commande créée dans la table Products de la base de données Northwind pour illustrer le code de consommateur généré par l’Assistant pour la classe de commande et la classe d’enregistrement utilisateur.  
+Les exemples suivants utilisent une classe de commande créée sur le `Products` table de la `Northwind` base de données pour illustrer le code de consommateur générées par l’Assistant pour la classe de commande et de la classe d’enregistrement utilisateur.  
   
 ## <a name="templated-user-record-classes"></a>Classes d’enregistrement utilisateur basées sur un modèle  
 
@@ -47,10 +47,10 @@ Si vous créez un consommateur OLE DB à l’aide des modèles OLE DB (et non de
 La première partie de la classe d’enregistrement utilisateur comprend les déclarations des membres de données et les membres de données d’état et de longueur pour chaque colonne liée aux données. Pour plus d’informations sur ces membres de données, consultez [Membres de données d’état des champs dans les accesseurs générés par l’Assistant](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
 > [!NOTE]
->  Si vous modifiez la classe d’enregistrement utilisateur ou écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
+> Si vous modifiez la classe d’enregistrement utilisateur ou écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
   
 > [!NOTE]
->  L’Assistant Consommateur OLE DB ATL utilise le `DB_NUMERIC` type pour lier les types de données numériques. Auparavant, il utilisait `DBTYPE_VARNUMERIC` (dont le format est décrit par le `DB_VARNUMERIC` type ; voir Oledb.h). Si vous n’utilisez pas l’Assistant pour créer des consommateurs, il est recommandé d’utiliser `DB_NUMERIC`.  
+> L’Assistant Consommateur OLE DB ATL utilise le `DB_NUMERIC` type pour lier les types de données numériques. Auparavant, il utilisait `DBTYPE_VARNUMERIC` (dont le format est décrit par le `DB_VARNUMERIC` type ; voir Oledb.h). Si vous n’utilisez pas l’Assistant pour créer des consommateurs, il est recommandé d’utiliser `DB_NUMERIC`.  
   
 ```cpp  
 // Products.H : Declaration of the CProducts class  
@@ -159,7 +159,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
 ## <a name="attribute-injected-user-record-classes"></a>Classes d'enregistrement utilisateur injectées par les attributs  
 
-Si vous créez un consommateur OLE DB en utilisant les attributs de base de données ([db_command](../../windows/db-command.md) ou [db_table](../../windows/db-table.md)), les attributs injectent une classe d’enregistrement utilisateur dont le nom prend la forme « _*NomClasse*Accessor ». Par exemple, si vous avez nommé votre classe de commande `COrders`, la classe d’enregistrement utilisateur s’intitule `_COrdersAccessor`. Bien que la classe d’enregistrement utilisateur s’affiche dans Affichage de classes, le fait de double-cliquer dessus donne accès à la classe de commande ou de table dans le fichier d’en-tête. Dans ce cas, vous ne pouvez voir la déclaration réelle de la classe d’enregistrement utilisateur qu’en affichant le code injecté par les attributs.  
+Si vous créez un consommateur OLE DB en utilisant les attributs de base de données ([db_command](../../windows/db-command.md) ou [db_table](../../windows/db-table.md)), les attributs injectent une classe d’enregistrement utilisateur dont le nom prend la forme « _*NomClasse*Accessor ». Par exemple, si vous avez nommé votre classe de commande `COrders`, la classe d’enregistrement utilisateur s’intitule `_COrdersAccessor`. Bien que la classe d’enregistrement utilisateur s’affiche dans **affichage de classes**, en double-cliquant dessus accède à la classe de commande ou de table dans le fichier d’en-tête à la place. Dans ce cas, vous ne pouvez voir la déclaration réelle de la classe d’enregistrement utilisateur qu’en affichant le code injecté par les attributs.  
   
 Vous pouvez rencontrer des complications si vous ajoutez ou substituez des méthodes dans des consommateurs avec attributs. Par exemple, vous pouvez décider d’ajouter un constructeur `_COrdersAccessor` à la déclaration `COrders` . Or, en réalité, le constructeur est ajouté à la classe `COrdersAccessor` injectée. Un constructeur de ce type peut initialiser les colonnes/paramètres, mais vous ne pouvez pas créer un constructeur de copie de cette façon, car il ne peut pas instancier directement l’objet `COrdersAccessor` . Si vous avez besoin d’un constructeur (ou autre méthode) directement dans la classe `COrders` , il est recommandé de définir une nouvelle classe dérivant de `COrders` et d’y ajouter les méthodes nécessaires.  
   

@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163114"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410809"
 ---
 # <a name="hstring-class"></a>HString, classe
 
-Une classe d’assistance pour la gestion de la durée de vie d’une chaîne HSTRING utilisant le modèle RAII.
+Une classe d’assistance pour la gestion de la durée de vie d’un [HSTRING](/windows/desktop/WinRT/hstring) utilisant le modèle RAII.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>Notes
 
-Le Runtime Windows fournit l’accès aux chaînes via les handles HSTRING. Le `HString` classe fournit des fonctions de commodité et d’opérateurs pour simplifier l’utilisation des handles HSTRING. Cette classe peut gérer la durée de vie de la fonction HSTRING qu’il détient via un modèle RAII.
+Le Runtime Windows fournit l’accès aux chaînes via [HSTRING](/windows/desktop/WinRT/hstring) handles. Le `HString` classe fournit des fonctions de commodité et d’opérateurs pour simplifier l’utilisation des handles HSTRING. Cette classe peut gérer la durée de vie de la fonction HSTRING qu’il détient via un modèle RAII.
 
 ## <a name="members"></a>Membres
 

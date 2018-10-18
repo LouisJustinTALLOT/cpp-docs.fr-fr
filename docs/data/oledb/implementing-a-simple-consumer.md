@@ -1,7 +1,7 @@
 ---
 title: Implémentation d’un consommateur Simple | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b407af3e6c105bdbb2f8d91aa9d854e6d877592c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162293"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410692"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implémentation d'un consommateur simple
 
@@ -211,75 +211,6 @@ Les étapes précédentes vous donnent de prise en charge du signet et un objet 
     ```  
   
 Pour plus d’informations sur les signets, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md). Exemples de signets sont également affichées dans [ensembles de lignes de la mise à jour](../../data/oledb/updating-rowsets.md).  
-  
-## <a name="adding-xml-support-to-the-consumer"></a>Ajout de prise en charge XML au consommateur  
-
-Comme indiqué dans [accès aux données XML](../../data/oledb/accessing-xml-data.md), il existe deux façons de récupérer des données XML à partir d’une source de données : à l’aide de [CStreamRowset](../../data/oledb/cstreamrowset-class.md) ou à l’aide de [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Cet exemple utilise `CStreamRowset`, qui est plus efficace, mais nécessite que vous disposiez de SQL Server 2000 est en cours d’exécution sur l’ordinateur sur lequel vous exécutez cet exemple d’application.  
-  
-### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Pour modifier la classe de commande d’hériter de CStreamRowset  
-  
-1. Dans l’application consommateur que vous avez créé précédemment, modifiez votre `CCommand` déclaration pour spécifier `CStreamRowset` en tant que l’ensemble de lignes de classe comme suit :  
-  
-    ```cpp  
-    class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
-    ```  
-  
-### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Pour modifier le code principal pour récupérer et de sortie des données XML  
-  
-1. Dans le fichier MyCons.cpp à partir de l’application de console que vous avez créé précédemment, modifiez le code principal comme suit :  
-  
-    ```cpp  
-    ///////////////////////////////////////////////////////////////////////  
-    // MyCons.cpp : Defines the entry point for the console application.  
-    //  
-  
-    #include "stdafx.h"  
-    #include "Products.h"   
-    #include <iostream>  
-    #include <fstream>  
-    using namespace std;  
-  
-    int _tmain(int argc, _TCHAR* argv[])  
-    {  
-       HRESULT hr = CoInitialize(NULL);  
-  
-       // Instantiate rowset  
-       CProducts rs;  
-  
-       // Add variable declarations for the Read method to handle sequential stream data  
-       CHAR buffer[1001];  // Pointer to buffer into which data stream is read  
-       ULONG cbRead;       // Actual number of bytes read from the data stream  
-  
-       hr = rs.OpenAll();  
-  
-       // Open file output.txt for writing in overwrite mode  
-       ofstream outfile( "C:\\output.txt", ios::out );  
-  
-       if (!outfile)      // Test for invalid file  
-          return -1;  
-  
-       // The following loop reads 1000 bytes of the data stream at a time   
-       // until it reaches the end of the data stream  
-       for (;;)  
-       {  
-          // Read sequential stream data into buffer  
-          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
-          if (FAILED (hr))  
-             break;  
-          // Output buffer to file  
-          buffer[cbRead] = 0;  
-          outfile << buffer;  
-          // Test for end of data stream  
-          if (cbRead < 1000)  
-             break;  
-       }  
-  
-       rs.CloseAll();  
-       CoUninitialize();  
-  
-       return 0;  
-    }  
-    ```  
   
 ## <a name="see-also"></a>Voir aussi  
 

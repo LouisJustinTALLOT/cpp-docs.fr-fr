@@ -1,7 +1,7 @@
 ---
 title: Création d’un consommateur sans utiliser l’Assistant | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a20abb132d0446874b099119dc6c54979aef4638
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023590"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410731"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Création d'un consommateur sans utiliser l'Assistant
 
@@ -28,7 +28,7 @@ L’exemple suivant suppose que vous ajoutez la prise en charge du consommateur 
   
 Pour ajouter la prise en charge du consommateur OLE DB sans utiliser l’Assistant Consommateur OLE DB ATL :  
   
-- Dans votre fichier Stdafx.h, ajoutez le code suivant `#include` instructions :  
+- Dans votre fichier pch.h, ajoutez le code suivant `#include` instructions :  
   
     ```cpp  
     #include <atlbase.h>  
@@ -38,10 +38,10 @@ Pour ajouter la prise en charge du consommateur OLE DB sans utiliser l’Assista
   
 Par programmation, un consommateur exécute généralement la séquence d’opérations suivante :  
   
-- Créez une classe d’enregistrement utilisateur qui lie les colonnes aux variables locales. Dans cet exemple, `CMyTableNameAccessor` est la classe d’enregistrement utilisateur (consultez [enregistrements utilisateur](../../data/oledb/user-records.md)). Cette classe contient le mappage de colonnes et le mappage de paramètre. Déclarez un membre de données dans la classe d’enregistrement utilisateur pour chaque champ que vous spécifiez dans le mappage de colonne ; pour chacun de ces membres de données, également déclarer un membre de données d’état et un membre de données de longueur. Pour plus d’informations, consultez [données membres de l’état des champs dans les accesseurs](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+1. Créez une classe d’enregistrement utilisateur qui lie les colonnes aux variables locales. Dans cet exemple, `CMyTableNameAccessor` est la classe d’enregistrement utilisateur (consultez [enregistrements utilisateur](../../data/oledb/user-records.md)). Cette classe contient le mappage de colonnes et le mappage de paramètre. Déclarez un membre de données dans la classe d’enregistrement utilisateur pour chaque champ que vous spécifiez dans le mappage de colonne ; pour chacun de ces membres de données, également déclarer un membre de données d’état et un membre de données de longueur. Pour plus d’informations, consultez [données membres de l’état des champs dans les accesseurs](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
-    >  Si vous écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
+    > Si vous écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
   
 - Instancier une source de données et d’une session. Décider quel type d’accesseur et ensemble de lignes à utiliser, puis instanciation d’un ensemble de lignes à l’aide [CCommand](../../data/oledb/ccommand-class.md) ou [CTable](../../data/oledb/ctable-class.md):  
   
@@ -67,7 +67,7 @@ Par programmation, un consommateur exécute généralement la séquence d’opé
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- Si vous le souhaitez, définition des propriétés de jeu de lignes à l’aide de `CDBPropSet::AddProperty` et les passer en tant que paramètre à `rs.Open`. Pour obtenir un exemple de cette procédure, consultez GetRowsetProperties dans [Consumer Wizard-Generated méthodes](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Si vous le souhaitez, définition des propriétés de jeu de lignes à l’aide de `CDBPropSet::AddProperty` et les passer en tant que paramètre à `rs.Open`. Pour obtenir un exemple de cette procédure, consultez **GetRowsetProperties** dans [Consumer Wizard-Generated méthodes](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - Vous pouvez maintenant utiliser l’ensemble de lignes pour récupérer/manipuler les données.  
   
@@ -83,7 +83,7 @@ Par programmation, un consommateur exécute généralement la séquence d’opé
   
 - Appeler `CoUnInitialize` pour annuler l’initialisation de COM. Cela est généralement appelé dans le code principal.  
   
-    ```  
+    ```cpp  
     CoUninitialize();  
     ```  
   
