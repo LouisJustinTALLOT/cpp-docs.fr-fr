@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3ed6610f71561a62d3ff99a794bb166bdcabd3d3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 32f3fc1b6a990a746c3dc87740c63fbe898f79d5
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083513"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410627"
 ---
 # <a name="ole-db-programming"></a>Programmation OLE DB
 
@@ -40,7 +40,7 @@ En outre, vous pouvez utiliser des attributs pour implémenter les modèles de c
 |Utilisation des modèles du fournisseur OLE DB (rubriques conceptuelles)|[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |Classes et macros des modèles OLE DB|[Référence des modèles OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Attributs du consommateur OLE DB|[Attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md)|  
-|Interfaces OLE DB|[Référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643) (dans le Kit de développement logiciel Windows)|  
+|Interfaces OLE DB|[Référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v%3dvs.85)) (dans le Kit de développement logiciel Windows)| 
 |Exemples de modèles OLE DB|[Exemples de modèles OLE DB](https://github.com/Microsoft/VCSamples)| 
 |Vue d'ensemble de la programmation de l'accès aux données (Visual C++)|[Programmation d’accès aux données](../../data/data-access-programming-mfc-atl.md)|  
 |Rubriques sur les concepts d'ODBC|[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)|  
