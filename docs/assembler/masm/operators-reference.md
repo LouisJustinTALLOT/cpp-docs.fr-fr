@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c9f5beb0e3525de6df88e44248410810502962e
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688174"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459151"
 ---
 # <a name="masm-operators-reference"></a>Référence des opérateurs MASM
 
@@ -36,7 +36,7 @@ ms.locfileid: "43688174"
 
 ||||
 |-|-|-|
-|[! (not logique runtime)](operator-logical-not-masm-run-time.md)|[! = (différent de runtime)](operator-not-equal-masm.md)|[&#124;&#124;(runtime logique ou)](operator-logical-or.md)|
+|[\! (not logique runtime)](operator-logical-not-masm-run-time.md)|[\!= (différent de runtime)](operator-not-equal-masm.md)|[&#124;&#124;(runtime logique ou)](operator-logical-or.md)|
 |[& & (runtime logique et)](operator-logical-and-masm-run-time.md)|[< (runtime inférieur à)](operator-less-than-masm-run-time.md)|[\<= (runtime inférieur ou égal à)](operator-less-or-equal-masm-run-time.md)|
 |[== (égal de runtime)](operator-equal-masm-run-time.md)|[> (supérieur à l’exécution)](operator-greater-than-masm-run-time.md)|[> = (runtime supérieur ou égal à)](operator-greater-or-equal-masm-run-time.md)|
 |[& (runtime au niveau du bit et)](operator-bitwise-and.md)|||
@@ -54,7 +54,7 @@ ms.locfileid: "43688174"
 
 ||||
 |-|-|-|
-|[! (littéral de caractère)](operator-logical-not-masm.md)|[% (treat sous forme de texte)](operator-percent.md)||
+|[\! (littéral de caractère)](operator-logical-not-masm.md)|[% (treat sous forme de texte)](operator-percent.md)||
 |[;; (traiter en tant que commentaire)](operator-semicolons.md)|[&lt; &gt; (traiter comme un littéral)](operator-literal.md)|[& & (remplacez la valeur de paramètre)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Divers
