@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017171"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807521"
 ---
 # <a name="provider-support-for-bookmarks"></a>Prise en charge des signets par le fournisseur
 
@@ -36,7 +36,7 @@ L’exemple de cette rubrique ajoute le `IRowsetLocate` interface pour la `CMyPr
   
 - Ajouter la prise en charge du signet.  
   
-L'interface `IRowsetLocate` hérite de l'interface `IRowset`. Pour ajouter le `IRowsetLocate` l’interface, héritent `CMyProviderRowset` de [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
+L'interface `IRowsetLocate` hérite de l'interface `IRowset` . Pour ajouter le `IRowsetLocate` l’interface, héritent `CMyProviderRowset` de [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
 Ajout de la `IRowsetLocate` interface est un peu différente de la plupart des interfaces. Pour aligner la vtable, OLE DB modèles du fournisseur ont un paramètre de modèle pour gérer l’interface dérivée. Le code suivant montre la nouvelle liste d’héritage :  
   
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-Le pendant que la boucle contient le code pour appeler le `Compare` méthode dans le `IRowsetLocate` interface. Le code que vous avez doit toujours passer, car vous comparez exactement les mêmes signets. En outre, stockez un signet dans une variable temporaire afin que vous puissiez l’utiliser après le pendant que boucle a fini d’appeler le `MoveToBookmark` fonction dans les modèles du consommateur. Le `MoveToBookmark` appels de fonction le `GetRowsAt` méthode dans `IRowsetLocate`.  
+Le **tandis que** boucle contient du code pour appeler le `Compare` méthode dans le `IRowsetLocate` interface. Le code que vous avez doit toujours passer, car vous comparez exactement les mêmes signets. En outre, stockez un signet dans une variable temporaire afin que vous pouvez l’utiliser après la **tandis que** boucle a fini d’appeler le `MoveToBookmark` fonction dans les modèles du consommateur. Le `MoveToBookmark` appels de fonction le `GetRowsAt` méthode dans `IRowsetLocate`.  
   
 Vous devez également mettre à jour l’enregistrement d’utilisateur dans le consommateur. Ajouter une entrée dans la classe pour gérer un signet et une entrée dans le `COLUMN_MAP`:  
   

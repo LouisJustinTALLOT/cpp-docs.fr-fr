@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163840"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808938"
 ---
 # <a name="creating-a-simple-consumer"></a>Création d'un consommateur simple
 
@@ -32,15 +32,15 @@ Utilisez l’Assistant Projet ATL et l’Assistant Consommateur OLE DB ATL pour 
 
    La boîte de dialogue **Nouveau projet** s’affiche.
 
-1. Dans le **Types de projets** volet, cliquez sur le **installé** > **modèles** > **Visual C++** dossier, et puis cliquez sur le **Application Console Win32** icône dans le **modèles** volet. Dans le **nom** , entrez le nom de votre projet, par exemple, *MyCons*.
+1. Dans le **Types de projets** volet, cliquez sur le **installé** > **Visual C++** > **Windows Desktop** dossier, puis cliquez sur le **Windows Desktop Assistant** icône dans le **modèles** volet. Dans le **nom** , entrez le nom de votre projet, par exemple, *MyCons*.
 
 1. Cliquez sur **OK**.
 
-   L’Assistant Application Win32 s’affiche.
+   Le **projet de bureau Windows** Assistant s’affiche.
 
 1. Sur le **paramètres d’Application** page, sélectionnez **application Console**, puis sélectionnez **ajouter des fichiers d’en-tête courants pour ATL**.
 
-1. Cliquez sur **Terminer** pour fermer l’Assistant et générer le projet.
+1. Cliquez sur **OK** pour fermer l’Assistant et générer le projet.
 
 Ensuite, utilisez l’Assistant Consommateur OLE DB ATL pour ajouter un objet du consommateur OLE DB.
 
@@ -48,9 +48,9 @@ Ensuite, utilisez l’Assistant Consommateur OLE DB ATL pour ajouter un objet du
 
 1. Dans **l’Explorateur de solutions**, avec le bouton droit le `MyCons` projet.
 
-1. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **classe**.
+1. Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **un nouvel élément**.
 
-   Le **ajouter une classe** boîte de dialogue s’affiche.
+   La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
 
 1. Dans le **catégories** volet, cliquez sur **installé** > **Visual C++** > **ATL**, cliquez sur le **ATL OLEDB Consumer** icône dans le **modèles** volet, puis cliquez sur **ajouter**.
 

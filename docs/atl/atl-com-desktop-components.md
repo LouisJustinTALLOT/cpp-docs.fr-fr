@@ -1,7 +1,7 @@
 ---
 title: Composants de bureau COM ATL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eadbcd138bd9fc73835938b8ff59d694ede152b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 378cd6fd283cd36142e293b51fdb91527afb6f88
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065619"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808899"
 ---
 # <a name="atl-com-desktop-components"></a>Composants de bureau COM ATL
 
-La référence de ATL décrit Active Template Library (ATL), un ensemble de classes C++ basées sur modèle qui simplifient la programmation d’objets de composant COM (Object Model). Pour tirer pleinement parti d’ATL, une connaissance pratique de COM est fortement recommandée.
+La référence de ATL décrit Active Template Library (ATL), un ensemble de classes C++ basées sur modèle qui simplifient la programmation d’objets de composant COM (Object Model). COM est une spécification binaire pour créer et consommer des composants du logiciel sur Windows. Pour tirer pleinement parti d’ATL, une connaissance pratique de COM est fortement recommandée. Pour plus d’informations sur COM, consultez [composant COM (Object Model)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="in-this-section"></a>Dans cette section
 

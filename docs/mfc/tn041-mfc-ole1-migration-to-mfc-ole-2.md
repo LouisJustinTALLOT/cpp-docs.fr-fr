@@ -1,7 +1,7 @@
 ---
 title: 'TN041 : Migration de MFC / OLE1 vers MFC / OLE 2 | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75177743b893bdcf48b52b27c25ea4070e000f88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2f93ffa79c5f737be032ae9edffa6c3e49c7055
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377056"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809016"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041 : migration de MFC/OLE1 vers MFC/OLE 2
 
@@ -301,7 +301,7 @@ L’implémentation de toutes ces commandes est en `COleDocument`, qui est la cl
 
 Une des fonctionnalités plus intéressantes d’OLE est l’activation sur place (ou « Modification visuelle »). Cette fonctionnalité permet à l’application serveur à tirer sur les parties de l’interface utilisateur du conteneur de fournir une interface de modification plus transparente pour l’utilisateur. Pour implémenter l’activation sur place à OCLIENT, certaines ressources spéciales doivent être ajoutés, ainsi que du code supplémentaire. Ces ressources et le code sont normalement fournis par AppWizard, en fait, une grande partie du code ici a été empruntée directement à partir d’une nouvelle application AppWizard avec prise en charge de « Conteneur ».
 
-Tout d’abord, il est nécessaire d’ajouter une ressource de menu à utiliser lorsqu’il existe un élément qui est actif en place. Vous pouvez créer cette ressource de menu supplémentaires dans Visual C++ en copiant la ressource IDR_OCLITYPE et en supprimant tous sauf les fichier et fenêtre les fenêtres contextuelles. Deux barres de séparation sont insérés entre les fenêtres publicitaires intempestives de fichier et de fenêtre pour indiquer la séparation des groupes (il doit ressembler à : fichier &#124; &#124; fenêtre). Pour plus d’informations sur ce que signifient ces séparateurs et comment les menus de serveur et un conteneur sont fusionnés consultez « Menus et ressources : fusion de menus » dans *Classes OLE 2*.
+Tout d’abord, il est nécessaire d’ajouter une ressource de menu à utiliser lorsqu’il existe un élément qui est actif en place. Vous pouvez créer cette ressource de menu supplémentaires dans Visual C++ en copiant la ressource IDR_OCLITYPE et en supprimant tous sauf les fichier et fenêtre les fenêtres contextuelles. Deux barres de séparation sont insérés entre les fenêtres publicitaires intempestives de fichier et de fenêtre pour indiquer la séparation des groupes (il doit ressembler à : fichier &#124; &#124; fenêtre). Pour plus d’informations sur ce que signifient ces séparateurs et comment les menus de serveur et un conteneur sont fusionnés consultez [Menus et ressources : fusion de menus](../mfc/menus-and-resources-menu-merging.md).
 
 Une fois que vous avez ces menus créés, vous devez informer l’infrastructure à leur sujet. Cela est effectué en appelant `CDocTemplate::SetContainerInfo` du modèle de document avant de l’ajouter à la liste de modèle de document dans votre InitInstance. Le nouveau code pour enregistrer le modèle de document ressemble à ceci :
 
@@ -618,7 +618,7 @@ Il existe de nombreuses erreurs dans svritem.cpp qui n’ont pas été traités.
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` ne gère plus l’indicateur 'bIncludeNative'. Les données natives (les données écrites par la fonction de sérialisation de l’élément du serveur) sont toujours copiées, afin de supprimer le premier paramètre. En outre, `CopyToClipboard` lève une exception quand une erreur se produit au lieu de retourner la valeur FALSE. Modifiez le code pour CServerView::OnEditCopy comme suit :
+`COleServerItem::CopyToClipboard` prend en charge n’est plus le `bIncludeNative` indicateur. Les données natives (les données écrites par la fonction de sérialisation de l’élément du serveur) sont toujours copiées, afin de supprimer le premier paramètre. En outre, `CopyToClipboard` lève une exception quand une erreur se produit au lieu de retourner la valeur FALSE. Modifiez le code pour CServerView::OnEditCopy comme suit :
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -654,7 +654,7 @@ Pour ajouter « Modification visuelle » (ou l’activation sur place) à cett
 
 - Vous devez indiquer à l’infrastructure sur ces ressources spéciales et les classes.
 
-La ressource de menu est facile de créer. Exécuter Visual C++, copier la ressource de menu IDR_HIERSVRTYPE vers une ressource de menu appelée IDR_HIERSVRTYPE_SRVR_IP. Modifier le menu afin qu’uniquement les modification et aide menus déroulants sont conservés. Ajouter deux séparateurs au menu entre les menus aide et de modification (il doit ressembler à : modifier &#124; &#124; aider). Pour plus d’informations sur ce que signifient ces séparateurs et comment les menus de serveur et un conteneur sont fusionnés, consultez « Menus et ressources : fusion de menus » dans *Classes OLE 2*.
+La ressource de menu est facile de créer. Exécuter Visual C++, copier la ressource de menu IDR_HIERSVRTYPE vers une ressource de menu appelée IDR_HIERSVRTYPE_SRVR_IP. Modifier le menu afin qu’uniquement les modification et aide menus déroulants sont conservés. Ajouter deux séparateurs au menu entre les menus aide et de modification (il doit ressembler à : modifier &#124; &#124; aider). Pour plus d’informations sur ce que signifient ces séparateurs et comment les menus de serveur et un conteneur sont fusionnés, consultez [Menus et ressources : fusion de menus](../mfc/menus-and-resources-menu-merging.md).
 
 L’image bitmap de la barre d’outils du sous-ensemble peut être facilement créée en copiant celui à partir d’une application générée par AppWizard fraîche avec une option « Serveur » activée. Cette image bitmap ne peut ensuite être importée dans Visual C++. Veillez à donner à l’image bitmap à un ID de IDR_HIERSVRTYPE_SRVR_IP.
 
@@ -677,7 +677,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-Notez que la référence à *`AfxGetApp()->m_pMainWnd*`. Lorsque le serveur est activé sur place, il possède une fenêtre principale et m_pMainWnd est définie, mais il est généralement invisible. En outre, cette fenêtre fait référence à la *principal* fenêtre de l’application, la fenêtre frame MDI qui s’affiche lorsque le serveur est entièrement ouvrir ou exécuté en mode autonome. Il ne fait pas référence à la fenêtre frame actif, qui lorsqu’in situ activé est un cadre de fenêtre dérivées de `COleIPFrameWnd`. Pour obtenir la fenêtre active correcte même lorsque la modification sur place, cette version de MFC ajoute une nouvelle fonction, `AfxGetMainWnd`. En règle générale, vous devez utiliser cette fonction au lieu de *`AfxGetApp()->m_pMainWnd*`. Ce code doit modifier comme suit :
+Notez que la référence à `AfxGetApp()->m_pMainWnd`. Lorsque le serveur est activé sur place, il possède une fenêtre principale et m_pMainWnd est définie, mais il est généralement invisible. En outre, cette fenêtre fait référence à la *principal* fenêtre de l’application, la fenêtre frame MDI qui s’affiche lorsque le serveur est entièrement ouvrir ou exécuté en mode autonome. Il ne fait pas référence à la fenêtre frame actif, qui lorsqu’in situ activé est un cadre de fenêtre dérivées de `COleIPFrameWnd`. Pour obtenir la fenêtre active correcte même lorsque la modification sur place, cette version de MFC ajoute une nouvelle fonction, `AfxGetMainWnd`. En règle générale, vous devez utiliser cette fonction au lieu de `AfxGetApp()->m_pMainWnd`. Ce code doit modifier comme suit :
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,

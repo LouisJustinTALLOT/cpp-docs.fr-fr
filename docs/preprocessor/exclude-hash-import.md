@@ -1,7 +1,7 @@
 ---
 title: exclure (#import) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5798c7515c411b9abf9d10229a6185e01bb92f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c345d9268f63a714eeae4beff78a7ac39ce545a1
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400196"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807898"
 ---
-# <a name="exclude-import"></a>exclude (#import)
-**Spécifique à C++**  
-  
-Exclut des éléments des fichiers d'en-tête de bibliothèque de types en cours de création.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-exclude("Name1"[, "Name2",...])  
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*Nom1*  
-Premier élément à exclure.  
-  
-*Name2*  
-Deuxième élément à exclure (si nécessaire).  
-  
-## <a name="remarks"></a>Notes  
- 
-Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. Cet attribut peut prendre un nombre quelconque d’arguments, chacun étant un élément de niveau supérieur de bibliothèque de types à exclure.  
-  
-**FIN spécifique à C++**  
-  
-## <a name="see-also"></a>Voir aussi  
- 
+# <a name="exclude-import"></a>exclure (\#importer)
+
+**Spécifique à C++**
+
+Exclut des éléments des fichiers d'en-tête de bibliothèque de types en cours de création.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+exclude("Name1"[, "Name2",...])
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Nom1*<br/>
+Premier élément à exclure.
+
+*Name2*<br/>
+Deuxième élément à exclure (si nécessaire).
+
+## <a name="remarks"></a>Notes
+
+Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. Cet attribut peut prendre un nombre quelconque d’arguments, chacun étant un élément de niveau supérieur de bibliothèque de types à exclure.
+
+**FIN spécifique à C++**
+
+## <a name="see-also"></a>Voir aussi
+
 [attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directive #import](../preprocessor/hash-import-directive-cpp.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378219"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808249"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT, classe
 
@@ -39,10 +39,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>Paramètres
 
-*StringType*  
+*StringType*<br/>
 Utilisé comme classe de base pour l’objet de chaîne fixe et peut être toute `CStringT`-type de base. Voici quelques exemples `CString`, `CStringA`, et `CStringW`.
 
-*t_nChars*  
+*t_nChars*<br/>
 Le nombre de caractères stockés dans la mémoire tampon.
 
 ## <a name="members"></a>Membres
@@ -101,13 +101,13 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="parameters"></a>Paramètres
 
-*psz*  
+*psz*<br/>
 Une chaîne se terminant par null doit être copié dans ce `CFixedStringT` objet.
 
-*str*  
+*str*<br/>
 Un existant `CFixedStringT` objet doit être copié dans ce `CFixedStringT` objet.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Un pointeur vers le Gestionnaire de mémoire de le `CFixedStringT` objet. Pour plus d’informations sur `IAtlStringMgr` et gestion de la mémoire pour `CFixedStringT`, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Notes
@@ -129,10 +129,10 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str*  
+*str*<br/>
 Une chaîne se terminant par null doit être copié dans ce `CFixedStringT` objet.
 
-*psz*  
+*psz*<br/>
 Un existant `CFixedStringT` doit être copié dans ce `CFixedStringT` objet.
 
 ### <a name="remarks"></a>Notes

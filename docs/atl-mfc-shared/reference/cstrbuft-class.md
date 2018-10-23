@@ -1,7 +1,7 @@
 ---
 title: CStrBufT, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411181"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808990"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT, classe
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>Paramètres
 
-*TCharType*  
+*TCharType*<br/>
 Le type de caractère de la `CStrBufT` classe. Il peut s'agir d'une des valeurs suivantes :
 
 - **char** (pour les chaînes de caractères ANSI)
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*str*  
+*str*<br/>
 L’objet de chaîne associé à la mémoire tampon. En règle générale, le développeur utilisera les typedefs prédéfinis de `CStrBuf` (variant TCHAR), `CStrBufA` (**char** variante) et `CStrBufW` (**wchar_t** variante).
 
-*nMinLength*  
+*nMinLength*<br/>
 La longueur minimale de la mémoire tampon de caractères.
 
-*dwFlags*  
+*dwFlags*<br/>
 Détermine si la longueur de chaîne est déterminée automatiquement. Il peut s'agir d'une des valeurs suivantes :
 
 - AUTO_LENGTH longueur de chaîne est automatiquement déterminée lorsque [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) est appelée. La chaîne doit être nul. Valeur par défaut.
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Paramètres
 
-*nLength*  
+*nLength*<br/>
 Nouvelle longueur de la mémoire tampon de caractères de l’objet string.
 
 > [!NOTE]

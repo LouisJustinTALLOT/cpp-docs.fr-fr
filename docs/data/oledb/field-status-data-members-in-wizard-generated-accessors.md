@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b1c48f4699c0add937c2bcdb13d49bce8cb895c4
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ce3ad819b6e22bfb5c760849e5f3fdf85bd4f7bc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083958"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809094"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Données membres de l’état des champs dans les accesseurs générés par l’Assistant
 
@@ -80,13 +80,13 @@ END_COLUMN_MAP()
 ```  
   
 > [!NOTE]
->  Si vous modifiez la classe d’enregistrement utilisateur ou écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
+> Si vous modifiez la classe d’enregistrement utilisateur ou écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
   
 Vous pouvez utiliser les valeurs d’état pour le débogage. Si le code généré par l’Assistant Consommateur OLE DB ATL génère des erreurs de compilation telles que DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, vous devez tout d’abord examiner les valeurs actuelles des membres de données du champ État. Celles qui ont des valeurs différentes de zéro correspondent aux colonnes incriminés.  
   
 Vous pouvez également utiliser les valeurs d’état pour définir une valeur NULL pour un champ particulier. Cela est utile dans lequel vous voulez distinguer une valeur de champ en tant que valeur NULL au lieu de zéro. Il vous incombe de déterminer si NULL est une valeur valide ou une valeur spéciale et décider comment votre application doit la gérer. OLE DB définit DBSTATUS_S_ISNULL comme le moyen correct pour spécifier une valeur NULL générique. Si le consommateur lit les données et la valeur est null, le champ d’état a la valeur DBSTATUS_S_ISNULL. Si le consommateur souhaite définir une valeur NULL, le consommateur définit la valeur d’état DBSTATUS_S_ISNULL avant d’appeler le fournisseur.  
   
-Ensuite, ouvrez Oledb.h et recherchez `DBSTATUSENUM`. Vous pouvez ensuite faire correspondre la valeur numérique de l’état différent de zéro la `DBSTATUSENUM` valeurs d’énumération. Si le nom de l’énumération n’est pas suffisant pour vous indiquer quel est le problème, consultez la rubrique « État » dans la section « Liaison de valeurs de données » de la [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643). Cette rubrique contient des tableaux de valeurs d’état utilisés durant l’obtention ou définition de données. Pour plus d’informations sur les valeurs de longueur, consultez la rubrique « Longueur » dans la même section.  
+Ensuite, ouvrez Oledb.h et recherchez DBSTATUSENUM. Vous pouvez ensuite faire correspondre la valeur numérique de l’état différent de zéro aux valeurs d’énumération DBSTATUSENUM. Si le nom de l’énumération n’est pas suffisant pour vous indiquer quel est le problème, consultez la rubrique « État » dans la section « Liaison de valeurs de données » de la [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643). Cette rubrique contient des tableaux de valeurs d’état utilisés durant l’obtention ou définition de données. Pour plus d’informations sur les valeurs de longueur, consultez la rubrique « Longueur » dans la même section.  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Récupération de la longueur ou l’état d’une colonne  
 
