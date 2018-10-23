@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a3d2926b2f9c958d3770737729726bbad7b13e7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083656"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808912"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Récupération de métadonnées à l'aide de jeux de lignes du schéma
 
@@ -31,23 +31,23 @@ Vous avez parfois besoin d'obtenir des informations sur le fournisseur, un ensem
 Modèles OLE DB fournissent un ensemble de classes à récupérer des informations de schéma. Ces classes créent des ensembles de lignes de schéma prédéfinis et sont répertoriés dans [Classes d’ensemble de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 > [!NOTE]
->  Si vous utilisez OLAP et que certains de vos ensembles de lignes ne sont pas pris en charge par les classes d'ensembles de lignes de schéma (par exemple, si vous avez un nombre variable de colonnes), envisagez d'utiliser `CManualAccessor` ou `CDynamicAccessor`. Vous pouvez parcourir les colonnes et utiliser des instructions case pour gérer les types de données possibles de chaque colonne.  
+> Si vous utilisez OLAP et que certains de vos ensembles de lignes ne sont pas pris en charge par les classes d'ensembles de lignes de schéma (par exemple, si vous avez un nombre variable de colonnes), envisagez d'utiliser `CManualAccessor` ou `CDynamicAccessor`. Vous pouvez parcourir les colonnes et utiliser des instructions case pour gérer les types de données possibles de chaque colonne.  
   
 ## <a name="catalogschema-model"></a>Modèle catalogue/schéma  
 
 SQL ANSI définit un modèle catalogue/schéma pour les magasins de données ; OLE DB utilise ce modèle. Dans ce modèle, les catalogues (bases de données) contiennent des schémas et les schémas contiennent des tables.  
   
-- **Catalogue** un catalogue est un autre nom pour une base de données. Il s’agit d’une collection de schémas associés. Pour répertorier les catalogues (bases de données) appartenant à une source de données, utilisez [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Dans la mesure où la plupart des bases de données n'ont qu'un seul catalogue, les métadonnées sont parfois simplement appelées informations de schéma.  
+- **Catalogue** un catalogue est un autre nom pour une base de données. Il s’agit d’une collection de schémas associés. Pour répertorier les catalogues (bases de données) appartenant à une source de données, utilisez [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Étant donné que plusieurs bases de données n'ont qu’un seul catalogue, les métadonnées sont parfois appelée informations de schéma.  
   
 - **Schéma** un schéma est une collection d’objets de base de données qui appartiennent ou ont été créés par un utilisateur particulier. Pour répertorier les schémas appartenant à un utilisateur donné, utilisez [CSchemata](../../data/oledb/cschemata-cschematainfo.md).  
   
-     Dans la terminologie Microsoft SQL Server et ODBC 2.x, un schéma est un propriétaire (par exemple, dbo est un nom de schéma type). En outre, SQL Server stocke les métadonnées dans un ensemble de tables : une table contient une liste de toutes les tables et une autre table contient une liste de toutes les colonnes. Il n'existe pas d'équivalent à un schéma dans une base de données Microsoft Access.  
+     Dans la terminologie Microsoft SQL Server et ODBC 2.x, un schéma est un propriétaire (par exemple, dbo est un nom de schéma type). En outre, SQL Server stocke les métadonnées dans un ensemble de tables : une table contient une liste de toutes les tables et une autre table contient une liste de toutes les colonnes. Il n’existe aucun équivalent à un schéma dans une base de données Microsoft Access.  
   
 - **Table** Tables sont des collections de colonnes organisées dans un ordre spécifique. Pour répertorier les tables définies dans un catalogue donné (base de données) et des informations sur ces tables, utilisez [CTables](../../data/oledb/ctables-ctableinfo.md)).  
   
 ## <a name="restrictions"></a>Restrictions  
 
-Quand il s'agit de rechercher des informations de schéma, vous pouvez utiliser des restrictions pour spécifier le type d'information qui vous intéresse. Les restrictions s'apparentent à un filtre ou à un qualificateur de requête. Par exemple, dans la requête suivante :  
+Lorsque vous interrogez des informations de schéma, vous pouvez utiliser des restrictions pour spécifier le type d’informations qui vous intéresse. Les restrictions s'apparentent à un filtre ou à un qualificateur de requête. Par exemple, dans la requête suivante :  
   
 ```sql  
 SELECT * FROM authors where l_name = 'pivo'  
@@ -67,7 +67,7 @@ Pour spécifier des restrictions, consultez [annexe b : Schema Rowsets](/previo
   
 Par conséquent, par exemple, si vous souhaitez limiter par nom de table, notez que TABLE_NAME est la troisième colonne de restriction, puis appelez `Open`, spécifiant le nom de table voulue comme troisième paramètre de restriction, comme indiqué dans l’exemple suivant.  
   
-#### <a name="to-use-schema-rowsets"></a>Pour utiliser des ensembles de lignes de schéma  
+### <a name="to-use-schema-rowsets"></a>Pour utiliser des ensembles de lignes de schéma  
   
 1. Vous devez inclure le fichier d'en-tête Atldbsch.h (bien entendu, vous avez aussi besoin d'Atldbcli.h pour la prise en charge du consommateur).  
   
@@ -89,7 +89,7 @@ Par conséquent, par exemple, si vous souhaitez limiter par nom de table, notez 
     }  
     ```  
   
-1. Pour extraire les informations, accédez au membre de données approprié de l'objet ensemble de lignes de schéma, par exemple, `ColumnSchemaRowset.m_szColumnName`. Il s'agit ici de COLUMN_NAME. Pour voir quelle colonne OLE DB correspond chaque membre de données, consultez [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
+1. Pour récupérer les informations, accédez au membre de données approprié de l’objet ensemble de lignes de schéma, par exemple, `ColumnSchemaRowset.m_szColumnName`. Ce membre de données correspond à COLUMN_NAME. Pour voir quelle colonne OLE DB correspond chaque membre de données, consultez [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
   
 Pour la référence de l’ensemble de lignes de schéma, les classes typedef fournies dans les modèles OLE DB (consultez [Classes d’ensemble de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   

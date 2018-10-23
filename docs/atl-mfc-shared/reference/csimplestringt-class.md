@@ -1,7 +1,7 @@
 ---
 title: CSimpleStringT, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434659"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809146"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT, classe
 
@@ -66,7 +66,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>Paramètres
 
-*BaseType*  
+*BaseType*<br/>
 Le type de caractère de la classe string. Il peut s'agir d'une des valeurs suivantes :
 
 - **char** (pour les chaînes de caractères ANSI).
@@ -151,13 +151,13 @@ void Append(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*strSrc*  
+*strSrc*<br/>
 Le `CSimpleStringT` objet à ajouter.
 
-*pszSrc*  
+*pszSrc*<br/>
 Un pointeur vers une chaîne contenant les caractères à ajouter.
 
-*nLength*  
+*nLength*<br/>
 Nombre de caractères à ajouter.
 
 ### <a name="remarks"></a>Notes
@@ -187,7 +187,7 @@ void AppendChar(XCHAR ch);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*ch*  
+*ch*<br/>
 Le caractère à ajouter
 
 ### <a name="remarks"></a>Notes
@@ -209,13 +209,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>Paramètres
 
-*pchDest*  
+*pchDest*<br/>
 Pointeur vers une chaîne de caractères.
 
-*pchSrc*  
+*pchSrc*<br/>
 Un pointeur vers une chaîne contenant les caractères à copier.
 
-*nChars*  
+*nChars*<br/>
 Le nombre de *pchSrc* caractères à copier.
 
 ### <a name="remarks"></a>Notes
@@ -249,13 +249,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>Paramètres
 
-*pchDest*  
+*pchDest*<br/>
 Pointeur vers une chaîne de caractères.
 
-*pchSrc*  
+*pchSrc*<br/>
 Un pointeur vers une chaîne contenant les caractères à copier.
 
-*nChars*  
+*nChars*<br/>
 Le nombre de *pchSrc* caractères à copier.
 
 ### <a name="remarks"></a>Notes
@@ -280,19 +280,19 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
 #### <a name="parameters"></a>Paramètres
 
-*strSrc*  
+*strSrc*<br/>
 Un existant `CSimpleStringT` objet doit être copié dans ce `CSimpleStringT` objet.
 
-*pchSrc*  
+*pchSrc*<br/>
 Un pointeur vers un tableau de caractères de longueur *nLength*, non une valeur null s’est arrêtée.
 
-*pszSrc*  
+*pszSrc*<br/>
 Une chaîne se terminant par null doit être copié dans ce `CSimpleStringT` objet.
 
-*nLength*  
+*nLength*<br/>
 Le nombre de caractères dans `pch`.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Un pointeur vers le Gestionnaire de mémoire de le `CSimpleStringT` objet. Pour plus d’informations sur `IAtlStringMgr` et gestion de la mémoire pour `CSimpleStringT`, consultez [gestion de la mémoire et CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Notes
@@ -419,7 +419,7 @@ XCHAR GetAt(int iChar) const;
 ```
 #### <a name="parameters"></a>Paramètres
 
-*iChar*  
+*iChar*<br/>
 Index de base zéro du caractère dans la `CSimpleStringT` objet. Le *iChar* paramètre doit être supérieur ou égal à 0 et inférieur à la valeur retournée par [GetLength](#getlength). Sinon, `GetAt` génère une exception.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -451,7 +451,7 @@ PXSTR GetBuffer();
 ```
 #### <a name="parameters"></a>Paramètres
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 Le nombre minimal de caractères que la mémoire tampon de caractères peut contenir. Cette valeur n’inclut pas d’espace pour un terminateur null.
 
 Si *nMinBufferLength* est supérieure à la longueur de la mémoire tampon en cours, `GetBuffer` détruit la mémoire tampon actuelle, il remplace par une mémoire tampon de la taille demandée et réinitialise le décompte de références d’objet à zéro. Si vous avez précédemment appelé [LockBuffer](#lockbuffer) sur cette mémoire tampon, vous perdez le verrou de mémoire tampon.
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*nLength*  
+*nLength*<br/>
 La taille exacte de la `CSimpleStringT` mémoire tampon de caractères en caractères.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -696,7 +696,7 @@ XCHAR operator[](int iChar) const;
 ```
 #### <a name="parameters"></a>Paramètres
 
-*iChar*  
+*iChar*<br/>
 Index de base zéro d’un caractère dans la chaîne.
 
 ### <a name="remarks"></a>Notes
@@ -727,7 +727,7 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*iChar*  
+*iChar*<br/>
 Index de base zéro d’un caractère dans la chaîne.
 
 ### <a name="remarks"></a>Notes
@@ -755,13 +755,13 @@ CSimpleStringT& operator +=(wchar_t ch);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*pszSrc*  
+*pszSrc*<br/>
 Un pointeur vers une chaîne se terminant par null.
 
-*strSrc*  
+*strSrc*<br/>
 Un pointeur vers un existant `CSimpleStringT` objet.
 
-*ch*  
+*ch*<br/>
 Caractère à ajouter.
 
 ### <a name="remarks"></a>Notes
@@ -789,10 +789,10 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*pszSrc*  
+*pszSrc*<br/>
 Un pointeur vers une chaîne se terminant par null.
 
-*strSrc*  
+*strSrc*<br/>
 Un pointeur vers un existant `CSimpleStringT` objet.
 
 ### <a name="remarks"></a>Notes
@@ -894,7 +894,7 @@ void Preallocate( int nLength);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*nLength*  
+*nLength*<br/>
 La taille exacte de la `CSimpleStringT` mémoire tampon de caractères en caractères.
 
 ### <a name="remarks"></a>Notes
@@ -934,7 +934,7 @@ void ReleaseBuffer(int nNewLength = -1);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*nNewLength*  
+*nNewLength*<br/>
 Nouvelle longueur de la chaîne en caractères, sans compter un terminateur null. Si la chaîne est null s’est arrêté, la valeur par défaut-1 définit le `CSimpleStringT` taille à la longueur actuelle de la chaîne.
 
 ### <a name="remarks"></a>Notes
@@ -974,7 +974,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*nNewLength*  
+*nNewLength*<br/>
 La longueur de la chaîne qui est libérée
 
 ### <a name="remarks"></a>Notes
@@ -992,10 +992,10 @@ void SetAt(int iChar, XCHAR ch);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*iChar*  
+*iChar*<br/>
 Index de base zéro du caractère dans la `CSimpleStringT` objet. Le *iChar* paramètre doit être supérieur ou égal à 0 et inférieur à la valeur retournée par [GetLength](#getlength).
 
-*ch*  
+*ch*<br/>
 Le caractère de nouvelle.
 
 ### <a name="remarks"></a>Notes
@@ -1023,7 +1023,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Pointeur vers le nouveau gestionnaire de mémoire.
 
 ### <a name="remarks"></a>Notes
@@ -1051,10 +1051,10 @@ void SetString(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*pszSrc*  
+*pszSrc*<br/>
 Un pointeur vers une chaîne se terminant par null.
 
-*nLength*  
+*nLength*<br/>
 Le nombre de caractères dans *pszSrc*.
 
 ### <a name="remarks"></a>Notes
@@ -1091,7 +1091,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
 #### <a name="parameters"></a>Paramètres
 
-*psz*  
+*psz*<br/>
 Un pointeur vers une chaîne se terminant par null.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1121,7 +1121,7 @@ void Truncate(int nNewLength);
 ```
 #### <a name="parameters"></a>Paramètres
 
-*nNewLength*  
+*nNewLength*<br/>
 Nouvelle longueur de la chaîne.
 
 ### <a name="remarks"></a>Notes

@@ -18,26 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 79899bb4ff2dada8f459a6c25499be25d078353e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 769f2bf2c0ef6c2c92b4c0468569e91d399cea59
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105373"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808444"
 ---
 # <a name="defining-stored-procedures"></a>Définition des procédures stockées
 
 Avant d’appeler une procédure stockée, vous devez tout d’abord définir, en utilisant le [DEFINE_COMMAND](../../data/oledb/define-command.md) macro. Lorsque vous définissez la commande, désigner des paramètres avec un point d’interrogation ( ?) comme marqueur de paramètre :  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
-Notez que la syntaxe (l’utilisation d’accolades, etc.) utilisée dans les exemples de code dans cette rubrique est spécifique à SQL Server. La syntaxe que vous utilisez dans vos procédures stockées peut-être varier selon le fournisseur que vous utilisez.  
+La syntaxe (l’utilisation d’accolades, etc.) utilisée dans les exemples de code dans cette rubrique est spécifique à SQL Server. La syntaxe que vous utilisez dans vos procédures stockées peut-être varier selon le fournisseur que vous utilisez.  
   
 Ensuite, dans le mappage de paramètre, spécifiez les paramètres que vous avez utilisé dans la commande, en listant les paramètres dans l’ordre où ils apparaissent dans la commande :  
   
-```  
+```cpp  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
    SET_PARAM_TYPE(DBPARAMIO_INPUT)  
    COLUMN_ENTRY(1, m_Name)   // name corresponds to first '?' param  
@@ -46,9 +46,9 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
-L’exemple précédent définit une procédure stockée, tandis qu’elle passe. En règle générale, pour une réutilisation efficace du code, une base de données contient un ensemble de procédures stockées prédéfinies avec des noms comme « Ventes par année » ou « dt_adduserobject ». Vous pouvez afficher ces définitions à l’aide de SQL Server Enterprise Manager. Vous les appelez comme suit (le placement de la ' ?' paramètres varie selon l’interface de la procédure stockée) :  
+L’exemple précédent définit une procédure stockée, tandis qu’elle passe. En règle générale, pour une réutilisation efficace du code, une base de données contient un ensemble de procédures stockées prédéfinies avec des noms comme « Ventes par année » ou « dt_adduserobject ». Vous pouvez afficher ces définitions à l’aide de SQL Server Enterprise Manager. Vous les appelez comme suit (le placement de la ' ?' paramètres varient selon l’interface de la procédure stockée) :  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")  
 ```  

@@ -1,7 +1,7 @@
 ---
 title: Fichiers générés par l’Assistant fournisseur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 26e20e0417e2253158930a8d3d055171fe767001
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f22c5e21d1f648a8235207713391306b24e0a6cf
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108402"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807288"
 ---
 # <a name="provider-wizard-generated-files"></a>Fichiers générés par l'Assistant Fournisseur
 
-L’Assistant fournisseur OLE DB ATL génère les fichiers suivants. Les rubriques suivantes utilisent le nom court « MyProvider », mais les noms de fichiers exacte varient selon le choix effectué lors de la création du fournisseur.  
+L’Assistant fournisseur OLE DB ATL génère les fichiers suivants. Les rubriques suivantes utilisent le nom court *personnalisé*, mais les noms de fichiers exacte varient selon le choix effectué lors de la création du fournisseur.  
   
 |Nom de fichier|Description|  
 |---------------|-----------------|  
-|MyProviderRS.cpp|Contient l’application d’assistance `Execute` (méthode) et le mappage de colonnes du fournisseur.|  
-|MyProviderDS.h|Implémente l’objet de source de données. Ce fichier d’en-tête contient le mappage des propriétés pour les propriétés de source de données.|  
-|MyProviderRS.h|Implémente les objets command et rowset. Ce fichier d’en-tête contient le mappage des propriétés pour les propriétés d’ensemble de lignes et commande.|  
-|MyProviderSess.h|Implémente l’objet de session. Ce fichier d’en-tête contient le mappage des propriétés pour les propriétés de la session.|  
-|MyProvider.rgs|Contient les objets inscrits générés par l’Assistant fournisseur OLE DB.|  
+|*Custom*RS.cpp|Contient l’application d’assistance `Execute` (méthode) et le mappage de colonnes du fournisseur.|  
+|*Custom*DS.h|Implémente l’objet de source de données. Ce fichier d’en-tête contient le mappage des propriétés pour les propriétés de source de données.|  
+|*Custom*RS.h|Implémente les objets command et rowset. Ce fichier d’en-tête contient le mappage des propriétés pour les propriétés d’ensemble de lignes et commande.|  
+|*Custom*Sess.h|Implémente l’objet de session. Ce fichier d’en-tête contient le mappage des propriétés pour les propriétés de la session.|  
+|*Custom*.rgs|Contient les objets inscrits générés par l’Assistant fournisseur OLE DB.|  
   
 ## <a name="see-also"></a>Voir aussi  
 

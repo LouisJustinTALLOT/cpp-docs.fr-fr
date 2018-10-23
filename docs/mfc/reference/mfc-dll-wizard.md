@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8218500fc17efda01b4ecaa11b6ebf12bd76812
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 721c8ba75fc72879a2c4c7de0f21010f51513f50
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436271"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808782"
 ---
 # <a name="mfc-dll-wizard"></a>DLL MFC (Assistant)
 
@@ -56,5 +56,4 @@ Vous pouvez effectuer les tâches et les types d’améliorations apportées à 
 [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Ajout d’une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Implémentation d’une interface](../../ide/implementing-an-interface-visual-cpp.md)<br/>
-[Prise en charge d’autres langues par l’Assistant](../../ide/wizard-support-for-other-languages.md)
 

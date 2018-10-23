@@ -1,7 +1,7 @@
 ---
 title: CTimeSpan, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b70e4ca31f4346e8ad0b6dda4e66192e2e53111
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32e6599fa19c23751beaf3545696a90a2d117248
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397518"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809081"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan, classe
 
@@ -114,7 +114,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -133,22 +133,22 @@ Construit `CTimeSpan` objets de différentes manières.
 CTimeSpan() throw();
 CTimeSpan(__time64_t time) throw();
 
-CTimeSpan(  
-LONG lDays,
-int nHours,
-int nMins,
-int nSecs) throw();
+CTimeSpan(
+    LONG lDays,
+    int nHours,
+    int nMins,
+    int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*timeSpanSrc*  
+*timeSpanSrc*<br/>
 Un `CTimeSpan` objet qui existe déjà.
 
-*time*  
+*time*<br/>
 Un **__time64_t** valeur de temps, ce qui correspond au nombre de secondes dans l’intervalle de temps.
 
-*lDays*, *nHours*, *nMins*, *every*  
+*lDays*, *nHours*, *nMins*, *every*<br/>
 Jours, heures, minutes et secondes, respectivement.
 
 ### <a name="remarks"></a>Notes
@@ -163,12 +163,12 @@ Toutes ces constructeurs créent un nouveau `CTimeSpan` objet initialisé avec l
 
 - `CTimeSpan( LONG, int, int, int );` Construit un `CTimeSpan` objet à partir de composants avec chaque composant est limité aux plages suivantes :
 
-    |Composant|Plage|  
-    |---------------|-----------|  
-    |*lDays*|0-25 000 (environ)|  
-    |*nHours*|0-23|  
-    |*nMins*|0-59|  
-    |*Every*|0-59|
+   |Composant|Plage|
+   |---------------|-----------|
+   |*lDays*|0-25 000 (environ)|
+   |*nHours*|0-23|
+   |*nMins*|0-59|
+   |*Every*|0-59|
 
 Notez que la version Debug de la bibliothèque Microsoft Foundation Class déclare si un ou plusieurs des composants heure est hors limites. Il vous incombe de valider les arguments avant d’appeler.
 
@@ -188,7 +188,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*pFormat*, *pszFormat*  
+*pFormat*, *pszFormat*<br/>
 Une mise en forme de chaîne similaire à la `printf` mise en forme de chaîne. Mise en forme de codes, précédés d’un pourcentage (`%`) vous connecter, sont remplacés par le correspondantes `CTimeSpan` composant. Autres caractères dans la chaîne mise en forme sont copiées sans modification à la chaîne retournée. La valeur et la signification des codes de mise en forme pour `Format` sont répertoriées ci-dessous :
 
 - **%D** nombre total de jours dans ce `CTimeSpan`
@@ -201,7 +201,7 @@ Une mise en forme de chaîne similaire à la `printf` mise en forme de chaîne. 
 
 - **%%** Signe de pourcentage
 
-*nID*  
+*nID*<br/>
 L’ID de la chaîne qui identifie ce format.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -355,7 +355,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 La valeur à ajouter à la `CTimeSpan` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -381,7 +381,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 La valeur à ajouter à la `CTimeSpan` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -409,7 +409,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Paramètres
 
-*ar*  
+*ar*<br/>
 Le `CArchive` objet que vous souhaitez mettre à jour.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -1,7 +1,7 @@
 ---
 title: Cfiletimespan, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c69a45ec56c5ee6f1c8d7a48be2cac2d158dc6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27be228c735b667d76f1dc70d9ae36f4229acd01
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381931"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808964"
 ---
 # <a name="cfiletimespan-class"></a>Cfiletimespan, classe
 
@@ -93,10 +93,10 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan` existant.
 
-*nSpan*  
+*nSpan*<br/>
 Une période de temps en millisecondes.
 
 ### <a name="remarks"></a>Notes
@@ -125,7 +125,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -142,7 +142,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -159,7 +159,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -176,7 +176,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -193,7 +193,7 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -210,7 +210,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -227,7 +227,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -244,7 +244,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -261,7 +261,7 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -278,7 +278,7 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -295,7 +295,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*  
+*étendue*<br/>
 Objet `CFileTimeSpan` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -312,7 +312,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nSpan*  
+*nSpan*<br/>
 La nouvelle valeur pour l’intervalle de temps en millisecondes.
 
 ## <a name="see-also"></a>Voir aussi
@@ -321,4 +321,3 @@ La nouvelle valeur pour l’intervalle de temps en millisecondes.
 [CFileTime, classe](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes partagées ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

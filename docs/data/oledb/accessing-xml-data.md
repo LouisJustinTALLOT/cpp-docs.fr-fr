@@ -1,7 +1,7 @@
 ---
 title: Accès aux données XML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cfde3980e58ba86d6923eaac765332a23e40ad7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7db1d790ca9caeea6bd9c7853139f59ffa0ab6c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062499"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808717"
 ---
 # <a name="accessing-xml-data"></a>Accès aux données XML
 
@@ -66,7 +66,7 @@ SQL Server 2000 effectue la mise en forme XML et retourne toutes les colonnes et
 Pour obtenir un exemple utilisant le `Read` (méthode), consultez la section « Ajout de la prise en charge XML au consommateur » dans [implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md).  
   
 > [!NOTE]
->  Prise en charge de XML à l’aide de `CStreamRowset` fonctionne uniquement avec SQL Server 2000 et vous devez disposer du fournisseur OLE DB pour SQL Server 2000 (installé avec MDAC).  
+> Prise en charge de XML à l’aide de `CStreamRowset` fonctionne uniquement avec SQL Server 2000 et vous devez disposer du fournisseur OLE DB pour SQL Server 2000 (installé avec MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Récupération des données XML à l’aide de CXMLAccessor  
 

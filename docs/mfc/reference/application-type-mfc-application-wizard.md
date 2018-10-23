@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434374"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808769"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Type d'application, Assistant Application MFC
 
@@ -58,7 +58,7 @@ Utilisez cette page de la [Assistant Application MFC](../../mfc/reference/mfc-ap
 
 - **Langue de ressource**
 
-   Définit la langue de vos ressources. La liste affiche les langues disponibles sur votre système, comme installés par Visual Studio. Si vous souhaitez sélectionner une langue autre que langue de votre système, le dossier de modèle approprié pour cette langue doit déjà être installé. Pour plus d’informations sur l’installation des ressources de langue différentes par défaut disponibles dans le **langue de ressource** liste, consultez [prise en charge de l’Assistant pour d’autres langages](../../ide/wizard-support-for-other-languages.md).
+   Définit la langue de vos ressources. La liste affiche les langues disponibles sur votre système, comme installés par Visual Studio. Si vous souhaitez sélectionner une langue autre que langue de votre système, le dossier de modèle approprié pour cette langue doit déjà être installé.
 
    La langue que vous sélectionnez est répercutée dans le **des chaînes localisées** possibilité du [chaînes modèles de Document, Assistant Application MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md) page de l’Assistant.
 

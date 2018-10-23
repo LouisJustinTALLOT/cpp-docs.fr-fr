@@ -1,7 +1,7 @@
 ---
 title: Classe de module | Microsoft Docs
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -53,12 +53,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa34cb8fce2854f4b3864629b86122bdfe6b35f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 5df7ae90a347d82b303d7db251e533733c8e4a86
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494528"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808628"
 ---
 # <a name="module-class"></a>Module (classe)
 
@@ -177,22 +177,22 @@ WRL_NOTHROW static Module& Create(
 template<typename T>
 WRL_NOTHROW static Module& Create(
    _In_ T* object,
-   _In_ void (T::* method)()  
+   _In_ void (T::* method)()
 );
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*T*  
+*T*<br/>
 Type de module.
 
-*rappel*  
+*rappel*<br/>
 Appelé lorsque le dernier objet d’instance du module est relâché.
 
-*object*  
+*object*<br/>
 Le *objet* et *méthode* paramètres sont utilisés conjointement. Pointe vers le dernier objet d’instance lorsque le dernier objet d’instance dans le module est lancé.
 
-*(Méthode)*  
+*(Méthode)*<br/>
 Le *objet* et *méthode* paramètres sont utilisés conjointement. Points à la méthode du dernier objet d’instance lorsque le dernier objet d’instance dans le module est lancé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -225,13 +225,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Paramètres
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 IID d’une classe runtime.
 
-*ppIFactory*  
+*ppIFactory*<br/>
 IActivationFactory pour la classe runtime spécifié.
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Le nom d’un sous-ensemble des fabriques de classes du module en cours. Spécifiez le nom du serveur utilisé dans le [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) (macro), ou spécifiez `nullptr` pour obtenir le nom du serveur par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -253,16 +253,16 @@ Récupère un cache des fabriques de classes.
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*  
+*clsid*<br/>
 ID de classe.
 
-*riid*  
+*riid*<br/>
 ID d’interface que vous demandez.
 
-*PPV*  
+*PPV*<br/>
 Pointeur vers l’objet retourné.
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Le nom du serveur qui est spécifié dans le `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, ou `ActivatableClass` macro ; ou `nullptr` pour obtenir le nom du serveur par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -344,19 +344,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Nom qualifié complet d’un serveur.
 
-*CLSID*  
+*CLSID*<br/>
 Tableau de CLSID à inscrire.
 
-*fabriques*  
+*fabriques*<br/>
 Tableau d’interfaces IUnknown des objets de classe dont la disponibilité est en cours de publication.
 
-*Cookies*  
+*Cookies*<br/>
 Lorsque l’opération se termine, un tableau de pointeurs vers des valeurs qui identifient la classe des objets qui ont été enregistrés. Ces valeurs sont utilisées ultérieurement révoque l’inscription.
 
-*count*  
+*count*<br/>
 Le nombre de CLSID à inscrire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -381,10 +381,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Paramètres
 
-*module*  
+*module*<br/>
 Un tableau d’objets COM ou Windows Runtime.
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Nom du serveur qui a créé les objets.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -399,21 +399,21 @@ Inscrit un ou plusieurs objets Windows Runtime pour d’autres applications peuv
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
    wchar_t** activatableClassIds,
    WINRT_REGISTRATION_COOKIE* cookie,
-   unsigned int count)  
+   unsigned int count)
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Nom qui spécifie un sous-ensemble d’objets affectés par cette opération.
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 Tableau des CLSID activables à inscrire.
 
-*Cookie*  
+*Cookie*<br/>
 Une valeur qui identifie les objets de classe qui ont été inscrits. Cette valeur est utilisée ultérieurement pour révoquer l’inscription.
 
-*count*  
+*count*<br/>
 Le nombre d’objets à inscrire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -453,13 +453,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 (Non utilisé)
 
-*Cookies*  
+*Cookies*<br/>
 Un tableau de pointeurs vers des valeurs qui identifient les objets de classe doit être annulée. Le tableau a été créé par le [RegisterCOMObject](#registercomobject) (méthode).
 
-*count*  
+*count*<br/>
 Le nombre de classes pour annuler l’inscription.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -478,10 +478,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Paramètres
 
-*module*  
+*module*<br/>
 Pointeur vers un module.
 
-*Nom du serveur*  
+*Nom du serveur*<br/>
 Nom de qualification qui spécifie un sous-ensemble d’objets affectés par cette opération.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -501,5 +501,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*Cookie*  
+*Cookie*<br/>
 Pointeur vers une valeur qui identifie l’objet de classe dont l’inscription doit être révoqué.

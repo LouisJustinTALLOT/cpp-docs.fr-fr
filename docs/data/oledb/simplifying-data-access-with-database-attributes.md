@@ -1,7 +1,7 @@
 ---
 title: Simplifier l’accès aux données avec les attributs de base de données | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2689aab8b33c01c9a4d72b231a11a251813ac625
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054075"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808015"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Simplification de l'accès aux données à l'aide d'attributs de base de données
 
@@ -52,18 +52,26 @@ En comparant les deux fichiers, vous pouvez voir comment beaucoup plus simple es
   
 - Le `db_table` appel dans la version avec attributs est équivalent à la déclaration de modèle suivante :  
   
-    ```  
+    ```cpp  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 - Le `db_column` appels dans la version avec attributs sont équivalents au mappage de colonnes (voir `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) dans la déclaration de modèle.  
   
-Les attributs injectent une déclaration de classe d’enregistrement utilisateur pour vous. La classe d’enregistrement utilisateur est équivalente à `CAuthorsNoAttrAccessor` dans la déclaration de modèle. Si votre classe de table est `CAuthors`, la classe d’enregistrement utilisateur injectée est nommée `CAuthorsAccessor`, et vous pouvez uniquement afficher sa déclaration dans le code injecté. Pour plus d’informations, consultez « Classes d’enregistrement utilisateur injectées par des attributs » dans [enregistrements utilisateur](../../data/oledb/user-records.md).  
+Les attributs injectent une déclaration de classe d’enregistrement utilisateur pour vous. La classe d’enregistrement utilisateur est égale à `CAuthorsNoAttrAccessor` dans la déclaration de modèle. Si votre classe de table est `CAuthors`, la classe d’enregistrement utilisateur injectée est nommée `CAuthorsAccessor`, et vous pouvez uniquement afficher sa déclaration dans le code injecté. Pour plus d’informations, consultez « Classes d’enregistrement utilisateur injectées par des attributs » dans [enregistrements utilisateur](../../data/oledb/user-records.md).  
   
-Notez que dans à la fois avec attributs et le code basé sur un modèle, vous devez définir les propriétés d’ensemble de lignes à l’aide `CDBPropSet::AddProperty`.  
+Dans à la fois avec attributs et le code basé sur un modèle, vous devez définir les propriétés d’ensemble de lignes à l’aide `CDBPropSet::AddProperty`.  
   
-Pour plus d’informations sur les attributs présentés dans cette rubrique, consultez [les attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md).  
-  
+Pour plus d’informations sur les attributs présentés dans cette rubrique, consultez [les attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md).
+
+> [!NOTE]
+> Ce qui suit `include` instructions sont requis pour compiler les exemples ci-dessous :
+> ```cpp
+> #include <atlbase.h>  
+> #include <atlplus.h>  
+> #include <atldbcli.h>    
+> ```
+
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Table et la déclaration d’accesseur à l’aide d’attributs  
 
 Le code suivant appelle `db_source` et `db_table` sur la classe de table. `db_source` Spécifie la source de données et la connexion à utiliser. `db_table` injecte le code de modèle approprié pour déclarer une classe de table. `db_column` spécifier le mappage de colonnes et injecte la déclaration d’accesseur. Vous pouvez utiliser des attributs du consommateur OLE DB dans n’importe quel projet qui prend en charge ATL.  
@@ -85,15 +93,15 @@ Voici la déclaration de table et d’accesseur à l’aide d’attributs :
 class CAuthors  
 {  
 public:  
-   DWORD m_dwAuIDStatus;  
-   DWORD m_dwAuthorStatus;  
-   DWORD m_dwYearBornStatus;  
-   DWORD m_dwAuIDLength;  
-   DWORD m_dwAuthorLength;  
-   DWORD m_dwYearBornLength;  
-   [ db_column(1, status=m_dwAuIDStatus, length=m_dwAuIDLength) ] LONG m_AuID;  
-   [ db_column(2, status=m_dwAuthorStatus, length=m_dwAuthorLength) ] TCHAR m_Author[51];  
-   [ db_column(3, status=m_dwYearBornStatus, length=m_dwYearBornLength) ] SHORT m_YearBorn;  
+   DBSTATUS m_dwAuIDStatus;
+   DBSTATUS m_dwAuthorStatus;
+   DBSTATUS m_dwYearBornStatus;
+   DBLENGTH m_dwAuIDLength;
+   DBLENGTH m_dwAuthorLength;
+   DBLENGTH m_dwYearBornLength;
+   [db_column("1", status = "m_dwAuIDStatus", length = "m_dwAuIDLength")] LONG m_AuID;
+   [db_column("2", status = "m_dwAuthorStatus", length = "m_dwAuthorLength")] TCHAR m_Author[51];
+   [db_column("3", status = "m_dwYearBornStatus", length = "m_dwYearBornLength")] SHORT m_YearBorn;
    void GetRowsetProperties(CDBPropSet* pPropSet)  
    {  
       pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true);  

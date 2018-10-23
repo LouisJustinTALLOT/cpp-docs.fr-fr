@@ -1,7 +1,7 @@
 ---
 title: high_method_prefix | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883f573100c31fab8cc0142d371f6a8a14f8783f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fb69b9fbb7ede0ca458007aec1bee2cf38e286f
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428718"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807716"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
-**Spécifique à C++**  
-  
-Spécifie un préfixe à utiliser pour nommer les propriétés et les méthodes de haut niveau.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-high_method_prefix("Prefix")  
-```  
-  
-### <a name="parameters"></a>Paramètres  
-*Prefix*  
-Préfixe à utiliser.  
-  
-## <a name="remarks"></a>Notes  
- 
-Par défaut, les propriétés de gestion des erreurs et les méthodes de niveau supérieur sont exposées par des fonctions membres nommées sans préfixe. Les noms sont issus de la bibliothèque de types.  
-  
-**FIN spécifique à C++**  
-  
-## <a name="see-also"></a>Voir aussi  
- 
+
+**Spécifique à C++**
+
+Spécifie un préfixe à utiliser pour nommer les propriétés et les méthodes de haut niveau.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+high_method_prefix("Prefix")
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Prefix*<br/>
+Préfixe à utiliser.
+
+## <a name="remarks"></a>Notes
+
+Par défaut, les propriétés de gestion des erreurs et les méthodes de niveau supérieur sont exposées par des fonctions membres nommées sans préfixe. Les noms sont issus de la bibliothèque de types.
+
+**FIN spécifique à C++**
+
+## <a name="see-also"></a>Voir aussi
+
 [attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directive #import](../preprocessor/hash-import-directive-cpp.md)

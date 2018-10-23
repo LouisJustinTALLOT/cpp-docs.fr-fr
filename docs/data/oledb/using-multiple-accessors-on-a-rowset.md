@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3ab75c1a8b0c6addf41366c63f14305b68ce5bc5
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860691"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808457"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilisation de plusieurs accesseurs dans un jeu de lignes
 
@@ -35,9 +35,9 @@ Il existe trois principaux scénarios dans lesquels vous devez utiliser plusieur
 
    - L’accesseur 1 contient toutes les colonnes à l’exception de la clé primaire.
 
-- **Performances** Dans ce scénario, une ou plusieurs colonnes contiennent une grande quantité de données, par exemple, aux fichiers de graphiques, audio ou vidéo. Chaque fois que vous passez à une ligne, vous probablement ne souhaitez pas extraire la colonne avec le fichier de données volumineux, car cela risque de ralentir les performances de votre application.
+- **Performances** Dans ce scénario, une ou plusieurs colonnes ont une grande quantité de données, par exemple, aux fichiers de graphiques, audio ou vidéo. Chaque fois que vous passez à une ligne, sans doute ne voulez-vous extraire la colonne avec le fichier de données volumineux, car cela risque de ralentir les performances de votre application.
 
-   Vous pouvez définir des accesseurs distincts dans lequel le premier accesseur contient toutes les colonnes sauf celui avec des données volumineuses, et il récupère des données à partir de ces colonnes automatiquement ; Il s’agit de l’accesseur automatique. Le deuxième accesseur récupère seulement la colonne contenant des données volumineuses, mais ne récupère pas les données à partir de cette colonne de façon automatique. Vous pouvez avoir des autres méthodes de mise à jour ou extraire les données volumineuses à la demande.
+   Vous pouvez définir des accesseurs distincts dans lequel le premier accesseur contient toutes les colonnes sauf celui avec des données volumineuses, et il récupère des données à partir de ces colonnes automatiquement ; l’accesseur premier est l’accesseur automatique. Le deuxième accesseur récupère seulement la colonne contenant des données volumineuses, mais il ne récupérer automatiquement des données à partir de cette colonne. Vous pouvez avoir des autres méthodes de mise à jour ou extraire les données volumineuses à la demande.
 
    - Accesseur 0 est un accesseur automatique ; Il récupère toutes les colonnes à l’exception de celui avec des données volumineuses.
 
@@ -45,7 +45,7 @@ Il existe trois principaux scénarios dans lesquels vous devez utiliser plusieur
 
    Utilisez l’argument automatique pour spécifier si l’accesseur est un accesseur automatique.
 
-- **Plusieurs colonnes ISequentialStream.** Dans ce scénario, vous avez plus d’une colonne qui contient `ISequentialStream` données. Toutefois, chaque accesseur est limité à un `ISequentialStream` flux de données. Pour résoudre ce problème, configurez plusieurs accesseurs, chacun contenant un seul `ISequentialStream` pointeur.
+- **Plusieurs colonnes ISequentialStream.** Dans ce scénario, vous avez plus d’une colonne qui contient `ISequentialStream` données. Toutefois, chaque accesseur est limité à un `ISequentialStream` flux de données. Pour résoudre ce problème, configurez plusieurs accesseurs, chacun comportant une `ISequentialStream` pointeur.
 
 Normalement, vous créez des accesseurs en utilisant le [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) macros. Vous pouvez également utiliser le [db_accessor](../../windows/db-accessor.md) attribut. (Les accesseurs sont décrits dans [enregistrements utilisateur](../../data/oledb/user-records.md).) Les macros ou l’attribut spécifient si un accesseur est automatique ou un accesseur non automatique :
 
@@ -53,7 +53,7 @@ Normalement, vous créez des accesseurs en utilisant le [BEGIN_ACCESSOR](../../d
 
 - Dans un accesseur non automatique, la récupération ne se produit pas jusqu'à ce que vous appelez explicitement une méthode comme `Update`, `Insert`, `Fetch`, ou `Delete`. Dans les scénarios décrits ci-dessus, vous ne souhaitez ne peut-être pas récupérer toutes les colonnes à chaque déplacement. Vous pouvez placer une ou plusieurs colonnes dans un accesseur séparé et en faire un accesseur non automatique, comme indiqué ci-dessous.
 
-L’exemple suivant utilise plusieurs accesseurs pour lire et écrire dans la table des tâches de la base de données pubs SQL Server à l’aide de plusieurs accesseurs. Cela est l’utilisation la plus courante des accesseurs multiples ; consultez le scénario « plusieurs ensembles de lignes en lecture/écriture » ci-dessus.
+L’exemple suivant utilise plusieurs accesseurs pour lire et écrire dans la table des tâches de la base de données pubs SQL Server à l’aide de plusieurs accesseurs. Cet exemple est l’utilisation la plus courante des accesseurs multiples ; consultez le scénario « plusieurs ensembles de lignes en lecture/écriture » ci-dessus.
 
 La classe d’enregistrement utilisateur est comme suit. Elle définit deux accesseurs : l’accesseur 0 contient uniquement la colonne clé primaire (ID) et l’accesseur 1 contient d’autres colonnes.
 

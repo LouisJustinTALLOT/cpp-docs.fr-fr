@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101640"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808925"
 ---
 # <a name="using-manual-accessors"></a>Utilisation des accesseurs manuels
 
@@ -36,7 +36,7 @@ Il existe quatre opérations lors du traitement d’une commande inconnue :
   
 - S’il existe plusieurs ensembles de lignes de retour  
   
-Pour ce faire, avec les modèles du consommateur OLE DB, utilisez la `CManualAccessor` classe et procédez comme suit :  
+Pour effectuer les opérations suivantes avec les modèles du consommateur OLE DB, utilisez la `CManualAccessor` classe et procédez comme suit :  
   
 1. Ouvrir un `CCommand` avec l’objet `CManualAccessor` comme paramètre de modèle.  
   
