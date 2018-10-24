@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407593"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162163"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Ajout de références aux projets Visual C++
 
@@ -84,11 +84,11 @@ Les propriétés suivantes sont disponibles sur divers genres de références. E
 
 - **Copier les assemblys satellites locaux**
 
-   Spécifie si les assemblys satellites de l'assembly référencé doivent être copiés automatiquement vers l'emplacement cible pendant une génération. Utilisé uniquement si **Copie locale** a la valeur `true`.
+   Spécifie si les assemblys satellites de l'assembly référencé doivent être copiés automatiquement vers l'emplacement cible pendant une génération. Utilisé uniquement si **Copie locale** a la valeur **true**.
 
 - **Sortie de l’assembly de référence**
 
-   Spécifie que cet assembly est utilisé dans le processus de génération. Si la valeur est `true`, l'assembly est utilisé sur la ligne de commande du compilateur durant la génération.
+   Spécifie que cet assembly est utilisé dans le processus de génération. Si la valeur est **true**, l'assembly est utilisé sur la ligne de commande du compilateur durant la génération.
 
 ### <a name="project-to-project-reference-properties"></a>Propriétés de référence entre projets
 

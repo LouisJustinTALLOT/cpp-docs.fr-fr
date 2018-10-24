@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 20291e1f824704ee94cb45f14c16d6f0e4960348
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821047"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410835"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurer un projet CMake Linux
 
@@ -30,7 +30,7 @@ Quand vous installez la charge de travail Linux C++ pour Visual Studio, la prise
 Cette rubrique suppose que vous avez une connaissance de base de la prise en charge de CMake dans Visual Studio. Pour plus d’informations, consultez [Visual C++ Tools pour CMake](../ide/cmake-tools-for-visual-cpp.md). Pour plus d’informations sur la solution CMake proprement dite, consultez [Build, Test and Package Your Software With CMake](https://cmake.org/).
 
 > [!NOTE]  
-> La prise en charge de CMake dans Visual Studio nécessite la prise en charge du mode serveur qui a été introduit dans CMake 3.8. Pour une variante CMake fournie par Microsoft qui prend en charge le volet [Affichage des cibles de CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) dans Visual Studio, téléchargez les derniers fichiers binaires prédéfinis sur [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). Si votre gestionnaire de package fournit une version antérieure à CMake 3.8, vous pouvez contourner le problème en [générant CMake à partir de la source](#build-a-supported-cmake-release-from-source) ou, si vous préférez utiliser le CMake standard, en le téléchargeant sur la [page officielle de téléchargement de CMake](https://cmake.org/download/). 
+> La prise en charge de CMake dans Visual Studio nécessite la prise en charge du mode serveur qui a été introduit dans CMake 3.8. Pour une variante de CMake fournie par Microsoft, téléchargez les fichiers binaires prédéfinis les plus récents à partir de [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
 
 ## <a name="open-a-folder"></a>Ouvrir un dossier
 
@@ -118,49 +118,10 @@ Il existe également des paramètres facultatifs qui vous permettent d’exercer
 
 Ces options vous permettent d’exécuter des commandes sur la boîte distante avant et après la build, et avant la génération CMake. Il peut s’agir de n’importe quelle commande valide sur la boîte distante. La sortie est redirigée vers Visual Studio.
 
-## <a name="build-a-supported-cmake-release-from-source"></a>Générer une version de CMake prise en charge à partir de la source
+## <a name="download-prebuilt-cmake-binaries"></a>Télécharger les fichiers binaires CMake prédéfinis
 
-Votre machine Linux doit avoir la version 3.8 de CMake au minimum, mais également prendre en charge le mode serveur. Pour vérifier la version, exécutez la commande suivante :
+Votre distribution Linux peut avoir une version antérieure de CMake. La prise en charge de CMake dans Visual Studio nécessite la prise en charge du mode serveur qui a été introduit dans CMake 3.8. Pour une variante de CMake fournie par Microsoft, téléchargez les fichiers binaires prédéfinis les plus récents à partir de [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
 
-```cmd
-cmake --version
-```
-
-Pour vérifier que le mode serveur est activé, exécutez cette commande :
-
-```cmd
-cmake -E capabilities
-```
-
-Dans la sortie, recherchez **"serverMode":true**. Notez que même lorsque vous compilez un projet CMake à partir de la source, comme cela est décrit ci-dessous, vous devez vérifier les fonctionnalités à la fin de l’opération. En effet, votre système Linux peut avoir des limitations qui empêchent l’activation du mode serveur.
-
-Pour préparer la génération de CMake à partir de la source dans l’interpréteur de commandes de votre système Linux, vérifiez que votre gestionnaire de package est à jour et que git et cmake sont disponibles.
-
-Tout d’abord, clonez les sources CMake à partir du [référentiel Microsoft CMake](https://github.com/Microsoft/CMake) sur lequel nous maintenons une fourche pour la prise en charge de CMake dans Visual Studio :
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-Pour générer et installer la version actuelle de CMake dans /usr/local/bin, exécutez ces commandes :
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-Maintenant, exécutez cette commande pour vérifier que la version utilisée est la version 3.8 ou une version ultérieure et que ce mode serveur est activé :
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
 
 ## <a name="see-also"></a>Voir aussi
 
