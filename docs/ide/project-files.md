@@ -1,32 +1,30 @@
 ---
-title: Fichiers projet | Microsoft Docs
+title: Exemple de fichier de projet | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- .vcproj files
-- Visual C++ projects, project file format
-- VCPROJ (Visual C++ project file) format
-- project files [C++], .vcproj file format
+- .vcxproj files
+- C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7202dff0bd1a790a4e8727bbac9d375daecb8e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 591802e04348ca08bded17504b3fb19fb9aa7213
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389016"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072383"
 ---
 # <a name="project-files"></a>Fichiers projet
 
-Un fichier projet Visual C++ est un fichier XML dont l’extension de nom de fichier est .vcxproj et qui contient des informations nécessaires à la génération d’un projet Visual C++.
+Un fichier projet Visual C++ est un fichier XML dont l’extension de nom de fichier est .vcxproj et qui contient des informations nécessaires à la génération d’un projet Visual C++. Notez que le fichier de projet importe différents fichiers de projet ayant l’extension *.props* ou *.targets*. Ces fichiers contiennent des informations de build supplémentaires, et peuvent faire référence à d’autres fichiers *.props* ou *.targets*. Les macros contenues dans le chemin d’accès au fichier (par exemple `$(VCTargetsPath)`) dépendent de votre installation de Visual Studio. Pour plus d’informations sur ces macros et sur les fichiers *.props* et *.targets*, consultez [VC++ Directories Property Page](vcpp-directories-property-page.md), [Utilisation des propriétés de projet](working-with-project-properties.md#bkmkPropertiesVersusMacros) et [Macros courantes pour les propriétés et les commandes de génération](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Exemple
 
