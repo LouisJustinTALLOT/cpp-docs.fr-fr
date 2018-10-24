@@ -17,24 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdde0f8d4edc13e8c1e1a53d8f4393dc7c2dac40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d036f7d46e0db84b8572b26c747947c929972517
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372468"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889930"
 ---
 # <a name="redistributing-web-client-applications"></a>Redistribution d'applications clientes Web
 
 Si votre application utilise les classes MFC implémentant le contrôle WebBrowser (par exemple `CHtmlView` ou `CHtmlEditView`), l’ordinateur cible doit disposer d’une installation de base de Microsoft Internet Explorer 4.0 ou ultérieur.
 
-L’installation de la dernière version de Microsoft Internet Explorer garantit également que l’ordinateur cible dispose des derniers fichiers de contrôle communs.
-
-Des informations relatives à l’installation des composants de base de Microsoft Internet Explorer sont disponibles dans l’article suivant de la Base de connaissances :
-
-- Q185375, HOWTO: Create a Single EXE Install of Internet Explorer ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))
-
-Vous trouverez les articles de la Base de connaissances dans MSDN Library ou sur [http://support.microsoft.com](http://support.microsoft.com).
+L’installation de la dernière version de Microsoft Internet Explorer garantit également que l’ordinateur cible dispose des derniers fichiers de contrôle communs. Pour plus d’informations, consultez [Installer et déployer Internet Explorer 11](/internet-explorer/ie11-deploy-guide/install-and-deploy-ie11).
 
 ## <a name="see-also"></a>Voir aussi
 

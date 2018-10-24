@@ -30,37 +30,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a518402d027ae128fcf403752fafb448461628
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38cd49dd483b556c8bda95e7a77109a9d4682e7c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390467"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233617"
 ---
 # <a name="lock"></a>_lock
-Acquiert un verrou multithread.  
-  
+
+Acquiert un verrou multithread.
+
 > [!IMPORTANT]
->  Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _lock  
-   int locknum  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [in] `locknum`  
- L’identificateur du verrou à acquérir.  
-  
-## <a name="remarks"></a>Notes  
- Si le verrou a déjà été acquis, cette méthode acquiert néanmoins le verrou et provoque une erreur CRT interne. Si la méthode ne peut pas acquérir un verrou, elle se termine avec une erreur irrécupérable et affecte le code d’erreur sur `_RT_LOCK`.  
-  
-## <a name="requirements"></a>Configuration requise  
- **Source :** mlock.c  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_unlock](../c-runtime-library/unlock.md)
+>  Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __cdecl _lock
+   int locknum
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*locknum*<br/>
+[in] Identificateur du verrou à acquérir.
+
+## <a name="remarks"></a>Notes
+
+Si le verrou a déjà été acquis, cette méthode acquiert néanmoins le verrou et provoque une erreur CRT interne. Si la méthode ne peut pas acquérir un verrou, elle se termine avec une erreur irrécupérable et affecte le code d’erreur sur `_RT_LOCK`.
+
+## <a name="requirements"></a>Configuration requise
+
+**Source :** mlock.c
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_unlock](../c-runtime-library/unlock.md)

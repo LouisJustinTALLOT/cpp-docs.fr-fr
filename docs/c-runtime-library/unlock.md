@@ -30,34 +30,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 478f942b489aa2350319b90da4c05c61925101f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e232364c7c9403bdaafd41466a9999faa4e45953
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407920"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234279"
 ---
 # <a name="unlock"></a>_unlock
-Libère un verrou multithread.  
-  
+
+Libère un verrou multithread.
+
 > [!IMPORTANT]
->  Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _unlock(  
-   int locknum  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [in] `locknum`  
- L’identificateur du verrou à libérer.  
-  
-## <a name="requirements"></a>Configuration requise  
- **Source :** mlock.c  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_lock](../c-runtime-library/lock.md)
+>  Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __cdecl _unlock(
+   int locknum
+);
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*locknum*<br/>
+[in] Identificateur du verrou à libérer.
+
+## <a name="requirements"></a>Configuration requise
+
+**Source :** mlock.c
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_lock](../c-runtime-library/lock.md)

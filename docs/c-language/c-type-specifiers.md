@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c2bf6990180a7fe325b1ee3d4f4e497a433c183e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103358"
 ---
 # <a name="c-type-specifiers"></a>Spécificateurs de type C
 
@@ -28,19 +28,7 @@ Les spécificateurs de type dans les déclarations définissent le type d'une va
 
 ## <a name="syntax"></a>Syntaxe
 
-*type-specifier* :  
-&nbsp;&nbsp;&nbsp;&nbsp;**void**  
-&nbsp;&nbsp;&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;&nbsp;&nbsp;**short**  
-&nbsp;&nbsp;&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;&nbsp;&nbsp;**long**  
-&nbsp;&nbsp;&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;&nbsp;&nbsp;**double**  
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**  
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**  
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*  
+*type-specifier*: &nbsp;&nbsp;&nbsp;&nbsp;**void** &nbsp;&nbsp;&nbsp;&nbsp;**char** &nbsp;&nbsp;&nbsp;&nbsp;**short** &nbsp;&nbsp;&nbsp;&nbsp;**int** &nbsp;&nbsp;&nbsp;&nbsp;**long** &nbsp;&nbsp;&nbsp;&nbsp;**float** &nbsp;&nbsp;&nbsp;&nbsp;**double** &nbsp;&nbsp;&nbsp;&nbsp;**signed** &nbsp;&nbsp;&nbsp;&nbsp;**unsigned** &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
 Les types **signed char**, **signed int**, **signed short int** et **signed long int**, ainsi que leurs équivalents **unsigned** et **enum**, sont appelés types *intégraux*. Les spécificateurs de type **float**, **double** et **long double** sont appelés types *flottants* ou *à virgule flottante*. Vous pouvez utiliser n'importe quel spécificateur de type intégral ou à virgule flottante dans une variable ou une déclaration de fonction. Si aucun *type-specifier* n’est fourni dans une déclaration, **int** est utilisé par défaut.
 
@@ -87,4 +75,4 @@ Vous pouvez créer des spécificateurs de type supplémentaires avec des déclar
 
 ## <a name="see-also"></a>Voir aussi
 
-[Déclarations et types](../c-language/declarations-and-types.md)  
+[Déclarations et types](../c-language/declarations-and-types.md)

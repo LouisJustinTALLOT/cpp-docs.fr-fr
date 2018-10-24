@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d93486d8df8cdb8bc253a0e71037f4e2ddf9e128
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404018"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890477"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
 
@@ -35,7 +35,7 @@ Ces fichiers se trouvent dans le répertoire *Projname* . Dans l’Explorateur d
 
 |Nom de fichier|Description|
 |---------------|-----------------|
-|stdafx.h|Fichier Include pour les fichiers Include système standard et pour les fichiers Include spécifiques au projet, qui sont fréquemment utilisés mais rarement modifiés.<br /><br /> Évitez de définir ou d’annuler la définition des macros _AFX_NO_XXX dans stdafx.h. Consultez l’article de la Base de connaissances sur PRB et l’apparition de problèmes après la définition de _AFX_NO_XXX. Vous pouvez trouver des articles de la Base de connaissances dans MSDN Library ou sur [http:// support.microsoft.com/](http://%20support.microsoft.com/).|
+|stdafx.h|Fichier Include pour les fichiers Include système standard et pour les fichiers Include spécifiques au projet, qui sont fréquemment utilisés mais rarement modifiés.<br /><br /> Vous ne devez pas définir ou annuler la définition des macros _AFX_NO_XXX dans stdafx.h.|
 |stdafx.cpp|Contient la directive de préprocesseur `#include "stdafx.h"` , et ajoute des fichiers Include pour les types précompilés. Les fichiers précompilés de tout type, notamment les fichiers d’en-tête, prennent en charge l’accélération des temps de compilation en limitant celle-ci aux fichiers qui en ont besoin. Une fois votre projet généré pour la première fois, vous remarquerez une accélération importante des temps de génération pour les builds suivantes, en raison de la présence de fichiers d’en-tête précompilés.|
 
 ## <a name="see-also"></a>Voir aussi

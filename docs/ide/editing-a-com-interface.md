@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451e7fc6e2a7b4a72188da6b69888bf04b605842
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f660f9d69fc787384fcfbec37caec0064a58ec29
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412359"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861341"
 ---
 # <a name="editing-a-com-interface"></a>Modification d'une interface COM
 
@@ -38,8 +38,8 @@ Les trois Assistants suivants vous aident à personnaliser les interfaces exista
 
 |Assistant|Type de projet|
 |------------|------------------|
-|[Assistant Ajout de propriété](../ide/names-add-property-wizard.md)|Projets ATL ou MFC prenant en charge ATL. Cliquez avec le bouton droit sur l’interface à laquelle vous voulez ajouter la propriété.<br /><br /> Visual C++ détecte le type de projet et modifie en conséquence les options de l’Assistant Ajout de propriété :<br /><br /> - Pour les dispinterfaces de projets créés à l’aide de [l’Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’appel de l’Assistant Ajout de propriété fournit des options propres à MFC.<br />- Pour les interfaces de contrôle ActiveX MFC, l’Assistant Ajout de propriété fournit la liste des méthodes et propriétés stock que vous pouvez utiliser telles quelles ou personnaliser pour votre contrôle.<br />- Pour toutes les autres interfaces, l’Assistant Ajout de propriété fournit des options utiles dans la plupart des situations.|
-|[Assistant Ajout de méthode](../ide/add-method-wizard.md)|Projets ATL ou MFC prenant en charge ATL. Cliquez avec le bouton droit sur l’interface à laquelle vous voulez ajouter la méthode.<br /><br /> Visual C++ détecte le type de projet et modifie en conséquence les options de l’Assistant Ajout de méthode :<br /><br /> - Pour les dispinterfaces de projets créés à l’aide de [l’Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’appel de l’Assistant Ajout de méthode fournit des options spécifiques de MFC.<br />- Pour les interfaces de contrôle ActiveX MFC, l’Assistant Ajout de méthode fournit la liste des méthodes et propriétés stock que vous pouvez utiliser telles quelles ou personnaliser pour votre contrôle.<br />- Pour toutes les autres interfaces, l’Assistant **Ajout de méthode** fournit des options utiles dans la plupart des situations.|
+|[Assistant Ajout de propriété](../ide/names-add-property-wizard.md)|Projets ATL ou MFC prenant en charge ATL. Cliquez avec le bouton droit sur l’interface à laquelle vous voulez ajouter la propriété.<br /><br />Visual C++ détecte le type de projet et modifie en conséquence les options de l’Assistant Ajout de propriété :<br /><br />- Pour les dispinterfaces de projets créés à l’aide de [l’Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’appel de l’Assistant Ajout de propriété fournit des options propres à MFC.<br />- Pour les interfaces de contrôle ActiveX MFC, l’Assistant Ajout de propriété fournit la liste des méthodes et propriétés stock que vous pouvez utiliser telles quelles ou personnaliser pour votre contrôle.<br />- Pour toutes les autres interfaces, l’Assistant Ajout de propriété fournit des options utiles dans la plupart des situations.|
+|[Assistant Ajout de méthode](../ide/add-method-wizard.md)|Projets ATL ou MFC prenant en charge ATL. Cliquez avec le bouton droit sur l’interface à laquelle vous voulez ajouter la méthode.<br /><br />Visual C++ détecte le type de projet et modifie en conséquence les options de l’Assistant Ajout de méthode :<br /><br />- Pour les dispinterfaces de projets créés à l’aide de [l’Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’appel de l’Assistant Ajout de méthode fournit des options spécifiques de MFC.<br />- Pour les interfaces de contrôle ActiveX MFC, l’Assistant Ajout de méthode fournit la liste des méthodes et propriétés stock que vous pouvez utiliser telles quelles ou personnaliser pour votre contrôle.<br />- Pour toutes les autres interfaces, l’Assistant **Ajout de méthode** fournit des options utiles dans la plupart des situations.|
 
 Vous pouvez également implémenter de nouvelles interfaces sur votre contrôle COM en cliquant avec le bouton droit sur la classe de contrôle de l’objet dans l’affichage de classes et en cliquant sur [Implémenter l’interface](../ide/implement-interface-wizard.md).
 

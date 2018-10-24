@@ -20,23 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
-ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
+ms.openlocfilehash: 2622702cd19dab3cad2613aa3df28b5cef464853
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076006"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Chaînes relatives aux noms, aux langues, au pays et à la région
 
 L'argument *locale* des fonctions `setlocale` et `_create_locale` peut être défini en utilisant les noms de paramètres régionaux, les langages, les codes de pays ou de région, et les pages de codes prises en charge par l'API de NLS Windows. L'argument *locale* prend la forme suivante :
 
-> *locale* :: "*locale_name*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "C"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ""  
-&nbsp;&nbsp;&nbsp;&nbsp;| NULL  
+> *locale* :: "*locale_name*" &nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]" &nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*" &nbsp;&nbsp;&nbsp;&nbsp;| "C" &nbsp;&nbsp;&nbsp;&nbsp;| "" &nbsp;&nbsp;&nbsp;&nbsp;| NULL
 
 La forme de nom des paramètres régionaux est préférée ; par exemple, utilisez `en-US` pour l'anglais (États-Unis) ou `bs-Cyrl-BA` pour le Bosniaque (cyrillique, Bosnie-Herzégovine). Le jeu de noms de paramètres régionaux est décrit dans la rubrique [Locale Names](/windows/desktop/Intl/locale-names). Pour obtenir une liste des noms de paramètres régionaux pris en charge par la version du système d’exploitation Windows, consultez la colonne **Balise de langue** de la table dans [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) dans [MS-LCID] : référence d’identificateur de code de langue (LCID) Windows. Cette ressource répertorie le langage, le script, et les parties régionales des noms de paramètres régionaux pris en charge. Pour plus d’informations sur les noms de paramètres régionaux pris en charge dont les ordres de tri ne sont pas définis par défaut, consultez la colonne **Locale name** dans la rubrique [Sort Order Identifiers](/windows/desktop/Intl/sort-order-identifiers). Sous Windows 10 ou version ultérieure, les noms de paramètres régionaux qui correspondent aux balises de langue BCP-47 valides sont autorisés. Par exemple, `jp-US` est une balise BCP-47 valide, mais elle ne correspond en fait qu’à `US` pour la fonctionnalité des paramètres régionaux.
 
@@ -50,8 +45,7 @@ Une valeur d’argument *locale* de `C` spécifie l'environnement de conformatio
 
 Spécifiez toutes les catégories de paramètres régionaux en même temps pour les fonctions `setlocale` et `_wsetlocale` à l'aide de la catégorie `LC_ALL` . Les catégories peuvent toutes être définies aux mêmes paramètres régionaux, ou vous pouvez définir chaque catégorie individuellement en utilisant un argument de paramètres régionaux qui se présente comme suit :
 
-> LC_ALL_specifier :: locale  
-&nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
+> LC_ALL_specifier :: locale &nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
 
 Spécifiez plusieurs types de catégories, séparés par des points-virgules. Les types de catégories non spécifiés utilisent les paramètres régionaux actuels. Par exemple, cet extrait de code attribue à toutes les catégories les paramètres régionaux actuels `de-DE`, puis définit les catégories `LC_MONETARY` sur `en-GB` et `LC_TIME` sur `es-ES` :
 
@@ -62,9 +56,9 @@ _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)  
-[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)  
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
-[Chaînes de langue](../c-runtime-library/language-strings.md)  
-[Chaînes pays/région](../c-runtime-library/country-region-strings.md)  
+[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[Chaînes de langue](../c-runtime-library/language-strings.md)<br/>
+[Chaînes pays/région](../c-runtime-library/country-region-strings.md)

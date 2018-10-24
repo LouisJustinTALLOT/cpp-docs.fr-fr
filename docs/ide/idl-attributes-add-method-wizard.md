@@ -17,52 +17,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea2f0cd3ae445c4804738567b5bd9265363995e3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ce9042a980190bf1fe3da06fb4a9843f73294dee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705156"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398844"
 ---
 # <a name="idl-attributes-add-method-wizard"></a>Attributs IDL, Assistant Ajout de méthode
-Utilisez cette page de l’Assistant Ajout de méthode pour spécifier tous les paramètres IDL (Interface Definition Language) de la méthode.  
-  
+
+Utilisez cette page de l’Assistant Ajout de méthode pour spécifier tous les paramètres IDL (Interface Definition Language) de la méthode.
+
 - **ID**
 
-   Définit l’ID numérique qui identifie la méthode. Consultez [id](/windows/desktop/Midl/id) dans les *Informations de référence MIDL*.  
-  
-   Cette zone n’est pas disponible pour les interfaces personnalisées ni pour les dispinterfaces MFC.  
-  
+   Définit l’ID numérique qui identifie la méthode. Consultez [id](/windows/desktop/Midl/id) dans les *Informations de référence MIDL*.
+
+   Cette zone n’est pas disponible pour les interfaces personnalisées ni pour les dispinterfaces MFC.
+
 - **call_as**
 
-   Spécifie le nom d’une méthode distante à laquelle cette méthode locale peut être mappée. Consultez [call_as](/windows/desktop/Midl/call-as) dans les *Informations de référence MIDL*.  
-  
-   Non disponible pour les dispinterfaces MFC.  
-  
+   Spécifie le nom d’une méthode distante à laquelle cette méthode locale peut être mappée. Consultez [call_as](/windows/desktop/Midl/call-as) dans les *Informations de référence MIDL*.
+
+   Non disponible pour les dispinterfaces MFC.
+
 - **helpcontext**
 
-   Spécifie un ID de contexte qui permet à l'utilisateur de voir des informations sur cette méthode dans le fichier d’aide. Consultez [helpcontext](/windows/desktop/Midl/helpcontext) dans les *Informations de référence MIDL*.  
-  
-   Non disponible pour les dispinterfaces MFC.  
-  
+   Spécifie un ID de contexte qui permet à l'utilisateur de voir des informations sur cette méthode dans le fichier d’aide. Consultez [helpcontext](/windows/desktop/Midl/helpcontext) dans les *Informations de référence MIDL*.
+
+   Non disponible pour les dispinterfaces MFC.
+
 - **helpstring**
 
-   Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique. Par défaut, il est défini sur « method *nom de la méthode* ». Consultez [helpstring](/windows/desktop/Midl/helpstring) dans les *Informations de référence MIDL*.  
-  
-   Non disponible pour les dispinterfaces MFC.  
-  
+   Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique. Par défaut, il est défini sur « method *nom de la méthode* ». Consultez [helpstring](/windows/desktop/Midl/helpstring) dans les *Informations de référence MIDL*.
+
+   Non disponible pour les dispinterfaces MFC.
+
 - **Attributs supplémentaires**
 
-   Non disponible pour les dispinterfaces MFC.  
-  
-   |Attribut|Description|  
-   |---------------|-----------------|  
-   |**hidden**|Indique que la méthode existe, mais qu’elle ne doit pas être affichée dans un navigateur orienté utilisateur. Consultez [hidden](/windows/desktop/Midl/hidden) dans les *Informations de référence MIDL*.|  
-   |**source**|Indique qu’un membre de la méthode est une source d’événements. Consultez [source](/windows/desktop/Midl/source) dans les *Informations de référence MIDL*.|  
-   |`local`|Spécifie au compilateur MIDL que la méthode n’est pas distante. Consultez [local](/windows/desktop/Midl/local) dans les *Informations de référence MIDL*.|  
-   |**restricted**|Spécifie que la méthode ne peut pas être appelée arbitrairement. Consultez [restricted](/windows/desktop/Midl/restricted) dans les *Informations de référence MIDL*.|  
-   |**vararg**|Spécifie que la méthode accepte un nombre variable d’arguments. Le dernier argument doit être un tableau sécurisé de type **VARIANT** qui contient tous les arguments restants. Consultez [vararg](/windows/desktop/Midl/vararg) dans les *Informations de référence MIDL*.|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Ajout d’une méthode](../ide/adding-a-method-visual-cpp.md)   
- [Assistant Ajout de méthode](../ide/add-method-wizard.md)
+   Non disponible pour les dispinterfaces MFC.
+
+   |Attribut|Description|
+   |---------------|-----------------|
+   |**hidden**|Indique que la méthode existe, mais qu’elle ne doit pas être affichée dans un navigateur orienté utilisateur. Consultez [hidden](/windows/desktop/Midl/hidden) dans les *Informations de référence MIDL*.|
+   |**source**|Indique qu’un membre de la méthode est une source d’événements. Consultez [source](/windows/desktop/Midl/source) dans les *Informations de référence MIDL*.|
+   |`local`|Spécifie au compilateur MIDL que la méthode n’est pas distante. Consultez [local](/windows/desktop/Midl/local) dans les *Informations de référence MIDL*.|
+   |**restricted**|Spécifie que la méthode ne peut pas être appelée arbitrairement. Consultez [restricted](/windows/desktop/Midl/restricted) dans les *Informations de référence MIDL*.|
+   |**vararg**|Spécifie que la méthode accepte un nombre variable d’arguments. Le dernier argument doit être un tableau sécurisé de type **VARIANT** qui contient tous les arguments restants. Consultez [vararg](/windows/desktop/Midl/vararg) dans les *Informations de référence MIDL*.|
+
+## <a name="see-also"></a>Voir aussi
+
+[Ajout d’une méthode](../ide/adding-a-method-visual-cpp.md)<br>
+[Assistant Ajout de méthode](../ide/add-method-wizard.md)

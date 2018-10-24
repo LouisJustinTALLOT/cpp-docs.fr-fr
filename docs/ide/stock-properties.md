@@ -15,29 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a9b2aa4389d693cfc6734a29f3a744e955ca3ea
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 201e6f0591d446dc0e6b036cfd7ac6f3028eb812
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213791"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430261"
 ---
 # <a name="stock-properties"></a>Propriétés stock
-Si vous ajoutez une propriété à une dispinterface MFC à l’aide de [l’Assistant Ajout de propriété](../ide/idl-attributes-add-property-wizard.md), vous pouvez choisir une propriété stock dans la liste **Nom de la propriété** de la page [Noms](../ide/names-add-property-wizard.md) de l’Assistant. Ces propriétés sont les suivantes :  
-  
-|Nom de propriété|Description|  
-|-------------------|-----------------|  
-|**Appearance**|Retourne ou définit une valeur qui détermine l’apparence du contrôle. La propriété **Appearance** du contrôle peut inclure ou omettre les effets 3D. Il s’agit d’une propriété ambiante en lecture/écriture.|  
-|`BackColor`|Retourne ou définit la propriété `BackColor` ambiante du contrôle avec une couleur de palette (RVB) ou une couleur système prédéfinie. Par défaut, sa valeur correspond à la couleur de premier plan du conteneur du contrôle. Il s’agit d’une propriété ambiante en lecture/écriture.|  
-|`BorderStyle`|Retourne ou définit le style de bordure d’un contrôle. Il s’agit d’une propriété en lecture/écriture.|  
-|**Légende**|Retourne ou définit la propriété **Caption** du contrôle. La légende est le titre de la fenêtre. **Caption** n’a pas de type d’implémentation **Variable membre**.|  
-|**Activé**|Retourne ou définit la propriété **Enabled** du contrôle. Un contrôle activé peut répondre aux événements générés par l’utilisateur.|  
-|**Police**|Retourne ou définit la police ambiante du contrôle. Null si le contrôle n’a pas de police.|  
-|`ForeColor`|Retourne ou définit la propriété `ForeColor` ambiante du contrôle.|  
-|**hWnd**|Retourne ou définit la propriété **hWnd** du contrôle. **hWnd** n’a pas de type d’implémentation **Variable membre**.|  
-|**ReadyState**|Retourne ou définit la propriété **ReadyState** du contrôle. Un contrôle peut être non initialisé, initialisé, en cours de chargement, interactif ou complet. Pour plus d’informations, consultez [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) dans le *kit SDK Internet*.|  
-|**Text**|Retourne ou définit le texte présent dans un contrôle. **Text** n’a pas de type d’implémentation **Variable membre**.|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Ajout d’une propriété](../ide/adding-a-property-visual-cpp.md)   
- [Attributs IDL, Assistant Ajout de propriété](../ide/idl-attributes-add-property-wizard.md)
+
+Si vous ajoutez une propriété à une dispinterface MFC à l’aide de [l’Assistant Ajout de propriété](../ide/idl-attributes-add-property-wizard.md), vous pouvez choisir une propriété stock dans la liste **Nom de la propriété** de la page [Noms](../ide/names-add-property-wizard.md) de l’Assistant. Ces propriétés sont les suivantes :
+
+|Nom de propriété|Description|
+|-------------------|-----------------|
+|**Appearance**|Retourne ou définit une valeur qui détermine l’apparence du contrôle. La propriété **Appearance** du contrôle peut inclure ou omettre les effets 3D. Il s’agit d’une propriété ambiante en lecture/écriture.|
+|`BackColor`|Retourne ou définit la propriété `BackColor` ambiante du contrôle avec une couleur de palette (RVB) ou une couleur système prédéfinie. Par défaut, sa valeur correspond à la couleur de premier plan du conteneur du contrôle. Il s’agit d’une propriété ambiante en lecture/écriture.|
+|`BorderStyle`|Retourne ou définit le style de bordure d’un contrôle. Il s’agit d’une propriété en lecture/écriture.|
+|**Légende**|Retourne ou définit la propriété **Caption** du contrôle. La légende est le titre de la fenêtre. **Caption** n’a pas de type d’implémentation **Variable membre**.|
+|**Activé**|Retourne ou définit la propriété **Enabled** du contrôle. Un contrôle activé peut répondre aux événements générés par l’utilisateur.|
+|**Police**|Retourne ou définit la police ambiante du contrôle. Null si le contrôle n’a pas de police.|
+|`ForeColor`|Retourne ou définit la propriété `ForeColor` ambiante du contrôle.|
+|**hWnd**|Retourne ou définit la propriété **hWnd** du contrôle. **hWnd** n’a pas de type d’implémentation **Variable membre**.|
+|**ReadyState**|Retourne ou définit la propriété **ReadyState** du contrôle. Un contrôle peut être non initialisé, initialisé, en cours de chargement, interactif ou complet. Pour plus d’informations, consultez [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) dans le *kit SDK Internet*.|
+|**Text**|Retourne ou définit le texte présent dans un contrôle. **Text** n’a pas de type d’implémentation **Variable membre**.|
+
+## <a name="see-also"></a>Voir aussi
+
+[Ajout d’une propriété](../ide/adding-a-property-visual-cpp.md)<br>
+[Attributs IDL, Assistant Ajout de propriété](../ide/idl-attributes-add-property-wizard.md)

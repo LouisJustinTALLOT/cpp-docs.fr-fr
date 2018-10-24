@@ -2,7 +2,7 @@
 title: Installer la charge de travail Linux C++ dans Visual Studio | Microsoft Docs
 description: Décrit comment télécharger, installer et configurer la charge de travail Linux pour C++ dans Visual Studio.
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -13,35 +13,46 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: e33b9ac72ca7691ccbb80a9a30349d3a1e31e194
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 403f1bcd8634c3f471f34ff1266501de5bf05d52
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207557"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601390"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Télécharger, installer et configurer la charge de travail Linux
 
-Pour utiliser l’IDE Visual Studio pour créer et déboguer des projets C++ sur Linux, vous devez installer la charge de travail **Développement Linux en C++**.
+Vous pouvez utiliser l’IDE Visual Studio dans Windows pour créer, modifier et déboguer des projets C++ qui s’exécutent sur une machine virtuelle, un ordinateur physique Linux ou le [sous-système Windows pour Linux](/windows/wsl/about). Pour chacun de ces scénarios, installez d’abord la charge de travail **Développement Linux en C++**.
 
 ## <a name="visual-studio-setup"></a>Installation Visual Studio
-1. Démarrez le programme d’installation de Visual Studio et sélectionnez la charge de travail **Développement Linux en C++**.
 
-   ![Extension de Visual C++ pour le développement Linux](media/linuxworkload.png)
+1. Tapez « Visual Studio Installer » dans le menu de recherche de Windows. Recherchez-le dans les résultats **Applications**, puis double-cliquez dessus. Quand le programme d’installation s’ouvre, choisissez **Modifier**, puis cliquez sur l’onglet **Charges de travail**. Faites défiler vers le bas jusqu’à **Autres ensembles d’outils** et sélectionnez la charge de travail **Développement Linux en C++**.
 
-2. Cliquez sur **Installer** pour continuer l’installation.
+   ![Charge de travail Visual C++ pour le développement sous Linux](media/linuxworkload.png)
+
+1. Si vous utilisez CMake ou que vous ciblez des plateformes incorporées ou IoT, accédez au volet **Détails de l’installation** à droite, sous **Développement Linux en C++**, développez **Composants facultatifs** et choisissez les composants dont vous avez besoin. 
+
+1. Cliquez sur **Modifier** pour continuer l’installation.
+
+
+## <a name="options-for-creating-a-linux-environment"></a>Options pour la création d’un environnement Linux
+
+Si vous n’avez pas encore de machine Linux, vous pouvez créer une Machine virtuelle Linux sur Azure. Pour plus d’informations, consultez [Guide de démarrage rapide : Créer une machine virtuelle Linux sur le Portail Azure](/azure/virtual-machines/linux/quick-create-portal).
+
+Une autre option, sur Windows 10, consiste à activer le sous-système Windows pour Linux. Pour plus d’informations, consultez le [Guide d’installation de Windows 10](/windows/wsl/install-win10).
 
 ## <a name="linux-setup"></a>Installation Linux
-**openssh-server**, **g++**, **gdb** et **gdbserver** doivent être installés sur l’ordinateur Linux cible et le démon ssh doit être en cours d’exécution.  Si ces éléments ne sont pas déjà présents, vous pouvez les installer comme suit :
- 
+
+**openssh-server**, **g++**, **gdb** et **gdbserver** doivent être installés sur l’ordinateur Linux cible et le démon ssh doit être en cours d’exécution. **zip** est obligatoire pour la synchronisation automatique des en-têtes distants avec votre ordinateur local pour la prise en charge d’Intellisense. Si ces applications ne sont pas déjà présentes, vous pouvez les installer comme suit :
+
 1. À l’invite de commandes du shell sur votre ordinateur Linux, exécutez :
 
-   `sudo apt-get install openssh-server g++ gdb gdbserver`
+   `sudo apt-get install openssh-server g++ gdb gdbserver zip`
 
    Vous pouvez être invité à indiquer votre mot de passe racine en raison de la commande sudo.  Dans ce cas, entrez-la et continuez.  Quand vous avez terminé, ces outils et services sont installés.
 
 1. Vérifiez que le service ssh est en cours d’exécution sur votre ordinateur Linux en exécutant :
 
    `sudo service ssh start`
-   
+
    Vous démarrez ainsi le service qui s’exécute en arrière-plan, prêt à accepter des connexions.
