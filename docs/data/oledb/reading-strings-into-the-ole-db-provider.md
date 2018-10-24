@@ -15,31 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b51611ff5727a89e47bef569865f915a189a993
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 6521ed8078f4411b704678b53f16fbdbc4d04e73
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410653"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989877"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lecture de chaînes dans le fournisseur OLE DB
 
-Le `RMyProviderRowset::Execute` fonction ouvre un fichier et lit les chaînes. Le consommateur passe le nom de fichier au fournisseur en appelant [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757). Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_szCommandText`. `Execute` lit le nom de fichier à partir de `m_szCommandText`. Si le nom de fichier n’est pas valide ou le fichier n’est pas disponible, `Execute` retourne une erreur. Sinon, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes. Pour chaque jeu de chaînes qu’il lit, `Execute` crée une instance de l’enregistrement utilisateur (`CAgentMan`) et le place dans un tableau.  
+Le `RCustomRowset::Execute` fonction ouvre un fichier et lit les chaînes. Le consommateur passe le nom de fichier au fournisseur en appelant [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757). Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_szCommandText`. `Execute` lit le nom de fichier à partir de `m_szCommandText`. Si le nom de fichier n’est pas valide ou le fichier n’est pas disponible, `Execute` retourne une erreur. Sinon, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes. Pour chaque jeu de chaînes qu’il lit, `Execute` crée une instance de l’enregistrement utilisateur (`CAgentMan`) et le place dans un tableau.  
   
 Si le fichier ne peut pas être ouvert, `Execute` doit retourner DB_E_NOTABLE. Si elle retourne E_FAIL à la place, le fournisseur ne fonctionnera pas avec beaucoup de consommateurs et ne peut pas passer de OLE DB [tests de compatibilité](../../data/oledb/testing-your-provider.md).  
   
 ## <a name="example"></a>Exemple  
-  
-### <a name="description"></a>Description  
 
 Le texte modifié `Execute` fonction ressemble à ceci :  
   
-### <a name="code"></a>Code  
-  
 ```cpp
 /////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
-class RMyProviderRowset : public CRowsetImpl< RMyProviderRowset, CAgentMan, CRMyProviderCommand>  
+// CustomRS.h  
+class RCustomRowset : public CRowsetImpl< RCustomRowset, CAgentMan, CRCustomCommand>  
 {  
 public:  
     HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)  

@@ -1,7 +1,7 @@
 ---
 title: Création d’un consommateur OLE DB à l’aide d’un Assistant | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 76f16c10ff4342e32a6081e89581945c53ee607c
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097885"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990111"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Création d'un consommateur OLE DB en utilisant l'Assistant
 
-Cette procédure montre comment vous pouvez utiliser l’Assistant Projet ATL et l’Assistant Consommateur OLE DB ATL pour générer un consommateur des modèles OLE DB, puis modifier le code principal de l’application de console pour récupérer et afficher des données à partir d’une table de base de données.  
+Cette procédure montre comment vous pouvez utiliser la **Assistant Projet ATL** et **Assistant Consommateur OLE DB ATL* pour générer un consommateur des modèles OLE DB, puis modifier le code principal de l’application de console à récupérer et afficher des données à partir d’une table de base de données.  
   
 Les deux dernières sections expliquent le code généré par l’Assistant du consommateur OLE DB.  
   

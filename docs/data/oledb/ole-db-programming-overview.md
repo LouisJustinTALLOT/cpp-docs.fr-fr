@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble de la programmation OLE DB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec41a0213c621e948a160553c03b17be39e9f2f3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5fea82dfd7d3f9cdd64d0eab66e44ac1a486abac
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090709"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989890"
 ---
 # <a name="ole-db-programming-overview"></a>Vue d'ensemble de la programmation OLE DB
 
-OLE DB est une technologie de base de données hautes performances, basé sur COM. Il fournit une méthode courante pour accéder aux données, quel que soit le formulaire dans lequel il est stocké. Dans une situation de l’entreprise classique, une grande quantité d’informations est stockée en dehors des bases de données d’entreprise. Ces informations se trouve dans les systèmes de fichiers (FAT ou NTFS), fichiers à accès séquentiel indexé, bases de données personnelles (par exemple, accès), des feuilles de calcul (par exemple, Excel), applications de planification de projet (par exemple, le projet) et messagerie (par exemple, Outlook). OLE DB vous permet d’accéder à n’importe quel type de magasin de données de la même manière, tant que le magasin de données a un fournisseur OLE DB.
+OLE DB est une technologie de base de données hautes performances, basé sur COM. Il fournit une méthode courante pour accéder aux données indépendantes de l’écran dans lequel il est stocké. Dans une situation d’entreprise classique, une grande quantité d’informations n’est pas stockée dans des bases de données d’entreprise. Ces informations se trouve dans les systèmes de fichiers (FAT ou NTFS), fichiers à accès séquentiel indexé, bases de données personnelles (par exemple, accès), des feuilles de calcul (par exemple, Excel), applications de planification de projet (par exemple, le projet) et messagerie (par exemple, Outlook). OLE DB vous permet d’accéder à n’importe quel type de magasin de données de la même manière, tant que le magasin de données a un fournisseur OLE DB.
   
 OLE DB permet de développer des applications qui accèdent à diverses sources de données, qu’ils soient SGBD ou non. OLE DB rend possible l’accès universel à l’aide des interfaces COM qui prennent en charge la fonctionnalité SGBD appropriée pour une source de données. COM réduit la duplication inutile des services et agrandie d’interopérabilité non seulement entre les sources de données, mais également entre d’autres applications.  
   

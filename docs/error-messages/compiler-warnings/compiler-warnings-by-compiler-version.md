@@ -1,7 +1,7 @@
 ---
 title: Avertissements du compilateur par version du compilateur | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/24/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c4d815ba1036a03042992d2715e49bbd8f74a28
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319082"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990384"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avertissements du compilateur par version du compilateur
 
@@ -45,10 +45,19 @@ Ces versions du compilateur a introduit de nouveaux avertissements :
 | Visual C++ 2017 version 15.5 | 19.12.25830.0 |
 | Visual C++ 2017 version 15.6 | 19.13.26128.0 |
 | Visual C++ 2017 version 15.7 | 19.14.26428.0 |
+| Visual C++ 2017 version 15.8 | 19.15.26726.0 |
 
 Vous pouvez spécifier uniquement le numéro principal, les numéros major et minor ou major, minor et les numéros de build pour le __/WV__ option. Le compilateur signale tous les avertissements qui correspondent aux versions qui commencent par le nombre spécifié et supprime tous les avertissements pour les versions supérieures que le nombre spécifié. Par exemple, __/Wv:17__ signale tous les avertissements introduits dans ou avant n’importe quelle version de Visual Studio 2012 et supprime tous les avertissements introduits par n’importe quel compilateur à partir de Visual Studio 2013 (version du 18) ou version ultérieure. Pour supprimer les avertissements introduits dans Visual Studio 2015 update 2 et versions ultérieures, vous pouvez utiliser __/Wv:19.00.23506__. Utilisez __/Wv:19.11__ pour signaler tous les avertissements introduits dans n’importe quelle version de Visual Studio antérieures à Visual Studio 2017 version 15.5, mais supprime les avertissements introduits dans Visual Studio 2017 version 15.5 et versions ultérieure.
 
 Les sections suivantes répertorient les avertissements introduits par chaque version de Visual C++, vous pouvez supprimer à l’aide de la __/WV__ option du compilateur. Le __/WV__ option ne peut pas supprimer les avertissements qui ne sont pas répertoriés, et qui sont antérieurs aux versions spécifiées du compilateur.
+
+## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Avertissements introduits dans Visual C++ 2017 version 15.8 (version du compilateur 19.15.26726.0)
+
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option de compilateur __/Wv:19.14__.
+
+|||
+|-|-|
+C5046|«*fonction*' : symbole impliquant le type avec une liaison interne non définie|
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Avertissements introduits dans Visual C++ 2017 version 15.7 (version du compilateur 19.14.26428.0)
 

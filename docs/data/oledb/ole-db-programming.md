@@ -1,7 +1,7 @@
 ---
 title: Programmation OLE DB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32f3fc1b6a990a746c3dc87740c63fbe898f79d5
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 2628756992298fa61bad070b72f66232d65bec5f
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410627"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990034"
 ---
 # <a name="ole-db-programming"></a>Programmation OLE DB
 
@@ -32,9 +32,9 @@ Les modèles OLE DB sont des modèles C++ qui facilitent l'utilisation de la tec
   
 Visual C++ prend également en charge des Assistants pour créer des applications de départ OLE DB.  
   
-En outre, vous pouvez utiliser des attributs pour implémenter les modèles de consommateurs OLE DB.  
+En outre, vous pouvez utiliser des attributs pour implémenter les modèles du consommateur OLE DB.  
   
-|Pour en savoir plus sur|Voir|  
+|Pour en savoir plus sur les sujets suivants|Voir|  
 |-------------------------|---------|  
 |Utilisation des modèles du consommateur OLE DB (rubriques conceptuelles)|[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|  
 |Utilisation des modèles du fournisseur OLE DB (rubriques conceptuelles)|[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
