@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939937ec79ae3e6d172b48d22368176088064397
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dba47b8464c7fcdd170df1819b65aa448d8f8aeb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434347"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808419"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Types de fichiers créés pour les projets Visual C++
 
@@ -82,7 +82,7 @@ Le tableau suivant présente les fichiers courants d'un projet Visual C++ et les
 |.pch|Débogage|Fichier d'en-tête précompilé.|
 |.rc, .rc2|Ressource|[Fichiers de script de ressources](../windows/working-with-resource-files.md) pour générer des ressources.|
 |.sbr|Compilation|Fichier intermédiaire d'explorateur de source. Fichier d'entrée de [BSCMAKE](../build/reference/bscmake-options.md).|
-|.sln|Solution|Fichier [solution](/visualstudio/ide/solutions-and-projects-in-visual-studio).|
+|.sln|Solution|Fichier [solution](/visualstudio/ide/solutions-and-projects-in-visual-studio) .|
 |.suo|Solution|Fichier d'options de solution.|
 |.txt|Ressource|Fichier texte, généralement le fichier « Lisez-moi ».|
 |.vap|Projet|Fichier projet Visual Studio Analyzer.|
@@ -105,4 +105,3 @@ Quand vous ajoutez un élément à un projet, vous l'ajoutez à toutes les confi
 
 [Création et gestion de projets Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Types de projets Visual C++](../ide/visual-cpp-project-types.md)<br>
-[Prise en charge d’autres langues par l’Assistant](../ide/wizard-support-for-other-languages.md)
