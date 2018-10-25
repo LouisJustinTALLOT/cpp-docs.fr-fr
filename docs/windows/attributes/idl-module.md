@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91bed0ebfdacae21f2d606c0b8fa1bb43326816d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 54fcef3c7b2ef86273a570e483f65b34b3b2efc2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791036"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063094"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -56,10 +56,10 @@ Un nom défini par l’utilisateur du bloc de code qui s’affiche dans le fichi
 (Facultatif) L’ID d’aide pour cette bibliothèque de types.
 
 *hidden*<br/>
-(Facultatif) Un paramètre qui empêche l’affichage de la bibliothèque. Consultez le [masqué](/windows/desktop/Midl/hidden) attribut MIDL pour plus d’informations.
+(Facultatif) Un paramètre qui empêche l’affichage de la bibliothèque. Pour plus d’informations, consultez l’attribut MIDL [hidden](/windows/desktop/Midl/hidden) .
 
 *restricted*<br/>
-(Facultatif) Membres de la bibliothèque ne peut pas être appelées arbitrairement. Consultez le [restreint](/windows/desktop/Midl/restricted) attribut MIDL pour plus d’informations.
+(Facultatif) Membres de la bibliothèque ne peut pas être appelées arbitrairement. Pour plus d’informations, consultez l’attribut MIDL [restricted](/windows/desktop/Midl/restricted) .
 
 *déclaration de fonction*<br/>
 La fonction que vous définirez.
@@ -98,10 +98,10 @@ void FuncName(int i);
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs autonomes](stand-alone-attributes.md)<br/>
-[entry](entry.md)  
+[entry](entry.md)

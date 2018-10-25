@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 338404abe7499b6d9ff7679420f069a2857ce1e0
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: de3ca61005d0bafcc4387c793b09ec4925faf64b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494437"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064073"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programmation .NET avec C++/CLI (Visual C++)
 
-**Visual Studio 2015**: par défaut, les projets CLR créés avec Visual Studio 2015 ciblent .NET Framework 4.5.2. Pour cibler .NET Framework 4.6 quand vous créez un projet, dans la boîte de dialogue **Nouveau projet** , remplacez la version cible de .NET Framework dans la zone de liste déroulante en haut et au milieu de la boîte de dialogue. Pour changer la version cible de .NET Framework pour un projet existant, fermez le projet, éditez le fichier projet (.vcxproj), puis remplacez la valeur de la version cible de .NET Framework par 4.6. La prochaine fois que vous ouvrez le projet, les paramètres prennent effet. 
+**Visual Studio 2015**: par défaut, les projets CLR créés avec Visual Studio 2015 ciblent .NET Framework 4.5.2. Pour cibler .NET Framework 4.6 quand vous créez un projet, dans la boîte de dialogue **Nouveau projet** , remplacez la version cible de .NET Framework dans la zone de liste déroulante en haut et au milieu de la boîte de dialogue. Pour changer la version cible de .NET Framework pour un projet existant, fermez le projet, éditez le fichier projet (.vcxproj), puis remplacez la valeur de la version cible de .NET Framework par 4.6. La prochaine fois que vous ouvrez le projet, les paramètres prennent effet.
 
-**Visual Studio 2017**: dans Visual Studio 2017, l’infrastructure par défaut est 4.6.1 et le sélecteur de version de Framework est en bas de la **boîte de dialogue Nouveau projet**. C++ / c++ / CLI proprement dite n’est pas installé par défaut. Pour installer le composant, ouvrez le programme d’installation Visual Studio et choisir C++ / c++ / CLI composant sous Visual C++. 
+**Visual Studio 2017**: dans Visual Studio 2017, l’infrastructure par défaut est 4.6.1 et le sélecteur de version de Framework est en bas de la **boîte de dialogue Nouveau projet**. C++ / c++ / CLI proprement dite n’est pas installé par défaut. Pour installer le composant, ouvrez le programme d’installation Visual Studio et choisir C++ / c++ / CLI composant sous Visual C++.
 
 ## <a name="in-this-section"></a>Dans cette section
 

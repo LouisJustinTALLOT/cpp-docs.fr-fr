@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76d53a1322024f1a56477de4e4b58bcdb88930ad
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 2b8f9b1e40deadbc23fe19f02bf2aaef899c52a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328478"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056692"
 ---
 # <a name="safecast-ccli-and-ccx"></a>safe_cast (C++ / c++ / CLI et c++ / CX)
 
@@ -37,7 +37,7 @@ Le **safe_cast** opération retourne l’expression spécifiée en tant que type
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[default]:: safe_cast< type-id >( expression )  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ## <a name="windows-runtime"></a>Windows Runtime
@@ -107,7 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[cli]:: safe_cast< type-id >( expression )  
+[cli]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -136,7 +136,7 @@ Pour plus d’informations sur **safe_cast**, consultez :
 
 - [Les Casts de Style C avec /clr (C++ / c++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)
 
-- [Guide pratique pour utiliser safe_cast dans C++-CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+- [Guide pratique pour utiliser safe_cast dans C++-CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -176,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

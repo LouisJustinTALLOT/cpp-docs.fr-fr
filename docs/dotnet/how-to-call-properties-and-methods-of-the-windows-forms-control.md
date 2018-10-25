@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393397"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061571"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Comment : appeler des propriétés et des méthodes du contrôle Windows Forms
 
@@ -39,11 +39,11 @@ Cette rubrique suppose que vous avez déjà effectué [Comment : créer le cont
 
 1. Ajoutez la ligne suivante à la section publique de remplacements de la `CMFC02View` déclaration dans MFC02View.h de classe.
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. Ajoutez une substitution pour OnInitialupdate.
 
-     Afficher le **propriétés** fenêtre (F4). Dans **affichage de classes** (CTRL + MAJ + C), sélectionnez CMFC02View classe. Dans le **propriétés** fenêtre, sélectionnez l’icône pour les remplacements. Scoll vers le bas la liste pour OnInitialUpdate. Cliquez sur la liste déroulante et sélectionnez \<Ajouter >. Dans MFC02View.cpp. Assurez-vous que le corps de la fonction OnInitialUpdate est comme suit :
+   Afficher le **propriétés** fenêtre (F4). Dans **affichage de classes** (CTRL + MAJ + C), sélectionnez CMFC02View classe. Dans le **propriétés** fenêtre, sélectionnez l’icône pour les remplacements. Scoll vers le bas la liste pour OnInitialUpdate. Cliquez sur la liste déroulante et sélectionnez \<Ajouter >. Dans MFC02View.cpp. Assurez-vous que le corps de la fonction OnInitialUpdate est comme suit :
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ Cette rubrique suppose que vous avez déjà effectué [Comment : créer le cont
 
 1. Générez et exécutez le projet.
 
-     Dans le menu **Générer** , cliquez sur **Générer la solution**.
+   Dans le menu **Générer** , cliquez sur **Générer la solution**.
 
-     Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.
+   Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.
 
-     Notez que la zone de texte est maintenant initialisée.
+   Notez que la zone de texte est maintenant initialisée.
 
 ## <a name="see-also"></a>Voir aussi
 

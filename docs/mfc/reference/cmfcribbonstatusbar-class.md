@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bc8c58c6f11903b483893e99f415ab836ae358
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4303dc9f5f72e4a9500a1d5a6a7c210e7f7bc62f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448049"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063794"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Cmfcribbonstatusbar, classe
 
@@ -121,7 +121,7 @@ En règle générale, la zone principale de la barre d’état affiche des notif
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonStatusBar` classe. L’exemple montre comment ajouter un nouvel élément de ruban à la barre d’état de ruban, ajoutez un élément de ruban à la zone étendue de la barre d’état du ruban, ajoutez un séparateur et activer le mode normal pour la barre d’état du ruban.
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonStatusBar` . L’exemple montre comment ajouter un nouvel élément de ruban à la barre d’état de ruban, ajoutez un élément de ruban à la zone étendue de la barre d’état du ruban, ajoutez un séparateur et activer le mode normal pour la barre d’état du ruban.
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -289,8 +289,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*uiCmdID*<br/>
-[in] [in] *BOOL*
+[in] *uiCmdID*<br/>
+[in] *BOOL*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -385,7 +385,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *rect*
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -425,7 +425,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pElement*
+[in] *pElement*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -460,7 +460,7 @@ virtual void OnDrawInformation(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *strInfo*<br/>

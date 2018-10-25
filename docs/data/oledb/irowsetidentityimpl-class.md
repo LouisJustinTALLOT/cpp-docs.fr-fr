@@ -25,65 +25,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b47cbf2b30323cf51881ebaae9f546001a2d61b3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 9a1b11450dd67e63927aeb20c54643a5980fa672
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058867"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl, classe
 
-Implémente la norme OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913) interface, ce qui permet de tester pour l’identité de ligne.  
-  
+Implémente la norme OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913) interface, ce qui permet de tester pour l’identité de ligne.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class T, class RowClass = CSimpleRow>  
-class ATL_NO_VTABLE IRowsetIdentityImpl   
-   : public IRowsetIdentity  
-```  
-  
-### <a name="parameters"></a>Paramètres  
+template <class T, class RowClass = CSimpleRow>
+class ATL_NO_VTABLE IRowsetIdentityImpl
+   : public IRowsetIdentity
+```
+
+### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Une classe dérivée de `IRowsetIdentityImpl`.  
-  
+Une classe dérivée de `IRowsetIdentityImpl`.
+
 *RowClass*<br/>
-L’unité de stockage pour le `HROW`.  
+L’unité de stockage pour le `HROW`.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atldb.h  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="methods"></a>Méthodes  
-  
-|||  
-|-|-|  
-|[IsSameRow](#issamerow)|Compare deux handles de ligne pour voir si elles font référence à la même ligne.|  
-  
+**En-tête :** atldb.h
+
+## <a name="members"></a>Membres
+
+### <a name="methods"></a>Méthodes
+
+|||
+|-|-|
+|[IsSameRow](#issamerow)|Compare deux handles de ligne pour voir si elles font référence à la même ligne.|
+
 ## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
 
-Compare deux handles de ligne pour voir si elles font référence à la même ligne.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Compare deux handles de ligne pour voir si elles font référence à la même ligne.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-STDMETHOD(IsSameRow )(HROW hThisRow,  
-   HROW hThatRow);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+STDMETHOD(IsSameRow )(HROW hThisRow,
+   HROW hThatRow);
+```
 
-Consultez [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) dans le *de référence du programmeur OLE DB*.  
-  
-### <a name="remarks"></a>Notes  
+#### <a name="parameters"></a>Paramètres
 
-Pour comparer les handles de ligne, cette méthode convertit le `HROW` gère à `RowClass` membres et appelle `memcmp` sur les pointeurs.  
-  
-## <a name="see-also"></a>Voir aussi  
+Consultez [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) dans le *de référence du programmeur OLE DB*.
+
+### <a name="remarks"></a>Notes
+
+Pour comparer les handles de ligne, cette méthode convertit le `HROW` gère à `RowClass` membres et appelle `memcmp` sur les pointeurs.
+
+## <a name="see-also"></a>Voir aussi
 
 [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

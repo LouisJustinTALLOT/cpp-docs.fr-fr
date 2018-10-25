@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 153e1bba37b10da64b394c48ee1cf8c059ae86e9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 03131071f38dbbe1f9e1dbc2dc6645dcfb5d7366
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083021"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057853"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -87,7 +87,7 @@ L’exemple suivant associe le `nOutput` variable avec un paramètre de sortie.
 #include <atldbcli.h>
 
 [ db_source(L"my_connection_string"),
-  db_command(L"{ ? = CALL dbo.\"Sales by Year\"(?,?) }")  
+  db_command(L"{ ? = CALL dbo.\"Sales by Year\"(?,?) }")
 ]
 struct CSalesbyYear {
    DBSTATUS m_dwShippedDateStatus;
@@ -128,4 +128,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)  
+[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)

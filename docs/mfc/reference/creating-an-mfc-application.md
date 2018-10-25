@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c20d3214f8f2f76fedaeebcd439f10e016ccdd9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ec61db21b27ef49f660751605b4788599f7f3485
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410635"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062494"
 ---
 # <a name="creating-an-mfc-application"></a>Création d'une application MFC
 
@@ -63,5 +63,4 @@ Une fois votre projet créé, vous pouvez afficher les fichiers créés dans **l
 
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pages de propriétés](../../ide/property-pages-visual-cpp.md)
-
 

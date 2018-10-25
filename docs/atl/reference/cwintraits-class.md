@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69ea4cf411e0ded0f1c324cea439d5a5a4c0c553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069390"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062468"
 ---
 # <a name="cwintraits-class"></a>CWinTraits, classe
 
@@ -68,15 +68,15 @@ Utilisez ce modèle lorsque vous souhaitez fournir par défaut des styles de fen
 
 ATL fournit trois spécialisations prédéfinies de ce modèle pour des combinaisons de styles de fenêtre couramment utilisés :
 
-- `CControlWinTraits`  
+- `CControlWinTraits`
 
    Conçu pour une fenêtre de contrôle standard. Les styles standards suivants sont utilisés : WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Il n’existe aucun des styles étendus.
 
-- `CFrameWinTraits`  
+- `CFrameWinTraits`
 
    Conçu pour une fenêtre frame standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_APPWINDOW et WS_EX_WINDOWEDGE.
 
-- `CMDIChildWinTraits`  
+- `CMDIChildWinTraits`
 
    Conçu pour une fenêtre enfant MDI standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_MDICHILD.
 

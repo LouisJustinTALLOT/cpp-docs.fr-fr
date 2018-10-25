@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3a0ec5a39d6e99e5ceb6ec4ed089373e3057c1e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ccc83dd6f51c3b7072b17d141f29e93c63688fa1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790640"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059530"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -53,9 +53,9 @@ Reportez-vous aux exemples de [defaultvalue](defaultvalue.md) et [nonextensible]
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|**dispinterface**|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs d’interface](interface-attributes.md)  
+[Attributs d’interface](interface-attributes.md)

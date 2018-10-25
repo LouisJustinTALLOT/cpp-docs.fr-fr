@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441926"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059868"
 ---
 # <a name="key-wrl-apis-by-category"></a>API WRL principales par catégorie
+
 Les tableaux suivants répertorient les principaux classes, structs, fonctions et macros bibliothèque de modèles C++ Windows Runtime. Constructions dans les classes et les espaces de noms d’assistance sont omises. Ces listes complètent la documentation de l’API, organisée par espace de noms.
-  
-### <a name="classes"></a>Classes
-  
+
+## <a name="classes"></a>Classes
+
 |Titre|Description|
 |-----------|-----------------|
 |[ActivationFactory, classe](../windows/activationfactory-class.md)|Permet à une ou plusieurs classes d'être activées par le Windows Runtime.|
@@ -46,18 +47,18 @@ Les tableaux suivants répertorient les principaux classes, structs, fonctions e
 |[SimpleActivationFactory, classe](../windows/simpleactivationfactory-class.md)|Fournit un mécanisme fondamental pour créer une classe de base Windows Runtime ou une classe de base COM classique.|
 |[SimpleClassFactory, classe](../windows/simpleclassfactory-class.md)|Fournit un mécanisme fondamental pour créer une classe de base.|
 |[WeakRef, classe](../windows/weakref-class.md)|Représente une *référence faible* qui peut être utilisée uniquement par le Windows Runtime, pas par le COM classique. Une référence faible représente un objet qui peut être accessible ou non.|
-  
-### <a name="structures"></a>Structures
-  
+
+## <a name="structures"></a>Structures
+
 |Titre|Description|
 |-----------|-----------------|
 |[ChainInterfaces, structure](../windows/chaininterfaces-structure.md)|Spécifie les fonctions de vérification et d'initialisation pouvant être appliquées à un ensemble d'ID d'interface.|
 |[CloakedIid, structure](../windows/cloakediid-structure.md)|Indique à la `RuntimeClass`, `Implements` et `ChainInterfaces` modèles que l’interface spécifiée n’est pas accessible dans la liste des IID.|
 |[Implements, structure](../windows/implements-structure.md)|Implémente `QueryInterface` et `GetIid` pour les interfaces spécifiées.|
 |[MixIn, structure](../windows/mixin-structure.md)|Garantit qu'une classe d'exécution dérive des interfaces du Windows Runtime, le cas échéant, puis des interfaces du COM classique.|
-  
-### <a name="functions"></a>Fonctions
-  
+
+## <a name="functions"></a>Fonctions
+
 |Titre|Description|
 |-----------|-----------------|
 |[ActivateInstance, fonction](../windows/activateinstance-function.md)|Enregistre et récupère une instance d’un type spécifié défini dans un ID de classe spécifié.|
@@ -67,14 +68,14 @@ Les tableaux suivants répertorient les principaux classes, structs, fonctions e
 |[CreateClassFactory, fonction](../windows/createclassfactory-function.md)|Crée une fabrique produisant des instances de la classe spécifiée.|
 |[GetActivationFactory, fonction](../windows/getactivationfactory-function.md)|Récupère une fabrique d’activation pour le type spécifié par le paramètre de modèle.|
 |[Make, fonction](../windows/make-function.md)|Initialise la classe Windows Runtime spécifiée.|
-  
-### <a name="macros"></a>Macros
-  
+
+## <a name="macros"></a>Macros
+
 |Titre|Description|
 |-----------|-----------------|
 |[ActivatableClass, macros](../windows/activatableclass-macros.md)|Remplit un cache interne qui contient une fabrique pouvant créer une instance de la classe spécifiée.|
 |[InspectableClass, macro](../windows/inspectableclass-macro.md)|Définit le niveau de confiance et de nom de la classe runtime.|
-  
+
 ## <a name="see-also"></a>Voir aussi
 
 [Bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

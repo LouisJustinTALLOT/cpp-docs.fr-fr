@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 765cb6ccf24415c174761c57268dc79e1fc6845b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062559"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Opérations CString relatives aux chaînes de style C
 
@@ -54,9 +54,9 @@ Un [CString](../atl-mfc-shared/using-cstring.md) objet contient des données de 
 
 Pour utiliser un `CString` sous forme de chaîne C-style de l’objet, effectuez un cast de l’objet en type LPCTSTR. Dans l'exemple suivant, `CString` retourne un pointeur vers une chaîne terminée par le caractère null de style C en lecture seule. La fonction `strcpy` place une copie de la chaîne de style C dans la variable `myString`.
 
-```
-CString aCString = "A string";  
-char myString[256];  
+```cpp
+CString aCString = "A string";
+char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
@@ -67,7 +67,7 @@ Vous pouvez parfois avoir besoin d'une copie des données de `CString` pour les 
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
-> Le troisième argument de `strcpy_s` (ou la portable Unicode/MBCS `_tcscpy_s`) est soit un `const wchar_t*` (Unicode) ou un `const char*` (ANSI). L'exemple ci-dessus passe un objet `CString` pour cet argument. Le compilateur C++ applique automatiquement la fonction de conversion définie pour la classe `CString` qui convertit un objet `CString` en un pointeur `LPCTSTR`. La possibilité de définir des opérations de cast d’un type vers un autre type est une des fonctionnalités les plus pratiques de C++.
+> Le troisième argument de `strcpy_s` (ou la portable Unicode/MBCS `_tcscpy_s`) est soit un `const wchar_t*` (Unicode) ou un `const char*` (ANSI). L’exemple ci-dessus passe un objet `CString` pour cet argument. Le compilateur C++ applique automatiquement la fonction de conversion définie pour la classe `CString` qui convertit un objet `CString` en un pointeur `LPCTSTR`. La possibilité de définir des opérations de cast d’un type vers un autre type est une des fonctionnalités les plus pratiques de C++.
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Utilisation des fonctions de chaîne Standard Run-Time Library
 
@@ -93,7 +93,7 @@ Les méthodes `GetBuffer` et `ReleaseBuffer` offrent un accès à la mémoire ta
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Utilisation d’objets CString avec des fonctions d’arguments variables
 
-Certaines fonctions C prennent un nombre variable d’arguments. `printf_s` en est un bon exemple. En raison de la façon dont ce type de fonction est déclaré, le compilateur ne peut pas être sûr du type des arguments et ne peut pas déterminer quelle opération de conversion effectuer sur chacun des arguments. Il est donc essentiel d'utiliser un cast de type explicite quand vous passez un objet `CString` à une fonction qui prend un nombre variable d'arguments.
+Certaines fonctions C prennent un nombre variable d’arguments. `printf_s` en est un bon exemple. En raison de la façon dont ce type de fonction est déclaré, le compilateur ne peut pas être sûr du type des arguments et ne peut pas déterminer quelle opération de conversion effectuer sur chacun des arguments. Il est donc essentiel d’utiliser un cast de type explicite quand vous passez un objet `CString` à une fonction qui prend un nombre variable d’arguments.
 
 Pour utiliser un `CString` objet dans une fonction d’argument variable, effectuer un cast explicite le `CString` vers une chaîne LPCTSTR, comme illustré dans l’exemple suivant.
 
@@ -101,7 +101,7 @@ Pour utiliser un `CString` objet dans une fonction d’argument variable, effect
 
 ##  <a name="_core_specifying_cstring_formal_parameters"></a> Spécification de paramètres formels CString
 
-Pour la plupart des fonctions nécessitant un argument de type chaîne, il est préférable de spécifier les paramètres formels dans le prototype de la fonction sous la forme d'un pointeur `const` vers un caractère (`LPCTSTR`) au lieu d'un objet `CString`. Lorsqu’un paramètre formel est spécifié comme un `const` pointeur vers un caractère, vous pouvez passer soit un pointeur vers un tableau de type par TCHAR, une chaîne littérale [`"hi there"`], ou un `CString` objet. Le `CString` objet sera automatiquement converti en un type LPCTSTR. N’importe où vous pouvez utiliser un type LPCTSTR, vous pouvez également utiliser un `CString` objet.
+Pour la plupart des fonctions nécessitant un argument de type chaîne, il est préférable de spécifier les paramètres formels dans le prototype de la fonction sous la forme d’un pointeur `const` vers un caractère (`LPCTSTR`) au lieu d’un objet `CString`. Lorsqu’un paramètre formel est spécifié comme un `const` pointeur vers un caractère, vous pouvez passer soit un pointeur vers un tableau de type par TCHAR, une chaîne littérale [`"hi there"`], ou un `CString` objet. Le `CString` objet sera automatiquement converti en un type LPCTSTR. N’importe où vous pouvez utiliser un type LPCTSTR, vous pouvez également utiliser un `CString` objet.
 
 Vous pouvez également spécifier un paramètre formel en tant que référence de chaîne constante (c'est-à-dire, `const CString&`) si l’argument ne sera pas modifié. Supprimer le **const** modificateur si la chaîne sera modifiée par la fonction. Si vous voulez une valeur null par défaut, initialisez-la avec la chaîne null [`""`], comme ci-dessous :
 

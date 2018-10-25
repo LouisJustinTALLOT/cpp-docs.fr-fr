@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af4817c3b89f83fd9f3f22875e5da26053b55c87
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 89fb592a29fec5198ee96b25319e194eeaffa91f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063599"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -53,7 +53,7 @@ Consultez l’exemple de [peut être liée](bindable.md) pour obtenir un exemple
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -62,4 +62,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [Attributs de membre de données](data-member-attributes.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
-[requestedit](requestedit.md)  
+[requestedit](requestedit.md)

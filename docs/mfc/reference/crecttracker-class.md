@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b229382a5d72607d8aa624002a88ead88800a028
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 98da12276e21a9619468cea3bbaba0190ac54e63
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056865"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (classe)
 
@@ -151,7 +151,6 @@ Crée et initialise un `CRectTracker` objet.
 ```
 CRectTracker();
 
-
 CRectTracker(
     LPCRECT lpSrcRect,
     UINT nStyle);
@@ -191,7 +190,7 @@ void Draw(CDC* pDC) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique sur lequel dessiner.
 
 ### <a name="remarks"></a>Notes
@@ -218,7 +217,7 @@ Pointeur vers le `RECT` qui contient le rectangle à dessiner.
 *pWndClipTo*<br/>
 Pointeur vers la fenêtre à utiliser dans le rectangle de détourage.
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique sur lequel dessiner.
 
 *pWnd*<br/>

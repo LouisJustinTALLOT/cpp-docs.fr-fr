@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e3de9b373a80ef939f5ac5ff3d746e0ebdc8b74
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45c1c105fafcadab74107b008f437d49f420e66e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061090"
 ---
 # <a name="using-cstring"></a>Utilisation de CString
 
@@ -43,13 +43,13 @@ Pour ajouter davantage de capacités à celles actuellement offertes par `CStrin
 
 Le code suivant montre comment créer un objet `CString` et l'imprimer dans la sortie standard :
 
-```cpp  
+```cpp
 #include <atlstr.h>
 
-int main() {  
-    CString aCString = CString(_T("A string"));  
-    _tprintf(_T("%s"), (LPCTSTR) aCString);  
-}  
+int main() {
+    CString aCString = CString(_T("A string"));
+    _tprintf(_T("%s"), (LPCTSTR) aCString);
+}
 ```
 
 ## <a name="in-this-section"></a>Dans cette section

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 109b0303eaf4c4352d4e9b426642f92e361051a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410705"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063404"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilisation d'assemblys vérifiables avec SQL Server (C++/CLI)
 
@@ -32,7 +32,7 @@ SQL Server fournit des extensions à Transact-SQL (T-SQL) pour vous permettre d�
 
 - Mode non restreint : exécuter du code à vos risques et périls ; code ne devra pas être de type sécurisé.
 
-- Mode sans échec : exécuter sécurisé vérifié le code de type sécurisé ; compilé avec/clr : safe. 
+- Mode sans échec : exécuter sécurisé vérifié le code de type sécurisé ; compilé avec/clr : safe.
 
 > [!IMPORTANT]
 > Déconseillé de Visual Studio 2015 et Visual Studio 2017 ne prend pas en charge la **/CLR : pure** et **/CLR : safe** la création de projets vérifiables. Si vous avez besoin du code vérifiable, nous vous recommandons de que vous traduisez votre code en c#.
@@ -88,6 +88,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
 ## <a name="see-also"></a>Voir aussi
-
 
 [Classes et structs](../cpp/classes-and-structs-cpp.md)

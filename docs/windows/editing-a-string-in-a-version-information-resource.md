@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5a456c745a11fa4250ad731f00556b211ad21b8f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445022"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061701"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>Modification d’une chaîne dans une ressource d’informations de Version (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "46445022"
 
 1. Cliquez sur l’élément pour le sélectionner, puis recliquez dessus pour commencer à le modifier. Apportez les modifications directement dans le **informations de Version** table ou dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Les modifications que vous apportez apparaîtront aux deux emplacements.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Lors de la modification la `FILEFLAGS` clé dans le **informations de Version** éditeur, vous remarquerez que vous ne pouvez pas définir le **déboguer**, **Private Build**, ou **spécial Build** propriétés (dans le **propriétés** fenêtre) pour les fichiers .rc :
 
    - Le **informations de Version** éditeur attribue le **déboguer** propriété avec une `#ifdef` dans le script de ressources, selon le `_DEBUG` indicateur de build.
@@ -49,4 +49,4 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Éditeur d’informations sur la version](../windows/version-information-editor.md)<br/>
-[Informations de version (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+[Informations sur la version (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

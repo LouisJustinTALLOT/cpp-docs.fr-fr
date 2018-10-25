@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a03708f96f881206aa683b31c26c3c5192f8cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8f4a3ba23fbf6e9465d78b04fcd79758c7cae525
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060226"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : copier-coller des données
 
@@ -56,7 +56,7 @@ Collage de données est plus complexe que la copie, car vous devez choisir le fo
 
 1. Appelez `COleDataObject::IsDataAvailable` pour vérifier si un format particulier est disponible.
 
-     Vous pouvez également utiliser `COleDataObject::BeginEnumFormats` pour rechercher d’autres formats jusqu'à ce que vous trouviez un adapté à votre application.
+   Vous pouvez également utiliser `COleDataObject::BeginEnumFormats` pour rechercher d’autres formats jusqu'à ce que vous trouviez un adapté à votre application.
 
 1. Effectuer le collage du format.
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2e9fdbef911a0160ff42925a9c7984f0211069
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6f00b3c3136a4a2df96667d0f99f195339c60f1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843221"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056618"
 ---
 # <a name="hash-structure-c-standard-library"></a>hash, structure (bibliothèque standard C++)
 
@@ -34,11 +34,10 @@ struct hash<thread::id> :
 {
     size_t operator()(thread::id Val) const;
 
-
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<thread >
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0b9a8e72cb3c1334484ed4a4e5c85c8b9a12347
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055136"
 ---
 # <a name="marshaling-global-functions"></a>Fonctions globales de marshaling
 
@@ -34,7 +34,7 @@ Ces fonctions fournissent la prise en charge de marshaling et de conversion de d
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Libère les données de marshaling et les `IStream` pointeur.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crée un objet de flux et marshale le pointeur d’interface spécifié.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Convertit les données de marshaling d’un flux en un pointeur d’interface.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Convertit les données de marshaling d’un flux en un pointeur d’interface.|
 
 ## <a name="requirements"></a>Configuration requise :
 
@@ -42,7 +42,7 @@ Ces fonctions fournissent la prise en charge de marshaling et de conversion de d
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Libère les données de marshaling dans le flux, puis libère le pointeur de flux.  
+Libère les données de marshaling dans le flux, puis libère le pointeur de flux.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

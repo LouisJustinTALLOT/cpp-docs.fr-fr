@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67a0fd2af9bb8bf3ec11d5a4e2a38c195b18633c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d29222b461091dcd72a0c894a138a4df15b9d4b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057287"
 ---
 # <a name="database-macros-and-globals"></a>Macros et objet Globals de base de données
 
@@ -50,7 +50,6 @@ Avant de 4.2 de MFC, les macros `AFX_SQL_ASYNC` et `AFX_SQL_SYNC` a donné des o
 |-|-|
 |[AfxDbInitModule](#afxdbinitmodule)|Ajoute la prise en charge de la base de données pour une DLL MFC normale liée de manière dynamique aux MFC.|
 |[AfxGetHENV](#afxgethenv)|Récupère un handle vers l’environnement ODBC en cours d’utilisation par MFC. Vous pouvez utiliser ce handle dans les appels ODBC directs.|
-
 
 ## <a name="afxdbinitmodule"></a> AfxDbInitModule
 
@@ -74,8 +73,6 @@ Assurez-vous que cet appel se produit avant tout appel de la classe de base ou d
 
 [Macros et objet Globals](mfc-macros-and-globals.md)
 
-
-
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 
 Utilisez cette macro pour appeler une fonction API ODBC qui peut-être retourner `SQL_STILL_EXECUTING`.
@@ -96,7 +93,6 @@ Une fonction API ODBC. Pour plus d’informations sur les fonctions API ODBC, co
 Avant d’appeler `AFX_ODBC_CALL`, vous devez déclarer une variable, `nRetCode`, de type et RETCODE contient.
 
 Notez que des classes ODBC MFC maintenant utiliser uniquement le traitement synchrone. Pour effectuer une opération asynchrone, vous devez appeler la fonction API ODBC `SQLSetConnectOption`. Pour plus d’informations, consultez la rubrique « L’exécution de fonctions de façon asynchrone » dans le SDK Windows.
-
 
 ### <a name="example"></a>Exemple
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e67ed063030ae619124d82cb8fb8de3e7a6ff708
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: cf3e41beccf351fdda52fb7e126996a8cfbd3239
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790592"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063016"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -76,7 +76,7 @@ __interface IFireTabCtrl : IDispatch {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -86,4 +86,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [retval](retval.md)<br/>
 [in](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>
-[unique](unique-cpp.md)  
+[unique](unique-cpp.md)

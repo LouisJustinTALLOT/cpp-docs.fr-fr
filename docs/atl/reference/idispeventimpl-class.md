@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2419b4da0cad2662a246c167938d673429afbf26
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060896"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl, classe
 
@@ -44,7 +44,7 @@ template <UINT nID, class T,
     const IID* pdiid = &IID_NULL,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
@@ -102,7 +102,7 @@ La classe utilisée pour gérer les informations de type pour *T*. La valeur par
 
 `IDispEventImpl` fonctionne conjointement avec la table de récepteur d’événements dans votre classe pour acheminer les événements à la fonction gestionnaire approprié. Pour utiliser cette classe :
 
-Ajouter un [aide de SINK_ENTRY](composite-control-macros.md#sink_entry) ou [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) macro à la table de récepteur d’événements pour chaque événement sur chaque objet que vous souhaitez gérer. Lorsque vous utilisez `IDispEventImpl` une classe de base d’un contrôle composite, vous pouvez appeler la méthode [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) à établir et rompre la connexion avec les sources d’événements pour toutes les entrées de table de récepteur de l’événement. Dans d’autres cas, ou pour un meilleur contrôle, appelez [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) pour établir la connexion entre l’objet source et la classe de base. Appelez [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) interrompre la connexion.  
+Ajouter un [aide de SINK_ENTRY](composite-control-macros.md#sink_entry) ou [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) macro à la table de récepteur d’événements pour chaque événement sur chaque objet que vous souhaitez gérer. Lorsque vous utilisez `IDispEventImpl` une classe de base d’un contrôle composite, vous pouvez appeler la méthode [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) à établir et rompre la connexion avec les sources d’événements pour toutes les entrées de table de récepteur de l’événement. Dans d’autres cas, ou pour un meilleur contrôle, appelez [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) pour établir la connexion entre l’objet source et la classe de base. Appelez [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) interrompre la connexion.
 
 Vous devez dériver de `IDispEventImpl` (à l’aide d’une valeur unique pour *nID*) pour chaque objet pour lequel vous avez besoin gérer les événements. Vous pouvez réutiliser la classe de base en désinformation par rapport à l’objet d’une seule source puis il conseille ses par rapport à un objet source différente, mais le nombre maximal d’objets de source qui peut être gérée par un seul objet à la fois est limité par le nombre de `IDispEventImpl` classes de base.
 
