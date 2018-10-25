@@ -1,7 +1,7 @@
 ---
 title: stdin, stdout, stderr | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/23/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -23,20 +23,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36d5fd60a19222e6f802e5a14037fb01ff865f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 707811a9c05135cb46520dd72895d677cdc0a6e4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071976"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808704"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
-      FILE *stdin; 
+FILE *stdin; 
 FILE *stdout; 
 FILE *stderr; 
 #include <stdio.h>
@@ -53,12 +52,12 @@ Les pointeurs de flux suivants sont disponibles pour accéder aux flux standard 
 |Pointeur|Flux|
 |-------------|------------|
 |`stdin`|Entrée standard|
-|**stdout**|Objet de flux de sortie standard|
+|`stdout`|Objet de flux de sortie standard|
 |`stderr`|Erreur standard|
 
-Ces pointeurs peuvent être utilisés comme arguments pour fonctions. Certaines fonctions, telles que **getchar** et `putchar`, utilisent `stdin` et **stdout** automatiquement.
+Ces pointeurs peuvent être utilisés comme arguments pour fonctions. Certaines fonctions, telles que [getchar](../c-runtime-library/reference/getchar-getwchar.md) et [putchar](../c-runtime-library/reference/putchar-putwchar.md), utilisent `stdin` et `stdout` automatiquement.
 
-Ces pointeurs sont des constantes et il n’est pas possible de leur affecter de nouvelles valeurs. La fonction `freopen` peut être utilisée pour rediriger les flux vers des fichiers sur disque ou d’autres appareils. Le système d’exploitation vous permet de rediriger l’entrée et la sortie standard d’un programme au niveau de la commande.
+Ces pointeurs sont des constantes et il n’est pas possible de leur affecter de nouvelles valeurs. La fonction [freopen](../c-runtime-library/reference/freopen-wfreopen.md) peut être utilisée pour rediriger les flux vers des fichiers sur disque ou d’autres appareils. Le système d’exploitation vous permet de rediriger l’entrée et la sortie standard d’un programme au niveau de la commande.
 
 ## <a name="see-also"></a>Voir aussi
 
