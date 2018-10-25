@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5ad67a806bae53234661c19d3f405a526ce5f87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f266efa2fb6de580bc1af04bdee6f80e2244fa23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440769"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070047"
 ---
 # <a name="tiledindex-class"></a>tiled_index, classe
 
@@ -249,6 +249,7 @@ Stocke la longueur de la prochaine-à-dimension la plus significative.
 ```
 static const int tile_dim1 = _Dim1;
 ```
+
 ## <a name="tiled_index__tile_dim2"></a>  tile_dim2
 
 Stocke la longueur de la dimension la moins significative.
@@ -258,6 +259,7 @@ Stocke la longueur de la dimension la moins significative.
 ```
 static const int tile_dim2 = _Dim2;
 ```
+
 ## <a name="tiled_index__tile_origin"></a>  tile_origin
 
 Stocke un [index](index-class.md) objet de coordonnées de rang 1, 2 ou 3 qui représente les paramètres globaux de l’origine de la mosaïque actuelle au sein d’un [tiled_extent](tiled-extent-class.md) objet.
@@ -267,6 +269,7 @@ Stocke un [index](index-class.md) objet de coordonnées de rang 1, 2 ou 3 qui re
 ```
 const index<rank> tile_origin
 ```
+
 ## <a name="tile_extent"></a>  tile_extent
   Obtient un [étendue](extent-class.md) objet qui a les valeurs de la `tiled_index` arguments template `tiled_index` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.
 

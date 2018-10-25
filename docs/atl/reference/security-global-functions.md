@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbac8dc499c08d96abd33d49f5adec08095ca420
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075153"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067291"
 ---
 # <a name="security-global-functions"></a>Fonctions globales de sécurité
 
@@ -50,11 +50,11 @@ Ces fonctions prennent en charge la modification des objets de SID et de l’ACL
 |[AtlSetOwnerSid](#atlsetownersid)|Appelez cette fonction pour définir l'identificateur de sécurité (SID) de propriétaire d'un objet.|
 |[AtlGetSacl](#atlgetsacl)|Appelez cette fonction pour récupérer les informations relatives à la liste de contrôle d'accès système (SACL) d'un objet spécifique.|
 |[AtlSetSacl](#atlsetsacl)|Appelez cette fonction pour définir les informations relatives à la liste de contrôle d'accès système (SACL) d'un objet spécifique.|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Appelez cette fonction pour récupérer le descripteur de sécurité d'un objet donné.|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Appelez cette fonction pour récupérer le descripteur de sécurité d'un objet donné.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h 
+**En-tête :** atlsecurity.h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -127,7 +127,7 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 Dans les versions debug, une erreur d’assertion se produit si *hObject* n’est pas valide, ou si *dwInheritanceFlowControl* n’est pas une des trois valeurs autorisées.
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h 
+**En-tête :** atlsecurity.h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +156,11 @@ Pointeur vers un `CSid` objet qui contient les nouvelles informations de sécuri
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true en cas de réussite, false en cas d'échec.  
+Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h 
+**En-tête :** atlsecurity.h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +189,11 @@ Le `CSid` objet contenant les nouvelles informations de sécurité.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true en cas de réussite, false en cas d'échec.  
+Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h 
+**En-tête :** atlsecurity.h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +222,11 @@ Pointeur vers un `CSid` objet qui contient les nouvelles informations de sécuri
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true en cas de réussite, false en cas d'échec.  
+Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h 
+**En-tête :** atlsecurity.h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +255,11 @@ Le `CSid` objet contenant les nouvelles informations de sécurité.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true en cas de réussite, false en cas d'échec.  
+Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h 
+**En-tête :** atlsecurity.h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +296,11 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 ### <a name="remarks"></a>Notes
 
-Si `AtlGetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* définie sur false.  
+Si `AtlGetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* définie sur false.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h 
+**En-tête :** atlsecurity.h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +343,11 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 Dans les versions debug, une erreur d’assertion se produit si *hObject* n’est pas valide, ou si *dwInheritanceFlowControl* n’est pas une des trois valeurs autorisées.
 
-Si `AtlSetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* définie sur false.  
+Si `AtlSetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* définie sur false.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlsecurity.h 
+**En-tête :** atlsecurity.h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,7 +390,7 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 ### <a name="remarks"></a>Notes
 
-Si `AtlGetSecurityDescriptor` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* définie sur false.  
+Si `AtlGetSecurityDescriptor` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* définie sur false.
 
 ### <a name="requirements"></a>Configuration requise
 

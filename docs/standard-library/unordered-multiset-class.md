@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35c13890262bf7d1bbcf5d86d71e50ed55a073ff
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4b3e7697eea7ae6fddf2abafaacef1ddc13c1137
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069684"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset, classe
 
@@ -290,7 +290,6 @@ Désigne le début de la séquence contrôlée ou un compartiment.
 iterator begin();
 
 const_iterator begin() const;
-
 
 local_iterator begin(size_type nbucket);
 
@@ -1866,7 +1865,6 @@ Obtient ou définit le nombre maximal d’éléments par compartiment.
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```

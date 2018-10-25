@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b10004551a594d6f969ffaf7893cd2e7efe2d76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bc91a98d1909245e09268cc7129084392a4c096
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396549"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076254"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Cmfcribboncheckbox, classe
 
@@ -135,7 +135,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers la capture de données modifiées associé à la case à cocher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -156,7 +156,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers la capture de données modifiées associée à cette case à cocher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -177,7 +177,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers l’objet de capture de données modifiées associé à cette case à cocher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -212,7 +212,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers la capture de données modifiées dans lequel dessiner la case à cocher.
 
 ### <a name="remarks"></a>Notes
@@ -227,7 +227,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CDC** pointeur vers la capture de données modifiées associé à la case à cocher.
+[in] *Capture de données modifiées&#42;*<br/>
+Pointeur vers la capture de données modifiées associé à la case à cocher.
 
 *CRect*<br/>
 [in] Un `CRect` objet qui spécifie le rectangle dans lequel dessiner l’image de menu.
@@ -256,7 +257,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique dans lequel dessiner la case à cocher.
 
 *strText*<br/>

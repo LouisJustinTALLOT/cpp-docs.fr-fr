@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3883065d9d7222d5e9d98806f0baadf0bc209213
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062668"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072302"
 ---
 # <a name="cwintraitsor-class"></a>Cwintraitsor, classe
 
@@ -38,7 +38,7 @@ Cette classe fournit une méthode pour standardiser les styles utilisés lors de
 
 ```
 template <DWORD t_dwStyle = 0,
-          DWORD t_dwExStyle = 0, 
+          DWORD t_dwExStyle = 0,
           class TWinTraits = CControlWinTraits>
 class CWinTraitsOR
 ```

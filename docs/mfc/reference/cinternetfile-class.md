@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b28cfffbe3ce8304d12f5a52cd3cf3af7b6679c2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e5a26b38943d6fe76031d85cc68fd705e0d739c8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406852"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071991"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile, classe
 
@@ -141,7 +141,6 @@ CInternetFile(
     LPCTSTR pstrFileName,
     CInternetConnection* pConnection,
     BOOL bReadMode);
-
 
 CInternetFile(
     HINTERNET hFile,
@@ -261,7 +260,6 @@ Appelez cette fonction membre pour lire un flux de caractères jusqu'à ce qu’
 
 ```
 virtual BOOL ReadString(CString& rString);
-
 
 virtual LPTSTR ReadString(
     LPTSTR pstr,

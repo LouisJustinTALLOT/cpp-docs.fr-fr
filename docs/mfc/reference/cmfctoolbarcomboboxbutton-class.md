@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc4c205ff7c68fbf778b8d300fbe98e6a3deca1d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0cde2b5c62d4d4584330fe24000114b33ba957b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413027"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067486"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Cmfctoolbarcomboboxbutton, classe
 
@@ -146,7 +146,7 @@ Pour plus d’informations, consultez [procédure pas à pas : placer le contr�
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarComboBoxButton` classe. L’exemple montre comment activer les cases à modifier et de la liste déroulante, définissez des cases à la position verticale de la zone de liste déroulante dans l’application, définir la hauteur de la zone de liste lorsqu’il est déplacé vers le bas, définir l’apparence de style à deux dimensions de boutons de zone de liste modifiable dans l’application et définir le texte dans la zone d’édition de la liste déroulante bouton de zone. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCToolBarComboBoxButton` . L’exemple montre comment activer les cases à modifier et de la liste déroulante, définissez des cases à la position verticale de la zone de liste déroulante dans l’application, définir la hauteur de la zone de liste lorsqu’il est déplacé vers le bas, définir l’apparence de style à deux dimensions de boutons de zone de liste modifiable dans l’application et définir le texte dans la zone d’édition de la liste déroulante bouton de zone. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -908,7 +908,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.
 
 *sizeDefault*<br/>
@@ -968,7 +968,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.
 
 *nCtlColor*<br/>
@@ -1037,7 +1037,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.
 
 *Rect*<br/>
@@ -1176,11 +1176,9 @@ static BOOL SelectItemAll(
     UINT uiCmd,
     int iIndex);
 
-
 static BOOL SelectItemAll(
     UINT uiCmd,
     DWORD_PTR dwData);
-
 
 static BOOL SelectItemAll(
     UINT uiCmd,
@@ -1348,6 +1346,4 @@ void SetText(LPCTSTR lpszText);
 [CComboBox, classe](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

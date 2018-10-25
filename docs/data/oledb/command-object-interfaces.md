@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ea824fda89ccf45c62145a0fe72e55edc614970a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8176bad2921edd22edaab1688e38bc7de275b0bb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106957"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074798"
 ---
 # <a name="command-object-interfaces"></a>Interfaces de l'objet de commande
 
-L’objet de commande utilise le `IAccessor` interface pour spécifier les liaisons de paramètres. Le consommateur appelle `IAccessor::CreateAccessor`, en lui passant un tableau de `DBBINDING` structures. `DBBINDING` contient des informations sur les liaisons de colonne (par exemple, le type et la longueur). Le fournisseur reçoit les structures et détermine comment les données doivent être transférées et si les conversions sont nécessaires.  
-  
-Le `ICommandText` interface fournit un moyen de spécifier une commande de texte. Le `ICommandProperties` interface gère toutes les propriétés de commande.  
-  
-## <a name="see-also"></a>Voir aussi  
+L’objet de commande utilise le `IAccessor` interface pour spécifier les liaisons de paramètres. Le consommateur appelle `IAccessor::CreateAccessor`, en lui passant un tableau de `DBBINDING` structures. `DBBINDING` contient des informations sur les liaisons de colonne (par exemple, le type et la longueur). Le fournisseur reçoit les structures et détermine comment les données doivent être transférées et si les conversions sont nécessaires.
+
+Le `ICommandText` interface fournit un moyen de spécifier une commande de texte. Le `ICommandProperties` interface gère toutes les propriétés de commande.
+
+## <a name="see-also"></a>Voir aussi
 
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

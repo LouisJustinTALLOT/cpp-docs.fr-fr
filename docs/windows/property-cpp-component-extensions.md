@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 24028ac403092404ddf7fd279864273fcf6016ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075864"
 ---
 # <a name="property--ccli-and-ccx"></a>propriété (C++ / c++ / CLI et c++ / CX)
 
@@ -53,17 +53,17 @@ Vous devez déclarer explicitement un membre de données pour qu'il contienne la
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -173,7 +173,6 @@ Une accessibilité différente est autorisée pour les méthodes d'accesseur dan
 
 **propriété** est un mot clé contextuel.  Pour plus d’informations, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).
 
-
 ### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
@@ -226,4 +225,4 @@ test
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

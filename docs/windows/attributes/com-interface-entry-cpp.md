@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06377d9fc3f0eff1487c5d920d257d68bece46b2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6ccd3277b5ad627c6956e6f5620ee6aed1640cc5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074005"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -37,14 +37,14 @@ Ajoute une entrée de l’interface dans le mappage COM de la classe cible.
 
 ### <a name="parameters"></a>Paramètres
 
-*COM_INTERFACE_ENTRY*<br/>
+*com_interface_entry*<br/>
 Chaîne contenant le texte de l’entrée. Pour obtenir la liste des valeurs possibles, consultez [Macros COM_INTERFACE_ENTRY](../../atl/reference/com-interface-entry-macros.md).
 
 ## <a name="remarks"></a>Notes
 
 Le **com_interface_entry** attribut C++ insère le contenu ondes ultracourtes d’une chaîne de caractères dans la table d’interface COM de l’objet cible. Si l’attribut est appliqué une fois à l’objet cible, l’entrée est insérée au début de la carte d’interface existante. Si l’attribut est appliqué à plusieurs reprises pour le même objet cible, les entrées sont insérées au début de la carte d’interface dans l’ordre de que leur réception.
 
-Cet attribut exige que le [coclasse](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) attribut (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
+Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
 
 Étant donné que la première utilisation de **com_interface_entry** provoque la nouvelle interface doit être inséré au début de la carte d’interface, il doit être un des types COM_INTERFACE_ENTRY suivants :
 
@@ -93,7 +93,7 @@ __interface IMyClass{};
 [ coclass,
   com_interface_entry ("COM_INTERFACE_ENTRY (IMyClass)"),
   com_interface_entry ("COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"),
-  uuid("b85f8626-e76e-4775-b6a0-4826a9e94af2")  
+  uuid("b85f8626-e76e-4775-b6a0-4826a9e94af2")
 ]
 
 class CMyClass: public IMyClass, public IDebugTest
@@ -104,14 +104,14 @@ class CMyClass: public IMyClass, public IDebugTest
 Mappage résultant de l’objet COM pour `CMyBaseClass` se présente comme suit :
 
 ```cpp
-BEGIN_COM_MAP(CMyClass)  
-    COM_INTERFACE_ENTRY (IMyClass)  
-    COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
-    COM_INTERFACE_ENTRY(IMyClass)  
-    COM_INTERFACE_ENTRY2(IDispatch, IMyClass)  
-    COM_INTERFACE_ENTRY(IDebugTest)  
-    COM_INTERFACE_ENTRY(IProvideClassInfo)  
-END_COM_MAP()  
+BEGIN_COM_MAP(CMyClass)
+    COM_INTERFACE_ENTRY (IMyClass)
+    COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)
+    COM_INTERFACE_ENTRY(IMyClass)
+    COM_INTERFACE_ENTRY2(IDispatch, IMyClass)
+    COM_INTERFACE_ENTRY(IDebugTest)
+    COM_INTERFACE_ENTRY(IProvideClassInfo)
+END_COM_MAP()
 ```
 
 ## <a name="requirements"></a>Configuration requise
@@ -125,10 +125,10 @@ END_COM_MAP()
 |**Attributs requis**|Un ou plusieurs des opérations suivantes : `coclass`, `progid`, ou `vi_progid`.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs COM](com-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)  
+[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)

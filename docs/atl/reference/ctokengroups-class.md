@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d14a839cded7d22236912ba52a733a9ce15f7aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae36ce81d51c3fc66941bfd3c8755c4bcdcc98fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103234"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077203"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups, classe
 
@@ -230,7 +230,7 @@ Cette méthode énumérera tous les `CSid` objets contenus dans le `CTokenGroups
 Récupère les attributs associés à un `CSid` objet.
 
 ```
-bool LookupSid(  
+bool LookupSid(
     const CSid& rSid,
     DWORD* pdwAttributes = NULL) const throw();
 ```

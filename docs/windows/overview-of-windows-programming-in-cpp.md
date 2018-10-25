@@ -13,20 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
-ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
+ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347226"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073526"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
 Vous pouvez utiliser Visual C++ pour écrire de nombreux types de programmes qui s’exécutent sur un PC Windows (x 86, x64 ou ARM), sur un serveur Windows, dans le cloud ou sur Xbox. Les programmes C++ bien écrits ont ces qualités :
+
 - efficace dans les besoins en mémoire
-- économes en énergie 
+- économes en énergie
 - en mesure de tirer pleinement parti des appareils multicœurs et de nombreux cœurs
-- en mesure d’effectuer un calcul général sur l’unité de traitement graphique (GPGPU)  
+- en mesure d’effectuer un calcul général sur l’unité de traitement graphique (GPGPU)
 - possibilité de tirer parti des autres avancées récentes dans le matériel.
 
 Il existe plusieurs grandes catégories d'applications Windows que vous pouvez développer avec Visual C++. Ces catégories ont des modèles de programmation différents ou des modèles d’application, qui ont été introduits au fil des années. Chaque modèle utilise les différentes bibliothèques et API pour fournir un accès à la plateforme et créer des interfaces utilisateur telles que les fenêtres et boîtes de dialogue. La bibliothèque C++ standard, ainsi que les bibliothèques tierces peuvent être utilisés dans une de ces catégories, avec quelques restrictions pour UWP.
@@ -98,7 +99,7 @@ Les bibliothèques Microsoft incluent :
 
 - Runtime d'accès concurrentiel : bibliothèque qui simplifie le travail de programmation parallèle et asynchrone pour les appareils dotés de plusieurs cœurs, voire de nombreux cœurs. Pour plus d'informations, consultez [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
-De nombreux scénarios de programmation Windows requièrent également le Kit de développement logiciel Windows, qui inclut les fichiers d'en-tête qui permettent l'accès aux composants du système d'exploitation Windows. Par défaut, Visual Studio installe le Kit de développement logiciel Windows en tant que composant de la charge de travail C++ Desktop, ce qui permet le développement d’applications de Windows Universal. Pour développer des applications UWP, vous avez besoin de la version de Windows 10 du Kit de développement Windows. Pour plus d’informations, consultez [SDK Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Pour plus d’informations sur les kits de développement logiciel Windows pour les versions antérieures de Windows, consultez le [archive du SDK Windows](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
+De nombreux scénarios de programmation Windows requièrent également le Kit de développement logiciel Windows, qui inclut les fichiers d'en-tête qui permettent l'accès aux composants du système d'exploitation Windows. Par défaut, Visual Studio installe le Kit de développement logiciel Windows en tant que composant de la charge de travail C++ Desktop, ce qui permet le développement d’applications de Windows Universal. Pour développer des applications UWP, vous avez besoin de la version de Windows 10 du Kit de développement Windows. Pour plus d’informations, consultez [SDK Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Pour plus d’informations sur les kits de développement logiciel Windows pour les versions antérieures de Windows, consultez le [archive du SDK Windows](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
 **Programmer des fichiers (x86) \Windows Kits** est l’emplacement par défaut pour toutes les versions du SDK Windows que vous avez installée.
 

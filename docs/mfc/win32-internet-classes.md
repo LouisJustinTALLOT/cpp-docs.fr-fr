@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b4adb3de5c6ec57b9f6bc2c48385916c3e5076
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 075804ae82d2e8431bef97d656aeee212feb6757
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073797"
 ---
 # <a name="win32-internet-classes"></a>Classes Internet Win32
 
@@ -32,7 +32,6 @@ MFC encapsule l’Internet Win32 (WinInet) et la technologie ActiveX pour facili
 
 >[!IMPORTANT]
 > ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
-
 
 [CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
 Crée et initialise une ou plusieurs sessions Internet simultanées et, si nécessaire, décrit la connexion à un serveur proxy.

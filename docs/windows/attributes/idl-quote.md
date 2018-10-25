@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f4050e78e6313b77808c1a1ed790e2b7082122d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 31e06d83ce64675b5b1e8ac9cbb865bfb3eff334
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790593"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074161"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -93,9 +93,9 @@ Ce code provoque `MYFLOT` et `MYDUB` et *texte* entrée à placer dans le fichie
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs autonomes](stand-alone-attributes.md)  
+[Attributs autonomes](stand-alone-attributes.md)

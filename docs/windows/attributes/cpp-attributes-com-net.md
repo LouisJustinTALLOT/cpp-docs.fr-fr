@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe6941e8809c0d735013b56d340f27302890b149
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790660"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072523"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributs de C++ pour COM et .NET
 
@@ -90,21 +90,21 @@ En outre, l’éditeur de liens Visual C++ génère toutes les informations d’
 ## <a name="contexts"></a> Contextes d’attribut
 
 Attributs C++ peuvent être décrits à l’aide de quatre champs de base : la cible, elles peuvent être appliquées à (**s’applique à**), si elles sont renouvelables ou non (**Repeatable**), le requis la présence d’autres attributs ( **Attributs requis**) et les incompatibilités avec d’autres attributs (**attributs non valides**). Ces champs sont répertoriés dans une table qui accompagne cet article dans la rubrique de référence de chaque attribut. Chacun de ces champs est décrite ci-dessous.
-  
+
 ### <a name="applies-to"></a>S'applique à
 
 Ce champ décrit les éléments de langage C++ différents qui sont des cibles juridiques pour l’attribut spécifié. Par exemple, si un attribut spécifie « classe » dans le **s’applique à** champ, cela indique que l’attribut peut uniquement être appliqué à une classe C++ juridique. Si l’attribut est appliqué à une fonction membre d’une classe, une erreur de syntaxe est générée.
-  
+
 Pour plus d’informations, consultez [attributs par utilisation](attributes-by-usage.md).
-  
+
 ### <a name="repeatable"></a>Renouvelable
 
 Ce champ indique si l’attribut peut être appliqué à plusieurs reprises sur la même cible. La majorité des attributs ne sont pas reproductibles.
-  
+
 ### <a name="required-attributes"></a>Attributs requis
 
 Ce champ répertorie les autres attributs qui doivent être présents (est, appliqué à la même cible) pour l’attribut spécifié fonctionner correctement. Il est rare qu’un attribut d’avoir toutes les entrées pour ce champ.
-  
+
 ### <a name="invalid-attributes"></a>Attributs non valides
 
 Ce champ répertorie les autres attributs qui ne sont pas compatibles avec l’attribut spécifié. Il est rare qu’un attribut d’avoir toutes les entrées pour ce champ.

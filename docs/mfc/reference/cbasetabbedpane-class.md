@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412026"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067318"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane, classe
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pNewBar* un pointeur vers le volet à ajouter. Ce pointeur peut devenir non valide après avoir appelé cette méthode. Pour plus d'informations, consultez la section Remarques.
+*pNewBar*<br/>
+[in, out] Pointeur vers le volet à ajouter. Ce pointeur peut devenir non valide après avoir appelé cette méthode. Pour plus d'informations, consultez la section Remarques.
 
 *bVisible*<br/>
 [in] TRUE pour afficher l’onglet ; Sinon, FALSE.
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pBar* un pointeur vers le volet pour float.
+*pBar*<br/>
+[in, out] Un pointeur vers le volet pour float.
 
 *nTabID*<br/>
 [in] Spécifie l’index de base zéro de l’onglet en float.
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pBar* un pointeur vers le volet à supprimer dans le volet à onglets.
+*pBar*<br/>
+[in, out] Pointeur vers le volet à supprimer dans le volet à onglets.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Spécifie l’alignement du volet masquage automatique qui doit être créé. Pour obtenir la liste des valeurs possibles, consultez [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
 
-[in] [out] *pCurrAutoHideBar* un pointeur vers la barre d’outils de masquage automatique en cours. Peut être NULL.
+*pCurrAutoHideBar*<br/>
+[in, out] Pointeur vers la barre d’outils de masquage automatique en cours. Peut être NULL.
 
 *bUseTimer*<br/>
 [in] Spécifie s’il faut utiliser l’effet de masquage automatique lorsque l’utilisateur bascule le volet en mode de masquage automatique, ou masquer le volet immédiatement.

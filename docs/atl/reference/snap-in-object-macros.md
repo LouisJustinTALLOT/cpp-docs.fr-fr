@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f2c692f9055e0c2ca3657a6bba0d854209f786b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068747"
 ---
 # <a name="snap-in-object-macros"></a>Macros d’objet du composant logiciel enfichable
 
@@ -41,7 +41,7 @@ Ces macros fournissent la prise en charge pour les extensions de composant logic
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Crée un membre de données pour la classe de données de l’extension du composant logiciel enfichable.|
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Passe à une classe de données d’extension du composant logiciel enfichable dans le mappage de classe de données extension composant logiciel enfichable de l’objet Snap-In.|
 |[SNAPINMENUID](#snapinmenuid)|Déclare l’ID du menu contextuel utilisé par l’objet Snap-In.|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Insère une barre d’outils dans le mappage de la barre d’outils de l’objet Snap-In.|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Insère une barre d’outils dans le mappage de la barre d’outils de l’objet Snap-In.|
 
 ## <a name="requirements"></a>Configuration requise
 

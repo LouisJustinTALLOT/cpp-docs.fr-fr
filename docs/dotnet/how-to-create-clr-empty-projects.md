@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e76b1c8be4e180136c4c1ff3de3e4801770bce92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b6a915dbe9904a7bbe56e8ba1100631bd954d86
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437678"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071165"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Comment : créer des projets vides CLR
 
@@ -34,7 +34,7 @@ Pour créer un projet vide CLR, utilisez le **projet vide CLR** modèle, qui est
 
 1. Dans le menu **Fichier** , cliquez sur **Nouveau**, puis sur **Projet**.
 
-     La boîte de dialogue **Nouveau projet** s’affiche.
+   La boîte de dialogue **Nouveau projet** s’affiche.
 
 1. Sous **modèles installés**, cliquez sur le **Visual C++** nœud ; puis cliquez sur le **CLR** nœud. Choisissez le **projet vide CLR** icône.
 

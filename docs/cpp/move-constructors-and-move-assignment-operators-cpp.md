@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c819d024b9b89d28c0e87b86382bf1c1f23258a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b097e1d3c7d26c51283d4f63bb2bae14059f21cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118490"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069775"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructeurs de déplacement et opérateurs d'assignation de déplacement (C++)
 
@@ -151,14 +151,14 @@ Les procédures suivantes décrivent comment écrire un constructeur de déplace
 
 1. Dans l'instruction conditionnelle, libérez des ressources (telles que de la mémoire) à partir de l'objet auquel elles sont assignées.
 
-     L'exemple suivant libère le membre `_data` de l'objet auquel il est assigné :
+   L'exemple suivant libère le membre `_data` de l'objet auquel il est assigné :
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-     Suivez les étapes 2 et 3 de la première procédure pour transférer les données membres de l'objet source vers l'objet en cours de construction :
+   Suivez les étapes 2 et 3 de la première procédure pour transférer les données membres de l'objet source vers l'objet en cours de construction :
 
     ```cpp
     // Copy the data pointer and its length from the
