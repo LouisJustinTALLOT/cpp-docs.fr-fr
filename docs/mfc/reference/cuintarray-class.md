@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c110ffd183aa3de989543d368349ba629c580433
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6dc9bf5b2a7e7cf5d2335676d9c6fd219ce35634
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064873"
 ---
 # <a name="cuintarray-class"></a>Cuintarray, classe
 
@@ -138,6 +138,4 @@ Pour plus d’informations sur l’utilisation de `CUIntArray`, consultez l’ar
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c9844c610a1b5bffab8f5fba67daff90a52412e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539995"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065172"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -31,7 +31,7 @@ Spécifie que *short_filename* doit être utilisé en tant qu’alias pour *long
 
 ## <a name="syntax"></a>Syntaxe
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias («*long_filename*«, »*short_filename*»)  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias («*long_filename*«, »*short_filename*»)
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*long_filename*, *short_filename*)
 
 ## <a name="remarks"></a>Notes
@@ -59,7 +59,7 @@ L'alias recherché doit correspondre exactement à la spécification, aussi bien
 ```
 
 aucune attribution d'alias (substitution) n'est effectuée, puisque les chaînes de fichier d'en-tête ne correspondent pas exactement. En outre, les noms de fichiers en-tête utilisés comme arguments pour le `/Yu` et `/Yc` options du compilateur, ou le `hdrstop` pragma, ne sont pas remplacées. Par exemple, si votre fichier source contient la directive suivante,
-  
+
 ```cpp
 #include <AppleSystemHeaderStop.h>
 ```
@@ -111,7 +111,7 @@ Notez également que la transitivité n'est pas prise en charge. Avec les direct
 #include "one.h"
 ```
 
-le compilateur recherche le fichier TWO.H à la place de THREE.H.  
+le compilateur recherche le fichier TWO.H à la place de THREE.H.
 
 ## <a name="see-also"></a>Voir aussi
 
