@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3cdf60f614b95c22b4b3c40b5528a7daf885bed
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d2e5e91465df0c3e7608b949c6e1f4b8dfc80bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388737"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064145"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Déclaration d'une variable basée sur votre nouvelle classe de contrôle
 
@@ -37,7 +37,7 @@ Une fois que vous avez créé une classe de contrôle MFC, vous pouvez déclarer
 
 1. Tout en appuyant sur la touche CTRL enfoncée, double-cliquez sur le contrôle.
 
-     Le [ajouter une Variable membre](../../ide/add-member-variable-wizard.md) boîte de dialogue s’affiche.
+   Le [ajouter une Variable membre](../../ide/add-member-variable-wizard.md) boîte de dialogue s’affiche.
 
 1. Dans le **accès** , sélectionnez l’accès correct pour votre contrôle.
 
@@ -60,6 +60,6 @@ Une fois que vous avez créé une classe de contrôle MFC, vous pouvez déclarer
 [Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Ajout d’une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Ajout d’une variable membre](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Une fonction virtuelle de substitution](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestionnaire de messages MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
 [Parcours de la structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)

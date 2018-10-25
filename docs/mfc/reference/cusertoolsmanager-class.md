@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da34eacb7524168f16d05248eee97422a1fb770
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4fdc79325fcf05eda37399a9e913c79a03f6da5d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380759"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054585"
 ---
 # <a name="cusertoolsmanager-class"></a>Cusertoolsmanager, classe
 
@@ -156,7 +156,6 @@ Construit un objet `CUserToolsManager`. Chaque application doit avoir au plus un
 
 ```
 CUserToolsManager();
-
 
 CUserToolsManager(
     const UINT uiCmdToolsDummy,

@@ -71,12 +71,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: bef92e7315418e13b660f655a54f20e8696c7590
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328532"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066589"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Prise en charge du compilateur pour les Type Traits (C++ / c++ / CLI et c++ / CX)
 
@@ -231,7 +231,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
 
    Retourne **true** si le type a un destructeur trivial, généré par le compilateur.
 
-    ``` cpp 
+    ``` cpp
     // has_trivial_destructor.cpp
     #include <stdio.h>
     struct S {};
@@ -567,7 +567,7 @@ ref struct is_class {
 ref class R {};
 
 int main () {
-   if (is_class<R>::value)  
+   if (is_class<R>::value)
       Console::WriteLine("R is a ref class");
    else
       Console::WriteLine("R is not a ref class");
@@ -580,4 +580,4 @@ R is a ref class
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

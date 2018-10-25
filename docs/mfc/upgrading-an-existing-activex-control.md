@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082925"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Mise à niveau d'un contrôle ActiveX
 
@@ -213,11 +213,11 @@ Pour utiliser un contrôle sous licence dans une page HTML sur un ordinateur san
 
 1. Insérer le \<objet > balise pour votre contrôle sous licence après la balise de gestionnaire de licences.
 
-     Par exemple, une page HTML qui affiche le contrôle Microsoft Masked Edit est indiquée ci-dessous. Le premier identificateur de classe qu'est pour le contrôle de gestionnaire de licences, le deuxième identificateur de classe qu'est pour le contrôle Masked Edit. Modifier les balises pour pointer vers le chemin d’accès relatif du fichier d’interactivité que vous avez créé précédemment et ajoutez une balise d’objet, y compris l’ID de classe de votre contrôle.
+   Par exemple, une page HTML qui affiche le contrôle Microsoft Masked Edit est indiquée ci-dessous. Le premier identificateur de classe qu'est pour le contrôle de gestionnaire de licences, le deuxième identificateur de classe qu'est pour le contrôle Masked Edit. Modifier les balises pour pointer vers le chemin d’accès relatif du fichier d’interactivité que vous avez créé précédemment et ajoutez une balise d’objet, y compris l’ID de classe de votre contrôle.
 
 1. Insérer le \<EMBED > attribut pour le fichier LPK, si vous utilisez le module complémentaire NCompass ActiveX.
 
-     Si votre contrôle peut être affiché sur les autres actif activé navigateurs — par exemple, Netscape utilisant le module complémentaire NCompass ActiveX — vous devez ajouter le \<EMBED > syntaxe comme illustré ci-dessous.
+   Si votre contrôle peut être affiché sur les autres actif activé navigateurs — par exemple, Netscape utilisant le module complémentaire NCompass ActiveX — vous devez ajouter le \<EMBED > syntaxe comme illustré ci-dessous.
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

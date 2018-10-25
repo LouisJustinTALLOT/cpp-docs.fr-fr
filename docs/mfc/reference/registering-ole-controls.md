@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9008ba16d52987e4d7f14b5692cdf349951f83a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27e0589e7ba0b2428f4cfea1d2561ef5e666641e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407710"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054161"
 ---
 # <a name="registering-ole-controls"></a>Inscription des contrôles OLE
 
@@ -86,7 +86,7 @@ Contient un ou plusieurs des indicateurs suivants :
 
 - `afxRegFreeThreading` Définit le modèle de thread dans le Registre pour ThreadingModel = gratuit.
 
-     Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](/windows/desktop/com/inprocserver32) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.
+   Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](/windows/desktop/com/inprocserver32) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.
 
 > [!NOTE]
 >  Dans les versions MFC antérieures 4.2 de MFC, la **int** *nRegFlags* paramètre était un paramètre de type BOOL, *bInsertable*, qui autorisé ou interdit le contrôle à insérer à partir de l’instruction Insert Boîte de dialogue d’objet.

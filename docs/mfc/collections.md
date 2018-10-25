@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412858"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069904"
 ---
 # <a name="collections"></a>Collections
 
@@ -53,15 +53,15 @@ Chacune des trois formes de collection est décrite brièvement plus loin dans c
 
 - Liste
 
-     La classe de liste fournit une liste triée et non indexée d'éléments, implémentée comme une liste doublement chaînée. Une liste possède une "tête" et une "queue", et ajouter ou supprimer des éléments de la tête ou de la queue, ou insérer ou supprimer des éléments au milieu, est très rapide.
+   La classe de liste fournit une liste triée et non indexée d'éléments, implémentée comme une liste doublement chaînée. Une liste possède une "tête" et une "queue", et ajouter ou supprimer des éléments de la tête ou de la queue, ou insérer ou supprimer des éléments au milieu, est très rapide.
 
 - Tableau
 
-     La classe de tableau fournit un tableau d'objets classés, ordonnés et indexés par des entiers.
+   La classe de tableau fournit un tableau d'objets classés, ordonnés et indexés par des entiers.
 
 - Mappage (également appelé dictionnaire)
 
-     Un mappage est une collection qui associe un objet principal à un objet de valeur.
+   Un mappage est une collection qui associe un objet principal à un objet de valeur.
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Les Classes de Collection basées sur un modèle
 

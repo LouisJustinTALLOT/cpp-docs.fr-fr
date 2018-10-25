@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c86efacf7211415bfdc2936a736d78e29dc419bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423128"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076397"
 ---
 # <a name="crecordset-class"></a>CRecordset, classe
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ Obtient des informations sur les champs dans le jeu d’enregistrements.
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ Acceptez la valeur par défaut, AFX_DB_USE_DEFAULT_TYPE ou utilisez une de ces v
 
 - `CRecordset::forwardOnly` Un jeu d’enregistrements en lecture seule avec défilement vers l’avant uniquement.
 
-     Pour `CRecordset`, la valeur par défaut est `CRecordset::snapshot`. Le mécanisme de valeur par défaut permet les Assistants Visual C++ interagir avec les deux ODBC `CRecordset` et DAO `CDaoRecordset`, qui ont différentes valeurs par défaut.
+   Pour `CRecordset`, la valeur par défaut est `CRecordset::snapshot`. Le mécanisme de valeur par défaut permet les Assistants Visual C++ interagir avec les deux ODBC `CRecordset` et DAO `CDaoRecordset`, qui ont différentes valeurs par défaut.
 
 Pour plus d’informations sur ces types de jeu d’enregistrements, consultez l’article [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). Pour plus d’informations, consultez l’article « À l’aide de bloc et curseurs avec défilement » dans le SDK Windows.
 
@@ -1613,7 +1609,7 @@ Lorsque vous appelez `Open`, une requête, généralement une SQL **sélectionne
 
 La procédure habituelle consiste à passer NULL pour `Open`; dans ce cas, `Open` appels [GetDefaultSQL](#getdefaultsql). Si vous utilisez une dérivée `CRecordset` classe, `GetDefaultSQL` donne les noms de table spécifié dans ClassWizard. Vous pouvez spécifier à la place d’autres informations dans le `lpszSQL` paramètre.
 
-Ce que vous transmettez `Open` construit une chaîne SQL finale pour la requête (la chaîne peut avoir SQL **où** et **ORDER BY** clauses ajouté à la `lpszSQL` chaîne que vous avez passé), puis l’exécute la requête. Vous pouvez examiner la chaîne construite en appelant [GetSQL](#getsql) après l’appel *`Open`. Pour des détails supplémentaires sur la façon dont le jeu d’enregistrements construit une instruction SQL et sélectionne les enregistrements, consultez l’article [Recordset : sélection d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Ce que vous transmettez `Open` construit une chaîne SQL finale pour la requête (la chaîne peut avoir SQL **où** et **ORDER BY** clauses ajouté à la `lpszSQL` chaîne que vous avez passé), puis l’exécute la requête. Vous pouvez examiner la chaîne construite en appelant [GetSQL](#getsql) après avoir appelé `Open`. Pour des détails supplémentaires sur la façon dont le jeu d’enregistrements construit une instruction SQL et sélectionne les enregistrements, consultez l’article [Recordset : sélection d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 Les membres de données de champ de votre classe de jeu d’enregistrements sont liés aux colonnes de données sélectionnées. Si tous les enregistrements sont retournés, le premier enregistrement devient l’enregistrement actif.
 

@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 10c5a4fd9b7f15e5f6532bbaf6b5d8af4d3c86ba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 069ecc2c743e75a120355b6c57acd5968f1de28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067994"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083150"
 ---
 # <a name="odbc-driver-list"></a>Liste de pilotes ODBC
 
-Visual C++ fournit des pilotes ODBC pour les bases de données suivantes :  
-  
-- SQL Server  
-  
-- Microsoft Access  
-  
-- Microsoft Excel  
-  
-- dBASE  
-  
-- Paradox  
-  
-- Microsoft Oracle ODBC  
-  
-- Fichiers texte  
-  
-Pour plus d’informations sur les pilotes ODBC de Microsoft et d’autres sociétés, y compris le Pack de pilote ODBC, contactez le Support technique Microsoft.  
-  
-## <a name="see-also"></a>Voir aussi  
+Visual C++ fournit des pilotes ODBC pour les bases de données suivantes :
+
+- SQL Server
+
+- Microsoft Access
+
+- Microsoft Excel
+
+- dBASE
+
+- Paradox
+
+- Microsoft Oracle ODBC
+
+- Fichiers texte
+
+Pour plus d’informations sur les pilotes ODBC de Microsoft et d’autres sociétés, y compris le Pack de pilote ODBC, contactez le Support technique Microsoft.
+
+## <a name="see-also"></a>Voir aussi
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

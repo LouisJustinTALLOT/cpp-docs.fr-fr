@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eb5010fda78cce2728bc47bc729859cef5c0108
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 01fac0286ea93766771043ebfa7e268f0d6b167d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073901"
 ---
 # <a name="cfiledialog-class"></a>Classe CFileDialog
 
@@ -423,7 +423,6 @@ Ajoute qu'un dossier à la liste des places disponible pour l’utilisateur à o
 void AddPlace(
     LPCWSTR lpszFolder,
     FDAP fdap = FDAP_TOP) throw();
-
 
 void AddPlace(
     IShellItem* psi,
@@ -1481,7 +1480,6 @@ void SetControlText(
     int nID,
     LPCSTR lpsz);
 
-
 void SetControlText(
     int nID,
     const wchar_t *lpsz);
@@ -1581,7 +1579,6 @@ Définit le modèle de boîte de dialogue pour le [CFileDialog](../../mfc/refere
 void SetTemplate(
     UINT nWin3ID,
     UINT nWin4ID);
-
 
 void SetTemplate(
     LPCTSTR lpWin3ID,

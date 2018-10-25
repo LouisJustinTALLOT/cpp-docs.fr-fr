@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e5df8e88124d1d94869618a94525e224d32495
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0aaefc41ca365e2bf4d87583f2e25dfa2a870a90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424668"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079010"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets : utilisation de la classe CAsyncSocket
 
@@ -48,19 +48,19 @@ Cet article couvre les sujets suivants :
 
 1. Construire un [CAsyncSocket](../mfc/reference/casyncsocket-class.md) et que vous utilisez l’objet à créer sous-jacent **SOCKET** gérer.
 
-     La création d’un socket suit le modèle MFC de construction en deux étapes.
+   La création d’un socket suit le modèle MFC de construction en deux étapes.
 
-     Exemple :
+   Exemple :
 
-     [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
      - ou -
 
-     [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-     Le premier constructeur ci-dessus crée un `CAsyncSocket` objet sur la pile. Le deuxième constructeur crée un `CAsyncSocket` sur le tas. La première [créer](../mfc/reference/casyncsocket-class.md#create) appel ci-dessus utilise les paramètres par défaut pour créer un socket de flux de données. La seconde `Create` appel crée un socket datagramme avec un port spécifié et une adresse. (Vous pouvez utiliser `Create` version avec chaque méthode de construction.)
+   Le premier constructeur ci-dessus crée un `CAsyncSocket` objet sur la pile. Le deuxième constructeur crée un `CAsyncSocket` sur le tas. La première [créer](../mfc/reference/casyncsocket-class.md#create) appel ci-dessus utilise les paramètres par défaut pour créer un socket de flux de données. La seconde `Create` appel crée un socket datagramme avec un port spécifié et une adresse. (Vous pouvez utiliser `Create` version avec chaque méthode de construction.)
 
-     Les paramètres à `Create` sont :
+   Les paramètres à `Create` sont :
 
    - Un « port » : un entier court.
 
@@ -72,28 +72,28 @@ Cet article couvre les sujets suivants :
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-     Les termes « port » et « adresse de socket » est expliqué dans [Windows Sockets : Ports et adresses de Socket](../mfc/windows-sockets-ports-and-socket-addresses.md).
+   Les termes « port » et « adresse de socket » est expliqué dans [Windows Sockets : Ports et adresses de Socket](../mfc/windows-sockets-ports-and-socket-addresses.md).
 
 1. Si le socket est un client, connecter l’objet socket à un serveur socket, à l’aide de [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect).
 
      - ou -
 
-     Si le socket est un serveur, définissez le socket pour commencer à écouter (avec [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) tentatives de connexion à partir d’un client. Lorsqu’il reçoit une demande de connexion, acceptez-la avec [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Si le socket est un serveur, définissez le socket pour commencer à écouter (avec [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) tentatives de connexion à partir d’un client. Lorsqu’il reçoit une demande de connexion, acceptez-la avec [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
-     Après avoir accepté une connexion, vous pouvez effectuer des tâches telles que la validation des mots de passe.
+   Après avoir accepté une connexion, vous pouvez effectuer des tâches telles que la validation des mots de passe.
 
     > [!NOTE]
     >  Le `Accept` fonction membre prend une référence à un vide `CSocket` objet comme paramètre. Vous devez créer cet objet avant d’appeler `Accept`. Si cet objet socket est hors de portée, la connexion se ferme. N’appelez pas `Create` pour ce nouvel objet socket. Pour obtenir un exemple, consultez l’article [Windows Sockets : séquence des opérations](../mfc/windows-sockets-sequence-of-operations.md).
 
 1. Exécutez vos communications avec d’autres sockets en appelant le `CAsyncSocket` fonctions membres de l’objet qui encapsulent les fonctions d’API de Sockets Windows.
 
-     Consultez la spécification Windows Sockets et la classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md) dans le *référence MFC*.
+   Consultez la spécification Windows Sockets et la classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md) dans le *référence MFC*.
 
 1. Détruire le `CAsyncSocket` objet.
 
-     Si vous avez créé l’objet socket sur la pile, son destructeur est appelé lorsque la fonction contenante va hors de portée. Si vous avez créé l’objet socket sur le tas, à l’aide la **nouveau** opérateur, il vous incombe à l’aide de la **supprimer** opérateur pour détruire l’objet.
+   Si vous avez créé l’objet socket sur la pile, son destructeur est appelé lorsque la fonction contenante va hors de portée. Si vous avez créé l’objet socket sur le tas, à l’aide la **nouveau** opérateur, il vous incombe à l’aide de la **supprimer** opérateur pour détruire l’objet.
 
-     Le destructeur appelle l’objet [fermer](../mfc/reference/casyncsocket-class.md#close) fonction membre avant de détruire l’objet.
+   Le destructeur appelle l’objet [fermer](../mfc/reference/casyncsocket-class.md#close) fonction membre avant de détruire l’objet.
 
 Pour obtenir un exemple de cette séquence dans le code (en fait, pour un `CSocket` objet), consultez [Windows Sockets : séquence des opérations](../mfc/windows-sockets-sequence-of-operations.md).
 

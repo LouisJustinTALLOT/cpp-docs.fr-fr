@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d49f87d5709483a36325afa426a790374fc93837
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ac931aca05c9df6d5b201fdafb8872c1ee9c789
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415809"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080674"
 ---
 # <a name="unicode-programming-summary"></a>Synthèse de la programmation Unicode
 
@@ -87,7 +87,7 @@ Pour tirer parti de la prise en charge runtime C et MFC pour Unicode, vous devez
     pDC->TextOut( str, str.GetLength( ) );
     ```
 
-     `CDC::TextOut` prend un nombre de caractères, pas un nombre d’octets.
+   `CDC::TextOut` prend un nombre de caractères, pas un nombre d’octets.
 
 - Utilisez [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) pour ouvrir les fichiers Unicode.
 

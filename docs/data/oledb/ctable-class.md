@@ -24,102 +24,102 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4548e319d7a85c547b0e750d040bdc6b6d7bbba5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: dd9d3b291f967b98017e4136740628ef951ea12a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060128"
 ---
 # <a name="ctable-class"></a>CTable, classe
 
-Fournit un moyen d’accéder directement à un rowset simple (sans paramètres).  
-  
+Fournit un moyen d’accéder directement à un rowset simple (sans paramètres).
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-            template <typename T> class TRowset = CRowset>  
-class CTable :  
-   public CAccessorRowset <TAccessor, TRowset>  
-```  
-  
-### <a name="parameters"></a>Paramètres  
+template <class TAccessor = CNoAccessor,
+            template <typename T> class TRowset = CRowset>
+class CTable :
+   public CAccessorRowset <TAccessor, TRowset>
+```
+
+### <a name="parameters"></a>Paramètres
 
 *TAccessor*<br/>
-Classe d’accesseur.  
-  
+Classe d’accesseur.
+
 *TRowset*<br/>
-Une classe rowset.  
+Une classe rowset.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atldbcli.h  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="methods"></a>Méthodes  
-  
-|||  
-|-|-|  
-|[Ouvrir](#open)|La table s’ouvre.|  
-  
-## <a name="remarks"></a>Notes  
+**En-tête :** atldbcli.h
 
-Consultez [CCommand](../../data/oledb/ccommand-class.md) pour plus d’informations sur la façon d’exécuter une commande pour accéder à un ensemble de lignes.  
+## <a name="members"></a>Membres
+
+### <a name="methods"></a>Méthodes
+
+|||
+|-|-|
+|[Ouvrir](#open)|La table s’ouvre.|
+
+## <a name="remarks"></a>Notes
+
+Consultez [CCommand](../../data/oledb/ccommand-class.md) pour plus d’informations sur la façon d’exécuter une commande pour accéder à un ensemble de lignes.
 
 ## <a name="open"></a> CTable::Open
 
-La table s’ouvre.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+La table s’ouvre.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Open(const CSession& session,  
-   LPCWSTR wszTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCWSTR wszTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   LPCSTR szTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCSTR szTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   DBID& dbid,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT Open(const CSession& session,
+   DBID& dbid,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *session*<br/>
-[in] La session pour laquelle la table est ouvert.  
-  
+[in] La session pour laquelle la table est ouvert.
+
 *wszTableName*<br/>
-[in] Le nom de la table à ouvrir, transmis sous forme de chaîne Unicode.  
-  
+[in] Le nom de la table à ouvrir, transmis sous forme de chaîne Unicode.
+
 *szTableName*<br/>
-[in] Le nom de la table à ouvrir, transmis sous forme de chaîne ANSI.  
-  
+[in] Le nom de la table à ouvrir, transmis sous forme de chaîne ANSI.
+
 *dbid*<br/>
-[in] Le `DBID` de la table à ouvrir.  
-  
+[in] Le `DBID` de la table à ouvrir.
+
 *pPropSet*<br/>
-[in] Un pointeur vers un tableau de [DBPROPSET](/previous-versions/windows/desktop/ms714367) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](/previous-versions/windows/desktop/ms713696) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. La valeur par défaut NULL ne spécifie aucuns propriétés.  
-  
+[in] Un pointeur vers un tableau de [DBPROPSET](/previous-versions/windows/desktop/ms714367) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](/previous-versions/windows/desktop/ms713696) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. La valeur par défaut NULL ne spécifie aucuns propriétés.
+
 *ulPropSets*<br/>
-[in] Le nombre de [DBPROPSET](/previous-versions/windows/desktop/ms714367) structures passées dans le *pPropSet* argument.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Le nombre de [DBPROPSET](/previous-versions/windows/desktop/ms714367) structures passées dans le *pPropSet* argument.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Pour plus d’informations, consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) dans le *de référence du programmeur OLE DB*.  
-  
-## <a name="see-also"></a>Voir aussi  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Pour plus d’informations, consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) dans le *de référence du programmeur OLE DB*.
+
+## <a name="see-also"></a>Voir aussi
 
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: feb34a64fee8f3d3674f1513ea2a964f574aab54
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8583e7efe46ba5bae2b55e6f8cb5bdad7c7385b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071938"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox, classe
 
@@ -134,7 +134,6 @@ Sélectionne la police qui correspond aux critères spécifiés dans la zone de 
 
 ```
 BOOL SelectFont(CMFCFontInfo* pDesc);
-
 
 BOOL SelectFont(
     LPCTSTR lpszName,

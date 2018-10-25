@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43f5d1017b3f89474e9dd7eebce0cf71c8c8c448
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f730a8c0b2c1f552e0aca7f360f402788630c96
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065406"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Mise à jour de l'interface utilisateur pour les vues des enregistrements (Accès aux données MFC)
 
-`CRecordView` Fournit des gestionnaires de mise à jour l’interface utilisateur par défaut pour les commandes de navigation. Ces gestionnaires automatisent l'activation et la désactivation des objets d'interface utilisateur (éléments de menu et boutons de barre d'outils). L’Assistant application fournit des menus standard et, si vous choisissez la **barre d’outils ancrable** option, un ensemble de boutons de barre d’outils pour les commandes. Si vous créez une classe de vue d'enregistrement à l'aide de `CRecordView`, vous pouvez ajouter des objets d'interface utilisateur similaires à votre application.  
-  
-### <a name="to-create-menu-resources-with-the-menu-editor"></a>Pour créer des ressources de menu avec l'éditeur de menu  
-  
-1. Qui fait référence aux informations sur l’utilisation de la [éditeur de menus](../windows/menu-editor.md), créer votre propre menu avec les mêmes commandes que quatre.  
-  
-#### <a name="to-create-toolbar-buttons-with-the-graphics-editor"></a>Pour créer des boutons de barre d'outils avec l'éditeur de graphismes  
-  
-1. Qui fait référence aux informations sur l’utilisation de la [éditeur de la barre d’outils](../windows/toolbar-editor.md), modifiez la ressource de barre d’outils pour ajouter des boutons de barre d’outils pour vos commandes de navigation entre les enregistrements.  
-  
-## <a name="see-also"></a>Voir aussi  
+`CRecordView` Fournit des gestionnaires de mise à jour l’interface utilisateur par défaut pour les commandes de navigation. Ces gestionnaires automatisent l'activation et la désactivation des objets d'interface utilisateur (éléments de menu et boutons de barre d'outils). L’Assistant application fournit des menus standard et, si vous choisissez la **barre d’outils ancrable** option, un ensemble de boutons de barre d’outils pour les commandes. Si vous créez une classe de vue d'enregistrement à l'aide de `CRecordView`, vous pouvez ajouter des objets d'interface utilisateur similaires à votre application.
+
+### <a name="to-create-menu-resources-with-the-menu-editor"></a>Pour créer des ressources de menu avec l'éditeur de menu
+
+1. Qui fait référence aux informations sur l’utilisation de la [éditeur de menus](../windows/menu-editor.md), créer votre propre menu avec les mêmes commandes que quatre.
+
+#### <a name="to-create-toolbar-buttons-with-the-graphics-editor"></a>Pour créer des boutons de barre d'outils avec l'éditeur de graphismes
+
+1. Qui fait référence aux informations sur l’utilisation de la [éditeur de la barre d’outils](../windows/toolbar-editor.md), modifiez la ressource de barre d’outils pour ajouter des boutons de barre d’outils pour vos commandes de navigation entre les enregistrements.
+
+## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
 [À l’aide d’une vue d’enregistrement](../data/using-a-record-view-mfc-data-access.md)

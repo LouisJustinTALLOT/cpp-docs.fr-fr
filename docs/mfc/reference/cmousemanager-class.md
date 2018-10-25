@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b27579211e6d0cf3cd1a933dd6ee83599dcd06f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d430ab70818dafb883e405b082f60c86689853cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408685"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081038"
 ---
 # <a name="cmousemanager-class"></a>Cmousemanager, classe
 
@@ -89,7 +89,6 @@ BOOL AddView(
     int iViewId,
     UINT uiViewNameResId,
     UINT uiIconId = 0);
-
 
 BOOL AddView(
     int iId,
@@ -284,6 +283,4 @@ Si *uiCmd* est définie sur 0, la vue spécifiée n’est plus associée à une 
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx, classe](../../mfc/reference/cwinappex-class.md)<br/>
 [Personnalisation du clavier et de la souris](../../mfc/keyboard-and-mouse-customization.md)
-
-
 

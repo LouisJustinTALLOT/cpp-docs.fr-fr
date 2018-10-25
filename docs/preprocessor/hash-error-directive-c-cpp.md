@@ -18,32 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 143733af9003442996d9f649825f45f93643f536
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539180"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078799"
 ---
 # <a name="error-directive-cc"></a>#error, directive (C/C++)
-Le **#error** directive émet un message d’erreur spécifié par l’utilisateur au moment de la compilation, puis termine la compilation.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#errortoken-string  
-```  
-  
-## <a name="remarks"></a>Notes  
- 
-Le message d’erreur qui émet cette directive inclut le *chaîne de jeton* paramètre. Le *chaîne de jeton* paramètre n’est pas soumis à une expansion macro. Cette directive est particulièrement utile pendant le prétraitement pour notifier le développeur d’une incohérence de programme ou de la violation d’une contrainte. L’exemple suivant illustre l’erreur lors du traitement pendant le prétraitement :  
-  
-```  
-#if !defined(__cplusplus)  
-#error C++ compiler required.  
-#endif  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- 
+Le **#error** directive émet un message d’erreur spécifié par l’utilisateur au moment de la compilation, puis termine la compilation.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#errortoken-string
+```
+
+## <a name="remarks"></a>Notes
+
+Le message d’erreur qui émet cette directive inclut le *chaîne de jeton* paramètre. Le *chaîne de jeton* paramètre n’est pas soumis à une expansion macro. Cette directive est particulièrement utile pendant le prétraitement pour notifier le développeur d’une incohérence de programme ou de la violation d’une contrainte. L’exemple suivant illustre l’erreur lors du traitement pendant le prétraitement :
+
+```
+#if !defined(__cplusplus)
+#error C++ compiler required.
+#endif
+```
+
+## <a name="see-also"></a>Voir aussi
+
 [Directives de préprocesseur](../preprocessor/preprocessor-directives.md)

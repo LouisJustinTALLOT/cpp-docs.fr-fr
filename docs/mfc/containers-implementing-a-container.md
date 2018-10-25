@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28c93e5d1331d7195b894fe88c3fe5fc11e7c31d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394359"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074070"
 ---
 # <a name="containers-implementing-a-container"></a>Conteneurs : implémentation d'un conteneur
 
@@ -62,15 +62,15 @@ Vous pouvez aussi prendre en charge certaines des fonctionnalités suivantes dan
 
 - Activation en place lors de la modification d'un élément incorporé.
 
-     Pour plus d’informations, consultez [Activation](../mfc/activation-cpp.md).
+   Pour plus d’informations, consultez [Activation](../mfc/activation-cpp.md).
 
 - Création d’éléments OLE par glissement-dépôt d’une sélection depuis une application serveur.
 
-     Pour plus d’informations, consultez [glisser-déposer (OLE)](../mfc/drag-and-drop-ole.md).
+   Pour plus d’informations, consultez [glisser-déposer (OLE)](../mfc/drag-and-drop-ole.md).
 
 - Liens vers les objets incorporés ou association des applications conteneur/serveur.
 
-     Pour plus d’informations, consultez [conteneurs : fonctionnalités avancées](../mfc/containers-advanced-features.md).
+   Pour plus d’informations, consultez [conteneurs : fonctionnalités avancées](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc19475cff0038d11131a26c36ab498a562b234c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 7e9ec6724addeb8002eeb681f289f232520f31dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236034"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060097"
 ---
 # <a name="hashmap-class"></a>hash_map, classe
 
@@ -277,7 +277,6 @@ Référence à la valeur de données de l'élément trouvé.
 ### <a name="remarks"></a>Notes
 
 Si la valeur de clé de l’argument est introuvable, la fonction lève un objet de classe [out_of_range](../standard-library/out-of-range-class.md).
-
 
 ### <a name="example"></a>Exemple
 
@@ -2688,9 +2687,9 @@ Retourne l’objet de fonction de comparaison utilisé par un hash_map pour ordo
 
 ### <a name="remarks"></a>Notes
 
-Pour un hash_map *m*, si deux éléments *e*1 *(k*1 *, d*1 *)* et *e*2 *(k*2 *, d*2 *)* sont des objets de type [value_type](#value_type), où *k*1 et *k*2 ont des clés de type [key_type](#key_type) et `d`1 et `d`2 ont des données de type [mapped_type](#mapped_type), alors *m.*`value_comp`*( )(e*1 *, e*2 *)*  équivaut à *m.*`key_comp`*( ) (k*1 *, k*2 *)*. Un objet stocké définit la fonction membre
+Pour un hash_map *m*, si deux éléments *e1* (*k1*, *d1*) et *e2* (*k2*, *d2*) sont des objets de type [value_type](#value_type), où *k1* et *k2* sont leurs clés de type [key_type](#key_type) et *d1* et *d2* sont leurs données de type [mapped_type](#mapped_type), puis `m.value_comp()(e1, e2)` équivaut à `m.key_comp()(k1, k2)` . Un objet stocké définit la fonction membre
 
-**bool operator**( **value_type&** `left`, **value_type&** `right`) **;**
+`bool operator(value_type& left, value_type& right);`
 
 qui retourne **true** si la valeur de clé de `left` précède et n’est pas égale à la valeur clé de `right` dans l’ordre de tri.
 

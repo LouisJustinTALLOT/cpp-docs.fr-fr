@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eee19197c4b171cf669c9458ab722240e431bf70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ae53d5de0a562886ad22a23bd78cc9c1a4fbc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398213"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054291"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF, classe
 
@@ -75,7 +75,6 @@ Construit un objet CD2DRectF à partir de l’objet CRect.
 CD2DRectF(const CRect& rect);
 CD2DRectF(const D2D1_RECT_F& rect);
   CD2DRectF(const D2D1_RECT_F* rect);
-
 
 CD2DRectF(
     FLOAT fLeft = 0.,

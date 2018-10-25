@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d0cc73df8304377bde00d8da2ab3c501ea5db45
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4a362404cc92a147b0517b394c3923e0c9924ca3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059335"
 ---
-# <a name="dialog-editor-states-guides-and-grids-c"></a>États d’éditeur de la boîte de dialogue (repères et grilles) (C++) 
+# <a name="dialog-editor-states-guides-and-grids-c"></a>États d’éditeur de la boîte de dialogue (repères et grilles) (C++)
 
 Vous pouvez organiser les contrôles dans les boîtes de dialogue avec le **boîte de dialogue** editor dans un des trois états différents :
 

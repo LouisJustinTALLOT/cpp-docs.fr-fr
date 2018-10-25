@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1867f044c143fc0e5fbb06705bf45b8fa729a5cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083799"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068968"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 
@@ -61,8 +61,6 @@ La bibliothèque Microsoft Foundation Class fournit les fonctions globales suiva
 |[AfxSocketInit](#afxsocketinit)|Appelé dans un `CWinApp::InitInstance` remplacement pour initialiser Windows Sockets.|
 |[AfxUserToolsManager](#afxusertoolsmanager)|Pointeur vers le global [responsable des outils utilisateur](cusertoolsmanager-class.md).|
 |[AfxWinInit](#afxwininit)|Appelé par le fournie par MFC `WinMain` (fonction), dans le cadre de la [CWinApp](../../mfc/reference/cwinapp-class.md) l’initialisation d’une application basée sur une interface graphique utilisateur, pour initialiser MFC. Doit être appelé directement pour les applications de console qui utilisent MFC.|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -145,6 +143,7 @@ Pointeur vers le global [Gestionnaire de menu de contexte](ccontextmenumanager-c
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcontextmenumanager.h
@@ -152,7 +151,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="see-also"></a>Voir aussi
 
 [CContextMenuManager, classe](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -190,6 +188,7 @@ Utilisez `AfxFindResourceHandle` pour remonter la chaîne de ressource et de loc
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *Caractère*<br/>
@@ -471,6 +470,7 @@ Détermine si la fenêtre donnée est un objet frame étendu.
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *pWnd*<br/>
@@ -514,6 +514,7 @@ Détermine si la fenêtre donnée est un objet de barre d’outils.
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *pWnd*<br/>
@@ -536,7 +537,6 @@ Cette méthode retourne `TRUE` si *pWnd* dérive `CMFCToolBar`. Cette méthode e
 [CWnd, classe](cwnd-class.md)<br/>
 [CMFCToolBar, classe](cmfctoolbar-class.md)
 
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Pointeur vers le global [Gestionnaire de clavier](ckeyboardmanager-class.md).
@@ -546,6 +546,7 @@ Pointeur vers le global [Gestionnaire de clavier](ckeyboardmanager-class.md).
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxkeyboardmanager.h
@@ -554,7 +555,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [Macros, fonctions globales et Variables globales](mfc-macros-and-globals.md)<br/>
 [CKeyboardManager, classe](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -618,6 +618,7 @@ Pointeur vers le global [Gestionnaire de menu volante](cmenutearoffmanager-class
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmenutearoffmanager.h
@@ -635,6 +636,7 @@ Pointeur vers le global [Gestionnaire de souris](cmousemanager-class.md).
 ```
 CMouseManager* afxMouseManager;
 ```
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmousemanager.h
@@ -642,8 +644,6 @@ CMouseManager* afxMouseManager;
 ### <a name="see-also"></a>Voir aussi
 
 [CMouseManager, classe](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -843,7 +843,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="see-also"></a>Voir aussi
 
 [CUserToolsManager, classe](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 

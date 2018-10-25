@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca9d1ea34aa8a2793f895a3c89f94994743570e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060302"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082675"
 ---
 # <a name="data-access-in-visual-c"></a>Accès aux données dans Visual C++
 
@@ -52,13 +52,13 @@ Connectez-vous à la base de données SQL Azure à partir d’applications C ou 
 Le service [Stockage Azure](/azure/storage/storage-introduction) est une solution de stockage cloud pour les applications modernes qui s’appuient sur la durabilité, la disponibilité et la scalabilité afin de répondre aux besoins de leurs clients. Connectez-vous au service Stockage Azure à partir de C++ à l’aide de la bibliothèque cliente de stockage Azure pour C++.
 
 [Pilote ODBC 13.1 pour SQL Server - Windows publié](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-Le dernier pilote ODBC fournit un accès fiable aux données de Microsoft SQL Server 2016 et Microsoft Azure SQL Database pour les applications C/C++. Fournit la prise en charge des fonctionnalités, notamment est toujours chiffré, Azure Active Directory et les groupes de disponibilité AlwaysOn. Également disponible pour Mac OS et Linux.     
- 
+Le dernier pilote ODBC fournit un accès fiable aux données de Microsoft SQL Server 2016 et Microsoft Azure SQL Database pour les applications C/C++. Fournit la prise en charge des fonctionnalités, notamment est toujours chiffré, Azure Active Directory et les groupes de disponibilité AlwaysOn. Également disponible pour Mac OS et Linux.
+
 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 SQL Server Native Client est une interface de programmation d’application (API) d’accès aux données autonome, utilisée pour OLE DB et ODBC, qui prend en charge les versions SQL Server 2005 à SQL Server 2014. Les nouvelles applications doivent utiliser le pilote ODBC 13.1 pour SQL Server.
 
 [Microsoft Azure C et C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
-Azure facilite la création d’applications C++ avec plus de souplesse, de scalabilité et de fiabilité à l’aide des outils que vous aimez.    
+Azure facilite la création d’applications C++ avec plus de souplesse, de scalabilité et de fiabilité à l’aide des outils que vous aimez.
 
 [Comment utiliser le stockage d’objets Blob à partir de C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Le stockage Blob Azure est un service qui stocke les données non structurées dans le cloud en tant qu’objets/objets blob. Le stockage Blob permet de stocker n’importe quel type de données texte ou binaires, par exemple un document, un fichier multimédia ou un programme d’installation d’application. Le stockage Blob est également appelé stockage d’objets.

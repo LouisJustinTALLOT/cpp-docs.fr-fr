@@ -21,54 +21,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f14ad79e1cbd2207b4eb1582cb80e0107d68ec39
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064236"
 ---
 # <a name="cnorowset-class"></a>CNoRowset, classe
 
-Peut être utilisé comme argument template (`TRowset`) pour [CCommand](../../data/oledb/ccommand-class.md) ou [CTable](../../data/oledb/ctable-class.md).  
-  
+Peut être utilisé comme argument template (`TRowset`) pour [CCommand](../../data/oledb/ccommand-class.md) ou [CTable](../../data/oledb/ctable-class.md).
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CNoRowset  
-```  
-  
-### <a name="parameters"></a>Paramètres  
+template <class TAccessor = CAccessorBase>
+class CNoRowset
+```
+
+### <a name="parameters"></a>Paramètres
 
 *TAccessor*<br/>
-Classe d’accesseur. La valeur par défaut est `CAccessorBase`.  
-  
-## <a name="remarks"></a>Notes  
+Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
 
-Utilisez `CNoRowset` comme argument de modèle si la commande ne renvoie pas un ensemble de lignes.  
-  
-`CNoRowset` implémente les méthodes stub suivantes, chacune d’elles correspondent à d’autres méthodes de classe d’accesseur :  
-  
-- `BindFinished` : Indique quand la liaison est terminée (retourne `S_OK`).  
-  
-- `Close` -Libère des lignes et l’interface IRowset actuelle.  
-  
-- `GetIID` -Récupère l’ID d’interface d’un point de connexion.  
-  
-- `GetInterface` -Récupère une interface.  
-  
-- `GetInterfacePtr` -Récupère un pointeur d’interface encapsulé.  
-  
-- `SetAccessor` -Définit un pointeur vers l’accesseur.  
-  
-- `SetupOptionalRowsetInterfaces` -Définit les interfaces facultatives pour l’ensemble de lignes.  
-  
-## <a name="requirements"></a>Configuration requise  
+## <a name="remarks"></a>Notes
 
-**En-tête :** atldbcli.h  
-  
-## <a name="see-also"></a>Voir aussi  
+Utilisez `CNoRowset` comme argument de modèle si la commande ne renvoie pas un ensemble de lignes.
+
+`CNoRowset` implémente les méthodes stub suivantes, chacune d’elles correspondent à d’autres méthodes de classe d’accesseur :
+
+- `BindFinished` : Indique quand la liaison est terminée (retourne `S_OK`).
+
+- `Close` -Libère des lignes et l’interface IRowset actuelle.
+
+- `GetIID` -Récupère l’ID d’interface d’un point de connexion.
+
+- `GetInterface` -Récupère une interface.
+
+- `GetInterfacePtr` -Récupère un pointeur d’interface encapsulé.
+
+- `SetAccessor` -Définit un pointeur vers l’accesseur.
+
+- `SetupOptionalRowsetInterfaces` -Définit les interfaces facultatives pour l’ensemble de lignes.
+
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :** atldbcli.h
+
+## <a name="see-also"></a>Voir aussi
 
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

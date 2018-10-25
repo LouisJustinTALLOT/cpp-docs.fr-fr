@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f44d362fc30503b062221c358dde6b2c10b9bd3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2bbf1a088151bcd2a6ecc1990c668211c6f70cd9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423752"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065484"
 ---
 |||
 |-|-|
@@ -34,7 +34,6 @@ ms.locfileid: "46423752"
 |[INTERFACE_PART](#interface_part)|Utilisé entre le BEGIN_INTERFACE_MAP (macro) et la macro END_INTERFACE_MAP pour chaque interface que votre objet prendra en charge.|
 |[MAKE_DELEGATE](#make_delegate)|Attache un gestionnaire d’événements à un contrôle géré.|
 
-
 ## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 
 Commence un mappage de délégué.
@@ -44,6 +43,7 @@ Commence un mappage de délégué.
 ```
 BEGIN_DELEGATE_MAP(  CLASS );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *CLASSE*<br/>
@@ -70,6 +70,7 @@ Commence la définition de la carte interfaced lorsqu’il est utilisé dans le 
 ```
 BEGIN_INTERFACE_MAP( theClass, baseClass )
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *theClass*<br/>
@@ -97,6 +98,7 @@ Inscrit les méthodes de rappel avec une source de commande.
 ```
 delegate void CommandHandler(  UINT^ cmdID  );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
@@ -127,6 +129,7 @@ Inscrit les méthodes de rappel avec un message de commande de mise à jour inte
 ```
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
@@ -172,7 +175,6 @@ Cette macro marque la fin d’une liste d’entrées de délégué, qui se compo
 
 [Guide pratique pour recevoir des événements Windows Forms de classes C++ natives](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
 Met fin à la carte d’interface dans le fichier d’implémentation.
@@ -196,7 +198,6 @@ Pour plus d’informations sur les cartes d’interface, consultez [Technical No
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [BEGIN_INTERFACE_MAP](#begin_interface_map)
 
-
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
 Crée une entrée dans le mappage de délégué.
@@ -206,6 +207,7 @@ Crée une entrée dans le mappage de délégué.
 ```
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *MEMBRE*<br/>
@@ -242,7 +244,6 @@ END_DELEGATE_MAP()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)
 
-
 ##  <a name="interface_part"></a>INTERFACE_PART
 
 Utilisé entre le BEGIN_INTERFACE_MAP (macro) et la macro END_INTERFACE_MAP pour chaque interface que votre objet prendra en charge.
@@ -252,6 +253,7 @@ Utilisé entre le BEGIN_INTERFACE_MAP (macro) et la macro END_INTERFACE_MAP pour
 ```
 INTERFACE_PART( theClass, iid, localClass)
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *theClass*<br/>
@@ -271,7 +273,6 @@ Pour plus d’informations sur les cartes d’interface, consultez [Technical No
 
 **En-tête :** afxwin.h
 
-
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
 
 Attache un gestionnaire d’événements à un contrôle géré.
@@ -281,6 +282,7 @@ Attache un gestionnaire d’événements à un contrôle géré.
 ```
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *DÉLÉGUÉ*<br/>
@@ -316,7 +318,4 @@ void CMyView::OnInitialUpdate()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)<br/>
 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
-
-
 

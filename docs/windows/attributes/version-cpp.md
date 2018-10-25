@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee79fca8784ade6509cfc5854eaaa165b68edee0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95b30d65fe67f2647cb8ca50619f3ab13f167053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791013"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058997"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -56,12 +56,12 @@ Consultez le [peut être liée](bindable.md) exemple pour un exemple d’utilisa
 |-|-|
 |**S'applique à**|**classe**, **struct**|
 |**Renouvelable**|Non|
-|**Attributs requis**|**coclass**|
+|**Attributs requis**|**coclasse**|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs de compilateur](compiler-attributes.md)<br/>
-[Attributs de classe](class-attributes.md)  
+[Attributs de classe](class-attributes.md)

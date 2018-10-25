@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3b93e2c52feab4dea5c4d069d48991a2e14ee54
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2705a1889e7b9c9c0960cce45b8dc7b411e16982
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438897"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061000"
 ---
 # <a name="coleexception-class"></a>COleException, classe
 
@@ -122,6 +122,4 @@ Pour plus d’informations sur SCODE, consultez [Structure of COM Error Codes](/
 [Exemple MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
 [CException, classe](../../mfc/reference/cexception-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

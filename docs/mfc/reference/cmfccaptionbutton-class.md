@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719d6bafc50a036831f4aef1dd34c293b4129a83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6b1363dd77d4fd052a530a60b2e462e15a2291
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381528"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074434"
 ---
 # <a name="cmfccaptionbutton-class"></a>Cmfccaptionbutton, classe
 
@@ -104,7 +104,6 @@ Construit un objet `CMFCCaptionButton`.
 
 ```
 CMFCCaptionButton();
-
 
 CMFCCaptionButton(
     UINT nHit,
@@ -266,7 +265,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le bouton.
 
 *bActive*<br/>

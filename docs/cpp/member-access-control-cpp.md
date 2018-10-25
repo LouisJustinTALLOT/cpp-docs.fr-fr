@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821658"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063352"
 ---
 # <a name="member-access-control-c"></a>Contrôle d'accès aux membres (C++)
 
@@ -246,8 +246,7 @@ Dans les treillis à héritage multiple impliquant des classes de base virtuelle
 
 ![Accès avec les chemins d’accès d’un graphique d’héritage](../cpp/media/vc38v91.gif "vc38V91") le long de chemins d’accès d’un graphique d’héritage
 
-Dans cette figure, un nom déclaré dans la classe `VBase` est toujours accessible via la classe `RightPath`. Le chemin d'accès correct est plus accessible car `RightPath` déclare `VBase` en tant que classe de base publique, tandis que `LeftPath` déclare `VBase` comme classe privée.
-
+Dans cette figure, un nom déclaré dans la classe `VBase` est toujours accessible via la classe `RightPath`. Le chemin d’accès correct est plus accessible car `RightPath` déclare `VBase` en tant que classe de base publique, tandis que `LeftPath` déclare `VBase` comme classe privée.
 
 ## <a name="see-also"></a>Voir aussi
 

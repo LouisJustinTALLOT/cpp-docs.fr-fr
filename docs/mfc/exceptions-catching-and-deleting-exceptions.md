@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434763"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074122"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions : interception et suppression d'exceptions
 
@@ -36,9 +36,9 @@ Votre **catch** bloc doit supprimer une exception lorsque :
 
 - Le **catch** bloc lève une exception.
 
-     Bien sûr, vous ne devez pas supprimer l’exception si vous levez à nouveau la même exception :
+   Bien sûr, vous ne devez pas supprimer l’exception si vous levez à nouveau la même exception :
 
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
 - L’exécution retourne depuis la **catch** bloc.
 
@@ -49,15 +49,15 @@ Votre **catch** bloc doit supprimer une exception lorsque :
 
 1. Utilisez le **essayez** mot clé pour configurer un **essayez** bloc. Les instructions de n’importe quel programme susceptible de lever une exception dans un **essayez** bloc.
 
-     Utilisez le **catch** mot clé pour configurer un **catch** bloc. Placez le code de gestion des exceptions dans un **catch** bloc. Le code dans le **catch** bloc est exécuté uniquement si le code dans le **essayez** bloc lève une exception du type spécifié dans le **catch** instruction.
+   Utilisez le **catch** mot clé pour configurer un **catch** bloc. Placez le code de gestion des exceptions dans un **catch** bloc. Le code dans le **catch** bloc est exécuté uniquement si le code dans le **essayez** bloc lève une exception du type spécifié dans le **catch** instruction.
 
-     Le squelette suivant montre comment **essayez** et **catch** blocs sont organisés normalement :
+   Le squelette suivant montre comment **essayez** et **catch** blocs sont organisés normalement :
 
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-     Lorsqu’une exception est levée, le contrôle passe à la première **catch** bloc dont déclaration d’exception correspond au type de l’exception. Vous pouvez gérer de manière sélective différents types d’exceptions avec séquentiel **catch** bloque comme indiqué ci-dessous :
+   Lorsqu’une exception est levée, le contrôle passe à la première **catch** bloc dont déclaration d’exception correspond au type de l’exception. Vous pouvez gérer de manière sélective différents types d’exceptions avec séquentiel **catch** bloque comme indiqué ci-dessous :
 
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
 Pour plus d’informations, consultez [Exceptions : conversion à partir de Macros d’Exception MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 

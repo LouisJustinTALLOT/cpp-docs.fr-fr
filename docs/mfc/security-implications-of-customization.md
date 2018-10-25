@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442082"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080843"
 ---
 # <a name="security-implications-of-customization"></a>Implications en matière de sécurité de la personnalisation
 
@@ -38,7 +38,7 @@ Nous recommandons une de ces trois méthodes pour fermer les vulnérabilités da
 
 - Store les données dans un fichier sécurisé au lieu de dans le Registre.
 
-     Pour effectuer l’une de ces deux premières méthodes, dérivez une classe de [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) et substituer ses méthodes pour implémenter le chiffrement ou le stockage en dehors du Registre.
+   Pour effectuer l’une de ces deux premières méthodes, dérivez une classe de [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) et substituer ses méthodes pour implémenter le chiffrement ou le stockage en dehors du Registre.
 
 - Vous pouvez également désactiver des personnalisations dans votre application.
 

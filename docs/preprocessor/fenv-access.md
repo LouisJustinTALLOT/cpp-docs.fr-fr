@@ -18,23 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c06556d47bf0c471aa7e4fab610971e2b7ad11e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42543139"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081467"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Désactive (**sur**) ou active (**hors**) optimisations qui peuvent modifier l’environnement à virgule flottante signaler des tests et les changements de mode.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma fenv_access (** { **sur** | **hors** } **)**  
+> **#pragma fenv_access (** { **sur** | **hors** } **)**
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, **fenv_access** est **hors**. Si le compilateur peut supposer que votre code ne pas accéder à ou manipuler l’environnement à virgule flottante, il peut effectuer de nombreuses optimisations de code en virgule flottante. Définissez **fenv_access** à **sur** pour informer le compilateur que votre code accède à l’environnement à virgule flottante pour tester les indicateurs d’état, exceptions, ou pour définir des indicateurs de mode de contrôle. Le compilateur désactive ces optimisations afin que votre code peut accéder à l’environnement à virgule flottante régulièrement. 
+Par défaut, **fenv_access** est **hors**. Si le compilateur peut supposer que votre code ne pas accéder à ou manipuler l’environnement à virgule flottante, il peut effectuer de nombreuses optimisations de code en virgule flottante. Définissez **fenv_access** à **sur** pour informer le compilateur que votre code accède à l’environnement à virgule flottante pour tester les indicateurs d’état, exceptions, ou pour définir des indicateurs de mode de contrôle. Le compilateur désactive ces optimisations afin que votre code peut accéder à l’environnement à virgule flottante régulièrement.
 
 Pour plus d’informations sur le comportement de virgule flottante, consultez [/fp (spécifier le comportement de virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md).
 

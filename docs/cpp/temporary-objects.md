@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aea9e17d17008642f9421beb47be38cac401132
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4e94fa412b76107dde90d3a6a664ec68c6b6bdaf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071313"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078790"
 ---
 # <a name="temporary-objects"></a>Objets temporaires
 
@@ -41,9 +41,9 @@ Dans certains cas, le compilateur a besoin de créer des objets temporaires. Ces
                     //   value.
     ```
 
-     La valeur de retour n'étant pas copiée dans un autre objet, un objet temporaire est créé. Un des cas les plus courants où des objets temporaires sont créés est l'évaluation d'une expression où des fonctions surchargées d'opérateur doivent être appelées. Ces fonctions d'opérateur surchargées retournent un type défini par l'utilisateur qui n'est souvent pas copié dans un autre objet.
+   La valeur de retour n'étant pas copiée dans un autre objet, un objet temporaire est créé. Un des cas les plus courants où des objets temporaires sont créés est l'évaluation d'une expression où des fonctions surchargées d'opérateur doivent être appelées. Ces fonctions d'opérateur surchargées retournent un type défini par l'utilisateur qui n'est souvent pas copié dans un autre objet.
 
-     Prenons l'exemple de l'expression `ComplexResult = Complex1 + Complex2 + Complex3`. L'expression `Complex1 + Complex2` est évaluée, et le résultat est stocké dans un objet temporaire. Ensuite, l’expression *temporaire* `+ Complex3` est évaluée, et le résultat est copié dans `ComplexResult` (en supposant que l’opérateur d’assignation ne soit pas surchargé).
+   Prenons l'exemple de l'expression `ComplexResult = Complex1 + Complex2 + Complex3`. L'expression `Complex1 + Complex2` est évaluée, et le résultat est stocké dans un objet temporaire. Ensuite, l’expression *temporaire* `+ Complex3` est évaluée, et le résultat est copié dans `ComplexResult` (en supposant que l’opérateur d’assignation ne soit pas surchargé).
 
 - Pour stocker le résultat d'un cast en un type défini par l'utilisateur. Lorsqu'un objet d'un type donné est converti explicitement en un type défini par l'utilisateur, ce nouvel objet est construit sous la forme d'un objet temporaire.
 

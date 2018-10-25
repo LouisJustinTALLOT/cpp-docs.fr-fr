@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0db4d53d64def1c1f55929aa9d7514142955cf
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821119"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055059"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Ajout d'une page de propriétés (Didacticiel ATL, Partie 6)
 
@@ -45,7 +45,7 @@ Pour ajouter une page de propriétés à votre contrôle, utilisez le modèle de
 
 1. Cliquez sur **chaînes** pour ouvrir le **chaînes** page et entrez **& polygone** en tant que le **titre**.
 
-     Le **titre** de la propriété page est la chaîne qui apparaît dans l’onglet correspondant à cette page. Le **Chaîne Doc** est une description qui utilise d’un frame de propriété à placer dans une info-bulle état ligne ou outil. Notez que le frame de propriété standard actuellement n’utilise pas cette chaîne, vous pouvez donc laisser il avec le contenu par défaut. Vous n’allez pas générer un **fichier d’aide** pour le moment, par conséquent, supprimez l’entrée dans cette zone de texte.
+   Le **titre** de la propriété page est la chaîne qui apparaît dans l’onglet correspondant à cette page. Le **Chaîne Doc** est une description qui utilise d’un frame de propriété à placer dans une info-bulle état ligne ou outil. Notez que le frame de propriété standard actuellement n’utilise pas cette chaîne, vous pouvez donc laisser il avec le contenu par défaut. Vous n’allez pas générer un **fichier d’aide** pour le moment, par conséquent, supprimez l’entrée dans cette zone de texte.
 
 1. Cliquez sur **Terminer**, et l’objet de page de propriété sera créé.
 

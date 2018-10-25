@@ -1,7 +1,7 @@
 ---
 title: multimap, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cde4954dd7222fbe9a406756a81466346f4dd01
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 9ae6c027947cf869a159b1561a7f7a3b853af0c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235930"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068930"
 ---
 # <a name="multimap-class"></a>multimap, classe
 
@@ -887,7 +887,6 @@ Retourne l'itérateur past-the-end.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1030,7 +1029,6 @@ Retourne un itérateur qui fait référence au premier emplacement d'un élémen
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1194,19 +1192,16 @@ Insère un élément ou une plage d'éléments dans une classe multimap.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1214,13 +1209,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2339,7 +2332,7 @@ Retourne l’objet de fonction de comparaison utilisé par un multimap pour ordo
 
 ### <a name="remarks"></a>Notes
 
-Pour un multimap *m*, si deux éléments *e*1( *k*1, *d*1) et *e*2( *k*2, `d`2) sont des objets de type `value_type`, où *k*1 et *k*2 ont des clés de type `key_type` et `d`1 et `d`2 ont des données de type `mapped_type`, alors *m.*`value_comp`( *e*1, *e*2) équivaut à *m.*`key_comp`( *k*1, *k*2).
+Pour une classe multimap *m*, si deux éléments *e1*(*k1*, *d1*) et *e2*(*k2*, *d2*) sont des objets de type `value_type`, où *k1* et *k2* sont leurs clés de type `key_type` et *d1*  et *d2* sont leurs données de type `mapped_type`, puis `m.value_comp(e1, e2)` équivaut à `m.key_comp(k1, k2)`.
 
 ### <a name="example"></a>Exemple
 

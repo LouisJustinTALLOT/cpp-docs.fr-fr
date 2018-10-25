@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2fb7b2468946be29553f54fcedde98e43881d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413248"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068825"
 ---
 # <a name="dynamic-layout"></a>Disposition dynamique
 
@@ -65,7 +65,7 @@ La procédure précédente permet de spécifier les propriétés de disposition 
 
 1. Recherchez ou ajoutez un emplacement dans le code d'implémentation de votre classe de boîte de dialogue où vous souhaitez spécifier la disposition dynamique de la boîte de dialogue. Par exemple, vous pouvez ajouter la méthode `AdjustLayout` dans votre boîte de dialogue et l'appeler à chaque endroit où la disposition doit être modifiée. Vous pouvez l'appeler d'abord à partir du constructeur ou après avoir apporté les modifications à la boîte de dialogue.
 
-2. Pour la boîte de dialogue, appelez [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), une méthode de la `CWnd` classe. `GetDynamicLayout` Retourne un pointeur vers un `CMFCDynamicLayout` objet.
+2. Pour la boîte de dialogue, appelez [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), une méthode de la `CWnd` classe. `GetDynamicLayout` retourne un pointeur vers un objet `CMFCDynamicLayout` .
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -119,7 +119,7 @@ La procédure précédente permet de spécifier les propriétés de disposition 
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     La ressource nommée doit faire référence à une boîte de dialogue qui contient des informations de mise en page sous la forme d’un **AFX_DIALOG_LAYOUT** entrée dans le fichier de ressources, comme dans l’exemple suivant :
+   La ressource nommée doit faire référence à une boîte de dialogue qui contient des informations de mise en page sous la forme d’un **AFX_DIALOG_LAYOUT** entrée dans le fichier de ressources, comme dans l’exemple suivant :
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////

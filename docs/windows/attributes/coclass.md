@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a76fa402cd270bfc7d0fa87902362de50c55a73
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: df131b79d3247e39aecb95c81564d7ac9fc2732d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790573"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058932"
 ---
 # <a name="coclass"></a>coclasse
 
@@ -102,7 +102,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};
 ```
 
-L’exemple suivant montre comment substituer l’implémentation par défaut d’une fonction qui s’affiche dans le code injecté par le **coclasse** attribut. Consultez [/Fx](../../build/reference/fx-merge-injected-code.md) pour plus d’informations sur l’affichage de code injecté. Les classes de base ou les interfaces que vous utilisez pour une classe s’affiche dans le code injecté. En outre, si une classe est incluse par défaut dans le code injecté et que vous spécifiez explicitement cette classe comme base pour votre coclasse, le fournisseur de l’attribut utilisera le formulaire spécifié dans votre code.
+L’exemple suivant montre comment substituer l’implémentation par défaut d’une fonction qui s’affiche dans le code injecté par le **coclasse** attribut. Pour plus d’informations sur l’affichage de code injecté, consultez [/Fx](../../build/reference/fx-merge-injected-code.md) . Les classes de base ou les interfaces que vous utilisez pour une classe s’affiche dans le code injecté. En outre, si une classe est incluse par défaut dans le code injecté et que vous spécifiez explicitement cette classe comme base pour votre coclasse, le fournisseur de l’attribut utilisera le formulaire spécifié dans votre code.
 
 ```cpp
 // cpp_attr_ref_coclass2.cpp
@@ -128,7 +128,7 @@ public:
       // you can add to the default implementation
       CRegistryVirtualMachine rvm;
       HRESULT hr;
-      if (FAILED(hr = rvm.AddStandardReplacements()))  
+      if (FAILED(hr = rvm.AddStandardReplacements()))
          return hr;
       rvm.AddReplacement(_T("FriendlyName"), GetObjectFriendlyName());
       return rvm.VMUpdateRegistry(GetOpCodes(), GetOpcodeStringVals(),       GetOpcodeDWORDVals(), GetOpcodeBinaryVals(), bRegister);
@@ -147,7 +147,7 @@ public:
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 

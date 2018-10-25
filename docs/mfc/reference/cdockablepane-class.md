@@ -1,7 +1,7 @@
 ---
 title: CDockablePane, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078307"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pTabControlBarAttachTo* Spécifie le volet cible que le volet actif s’attache à. Le volet cible doit être un volet Ancrable.
+*pTabControlBarAttachTo*<br/>
+[in, out] Spécifie le volet cible que le volet actif s’attache à. Le volet cible doit être un volet Ancrable.
 
 *dockMethod*<br/>
 [in] Spécifie la méthode d’ancrage.
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in] Spécifie le nom de la fenêtre.
 
-[in] [out] *pParentWnd* spécifie la fenêtre parente.
+*pParentWnd*<br/>
+[in, out] Spécifie la fenêtre parente.
 
 *Rect*<br/>
 [in] Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Spécifie les attributs de style supplémentaires.
 
-[in] [out] *pContext* Spécifie le contexte de la création de la fenêtre.
+*pContext*<br/>
+[in, out] Spécifie le contexte de la création de la fenêtre.
 
 *lpszWindowName*<br/>
 [in] Spécifie le nom de la fenêtre.
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in] Spécifie le nom de la fenêtre.
 
-[in] [out] *pParentWnd* spécifie la fenêtre parente.
+*pParentWnd*<br/>
+[in, out] Spécifie la fenêtre parente.
 
 *Rect*<br/>
 [in] Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Spécifie les attributs de style supplémentaires.
 
-[in] [out] *pContext* Spécifie le contexte de la création de la fenêtre.
+*pContext*<br/>
+[in, out] Spécifie le contexte de la création de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pTargetWindow* Spécifie le volet ancrable pour ancrer ce volet pour.
+*pTargetWindow*<br/>
+[in, out] Spécifie le volet ancrable pour ancrer ce volet pour.
 
 *dwAlignment*<br/>
 [in] Spécifie l’alignement d’ancrage du volet. Peut être CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Défini dans afxres.h.)
@@ -870,7 +875,7 @@ virtual void DrawCaption(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Représente le contexte de périphérique utilisé pour le dessin.
 
 *rectCaption*<br/>
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pWndOldParent*
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Spécifie l’alignement du volet masquage automatique pour la créer.
 
-[in] [out] *pCurrAutoHideBar* un pointeur vers la barre d’outils de masquage automatique en cours. Peut être NULL.
+*pCurrAutoHideBar*<br/>
+[in, out] Pointeur vers la barre d’outils de masquage automatique en cours. Peut être NULL.
 
 *bUseTimer*<br/>
 [in] Spécifie s’il faut utiliser l’effet de masquage automatique lorsque l’utilisateur bascule le volet en mode de masquage automatique ou masquer le volet immédiatement.

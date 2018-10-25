@@ -16,23 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d832365a7b17dc5e35a4f01ed3fa031c10e9a6ec
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 89472fc97b781217198b7e37a4f00267e0343438
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113785"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057697"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Installation et mise en route d'ODBC
 
-Les rubriques suivantes vous aider à installer les composants dont vous avez besoin pour commencer à travailler avec ODBC Open Database Connectivity ().  
-  
-## <a name="in-this-section"></a>Dans cette section  
-  
-- [Installer les pilotes ODBC fournis avec Visual C++](../../data/odbc/odbc-administrator.md)  
-  
-- [Redistribuer des composants ODBC à vos clients](../../data/odbc/odbc-basics.md)  
-  
-## <a name="see-also"></a>Voir aussi  
+Les rubriques suivantes vous aider à installer les composants dont vous avez besoin pour commencer à travailler avec ODBC Open Database Connectivity ().
+
+## <a name="in-this-section"></a>Dans cette section
+
+- [Installer les pilotes ODBC fournis avec Visual C++](../../data/odbc/odbc-administrator.md)
+
+- [Redistribuer des composants ODBC à vos clients](../../data/odbc/odbc-basics.md)
+
+## <a name="see-also"></a>Voir aussi
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

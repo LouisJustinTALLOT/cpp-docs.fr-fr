@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389863"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054929"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Utilisation de contrôles communs dans une boîte de dialogue
 
@@ -42,7 +42,7 @@ Les contrôles communs Windows peuvent être utilisés dans [boîtes de dialogue
 
 1. Dans [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) pour votre classe de boîte de dialogue, définissez des conditions initiales pour le contrôle commun. Grâce à la variable membre créée à l'étape précédente, utilisez les fonctions membres pour définir la valeur initiale et d'autres paramètres. Consultez les descriptions suivantes des contrôles pour plus d'informations sur les paramètres.
 
-     Vous pouvez également utiliser [échange de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md) (DDX) pour initialiser les contrôles dans une boîte de dialogue.
+   Vous pouvez également utiliser [échange de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md) (DDX) pour initialiser les contrôles dans une boîte de dialogue.
 
 1. Dans les gestionnaires des contrôles de la boîte de dialogue, utilisez la variable membre pour manipuler le contrôle. Consultez les descriptions suivantes des contrôles pour plus d'informations sur les méthodes.
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2e56e4b13f739f61df5b37ab70689784a39882
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8d85767ad529cb54686ff2cde186bd4a681d3570
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077540"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063313"
 ---
 # <a name="device-context-global-functions"></a>Fonctions globales de contexte de périphérique
 
@@ -53,7 +53,7 @@ Retourne le handle vers un contexte de périphérique pour le périphérique sp�
 
 Si la structure est NULL et *hdc* est NULL, crée un contexte de périphérique pour le périphérique d’affichage par défaut.
 
-Si *hdc* n’est pas NULL et *ptd* est NULL, la fonction retourne existant *hdc*.  
+Si *hdc* n’est pas NULL et *ptd* est NULL, la fonction retourne existant *hdc*.
 
 ## <a name="requirements"></a>Configuration requise
 

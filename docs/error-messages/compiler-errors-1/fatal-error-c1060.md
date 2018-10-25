@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1961784efc61c3c31f87c76cd2bdfe00fe954c5d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 09d9c0292840daf65effca09775ff85a156b00f8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053914"
 ---
 # <a name="fatal-error-c1060"></a>Erreur irrécupérable C1060
 
@@ -33,7 +33,7 @@ Le système d'exploitation ou la bibliothèque Runtime ne peut pas répondre à 
 
 1. Si le compilateur émet aussi les erreurs [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) et [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), utilisez le [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) option du compilateur pour réduire la limite d’allocation de mémoire. Si vous réduisez l'allocation de mémoire restante, l'espace du tas dont dispose votre application est plus important.
 
-     Si le [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) option est déjà définie, essayez de la supprimer. Il se peut que l'espace du tas soit épuisé, car la limite d'allocation de mémoire spécifiée dans l'option est trop élevée. Le compilateur utilise une limite par défaut si vous supprimez le [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) option.
+   Si le [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) option est déjà définie, essayez de la supprimer. Il se peut que l'espace du tas soit épuisé, car la limite d'allocation de mémoire spécifiée dans l'option est trop élevée. Le compilateur utilise une limite par défaut si vous supprimez le [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) option.
 
 1. Si vous compilez sur une plateforme 64 bits, utilisez l'ensemble d'outils de compilateur 64 bits. Pour plus d’informations, consultez [Comment : activer un 64 bits Visual C++ ensemble d’outils sur la ligne de commande](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 

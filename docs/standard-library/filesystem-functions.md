@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::u8path
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dc53bff438830cfb8a7b0414c4e5cfb111f8f31
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 8fcf7260b6bb10e317a3244ee11b4a92658daf45
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063300"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt;, fonctions
 
@@ -120,7 +120,6 @@ Ces fonctions libres de l’en-tête [\<filesystem>](../standard-library/filesys
 |[resize_file](#resize_file)|[space](#space)|[status](#status)|
 |[status_known](#status_known)|[swap](#swap)|[symlink_status](#symlink_status)|
 |[system_complete](#system_complete)|[temp_directory_path](#temp_directory_path)|[u8path](#u8path)|
-
 
 ## <a name="absolute"></a> absolu
 

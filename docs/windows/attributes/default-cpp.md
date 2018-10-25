@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fb7f205ccdf78e1ef64e2ba2c132e3c2b6b6000
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2ca39b160aacdf72bb6d6131b757755f87ac22a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791001"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075074"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -44,13 +44,13 @@ Interface par défaut qui sera accessible aux environnements de script qui crée
 Si aucune interface par défaut n’est spécifiée, la première occurrence d’une interface non source est utilisée par défaut.
 
 *Interface2*<br/>
-(Facultatif) L’interface source par défaut. Vous devez également spécifier cette interface avec le [source](source-cpp.md) attribut.
+(Facultatif) L’interface source par défaut. Vous devez aussi spécifier cette interface avec l’attribut [source](source-cpp.md) .
 
 Si aucune interface source par défaut n’est spécifiée, la première interface source est utilisée par défaut.
 
 ## <a name="remarks"></a>Notes
 
-Le **par défaut** attribut C++ a les mêmes fonctionnalités que le [par défaut](/windows/desktop/Midl/default) attribut MIDL. Le **par défaut** attribut est également utilisé avec le [cas](case-cpp.md) attribut.
+L’attribut C++ **default** a les mêmes fonctionnalités que l’attribut MIDL [default](/windows/desktop/Midl/default) . L’attribut **default** est aussi utilisé avec l’attribut [case](case-cpp.md) .
 
 ## <a name="example"></a>Exemple
 
@@ -77,7 +77,7 @@ __interface ICustomDispatch : public IDispatch {
    HRESULT Dispatch([in] long l, [out, retval] long *pLong);
 };
 
-[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")  
+[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")
 ]
 class CClass : public ICustom, public IDual, public ICustomDispatch {
    HRESULT Custom(long l, long *pLong) { return(S_OK); }
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-Le [source](source-cpp.md) attribut possède également un exemple montrant comment utiliser **par défaut**.
+Il existe aussi un exemple pour l’attribut [source](source-cpp.md) qui montre comment utiliser **default**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -115,10 +115,10 @@ Le [source](source-cpp.md) attribut possède également un exemple montrant comm
 |**Attributs requis**|**coclasse** (lorsqu’il est appliqué à **classe** ou **struct**)|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclasse](coclass.md)

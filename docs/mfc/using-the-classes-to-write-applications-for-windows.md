@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60cf5d6f61f16aac18524e8b6e75638ec13d27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9907424a583cc16f170890a739fa7ece8cc93ead
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075123"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Utilisation des classes pour l'écriture d'applications pour Windows
 
@@ -66,17 +66,17 @@ Autres parties de l’infrastructure sont les suivantes :
 
 - [Gestion de la mémoire](../mfc/memory-management.md)
 
-     Outre ce qui vous donne un avantage à écrire des applications pour le système d’exploitation Windows, MFC rend également beaucoup plus facile d’écrire des applications qui utilisent spécifiquement de liaison et incorporation technologie OLE. Vous pouvez rendre votre application OLE visual modification du conteneur, un serveur d’édition visuelle OLE ou les deux, et vous pouvez ajouter Automation afin que les autres applications peuvent utiliser des objets à partir de votre application ou même le lecteur à distance.
+   Outre ce qui vous donne un avantage à écrire des applications pour le système d’exploitation Windows, MFC rend également beaucoup plus facile d’écrire des applications qui utilisent spécifiquement de liaison et incorporation technologie OLE. Vous pouvez rendre votre application OLE visual modification du conteneur, un serveur d’édition visuelle OLE ou les deux, et vous pouvez ajouter Automation afin que les autres applications peuvent utiliser des objets à partir de votre application ou même le lecteur à distance.
 
 - [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
 
-     Le kit de développement de contrôle OLE (CDK) est maintenant entièrement intégré à l’infrastructure. Famille de cet article fournit une vue d’ensemble du développement de contrôles ActiveX avec MFC. (Les contrôles ActiveX ont été anciennement contrôles OLE.)
+   Le kit de développement de contrôle OLE (CDK) est maintenant entièrement intégré à l’infrastructure. Famille de cet article fournit une vue d’ensemble du développement de contrôles ActiveX avec MFC. (Les contrôles ActiveX ont été anciennement contrôles OLE.)
 
 - [Programmation de base de données](../data/data-access-programming-mfc-atl.md)
 
-     MFC fournit également deux ensembles de classes de base de données qui simplifient l’écriture d’accès aux données des applications. À l’aide des classes de base de données ODBC, vous pouvez vous connecter aux bases de données via un pilote Open Database Connectivity (ODBC), sélectionner des enregistrements de tables et afficher les informations de l’enregistrement dans un formulaire à l’écran. En utilisant les classes d’objet DAO (Data Access), vous pouvez manipuler les bases de données via le moteur de base de données Microsoft Jet ou les sources de données de (non Jet) externes, y compris les sources de données ODBC.
+   MFC fournit également deux ensembles de classes de base de données qui simplifient l’écriture d’accès aux données des applications. À l’aide des classes de base de données ODBC, vous pouvez vous connecter aux bases de données via un pilote Open Database Connectivity (ODBC), sélectionner des enregistrements de tables et afficher les informations de l’enregistrement dans un formulaire à l’écran. En utilisant les classes d’objet DAO (Data Access), vous pouvez manipuler les bases de données via le moteur de base de données Microsoft Jet ou les sources de données de (non Jet) externes, y compris les sources de données ODBC.
 
-     En outre, MFC est entièrement activé pour écrire des applications qui utilisent Unicode et jeux de caractères multioctets (MBCS), spécifiquement double jeux de caractères (DBCS).
+   En outre, MFC est entièrement activé pour écrire des applications qui utilisent Unicode et jeux de caractères multioctets (MBCS), spécifiquement double jeux de caractères (DBCS).
 
 Pour obtenir une aide générale à la documentation de MFC, consultez [Rubriques MFC générales](../mfc/general-mfc-topics.md).
 

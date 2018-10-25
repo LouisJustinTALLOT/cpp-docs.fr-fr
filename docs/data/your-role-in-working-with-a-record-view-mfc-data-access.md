@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0188f9b7498bc704c43f642fcb7aa1dc72af6a4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f84c7491524e8acccb0c904ed51a97ce66bb2151
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105464"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056046"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Votre rôle dans l'utilisation d'une vue de l'enregistrement (Accès aux données MFC)
 
-Le tableau suivant montre ce que vous devez généralement faire pour travailler avec une vue d'enregistrement et ce que l'infrastructure effectue pour vous.  
-  
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Utilisation d'une vue d'enregistrement : l'infrastructure et vous  
-  
-|Vous|L'infrastructure|  
-|---------|-------------------|  
-|Utiliser l'éditeur de boîte de dialogue Visual C++ pour concevoir le formulaire.|Crée une ressource de modèle de boîte de dialogue avec des contrôles.|  
-|Utilisez le [Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md) pour créer des classes dérivées de [CRecordView](../mfc/reference/crecordview-class.md) et [CRecordset](../mfc/reference/crecordset-class.md).|Écrit les classes pour vous.|  
-|Mapper les contrôles de vue d'enregistrement à des données membres de champ de recordset.|Fournit DDX entre les contrôles et les champs du recordset.|  
-||Fournit des gestionnaires de commandes pour valeur par défaut **placer en premier**, **placer en dernier**, **Move Next**, et **Move Previous** les commandes de menus ou barre d’outils boutons.|  
-||Met à jour les modifications apportées à la source de données.|  
-|[Facultatif] Écrire du code pour remplir les zones de liste ou zones de liste déroulante ou d'autres contrôles avec des données à partir d'un second recordset.||  
-|[Facultatif] Écrire du code pour les validations spéciales.||  
-|[Facultatif] Écrire du code pour ajouter ou supprimer des enregistrements.||  
-  
-La programmation basée sur formulaire n'est qu'une approche parmi d'autres de l'utilisation d'une base de données. Pour plus d’informations sur les applications à l’aide d’une autre interface utilisateur, ou aucune interface utilisateur, consultez [MFC : à l’aide des Classes de base de données des Documents et vues](../data/mfc-using-database-classes-with-documents-and-views.md) et [MFC : utilisation de Classes de base de données sans document et les vues](../data/mfc-using-database-classes-without-documents-and-views.md). Pour d’autres approches pour l’affichage des enregistrements de base de données, consultez la section classes [CListView](../mfc/reference/clistview-class.md) et [CTreeView](../mfc/reference/ctreeview-class.md).  
-  
-## <a name="see-also"></a>Voir aussi  
+Le tableau suivant montre ce que vous devez généralement faire pour travailler avec une vue d'enregistrement et ce que l'infrastructure effectue pour vous.
+
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Utilisation d'une vue d'enregistrement : l'infrastructure et vous
+
+|Vous|L'infrastructure|
+|---------|-------------------|
+|Utiliser l'éditeur de boîte de dialogue Visual C++ pour concevoir le formulaire.|Crée une ressource de modèle de boîte de dialogue avec des contrôles.|
+|Utilisez le [Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md) pour créer des classes dérivées de [CRecordView](../mfc/reference/crecordview-class.md) et [CRecordset](../mfc/reference/crecordset-class.md).|Écrit les classes pour vous.|
+|Mapper les contrôles de vue d'enregistrement à des données membres de champ de recordset.|Fournit DDX entre les contrôles et les champs du recordset.|
+||Fournit des gestionnaires de commandes pour valeur par défaut **placer en premier**, **placer en dernier**, **Move Next**, et **Move Previous** les commandes de menus ou barre d’outils boutons.|
+||Met à jour les modifications apportées à la source de données.|
+|[Facultatif] Écrire du code pour remplir les zones de liste ou zones de liste déroulante ou d'autres contrôles avec des données à partir d'un second recordset.||
+|[Facultatif] Écrire du code pour les validations spéciales.||
+|[Facultatif] Écrire du code pour ajouter ou supprimer des enregistrements.||
+
+La programmation basée sur formulaire n'est qu'une approche parmi d'autres de l'utilisation d'une base de données. Pour plus d’informations sur les applications à l’aide d’une autre interface utilisateur, ou aucune interface utilisateur, consultez [MFC : à l’aide des Classes de base de données des Documents et vues](../data/mfc-using-database-classes-with-documents-and-views.md) et [MFC : utilisation de Classes de base de données sans document et les vues](../data/mfc-using-database-classes-without-documents-and-views.md). Pour d’autres approches pour l’affichage des enregistrements de base de données, consultez la section classes [CListView](../mfc/reference/clistview-class.md) et [CTreeView](../mfc/reference/ctreeview-class.md).
+
+## <a name="see-also"></a>Voir aussi
 
 [Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

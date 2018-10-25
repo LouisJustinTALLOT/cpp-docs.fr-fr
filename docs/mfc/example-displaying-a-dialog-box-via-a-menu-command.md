@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a02bc21362c8f8acd71984f91d5528078d141eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890203"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060414"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Exemple : affichage d'une boîte de dialogue via une commande de menu
 
@@ -56,15 +56,15 @@ Les procédures utilisent les noms et valeurs suivants :
 
 1. Dans **affichage de classes**, sélectionnez la classe de document (CDisplayDialogDoc). Dans la fenêtre **Propriétés** , cliquez sur le bouton **Événements** . Double-cliquez sur l’ID de la commande de menu (ID_VIEW_TEST) dans le volet gauche de la **propriétés** fenêtre et sélectionnez **commande**. Dans le volet droit, cliquez sur la flèche vers le bas et sélectionnez  **\<Ajouter > OnViewTest**.
 
-     Si vous avez ajouté la commande de menu au macroordinateur d’une application MDI, sélectionnez la classe d’application (CDisplayDialogApp) à la place.
+   Si vous avez ajouté la commande de menu au macroordinateur d’une application MDI, sélectionnez la classe d’application (CDisplayDialogApp) à la place.
 
 1. Ajoutez l’instruction à CDisplayDialogDoc.cpp (ou CDisplayDialogApp.cpp) include suivante après les instructions include existantes :
 
-     [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
 
 1. Ajoutez le code suivant à `OnViewTest` pour implémenter la fonction :
 
-     [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Pour afficher une boîte de dialogue non modale
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c881e31d178d6303939c94d68e2824fb11ec2cbd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9d4155fec333061c65f148f29e849dc4717f0d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073758"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Utilisation d'une barre de boîte de dialogue avec un contrôle rebar
 
@@ -41,13 +41,13 @@ La procédure suivante décrit les étapes nécessaires pour obtenir la transpar
 
 1. Dans le nouveau gestionnaire, modifiez le code existant pour correspondre à l’exemple suivant :
 
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
 
 1. Ajoutez un gestionnaire pour le message WM_MOVE.
 
 1. Dans le nouveau gestionnaire, modifiez le code existant pour correspondre à l’exemple suivant :
 
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
 
 Les nouveaux gestionnaires simulent la transparence de la barre de boîte de dialogue en transmettant le message WM_ERASEBKGND à la fenêtre parente et en forçant une mise à jour chaque fois que l’objet de barre de boîte de dialogue est déplacé.
 

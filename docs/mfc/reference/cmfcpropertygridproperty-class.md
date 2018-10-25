@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792e84c094497dc6e3b8a37afc4cf4e48046171f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6430e65e15458eec3a0591168ba7717e1236c089
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387599"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071847"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Cmfcpropertygridproperty, classe
 
@@ -430,7 +430,6 @@ CMFCPropertyGridProperty(
     const CString& strGroupName,
     DWORD_PTR dwData=0,
     BOOL bIsValueList=FALSE);
-
 
 CMFCPropertyGridProperty(
     const CString& strName,
@@ -883,7 +882,6 @@ CMFCPropertyGridProperty* HitTest(
     CPoint point,
     CMFCPropertyGridProperty::ClickArea* pnArea=NULL);
 
-
 CMFCPropertyGridProperty* HitTest(
     CPoint pt,
     CMFCPropertyGridProperty::ClickArea* pnArea=NULL,
@@ -1214,7 +1212,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *nCtlColor*<br/>
@@ -1269,7 +1267,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectButton*<br/>
@@ -1289,7 +1287,7 @@ virtual void OnDrawDescription(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1311,7 +1309,7 @@ virtual void OnDrawExpandBox(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectExpand*<br/>
@@ -1333,7 +1331,7 @@ virtual void OnDrawName(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1353,7 +1351,7 @@ virtual void OnDrawValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1422,14 +1420,13 @@ Par défaut, cette méthode ne fait rien et retourne la valeur TRUE. Si vous sub
 
 ##  <a name="onkillselection"></a>  CMFCPropertyGridProperty::OnKillSelection
 
-
 ```
 virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CMFCPropertyGridProperty**
+[in] *CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -1437,14 +1434,13 @@ Par défaut, cette méthode ne fait rien.
 
 ##  <a name="onpossizechanged"></a>  CMFCPropertyGridProperty::OnPosSizeChanged
 
-
 ```
 virtual void OnPosSizeChanged(CRect);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CRect*
+[in] *CRect*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -1519,14 +1515,13 @@ Cette méthode prend en charge les types variants suivants : VT_INT VT_I2, VT_I
 
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection
 
-
 ```
-virtual void OnSetSelection(CMFCPropertyGridProperty*);
+virtual void OnSetSelection CMFCPropertyGridProperty*);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CMFCPropertyGridProperty**
+[in] *CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>Notes
 

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4dbf1b085ca5ffddd87396fc367bf19f2ad02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 841a140236c092ad14501698db90007bce0322ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383052"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054876"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml Helper Macros
 
@@ -58,8 +58,6 @@ Les macros d’assistance de DDX_DHtml permettent un accès facile aux propriét
 ## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 
 Définit ou récupère la destination URL ou point d’ancrage.
-
-
 
 ```
 DDX_DHtml_Anchor_Href(
@@ -113,8 +111,6 @@ Cette macro appelle le [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference
 
 Définit ou récupère le code HTML entre les balises de début et de fin de l’élément actuel.
 
-
-
 ```
 DDX_DHtml_ElementInnerHtml(
     CDataExchange* dx,
@@ -137,12 +133,9 @@ La valeur qui est échangée.
 
 Cette macro appelle le [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) ID de dispatch de fonction à l’aide de la DISPID_IHTMLELEMENT_INNERHTML
 
-
 ## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 
 Définit ou récupère le texte entre les balises de début et de fin de l’élément actuel.
-
-
 
 ```
 DDX_DHtml_ElementInnerText(
@@ -224,8 +217,6 @@ Cette macro appelle le [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference
 
 Définit ou récupère l’URL de l’image associée.
 
-
-
 ```
 DDX_DHtml_IFrame_Src(
     CDataExchange* dx,
@@ -275,7 +266,6 @@ La valeur qui est échangée.
 Lorsque vous utilisez la macro DDX_DHtml_Img_Src pour récupérer la propriété src d’un élément IMAGE, l’objet d’image de Internet Explorer renvoie l’URL entièrement avec séquence d’échappement pour la source de l’image. Par exemple, si vous utilisez la macro DDX_DHtml_Img_Src pour définir la propriété de src d’un élément d’IMAGE à la chaîne « certains image intéressante », lorsque vous récupérez cette propriété, Internet Explorer retourne la chaîne « res://d:\myapplication\myapp.exe/some% 20interesting % 20picture. »
 
 Cette macro appelle le [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) ID de dispatch de fonction à l’aide de la DISPID_IHTMLIMGELEMENT_SRC
-
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6537cdb9e7ff9806bef3bfec85a94e0d50808477
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030142"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078464"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray, classe
 
@@ -100,7 +100,7 @@ Type de données à stocker dans le tableau.
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Convertit une valeur dans un `SAFEARRAY` pointeur.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Récupère un élément du tableau.|
-|[CComSafeArray::operator =](#operator_eq)|Opérateur d'assignation.|  
+|[CComSafeArray::operator =](#operator_eq)|Opérateur d'assignation.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
@@ -110,7 +110,7 @@ Type de données à stocker dans le tableau.
 
 ## <a name="remarks"></a>Notes
 
-`CComSafeArray` fournit un wrapper pour le [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) (classe), rendant très simple de créer et gérer des tableaux unidimensionnels et multidimensionnels de pratiquement n’importe quel les types prenant en charge VARIANT.
+`CComSafeArray` fournit un wrapper pour la classe [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , ce qui simplifie la création et la gestion des tableaux unidimensionnels et multidimensionnels de pratiquement n’importe quel type prenant en charge VARIANT.
 
 `CComSafeArray` simplifie le transmission de tableaux entre processus et offre en outre une sécurité renforcée en vérifiant les valeurs d’index de tableau par rapport aux limites inférieure et supérieure.
 
@@ -159,7 +159,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *psaSrc*<br/>
-Un pointeur vers un `SAFEARRAY` objet.
+Pointeur vers un objet `SAFEARRAY` .
 
 *ulCount*<br/>
 Le nombre d’objets à ajouter au tableau.
@@ -311,7 +311,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="parameters"></a>Paramètres
 
 *pBound*<br/>
-Un pointeur vers un `SAFEARRAYBOUND` objet.
+Pointeur vers un objet `SAFEARRAYBOUND` .
 
 *uDims*<br/>
 Le nombre de dimensions dans le tableau.
@@ -597,7 +597,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 Référence à un objet `CComSafeArray`.
 
 *psaSrc*<br/>
-Un pointeur vers un `SAFEARRAY` objet.
+Pointeur vers un objet `SAFEARRAY` .
 
 ### <a name="return-value"></a>Valeur de retour
 

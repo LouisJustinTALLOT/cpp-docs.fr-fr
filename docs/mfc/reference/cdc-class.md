@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fe5aeaa288f0d36db71df7f7ab5d498aec3256
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 496b958c1ff96b2bc8f3fd3ce8b453c9d3497dcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448582"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081142"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -887,7 +887,6 @@ BOOL Arc(
     int x4,
     int y4);
 
-
 BOOL Arc(
     LPCRECT lpRect,
     POINT ptStart,
@@ -957,7 +956,6 @@ BOOL ArcTo(
     int y3,
     int x4,
     int y4);
-
 
 BOOL ArcTo(
     LPCRECT lpRect,
@@ -1142,7 +1140,6 @@ BOOL Chord(
     int x4,
     int y4);
 
-
 BOOL Chord(
     LPCRECT lpRect,
     POINT ptStart,
@@ -1226,7 +1223,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers un contexte de périphérique. Si *pDC* est NULL, la fonction crée un contexte de périphérique de mémoire qui est compatible avec l’affichage du système.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1420,7 +1417,6 @@ void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
     COLORREF clrBottomRight);
-
 
 void Draw3dRect(
     int x,
@@ -1672,7 +1668,6 @@ BOOL DrawIcon(
     int y,
     HICON hIcon);
 
-
 BOOL DrawIcon(
     POINT point,
     HICON hIcon);
@@ -1721,7 +1716,6 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1729,7 +1723,6 @@ BOOL DrawState(
     UINT nFlags,
     CBrush* pBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1737,14 +1730,12 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
     HICON hIcon,
     UINT nFlags,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1755,7 +1746,6 @@ BOOL DrawState(
     int nTextLen = 0,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1764,7 +1754,6 @@ BOOL DrawState(
     BOOL bPrefixText = TRUE,
     int nTextLen = 0,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1773,7 +1762,6 @@ BOOL DrawState(
     LPARAM lData,
     UINT nFlags,
     HBRUSH hBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1840,7 +1828,6 @@ virtual int DrawText(
     LPRECT lpRect,
     UINT nFormat);
 
-
 int DrawText(
     const CString& str,
     LPRECT lpRect,
@@ -1896,7 +1883,6 @@ virtual int DrawTextEx(
     LPRECT lpRect,
     UINT nFormat,
     LPDRAWTEXTPARAMS lpDTParams);
-
 
 int DrawTextEx(
     const CString& str,
@@ -2097,7 +2083,6 @@ virtual int Escape(
     int nCount,
     LPCSTR lpszInData,
     LPVOID lpOutData);
-
 
 int Escape(
     int nEscape,
@@ -2301,7 +2286,6 @@ virtual BOOL ExtTextOut(
     UINT nCount,
     LPINT lpDxWidths);
 
-
 BOOL ExtTextOut(
     int x,
     int y,
@@ -2433,7 +2417,6 @@ Appelez cette fonction membre pour remplir le rectangle donné avec la couleur u
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
-
 
 void FillSolidRect(
     int x,
@@ -3553,7 +3536,7 @@ Pointe vers un tableau d’octets où sont placés les types de vertex. Les vale
 
 PT_BEZIERTO toujours se produire dans les ensembles de trois. Le point dans le chemin d’accès faisant immédiatement précéder définit le point de départ de la courbe Bzier. Les deux premiers points PT_BEZIERTO sont les points de contrôle et le troisième point PT_BEZIERTO est le point de terminaison (si codées en dur).
 
-     A PT_LINETO or PT_BEZIERTO type may be combined with the following flag (by using the bitwise operator **OR**) to indicate that the corresponding point is the last point in a figure and that the figure should be closed:
+   Un type PT_LINETO ou PT_BEZIERTO peut-être être combiné avec l’indicateur suivant (à l’aide de l’opérateur de bits **OR**) pour indiquer que le point correspondant est le dernier point dans une figure et que la figure doit être fermée :
 
 - PT_CLOSEFIGURE Spécifie que la figure est fermée automatiquement après la ligne correspondante ou courbe est dessinée. La figure est fermée en dessinant une ligne du point de terminaison ou la courbe au point correspondant au dernier PT_MOVETO.
 
@@ -4704,7 +4687,6 @@ BOOL Pie(
     int x4,
     int y4);
 
-
 BOOL Pie(
     LPCRECT lpRect,
     POINT ptStart,
@@ -4768,7 +4750,6 @@ Lit le contenu du métafichier spécifié sur le contexte de périphérique.
 
 ```
 BOOL PlayMetaFile(HMETAFILE hMF);
-
 
 BOOL PlayMetaFile(
     HENHMETAFILE hEnhMetaFile,
@@ -4951,11 +4932,11 @@ Pointe vers un tableau qui spécifie la façon dont chaque point dans le *lpPoin
 
 PT_BEZIERTO toujours se produire dans les ensembles de trois. La position actuelle définit le point de départ pour la fonction spline Bzier. Les deux premiers points PT_BEZIERTO sont les points de contrôle et le troisième point PT_BEZIERTO est le point de fin. Le point de fin devient la nouvelle position actuelle. S’il n’y a pas trois points PT_BEZIERTO consécutifs, une erreur se produit.
 
-     A PT_LINETO or PT_BEZIERTO type can be combined with the following constant by using the bitwise operator OR to indicate that the corresponding point is the last point in a figure and the figure is closed:
+   Un type PT_LINETO ou PT_BEZIERTO peut être combiné avec la constante suivante à l’aide de l’opérateur au niveau du bit ou pour indiquer que le point correspondant est le dernier point dans une illustration et la figure est fermée :
 
 - PT_CLOSEFIGURE Spécifie que la figure est fermée automatiquement après le PT_LINETO ou PT_BEZIERTO pour ce point est effectuée. Une ligne est dessinée à partir de ce point à la plus récente PT_MOVETO ou `MoveTo` point.
 
-     Cet indicateur est combiné avec le type PT_LINETO pour une ligne, ou avec le type PT_BEZIERTO de point de fin pour une spline Bzier, à l’aide de l’opérateur de bits **OR** opérateur. La position actuelle est définie pour le point de fin de la ligne fermante.
+   Cet indicateur est combiné avec le type PT_LINETO pour une ligne, ou avec le type PT_BEZIERTO de point de fin pour une spline Bzier, à l’aide de l’opérateur de bits **OR** opérateur. La position actuelle est définie pour le point de fin de la ligne fermante.
 
 *nCount*<br/>
 Spécifie le nombre total de points dans le *lpPoints* de tableau, le même que le nombre d’octets dans le *lpTypes* tableau.
@@ -5332,7 +5313,6 @@ BOOL RoundRect(
     int x3,
     int y3);
 
-
 BOOL RoundRect(
     LPCRECT lpRect,
     POINT point);
@@ -5557,7 +5537,6 @@ Sélectionne la zone donnée en tant que la zone de découpage en cours pour le 
 
 ```
 int SelectClipRgn(CRgn* pRgn);
-
 
 int SelectClipRgn(
     CRgn* pRgn,
@@ -6194,7 +6173,6 @@ COLORREF SetPixel(
     int y,
     COLORREF crColor);
 
-
 COLORREF SetPixel(
     POINT point,
     COLORREF crColor);
@@ -6233,7 +6211,6 @@ BOOL SetPixelV(
     int x,
     int y,
     COLORREF crColor);
-
 
 BOOL SetPixelV(
     POINT point,
@@ -6903,7 +6880,6 @@ virtual CSize TabbedTextOut(
     LPINT lpnTabStopPositions,
     int nTabOrigin);
 
-
 CSize TabbedTextOut(
     int x,
     int y,
@@ -6961,7 +6937,6 @@ virtual BOOL TextOut(
     int y,
     LPCTSTR lpszString,
     int nCount);
-
 
 BOOL TextOut(
     int x,
