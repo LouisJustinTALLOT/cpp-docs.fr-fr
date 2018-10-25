@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f9ce0094bce1f8e7590cef0cbe3bfe85f35158d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050877"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056059"
 ---
 # <a name="run-time-type-information"></a>Informations de type au moment de l'exécution
 
@@ -35,15 +35,15 @@ Il existe trois principaux éléments de langage C++ se rapportant aux informati
 
 - Le [dynamic_cast](../cpp/dynamic-cast-operator.md) opérateur.
 
-     Utilisé pour la conversion des types polymorphes.
+   Utilisé pour la conversion des types polymorphes.
 
 - Le [typeid](../cpp/typeid-operator.md) opérateur.
 
-     Utilisé pour identifier le type exact d'un objet.
+   Utilisé pour identifier le type exact d'un objet.
 
 - Le [type_info](../cpp/type-info-class.md) classe.
 
-     Permet de conserver les informations de type retournées par la **typeid** opérateur.
+   Permet de conserver les informations de type retournées par la **typeid** opérateur.
 
 ## <a name="see-also"></a>Voir aussi
 

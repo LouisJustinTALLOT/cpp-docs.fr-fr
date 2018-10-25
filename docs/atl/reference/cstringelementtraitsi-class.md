@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d34277bd3c9b47c5ba9367d19348e43ea263f43b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 29df4bd550a5de232b5ced0510e8dbfc68e59d42
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060752"
 ---
 # <a name="cstringelementtraitsi-class"></a>Cstringelementtraitsi, classe
 
@@ -120,7 +120,7 @@ Le deuxième élément de chaîne.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Zéro si les chaînes sont identiques, < 0 si *str1* est inférieure à *str2*, ou 0 > Si *str1* est supérieur à *str2*. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour exécuter les comparaisons.  
+Zéro si les chaînes sont identiques, < 0 si *str1* est inférieure à *str2*, ou 0 > Si *str1* est supérieur à *str2*. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour exécuter les comparaisons.
 
 ### <a name="remarks"></a>Notes
 
