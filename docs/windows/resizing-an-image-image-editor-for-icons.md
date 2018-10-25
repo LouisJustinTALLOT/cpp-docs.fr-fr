@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e81ca5418782b993f406f33b0b207bc8acb5ba0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc70d6cd5933608067a43cdb7dcca1e11dd22a2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082287"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Redimensionnement d'une image (Éditeur d'images pour les icônes)
 
@@ -37,7 +37,7 @@ Lorsque la sélection inclut l’image entière, le **Image** éditeur soit réd
 
 Il existe deux mécanismes pour redimensionner une image : les poignées de redimensionnement et la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez faire glisser les poignées de redimensionnement pour modifier la taille de tout ou partie d’une image. Les poignées de dimensionnement que vous pouvez faire glisser sont pleines. Vous ne pouvez pas faire glisser les poignées qui sont vides. Vous pouvez utiliser la **propriétés** fenêtre pour redimensionner l’intégralité de l’image uniquement, pas une partie sélectionnée.
 
-![Dimensionnement des handles sur une image bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
+![Dimensionnement des handles sur une image bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
 Poignées de redimensionnement
 
 > [!NOTE]

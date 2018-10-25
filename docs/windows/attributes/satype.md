@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 255517789a5854ee6f76c4982bb75825905df546
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 708495d68b8cac4c49980e6a92b08e5ca9f37ff4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791004"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069995"
 ---
 # <a name="satype"></a>satype
 
@@ -75,4 +75,4 @@ __interface A {
 [Attributs de compilateur](compiler-attributes.md)<br/>
 [Attributs de paramètres](parameter-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[ID](id.md)  
+[ID](id.md)

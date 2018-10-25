@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387833"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078191"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog, classe
 
@@ -138,15 +138,15 @@ Par défaut, la boîte de dialogue Propriétés de l’objet OLE a trois pages p
 
 - Général
 
-     Cette page contient des informations système pour le fichier représenté par l’élément de document sélectionné. Cette page, l’utilisateur peut convertir l’élément sélectionné vers un autre type.
+   Cette page contient des informations système pour le fichier représenté par l’élément de document sélectionné. Cette page, l’utilisateur peut convertir l’élément sélectionné vers un autre type.
 
 - Vue
 
-     Cette page contient des options pour afficher l’élément, la modification de l’icône et la modification de la mise à l’échelle de l’image.
+   Cette page contient des options pour afficher l’élément, la modification de l’icône et la modification de la mise à l’échelle de l’image.
 
 - Lien
 
-     Cette page contient des options de modification de l’emplacement de l’élément lié et de la mise à jour de l’élément lié. À partir de cette page, l’utilisateur peut rompre la liaison de l’élément sélectionné.
+   Cette page contient des options de modification de l’emplacement de l’élément lié et de la mise à jour de l’élément lié. À partir de cette page, l’utilisateur peut rompre la liaison de l’élément sélectionné.
 
 Pour ajouter des pages au-delà de ceux fournis par défaut, modifiez le [m_psh](#m_psh) variable membre avant de quitter le constructeur de votre `COlePropertiesDialog`-classe dérivée. Il s’agit d’une implémentation avancée de la `COlePropertiesDialog` constructeur.
 

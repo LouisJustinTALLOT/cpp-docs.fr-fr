@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dd74589833d3a5debac4dfa8320267b7a9c430c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d16e3ca84b97aa1c6312ae9c634468b11ca86b9c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447373"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068171"
 ---
 # <a name="cobject-class"></a>CObject (classe)
 
@@ -288,11 +288,9 @@ Pour la version de la bibliothèque, opérateur **supprimer** libère la mémoir
 ```
 void PASCAL operator delete(void* p);
 
-
 void PASCAL operator delete(
     void* p,
     void* pPlace);
-
 
 void PASCAL operator delete(
     void* p,
@@ -327,7 +325,6 @@ Pour la version de la bibliothèque, opérateur **nouveau** effectue une allocat
 ```
 void* PASCAL operator new(size_t nSize);
 void* PASCAL operator new(size_t, void* p);
-
 
 void* PASCAL operator new(
     size_t nSize,
@@ -390,6 +387,4 @@ Consultez [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pour 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

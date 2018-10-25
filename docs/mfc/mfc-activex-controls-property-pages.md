@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376484"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079855"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Contrôles ActiveX MFC : pages de propriétés
 
@@ -86,7 +86,7 @@ Par exemple à des fins, les procédures suivantes utilisent un contrôle simple
 
 1. Ouvrez la boîte de dialogue IDD_PROPPAGE_SAMPLE.
 
-     L’Assistant contrôle ActiveX ajoute le nom du projet à la fin de l’ID de boîte de dialogue, dans ce cas, un exemple.
+   L’Assistant contrôle ActiveX ajoute le nom du projet à la fin de l’ID de boîte de dialogue, dans ce cas, un exemple.
 
 1. Glisser -déplacer le contrôle sélectionné à partir de la boîte à outils vers la zone de la boîte de dialogue.
 

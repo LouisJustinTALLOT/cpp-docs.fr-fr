@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384500"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080219"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Spécifie la taille initiale et la position de la *pParentWnd* fenêtre, en coordonnées clientes.
 
-[in] [out] *pParentWnd* spécifie la fenêtre parente de ce volet.
+*pParentWnd*<br/>
+[in, out] Spécifie la fenêtre parente de ce volet.
 
 *nID*<br/>
 [in] Spécifie l’ID du volet.
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Spécifie le style pour le volet. Pour plus d’informations, consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* Spécifie le contexte de la création du volet.
+*pContext*<br/>
+[in, out] Spécifie le contexte de la création du volet.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Spécifie la taille initiale et la position de la *pParentWnd* fenêtre, en coordonnées clientes.
 
-[in] [out] *pParentWnd* spécifie la fenêtre parente de ce volet.
+*pParentWnd*<br/>
+[in, out] Spécifie la fenêtre parente de ce volet.
 
 *nID*<br/>
 [in] Spécifie l’ID du volet.
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Spécifie le style pour le volet. Pour plus d’informations, consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* Spécifie le contexte de créer pour le volet.
+*pContext*<br/>
+[in, out] Spécifie le contexte de créer pour le volet.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pDockBar* Spécifie le volet de base pour l’ancrer ce volet pour.
+*pDockBar*<br/>
+[in, out] Spécifie le volet de base pour l’ancrer ce volet pour.
 
 *lpRect*<br/>
 [in] Spécifie le rectangle dans le volet de base où ce volet doit être ancré.
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pWndOldParent* fenêtre parente de la précédente du volet.
+*pWndOldParent*<br/>
+[in, out] Fenêtre parente de la précédente du volet.
 
 ### <a name="remarks"></a>Notes
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pWndNewParent* spécifie la nouvelle fenêtre parente.
+*pWndNewParent*<br/>
+[in, out] Spécifie la nouvelle fenêtre parente.
 
 *bDelay*<br/>
 [in] TRUE pour différer l’ajustement global de mise en page d’accueil ; Sinon, FALSE.
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *ppDockBar* Spécifie le volet d’accueil pour ce volet.
+*ppDockBar*<br/>
+[in, out] Spécifie le volet d’accueil pour ce volet.
 
 *lpRect*<br/>
 [in] Spécifie le rectangle d’ancrage.
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pClass* spécifie les informations de classe runtime pour la fenêtre mini-frame.
+*pClass*<br/>
+[in, out] Spécifie les informations de classe runtime pour la fenêtre mini-frame.
 
 ### <a name="remarks"></a>Notes
 

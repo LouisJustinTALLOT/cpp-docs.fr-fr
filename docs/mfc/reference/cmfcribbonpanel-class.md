@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082578"
 ---
 # <a name="cmfcribbonpanel-class"></a>Cmfcribbonpanel, classe
 
 Implémente un panneau qui contient un jeu d'éléments de ruban. Lorsque le panneau est dessiné, il affiche le plus d'éléments possible, selon la taille du panneau.
 
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
-
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -540,7 +539,6 @@ Le nom du Panneau de ruban.
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 Pointeur vers la catégorie de ruban qui contient ce panneau de ruban.
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ Le panneau de ruban principale s’affiche lorsque l’utilisateur sélectionne 
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *nChar*
+[in] *nChar*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -866,7 +861,7 @@ int nHeight);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le volet du ruban.
 
 *nHeight*<br/>
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in] Spécifie l’index de base zéro de l’élément à remplacer.
 
-[in] [out] *pElem* un pointeur valide vers l’élément qui remplace l’élément d’origine.
+*pElem*<br/>
+[in, out] Un pointeur valide vers l’élément qui remplace l’élément d’origine.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in] Spécifie l’ID de commande de l’élément à remplacer.
 
-[in] [out] *pElem* un pointeur valide vers l’élément qui remplacera l’élément d’origine.
+*pElem*<br/>
+[in, out] Un pointeur valide vers l’élément qui remplacera l’élément d’origine.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in] Spécifie l’index de base zéro de l’élément de ruban à ajouter.
 
-[in] [out] *pRTC* un pointeur vers les informations de classe runtime de l’élément de ruban est ajouté au volet du ruban.
+*pRTC*<br/>
+[in, out] Un pointeur vers les informations de classe runtime de l’élément de ruban est ajouté au volet du ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in] Spécifie l’ID de commande de l’élément de ruban à ajouter.
 
-[in] [out] *pRTC* un pointeur vers les informations de classe runtime associés à l’élément de ruban est ajouté au volet du ruban.
+*pRTC*<br/>
+[in, out] Un pointeur vers les informations de classe runtime associés à l’élément de ruban est ajouté au volet du ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

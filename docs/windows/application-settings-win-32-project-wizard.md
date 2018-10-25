@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c8e2294c7aee3634409a01c613d7e31729230a
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 7342e8cfb95e8e443631563499a84fd7bd6579a1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861822"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080700"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Paramètres de l'application, Assistant Projet Win 32
 
@@ -62,4 +62,4 @@ Ajouter la prise en charge pour l’une des bibliothèques fournies dans Visual 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Application Win32 (Assistant)](../windows/win32-application-wizard.md)  
+[Application Win32 (Assistant)](../windows/win32-application-wizard.md)

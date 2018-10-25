@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b11a78d1be76895b9687d1423df74c51fe3d39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49ae12184189996561717874833d6cdf3f30e159
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416693"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078842"
 ---
 # <a name="concurrency-namespace-enums"></a>énumérations d’espace de noms d’accès concurrentiel
 
@@ -44,6 +44,7 @@ ms.locfileid: "46416693"
 ```
 enum agent_status;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -94,6 +95,7 @@ Types d'événements qui peuvent être tracés à l'aide des fonctionnalités de
 ```
 enum ConcRT_EventType;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -119,6 +121,7 @@ Indicateurs de suivi des types d'événements.
 ```
 enum Concrt_TraceFlags;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -142,6 +145,7 @@ Type de région critique dans lequel se trouve un contexte.
 ```
 enum CriticalRegionType;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -161,6 +165,7 @@ Utilisé par la stratégie `DynamicProgressFeedback` pour décrire si les ressou
 ```
 enum DynamicProgressFeedbackType;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -174,6 +179,7 @@ Type d'un bloc de messagerie `join`.
 ```
 enum join_type;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -192,6 +198,7 @@ Réponses valides à une offre d'objet `message` à un bloc.
 ```
 enum message_status;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -212,6 +219,7 @@ Clés de stratégie qui décrivent certains aspects du comportement du planifica
 ```
 enum PolicyElementKey;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -258,6 +266,7 @@ Utilisé par la stratégie `SchedulingProtocol` pour décrire l'algorithme de pl
 ```
 enum SchedulingProtocolType;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -276,6 +285,7 @@ Utilisé pour indiquer l'état d'un proxy de thread, quand il exécute un change
 ```
 enum SwitchingProxyState;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -297,13 +307,14 @@ Décrit l'état d'exécution d'un objet `task_group` ou `structured_task_group`.
 ```
 enum task_group_status;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
 |----------|-----------------|
 |`canceled`|L'objet `task_group` ou `structured_task_group` a été annulé. Une ou plusieurs tâches n’ont pas pu s’exécuter.|
-|`completed`|Les tâches mises en file d'attente dans l'objet `task_group` ou `structured_task_group` sont terminées.|
-|`not_complete`|Les tâches mises en file d'attente dans l'objet `task_group` ne sont pas terminées. Notez que cette valeur n'est actuellement pas retournée par le runtime d'accès concurrentiel.|
+|`completed`|Les tâches mises en file d’attente dans l’objet `task_group` ou `structured_task_group` sont terminées.|
+|`not_complete`|Les tâches mises en file d’attente dans l’objet `task_group` ne sont pas terminées. Notez que cette valeur n'est actuellement pas retournée par le runtime d'accès concurrentiel.|
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -316,6 +327,7 @@ Utilisé par la stratégie `WinRTInitialization` pour décrire si et comment le 
 ```
 enum WinRTInitializationType;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|

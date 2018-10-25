@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe348043d991aa04652eae02ba0f2efa393bcf5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ac01274773abf04bf6f817b0f70bcd527865a1b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098132"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083475"
 ---
 # <a name="record-mfc-data-access"></a>Enregistrement (Accès aux données MFC)
 
-Un enregistrement est une collection de données relatives à une seule entité, telle qu’un compte ou un client, stockée dans une table (une ligne de la table). Un enregistrement est constitué d'un groupe de colonnes contiguës (parfois appelées champs) qui contiennent des données de différents types. Un ensemble d'enregistrements sélectionnés à partir d'une source de données (souvent appelé jeu de résultats en termes de base de données) est appelé recordset dans MFC. Pour plus d’informations, consultez [Recordset (ODBC)](../data/odbc/recordset-odbc.md).  
-  
-## <a name="see-also"></a>Voir aussi  
+Un enregistrement est une collection de données relatives à une seule entité, telle qu’un compte ou un client, stockée dans une table (une ligne de la table). Un enregistrement est constitué d'un groupe de colonnes contiguës (parfois appelées champs) qui contiennent des données de différents types. Un ensemble d'enregistrements sélectionnés à partir d'une source de données (souvent appelé jeu de résultats en termes de base de données) est appelé recordset dans MFC. Pour plus d’informations, consultez [Recordset (ODBC)](../data/odbc/recordset-odbc.md).
+
+## <a name="see-also"></a>Voir aussi
 
 [Accès aux données de programmation (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

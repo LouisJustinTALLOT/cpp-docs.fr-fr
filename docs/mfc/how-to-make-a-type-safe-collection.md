@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d0d250e17ddd8beaef2a9f5cff4d4e1046fdcb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7368e067e1324c3263440a7a6b165099c870735
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380440"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078152"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Comment : définir une collection de type sécurisé
 
@@ -45,11 +45,11 @@ La bibliothèque MFC fournit les collections de type sécurisé prédéfinies ba
 
 1. Déclarez une variable du type de classe de collection. Exemple :
 
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
 1. Appelez la fonction membre de l’objet de la collection. Exemple :
 
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
 1. Si nécessaire, implémentez le [fonctions d’assistance](../mfc/reference/collection-class-helpers.md) et [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements). Pour plus d’informations sur l’implémentation de ces fonctions, consultez [implémentation de fonctions d’assistance](#_core_implementing_helper_functions).
 
@@ -57,15 +57,15 @@ Cet exemple illustre la déclaration d'une liste d'entiers. Le premier paramètr
 
 ##  <a name="_core_implementing_helper_functions"></a> Implémentation de fonctions d’assistance
 
-Les classes de collection basées sur les modèles `CArray`, `CList` et `CMap` utilisent cinq fonctions d'assistance globales que vous pouvez personnaliser autant que nécessaire pour votre classe de collection dérivée. Pour plus d’informations sur ces fonctions d’assistance, consultez [Assistants de classe de Collection](../mfc/reference/collection-class-helpers.md) dans le *référence MFC*. L’implémentation de la fonction de sérialisation est nécessaire pour la plupart des utilisations de classes de collection basées sur un modèle.
+Les classes de collection basées sur les modèles `CArray`, `CList` et `CMap` utilisent cinq fonctions d’assistance globales que vous pouvez personnaliser autant que nécessaire pour votre classe de collection dérivée. Pour plus d’informations sur ces fonctions d’assistance, consultez [Assistants de classe de Collection](../mfc/reference/collection-class-helpers.md) dans le *référence MFC*. L’implémentation de la fonction de sérialisation est nécessaire pour la plupart des utilisations de classes de collection basées sur un modèle.
 
 ###  <a name="_core_serializing_elements"></a> Sérialisation des éléments
 
-Les classes `CArray`, `CList` et `CMap` appellent `SerializeElements` pour stocker des éléments de collection ou pour la lecture d'une archive.
+Les classes `CArray`, `CList` et `CMap` appellent `SerializeElements` pour stocker des éléments de collection ou pour la lecture d’une archive.
 
 L'implémentation par défaut de la fonction d'assistance de `SerializeElements` effectue une écriture de bits sur les objets de l'archive, ou une lecture au niveau de l'archivage des objets, selon que les objets sont stockés ou extraits de l'archive. Remplacez `SerializeElements` si cette opération n'est pas appropriée.
 
-Si la collection contient des objets dérivés `CObject` et que vous utilisez la macro `IMPLEMENT_SERIAL` dans l'implémentation de la classe d'éléments de collection, vous pouvez tirer parti des fonctionnalités de sérialisation intégrée dans `CArchive` et `CObject` :
+Si la collection contient des objets dérivés `CObject` et que vous utilisez la macro `IMPLEMENT_SERIAL` dans l’implémentation de la classe d’éléments de collection, vous pouvez tirer parti des fonctionnalités de sérialisation intégrée dans `CArchive` et `CObject` :
 
 [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]
 
@@ -85,27 +85,27 @@ Il existe deux manières de créer des collections de types cohérents avec les 
 
 1. Utilisez directement l'une des classes basées sur des modèles, telles que `CWordArray`.
 
-     Par exemple, vous pouvez créer `CWordArray` et lui ajouter toutes les valeurs 32 bits avant de les récupérer. Il n'y a rien d'autre à faire. Utilisez uniquement la fonctionnalité prédéfinie.
+   Par exemple, vous pouvez créer `CWordArray` et lui ajouter toutes les valeurs 32 bits avant de les récupérer. Il n'y a rien d'autre à faire. Utilisez uniquement la fonctionnalité prédéfinie.
 
-     Vous pouvez également utiliser une collection prédéfinie, par exemple `CObList`, pour conserver tous les objets dérivés `CObject`. Une collection `CObList` est définie pour contenir les pointeurs vers `CObject`. Lorsque vous récupérez un objet dans la liste, vous devrez peut-être convertir le résultat en type approprié puisque les fonctions `CObList` retournent des pointeurs vers `CObject`. Par exemple, si vous stockez les objets `CPerson` d'une collection `CObList`, vous devrez convertir un élément récupéré en pointeur vers un objet `CPerson`. L'exemple suivant utilise une collection `CObList` pour gérer les objets `CPerson` :
+   Vous pouvez également utiliser une collection prédéfinie, par exemple `CObList`, pour conserver tous les objets dérivés `CObject`. Une collection `CObList` est définie pour contenir les pointeurs vers `CObject`. Lorsque vous récupérez un objet dans la liste, vous devrez peut-être convertir le résultat en type approprié puisque les fonctions `CObList` retournent des pointeurs vers `CObject`. Par exemple, si vous stockez les objets `CPerson` d'une collection `CObList`, vous devrez convertir un élément récupéré en pointeur vers un objet `CPerson`. L’exemple suivant utilise une collection `CObList` pour gérer les objets `CPerson` :
 
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-     Cette technique d’utilisation d’un type de collection prédéfini et de la conversion si nécessaire peut être adéquate pour vos besoins en matière de collection. Si vous avez d'une fonctionnalité avancée ou de la cohérence des types, utilisez une classe basée sur un modèle, ou suivez la procédure ci-après.
+   Cette technique d’utilisation d’un type de collection prédéfini et de la conversion si nécessaire peut être adéquate pour vos besoins en matière de collection. Si vous avez d'une fonctionnalité avancée ou de la cohérence des types, utilisez une classe basée sur un modèle, ou suivez la procédure ci-après.
 
 #### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>Pour dériver et étendre une collection de types cohérents non basés sur des modèles
 
 1. Faites dériver votre propre classe de collection de l’une des classes basées sur des modèles prédéfinis.
 
-     Lorsque vous dérivez votre classe, vous pouvez ajouter des fonctions wrapper de type cohérent pour fournir une interface de type cohérent aux fonctions existantes.
+   Lorsque vous dérivez votre classe, vous pouvez ajouter des fonctions wrapper de type cohérent pour fournir une interface de type cohérent aux fonctions existantes.
 
-     Par exemple, si vous avez dérivé une liste `CObList` pour gérer les objets `CPerson`, vous pourrez ajouter des fonctions wrapper `AddHeadPerson` et `GetHeadPerson`, comme indiqué ci-dessous.
+   Par exemple, si vous avez dérivé une liste `CObList` pour gérer les objets `CPerson`, vous pourrez ajouter des fonctions wrapper `AddHeadPerson` et `GetHeadPerson`, comme indiqué ci-dessous.
 
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
+   [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-     Ces fonctions wrapper fournissent un mode de type cohérent pour ajouter et récupérer des objets `CPerson` de la liste dérivée. Vous pouvez voir que pour la fonction `GetHeadPerson`, vous encapsulez simplement la conversion de type.
+   Ces fonctions wrapper fournissent un mode de type cohérent pour ajouter et récupérer des objets `CPerson` de la liste dérivée. Vous pouvez voir que pour la fonction `GetHeadPerson`, vous encapsulez simplement la conversion de type.
 
-     Vous pouvez également ajouter une nouvelle fonctionnalité en définissant de nouvelles fonctions qui étendent les capacités de la collection plutôt que de juste encapsuler les fonctionnalités existantes en types cohérents. Par exemple, l’article [la suppression de tous les objets d’une Collection CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) décrit une fonction pour supprimer tous les objets contenus dans une liste. Cette fonction peut être ajoutée à cette classe dérivée comme une fonction membre.
+   Vous pouvez également ajouter une nouvelle fonctionnalité en définissant de nouvelles fonctions qui étendent les capacités de la collection plutôt que de juste encapsuler les fonctionnalités existantes en types cohérents. Par exemple, l’article [la suppression de tous les objets d’une Collection CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) décrit une fonction pour supprimer tous les objets contenus dans une liste. Cette fonction peut être ajoutée à cette classe dérivée comme une fonction membre.
 
 ## <a name="see-also"></a>Voir aussi
 

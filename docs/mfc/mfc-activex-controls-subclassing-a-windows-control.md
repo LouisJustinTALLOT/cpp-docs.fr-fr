@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081704"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Contrôles ActiveX MFC : sous-classement d'un contrôle Windows
 
@@ -94,12 +94,12 @@ Pour ajouter un gestionnaire de messages pour un message de fenêtre réfléchi 
 
 - Dans le fichier .H de la classe de contrôle, déclarez une fonction gestionnaire. La fonction doit avoir un type de retour **LRESULT** et deux paramètres, avec des types **WPARAM** et **LPARAM**, respectivement. Exemple :
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - Dans la classe du contrôle. CPP, ajoutez une entrée ON_MESSAGE à la table des messages. Les paramètres de cette entrée doivent être l'identificateur de message et le nom de la fonction gestionnaire. Exemple :
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - Également dans le. Fichier CPP, implémenter la `OnOcmCommand` fonction membre pour traiter le message réfléchi. Le *wParam* et *lParam* paramètres sont les mêmes que celles du message de fenêtre d’origine.
 

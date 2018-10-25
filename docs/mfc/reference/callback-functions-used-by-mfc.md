@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be34fa84a05d329d26d1bc4aaacbed0c2b0a76e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3093ca60b222512e517400f478fc9d635a6f867
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409192"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073771"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
 
@@ -117,7 +117,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 Identifie le contexte de périphérique.
 
-*Code*<br/>
+*code*<br/>
 Spécifie si une erreur s’est produite. Il est 0 si aucune erreur ne se n’est produite. Il est SP_OUTOFDISK si le Gestionnaire d’impression est actuellement manque d’espace disque et davantage d’espace disque devient disponible si l’application attend. Si *code* est SP_OUTOFDISK, l’application ne devra pas abandonner le travail d’impression. Dans le cas contraire, elle doit générer pour le Gestionnaire d’impression en appelant le `PeekMessage` ou `GetMessage` (fonction) Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -127,7 +127,6 @@ La valeur de retour de la fonction de gestionnaire d’abandon est différent de
 ### <a name="remarks"></a>Notes
 
 Le nom réel doit être exporté comme décrit dans la section Notes de [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
-
 
 ## <a name="see-also"></a>Voir aussi
 

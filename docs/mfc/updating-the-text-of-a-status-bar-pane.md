@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae8b15431edbdd24a7afd6c7e25be6b9eadb4107
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393319"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081389"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Mise à jour du texte d'un volet de barre d'état
 
@@ -40,17 +40,17 @@ Par exemple, supposons qu’un d’eux a `ID_INDICATOR_PAGE` en tant que son ide
 
 1. Définir l’ID de commande. du volet
 
-     Sur le **vue** menu, cliquez sur **affichage des ressources**. Avec le bouton droit de la ressource de projet et cliquez sur **symboles des ressources**. Dans la boîte de dialogue Symboles des ressources, cliquez sur `New`. Tapez un nom d’ID de commande : par exemple, `ID_INDICATOR_PAGE`. Spécifiez une valeur pour l’ID ou acceptez la valeur proposée dans la boîte de dialogue Symboles des ressources. Par exemple, pour `ID_INDICATOR_PAGE`, acceptez la valeur par défaut. Fermez la boîte de dialogue Symboles des ressources.
+   Sur le **vue** menu, cliquez sur **affichage des ressources**. Avec le bouton droit de la ressource de projet et cliquez sur **symboles des ressources**. Dans la boîte de dialogue Symboles des ressources, cliquez sur `New`. Tapez un nom d’ID de commande : par exemple, `ID_INDICATOR_PAGE`. Spécifiez une valeur pour l’ID ou acceptez la valeur proposée dans la boîte de dialogue Symboles des ressources. Par exemple, pour `ID_INDICATOR_PAGE`, acceptez la valeur par défaut. Fermez la boîte de dialogue Symboles des ressources.
 
 1. Définir une chaîne par défaut à afficher dans le volet.
 
-     Affichage des ressources ouvrir, puis double-cliquez sur **Table de chaînes** dans la fenêtre qui répertorie les types de ressources pour votre application. Avec le **Table de chaînes** éditeur ouvert, choisissez **nouvelle chaîne** à partir de la **insérer** menu. Dans la fenêtre Propriétés de chaîne, sélectionnez l’ID de volet commande (par exemple, `ID_INDICATOR_PAGE`) et tapez une valeur de chaîne par défaut, tels que « Page ». Fermez l’éditeur de chaîne. (Vous avez besoin une chaîne par défaut pour éviter une erreur du compilateur).
+   Affichage des ressources ouvrir, puis double-cliquez sur **Table de chaînes** dans la fenêtre qui répertorie les types de ressources pour votre application. Avec le **Table de chaînes** éditeur ouvert, choisissez **nouvelle chaîne** à partir de la **insérer** menu. Dans la fenêtre Propriétés de chaîne, sélectionnez l’ID de volet commande (par exemple, `ID_INDICATOR_PAGE`) et tapez une valeur de chaîne par défaut, tels que « Page ». Fermez l’éditeur de chaîne. (Vous avez besoin une chaîne par défaut pour éviter une erreur du compilateur).
 
 1. Ajouter le volet à la *indicateurs* tableau.
 
-     Dans le fichier MAINFRM. CPP, recherchez le *indicateurs* tableau. Ce tableau répertorie les ID de commande pour tous les indicateurs de la barre d’état, dans l’ordre de gauche à droite. Au point approprié dans le tableau, entrez l’ID de volet commande, comme indiqué ici pour `ID_INDICATOR_PAGE`:
+   Dans le fichier MAINFRM. CPP, recherchez le *indicateurs* tableau. Ce tableau répertorie les ID de commande pour tous les indicateurs de la barre d’état, dans l’ordre de gauche à droite. Au point approprié dans le tableau, entrez l’ID de volet commande, comme indiqué ici pour `ID_INDICATOR_PAGE`:
 
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
 La méthode recommandée pour afficher du texte dans un volet consiste à appeler le `SetText` fonction membre de classe `CCmdUI` dans une fonction de gestionnaire de mise à jour pour le volet. Par exemple, vous souhaiterez peut-être définir une variable entière *m_nPage* qui contient le numéro de page actuel et l’utilisation `SetText` pour définir du texte du volet vers une version de chaîne de ce nombre.
 
@@ -63,19 +63,19 @@ La procédure suivante montre comment utiliser une fonction de gestionnaire de m
 
 1. Ajoutez un gestionnaire de mise à jour de commande pour la commande.
 
-     Ajouter manuellement un prototype pour le gestionnaire, comme indiqué ici pour `ID_INDICATOR_PAGE` (dans MAINFRM. (H) :
+   Ajouter manuellement un prototype pour le gestionnaire, comme indiqué ici pour `ID_INDICATOR_PAGE` (dans MAINFRM. (H) :
 
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+   [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
 1. Dans les zones appropriées. CPP, ajoutez la définition du gestionnaire, comme indiqué ici pour `ID_INDICATOR_PAGE` (dans MAINFRM. (CPP) :
 
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+   [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-     Les trois dernières lignes de ce gestionnaire sont le code qui affiche votre texte.
+   Les trois dernières lignes de ce gestionnaire sont le code qui affiche votre texte.
 
 1. Dans la table des messages appropriés, ajoutez la macro ON_UPDATE_COMMAND_UI, comme indiqué ici pour `ID_INDICATOR_PAGE` (dans MAINFRM. (CPP) :
 
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+   [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
 Une fois que vous définissez la valeur de la *m_nPage* variable membre (de classe `CMainFrame`), cette technique provoque le numéro de page dans le volet pendant le traitement inactif de la même manière que l’application met à jour les autres indicateurs. Si *m_nPage* modifications, l’affichage change pendant la boucle inactive suivante.
 

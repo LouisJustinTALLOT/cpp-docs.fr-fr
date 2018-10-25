@@ -16,38 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 225f27703ff56c4b37bad4287a708df7a2b1f479
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 7c3d94bec2638901f542dfa7c412da0de9a60942
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410718"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078296"
 ---
 # <a name="creating-an-ole-db-provider"></a>Création d'un fournisseur OLE DB
 
-La méthode recommandée pour créer un fournisseur OLE DB consiste à utiliser les Assistants pour créer un projet ATL COM et un fournisseur, puis modifier les fichiers en utilisant les modèles OLE DB. Quand vous personnalisez votre fournisseur, vous pouvez commenter les propriétés indésirables et ajouter des interfaces facultatives.  
-  
-Les étapes de base sont les suivantes :  
+La méthode recommandée pour créer un fournisseur OLE DB consiste à utiliser les Assistants pour créer un projet ATL COM et un fournisseur, puis modifier les fichiers en utilisant les modèles OLE DB. Quand vous personnalisez votre fournisseur, vous pouvez commenter les propriétés indésirables et ajouter des interfaces facultatives.
 
-1. Utilisez le **Assistant Projet ATL** pour créer les fichiers de projet de base et la **Assistant de fournisseur OLEDB ATL** pour créer le fournisseur (sélectionnez **fournisseur de ATL OLEDB** à partir de la **Installé** > **Visual C++** > **ATL** dossier **ajouter un nouvel élément**).  
+Les étapes de base sont les suivantes :
+
+1. Utilisez le **Assistant Projet ATL** pour créer les fichiers de projet de base et la **Assistant de fournisseur OLEDB ATL** pour créer le fournisseur (sélectionnez **fournisseur de ATL OLEDB** à partir de la **Installé** > **Visual C++** > **ATL** dossier **ajouter un nouvel élément**).
 
    > [!NOTE]
    > Le projet doit inclure la prise en charge MFC avant d’ajouter un **fournisseur d’OLEDB ATL**.
-  
-1. Modifier le code dans le `Execute` méthode dans [CMyProviderRowset(MyProviderRS.h)](cmyproviderrowset-myproviderrs-h.md). Pour obtenir un exemple, consultez [lecture de chaînes dans le fournisseur OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
-  
-1. Modifier la propriété est mappée dans [MyProviderDS.h](cmyprovidersource-myproviderds-h.md), [MyProviderSess.h](cmyprovidersession-myprovidersess-h.md), et [MyProviderRS.h](cmyproviderrowset-myproviderrs-h.md). L’Assistant crée des mappages de propriété qui contiennent toutes les propriétés qu’un fournisseur peut implémenter. Parcourez les mappages de propriété et supprimez ou commentez les propriétés de votre fournisseur n’a pas besoin pour prendre en charge.  
-  
-1. Mettre à jour PROVIDER_COLUMN_MAP, qui se trouve dans [CMyProviderRowset(MyProviderRS.h)](cmyproviderrowset-myproviderrs-h.md). Pour obtenir un exemple, consultez [stockage de chaînes dans le fournisseur OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
-  
-1. Lorsque vous êtes prêt à tester votre fournisseur, vous pouvez le tester en essayant de trouver le fournisseur dans une énumération de fournisseur. Pour obtenir des exemples de code de test qui recherche un fournisseur dans une énumération, consultez le [CATDB](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb) et [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) ou l’exemple fourni dans [implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md).  
-  
-1. Ajouter toutes les interfaces que vous souhaitez. Pour obtenir un exemple, consultez [amélioration le fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
-  
+
+1. Modifier le code dans le `Execute` méthode dans [CCustomRowset(CustomRS.h)](cmyproviderrowset-myproviderrs-h.md). Pour obtenir un exemple, consultez [lecture de chaînes dans le fournisseur OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
+
+1. Modifier la propriété est mappée dans [CustomDS.h](cmyprovidersource-myproviderds-h.md), [CustomSess.h](cmyprovidersession-myprovidersess-h.md), et [CustomRS.h](cmyproviderrowset-myproviderrs-h.md). L’Assistant crée des mappages de propriété qui contiennent toutes les propriétés qu’un fournisseur peut implémenter. Parcourez les mappages de propriété et supprimez ou commentez les propriétés de votre fournisseur n’a pas besoin pour prendre en charge.
+
+1. Mettre à jour PROVIDER_COLUMN_MAP, qui se trouve dans [CCustomRowset(CustomRS.h)](cmyproviderrowset-myproviderrs-h.md). Pour obtenir un exemple, consultez [stockage de chaînes dans le fournisseur OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).
+
+1. Lorsque vous êtes prêt à tester votre fournisseur, vous pouvez le tester en essayant de trouver le fournisseur dans une énumération de fournisseur. Pour obtenir des exemples de code de test qui recherche un fournisseur dans une énumération, consultez le [CATDB](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb) et [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) ou l’exemple fourni dans [implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md).
+
+1. Ajouter toutes les interfaces que vous souhaitez. Pour obtenir un exemple, consultez [amélioration le fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).
+
    > [!NOTE]
-   > Par défaut, les Assistants génèrent un code OLE DB conforme au niveau 0. Pour vous assurer que votre application reste conforme au niveau 0, ne supprimez pas les interfaces générées par l’Assistant à partir du code.  
-  
-## <a name="see-also"></a>Voir aussi  
+   > Par défaut, les Assistants génèrent un code OLE DB conforme au niveau 0. Pour vous assurer que votre application reste conforme au niveau 0, ne supprimez pas les interfaces générées par l’Assistant à partir du code.
+
+## <a name="see-also"></a>Voir aussi
 
 [CatDB, exemple : Explorateur de schémas de base de données](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
 [Exemple DBViewer : Navigateur de base de données](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)
