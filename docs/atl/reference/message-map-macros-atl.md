@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbfd58491981cdba1b3aa3002736f49a7c09038c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054474"
 ---
 # <a name="message-map-macros-atl"></a>Macros de mappage des messages (ATL)
 
@@ -93,11 +93,11 @@ Ces macros définissent des tables des messages et des entrées.
 |[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon le code de notification et l’identificateur du contrôle.|
 |[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon l’identificateur du contrôle.|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon le code de notification et une plage contiguë d’identificateurs de contrôle.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon une plage contiguë d’identificateurs de contrôle.|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mappe un message WM_NOTIFY réfléchi à une fonction de gestionnaire, selon une plage contiguë d’identificateurs de contrôle.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h  
+**En-tête :** atlwin.h
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -136,7 +136,7 @@ L’exemple suivant montre deux mappages de messages de remplacement. La table d
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h   
+**En-tête :** atlwin.h
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -153,7 +153,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="remarks"></a>Notes
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc) utilise la table des messages par défaut pour traiter les messages envoyés à la fenêtre. La table des messages dirige les messages à la fonction gestionnaire approprié ou à une autre table des messages.  
+[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc) utilise la table des messages par défaut pour traiter les messages envoyés à la fenêtre. La table des messages dirige les messages à la fonction gestionnaire approprié ou à une autre table des messages.
 
 Les macros suivantes mappent un message à une fonction gestionnaire. Cette fonction doit être définie dans *theClass*.
 
@@ -328,7 +328,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="remarks"></a>Notes
 
-Macro CHAIN_MSG_MAP_DYNAMIC dirige les messages, en cours d’exécution, à la table des messages par défaut dans un autre objet. L’objet et sa table des messages associés *dynaChainID*, que vous définissez via [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Vous devez dériver votre classe de `CDynamicChain` pour pouvoir utiliser la macro CHAIN_MSG_MAP_DYNAMIC. Pour obtenir un exemple, consultez le [CDynamicChain](../../atl/reference/cdynamicchain-class.md) vue d’ensemble.  
+Macro CHAIN_MSG_MAP_DYNAMIC dirige les messages, en cours d’exécution, à la table des messages par défaut dans un autre objet. L’objet et sa table des messages associés *dynaChainID*, que vous définissez via [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Vous devez dériver votre classe de `CDynamicChain` pour pouvoir utiliser la macro CHAIN_MSG_MAP_DYNAMIC. Pour obtenir un exemple, consultez le [CDynamicChain](../../atl/reference/cdynamicchain-class.md) vue d’ensemble.
 
 > [!NOTE]
 >  Toujours commencer avec une table des messages [BEGIN_MSG_MAP](#begin_msg_map). Vous pouvez ensuite déclarer les tables des messages de remplacement suivants avec ALT_MSG_MAP. Le [END_MSG_MAP](#end_msg_map) macro marque la fin de la table des messages. Chaque mappage de message doit avoir exactement une instance de BEGIN_MSG_MAP et END_MSG_MAP.
@@ -387,10 +387,10 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>Paramètres
 
-*Code*<br/>
+*code*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
@@ -410,10 +410,10 @@ COMMAND_HANDLER(id, code, func)
 *ID*<br/>
 [in] L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
 
-*Code*<br/>
+*code*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
@@ -452,7 +452,7 @@ COMMAND_ID_HANDLER(id, func)
 *ID*<br/>
 [in] Identificateur de l’élément de menu, le contrôle ou l’accélérateur d’envoi du message.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
@@ -475,10 +475,10 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 *idLast*<br/>
 [in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
-*Code*<br/>
+*code*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
@@ -505,7 +505,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 *idLast*<br/>
 [in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
@@ -601,7 +601,7 @@ MESSAGE_HANDLER( msg, func )
 *Msg*<br/>
 [in] Le message Windows.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
@@ -645,7 +645,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 *msgLast*<br/>
 [in] Marque la fin d’une plage contiguë de messages.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
@@ -665,7 +665,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 *CD*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
@@ -688,7 +688,7 @@ NOTIFY_HANDLER( id, cd, func )
 *CD*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
@@ -729,7 +729,7 @@ NOTIFY_ID_HANDLER( id, func )
 *ID*<br/>
 [in] L’identificateur du contrôle qui envoie le message.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
@@ -755,7 +755,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *CD*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
@@ -782,7 +782,7 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 *idLast*<br/>
 [in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="remarks"></a>Notes
@@ -819,11 +819,11 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>Paramètres
 
-*Code*<br/>
+*code*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.  
+*func*<br/>
+[in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -842,15 +842,15 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 *ID*<br/>
 [in] L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
 
-*Code*<br/>
+*code*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.  
+*func*<br/>
+[in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h  
+**En-tête :** atlwin.h
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
@@ -865,12 +865,12 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 *ID*<br/>
 [in] L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
 
-*Func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.  
+*func*<br/>
+[in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h  
+**En-tête :** atlwin.h
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
@@ -888,15 +888,15 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 *idLast*<br/>
 [in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
-*Code*<br/>
+*code*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.  
+*func*<br/>
+[in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h  
+**En-tête :** atlwin.h
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
@@ -914,12 +914,12 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 *idLast*<br/>
 [in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
-*Func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.  
+*func*<br/>
+[in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h  
+**En-tête :** atlwin.h
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
@@ -934,12 +934,12 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 *CD*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.  
+*func*<br/>
+[in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h  
+**En-tête :** atlwin.h
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
@@ -957,12 +957,12 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 *CD*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.  
+*func*<br/>
+[in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h  
+**En-tête :** atlwin.h
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
@@ -977,12 +977,12 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 *ID*<br/>
 [in] L’identificateur de l’élément de menu, un contrôle ou un accélérateur.
 
-*Func*<br/>
-[in] Le nom de la fonction de gestionnaire de messages.  
+*func*<br/>
+[in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h  
+**En-tête :** atlwin.h
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 
@@ -1003,7 +1003,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *CD*<br/>
 [in] Le code de notification.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ### <a name="requirements"></a>Configuration requise
@@ -1026,7 +1026,7 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 *idLast*<br/>
 [in] Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 
-*Func*<br/>
+*func*<br/>
 [in] Le nom de la fonction de gestionnaire de messages.
 
 ## <a name="see-also"></a>Voir aussi

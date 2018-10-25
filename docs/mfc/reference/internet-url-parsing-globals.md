@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0ffae70ae2da4edab9326a913e597fe1434611
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18ef64bc20ba963b248273be16af7748a798a1bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383764"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054707"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Programmes d’assistance et objet Globals d’analyse URL Internet
 
@@ -237,6 +237,7 @@ Utilisez cette fonction globale pour déterminer le type d’un handle d’Inter
   ```
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *hQuery*<br/>
@@ -297,6 +298,7 @@ Lève une exception d’Internet.
 ```
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *dwContext*<br/>
@@ -321,5 +323,4 @@ Vous êtes chargé de déterminer la cause en fonction du code d’erreur de sys
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [CInternetException, classe](cinternetexception-class.md)<br/>
 [THROW](#throw)
-
 

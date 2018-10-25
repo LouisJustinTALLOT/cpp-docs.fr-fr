@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217dcd1d5e999ea640795c656bbf40f7adad3d7d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295077b474681cabeb1221052ae9e2c9ad5ed79a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398743"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053173"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets : utilisation de sockets avec des archives
 
@@ -49,7 +49,7 @@ L'utilisation d'un objet `CSocket` implique la création et l'association de plu
 
 1. Utiliser l’objet pour créer sous-jacent **SOCKET** gérer.
 
-     Pour un `CSocket` client de l’objet, vous devez normalement utiliser les paramètres par défaut à [créer](../mfc/reference/casyncsocket-class.md#create), sauf si vous avez besoin d’un socket datagramme. Pour un `CSocket` objet serveur, vous devez spécifier un port dans le `Create` appeler.
+   Pour un `CSocket` client de l’objet, vous devez normalement utiliser les paramètres par défaut à [créer](../mfc/reference/casyncsocket-class.md#create), sauf si vous avez besoin d’un socket datagramme. Pour un `CSocket` objet serveur, vous devez spécifier un port dans le `Create` appeler.
 
     > [!NOTE]
     >  `CArchive` ne fonctionne pas avec les sockets datagramme. Si vous souhaitez utiliser `CSocket` pour un socket datagramme, vous devez utiliser la classe comme vous utiliseriez `CAsyncSocket`, c'est à dire, sans archive. Les datagrammes sont peu fiables (aucune garantie d'arrivée et peuvent être répétés, ou hors de la séquence), ils ne sont pas compatibles avec la sérialisation par le biais d'une archive. Vous vous attendez à ce qu'une opération de sérialisation se termine de manière fiable et dans l'ordre. Si vous essayez d'utiliser `CSocket` avec un objet `CArchive` pour un datagramme, une assertion MFC échoue.
@@ -58,7 +58,7 @@ L'utilisation d'un objet `CSocket` implique la création et l'association de plu
 
      - ou -
 
-     Si le socket est un serveur, appelez [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) pour commencer à écouter les tentatives de connexion à partir d’un client. Lorsqu’il reçoit une demande de connexion, recevez-la en appelant [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Si le socket est un serveur, appelez [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) pour commencer à écouter les tentatives de connexion à partir d’un client. Lorsqu’il reçoit une demande de connexion, recevez-la en appelant [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
     > [!NOTE]
     >  Le `Accept` fonction membre prend une référence à un vide `CSocket` objet comme paramètre. Vous devez créer cet objet avant d’appeler `Accept`. Si cet objet socket est hors de portée, la connexion se ferme. N’appelez pas `Create` pour ce nouvel objet socket.
@@ -67,13 +67,13 @@ L'utilisation d'un objet `CSocket` implique la création et l'association de plu
 
 1. Créer un [CArchive](../mfc/reference/carchive-class.md) objet pour charger (recevoir) ou le stockage des données (envoi). L'archive est associée à l'objet `CSocketFile`.
 
-     N'oubliez pas que `CArchive` ne fonctionne pas avec les sockets datagramme.
+   N'oubliez pas que `CArchive` ne fonctionne pas avec les sockets datagramme.
 
 1. Utilisez l'objet `CArchive` pour passer des données de test entre les sockets client et serveur.
 
-     Gardez à l'esprit qu'un objet donné `CArchive` déplace les données dans une seule direction : pour charger (recevoir) ou enregistrer (émettre). Dans certains cas, vous utiliserez deux objets `CArchive` : un pour envoyer des données, l'autre pour recevoir les accusés de réception.
+   Gardez à l'esprit qu'un objet donné `CArchive` déplace les données dans une seule direction : pour charger (recevoir) ou enregistrer (émettre). Dans certains cas, vous utiliserez deux objets `CArchive` : un pour envoyer des données, l'autre pour recevoir les accusés de réception.
 
-     Après avoir accepté une connexion et la configuration de l'archive, vous pouvez effectuer des tâches telles que la validation des mots de passe.
+   Après avoir accepté une connexion et la configuration de l'archive, vous pouvez effectuer des tâches telles que la validation des mots de passe.
 
 1. Détruisez archive, le fichier de sockets et les objets socket.
 

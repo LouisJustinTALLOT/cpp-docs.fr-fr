@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095597"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053615"
 ---
 # <a name="cnonstatelessworker-class"></a>Cnonstatelessworker, classe
 
@@ -75,7 +75,7 @@ L’avantage de cette classe est qu’il fournit un moyen pratique pour modifier
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-Implémentation de [WorkerArchetype::Execute](worker-archetype.md#execute).  
+Implémentation de [WorkerArchetype::Execute](worker-archetype.md#execute).
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode crée une instance de la *Worker* classe sur la pile et les appels [initialiser](worker-archetype.md#initialize) sur cet objet. Si l’initialisation réussite, cette méthode appelle également [Execute](worker-archetype.md#execute) et [Terminate](worker-archetype.md#terminate) sur le même objet.  
+Cette méthode crée une instance de la *Worker* classe sur la pile et les appels [initialiser](worker-archetype.md#initialize) sur cet objet. Si l’initialisation réussite, cette méthode appelle également [Execute](worker-archetype.md#execute) et [Terminate](worker-archetype.md#terminate) sur le même objet.
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

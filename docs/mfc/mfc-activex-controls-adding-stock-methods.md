@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42907273423d69ed93df5700b33556047338fe2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e103e43f23746f8274ad00da4d043e3446dfc706
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391424"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053026"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Contrôles ActiveX MFC : ajout de méthodes stock
 
@@ -51,7 +51,7 @@ Ajout d’une méthode stockée est simple à l’aide de la [Assistant Ajout de
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une méthode**.
 
-     Cette opération ouvre l’Assistant Ajout de méthode.
+   Cette opération ouvre l’Assistant Ajout de méthode.
 
 1. Dans le **nom de la méthode** , cliquez sur **Actualiser**.
 

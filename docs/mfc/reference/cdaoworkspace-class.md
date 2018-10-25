@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 964fab6030e0a89ef69730fd4867973e402db614
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a4a5b6936397728472bf0041735248157091db56
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442017"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054356"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace, classe
 
@@ -163,7 +163,7 @@ Vous pouvez utiliser la classe `CDaoWorkspace` pour :
 
 - Ouvrir explicitement l’espace de travail par défaut.
 
-     Généralement l’utilisation de l’espace de travail par défaut est implicite, lorsque vous ouvrez un nouveau [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objets. Mais vous devrez peut-être accéder de manière explicite, par exemple, pour accéder aux propriétés de moteur de base de données ou la collection d’espaces de travail. Consultez « Utilisation implicite de l’espace de travail par défaut » ci-dessous.
+   Généralement l’utilisation de l’espace de travail par défaut est implicite, lorsque vous ouvrez un nouveau [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objets. Mais vous devrez peut-être accéder de manière explicite, par exemple, pour accéder aux propriétés de moteur de base de données ou la collection d’espaces de travail. Consultez « Utilisation implicite de l’espace de travail par défaut » ci-dessous.
 
 - Créer de nouveaux espaces de travail. Appelez [Append](#append) si vous souhaitez les ajouter à la collection d’espaces de travail.
 
@@ -309,7 +309,6 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszLocale = dbLangGeneral,
     int nOptions = 0);
 
-
 static void PASCAL CompactDatabase(
     LPCTSTR lpszSrcName,
     LPCTSTR lpszDestName,
@@ -453,7 +452,6 @@ void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetDatabaseInfo(
     LPCTSTR lpszName,
@@ -624,7 +622,6 @@ void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetWorkspaceInfo(
     LPCTSTR lpszName,

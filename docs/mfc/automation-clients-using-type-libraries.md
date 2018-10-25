@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421040024e5dd95fb39bdc78cd54f3f7dc49bf83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 001dfb29a5ac0f6d93b0715bd2b86ccd60e91259
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377708"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054603"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Clients Automation : utilisation des bibliothèques de types
 
@@ -54,9 +54,9 @@ Visual C++ gère automatiquement ce fichier de bibliothèque de types pour vous 
     > [!NOTE]
     >  Vous pouvez sélectionner des interfaces à partir de plus d’une bibliothèque de types.
 
-     Pour sélectionner des interfaces, double-cliquez dessus ou cliquez sur le **ajouter** bouton. Lorsque vous procédez ainsi, les noms pour les classes de distribution s’affichent dans le **classes générées** boîte. Vous pouvez modifier les noms de classe dans le `Class` boîte.
+   Pour sélectionner des interfaces, double-cliquez dessus ou cliquez sur le **ajouter** bouton. Lorsque vous procédez ainsi, les noms pour les classes de distribution s’affichent dans le **classes générées** boîte. Vous pouvez modifier les noms de classe dans le `Class` boîte.
 
-     Le **fichier** boîte affiche le fichier dans lequel la classe sera déclarée. (vous pouvez modifier ce nom de fichier ainsi). Vous pouvez également utiliser le bouton Parcourir pour sélectionner d’autres fichiers, si vous préférez que les informations d’en-tête et d’implémentation écrites dans les fichiers existants ou dans un répertoire autre que le répertoire du projet.
+   Le **fichier** boîte affiche le fichier dans lequel la classe sera déclarée. (vous pouvez modifier ce nom de fichier ainsi). Vous pouvez également utiliser le bouton Parcourir pour sélectionner d’autres fichiers, si vous préférez que les informations d’en-tête et d’implémentation écrites dans les fichiers existants ou dans un répertoire autre que le répertoire du projet.
 
     > [!NOTE]
     >  Toutes les classes de distribution pour les interfaces sélectionnés seront placés dans le fichier spécifié ici. Si vous souhaitez que les interfaces doivent être déclarées dans les en-têtes distincts, vous devez exécuter cet Assistant pour chaque fichier d’en-tête que vous souhaitez créer.
@@ -66,7 +66,7 @@ Visual C++ gère automatiquement ce fichier de bibliothèque de types pour vous 
 
 1. Cliquez sur **Terminer**.
 
-     L’Assistant écrit le code pour vos classes de distribution à l’aide de la classe spécifiée et les noms de fichiers.
+   L’Assistant écrit le code pour vos classes de distribution à l’aide de la classe spécifiée et les noms de fichiers.
 
 ## <a name="see-also"></a>Voir aussi
 
