@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
-ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
+ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42583927"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235007"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Guide pratique pour signaler un problème avec la documentation ou l’ensemble d’outils Visual C++
 
@@ -370,14 +370,12 @@ Quand vous choisissez de signaler un problème, cherchez d’abord s’il en exi
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>Utiliser les pages de la Communauté des développeurs Visual Studio
 
-Les pages de la Communauté des développeurs Visual Studio sont un autre moyen pratique de signaler des problèmes et trouver des solutions pour Visual Studio, le compilateur C++, les outils et les bibliothèques. La page [Visual Studio Questions](https://developercommunity.visualstudio.com/spaces/8/index.html) est l’endroit où vous pouvez signaler des problèmes avec l’IDE ou l’installation. Pour les problèmes relatifs au compilateur, à l’éditeur de liens, et aux autres outils et bibliothèques C++, utilisez la page [C++ Questions](https://developercommunity.visualstudio.com/spaces/62/index.html).
+Les pages de la Communauté des développeurs Visual Studio sont un autre moyen pratique de signaler des problèmes et de trouver des solutions pour Visual Studio, le compilateur C++, les outils et les bibliothèques. Il existe des pages de Communauté des développeurs propres à [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html), [Visual Studio pour Mac](https://developercommunity.visualstudio.com/spaces/41/index.html), [.NET](https://developercommunity.visualstudio.com/spaces/61/index.html), [C++](https://developercommunity.visualstudio.com/spaces/62/index.html), [Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html) et [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html). Sous ces onglets, en haut de chaque page, se trouve une zone de recherche que vous pouvez utiliser pour rechercher des publications ou des rubriques qui signalent des problèmes similaires aux vôtres. Il est possible qu’une solution ou d’autres informations utiles relatives à votre problème soient déjà disponibles. Si quelqu’un a signalé le même problème, votez pour cette rubrique et ajoutez-y des commentaires au lieu de signaler un nouveau problème. Pour commenter, voter ou signaler un nouveau problème, vous pouvez être invité à vous connecter à votre compte Visual Studio et à accepter de donner à l’application Communauté des développeurs un accès à votre profil.
 
-Dans la bannière Communauté de développeurs située en haut de chaque page se trouve une zone de recherche, que vous pouvez utiliser pour rechercher des publications ou des rubriques qui signalent des problèmes similaires aux vôtres. Il est possible qu’une solution ou d’autres informations utiles relatives à votre problème soient déjà disponibles dans une rubrique existante. Si quelqu’un a signalé le même problème, votez pour cette rubrique et ajoutez-y des commentaires au lieu de signaler un nouveau problème.
-
-Si votre problème n’a pas déjà été signalé, choisissez le bouton **Signaler un problème** en regard de la zone de recherche de la page Communauté des développeurs. Vous pouvez être invité à vous connecter à votre compte Visual Studio et à accepter de donner à l’application Communauté des développeurs un accès à votre profil. Une fois connecté, vous accédez directement à une page où vous pouvez signaler le problème. Vous pouvez inclure le code et la ligne de commande de votre reproduction, des captures d’écran, des liens vers des discussions qui s’y rapportent, et toute autre information que vous pensez pertinente et utile.
+Pour les problèmes relatifs au compilateur, à l’éditeur de liens, et aux autres outils et bibliothèques C++, utilisez la page [C++](https://developercommunity.visualstudio.com/spaces/62/index.html). Si vous recherchez votre problème et qu’il n’a pas encore été signalé, choisissez le bouton **Signaler un problème** en regard de la zone de recherche en haut de la page. Vous pouvez inclure le code et la ligne de commande de votre reproduction, des captures d’écran, des liens vers des discussions qui s’y rapportent, et toute autre information que vous pensez pertinente et utile.
 
 > [!TIP]
-> Pour d’autres types de problèmes que vous pouvez rencontrer dans Visual Studio et qui ne sont pas liés à l’ensemble d’outils (par exemple, des problèmes d’interface utilisateur, des fonctionnalités IDE altérées ou des blocages d’ordre général), l’outil **Signaler un problème** peut s’avérer être un choix particulièrement judicieux en raison de ses fonctionnalités de capture d’écran et de sa capacité à enregistrer les actions de l’interface utilisateur qui aboutissent au problème que vous avez rencontré. Ces types d’erreurs peuvent également être signalés sur le site [Communauté de développeurs](https://developercommunity.visualstudio.com/).
+> Pour d’autres types de problèmes que vous pouvez rencontrer dans Visual Studio et qui ne sont pas liés à l’ensemble d’outils C++ (par exemple, des problèmes d’interface utilisateur, une fonctionnalité de l’IDE rompue ou des plantages généraux), utilisez l’outil **Signaler un problème** dans l’IDE. Il s’agit du meilleur choix, en raison de ses fonctionnalités de capture d’écran et de sa capacité à enregistrer des actions d’interface utilisateur qui mènent à un problème que vous avez rencontré. Ces types d’erreurs peuvent également être recherchés sur le site [Communauté des développeurs](https://developercommunity.visualstudio.com/). Pour plus d’informations, consultez [Guide pratique pour signaler un problème avec Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
 ### <a name="reports-and-privacy"></a>Rapports et confidentialité
 

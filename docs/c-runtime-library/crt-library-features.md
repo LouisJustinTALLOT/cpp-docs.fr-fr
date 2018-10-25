@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42578517"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092233"
 ---
 # <a name="crt-library-features"></a>Fonctionnalités de la bibliothèque CRT
 
@@ -65,7 +65,8 @@ Ce tableau répertorie les bibliothèques qui implémentent la bibliothèque vcr
 |vcruntime.lib|vcruntime\<version>.dll|Bibliothèque d’importation de DLL pour vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|Bibliothèque d’importation de DLL pour le vcruntime de débogage. Non redistribuable.|**/MDd**|_DEBUG, _MT, _DLL|
 
-Au moment de la refactorisation UCRT, les fonctions de runtime d’accès concurrentiel ont été déplacées vers concrt140.dll, qui fait partie du package redistribuable C++. Cette DLL est obligatoire pour les conteneurs et algorithmes parallèles C++ tels que `concurrency::parallel_for`. De plus, la bibliothèque standard C++ nécessite cette DLL sur Windows XP pour permettre la prise en charge des primitives de synchronisation, car Windows XP n’a pas de variables de condition.
+> [!NOTE]
+> Au moment de la refactorisation UCRT, les fonctions de runtime d’accès concurrentiel ont été déplacées vers concrt140.dll, qui a été ajouté au package redistribuable C++. Cette DLL est obligatoire pour les conteneurs et algorithmes parallèles C++ tels que `concurrency::parallel_for`. De plus, la bibliothèque standard C++ nécessite cette DLL sur Windows XP pour permettre la prise en charge des primitives de synchronisation, car Windows XP n’a pas de variables de condition.
 
 Le code qui initialise le CRT se trouve dans l’une des nombreuses bibliothèques, selon que la bibliothèque CRT est liée de manière statique ou dynamique, ou que le code est natif, managé ou mixte. Ce code gère le démarrage du CRT, l’initialisation interne des données par thread, et l’arrêt. Il est spécifique à la version du compilateur utilisé. Cette bibliothèque est toujours liée de manière statique, même quand vous utilisez un UCRT lié de manière dynamique.
 

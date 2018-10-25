@@ -1,7 +1,7 @@
 ---
 title: Accesseurs et jeux de lignes | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113095"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990176"
 ---
 # <a name="accessors-and-rowsets"></a>Accesseurs et jeux de lignes
 
@@ -50,7 +50,7 @@ Classes d’accesseurs
   
 - [CAccessor](../../data/oledb/caccessor-class.md) utiliser cet accesseur lorsque vous connaissez la structure de la source de la base de données au moment du design. `CAccessor` lie statiquement un enregistrement de base de données qui contient la mémoire tampon, à la source de données.  
   
-- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Utilisez cet accesseur si vous ne connaissez pas la structure de la base de données au moment du design. `CDynamicAccessor` appels `IColumnsInfo::GetColumnInfo` pour obtenir les informations de colonne de base de données. Il crée et gère un accesseur et la mémoire tampon.  
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) utiliser cet accesseur lorsque vous ne savez pas la structure de la base de données au moment du design. `CDynamicAccessor` appels `IColumnsInfo::GetColumnInfo` pour obtenir les informations de colonne de base de données. Il crée et gère un accesseur et la mémoire tampon.  
   
 - [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) cet accesseur permet de gérer les types de commande inconnue. Lorsque vous préparez les commandes, `CDynamicParameterAccessor` peut obtenir des informations sur les paramètres à partir de la `ICommandWithParameters` interface, si le fournisseur prend en charge `ICommandWithParameters`.  
   
@@ -77,7 +77,7 @@ La figure suivante montre les types de l’ensemble de lignes.
 ![Graphique de RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 Classes de l’ensemble de lignes  
   
-[Ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) pas accéder aux données dans les données stocker mais à la place accéder aux informations sur le magasin de données, appelée métadonnées. Ensembles de lignes de schéma sont généralement utilisés dans les situations dans lesquelles la structure de base de données n’est pas connue au moment de la compilation et doit être obtenue en cours d’exécution.  
+[Ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) n’accéder aux données dans les données stocker, mais à la place accéder aux informations sur le magasin de données, appelée métadonnées. Ensembles de lignes de schéma sont généralement utilisés dans les situations dans lesquelles la structure de base de données n’est pas connue au moment de la compilation et doit être obtenue en cours d’exécution.  
   
 ## <a name="see-also"></a>Voir aussi  
 

@@ -1,7 +1,7 @@
 ---
 title: Expressions primaires C | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/21/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -14,30 +14,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688e62cc82446a2e52dc1b75a439881a4f2d8eed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a9c038cae5f70ef2b92d4e81fc513b6faf74185
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381429"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809029"
 ---
 # <a name="c-primary-expressions"></a>Expressions primaires C
-Dans les expressions, les opérandes sont appelés des expressions primaires.  
-  
-## <a name="syntax"></a>Syntaxe  
- *primary-expression* :  
- *identifier*  
-  
- *constant*  
-  
- *string-literal*  
-  
- **(**  *expression*  **)**  
-  
- *expression* :  
- *assignment-expression*  
-  
- *expression*  **,**  *assignment-expression*  
-  
-## <a name="see-also"></a>Voir aussi  
- [Opérandes et expressions](../c-language/operands-and-expressions.md)
+
+Dans les expressions, les opérandes sont appelés des expressions primaires.
+
+## <a name="syntax"></a>Syntaxe
+
+*primary-expression* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*constante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*string-literal*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *expression* **)**<br/>
+
+*expression* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*<br/>
+
+## <a name="see-also"></a>Voir aussi
+
+[Opérandes et expressions](../c-language/operands-and-expressions.md)

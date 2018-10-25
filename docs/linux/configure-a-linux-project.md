@@ -1,7 +1,7 @@
 ---
 title: Configurer un projet Linux C++ dans Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -9,17 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: b4ba6a2300bcdac46467debc544ed69294834f15
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895199"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410796"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 
@@ -33,9 +33,11 @@ Différentes options peuvent être configurées pour un projet Linux avec Visual
 
 Par défaut, un fichier exécutable (.out) est créé avec l’outil.  Pour générer une bibliothèque statique ou dynamique, ou utiliser un fichier makefile existant, utilisez la sélection **Type de configuration**.
 
+Pour plus d’informations sur les options dans les pages de propriétés, consultez [Informations de référence sur les pages de propriétés dans un projet Linux](prop-pages-linux.md).
+
 ## <a name="remote-settings"></a>Paramètres distants
 
-Pour changer les paramètres relatifs à l’ordinateur Linux distant, configurez les options distantes affichées dans la section de paramètres **Général** :
+Pour changer les paramètres relatifs à l’ordinateur Linux distant, configurez les options distantes affichées dans la section de paramètres [Général](prop-pages/general-linux.md) :
 
 - Pour changer l’ordinateur Linux cible, utilisez l’entrée **Machine de build distante**.  Cela vous permet de sélectionner l’une des connexions créées précédemment.  Pour créer une entrée, consultez la section [Connexion à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md).
 
@@ -44,11 +46,12 @@ Pour changer les paramètres relatifs à l’ordinateur Linux distant, configure
 - L’entrée **Répertoire de projet de build distant** définit l’emplacement où ce projet spécifique est généré sur l’ordinateur Linux distant.  Par défaut, il s’agit de **$(RemoteRootDir)/$(ProjectName)**, qui se développe jusqu’à un répertoire nommé d’après le projet actuel, sous le répertoire racine défini ci-dessus.
 
 > [!NOTE]
-> Pour changer les compilateurs C et C++ par défaut, ou l’éditeur de liens et le programme d’archivage utilisés pour générer le projet, utilisez les entrées appropriées dans les sections **C/C++ > Général** et **Éditeur de liens > Général**.  Vous pouvez les définir pour utiliser une version spécifique de GCC ou même le compilateur Clang, par exemple.
+> Pour changer les compilateurs C et C++ par défaut, ou l’éditeur de liens et le programme d’archivage utilisés pour générer le projet, utilisez les entrées appropriées dans les sections **C/C++ > Général** et **Éditeur de liens > Général**.  Vous pouvez les définir pour utiliser une version spécifique de GCC ou même le compilateur Clang, par exemple. Pour plus d’informations, consultez [C/C++, propriétés (Linux C++)](prop-pages/c-cpp-linux.md) et [Éditeur de liens, propriétés (Linux C++)](prop-pages/linker-linux.md).
 
 ## <a name="include-directories-and-intellisense-support"></a>Répertoires include et prise en charge d’IntelliSense
 
-**Visual Studio 2017 15.6 et ultérieur :** Par défaut, Visual Studio n’inclut aucun fichier include au niveau système de l’ordinateur Linux.  Par exemple, les éléments dans le répertoire **/usr/include** ne sont pas présents dans Visual Studio.
+**Visual Studio 2017 version 15.6 et antérieures :**<br/>
+Par défaut, Visual Studio n’inclut aucun fichier Include au niveau système de l’ordinateur Linux.  Par exemple, les éléments dans le répertoire **/usr/include** ne sont pas présents dans Visual Studio.
 Pour une prise en charge [IntelliSense](/visualstudio/ide/using-intellisense) complète, vous devez copier ces fichiers au même emplacement sur votre ordinateur de développement et faire pointer Visual Studio vers celui-ci.  Une option consiste à utiliser SCP (Secure Copy) pour copier les fichiers.  Sur Windows 10, vous pouvez utiliser [Bash sur Windows](https://msdn.microsoft.com/commandline/wsl/about) pour exécuter SCP.  Pour les versions précédentes de Windows, vous pouvez employer un outil tel que [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Vous pouvez copier les fichiers en utilisant une commande semblable à la suivante :
@@ -61,7 +64,8 @@ Une fois que les fichiers sont copiés, utilisez l’élément **Répertoires VC
 
 ![Répertoires VC++](media/settings_directories.png)
 
-**Visual Studio 2017 15.7 et ultérieur :** Consultez [Gérer les en-têtes distants pour IntelliSense](#remote_intellisense).
+**Visual Studio 2017 15.7 et versions ultérieures :**<br/>
+Voir [Gérer les en-têtes distants pour IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Copier les sources
 
@@ -97,8 +101,8 @@ Pour gérer votre cache d’en-têtes, accédez à **Outils > Options, Multiplat
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des propriétés de projet](../ide/working-with-project-properties.md)  
-[Général C++, propriétés (Linux C++)](../linux/prop-pages/general-linux.md)  
-[Répertoires VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[Copier les sources, propriétés de projet (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[Utilisation des propriétés de projet](../ide/working-with-project-properties.md)<br/>
+[Général C++, propriétés (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[Répertoires VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[Copier les sources, propriétés de projet (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
 [Événement de build, propriétés (Linux C++)](../linux/prop-pages/build-events-linux.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed2b8d1d8bc3ac516b3d605f13e02bda37bb0122
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9373c7569ac31b74429e815bd466cd9d5b9aa78
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028543"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990268"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Liaison dynamique des colonnes dans votre fournisseur
 
@@ -32,7 +32,7 @@ Assurez-vous que vous avez vraiment besoin de liaison dynamique des colonnes. Vo
   
 - Vous prend en charge un élément telles que les signets qui ajoute des colonnes.  
   
-### <a name="to-implement-dynamic-column-binding"></a>Pour implémenter la liaison de colonne dynamique  
+## <a name="to-implement-dynamic-column-binding"></a>Pour implémenter la liaison de colonne dynamique  
   
 1. Supprimez les `PROVIDER_COLUMN_MAP`s à partir de votre code.  
   

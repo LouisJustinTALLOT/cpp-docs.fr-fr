@@ -1,7 +1,7 @@
 ---
 title: Commandes et Tables | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fefd4241d1412ec6ea319db9ca6669856715e631
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 762623d6460404b4de85a45adaff7c5662bac258
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028114"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990008"
 ---
 # <a name="commands-and-tables"></a>Commandes et tables
 
@@ -36,7 +36,7 @@ Commandes et tables pouvoir accéder aux ensembles de lignes ; Autrement dit, o
 ![CCommand et CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
 Commande et les Classes de Table  
   
-Dans le tableau précédent, `TAccessor` peut être n’importe quel type d’accesseur répertoriée dans [Types d’accesseurs](../../data/oledb/accessors-and-rowsets.md). *TRowset* peut être n’importe quel type d’ensemble de lignes répertoriée dans [Types de l’ensemble de lignes](../../data/oledb/accessors-and-rowsets.md). *TMultiple* Spécifie le type de résultat (un seul ou plusieurs de jeu de résultats).  
+Dans le tableau précédent, `TAccessor` peut être n’importe quel type d’accesseur répertoriée dans [Types d’accesseurs](../../data/oledb/accessors-and-rowsets.md). `TRowset` peut être n’importe quel type d’ensemble de lignes répertoriée dans [Types de l’ensemble de lignes](../../data/oledb/accessors-and-rowsets.md). `TMultiple` Spécifie le type de résultat (un seul ou plusieurs de jeu de résultats).  
   
 Le [Assistant Consommateur OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) vous permet de spécifier si un objet de commande ou de table.  
   

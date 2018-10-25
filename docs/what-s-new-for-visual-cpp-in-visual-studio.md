@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680537"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890710"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Nouveautés de Visual C++ dans Visual Studio 2017
 
@@ -65,7 +65,7 @@ Améliorations supplémentaires apportées aux diagnostics dans le compilateur. 
 
 **Visual Studio 2017 version 15.5** :
 
-Les performances d’exécution de Visual C++ continuent de s’améliorer grâce à une meilleure qualité du code généré. Cela signifie que vous pouvez simplement recompiler votre code pour rendre votre application plus rapide. Certaines optimisations du compilateur sont nouvelles, comme la vectorisation des stockages de scalaires conditionnels, la combinaison des appels `sin(x)` et `cos(x)` en un nouveau `sincos(x)`, et la suppression des instructions redondantes dans l’optimiseur SSA. Les autres optimisations du compilateur concernent des améliorations qui ont été apportées à des fonctionnalités existantes, par exemple, les heuristiques du vectoriseur pour les expressions conditionnelles, les boucles optimisées et la génération de code avec des valeurs float min/max. L’éditeur de liens a une nouvelle implémentation de **/OPT:ICF** plus rapide, qui peut accélérer l’édition de liens de jusqu’à 9 %. D’autres correctifs ont été apportés pour améliorer les performances de la liaison incrémentielle. Pour plus d’informations, consultez [/OPT (Optimisations)](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations) et [/INCREMENTAL (Lier par incrément)](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally).
+Les performances d’exécution de Visual C++ continuent de s’améliorer grâce à une meilleure qualité du code généré. Cela signifie que vous pouvez simplement recompiler votre code pour rendre votre application plus rapide. Certaines optimisations du compilateur sont nouvelles, comme la vectorisation des stockages de scalaires conditionnels, la combinaison des appels `sin(x)` et `cos(x)` en un nouveau `sincos(x)`, et la suppression des instructions redondantes dans l’optimiseur SSA. Les autres optimisations du compilateur concernent des améliorations qui ont été apportées à des fonctionnalités existantes, par exemple, les heuristiques du vectoriseur pour les expressions conditionnelles, les boucles optimisées et la génération de code avec des valeurs float min/max. L’éditeur de liens a une nouvelle implémentation de **/OPT:ICF** plus rapide, qui peut accélérer l’édition de liens de jusqu’à 9 %. D’autres correctifs ont été apportés pour améliorer les performances de la liaison incrémentielle. Pour plus d’informations, consultez [/OPT (Optimisations)](build/reference/opt-optimizations.md) et [/INCREMENTAL (Lier par incrément)](build/reference/incremental-link-incrementally.md).
 
 Visual C++ prend en charge les instructions AVX-512 d’Intel, dont les instructions Vector Length qui apportent de nouvelles fonctions dans AVX-512 pour les registres de largeur 128 bits et 256 bits.
 
@@ -394,12 +394,11 @@ C++ est fourni sous forme de composant facultatif pour la charge de travail Appl
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nouvelles options pour C++ sur la plateforme Windows universelle (UWP)
 Vous avez maintenant de nouvelles options pour l’écriture et l’empaquetage des applications C++ pour la plateforme Windows universelle et le Windows Store : vous pouvez utiliser l’infrastructure Desktop Bridge pour empaqueter votre application de bureau existante ou un objet COM pour le déploiement via le Windows Store ou via vos canaux existants par chargement indépendant. Les nouvelles fonctionnalités de Windows 10 vous permettent d’ajouter une plateforme universelle Windows (UWP) à votre application de bureau de différentes manières. Pour plus d’informations, consultez [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
-**Visual Studio 2017 version 15.5**  
-Un modèle de **projet de création de packages d’application Windows**  a été ajouté et facilite considérablement l’empaquetage d’applications de bureau à l’aide de Desktop Bridge. Cette fonctionnalité est disponible sous **Fichier | Nouveau | Projet | Installé | Visual C++ | Plateforme Windows universelle**. Pour plus d’informations, consultez [Empaqueter une application à l’aide de Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+**Visual Studio 2017 version 15.5** : Un modèle de **projet de création de packages d’application Windows** a été ajouté et facilite considérablement l’empaquetage d’applications de bureau à l’aide de Desktop Bridge. Cette fonctionnalité est disponible sous **Fichier | Nouveau | Projet | Installé | Visual C++ | Plateforme Windows universelle**. Pour plus d’informations, consultez [Empaqueter une application à l’aide de Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Lors de l’écriture de nouveau code, vous pouvez désormais utiliser C++/WinRT, une projection de langage C++ standard pour Windows Runtime (WinRT) implémentée uniquement dans les fichiers d’en-tête. Il vous permet à la fois de créer et de consommer des API Windows Runtime à l’aide d’un compilateur C++ conforme aux normes. C++/WinRT est conçu pour offrir aux développeurs C++ un accès idéal à l’API Windows moderne. Pour plus d’informations, consultez [C++/WinRT disponible sur GitHub](https://moderncpp.com/).
 
-Dans la [version 17025 du SDK Windows Insider Preview](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97), C++/WinRT est inclus dans Windows SDK. Pour plus d’informations, consultez [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
+Dans la build 17025 du SDK Windows Insider Preview, C++/WinRT est inclus dans Microsoft Windows SDK. Pour plus d’informations, consultez [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
 
 ## <a name="clangc2-platform-toolset"></a>Ensemble d’outils de plateforme Clang/C2
 
@@ -440,7 +439,7 @@ Pour plus d’informations, consultez [Boost.Test Unit Testing: Dynamic Library 
 
 **Visual Studio 2017 version 15.7** :
 
-Ajout de la prise en charge de [CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) pour les projets de test unitaire C++. Pour plus d’informations, consultez [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
+Ajout de la prise en charge de [CodeLens](/visualstudio/ide/find-code-changes-and-other-history-with-codelens) pour les projets de test unitaire C++. Pour plus d’informations, consultez [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio Graphics Diagnostics
 

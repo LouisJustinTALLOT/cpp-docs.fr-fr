@@ -1,7 +1,7 @@
 ---
 title: _get_tzname | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b49aa404dda6234382ae461459dece64e5996d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d773d5d98466963ef621cc3fa7bc5ab8b4acc40a
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451691"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990306"
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -59,10 +59,10 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>Paramètres
 
 *pReturnValue*<br/>
-La longueur de chaîne *NomFuseauhoraire* , y compris un terminateur null.
+La longueur de chaîne de *NomFuseauhoraire* , y compris une marque de fin null.
 
 *NomFuseauhoraire*<br/>
-L’adresse d’une chaîne de caractères pour la représentation sous forme de nom du fuseau horaire ou le nom de zone de l’heure d’hiver l’heure d’été (DST), en fonction de *index*.
+L’adresse d’une chaîne de caractères pour la représentation du nom du fuseau horaire ou le nom du fuseau horaire d’été (DST), en fonction de *index*.
 
 *sizeInBytes*<br/>
 La taille de la *NomFuseauhoraire* chaîne en octets de caractères.
@@ -70,11 +70,19 @@ La taille de la *NomFuseauhoraire* chaîne en octets de caractères.
 *index*<br/>
 Index d’un des deux noms de fuseaux horaires à récupérer.
 
+|*index*|Contenu de *NomFuseauhoraire*|*NomFuseauhoraire* valeur par défaut|
+|-|-|-|
+|0|Nom du fuseau horaire|« PST »|
+|1|Nom du fuseau horaire d’hiver|« PDT »|
+|> 1 ou < 0|**errno** la valeur **EINVAL**|non modifié|
+
+À moins que les valeurs soient explicitement modifiées pendant l’exécution, les valeurs par défaut sont respectivement « PST » et « PDT ».
+
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de réussite, sinon un **errno** type valeur.
+Zéro en cas de réussite, sinon une **errno** type valeur.
 
-Si le paramètre *NomFuseauhoraire* est **NULL**, ou *sizeInBytes* est égal à zéro ou inférieur à zéro (mais pas les deux), un gestionnaire de paramètre non valide est appelé, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
+Si *NomFuseauhoraire* est **NULL**, ou *sizeInBytes* est égal à zéro ou inférieure à zéro (mais pas les deux), un gestionnaire de paramètre non valide est appelé, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
@@ -88,19 +96,53 @@ Si le paramètre *NomFuseauhoraire* est **NULL**, ou *sizeInBytes* est égal à 
 
 ## <a name="remarks"></a>Notes
 
-Le **_get_tzname** fonction récupère la représentation de chaîne de caractères du nom fuseau horaire ou le nom de zone de l’heure d’hiver l’heure d’été (DST) dans l’adresse de *NomFuseauhoraire* en fonction de l’index valeur, ainsi que la taille de la chaîne de *pReturnValue*. Si *NomFuseauhoraire* est **NULL** et *sizeInBytes* est égal à zéro, simplement la taille de la chaîne d’heure zone en octets est retourné dans *pReturnValue*. La valeur d’index doit être 0 (fuseau horaire standard) ou 1 (fuseau horaire d’été) ; toute autre valeur d’index engendre des résultats indéterminés.
+Le **_get_tzname** fonction récupère la représentation de chaîne de caractères du nom fuseau horaire actuel ou le nom du fuseau horaire d’été (DST) dans l’adresse de *NomFuseauhoraire* en fonction de la index de valeur, ainsi que la taille de la chaîne dans *pReturnValue*. Si *NomFuseauhoraire* est **NULL** et *sizeInBytes* est zéro, la taille de la chaîne nécessaire pour contenir le fuseau horaire spécifié et une caractère null de fin en octets est retournée dans *pReturnValue*. Les valeurs d’index doivent être 0 pour le fuseau horaire standard ou 1 pour le fuseau horaire de l’heure d’été ; toutes les autres valeurs de *index* ont des résultats indéterminés.
 
-### <a name="index-values"></a>Valeurs d’index
+## <a name="example"></a>Exemple
 
-|*index*|Contenu de *NomFuseauhoraire*|*NomFuseauhoraire* valeur par défaut|
-|-------------|--------------------------------|----------------------------------|
-|0|Nom du fuseau horaire|« PST »|
-|1|Nom du fuseau horaire d’hiver|« PDT »|
-|> 1 ou < 0|**errno** la valeur **EINVAL**|non modifié|
+Cet exemple appelle **_get_tzname** pour obtenir la taille de mémoire tampon requise pour afficher le nom de zone actuel l’heure d’été heure d’hiver, alloue une mémoire tampon de cette taille, les appels **_get_tzname** à nouveau pour charger le nom dans le mettre en mémoire tampon et l’imprime sur la console.
 
-À moins que les valeurs soient explicitement modifiées pendant l’exécution, les valeurs par défaut sont respectivement « PST » et « PDT ».  Les tailles de ces tableaux de caractères sont régies par **TZNAME_MAX** valeur.
+```C
+// crt_get_tzname.c
+// Compile by using: cl /W4 crt_get_tzname.c
+#include <stdio.h>
+#include <time.h>
+#include <malloc.h>
 
-## <a name="requirements"></a>Spécifications
+enum TZINDEX {
+    STD,
+    DST
+};
+
+int main()
+{
+    size_t tznameSize = 0;
+    char * tznameBuffer = NULL;
+
+    // Get the size of buffer required to hold DST time zone name
+    if (_get_tzname(&tznameSize, NULL, 0, DST))
+        return 1;    // Return an error value if it failed
+
+    // Allocate a buffer for the name
+    if (NULL == (tznameBuffer = (char *)(malloc(tznameSize))))
+        return 2;    // Return an error value if it failed
+
+    // Load the name in the buffer
+    if (_get_tzname(&tznameSize, tznameBuffer, tznameSize, DST))
+        return 3;    // Return an error value if it failed
+
+    printf_s("The current Daylight standard time zone name is %s.\n", tznameBuffer);
+    return 0;
+}
+```
+
+### <a name="output"></a>Sortie
+
+```Output
+The current Daylight standard time zone name is PDT.
+```
+
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -115,4 +157,3 @@ Pour plus d'informations, voir [Compatibilité](../../c-runtime-library/compatib
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>
-[TZNAME_MAX](../../c-runtime-library/tzname-max.md)<br/>

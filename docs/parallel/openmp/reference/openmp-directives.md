@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e761115642cb9ab95931a89ac3b511256d88708b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809003"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990332"
 ---
 # <a name="openmp-directives"></a>Directives OpenMP
 
@@ -111,7 +111,7 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>cloisonnement
 
 Synchronise tous les threads dans une équipe. tous les threads suspendre à la barrière, jusqu'à ce que tous les threads exécuteront le cloisonnement.
 
@@ -129,7 +129,7 @@ Pour plus d’informations, consultez [2.6.3 Directive barrier](../../../paralle
 
 Pour obtenir un exemple montrant comment utiliser `barrier`, consultez [master](#master).
 
-## <a name="critical"></a>critical
+## <a name="critical"></a>Critique
 
 Spécifie que code est uniquement être exécuté sur un seul thread à la fois.
 
@@ -209,7 +209,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>flush (OpenMP)
+## <a name="flush-openmp"></a>Flush (OpenMP)
 
 Spécifie que tous les threads ont la même vue de mémoire pour tous les objets partagés.
 
@@ -285,7 +285,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for (OpenMP)
+## <a name="for-openmp"></a>pour (OpenMP)
 
 Provoque le travail effectué dans un `for` boucle à l’intérieur d’une région parallèle doit être divisé entre threads.
 
@@ -382,7 +382,7 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>maître
+## <a name="master"></a>Master
 
 Spécifie que seul le thread principal doit exécuter une section du programme.
 
@@ -515,7 +515,7 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>Parallèle
 
 Définit une région parallèle, ce qui est le code qui sera exécuté par plusieurs threads en parallèle.
 
@@ -588,7 +588,7 @@ Identifie les sections de code pour être réparti entre tous les threads.
    #pragma omp section
    {
       code_block
-   } 
+   } 
 }
 ```
 
@@ -636,12 +636,12 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>unique
+## <a name="single"></a>Unique
 
 Vous permet de spécifier qu’une section de code doit être exécutée sur un seul thread, mais pas nécessairement le thread principal.
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses] 
 {
    code_block
 }

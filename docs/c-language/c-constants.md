@@ -15,27 +15,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310d80f92b2648c0a5711c304b3a1b5bc32413be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: da2bfdc1894d15ae06cb56e457cf96d7fcd20664
+ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381653"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49640714"
 ---
 # <a name="c-constants"></a>Constantes C
-Une « constante » est un nombre, un caractère ou une chaîne de caractères qui peut être utilisé comme valeur dans un programme. Utilisez des constantes pour représenter des valeurs à virgule flottante, entières, d'énumération ou de caractères qui ne peuvent pas être modifiées.  
-  
-## <a name="syntax"></a>Syntaxe  
- `constant`:  
- *floating-point-constant*  
-  
- *integer-constant*  
-  
- *enumeration-constant*  
-  
- *character-constant*  
-  
- Les constantes sont caractérisées par le fait qu'elles ont une valeur et un type. Les constantes à [virgule flottante](../c-language/c-floating-point-constants.md), [entières](../c-language/c-integer-constants.md) et [caractères](../c-language/c-character-constants.md) sont traitées dans les trois sections suivantes. Les constantes d'énumération sont décrites dans [Déclarations d'énumération](../c-language/c-enumeration-declarations.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Éléments de C](../c-language/elements-of-c.md)
+
+Une « constante » est un nombre, un caractère ou une chaîne de caractères qui peut être utilisé comme valeur dans un programme. Utilisez des constantes pour représenter des valeurs à virgule flottante, entières, d'énumération ou de caractères qui ne peuvent pas être modifiées.
+
+## <a name="syntax"></a>Syntaxe
+
+`constant`:<br/>
+*floating-point-constant*
+
+*integer-constant*
+
+*enumeration-constant*
+
+*character-constant*
+
+Les constantes sont caractérisées par le fait qu'elles ont une valeur et un type. Les constantes à [virgule flottante](../c-language/c-floating-point-constants.md), [entières](../c-language/c-integer-constants.md) et [caractères](../c-language/c-character-constants.md) sont traitées dans les trois sections suivantes. Les constantes d'énumération sont décrites dans [Déclarations d'énumération](../c-language/c-enumeration-declarations.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Éléments de C](../c-language/elements-of-c.md)

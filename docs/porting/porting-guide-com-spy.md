@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434acbaa23826636a221deb77f1930283e43e9de
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d8a4278d89727f47e85d20809060fc8cef421998
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578423"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427210"
 ---
 # <a name="porting-guide-com-spy"></a>Guide du portage : COMSpy
+
 Cette rubrique est la deuxième d'une série d'articles qui décrit le processus de mise à niveau d'anciens projets Visual C++ vers la dernière version de Visual Studio. L'exemple de code utilisé dans cette rubrique a été compilé avec Visual Studio 2005.  
   
 ## <a name="comspy"></a>COMSpy  
@@ -175,6 +176,6 @@ Cela a fonctionné sans problème. Avec COMSpy, opérationnel et configuré pour
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Portage et mise à niveau : exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)   
-[Exemple suivant : Spy++](../porting/porting-guide-spy-increment.md)   
+[Portage et mise à niveau : exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Exemple suivant : Spy++](../porting/porting-guide-spy-increment.md)<br/>
 [Exemple précédent : Scribble MFC](../porting/porting-guide-mfc-scribble.md)

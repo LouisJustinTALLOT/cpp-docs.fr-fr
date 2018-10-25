@@ -18,40 +18,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 184161b22358f77845b5f7c4b6da0bb42f3ea15f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: cd16628c48c30f6f554a842b70c5217753e305f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324913"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430304"
 ---
 # <a name="adding-an-event-handler-visual-c"></a>Ajout d'un gestionnaire d'événements (Visual C++)
-À partir de l’éditeur de ressources, vous pouvez ajouter un nouveau gestionnaire d’événements ou modifier un gestionnaire existant pour un contrôle de boîte de dialogue en recourant à [l’Assistant Gestionnaire d’événements](../ide/event-handler-wizard.md).  
-  
- Vous pouvez ajouter un événement à la classe implémentant la boîte de dialogue à l’aide de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Si vous souhaitez ajouter l’événement à une classe autre que celle de la boîte de dialogue, utilisez l’Assistant Gestionnaire d’événements.  
-  
-### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>Pour ajouter un gestionnaire d’événements à un contrôle de boîte de dialogue  
-  
-1.  Double-cliquez sur la ressource boîte de dialogue dans [l’affichage des ressources](../windows/resource-view-window.md) pour ouvrir la ressource boîte de dialogue qui contient le contrôle dans [l’Éditeur de boîtes de dialogue](../windows/dialog-editor.md).  
-  
-2.  Cliquez avec le bouton droit sur le contrôle pour lequel vous souhaitez gérer l’événement de notification.  
-  
-3.  Dans le menu contextuel, cliquez sur **Ajouter un gestionnaire d’événements** pour afficher l’Assistant Gestionnaire d’événements.  
-  
-4.  Dans la zone **Type de message**, sélectionnez l’événement à ajouter à la classe sélectionnée dans la zone **Liste de classes**.  
-  
-5.  Acceptez le nom par défaut de la zone **Nom du gestionnaire de fonctions** ou indiquez le nom de votre choix.  
-  
-6.  Cliquez sur **Ajouter et modifier** pour ajouter le gestionnaire d’événements au projet et ouvrir l’éditeur de texte à l’emplacement de la nouvelle fonction pour ajouter le code approprié du gestionnaire d’événements.  
-  
-     Si le type de message sélectionné possède déjà un gestionnaire d’événements pour la classe sélectionnée, **Ajouter et modifier** n’est pas disponible contrairement à **Modifier le code**. Cliquez sur **Modifier le code** pour ouvrir l’éditeur de texte à l’emplacement de la fonction existante.  
-  
- Une autre solution consiste à ajouter les gestionnaires d’événements à partir de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Pour plus d’informations, consultez [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)   
- [Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
- [Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)   
- [Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Parcours de la structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)
+
+À partir de l’éditeur de ressources, vous pouvez ajouter un nouveau gestionnaire d’événements ou modifier un gestionnaire existant pour un contrôle de boîte de dialogue en recourant à [l’Assistant Gestionnaire d’événements](../ide/event-handler-wizard.md).
+
+Vous pouvez ajouter un événement à la classe implémentant la boîte de dialogue à l’aide de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Si vous souhaitez ajouter l’événement à une classe autre que celle de la boîte de dialogue, utilisez l’Assistant Gestionnaire d’événements.
+
+### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>Pour ajouter un gestionnaire d’événements à un contrôle de boîte de dialogue
+
+1. Double-cliquez sur la ressource boîte de dialogue dans [l’affichage des ressources](../windows/resource-view-window.md) pour ouvrir la ressource boîte de dialogue qui contient le contrôle dans [l’Éditeur de boîtes de dialogue](../windows/dialog-editor.md).
+
+1. Cliquez avec le bouton droit sur le contrôle pour lequel vous souhaitez gérer l’événement de notification.
+
+1. Dans le menu contextuel, cliquez sur **Ajouter un gestionnaire d’événements** pour afficher l’Assistant Gestionnaire d’événements.
+
+1. Dans la zone **Type de message**, sélectionnez l’événement à ajouter à la classe sélectionnée dans la zone **Liste de classes**.
+
+1. Acceptez le nom par défaut de la zone **Nom du gestionnaire de fonctions** ou indiquez le nom de votre choix.
+
+1. Cliquez sur **Ajouter et modifier** pour ajouter le gestionnaire d’événements au projet et ouvrir l’éditeur de texte à l’emplacement de la nouvelle fonction pour ajouter le code approprié du gestionnaire d’événements.
+
+   Si le type de message sélectionné possède déjà un gestionnaire d’événements pour la classe sélectionnée, **Ajouter et modifier** n’est pas disponible contrairement à **Modifier le code**. Cliquez sur **Modifier le code** pour ouvrir l’éditeur de texte à l’emplacement de la fonction existante.
+
+Une autre solution consiste à ajouter les gestionnaires d’événements à partir de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Pour plus d’informations, consultez [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)<br>
+[Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)<br>
+[Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
+[Parcours de la structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)

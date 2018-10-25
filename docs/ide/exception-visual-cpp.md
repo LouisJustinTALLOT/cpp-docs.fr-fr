@@ -18,61 +18,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3d5b7a89a3725ae9dee2065bcd21d8f114ca00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: bb7b5f4e153ca892cf10f8c5cbe6fe1bebbd20f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323938"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419962"
 ---
 # <a name="ltexceptiongt-visual-c"></a>&lt;exception&gt; (Visual C++)
-La balise \<exception> vous permet de spécifier quelles exceptions peuvent être levées. Cette balise est appliquée à une définition de méthode.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-<exception cref="member">description</exception>  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `member`  
- Référence à une exception qui est disponible à partir de l’environnement de compilation actuel. À l’aide des règles de recherche de nom, le compilateur vérifie que l’exception donnée existe et traduit `member` en nom d’élément canonique dans le fichier XML de sortie.  Le compilateur émet un avertissement s'il ne trouve pas `member`.  
-  
- Mettez le nom entre guillemets simples ou doubles.  
-  
- Pour plus d’informations sur la création d’une référence cref à un type générique, consultez [\<see>](../ide/see-visual-cpp.md).  
-  
- `description`  
- Description.  
-  
-## <a name="remarks"></a>Notes  
- Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
-  
- Le compilateur Visual C++ tente de résoudre les références cref en une seule passe via les commentaires de la documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue. Pour plus d’informations, consultez [\<seealso>](../ide/seealso-visual-cpp.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// xml_exception_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_exception_tag.dll  
-using namespace System;  
-  
-/// Text for class EClass.  
-public ref class EClass : public Exception {  
-   // class definition ...  
-};  
-  
-/// <exception cref="System.Exception">Thrown when... .</exception>  
-public ref class TestClass {  
-   void Test() {  
-      try {  
-      }  
-      catch(EClass^) {  
-      }  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Documentation XML](../ide/xml-documentation-visual-cpp.md)
+
+La balise \<exception> vous permet de spécifier quelles exceptions peuvent être levées. Cette balise est appliquée à une définition de méthode.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+<exception cref="member">description</exception>
+```
+
+#### <a name="parameters"></a>Paramètres
+
+*member*<br/>
+Référence à une exception qui est disponible à partir de l’environnement de compilation actuel. À l’aide des règles de recherche de nom, le compilateur vérifie que l’exception donnée existe et traduit `member` en nom d’élément canonique dans le fichier XML de sortie.  Le compilateur émet un avertissement s'il ne trouve pas `member`.
+
+Mettez le nom entre guillemets simples ou doubles.
+
+Pour plus d’informations sur la création d’une référence cref à un type générique, consultez [\<see>](../ide/see-visual-cpp.md).
+
+*description*<br/>
+Description.
+
+## <a name="remarks"></a>Notes
+
+Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+
+Le compilateur Visual C++ tente de résoudre les références cref en une seule passe via les commentaires de la documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue. Pour plus d’informations, consultez [\<seealso>](../ide/seealso-visual-cpp.md).
+
+## <a name="example"></a>Exemple
+
+```
+// xml_exception_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_exception_tag.dll
+using namespace System;
+
+/// Text for class EClass.
+public ref class EClass : public Exception {
+   // class definition ...
+};
+
+/// <exception cref="System.Exception">Thrown when... .</exception>
+public ref class TestClass {
+   void Test() {
+      try {
+      }
+      catch(EClass^) {
+      }
+   }
+};
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Documentation XML](../ide/xml-documentation-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Modification de l’héritage de RMyProviderRowset | Microsoft Docs
+title: Modification de l’héritage de RCustomRowset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,28 +10,29 @@ dev_langs:
 helpviewer_keywords:
 - RMyProviderRowset
 - inheritance [C++]
+- RCustomRowset
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 77b26d1d0b67726e1ba2cd66d0e181bc04105a6a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6f4827ecf0571878bc0eeaef5dce74326488c61
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028166"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990281"
 ---
-# <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Modification de l'héritage de RMyProviderRowset
+# <a name="modifying-the-inheritance-of-rcustomrowset"></a>Modification de l’héritage de RCustomRowset
 
-Pour ajouter le `IRowsetLocate` l’interface à l’exemple de fournisseur simple en lecture seule, modifiez l’héritage de `RMyProviderRowset`. Initialement, `RMyProviderRowset` hérite `CRowsetImpl`. Vous devez modifier qu’elle hérite de `CRowsetBaseImpl`.  
+Pour ajouter le `IRowsetLocate` l’interface à l’exemple de fournisseur simple en lecture seule, modifiez l’héritage de `RCustomRowset`. Initialement, `RCustomRowset` hérite `CRowsetImpl`. Vous devez modifier qu’elle hérite de `CRowsetBaseImpl`.  
   
-Pour ce faire, créez une nouvelle classe, `CMyRowsetImpl`, dans MyProviderRS.h :  
+Pour ce faire, créez une nouvelle classe, `CMyRowsetImpl`, dans *personnalisé*RS.h :  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
+// CustomRS.h  
   
 template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage>>  
 class CMyRowsetImpl:  
@@ -41,7 +42,7 @@ class CMyRowsetImpl:
 };  
 ```  
   
-À présent, modifiez le mappage d’interface COM dans MyProviderRS.h comme suit :  
+À présent, modifiez le mappage d’interface COM dans *personnalisé*RS.h comme suit :  
   
 ```cpp  
 BEGIN_COM_MAP(CMyRowsetImpl)  
@@ -55,7 +56,7 @@ Cette opération crée un mappage d’interface COM qui indique à `CMyRowsetImp
 Enfin, liez `RAgentRowset` à `CMyRowsetBaseImpl` en modifiant `RAgentRowset` d’hériter de `CMyRowsetImpl`, comme suit :  
   
 ```cpp  
-class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
+class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>  
 ```  
   
 `RAgentRowset` peuvent désormais utiliser le `IRowsetLocate` interface tout en tirant parti du reste de l’implémentation pour la classe rowset.  
