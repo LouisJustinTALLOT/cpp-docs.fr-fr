@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57bd79e1df35f650d78da3108137d58405b33f25
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6101c45f30284633c5f10c148be5a15e1e81dde7
+ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082012"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49640729"
 ---
 # <a name="c-string-literals"></a>Littéraux de chaîne C
 
@@ -29,11 +29,19 @@ Un littéral de chaîne est une séquence de caractères du jeu de caractères s
 
 ## <a name="syntax"></a>Syntaxe
 
-*string-literal*: &nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"** &nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
+*string-literal*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
 
-*s-char-sequence*: &nbsp;&nbsp;&nbsp;&nbsp;*s-char* &nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
+*s-char-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*
 
-*s-char*: &nbsp;&nbsp;&nbsp;&nbsp;tout membre du jeu de caractères de code source sauf le guillemet double (''), la barre oblique inverse (\\) ou le saut de ligne &nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence*
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
+
+*s-char* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Tout membre du jeu de caractères source, à l'exception du guillemet double ("), de la barre oblique inverse (\\) ou du caractère de saut de ligne<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence*
 
 ## <a name="remarks"></a>Notes
 

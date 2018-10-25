@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310dc9b8e31f72fbd04c620987d9857932f7a0a1
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821130"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328374"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE et outils du compilateur pour le développement Visual C++
 
@@ -42,7 +42,7 @@ Visual Studio 2017 prend en charge tous les systèmes de build ou outils de buil
 
    En règle générale, vous devez utiliser ces modèles pour les nouveaux projets, sauf si vous avez une raison spécifique d’utiliser CMake ou un autre système de projet. Certains projets ont un *Assistant* qui vous guide pas à pas à travers le processus de création d’un projet. Pour plus d’informations, consultez [Création et gestion de projets basés sur MSBuild](creating-and-managing-visual-cpp-projects.md).
 
-- **CMake** est un système de génération multiplateforme intégré dans l’IDE Visual Studio quand vous installez une charge de travail Développement Desktop en C++. Pour plus d’informations, consultez [Projets CMake dans Visual C++](cmake-tools-for-visual-cpp.md).
+- **CMake** est un système de génération multiplateforme intégré dans l’IDE Visual Studio quand vous installez une charge de travail Développement Desktop en C++. Pour plus d’informations, consultez [CMake projects in Visual C++](cmake-tools-for-visual-cpp.md).
 - Tous les autres systèmes de génération C++, notamment un ensemble libre de fichiers, sont pris en charge via la fonctionnalité **Ouvrir le dossier**. Vous créez des fichiers JSON simples pour appeler votre programme de génération et configurer des sessions de débogage. Pour plus d’informations, consultez [Open Folder projects in Visual C++](non-msbuild-projects.md).
 
 ## <a name="add-to-source-control"></a>Ajouter au contrôle de code source
@@ -59,7 +59,7 @@ Si votre programme a une interface utilisateur, vous pouvez utiliser un concepte
 
 ![Concepteur et Boîte à outils](media/vs2017-toolbox-designer.png "Concepteur et Boîte à outils de Visual Studio 2017")
 
-Pour plus d’informations sur la conception d’une interface utilisateur pour une application de plateforme Windows universelle, consultez [Concevoir une interface utilisateur](https://developer.microsoft.com/en-us/windows/design).
+Pour plus d’informations sur la conception d’une interface utilisateur pour une application de plateforme Windows universelle, consultez [Concevoir une interface utilisateur](https://developer.microsoft.com/windows/design).
 
 Pour plus d’informations sur la création d’une interface utilisateur pour une application MFC, consultez [Applications de bureau MFC](../mfc/mfc-desktop-applications.md). Pour plus d’informations sur les programmes Windows Win32, consultez [Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md).
 
