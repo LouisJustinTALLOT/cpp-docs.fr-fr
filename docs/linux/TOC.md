@@ -1,7 +1,7 @@
 # [Télécharger, installer et configurer la charge de travail de développement Linux](download-install-and-setup-the-linux-development-workload.md)
-# [Créer un projet Linux](create-a-new-linux-project.md)
 # [Configurer un projet Linux](configure-a-linux-project.md)
 # [Configurer un projet Linux CMake](cmake-linux-project.md)
+# [Créer un projet Linux](create-a-new-linux-project.md)
 # [Se connecter à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md)
 # [Déployer, exécuter et déboguer votre projet Linux](deploy-run-and-debug-your-linux-project.md)
 # [Informations de référence sur les pages de propriétés dans un projet Linux](prop-pages-linux.md)

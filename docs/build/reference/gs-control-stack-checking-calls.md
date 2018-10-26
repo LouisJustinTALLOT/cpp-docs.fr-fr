@@ -1,7 +1,7 @@
 ---
 title: -Gs (contrôler les appels de contrôle de pile) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/25/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -22,52 +22,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9f6b2d31552127807af6fa731574b04770b2a7fe
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719268"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143671"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (contrôler les appels de contrôle de pile)
 
-Gère les tests de pile.
+Contrôle le seuil pour les tests de pile.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-/Gs[size]
-```
+> **/GS**[*taille*]
 
 ## <a name="arguments"></a>Arguments
 
 *size*<br/>
-(Facultatif) Nombre d'octets que les variables locales peuvent occuper avant qu'une sonde de pile soit lancée. Si le **/GS** option est spécifiée sans un `size` argument, il est identique à la spécification **/Gs0**,
+(Facultatif) Nombre d'octets que les variables locales peuvent occuper avant qu'une sonde de pile soit lancée. Aucun espace n’est autorisé entre **/GS** et *taille*.
 
 ## <a name="remarks"></a>Notes
 
-Une sonde de pile est une séquence de code que le compilateur insère dans chaque appel de fonction. Lorsqu'elle est lancée, une sonde de pile pénètre sans heurt dans la mémoire en fonction de l'espace requis pour stocker les variables locales de la fonction.
+Un *sonde de pile* est une séquence de code que le compilateur insère au début d’un appel de fonction. Lorsqu'elle est lancée, une sonde de pile pénètre sans heurt dans la mémoire en fonction de l'espace requis pour stocker les variables locales de la fonction. Cela entraîne le système d’exploitation vers la page en toute transparence dans la mémoire de la pile supplémentaires si nécessaire, avant que le reste de la fonction s’exécute.
 
-Si une fonction requiert plus de `size` octets d'espace de pile pour les variables locales, sa sonde de pile est démarrée. Par défaut, le compilateur génère du code qui lance une sonde de pile quand une fonction requiert plus d'une page d'espace de pile. Cela équivaut à une option du compilateur **/Gs4096** x86 x64 et les plateformes ARM. Cette valeur permet à une application et au gestionnaire de mémoire Windows d’augmenter la quantité de mémoire validée dynamiquement dans la pile du programme au moment de l’exécution.
+Par défaut, le compilateur génère du code qui lance une sonde de pile quand une fonction requiert plus d'une page d'espace de pile. Cela équivaut à une option du compilateur **/Gs4096** pour x86, x 64, ARM, ARM64 plateformes et. Cette valeur permet à une application et au gestionnaire de mémoire Windows d’augmenter la quantité de mémoire validée dynamiquement dans la pile du programme au moment de l’exécution.
 
 > [!NOTE]
->  La valeur par défaut **/Gs4096** permet à la pile du programme d’applications pour Windows de croître correctement au moment de l’exécution. Nous vous recommandons de ne pas modifier la valeur par défaut à moins que vous sachiez exactement pourquoi vous devez la changer.
+> La valeur par défaut **/Gs4096** permet à la pile du programme d’applications pour Windows de croître correctement au moment de l’exécution. Nous vous recommandons de ne pas modifier la valeur par défaut à moins que vous sachiez exactement pourquoi vous devez la changer.
 
-Certains programmes (par exemple, les pilotes de périphériques virtuels) n'ont pas besoin de ce mécanisme de croissance de pile par défaut. Dans ce cas, les sondes de pile ne sont pas nécessaires et vous pouvez arrêter le compilateur qui les génère en affectant à `size` une valeur supérieure à celle qu'aucune fonction exigera pour le stockage des variables locales. Aucun espace n’est autorisé entre **/GS** et `size`.
+Certains programmes (par exemple, les pilotes de périphériques virtuels) n'ont pas besoin de ce mécanisme de croissance de pile par défaut. Dans ce cas, les sondes de pile ne sont pas nécessaires et vous pouvez indiquer au compilateur de les générer en définissant *taille* sur une valeur supérieure à celle qu’aucune fonction exigera pour le stockage des variables locales.
 
-**/ Gs0** Active les tests de pile pour chaque appel de fonction qui requiert un stockage pour les variables locales. Cela peut avoir un impact négatif sur les performances.
+**/ Gs0** lance des tests pour chaque appel de fonction qui requiert un stockage pour les variables locales de pile. Cela peut avoir un impact négatif sur les performances.
 
-Vous pouvez activer ou désactiver les sondes de pile à l’aide de [check_stack](../../preprocessor/check-stack.md). **/GS** et `check_stack` pragma n’ont aucun effet sur les routines de bibliothèque C standard ; ils affectent uniquement les fonctions que vous compilez.
+Pour x64 cible, si le **/GS** option est spécifiée sans un *taille* argument, il est identique à **/Gs0**. Si le *taille* argument est de 1 à 9, D9014 d’avertissement est émis, et l’effet est le même que la spécification **/Gs0**.
+
+Pour x86, ARM, ARM64 cibles et le **/GS** option sans un *taille* argument est le même que **/Gs4096**. Si le *taille* argument est de 1 à 9, D9014 d’avertissement est émis, et l’effet est le même que la spécification **/Gs4096**.
+
+Pour toutes les cibles, un *taille* argument comprise entre 10 et 2147485647 définit le seuil à la valeur spécifiée. Un *taille* de causes 2147485648 ou supérieur, erreur irrécupérable C1049.
+
+Vous pouvez activer ou désactiver les sondes de pile à l’aide de la [check_stack](../../preprocessor/check-stack.md) directive. **/GS** et `check_stack` pragma n’ont aucun effet sur les routines de bibliothèque C standard ; ils affectent uniquement les fonctions que vous compilez.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
-1. Sélectionnez le **C/C++** dossier.
+1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 
-1. Sélectionnez le **ligne de commande** page de propriétés.
-
-1. Tapez l'option de compilateur dans la zone **Options supplémentaires** .
+1. Entrez le **/GS** option de compilateur et éventuellement la taille dans **des Options supplémentaires**. Choisissez **OK** ou **appliquer** pour enregistrer vos modifications.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
