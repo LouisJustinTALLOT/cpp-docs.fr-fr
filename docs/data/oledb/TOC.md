@@ -66,7 +66,7 @@
 ###### [Lecture de chaînes dans le fournisseur OLE DB](reading-strings-into-the-ole-db-provider.md)
 ###### [Stockage de chaînes dans le fournisseur OLE DB](storing-strings-in-the-ole-db-provider.md)
 ##### [Amélioration du fournisseur simple accessible en lecture seule](enhancing-the-simple-read-only-provider.md)
-###### [Modification de l’héritage de RMyProviderRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [Modification de l’héritage de RCustomRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [Détermination de manière dynamique des colonnes retournées au consommateur](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [Test du fournisseur accessible en lecture seule](testing-the-read-only-provider.md)
 #### [Création d’un fournisseur actualisable](creating-an-updatable-provider.md)
