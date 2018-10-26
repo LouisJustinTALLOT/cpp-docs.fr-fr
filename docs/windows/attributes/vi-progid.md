@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 468b5c5dcadc1715384684062f203ae9179ef044
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7b63e98e070dc5352d7c1456252722bea958b8bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791017"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072094"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -66,11 +66,11 @@ Consultez le [coclasse](coclass.md) exemple pour un exemple d’utilisation de *
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[Clé de progID](/windows/desktop/com/-progid--key)  
+[Clé de progID](/windows/desktop/com/-progid--key)

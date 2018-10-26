@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb329b60b72aae268252ae3ddbcc2c63d4a18f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 273893f5164c4e89b3516c43b5414e5487af376e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389683"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063209"
 ---
 # <a name="toolbar-editor-c"></a>Éditeur de la barre d’outils (C++)
 
@@ -43,8 +43,7 @@ Avec le **barre d’outils** éditeur, vous pouvez :
 
 Le **barre d’outils** fenêtre de l’éditeur affiche deux vues d’une image du bouton, identique à la fenêtre d’éditeur d’Image. Une barre de fractionnement sépare les deux volets. Vous pouvez faire glisser la barre de fractionnement pour modifier la taille des volets. Une bordure de sélection entoure le volet actif. Au-dessus des deux affichages de l’image figure la barre d’outils de sujet.
 
-![Barre d’outils Éditeur](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-Éditeur de barres d’outils
+![Barre d’outils Éditeur](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") éditeur de la barre d’outils
 
 Le **barre d’outils** éditeur est similaire à la **Image** éditeur dans la fonctionnalité. Les éléments de menu, outils de graphique et grille de bitmap sont les mêmes que celles figurant dans le **Image** éditeur. Il existe une commande de menu sur le **Image** menu vous permet de basculer entre le **barre d’outils** éditeur et le **Image** éditeur. Pour plus d’informations sur l’utilisation de la **Graphics** barre d’outils, **couleurs** palette, ou **Image** menu, consultez [Éditeur d’images](../windows/image-editor-for-icons.md).
 

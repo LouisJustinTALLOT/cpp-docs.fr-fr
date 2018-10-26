@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c43e28e035691b04181bef2162de828f3271a600
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: c8a2935d5b1c32298215b0ebfcf7382dafd259b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082752"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052939"
 ---
 # <a name="server-registration-global-functions"></a>Fonctions globales de serveur d’inscription
 
@@ -38,7 +38,7 @@ Ces fonctions fournissent la prise en charge pour inscrire et désinscrire des o
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Cette fonction est appelée pour annuler l'inscription de chaque objet du mappage d'objets.|
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Cette fonction est appelée pour inscrire des objets de classe.|
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Cette fonction est appelée pour révoquer des objets de classe à partir d’un module COM.|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Cette fonction est appelée pour obtenir l’objet de classe.|  
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Cette fonction est appelée pour obtenir l’objet de classe.|
 
 ## <a name="requirements"></a>Configuration requise
 

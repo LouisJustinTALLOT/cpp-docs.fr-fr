@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067b109757f14e1b76c292bbae5a2ea7d688eae2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4739b8664da21a86caa91398a7956eac77e22f3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393622"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072887"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
-**Spécifique à C++**  
-  
-Désactive l'utilisation des classes de prise en charge COM dans les fonctions wrapper de haut niveau et force l'utilisation de types de données de bas niveau à la place.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-raw_native_types  
-```  
-  
-## <a name="remarks"></a>Notes  
- 
-Par défaut, les méthodes de gestion des erreurs de haut niveau utilisent les classes de prise en charge COM [_bstr_t](../cpp/bstr-t-class.md) et [_variant_t](../cpp/variant-t-class.md) à la place de la `BSTR` et `VARIANT` pointeurs d’interface COM bruts et les types de données. Ces classes encapsulent les détails de l'allocation et de la libération du stockage de mémoire pour ces types de données, et simplifient considérablement le casting de type et les opérations de conversion.  
-  
-**FIN spécifique à C++**  
-  
-## <a name="see-also"></a>Voir aussi  
- 
+**Spécifique à C++**
+
+Désactive l'utilisation des classes de prise en charge COM dans les fonctions wrapper de haut niveau et force l'utilisation de types de données de bas niveau à la place.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+raw_native_types
+```
+
+## <a name="remarks"></a>Notes
+
+Par défaut, les méthodes de gestion des erreurs de haut niveau utilisent les classes de prise en charge COM [_bstr_t](../cpp/bstr-t-class.md) et [_variant_t](../cpp/variant-t-class.md) à la place de la `BSTR` et `VARIANT` pointeurs d’interface COM bruts et les types de données. Ces classes encapsulent les détails de l'allocation et de la libération du stockage de mémoire pour ces types de données, et simplifient considérablement le casting de type et les opérations de conversion.
+
+**FIN spécifique à C++**
+
+## <a name="see-also"></a>Voir aussi
+
 [attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [directive #import](../preprocessor/hash-import-directive-cpp.md)

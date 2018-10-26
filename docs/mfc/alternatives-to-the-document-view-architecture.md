@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403473"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053043"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Solutions de remplacement de l'architecture document/vue
 
@@ -56,7 +56,7 @@ Il est fortement recommandé d'utiliser l'Assistant Application MFC pour créer 
 
 - Traitez le document comme une annexe inutilisée et implémentez le code de gestion des données de la classe d'affichage, comme suggéré précédemment. La surcharge du document est relativement basse. Un seul [CDocument](../mfc/reference/cdocument-class.md) objet entraîne une petite quantité de charge par lui-même, ainsi que la surcharge de `CDocument`de classes de base, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) et [CObject](../mfc/reference/cobject-class.md). Les deux dernières classes sont petites.
 
-     Déclaré dans `CDocument`:
+   Déclaré dans `CDocument`:
 
    - Deux objets `CString`.
 
@@ -66,7 +66,7 @@ Il est fortement recommandé d'utiliser l'Assistant Application MFC pour créer 
 
    - Un objet `CPtrList`, qui contient une liste des vues du document.
 
-     En outre, le document requiert la durée nécessaire pour créer l'objet de document, ses objets de vue, une fenêtre frame et un objet modèle de document.
+   En outre, le document requiert la durée nécessaire pour créer l'objet de document, ses objets de vue, une fenêtre frame et un objet modèle de document.
 
 - Traitez à la fois le document et la vue comme des annexes inutilisées. Placez votre code de gestion des données et de dessin dans la fenêtre frame plutôt que dans la vue. Cette approche est plus proche du modèle de programmation en langage C.
 

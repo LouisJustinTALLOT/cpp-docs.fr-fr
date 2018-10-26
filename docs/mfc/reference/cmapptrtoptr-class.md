@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4bbe44b7ae10b6b2ee448be8e9dcb682f9e0a1a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f3ba3d6d8a15b3ebf4262377c47df22960c1725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067348"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr, classe
 
@@ -125,6 +125,4 @@ Pour plus d’informations sur `CMapPtrToPtr`, consultez l’article [Collection
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

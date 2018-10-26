@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 477ed175e6f8e81acdae5c873d1436e6c3dbbd60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b12f3ff78f88029067d3b77296979a173dad494d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423557"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079647"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Utilisation de listes d'images avec des contrôles Header
 
@@ -35,17 +35,17 @@ La procédure suivante illustre les détails, à l’aide d’un pointeur vers u
 
 1. Initialiser le nouvel objet de liste d’images en appelant [CImageList::Create](../mfc/reference/cimagelist-class.md#create). Le code suivant est un exemple de cet appel.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
 
 1. Ajouter les images pour chaque élément d’en-tête. Le code suivant ajoute deux images prédéfinies.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
 
 1. Associer la liste d’images avec le contrôle d’en-tête avec un appel à [CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).
 
 1. Modifier l’élément d’en-tête pour afficher une image à partir de la liste d’images associée. L’exemple suivant assigne la première image à partir de `m_phdrImages`, pour le premier élément d’en-tête, `m_pHdrCtrl`.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
 
 Pour plus d’informations sur les valeurs de paramètre utilisées, consultez les informations pertinentes [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).
 

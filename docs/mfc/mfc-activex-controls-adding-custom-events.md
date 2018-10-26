@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076033"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Contrôles ActiveX MFC : ajout d'événements personnalisés
 
@@ -48,7 +48,7 @@ La procédure suivante ajoute un événement personnalisé spécifique, ClickIn.
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter un événement**.
 
-     Cette opération ouvre l’Assistant Ajout d’événement.
+   Cette opération ouvre l’Assistant Ajout d’événement.
 
 1. Dans le **nom de l’événement** boîte, tout d’abord sélectionner n’importe quel événement existant, puis cliquez sur le **personnalisé** radio bouton, puis tapez *ClickIn*.
 
@@ -94,7 +94,7 @@ Maintenant que vous avez ajouté l’événement personnalisé ClickIn à l’ai
 
 1. Dans la fenêtre Propriétés, cliquez sur le **Messages** bouton.
 
-     La fenêtre Propriétés affiche une liste de messages qui peuvent être gérés par le contrôle ActiveX. Tout message indiqué en gras déjà possède une fonction de gestionnaire qui lui est assignée.
+   La fenêtre Propriétés affiche une liste de messages qui peuvent être gérés par le contrôle ActiveX. Tout message indiqué en gras déjà possède une fonction de gestionnaire qui lui est assignée.
 
 1. Dans la fenêtre Propriétés, sélectionnez le message que vous souhaitez gérer. Pour cet exemple, sélectionnez WM_LBUTTONDOWN.
 
@@ -131,7 +131,7 @@ La procédure suivante ajoute un personnalisé, cliquez sur événement.
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter un événement**.
 
-     Cette opération ouvre l’Assistant Ajout d’événement.
+   Cette opération ouvre l’Assistant Ajout d’événement.
 
 1. Dans le **nom de l’événement** liste déroulante, sélectionnez un nom d’événement stock. Pour cet exemple, sélectionnez **cliquez sur**.
 

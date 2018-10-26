@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1eea2e3158d980c77863640d0342f8b074bf7849
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328608"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080245"
 ---
 # <a name="mfc-classes"></a>Classes MFC
 
@@ -1316,6 +1316,4 @@ Prend en charge des tableaux de mots de 16 bits.
 
 [MFC, applications de bureau](../../mfc/mfc-desktop-applications.md)<br/>
 Contient des liens vers les rubriques sur les classes, les fonctions globales, les variables globales et les macros qui composent la bibliothèque MFC.
-
-
 

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107da291ea12490964fc5d142f8360c93a1ac536
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28085c49903aff1c49fa9114b6a0828c5493840b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380098"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077918"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl, classe
 
@@ -166,7 +166,7 @@ virtual void DrawCursor(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -209,7 +209,7 @@ void GetHLS(
 *luminance*<br/>
 [out] Pointeur vers une variable de type double qui reçoit les informations de luminance.
 
-*saturation*<br/>
+*Saturation*<br/>
 [out] Pointeur vers une variable de type double qui reçoit les informations de saturation.
 
 ### <a name="remarks"></a>Notes
@@ -265,7 +265,6 @@ void SelectCellHexagon(
     BYTE R,
     BYTE G,
     BYTE B);
-
 
 BOOL SelectCellHexagon(
     int x,
@@ -334,7 +333,7 @@ void SetHLS(
 *luminance*<br/>
 [in] Une valeur de luminance.
 
-*saturation*<br/>
+*Saturation*<br/>
 [in] Une valeur de saturation.
 
 *bInvalidate*<br/>

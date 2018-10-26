@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 575af8c372e0d935e1ca7c262a70466a97885648
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46079334"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053953"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Catlpreviewctrlimpl, classe
 
@@ -89,7 +89,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 |Name|Description|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Couleur d’arrière-plan de la fenêtre d’aperçu.|
-|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Couleur du texte de la fenêtre d’aperçu.|  
+|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Couleur du texte de la fenêtre d’aperçu.|
 
 ## <a name="remarks"></a>Notes
 
@@ -226,7 +226,7 @@ const LOGFONTW* m_plf;
 Gère le message WM_PAINT.
 
 ```
-LRESULT OnPaint(  
+LRESULT OnPaint(
     UINT nMsg,
     WPARAM wParam,
     LPARAM lParam,

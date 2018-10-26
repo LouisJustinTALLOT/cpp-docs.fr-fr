@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1711e634fca1b4350e8aca5f75f0de8a4b3a0e5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 749dd92a7fb04696a4f9d173e6496e239dc3f6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417356"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073134"
 ---
 # <a name="exception-processing"></a>Traitement des exceptions
 
@@ -388,7 +388,6 @@ Cette fonction est appelée lorsque les arguments non valides sont utilisés.
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [CInvalidArgException, classe](cinvalidargexception-class.md)<br/>
 [THROW](#throw)
-
 
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 

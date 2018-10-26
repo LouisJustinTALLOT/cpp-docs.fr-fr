@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6b687b00310390e3748fb5a8f6db74a19dfd0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97735b5509fb841a8b9b3d8212f4a23514f9d28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057463"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Comment : gérer une instance de planificateur
 
@@ -34,7 +34,7 @@ Les exemples créent des planificateurs qui utilisent les stratégies de planifi
 
 1. Appelez le [Concurrency::CurrentScheduler :: Create](reference/currentscheduler-class.md#create) méthode ou le [Concurrency::Scheduler :: Create](reference/scheduler-class.md#create) méthode pour créer une instance de planificateur.
 
-     Si vous utilisez le `Scheduler::Create` méthode, appelez le [Concurrency::Scheduler :: Attach](reference/scheduler-class.md#attach) méthode lorsque vous devez associer le planificateur au contexte actuel.
+   Si vous utilisez le `Scheduler::Create` méthode, appelez le [Concurrency::Scheduler :: Attach](reference/scheduler-class.md#attach) méthode lorsque vous devez associer le planificateur au contexte actuel.
 
 1. Appelez le [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) fonction permettant de créer un handle vers un objet d’événement non signalé, de réinitialisation automatique.
 
@@ -44,7 +44,7 @@ Les exemples créent des planificateurs qui utilisent les stratégies de planifi
 
 1. Appelez le [Concurrency::CurrentScheduler :: Detach](reference/currentscheduler-class.md#detach) méthode pour détacher le planificateur actuel et de restaurer le planificateur précédent en tant que celle en cours.
 
-     Si vous utilisez le `Scheduler::Create` méthode, appelez le [Concurrency::Scheduler :: Release](reference/scheduler-class.md#release) méthode décrémente le décompte de références le `Scheduler` objet.
+   Si vous utilisez le `Scheduler::Create` méthode, appelez le [Concurrency::Scheduler :: Release](reference/scheduler-class.md#release) méthode décrémente le décompte de références le `Scheduler` objet.
 
 1. Passez le handle vers l’événement à la [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) fonction pour attendre l’arrêt du planificateur.
 

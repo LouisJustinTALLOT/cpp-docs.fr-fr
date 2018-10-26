@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b686cd19d76706bb6a30286cf611c563c1aed50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 169b0ab1194783f1e7de44c9ae0a153e9d4d3071
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790645"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057827"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ Indique que la classe prend en charge l’agrégation.
 
 Le **agrégeable** attribut C++ a les mêmes fonctionnalités que le [agrégeable](/windows/desktop/Midl/aggregatable) attribut MIDL. Cela signifie que le compilateur passe le **agrégeable** par le biais d’attributs dans le fichier .idl généré.
 
-Cet attribut exige que le [coclasse](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) attribut (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
+Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
 
 ### <a name="atl-projects"></a>Projets ATL
 
@@ -88,11 +88,11 @@ class CMyClass {};
 |**Attributs requis**|Un ou plusieurs des opérations suivantes : `coclass`, `progid`, ou `vi_progid`.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Aggregation](/windows/desktop/com/aggregation)  
+[Aggregation](/windows/desktop/com/aggregation)

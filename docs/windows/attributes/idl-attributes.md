@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebc257d78bf658b722a93e9d7c306c9bcf6e88bd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 87ab9e42af139f9b156fa2a688558077967dfa8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790893"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067798"
 ---
 # <a name="idl-attributes"></a>Attributs IDL
 
@@ -48,7 +48,7 @@ Notez que [idl_quote](idl-quote.md) vous permet d’utiliser des constructions M
 |[bindable](bindable.md)|Indique que la propriété prend en charge la liaison de données.|
 |[call_as](call-as.md)|Permet à une fonction non accessibles à distance à mapper à une fonction à distance.|
 |[case](case-cpp.md)|Utilisé avec le [switch_type](switch-type.md) attribut dans une union.|
-|[coclass](coclass.md)|Définition dans un fichier .idl que coclasse de classe de lieux.|
+|[coclasse](coclass.md)|Définition dans un fichier .idl que coclasse de classe de lieux.|
 |[control](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
 |[cpp_quote](cpp-quote.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier d’en-tête généré.|
 |[defaultbind](defaultbind.md)|Indique la propriété unique, pouvant être liée qui correspond le mieux à l’objet.|
@@ -92,7 +92,7 @@ Notez que [idl_quote](idl-quote.md) vous permet d’utiliser des constructions M
 |[object](object-cpp.md)|Identifie une interface personnalisée ; synonyme d’attribut personnalisé.|
 |[odl](odl.md)|Identifie une interface en tant qu’objet Description Language (ODL) interface.|
 |[oleautomation](oleautomation.md)|Indique qu’une interface est compatible avec Automation.|
-|[Facultatif](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
+|[optional](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
 |[out](out-cpp.md)|Identifie des paramètres pointeurs qui sont retournés de la procédure appelée à la procédure appelante (du serveur au client).|
 |[pointer_default](pointer-default.md)|Spécifie l’attribut de pointeur par défaut pour tous les pointeurs à l’exception des pointeurs de niveau supérieur qui apparaissent dans les listes de paramètres.|
 |[pragma](pragma.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier .idl généré.|
@@ -125,4 +125,4 @@ Notez que [idl_quote](idl-quote.md) vous permet d’utiliser des constructions M
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs par groupe](attributes-by-group.md)  
+[Attributs par groupe](attributes-by-group.md)

@@ -1,7 +1,7 @@
 ---
 title: Cmfcmenubar, classe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aafffcdcfbab750215ccb968774d60259e03672
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93e9d1d148cc70ad0b83bb71565276baa5174afb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433647"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080869"
 ---
 # <a name="cmfcmenubar-class"></a>Cmfcmenubar, classe
 
@@ -201,7 +201,7 @@ Pour utiliser un `CMFCMenuBar` d’objet, l’incorporer dans l’objet de frame
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCMenuBar` classe. L’exemple montre comment définir le style du volet, activer le bouton Personnaliser, une zone de l’aide, activer les ombres des menus contextuels et mettre à jour de la barre de menus. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCMenuBar` . L’exemple montre comment définir le style du volet, activer le bouton Personnaliser, une zone de l’aide, activer les ombres des menus contextuels et mettre à jour de la barre de menus. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -254,7 +254,6 @@ Retourne la valeur TRUE si l’utilisateur peut choisir Afficher les étiquettes
 
 ##  <a name="allowshowonpanemenu"></a>  CMFCMenuBar::AllowShowOnPaneMenu
 
-
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
 ```
@@ -265,7 +264,6 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ##  <a name="calcfixedlayout"></a>  CMFCMenuBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -274,15 +272,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Paramètres
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="calclayout"></a>  CMFCMenuBar::CalcLayout
-
 
 ```
 virtual CSize CalcLayout(
@@ -292,15 +290,15 @@ virtual CSize CalcLayout(
 
 ### <a name="parameters"></a>Paramètres
 
-*dwMode*<br/>
-[in] [in] *nLength*
+[in] *dwMode*<br/>
+
+[in] *nLength*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="calcmaxbuttonheight"></a>  CMFCMenuBar::CalcMaxButtonHeight
-
 
 ```
 virtual int CalcMaxButtonHeight();
@@ -312,7 +310,6 @@ virtual int CalcMaxButtonHeight();
 
 ##  <a name="canbeclosed"></a>  CMFCMenuBar::CanBeClosed
 
-
 ```
 virtual BOOL CanBeClosed() const;
 ```
@@ -322,7 +319,6 @@ virtual BOOL CanBeClosed() const;
 ### <a name="remarks"></a>Notes
 
 ##  <a name="canberestored"></a>  CMFCMenuBar::CanBeRestored
-
 
 ```
 virtual BOOL CanBeRestored() const;
@@ -487,7 +483,6 @@ L’algorithme utilisé par cette méthode est complexe et peut diminuer les per
 
 ##  <a name="getavailableexpandsize"></a>  CMFCMenuBar::GetAvailableExpandSize
 
-
 ```
 virtual int GetAvailableExpandSize() const;
 ```
@@ -497,7 +492,6 @@ virtual int GetAvailableExpandSize() const;
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getcolumnwidth"></a>  CMFCMenuBar::GetColumnWidth
-
 
 ```
 virtual int GetColumnWidth() const;
@@ -541,21 +535,19 @@ L’infrastructure charge le menu par défaut pour le `CMFCMenuBar` objet à par
 
 ##  <a name="getfloatpopupdirection"></a>  CMFCMenuBar::GetFloatPopupDirection
 
-
 ```
 int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pButton*
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getforcedownarrows"></a>  CMFCMenuBar::GetForceDownArrows
-
 
 ```
 BOOL GetForceDownArrows();
@@ -629,7 +621,6 @@ Un pointeur vers le `CMFCToolBarButton` objet qui correspond à l’index spéci
 
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight
 
-
 ```
 virtual int GetRowHeight() const;
 ```
@@ -640,7 +631,6 @@ virtual int GetRowHeight() const;
 
 ##  <a name="getsystembutton"></a>  CMFCMenuBar::GetSystemButton
 
-
 ```
 CMFCToolBarMenuButtonsButton* GetSystemButton(
     UINT uiBtn,
@@ -649,15 +639,15 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*uiBtn*<br/>
-[in] [in] *bByCommand*
+[in] *uiBtn*<br/>
+
+[in] *bByCommand*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getsystembuttonscount"></a>  CMFCMenuBar::GetSystemButtonsCount
-
 
 ```
 int GetSystemButtonsCount() const;
@@ -668,7 +658,6 @@ int GetSystemButtonsCount() const;
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getsystemmenu"></a>  CMFCMenuBar::GetSystemMenu
-
 
 ```
 CMFCToolBarSystemMenuButton* GetSystemMenu() const;
@@ -696,7 +685,6 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 Par défaut, le framework ne met pas en surbrillance les éléments de menu non disponibles lorsque l’utilisateur positionne le pointeur de la souris au-dessus d’eux.
 
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCMenuBar::IsButtonExtraSizeAvailable
-
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -828,14 +816,13 @@ Dans la plupart des cas votre application n’appelle pas `LoadState`. L’infra
 
 ##  <a name="onchangehot"></a>  CMFCMenuBar::OnChangeHot
 
-
 ```
 virtual void OnChangeHot(int iHot);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *iHot*
+[in] *iHot*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -858,14 +845,13 @@ L’implémentation par défaut de cette fonction est sans effet. Remplacez cett
 
 ##  <a name="onsendcommand"></a>  CMFCMenuBar::OnSendCommand
 
-
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pButton*
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -894,7 +880,6 @@ L’implémentation par défaut de cette méthode modifie le texte du bouton au 
 
 ##  <a name="ontoolhittest"></a>  CMFCMenuBar::OnToolHitTest
 
-
 ```
 virtual INT_PTR OnToolHitTest(
     CPoint point,
@@ -903,8 +888,9 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Paramètres
 
-*point*<br/>
-[in] [in] *pTI*
+[in] *point*<br/>
+
+[in] *pTI*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -912,14 +898,13 @@ virtual INT_PTR OnToolHitTest(
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuBar::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pMsg*
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -996,14 +981,13 @@ Utilisez le [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) méthode po
 
 ##  <a name="setforcedownarrows"></a>  CMFCMenuBar::SetForceDownArrows
 
-
 ```
 void SetForceDownArrows(BOOL bValue);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bValue*
+[in] *bValue*<br/>
 
 ### <a name="remarks"></a>Notes
 

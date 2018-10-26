@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f89d70ed5b7a84cdbed61784b59b0748abc6432d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890892"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083319"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -444,19 +444,19 @@ Contrôles d’affichage de liste peuvent afficher leur contenu de quatre maniè
 
 - Affichage de l’icône
 
-     Chaque élément apparaît comme une icône de taille normale (32 x 32 pixels) avec une étiquette placée au-dessous. L’utilisateur peut faire glisser les éléments à n’importe quel emplacement dans la fenêtre d’affichage de liste.
+   Chaque élément apparaît comme une icône de taille normale (32 x 32 pixels) avec une étiquette placée au-dessous. L’utilisateur peut faire glisser les éléments à n’importe quel emplacement dans la fenêtre d’affichage de liste.
 
 - Affichage de la petite icône
 
-     Chaque élément apparaît comme une petite icône (pixels de 16 x 16) avec l’étiquette à droite de celui-ci. L’utilisateur peut faire glisser les éléments à n’importe quel emplacement dans la fenêtre d’affichage de liste.
+   Chaque élément apparaît comme une petite icône (pixels de 16 x 16) avec l’étiquette à droite de celui-ci. L’utilisateur peut faire glisser les éléments à n’importe quel emplacement dans la fenêtre d’affichage de liste.
 
 - Liste (vue)
 
-     Chaque élément apparaît comme une petite icône avec une étiquette à droite de celui-ci. Les éléments sont organisés en colonnes et ne peut pas être déplacées à n’importe quel emplacement dans la fenêtre d’affichage de liste.
+   Chaque élément apparaît comme une petite icône avec une étiquette à droite de celui-ci. Les éléments sont organisés en colonnes et ne peut pas être déplacées à n’importe quel emplacement dans la fenêtre d’affichage de liste.
 
 - Vue rapport
 
-     Chaque élément apparaît sur sa propre ligne, avec des informations supplémentaires sont disposées en colonnes à droite. La colonne de gauche contient la petite icône et une étiquette et les colonnes suivantes contiennent des sous-éléments, comme spécifié par l’application. Un contrôle header incorporé (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implémente ces colonnes. Pour plus d’informations sur le contrôle d’en-tête et les colonnes dans une vue de rapport, consultez [utilisation de CListCtrl : ajout de colonnes au contrôle (vue rapport)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Chaque élément apparaît sur sa propre ligne, avec des informations supplémentaires sont disposées en colonnes à droite. La colonne de gauche contient la petite icône et une étiquette et les colonnes suivantes contiennent des sous-éléments, comme spécifié par l’application. Un contrôle header incorporé (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implémente ces colonnes. Pour plus d’informations sur le contrôle d’en-tête et les colonnes dans une vue de rapport, consultez [utilisation de CListCtrl : ajout de colonnes au contrôle (vue rapport)](../../mfc/adding-columns-to-the-control-report-view.md).
 
 Le style d’affichage de liste actuel du contrôle détermine l’affichage actuel. Pour plus d’informations sur ces styles et leur utilisation, consultez [utilisation de CListCtrl : modification des Styles de contrôle liste](../../mfc/changing-list-control-styles.md).
 
@@ -466,19 +466,19 @@ Outre les styles de liste standard, classe `CListCtrl` prend en charge un large 
 
 - Sélection de pointage
 
-     Lorsque l’option est activée, permet la sélection automatique d’un élément lorsque le curseur reste sur l’élément pendant un certain laps de temps.
+   Lorsque l’option est activée, permet la sélection automatique d’un élément lorsque le curseur reste sur l’élément pendant un certain laps de temps.
 
 - Vues de liste virtuelle
 
-     Lorsque l’option est activée, permet au contrôle prendre en charge les éléments DWORD au maximum. Cela est possible en plaçant la surcharge de la gestion des données de l’élément sur l’application. À l’exception de la sélection d’éléments et les informations de focus, toutes les informations de l’élément doivent être gérées par l’application. Pour plus d’informations, consultez [utilisation de CListCtrl : contrôles de liste virtuels](../../mfc/virtual-list-controls.md).
+   Lorsque l’option est activée, permet au contrôle prendre en charge les éléments DWORD au maximum. Cela est possible en plaçant la surcharge de la gestion des données de l’élément sur l’application. À l’exception de la sélection d’éléments et les informations de focus, toutes les informations de l’élément doivent être gérées par l’application. Pour plus d’informations, consultez [utilisation de CListCtrl : contrôles de liste virtuels](../../mfc/virtual-list-controls.md).
 
 - Activation et deux-clic
 
-     Lorsque activé, permet la sélection réactive (mise en surbrillance automatique du texte de l’élément) et l’activation d’un ou deux clic de l’élément en surbrillance.
+   Lorsque activé, permet la sélection réactive (mise en surbrillance automatique du texte de l’élément) et l’activation d’un ou deux clic de l’élément en surbrillance.
 
 - Faites glisser et déposez l’ordre des colonnes
 
-     Lorsque l’option est activée, permet de glisser-déplacer la réorganisation des colonnes dans un contrôle list view. Disponible uniquement dans la vue rapport.
+   Lorsque l’option est activée, permet de glisser-déplacer la réorganisation des colonnes dans un contrôle list view. Disponible uniquement dans la vue rapport.
 
 Pour plus d’informations sur l’utilisation des nouveaux des styles étendus, consultez [utilisation de CListCtrl : modification des Styles de contrôle liste](../../mfc/changing-list-control-styles.md).
 
@@ -496,19 +496,19 @@ Les icônes, images d’élément en-tête et application - défini des États p
 
 - Grande icône
 
-     Utilisé dans la vue de l’icône pour les icônes en taille réelle.
+   Utilisé dans la vue de l’icône pour les icônes en taille réelle.
 
 - Petite icône
 
-     Utilisée dans la petite icône, liste et les vues de rapport pour des versions plus petites des icônes utilisées dans la vue de l’icône.
+   Utilisée dans la petite icône, liste et les vues de rapport pour des versions plus petites des icônes utilisées dans la vue de l’icône.
 
 - État défini par l’application
 
-     Contient des images d’état sont affichées en regard de l’icône d’un élément pour indiquer un état défini par l’application.
+   Contient des images d’état sont affichées en regard de l’icône d’un élément pour indiquer un état défini par l’application.
 
 - Élément d’en-tête
 
-     Utilisé dans la vue de rapport pour les petites images qui apparaissent dans chaque élément de contrôle d’en-tête.
+   Utilisé dans la vue de rapport pour les petites images qui apparaissent dans chaque élément de contrôle d’en-tête.
 
 Par défaut, un contrôle list view détruit les listes d’images qui lui est assignées lorsqu’il est détruit ; Toutefois, le développeur peut personnaliser ce comportement en détruisant chaque liste d’images lorsqu’il n’est plus utilisé, tel que déterminé par l’application. Pour plus d’informations, consultez [utilisation de CListCtrl : éléments de liste et listes d’images](../list-items-and-image-lists.md).
 

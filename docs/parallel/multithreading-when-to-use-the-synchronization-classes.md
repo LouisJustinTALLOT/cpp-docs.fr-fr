@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018623e9e6a093c4f86b8768e0fd5329f4ea3282
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6da48b12b657944864b1a33216692fce296e5dfd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443772"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083449"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Multithreading : Quand utiliser les Classes de synchronisation MFC
 
@@ -38,17 +38,17 @@ Pour déterminer quelle classe de synchronisation que vous devez utiliser, deman
 
 1. L’application doit attendre que quelque chose se produise avant d’accéder à la ressource (par exemple, données doivent être reçues à partir d’un port de communication avant de pouvoir écrire dans un fichier) ?
 
-     Si Oui, utilisez `CEvent`.
+   Si Oui, utilisez `CEvent`.
 
 2. Pouvez plusieurs threads dans le même accès aux applications cette ressource en même temps (par exemple, votre application autorise jusqu'à cinq fenêtres avec des vues sur le même document) ?
 
-     Si Oui, utilisez `CSemaphore`.
+   Si Oui, utilisez `CSemaphore`.
 
 3. Plusieurs applications permettent de cette ressource (par exemple, la ressource est dans une DLL) ?
 
-     Si Oui, utilisez `CMutex`.
+   Si Oui, utilisez `CMutex`.
 
-     Sinon, utilisez `CCriticalSection`.
+   Sinon, utilisez `CCriticalSection`.
 
 `CSyncObject` est jamais utilisé directement. Il est la classe de base pour les quatre autres classes de synchronisation.
 

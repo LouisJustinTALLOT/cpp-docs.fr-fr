@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 24eded7bac023bd2291e0c574012f72ba86b6bcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053797"
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 
@@ -101,7 +101,7 @@ Les éléments facultatifs d'une déclaration de fonction sont les suivants :
 
     ```
 
-     Pour plus d’informations, consultez [programme et liaison](../cpp/program-and-linkage-cpp.md).
+   Pour plus d’informations, consultez [programme et liaison](../cpp/program-and-linkage-cpp.md).
 
 1. **inline**, qui indique au compilateur de remplacer chaque appel à la fonction avec le code de fonction lui-même. L'incorporation peut améliorer les performances dans les scénarios où une fonction s'exécute rapidement et est appelée à plusieurs reprises dans une section du code critique pour les performances.
 
@@ -112,7 +112,7 @@ Les éléments facultatifs d'une déclaration de fonction sont les suivants :
     }
     ```
 
-     Pour plus d’informations, consultez [fonctions Inline](../cpp/inline-functions-cpp.md).
+   Pour plus d’informations, consultez [fonctions Inline](../cpp/inline-functions-cpp.md).
 
 1. Un `noexcept` expression, qui spécifie si la fonction peut lever une exception. Dans l’exemple suivant, la fonction ne lève pas d’exception si le `is_pod` expression prend la valeur **true**.
 
@@ -123,7 +123,7 @@ Les éléments facultatifs d'une déclaration de fonction sont les suivants :
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     Pour plus d’informations, consultez [noexcept](../cpp/noexcept-cpp.md).
+   Pour plus d’informations, consultez [noexcept](../cpp/noexcept-cpp.md).
 
 1. (Fonctions membres uniquement) Les qualificateurs cv, ce qui spécifient si la fonction est **const** ou **volatile**.
 
@@ -264,12 +264,11 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 Lorsque **automatique** est utilisé conjointement avec un type de retour de fin, il sert seulement un espace réservé pour le produit de l’expression decltype et n’effectue pas lui-même de déduction de type.
 
-
 ## <a name="function-local-variables"></a>Variables locales de fonction
 
 Une variable est déclarée à l’intérieur d’un corps de fonction est appelée un *variable locale* ou simplement un *local*. Les variables locales non statiques sont uniquement visibles à l'intérieur du corps de la fonction et, si elles sont déclarées sur la pile, sortent de la portée lors de la fermeture de la fonction. Quand vous construisez une variable locale et la retournez par valeur, le compilateur peut généralement exécuter l'optimisation de la valeur de retour pour éviter des opérations de copie inutiles. Si vous retournez une variable locale par référence, le compilateur émet un avertissement, car toute tentative d’utiliser cette référence par l’appelant se produit après la destruction de la variable locale.
 
-En C++, une variable locale peut être déclarée comme statique. La variable n'est visible que dans le corps de fonction, mais une seule copie de la variable existe pour toutes les instances de la fonction. Les objets statiques locaux sont détruits durant l'arrêt spécifié par `atexit`. Si un objet statique n’a pas été construit car le flux de contrôle du programme a contourné sa déclaration, aucune tentative de destruction de cet objet n’est effectuée.
+En C++, une variable locale peut être déclarée comme statique. La variable n'est visible que dans le corps de fonction, mais une seule copie de la variable existe pour toutes les instances de la fonction. Les objets statiques locaux sont détruits durant l’arrêt spécifié par `atexit`. Si un objet statique n’a pas été construit car le flux de contrôle du programme a contourné sa déclaration, aucune tentative de destruction de cet objet n’est effectuée.
 
 ##  <a name="type_deduction"></a> Déduction de type dans les types de retour (C ++ 14)
 
@@ -426,7 +425,7 @@ typedef int (*fp)(int);
 fp myFunction(char* s); // function returning function pointer
 ```
 
-Si vous ne procédez pas ainsi, la syntaxe appropriée pour la déclaration de fonction peut être déduite de la syntaxe des déclarateurs pour le pointeur fonction, en remplaçant l'identificateur (`fp` dans l'exemple ci-dessus) par la liste de noms et d'arguments de fonctions, comme suit :
+Si vous ne procédez pas ainsi, la syntaxe appropriée pour la déclaration de fonction peut être déduite de la syntaxe des déclarateurs pour le pointeur fonction, en remplaçant l’identificateur (`fp` dans l’exemple ci-dessus) par la liste de noms et d’arguments de fonctions, comme suit :
 
 ```cpp
 int (*myFunction(char* s))(int);

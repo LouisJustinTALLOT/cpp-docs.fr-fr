@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2b71271dc0579e1d0682b95a0d3bdf57d197d1a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ffa4b43c595bfa75d805e8896aad8c44ac6baa50
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064704"
 ---
 # <a name="retval"></a>retval
 
@@ -55,10 +55,10 @@ Consultez l’exemple de [peut être liée](bindable.md) pour un exemple d’uti
 |**Attributs requis**|**out**|
 |**Attributs non valides**|**in**|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de paramètres](parameter-attributes.md)<br/>
-[Attributs de méthode](method-attributes.md)  
+[Attributs de méthode](method-attributes.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3e4b14353e811def1cfa7a3a60505fdc25d1767
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1551a06168c1ea4255c43ef06c9180789d654893
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063521"
 ---
 # <a name="lcid"></a>lcid
 
@@ -64,9 +64,9 @@ __interface IStatic {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)  
+[Attributs de paramètres](parameter-attributes.md)

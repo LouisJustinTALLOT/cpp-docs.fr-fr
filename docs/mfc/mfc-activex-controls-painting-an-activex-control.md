@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436791"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056007"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Contrôles ActiveX MFC : peinture d'un contrôle ActiveX
 
@@ -112,11 +112,11 @@ Une fois que vous avez implémenté le rendu de métafichier pour le contrôle, 
 
 1. Dans le **insérer un nouveau contrôle** zone, sélectionnez le contrôle, puis cliquez sur **OK**.
 
-     Le contrôle s'affiche dans le conteneur de test.
+   Le contrôle s'affiche dans le conteneur de test.
 
 1. Sur le **contrôle** menu, cliquez sur **dessiner le métafichier**.
 
-     Une fenêtre distincte apparaît dans laquelle le métafichier s'affiche. Vous pouvez modifier la taille de cette fenêtre pour voir comment la mise à l'échelle affecte un métafichier du contrôle. Vous pouvez fermer cette fenêtre à tout moment.
+   Une fenêtre distincte apparaît dans laquelle le métafichier s'affiche. Vous pouvez modifier la taille de cette fenêtre pour voir comment la mise à l'échelle affecte un métafichier du contrôle. Vous pouvez fermer cette fenêtre à tout moment.
 
 ## <a name="see-also"></a>Voir aussi
 

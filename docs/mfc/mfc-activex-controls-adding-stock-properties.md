@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4100dc14a25a744e5c28ffd1b16119408d800656
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 038d33a81d96067089eb55affbad6991a62d129f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404512"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055201"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Contrôles ActiveX MFC : ajout de propriétés stock
 
@@ -59,7 +59,7 @@ Ajout de propriétés stock nécessite moins de code que l’ajout de propriét�
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
 
-     Cette opération ouvre le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md).
+   Cette opération ouvre le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md).
 
 1. Dans le **nom de la propriété** , cliquez sur **légende**.
 

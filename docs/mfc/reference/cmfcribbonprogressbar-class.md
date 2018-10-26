@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27fec3420343b5b6af240f89bb922256cee52a7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c056ce5a9747be280e465e2054402f43761c64e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071571"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar, classe
 
@@ -81,7 +81,7 @@ Un `CMFCRibbonProgressBar` peut fonctionner dans deux modes : normal et infinie
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonProgressBar` classe. L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définissez les valeurs minimales et maximales pour la barre de progression et définissez la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonProgressBar` . L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définissez les valeurs minimales et maximales pour la barre de progression et définissez la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -103,7 +103,6 @@ Crée et initialise un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonpro
 
 ```
 CMFCRibbonProgressBar();
-
 
 CMFCRibbonProgressBar(
     UINT nID,
@@ -174,7 +173,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -206,7 +205,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Notes
 

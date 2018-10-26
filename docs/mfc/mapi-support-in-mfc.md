@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fbc661a870c7adc6e2e5dda5def744fa3e0396
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b538904c78fc0f0bc88b7c12de1bc4862a88ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417011"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053407"
 ---
 # <a name="mapi-support-in-mfc"></a>Prise en charge MAPI dans MFC
 
@@ -44,11 +44,11 @@ L'interface MAPI doit lire le fichier pour envoyer la pièce jointe. Si l'appli
 
 1. Utilisez l’éditeur de menus Visual C++ pour ajouter un élément de menu dont l’ID de commande est ID_FILE_SEND_MAIL.
 
-     Cet ID de commande est fourni par le framework dans AFXRES.H. La commande peut être ajoutée à n’importe quel menu, mais il est généralement ajouté à la **fichier** menu.
+   Cet ID de commande est fourni par le framework dans AFXRES.H. La commande peut être ajoutée à n’importe quel menu, mais il est généralement ajouté à la **fichier** menu.
 
 1. Ajoutez manuellement le code suivant à la table des messages de votre document :
 
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
     >  Cette table des messages fonctionne pour un document dérivé `CDocument` ou `COleDocument` , il récupère la classe de base dans les deux cas, même si la table des messages est dans votre classe de document dérivée.

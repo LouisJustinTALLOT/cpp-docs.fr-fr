@@ -15,24 +15,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1f5cb9e23d5b818779062a5039a2d16c04aefe
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 875101f99f06f4755d2dcc80f563534b6637db42
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053212"
 ---
 # <a name="grammar-summary-cc"></a>Résumé de la grammaire (C/C++)
-Cette section décrit la grammaire formelle du préprocesseur. Elle couvre la syntaxe des directives de prétraitement et opérateurs décrits dans [le préprocesseur](../preprocessor/preprocessor.md) et dans [Directives Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
-  
-Les rubriques suivantes sont incluses :  
-  
-- [Définitions](../preprocessor/definitions-for-the-grammar-summary.md)  
-  
-- [Conventions](../preprocessor/conventions.md)  
-  
-- [Grammaire du préprocesseur](../preprocessor/preprocessor-grammar.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- 
+Cette section décrit la grammaire formelle du préprocesseur. Elle couvre la syntaxe des directives de prétraitement et opérateurs décrits dans [le préprocesseur](../preprocessor/preprocessor.md) et dans [Directives Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+
+Les rubriques suivantes sont incluses :
+
+- [Définitions](../preprocessor/definitions-for-the-grammar-summary.md)
+
+- [Conventions](../preprocessor/conventions.md)
+
+- [Grammaire du préprocesseur](../preprocessor/preprocessor-grammar.md)
+
+## <a name="see-also"></a>Voir aussi
+
 [Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

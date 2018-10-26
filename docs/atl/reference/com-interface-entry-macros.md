@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085223"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080115"
 ---
-# <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY  
+# <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY
 
-Ces macros entrer des interfaces d’un objet dans son mappage COM afin qu’ils soient accessibles par `QueryInterface`. L’ordre des entrées de mappage COM est un IID correspondant pendant seront vérifiés dans les interfaces de commande `QueryInterface`.  
+Ces macros entrer des interfaces d’un objet dans son mappage COM afin qu’ils soient accessibles par `QueryInterface`. L’ordre des entrées de mappage COM est un IID correspondant pendant seront vérifiés dans les interfaces de commande `QueryInterface`.
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Ces macros entrer des interfaces d’un objet dans son mappage COM afin qu’ils
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Traite le mappage COM de la classe de base lorsque le traitement atteint cette entrée dans le mappage COM.|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Un mécanisme général pour le raccordement d’ATL `QueryInterface` logique.|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Identique à [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), sauf que l’interrogation pour n’importe quel IID entraîne un appel à *func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Retourne E_NOINTERFACE et termine le traitement de mappage COM lors de l’interface spécifiée est interrogée pour.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Retourne E_NOINTERFACE et termine le traitement de mappage COM lors de l’interface spécifiée est interrogée pour.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -70,6 +70,7 @@ Insère des interfaces dans la table d’interface COM.
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *x*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
@@ -356,7 +358,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 *entrepôt de données*<br/>
 [in] Un paramètre passé à la *func*.
 
-*Func*<br/>
+*func*<br/>
 [in] Le pointeur de fonction qui retournera *iid*.
 
 ### <a name="remarks"></a>Notes
@@ -380,7 +382,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 *entrepôt de données*<br/>
 [in] Un paramètre passé à la *func*.
 
-*Func*<br/>
+*func*<br/>
 [in] La fonction est appelée lors du traitement de cette entrée dans le mappage COM.
 
 ### <a name="remarks"></a>Notes
@@ -406,4 +408,3 @@ Vous pouvez utiliser cette macro pour empêcher une interface d’être utilisé
 
 L’interface IID sera construite en ajoutant *x* à `IID_`. Par exemple, si *x* est `IPersistStorage`, l’IID sera `IID_IPersistStorage`.
 
-  

@@ -18,30 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c22a9fa20e663a87d10dcb1e9ba154c921a5bf8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a51428d32c1e7e5863e777302c3c55b728ce11f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083059"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
-Contrôle l’expansion inline des appels de fonction directe ou mutuellement récursive.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#pragma inline_recursion( [{on | off}] )  
-```  
-  
-## <a name="remarks"></a>Notes  
- 
-Utiliser ce pragma pour contrôler les fonctions marqué comme [inline](../cpp/inline-functions-cpp.md) et [__inline](../cpp/inline-functions-cpp.md) ou des fonctions que le compilateur développe automatiquement sous le `/Ob2` option. Utilisation de ce pragma requiert un [/Ob](../build/reference/ob-inline-function-expansion.md) paramètre d’option du compilateur de 1 ou 2. L’état par défaut **inline_recursion** est désactivé. Ce pragma entre en vigueur au premier appel de fonction après sa détection et n'a aucune incidence sur la définition de la fonction.  
-  
-Le **inline_recursion** pragma contrôle comment les fonctions récursives sont développées. Si **inline_recursion** est désactivée, et si une fonction inline s’appelle elle-même (directement ou indirectement), la fonction est étendue qu’une seule fois. Si **inline_recursion** est activé, la fonction est développée plusieurs fois jusqu'à ce qu’il atteigne la valeur définie avec la [inline_depth](../preprocessor/inline-depth.md) pragma, la valeur par défaut pour les fonctions récursives qui est définie par le `inline_depth` pragma, ou une capacité limite.  
-  
-## <a name="see-also"></a>Voir aussi  
- 
+Contrôle l’expansion inline des appels de fonction directe ou mutuellement récursive.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#pragma inline_recursion( [{on | off}] )
+```
+
+## <a name="remarks"></a>Notes
+
+Utiliser ce pragma pour contrôler les fonctions marqué comme [inline](../cpp/inline-functions-cpp.md) et [__inline](../cpp/inline-functions-cpp.md) ou des fonctions que le compilateur développe automatiquement sous le `/Ob2` option. Utilisation de ce pragma requiert un [/Ob](../build/reference/ob-inline-function-expansion.md) paramètre d’option du compilateur de 1 ou 2. L’état par défaut **inline_recursion** est désactivé. Ce pragma entre en vigueur au premier appel de fonction après sa détection et n'a aucune incidence sur la définition de la fonction.
+
+Le **inline_recursion** pragma contrôle comment les fonctions récursives sont développées. Si **inline_recursion** est désactivée, et si une fonction inline s’appelle elle-même (directement ou indirectement), la fonction est étendue qu’une seule fois. Si **inline_recursion** est activé, la fonction est développée plusieurs fois jusqu'à ce qu’il atteigne la valeur définie avec la [inline_depth](../preprocessor/inline-depth.md) pragma, la valeur par défaut pour les fonctions récursives qui est définie par le `inline_depth` pragma, ou une capacité limite.
+
+## <a name="see-also"></a>Voir aussi
+
 [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_depth](../preprocessor/inline-depth.md)<br/>
 [/Ob (Expansion des fonctions Inline)](../build/reference/ob-inline-function-expansion.md)

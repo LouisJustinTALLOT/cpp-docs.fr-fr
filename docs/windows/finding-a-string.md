@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 308e84a84c39399c93d270ba4662b3b0f593e42d
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 23855fc0605992c7348fd4a8dd901abb4d629949
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057723"
 ---
 # <a name="finding-a-string-resource-c"></a>Recherche une ressource de type chaîne (C++)
 
@@ -55,4 +55,4 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur de chaînes](../windows/string-editor.md)  
+[Éditeur de chaînes](../windows/string-editor.md)
