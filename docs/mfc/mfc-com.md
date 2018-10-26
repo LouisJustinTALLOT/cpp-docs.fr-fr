@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 5ae1ccdcda4fac1cbd0660b054d792999ae449fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890034"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079284"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -52,7 +52,7 @@ Technologies Active incluent des technologies client et serveur, notamment les s
 
 - [Automation](../mfc/automation.md) (anciennement appelé OLE Automation) permet à une application de manipuler des objets implémentés dans une autre application, ou « exposer » les objets afin qu’ils puissent être manipulés.
 
-     L’objet automatisé peut être local ou distant (sur un autre ordinateur accessible via un réseau). Automation est disponible pour les objets OLE et COM.
+   L’objet automatisé peut être local ou distant (sur un autre ordinateur accessible via un réseau). Automation est disponible pour les objets OLE et COM.
 
 - Cette section fournit également des informations sur la façon d’écrire des composants COM à l’aide de MFC, par exemple, dans [Points de connexion](../mfc/connection-points.md).
 

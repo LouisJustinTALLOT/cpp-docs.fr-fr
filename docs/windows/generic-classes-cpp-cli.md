@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f5d87663402081a06270f09547b2d61477d5ea3f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409361"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056904"
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 
@@ -58,7 +58,7 @@ Soit **classe** ou **typename**
 *clauses de contrainte*<br/>
 Une liste (ne pas séparées par des virgules) de **où** clauses spécifiant les contraintes pour les paramètres de type. Prend la forme :
 
-> **où** *identificateur de paramètre de type* **:** *liste de contraintes***...** 
+> **où** *identificateur de paramètre de type* **:** *liste de contraintes***...**
 
 *liste de contraintes*<br/>
 *classe ou interface*[`,` *...* ]
@@ -346,7 +346,7 @@ int main() {
 
 ```Output
 Name: Jeff Smith
-Amount: $123.00**  
+Amount: $123.00**
 ```
 
 ## <a name="generic-methods-in-generic-classes"></a>Méthodes génériques dans les Classes génériques

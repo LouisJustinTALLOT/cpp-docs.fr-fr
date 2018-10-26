@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 057652eaf1f188cfd61dcfa4a0d433a43ef8c56c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028049"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068890"
 ---
 # <a name="com-map-macros"></a>Macros de mappage COM
 
@@ -31,7 +31,7 @@ Ces macros définissent des tables d’interface COM.
 |||
 |-|-|
 |[BEGIN_COM_MAP](#begin_com_map)|Marque le début des entrées de mappage d’interface COM.|
-|[END_COM_MAP](#end_com_map)|Marque la fin des entrées de mappage d’interface COM.|  
+|[END_COM_MAP](#end_com_map)|Marque la fin des entrées de mappage d’interface COM.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -52,7 +52,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="remarks"></a>Notes
 
-[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) ne renvoie que des pointeurs pour les interfaces dans le mappage COM. Démarrez votre carte d’interface avec la macro BEGIN_COM_MAP, ajouter des entrées pour chacun de vos interfaces avec la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro ou une de ses variantes et effectuer un mappage avec le [END_COM_MAP](#end_com_map) macro.  
+[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) ne renvoie que des pointeurs pour les interfaces dans le mappage COM. Démarrez votre carte d’interface avec la macro BEGIN_COM_MAP, ajouter des entrées pour chacun de vos interfaces avec la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro ou une de ses variantes et effectuer un mappage avec le [END_COM_MAP](#end_com_map) macro.
 
 ### <a name="example"></a>Exemple
 

@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31ac9d8ab0200d8dd56bbca3c82eb0ebec32388b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 210ef0d41cd0653718908b10ad64cd6004886c64
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015967"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077749"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Assistant Composant ASP ATL
 
 Utilisez cette page de l’Assistant composant Active Server Page ATL pour spécifier des paramètres facultatifs pour la gestion des informations et l’état associé à votre composant ASP.
 
-- **Méthodes facultatives**  
+- **Méthodes facultatives**
 
    Ajoute les méthodes ASP facultatives, **OnStartPage** et **OnEndPage**, à votre objet. Cette option doit être sélectionnée pour définir des objets intrinsèques Active Server Pages. Par défaut, il est sélectionné.
 
@@ -35,7 +35,7 @@ Utilisez cette page de l’Assistant composant Active Server Page ATL pour spéc
 
    [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) est appelée la première fois que le script tente d’accéder à l’objet. **OnEndPage** est appelée lorsque l’objet a terminé le script de traitement.
 
-- **Objet intrinsèque**  
+- **Objet intrinsèque**
 
    Vous devez sélectionner le **OnStartPage/OnEndPage** option permettant de définir des objets intrinsèques ASP.
 
