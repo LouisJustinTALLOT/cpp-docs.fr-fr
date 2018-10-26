@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721290"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136170"
 ---
 # <a name="linker-options"></a>Options de l'éditeur de liens
 
@@ -60,7 +60,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Définit le type (IJW, pure ou sécurisée) d’une image CLR.|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Préserve le dernier code d’erreur des fonctions qui sont appelées via le mécanisme P/Invoke.|
 |[/CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|Spécifie l’attribut de thread à appliquer au point d’entrée de votre programme CLR.|
-|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|Spécifie si l’éditeur de liens doit appliquer l’attribut SuppressUnmanagedCodeSecurity aux stubs PInvoke générés par l’éditeur de liens qui appellent à partir du code managé dans des DLL natives.|
+|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|Spécifie si l’éditeur de liens doit appliquer l’attribut SuppressUnmanagedCodeSecurity aux stubs PInvoke générés par l’éditeur de liens qui appellent à partir du code managé dans des DLL natives.|
 |[/DEBUG](../../build/reference/debug-generate-debug-info.md)|Crée des informations de débogage.|
 |[/DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|Spécifie les données à inclure dans les informations de débogage.|
 |[/DEF](../../build/reference/def-specify-module-definition-file.md)|Passe un fichier de définition de module (.def) à l’éditeur de liens.|

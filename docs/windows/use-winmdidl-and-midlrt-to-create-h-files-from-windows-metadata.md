@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3f97ef0f285cda7d31ddd53f0a8b0ca9a22f360c
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071357"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136196"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Comment : utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows
 
@@ -39,13 +39,13 @@ Par défaut dans [Windows 8.1, winmdidl.exe et midlrt.exe se trouvent dans C:\Pr
 ## <a name="winmdidl-command-line-arguments"></a>Arguments de ligne de commande Winmdidl
 
 ```
-Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
+Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
 **/nologo**<br/>
 Empêche l'affichage dans la console du message de copyright et du numéro de version winmdidl. 
 
-**/supressversioncheck**<br/>
+**/suppressversioncheck**<br/>
 Non utilisé.
 
 **/ heure**<br/>

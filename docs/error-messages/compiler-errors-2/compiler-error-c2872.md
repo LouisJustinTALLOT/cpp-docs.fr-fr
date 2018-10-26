@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4bdc67e13db11949371e2f9e3d8a205b146d701
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 8eb494d3a8ba2e2569f68dbfd0164c7bf6a9ae29
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890112"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136222"
 ---
 # <a name="compiler-error-c2872"></a>Erreur du compilateur C2872
 
@@ -31,7 +31,7 @@ Le compilateur ne peut pas déterminer quel symbole que vous faites référence.
 
 C2872 peut se produire si un fichier d’en-tête inclut un [à l’aide de la directive](../../cpp/namespaces-cpp.md#using_directives), et un fichier d’en-tête suivant est inclus qui contient un type qui se trouve également dans l’espace de noms spécifié dans la `using` directive. Spécifiez un `using` directive uniquement une fois que toutes vos fichiers d’en-tête sont spécifiés avec `#include`.
 
-C2872 peut se produire dans Visual Studio 2013 en raison d’un conflit entre la le `Windows::Foundation::Metadata::Platform` enum type et C++ / c++ / CX-défini `Platform` espace de noms. Pour contourner ce problème, procédez comme suit :
+C2872 peut se produire dans Visual Studio 2013 en raison d’un conflit entre la `Windows::Foundation::Metadata::Platform` enum type et C++ / c++ / CX-défini `Platform` espace de noms. Pour contourner ce problème, procédez comme suit :
 
 - Supprimez la clause « à l’aide d’espace de noms Windows::Foundation::Metadata » à partir des fichiers projet.
 
