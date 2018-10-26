@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5a1c972be0b4e14d881812195856465dbc7c9e70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025540"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075786"
 ---
 # <a name="connection-point-global-functions"></a>Fonctions globales de Point de connexion
 
@@ -36,7 +36,7 @@ Ces fonctions prennent en charge des points de connexion et le récepteur maps.
 |-|-|
 |[AtlAdvise](#atladvise)|Crée une connexion entre le point de connexion d'un objet et le récepteur d'un client.|
 |[AtlUnadvise](#atlunadvise)|Met fin à la connexion établie via `AtlAdvise`.|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Conseille ou avertit des entrées dans une table de récepteur d’événements.|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Conseille ou avertit des entrées dans une table de récepteur d’événements.|
 
 ## <a name="requirements"></a>Configuration requise
 

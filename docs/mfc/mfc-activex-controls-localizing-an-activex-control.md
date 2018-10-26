@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2705061b1914ac8fad9f7ca8d769df16bab2f5c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415692"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053277"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Contrôles ActiveX MFC : localisation d'un contrôle ActiveX
 
@@ -68,7 +68,7 @@ Pour créer plusieurs bibliothèques de types traduites, vous pouvez ajouter au 
 
 1. Avec votre projet de contrôle ouvert, dans le **projet** menu, cliquez sur **ajouter un élément existant**.
 
-     Le **ajouter un élément existant** boîte de dialogue s’affiche.
+   Le **ajouter un élément existant** boîte de dialogue s’affiche.
 
 1. Si nécessaire, sélectionnez le lecteur et le répertoire à afficher.
 

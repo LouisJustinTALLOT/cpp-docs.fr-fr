@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24b663e1b07d1012c1611714390340df3ce3867f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074733"
 ---
 # <a name="cdockingmanager-class"></a>Cdockingmanager, classe
 
@@ -296,7 +296,7 @@ Les conseils suivants s’appliquent à `CDockingManager` objets :
 
     - `AFX_DOCK_TYPE::DT_SMART`
 
-     Ces modes d’ancrage sont définis par [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) et sont définies en appelant [CDockingManager::SetDockingMode](#setdockingmode).
+   Ces modes d’ancrage sont définis par [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) et sont définies en appelant [CDockingManager::SetDockingMode](#setdockingmode).
 
 - Si vous souhaitez créer un volet non flottante, non redimensionnable, appelez le [CDockingManager::AddPane](#addpane) (méthode). Cette méthode inscrit le volet avec le Gestionnaire d’ancrage, ce qui est responsable de la disposition du volet.
 
@@ -396,7 +396,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>Paramètres
 
 *hdwp*<br/>
-[in] Spécifie la structure de position de fenêtre différée. Pour plus d’informations, consultez [les Types de données Windows](/windows/desktop/WinProg/windows-data-types).
+[in] Spécifie la structure de position de fenêtre différée. Pour plus d'informations, consultez [Types de données Windows](/windows/desktop/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Notes
 

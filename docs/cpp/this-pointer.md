@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070585"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077333"
 ---
 # <a name="this-pointer"></a>Pointeur this
 
@@ -32,7 +32,7 @@ Le **cela** pointeur est un pointeur accessible uniquement dans les fonctions me
 ## <a name="syntax"></a>Syntaxe
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +181,7 @@ int main()
 
 Le type de **cela** dans un membre de fonction est décrite par la syntaxe suivante, où *cv-qualifier-list* est déterminé à partir du déclarateur de fonctions de membre et peut être **const**ou **volatile** (ou les deux), et *type de classe* est le nom de la classe :
 
-*type de classe [cv-qualifier-list]* **\* const cela**
+*type de classe [cv-qualifier-list]* **&#42; const cela**
 
 En d’autres termes, **cela** est toujours un pointeur const ; il ne peut pas être réassigné.  Le **const** ou **volatile** qualificateurs utilisés dans la déclaration de fonction membre s’appliquent à l’instance de classe vers laquelle pointé **cela** dans la portée de cette fonction.
 

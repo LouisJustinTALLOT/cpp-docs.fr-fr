@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ff74e07308ec359375624a31f2cf196690443b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d3a704f4c683e774057265604ecd69cd03dfb657
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413157"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056943"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl, classe
 
@@ -168,14 +168,13 @@ L'exemple suivant montre comment construire un objet `CMFCToolTipCtrl`, définir
 
 ##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl
 
-
 ```
 CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pParams*
+[in] *pParams*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -216,7 +215,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -231,7 +230,6 @@ Substituez cette méthode dans une classe dérivée pour personnaliser l’appar
 
 ##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription
 
-
 ```
 virtual CSize OnDrawDescription(
     CDC* pDC,
@@ -241,8 +239,9 @@ virtual CSize OnDrawDescription(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
-[in] [in] *rect* [in] *bCalcOnly*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -260,7 +259,7 @@ virtual BOOL OnDrawIcon(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectImage*<br/>
@@ -287,7 +286,7 @@ virtual CSize OnDrawLabel(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -318,7 +317,7 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *x1*<br/>
@@ -350,7 +349,7 @@ virtual void OnFillBackground(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -387,7 +386,6 @@ Le texte de description s’affiche dans l’info-bulle sous le séparateur.
 
 ##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth
 
-
 ```
 void SetFixedWidth(
     int nWidthRegular,
@@ -396,13 +394,12 @@ void SetFixedWidth(
 
 ### <a name="parameters"></a>Paramètres
 
-*nWidthRegular*<br/>
-[in] [in] *nWidthLargeImage*
+[in] *nWidthRegular*<br/>
+[in] *nWidthLargeImage*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="sethotribbonbutton"></a>  CMFCToolTipCtrl::SetHotRibbonButton
-
 
 ```
 void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
@@ -410,12 +407,11 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pRibbonButton*
+[in] *pRibbonButton*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="setlocation"></a>  CMFCToolTipCtrl::SetLocation
-
 
 ```
 void SetLocation(CPoint pt);
@@ -423,7 +419,7 @@ void SetLocation(CPoint pt);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pt*
+[in] *pt*<br/>
 
 ### <a name="remarks"></a>Notes
 

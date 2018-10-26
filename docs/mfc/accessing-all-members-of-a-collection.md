@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320457928ef8bc1a03d86b3a898bc0b719e116a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bcaaf4723e8b6a1ad40fb534b7114f317d76f6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442875"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060817"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Accès à tous les membres d'une collection
 
@@ -48,38 +48,38 @@ Les procédures suivantes montrent comment itérer sur les trois principaux type
 
 1. Utilisez des numéros d’index séquentiels avec la fonction membre `GetAt` :
 
-     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
 
-     Cet exemple utilise un tableau de pointeurs typés qui contient des pointeurs vers des objets `CPerson` . Le tableau est dérivé de la classe `CObArray`, l’une des classes prédéfinies non basées sur un modèle. `GetAt` retourne un pointeur vers un objet `CPerson` . Pour les classes de collection de pointeurs typés (tableaux ou listes), le premier paramètre spécifie la classe de base ; le deuxième paramètre spécifie le type à stocker.
+   Cet exemple utilise un tableau de pointeurs typés qui contient des pointeurs vers des objets `CPerson` . Le tableau est dérivé de la classe `CObArray`, l’une des classes prédéfinies non basées sur un modèle. `GetAt` retourne un pointeur vers un objet `CPerson` . Pour les classes de collection de pointeurs typés (tableaux ou listes), le premier paramètre spécifie la classe de base ; le deuxième paramètre spécifie le type à stocker.
 
-     Le `CTypedPtrArray` classe également des surcharges de la **[]** opérateur afin que vous pouvez utiliser la syntaxe d’indice de tableau habituel pour accéder aux éléments d’un tableau. Une alternative à l’instruction dans le corps de la **pour** boucle ci-dessus est
+   Le `CTypedPtrArray` classe également des surcharges de la **[]** opérateur afin que vous pouvez utiliser la syntaxe d’indice de tableau habituel pour accéder aux éléments d’un tableau. Une alternative à l’instruction dans le corps de la **pour** boucle ci-dessus est
 
-     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-     Cet opérateur existe dans les versions **const** et non**const** . La version **const** , qui est appelée pour les tableaux **const** , peuvent apparaître uniquement à droite d’une instruction d’assignation.
+   Cet opérateur existe dans les versions **const** et non**const** . La version **const** , qui est appelée pour les tableaux **const** , peuvent apparaître uniquement à droite d’une instruction d’assignation.
 
 ### <a name="_core_to_iterate_a_list"></a> Pour itérer une liste
 
 1. Utilisez les fonctions membres `GetHeadPosition` et `GetNext` pour parcourir la liste :
 
-     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
 
-     Cet exemple utilise une liste de pointeurs typés destinée à contenir des pointeurs vers des objets `CPerson` . La déclaration de liste ressemble à celle du tableau de la procédure [Pour itérer un tableau](#_core_to_iterate_an_array) , sauf qu’elle est dérivée de la classe `CObList`. `GetNext` retourne un pointeur vers un objet `CPerson` .
+   Cet exemple utilise une liste de pointeurs typés destinée à contenir des pointeurs vers des objets `CPerson` . La déclaration de liste ressemble à celle du tableau de la procédure [Pour itérer un tableau](#_core_to_iterate_an_array) , sauf qu’elle est dérivée de la classe `CObList`. `GetNext` retourne un pointeur vers un objet `CPerson` .
 
 ### <a name="_core_to_iterate_a_map"></a> Pour itérer un mappage
 
 1. Utilisez `GetStartPosition` pour atteindre le début du mappage et `GetNextAssoc` pour obtenir plusieurs fois la clé et la valeur suivantes du mappage, comme le montre l’exemple suivant :
 
-     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
 
-     Cet exemple utilise un modèle de mappage simple (et non une collection de pointeurs typés) qui utilise des clés `CString` et stocke des pointeurs vers des objets `CPerson` . Quand vous utilisez des fonctions d’accès, telles que `GetNextAssoc`, la classe fournit des pointeurs vers des objets `CPerson` . Si, à la place, vous utilisez l’une des collections de mappages non basés sur un modèle, vous devez convertir le pointeur `CObject` retourné en pointeur vers un `CPerson`.
+   Cet exemple utilise un modèle de mappage simple (et non une collection de pointeurs typés) qui utilise des clés `CString` et stocke des pointeurs vers des objets `CPerson` . Quand vous utilisez des fonctions d’accès, telles que `GetNextAssoc`, la classe fournit des pointeurs vers des objets `CPerson` . Si, à la place, vous utilisez l’une des collections de mappages non basés sur un modèle, vous devez convertir le pointeur `CObject` retourné en pointeur vers un `CPerson`.
 
     > [!NOTE]
     >  Pour les mappages non basés sur un modèle, le compilateur nécessite une référence à un pointeur `CObject` dans le dernier paramètre de `GetNextAssoc`. En entrée, vous devez convertir vos pointeurs dans ce type, comme le montre l’exemple suivant.
 
-     La solution avec modèle est plus simple et assure une meilleure sécurité de type. Le code sans modèle est plus compliqué, comme vous pouvez le constater ici :
+   La solution avec modèle est plus simple et assure une meilleure sécurité de type. Le code sans modèle est plus compliqué, comme vous pouvez le constater ici :
 
-     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
+   [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
 
 Pour plus d’informations, consultez [Suppression de tous les objets d’une collection CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md).
 

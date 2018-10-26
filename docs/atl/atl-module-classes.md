@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e067b1d72b80950b4ed33fbae8cac7333ac0438
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067634"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083072"
 ---
 # <a name="atl-module-classes"></a>Module ATL, classes
 
@@ -55,15 +55,15 @@ La fonctionnalité de `CComModule` a été distribuée dans plusieurs nouvelles 
 
 - Vérifiez la fonctionnalité dans `CComModule` granulaire.
 
-     Prise en charge de COM, le fenêtrage, débogage de l’interface et les fonctionnalités (DLL ou EXE) spécifique à l’application est maintenant dans des classes distinctes.
+   Prise en charge de COM, le fenêtrage, débogage de l’interface et les fonctionnalités (DLL ou EXE) spécifique à l’application est maintenant dans des classes distinctes.
 
 - Déclarer automatiquement l’instance globale de chacun de ces modules.
 
-     Une instance globale des classes du module requis est liée au projet.
+   Une instance globale des classes du module requis est liée au projet.
 
 - Supprimer la nécessité de l’appel de méthodes Init et terme.
 
-     Les méthodes Init et Term ont déplacés dans les constructeurs et les destructeurs des classes de module ; Il n’est plus nécessaire de les appeler à terme.
+   Les méthodes Init et Term ont déplacés dans les constructeurs et les destructeurs des classes de module ; Il n’est plus nécessaire de les appeler à terme.
 
 ## <a name="see-also"></a>Voir aussi
 

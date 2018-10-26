@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7907935971fae7d990c651410e5b76982b798075
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060518"
 ---
 # <a name="servers-implementing-server-documents"></a>Serveurs : implémentation de documents de serveur
 
@@ -36,7 +36,7 @@ Cet article explique les étapes à suivre pour implémenter correctement un doc
 
 1. Implémentez le `OnGetEmbeddedItem` fonction membre de votre classe de document serveur.
 
-     `OnGetEmbeddedItem` est appelée lorsque l’utilisateur d’une application conteneur crée ou modifie un élément incorporé. Elle doit retourner un élément qui représente la totalité du document. Cela doit être un objet de votre `COleServerItem`-classe dérivée.
+   `OnGetEmbeddedItem` est appelée lorsque l’utilisateur d’une application conteneur crée ou modifie un élément incorporé. Elle doit retourner un élément qui représente la totalité du document. Cela doit être un objet de votre `COleServerItem`-classe dérivée.
 
 1. Remplacer le `Serialize` fonction membre à sérialiser le contenu du document. Vous n’avez pas besoin de sérialiser la liste des éléments de serveur, sauf si vous les utilisez pour représenter les données natives dans votre document. Pour plus d’informations, consultez *implémentation des éléments serveur* dans l’article [serveurs : éléments de serveur](../mfc/servers-server-items.md).
 

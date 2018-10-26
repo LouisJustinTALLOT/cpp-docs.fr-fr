@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f07ab7b4420a5c33be56a9278b60afb6424e9e83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389733"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063547"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026 : routines DDX et DDV
 
@@ -224,21 +224,21 @@ Chaque champ est délimitée par un caractère « ; ». Les champs et leur obj
 
    - *promptN*
 
-     Chaîne à placer au-dessus de l’élément d’édition (en & pour accélérateur).
+      Chaîne à placer au-dessus de l’élément d’édition (en & pour accélérateur).
 
    - *fmtN*
 
-     Caractère de format pour le type arg, une des :
+      Caractère de format pour le type arg, une des :
 
-     |Caractère|Type|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | long int (autrement dit, long)
-     U | long non signé (autrement dit, DWORD)
-     f | float
-     F | double
-     s | chaîne
+      |Caractère|Type|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | long int (autrement dit, long)|
+      |U | long non signé (autrement dit, DWORD)|
+      |f | float|
+      |F | double|
+      |s | chaîne|
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dd43b806852e578c28dc7a647cb367ad6f2780
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406788"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076618"
 ---
 # <a name="servers-implementing-a-server"></a>Serveurs : implémentation d'un serveur
 
@@ -36,7 +36,7 @@ Le code du serveur qui fournit l’Assistant application se divise en plusieurs 
 
    - Les ressources de menu et barre d’outils utilisés lorsque le serveur est actif en place.
 
-     Pour plus d’informations sur ces ressources, consultez [Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
+   Pour plus d’informations sur ces ressources, consultez [Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
 
 - Définition d’une classe d’élément dérivé `COleServerItem`. Pour plus d’informations sur les éléments de serveur, consultez [serveurs : éléments de serveur](../mfc/servers-server-items.md).
 

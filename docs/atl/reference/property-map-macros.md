@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: caa298ebbb96b04145bf2beb52f93838708ae50b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106348"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088900"
 ---
 # <a name="property-map-macros"></a>Macros de mappage de propriété
 
@@ -39,7 +39,7 @@ Ces macros définissent les mappages des propriétés et des entrées.
 |[PROP_ENTRY_TYPE](#prop_entry_type)|Insère une page de description, propriété DISPID et propriété des propriétés CLSID dans le mappage de propriété.|
 |[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Insère une description de la propriété propriété DISPID, CLSID, page des propriétés et `IDispatch` IID dans le mappage de propriété.|
 |[PROP_PAGE](#prop_page)|Insère une page de propriétés CLSID dans le mappage de propriété.|
-|[END_PROP_MAP](#end_prop_map)|Marque la fin de la table de propriétés ATL.|  
+|[END_PROP_MAP](#end_prop_map)|Marque la fin de la table de propriétés ATL.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -83,7 +83,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 *szDesc*<br/>
 [in] La description de la propriété.
 
-*Membre*<br/>
+*member*<br/>
 [in] Le membre de données contenant l’étendue ; par exemple, `m_sizeExtent`.
 
 *vt*<br/>

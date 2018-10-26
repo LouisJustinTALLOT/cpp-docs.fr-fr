@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6146106a7ae378821fc7133d2d65597d1225cc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079660"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets : arrière-plan
 
@@ -69,11 +69,11 @@ Deux types de socket sont disponibles :
 
 - Sockets de Stream
 
-     Stream de sockets fournissent pour un flux de données sans limites d’enregistrement : un flux d’octets. Flux sont garantis pour être remis et être séquencée et non-duplication correctement.
+   Stream de sockets fournissent pour un flux de données sans limites d’enregistrement : un flux d’octets. Flux sont garantis pour être remis et être séquencée et non-duplication correctement.
 
 - Sockets datagramme
 
-     Datagramme des flux de données de prise en charge orientée sur un enregistrement de sockets qui ne sont pas garanti pour être remis et ne peuvent pas être séquencée comme envoyé ni non dupliqué.
+   Datagramme des flux de données de prise en charge orientée sur un enregistrement de sockets qui ne sont pas garanti pour être remis et ne peuvent pas être séquencée comme envoyé ni non dupliqué.
 
 « Ordonnancé » signifie que les paquets sont remis dans l’ordre d’envoi. « Non dupliqué » signifie que vous obtenez un paquet particulier une seule fois.
 

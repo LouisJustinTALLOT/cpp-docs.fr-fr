@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a61ad47464bc7cb005cfea41049019cfa0202b08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a399c63903723fb35bd1b732eb15b561eeac6759
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391369"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070346"
 ---
 # <a name="cfile-class"></a>CFile (classe)
 
@@ -193,11 +193,9 @@ CFile();
 CFile(CAtlTransactionManager* pTM);
 CFile(HANDLE hFile);
 
-
 CFile(
 LPCTSTR lpszFileName,
 UINT nOpenFlags);
-
 
 CFile(
 LPCTSTR lpszFileName,
@@ -211,7 +209,7 @@ CAtlTransactionManager* pTM);
 Handle d'un fichier à attacher à l'objet `CFile`.
 
 *lpszFileName*<br/>
-Chemin d'accès relatif ou complet d'un fichier à attacher à l'objet `CFile`.
+Chemin d’accès relatif ou complet d’un fichier à attacher à l’objet `CFile`.
 
 *nOpenFlags*<br/>
 Combinaison de bits (OR) ou options d'accès au fichier pour le fichier spécifié. Consultez la section Notes pour connaître les options possibles.
@@ -576,7 +574,6 @@ virtual BOOL Open(
     LPCTSTR lpszFileName,
     UINT nOpenFlags,
     CFileException* pError = NULL);
-
 
 virtual BOOL Open(
     LPCTSTR lpszFileName,

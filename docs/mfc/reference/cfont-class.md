@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 760f8c5527f0dbd4fa0ebc2aed3aed59a9676b82
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c914bab9ab7a4bb15f6fe3d2820d7ff2534c3c6e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399015"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053641"
 ---
 # <a name="cfont-class"></a>CFont (classe)
 
@@ -250,7 +250,7 @@ Hauteur de police en dixièmes d’un point a demandé. (Par exemple, transmettr
 *lpszFaceName*<br/>
 Un `CString` ou pointeur vers une chaîne se terminant par null qui spécifie le nom de la police. La longueur de cette chaîne ne doit pas dépasser 30 caractères. Le Windows ' EnumFontFamilies fonction peut être utilisée pour énumérer toutes les polices actuellement disponibles. Si *lpszFaceName* est NULL, l’interface GDI utilise une police indépendant du périphérique.
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le [CDC](../../mfc/reference/cdc-class.md) objet à utiliser pour convertir la hauteur dans *nPointSize* d’unités logiques. Si NULL, un contexte de périphérique est utilisé pour la conversion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -282,7 +282,7 @@ BOOL CreatePointFontIndirect(
 *lpLogFont*<br/>
 Pointe vers un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure qui définit les caractéristiques de la police logique. Le `lfHeight` membre de la `LOGFONT` structure est mesurée en dixièmes d’un point plutôt qu’en unités logiques. (Par exemple, définissez `lfHeight` à 120 pour demander une police de 12 points.)
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le [CDC](../../mfc/reference/cdc-class.md) objet à utiliser pour convertir la hauteur dans `lfHeight` d’unités logiques. Si NULL, un contexte de périphérique est utilisé pour la conversion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -372,6 +372,4 @@ Pour plus d’informations sur l’utilisation des objets graphiques, consultez 
 [Exemple MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject, classe](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

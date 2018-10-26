@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082531"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069813"
 ---
 # <a name="postfix-expressions"></a>Expressions suffixées
 
@@ -41,7 +41,7 @@ Les expressions suffixées se composent d'expressions primaires ou d'expressions
 La syntaxe suivante décrit les expressions suffixées possibles :
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ Lorsqu’une fonction est appelée, les tâches suivantes sont effectuées :
     Func( 7 );          // Execute function call
     ```
 
-     Les initialisations conceptuelles avant l'appel sont :
+   Les initialisations conceptuelles avant l'appel sont :
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     Notez que l'initialisation est exécutée comme si la syntaxe de signe égal était utilisée au lieu de la syntaxe de parenthèses. Une copie de `i` est effectuée avant de passer la valeur à la fonction. (Pour plus d’informations, consultez [initialiseurs](../cpp/initializers.md) et [Conversions](../cpp/user-defined-type-conversions-cpp.md)).
+   Notez que l'initialisation est exécutée comme si la syntaxe de signe égal était utilisée au lieu de la syntaxe de parenthèses. Une copie de `i` est effectuée avant de passer la valeur à la fonction. (Pour plus d’informations, consultez [initialiseurs](../cpp/initializers.md) et [Conversions](../cpp/user-defined-type-conversions-cpp.md)).
 
-     Par conséquent, si le prototype de fonction (déclaration) fait appel à un argument de type **long**, et si le programme appelant fournit un argument réel de type **int**, l’argument réel est promu à l’aide un conversion de type standard vers le type **long** (consultez [Conversions Standard](../cpp/standard-conversions.md)).
+   Par conséquent, si le prototype de fonction (déclaration) fait appel à un argument de type **long**, et si le programme appelant fournit un argument réel de type **int**, l’argument réel est promu à l’aide un conversion de type standard vers le type **long** (consultez [Conversions Standard](../cpp/standard-conversions.md)).
 
-     C’est une erreur de fournir un argument réel pour lequel il n’existe aucune conversion standard ou définie par l’utilisateur au type de l’argument formel.
+   C’est une erreur de fournir un argument réel pour lequel il n’existe aucune conversion standard ou définie par l’utilisateur au type de l’argument formel.
 
-     Pour les arguments réels du type classe, l’argument formel est initialisé en appelant le constructeur de la classe. (Consultez [constructeurs](../cpp/constructors-cpp.md) pour plus d’informations sur ces fonctions de membre de classe spéciale.)
+   Pour les arguments réels du type classe, l’argument formel est initialisé en appelant le constructeur de la classe. (Consultez [constructeurs](../cpp/constructors-cpp.md) pour plus d’informations sur ces fonctions de membre de classe spéciale.)
 
 - L'appel de fonction est exécuté.
 

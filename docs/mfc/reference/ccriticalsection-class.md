@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159d452c3b0a813c52d8486f52d67b9817c3a558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069280"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection, classe
 
@@ -54,7 +54,7 @@ class CCriticalSection : public CSyncObject
 |Nom|Description|
 |----------|-----------------|
 |[CCriticalSection::Lock](#lock)|Utiliser pour accéder à la `CCriticalSection` objet.|
-|[CCriticalSection::Unlock](#unlock)|Libère l'objet `CCriticalSection`.|
+|[CCriticalSection::Unlock](#unlock)|Libère l’objet `CCriticalSection`.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -81,7 +81,7 @@ Il existe deux méthodes pour utiliser un `CCriticalSection` objet : autonome e
 
 - Méthode autonome à utiliser un autonome `CCriticalSection` d’objet, de construire le `CCriticalSection` de l’objet lorsqu’il est nécessaire. Après un retour réussi à partir du constructeur, verrouiller explicitement l’objet avec un appel à [verrou](#lock). Appelez [Unlock](#unlock) lorsque vous avez terminé l’accès à la section critique. Cette méthode, lors de la façon la plus claire à une personne lisant votre code source, est plus sujette aux erreurs que vous devez penser à verrouiller et déverrouiller la section critique avant et après l’accès.
 
-     Une méthode plus préférable consiste à utiliser le [CSingleLock](../../mfc/reference/csinglelock-class.md) classe. Il possède également un `Lock` et `Unlock` (méthode), mais vous n’avez pas à vous soucier de déverrouillage de la ressource si une exception se produit.
+   Une méthode plus préférable consiste à utiliser le [CSingleLock](../../mfc/reference/csinglelock-class.md) classe. Il possède également un `Lock` et `Unlock` (méthode), mais vous n’avez pas à vous soucier de déverrouillage de la ressource si une exception se produit.
 
 - Incorporé de méthode, vous pouvez également partager une classe avec plusieurs threads en ajoutant un `CCriticalSection`-membre de données de type à la classe et de verrouillage le membre de données si nécessaire.
 

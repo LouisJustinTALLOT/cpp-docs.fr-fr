@@ -13,19 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 2d8c5188cccceb0c09de95c43a72a645ded0e6a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077515"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau (Visual C++)
 
 Un *application de bureau* en C++ est une application native qui peut accéder à l’ensemble des API de Windows et s’exécute dans une fenêtre ou dans la console système. Applications de bureau en C++ peuvent exécuter sur XP de Windows via Windows 10 (bien que Windows XP n’est ne sont plus officiellement pris en charge et il existe de nombreuses API Windows qui ont été introduites depuis).
 
 Une application de bureau est distincte à partir d’une application de plateforme universelle Windows (UWP), ce qui peut s’exécuter sur les PC exécutant Windows 10, ainsi que sur la XBox, Windows Phone, Surface Hub et autres appareils. Pour plus d’informations sur les postes de travail Visual Studio. Les applications UWP, consultez [choisir votre technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993).
-
 
 ### <a name="desktop-bridge"></a>Pont du bureau
 

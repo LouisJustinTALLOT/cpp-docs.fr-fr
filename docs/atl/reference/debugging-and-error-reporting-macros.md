@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c7100199d7e4ee76bf2f096aba9e20c244ae10ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136157"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070558"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et rapport d’erreurs
 
@@ -102,7 +102,7 @@ Expression (pointeurs inclus) qui prend une valeur différente de zéro ou 0.
 
 ### <a name="remarks"></a>Notes
 
-Dans les versions debug, évalue ATLASSERT ; *booleanExpression* et génère un rapport de débogage lorsque le résultat est false.  
+Dans les versions debug, évalue ATLASSERT ; *booleanExpression* et génère un rapport de débogage lorsque le résultat est false.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -139,11 +139,11 @@ La différence entre ATLENSURE et ATLASSERT ; est que ATLENSURE lève une excep
 
 ### <a name="example"></a>Exemple
 
-[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afx.h  
+**En-tête :** afx.h
 
 ##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL
 
@@ -168,7 +168,7 @@ Dans les versions release, renvoie simplement E_NOTIMPL.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atltrace.h 
+**En-tête :** atltrace.h
 
 ##  <a name="atltrace"></a>  ATLTRACE
 
@@ -177,7 +177,7 @@ Signale les avertissements pour un périphérique de sortie, tels que la fenêtr
 ```
 ATLTRACE(exp);
 
-ATLTRACE(  
+ATLTRACE(
     DWORD category,
     UINT  level,
     LPCSTR lpszFormat, ...);

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356027e151dcc94891b9c4043e4f1af8b2f0b947
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 847ad295956cafa12e3793dc68d663f005da095a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430915"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072835"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Comment WinInet facilite la création d'applications clientes Internet
 
@@ -33,15 +33,15 @@ Visual C++ propose deux méthodes que vous pouvez utiliser WinInet. Vous pouvez 
 
 - Télécharger des pages HTML.
 
-     HTTP est un protocole utilisé pour transférer des pages HTML à partir d’un serveur vers un navigateur client.
+   HTTP est un protocole utilisé pour transférer des pages HTML à partir d’un serveur vers un navigateur client.
 
 - Envoyer des demandes FTP pour charger ou télécharger des fichiers ou obtenir les listes de répertoires.
 
-     Une demande standard est une connexion anonyme pour télécharger un fichier.
+   Une demande standard est une connexion anonyme pour télécharger un fichier.
 
 - Utilisez le système de menus de gopher pour accéder aux ressources sur Internet.
 
-     Éléments de menu peuvent contenir plusieurs types, y compris les autres menus, vous pouvez rechercher une base de données indexée, un groupe de discussion ou un fichier.
+   Éléments de menu peuvent contenir plusieurs types, y compris les autres menus, vous pouvez rechercher une base de données indexée, un groupe de discussion ou un fichier.
 
 Pour les trois protocoles, établir une connexion, effectuer des demandes au serveur et fermer la connexion.
 
@@ -51,7 +51,7 @@ Pour les trois protocoles, établir une connexion, effectuer des demandes au ser
 
 - Utilisez des protocoles HTTP, FTP et gopher sans programmer directement WinSock ou TCP/IP.
 
-     Les développeurs qui utilisent les fonctions Win32 Internet n’avez pas besoin de se familiariser avec TCP/IP ou de Windows Sockets. Vous pouvez toujours programmer au niveau du socket, à l’aide de protocoles WinSock et TCP/IP directement, mais il est encore plus facile à utiliser les classes WinInet MFC pour l’accès HTTP, FTP et les protocoles gopher via Internet. Pour de nombreuses opérations courantes, les développeurs n’ont pas à connaître les détails du protocole particulier qu’ils utilisent.
+   Les développeurs qui utilisent les fonctions Win32 Internet n’avez pas besoin de se familiariser avec TCP/IP ou de Windows Sockets. Vous pouvez toujours programmer au niveau du socket, à l’aide de protocoles WinSock et TCP/IP directement, mais il est encore plus facile à utiliser les classes WinInet MFC pour l’accès HTTP, FTP et les protocoles gopher via Internet. Pour de nombreuses opérations courantes, les développeurs n’ont pas à connaître les détails du protocole particulier qu’ils utilisent.
 
 Nombre d’opérations qui peut être effectuée par votre ordinateur en tant que client à d’autres ordinateurs sur Internet peut prendre un certain temps. La vitesse de ces opérations est généralement limitée par la vitesse de votre connexion réseau, mais ils peuvent également être affectées par tout autre trafic réseau et la complexité de l’opération. Connexion à un serveur FTP distant, par exemple, nécessite que votre ordinateur tout d’abord rechercher le nom de ce serveur pour trouver son adresse. Votre application sera puis essayez de vous connecter au serveur à l’adresse. Une fois que la connexion est ouverte, votre ordinateur et le serveur distant lance une conversation avec le protocole de transfert de fichier avant de pouvoir utiliser réellement la connexion pour récupérer des fichiers.
 

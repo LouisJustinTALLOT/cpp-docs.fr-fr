@@ -19,20 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2eb66b1068e20f4bfc8936e592afbcb5183974a2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: de45e534059ce71134ccabf8f5f6f71477b4a046
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110950"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057983"
 ---
 # <a name="catalog-information--mfc-data-access"></a>Informations relatives au catalogue (Accès aux données MFC)
 
-Les informations sur les tables d'une source de données peuvent inclure les noms des tables et de leurs colonnes, les privilèges de table, les noms des clés primaires et étrangères, des informations sur les procédures stockées ou les requêtes prédéfinies, des informations sur les index des tables et des statistiques sur les tables.  
-  
-Pour plus d’informations, consultez [Source de données : détermination du schéma de la Source de données (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
-  
-  
-## <a name="see-also"></a>Voir aussi  
+Les informations sur les tables d'une source de données peuvent inclure les noms des tables et de leurs colonnes, les privilèges de table, les noms des clés primaires et étrangères, des informations sur les procédures stockées ou les requêtes prédéfinies, des informations sur les index des tables et des statistiques sur les tables.
+
+Pour plus d’informations, consultez [Source de données : détermination du schéma de la Source de données (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).
+
+## <a name="see-also"></a>Voir aussi
 
 [Accès aux données de programmation (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

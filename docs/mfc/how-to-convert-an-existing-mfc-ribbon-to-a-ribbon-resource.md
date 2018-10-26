@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31062530bfe6da940cd6458bd5cfa91f3e29ae7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378109"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052549"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Comment : convertir un ruban MFC existant en ressource du ruban
 
@@ -37,13 +37,13 @@ Vous devez disposer d’un projet MFC existant qui comporte du code qui utilise 
 
 ```
 
-     Save and close the file.
+   Enregistrez et fermez le fichier.
 
 1. Générer et exécuter l’application MFC, puis dans le bloc-notes, ouvrez RibbonOutput.txt et copiez son contenu.
 
 1. Dans Visual Studio, sur le **projet** menu, cliquez sur **ajouter une ressource**. Dans le **ajouter une ressource** boîte de dialogue, sélectionnez **ruban** puis cliquez sur **New**.
 
-     Visual Studio crée une ressource de ruban et s’ouvre en mode design. L’ID de ressource de ruban est IDR_RIBBON1, qui s’affiche dans **affichage des ressources**. Le ruban est défini dans le fichier XML de ribbon1.mfcribbon-ms.
+   Visual Studio crée une ressource de ruban et s’ouvre en mode design. L’ID de ressource de ruban est IDR_RIBBON1, qui s’affiche dans **affichage des ressources**. Le ruban est défini dans le fichier XML de ribbon1.mfcribbon-ms.
 
 1. Dans Visual Studio, ouvrez ribbon1.mfcribbon-ms, supprimez son contenu, puis collez le contenu du RibbonOutput.txt, ce qui vous avez copiée précédemment. Enregistrez et fermez ribbon1.mfcribbon-ms.
 

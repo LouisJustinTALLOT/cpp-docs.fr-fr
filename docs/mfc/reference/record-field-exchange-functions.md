@@ -55,12 +55,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d9d297161a05f9158893454f00be2afbe7a47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fba2e8d949745f694973f2d7b29c5244ab30db4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058906"
 ---
 # <a name="record-field-exchange-functions"></a>Fonctions Record Field Exchange (RFX)
 
@@ -440,7 +440,6 @@ Consultez [RFX_Text](#rfx_text).
 
 **En-tête :** afxdb.h
 
-
 ## <a name="rfx_text"></a>  RFX_Text
 
 Transferts `CString` des données entre les membres de données de champ d’un `CRecordset` objet et les colonnes d’un enregistrement sur la source de données d’ODBC type SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL ou SQL_NUMERIC.
@@ -506,7 +505,6 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
-
 
 ## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
 
@@ -873,7 +871,6 @@ Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
 **En-tête :** afxdb.h
 
-
 ## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 
 Transferts de plusieurs lignes de données de type caractère à partir d’une colonne d’une source de données ODBC dans un tableau correspondant dans un `CRecordset`-objet dérivé.
@@ -986,7 +983,6 @@ Consultez [DFX_Text](#dfx_text).
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
-
 
 ## <a name="dfx_bool"></a>  DFX_Bool
 
@@ -1249,7 +1245,6 @@ Consultez [DFX_Text](#dfx_text).
 
 **En-tête :** afxdao.h
 
-
 ## <a name="dfx_longbinary"></a>  DFX_LongBinary
 
 **Important** il est recommandé d’utiliser [DFX_Binary](#dfx_binary) au lieu de cette fonction.
@@ -1342,7 +1337,6 @@ Consultez [DFX_Text](#dfx_text).
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
-
 
 ## <a name="dfx_single"></a>  DFX_Single
 

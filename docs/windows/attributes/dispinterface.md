@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b02244e0576f99cc0a6940f2ee4a13511cfbe6f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ea3ece20ac6df0fab00f1e21d27c41ae6e115517
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790581"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065900"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -40,7 +40,7 @@ Quand l’attribut C++ **dispinterface** précède une interface, il fait en sor
 
 Une interface de dispatch dérivent de `IDispatch`, sauf si vous spécifiez une classe de base. Vous devez spécifier un [id](id.md) pour les membres d’une interface de dispatch.
 
-L’exemple d’utilisation [dispinterface](/windows/desktop/Midl/dispinterface) dans la documentation MIDL :
+L’exemple d’utilisation de [dispinterface](/windows/desktop/Midl/dispinterface) dans la documentation MIDL :
 
 ```cpp
 dispinterface helloPro
@@ -51,7 +51,7 @@ n’est pas valide pour l’attribut **dispinterface** .
 
 ## <a name="example"></a>Exemple
 
-Consultez l’exemple de [peut être liée](bindable.md) pour obtenir un exemple montrant comment utiliser **dispinterface**.
+Pour obtenir un exemple montrant comment utiliser [dispinterface](bindable.md) , consultez l’exemple de **bindable**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -64,7 +64,7 @@ Consultez l’exemple de [peut être liée](bindable.md) pour obtenir un exemple
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -74,4 +74,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [dual](dual.md)<br/>
 [custom](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

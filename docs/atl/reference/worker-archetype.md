@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90d389fb9ad6ffb3fbdbb726f7968d464170d693
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062091"
 ---
 # <a name="worker-archetype"></a>Archétype de travail
 
@@ -70,8 +70,8 @@ Appelé pour traiter un élément de travail.
 
 ```
 void Execute(
-    RequestType request,  
-    void* pvWorkerParam,  
+    RequestType request,
+    void* pvWorkerParam,
     OVERLAPPED* pOverlapped);
 ```
 

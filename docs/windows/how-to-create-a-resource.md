@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23717c35d0590c88a4904e5b6b6ddb0e4c7ccffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438637"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071966"
 ---
 # <a name="how-to-create-a-resource"></a>Comment : créer une ressource
 
@@ -33,7 +33,7 @@ ms.locfileid: "46438637"
 
 1. Avec le focus sur votre fichier .rc dans [affichage des ressources](../windows/resource-view-window.md), cliquez sur le **modifier** menu et choisissez **ajouter une ressource** (ou cliquez sur le fichier .rc dans **affichagedesressources** et choisissez **ajouter une ressource** dans le menu contextuel).
 
-   > [!NOTE] 
+   > [!NOTE]
    > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
 
 2. Dans la [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), choisissez le type de ressource que vous souhaitez ajouter à votre projet.
@@ -48,7 +48,7 @@ ms.locfileid: "46438637"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Pour créer une ressource dans l’affichage de classes
 
-1. Dans [affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), avec le bouton droit de votre classe et choisissez **ajouter**, puis cliquez sur **ajouter une ressource** dans le menu contextuel.
+1. Dans [Affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), cliquez avec le bouton droit sur la classe, choisissez **Ajouter**, puis cliquez sur **Ajouter une ressource** dans le menu contextuel.
 
 2. Dans la [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), choisissez le type de ressource que vous souhaitez ajouter à votre projet.
 
@@ -70,4 +70,4 @@ Win32
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Éditeurs de ressources](../windows/resource-editors.md)<br/>
-[Ajouter une ressource, boîte de dialogue](../windows/add-resource-dialog-box.md)
+[Add Resource Dialog Box](../windows/add-resource-dialog-box.md)

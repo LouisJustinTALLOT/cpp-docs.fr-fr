@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e26af845071e5765b30320a86f8d048d2eb12e6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: b3800a99a6c3ae22b34f1c70a7a688ae523b7a67
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061639"
 ---
 # <a name="adding-or-deleting-a-string-resource-c"></a>Ajout ou suppression d’une ressource de type chaîne (C++)
 
@@ -73,4 +73,4 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur de chaînes](../windows/string-editor.md)  
+[Éditeur de chaînes](../windows/string-editor.md)

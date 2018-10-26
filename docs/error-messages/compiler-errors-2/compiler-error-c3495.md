@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda1e2f2699969ad0bc446d9f79a0004e043998d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ab2f92fd1d33d547bfe7703b71abe2797b37c8e6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067387"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070619"
 ---
 # <a name="compiler-error-c3495"></a>Erreur du compilateur C3495
 
@@ -50,5 +50,4 @@ int main()
 ## <a name="see-also"></a>Voir aussi
 
 [Expressions lambda](../../cpp/lambda-expressions-in-cpp.md)
-
 

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce642b6ed4017dba66d80325e7b9be8f18a7fb16
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075707"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076085"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject, classe
 
@@ -199,7 +199,7 @@ Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Si l’interface demandée est `IUnknown`, retourne un pointeur vers le `CComCachedTearOffObject`de propre `IUnknown` et incrémente le décompte de références. Sinon, les requêtes pour l’interface sur votre classe détachables à l’aide de la [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) héritée de la méthode `CComObjectRootEx`.  
+Si l’interface demandée est `IUnknown`, retourne un pointeur vers le `CComCachedTearOffObject`de propre `IUnknown` et incrémente le décompte de références. Sinon, les requêtes pour l’interface sur votre classe détachables à l’aide de la [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) héritée de la méthode `CComObjectRootEx`.
 
 ##  <a name="release"></a>  CComCachedTearOffObject::Release
 

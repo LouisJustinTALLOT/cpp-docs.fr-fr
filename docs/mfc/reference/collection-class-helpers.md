@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381718"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083371"
 ---
 # <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 
@@ -152,7 +152,6 @@ Nombre d’éléments à être vidées.
 Le `CArray::Dump`, `CList::Dump`, et `CMap::Dump` fonctions appelez cette méthode si la profondeur de l’image mémoire est supérieure à 0.
 
 L'implémentation par défaut n'exécute aucune opération. Si les éléments de votre collection sont dérivés de `CObject`, votre remplacement sera généralement itérer au sein des éléments de la collection, appelant `Dump` pour chaque élément à son tour.
-
 
 ### <a name="requirements"></a>Configuration requise
 

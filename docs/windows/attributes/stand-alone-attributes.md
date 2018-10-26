@@ -16,16 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b46b5c3b4750957c548becfcc5143f5eed858f71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0df8cb1def78e3a7b564f268eb1b3b0a2069fb11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790664"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062845"
 ---
 # <a name="stand-alone-attributes"></a>Attributs autonomes
+
 Un attribut autonome ne fonctionne pas sur un mot clé C++, mais plutôt d’une ligne de code. Les instructions d’attribut autonome nécessitent un point-virgule à la fin de la ligne.
-  
+
+## <a name="stand-alone-attribute-list"></a>Liste d’attributs autonomes
+
 |Attribut|Description|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier d’en-tête généré.|
@@ -43,7 +46,7 @@ Un attribut autonome ne fonctionne pas sur un mot clé C++, mais plutôt d’une
 |[module](module-cpp.md)|Définit le bloc de bibliothèque dans le fichier .idl.|
 |[no_injected_text](no-injected-text.md)|Empêche le compilateur d’injecter du code à la suite d’utilisation de l’attribut.|
 |[pragma](pragma.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier .idl généré.|
-  
+
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs par utilisation](attributes-by-usage.md)

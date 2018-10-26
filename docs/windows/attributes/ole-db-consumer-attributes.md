@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35051c565a18ba61de53813ce57be147140cc468
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 19c3e441ff4130d30f3aeb7957c5af85576fb9e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791045"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065861"
 ---
 # <a name="ole-db-consumer-attributes"></a>Attributs du consommateur OLE DB
 Attributs du consommateur OLE DB injectent du code, selon la [les modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md), pour créer un travail consommateur OLE DB qui effectue des tâches telles que les tables de l’ouverture, l’exécution de commandes et l’accès aux données.
-  
+
 |Attribut|Description|
 |---------------|-----------------|
 |[db_accessor](db-accessor.md)|Lie les colonnes dans un ensemble de lignes et les lie aux mappages d’accesseur correspondant.|
@@ -38,7 +38,7 @@ Attributs du consommateur OLE DB injectent du code, selon la [les modèles du co
 |[db_param](db-param.md)|Associe la variable de membre spécifié avec un paramètre d’entrée ou de sortie.|
 |[db_source](db-source.md)|Crée et encapsule une connexion, via un fournisseur, à une source de données.|
 |[db_table](db-table.md)|Ouvre une table OLE DB.|
-  
+
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs par groupe](attributes-by-group.md)

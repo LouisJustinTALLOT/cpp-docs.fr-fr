@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427275"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062222"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets : exemple de sockets utilisant des archives
 
@@ -40,11 +40,11 @@ Pour l’envoi, l’exemple de fonction effectue une itération pendant un nombr
 
 - Un « en-tête » qui spécifie la nature des données (dans ce cas, la valeur de la *bValue* variable et le nombre de copies sera envoyé).
 
-     Les deux éléments sont générés au hasard pour cet exemple.
+   Les deux éléments sont générés au hasard pour cet exemple.
 
 - Le nombre spécifié de copies des données.
 
-     Interne **pour** boucle envoie *bValue* le nombre de fois spécifié.
+   Interne **pour** boucle envoie *bValue* le nombre de fois spécifié.
 
 - Une chaîne appelée *strText* affichant le récepteur à son utilisateur.
 

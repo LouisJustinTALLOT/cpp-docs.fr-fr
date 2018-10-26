@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058948"
 ---
 # <a name="mapping-messages-to-functions"></a>Mappage de messages à des fonctions
 
@@ -42,7 +42,7 @@ Lorsque vous utilisez l’affichage de classes pour créer une nouvelle classe d
     > [!NOTE]
     >  Le **Messages** bouton est disponible lorsque vous sélectionnez le nom de classe dans l’affichage de classes ou lorsque vous cliquez sur dans la fenêtre source.
 
-     Si votre projet a un gestionnaire pour un message, le nom du gestionnaire apparaît dans la colonne de droite en regard du message.
+   Si votre projet a un gestionnaire pour un message, le nom du gestionnaire apparaît dans la colonne de droite en regard du message.
 
 1. Si le message n’a aucun gestionnaire, puis cliquez sur la cellule dans la colonne de droite dans la fenêtre Propriétés pour afficher le nom proposé pour le gestionnaire en tant que \<Ajouter >*HandlerName*. (Par exemple, le Gestionnaire de messages WM_TIMER suggère \<Ajouter >`OnTimer`).
 
@@ -59,6 +59,6 @@ Pour supprimer un gestionnaire de messages, double-cliquez sur le gestionnaire d
 [Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Ajout d’une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Ajout d’une variable membre](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Une fonction virtuelle de substitution](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Parcours de la structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)

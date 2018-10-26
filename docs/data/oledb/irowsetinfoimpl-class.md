@@ -37,105 +37,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d00e6a89d8c05f5b9d6a3f1eaef434968931a26
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ac05cdb93ff87e40c41a59ce466d81aa7bcb5e92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083305"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053472"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
 
-Fournit une implémentation pour le [IRowsetInfo](/previous-versions/windows/desktop/ms724541) interface.  
-  
+Fournit une implémentation pour le [IRowsetInfo](/previous-versions/windows/desktop/ms724541) interface.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class T, class PropClass = T>  
-class ATL_NO_VTABLE IRowsetInfoImpl :   
-   public IRowsetInfo,    
-   public CUtlProps<PropClass>  
-```  
-  
-### <a name="parameters"></a>Paramètres  
+template <class T, class PropClass = T>
+class ATL_NO_VTABLE IRowsetInfoImpl :
+   public IRowsetInfo,  
+   public CUtlProps<PropClass>
+```
+
+### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `IRowsetInfoImpl`.  
-  
+Votre classe, dérivée de `IRowsetInfoImpl`.
+
 *PropClass*<br/>
-Une classe de propriété définis par l’utilisateur par défaut est *T*. 
+Une classe de propriété définis par l’utilisateur par défaut est *T*.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** altdb.h   
-  
-## <a name="members"></a>Membres  
-  
-### <a name="interface-methods"></a>Méthodes d’interface  
-  
-|||  
-|-|-|  
-|[GetProperties](#getproperties)|Retourne les paramètres actuels de toutes les propriétés prises en charge par l’ensemble de lignes.|  
-|[GetReferencedRowset](#getreferencedrowset)|Retourne un pointeur d’interface pour l’ensemble de lignes auquel s’applique un signet.|  
-|[GetSpecification](#getspecification)|Retourne un pointeur d’interface sur l’objet (commande ou session) qui a créé cet ensemble de lignes.|  
-  
-## <a name="remarks"></a>Notes  
+**En-tête :** altdb.h
 
-Une interface obligatoire sur les ensembles de lignes. Cette classe implémente les propriétés de l’ensemble de lignes à l’aide de la [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md) définies dans votre classe de commande. Bien que la classe d’ensemble de lignes s’affiche à l’utilisation de propriété de la classe de commande définit, l’ensemble de lignes est fourni avec sa propre copie des propriétés d’exécution, lorsqu’il est créé par un objet de commande ou session.  
-  
+## <a name="members"></a>Membres
+
+### <a name="interface-methods"></a>Méthodes d’interface
+
+|||
+|-|-|
+|[GetProperties](#getproperties)|Retourne les paramètres actuels de toutes les propriétés prises en charge par l’ensemble de lignes.|
+|[GetReferencedRowset](#getreferencedrowset)|Retourne un pointeur d’interface pour l’ensemble de lignes auquel s’applique un signet.|
+|[GetSpecification](#getspecification)|Retourne un pointeur d’interface sur l’objet (commande ou session) qui a créé cet ensemble de lignes.|
+
+## <a name="remarks"></a>Notes
+
+Une interface obligatoire sur les ensembles de lignes. Cette classe implémente les propriétés de l’ensemble de lignes à l’aide de la [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md) définies dans votre classe de commande. Bien que la classe d’ensemble de lignes s’affiche à l’utilisation de propriété de la classe de commande définit, l’ensemble de lignes est fourni avec sa propre copie des propriétés d’exécution, lorsqu’il est créé par un objet de commande ou session.
+
 ## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
 
-Retourne les paramètres actuels pour les propriétés de le `DBPROPSET_ROWSET` groupe.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
-   const DBPROPIDSET rgPropertyIDSets[],  
-   ULONG* pcPropertySets,  
-   DBPROPSET** prgPropertySets);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+Retourne les paramètres actuels pour les propriétés de le `DBPROPSET_ROWSET` groupe.
 
-Consultez [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611) dans le *de référence du programmeur OLE DB*. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG* pcPropertySets,
+   DBPROPSET** prgPropertySets);
+```
+
+#### <a name="parameters"></a>Paramètres
+
+Consultez [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
-Retourne un pointeur d’interface pour l’ensemble de lignes auquel s’applique un signet.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
-   REFIID riid,  
-   IUnknown** ppReferencedRowset);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+Retourne un pointeur d’interface pour l’ensemble de lignes auquel s’applique un signet.
 
-Consultez [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) dans le *de référence du programmeur OLE DB*. Le *iOrdinal* paramètre doit être une colonne de signet. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
+   REFIID riid,
+   IUnknown** ppReferencedRowset);
+```
+
+#### <a name="parameters"></a>Paramètres
+
+Consultez [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) dans le *de référence du programmeur OLE DB*. Le *iOrdinal* paramètre doit être une colonne de signet.
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
-Retourne un pointeur d’interface sur l’objet (commande ou session) qui a créé cet ensemble de lignes.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Retourne un pointeur d’interface sur l’objet (commande ou session) qui a créé cet ensemble de lignes.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-STDMETHOD (GetSpecification )(REFIID riid,  
-   IUnknown** ppSpecification);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+STDMETHOD (GetSpecification )(REFIID riid,
+   IUnknown** ppSpecification);
+```
 
-Consultez [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) dans le *de référence du programmeur OLE DB*.  
-  
-### <a name="remarks"></a>Notes  
+#### <a name="parameters"></a>Paramètres
 
-Utilisez cette méthode avec [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) pour récupérer des propriétés de l’objet de source de données.  
-  
-## <a name="see-also"></a>Voir aussi  
+Consultez [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) dans le *de référence du programmeur OLE DB*.
+
+### <a name="remarks"></a>Notes
+
+Utilisez cette méthode avec [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) pour récupérer des propriétés de l’objet de source de données.
+
+## <a name="see-also"></a>Voir aussi
 
 [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

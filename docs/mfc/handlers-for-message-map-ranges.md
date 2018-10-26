@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403569"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073095"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestionnaires pour les plages de table des messages
 
@@ -81,7 +81,7 @@ L’entrée de mappage de message se compose des éléments suivants :
 
 - Paramètres de la macro :
 
-     Les deux premières macros prennent trois paramètres :
+   Les deux premières macros prennent trois paramètres :
 
    - L’ID de commande qui commence la plage
 
@@ -89,9 +89,9 @@ L’entrée de mappage de message se compose des éléments suivants :
 
    - Le nom de la fonction de gestionnaire de message
 
-     La plage d’ID de commande doit être contiguë.
+   La plage d’ID de commande doit être contiguë.
 
-     La troisième macro, `ON_CONTROL_RANGE`, prend le premier paramètre supplémentaire : une notification de contrôle du message, comme **EN_CHANGE**.
+   La troisième macro, `ON_CONTROL_RANGE`, prend le premier paramètre supplémentaire : une notification de contrôle du message, comme **EN_CHANGE**.
 
 ##  <a name="_core_declaring_the_handler_function"></a> Déclarer une fonction de gestionnaire
 
@@ -113,11 +113,11 @@ Lorsque vous écrivez l’entrée de table des messages, vous spécifiez :
 
 - Deux ID de commande, début et de fin d’une plage contiguë.
 
-     Les Voici **ID_VIEW_ZOOM25** et **ID_VIEW_ZOOM300**.
+   Les Voici **ID_VIEW_ZOOM25** et **ID_VIEW_ZOOM300**.
 
 - Le nom de la fonction gestionnaire pour les commandes.
 
-     Ici, il a `OnZoom`.
+   Ici, il a `OnZoom`.
 
 La déclaration de fonction se présente comme suit :
 
@@ -137,15 +137,15 @@ Lorsque vous écrivez le `ON_CONTROL_RANGE` macro dans votre table des messages,
 
 - Un message de notification de contrôle particulier.
 
-     Ici, il a **BN_CLICKED**.
+   Ici, il a **BN_CLICKED**.
 
 - Les valeurs d’ID de contrôle associés à la plage contiguë de contrôles.
 
-     Voici ces **IDC_BUTTON1** et **IDC_BUTTON10**.
+   Voici ces **IDC_BUTTON1** et **IDC_BUTTON10**.
 
 - Le nom de la fonction de gestionnaire de message.
 
-     Ici, il a `OnButtonClicked`.
+   Ici, il a `OnButtonClicked`.
 
 Lorsque vous écrivez la fonction gestionnaire, spécifiez supplémentaire **UINT** paramètre, comme indiqué dans le code suivant :
 

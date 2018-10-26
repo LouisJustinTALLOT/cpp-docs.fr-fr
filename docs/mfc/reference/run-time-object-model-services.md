@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083591"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064562"
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 
@@ -39,8 +39,6 @@ Pour plus d’informations sur ces services de l’objet d’exécution et la s�
 
 ### <a name="run-time-object-model-services-macros"></a>Macros des services du modèle objet au moment de l'exécution
 
-
-
 |||
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|Permet d'accéder aux informations sur la classe d'exécution (doit être utilisé dans la déclaration de classe).|
@@ -51,19 +49,11 @@ Pour plus d’informations sur ces services de l’objet d’exécution et la s�
 |[IMPLEMENT_SERIAL](#implement_serial)|Permet la sérialisation et l'accès aux informations sur la classe d'exécution (doit être utilisé dans l'implémentation de classe).|
 |[RUNTIME_CLASS](#runtime_class)|Retourne la structure `CRuntimeClass` qui correspond à la classe nommée.|
 
-
 OLE requiert souvent la création dynamique des objets au moment de l'exécution. Par exemple, une application serveur OLE doit pouvoir créer des éléments OLE dynamiquement en réponse à la demande d'un client. De même, un serveur Automation doit être en mesure de créer des éléments en réponse aux demandes des clients Automation.
 
 La bibliothèque MFC fournit deux macros spécifiques à OLE.
 
 ### <a name="dynamic-creation-of-ole-objects"></a>Création dynamique des objets OLE
-
-
-
-
-
-
-
 
 |||
 |-|-|
@@ -85,6 +75,7 @@ Détermine si la bibliothèque de contrôles communs implémente l’API spécif
   ```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *proc*<br/>
@@ -112,6 +103,7 @@ Détermine si la bibliothèque de contrôles communs implémente l’API spécif
 ```
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *proc*<br/>
@@ -129,8 +121,6 @@ afxcomctl32.h, afxcomctl32.inl
 
 [Isolement de la bibliothèque de contrôles communs MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
-
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -197,7 +187,6 @@ Consultez l’exemple de [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
 **En-tête :** afx.h
 
-
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
 
 Déclare le `GetUserTypeNameID` et `GetMiscStatus` fonctions membres de votre classe de contrôle.
@@ -207,6 +196,7 @@ Déclare le `GetUserTypeNameID` et `GetMiscStatus` fonctions membres de votre cl
 ```
 DECLARE_OLECTLTYPE( class_name )
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *CLASS_NAME*<br/>
@@ -224,7 +214,6 @@ Le nom de la classe de contrôle.
 
 [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 Déclare que le contrôle OLE fournit une liste de pages de propriétés pour afficher ses propriétés.
@@ -234,6 +223,7 @@ Déclare que le contrôle OLE fournit une liste de pages de propriétés pour af
 ```
 DECLARE_PROPPAGEIDS( class_name )
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *CLASS_NAME*<br/>
@@ -370,6 +360,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *CLASS_NAME*<br/>
@@ -408,7 +399,6 @@ L’ID de classe OLE est un identificateur unique de 128 bits pour l’objet. Il
 [DECLARE_OLECREATE](#declare_olecreate)<br/>
 [Clé de CLSID](/windows/desktop/com/clsid-key-hklm)
 
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Implémente le `GetUserTypeNameID` et `GetMiscStatus` fonctions membres de votre classe de contrôle.
@@ -418,6 +408,7 @@ Implémente le `GetUserTypeNameID` et `GetMiscStatus` fonctions membres de votre
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *CLASS_NAME*<br/>

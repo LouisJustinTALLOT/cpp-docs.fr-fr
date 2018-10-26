@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2d82a1254a11dbda3164ea1c350dc14e2b1a122
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a94ed846d2d4ebda2e457ee772a9f8bf081d69d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050110"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077166"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Évaluateur d'expression, erreur CXX0036
 
@@ -32,20 +32,20 @@ Ce message peut être généré par plusieurs erreurs dans l’utilisation de l�
 
 - La syntaxe de l’opérateur de contexte (**{}**) a été donné de façon incorrecte.
 
-     La syntaxe de l’opérateur de contexte est :
+   La syntaxe de l’opérateur de contexte est :
 
      {*fonction*,*module*,*dll*}*expression*
 
-     Spécifie le contexte de *expression*. L’opérateur de contexte a la même priorité et l’utilisation en tant qu’un cast de type.
+   Spécifie le contexte de *expression*. L’opérateur de contexte a la même priorité et l’utilisation en tant qu’un cast de type.
 
-     Virgules de fin peuvent être omis. Si un des *fonction*, *module*, ou *dll* contient une virgule littérale, vous devez placer l’intégralité du nom entre parenthèses.
+   Virgules de fin peuvent être omis. Si un des *fonction*, *module*, ou *dll* contient une virgule littérale, vous devez placer l’intégralité du nom entre parenthèses.
 
 - Le nom de fonction a été mal orthographié ou n’existe pas dans la bibliothèque de liens dynamiques ou le module spécifié.
 
-     Étant donné que C est un langage qui respecte la casse, *fonction* doivent figurer dans la casse car il est défini dans la source.
+   Étant donné que C est un langage qui respecte la casse, *fonction* doivent figurer dans la casse car il est défini dans la source.
 
 - Le module ou la DLL est introuvable.
 
-     Vérifiez le nom de chemin d’accès complet du module spécifié ou de la DLL.
+   Vérifiez le nom de chemin d’accès complet du module spécifié ou de la DLL.
 
 Cette erreur est identique à CAN0036.

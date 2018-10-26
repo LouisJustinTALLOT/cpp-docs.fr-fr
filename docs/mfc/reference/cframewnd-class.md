@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 8f878d1cdf450c1672298fc16ec8948c94a33056
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861731"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059829"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -1212,7 +1212,6 @@ Surchargé. S’applique à une superposition à un bouton de barre des tâches 
 BOOL SetTaskbarOverlayIcon(
     UINT nIDResource,
     LPCTSTR lpcszDescr);
-
 
 BOOL SetTaskbarOverlayIcon(
     HICON hIcon,
