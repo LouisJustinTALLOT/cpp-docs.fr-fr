@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69bfb29bdcc03f0373b5c5ab4916108b0705fc83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b14359fa6bb602240f4cba173c41660c6863f939
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434425"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204326"
 ---
 # <a name="containers-for-activex-controls"></a>Conteneurs de contrôles ActiveX
 
 Vous pouvez utiliser les contrôles ActiveX développés dans Visual C++ dans d’autres applications, tant qu’ils prennent en charge les contrôles ActiveX. Un nombre d’applications Microsoft, commençant par les versions répertoriées, prennent en charge les contrôles ActiveX.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 > [!NOTE]
 >  La liste suivante n’est pas une liste complète des applications qui prennent en charge les contrôles ActiveX, mais représente le plus souvent utilisé dans le test de jeu :

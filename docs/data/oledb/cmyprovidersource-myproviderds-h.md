@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bcabecde8f299e878ec6498dada503a894c406b4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3ad9a2c9ac2d7371cc1fb357e2ce6a9e35701607
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081129"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216381"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
 
@@ -37,6 +37,27 @@ Les classes de fournisseur utilisent l’héritage multiple. Le code suivant mon
 /////////////////////////////////////////////////////////////////////////
 // CCustomSource
 class ATL_NO_VTABLE CCustomSource :
+   public CComObjectRootEx<CComSingleThreadModel>,
+   public CComCoClass<CCustomSource, &CLSID_Custom>,
+   public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
+   public IDBInitializeImpl<CCustomSource>,
+   public IDBPropertiesImpl<CCustomSource>,
+   public IPersistImpl<CCustomSource>,
+   public IInternalConnectionImpl<CCustomSource>
+```
+
+Tous les composants COM dérivent `CComObjectRootEx` et `CComCoClass`. `CComObjectRootEx` fournit toute l’implémentation pour le `IUnknown` interface. Il peut gérer n’importe quel modèle de thread. `CComCoClass` gère toute prise en charge de l’erreur requise. Si vous souhaitez envoyer des informations d’erreur plus détaillées au client, vous pouvez utiliser certaines API d’erreurs dans `CComCoClass`.
+
+L’objet de source de données hérite également de plusieurs classes de 'Impl'. Chaque classe fournit l’implémentation pour une interface. La source de données objet implémente le `IPersist`, `IDBProperties`, `IDBInitialize`, et `IDBCreateSession` interfaces. Chaque interface est requise par OLE DB pour mettre en œuvre de l’objet de source de données. Vous pouvez choisir de prendre en charge ou la prend pas en charge des fonctionnalités particulières en héritant ou non à partir d’une de ces classes de 'Impl'. Si vous souhaitez prendre en charge la `IDBDataSourceAdmin` interface, vous héritez de la `IDBDataSourceAdminImpl` classe pour obtenir les fonctionnalités requises.
+
+## <a name="com-map"></a>Mappage COM
+
+Chaque fois que le client appelle `QueryInterface` pour une interface sur la source de données, qu’il traverse le mappage COM suivant :
+
+```cpp
+/////////////////////////////////////////////////////////////////////////
+// CCustomSource
+class ATL_NO_VTABLE CCustomSource : 
    public CComObjectRootEx<CComSingleThreadModel>,
    public CComCoClass<CCustomSource, &CLSID_Custom>,
    public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
@@ -68,7 +89,7 @@ Les macros COM_INTERFACE_ENTRY sont issues d’ATL et indiquent à l’implémen
 
 ## <a name="property-map"></a>Mappage des propriétés
 
-Le mappage des propriétés spécifie toutes les propriétés désignées par le fournisseur :
+Le mappage des propriétés spécifie toutes les propriétés affectées par le fournisseur :
 
 ```cpp
 BEGIN_PROPSET_MAP(CCustomSource)
@@ -162,13 +183,13 @@ Chaque élément dans la structure représente des informations pour gérer la p
 
 Si vous souhaitez modifier la valeur par défaut d’une propriété (Notez qu’un consommateur peut modifier la valeur d’une propriété accessible en écriture à tout moment), vous pouvez utiliser le PROPERTY_INFO_ENTRY_VALUE ou PROPERTY_INFO_ENTRY_EX (macro). Ces macros permettent de spécifier une valeur pour une propriété correspondante. La macro PROPERTY_INFO_ENTRY_VALUE est une notation raccourcie qui vous permet de modifier la valeur. La macro PROPERTY_INFO_ENTRY_VALUE appelle la macro PROPERTY_INFO_ENTRY_EX. Cette macro vous permet d’ajouter ou modifier tous les attributs dans le `UPROPINFO` structure.
 
-Si vous souhaitez définir votre propre jeu de propriétés, vous pouvez ajouter un en créant une combinaison BEGIN_PROPSET_MAP/END_PROPSET_MAP supplémentaire. Vous devez définir un GUID pour le jeu de propriétés, puis définissez vos propres propriétés. Si vous avez des propriétés spécifiques au fournisseur, ajoutez-les à une nouvelle propriété au lieu d’utiliser un existant. Cela évite tout problème dans les versions ultérieures d’OLE DB.
+Si vous souhaitez définir votre propre jeu de propriétés, vous pouvez ajouter un en créant une combinaison BEGIN_PROPSET_MAP/END_PROPSET_MAP supplémentaire. Définir un GUID pour le jeu de propriétés, puis définissez vos propres propriétés. Si vous avez des propriétés spécifiques au fournisseur, ajoutez-les à une nouvelle propriété au lieu d’utiliser un existant. Cela évite tout problème dans les versions ultérieures d’OLE DB.
 
 ## <a name="user-defined-property-sets"></a>Jeux de propriétés définies par l’utilisateur
 
 Visual C++ prend en charge les jeux de propriétés définies par l’utilisateur. Vous n’êtes pas obligé de substituer `GetProperties` ou `GetPropertyInfo`. Au lieu de cela, les modèles de détectent tout jeu de propriétés défini par l’utilisateur et l’ajouter à l’objet approprié.
 
-Si vous avez un ensemble de propriétés défini par l’utilisateur qui doit être disponible au moment de l’initialisation (autrement dit, avant que le consommateur appelle `IDBInitialize::Initialize`), vous pouvez le spécifier à l’aide de l’indicateur UPROPSET_USERINIT conjointement avec la macro BEGIN_PROPERTY_SET_EX. Le jeu de propriétés doit être dans l’objet de source de données pour ce faire (comme la spécification OLE DB exige). Exemple :
+Si vous avez un ensemble de propriétés défini par l’utilisateur qui doit être disponible au moment de l’initialisation (autrement dit, avant que le consommateur appelle `IDBInitialize::Initialize`), vous pouvez le spécifier en utilisant l’indicateur UPROPSET_USERINIT, ainsi que la macro BEGIN_PROPERTY_SET_EX. Le jeu de propriétés doit être dans l’objet de source de données pour ce faire (comme la spécification OLE DB exige). Exemple :
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
@@ -178,4 +199,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers générés par l’Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)
+[Fichiers générés par l’Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)<br/>

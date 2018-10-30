@@ -19,49 +19,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c1958604edbb2f9d9c10e58082e70c2df400b8c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e37ed0ac918b004513aa64308870a534a7b2af40
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077372"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216290"
 ---
 # <a name="user-record"></a>Enregistrement utilisateur
 
-L’enregistrement de l’utilisateur fournit la code et structure de données qui représente les données de colonne pour un ensemble de lignes. Un enregistrement d’utilisateur peut être créé au moment de la compilation ou au moment de l’exécution. Lorsque vous créez un fournisseur à l’aide de l’Assistant fournisseur OLE DB ATL, l’Assistant crée un enregistrement d’utilisateur par défaut qui ressemble à ceci (en supposant que vous avez spécifié un nom de fournisseur [nom court] de *personnalisé*) :
+L’enregistrement de l’utilisateur fournit la code et structure de données qui représente les données de colonne pour un ensemble de lignes. Un enregistrement d’utilisateur peut être créé au moment de la compilation ou au moment de l’exécution. Lorsque vous créez un fournisseur à l’aide de la **Assistant fournisseur OLE DB ATL**, l’Assistant crée un enregistrement d’utilisateur par défaut qui ressemble à ceci (en supposant que vous avez spécifié un nom de fournisseur [nom court] de *MyProvider*) :
 
 ```cpp
 class CWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
-
-BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+  
+BEGIN_PROVIDER_COLUMN_MAP(CMyProviderWindowsFile)
    PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
    PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
    PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
    PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
    PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
 END_PROVIDER_COLUMN_MAP()
-
+  
 };
 ```
 
-Les modèles du fournisseur OLE DB gèrent toutes les particularités de OLE DB concernant les interactions avec le client. Pour acquérir les données de colonne nécessaires pour une réponse, le fournisseur appelle le `GetColumnInfo` (fonction), que vous devez placer dans l’enregistrement utilisateur. Vous pouvez substituer explicitement `GetColumnInfo` dans l’enregistrement de l’utilisateur, par exemple, en la déclarant dans le fichier .h comme illustré ici :
+Les modèles du fournisseur OLE DB gèrent toutes les particularités de OLE DB sur les interactions avec le client. Pour acquérir les données de colonne nécessaires pour une réponse, le fournisseur appelle le `GetColumnInfo` (fonction), que vous devez placer dans l’enregistrement utilisateur. Vous pouvez substituer explicitement `GetColumnInfo` dans l’enregistrement de l’utilisateur, par exemple, en la déclarant dans le fichier .h comme illustré ici :
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
 ```
 
-Ceci équivaut à :
+Cela équivaut à :
 
 ```cpp
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)
 ```
 
-Vous devez également implémenter `GetColumnInfo` dans le fichier .cpp de l’enregistrement utilisateur.
+Ensuite, implémentez `GetColumnInfo` dans le fichier .cpp de l’enregistrement utilisateur.
 
 Les macros PROVIDER_COLUMN_MAP faciliter la création d’un `GetColumnInfo` (fonction) :
 
@@ -71,7 +71,7 @@ Les macros PROVIDER_COLUMN_MAP faciliter la création d’un `GetColumnInfo` (fo
 
 - END_PROVIDER_COLUMN_MAP ferme le tableau et la fonction. Il place également le nombre d’éléments de tableau dans le *pcCols* paramètre.
 
-Lorsqu’un enregistrement d’utilisateur est créé au moment de l’exécution, `GetColumnInfo` utilise le *pThis* paramètre pour recevoir un pointeur vers une instance de l’ensemble de lignes ou de la commande. Commandes et des ensembles de lignes doit prendre en charge la `IColumnsInfo` interface, donc les informations de colonne peuvent être obtenues à partir de ce pointeur.
+Lorsqu’un enregistrement d’utilisateur est créé au moment de l’exécution, `GetColumnInfo` utilise le *pThis* paramètre pour recevoir un pointeur vers une instance de l’ensemble de lignes ou de la commande. Commandes et des ensembles de lignes doit prendre en charge la `IColumnsInfo` interface, donc les informations de colonne peuvent être prises à partir de ce pointeur.
 
 `CommandClass` et `RowsetClass` sont command et rowset qui utilisent l’enregistrement utilisateur.
 
@@ -79,4 +79,4 @@ Pour obtenir un exemple plus détaillé de la procédure de remplacement `GetCol
 
 ## <a name="see-also"></a>Voir aussi
 
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9bc7c85dccdfe095412450d5020fc8a6b42d516
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 40422ac7894523a28a2135b7f5005eb1f11d36c8
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076969"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216368"
 ---
 # <a name="provider-wizard-generated-files"></a>Fichiers générés par l'Assistant Fournisseur
 
-L’Assistant fournisseur OLE DB ATL génère les fichiers suivants. Les rubriques suivantes utilisent le nom court *personnalisé*, mais les noms de fichiers exacte varient selon le choix effectué lors de la création du fournisseur.
+Le **Assistant fournisseur OLE DB ATL** génère les fichiers suivants. Les rubriques suivantes utilisent le nom court *personnalisé*, mais les noms de fichiers exacte varient selon le choix effectué lors de la création du fournisseur.
 
 |Nom de fichier|Description|
 |---------------|-----------------|
@@ -32,8 +32,8 @@ L’Assistant fournisseur OLE DB ATL génère les fichiers suivants. Les rubriqu
 |*Custom*DS.h|Implémente l’objet de source de données. Ce fichier d’en-tête contient le mappage des propriétés pour les propriétés de source de données.|
 |*Custom*RS.h|Implémente les objets command et rowset. Ce fichier d’en-tête contient le mappage des propriétés pour les propriétés d’ensemble de lignes et commande.|
 |*Custom*Sess.h|Implémente l’objet de session. Ce fichier d’en-tête contient le mappage des propriétés pour les propriétés de la session.|
-|*Custom*.rgs|Contient les objets inscrits générés par l’Assistant fournisseur OLE DB.|
+|*Custom*.rgs|Contient les objets inscrits générés par le **Assistant fournisseur OLE DB**.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+[Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>
