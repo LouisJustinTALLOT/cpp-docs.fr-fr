@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eafdf3a140dd8a5976cf2fe8554b3b076111b74
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060505"
 ---
 # <a name="code-pages"></a>Pages de codes
 
@@ -43,7 +43,7 @@ La bibliothèque Runtime Microsoft utilise les types suivants de pages de codes�
     setlocale ( LC_ALL, "" );
     ```
 
-     définit également les paramètres régionaux sur la page de codes ANSI par défaut du système.
+   définit également les paramètres régionaux sur la page de codes ANSI par défaut du système.
 
 - Page de codes des paramètres régionaux. Le comportement d'un certain nombre de routines d'exécution dépend des paramètres régionaux actuels, qui incluent la page de codes des paramètres régionaux. Pour plus d’informations, consultez [Routines dépendantes des paramètres régionaux](../c-runtime-library/locale.md). Par défaut, toutes les routines dépendantes des paramètres régionaux de la bibliothèque Runtime Microsoft utilisent la page de codes correspondant aux paramètres régionaux "C". Au moment de l’exécution, vous pouvez modifier ou interroger la page de codes des paramètres régionaux utilisée avec un appel à [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 

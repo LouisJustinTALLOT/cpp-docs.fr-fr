@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3c66fe63d97f623011b3dade46266a4a9d8d83b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064419"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
 
@@ -52,11 +52,11 @@ Vous devez supprimer cette propriété quand vous souhaitez mettre à niveau vos
 
 Si vous choisissez de ne pas effectuer de mise à niveau, Visual Studio n’apporte aucune modification à vos fichiers projet ou solution. Quand vous générez le projet, les fichiers binaires générés sont entièrement compatibles avec ceux que vous avez générés avec l’ancienne version de Visual Studio. En effet, Visual Studio utilise le compilateur C++ et lie les bibliothèques avec lesquelles était fourni l’ancien IDE. C’est également la raison pour laquelle la boîte de dialogue de mise à niveau vous conseille de conserver l’ancienne version de Visual Studio si vous choisissez **Annuler**.
 
-## <a name="instructions-for-visual-studio-2008"></a>Instructions pour Visual Studio 2008  
-  
+## <a name="instructions-for-visual-studio-2008"></a>Instructions pour Visual Studio 2008
+
 Visual Studio 2008 avait son propre système de build dédié pour C++ appelé **VCBuild**. Depuis Visual Studio 2010, les projets Visual C++ ont été changés pour utiliser **MSBuild**. Cela signifie que vous devez passer par une étape de mise à jour pour générer vos projets Visual Studio 2008 dans la dernière version de Visual Studio. Votre projet mis à jour génère toujours des fichiers binaires qui sont entièrement compatibles avec les fichiers binaires créés à l’aide de l’IDE de Visual Studio 2008.
 
-Tout d’abord, outre la version actuelle de Visual Studio, vous devez installer Visual Studio 2010 sur le même ordinateur que Visual Studio 2008. Seul Visual Studio 2010 installe les scripts **MSBuild** nécessaires au ciblage des projets Visual Studio 2008. 
+Tout d’abord, outre la version actuelle de Visual Studio, vous devez installer Visual Studio 2010 sur le même ordinateur que Visual Studio 2008. Seul Visual Studio 2010 installe les scripts **MSBuild** nécessaires au ciblage des projets Visual Studio 2008.
 
 Ensuite, vous devez mettre à jour vos projets et solution Visual Studio 2008 vers la version actuelle de Visual Studio. Nous vous recommandons de créer une sauvegarde de vos projets et de vos fichiers solution avant d’effectuer la mise à niveau. Pour démarrer le processus de mise à niveau, ouvrez la solution dans la version actuelle de Visual Studio. Quand vous obtenez l’invite de mise à niveau, passez en revue les informations présentées, puis choisissez **OK** pour démarrer la mise à niveau. Si la solution comporte plusieurs projets, vous devez mettre à jour L’Assistant crée les fichiers projet .vcxproj côté à côte avec les fichiers .vcproj existants. Tant que vous avez également une copie du fichier .sln d’origine, la mise à niveau n’a aucun autre impact sur vos projets Visual Studio 2008 existants.
 
@@ -77,4 +77,4 @@ Quand ces produits sont installés, la liste déroulante de propriétés **Ensem
 ## <a name="see-also"></a>Voir aussi
 
 [Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Améliorations de la conformité de C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md)  
+[Améliorations de la conformité de C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md)

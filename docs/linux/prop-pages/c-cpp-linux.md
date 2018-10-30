@@ -13,12 +13,12 @@ f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061558"
 ---
 # <a name="cc-properties-linux-c"></a>C/C++, propriétés (Linux C++)
 
@@ -85,4 +85,4 @@ Property | Description | Options
 Compiler en | Permet de sélectionner l’option de langage de compilation pour les fichiers .c et .cpp.  'Default' effectue la détection d’après l’extension (.c ou .cpp). (-x c, -x c++) | **Par défaut** : option par défaut.<br/>**Compiler en code C** : compile en code C.<br/>**Compiler en code C++**  : compile en code C++.<br/>
 Fichiers Include forcés | Un ou plusieurs fichiers Include forcés. (-include [name])
 
-## <a name="additional-options"></a>Options supplémentaires 
+## <a name="additional-options"></a>Options supplémentaires

@@ -8,18 +8,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfa82580ba61ab276d6d64a9424d7043c2822f1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 742d722033d0fb2e686861d0e09fc45c73540ade
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393774"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075760"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 
 Au fil des années, le compilateur Microsoft Visual C++ a subi de nombreuses modifications, avec des changements apportés au langage C++ lui-même, à la bibliothèque C++ standard, à la bibliothèque Runtime C (CRT) et à d’autres bibliothèques telles que MFC et ATL. Ainsi, durant la mise à niveau d’une application à partir d’une version antérieure de Visual Studio, vous pouvez rencontrer des erreurs du compilateur et de l’éditeur de liens ainsi que des avertissements dans le code précédemment compilé correctement. Plus la base de code d’origine est ancienne, plus le risque de telles erreurs est élevé. Cette vue d’ensemble résume les classes les plus courantes des problèmes que vous êtes susceptible de rencontrer, et fournit des liens vers des informations plus détaillées.
 
-> [!NOTE] 
+> [!NOTE]
 > Par le passé, nous avons recommandé que les mises à niveau couvrant plusieurs versions de Visual Studio soient effectuées de façon incrémentielle, une version à la fois. Nous ne conseillons plus cette démarche. Nous avons découvert qu’il est presque toujours plus simple d’effectuer la mise à niveau vers la version la plus récente de Visual Studio, quelle que soit l’ancienneté de la base de code.
 
 Les questions ou commentaires concernant le processus de mise à niveau peuvent être envoyés à vcupgrade@microsoft.com.
@@ -161,7 +161,7 @@ Pour plus d’informations sur l’ensemble API actuel et les versions de systè
 
 ### <a name="windows-version"></a>Version Windows
 
-Lors de la mise à niveau d’un programme qui utilise l’API Windows directement ou indirectement, vous devez décider de la version minimale de Windows à prendre en charge. Dans la plupart des cas, Windows 7 représente un choix judicieux. Pour plus d’informations, consultez [Problèmes liés aux fichiers d’en-tête](porting-guide-spy-increment.md#header_file_problems). La macro `WINVER` définit la plus ancienne version de Windows sur laquelle votre programme est conçu pour s’exécuter. Si votre programme MFC affecte à WINVER la valeur 0x0501 (Windows XP), un avertissement est émis, car MFC ne prend plus en charge XP, même si le compilateur lui-même a un mode XP.  
+Lors de la mise à niveau d’un programme qui utilise l’API Windows directement ou indirectement, vous devez décider de la version minimale de Windows à prendre en charge. Dans la plupart des cas, Windows 7 représente un choix judicieux. Pour plus d’informations, consultez [Problèmes liés aux fichiers d’en-tête](porting-guide-spy-increment.md#header_file_problems). La macro `WINVER` définit la plus ancienne version de Windows sur laquelle votre programme est conçu pour s’exécuter. Si votre programme MFC affecte à WINVER la valeur 0x0501 (Windows XP), un avertissement est émis, car MFC ne prend plus en charge XP, même si le compilateur lui-même a un mode XP.
 
 Pour plus d’informations, consultez [Mise à jour de la version cible de Windows](porting-guide-spy-increment.md#updating_winver) et [Autres fichiers d’en-tête obsolètes](porting-guide-spy-increment.md#outdated_header_files).
 
@@ -188,4 +188,4 @@ Pour plus d’informations, consultez [Portage de MBCS vers Unicode](porting-gui
 ## <a name="see-also"></a>Voir aussi
 
 [Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Améliorations de la conformité de C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md)  
+[Améliorations de la conformité de C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md)

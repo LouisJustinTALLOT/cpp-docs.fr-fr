@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 16fe66e6ba8ea3f6e4f88f434b58c61d46ce1edb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404265"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080648"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portage vers la plateforme Windows universelle (C++)
 
 Dans cette rubrique, vous trouverez des informations sur la façon de porter du code C++ existant vers la plateforme d’application Windows 10, la plateforme Windows universelle. Le terme *universel* signifie que votre code peut s'exécuter sur tout appareil équipé de Windows 10, notamment les ordinateurs de bureau, les téléphones, les tablettes et les appareils nouvelle génération qui exécutent Windows 10. Vous créez un seul projet et une interface utilisateur XAML unique qui fonctionne correctement sur n’importe quel appareil exécutant Windows 10. Vous pouvez utiliser les fonctionnalités de disposition dynamique de XAML pour permettre à l'interface utilisateur de l'application de s'adapter à différentes tailles d'affichage.
 
-La documentation du Centre de développement Windows contient un guide de portage d’applications Windows 8.1 vers la plateforme Windows universelle. Consultez [Passer de Windows Runtime 8 à UWP](/windows/uwp/porting/w8x-to-uwp-root). Bien que le guide soit axé essentiellement sur le code C#, la plupart des conseils sont applicables à C++. Les procédures suivantes contiennent des informations plus détaillées.
+La documentation du Centre de développement Windows contient un guide de portage d’applications Windows 8.1 vers la plateforme Windows universelle. Consultez [Passer de Windows Runtime 8 à la plateforme Windows universelle](/windows/uwp/porting/w8x-to-uwp-root). Bien que le guide soit axé essentiellement sur le code C#, la plupart des conseils sont applicables à C++. Les procédures suivantes contiennent des informations plus détaillées.
 
 Cette rubrique contient les procédures suivantes relatives au portage de code vers la plateforme Windows universelle (UWP).
 
@@ -74,7 +74,7 @@ Si vous avez une application du Windows Store Windows 8.1, vous pouvez appliquer
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     ```
 
-     Ces instructions s’appliquent respectivement aux applications UWP, aux applications du Windows Phone Store, aux deux ou bien aux applications de bureau Win32 classiques uniquement. Ces macros sont uniquement disponibles dans le Kit de développement logiciel (SDK) Windows 8.1 et versions ultérieures. Par conséquent, si votre code doit être compilé avec des versions antérieures du SDK Windows ou pour d’autres plateformes non-Windows, vous devez également vous préparer à l’éventualité qu’aucune de ces macros ne soit définie.
+   Ces instructions s’appliquent respectivement aux applications UWP, aux applications du Windows Phone Store, aux deux ou bien aux applications de bureau Win32 classiques uniquement. Ces macros sont uniquement disponibles dans le Kit de développement logiciel (SDK) Windows 8.1 et versions ultérieures. Par conséquent, si votre code doit être compilé avec des versions antérieures du SDK Windows ou pour d’autres plateformes non-Windows, vous devez également vous préparer à l’éventualité qu’aucune de ces macros ne soit définie.
 
 11. Exécutez et déboguez l’application sur un émulateur ou un appareil physique pour chaque type d’appareil pris en charge par votre application. Pour exécuter un émulateur, vous devez exécuter Visual Studio sur un ordinateur physique, et non sur un ordinateur virtuel.
 
@@ -119,4 +119,4 @@ Si vous avez créé un projet UWP à l’aide de Visual Studio, vous ne devez pa
 ## <a name="see-also"></a>Voir aussi
 
 [Guide du portage de Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
-[Développer des applications pour la plateforme Windows universelle (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  
+[Développer des applications pour la plateforme Windows universelle (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

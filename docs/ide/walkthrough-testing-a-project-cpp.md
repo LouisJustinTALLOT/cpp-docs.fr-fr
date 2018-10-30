@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 56614dc0829834e77cfdf10d8d88ed44492237e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235540"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070138"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Procédure pas à pas : test d'un projet (C++)
 
@@ -33,7 +33,7 @@ Dans cette procédure pas à pas, vous observez la valeur d’une variable que l
 
 - Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.
 
-- Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes listées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ### <a name="to-run-a-program-in-debug-mode"></a>Pour exécuter le programme en mode débogage
 
@@ -41,7 +41,7 @@ Dans cette procédure pas à pas, vous observez la valeur d’une variable que l
 
 1. Sélectionnez cette ligne de code :
 
-     `Cardgame.solitaire(1);`
+   `Cardgame.solitaire(1);`
 
 1. Pour définir un point d’arrêt sur cette ligne, dans la barre de menus, choisissez **Déboguer** > **Basculer le point d’arrêt** ou appuyez sur **F9**. Un cercle rouge apparaît à gauche de la ligne. Il indique qu’un point d’arrêt est défini. Pour supprimer un point d’arrêt, vous pouvez choisir la commande de menu ou réappuyer sur **F9**.
 

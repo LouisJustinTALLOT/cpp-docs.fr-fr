@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c7473cd7d6f2f07d81011eca0826b8066513d23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069254"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Projets Ouvrir un dossier dans Visual C++
 
@@ -245,6 +245,7 @@ Vous pouvez créer autant de configurations que vous le souhaitez dans CppProper
   ]
 }
 ```
+
 ### <a name="define-tasks-with-tasksvsjson"></a>Définir de tâches avec tasks.vs.json
 
 Vous pouvez automatiser les scripts de génération ou d’autres opérations externes sur les fichiers de votre espace de travail actuel en les exécutant comme des tâches directement dans l’IDE. Vous pouvez configurer une nouvelle tâche en cliquant sur un fichier ou dossier puis en sélectionnant **Configurer les tâches**.
