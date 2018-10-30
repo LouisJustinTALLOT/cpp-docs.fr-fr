@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3be523feaacb403076f2c066943ca55ace958dce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf2568561e3e79eaf7c2f56b0b571f5c9e74f268
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401835"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204520"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Contrôles ActiveX MFC : sérialisation
 
 Cet article décrit comment sérialiser un contrôle ActiveX. Sérialisation est le processus de lecture ou écriture sur un support de stockage persistant, tel qu’un fichier de disque. La bibliothèque Microsoft Foundation classes (MFC) fournit la prise en charge intégrée pour la sérialisation dans la classe `CObject`. `COleControl` étend cette prise en charge pour les contrôles ActiveX via l’utilisation d’un mécanisme d’échange de propriété.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Sérialisation pour les contrôles ActiveX est implémentée en substituant [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Cette fonction, appelée pendant le chargement et l’enregistrement de l’objet contrôle, stocke toutes les propriétés implémentées avec une variable de membre ou une variable membre avec notification de modification.
 

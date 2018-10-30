@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429746"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204611"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
 
@@ -69,7 +69,7 @@ Découvrez comment créer une application UWP qui utilise [Microsoft Media Found
 Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant COM de base et une méthode simple pour vous inscrire et utiliser le composant COM à partir d’une application de bureau.
 
 [Guide pratique pour instancier directement les composants WRL](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
-Découvrez comment utiliser le [Microsoft::wrl :: Make](../windows/make-function.md) et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) pour instancier un composant à partir du module qui le définit.
+Découvrez comment utiliser les fonctions [Microsoft::WRL::Make](../windows/make-function.md) et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) pour instancier un composant à partir du module qui le définit.
 
 [Guide pratique pour utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Montre comment consommer des composants Windows Runtime personnalisées à partir de WRL en créant un fichier IDL à partir des métadonnées .winmd.
@@ -119,23 +119,23 @@ Bibliothèque de modèles Windows Runtime C++ fournit des types représentant qu
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](../windows/comptr-class.md) est un *pointeur intelligent* type qui représente l’interface spécifiée par le paramètre de modèle. Utilisez `ComPtr` pour déclarer une variable pouvant accéder aux membres d'un objet dérivé de l'interface. `ComPtr` met à jour automatiquement un décompte de références pour le pointeur d'interface sous-jacent et libère l'interface lorsque le décompte de références atteint zéro.
+[ComPtr](../windows/comptr-class.md) est un type de *pointeur intelligent* qui représente l'interface spécifiée par le paramètre de modèle. Utilisez `ComPtr` pour déclarer une variable pouvant accéder aux membres d'un objet dérivé de l'interface. `ComPtr` met à jour automatiquement un décompte de références pour le pointeur d'interface sous-jacent et libère l'interface lorsque le décompte de références atteint zéro.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](../windows/runtimeclass-class.md) représente une classe instanciée qui hérite d’un ensemble d’interfaces spécifiées. Un `RuntimeClass` objet peut fournir une combinaison de prise en charge pour une ou plusieurs interfaces Windows Runtime COM, ou une référence faible à un composant.
+[RuntimeClass](../windows/runtimeclass-class.md) représente une classe instanciée qui hérite d'un ensemble d'interfaces spécifiées. Un `RuntimeClass` objet peut fournir une combinaison de prise en charge pour une ou plusieurs interfaces Windows Runtime COM, ou une référence faible à un composant.
 
 ### <a name="module"></a>Module
 
-[Module](../windows/module-class.md) représente une collection d’objets connexes. Un objet `Module` gère les fabriques de classe, qui créent des objets, et l'inscription, qui permet à d'autres applications d'utiliser un objet.
+[Module](../windows/module-class.md) représente une collection d'objets connexes. Un objet `Module` gère les fabriques de classe, qui créent des objets, et l'inscription, qui permet à d'autres applications d'utiliser un objet.
 
 ### <a name="callback"></a>Rappel
 
-Le [rappel](../windows/callback-function-windows-runtime-cpp-template-library.md) fonction crée un objet dont la fonction membre est un gestionnaire d’événements (une méthode de rappel). Utilisez la fonction `Callback` pour écrire des opérations asynchrones.
+La fonction [Callback](../windows/callback-function-windows-runtime-cpp-template-library.md) crée un objet dont la fonction membre est un gestionnaire d'événements (une méthode de rappel). Utilisez la fonction `Callback` pour écrire des opérations asynchrones.
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](../windows/eventsource-class.md) sert à gérer *déléguer* gestionnaires d’événements. Utiliser la bibliothèque de modèles Windows Runtime C++ pour implémenter un délégué et utilisez `EventSource` pour ajouter, supprimer et appeler des délégués.
+[EventSource](../windows/eventsource-class.md) sert à gérer des gestionnaires d'événements *délégués* . Utiliser la bibliothèque de modèles Windows Runtime C++ pour implémenter un délégué et utilisez `EventSource` pour ajouter, supprimer et appeler des délégués.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -147,7 +147,7 @@ Le [rappel](../windows/callback-function-windows-runtime-cpp-template-library.md
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](../windows/weakref-class.md) est un type pointeur intelligent qui représente un *référence faible*, qui fait référence à un objet qui peut ou ne peut pas accessible. Un `WeakRef` objet peut être utilisé uniquement par le Windows Runtime et non par le COM classique.
+[WeakRef](../windows/weakref-class.md) est un type de pointeur intelligent qui représente une *référence faible*, qui fait référence à un objet qui peut être accessible ou non. Un `WeakRef` objet peut être utilisé uniquement par le Windows Runtime et non par le COM classique.
 
 Un objet `WeakRef` représente généralement un objet dont l'existence est contrôlée par un thread ou une application externe. Par exemple, un objet `WeakRef` peut faire référence à un objet fichier. Lorsque le fichier est ouvert, `WeakRef` est valide et le fichier référencé est accessible. En revanche, quand le fichier est fermé, `WeakRef` est incorrect et le fichier n'est pas accessible.
 

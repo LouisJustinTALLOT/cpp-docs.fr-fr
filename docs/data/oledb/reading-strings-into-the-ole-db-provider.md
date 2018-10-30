@@ -15,22 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a2a580c5ae3d80349b74e6ce7606763c32201805
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b1730c839ab2eb87511a241c28409646a999cfd6
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063326"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216251"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lecture de chaînes dans le fournisseur OLE DB
 
 Le `RCustomRowset::Execute` fonction ouvre un fichier et lit les chaînes. Le consommateur passe le nom de fichier au fournisseur en appelant [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757). Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_szCommandText`. `Execute` lit le nom de fichier à partir de `m_szCommandText`. Si le nom de fichier n’est pas valide ou le fichier n’est pas disponible, `Execute` retourne une erreur. Sinon, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes. Pour chaque jeu de chaînes qu’il lit, `Execute` crée une instance de l’enregistrement utilisateur (`CAgentMan`) et le place dans un tableau.
 
-Si le fichier ne peut pas être ouvert, `Execute` doit retourner DB_E_NOTABLE. Si elle retourne E_FAIL à la place, le fournisseur ne fonctionnera pas avec beaucoup de consommateurs et ne peut pas passer de OLE DB [tests de compatibilité](../../data/oledb/testing-your-provider.md).
+Si le fichier ne peut pas être ouvert, `Execute` doit retourner DB_E_NOTABLE. Si elle retourne E_FAIL à la place, le fournisseur ne fonctionnera pas avec beaucoup de consommateurs et ne sont pas transmettre OLE DB [tests de compatibilité](../../data/oledb/testing-your-provider.md).
 
 ## <a name="example"></a>Exemple
-
-Le texte modifié `Execute` fonction ressemble à ceci :
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -106,4 +104,4 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Implémentation d’un fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md)
+[Implémentation d’un fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

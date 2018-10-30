@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e3d6501e969b103146aa53311069e5fdd4d048e
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080439"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204559"
 ---
 # <a name="scope-c"></a>Portée (C++)
 
@@ -41,7 +41,7 @@ Il existe six types de portée :
 
 - **Portée locale** un nom déclaré dans une fonction ou une expression lambda, y compris les noms de paramètre, ont une portée locale. Elles sont souvent appelées « variables locales ». Elles ne sont visibles à partir de leur point de déclaration jusqu'à la fin du corps du lambda ou fonction. Portée locale est un type de portée de bloc, qui est abordée plus loin dans cet article.
 
-- **Portée de classe** noms de membres de classe ont une portée de classe, qui étend tout au long de la définition de classe, quel que soit le point de déclaration. Accessibilité des membres de classe est plus contrôlé par le **public**, **privé**, et **protégé** mots clés. Membres publics ou protégés sont accessibles uniquement en utilisant les opérateurs de sélection de membre (**.** ou **->**) ou des opérateurs de pointeur vers membre (**.** <strong>\*</strong> ou **->** <strong>\*</strong>).
+- **Portée de classe** noms de membres de classe ont une portée de classe, qui étend tout au long de la définition de classe, quel que soit le point de déclaration. Accessibilité des membres de classe est plus contrôlée par le **public**, **privé**, et **protégé** mots clés. Membres publics ou protégés sont accessibles uniquement en utilisant les opérateurs de sélection de membre (**.** ou **->**) ou des opérateurs de pointeur vers membre (**.** <strong>\*</strong> ou **->** <strong>\*</strong>).
 
 - **Portée de l’instruction** noms déclarés dans un **pour**, **si**, **tandis que**, ou **basculer** instruction sont visibles jusqu'à la fin de la bloc d’instructions.
 
@@ -49,7 +49,7 @@ Il existe six types de portée :
 
 ## <a name="hiding-names"></a>Masquage des noms
 
-Vous pouvez masquer un nom en le déclarant dans un bloc englobé. Dans l'illustration suivante, `i` est redéclaré dans le bloc interne, masquant ainsi la variable associée à `i` dans la portée de bloc externe.
+Vous pouvez masquer un nom en le déclarant dans un bloc englobé. Dans l’illustration suivante, `i` est redéclaré dans le bloc interne, masquant ainsi la variable associée à `i` dans la portée de bloc externe.
 
 ![Bloc&#45;masquage de nom d’étendue](../cpp/media/vc38sf1.png "vc38SF1") portée de bloc et le masquage de nom
 

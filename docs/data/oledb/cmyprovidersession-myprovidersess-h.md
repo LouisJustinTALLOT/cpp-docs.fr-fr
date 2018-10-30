@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8873247ee54884236ed3472c345fb15b99e97131
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 50576d93d8b86a070b928d62662a212d957e5c79
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076683"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216316"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
@@ -36,7 +36,7 @@ ms.locfileid: "50076683"
 ```cpp
 /////////////////////////////////////////////////////////////////////////
 // CCustomSession
-class ATL_NO_VTABLE CCustomSession :
+class ATL_NO_VTABLE CCustomSession : 
    public CComObjectRootEx<CComSingleThreadModel>,
    public IGetDataSourceImpl<CCustomSession>,
    public IOpenRowsetImpl<CCustomSession>,
@@ -46,12 +46,12 @@ class ATL_NO_VTABLE CCustomSession :
    public IDBCreateCommandImpl<CCustomSession, CCustomCommand>
 ```
 
-Hérite de l’objet de session `IGetDataSource`, `IOpenRowset`, `ISessionProperties`, et `IDBCreateCommand`. Le `IGetDataSource` interface permet à une session récupérer la source de données qui l’a créée. Cela est utile si vous avez besoin obtenir des propriétés de la source de données que vous avez créé ou d’autres informations que la source de données peut fournir. Le `ISessionProperties` interface gère toutes les propriétés de la session. Le `IOpenRowset` et `IDBCreateCommand` interfaces sont utilisées pour effectuer le travail de base de données. Si le fournisseur prend en charge les commandes, il implémente le `IDBCreateCommand` interface. Il est utilisé pour créer l’objet de commande qui peut exécuter des commandes. Le fournisseur implémente toujours les `IOpenRowset` objet. Il est utilisé pour générer un ensemble de lignes simple à partir d’un fournisseur. Il est un ensemble de lignes par défaut (par exemple, `"select * from mytable"`) à partir d’un fournisseur.
+Hérite de l’objet de session `IGetDataSource`, `IOpenRowset`, `ISessionProperties`, et `IDBCreateCommand`. Le `IGetDataSource` interface permet à une session récupérer la source de données qui l’a créée. Cela est utile si vous avez besoin obtenir des propriétés de la source de données que vous avez créé ou d’autres informations que la source de données peut fournir. Le `ISessionProperties` interface gère toutes les propriétés de la session. Le `IOpenRowset` et `IDBCreateCommand` interfaces sont utilisées pour effectuer le travail de base de données. Si le fournisseur prend en charge les commandes, il implémente le `IDBCreateCommand` interface. Il est utilisé pour créer l’objet de commande qui peut exécuter des commandes. Le fournisseur implémente toujours les `IOpenRowset` objet. Il est utilisé pour générer un ensemble de lignes à partir d’un fournisseur. Il est un ensemble de lignes par défaut (par exemple, `"select * from mytable"`) à partir d’un fournisseur.
 
-L’Assistant génère également trois classes de session : `CCustomSessionColSchema`, `CCustomSessionPTSchema`, et `CCustomSessionTRSchema`. Ces sessions sont utilisées pour les ensembles de lignes de schéma. Ensembles de lignes de schéma permettent au fournisseur retourner des métadonnées au consommateur sans que celui-ci ait à exécuter une requête ou l’extraction des données. L’extraction de métadonnées peut être beaucoup plus rapide que la découverte des fonctionnalités d’un fournisseur.
+L’Assistant génère également trois classes de session : `CCustomSessionColSchema`, `CCustomSessionPTSchema`, et `CCustomSessionTRSchema`. Ces sessions sont utilisées pour les ensembles de lignes de schéma. Ensembles de lignes de schéma permettent au fournisseur retourner des métadonnées au consommateur sans que celui-ci ait à exécuter une requête ou l’extraction des données. L’extraction de métadonnées peut être beaucoup plus rapide que la recherche les fonctionnalités d’un fournisseur.
 
-La spécification OLE DB requiert que fournisseurs qui implémentent le `IDBSchemaRowset` types d’interface prise en charge trois schéma ensemble de lignes : DBSCHEMA_COLUMNS, DBSCHEMA_PROVIDER_TYPES et DBSCHEMA_TABLES. L’Assistant génère des implémentations pour chaque ensemble de lignes de schéma. Chaque classe générée par l’Assistant contient un `Execute` (méthode). Dans ce `Execute` (méthode), vous pouvez retourner des données pour le fournisseur sur les tables, les colonnes et les types de données que vous prenez en charge. Ces données sont généralement connues au moment de la compilation.
+La spécification OLE DB requiert que fournisseurs qui implémentent le `IDBSchemaRowset` types d’interface prise en charge trois schéma ensemble de lignes : DBSCHEMA_COLUMNS, DBSCHEMA_PROVIDER_TYPES et DBSCHEMA_TABLES. L’Assistant génère des implémentations pour chaque ensemble de lignes de schéma. Chaque classe générée par l’Assistant contient un `Execute` (méthode). Dans ce `Execute` (méthode), vous pouvez retourner des données pour le fournisseur sur les tables, les colonnes et les types de données que vous prenez en charge. Ces données sont connues au moment de la compilation.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers générés par l’Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)
+[Fichiers générés par l’Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)<br/>

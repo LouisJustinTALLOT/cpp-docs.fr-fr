@@ -1,7 +1,7 @@
 ---
 title: Détermination de manière dynamique des colonnes retournées au consommateur | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa1e10c8b6a8f440cc74348ce06c44fdd9d24628
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a2149c50f4dc8880e20bff2401adf0db46ad6588
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064288"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216498"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Détermination de manière dynamique des colonnes retournées au consommateur
 
@@ -40,17 +40,16 @@ public:
    TCHAR szText[256];
    TCHAR szCommand2[256];
    TCHAR szText2[256];
-
+  
    static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
    bool operator==(const CAgentMan& am)
    {
       return (lstrcmpi(szCommand, am.szCommand) == 0);
    }
-
 };
 ```
 
-Ensuite, implémentez la `GetColumnInfo` fonctionner dans CustomRS.cpp, comme indiqué dans le code suivant.
+Ensuite, implémentez la `GetColumnInfo` fonctionner dans *personnalisé*RS.cpp, comme indiqué dans le code suivant.
 
 `GetColumnInfo` vérifie tout d’abord si la propriété OLE DB `DBPROP_BOOKMARKS` est définie. Pour obtenir la propriété, `GetColumnInfo` utilise un pointeur (`pRowset`) à l’objet d’ensemble de lignes. Le `pThis` pointeur représente la classe qui a créé l’ensemble de lignes, qui est la classe où le mappage des propriétés. `GetColumnInfo` conversions de type les `pThis` pointeur vers un `RCustomRowset` pointeur.
 
@@ -63,90 +62,59 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 {
    static ATLCOLUMNINFO _rgColumns[5];
    ULONG ulCols = 0;
-
-   // Check the property flag for bookmarks; if it is set, set the zero
+  
+   // Check the property flag for bookmarks; if it is set, set the zero 
    // ordinal entry in the column map with the bookmark information.
    CAgentRowset* pRowset = (CAgentRowset*) pThis;
    CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
-
+  
    CDBPropIDSet set(DBPROPSET_ROWSET);
    set.AddPropertyID(DBPROP_BOOKMARKS);
    DBPROPSET* pPropSet = NULL;
    ULONG ulPropSet = 0;
    HRESULT hr;
-
+  
    if (spRowsetProps)
       hr = spRowsetProps->GetProperties(1, &set, &ulPropSet, &pPropSet);
-
+  
    if (pPropSet)
    {
       CComVariant var = pPropSet->rgProperties[0].vValue;
       CoTaskMemFree(pPropSet->rgProperties);
       CoTaskMemFree(pPropSet);
-
+  
       if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
       {
-         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
-         DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark,
+         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD), 
+         DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark, 
          DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
    }
-
+  
    // Next, set the other columns up.
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF,
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF, 
       GUID_NULL, CAgentMan, szCommand)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF,
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF, 
       GUID_NULL, CAgentMan, szText)
    ulCols++;
-
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF,
+  
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF, 
       GUID_NULL, CAgentMan, szCommand2)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF,
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF, 
       GUID_NULL, CAgentMan, szText2)
    ulCols++;
-
+  
    if (pcCols != NULL)
       *pcCols = ulCols;
-
+  
    return _rgColumns;
 }
 ```
 
-Cet exemple utilise un tableau statique pour contenir les informations de colonne. Si le consommateur ne souhaite pas que la colonne de signet, une entrée dans le tableau est inutilisée. Pour gérer les informations, vous créez deux macros de tableau : ADD_COLUMN_ENTRY et ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX prend un paramètre supplémentaire, `flags`, qui est nécessaire si vous désignez une colonne de signet.
-
-```cpp
-////////////////////////////////////////////////////////////////////////
-// CustomRS.h
-
-#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \
-   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \
-   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \
-   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \
-   _rgColumns[ulCols].dwFlags = 0; \
-   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \
-   _rgColumns[ulCols].wType = (DBTYPE)type; \
-   _rgColumns[ulCols].bPrecision = (BYTE)precision; \
-   _rgColumns[ulCols].bScale = (BYTE)scale; \
-   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);
-
-#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \
-   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \
-   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \
-   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \
-   _rgColumns[ulCols].dwFlags = flags; \
-   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \
-   _rgColumns[ulCols].wType = (DBTYPE)type; \
-   _rgColumns[ulCols].bPrecision = (BYTE)precision; \
-   _rgColumns[ulCols].bScale = (BYTE)scale; \
-   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member); \
-   memset(&(_rgColumns[ulCols].columnid), 0, sizeof(DBID)); \
-   _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;
-```
-
-Dans le `GetColumnInfo` (fonction), la macro de signet est utilisée comme suit :
+Cet exemple utilise un tableau statique pour contenir les informations de colonne. Si le consommateur ne veut pas la colonne de signet, une entrée dans le tableau est inutilisée. Pour gérer les informations, vous créez deux macros de tableau : ADD_COLUMN_ENTRY et ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX prend un paramètre supplémentaire, *indicateurs*, qui est nécessaire si vous désignez une colonne de signet.
 
 ```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
@@ -158,4 +126,4 @@ Vous pouvez maintenant compiler et exécuter le fournisseur amélioré. Pour tes
 
 ## <a name="see-also"></a>Voir aussi
 
-[Amélioration du fournisseur simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+[Amélioration du fournisseur simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>
