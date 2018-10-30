@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: d2ffd41fe224e492eb4b27a355f6df864e0dd066
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410822"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069945"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Déployer, exécuter et déboguer un projet Linux
 
@@ -41,7 +41,7 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 
     - En mode **gdb**, le débogueur Visual Studio exécute GDB sur le système distant, ce qui est plus compatible si la version locale de GDB n’est pas compatible avec la version installée sur l’ordinateur cible. |
 
-    > [!NOTE] 
+    > [!NOTE]
     > Si vous ne pouvez pas atteindre les points d’arrêt en mode de débogage gdbserver, essayez le mode gdb. Vous devez d’abord [installer](../linux/download-install-and-setup-the-linux-development-workload.md) gdb sur la cible distante.
 
 2. Sélectionnez la cible distante dans la barre d’outils **Déboguer** standard de Visual Studio.
@@ -64,7 +64,7 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 
     S’il n’y a aucune erreur, l’application démarre et le débogueur s’interrompt au point d’arrêt.
 
-    ![Atteindre un point d’arrêt](media/hit_breakpoint.png)  
+    ![Atteindre un point d’arrêt](media/hit_breakpoint.png)
 
     Maintenant, vous pouvez interagir avec l’application dans son état actuel, afficher les variables et exécuter le code pas à pas en appuyant sur des touches de commande (par exemple, **F10** ou **F11**).
 
@@ -79,7 +79,7 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 ## <a name="configure-other-debugging-options"></a>Configurer d’autres options de débogage
 
 * Vous pouvez passer les arguments de ligne de commande à l’exécutable en utilisant l’élément **Arguments de programme** dans la page de propriétés **Débogage** du projet.
-  
+
   ![Arguments de programme](media/settings_programarguments.png)
 
 * Vous pouvez passer des options de débogueur spécifiques à GDB à l’aide de l’entrée **Commandes de débogueur supplémentaires**.  Par exemple, il est conseillé d’ignorer les signaux d’instruction non conforme (SIGILL).  Vous pouvez utiliser la commande **handle** pour y parvenir  en ajoutant le code suivant à l’entrée **Commandes de débogueur supplémentaires** comme indiqué ci-dessus :

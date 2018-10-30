@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 20291e1f824704ee94cb45f14c16d6f0e4960348
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: b7c28a8e67ef2731d26071262383e93d32be9583
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410835"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064106"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurer un projet CMake Linux
 
@@ -29,8 +29,8 @@ Quand vous installez la charge de travail Linux C++ pour Visual Studio, la prise
 
 Cette rubrique suppose que vous avez une connaissance de base de la prise en charge de CMake dans Visual Studio. Pour plus d’informations, consultez [Visual C++ Tools pour CMake](../ide/cmake-tools-for-visual-cpp.md). Pour plus d’informations sur la solution CMake proprement dite, consultez [Build, Test and Package Your Software With CMake](https://cmake.org/).
 
-> [!NOTE]  
-> La prise en charge de CMake dans Visual Studio nécessite la prise en charge du mode serveur qui a été introduit dans CMake 3.8. Pour une variante de CMake fournie par Microsoft, téléchargez les fichiers binaires prédéfinis les plus récents à partir de [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
+> [!NOTE]
+> La prise en charge de CMake dans Visual Studio nécessite la prise en charge du mode serveur qui a été introduit dans CMake 3.8. Pour une variante de CMake fournie par Microsoft, téléchargez les fichiers binaires prédéfinis les plus récents à partir de [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="open-a-folder"></a>Ouvrir un dossier
 
@@ -120,10 +120,9 @@ Ces options vous permettent d’exécuter des commandes sur la boîte distante a
 
 ## <a name="download-prebuilt-cmake-binaries"></a>Télécharger les fichiers binaires CMake prédéfinis
 
-Votre distribution Linux peut avoir une version antérieure de CMake. La prise en charge de CMake dans Visual Studio nécessite la prise en charge du mode serveur qui a été introduit dans CMake 3.8. Pour une variante de CMake fournie par Microsoft, téléchargez les fichiers binaires prédéfinis les plus récents à partir de [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
-
+Votre distribution Linux peut avoir une version antérieure de CMake. La prise en charge de CMake dans Visual Studio nécessite la prise en charge du mode serveur qui a été introduit dans CMake 3.8. Pour une variante de CMake fournie par Microsoft, téléchargez les fichiers binaires prédéfinis les plus récents à partir de [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation des propriétés de projet](../ide/working-with-project-properties.md)<br/>
-[Visual C++ Tools pour CMake](../ide/cmake-tools-for-visual-cpp.md)  
+[Visual C++ Tools pour CMake](../ide/cmake-tools-for-visual-cpp.md)

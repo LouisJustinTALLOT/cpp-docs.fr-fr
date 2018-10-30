@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2884abbf02c9eb244d6fb446c7158b708c211557
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0dca0359ea385e3a30f5dab6e8745a2d567ec1e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055253"
 ---
 # <a name="thread-local-storage"></a>stockage local des threads
 
@@ -94,7 +94,7 @@ Ces instructions doivent être observées lors de la déclaration de variables e
     Thread int tls_i = sizeof( tls_i )    /* Okay  */
     ```
 
-     Notez qu'une expression sizeof qui inclut la variable initialisée ne constitue pas une référence à elle-même et est autorisée.
+   Notez qu'une expression sizeof qui inclut la variable initialisée ne constitue pas une référence à elle-même et est autorisée.
 
 - L'utilisation de **__declspec(thread)** peut perturber le [chargement différé](../build/reference/linker-support-for-delay-loaded-dlls.md) des importations de DLL **.**
 

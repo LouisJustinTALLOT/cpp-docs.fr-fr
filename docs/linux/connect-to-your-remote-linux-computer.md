@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 5e6a5dd4a00bd4d98c36222434d7cd83242905c9
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 387550fa7d3e745038d0be8ee66574d4496132a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061286"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Se connecter à votre ordinateur Linux distant
 
@@ -29,7 +29,7 @@ Lors de la génération d’un projet Linux C++ dans Visual Studio, le code Linu
    ![Gestionnaire de connexion](media/settings_connectionmanager.png)
 
    Dans les deux cas, la fenêtre **Connect to Remote System** (Se connecter au système distant) s’affiche.
-   
+
    ![Connect to Remote System (Se connecter au système distant)](media/connect.png)
 
 1. Entrez les informations suivantes :

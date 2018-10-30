@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094388"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083241"
 ---
 # <a name="type-qualifiers"></a>Qualificateurs de type
 
@@ -69,7 +69,7 @@ La liste suivante explique comment utiliser **const** et `volatile`.
 
 - Le compilateur suppose que, à tout moment dans le programme, une variable `volatile` est accessible par un processus inconnu qui utilise ou modifie sa valeur. Par conséquent, indépendamment des optimisations spécifiées sur la ligne de commande, le code pour chaque assignation ou référence d'une variable `volatile` doit être généré même s'il semble n'avoir aucun effet.
 
-     Si `volatile` est utilisé seul, `int` est pris par défaut. Le spécificateur de type `volatile` peut être utilisé pour fournir un accès fiable aux emplacements de mémoire spéciaux. Utilisez `volatile` avec des objets de données accessibles ou modifiables par les gestionnaires de signaux, en exécutant simultanément des programmes, ou par un matériel spécial tel que les registres de contrôle d'E/S mappé en mémoire. Vous pouvez déclarer une variable comme `volatile` pour toute sa durée de vie, ou vous pouvez effectuer un cast d'une référence unique pour qu'elle soit `volatile`.
+   Si `volatile` est utilisé seul, `int` est pris par défaut. Le spécificateur de type `volatile` peut être utilisé pour fournir un accès fiable aux emplacements de mémoire spéciaux. Utilisez `volatile` avec des objets de données accessibles ou modifiables par les gestionnaires de signaux, en exécutant simultanément des programmes, ou par un matériel spécial tel que les registres de contrôle d'E/S mappé en mémoire. Vous pouvez déclarer une variable comme `volatile` pour toute sa durée de vie, ou vous pouvez effectuer un cast d'une référence unique pour qu'elle soit `volatile`.
 
 - Un élément peut être **const** et `volatile`, auquel cas il ne peut pas être légitimement modifié par son propre programme, mais par un processus asynchrone.
 
