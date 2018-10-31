@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca30330e721575443ba9d3f7b0b19c315427eb2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3071b779338150816cb1d52d16932ac0e3878538
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234123"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079315"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Procédure pas à pas : génération d’un projet (C++)
 
@@ -31,7 +31,7 @@ Dans cette procédure pas à pas, vous introduisez délibérément une erreur de
 
 - Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.
 
-- Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes listées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ### <a name="to-fix-compilation-errors"></a>Pour résoudre les erreurs de compilation
 
@@ -49,7 +49,7 @@ Dans cette procédure pas à pas, vous introduisez délibérément une erreur de
 
 1. Replacez le point-virgule à la fin de la ligne où se situe l'erreur de syntaxe :
 
-     `return 0;`
+   `return 0;`
 
 1. Dans la barre de menus, choisissez **Générer**  >  **Générer la solution**.
 
