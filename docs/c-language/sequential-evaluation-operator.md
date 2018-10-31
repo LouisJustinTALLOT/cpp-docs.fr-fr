@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a285cc87ec4182586663afcb3559101167ae7261
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0cee62bdf19e6ba3196e0336cb29a7c7606775b5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095571"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808288"
 ---
 # <a name="sequential-evaluation-operator"></a>Opérateur d'évaluation séquentielle
 
@@ -29,9 +29,9 @@ L’opérateur d’évaluation séquentielle, appelé aussi opérateur virgule, 
 
 ## <a name="syntax"></a>Syntaxe
 
-*expression*: *assignment-expression*
-
-*expression*  **,**  *assignment-expression*
+*expression* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
 
 L'opérande gauche de l'opérateur d'évaluation séquentielle est évalué comme une expression `void`. Le résultat de l'opération a la même valeur et le même type que l'opérande droite. Chaque opérande peut être de tout type. L'opérateur d'évaluation séquentielle n'effectue pas de conversions de type entre ses opérandes et ne produit pas de l-value. Il existe un point de séquence après le premier opérande. Cela signifie que tous les effets secondaires de l’évaluation de l’opérande gauche sont terminés avant le début de l’évaluation de l’opérande droite. Pour plus d'informations, consultez [Points de séquence](../c-language/c-sequence-points.md).
 
