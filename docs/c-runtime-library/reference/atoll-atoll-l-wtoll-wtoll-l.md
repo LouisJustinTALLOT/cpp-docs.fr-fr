@@ -1,10 +1,6 @@
 ---
-title: atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs
-ms.custom: ''
+title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoll
 - _atoll_l
@@ -31,24 +27,18 @@ f1_keywords:
 - _tstoll
 - _wtoll_l
 - atoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - atoll function
 - _wtoll_l function
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15a0753a487d969d3f75e1e41b6509ea40b9b19f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a857e0f04ff875a740a8a5d1401484cdaf9d3c75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613974"
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
@@ -83,11 +73,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne le **long** **long** valeur produite par l’interprétation des caractères d’entrée en tant que nombre. La valeur de retour pour **atoll** est égal à 0 si l’entrée ne peut pas être convertie en valeur de ce type.
+Chaque fonction retourne le **long** **long** valeur produite en interprétant les caractères d’entrée en tant que nombre. La valeur de retour pour **(atoll)** est 0 si l’entrée ne peut pas être convertie en une valeur de ce type.
 
-Dépassement de capacité avec grandes valeurs intégrales positifs, **atoll** retourne **LLONG_MAX**, et de dépassement de capacité avec des valeurs intégrales grandes négatives, elle retourne **LLONG_MIN**.
+Pour le dépassement de capacité avec grandes valeurs intégrales positives, **(atoll)** retourne **LLONG_MAX**, et de dépassement de capacité avec grandes valeurs intégrales négatives, elle retourne **LLONG_MIN**.
 
-Dans tous les cas d’out-of-range, **errno** a la valeur **ERANGE**. Si le paramètre est passé dans est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourne 0.
+Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent 0.
 
 ## <a name="remarks"></a>Notes
 
@@ -95,15 +85,15 @@ Ces fonctions convertissent une chaîne de caractères à un **long** **long** v
 
 La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère null ('\0' ou L'\0') qui termine la chaîne.
 
-Le *str* argument **atoll** a la forme suivante :
+Le *str* l’argument de **(atoll)** a la forme suivante :
 
-> [*espace blanc*] [*signe*] [*chiffres*]
+> [*espace blanc*] [*connexion*] [*chiffres*]
 
-A *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *signe* est plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres.
+Un *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *connexion* est soit plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres.
 
-**_wtoll** est identique à **atoll** sauf qu’elle prend une chaîne de caractères larges en tant que paramètre.
+**_wtoll** est identique à **(atoll)** , à ceci près qu’elle prend une chaîne de caractères larges en tant que paramètre.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques à celles qui n’est pas installé, sauf qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le **_l** suffixe sont identiques aux versions qui n’ont pas encore, à ceci près qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -113,7 +103,7 @@ Les versions de ces fonctions qui ont le **_l** suffixe sont identiques à celle
 |**_tstoll_l**|**_atoll_l**|**_atoll_l**|**_wtoll_l**|
 |**_ttoll**|**_atoll**|**_atoll**|**_wtoll**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routines|En-tête requis|
 |--------------|---------------------|
@@ -122,7 +112,7 @@ Les versions de ces fonctions qui ont le **_l** suffixe sont identiques à celle
 
 ## <a name="example"></a>Exemple
 
-Ce programme montre comment utiliser le **atoll** fonctions pour convertir des nombres stockés sous forme de chaînes en valeurs numériques.
+Ce programme montre comment utiliser le **(atoll)** fonctions pour convertir les nombres stockés sous forme de chaînes en valeurs numériques.
 
 ```C
 // crt_atoll.c

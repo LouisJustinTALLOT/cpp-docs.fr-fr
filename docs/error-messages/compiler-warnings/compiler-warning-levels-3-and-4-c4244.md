@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveaux 3 et 4) C4244 | Microsoft Docs
-ms.custom: ''
+title: Avertissement du compilateur (niveaux 3 et 4) C4244
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4244
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4244
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 55c862ee304c0ad0d95cbde34a5b6bb9b52798d9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 59513f9179aa295838d73f8a7a906570d7abdc57
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039502"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608492"
 ---
 # <a name="compiler-warning-levels-3-and-4-c4244"></a>Avertissement du compilateur (niveaux 3 et 4) C4244
 

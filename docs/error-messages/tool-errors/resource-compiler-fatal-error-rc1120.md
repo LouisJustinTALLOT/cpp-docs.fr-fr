@@ -1,27 +1,17 @@
 ---
-title: Erreur irrécupérable RC1120 du compilateur de ressources | Microsoft Docs
-ms.custom: ''
+title: 'Erreur irrécupérable RC1120 du compilateur de ressources '
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC1120
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC1120
 ms.assetid: 4e462931-e42e-42e3-8bfc-847677194286
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62f28e381d4eac0bfd1f010ef3919452635a1b96
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eff46ddee118c3355e548c73220b407db0561e36
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057000"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614921"
 ---
 # <a name="resource-compiler-fatal-error-rc1120"></a>Erreur irrécupérable RC1120 du compilateur de ressources 
 

@@ -1,27 +1,17 @@
 ---
-title: Modification du contrôle ATL DHTML | Microsoft Docs
-ms.custom: ''
+title: Modification du contrôle ATL DHTML
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - HTML controls, modifying
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ed2e1f8f24b3d33dd7d45bb597b252ead1453647
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2a16ad50911185c27906eee27902cee9971932c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861146"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493676"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Modification du contrôle ATL DHTML
 

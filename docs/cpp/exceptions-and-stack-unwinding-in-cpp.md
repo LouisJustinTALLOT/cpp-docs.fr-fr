@@ -1,23 +1,13 @@
 ---
-title: Exceptions et déroulement de pile en C++ | Microsoft Docs
-ms.custom: ''
+title: Exceptions et déroulement de pile en C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a413179ca2c44d1a66ae1702c690039383d1045
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 43d7945d53a0bd9993e75c04cceb3c8f5fec8ae2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569713"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Exceptions et déroulement de pile en C++
 
@@ -35,85 +25,85 @@ Dans le mécanisme d'exception C++, le contrôle passe de l'instruction Throw à
 
 ## <a name="stack-unwinding-example"></a>Exemple de déroulement de pile
 
-L'exemple suivant illustre le déroulement de la pile lorsqu'une exception est levée. L'exécution sur le thread passe de l'instruction Throw dans `C` à l'instruction Catch dans `main` et déroule chaque fonction pendant le processus. Notez l'ordre dans lequel les objets `Dummy` sont créés puis détruits lorsqu'ils passent hors de portée. Notez également qu'aucune fonction ne se termine, sauf `main`, qui contient l'instruction Catch. La fonction `A` ne retourne jamais d'un appel à `B()`, et `B` ne retourne jamais d'un appel à `C()`. Si vous supprimez les marques de commentaire de la définition du pointeur `Dummy` et de l'instruction Delete correspondante et que vous exécutez le programme, le pointeur n'est jamais supprimé. Cela indique ce qui peut se produire lorsque les fonctions ne fournissent pas de garantie d'exception. Pour plus d'informations, consultez Comment : concevoir des exceptions. Si vous commentez l'instruction Catch, vous pouvez observer ce qui se produit lorsqu'un programme se termine en raison d'une exception non gérée.
+L'exemple suivant illustre le déroulement de la pile lorsqu'une exception est levée. L'exécution sur le thread passe de l'instruction Throw dans `C` à l'instruction Catch dans `main` et déroule chaque fonction pendant le processus. Notez l’ordre dans lequel les objets `Dummy` sont créés puis détruits lorsqu’ils passent hors de portée. Notez également qu'aucune fonction ne se termine, sauf `main`, qui contient l'instruction Catch. La fonction `A` ne retourne jamais d'un appel à `B()`, et `B` ne retourne jamais d'un appel à `C()`. Si vous supprimez les marques de commentaire de la définition du pointeur `Dummy` et de l'instruction Delete correspondante et que vous exécutez le programme, le pointeur n'est jamais supprimé. Cela indique ce qui peut se produire lorsque les fonctions ne fournissent pas de garantie d'exception. Pour plus d'informations, consultez Comment : concevoir des exceptions. Si vous commentez l'instruction Catch, vous pouvez observer ce qui se produit lorsqu'un programme se termine en raison d'une exception non gérée.
 
 ```cpp
-#include <string>
-#include <iostream>
-using namespace std;
+#include <string>
+#include <iostream>
+using namespace std;
 
-class MyException{};
-class Dummy
+class MyException{};
+class Dummy
 {
-    public:
-    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }
-    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }
-    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }
-    void PrintMsg(string s) { cout << s  << MyName <<  endl; }
-    string MyName; 
-    int level;
+    public:
+    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }
+    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }
+    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }
+    void PrintMsg(string s) { cout << s  << MyName <<  endl; }
+    string MyName; 
+    int level;
 };
 
-void C(Dummy d, int i)
-{ 
-    cout << "Entering FunctionC" << endl;
-    d.MyName = " C";
-    throw MyException();   
+void C(Dummy d, int i)
+{ 
+    cout << "Entering FunctionC" << endl;
+    d.MyName = " C";
+    throw MyException();   
 
-    cout << "Exiting FunctionC" << endl;
+    cout << "Exiting FunctionC" << endl;
 }
 
-void B(Dummy d, int i)
+void B(Dummy d, int i)
 {
-    cout << "Entering FunctionB" << endl;
-    d.MyName = "B";
-    C(d, i + 1);   
-    cout << "Exiting FunctionB" << endl; 
+    cout << "Entering FunctionB" << endl;
+    d.MyName = "B";
+    C(d, i + 1);   
+    cout << "Exiting FunctionB" << endl; 
 }
 
-void A(Dummy d, int i)
-{ 
-    cout << "Entering FunctionA" << endl;
-    d.MyName = " A" ;
-  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!
-    B(d, i + 1);
- //   delete pd; 
-    cout << "Exiting FunctionA" << endl;   
+void A(Dummy d, int i)
+{ 
+    cout << "Entering FunctionA" << endl;
+    d.MyName = " A" ;
+  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!
+    B(d, i + 1);
+ //   delete pd; 
+    cout << "Exiting FunctionA" << endl;   
 }
 
-int main()
+int main()
 {
-    cout << "Entering main" << endl;
-    try
-    {
-        Dummy d(" M");
-        A(d,1);
-    }
-    catch (MyException& e)
-    {
-        cout << "Caught an exception of type: " << typeid(e).name() << endl;
-    }
+    cout << "Entering main" << endl;
+    try
+    {
+        Dummy d(" M");
+        A(d,1);
+    }
+    catch (MyException& e)
+    {
+        cout << "Caught an exception of type: " << typeid(e).name() << endl;
+    }
 
-    cout << "Exiting main." << endl;
-    char c;
-    cin >> c;
+    cout << "Exiting main." << endl;
+    char c;
+    cin >> c;
 }
 
-/* Output:
-    Entering main
-    Created Dummy: M
-    Copy created Dummy: M
-    Entering FunctionA
-    Copy created Dummy: A
-    Entering FunctionB
-    Copy created Dummy: B
-    Entering FunctionC
-    Destroyed Dummy: C
-    Destroyed Dummy: B
-    Destroyed Dummy: A
-    Destroyed Dummy: M
-    Caught an exception of type: class MyException
-    Exiting main.
+/* Output:
+    Entering main
+    Created Dummy: M
+    Copy created Dummy: M
+    Entering FunctionA
+    Copy created Dummy: A
+    Entering FunctionB
+    Copy created Dummy: B
+    Entering FunctionC
+    Destroyed Dummy: C
+    Destroyed Dummy: B
+    Destroyed Dummy: A
+    Destroyed Dummy: M
+    Caught an exception of type: class MyException
+    Exiting main.
 
 */
 ```

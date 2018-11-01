@@ -1,10 +1,6 @@
 ---
-title: printf, _printf_l, wprintf, _wprintf_l | Microsoft Docs
-ms.custom: ''
+title: printf, _printf_l, wprintf, _wprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_l
 - wprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - printf
 - _tprintf
 - wprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf function
 - printf_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e66c185a6ee56e4a82a98e62d8d2c7d8167399e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405235"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666893"
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -87,7 +77,7 @@ int _wprintf_l(
 *format*<br/>
 Contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 *locale*<br/>
@@ -95,17 +85,17 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le nombre de caractères imprimés ou une valeur négative si une erreur se produit. Si *format* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et définit **errno** à **EINVAL**. Si **EOF** (0xFFFF) est rencontré dans *argument*, la fonction retourne -1.
+Retourne le nombre de caractères imprimés ou une valeur négative si une erreur se produit. Si *format* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et affecte **errno** à **EINVAL**. Si **EOF** (0xFFFF) est rencontré dans *argument*, la fonction retourne -1.
 
-Pour plus d’informations sur **errno** et codes d’erreur, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pour plus d’informations sur **errno** et les codes d’erreur, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **printf** fonction met en forme et imprime une série de caractères et de valeurs dans le flux de sortie standard, **stdout**. Si les arguments suivent les *format* chaîne, le *format* chaîne doit contenir des spécifications qui déterminent le format de sortie pour les arguments. **printf** et [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) se comportent de façon identique, sauf que **printf** écrit la sortie vers **stdout** plutôt qu’à une destination de type **fichier** .
+Le **printf** fonction met en forme et imprime une série de caractères et de valeurs dans le flux de sortie standard, **stdout**. Si des arguments suivent la *format* chaîne, le *format* chaîne doit contenir des spécifications qui déterminent le format de sortie pour les arguments. **printf** et [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) ont un comportement identique, sauf que **printf** écrit la sortie dans **stdout** plutôt que vers une destination de type **fichier** .
 
-**wprintf** est une version à caractères larges de **printf**; *format* est une chaîne à caractères larges. **wprintf** et **printf** se comportent de façon identique, si le flux est ouvert en mode ANSI. **printf** ne prend pas en charge sortie dans un flux de données UNICODE.
+**wprintf** est une version à caractères larges de **printf**; *format* est une chaîne de caractères larges. **wprintf** et **printf** se comportent comme si le flux est ouvert en mode ANSI. **printf** ne prend pas en charge sortie vers un flux UNICODE.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -113,7 +103,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-Le *format* argument se compose de caractères ordinaires, les séquences d’échappement, et (si les arguments suivent *format*) aux spécifications de format. Les caractères ordinaires et les séquences d’échappement sont copiés vers **stdout** dans leur ordre d’apparition. Par exemple, la ligne suivante :
+Le *format* argument se compose de caractères ordinaires, les séquences d’échappement, et (si des arguments suivent *format*) spécifications de format. Les caractères ordinaires et les séquences d’échappement sont copiés vers **stdout** dans leur ordre d’apparition. Par exemple, la ligne suivante :
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -126,7 +116,7 @@ Line one
         Line two
 ```
 
-[Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) commencent toujours par un signe de pourcentage (**%**) et sont lues de gauche à droite. Lorsque **printf** rencontre la première spécification de format (le cas échéant), il convertit la valeur du premier argument après *format* et fournit en sortie en conséquence. La deuxième spécification de format entraîne la conversion et la sortie du deuxième argument, et ainsi de suite. S’il y a plus d’arguments que de spécifications de format, les arguments en trop sont ignorés. Les résultats sont indéfinis s’il n’y a pas assez d’arguments pour toutes les spécifications de format.
+[Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) commencent toujours par un signe de pourcentage (**%**) et sont lues de gauche à droite. Lorsque **printf** rencontre la première spécification de format (le cas échéant), il convertit la valeur du premier argument après *format* et sort en conséquence. La deuxième spécification de format entraîne la conversion et la sortie du deuxième argument, et ainsi de suite. S’il y a plus d’arguments que de spécifications de format, les arguments en trop sont ignorés. Les résultats sont indéfinis s’il n’y a pas assez d’arguments pour toutes les spécifications de format.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
@@ -138,14 +128,14 @@ Line one
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 |**_tprintf_l**|**_printf_l**|**_printf_l**|**_wprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**printf**, **_printf_l**|\<stdio.h>|
 |**wprintf**, **_wprintf_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

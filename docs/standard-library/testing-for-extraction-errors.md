@@ -1,25 +1,15 @@
 ---
-title: Tester les erreurs d’extraction | Microsoft Docs
-ms.custom: ''
+title: Tester les erreurs d'extraction
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - extraction errors
 ms.assetid: 6a681028-adba-4557-8f7b-f137932905f8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dc84277b654a79eebd38461c3ee83aefd533e4a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 62d9c94f366ec666acf2179803c62e4a3ccd7e6a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853896"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629227"
 ---
 # <a name="testing-for-extraction-errors"></a>Tester les erreurs d'extraction
 

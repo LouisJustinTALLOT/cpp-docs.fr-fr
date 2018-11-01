@@ -1,29 +1,19 @@
 ---
-title: Csimplearrayequalhelperfalse, classe | Microsoft Docs
-ms.custom: ''
+title: Csimplearrayequalhelperfalse, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSimpleArrayEqualHelperFalse
 - ATLSIMPCOLL/ATL::CSimpleArrayEqualHelperFalse
 - ATLSIMPCOLL/ATL::CSimpleArrayEqualHelperFalse::IsEqual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSimpleArrayEqualHelperFalse class
 ms.assetid: 6918af6f-d23d-49eb-8482-c44272f5ffeb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6cc489850ea8e8d2704c92d1c2a671557a4db67a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 91987d369291a092b6dfb5f7db9ca8ba1434a7cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594907"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>Csimplearrayequalhelperfalse, classe
 

@@ -1,10 +1,6 @@
 ---
-title: ftell, _ftelli64 | Microsoft Docs
-ms.custom: ''
+title: ftell, _ftelli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64
 - ftell
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _ftelli64
 - ftell
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftell function
 - ftelli64 function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d09d29abc4d1406bd85187ceb5c6661be98229be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc76ad0776ae82637b95d32cdc6254d3c40da5b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660523"
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 
@@ -61,12 +51,12 @@ __int64 _ftelli64(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Cible **fichier** structure.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**ftell** et **_ftelli64** retourner la position actuelle du fichier. La valeur retournée par **ftell** et **_ftelli64** peut ne pas refléter le décalage d’octet physique pour les flux ouverts en mode texte, car le mode texte provoque la traduction des sauts de ligne de transport. Utilisez **ftell** avec [fseek](fseek-fseeki64.md) ou **_ftelli64** avec [_fseeki64](fseek-fseeki64.md) vers les emplacements de fichier correctement. En cas d’erreur, **ftell** et **_ftelli64** appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 L et le jeu de **errno** à une des deux constantes, définis dans ERRNO. H. Le **EBADF** constante signifie la *flux* argument n’est pas une valeur de pointeur de fichier valide ou ne fait pas référence à un fichier ouvert. **EINVAL** signifie non valide *flux* argument a été passé à la fonction. Sur les appareils non compatibles avec la recherche (par exemple, les terminaux et les imprimantes), ou lorsque *flux* ne fait pas référence à un fichier ouvert, la valeur de retour n’est pas définie.
+**ftell** et **_ftelli64** retourner la position actuelle du fichier. La valeur retournée par **ftell** et **_ftelli64** peuvent ne pas refléter l’offset d’octet physique pour les flux ouverts en mode texte, car ce mode entraîne la traduction des sauts de ligne de transport. Utilisez **ftell** avec [fseek](fseek-fseeki64.md) ou **_ftelli64** avec [_fseeki64](fseek-fseeki64.md) vers les emplacements de fichier correctement. En cas d’erreur, **ftell** et **_ftelli64** appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 L et un ensemble **errno** à une des suivantes constantes, définies dans ERRNO. H. Le **EBADF** constante signifie la *flux* argument n’est pas une valeur de pointeur de fichier valide ou ne fait pas référence à un fichier ouvert. **EINVAL** signifie non valide *flux* argument passé à la fonction. Sur les appareils incapables de recherche (tels que les terminaux et les imprimantes), ou lorsque *flux* ne fait pas référence à un fichier ouvert, la valeur de retour n’est pas définie.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -76,11 +66,11 @@ Le **ftell** et **_ftelli64** fonctions récupèrent la position actuelle du poi
 
 Notez que quand un fichier est ouvert pour un ajout de données, la position de fichier actuelle est déterminée par la dernière opération d’E/S, pas par l’emplacement auquel l’écriture suivante se produirait. Par exemple, si un fichier est ouvert pour un ajout et que la dernière opération était une lecture, la position de fichier est le point où l’opération de lecture suivante commencerait, pas celui où l’écriture suivante démarrerait. (Quand un fichier est ouvert pour un ajout, la position de fichier est déplacée vers la fin du fichier avant toute opération d’écriture.) Si aucune opération d’E/S ne s’est produite sur un fichier ouvert pour un ajout, la position de fichier correspond au début du fichier.
 
-En mode texte, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture/écriture, **fopen** et toutes les routines connexes d’un CTRL + Z à la fin du fichier et si possible de le supprimer. Pour cela, car il est à l’aide de la combinaison de **ftell** et [fseek](fseek-fseeki64.md) ou **_ftelli64** et [_fseeki64](fseek-fseeki64.md), pour se déplacer dans un fichier qui se termine par CTRL + Z peut provoquer **ftell** ou **_ftelli64** comportement incorrect vers la fin du fichier.
+En mode texte, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture/écriture, **fopen** et toutes les routines connexes recherchent un CTRL + Z à la fin du fichier et le suppriment si possible. En effet à l’aide de la combinaison de **ftell** et [fseek](fseek-fseeki64.md) ou **_ftelli64** et [_fseeki64](fseek-fseeki64.md)pour se déplacer dans un fichier qui se termine par un CTRL + Z peut provoquer **ftell** ou **_ftelli64** au comportement incorrect vers la fin du fichier.
 
-Cette fonction verrouille le thread appelant pendant l’exécution et est donc thread-safe. Pour une version sans verrouillage, voir **_ftell_nolock**.
+Cette fonction verrouille le thread appelant pendant l’exécution et est donc thread-safe. Pour obtenir une version sans verrouillage, consultez **_ftell_nolock**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|En-têtes facultatifs|
 |--------------|---------------------|----------------------|

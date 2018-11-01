@@ -1,27 +1,17 @@
 ---
-title: Erreur LNK1301 des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK1301
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1301
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8646de5bb81120f6445e16b819b27da62ed9d5ec
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b112c4498913c18d82ce8fbc4f6c6d211b906263
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431237"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Erreur des outils Éditeur de liens LNK1301
 

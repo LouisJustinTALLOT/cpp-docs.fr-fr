@@ -1,31 +1,21 @@
 ---
-title: -DELAYLOAD (différer le chargement l’importation) | Microsoft Docs
-ms.custom: ''
+title: /DELAYLOAD (Différer le chargement de l'importation)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /delayload
 - VC.Project.VCLinkerTool.DelayLoadDLLS
-dev_langs:
-- C++
 helpviewer_keywords:
 - DELAYLOAD linker option
 - -DELAYLOAD linker option
 - /DELAYLOAD linker option
 - delayed loading of DLLs, /DELAYLOAD option
 ms.assetid: 39ea0f1e-5c01-450f-9c75-2d9761ff9b28
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 3833c2006a93ee73d2ed68ab7be5e869935143ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860743"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525006"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Différer le chargement de l'importation)
 

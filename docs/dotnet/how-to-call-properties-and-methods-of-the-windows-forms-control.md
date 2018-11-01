@@ -1,12 +1,7 @@
 ---
-title: 'Comment : appeler des propriétés et des méthodes des formulaires Windows contrôle | Microsoft Docs'
+title: 'Comment : appeler des propriétés et des méthodes du contrôle Windows Forms'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - method calls, Windows Forms
 - calling methods, Windows Forms control
@@ -15,17 +10,12 @@ helpviewer_keywords:
 - calling properties
 - Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 809fa428172dffb5f53e7339e04882b451c8562f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061571"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561484"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Comment : appeler des propriétés et des méthodes du contrôle Windows Forms
 

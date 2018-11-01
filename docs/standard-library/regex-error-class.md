@@ -1,28 +1,18 @@
 ---
-title: regex_error, classe | Microsoft Docs
-ms.custom: ''
+title: regex_error, classe
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - regex/std::regex_error
 - regex/std::regex_error::code
-dev_langs:
-- C++
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7358af41e1a7172daec619bec3e701ff4541fd0c
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: eed961ea698591935c22fc748ff79583ae636b27
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495808"
 ---
 # <a name="regexerror-class"></a>regex_error, classe
 
@@ -49,7 +39,7 @@ Cette classe décrit un objet d’exception levé pour signaler une erreur dans 
 
 |Fonction membre|Description|
 |-|-|
-|[Code](#code)|Retourne le code d'erreur.|
+|[code](#code)|Retourne le code d'erreur.|
 
 ## <a name="requirements"></a>Configuration requise
 

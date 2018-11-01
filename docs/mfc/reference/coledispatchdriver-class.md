@@ -1,10 +1,6 @@
 ---
-title: COleDispatchDriver, classe | Microsoft Docs
-ms.custom: ''
+title: COleDispatchDriver, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDispatchDriver
 - AFXDISP/COleDispatchDriver
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXDISP/COleDispatchDriver::SetProperty
 - AFXDISP/COleDispatchDriver::m_bAutoRelease
 - AFXDISP/COleDispatchDriver::m_lpDispatch
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDispatchDriver [MFC], COleDispatchDriver
 - COleDispatchDriver [MFC], AttachDispatch
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7093d25e8221ce3fc3ec8d0d13f8bbc5b420d2
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569220"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver, classe
 
@@ -111,7 +101,7 @@ Pour plus d’informations sur l’utilisation de `COleDispatchDriver`, consulte
 
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch
 
-Appelez la fonction membre `AttachDispatch` pour attacher un pointeur `IDispatch` vers l’objet `COleDispatchDriver` . Pour plus d’informations, consultez [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Appelez la fonction membre `AttachDispatch` pour attacher un pointeur `IDispatch` vers l’objet `COleDispatchDriver` . Pour plus d'informations, consultez [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ```
 void AttachDispatch(
@@ -162,7 +152,7 @@ Le formulaire `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelea
 
 Le formulaire `COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) copie existante `COleDispatchDriver` de l’objet et incrémente le décompte de références.
 
-Le formulaire `COleDispatchDriver`() crée un `COleDispatchDriver` de l’objet, mais ne se connecte pas le `IDispatch` interface. Avant d’utiliser `COleDispatchDriver`() sans arguments, vous devez vous connecter un `IDispatch` à l’aide soit [COleDispatchDriver::CreateDispatch](#createdispatch) ou [COleDispatchDriver::AttachDispatch](#attachdispatch). Pour plus d’informations, consultez [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Le formulaire `COleDispatchDriver`() crée un `COleDispatchDriver` de l’objet, mais ne se connecte pas le `IDispatch` interface. Avant d’utiliser `COleDispatchDriver`() sans arguments, vous devez vous connecter un `IDispatch` à l’aide soit [COleDispatchDriver::CreateDispatch](#createdispatch) ou [COleDispatchDriver::AttachDispatch](#attachdispatch). Pour plus d'informations, consultez [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="example"></a>Exemple
 
@@ -170,7 +160,7 @@ Le formulaire `COleDispatchDriver`() crée un `COleDispatchDriver` de l’objet,
 
 ##  <a name="createdispatch"></a>  COleDispatchDriver::CreateDispatch
 
-Crée un [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) objet d’interface et l’attache à la `COleDispatchDriver` objet.
+Crée un objet d’interface [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) et l’attache à l’objet `COleDispatchDriver` .
 
 ```
 BOOL CreateDispatch(
@@ -240,7 +230,7 @@ void GetProperty(
 Identifie la propriété à récupérer.
 
 *vtProp*<br/>
-Spécifie la propriété à récupérer. Pour connaître les valeurs possibles, consultez la section Notes pour [COleDispatchDriver::InvokeHelper](#invokehelper).
+Spécifie la propriété à récupérer. Pour connaître les valeurs possibles, consultez la section Notes de [COleDispatchDriver::InvokeHelper](#invokehelper).
 
 *pvProp*<br/>
 Adresse de la variable qui recevra la valeur de propriété. Il doit correspondre au type spécifié par *vtProp*.
@@ -304,7 +294,7 @@ Les valeurs possibles pour le *vtRet* argument proviennent de l’énumération 
 |VT_VARIANT|**TYPE VARIANT**|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Le *pbParamInfo* argument est une liste séparée par des espaces de **VTS_** constantes. Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste des paramètres de la fonction. Les valeurs possibles sont répertoriées avec la [EVENT_CUSTOM](event-maps.md#event_custom) macro.
+Le *pbParamInfo* argument est une liste séparée par des espaces de **VTS_** constantes. Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste des paramètres de la fonction. Les valeurs possibles sont répertoriées avec la macro [EVENT_CUSTOM](event-maps.md#event_custom) .
 
 Cette fonction convertit les paramètres VARIANTARG valeurs, puis appelle la [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) (méthode). Si l’appel à `Invoke` échoue, cette fonction lève une exception. Si le SCODE (code d’état) retourné par `IDispatch::Invoke` est DISP_E_EXCEPTION, cette fonction lève un [COleException](../../mfc/reference/coleexception-class.md) ; sinon, elle lève une [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
@@ -407,7 +397,7 @@ void AFX_CDECL SetProperty(
 Identifie la propriété à définir.
 
 *vtProp*<br/>
-Spécifie le type de la propriété à définir. Pour connaître les valeurs possibles, consultez la section Notes pour [COleDispatchDriver::InvokeHelper](#invokehelper).
+Spécifie le type de la propriété à définir. Pour connaître les valeurs possibles, consultez la section Notes de [COleDispatchDriver::InvokeHelper](#invokehelper).
 
 *...*<br/>
 Un seul paramètre de type spécifié par *vtProp*.

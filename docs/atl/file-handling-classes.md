@@ -1,25 +1,16 @@
 ---
-title: Classes (ATL) de gestion de fichiers | Microsoft Docs
-ms.custom: ''
+title: Classes (ATL) de gestion de fichiers
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - file classes [C++]
 ms.assetid: 94355eb1-daa3-4825-b183-7392b3899561
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 886c300cb25b9370dee7c9ad23e8b5ff31214522
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b5f17a93fdfa885e717314ca5e62a8cfa8db293
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763946"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614212"
 ---
 # <a name="file-handling-classes"></a>Classes de gestion de fichiers
 
