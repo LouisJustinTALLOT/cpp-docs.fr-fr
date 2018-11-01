@@ -1,30 +1,20 @@
 ---
-title: Fonctions d’image Bitmap tramée et grise | Microsoft Docs
-ms.custom: ''
+title: fonctions d'image bitmap tramée et grise
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
 - AFXWIN/AfxDrawDitheredBitmap
 - AFXWIN/AfxGetDitheredBitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01bd722dad7e09e52990d46d1c7666cdb939118c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064121"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490894"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>fonctions d'image bitmap tramée et grise
 
