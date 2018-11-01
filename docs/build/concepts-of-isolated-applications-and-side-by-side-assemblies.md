@@ -1,44 +1,34 @@
 ---
-title: Concepts d’Applications isolées et assemblys côte à côte | Microsoft Docs
-ms.custom: ''
+title: Concepts d'applications isolées et d'assemblys côte à côte
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27ecefc5e448a1040e7eff3e45b94b0a31fbfc87
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6453e68b07013bc5f5799b7252ad9a88e73250f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532936"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Concepts d'applications isolées et d'assemblys côte à côte
 
-Une application est considérée comme un [application isolée](/windows/desktop/SbsCs/isolated-applications) si tous ses composants sont [les assemblys côte à côte](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Un assembly côte à côte est une collection de ressources (un groupe de DLL, de classes de fenêtres, de serveurs COM, de bibliothèques de types ou d'interfaces) déployées ensemble et qu'une application peut utiliser au moment de l'exécution. En général, un assembly côte à côte est composé d'une ou de plusieurs DLL.
+Une application est considérée comme une [application isolée](/windows/desktop/SbsCs/isolated-applications) si tous ses composants sont des [assemblys côte à côte](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Un assembly côte à côte est une collection de ressources (un groupe de DLL, de classes de fenêtres, de serveurs COM, de bibliothèques de types ou d'interfaces) déployées ensemble et qu'une application peut utiliser au moment de l'exécution. En général, un assembly côte à côte est composé d'une ou de plusieurs DLL.
 
 ## <a name="shared-or-private"></a>Partagé ou privé
 
-Un assembly côte à côte peut ou être partagé ou privé. [Les assemblys côte à côte partagés](https://msdn.microsoft.com/library/aa375996.aspx) peuvent être utilisés par plusieurs applications qui spécifient, dans leur manifeste, une dépendance sur l’assembly. Plusieurs versions d'un assembly côte à côte peuvent être partagées par différentes applications qui s'exécutent en même temps. Un [assembly privé](/windows/desktop/SbsCs/about-private-assemblies-) est un assembly qui est déployé avec une application à l’usage exclusif de cette application. Les assemblys privés sont installés dans le dossier qui contient le fichier exécutable de l'application ou l'un de ses sous-dossiers.
+Un assembly côte à côte peut ou être partagé ou privé. Les[assemblys côte à côte partagés](https://msdn.microsoft.com/library/aa375996.aspx) peuvent être utilisés par plusieurs applications qui spécifient, dans leur manifeste, une dépendance vis-à-vis de ces derniers. Plusieurs versions d'un assembly côte à côte peuvent être partagées par différentes applications qui s'exécutent en même temps. Un [assembly privé](/windows/desktop/SbsCs/about-private-assemblies-) est un assembly déployé avec une application et réservé à l'usage exclusif de cette dernière. Les assemblys privés sont installés dans le dossier qui contient le fichier exécutable de l'application ou l'un de ses sous-dossiers.
 
 ## <a name="manifests-and-search-order"></a>Manifestes et ordre de recherche
 
-Applications isolées et assemblys côte à côte sont décrits par [manifestes](https://msdn.microsoft.com/library/aa375365). Un manifeste est un document XML qui peut être un fichier externe ou qui peut être incorporé dans une application ou un assembly en tant que ressource. Le fichier manifeste d'une application isolée sert à gérer les noms et les versions des assemblys partagés côte à côte auxquels l'application doit se lier au moment de l'exécution. Le manifeste d'un assembly côte à côte spécifie les noms, les versions, les ressources et les assemblys dépendants d'assemblys côte à côte. Dans le cas d'un assembly partagé côte à côte, le manifeste est installé dans le dossier %WINDIR%\WinSxS\Manifests\. Dans le cas d'un assembly privé, il est recommandé d'inclure le manifeste dans la DLL en tant que ressource dont l'ID est égal à 1. Vous pouvez également donner à l'assembly privé le même nom que celui de la DLL. Pour plus d’informations, consultez [sur les assemblys privés](/windows/desktop/SbsCs/about-private-assemblies-).
+Les applications isolées et les assemblys côte à côte sont décrits par des [manifestes](https://msdn.microsoft.com/library/aa375365). Un manifeste est un document XML qui peut être un fichier externe ou qui peut être incorporé dans une application ou un assembly en tant que ressource. Le fichier manifeste d'une application isolée sert à gérer les noms et les versions des assemblys partagés côte à côte auxquels l'application doit se lier au moment de l'exécution. Le manifeste d'un assembly côte à côte spécifie les noms, les versions, les ressources et les assemblys dépendants d'assemblys côte à côte. Dans le cas d'un assembly partagé côte à côte, le manifeste est installé dans le dossier %WINDIR%\WinSxS\Manifests\. Dans le cas d'un assembly privé, il est recommandé d'inclure le manifeste dans la DLL en tant que ressource dont l'ID est égal à 1. Vous pouvez également donner à l'assembly privé le même nom que celui de la DLL. Pour plus d’informations, consultez [sur les assemblys privés](/windows/desktop/SbsCs/about-private-assemblies-).
 
-Au moment de l'exécution, Windows utilise les informations d'assembly provenant du manifeste de l'application pour rechercher et charger l'assembly côte à côte correspondant. Si une application isolée spécifie une dépendance d'assembly, le système d'exploitation recherche d'abord l'assembly parmi les assemblys partagés contenus dans le cache d'assembly natif au sein du dossier %WINDIR%\WinSxS\. Si l'assembly requis n'y figure pas, le système d'exploitation recherche un assembly privé dans un dossier de la structure de répertoire de l'application. Pour plus d’informations, consultez [séquence de recherche d’Assembly](/windows/desktop/SbsCs/assembly-searching-sequence).
+Au moment de l'exécution, Windows utilise les informations d'assembly provenant du manifeste de l'application pour rechercher et charger l'assembly côte à côte correspondant. Si une application isolée spécifie une dépendance d'assembly, le système d'exploitation recherche d'abord l'assembly parmi les assemblys partagés contenus dans le cache d'assembly natif au sein du dossier %WINDIR%\WinSxS\. Si l'assembly requis n'y figure pas, le système d'exploitation recherche un assembly privé dans un dossier de la structure de répertoire de l'application. Pour plus d’informations, consultez [Séquence de recherche d’assemblys](/windows/desktop/SbsCs/assembly-searching-sequence).
 
 ## <a name="changing-dependencies"></a>Modification des dépendances
 
-Vous pouvez modifier les dépendances d’assembly de côte à côte après le déploiement d’une application en modifiant le [les fichiers de Configuration de serveur de publication](/windows/desktop/SbsCs/publisher-configuration-files) et [fichiers de Configuration d’Application](/windows/desktop/SbsCs/application-configuration-files). Un fichier de configuration d'éditeur, également appelé fichier de stratégie d'éditeur, est un fichier XML qui redirige globalement des applications et des assemblys, les empêchant d'utiliser une version d'un assembly côte à côte pour les contraindre à utiliser une autre version du même assembly. Par exemple, vous pouvez modifier une dépendance lorsqu'une résolution de bogue ou un correctif de sécurité est déployé pour un assembly côte à côte et que vous souhaitez rediriger toutes les applications de manière à utiliser la version corrigée. Un fichier de configuration de l'application est un fichier XML qui redirige une application spécifique de façon à ce qu'elle utilise, plutôt qu'une version d'un assembly côte à côte, une autre version du même assembly. Vous pouvez utiliser un fichier de configuration de l'application pour rediriger une application spécifique afin qu'elle utilise une autre version d'un assembly côte à côte que celle définie dans le fichier de configuration d'éditeur. Pour plus d’informations, consultez [Configuration](/windows/desktop/SbsCs/configuration).
+Vous pouvez modifier des dépendances d’assemblys côte à côte après qu’une application a été déployée en modifiant les [fichiers de configuration d’éditeur](/windows/desktop/SbsCs/publisher-configuration-files) et les [fichiers de configuration de l’application](/windows/desktop/SbsCs/application-configuration-files). Un fichier de configuration d'éditeur, également appelé fichier de stratégie d'éditeur, est un fichier XML qui redirige globalement des applications et des assemblys, les empêchant d'utiliser une version d'un assembly côte à côte pour les contraindre à utiliser une autre version du même assembly. Par exemple, vous pouvez modifier une dépendance lorsqu'une résolution de bogue ou un correctif de sécurité est déployé pour un assembly côte à côte et que vous souhaitez rediriger toutes les applications de manière à utiliser la version corrigée. Un fichier de configuration de l'application est un fichier XML qui redirige une application spécifique de façon à ce qu'elle utilise, plutôt qu'une version d'un assembly côte à côte, une autre version du même assembly. Vous pouvez utiliser un fichier de configuration de l'application pour rediriger une application spécifique afin qu'elle utilise une autre version d'un assembly côte à côte que celle définie dans le fichier de configuration d'éditeur. Pour plus d’informations, consultez [Configuration](/windows/desktop/SbsCs/configuration).
 
 ## <a name="visual-c-libraries"></a>Bibliothèques Visual C++
 
