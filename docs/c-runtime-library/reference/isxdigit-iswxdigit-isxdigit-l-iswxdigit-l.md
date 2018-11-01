@@ -1,10 +1,6 @@
 ---
-title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l | Microsoft Docs
-ms.custom: ''
+title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswxdigit_l
 - iswxdigit
@@ -27,8 +23,6 @@ f1_keywords:
 - iswxdigit
 - isxdigit
 - _istxdigit
-dev_langs:
-- C++
 helpviewer_keywords:
 - isxdigit function
 - istxdigit function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92908e6d4c39f990da6fba5008c7ffe8af40ccc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7f70fedb19cca746ffb1e276c69b5fc98388b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659704"
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
@@ -84,13 +74,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation spécifique d’un chiffre hexadécimal. **isxdigit** retourne une valeur différente de zéro si *c* est un chiffre hexadécimal (A - F, a - f, ou 0 - 9). **iswxdigit** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à un chiffre hexadécimal. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un chiffre hexadécimal. **isxdigit** retourne une valeur différente de zéro si *c* est un chiffre hexadécimal (A - F, a - f ou 0 - 9). **iswxdigit** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à un caractère numérique hexadécimal. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Pour les paramètres régionaux « C », le **iswxdigit** (fonction) ne prend pas en charge les caractères hexadécimaux de Unicode en pleine largeur.
+Pour les paramètres régionaux « C », le **iswxdigit** fonction ne prend pas en charge les caractères hexadécimaux à pleine chasse Unicode.
 
-Les versions de ces fonctions qui ont le **_l** suffixe utilisent les paramètres régionaux qui sont passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le **_l** suffixe utiliser les paramètres régionaux qui sont passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **isxdigit** et **_isxdigit_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Lorsqu’une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, le fonctions de déclencher une assertion.
+Le comportement de **isxdigit** et **_isxdigit_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -98,7 +88,7 @@ Le comportement de **isxdigit** et **_isxdigit_l** n’est pas défini si *c* n�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istxdigit**|**isxdigit**|**isxdigit**|**iswxdigit**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

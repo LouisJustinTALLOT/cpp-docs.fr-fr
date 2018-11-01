@@ -1,30 +1,20 @@
 ---
-title: faire-while, instruction (C++) | Microsoft Docs
-ms.custom: ''
+title: do-while, instruction (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - do_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - do keyword [C++], do-while
 - do-while keyword [C++]
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 37155be11caaee9c609a0e11ddbfeb5d62856903
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 014012166f3a659d71b2e3212d63a523f2b87b8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071196"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656129"
 ---
 # <a name="do-while-statement-c"></a>do-while, instruction (C++)
 
@@ -34,19 +24,19 @@ Exécute un *instruction* à plusieurs reprises jusqu'à ce que la condition d�
 
 ```
 do
-   statement
+   statement
 while ( expression ) ;
 ```
 
 ## <a name="remarks"></a>Notes
 
-Le test de la condition d’arrêt est effectué après chaque exécution de la boucle ; Par conséquent, un **faire-tandis que** boucle exécute une ou plusieurs fois, selon la valeur de l’expression d’arrêt. Le **faire-tandis que** instruction peut également se terminer lorsqu’une [saut](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retourner](../cpp/return-statement-cpp.md) instruction est exécutée dans le corps d’instruction.
+Le test de la condition d’arrêt est effectué après chaque exécution de la boucle ; Par conséquent, un **faire-tandis que** boucle exécute une ou plusieurs fois, selon la valeur de l’expression d’arrêt. L'instruction **do-while** peut également se terminer lorsqu'une instruction [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) ou [return](../cpp/return-statement-cpp.md) est exécutée dans le corps de l'instruction.
 
 L'élément *expression* doit être de type arithmétique ou pointeur. L'exécution se déroule comme suit :
 
 1. Le corps de l'instruction est exécuté.
 
-1. Ensuite, l'élément *expression* est évalué. Si *expression* a la valeur false, le **faire-tandis que** instruction se termine et le contrôle passe à l’instruction suivante dans le programme. Si l'élément *expression* est true (différent de zéro), le processus se répète, en commençant à l'étape 1.
+1. Ensuite, l'élément *expression* est évalué. Si l'élément *expression* est false, l'instruction **do-while** se termine et le contrôle passe à l'instruction suivante du programme. Si l'élément *expression* est true (différent de zéro), le processus se répète, en commençant à l'étape 1.
 
 ## <a name="example"></a>Exemple
 

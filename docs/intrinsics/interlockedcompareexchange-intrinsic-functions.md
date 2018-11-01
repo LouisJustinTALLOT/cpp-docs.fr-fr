@@ -1,10 +1,6 @@
 ---
-title: Fonctions intrinsèques _interlockedcompareexchangepointer | Microsoft Docs
-ms.custom: ''
+title: Fonctions intrinsèques _InterlockedCompareExchangePointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
 - _InterlockedCompareExchange8_nf
@@ -36,8 +32,6 @@ f1_keywords:
 - _InterlockedCompareExchange64
 - _InterlockedCompareExchange16
 - _InterlockedCompareExchange
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedCompareExchange16 intrinsic
 - _InterlockedCompareExchange_acq intrinsic
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c7a62ba6e87348e78efe7def75b89fbc19e9320
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2a583c953c98df49b45eecd2040905b253567cfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418695"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577231"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Fonctions intrinsèques _InterlockedCompareExchangePointer
 
@@ -216,7 +206,7 @@ La valeur de retour est la valeur initiale du pointeur `Destination`.
 
 `_InterlockedCompareExchange` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange) (fonction).
 
-Il existe plusieurs variantes de `_InterlockedCompareExchange` qui varient selon les types de données qu'elles impliquent et l'utilisation d'une sémantique acquire ou release spécifique au processeur.
+Il existe plusieurs variantes de `_InterlockedCompareExchange` qui varient selon les types de données qu’elles impliquent et l’utilisation d’une sémantique acquire ou release spécifique au processeur.
 
 La fonction `_InterlockedCompareExchange` opère sur les valeurs entières longues, `_InterlockedCompareExchange8` sur les valeurs entières de 8 bits, `_InterlockedCompareExchange16` sur les valeurs entières courtes et `_InterlockedCompareExchange64` sur les valeurs entières de 64 bits.
 
@@ -230,7 +220,7 @@ Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
 ## <a name="example"></a>Exemple
 
-Dans l'exemple suivant, `_InterlockedCompareExchange` est utilisé pour la synchronisation simple des threads de bas niveau. L'approche a ses limites comme base pour la programmation multithread ; elle est présentée pour illustrer l'utilisation standard des intrinsèques verrouillées. Pour obtenir de meilleurs résultats, utilisez l'API Windows. Pour plus d’informations sur la programmation multithread, consultez [écrire un programme Win32 multithread](../parallel/writing-a-multithreaded-win32-program.md).
+Dans l’exemple suivant, `_InterlockedCompareExchange` est utilisé pour la synchronisation simple des threads de bas niveau. L'approche a ses limites comme base pour la programmation multithread ; elle est présentée pour illustrer l'utilisation standard des intrinsèques verrouillées. Pour obtenir de meilleurs résultats, utilisez l'API Windows. Pour plus d’informations sur la programmation multithread, consultez [écrire un programme Win32 multithread](../parallel/writing-a-multithreaded-win32-program.md).
 
 ```
 // intrinExample.cpp

@@ -1,11 +1,6 @@
 ---
-title: cacosh, cacoshf, cacoshl | Microsoft Docs
-ms.custom: ''
+title: cacosh, cacoshf, cacoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacosh
 - cacoshf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cacosh
 - complex/cacoshf
 - complex/cacoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacosh function
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c61130dbfcc0363ef020216389299634cfcd002f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668193"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
@@ -79,13 +68,13 @@ Nombre complexe qui représente un angle, en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le cosinus hyperbolique inverse de *z*, en radians. Le résultat est non liée et non négatif sur l’axe réel, ainsi que dans l’intervalle [-iπ, + iπ] sur l’axe imaginaire.
+Cosinus hyperbolique inverse de *z*, en radians. Le résultat est illimitée et non négatif sur l’axe des réels et dans l’intervalle [-iπ, + iπ] sur l’axe des imaginaires.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cacosh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **cacosh** accepte et retourne toujours un **_Dcomplex** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **cacosh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **cacosh** accepte et retourne toujours un **_Dcomplex** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

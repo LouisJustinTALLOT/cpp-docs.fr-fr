@@ -1,35 +1,25 @@
 ---
-title: Assistant Page de propriétés ATL | Microsoft Docs
-ms.custom: ''
+title: Assistant Page de propriétés ATL
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 206fe83407421a7aabfd920214590a86e4727714
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 9b698616dbde06452e9ab08f37c646a2cedbc37c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572768"
 ---
 # <a name="atl-property-page-wizard"></a>Assistant Page de propriétés ATL
 
 Cet Assistant [ajoute une page de propriétés dans un projet ATL](../../atl/reference/adding-an-atl-property-page.md) ou à un projet MFC avec prise en charge ATL. Une page de propriétés ATL fournit une interface utilisateur pour définir les propriétés (ou en appelant les méthodes) d’un ou plusieurs objets COM.
 
 > [!WARNING]
-> Dans Visual Studio 2017 version 15.9 cet Assistant code est déconseillé et sera supprimé dans une future version de Visual Studio. Cet Assistant est rarement utilisé. Prise en charge générale pour ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette utilisation déconseillée, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires est important pour nous.
+> Dans Visual Studio 2017 version 15.9, cet Assistant Code est déprécié et sera supprimé dans une version ultérieure de Visual Studio. Cet Assistant est rarement utilisé. La prise en charge générale d’ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette dépréciation, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires sont précieux pour nous.
 
 ## <a name="remarks"></a>Notes
 

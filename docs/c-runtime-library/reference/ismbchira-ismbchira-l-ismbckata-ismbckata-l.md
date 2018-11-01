@@ -1,10 +1,6 @@
 ---
-title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l | Microsoft Docs
-ms.custom: ''
+title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbckata
 - _ismbchira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbchira_l
 - _ismbchira_l
 - _ismbchira
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbckata function
 - _ismbchira function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fe2b9c824fcc45eb2d0fda82cd350d3a9435b94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403727"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506585"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,24 +83,24 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c* < = 255 et qu’il existe un correspondant **_ismbb** routine (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), résultat est la valeur de retour correspondantes **_ismbb** routine.
+Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c* < = 255 et qu’il existe un correspondant **_ismbb** routine (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le Il en résulte la valeur de retour correspondantes **_ismbb** routine.
 
 ## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions teste un caractère multioctet fourni pour un état donné.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condition de test (page de codes 932 uniquement)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Double-byte Hiragana : 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Double-byte Hiragana : 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Deux octets katakana : 0x8340 < =*c*< = 0x8396.|
-|**_ismbckata_l**|Deux octets katakana : 0x8340 < =*c*< = 0x8396.|
+|**_ismbchira**|Hiragana de deux octets : 0x829F < =*c*< = 0x82F1.|
+|**_ismbchira_l**|Hiragana de deux octets : 0x829F < =*c*< = 0x82F1.|
+|**_ismbckata**|Deux octets : 0 x 8340 < =*c*< = 0 x 8396.|
+|**_ismbckata_l**|Deux octets : 0 x 8340 < =*c*< = 0 x 8396.|
 
 **Fin des fonctions spécifiques à la page de codes 932**
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

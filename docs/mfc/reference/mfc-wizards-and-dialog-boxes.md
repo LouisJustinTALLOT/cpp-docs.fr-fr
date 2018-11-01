@@ -1,23 +1,13 @@
 ---
-title: MFC, Assistants et boîtes de dialogue | Microsoft Docs
-ms.custom: ''
+title: MFC, assistants et boîtes de dialogue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a33809add82ec01779fae9e8cd825922443aa61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9574b270fdbffc0026d49452adf092fdf87d7cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404928"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493897"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC, assistants et boîtes de dialogue
 

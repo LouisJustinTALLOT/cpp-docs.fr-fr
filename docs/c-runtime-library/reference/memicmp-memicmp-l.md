@@ -1,10 +1,6 @@
 ---
-title: _memicmp, _memicmp_l | Microsoft Docs
-ms.custom: ''
+title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,24 +21,18 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403051"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636811"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 
@@ -84,20 +74,20 @@ La valeur de retour indique la relation entre les mémoires tampons.
 
 |Valeur de retour|Relation des count premiers octets de buf1 et buf2|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* moins *buffer2*.|
+|< 0|*buffer1* inférieure à *buffer2*.|
 |0|*buffer1* identique à *buffer2*.|
 |> 0|*buffer1* supérieur *buffer2*.|
 |**_NLSCMPERROR**|Une erreur s'est produite.|
 
 ## <a name="remarks"></a>Notes
 
-Le **_memicmp** fonction compare la première *nombre* caractères des deux tampons *buffer1* et *buffer2* octet par octet. La comparaison ne respecte pas la casse.
+Le **_memicmp** fonction compare la première *nombre* caractères des deux mémoires tampons *buffer1* et *buffer2* octet par octet. La comparaison ne respecte pas la casse.
 
-Si le paramètre *buffer1* ou *buffer2* est un pointeur null, cette fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **_NLSCMPERROR** et définit **errno** à **EINVAL**.
+Si *buffer1* ou *buffer2* est un pointeur null, cette fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **_NLSCMPERROR** et définit **errno** à **EINVAL**.
 
-**_memicmp** utilise les paramètres régionaux actuels pour un comportement dépendant des paramètres régionaux ; **_memicmp_l** est identique, sauf qu’elle utilise les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_memicmp** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux ; **_memicmp_l** est identique, sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

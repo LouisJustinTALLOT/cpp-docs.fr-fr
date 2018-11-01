@@ -1,23 +1,13 @@
 ---
-title: Graphiques (C++ AMP) | Microsoft Docs
-ms.custom: ''
+title: Graphiques (C++ AMP)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97c673e564a91447854dc02a18ced0b4f0061a9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570311"
 ---
 # <a name="graphics-c-amp"></a>Graphiques (C++ AMP)
 
@@ -67,7 +57,7 @@ L'opération est portée entre chaque composant du vecteur court et la variable 
 
 ### <a name="swizzling-expressions"></a>Expressions de swizzling
 
-La bibliothèque de vecteurs courts prend en charge la construction de l'accesseur `vector_type.identifier` pour accéder aux composants d'un vecteur court. Le `identifier`, qui est appelé un *expression de swizzling*, spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Les caractères individuels dans l’identificateur peuvent être : x, y, z et w ; ou r, g, b et un. « x » et « r » désigne le composant zéro, « y » et « g » désigne le premier composant et ainsi de suite. (Notez que « x » et « r » ne peuvent être utilisés dans le même identificateur.) Par conséquent, « rgba » et « xyzw » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.
+La bibliothèque de vecteurs courts prend en charge la construction de l’accesseur `vector_type.identifier` pour accéder aux composants d’un vecteur court. Le `identifier`, qui est appelé un *expression de swizzling*, spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Les caractères individuels dans l’identificateur peuvent être : x, y, z et w ; ou r, g, b et un. « x » et « r » désigne le composant zéro, « y » et « g » désigne le premier composant et ainsi de suite. (Notez que « x » et « r » ne peuvent être utilisés dans le même identificateur.) Par conséquent, « rgba » et « xyzw » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.
 
 ## <a name="texture-classes"></a>Classes de texture
 

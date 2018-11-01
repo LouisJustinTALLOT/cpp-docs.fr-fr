@@ -1,28 +1,18 @@
 ---
-title: __nop | Microsoft Docs
-ms.custom: ''
+title: __nop
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __nop
-dev_langs:
-- C++
 helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bc5dab4ba2c23f60eb4407548cea5c15106c1401
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 25ba27485990ceaae77e1827f0c74680914e2f40
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820501"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651722"
 ---
 # <a name="nop"></a>__nop
 
@@ -48,7 +38,7 @@ void __nop();
 
 ## <a name="remarks"></a>Notes
 
-Le `__nop` fonction est équivalente à la `NOP` instruction machine. Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : référence de jeu d’instructions, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La fonction `__nop` est équivalente à l’instruction machine `NOP` . Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : référence de jeu d’instructions, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 ## <a name="see-also"></a>Voir aussi
 

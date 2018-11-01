@@ -1,27 +1,17 @@
 ---
-title: LNK1169 d’erreur des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK1169
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1169
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1169
 ms.assetid: e079d518-f184-48cd-8b38-969bf137af54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d30171eedd43695b26be24f6c7e2c9751ae8fcdb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f167c82c28834d1de82578735e5557d0e9d6b5f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036044"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500319"
 ---
 # <a name="linker-tools-error-lnk1169"></a>Erreur des outils Éditeur de liens LNK1169
 

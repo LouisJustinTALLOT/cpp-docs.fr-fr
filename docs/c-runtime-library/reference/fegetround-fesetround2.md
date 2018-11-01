@@ -1,11 +1,6 @@
 ---
-title: fegetround, fesetround | Documents Microsoft
-ms.custom: ''
+title: fegetround, fesetround
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fegetround
 - fesetround
@@ -27,22 +22,16 @@ f1_keywords:
 - fesetround
 - fenv/fegetround
 - fenv/fesetround
-dev_langs:
-- C++
 helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 137d886d557cbb1fee7db1dd60405b9557bf6bf2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398082"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666802"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -65,7 +54,7 @@ Mode d’arrondi à définir, comme l’une des macros d’arrondi à virgule fl
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **fegetround** retourne le mode d’arrondi comme l’une des valeurs des macros d’arrondi à virgule flottante. Une valeur négative est retournée s’il est impossible de déterminer le mode d’arrondi actuel.
+En cas de réussite, **fegetround** retourne le mode d’arrondi comme l’une des valeurs de macros d’arrondi à virgule flottante. Une valeur négative est retournée s’il est impossible de déterminer le mode d’arrondi actuel.
 
 En cas de réussite, **fesetround** retourne 0. Sinon, une valeur non nulle est retournée.
 
@@ -88,13 +77,13 @@ Le mode d’arrondi actuel affecte ces opérations :
 
 - Résultats des opérateurs arithmétiques à virgule flottante en dehors des expressions constantes.
 
-- La bibliothèque de fonctions, d’arrondi comme **imprimer** et **nearbyint**.
+- La bibliothèque de fonctions, d’arrondi comme **Imp** et **nearbyint**.
 
 - Valeurs de retour des fonctions mathématiques de bibliothèque standard.
 
 Le mode d’arrondi actuel n’affecte pas ces opérations :
 
-- Le **trunc**, **ceil**, **floor**, et **lround** fonctions de la bibliothèque.
+- Le **trunc**, **ceil**, **floor**, et **lround** fonctions de bibliothèque.
 
 - Casts et conversions implicites entre des valeurs à virgule flottante et entières, toujours arrondies à zéro.
 
@@ -102,7 +91,7 @@ Le mode d’arrondi actuel n’affecte pas ces opérations :
 
 Pour utiliser ces fonctions, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d’informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

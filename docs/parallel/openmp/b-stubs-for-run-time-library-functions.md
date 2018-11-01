@@ -1,23 +1,13 @@
 ---
-title: B. Stubs pour les fonctions de bibliothèque du Run-time | Microsoft Docs
-ms.custom: ''
+title: B. Stubs pour les fonctions de bibliothèque du Run-time
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e6963d818ae721c4058ee2ad4dd0b8da86c2fd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b2d48155a3baf4d317d3114bb5ae5a8ed306bef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390551"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551448"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs pour les fonctions de bibliothèque du Run-time
 

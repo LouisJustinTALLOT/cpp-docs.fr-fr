@@ -1,27 +1,17 @@
 ---
-title: '&lt;deque&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;deque&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <deque>
-dev_langs:
-- C++
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a0f8ce0e6078f77dc62953ed84ec42d0be26b99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 006b4f3a82fd750d99fde9db7e98445c2f2bb088
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513007"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
@@ -38,7 +28,7 @@ Définit la classe de modèle de conteneur deque et plusieurs modèles de prise 
 
 |Opérateur|Description|
 |-|-|
-|[operator!=](../standard-library/deque-operators.md#op_neq)|Teste si l'objet deque situé à gauche de l'opérateur n'est pas égal à l'objet deque situé à droite.|
+|[!=, opérateur](../standard-library/deque-operators.md#op_neq)|Teste si l'objet deque situé à gauche de l'opérateur n'est pas égal à l'objet deque situé à droite.|
 |[operator<](../standard-library/deque-operators.md#op_lt)|Teste si l'objet deque situé à gauche de l'opérateur est inférieur à l'objet deque situé à droite.|
 |[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Teste si l'objet deque situé à gauche de l'opérateur est inférieur ou égal à l'objet deque situé à droite.|
 |[operator==](../standard-library/deque-operators.md#op_eq_eq)|Teste si l'objet deque situé à gauche de l'opérateur est égal à l'objet deque situé à droite.|

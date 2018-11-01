@@ -1,10 +1,6 @@
 ---
-title: _ASSERT, _ASSERTE, _ASSERT_EXPR, macros | Microsoft Docs
-ms.custom: ''
+title: _ASSERT, _ASSERTE, _ASSERT_EXPR (macros)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,8 +18,6 @@ f1_keywords:
 - ASSERTE
 - _ASSERT
 - _ASSERT_EXPR
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _ASSERTE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d2d83c3afa8e22c1f75480fe2afefa8bf68be858
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107586"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598456"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT, _ASSERTE, _ASSERT_EXPR (macros)
 
@@ -74,7 +64,7 @@ Le **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** macros fournissent une applicat
 
 Étant donné que le **_ASSERTE** macro Spécifie l’expression qui a échoué, et **_ASSERT_EXPR** vous permet de spécifier d’un message dans le rapport généré, elles permettent aux utilisateurs d’identifier le problème sans faire référence à la code source de l’application. Toutefois, l’inconvénient que chaque *message* imprimées par **_ASSERT_EXPR** et chaque expression évaluée par **_ASSERTE** est inclus dans la sortie (version débogage) fichier de votre application en tant que constante de chaîne. Par conséquent, si un grand nombre d’appels sont effectués à **_ASSERT_EXPR** ou **_ASSERTE**, ces expressions peuvent augmenter considérablement la taille de votre fichier de sortie.
 
-Sauf indication contraire avec les fonctions [_CrtSetReportMode](crtsetreportmode.md) et [_CrtSetReportFile](crtsetreportfile.md) , les messages s’affichent dans une boîte de dialogue contextuelle, ce qui équivaut à définir :
+Sauf indication contraire avec les fonctions [_CrtSetReportMode](crtsetreportmode.md) et [_CrtSetReportFile](crtsetreportfile.md) , les messages s’affichent dans un boîte de dialogue contextuelle, ce qui équivaut à définir :
 
 ```C
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
@@ -84,7 +74,7 @@ _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 
 Lorsque la destination est une fenêtre de message de débogage et l’utilisateur clique sur le **de nouvelle tentative** bouton, **_CrtDbgReportW** retourne 1, à l’origine le **_ASSERT_EXPR**, **_ ASSERT** et **_ASSERTE** macros pour démarrer le débogueur si le débogage juste-à-temps (JIT) est activé.
 
-Pour plus d’informations sur le processus de création de rapports, consultez la fonction [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md). Pour plus d’informations sur la résolution des échecs d’assertion et l’utilisation de ces macros comme mécanisme de gestion des erreurs de débogage consultez [Utilisation de macros pour la vérification et la création de rapports](/visualstudio/debugger/macros-for-reporting).
+Pour plus d’informations sur le processus de création de rapports, consultez la fonction [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) . Pour plus d’informations sur la résolution des échecs d’assertion et l’utilisation de ces macros comme mécanisme de gestion des erreurs de débogage consultez [Utilisation de macros pour la vérification et la création de rapports](/visualstudio/debugger/macros-for-reporting).
 
 Outre le **_ASSERT** macros, le [assert](assert-macro-assert-wassert.md) macro peut être utilisée pour vérifier la logique de programme. Cette macro est disponible dans les versions Debug et Release des bibliothèques. Les macros de débogage [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) sont également disponibles pour générer un rapport de débogage, mais elles n’évaluent pas d’expression. Le **_RPT** macros génèrent un rapport simple. Le **_RPTF** macros incluent le nombre de lignes et les fichiers source où la macro de rapport a été appelée dans le rapport généré. Versions à caractères larges de ces macros sont disponibles (**_RPTW**, **_RPTFW**). Les versions à caractères larges sont identiques aux versions à caractères étroits, sauf que des chaînes de caractères sont utilisées pour tous les paramètres de chaînes et la sortie.
 

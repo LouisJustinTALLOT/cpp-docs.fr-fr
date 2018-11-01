@@ -1,31 +1,21 @@
 ---
-title: Fichiers de sortie binaires | Microsoft Docs
-ms.custom: ''
+title: Fichiers de sortie binaires
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], binary output files
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdb101620b1a61f3a29057ee408cf9e89d38f9e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842350"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615642"
 ---
 # <a name="binary-output-files"></a>Fichiers de sortie binaires
 
-Les flux ont été conçus à l’origine pour le texte, par conséquent, le mode de sortie par défaut est le mode texte. En mode texte, le caractère de saut de ligne (10 hexadécimal) se développe en un retour chariot (16 bits uniquement). L’extension peut entraîner des problèmes, comme le montre ce qui suit :
+Les flux ont été conçus à l’origine pour le texte, par conséquent, le mode de sortie par défaut est le mode texte. En mode texte, le caractère de saut de ligne (hexadécimal 10) se développe en un retour chariot (16 bits uniquement). L’extension peut entraîner des problèmes, comme le montre ce qui suit :
 
 ```cpp
 // binary_output_files.cpp

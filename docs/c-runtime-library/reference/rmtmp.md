@@ -1,10 +1,6 @@
 ---
-title: _rmtmp | Microsoft Docs
-ms.custom: ''
+title: _rmtmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _rmtmp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - rmtmp
 - _rmtmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - removing temporary files
 - _rmtmp function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 050f1c93fc38b9fdf722682c9688336098a3da45
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf4f2cff48e8660682fc8a00d10d9a1fe960a6a7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508886"
 ---
 # <a name="rmtmp"></a>_rmtmp
 
@@ -57,13 +47,13 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_rmtmp** renvoie le nombre de fichiers temporaires fermé et supprimé.
+**_rmtmp** retourne le nombre de fichiers temporaires fermés et supprimés.
 
 ## <a name="remarks"></a>Notes
 
-Le **_rmtmp** nettoie tous les fichiers temporaires dans le répertoire actif. La fonction supprime uniquement les fichiers créés par **tmpfile**; uniquement l’utiliser dans le même répertoire que celui dans lequel les fichiers temporaires ont été créés.
+Le **_rmtmp** fonction nettoie tous les fichiers temporaires dans le répertoire actif. La fonction supprime uniquement les fichiers créés par **tmpfile**; utilisez-la seulement dans le même répertoire que celui dans lequel les fichiers temporaires ont été créés.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
