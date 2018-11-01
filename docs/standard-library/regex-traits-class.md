@@ -1,10 +1,6 @@
 ---
-title: regex_traits, classe | Microsoft Docs
-ms.custom: ''
+title: Classe regex_traits
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - regex/std::regex_traits
 - regex/std::regex_traits::char_type
@@ -23,8 +19,6 @@ f1_keywords:
 - regex/std::regex_traits::value
 - regex/std::regex_traits::imbue
 - regex/std::regex_traits::getloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::regex_traits [C++]
 - std::regex_traits [C++], char_type
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff45758e0c458ea333595ced51476826651b593e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723890"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484056"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -107,7 +97,7 @@ Chaque objet `regex_traits` a un objet de type `regex_traits::locale` qui est ut
 |[transform_primary](#transform_primary)|Convertit en séquence ordonnée équivalente ne respectant pas la casse.|
 |[Traduire](#translate)|Convertit en un élément correspondant équivalent.|
 |[translate_nocase](#translate_nocase)|Convertit en un élément correspondant équivalent ne respectant pas la casse.|
-|[value](#value)|Convertit un élément en valeur numérique.|
+|[valeur](#value)|Convertit un élément en valeur numérique.|
 
 ## <a name="requirements"></a>Configuration requise
 

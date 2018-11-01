@@ -1,10 +1,6 @@
 ---
-title: _execlp, _wexeclp | Microsoft Docs
-ms.custom: ''
+title: _execlp, _wexeclp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexeclp
 - _execlp
@@ -25,24 +21,18 @@ f1_keywords:
 - _wexeclp
 - wexeclp
 - _execlp
-dev_langs:
-- C++
 helpviewer_keywords:
 - execlp function
 - _execlp function
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43105dc6dc12546dd8fbb99367ba430205a62a42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db13263ca4574d59821d5783b9ae83f278fef14d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506637"
 ---
 # <a name="execlp-wexeclp"></a>_execlp, _wexeclp
 
@@ -96,9 +86,9 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 Chacune de ces fonctions charge et exécute un nouveau processus, passant chaque argument de ligne de commande en tant que paramètre distinct et utilisant le **chemin d’accès** variable d’environnement pour rechercher le fichier à exécuter.
 
-Le **_execlp** fonctions valident leurs paramètres. Si *cmdname* ou *arg0* est un pointeur null ou une chaîne vide, ces fonctions appellent le Gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun nouveau processus n'est lancé.
+Le **_execlp** fonctions valident leurs paramètres. Si *cmdname* ou *arg0* est un pointeur null ou une chaîne vide, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun nouveau processus n'est lancé.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
