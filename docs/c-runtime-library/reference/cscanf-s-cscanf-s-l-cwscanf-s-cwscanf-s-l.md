@@ -1,10 +1,6 @@
 ---
-title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwscanf_s_l
 - _cwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tcscanf_s_l
 - tcscanf_s
 - tcscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - cscanf_s function
 - _cwscanf_s_l function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ca65c4746256611ed6958bc76d8779cd36ae1ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c464c7262a60bb7744a68c0144234e152edd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403272"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463698"
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
@@ -100,7 +90,7 @@ int _cwscanf_s_l(
 *format*<br/>
 Chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Paramètres facultatifs.
 
 *locale*<br/>
@@ -114,14 +104,14 @@ Ces fonctions valident leurs paramètres. Si *format* est un pointeur null, ces 
 
 ## <a name="remarks"></a>Notes
 
-Le **_cscanf_s** fonction lit les données directement à partir de la console dans les emplacements données par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable avec un type qui correspond à un spécificateur de type dans *format*. Les contrôles de format des champs de l’interprétation de l’entrée et a la même forme et fonction que la *format* paramètre pour le [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) (fonction). Alors que **_cscanf_s** normalement reproduit en écho le caractère d’entrée, il ne fera pas si le dernier appel a été **_ungetch**.
+Le **_cscanf_s** fonction lit les données directement à partir de la console dans les emplacements donnés par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable avec un type qui correspond à un spécificateur de type dans *format*. Le format contrôle l’interprétation de l’entrée champs et a la même forme et fonction que le *format* paramètre pour le [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) (fonction). Bien que **_cscanf_s** renvoie normalement le caractère d’entrée, il ne fera pas si le dernier appel était de **_ungetch**.
 
-Comme les autres versions sécurisées des fonctions dans le **scanf** famille, **_cscanf_s** et **_cswscanf_s** requièrent des arguments de taille pour les caractères du champ de type **c** , **C**, **s**, **S**, et **[**. Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
+Comme les autres versions sécurisées des fonctions dans le **scanf** famille, **_cscanf_s** et **_cswscanf_s** nécessitent des arguments de taille pour les caractères de champ de type **c** , **C**, **s**, **S**, et **[**. Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
 > Le paramètre de taille est de type **non signé**, et non **size_t**.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -130,7 +120,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_tcscanf_s**|**_cscanf_s**|**_cscanf_s**|**_cwscanf_s**|
 |**_tcscanf_s_l**|**_cscanf_s_l**|**_cscanf_s_l**|**_cwscanf_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

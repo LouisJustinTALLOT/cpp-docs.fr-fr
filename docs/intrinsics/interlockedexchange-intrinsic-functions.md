@@ -1,10 +1,6 @@
 ---
-title: _InterlockedExchange, fonctions intrinsèques | Microsoft Docs
-ms.custom: ''
+title: _InterlockedExchange, fonctions intrinsèques
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -30,8 +26,6 @@ f1_keywords:
 - _InterlockedExchange_HLERelease
 - _InterlockedExchange64_cpp
 - _InterlockedExchange8_rel
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedExchange8
 - _InterlockedExchange64 intrinsic
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f35e3a435025a9758d1ad713eadcef744333441d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 034e0bb0c8c3f60d0686a5f88ee4b19ed473d72d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382425"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450685"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange, fonctions intrinsèques
 
@@ -176,7 +166,7 @@ Retourne la valeur initiale pointée par `Target`.
 
 `_InterlockedExchange` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) (fonction).
 
-Il existe plusieurs variantes de `_InterlockedExchange` qui varient selon les types de données qu'elles impliquent et l'utilisation d'une sémantique acquire ou release spécifique au processeur.
+Il existe plusieurs variantes de `_InterlockedExchange` qui varient selon les types de données qu’elles impliquent et l’utilisation d’une sémantique acquire ou release spécifique au processeur.
 
 La fonction `_InterlockedExchange` opère sur les valeurs entières de 32 bits, `_InterlockedExchange8` sur les valeurs entières de 8 bits, `_InterlockedExchange16` sur les valeurs entières de 16 bits et `_InterlockedExchange64` sur les valeurs entières de 64 bits.
 

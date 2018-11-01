@@ -1,30 +1,20 @@
 ---
-title: Exemples d’alignement de Structure | Documents Microsoft
-ms.custom: ''
+title: Exemples d'alignement de structure
 ms.date: 03/26/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9c4e8cb27d02777e40af56217bd82dec6e647b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367740"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466242"
 ---
 # <a name="examples-of-structure-alignment"></a>Exemples d'alignement de structure
 
-Les quatre exemples ci-dessous chaque déclarent qu'une alignés structure ou union et les chiffres correspondants illustrent la mise en page de cette structure ou union dans la mémoire. Chaque colonne dans une illustration représente un octet de la mémoire et le nombre de la colonne indique le décalage de cet octet. Le nom de la deuxième ligne de chaque chiffre correspond au nom d’une variable dans la déclaration. Les colonnes grisées indiquent le remplissage requis pour obtenir l’alignement spécifié.
+Les quatre exemples ci-dessous chaque déclarent qu'une aligné structure ou union et les chiffres correspondantes illustrent la disposition de cette structure ou union en mémoire. Chaque colonne dans une illustration représente un octet de mémoire et le numéro dans la colonne indique le décalage de cet octet. Le nom de la deuxième ligne de chaque chiffre correspond au nom d’une variable dans la déclaration. Les colonnes grisées indiquent le remplissage requis pour obtenir l’alignement spécifié.
 
 ## <a name="example-1"></a>Exemple 1
 

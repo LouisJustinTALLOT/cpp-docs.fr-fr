@@ -1,10 +1,6 @@
 ---
-title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l | Microsoft Docs
-ms.custom: ''
+title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __swprintf_l
 - sprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - sprintf
 - _stprintf
 - stprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _swprintf_l function
 - _stprintf function
@@ -51,20 +45,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02538d8c74de4f48cb4a3d6285e10c3c4e03c322
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d24ea0c83d934afe81368a9fe734c2a39d08c3d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415934"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451495"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
-Écrire des données mises en forme dans une chaîne. Il existe des versions plus sécurisées de certaines de ces fonctions. Consultez [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Les versions sécurisées de **swprintf** et **_swprintf_l** ne prennent pas un *nombre* paramètre.
+Écrire des données mises en forme dans une chaîne. Il existe des versions plus sécurisées de certaines de ces fonctions. Consultez [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Les versions sécurisées de **swprintf** et **_swprintf_l** ne prennent pas une *nombre* paramètre.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -126,7 +116,7 @@ Nombre maximal de caractères à stocker dans la version Unicode de cette foncti
 *format*<br/>
 Chaîne de contrôle de format
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs
 
 *locale*<br/>
@@ -142,14 +132,14 @@ Le nombre de caractères écrits, ou -1 si une erreur s’est produite. Si *tamp
 
 ## <a name="remarks"></a>Notes
 
-Le **sprintf** fonction formate et stocke une série de caractères et les valeurs de *tampon*. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que la *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le **sprintf** fonction met en forme et stocke une série de caractères et de valeurs dans *tampon*. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a les mêmes forme et fonction que le *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> À l’aide de **sprintf**, il n’existe aucun moyen de limiter le nombre de caractères écrits, ce qui signifie qu’à l’aide de code **sprintf** est susceptible de dépassements de mémoire tampon. Envisagez d’utiliser la fonction related [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), qui spécifie un nombre maximal de caractères à écrire dans *tampon*, ou utilisez [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) pour déterminer quelle taille un mémoire tampon est requise. Vérifiez également que *format* n’est pas une chaîne définie par l’utilisateur.
+> À l’aide de **sprintf**, il n’existe aucun moyen de limiter le nombre de caractères écrits, ce qui signifie qu’à l’aide de code **sprintf** est vulnérable à des dépassements de mémoire tampon. Envisagez d’utiliser la fonction related [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), qui spécifie un nombre maximal de caractères à écrire dans *tampon*, ou utilisez [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) pour déterminer quelle taille un mémoire tampon est requise. En outre, vérifiez que *format* n’est pas une chaîne définie par l’utilisateur.
 
-**swprintf** est une version à caractères larges de **sprintf**; les arguments de pointeur de **swprintf** sont des chaînes à caractères larges. La détection des erreurs dans l’encodage **swprintf** peut différer de celle dans **sprintf**. **swprintf** et **fwprintf** se comportent de façon identique, sauf que **swprintf** écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**et **swprintf** requiert le *nombre* paramètre pour spécifier le nombre maximal de caractères à écrire. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+**swprintf** est une version à caractères larges de **sprintf**; les arguments de pointeur à **swprintf** sont des chaînes à caractères larges. Détection d’erreurs dans d’encodage **swprintf** peut différer de celle dans **sprintf**. **swprintf** et **fwprintf** ont un comportement identique, sauf que **swprintf** écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**et **swprintf** nécessite le *nombre* paramètre pour spécifier le nombre maximal de caractères à écrire. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
-**swprintf** conforme au Standard ISO C, ce qui nécessite le deuxième paramètre, *nombre*, de type **size_t**. Pour forcer l’ancien comportement non standard, vous devez définir **_CRT_NON_CONFORMING_SWPRINTFS**. Sachant que l'ancien comportement risque d'être retiré dans une version ultérieure, il est conseillé de modifier le code pour utiliser le nouveau comportement conforme.
+**swprintf** conforme au Standard ISO C, ce qui nécessite le deuxième paramètre, *nombre*, de type **size_t**. Pour forcer l’ancien comportement non standard, définissez **_CRT_NON_CONFORMING_SWPRINTFS**. Sachant que l'ancien comportement risque d'être retiré dans une version ultérieure, il est conseillé de modifier le code pour utiliser le nouveau comportement conforme.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -160,7 +150,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_stprintf**|**sprintf**|**sprintf**|**_swprintf**|
 |**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

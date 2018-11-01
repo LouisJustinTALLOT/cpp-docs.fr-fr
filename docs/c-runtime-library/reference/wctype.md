@@ -1,10 +1,6 @@
 ---
-title: wctype | Microsoft Docs
-ms.custom: ''
+title: wctype
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctype
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctype
-dev_langs:
-- C++
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb5003db02ed27c2906ebc3619313489e40e5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411898"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456899"
 ---
 # <a name="wctype"></a>wctype
 
@@ -57,7 +47,7 @@ Chaîne de propriété.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si le **LC_CTYPE** catégorie de paramètres régionaux actuels ne définit pas une règle de classification dont le nom correspond à la chaîne de la propriété *propriété*, la fonction retourne zéro. Sinon, elle retourne une valeur différente de zéro qui peut être utilisée comme deuxième argument dans un appel ultérieur à [towctrans](towctrans.md).
+Si le **LC_CTYPE** catégorie des paramètres régionaux ne définit pas une règle de classification dont le nom correspond à la chaîne de propriété *propriété*, la fonction retourne zéro. Sinon, elle retourne une valeur différente de zéro qui peut être utilisée comme deuxième argument dans un appel ultérieur à [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -65,19 +55,19 @@ La fonction détermine une règle de classification pour les codes à caractère
 
 |Fonction|Identique à|
 |--------------|-------------|
-|iswalnum(c)|iswctype (c, wctype ("à" alnum ""))|
+|iswalnum(c)|iswctype (c, wctype ("alnum"))|
 |iswalpha(c)|iswctype (c, wctype (« alpha »))|
-|iswcntrl(c)|iswctype (c, wctype (« contrôle »))|
-|iswdigit(c)|iswctype (c, wctype (« chiffres »))|
+|iswcntrl(c)|iswctype (c, wctype (« cntrl »))|
+|iswdigit(c)|iswctype (c, wctype (« digit »))|
 |iswgraph(c)|iswctype (c, wctype (« graphique »))|
-|iswlower(c)|iswctype (c, wctype (« inférieur »))|
+|iswlower(c)|iswctype (c, wctype (« bas »))|
 |iswprint(c)|iswctype (c, wctype (« print »))|
 |iswpunct(c)|iswctype (c, wctype (« punct »))|
 |iswspace(c)|iswctype (c, wctype (« espace »))|
 |iswupper(c)|iswctype (c, wctype (« supérieur »))|
 |iswxdigit(c)|iswctype (c, wctype (« xdigit »))|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

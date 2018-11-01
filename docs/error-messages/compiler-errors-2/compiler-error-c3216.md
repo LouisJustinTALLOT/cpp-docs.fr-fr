@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C3216 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C3216
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3216
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3216
 ms.assetid: bbab1efe-8779-4489-8bb0-b11e45f5cbe5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4eb1fb93335dc6fb61e8e73ea11cfc91c6b461b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80435c38ff4130938c996b1144aa71300f96eca1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043688"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474904"
 ---
 # <a name="compiler-error-c3216"></a>Erreur du compilateur C3216
 

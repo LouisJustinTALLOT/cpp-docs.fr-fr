@@ -1,30 +1,20 @@
 ---
-title: InitInstance, fonction membre | Microsoft Docs
-ms.custom: ''
+title: InitInstance, fonction membre
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - InitInstance
-dev_langs:
-- C++
 helpviewer_keywords:
 - InitInstance method [MFC]
 - applications [MFC], initializing
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bc9d1d1ff35755a966591e6f46f7742ddfa59e08
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 6e430d30dc62a14008fad9e41e3b2cde7ddffc8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890021"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450594"
 ---
 # <a name="initinstance-member-function"></a>InitInstance, fonction membre
 

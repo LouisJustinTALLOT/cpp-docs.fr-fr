@@ -1,10 +1,6 @@
 ---
-title: _fpieee_flt | Microsoft Docs
-ms.custom: ''
+title: _fpieee_flt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpieee_flt
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - fpieee_flt
 - _fpieee_flt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fpieee_flt function
 - exception handling, floating-point
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412eef6e3999c18901792643fa7a57ce18d19520
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403363"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458615"
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 
@@ -73,20 +63,20 @@ La valeur de retour de **_fpieee_flt** est la valeur retournée par *gestionnair
 
 ## <a name="remarks"></a>Notes
 
-Le **_fpieee_flt** fonction appelle un gestionnaire d’interruptions défini par l’utilisateur pour les exceptions à virgule flottante IEEE et lui fournit toutes les informations pertinentes. Cette routine sert de filtre d'exception dans le mécanisme SEH, qui appelle votre propre gestionnaire d'exceptions IEEE si nécessaire.
+Le **_fpieee_flt** fonction appelle un gestionnaire d’interruptions défini par l’utilisateur pour les exceptions de virgule flottante IEEE et lui fournit toutes les informations pertinentes. Cette routine sert de filtre d'exception dans le mécanisme SEH, qui appelle votre propre gestionnaire d'exceptions IEEE si nécessaire.
 
 Le **_FPIEEE_RECORD** structure, définie dans Fpieee.h, contient des informations relatives à une exception à virgule flottante IEEE. Cette structure est passée au gestionnaire d’interruptions défini par l’utilisateur par **_fpieee_flt**.
 
 |Champ _FPIEEE_RECORD|Description|
 |----------------------------|-----------------|
 |**RoundingMode**<br/>**Précision**|Ces **non signé** **int** champs contiennent des informations sur l’environnement à virgule flottante au moment où l’exception s’est produite.|
-|**Opération**|Cela **non signé** **int** champ indique le type d’opération qui a provoqué l’interruption. Si le type est une comparaison (**_FpCodeCompare**), vous pouvez fournir une des spéciale **_FPIEEE_COMPARE_RESULT** valeurs (telle que définie dans Fpieee.h) dans le **Result.Value** champ. Le type de conversion (**_FpCodeConvert**) indique que l’interruption s’est produite lors d’une opération de conversion en virgule flottante. Vous pouvez examiner le **Operand1** et **résultat** types afin de déterminer le type de conversion tenté.|
-|**operand1**<br/>**operand2**<br/>**Résultat**|Ces **_FPIEEE_VALUE** structures indiquent les types et les valeurs des opérandes et résultat proposé. Chaque structure contient ces champs :<br /><br /> **OperandValid** - indicateur indiquant si la valeur de réponse est valide.<br />**Format** -type de données de la valeur correspondante. Le type de format peut être retourné même si la valeur correspondante n'est pas valide.<br />**Valeur** -valeur de données de résultat ou un opérande.|
-|**Cause**<br/>**Activer**<br/>**État**|**_FPIEEE_EXCEPTION_FLAGS** contient un champ de bits par type d’exception de virgule flottante. Il existe une correspondance entre ces champs et les arguments utilisés pour masquer les exceptions fournies à [_controlfp](control87-controlfp-control87-2.md). La signification exacte de chaque bit dépend du contexte :<br /><br /> **Cause** -chaque bit d’ensemble indique l’exception particulière qui a été déclenchée.<br />**Activer** -chaque bit d’ensemble indique que l’exception particulière est actuellement masquée.<br />**État** -chaque bit d’ensemble indique que l’exception particulière est actuellement en attente. Cela inclut les exceptions qui n’ont pas été déclenchées, car elles ont été masquées par **_controlfp**.|
+|**Opération**|Cela **non signé** **int** champ indique le type d’opération qui a provoqué l’interruption. Si le type est une comparaison (**_FpCodeCompare**), vous pouvez fournir un des spéciale **_FPIEEE_COMPARE_RESULT** valeurs (comme défini dans Fpieee.h) dans le **Result.Value** champ. Le type de conversion (**_FpCodeConvert**) indique que l’interruption s’est produite pendant une opération de conversion à virgule flottante. Vous pouvez examiner le **Operand1** et **résultat** types pour déterminer le type de conversion tenté.|
+|**Operand1**<br/>**Operand2**<br/>**Résultat**|Ces **_FPIEEE_VALUE** structures indiquent les types et les valeurs des opérandes et résultats proposée. Chaque structure contient ces champs :<br /><br /> **OperandValid** : indicateur spécifiant si la valeur de réponse est valide.<br />**Format** -type de données de la valeur correspondante. Le type de format peut être retourné même si la valeur correspondante n'est pas valide.<br />**Valeur** -valeur de données de résultat ou un opérande.|
+|**Cause**<br/>**Enable**<br/>**État**|**_FPIEEE_EXCEPTION_FLAGS** contient un champ de bits par type d’exception de virgule flottante. Il existe une correspondance entre ces champs et les arguments utilisés pour masquer les exceptions fournies à [_controlfp](control87-controlfp-control87-2.md). La signification exacte de chaque bit dépend du contexte :<br /><br /> **Cause** -chaque bit d’ensemble indique l’exception particulière qui a été déclenchée.<br />**Activer** -chaque bit d’ensemble indique que l’exception particulière est démasquée.<br />**État** -chaque bit d’ensemble indique que l’exception particulière est actuellement en attente. Cela inclut les exceptions qui n’ont pas été déclenchées, car elles ont été masquées par **_controlfp**.|
 
-Les exceptions en attente désactivées sont déclenchées lorsque vous les activez. Cela peut entraîner un comportement indéfini lors de l’utilisation **_fpieee_flt** comme un filtre d’exception. Appelez toujours [_clearfp](clear87-clearfp.md) avant d’activer les exceptions à virgule flottante.
+Les exceptions en attente désactivées sont déclenchées lorsque vous les activez. Cela peut entraîner un comportement non défini lors de l’utilisation **_fpieee_flt** comme filtre d’exception. Appelez toujours [_clearfp](clear87-clearfp.md) avant d’activer les exceptions à virgule flottante.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
