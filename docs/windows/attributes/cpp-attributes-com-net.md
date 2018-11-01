@@ -1,26 +1,17 @@
 ---
-title: Attributs de C++ pour COM et .NET | Microsoft Docs
+title: Attributs de C++ pour COM et .NET
 ms.custom: index-page
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
 ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589278"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributs de C++ pour COM et .NET
 

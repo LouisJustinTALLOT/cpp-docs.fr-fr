@@ -1,27 +1,17 @@
 ---
-title: Module ATL, Classes | Microsoft Docs
-ms.custom: ''
+title: Module ATL, classes
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComModule class, what's changed
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e067b1d72b80950b4ed33fbae8cac7333ac0438
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 47ab7f69e5df98dbd9b09adaa2676c22fdf72bed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505263"
 ---
 # <a name="atl-module-classes"></a>Module ATL, classes
 

@@ -1,10 +1,6 @@
 ---
-title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Microsoft Docs
-ms.custom: ''
+title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c87745a4aa1c2e9d93f2c779e089e0bff6f66fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401527"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506750"
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 
@@ -85,11 +75,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation spécifique d’un caractère de contrôle. **iscntrl** retourne une valeur différente de zéro si *c* est un caractère de contrôle (0 x 00-0x1F ou 0x7F). **iswcntrl** retourne une valeur différente de zéro si *c* est un contrôle de caractères larges. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un caractère de contrôle. **iscntrl** retourne une valeur différente de zéro si *c* est un caractère de contrôle (0 x 00-0x1F ou 0x7F). **iswcntrl** retourne une valeur différente de zéro si *c* est un contrôle à caractères larges. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Les versions de ces fonctions qui ont le **_l** suffixe utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le **_l** suffixe utiliser les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **iscntrl** et **_iscntrl_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Lorsqu’une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, le fonctions de déclencher une assertion.
+Le comportement de **iscntrl** et **_iscntrl_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -98,7 +88,7 @@ Le comportement de **iscntrl** et **_iscntrl_l** n’est pas défini si *c* n’
 |**_istcntrl**|**iscntrl**|**iscntrl**|**iswcntrl**|
 |**_istcntrl_l**|**_iscntrl_l**|**_iscntrl_l**|**_iswcntrl_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

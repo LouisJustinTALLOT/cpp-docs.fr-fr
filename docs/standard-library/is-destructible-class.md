@@ -1,28 +1,17 @@
 ---
-title: is_destructible, classe | Microsoft Docs
-ms.custom: ''
+title: is_destructible, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_destructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd23064123513281099fa14a690679fa046657fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1036a3756a736ee3916ed9fca84aa935bb0ba2cf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666174"
 ---
 # <a name="isdestructible-class"></a>is_destructible, classe
 

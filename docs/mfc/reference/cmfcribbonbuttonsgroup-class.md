@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbonbuttonsgroup, classe | Microsoft Docs
-ms.custom: ''
+title: CMFCRibbonButtonsGroup, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonButtonsGroup
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::RemoveAll
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::SetImages
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::SetParentCategory
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], CMFCRibbonButtonsGroup
 - CMFCRibbonButtonsGroup [MFC], AddButton
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e19b01aa2fa268064f9e6a5c51c56d26be22d1a6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0babda16ee29671a584599699b459062c22406e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425208"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592736"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup, classe
 
@@ -87,7 +77,7 @@ Le groupe est dérivé de [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbon
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonButtonsGroup` classe. L’exemple montre comment construire un `CMFCRibbonButtonsGroup` de l’objet, assigner des images au groupe de boutons de ruban et ajoutez un bouton au groupe de boutons de ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonButtonsGroup` . L’exemple montre comment construire un `CMFCRibbonButtonsGroup` de l’objet, assigner des images au groupe de boutons de ruban et ajoutez un bouton au groupe de boutons de ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 
@@ -203,7 +193,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique du groupe de ruban.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -238,7 +228,7 @@ virtual void OnDrawImage(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique de le `CMFCRibbonButtonsGroup` objet.
 
 *rectImage*<br/>

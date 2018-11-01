@@ -1,27 +1,17 @@
 ---
-title: ctype_base, classe| Microsoft Docs
-ms.custom: ''
+title: ctype_base, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::ctype_base
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3def685a8cd108666b3e1b8be9314fc7585a9837
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844892"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531129"
 ---
 # <a name="ctypebase-class"></a>ctype_base, classe
 
@@ -79,9 +69,9 @@ Elle définit un masque d’énumération. Chaque constante d’énumération ca
 
 - **graph** (fonction [isgraph](../standard-library/locale-functions.md#isgraph))
 
-Vous pouvez caractériser une combinaison de classifications en reliant ces constantes par une opération OR. En particulier, il est toujours true qui **à "alnum"** == ( **alpha** &#124; **chiffre** \) et **graphique** \= \= \( **à "alnum"** &#124; **punct**).
+Vous pouvez caractériser une combinaison de classifications en reliant ces constantes par une opération OR. En particulier, il est toujours true qui **alnum** == ( **alpha** &#124; **chiffre** \) et **graph** \= \= \( **alnum** &#124; **punct**).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 

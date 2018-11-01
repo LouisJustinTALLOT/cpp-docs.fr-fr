@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C3035 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C3035
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3035
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3035
 ms.assetid: af34fad2-2b45-42d0-a9ff-04eab3e91c37
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e3be9974d299018af77bde0989b1bdc18889706
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e6d42c53407e1047d299e82566c7fadeb639641d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081570"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550512"
 ---
 # <a name="compiler-error-c3035"></a>Erreur du compilateur C3035
 

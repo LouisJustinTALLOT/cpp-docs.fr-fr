@@ -1,10 +1,6 @@
 ---
-title: _fullpath_dbg, _wfullpath_dbg | Microsoft Docs
-ms.custom: ''
+title: _fullpath_dbg, _wfullpath_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfullpath_dbg
 - _fullpath_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450893"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488008"
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
-Les versions de [_fullpath, _wfullpath](fullpath-wfullpath.md) qui utilisent la version debug de **malloc** pour allouer de la mémoire.
+Versions de [_fullpath, _wfullpath](fullpath-wfullpath.md) qui utilisent la version debug de **malloc** d’allocation de mémoire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,8 +69,8 @@ Pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu o
 *relPath*<br/>
 Nom de chemin d’accès relatif.
 
-*maxLength*<br/>
-Longueur maximale du tampon du nom de chemin d’accès absolu (*absPath*). Cette longueur est exprimée en octets pour **_fullpath** mais en caractères larges (**wchar_t**) pour **_wfullpath**.
+*MaxLength*<br/>
+Longueur maximale du tampon du nom de chemin d’accès absolu (*absPath*). Cette durée est exprimée en octets pour **_fullpath** mais en caractères larges (**wchar_t**) pour **_wfullpath**.
 
 *blockType*<br/>
 Type de bloc de mémoire demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
@@ -97,9 +87,9 @@ Chaque fonction retourne un pointeur vers une mémoire tampon contenant le nom d
 
 ## <a name="remarks"></a>Notes
 
-Le **_fullpath_dbg** et **_wfullpath_dbg** fonctions sont identiques aux **_fullpath** et **_wfullpath** , sauf que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc**, **_malloc_dbg**, allocation de mémoire si **NULL** est passé en tant que premier paramètre. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
+Le **_fullpath_dbg** et **_wfullpath_dbg** fonctions sont identiques aux **_fullpath** et **_wfullpath** , à ceci près que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc**, **_malloc_dbg**, pour allouer la mémoire si **NULL** est passée en tant que premier paramètre. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
 
-Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir le **_CRTDBG_MAP_ALLOC** indicateur. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_fullpath** et **_wfullpath** sont remappés à **_fullpath_dbg** et **_wfullpath_dbg**, respectivement, avec la *blockType* la valeur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir le **_CRTDBG_MAP_ALLOC** indicateur. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_fullpath** et **_wfullpath** sont remappés à **_fullpath_dbg** et **_wfullpath_dbg**, respectivement, avec le *blockType* définie sur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions explicitement, sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -107,7 +97,7 @@ Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de mani�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath_dbg**|**_fullpath_dbg**|**_fullpath_dbg**|**_wfullpath_dbg**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

@@ -1,25 +1,15 @@
 ---
-title: Avertissements du compilateur par version du compilateur | Microsoft Docs
-ms.custom: ''
+title: Avertissements du compilateur par version du compilateur
 ms.date: 10/24/2018
-ms.technology:
-- devlang-cpp
-ms.topic: error-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c4d815ba1036a03042992d2715e49bbd8f74a28
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: ae5d1957694abe09d1e04fba5ccfd2cd87d36940
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990384"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530180"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avertissements du compilateur par version du compilateur
 

@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportFile | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportFile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportFile
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3df4f54ad8e191dac7110a914bdde1cec888ff9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402336"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464244"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
@@ -62,17 +52,17 @@ Nouveau fichier de rapport pour *reportType*.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Opération réussie, **_CrtSetReportFile** retourne le précédent fichier de rapport défini pour le type de rapport spécifié dans *reportType*. Si une valeur non valide est passée pour *reportType*, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **_CRTDBG_HFILE_ERROR**. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Opération réussie, **_CrtSetReportFile** retourne le fichier de rapport précédent défini pour le type de rapport spécifié dans *reportType*. Si une valeur non valide est passée pour *reportType*, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **_CRTDBG_HFILE_ERROR**. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-**_CrtSetReportFile** est utilisé avec le [_CrtSetReportMode](crtsetreportmode.md) fonction pour définir l’ou les destinations d’un type spécifique généré par **_CrtDbgReport**. Lorsque **_CrtSetReportMode** a été appelé pour affecter le **_CRTDBG_MODE_FILE** d’un type spécifique, le mode de création de rapports **_CrtSetReportFile** doit ensuite être appelé à définir le fichier spécifique ou un flux de données à utiliser comme destination. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetReportFile** sont supprimés lors du prétraitement.
+**_CrtSetReportFile** est utilisé avec le [_CrtSetReportMode](crtsetreportmode.md) (fonction) pour définir l’ou les destinations d’un type de rapport spécifique généré par **_CrtDbgReport**. Lorsque **_CrtSetReportMode** a été appelé pour assigner le **_CRTDBG_MODE_FILE** pour un type de rapport spécifique, le mode de création de rapports **_CrtSetReportFile** doit être appelé à définir le fichier ou flux spécifique à utiliser comme destination. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetReportFile** sont supprimés lors du prétraitement.
 
 La liste suivante présente les options disponibles pour *reportFile* et le comportement résultant de **_CrtDbgReport**. Ces options sont définies sous forme d’indicateurs binaires dans Crtdbg.h.
 
 - **handle de fichier**
 
-   Handle vers le fichier qui sera la destination des messages. Aucune tentative n’est effectuée pour vérifier la validité du handle. Vous devez ouvrir et fermer le handle vers le fichier. Par exemple :
+   Handle vers le fichier qui sera la destination des messages. Aucune tentative n’est effectuée pour vérifier la validité du handle. Vous devez ouvrir et fermer le handle vers le fichier. Exemple :
 
    ```C
    HANDLE hLogFile;
@@ -88,7 +78,7 @@ La liste suivante présente les options disponibles pour *reportFile* et le comp
 
 - **_CRTDBG_FILE_STDERR**
 
-   Écrit un message à **stderr**, ce qui peut être redirigé comme suit :
+   Écrit un message **stderr**, qui peut être redirigé comme suit :
 
    ```C
    freopen( "c:\\log2.txt", "w", stderr);
@@ -100,21 +90,21 @@ La liste suivante présente les options disponibles pour *reportFile* et le comp
 
 - **_CRTDBG_FILE_STDOUT**
 
-   Écrit un message à **stdout**, que vous pouvez rediriger.
+   Écrit un message **stdout**, que vous pouvez rediriger.
 
 - **_CRTDBG_REPORT_FILE**
 
    Retourne le mode de rapport actuel.
 
-Le fichier de rapport utilisé par chaque type de rapport peut être contrôlé séparément. Par exemple, il est possible de spécifier qu’un *reportType* de **_CRT_ERROR** signalée à **stderr**, pendant un *reportType* de **_CRT_ASSERT** signalée à un handle de fichier défini par l’utilisateur ou un flux.
+Le fichier de rapport utilisé par chaque type de rapport peut être contrôlé séparément. Par exemple, il est possible de spécifier qu’un *reportType* de **_CRT_ERROR** non-communication **stderr**, tandis qu’un *reportType* de **_CRT_ASSERT** signalées dans un handle de fichier défini par l’utilisateur ou le flux.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_CrtSetReportFile**|\<crtdbg.h>|\<errno.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 **Bibliothèques :** uniquement les versions de débogage des [fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 

@@ -1,27 +1,17 @@
 ---
-title: Tri de tableaux C++ | Microsoft Docs
-ms.custom: ''
+title: Tri des tableaux en C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - sequence [C++]
 - sequence, C++ arrays
 - arrays [C++]
 ms.assetid: ec53baa3-b77e-49be-911f-61fa1362943f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b4b285d77596362e2056ebc48d5a25878060ef1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d8c1d6842b6ab13064550315a8e0dcde415535f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031793"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601186"
 ---
 # <a name="ordering-of-c-arrays"></a>Tri des tableaux en C++
 

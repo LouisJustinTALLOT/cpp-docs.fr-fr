@@ -1,15 +1,9 @@
 ---
-title: -NOENTRY (aucun Point d’entrée) | Microsoft Docs
-ms.custom: ''
+title: /NOENTRY (Aucun point d'entrée)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ResourceOnlyDLL
 - /noentry
-dev_langs:
-- C++
 helpviewer_keywords:
 - entry points [C++], linker specifying
 - -NOENTRY linker option
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - /NOENTRY linker option [C++]
 - DLLs [C++], creating
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd90cb7824050e9bd0110e75f7120c4f004b8b47
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fef4340fa4bb130ac54f4d5e66d4cd4d2f2a3049
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607361"
 ---
 # <a name="noentry-no-entry-point"></a>/NOENTRY (Aucun point d'entrée)
 

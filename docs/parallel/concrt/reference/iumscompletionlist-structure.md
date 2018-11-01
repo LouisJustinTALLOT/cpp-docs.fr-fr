@@ -1,29 +1,19 @@
 ---
-title: IUMSCompletionList, Structure | Microsoft Docs
-ms.custom: ''
+title: IUMSCompletionList, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
-dev_langs:
-- C++
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aabab7a127fdc072b8d3863a53c02e20139afc5a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ec3c38ee609dfa7aec8d688269f1183d307be5b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438205"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList, structure
 

@@ -1,10 +1,6 @@
 ---
-title: strcpy_s, wcscpy_s, _mbscpy_s | Microsoft Docs
-ms.custom: ''
+title: strcpy_s, wcscpy_s, _mbscpy_s
 ms.date: 03/22/2086
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscpy_s
 - _mbscpy_s
@@ -28,8 +24,6 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -39,23 +33,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee648776d4c8b7df1089edf34d30b5c7e59a63c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416610"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616604"
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 
 Copie une chaîne. Ces versions de [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -116,16 +106,16 @@ Zéro en cas de réussite ; erreur dans un autre cas.
 |*dest*|*dest_size*|*src*|Valeur de retour|Contenu de *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|*dest*[0] a la valeur 0|
-|any|0 ou trop petit|any|**ERANGE**|*dest*[0] a la valeur 0|
+|any|any|**NULL**|**EINVAL**|*dest*[0] défini sur 0|
+|any|0 ou trop petit|any|**ERANGE**|*dest*[0] défini sur 0|
 
 ## <a name="remarks"></a>Notes
 
-Le **strcpy_s** fonction copie le contenu de l’adresse du *src*, y compris le caractère null de fin, à l’emplacement spécifié par *dest*. La chaîne de destination doit être suffisamment grande pour contenir la chaîne source et son caractère null de fin. Le comportement de **strcpy_s** n’est pas défini si les chaînes source et de destination se chevauchent.
+Le **strcpy_s** fonction copie le contenu dans l’adresse de *src*, y compris le caractère null de fin, à l’emplacement spécifié par *dest*. La chaîne de destination doit être suffisamment grande pour contenir la chaîne source et son caractère null de fin. Le comportement de **strcpy_s** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 **wcscpy_s** est la version à caractères larges de **strcpy_s**, et **_mbscpy_s** est la version à caractères multioctets. Les arguments de **wcscpy_s** sont des caractères larges chaînes ; ceux de **_mbscpy_s** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
-Si *dest* ou *src* est un pointeur null, ou si la destination de chaîne de taille *dest_size* est trop petite, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et **errno** à **EINVAL** lorsque *dest* ou  *src* est un pointeur null, et elles retournent **ERANGE** et **errno** à **ERANGE** lorsque la chaîne de destination est trop petite.
+Si *dest* ou *src* est un pointeur null, ou si la destination de chaîne de taille *dest_size* est trop petite, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et définissez **errno** à **EINVAL** lorsque *dest* ou  *src* est un pointeur null, et elles retournent **ERANGE** et définissez **errno** à **ERANGE** lorsque la chaîne de destination est trop petite.
 
 Si l'exécution aboutit, la chaîne de destination se termine toujours par un caractère null.
 
@@ -139,7 +129,7 @@ Les versions debug des bibliothèques de ces fonctions remplissent d’abord la 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy_s**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

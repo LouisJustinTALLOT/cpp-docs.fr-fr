@@ -1,10 +1,6 @@
 ---
-title: isspace, iswspace, _isspace_l, _iswspace_l | Microsoft Docs
-ms.custom: ''
+title: isspace, iswspace, _isspace_l, _iswspace_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -27,8 +23,6 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 404fee8d74cec18c277f6c076a7cc41065a8b242
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd93b196c23be5e91852e8c02d75055c1051b912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402245"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590451"
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 
@@ -83,11 +73,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation spécifique d’un espace. **isspace** retourne une valeur différente de zéro si *c* est un caractère d’espace blanc (0 x 09-0x0D ou 0 x 20). Le résultat de la condition de test pour le **isspace** fonction varie selon le **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions qui n’ont pas le **_l** suffixe utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe sont identiques, sauf qu’elles utilisent le paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un caractère d’espacement. **isspace** retourne une valeur différente de zéro si *c* est un caractère d’espace blanc (0 x 09-0x0D ou 0 x 20). Le résultat de la condition de test pour le **isspace** fonction varie selon le **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions qui n’ont pas la **_l** suffixe utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe sont identiques, sauf qu’ils utilisent le paramètres régionaux qui sont passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-**iswspace** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à un caractère espace blanc standard.
+**iswspace** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à un caractère d’espace blanc standard.
 
-Le comportement de **isspace** et **_isspace_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Lorsqu’une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, le fonctions de déclencher une assertion.
+Le comportement de **isspace** et **_isspace_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -95,7 +85,7 @@ Le comportement de **isspace** et **_isspace_l** n’est pas défini si *c* n’
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_** **istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,14 +1,8 @@
 ---
-title: 'TN057 : Localisation des composants MFC | Microsoft Docs'
-ms.custom: ''
+title: 'TN057 : localisation des composants MFC'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc.components
-dev_langs:
-- C++
 helpviewer_keywords:
 - components [MFC], localizing
 - TN057
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - DLLs [MFC], localizing MFC
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8dcd3117d50d2d8905e5382cf226ba487c13a7c7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 812c2d29c42b523d7b88b03741dc20f08ee70f44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414210"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428637"
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057 : localisation des composants MFC
 
@@ -80,7 +70,7 @@ L'instruction ci-dessus fonctionne si vos applications se lient statiquement à 
 
 L'approche la plus complexe consiste à fournir l'un des fichiers MFC7xLOC.DLL localisés (tel que MFC7xDEU, pour l'allemand, le MFC7xESP.DLL pour l'espagnol, etc.), ou une version ultérieure, et à installer le fichier MFC7xLOC.DLL approprié dans le répertoire système lorsque l'utilisateur installe votre application. Cela peut s'avérer très complexe pour le développeur et l'utilisateur final, par conséquent cette approche n'est pas recommandée. Consultez [Note technique 56](../mfc/tn056-installation-of-localized-mfc-components.md) pour plus d’informations sur cette technique et ses mises en garde.
 
-L'approche la plus simple et la plus sûre consiste à inclure les ressources MFC localisées dans votre application ou le fichier DLL lui-même (ou son fichier DLL satellite si vous en utilisez un). Cela évite les problèmes d'installation de MFC7xLOC.DLL. Pour ce faire, procédez de la même manière pour le cas statique fourni ci-dessus (définissant la ligne de commande RC correctement pour afficher les ressources localisées), sauf que vous devez également supprimer la définition de `/D_AFXDLL` qui a été ajoutée par AppWizard. Lorsque `/D_AFXDLL` est défini, AFXRES.H (et les autres fichiers RC MFC) ne définissent pas réellement une quelconque ressource (parce qu'elles sont extraites des DLL MFC à la place).
+L'approche la plus simple et la plus sûre consiste à inclure les ressources MFC localisées dans votre application ou le fichier DLL lui-même (ou son fichier DLL satellite si vous en utilisez un). Cela évite les problèmes d'installation de MFC7xLOC.DLL. Pour ce faire, procédez de la même manière pour le cas statique fourni ci-dessus (définissant la ligne de commande RC correctement pour afficher les ressources localisées), sauf que vous devez également supprimer la définition de `/D_AFXDLL` qui a été ajoutée par AppWizard. Lorsque `/D_AFXDLL` est défini, AFXRES.H (et les autres fichiers RC MFC) ne définissent pas réellement une quelconque ressource (parce qu’elles sont tirées des DLL MFC à la place).
 
 ## <a name="see-also"></a>Voir aussi
 

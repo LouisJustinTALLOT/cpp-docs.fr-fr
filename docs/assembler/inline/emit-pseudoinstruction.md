@@ -1,28 +1,18 @@
 ---
-title: _emit, pseudo-instruction | Microsoft Docs
-ms.custom: ''
+title: _emit, pseudo-instruction
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
 f1_keywords:
 - _emit
-dev_langs:
-- C++
 helpviewer_keywords:
 - byte defining (inline assembly)
 - _emit pseudoinstruction
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 569e3a078109e66df7dcf5cbf314817ce0786899
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f2a7c9c4dab97bc1aba3147b5d75f6abbdac951f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061923"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540866"
 ---
 # <a name="emit-pseudoinstruction"></a>_emit, pseudo-instruction
 

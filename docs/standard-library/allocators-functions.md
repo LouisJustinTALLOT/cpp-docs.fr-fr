@@ -1,8 +1,6 @@
 ---
-title: '&lt;allocators&gt;, macros | Microsoft Docs'
-ms.custom: ''
+title: '&lt;allocators&gt;, macros'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - allocators/std::ALLOCATOR_DECL
 - allocators/std::CACHE_CHUNKLIST
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: a24b854ac37dc0dfed44aec33fc1fb7e0bedcfc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 736e587a41fa1006801dcf6930b33ee434c9a5ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842662"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492646"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt;, macros
 

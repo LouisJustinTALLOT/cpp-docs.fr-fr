@@ -1,25 +1,15 @@
 ---
-title: path, classe | Microsoft Docs
-ms.custom: ''
+title: path, classe
 ms.date: 09/27/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
-dev_langs:
-- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618216"
 ---
 # <a name="path-class"></a>path, classe
 
@@ -63,10 +53,10 @@ class path;
 |[extension](#extension)|Retourne le suffixe de `filename()`.|
 |[filename](#filename)|Retourne le composant du répertoire racine de myname, spécifiquement `empty() path() : *--end()`. Le composant peut être vide.|
 |[generic_string](#generic_string)|Retourne `this->string<Elem, Traits, Alloc>(al)` avec (sous Windows) les barres obliques inverses converties en barres obliques.|
-|[generic_u16string](#generic_u16string)|Retourne `u16string()` avec (sur Windows) les barres obliques inverses converties en barres obliques.|
-|[generic_u32string](#generic_u32string)|Retourne `u32string()` avec (sur Windows) les barres obliques inverses converties en barres obliques.|
-|[generic_u8string](#generic_u8string)|Retourne `u8string()` avec (sur Windows) les barres obliques inverses converties en barres obliques.|
-|[generic_wstring](#generic_wstring)|Retourne `wstring()` avec (sur Windows) les barres obliques inverses converties en barres obliques.|
+|[generic_u16string](#generic_u16string)|Retourne `u16string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.|
+|[generic_u32string](#generic_u32string)|Retourne `u32string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.|
+|[generic_u8string](#generic_u8string)|Retourne `u8string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.|
+|[generic_wstring](#generic_wstring)|Retourne `wstring()` avec (sous Windows) les barres obliques inverses converties en barres obliques.|
 |[has_extension](#has_extension)|Retourne `!extension().empty()`.|
 |[has_filename](#has_filename)|Retourne `!filename().empty()`.|
 |[has_parent_path](#has_parent_path)|Retourne `!parent_path().empty()`.|
@@ -290,7 +280,7 @@ string generic_string() const;
 
 ## <a name="generic_u16string"></a> Path::generic_u16string
 
-Retourne `u16string()` avec (sur Windows) les barres obliques inverses converties en barres obliques.
+Retourne `u16string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.
 
 ```cpp
 u16string generic_u16string() const;
@@ -298,7 +288,7 @@ u16string generic_u16string() const;
 
 ## <a name="generic_u32string"></a> Path::generic_u32string
 
-Retourne `u32string()` avec (sur Windows) les barres obliques inverses converties en barres obliques.
+Retourne `u32string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.
 
 ```cpp
 u32string generic_u32string() const;
@@ -306,7 +296,7 @@ u32string generic_u32string() const;
 
 ## <a name="generic_u8string"></a> Path::generic_u8string
 
-Retourne `u8string()` avec (sur Windows) les barres obliques inverses converties en barres obliques.
+Retourne `u8string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.
 
 ```cpp
 string generic_u8string() const;
@@ -314,7 +304,7 @@ string generic_u8string() const;
 
 ## <a name="generic_wstring"></a> Path::generic_wstring
 
-Retourne `wstring()` avec (sur Windows) les barres obliques inverses converties en barres obliques.
+Retourne `wstring()` avec (sous Windows) les barres obliques inverses converties en barres obliques.
 
 ```cpp
 wstring generic_wstring() const;

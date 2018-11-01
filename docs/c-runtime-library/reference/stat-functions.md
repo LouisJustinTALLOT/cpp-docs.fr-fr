@@ -1,10 +1,6 @@
 ---
-title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32 | Microsoft Docs
-ms.custom: ''
+title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstat64
 - _stati64
@@ -78,8 +74,6 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -112,16 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13ce367bdee78be1610a36c887a04f2130375114
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637279"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -194,22 +184,22 @@ Chacune de ces fonctions retourne 0 si les informations sur l’état des fichie
 
 Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-L’horodatage d’un fichier peut être représenté s’il est ultérieur à minuit le 1er janvier 1970 et avant le 23:59:59, le 31 décembre 3000 UTC, sauf si vous utilisez **_stat32** ou **_wstat32**, ou vous avez défini **_ USE_32BIT_TIME_T**, auquel cas la date peut être représentée uniquement jusqu’au 23:59:59 le 18 janvier 2038, UTC.
+L’horodatage d’un fichier peut être représenté s’il est ultérieur au 1er janvier 1970 à minuit et antérieur 23:59:59 le 31 décembre 3000, UTC, sauf si vous utilisez **_stat32** ou **_wstat32**, ou vous avez défini **_ USE_32BIT_TIME_T**, auquel cas la date peut être représentée uniquement jusqu’à 23:59:59 le 18 janvier 2038, UTC.
 
 ## <a name="remarks"></a>Notes
 
-Le **_stat** fonction obtient des informations sur le fichier ou le répertoire spécifié par *chemin d’accès* et le stocke dans la structure vers laquelle pointée *tampon*. **_stat** gère automatiquement les arguments de chaîne de caractères multioctets selon le cas, le cas des séquences de caractères multioctets selon la page de codes multioctets en cours d’utilisation.
+Le **_stat** fonction obtient des informations sur le fichier ou le répertoire spécifié par *chemin d’accès* et le stocke dans la structure vers laquelle pointée *tampon*. **_stat** gère automatiquement les arguments de chaîne de caractères multioctets comme il convient, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation.
 
-**_wstat** est une version à caractères larges de **_stat**; le *chemin d’accès* argument **_wstat** est une chaîne à caractères larges. **_wstat** et **_stat** se comportent de façon identique, sauf que **_wstat** ne gère pas les chaînes de caractères multioctets.
+**_wstat** est une version à caractères larges de **_stat**; le *chemin d’accès* l’argument de **_wstat** est une chaîne de caractères larges. **_wstat** et **_stat** ont un comportement identique, sauf que **_wstat** ne gère pas les chaînes de caractères multioctets.
 
-Les variantes de ces fonctions prennent en charge les types d’heures 32 ou 64 bits et les longueurs de fichiers 32 ou 64 bits. Le premier suffixe numérique (**32** ou **64**) indique la taille de la durée du type utilisé ; le deuxième suffixe est **i32** ou **i64**, qui indique si la taille du fichier est représentée comme un entier 32 bits ou 64 bits.
+Les variantes de ces fonctions prennent en charge les types d’heures 32 ou 64 bits et les longueurs de fichiers 32 ou 64 bits. Le premier suffixe numérique (**32** ou **64**) indique la taille du temps type utilisé ; le deuxième suffixe est **i32** ou **i64**, indiquant si la taille du fichier est représentée comme un entier 32 bits ou 64 bits.
 
-**_stat** équivaut à **_stat64i32**, et **struct** **_stat** contient une heure 64 bits. Cela est vrai, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_stat** utilise une heure 32 bits, et **struct** **_stat** contient une heure 32 bits. Est de même pour **_stati64**.
+**_stat** équivaut à **_stat64i32**, et **struct** **_stat** contient une heure 64 bits. Cela est vrai, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_stat** utilise une heure 32 bits, et **struct** **_stat** contient une heure 32 bits. Vaut également pour **_stati64**.
 
 > [!NOTE]
-> **_wstat** ne fonctionne pas avec des liens symboliques de Windows Vista. Dans ce cas, **_wstat** indique toujours une taille de fichier 0. **_stat** ne fonctionne pas correctement avec des liens symboliques.
+> **_wstat** ne fonctionne pas avec les liens symboliques de Windows Vista. Dans ce cas, **_wstat** indique toujours une taille de fichier 0. **_stat** ne fonctionne pas correctement avec les liens symboliques.
 
-Cette fonction valide ses paramètres. Si le paramètre *chemin d’accès* ou *tampon* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+Cette fonction valide ses paramètres. Si *chemin d’accès* ou *tampon* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variantes de type d’heure et de type de longueur de fichier de _stat
 
@@ -234,25 +224,25 @@ Cette fonction valide ses paramètres. Si le paramètre *chemin d’accès* ou *
 |**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
 |**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
-Le **_stat** structure, définie dans SYS\STAT. H, contient les champs suivants.
+Le **_stat** structure, définie dans SYS\STAT. H, inclut les champs suivants.
 
 |Champ||
 |-|-|
 **st_gid**|Identificateur numérique du groupe propriétaire du fichier (propre à UNIX). Ce champ est toujours zéro sur les systèmes Windows. Un fichier de redirection est classé comme un fichier Windows.
 **st_atime**|Heure du dernier accès au fichier. Valide sur NTFS, mais pas sur les lecteurs de disque au format FAT.
 **st_ctime**|Heure de création du fichier. Valide sur NTFS, mais pas sur les lecteurs de disque au format FAT.
-**st_dev**|Numéro de lecteur du disque contenant le fichier (identique à **st_rdev**).
-**st_ino**|Numéro de nœud d’informations (le **inode**) pour le fichier (propre à UNIX). Sur les systèmes de fichiers UNIX, le **inode** décrit le contenu et les horodatages, les autorisations et date du fichier. Lorsque les fichiers sont liées à un autre, ils partagent le même **inode**. Le **inode**et par conséquent **st_ino**, n’a aucune signification dans les systèmes de fichiers FAT, HPFS ou NTFS.
+**st_dev**|Numéro du disque contenant le fichier du lecteur (même en tant que **st_rdev**).
+**st_ino**|Numéro du nœud d’informations (le **inode**) pour le fichier (propre à UNIX). Sur les systèmes de fichiers UNIX, le **inode** décrit la date du fichier et les horodatages, les autorisations et les contenus. Lorsque les fichiers sont matériellement liés entre eux, ils partagent le même **inode**. Le **inode**et par conséquent **st_ino**, n’a aucune signification dans les systèmes de fichiers FAT, HPFS ou NTFS.
 **st_mode**|Masque de bits pour les informations relatives au mode de fichier. Le **_S_IFDIR** bit est défini si *chemin d’accès* spécifie un répertoire ; le **_S_IFREG** bit est défini si *chemin d’accès* spécifie un fichier ordinaire ou un périphérique. Les bits de lecture/écriture utilisateur sont définis en fonction du mode d’autorisation du fichier. Les bits d’exécution utilisateur sont définis en fonction de l’extension de nom de fichier.
 **st_mtime**|Heure de dernière modification du fichier.
 **st_nlink**|Toujours 1 sur les systèmes de fichiers autres que NTFS.
-**st_rdev**|Numéro de lecteur du disque contenant le fichier (identique à **st_dev**).
+**st_rdev**|Numéro du disque contenant le fichier du lecteur (même en tant que **st_dev**).
 **st_size**|Taille du fichier en octets ; un entier 64 bits pour les variantes avec le **i64** suffixe.
 **st_uid**|Identificateur numérique de l’utilisateur propriétaire du fichier (propre à UNIX). Ce champ est toujours zéro sur les systèmes Windows. Un fichier de redirection est classé comme un fichier Windows.
 
-Si *chemin d’accès* fait référence à un périphérique, le **st_size**, divers champs d’heure, **st_dev**, et **st_rdev** champs dans le **_stat**  structure sont sans effet. Étant donné que STAT.H utilise le type [_dev_t](../../c-runtime-library/standard-types.md) défini dans TYPES.H, vous devez inclure TYPES.H avant STAT.H dans votre code.
+Si *chemin d’accès* fait référence à un périphérique, le **st_size**, divers champs d’heure, **st_dev**, et **st_rdev** champs dans le **_stat**  structure n’ont aucune signification. Étant donné que STAT.H utilise le type [_dev_t](../../c-runtime-library/standard-types.md) défini dans TYPES.H, vous devez inclure TYPES.H avant STAT.H dans votre code.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
