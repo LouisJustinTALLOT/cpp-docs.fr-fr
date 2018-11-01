@@ -1,27 +1,17 @@
 ---
-title: Erreur irrécupérable C1189 | Documents Microsoft
-ms.custom: ''
+title: Erreur irrécupérable C1189
 ms.date: 04/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1189
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 051b7eb965526d12311dfacaeae7a00e4fbe4e75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199792"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565527"
 ---
 # <a name="fatal-error-c1189"></a>Erreur irrécupérable C1189
 
@@ -29,7 +19,7 @@ ms.locfileid: "33199792"
 
 ## <a name="remarks"></a>Notes
 
-L’erreur C1189 est générée par le `#error` la directive. Le développeur qui code la directive spécifie le texte du message d’erreur. Pour plus d’informations, consultez [#error Directive (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
+L’erreur C1189 est générée par le `#error` directive. Le développeur qui code la directive spécifie le texte du message d’erreur. Pour plus d’informations, consultez [#error Directive (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
 
 ## <a name="example"></a>Exemple
 

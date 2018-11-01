@@ -1,16 +1,10 @@
 ---
-title: -Os, -Ot (favoriser la taille du Code, favoriser la Code rapide) | Microsoft Docs
-ms.custom: ''
+title: /Os, /Ot (Favoriser la taille du code, Favoriser la vitesse du code)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
 - /os
 - VC.Project.VCCLCompilerTool.FavorSizeOrSpeed
-dev_langs:
-- C++
 helpviewer_keywords:
 - favor fast code compiler option [C++]
 - /Os compiler option [C++]
@@ -23,16 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d74f313caec7ecb98faa3988e8e0dd59847917d5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa404641a42b0209e8436ca206e59a3b5f425133
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381515"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565956"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Favoriser la taille du code, Favoriser la vitesse du code)
 
