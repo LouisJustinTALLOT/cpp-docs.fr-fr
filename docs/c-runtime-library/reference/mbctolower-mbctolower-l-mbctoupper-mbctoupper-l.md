@@ -1,10 +1,6 @@
 ---
-title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l | Microsoft Docs
-ms.custom: ''
+title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctolower_l
 - _mbctoupper_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctoupper
 - mbctolower
 - _mbctoupper_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctolower function
 - mbctolower_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403659"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539684"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -95,20 +85,20 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne le caractère converti *c*, si possible. Dans le cas contraire, elle retourne le caractère *c* inchangée.
+Chacune de ces fonctions retourne le caractère converti *c*, si possible. Sinon, elle retourne le caractère *c* inchangé.
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions de test un caractère *c* et, si possible, appliquer une des conversions suivantes.
+Les fonctions testent un caractère *c* et, dans la mesure du possible, appliquez une des conversions suivantes.
 
 |Routines|Conversion|
 |--------------|--------------|
 |**_mbctolower**, **_mbctolower_l**|Caractère majuscule en caractère minuscule.|
 |**_mbctoupper**, **_mbctoupper_l**|Caractère minuscule en caractère majuscule.|
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le **_l** suffixe utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, sauf qu’elle utilise les paramètres régionaux passés à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le **_l** suffixe utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, sauf qu’elle utilise les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans les versions précédentes, **_mbctolower** a été appelé **jtolower**, et **_mbctoupper** a été appelé **jtoupper**. Pour le nouveau code, utilisez les nouveaux noms à la place.
+Dans les versions précédentes, **_mbctolower** a été appelée **jtolower**, et **_mbctoupper** a été appelée **jtoupper**. Pour le nouveau code, utilisez les nouveaux noms à la place.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -119,7 +109,7 @@ Dans les versions précédentes, **_mbctolower** a été appelé **jtolower**, e
 |**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routines|En-tête requis|
 |--------------|---------------------|

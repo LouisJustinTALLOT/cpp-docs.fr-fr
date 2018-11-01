@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_dbg, _wgetdcwd_dbg | Microsoft Docs
-ms.custom: ''
+title: _getdcwd_dbg, _wgetdcwd_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdcwd_dbg
 - _wgetdcwd_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - getdcwd_dbg
 - _wgetdcwd_dbg
 - wgetdcwd_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - working directory
 - _getdcwd_dbg function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f68fc4fe1c19204433e8f5c9b6c7991d8f7f90e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 700cfe732dc390ca59a976694403bb3d91af5980
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402824"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547172"
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 
@@ -94,13 +84,13 @@ Numéro de ligne dans le fichier source où l’opération d’allocation a ét�
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers *tampon*. A **NULL** valeur renvoyée indique une erreur, et **errno** prend la valeur **ENOMEM**, indiquant que la mémoire est insuffisante pour allouer *maxlen* octets (quand un **NULL** argument n’est fourni en tant que *tampon*), ou à **ERANGE**, indiquant que le chemin d’accès fait plu *maxlen*  caractères. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Retourne un pointeur vers *tampon*. Un **NULL** valeur renvoyée indique une erreur, et **errno** prend la valeur **ENOMEM**, indiquant qu’il existe une mémoire insuffisante pour allouer *maxlen* octets (quand un **NULL** argument est fourni en tant que *tampon*), ou la valeur **ERANGE**, indiquant que le chemin d’accès est plus long que *maxlen*  caractères. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_getdcwd_dbg** et **_wgetdcwd_dbg** fonctions sont identiques aux **_getdcwd** et **_wgetdcwd** , sauf que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc** et **_malloc_dbg** pour allouer la mémoire si **NULL** est passé comme le *tampon* paramètre. Pour plus d’informations, consultez [_malloc_dbg](malloc-dbg.md).
+Le **_getdcwd_dbg** et **_wgetdcwd_dbg** fonctions sont identiques aux **_getdcwd** et **_wgetdcwd** , à ceci près que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc** et **_malloc_dbg** d’allocation de mémoire si **NULL** est passée comme le *tampon* paramètre. Pour plus d’informations, consultez [_malloc_dbg](malloc-dbg.md).
 
-Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir le **_CRTDBG_MAP_ALLOC** indicateur. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_getdcwd** et **_wgetdcwd** sont remappés à **_getdcwd_dbg** et **_ wgetdcwd_dbg**, respectivement, avec la *blockType* la valeur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir le **_CRTDBG_MAP_ALLOC** indicateur. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_getdcwd** et **_wgetdcwd** sont remappés à **_getdcwd_dbg** et **_ wgetdcwd_dbg**, respectivement, avec le *blockType* définie sur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions explicitement, sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -108,7 +98,7 @@ Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de mani�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tgetdcwd_dbg**|**_getdcwd_dbg**|**_getdcwd_dbg**|**_wgetdcwd_dbg**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: Gestion d’une bibliothèque | Microsoft Docs
-ms.custom: ''
+title: Gestion d'une bibliothèque
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLibrarianTool.AdditionalDependencies
@@ -18,8 +14,6 @@ f1_keywords:
 - VC.Project.VCLibrarianTool.SubSystemVersion
 - VC.Project.VCLibrarianTool.OVERWRITEDefaultLibraryName
 - VC.Project.VCLibrarianTool.SubSystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - /LIBPATH library manager option
 - OUT library manager option
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd6fff812d200e16b82994f9f9bbe598aface547
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713152"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477062"
 ---
 # <a name="managing-a-library"></a>Gestion d'une bibliothèque
 
@@ -82,7 +72,7 @@ Affiche des informations sur la bibliothèque de sortie vers la sortie standard.
 **/ NAME :** *nom de fichier*<br/>
 Lorsque vous créez une bibliothèque d’importation, spécifie le nom de la DLL pour laquelle la bibliothèque d’importation est générée.
 
-**/ NODEFAULTLIB**<br/>
+**/NODEFAULTLIB**<br/>
 Supprime une ou plusieurs bibliothèques par défaut de la liste des bibliothèques qu’elle parcourt lors de la résolution des références externes. Consultez [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) pour plus d’informations.
 
 **/ OUT :** *nom de fichier*<br/>

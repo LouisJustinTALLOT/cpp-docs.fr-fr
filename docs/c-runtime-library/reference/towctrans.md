@@ -1,10 +1,6 @@
 ---
-title: towctrans | Microsoft Docs
-ms.custom: ''
+title: towctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - towctrans
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - towctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9d70570339868feb62ee906a707cf16ca03d556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407627"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561406"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -65,9 +55,9 @@ Le caractère *c*, après **towctrans** utilisé dans la règle de transformatio
 
 ## <a name="remarks"></a>Notes
 
-La valeur de *catégorie* doit avoir été retourné par un appel réussi précédemment à [wctrans](wctrans.md).
+La valeur de *catégorie* doit avoir été retourné par un appel antérieur réussi à [wctrans](wctrans.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
