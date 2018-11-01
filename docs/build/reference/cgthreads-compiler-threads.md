@@ -1,27 +1,17 @@
 ---
-title: -CGTHREADS (Threads du compilateur) | Microsoft Docs
-ms.custom: ''
+title: /CGTHREADS (threads du compilateur)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - /CGTHREADS linker option
 - -CGTHREADS linker option
 - CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d717ffb3ed135ffe9e6f4ed2c55f925e3f10d86f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1c459604d90b23953bbf3f250708c393fa78277d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720525"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495106"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (threads du compilateur)
 

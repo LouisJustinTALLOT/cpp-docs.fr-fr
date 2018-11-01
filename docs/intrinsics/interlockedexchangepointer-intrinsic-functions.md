@@ -1,10 +1,6 @@
 ---
-title: _InterlockedExchangePointer, fonctions intrinsèques | Microsoft Docs
-ms.custom: ''
+title: _InterlockedExchangePointer, fonctions intrinsèques
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedExchangePointer_cpp
 - _InterlockedExchangePointer_rel
@@ -14,8 +10,6 @@ f1_keywords:
 - _InterlockedExchangePointer
 - _InterlockedExchangePointer_acq_cpp
 - _InterlockedExchangePointer_HLEAcquire
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedExchangePointer_rel intrinsic
 - _InterlockedExchangePointer_HLERelease intrinsic
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 881d8dbdb7563197beaea66c4c83d7dbc7921a3f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7599d4221d7dbd0e08585b51982e839aa267a011
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512097"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer, fonctions intrinsèques
 
@@ -98,7 +88,7 @@ Sur l'architecture x86, `_InterlockedExchangePointer` est une macro qui appelle 
 
 Sur un système 64 bits, les paramètres sont 64 bits et doivent être alignés sur les limites 64 bits ; dans le cas contraire, la fonction échoue. Sur un système 32 bits, les paramètres sont 32 bits et doivent être alignés sur les limites 32 bits. Pour plus d’informations, consultez [aligner](../cpp/align-cpp.md).
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d'une section critique. La fonction intrinsèque avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agit pas comme une barrière mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. La fonction intrinsèque avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agit pas comme une barrière mémoire.
 
 Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les fonctions intrinsèques avec les suffixes `_HLEAcquire` et `_HLERelease` comprennent une indication pour le processeur qui peut accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des plateformes qui ne prennent pas en charge HLE, l'indication est ignorée.
 

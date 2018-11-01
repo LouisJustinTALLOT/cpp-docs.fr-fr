@@ -1,10 +1,6 @@
 ---
-title: _itoa, les fonctions _itow | Documents Microsoft
-ms.custom: ''
+title: _itoa, _itow fonctions
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - itoa
 - _itoa
@@ -83,8 +79,6 @@ f1_keywords:
 - _MAX_U64TOSTR_BASE10_COUNT
 - _MAX_U64TOSTR_BASE8_COUNT
 - _MAX_U64TOSTR_BASE2_COUNT
-dev_langs:
-- C++
 helpviewer_keywords:
 - _itot function
 - ui64toa function
@@ -104,20 +98,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 95aa140eae6d8a06eff84d03cbb562444c3bd552
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 182e7190554382f56d43f94fefe209fd38a7b78b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464088"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-Convertit un entier en chaîne. Des versions plus sécurisées de ces fonctions sont disponibles. consultez [_itoa_s, _itow_s fonctions](itoa-s-itow-s.md).
+Convertit un entier en chaîne. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [_itoa_s, _itow_s fonctions](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -181,10 +171,10 @@ Nombre à convertir.
 Mémoire tampon qui conserve le résultat de la conversion.
 
 *radix*<br/>
-La base à utiliser pour la conversion de *valeur*, qui doit être comprise entre 2-36.
+La base à utiliser pour la conversion de *valeur*, qui doit être comprise entre 2 et 36.
 
 *size*<br/>
-Longueur de la mémoire tampon dans les unités de type de caractère. Ce paramètre est déduit à partir de la *tampon* argument en C++.
+Longueur de la mémoire tampon en unités de type caractère. Ce paramètre est déduit à partir de la *tampon* argument en C++.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -192,25 +182,25 @@ Chacune de ces fonctions retourne un pointeur vers *tampon*. Aucun retour d'erre
 
 ## <a name="remarks"></a>Notes
 
-Le **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, et **_ui64toa** fonctions convertissent les chiffres de la donnée *valeur* argument à une chaîne de caractères terminée par null et le magasin le résultat (près de 33 caractères pour **_itoa**, **_ltoa**, et  **_ultoa**et 65 pour **_i64toa** et **_ui64toa**) dans *tampon*. Si *radix* est égal à 10 et *valeur* est négatif, le premier caractère de la chaîne stockée est le signe moins (**-**). Le **_itow**, **_ltow**, **_ultow**, **_i64tow**, et **_ui64tow** les fonctions sont des caractères larges les versions de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, et **_ui64toa**, respectivement.
+Le **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, et **_ui64toa** fonctions convertissent les chiffres de la donnée *valeur* l’argument de la forme de chaîne de caractères se terminant par null et stocke le résultat (jusqu'à 33 caractères pour **_itoa**, **_ltoa**, et  **_ultoa**et 65 pour **_i64toa** et **_ui64toa**) dans *tampon*. Si *radix* est égal à 10 et *valeur* est négatif, le premier caractère de la chaîne stockée est le signe moins (**-**). Le **_itow**, **_ltow**, **_ultow**, **_i64tow**, et **_ui64tow** fonctions sont des caractères larges versions de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, et **_ui64toa**, respectivement.
 
 > [!IMPORTANT]
-> Ces fonctions peuvent écrire au-delà de la fin d’une mémoire tampon est trop petite. Pour éviter les dépassements de mémoire tampon, vérifiez que *tampon* est suffisamment grande pour contenir les chiffres convertis ainsi que le caractère null de fin et un caractère de signe. Utilisation incorrecte de ces fonctions peut entraîner des problèmes de sécurité graves dans votre code.
+> Ces fonctions peuvent écrire au-delà de la fin d’une mémoire tampon est trop petite. Pour éviter les dépassements de mémoire tampon, vérifiez que *tampon* est suffisamment grande pour contenir les chiffres convertis plus le caractère null de fin et un caractère de signe. Une mauvaise utilisation de ces fonctions peut provoquer de sérieux problèmes de sécurité dans votre code.
 
-En raison de leur risque de problèmes de sécurité, par défaut, ces fonctions provoquent avertissement de désapprobation [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **cette fonction ou une variable peut présenter un risque. Envisagez d’utiliser** *safe_function* **à la place. Pour désactiver la désapprobation, utilisez _CRT_SECURE_NO_WARNINGS.** Nous vous recommandons de modifier votre code source à utiliser le *safe_function* suggérée par le message d’avertissement. Les fonctions plus sécurisées n’écrivent pas plus de caractères que la taille de mémoire tampon spécifiée. Pour plus d’informations, consultez [_itoa_s, _itow_s fonctions](itoa-s-itow-s.md).
+En raison de leur potentiel pour les problèmes de sécurité, par défaut, ces fonctions provoquent avertissement de dépréciation [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **cette fonction ou cette variable peut présenter un risque. Envisagez d’utiliser** *safe_function* **à la place. Pour désactiver la dépréciation, utilisez _CRT_SECURE_NO_WARNINGS.** Nous vous recommandons de modifier votre code source à utiliser le *safe_function* suggérée par le message d’avertissement. Les fonctions plus sécurisées n’écrivent pas plus de caractères que la taille de mémoire tampon spécifiée. Pour plus d’informations, consultez [_itoa_s, _itow_s fonctions](itoa-s-itow-s.md).
 
-Pour utiliser ces fonctions sans l’avertissement de désapprobation, définir le **_CRT_SECURE_NO_WARNINGS** macro de préprocesseur avant d’inclure des en-têtes CRT. Cela en ajoutant la ligne de commande dans une invite de commandes développeur la **/D_CRT_SECURE_NO_WARNINGS** l’option du compilateur le **cl** commande. Sinon, définissez la macro dans vos fichiers sources. Si vous utilisez des en-têtes précompilés, définissez la macro en haut de l’en-tête précompilé inclure le fichier, généralement stdafx.h. Pour définir la macro dans votre code source, utilisez un **#define** directive avant d’inclure n’importe quel en-tête de la bibliothèque CRT, comme dans cet exemple :
+Pour utiliser ces fonctions sans l’avertissement de dépréciation, définissez le **_CRT_SECURE_NO_WARNINGS** macro de préprocesseur avant d’inclure tous les en-têtes CRT. Cela en ajoutant la ligne de commande dans une invite de commandes développeur le **/D_CRT_SECURE_NO_WARNINGS** option du compilateur pour le **cl** commande. Sinon, définissez la macro dans vos fichiers sources. Si vous utilisez des en-têtes précompilés, définissez la macro en haut de l’en-tête précompilé du fichier, généralement stdafx.h include. Pour définir la macro dans votre code source, utilisez un **#define** directive avant d’inclure n’importe quel en-tête CRT, comme dans cet exemple :
 
 ```C
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
 ```
 
-En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents et plus sûres. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, ces fonctions ont des surcharges de modèle qui appellent leurs équivalents plus sûrs. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Les noms Posix **itoa**, **ltoa**, et **ultoa** existe en tant qu’alias pour la **_itoa**, **_ltoa**, et **_ultoa** fonctions. Les noms Posix sont déconseillées, car ils ne suivent pas les conventions de nom de ISO C. spécifique à l’implémentation (fonction) Par défaut, ces fonctions provoquent avertissement de désapprobation [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **nom le POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez le nom conforme ISO C et C++ :** *nouveau_nom*. Nous vous recommandons de modifier votre code source afin d’utiliser les versions plus sécurisées de ces fonctions, **_itoa_s**, **_ltoa_s**, ou **_ultoa_s**. Pour plus d’informations, consultez [_itoa_s, _itow_s fonctions](itoa-s-itow-s.md).
+Les noms Posix **itoa**, **ltoa**, et **ultoa** existent en tant qu’alias pour le **_itoa**, **_ltoa**, et **_ultoa** fonctions. Les noms Posix sont déconseillées, car ils ne suivent pas les conventions de nom (fonction) spécifiques à l’implémentation de ISO C. Par défaut, ces fonctions provoquent avertissement de dépréciation [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **nom le POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez le nom conforme ISO C et C++ :** *nouveau_nom*. Nous vous recommandons de modifier votre code source pour utiliser les versions plus sécurisées de ces fonctions, **_itoa_s**, **_ltoa_s**, ou **_ultoa_s**. Pour plus d’informations, consultez [_itoa_s, _itow_s fonctions](itoa-s-itow-s.md).
 
-Pour la portabilité du code source, vous pouvez conserver les noms Posix dans votre code. Pour utiliser ces fonctions sans l’avertissement de désapprobation, définir les deux le **_CRT_NONSTDC_NO_WARNINGS** et **_CRT_SECURE_NO_WARNINGS** des macros de préprocesseur avant d’inclure des en-têtes CRT. Cela en ajoutant la ligne de commande dans une invite de commandes développeur la **/D_CRT_SECURE_NO_WARNINGS** et **/D_CRT_NONSTDC_NO_WARNINGS** les options du compilateur pour le **cl**commande. Sinon, définissez les macros dans vos fichiers sources. Si vous utilisez des en-têtes précompilés, définir les macros en haut de l’en-tête précompilé incluent le fichier, généralement stdafx.h. Pour définir les macros dans votre code source, utilisez **#define** directives avant d’inclure n’importe quel en-tête de la bibliothèque CRT, comme dans cet exemple :
+Pour la portabilité du code source, vous pouvez conserver les noms Posix dans votre code. Pour utiliser ces fonctions sans l’avertissement de dépréciation, définir à la fois le **_CRT_NONSTDC_NO_WARNINGS** et **_CRT_SECURE_NO_WARNINGS** des macros de préprocesseur avant d’inclure tous les en-têtes CRT. Cela en ajoutant la ligne de commande dans une invite de commandes développeur le **/D_CRT_SECURE_NO_WARNINGS** et **/D_CRT_NONSTDC_NO_WARNINGS** options du compilateur pour le **cl**commande. Sinon, définissez les macros dans vos fichiers sources. Si vous utilisez des en-têtes précompilés, définir les macros en haut de l’en-tête précompilé incluent le fichier, généralement stdafx.h. Pour définir les macros dans votre code source, utilisez **#define** directives avant d’inclure n’importe quel en-tête CRT, comme dans cet exemple :
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -218,11 +208,11 @@ Pour la portabilité du code source, vous pouvez conserver les noms Posix dans v
 #include <stdlib.h>
 ```
 
-### <a name="maximum-conversion-count-macros"></a>Macros de nombre maximal de conversion
+### <a name="maximum-conversion-count-macros"></a>Macros de conversion maximale de nombre
 
-Pour vous aider à créer des tampons sécurisés pour les conversions, la bibliothèque CRT inclut des macros pratiques. Définir la taille de la mémoire tampon requise pour convertir la valeur la plus longue possible de chaque type d’entier, y compris le terminateur null et les signer caractère, pour plusieurs bases de common. Pour vous assurer que votre mémoire tampon est assez grande pour recevoir une conversion dans la base spécifiée par *radix*, utilisez une de ces défini macros lorsque vous allouez de la mémoire tampon. Cela contribue à éviter les erreurs de dépassement de mémoire tampon lors de la conversion de types intégraux en chaînes. Ces macros sont définies lorsque vous incluez stdlib.h ou wchar.h dans votre source.
+Pour vous aider à créer des mémoires tampon sécurisée pour les conversions, la bibliothèque CRT inclut des macros pratiques. Celles-ci définissent la taille de la mémoire tampon nécessaire pour convertir la valeur la plus longue possible de chaque type d’entier, y compris le terminateur null et signer caractère, pour plusieurs bases courantes. Pour vous assurer que votre mémoire tampon est assez grande pour recevoir de conversion dans la base spécifiée par *radix*, utilisez une de ces macros définies par lorsque vous allouez de la mémoire tampon. Cela permet d’éviter les erreurs de saturation de mémoire tampon lorsque vous convertissez des types intégraux en chaînes. Ces macros sont définies lorsque vous incluez stdlib.h ou wchar.h dans votre source.
 
-Pour utiliser une de ces macros dans une fonction de conversion de chaîne, déclarer votre mémoire tampon de conversion du type de caractère approprié et utiliser la valeur de la macro pour le type entier et la base que la dimension de la mémoire tampon. Ce tableau répertorie les macros appropriées pour chaque fonction pour les bases des listés :
+Pour utiliser une de ces macros dans une fonction de conversion de chaîne, déclarer votre mémoire tampon de conversion du type de caractère approprié et utilisez la valeur de macro pour le type entier et la base d’en tant que la dimension de la mémoire tampon. Ce tableau répertorie les macros qui sont appropriés pour chaque fonction pour les bases de répertoriées :
 
 ||||
 |-|-|-|
@@ -233,7 +223,7 @@ Pour utiliser une de ces macros dans une fonction de conversion de chaîne, déc
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-Cet exemple utilise une macro de conversion de nombre pour définir une mémoire tampon suffisamment grande pour contenir un **unsigned long long** 2 de base :
+Cet exemple utilise une macro de conversion de nombre pour définir une mémoire tampon assez grande pour contenir un **unsigned long long** dans la base 2 :
 
 ```cpp
 #include <wchar.h>
@@ -255,7 +245,7 @@ int main()
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
 |**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -263,11 +253,11 @@ int main()
 |**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
 |**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> ou \<wchar.h>|
 
-Ces fonctions et les macros sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Ces fonctions et macros sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
-Cet exemple illustre l’utilisation de certaines fonctions de conversion d’entier. Notez l’utilisation de la **_CRT_SECURE_NO_WARNINGS** macro progressivement avertissement C4996.
+Cet exemple illustre l’utilisation de certaines des fonctions de conversion d’entier. Notez l’utilisation de la **_CRT_SECURE_NO_WARNINGS** macro progressivement l’avertissement C4996.
 
 ```C
 // crt_itoa.c

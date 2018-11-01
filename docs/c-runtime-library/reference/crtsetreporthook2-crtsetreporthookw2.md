@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportHook2, _CrtSetReportHookW2 | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -25,24 +21,18 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17dc0fc97a46e6ce0b5bda68ec8adc6ef37c4218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402258"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446772"
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
@@ -67,19 +57,19 @@ int _CrtSetReportHookW2(
 L’action à entreprendre : **_CRT_RPTHOOK_INSTALL** ou **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Raccordement de rapport pour installer ou supprimer dans la version de caractère étroits ou caractères larges de cette fonction.
+Raccordement de rapport à installer ou supprimer dans la version de caractère étroits ou caractères larges de cette fonction.
 
 ## <a name="return-value"></a>Valeur de retour
 
--1 si une erreur s’est produite, avec **EINVAL** ou **ENOMEM** définie ; sinon, retourne le nombre de référence *pfnNewHook* après l’appel.
+-1 si une erreur s’est produite, avec **EINVAL** ou **ENOMEM** définie ; sinon, retourne le décompte de références *pfnNewHook* après l’appel.
 
 ## <a name="remarks"></a>Notes
 
-**_CrtSetReportHook2** et **_CrtSetReportHookW2** vous permettent de connecter ou déconnecter une fonction, tandis que [_CrtSetReportHook](crtsetreporthook.md) vous permet uniquement d’une fonction de raccordement.
+**_CrtSetReportHook2** et **_CrtSetReportHookW2** vous permettent de raccorder ou décrocher une fonction, tandis que [_CrtSetReportHook](crtsetreporthook.md) vous permet uniquement de raccorder une fonction.
 
-**_CrtSetReportHook2** ou **_CrtSetReportHookW2** doit être utilisé à la place de **_CrtSetReportHook** lorsque l’appel de raccordement est effectué dans une DLL et de lorsque plusieurs DLL peuvent être chargées et de définir leurs propres fonctions de raccordement. Dans une situation de ce type, les DLL peuvent être déchargées dans un ordre différent de leur chargement et la fonction de raccordement pointer vers une DLL non chargée. Aucune sortie de débogage bloque le processus si les fonctions de raccordement ont été ajoutées avec **_CrtSetReportHook**.
+**_CrtSetReportHook2** ou **_CrtSetReportHookW2** doit être utilisé au lieu de **_CrtSetReportHook** lorsque l’appel de raccordement est effectué dans une DLL et quand plusieurs DLL peuvent être chargées et définir leurs propres fonctions de raccordement. Dans une situation de ce type, les DLL peuvent être déchargées dans un ordre différent de leur chargement et la fonction de raccordement pointer vers une DLL non chargée. Toute sortie de débogage bloque le processus si les fonctions de raccordement ont été ajoutées avec **_CrtSetReportHook**.
 
-Un raccordement fonctions ajoutées avec **_CrtSetReportHook** appelées s’il n’y a pas de fonctions ajoutées avec raccordement **_CrtSetReportHook2** ou **_CrtSetReportHookW2** ou si tous les raccordement fonctions ajoutées avec **_CrtSetReportHook2** et **_CrtSetReportHookW2** retourner **FALSE**.
+Les fonctions de raccordement ajoutées avec **_CrtSetReportHook** sont appelées si il n’y a aucun fonctions ajoutées avec raccordement **_CrtSetReportHook2** ou **_CrtSetReportHookW2** ou si tous les raccordement fonctions ajoutées avec **_CrtSetReportHook2** et **_CrtSetReportHookW2** retourner **FALSE**.
 
 La version à caractères larges de cette fonction est disponible. Les fonctions de raccordement de rapport prennent une chaîne dont le type (caractères larges ou étroits) doit correspondre à la version de cette fonction utilisée. Utilisez le prototype de fonction suivant pour les raccordements de rapport utilisés avec la version à caractères larges de cette fonction :
 
@@ -96,9 +86,9 @@ int YourReportHook( int reportType, char *message, int *returnValue );
 Ces fonctions valident leurs paramètres. Si *mode* ou **pfnNewNook** est non valide, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
 
 > [!NOTE]
-> Si votre application est compilée avec **/CLR** et la fonction de création de rapports est appelée après que l’application a quitté principale, le CLR lève une exception si la fonction de création de rapports appelle les fonctions CRT.
+> Si votre application est compilée avec **/CLR** et la fonction de création de rapports est appelée après que l’application a quitté principale, le CLR lève une exception si la fonction de création de rapports appelle des fonctions CRT.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

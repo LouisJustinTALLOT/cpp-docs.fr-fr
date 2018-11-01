@@ -1,10 +1,6 @@
 ---
-title: _chsize | Microsoft Docs
-ms.custom: ''
+title: _chsize
 ms.date: 03/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _chsize
-dev_langs:
-- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb40d218439ebe308e7d7cf01ab5043a2ebb3b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395752"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600640"
 ---
 # <a name="chsize"></a>_chsize
 
@@ -65,7 +55,7 @@ Nouvelle longueur, en octets, du fichier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_chsize** renvoie la valeur 0 si la taille du fichier est modifiée avec succès. Une valeur de retour de -1 indique une erreur : **errno** a la valeur **EACCES** si le fichier spécifié est en lecture seule ou si le fichier spécifié est verrouillé contre tout accès, de **EBADF** si le descripteur n’est pas valide, **ENOSPC** si aucun espace n’est pas sur l’appareil, ou **EINVAL** si *taille* est inférieur à zéro.
+**_chsize** retourne la valeur 0 si la taille du fichier est modifiée avec succès. Une valeur de retour de -1 indique une erreur : **errno** a la valeur **EACCES** si le fichier spécifié est en lecture seule ou le fichier spécifié est verrouillé contre tout accès, à **EBADF** si le descripteur n’est pas valide, **ENOSPC** si aucun espace n’est pas sur l’appareil, ou **EINVAL** si *taille* est inférieur à zéro.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -75,7 +65,7 @@ Le **_chsize** fonction étend ou tronque le fichier associé *fd* à la longueu
 
 Cette fonction valide ses paramètres. Si *taille* est inférieur à zéro ou *fd* est un descripteur de fichier incorrect, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
