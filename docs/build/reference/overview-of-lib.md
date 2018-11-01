@@ -1,27 +1,17 @@
 ---
-title: Vue d’ensemble de LIB | Microsoft Docs
-ms.custom: ''
+title: Vue d'ensemble de LIB
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - Lib
-dev_langs:
-- C++
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 223f5284ed25b5a13fddef879e63ec2e480f3314
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 03209bc409453cab1769606cb972f4572d3617bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548497"
 ---
 # <a name="overview-of-lib"></a>Vue d'ensemble de LIB
 
@@ -43,22 +33,22 @@ Le tableau suivant répertorie les options de lib.exe, avec un lien vers plus d�
 
 |Option|Description|
 |-|-|
-|**/ DEF**|Créer une bibliothèque d’importation et d’un fichier d’exportation.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](../../build/reference/building-an-import-library-and-export-file.md).|
+|**/DEF**|Créer une bibliothèque d’importation et d’un fichier d’exportation.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](../../build/reference/building-an-import-library-and-export-file.md).|
 |**/ ERRORREPORT**|   Envoyer des informations à Microsoft sur les erreurs internes avec lib.exe.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
 |**/EXPORT**|   Exporte une fonction à partir de votre programme.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](../../build/reference/building-an-import-library-and-export-file.md).|
 |**/ EXTRACTION**|   Créez un fichier objet (.obj) qui contient une copie d’un membre d’une bibliothèque existante.<br/><br/>Pour plus d’informations, consultez [extraction d’un membre de bibliothèque](../../build/reference/extracting-a-library-member.md).|
-|**/ INCLURE**|   Ajoute un symbole à la table de symboles.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](../../build/reference/building-an-import-library-and-export-file.md).|
-|**/ LIBPATH**|   Substitue le chemin d’accès de la bibliothèque d’environnement.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
+|**/INCLUDE**|   Ajoute un symbole à la table de symboles.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](../../build/reference/building-an-import-library-and-export-file.md).|
+|**/LIBPATH**|   Substitue le chemin d’accès de la bibliothèque d’environnement.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
 |**/ LISTE**|   Affiche des informations sur la bibliothèque de sortie vers la sortie standard.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
 |**/LTCG**|   Provoque la bibliothèque à l’aide de la génération de code du moment de la liaison.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
-|**/ MACHINE**|   Spécifie la plateforme cible pour le programme.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
+|**/MACHINE**|   Spécifie la plateforme cible pour le programme.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
 |**/ NOM**|   Lorsque vous créez une bibliothèque d’importation, spécifie le nom de la DLL pour laquelle la bibliothèque d’importation est générée.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
-|**/ NODEFAULTLIB**|   Supprime une ou plusieurs bibliothèques par défaut de la liste des bibliothèques qu’elle parcourt lors de la résolution des références externes.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
+|**/NODEFAULTLIB**|   Supprime une ou plusieurs bibliothèques par défaut de la liste des bibliothèques qu’elle parcourt lors de la résolution des références externes.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
 |**/NOLOGO**|   Supprime l’affichage de la LIB copyright message et numéro de version et empêche la répercussion des fichiers de commandes.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
-|**/ ENTRÉE SORTIE**|   Remplace le nom de fichier de sortie par défaut.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
+|**/OUT**|   Remplace le nom de fichier de sortie par défaut.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
 |**/ SUPPRIMER**|   Omet un objet à partir de la bibliothèque de sortie.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
 |**/SUBSYSTEM**|   Indique le système d’exploitation comment exécuter un programme créé par la liaison à la bibliothèque de sortie.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
-|**/ VERBOSE**|   Affiche des détails sur la progression de la session, y compris les noms des fichiers .obj en cours d’ajout.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
+|**/VERBOSE**|   Affiche des détails sur la progression de la session, y compris les noms des fichiers .obj en cours d’ajout.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
 |**/WX**|   Considérer les avertissements comme des erreurs.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
 
 ## <a name="see-also"></a>Voir aussi
