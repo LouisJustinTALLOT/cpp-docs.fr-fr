@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
-ms.translationtype: MT
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070581"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 
@@ -81,11 +81,11 @@ Les promotions de type conservation-valeur et les promotions qui conservent l'en
 
 - Un opérande de **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, ou **>=**
 
-     Ces opérateurs se basent sur un signe pour déterminer le résultat. Par conséquent, les promotions de type conservation-valeur et conservation-signe produisent des résultats différents lorsqu’elles sont appliquées à ces opérandes.
+   Ces opérateurs se basent sur un signe pour déterminer le résultat. Par conséquent, les promotions de type conservation-valeur et conservation-signe produisent des résultats différents lorsqu’elles sont appliquées à ces opérandes.
 
 - L’opérande gauche de **>>** ou **>>=**
 
-     Ces opérateurs traitent les quantités signées et non signées différemment en effectuant une opération de décalage. Pour les quantités signées, le déplacement de la quantité vers la droite provoque la propagation du bit de signe dans les positions binaires libérées. Pour les quantités non signées, les positions binaires libérées sont vides.
+   Ces opérateurs traitent les quantités signées et non signées différemment en effectuant une opération de décalage. Pour les quantités signées, le déplacement de la quantité vers la droite provoque la propagation du bit de signe dans les positions binaires libérées. Pour les quantités non signées, les positions binaires libérées sont vides.
 
 - Argument vers une fonction ou un opérande surchargé d’un opérateur surchargé qui dépend de l’entier non signé du type de l’opérande pour la correspondance d’argument. (Consultez [opérateurs surchargés](../cpp/operator-overloading.md) pour plus d’informations sur la définition des opérateurs surchargés.)
 
@@ -221,7 +221,7 @@ Dans le second cas, un pointeur vers une classe peut être converti en pointeur 
 
 Le résultat de ce type de conversion est un pointeur vers le « sous-objet », la partie de l'objet qui est complètement décrite par la classe de base.
 
-Le code suivant définit deux classes, `A` et `B`, où `B` est dérivée de `A`. (Pour plus d’informations sur l’héritage, consultez [les Classes dérivées](../cpp/inheritance-cpp.md).) Il définit ensuite `bObject`, un objet de type `B`, et deux pointeurs (`pA` et `pB`) qui pointent vers l'objet.
+Le code suivant définit deux classes, `A` et `B`, où `B` est dérivée de `A`. (Pour plus d’informations sur l’héritage, consultez [les Classes dérivées](../cpp/inheritance-cpp.md).) Il définit ensuite , un objet de type `bObject`, et deux pointeurs (`B` et `pB`) qui pointent vers l'objet.
 
 ```cpp
 // C2039 expected

@@ -1,17 +1,15 @@
 ---
-title: '&lt;new&gt;, typedefs | Microsoft Docs'
-ms.custom: ''
+title: '&lt;new&gt;, typedefs'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
-ms.openlocfilehash: bbfe7d2c24cb589925c70c70235f6de112d274f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 85c8d0c2974f734783e3d9c2ad1269f84d605dec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539654"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549118"
 ---
 # <a name="ltnewgt-typedefs"></a>&lt;new&gt;, typedefs
 

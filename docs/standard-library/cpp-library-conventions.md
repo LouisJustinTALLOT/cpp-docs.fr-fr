@@ -1,12 +1,6 @@
 ---
-title: Conventions de la bibliothèque C++ | Microsoft Docs
-ms.custom: ''
+title: Conventions de la bibliothèque C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Standard Library, conventions
 - classes [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1140c5421f6b39498fa69199c4d7ff7ccdc2476
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1790b75baea340d0b3ab1044290317055ac81d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844235"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524780"
 ---
 # <a name="c-library-conventions"></a>Conventions de la bibliothèque C++
 

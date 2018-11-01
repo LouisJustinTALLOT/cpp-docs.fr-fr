@@ -1,10 +1,6 @@
 ---
-title: _lsearch | Microsoft Docs
-ms.custom: ''
+title: _lsearch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lsearch
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch
 - lsearch
-dev_langs:
-- C++
 helpviewer_keywords:
 - _lsearch function
 - values, searching for
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2aaf6626b2f7005181640f77026b6924c39cd325
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 340e8ac382972b15acc52013d5d6a51352db969c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532809"
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -84,13 +74,13 @@ Si la clé est trouvée, **_lsearch** retourne un pointeur vers l’élément du
 
 ## <a name="remarks"></a>Notes
 
-Le **_lsearch** fonction effectue une recherche linéaire pour la valeur *clé* dans un tableau de *nombre* éléments, chacun des *largeur* octets. Contrairement aux **bsearch**, **_lsearch** ne nécessite pas de tableau à trier. Si *clé* n’est trouvé, **_lsearch** ajoute à la fin du tableau et incrémente *nombre*.
+Le **_lsearch** fonction effectue une recherche linéaire portant sur la valeur *clé* dans un tableau de *nombre* éléments, chacun des *largeur* octets. Contrairement aux **bsearch**, **_lsearch** ne nécessite pas de tableau à trier. Si *clé* n’est trouvée, **_lsearch** ajoute à la fin du tableau et incrémente *nombre*.
 
-Le *comparer* argument est un pointeur vers une routine fournie par l’utilisateur qui compare deux éléments du tableau et retourne une valeur précisant leur relation. **_lsearch** appelle la *comparer* routine une ou plusieurs fois lors de la recherche, le passage de pointeurs vers deux éléments de tableau à chaque appel. *comparer* doit comparer les éléments et de retour soit différent de zéro (ce qui signifie que les éléments sont différents), ou 0 (ce qui signifie que les éléments sont identiques).
+Le *comparer* argument est un pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur spécifiant leur relation. **_lsearch** appelle le *comparer* routines une ou plusieurs fois pendant la recherche, en passant les pointeurs désignant deux éléments de tableau à chaque appel. *comparer* doit comparer les éléments et retourner une valeur différente de zéro (les éléments sont différents) ou 0 (ce qui signifie que les éléments sont identiques).
 
 Cette fonction valide ses paramètres. Si *comparer*, *clé* ou *nombre* est **NULL**, ou si *base* est **NULL**et *nombre* est différent de zéro, ou si *largeur* est inférieur à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

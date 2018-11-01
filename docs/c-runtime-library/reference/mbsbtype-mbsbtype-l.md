@@ -1,10 +1,6 @@
 ---
-title: _mbsbtype, _mbsbtype_l | Microsoft Docs
-ms.custom: ''
+title: _mbsbtype, _mbsbtype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsbtype_l
 - _mbsbtype
@@ -26,24 +22,18 @@ f1_keywords:
 - mbsbtype_l
 - _mbsbtype_l
 - _mbsbtype
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsbtype function
 - mbsbtype function
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5c2927b4e4b68b1284341fe7e767ec50feb21a44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451017"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566801"
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 
@@ -79,24 +69,24 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbsbtype** et **_mbsbtype_l** retourne une valeur entière indiquant le résultat du test sur l’octet spécifié. Les constantes manifestes présentes dans le tableau suivant sont définies dans Mbctype.h.
+**_mbsbtype** et **_mbsbtype_l** retourne une valeur entière indiquant le résultat du test de l’octet spécifié. Les constantes manifestes présentes dans le tableau suivant sont définies dans Mbctype.h.
 
 |Valeur de retour|Type d’octet|
 |------------------|---------------|
-|**_MBC_SINGLE** (0)|Caractère codé sur un octet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 0 si l’octet spécifié est dans la plage 0 x 20 – 0x7E ou 0xA1 - 0xDF.|
-|**_MBC_LEAD** (1)|Octet de tête de caractère multioctet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 1 si l’octet spécifié est dans la plage 0 x 81-0x9F ou 0xE0 - 0xFC.|
-|**_MBC_TRAIL** (2)|Octet de fin de caractère multioctet. Par exemple, dans la page de codes 932, **_mbsbtype** renvoie la valeur 2 si l’octet spécifié est dans la plage 0 x 40-0x7E ou 0 x 80 - 0xFC.|
-|**_MBC_ILLEGAL** (-1)|**NULL** chaîne, un caractère non valide ou octet null trouvée avant l’octet au décalage *nombre* dans *mbstr*.|
+|**_MBC_SINGLE** (0)|Caractère codé sur un octet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 0 si l’octet spécifié se trouve dans la plage 0 x 20-0x7E ou 0xA1 - 0xDF.|
+|**_MBC_LEAD** (1)|Octet de tête de caractère multioctet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 1 si l’octet spécifié appartient à la plage 0 x 81-0x9F ou 0xE0 - 0xFC.|
+|**_MBC_TRAIL** (2)|Octet de fin de caractère multioctet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 2 si l’octet spécifié appartient à la plage 0 x 40-0x7E ou 0 x 80 - 0xFC.|
+|**_MBC_ILLEGAL** (-1)|**NULL** chaîne, caractère non valide ou octet null trouvée avant l’octet au décalage *nombre* dans *mbstr*.|
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsbtype** fonction détermine le type d’un octet dans une chaîne de caractères multioctets. La fonction examine uniquement les octets au décalage *nombre* dans *mbstr*, en ignorant les caractères non valides avant l’octet spécifié.
+Le **_mbsbtype** fonction détermine le type d’un octet dans une chaîne de caractères multioctets. La fonction examine uniquement l’octet au décalage *nombre* dans *mbstr*, en ignorant les caractères non valides avant l’octet spécifié.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le **_l** suffixe utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, sauf qu’il utilise les paramètres régionaux transmis dans à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le **_l** suffixe utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, à ceci près qu’elle utilise les paramètres régionaux passés dans à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 Si la chaîne d’entrée est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **_MBC_ILLEGAL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

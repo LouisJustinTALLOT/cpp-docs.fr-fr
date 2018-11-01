@@ -1,28 +1,18 @@
 ---
-title: Vue d’ensemble de la classe ATL | Microsoft Docs
-ms.custom: ''
+title: Vue d’ensemble de la classe ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - vc.atl.classes
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de241532763267f5d20d051121e501934da972cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529663"
 ---
 # <a name="atl-class-overview"></a>Vue d’ensemble de la classe ATL
 

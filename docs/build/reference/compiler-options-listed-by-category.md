@@ -1,29 +1,19 @@
 ---
-title: Options du compilateur classées par catégorie | Microsoft Docs
-ms.custom: ''
+title: Options du compilateur classées par catégorie
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a255259af5f660a11007005fd71f85bff80a8e05
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42575498"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532949"
 ---
 # <a name="compiler-options-listed-by-category"></a>Options du compilateur classées par catégorie
 
-Cet article contient une liste par catégorie d'options du compilateur. Pour une liste alphabétique, consultez [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
+Cet article contient une liste par catégorie d'options du compilateur. Pour obtenir une liste alphabétique, consultez [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
 
 ### <a name="optimization"></a>Optimisation
 
@@ -31,12 +21,12 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|Crée un code compact.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Crée un code rapide.|
-|[/OB](ob-inline-function-expansion.md)|Contrôle l'expansion inline.|
+|[/Ob](ob-inline-function-expansion.md)|Contrôle l'expansion inline.|
 |[/Od](od-disable-debug.md)|Désactive l'optimisation.|
 |[/Og](og-global-optimizations.md)|Obsolète. Utilise des optimisations globales.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Génère des fonctions intrinsèques.|
-|[/OS](os-ot-favor-small-code-favor-fast-code.md)|Favorise la taille du code.|
-|[/OT](os-ot-favor-small-code-favor-fast-code.md)|Favorise la vitesse du code.|
+|[/Os](os-ot-favor-small-code-favor-fast-code.md)|Favorise la taille du code.|
+|[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Favorise la vitesse du code.|
 |[/Ox](ox-full-optimization.md)|Utilise l'optimisation maximale (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Omet le pointeur de frame. (x86 uniquement)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Produit du code optimisé pour une architecture spécifiée ou pour une plage d'architectures.|
@@ -45,31 +35,31 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 
 |Option|Objectif|
 |------------|-------------|
-|[/ arch](arch-x86.md)|Utiliser des instructions SSE ou SSE2 dans la génération du code. (x86 uniquement)|
+|[/arch](arch-x86.md)|Utiliser des instructions SSE ou SSE2 dans la génération du code. (x86 uniquement)|
 |[/clr](clr-common-language-runtime-compilation.md)|Produit un fichier de sortie à exécuter sur le CLR (Common Language Runtime).|
 |[/EH](eh-exception-handling-model.md)|Spécifie le modèle de gestion des exceptions.|
-|[/ FP](fp-specify-floating-point-behavior.md)|Spécifie le comportement de virgule flottante.|
+|[/fp](fp-specify-floating-point-behavior.md)|Spécifie le comportement de virgule flottante.|
 |[/GA](ga-optimize-for-windows-application.md)|Optimise pour les applications Windows.|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|Utilise la convention d'appel `__cdecl` . (x86 uniquement)|
-|[/GE](ge-enable-stack-probes.md)|Obsolète. Active les tests de pile.|
+|[/Ge](ge-enable-stack-probes.md)|Obsolète. Active les tests de pile.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Active le regroupement des chaînes.|
-|[/GH](gh-enable-penter-hook-function.md)|Appelle la fonction de raccordement `_penter`.|
+|[/Gh](gh-enable-penter-hook-function.md)|Appelle la fonction de raccordement `_penter`.|
 |[/GH](gh-enable-pexit-hook-function.md)|Appelle la fonction de raccordement `_pexit`.|
 |[/GL](gl-whole-program-optimization.md)|Active l'optimisation de l'ensemble du programme.|
 |[/Gm](gm-enable-minimal-rebuild.md)|Active la régénération minimale.|
 |[/GR](gr-enable-run-time-type-information.md)|Active les informations de type au moment de l'exécution (RTTI, Run-Time Type Information).|
-|[/ GR](gd-gr-gv-gz-calling-convention.md)|Utilise la convention d'appel `__fastcall` . (x86 uniquement)|
+|[/Gr](gd-gr-gv-gz-calling-convention.md)|Utilise la convention d'appel `__fastcall` . (x86 uniquement)|
 |[/GS](gs-buffer-security-check.md)|Vérifie la sécurité des mémoires tampons.|
-|[/GS](gs-control-stack-checking-calls.md)|Gère les tests de pile.|
+|[/Gs](gs-control-stack-checking-calls.md)|Gère les tests de pile.|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|Prend en charge la sécurité des fibres pour les données allouées en utilisant un stockage local des threads de type statique.|
-|[/ Guard : CF](guard-enable-control-flow-guard.md)|Ajoute des vérifications de sécurité de protection du flux de contrôle.|
-|[GV](gd-gr-gv-gz-calling-convention.md)|Utilise la convention d'appel `__vectorcall` . (x86 et x64 uniquement)|
-|[/GW](gw-optimize-global-data.md)|Active l'optimisation globale des données de la totalité du programme.|
+|[/guard:cf](guard-enable-control-flow-guard.md)|Ajoute des vérifications de sécurité de protection du flux de contrôle.|
+|[/Gv](gd-gr-gv-gz-calling-convention.md)|Utilise la convention d'appel `__vectorcall` . (x86 et x64 uniquement)|
+|[/Gw](gw-optimize-global-data.md)|Active l'optimisation globale des données de la totalité du programme.|
 |[/GX](gx-enable-exception-handling.md)|Obsolète. Active la gestion synchrone des exceptions. Utilisez [/EH](eh-exception-handling-model.md) à la place.|
-|[/ Gy](gy-enable-function-level-linking.md)|Active la liaison au niveau des fonctions.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Obsolète. Active les vérifications rapides. (Même en tant que [/RTC1](rtc-run-time-error-checks.md))|
+|[/Gy](gy-enable-function-level-linking.md)|Active la liaison au niveau des fonctions.|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Obsolète. Active les vérifications rapides. (Identique à [/RTC1](rtc-run-time-error-checks.md))|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Utilise la convention d'appel `__stdcall` . (x86 uniquement)|
-|[/Homeparams](homeparams-copy-register-parameters-to-stack.md)|Force l'écriture des paramètres passés dans les registres à leurs emplacements sur la pile lors de l'entrée de la fonction. Cette option du compilateur est uniquement pour les x64 compilateurs (compilation natives et croisée).|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Force l'écriture des paramètres passés dans les registres à leurs emplacements sur la pile lors de l'entrée de la fonction. Cette option du compilateur est uniquement pour les x64 compilateurs (compilation natives et croisée).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crée une image corrigeable en mémoire.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Génère des fonctions transcendantes rapides.|
 |[QIfist](qifist-suppress-ftol.md)|Obsolète. Supprime l'appel de la fonction d'assistance `_ftol` quand la conversion d'un type à virgule flottante vers un type intégral est requise. (x86 uniquement)|
@@ -80,7 +70,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 |[/Qspectre](qspectre.md)|Activer les atténuations pour CVE 2017-5753, pour une classe d’attaques de Spectre.|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Active les niveaux de création de rapports pour le vectorisation automatique.|
 |[/RTC](rtc-run-time-error-checks.md)|Active les vérifications des erreurs au moment de l'exécution.|
-|[/ volatile](volatile-volatile-keyword-interpretation.md)|Sélectionne comment le mot clé volatile est interprété.|
+|[/volatile](volatile-volatile-keyword-interpretation.md)|Sélectionne comment le mot clé volatile est interprété.|
 
 ### <a name="output-files"></a>Fichiers de sortie
 
@@ -88,13 +78,13 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Traite les commentaires de documentation pour les diriger vers un fichier XML.|
 |[/FA](fa-fa-listing-file.md)|Configure un fichier de listes d'assemblys.|
-|[/FA](fa-fa-listing-file.md)|Crée un fichier de listes d'assemblys.|
+|[/Fa](fa-fa-listing-file.md)|Crée un fichier de listes d'assemblys.|
 |[/Fd](fd-program-database-file-name.md)|Renomme le fichier de base de données du programme.|
-|[/FE](fe-name-exe-file.md)|Renomme le fichier exécutable.|
-|[/Fi](fi-preprocess-output-file-name.md)|Spécifie le nom du fichier de sortie prétraité.|
+|[/Fe](fe-name-exe-file.md)|Renomme le fichier exécutable.|
+|[/FI](fi-preprocess-output-file-name.md)|Spécifie le nom du fichier de sortie prétraité.|
 |[/Fm](fm-name-mapfile.md)|Crée un fichier de mappage.|
-|[/FO](fo-object-file-name.md)|Crée un fichier objet.|
-|[/ FP](fp-name-dot-pch-file.md)|Spécifie un nom de fichier d'en-tête précompilé.|
+|[/Fo](fo-object-file-name.md)|Crée un fichier objet.|
+|[/Fp](fp-name-dot-pch-file.md)|Spécifie un nom de fichier d'en-tête précompilé.|
 |[/ FR, /Fr](fr-fr-create-dot-sbr-file.md)|Nom généré des fichiers .sbr navigateur.|
 
 ### <a name="preprocessor"></a>Préprocesseur
@@ -120,11 +110,11 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 |Option|Objectif|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Évaluation de constexpr de contrôle au moment de la compilation.|
-|[/ OpenMP](openmp-enable-openmp-2-0-support.md)|Active [#pragma omp](../../preprocessor/omp.md) dans le code source.|
-|[/VD](vd-disable-construction-displacements.md)|Supprime ou active les membres masqués de la classe `vtordisp` .|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Active [#pragma omp](../../preprocessor/omp.md) dans le code source.|
+|[/vd](vd-disable-construction-displacements.md)|Supprime ou active les membres masqués de la classe `vtordisp` .|
 |[/vmb](vmb-vmg-representation-method.md)|Utilise la meilleure base pour les pointeurs vers des membres.|
 |[/vmg](vmb-vmg-representation-method.md)|Utilise la généralité complète pour les pointeurs vers des membres.|
-|[/ VMM](vmm-vms-vmv-general-purpose-representation.md)|Déclare un héritage multiple.|
+|[/vmm](vmm-vms-vmv-general-purpose-representation.md)|Déclare un héritage multiple.|
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Déclare un héritage simple.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Déclare un héritage virtuel.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Génère compatible C 7.0 informations de débogage.|
@@ -159,7 +149,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Affiche la liste des options du compilateur.|
 |[@](at-specify-a-compiler-response-file.md)|Spécifie un fichier réponse.|
-|[/ analyze](analyze-code-analysis.md)|Active l'analyse du code.|
+|[/analyze](analyze-code-analysis.md)|Active l'analyse du code.|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Augmente le nombre de sections adressables dans un fichier .obj.|
 |[/c](c-compile-without-linking.md)|Compile sans liaison.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Spécifie le nombre de threads de cl.exe à utiliser pour l'optimisation et la génération de code.|
@@ -167,7 +157,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Affiche le chemin d'accès complet des fichiers de code source passés à cl.exe dans un texte de diagnostic.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Force la sérialisation des écritures dans le fichier de base de données de programme (PDB) via MSPDBSRV.EXE.|
 |[/H](h-restrict-length-of-external-names.md)|Obsolète. Limite la longueur des noms externes (publics).|
-|[/ HELP](help-compiler-command-line-help.md)|Affiche la liste des options du compilateur.|
+|[/HELP](help-compiler-command-line-help.md)|Affiche la liste des options du compilateur.|
 |[/J](j-default-char-type-is-unsigned.md)|Change le type `char` par défaut.|
 |[/ JMC](jmc.md)|Prend en charge le débogage uniquement mon Code C++ natif.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Le compilateur et l'éditeur de liens créeront un binaire qui peut être exécuté dans le noyau Windows.|
@@ -175,9 +165,9 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Supprime l'affichage de la bannière d'ouverture de session.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Active des fonctionnalités de sécurité et ses avertissements supplémentaires.|
 |[/showIncludes](showincludes-list-include-files.md)|Affiche la liste de tous les fichiers Include pendant la compilation.|
-|[TP](tc-tp-tc-tp-specify-source-file-type.md)|Spécifie un fichier source C.|
+|[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Spécifie un fichier source C.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Spécifie que tous les fichiers sources sont C.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Spécifie un fichier source C++.|
+|[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Spécifie un fichier source C++.|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Spécifie tous les fichiers source C++.|
 |[/V](v-version-number.md)|Obsolète. Définit la chaîne version.|
 |[/w](compiler-option-warning-level.md)|Désactive tous les avertissements.|
@@ -187,7 +177,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 |[/wd](compiler-option-warning-level.md)|Désactive l’avertissement spécifié.|
 |[/we](compiler-option-warning-level.md)|Traite l’avertissement spécifié comme une erreur.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Active un diagnostic de ligne pour les messages d'erreur et d'avertissement lors de la compilation du code source C++ à partir de la ligne de commande.|
-|[WO](compiler-option-warning-level.md)|Affiche l’avertissement spécifié une seule fois.|
+|[/wo](compiler-option-warning-level.md)|Affiche l’avertissement spécifié une seule fois.|
 |[/Wv](compiler-option-warning-level.md)|Désactive les avertissements introduits par les versions ultérieures du compilateur.|
 |[/WX](compiler-option-warning-level.md)|Traite les avertissements comme des erreurs.|
 |[/Yc](yc-create-precompiled-header-file.md)|Créer. Fichier PCH.|
@@ -209,9 +199,9 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour une
 
 |Option|Objectif|
 |------------|-------------|
-|[/ CLR : noAssembly](clr-common-language-runtime-compilation.md)|Obsolète. Utilisez [/LN (Create MSIL Module)](ln-create-msil-module.md) à la place.|
+|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Obsolète. Utilisez plutôt [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Obsolète. Crée un fichier d’informations de consultation sans variables locales.|
-|[/GE](ge-enable-stack-probes.md)|Obsolète. Active les tests de pile. Activé par défaut.|
+|[/Ge](ge-enable-stack-probes.md)|Obsolète. Active les tests de pile. Activé par défaut.|
 |[/GX](gx-enable-exception-handling.md)|Obsolète. Active la gestion synchrone des exceptions. Utilisez [/EH](eh-exception-handling-model.md) à la place.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Obsolète. Active les vérifications rapides. Utilisez [/RTC1](rtc-run-time-error-checks.md) à la place.|
 |[/H](h-restrict-length-of-external-names.md)|Obsolète. Limite la longueur des noms externes (publics).|

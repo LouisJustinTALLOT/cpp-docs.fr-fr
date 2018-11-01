@@ -1,11 +1,6 @@
 ---
-title: lgamma, lgammaf, lgammal | Microsoft Docs
-ms.custom: ''
+title: lgamma, lgammaf, lgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lgamma
 - lgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/lgamma
 - math/lgammaf
 - math/lgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - lgamma function
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fb668e1c24d3f24331e0892002530192afdaeb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400250"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533482"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -72,7 +61,7 @@ Valeur à calculer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne le logarithme naturel de la valeur absolue de la fonction gamma de *x*.
+En cas de réussite, retourne le logarithme népérien de la valeur absolue de la fonction gamma de *x*.
 
 |Problème|Retourner|
 |-----------|------------|
@@ -87,11 +76,11 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lgamma** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **lgamma** accepte et retourne toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **lgamma** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **lgamma** accepte et retourne toujours un **double**.
 
 Si x est un nombre rationnel, cette fonction retourne le logarithme de la factorielle de (x - 1).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

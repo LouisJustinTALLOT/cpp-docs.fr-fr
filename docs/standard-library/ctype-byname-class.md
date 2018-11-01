@@ -1,27 +1,17 @@
 ---
-title: ctype_byname, classe | Microsoft Docs
-ms.custom: ''
+title: ctype_byname, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocale/std::ctype_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a7ebfb2d5bc4543665054208e37e1f993270e5f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d998747045ece765269ddb013b525b8c06fcdf8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843897"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517739"
 ---
 # <a name="ctypebyname-class"></a>ctype_byname, classe
 
@@ -52,7 +42,7 @@ protected:
 
 Son comportement est déterminé par les paramètres régionaux nommés `_Locname`. Chaque constructeur initialise son objet de base avec [ctype](../standard-library/ctype-class.md)\<CharType>( `_Refs`) ou l’équivalent pour la classe de base `ctype<char>`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<locale>
 
