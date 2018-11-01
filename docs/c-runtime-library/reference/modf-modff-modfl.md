@@ -1,10 +1,6 @@
 ---
-title: modf, modff, modfl | Microsoft Docs
-ms.custom: ''
+title: modf, modff, modfl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - modff
 - modf
@@ -30,23 +26,17 @@ f1_keywords:
 - math/modf
 - math/modff
 - math/modfl
-dev_langs:
-- C++
 helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87cddb8b565cdc369e6b1e9679583db64039bb49
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404829"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478063"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -79,13 +69,13 @@ Cette fonction retourne la partie fractionnaire signée de *x*. Aucun retour d'e
 
 ## <a name="remarks"></a>Notes
 
-Le **modf** fonctions décomposer la valeur à virgule flottante *x* en fractions de seconde et un nombre entier, chacune ayant la même signature que *x*. La partie fractionnaire signée du *x* est retourné. La partie entière est stockée en tant que valeur à virgule flottante à *intptr*.
+Le **modf** fonctions décomposent la valeur à virgule flottante *x* en une partie fractionnaire et une partie entière, chacune ayant le même signe que *x*. La partie fractionnaire signée de *x* est retourné. La partie entière est stockée en tant que valeur à virgule flottante à *intptr*.
 
-**modf** possède une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
+**modf** a une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
-C++ autorise la surcharge, vous pouvez appeler des surcharges de **modf** qui acceptent et retournent **float** ou **long** **double** paramètres. Dans un programme C, **modf** toujours accepte deux valeurs doubles et retourne une valeur double.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **modf** qui acceptent et retournent **float** ou **long** **double** paramètres. Dans un programme C, **modf** toujours prend deux valeurs doubles et retourne une valeur double.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDumpClient | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDumpClient
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDumpClient
 - CrtSetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d5fecc90b4b7259f1440a0a0d86277c769c4e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09f319f6298dbec6b229b2923bd86fc9b50314de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470745"
 ---
 # <a name="crtsetdumpclient"></a>_CrtSetDumpClient
 
-Installe une fonction définie par l’application pour faire un dump **_CLIENT_BLOCK** tapez des blocs de mémoire (version debug uniquement).
+Installe une fonction définie par l’application pour faire un dump **_CLIENT_BLOCK** type des blocs de mémoire (version debug uniquement).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,23 +50,23 @@ Retourne la fonction de vidage de bloc définie par le client.
 
 ## <a name="remarks"></a>Notes
 
-Le **_CrtSetDumpClient** fonction permet à l’application permettant d’accéder aux objets de vidage stockés dans sa propre fonction de **_CLIENT_BLOCK** blocs de mémoire dans le runtime C déboguer le processus de vidage de mémoire. Par conséquent, chaque fois qu’un débogage dump comme fonction [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) ou [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) exporte un **_CLIENT_BLOCK** bloc de mémoire, l’application fonction Dump est appelée ainsi. **_CrtSetDumpClient** fournit une application avec une méthode simple pour la détection des fuites de mémoire et de validation ou de création de rapports le contenu des données stockées dans **_CLIENT_BLOCK** blocs. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetDumpClient** sont supprimés lors du prétraitement.
+Le **_CrtSetDumpClient** (fonction) permet à l’application de raccorder sa propre fonction pour vider des objets stockés dans **_CLIENT_BLOCK** processus de vidage de mémoire de débogage de blocs de mémoire dans le temps d’exécution C. Par conséquent, chaque fois qu’un débogage fonction de vidage comme [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) ou [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) exporte un **_CLIENT_BLOCK** bloc de mémoire, l’application fonction de vidage est également appelée. **_CrtSetDumpClient** fournit une application avec une méthode simple pour la détection des fuites de mémoire et de validation ou de création de rapports le contenu des données stockées dans **_CLIENT_BLOCK** blocs. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetDumpClient** sont supprimés lors du prétraitement.
 
-Le **_CrtSetDumpClient** fonction installe la nouvelle fonction définie par l’application de vidage spécifiée dans *dumpClient* et retourne la fonction de vidage précédemment défini. Voici un exemple de fonction de vidage de bloc client :
+Le **_CrtSetDumpClient** fonction installe la nouvelle fonction de vidage définie par l’application spécifiée dans *dumpClient* et retourne la fonction de vidage définie. Voici un exemple de fonction de vidage de bloc client :
 
 ```C
 void DumpClientFunction( void *userPortion, size_t blockSize );
 ```
 
-Le *userPortion* argument est un pointeur vers le début de la partie de données utilisateur du bloc de mémoire et *blockSize* Spécifie le bloc de la taille de la mémoire allouée en octets. La fonction de vidage de bloc client doit retourner **void**. Le pointeur vers la fonction de vidage de client qui est passé à **_CrtSetDumpClient** est de type **_CRT_DUMP_CLIENT**, comme défini dans Crtdbg.h :
+Le *userPortion* argument est un pointeur vers le début de la partie de données utilisateur du bloc de mémoire et *blockSize* spécifie la taille de la mémoire allouée bloc en octets. La fonction de vidage de bloc client doit retourner **void**. Le pointeur vers la fonction de vidage client passé à **_CrtSetDumpClient** est de type **_CRT_DUMP_CLIENT**, tel que défini dans Crtdbg.h :
 
 ```C
 typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
 ```
 
-Pour plus d’informations sur les fonctions qui opèrent sur **_CLIENT_BLOCK** blocs de mémoire de type, consultez [fonctions de raccordement de bloc Client](/visualstudio/debugger/client-block-hook-functions). La fonction [_CrtReportBlockType](crtreportblocktype.md) peut être utilisée pour retourner des informations sur les types et sous-types de blocs.
+Pour plus d’informations sur les fonctions qui opèrent sur **_CLIENT_BLOCK** type des blocs de mémoire, consultez [fonctions de raccordement de bloc Client](/visualstudio/debugger/client-block-hook-functions). La fonction [_CrtReportBlockType](crtreportblocktype.md) peut être utilisée pour retourner des informations sur les types et sous-types de blocs.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

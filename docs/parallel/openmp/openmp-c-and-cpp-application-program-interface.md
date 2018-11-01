@@ -1,23 +1,13 @@
 ---
-title: Interface du programme OpenMP C et C++ | Microsoft Docs
-ms.custom: ''
+title: API OpenMP C et C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fca0391e4ba1feff52479017065e7b60f314ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 749d4a0a4fcbeed1f8cb61108c5b4d13dcdc3047
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413093"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481690"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>API OpenMP C et C++
 

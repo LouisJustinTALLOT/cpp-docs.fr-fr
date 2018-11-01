@@ -1,18 +1,12 @@
 ---
-title: -Z7, - Zi, - ZI (Format des informations de débogage) | Microsoft Docs
-ms.custom: ''
+title: /Z7, /Zi, /ZI (Format des informations de débogage)
 ms.date: 02/22/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
 - /Zi
 - /Z7
 - VC.Project.VCCLWCECompilerTool.DebugInformationFormat
-dev_langs:
-- C++
 helpviewer_keywords:
 - C7 compatible compiler option [C++]
 - Debug Information Format compiler option
@@ -29,16 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 271948368190ddf5110d8b1fb357fe770a72e1aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 43ffbe76092b9675be1610e58c65c0034955634f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714270"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479041"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Format des informations de débogage)
 

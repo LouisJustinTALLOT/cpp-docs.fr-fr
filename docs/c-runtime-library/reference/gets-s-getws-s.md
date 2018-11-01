@@ -1,10 +1,6 @@
 ---
-title: gets_s, _getws_s | Microsoft Docs
-ms.custom: ''
+title: gets_s, _getws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getws_s
 - gets_s
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _getws_s
 - gets_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - getws_s function
 - _getws_s function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3a5047871937d96288798768e17618ab791c75e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f71fafceaf1974bc5ff736ff175a67cf6c924ee6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401816"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482899"
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 
@@ -83,11 +73,11 @@ Taille de la mémoire tampon.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne *tampon* en cas de réussite. A **NULL** pointeur indique une condition d’erreur ou de fin de fichier. Utilisez [ferror](ferror.md) ou [feof](feof.md) pour déterminer laquelle des deux s’est produite.
+Retourne *tampon* en cas de réussite. Un pointeur **NULL** indique une condition d’erreur ou de fin de fichier. Utilisez [ferror](ferror.md) ou [feof](feof.md) pour déterminer laquelle des deux s’est produite.
 
 ## <a name="remarks"></a>Notes
 
-Le **gets_s** fonction lit une ligne dans le flux d’entrée standard **stdin** et la stocke dans *tampon*. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). **gets_s** remplace le caractère de saut de ligne par un caractère null ('\0') avant de retourner la ligne. En revanche, le **fgets_s** fonction conserve le caractère de saut de ligne.
+Le **gets_s** fonction lit une ligne à partir du flux d’entrée standard **stdin** et la stocke dans *tampon*. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). **gets_s** remplace ensuite le caractère de saut de ligne par un caractère null ('\0') avant de retourner la ligne. En revanche, le **fgets_s** fonction conserve le caractère de saut de ligne.
 
 Si le premier caractère lu est le caractère de fin de fichier, un caractère null est stocké au début de *tampon* et **NULL** est retourné.
 
@@ -103,14 +93,14 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_getts_s**|**gets_s**|**gets_s**|**_getws_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

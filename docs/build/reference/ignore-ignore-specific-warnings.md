@@ -1,27 +1,17 @@
 ---
-title: -IGNORE (ignorer des avertissements spécifiques) | Microsoft Docs
-ms.custom: ''
+title: /IGNORE (ignorer des avertissements spécifiques)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /OVERWRITE
-dev_langs:
-- C++
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aee498951c01c332dffe720dbd6e3b77c8121aa5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4826ecae1f16cd3834cb6d47850fc686b3682614
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705859"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479689"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (ignorer des avertissements spécifiques)
 
@@ -46,9 +36,9 @@ L'éditeur de liens ne permet pas d'ignorer certains avertissements. Ce tableau 
 |[LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)|option '`option`' non reconnue ; ignorée|
 |LNK4062|«`option`'non compatible avec'`architecture`' de l’ordinateur cible ; option ignorée|
 |[LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)|"`option1`" ignoré à cause de la spécification "`option2`"|
-|[LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)|'`function`' de point d'entrée n'est pas __stdcall avec des arguments de '`number`' octets ; l'image risque de ne pas s'exécuter|
+|[LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)|’`function`’ de point d’entrée n’est pas __stdcall avec des arguments de ’`number`’ octets ; l’image risque de ne pas s’exécuter|
 |LNK4088|image en cours de génération à cause de l'option /FORCE ; l'image risque de ne pas s'exécuter|
-|[LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)|aucun argument spécifié avec l'option '`option`' ; commutateur ignoré|
+|[LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)|aucun argument spécifié avec l’option ’`option`’ ; commutateur ignoré|
 |LNK4203|erreur lors de la lecture de la base de données '`filename`' du programme ; édition de liens des objets comme s'il n'y avait aucune information de débogage|
 |[LNK4204](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md)|'`filename`' manque d’informations de débogage pour référencer le module ; objet sera lié sans informations de débogage|
 |[LNK4205](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md)|'`filename`' il manque des informations de débogage en cours pour référencer le module ; objet sera lié sans informations de débogage|
