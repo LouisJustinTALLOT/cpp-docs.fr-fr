@@ -1,20 +1,13 @@
 ---
-title: Exceptions (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Exceptions (C++/CX)
 ms.date: 01/18/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e7514fdfc07fcbb4a1fff42d80fd138ab7d6043
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100246"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471699"
 ---
 # <a name="exceptions-ccx"></a>Exceptions (C++/CX)
 
@@ -22,7 +15,7 @@ Gestion des erreurs dans C++ / c++ / CX est basée sur les exceptions. Au niveau
 
 ## <a name="exceptions"></a>Exceptions
 
-Dans votre programme C++, vous pouvez lever et intercepter une exception qui provient d’une opération d’exécution de Windows, une exception qui est dérivée de `std::exception`, ou un type défini par l’utilisateur. Vous devez lever une exception Windows Runtime uniquement lorsqu’elle traversera la limite (ABI) de l’interface binaire d’application, par exemple, lorsque le code qui intercepte votre exception est écrit en JavaScript. Lorsqu’une exception non Windows Runtime C++ atteint la limite ABI, elle est convertie en un `Platform::FailureException` exception, ce qui représente un HRESULT E_FAIL. Pour plus d’informations sur l’ABI, consultez [création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Dans votre programme C++, vous pouvez lever et intercepter une exception qui provient d’une opération d’exécution de Windows, une exception qui est dérivée de `std::exception`, ou un type défini par l’utilisateur. Vous devez lever une exception Windows Runtime uniquement lorsqu’elle traversera la limite (ABI) de l’interface binaire d’application, par exemple, lorsque le code qui intercepte votre exception est écrit en JavaScript. Lorsqu’une exception non Windows Runtime C++ atteint la limite ABI, elle est convertie en un `Platform::FailureException` exception, ce qui représente un HRESULT E_FAIL. Pour plus d'informations sur l'ABI, consultez [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Vous pouvez déclarer un [Platform::Exception](platform-exception-class.md) en utilisant l’une des deux constructeurs qui acceptent un paramètre HRESULT ou un paramètre HRESULT et un [Platform::String](platform-string-class.md)^ paramètre qui peut être passé à travers le ABI à une application Windows Runtime qui prend en charge. Vous pouvez aussi déclarer une exception à l'aide de l'une des deux surcharges de méthode [Exception::CreateException](platform-exception-class.md#createexception) qui acceptent un paramètre HRESULT ou un paramètre HRESULT et un paramètre `Platform::String^` .
 
@@ -66,11 +59,11 @@ L'exemple ci-dessous montre comment intercepter l'exception.
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-Pour intercepter les exceptions levées pendant une opération asynchrone, utilisez la classe de tâche et ajoutez une continuation de gestion des erreurs. La continuation de gestion des erreurs marshale les exceptions levées sur d'autres threads vers le thread appelant afin de gérer toutes les exceptions éventuelles en un seul point de votre code. Pour plus d’informations, consultez [programmation asynchrone en C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+Pour intercepter les exceptions levées pendant une opération asynchrone, utilisez la classe de tâche et ajoutez une continuation de gestion des erreurs. La continuation de gestion des erreurs marshale les exceptions levées sur d'autres threads vers le thread appelant afin de gérer toutes les exceptions éventuelles en un seul point de votre code. Pour plus d’informations sur la programmation asynchrone, consultez [Programmation asynchrone en C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 ## <a name="unhandlederrordetected-event"></a>Événement UnhandledErrorDetected
 
-Dans Windows 8.1 vous pouvez vous abonner à la [Windows::ApplicationModel](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) un événement statique, ce qui permet d’accéder aux erreurs non gérées qui sont sur le point d’interrompre le processus. Quel que soit l’origine de l’erreur, il atteint ce gestionnaire en tant qu’un [Windows::ApplicationModel :: Core ::](/uwp/api/windows.applicationmodel.core.unhandlederror) objet qui est passé avec les arguments d’événement. Lorsque vous appelez `Propagate` sur l'objet, il crée et lève une exception `Platform::*Exception` dont le type correspond au code d'erreur. Dans les blocs catch, vous pouvez enregistrer l'état utilisateur, le cas échéant. Vous pouvez ensuite permettre au processus de se terminer en appelant `throw`, ou vous pouvez faire en sorte de restaurer le programme à un état connu. L'exemple suivant illustre le modèle de base :
+Dans Windows 8.1 vous pouvez vous abonner à la [Windows::ApplicationModel](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) un événement statique, ce qui permet d’accéder aux erreurs non gérées qui sont sur le point d’interrompre le processus. Indépendamment de l’origine de l’erreur, il atteint ce gestionnaire en tant qu’objet [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) passé avec les arguments d’événement. Lorsque vous appelez `Propagate` sur l'objet, il crée et lève une exception `Platform::*Exception` dont le type correspond au code d'erreur. Dans les blocs catch, vous pouvez enregistrer l'état utilisateur, le cas échéant. Vous pouvez ensuite permettre au processus de se terminer en appelant `throw`, ou vous pouvez faire en sorte de restaurer le programme à un état connu. L'exemple suivant illustre le modèle de base :
 
 Dans app.xaml.h :
 

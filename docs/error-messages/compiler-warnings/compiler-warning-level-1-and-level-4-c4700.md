@@ -1,39 +1,29 @@
 ---
-title: Compilateur avertissement (niveaux 1 et 4) C4700 | Documents Microsoft
-ms.custom: ''
+title: Avertissement du compilateur (niveaux 1 et 4) C4700
 ms.date: 02/21/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4700
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 876ae98fb2fdea5a9d8bdaecb93b8c229213d329
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa3326bd5ab495dbc4c54130bb168422eb827dce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463217"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4700"></a>Avertissement du compilateur (niveaux 1 et 4) C4700
 
 > variable locale non initialisée '*nom*' utilisé
 
-La variable locale *nom* a été *utilisé*, autrement dit, lire, avant qu’il ait été assignée à une valeur. En C et C++, les variables locales ne sont pas initialisés par défaut. Variables non initialisées peuvent contenir n’importe quelle valeur, et leur utilisation entraîne un comportement non défini. Avertissement C4700 indique presque toujours un bogue qui peut entraîner des résultats imprévisibles ou se bloque dans votre programme.
+La variable locale *nom* a été *utilisé*, autrement dit, lecture, avant qu’il ait été attribuée une valeur. En C et C++, les variables locales ne sont pas initialisées par défaut. Variables non initialisées peuvent contenir n’importe quelle valeur, et leur utilisation entraîne un comportement non défini. Avertissement C4700 indique presque toujours un bogue qui peut entraîner des résultats imprévisibles ou se bloque dans votre programme.
 
-Pour résoudre ce problème, vous pouvez initialiser des variables locales lorsqu’ils sont déclarés, ou leur attribuer une valeur avant de les utiliser. Une fonction peut être utilisée pour initialiser une variable qui est passé comme paramètre de référence, ou lorsque son adresse est passée comme un paramètre de pointeur.
+Pour résoudre ce problème, vous pouvez initialiser des variables locales quand elles sont déclarées ou leur attribuer une valeur avant de les utiliser. Une fonction peut être utilisée pour initialiser une variable qui est passé comme paramètre de référence, ou quand son adresse est passée comme un paramètre de pointeur.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple génère l’erreur C4700 lorsque variables t, u et v sont utilisés avant qu’ils sont initialisés et affiche le type de valeur de mémoire qui peut entraîner. Variables x, y et z ne pas provoquer l’avertissement, car ils sont initialisés avant des utiliser :
+Cet exemple génère l’erreur C4700 lorsque variables t, u et v sont utilisés avant qu’ils sont initialisés et affiche le type de valeur de mémoire peut entraîner. Variables x, y et z ne pas provoquer l’avertissement, car ils sont initialisés avant leur utilisation :
 
 ```cpp
 // c4700.cpp
@@ -63,7 +53,7 @@ int main()
 }
 ```
 
-Lorsque ce code est exécuté, t, u et v n’est pas initialisées, et la sortie de s est imprévisible :
+Lorsque ce code est exécution, t, u et v n’est pas initialisées, et la sortie de s est imprévisible :
 
 ```Output
 Value in s: 37816963
