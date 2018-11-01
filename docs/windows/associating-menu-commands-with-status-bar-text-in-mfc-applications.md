@@ -1,27 +1,16 @@
 ---
-title: Associer des commandes de Menu avec le texte de barre d’état dans les Applications MFC | Microsoft Docs
-ms.custom: ''
+title: Association de commandes de menu au texte de la barre d'état dans des applications MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - status bars [C++], associating menu items
 - menus [C++], status bar text
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 718766a8fc475f20bcbcc328973b38e486769d9c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc39695358a9c1f2f62878487a5e4fedf5db2b82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468885"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Association de commandes de menu au texte de la barre d'état dans des applications MFC
 

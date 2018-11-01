@@ -1,10 +1,6 @@
 ---
-title: Fonctions intrinsèques ARM | Microsoft Docs
-ms.custom: ''
+title: Fonctions ARM intrinsèques
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - arm_neon/vsetq_lane_p8
 - armintr/_arm_uxtb
@@ -1931,22 +1927,16 @@ f1_keywords:
 - arm_neon/vrsra_n_s32
 - arm_neon/vabdl_u16
 - arm_neon/vsliq_n_s32
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 092ac94cac92b3ba327aa7c7853ec286268a00af
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e32c33a5e04314b05558fe445aaaebb33dd92ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434100"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453857"
 ---
 # <a name="arm-intrinsics"></a>Fonctions ARM intrinsèques
 
@@ -2132,7 +2122,7 @@ La principale différence entre le compilateur Visual C++ et le compilateur ARM 
 
 ###  <a name="BarrierRestrictions"></a> Restrictions de barrière de mémoire
 
-Les fonctions intrinsèques `__dmb` (barrière de mémoire de données), `__dsb` (barrière de synchronisation de données) et `__isb` (barrière de synchronisation d'instruction) utilise les valeurs prédéfinies suivantes pour spécifier la restriction de barrière de mémoire en fonction du domaine de partage et du type d'accès qui sont affectés par l'opération.
+Les fonctions intrinsèques `__dmb` (barrière de mémoire de données), `__dsb` (barrière de synchronisation de données) et `__isb` (barrière de synchronisation d’instruction) utilise les valeurs prédéfinies suivantes pour spécifier la restriction de barrière de mémoire en fonction du domaine de partage et du type d’accès qui sont affectés par l’opération.
 
 |Valeur de restriction|Description|
 |-----------------------|-----------------|

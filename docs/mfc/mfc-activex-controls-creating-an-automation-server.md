@@ -1,27 +1,17 @@
 ---
-title: 'Contrôles ActiveX MFC : Création d’un serveur Automation | Microsoft Docs'
-ms.custom: ''
+title: "Contrôles ActiveX MFC : création d'un serveur Automation"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Automation servers [MFC], MFC ActiveX controls
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e37e6183ca840067ceca47dd48f3b24d7b3b98c7
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6861d8b0798ece957c84f52a15032052aa83b9c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074538"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448124"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Contrôles ActiveX MFC : création d'un serveur Automation
 
