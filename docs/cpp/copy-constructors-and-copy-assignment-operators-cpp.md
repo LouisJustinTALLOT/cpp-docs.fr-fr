@@ -1,12 +1,6 @@
 ---
-title: Constructeurs de copie et opérateurs d’assignation de copie (C++) | Microsoft Docs
-ms.custom: ''
+title: Constructeurs de copie et opérateurs d'assignation de copie (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - = operator [C++], copying objects
 - assignment statements [C++], copying objects
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 249182277473eebf5f11d4f6f3de1e8e7d275b61
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535042"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Constructeurs de copie et opérateurs d'assignation de copie (C++)
 

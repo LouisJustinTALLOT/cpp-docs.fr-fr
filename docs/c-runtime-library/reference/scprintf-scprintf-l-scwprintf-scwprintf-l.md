@@ -1,10 +1,6 @@
 ---
-title: _scprintf, _scprintf_l, _scwprintf, _scwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _scprintf_l
 - _scwprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - _sctprintf_l
 - scwprintf_l
 - _sctprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - scprintf function
 - sctprintf_l function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _scprintf function
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9d912d039cc732ebfe5399a90422d8b68d51332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407211"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500852"
 ---
 # <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 
@@ -93,7 +83,7 @@ int _scwprintf_l(
 *format*<br/>
 Chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 *locale*<br/>
@@ -111,9 +101,9 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-Chaque *argument* (le cas échéant) est convertie en fonction de la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que la *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md).
+Chaque *argument* (le cas échéant) est converti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a les mêmes forme et fonction que le *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
@@ -125,7 +115,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_sctprintf**|**_scprintf**|**_scprintf**|**_scwprintf**|
 |**_sctprintf_l**|**_scprintf_l**|**_scprintf_l**|**_scwprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
