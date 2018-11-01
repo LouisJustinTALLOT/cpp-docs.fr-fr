@@ -1,10 +1,6 @@
 ---
-title: _tell, _telli64 | Microsoft Docs
-ms.custom: ''
+title: _tell, _telli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _telli64
 - _tell
@@ -26,8 +22,6 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47958fdb3723c16f8f2dce03ace54c75ce6176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409984"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660146"
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 
@@ -64,7 +54,7 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Paramètres
 
-*Handle*<br/>
+*handle*<br/>
 Descripteur de fichier faisant référence au fichier ouvert.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -77,9 +67,9 @@ Pour plus d’informations sur ce code de retour et sur les autres codes, consul
 
 ## <a name="remarks"></a>Notes
 
-Le **_tell** fonction obtient la position actuelle du pointeur de fichier (le cas échéant) associée à la *gérer* argument. La position est exprimée en nombre d’octets à partir du début du fichier. Pour le **_telli64** fonction, cette valeur est exprimée sous forme d’entier 64 bits.
+Le **_tell** fonction obtient la position actuelle du pointeur de fichier (le cas échéant) associée à la *gérer* argument. La position est exprimée en nombre d’octets à partir du début du fichier. Pour le **_telli64** (fonction), cette valeur est exprimée sous la forme d’un entier 64 bits.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

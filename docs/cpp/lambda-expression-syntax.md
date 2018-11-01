@@ -1,25 +1,15 @@
 ---
-title: Syntaxe d’Expression lambda | Microsoft Docs
-ms.custom: ''
+title: Syntaxe d’expression lambda
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b51f0fb2b08d118313bec78e814d96ab64fda74
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 030960cf8a301575396231cec1a37ff7bed2667f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106848"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577467"
 ---
 # <a name="lambda-expression-syntax"></a>Syntaxe d’expression lambda
 

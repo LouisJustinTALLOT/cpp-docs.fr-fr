@@ -1,12 +1,6 @@
 ---
-title: Parallélisme (Concurrency Runtime) des tâches | Microsoft Docs
-ms.custom: ''
+title: Parallélisme des tâches (runtime d’accès concurrentiel)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ec6e99b3e4f1e86d9f0ee42ca92a93a57b1a1fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378083"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630423"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallélisme des tâches (runtime d’accès concurrentiel)
 
@@ -103,7 +93,7 @@ Vous pouvez utiliser la [concurrency::task](../../parallel/concrt/reference/task
 
 `task` est une classe de modèle. Le paramètre de type `T` est le type du résultat produit par la tâche. Ce type peut être `void` si la tâche ne retourne pas de valeur. `T` ne peut pas utiliser le modificateur `const`.
 
-Lorsque vous créez une tâche, vous fournissez un *fonction de travail* qui effectue le corps de la tâche. Cette fonction de travail se présente sous la forme d'une fonction lambda, de pointeur de fonction ou d'objet de fonction. Pour attendre une tâche se termine sans obtention du résultat, appelez le [Concurrency::Task :: wait](reference/task-class.md#wait) (méthode). Le `task::wait` méthode retourne un [concurrency::task_status](reference/concurrency-namespace-enums.md#task_group_status) valeur qui décrit si la tâche a été terminée ou annulée. Pour obtenir le résultat de la tâche, appelez le [Concurrency::Task :: Get](reference/task-class.md#get) (méthode). Cette méthode appelle `task::wait` pour attendre que la tâche se termine, et bloque donc l'exécution du thread actuel jusqu'à ce que le résultat soit disponible.
+Lorsque vous créez une tâche, vous fournissez un *fonction de travail* qui effectue le corps de la tâche. Cette fonction de travail se présente sous la forme d'une fonction lambda, de pointeur de fonction ou d'objet de fonction. Pour attendre une tâche se termine sans obtention du résultat, appelez le [Concurrency::Task :: wait](reference/task-class.md#wait) (méthode). Le `task::wait` méthode retourne un [concurrency::task_status](reference/concurrency-namespace-enums.md#task_group_status) valeur qui décrit si la tâche a été terminée ou annulée. Pour obtenir le résultat de la tâche, appelez le [Concurrency::Task :: Get](reference/task-class.md#get) (méthode). Cette méthode appelle `task::wait` pour attendre que la tâche se termine, et bloque donc l’exécution du thread actuel jusqu’à ce que le résultat soit disponible.
 
 L'exemple suivant montre comment créer une tâche, attendre son résultat et afficher sa valeur. Les exemples fournis dans cette documentation utilisent des fonctions lambda car ils fournissent une syntaxe plus concise. Toutefois, vous pouvez également utiliser des pointeurs de fonction et des objets de fonction quand vous utilisez des tâches.
 
@@ -159,7 +149,7 @@ Une continuation peut également retourner une autre tâche. En l’absence d’
 [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]
 
 > [!IMPORTANT]
->  Quand une continuation d'une tâche retourne une tâche imbriquée de type `N`, la tâche qui en résulte a le type `N`, et non `task<N>`, et elle se termine quand la tâche imbriquée se termine. En d’autres termes, la continuation désencapsule la tâche imbriquée.
+>  Quand une continuation d’une tâche retourne une tâche imbriquée de type `N`, la tâche qui en résulte a le type `N`, et non `task<N>`, et elle se termine quand la tâche imbriquée se termine. En d’autres termes, la continuation désencapsule la tâche imbriquée.
 
 ##  <a name="value-versus-task"></a> Sur la valeur et les Continuations basées sur des tâches
 
@@ -171,18 +161,18 @@ Cette section décrit la [concurrency::when_all](reference/concurrency-namespace
 
 ###  <a name="when-all"></a> Fonction when_all
 
-La fonction `when_all` produit une tâche qui s'exécute une fois qu'un ensemble de tâches est terminé. Cette fonction retourne un std ::[vecteur](../../standard-library/vector-class.md) objet qui contient le résultat de chaque tâche dans le jeu. L'exemple de base suivant utilise `when_all` pour créer une tâche qui représente l'achèvement de trois autres tâches.
+La fonction `when_all` produit une tâche qui s’exécute une fois qu’un ensemble de tâches est terminé. Cette fonction retourne un std ::[vecteur](../../standard-library/vector-class.md) objet qui contient le résultat de chaque tâche dans le jeu. L’exemple de base suivant utilise `when_all` pour créer une tâche qui représente l’achèvement de trois autres tâches.
 
 [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]
 
 > [!NOTE]
 >  Les tâches que vous passez à `when_all` doivent être uniformes. En d'autres termes, elles doivent toutes retourner le même type.
 
-Vous pouvez également utiliser la syntaxe `&&` pour produire une tâche qui s'exécute une fois qu'un ensemble de tâches est terminé, comme illustré dans l'exemple suivant.
+Vous pouvez également utiliser la syntaxe `&&` pour produire une tâche qui s’exécute une fois qu’un ensemble de tâches est terminé, comme illustré dans l’exemple suivant.
 
 `auto t = t1 && t2; // same as when_all`
 
-Il est courant d'utiliser une continuation avec `when_all` pour exécuter une action une fois qu'un ensemble de tâches est terminé. L'exemple suivant modifie le précédent pour imprimer la somme des trois tâches qui produisent chacune un résultat `int`.
+Il est courant d’utiliser une continuation avec `when_all` pour exécuter une action une fois qu’un ensemble de tâches est terminé. L’exemple suivant modifie le précédent pour imprimer la somme des trois tâches qui produisent chacune un résultat `int`.
 
 [!code-cpp[concrt-join-tasks#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_9.cpp)]
 
@@ -190,7 +180,7 @@ Dans cet exemple, vous pouvez également spécifier `task<vector<int>>` pour pro
 
 Si une tâche d'un ensemble de tâches est annulée ou lève une exception, `when_all` se termine immédiatement et n'attend pas que les tâches restantes se terminent. Si une exception est levée, le runtime lève à nouveau l'exception quand vous appelez `task::get` ou `task::wait` sur l'objet de tâche que `when_all` retourne. Si plusieurs tâches lèvent une exception, le runtime en choisit une. Par conséquent, vérifiez que vous observez toutes les exceptions une fois toutes les tâches terminées ; une exception de tâche non gérée entraîne l'arrêt de l'application.
 
-Voici une fonction utilitaire que vous pouvez utiliser pour vous assurer que votre programme observe toutes les exceptions. Pour chaque tâche incluse dans la plage fournie, `observe_all_exceptions` déclenche toute exception qui s'est produite pour être à nouveau levée, puis avale cette exception.
+Voici une fonction utilitaire que vous pouvez utiliser pour vous assurer que votre programme observe toutes les exceptions. Pour chaque tâche incluse dans la plage fournie, `observe_all_exceptions` déclenche toute exception qui s’est produite pour être à nouveau levée, puis avale cette exception.
 
 [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]
 
@@ -220,7 +210,7 @@ Considérez une application UWP qui utilise C++ et XAML et écrit un ensemble de
 
 ###  <a name="when-any"></a> Fonction when_any
 
-La fonction `when_any` produit une tâche qui se termine quand la première tâche d'un ensemble de tâches se termine. Cette fonction retourne un [std::pair](../../standard-library/pair-structure.md) objet qui contient le résultat de la tâche achevée et l’index de cette tâche dans le jeu.
+La fonction `when_any` produit une tâche qui se termine quand la première tâche d’un ensemble de tâches se termine. Cette fonction retourne un [std::pair](../../standard-library/pair-structure.md) objet qui contient le résultat de la tâche achevée et l’index de cette tâche dans le jeu.
 
 La fonction `when_any` s'avère particulièrement utile dans les scénarios suivants :
 
@@ -232,7 +222,7 @@ La fonction `when_any` s'avère particulièrement utile dans les scénarios suiv
 
 - Opérations expirées. Vous pouvez utiliser la fonction `when_any` pour choisir une ou plusieurs tâches et une tâche qui se termine après un délai spécifique.
 
-Comme avec `when_all`, il est courant d'utiliser une continuation avec `when_any` pour effectuer une action quand la première tâche d'un ensemble de tâches se termine. L'exemple de base suivant utilise `when_any` pour créer une tâche qui se termine quand la première des trois autres tâches se termine.
+Comme avec `when_all`, il est courant d'utiliser une continuation avec `when_any` pour effectuer une action quand la première tâche d'un ensemble de tâches se termine. L’exemple de base suivant utilise `when_any` pour créer une tâche qui se termine quand la première des trois autres tâches se termine.
 
 [!code-cpp[concrt-select-task#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_15.cpp)]
 
@@ -241,7 +231,7 @@ Dans cet exemple, vous pouvez également spécifier `task<pair<int, size_t>>` po
 > [!NOTE]
 >  Comme avec `when_all`, les tâches que vous passez à `when_any` doivent toutes retourner le même type.
 
-Vous pouvez également utiliser la syntaxe `||` pour produire une tâche qui s'exécute une fois que la première tâche d'un ensemble de tâches est terminée, comme illustré dans l'exemple suivant.
+Vous pouvez également utiliser la syntaxe `||` pour produire une tâche qui s’exécute une fois que la première tâche d’un ensemble de tâches est terminée, comme illustré dans l’exemple suivant.
 
 `auto t = t1 || t2; // same as when_any`
 
@@ -278,13 +268,13 @@ Le runtime fournit également un modèle de gestion des exceptions qui vous perm
 
 ##  <a name="comparing-groups"></a> Comparaison de task_group à structured_task_group
 
-Bien que nous vous recommandions d'utiliser `task_group` ou `parallel_invoke` au lieu de la classe `structured_task_group`, dans certains cas, vous pouvez utiliser `structured_task_group`, par exemple, quand vous écrivez un algorithme parallèle qui effectue un nombre variable de tâches ou qui requiert la prise en charge de l'annulation. Cette section explique les différences entre les classes `task_group` et `structured_task_group`.
+Bien que nous vous recommandions d’utiliser `task_group` ou `parallel_invoke` au lieu de la classe `structured_task_group`, dans certains cas, vous pouvez utiliser `structured_task_group`, par exemple, quand vous écrivez un algorithme parallèle qui effectue un nombre variable de tâches ou qui requiert la prise en charge de l’annulation. Cette section explique les différences entre les classes `task_group` et `structured_task_group`.
 
 La classe `task_group` est thread-safe. Ainsi, vous pouvez ajouter des tâches à un objet `task_group` à partir de plusieurs threads et attendre ou annuler un objet `task_group` à partir de plusieurs threads. La construction et la destruction d'un objet `structured_task_group` doit se produire dans la même portée lexicale. De plus, toutes les opérations sur un objet `structured_task_group` doivent se produire sur le même thread. L’exception à cette règle est la [Concurrency::structured_task_group :: Cancel](reference/structured-task-group-class.md#cancel) et [Concurrency::structured_task_group :: is_canceling](reference/structured-task-group-class.md#is_canceling) méthodes. Une tâche enfant peut appeler ces méthodes pour annuler le groupe de tâches parent ou vérifier l’annulation à tout moment.
 
 Vous pouvez exécuter des tâches supplémentaires sur un `task_group` objet une fois que vous appelez le [Concurrency::task_group :: wait](reference/task-group-class.md#wait) ou [Concurrency::task_group :: run_and_wait](reference/task-group-class.md#run_and_wait) (méthode). À l’inverse, si vous exécutez des tâches supplémentaires sur un `structured_task_group` objet une fois que vous appelez le [Concurrency::structured_task_group :: wait](reference/structured-task-group-class.md#wait) ou [Concurrency::structured_task_group :: run_and_wait](reference/structured-task-group-class.md#run_and_wait) méthodes , puis le comportement est indéfini.
 
-Étant donné que la classe `structured_task_group` n'est pas synchronisée entre les threads, elle a moins de charge d'exécution que la classe `task_group`. Par conséquent, si votre problème ne requiert pas de planification du travail à partir de plusieurs threads et que vous ne pouvez pas utiliser l'algorithme `parallel_invoke`, la classe `structured_task_group` peut vous aider à écrire du code plus performant.
+Étant donné que la classe `structured_task_group` n’est pas synchronisée entre les threads, elle a moins de charge d’exécution que la classe `task_group`. Par conséquent, si votre problème ne requiert pas de planification du travail à partir de plusieurs threads et que vous ne pouvez pas utiliser l'algorithme `parallel_invoke`, la classe `structured_task_group` peut vous aider à écrire du code plus performant.
 
 Si vous utilisez un seul objet `structured_task_group` à l'intérieur d'un autre objet `structured_task_group`, l'objet interne doit se terminer et être détruit avant la fin de l'objet externe. La classe `task_group` ne requiert pas que des groupes de tâches imbriqués se terminent avant les groupes externes.
 
@@ -298,7 +288,7 @@ Pour gérer les handles de tâches pour les cas où vous avez un nombre variable
 
 ##  <a name="example"></a> Exemple
 
-L’exemple de base suivant montre comment utiliser des groupes de tâches. Cet exemple utilise l'algorithme `parallel_invoke` pour effectuer deux tâches simultanément. Chaque tâche ajoute des sous-tâches à un objet `task_group`. Notez que la classe `task_group` permet à plusieurs tâches d'y ajouter des tâches simultanément.
+L’exemple de base suivant montre comment utiliser des groupes de tâches. Cet exemple utilise l'algorithme `parallel_invoke` pour effectuer deux tâches simultanément. Chaque tâche ajoute des sous-tâches à un objet `task_group`. Notez que la classe `task_group` permet à plusieurs tâches d’y ajouter des tâches simultanément.
 
 [!code-cpp[concrt-using-task-groups#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_17.cpp)]
 
@@ -310,7 +300,7 @@ Message from task: 3.14
 Message from task: 42
 ```
 
-Étant donné que l'algorithme `parallel_invoke` exécute des tâches simultanément, l'ordre des messages de sortie peut varier.
+Étant donné que l’algorithme `parallel_invoke` exécute des tâches simultanément, l’ordre des messages de sortie peut varier.
 
 Pour obtenir des exemples complets qui montrent comment utiliser le `parallel_invoke` algorithme, consultez [Comment : utiliser parallel_invoke pour écrire une Routine de tri parallèle](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) et [Comment : utiliser parallel_invoke pour exécuter des opérations parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Pour obtenir un exemple complet qui utilise le `task_group` classe pour implémenter des tâches asynchrones futures, consultez [procédure pas à pas : implémentation de tâches Futures](../../parallel/concrt/walkthrough-implementing-futures.md).
 

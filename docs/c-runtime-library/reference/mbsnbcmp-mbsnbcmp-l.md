@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcmp, _mbsnbcmp_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcmp, _mbsnbcmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcmp
 - _mbsnbcmp_l
@@ -27,8 +23,6 @@ f1_keywords:
 - _mbsnbcmp_l
 - mbsnbcmp_l
 - _mbsnbcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsnbcmp_l function
 - mbsnbcmp function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a21d19a3de6a047366497283f2e8515aca37794
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404634"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620000"
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 
@@ -84,25 +74,25 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de retour indique la relation ordinale entre les sous-chaînes de *string1* et *chaîne2*.
+La valeur de retour indique la relation ordinale entre les sous-chaînes de *string1* et *string2*.
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|*string1* sous-chaîne est inférieure à *chaîne2* sous-chaîne.|
-|0|*string1* sous-chaîne est identique à *chaîne2* sous-chaîne.|
-|> 0|*string1* sous-chaîne est supérieure à *chaîne2* sous-chaîne.|
+|< 0|*string1* sous-chaîne est inférieure à *string2* sous-chaîne.|
+|0|*string1* est identique à *string2* sous-chaîne.|
+|> 0|*string1* est supérieure à *string2* sous-chaîne.|
 
 Une erreur de validation de paramètre, **_mbsnbcmp** et **_mbsnbcmp_l** retourner **_NLSCMPERROR**, qui est défini dans \<string.h > et \< Mbstring.h >.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsnbcmp** fonctions comparent au maximum la première *nombre* octets dans *string1* et *chaîne2* et retourner une valeur qui indique le relation entre les sous-chaînes. **_mbsnbcmp** est une version respectant la casse de **_mbsnbicmp**. Contrairement aux **_mbsnbcoll**, **_mbsnbcmp** n’est pas affectée par l’ordre de classement des paramètres régionaux. **_mbsnbcmp** reconnaît les séquences de caractères multioctets selon la multioctet active [page de codes](../../c-runtime-library/code-pages.md).
+Le **_mbsnbcmp** fonctions comparent au plus la première *nombre* octets dans *string1* et *string2* et retourner une valeur qui indique le relation entre les sous-chaînes. **_mbsnbcmp** est une version de la casse de **_mbsnbicmp**. Contrairement aux **_mbsnbcoll**, **_mbsnbcmp** n’est pas affectée par l’ordre de classement des paramètres régionaux. **_mbsnbcmp** reconnaît les séquences de caractères multioctets selon la multioctet active [page de codes](../../c-runtime-library/code-pages.md).
 
-**_mbsnbcmp** ressemble à **_mbsncmp**, sauf que **_mbsncmp** compare les chaînes en caractères et non en octets.
+**_mbsnbcmp** ressemble à **_mbsncmp**, sauf que **_mbsncmp** compare des chaînes en caractères plutôt qu’en octets.
 
-La valeur de sortie est affectée par la **LC_CTYPE** catégorie définissant des paramètres régionaux, qui spécifie les octets de tête et de fin des octets de caractères multioctets. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Le **_mbsnbcmp** fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Le **_mbsnbcmp_l** fonction est identique, sauf qu’elle utilise le *paramètres régionaux* paramètre à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par le **LC_CTYPE** catégorie définissant des paramètres régionaux, qui spécifie les octets de tête et de fin des octets de caractères multioctets. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Le **_mbsnbcmp** fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Le **_mbsnbcmp_l** fonction est identique, sauf qu’elle utilise le *paramètres régionaux* paramètre à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si le paramètre *string1* ou *chaîne2* est un pointeur null, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **_NLSCMPERROR** et **errno** a la valeur **EINVAL**.
+Si *string1* ou *string2* est un pointeur null, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **_NLSCMPERROR** et **errno** a la valeur **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -111,7 +101,7 @@ Si le paramètre *string1* ou *chaîne2* est un pointeur null, ces fonctions app
 |**_tcsncmp**|[strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcmp**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
 |**_tcsncmp_l**|[strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcml**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

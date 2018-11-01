@@ -1,27 +1,17 @@
 ---
-title: LNK2011 d’erreur des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK2011
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2011
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2011
 ms.assetid: 04991ef5-49d5-46c7-8eee-a9d1d3fc541e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18562a21886508ff0766641f95ac2e15b76fd424
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c8c62da6c1b4ea856f7a0854b998946893f2be63
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095389"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518857"
 ---
 # <a name="linker-tools-error-lnk2011"></a>Erreur des outils Éditeur de liens LNK2011
 
