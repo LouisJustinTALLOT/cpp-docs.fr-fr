@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Microsoft Docs
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,21 +20,15 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405729"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429013"
 ---
 # <a name="quickexit"></a>quick_exit
 
@@ -64,13 +53,13 @@ Le **quick_exit** fonction ne peut pas retourner à son appelant.
 
 ## <a name="remarks"></a>Notes
 
-Le **quick_exit** fonction provoque l’arrêt normal du programme. Il n’appelle aucune fonction inscrite par **atexit**, **_onexit** ou manipulateurs de signaux inscrits par le **signal** (fonction). Comportement n’est pas défini si **quick_exit** est appelée plusieurs fois ou si le **quitter** fonction est également appelée.
+Le **quick_exit** fonction provoque l’arrêt normal du programme. Il n’appelle aucune fonction inscrite par **atexit**, **_onexit** ou manipulateurs de signaux inscrits par le **signal** (fonction). Comportement est indéfini si **quick_exit** est appelée plusieurs fois ou si le **quitter** fonction est également appelée.
 
-Le **quick_exit** dans le dernier entré, premier sorti (LIFO) commande, les fonctions inscrites par les appels de fonction **at_quick_exit**, sauf pour les fonctions déjà appelées lorsque la fonction a été inscrit.  Le comportement n’est pas défini si un appel [longjmp](longjmp.md) est effectué pendant un appel à une fonction inscrite qui terminerait l’appel à la fonction.
+Le **quick_exit** appels de fonctions, dans le dernier entré, premier sorti (LIFO) ordre, les fonctions inscrites par **at_quick_exit**, sauf pour les fonctions déjà appelées lorsque la fonction a été enregistrée.  Le comportement n’est pas défini si un appel à [longjmp](longjmp.md) est effectué pendant un appel à une fonction inscrite qui terminerait l’appel à la fonction.
 
 Une fois que les fonctions inscrites ont été appelées, **quick_exit** appelle **_Exit** à l’aide de la *état* valeur pour retourner le contrôle à l’environnement hôte.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

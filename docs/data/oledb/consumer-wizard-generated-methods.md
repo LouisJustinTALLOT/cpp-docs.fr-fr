@@ -1,12 +1,6 @@
 ---
-title: Méthodes de consommateur générées par l’Assistant | Microsoft Docs
-ms.custom: ''
+title: Méthodes de consommateur générées par l'Assistant
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -20,17 +14,12 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 972a057e866000eff82e6b91a8e27eadb9d81ddc
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4c364d0caccfc422b91a68e15704628a949ef67b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082214"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635797"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Méthodes de consommateur générées par l'Assistant
 

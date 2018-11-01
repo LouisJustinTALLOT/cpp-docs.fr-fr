@@ -1,25 +1,15 @@
 ---
-title: Implémentation d’une Page de propriétés (ATL) | Microsoft Docs
-ms.custom: ''
+title: Implémentation d’une Page de propriétés (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669090"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemple : Implémentation d’une Page de propriétés
 
@@ -51,7 +41,7 @@ Pour terminer cet exemple, vous allez :
 
 Tout d’abord, créez un nouveau projet ATL pour un serveur DLL appelé `ATLPages7`. Utilisez maintenant le [Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) pour générer une page de propriétés. Donnez à la page de propriétés un **nom court** de **DocProperties** puis basculez vers le **chaînes** page pour définir les éléments spécifiques de page de propriété comme indiqué dans le tableau ci-dessous.
 
-|Élément|Value|
+|Élément|Valeur|
 |----------|-----------|
 |Titre|TextDocument|
 |Chaîne doc|Propriétés VCUE TextDocument|
@@ -137,7 +127,7 @@ Pour afficher cette page, vous devez créer un objet d’assistance simple. L’
 
 Utiliser le [boîte de dialogue Ajouter une classe](../ide/add-class-dialog-box.md) et [Assistant objet Simple ATL](../atl/reference/atl-simple-object-wizard.md) pour générer une nouvelle classe et utilisez `Helper` comme son nom court. Une fois créé, ajoutez une méthode comme indiqué dans le tableau ci-dessous.
 
-|Élément|Value|
+|Élément|Valeur|
 |----------|-----------|
 |Nom de la méthode|`ShowPage`|
 |Paramètres|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|

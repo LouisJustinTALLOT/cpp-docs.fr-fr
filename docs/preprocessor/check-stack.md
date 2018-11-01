@@ -1,30 +1,20 @@
 ---
-title: check_stack | Microsoft Docs
-ms.custom: ''
+title: check_stack
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - vc-pragma.check_stack
 - check_stack_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - check_stack pragma
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 211a73fb2af2925f40518f2b0eda3f7bd5b5daf1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 93ded20bde98cc4e7b0fc15fd8332195d38f2543
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451985"
 ---
 # <a name="checkstack"></a>check_stack
 Indique au compilateur de désactiver les tests de pile si `off` (ou `-`) est spécifié, ou pour activer les tests de pile si `on` (ou `+`) est spécifié.
@@ -38,7 +28,7 @@ Indique au compilateur de désactiver les tests de pile si `off` (ou `-`) est sp
 
 ## <a name="remarks"></a>Notes
 
-Si aucun argument n’est fourni, les tests de pile sont traités en fonction de la valeur par défaut. Ce pragma est appliqué à la première fonction définie après détection du pragma. Les tests de pile ne font partie ni des macros, ni des fonctions générées inline.
+Si aucun argument n'est fourni, les tests de pile sont traités en fonction de la valeur par défaut. Ce pragma est appliqué à la première fonction définie après détection du pragma. Les tests de pile ne font partie ni des macros, ni des fonctions générées inline.
 
 Si vous ne fournissez pas d’argument pour le **check_stack** pragma, contrôle de pile rétablit le comportement spécifié sur la ligne de commande. Pour plus d’informations, consultez [référence du compilateur](../build/reference/compiler-options.md). L’interaction entre le `#pragma check_stack` et [/GS](../build/reference/gs-control-stack-checking-calls.md) option est résumée dans le tableau suivant.
 
@@ -47,7 +37,7 @@ Si vous ne fournissez pas d’argument pour le **check_stack** pragma, contrôle
 |Syntaxe|Compilé avec<br /><br /> Option /Gs ?|Action|
 |------------|------------------------------------|------------|
 |`#pragma check_stack( )` ou<br /><br /> `#pragma check_stack`|Oui|Désactive la vérification de la pile pour les fonctions qui suivent|
-|`#pragma check_stack( )` ou<br /><br /> `#pragma check_stack`|Non|Active la vérification de la pile pour les fonctions qui suivent|
+|`#pragma check_stack( )` ou<br /><br /> `#pragma check_stack`|Aucune|Active la vérification de la pile pour les fonctions qui suivent|
 |`#pragma check_stack(on)`<br /><br /> Ou `#pragma check_stack +`|Oui ou non|Active la vérification de la pile pour les fonctions qui suivent|
 |`#pragma check_stack(off)`<br /><br /> Ou `#pragma check_stack -`|Oui ou non|Désactive la vérification de la pile pour les fonctions qui suivent|
 

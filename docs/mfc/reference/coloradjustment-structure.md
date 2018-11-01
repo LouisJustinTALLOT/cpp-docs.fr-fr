@@ -1,27 +1,17 @@
 ---
-title: Coloradjustment, Structure | Microsoft Docs
-ms.custom: ''
+title: COLORADJUSTMENT, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COLORADJUSTMENT
-dev_langs:
-- C++
 helpviewer_keywords:
 - COLORADJUSTMENT structure [MFC]
 ms.assetid: 67fc4e63-0e0e-4fcb-8c45-aa5ebfefa013
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 682bbe2e9a4987ca30614e9210198193de977e3e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4f25b8241c1862a9c12d405ee5d47d5553dd6e29
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623507"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT, structure
 
@@ -114,7 +104,7 @@ Spécifie la quantité de colorfulness à appliquer à l’objet source. La vale
 *caRedGreenTint*<br/>
 Spécifie la quantité d’ajustement rouge ou vert teinte à appliquer à l’objet source. La valeur doit être dans la plage comprise entre -100 et 100. Nombres positifs seraient ajustez vers le rouge et celle de nombres négatifs vers le vert. 0 ne signifie aucun ajustement de la teinte.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** wingdi.h
 

@@ -1,12 +1,6 @@
 ---
-title: 'MFC : Utilisation de Classes de base de données des Documents et vues | Microsoft Docs'
-ms.custom: ''
+title: 'MFC : utilisation de classes de bases de données avec des documents et des vues'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - documents [C++], database applications
 - recordsets [C++], documents and views
@@ -20,17 +14,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 94dbb1b91d52a84172dabc635db6745109b8c4a4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059964"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624833"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC : utilisation de classes de bases de données avec des documents et des vues
 

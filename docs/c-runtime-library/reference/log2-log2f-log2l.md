@@ -1,11 +1,6 @@
 ---
-title: log2, log2f, log2l | Microsoft Docs
-ms.custom: ''
+title: log2, log2f, log2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log2
 - log2l
@@ -23,19 +18,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16fb56b1a3aef56e201d469974c5de434a08aa41
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f1db48abdc7237dc46a0ea8a3ea5647a0fce62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399525"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579307"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -73,11 +62,11 @@ Valeur dont le logarithme base 2 doit être déterminé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne retour log2 *x*.
+En cas de réussite, retourne LOG2 *x*.
 
 Sinon, peut retourner l’une des valeurs suivantes :
 
-|Problème|Retourner|
+|Problème|Return|
 |-----------|------------|
 |*x* < 0|NaN|
 |*x* = ±0|-INFINITY|
@@ -95,7 +84,7 @@ Si x est un entier, cette fonction retourne essentiellement l’index de base z�
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**LOG2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
 

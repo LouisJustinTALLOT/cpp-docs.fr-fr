@@ -1,24 +1,16 @@
 ---
-title: Platform::Collections::Details Namespace | Microsoft Docs
-ms.custom: ''
+title: Platform::Collections::Details, espace de noms
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::Details
-dev_langs:
-- C++
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 699ccd3bf97df9e278d101e23ccd8e4dbc3cf323
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b61470d865f751957d796bed7ebf23c24037dd51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104022"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567204"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Platform::Collections::Details, espace de noms
 
@@ -38,7 +30,7 @@ Les membres de cet espace de noms sont définis dans collection.h et ne sont pas
 
 [Platform::Collections, espace de noms](../cppcx/platform-collections-namespace.md)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 

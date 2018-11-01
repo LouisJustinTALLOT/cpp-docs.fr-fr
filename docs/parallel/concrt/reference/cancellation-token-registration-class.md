@@ -1,29 +1,19 @@
 ---
-title: cancellation_token_registration, classe | Microsoft Docs
-ms.custom: ''
+title: cancellation_token_registration, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - cancellation_token_registration
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration::cancellation_token_registration
-dev_langs:
-- C++
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1622dc78e0629bb90a6b646e4910cfb362be721e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca664d78f80a0c335a8669454b1345955aaefcb2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644663"
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration, classe
 
@@ -48,7 +38,7 @@ class cancellation_token_registration;
 
 |Nom|Description|
 |----------|-----------------|
-|[operator!=](#operator_neq)||
+|[!=, opérateur](#operator_neq)||
 |[operator=](#operator_eq)||
 |[operator==](#operator_eq_eq)||
 

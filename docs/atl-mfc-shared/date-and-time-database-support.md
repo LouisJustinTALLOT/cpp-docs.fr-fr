@@ -1,12 +1,6 @@
 ---
-title: 'Date et heure : prise en charge de base de données | Microsoft Docs'
-ms.custom: ''
+title: 'Date et heure : prise en charge de base de données'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - tables [C++]
 - dates [C++], database support
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - databases [C++], date/time data
 - COleDateTimeSpan class, database programming
 ms.assetid: 4a57a1bb-fad5-4b70-b32c-42ad75c710c8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c077ec376155f576b9cd0db9662f47a9d747c8a3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: be827455d79f6a6a8d7576b6deade2ffd7b45e20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751470"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676745"
 ---
 # <a name="date-and-time-database-support"></a>Date et heure : prise en charge de base de données
 

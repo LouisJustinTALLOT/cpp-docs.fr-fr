@@ -1,29 +1,19 @@
 ---
-title: Listes d’arguments variables (...) (C + C++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Listes d'arguments de variable (...) (C++/CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 183208d734fa5ad39151b171bd9c6889863c8d33
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ccbd8cf608b5041a0c8a64235cf0b4a0c2e02051
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057172"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630058"
 ---
-# <a name="variable-argument-lists--ccli"></a>Listes d’arguments de variable (...) (C++/CLI)
+# <a name="variable-argument-lists--ccli"></a>Listes d'arguments de variable (...) (C++/CLI)
 
 Cet exemple montre comment vous pouvez utiliser le `...` syntaxe en C / c++ / CLI pour implémenter des fonctions qui ont un nombre variable d’arguments.
 

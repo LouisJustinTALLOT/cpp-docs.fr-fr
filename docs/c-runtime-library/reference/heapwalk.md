@@ -1,10 +1,6 @@
 ---
-title: _heapwalk | Microsoft Docs
-ms.custom: ''
+title: _heapwalk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapwalk
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d98260ce281bc8773f597dae5897afe4beee0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403399"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454897"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -61,13 +51,13 @@ Mémoire tampon destinée à contenir les informations relatives au tas.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_heapwalk** renvoie un des constantes manifestes entières suivantes définies dans Malloc.h.
+**_heapwalk** retourne une des constantes manifestes entières suivantes définies dans Malloc.h.
 
 |Valeur de retour|Signification|
 |-|-|
 |**_HEAPBADBEGIN**| Informations d’en-tête initiales non valides ou introuvables.|
 |**_HEAPBADNODE**| Tas endommagé ou nœud incorrect trouvé.|
-|**_HEAPBADPTR**| Le **_pentry** champ le **_HEAPINFO** structure ne contient pas un pointeur valide dans le tas ou *entryinfo* est un pointeur null.|
+|**_HEAPBADPTR**| Le **_pentry** champ la **_HEAPINFO** structure ne contient pas un pointeur valide vers le tas ou *entryinfo* est un pointeur null.|
 |**_HEAPEND**| Fin du tas atteinte avec succès.|
 |**_HEAPEMPTY**| Tas non initialisé.|
 |**_HEAPOK**| Aucune erreur jusqu'à présent ; *entryinfo* est mis à jour avec des informations sur l’entrée suivante du tas.|
@@ -76,7 +66,7 @@ En outre, si une erreur se produit, **_heapwalk** définit **errno** à **ENOSYS
 
 ## <a name="remarks"></a>Notes
 
-Le **_heapwalk** fonction permet de déboguer les problèmes liés au tas de programmes. La fonction Guide à travers le tas, en parcourant une entrée par l’appel et retourne un pointeur vers une structure de type **_HEAPINFO** qui contient des informations sur l’entrée suivante du tas. Le **_HEAPINFO** type, définie dans Malloc.h, contient les éléments suivants.
+Le **_heapwalk** fonction permet de déboguer les problèmes liés au tas dans les programmes. La fonction parcourt le tas, en raison d’une entrée par appel et retourne un pointeur vers une structure de type **_HEAPINFO** qui contient des informations sur l’entrée suivante du tas. Le **_HEAPINFO** type, défini dans Malloc.h, contient les éléments suivants.
 
 |Champ|Signification|
 |-|-|
@@ -84,11 +74,11 @@ Le **_heapwalk** fonction permet de déboguer les problèmes liés au tas de pro
 |`size_t _size`|Taille de l’entrée du tas.|
 |`int _useflag`|Indicateur qui indique si l’entrée du tas est en cours d’utilisation.|
 
-Un appel à **_heapwalk** qui retourne **_HEAPOK** stocke la taille de l’entrée dans le **_size** champ et définit les **_useflag** soit au champ **_FREEENTRY** ou **_USEDENTRY** (les deux sont des constantes définies dans Malloc.h). Pour obtenir ces informations sur la première entrée dans le tas, passez **_heapwalk** un pointeur vers un **_HEAPINFO** structure dont **_pentry** membre est **NULL** . Si le système d’exploitation ne prend pas en charge **_heapwalk**(par exemple, Windows 98), la fonction retourne **_HEAPEND** et définit **errno** à **ENOSYS**.
+Un appel à **_heapwalk** qui retourne **_HEAPOK** stocke la taille de l’entrée dans le **_Taille** champ et définit le **_useflag** champ soit **_FREEENTRY** ou **_USEDENTRY** (les deux sont des constantes définies dans Malloc.h). Pour obtenir ces informations sur la première entrée dans le tas, passez **_heapwalk** un pointeur vers un **_HEAPINFO** dont la propriété **_pentry** membre est **NULL** . Si le système d’exploitation ne prend pas en charge **_heapwalk**(par exemple, Windows 98), la fonction retourne **_HEAPEND** et définit **errno** à **ENOSYS**.
 
 Cette fonction valide son paramètre. Si *entryinfo* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **_HEAPBADPTR**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

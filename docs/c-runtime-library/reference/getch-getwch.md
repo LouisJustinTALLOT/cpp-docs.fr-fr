@@ -1,10 +1,6 @@
 ---
-title: _getch, _getwch | Microsoft Docs
-ms.custom: ''
+title: _getch, _getwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getch
 - _getwch
@@ -25,8 +21,6 @@ f1_keywords:
 - getwch
 - _getch
 - _getwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - getch function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b69149340d2fca15071292001b9936e9d3bd5470
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666308"
 ---
 # <a name="getch-getwch"></a>_getch, _getwch
 
@@ -66,7 +56,7 @@ Retourne le caractère lu. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **_getch** et **_getwch** fonctions lire un caractère unique à partir de la console sans afficher le caractère. Aucune de ces fonctions ne peut être utilisée pour lire Ctrl+C. Pour la lecture d’une touche de fonction ou de direction, chaque fonction doit être appelée deux fois ; le premier appel retourne 0 ou 0xE0, tandis que le second retourne le code de la touche.
+Le **_getch** et **_getwch** fonctions lisent un caractère unique à partir de la console sans l’afficher. Aucune de ces fonctions ne peut être utilisée pour lire Ctrl+C. Pour la lecture d’une touche de fonction ou de direction, chaque fonction doit être appelée deux fois ; le premier appel retourne 0 ou 0xE0, tandis que le second retourne le code de la touche.
 
 Ces fonctions verrouillent le thread appelant et sont donc thread-safe. Pour les versions sans verrouillage, consultez [_getch_nolock, _getwch_nolock](getch-nolock-getwch-nolock.md).
 
@@ -76,7 +66,7 @@ Ces fonctions verrouillent le thread appelant et sont donc thread-safe. Pour les
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettch**|**_getch**|**_getch**|**_getwch**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

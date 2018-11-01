@@ -1,11 +1,6 @@
 ---
-title: csinh, csinhf, csinhl | Microsoft Docs
-ms.custom: ''
+title: csinh, csinhf, csinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csinh
 - csinhf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csinh
 - complex/csinhf
 - complex/csinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csinh function
 - csinhf function
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f620bdddb7bb86494b7981c84e12573a3ad89fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395966"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552007"
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
 
@@ -83,7 +72,7 @@ Le sinus hyperbolique de *z*, en radians.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **csinh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **csinh** accepte et retourne toujours un **_Dcomplex** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **csinh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **csinh** accepte et retourne toujours un **_Dcomplex** valeur.
 
 ## <a name="requirements"></a>Spécifications
 

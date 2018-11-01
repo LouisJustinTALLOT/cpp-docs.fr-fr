@@ -1,10 +1,6 @@
 ---
-title: CMFCShellTreeCtrl, classe | Microsoft Docs
-ms.custom: ''
+title: CMFCShellTreeCtrl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCShellTreeCtrl
 - AFXSHELLTREECTRL/CMFCShellTreeCtrl
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXSHELLTREECTRL/CMFCShellTreeCtrl::SelectPath
 - AFXSHELLTREECTRL/CMFCShellTreeCtrl::SetFlags
 - AFXSHELLTREECTRL/CMFCShellTreeCtrl::SetRelatedList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], EnableShellContextMenu
 - CMFCShellTreeCtrl [MFC], GetFlags
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 05936d35829c2982e008cf45d3a76f622357f7dc
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5f257cb57e7b6f287d5032bdc2655bb65fe946cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445875"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl, classe
 

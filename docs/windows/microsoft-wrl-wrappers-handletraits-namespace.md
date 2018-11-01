@@ -1,28 +1,18 @@
 ---
-title: Microsoft::wrl::wrappers::HandleTraits Namespace | Microsoft Docs
-ms.custom: ''
+title: Microsoft::WRL::Wrappers::HandleTraits, espace de noms
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits
-dev_langs:
-- C++
 helpviewer_keywords:
 - HandleTraits namespace
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 683759c3bf0b2152ee6fadbb638cd2398daecccd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e558838ca9cd06fb5529f689d45a920db151d272
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586127"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643246"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits, espace de noms
 
@@ -50,7 +40,7 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 |[SRWLockExclusiveTraits, structure](../windows/srwlockexclusivetraits-structure.md)|Décrit les caractéristiques communes de la `SRWLock` classe en mode de verrou exclusif.|
 |[SRWLockSharedTraits, structure](../windows/srwlocksharedtraits-structure.md)|Décrit les caractéristiques communes de la `SRWLock` classe en mode de verrou partagé.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** corewrappers.h
 
