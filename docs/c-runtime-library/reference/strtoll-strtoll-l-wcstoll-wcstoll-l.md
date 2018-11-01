@@ -1,10 +1,6 @@
 ---
-title: strtoll, _strtoll_l, wcstoll, _wcstoll_l | Microsoft Docs
-ms.custom: ''
+title: strtoll, _strtoll_l, wcstoll, _wcstoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strtoll
 - wcstoll
@@ -30,8 +26,6 @@ f1_keywords:
 - _wcstoll_l
 - strtoll
 - wcstoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcstoll_l function
 - _wcstoll_l function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _tcstoll function
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd469bcab9e64de070484ce6774e7449eda8d167
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 53ae4ab1d482478c50aa257acdc974569bfc05f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418144"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523172"
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 
@@ -98,17 +88,17 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**strtoll** retourne la valeur qui est représentée dans la chaîne *strSource*, sauf lorsque la représentation sous forme de provoquerait un dépassement de capacité, dans ce cas, elle retourne **LLONG_MAX** ou **LLONG_MIN**. La fonction retourne 0 si aucune conversion ne peut être effectuée. **wcstoll** renvoie les valeurs comme **strtoll**.
+**strtoll** retourne la valeur est représentée dans la chaîne *strSource*, sauf lorsque la représentation entraînerait un dépassement de capacité : dans ce cas, elle retourne **LLONG_MAX** ou **LLONG_MIN**. La fonction retourne 0 si aucune conversion ne peut être effectuée. **wcstoll** retourne des valeurs de façon analogue à **strtoll**.
 
 **LLONG_MAX** et **LLONG_MIN** sont définis dans les limites. H.
 
-Si *strSource* est **NULL** ou *base* est différente de zéro et inférieure à 2 ou supérieure à 36, **errno** a la valeur **EINVAL** .
+Si *strSource* est **NULL** ou *base* est différent de zéro et inférieur à 2 ou supérieur à 36, **errno** a la valeur **EINVAL** .
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **strtoll** fonction convertit *strSource* à un **long** **long**. Les deux fonctions arrêter la lecture de la chaîne *strSource* au premier caractère ne reconnaît pas comme partie d’un nombre. Cela peut être le caractère null de fin, ou il peut être le premier caractère numérique qui est supérieur ou égal à *base*. **wcstoll** est une version à caractères larges de **strtoll**; sa *strSource* argument est une chaîne à caractères larges. Sinon, ces fonctions se comportent de façon identique.
+Le **strtoll** fonction convertit *strSource* à un **long** **long**. Les deux fonctions arrêtent de lire la chaîne *strSource* au premier caractère qu’ils ne peuvent pas reconnaître comme faisant partie d’un nombre. Cela peut être le caractère null de fin, ou il peut être le premier caractère numérique qui est supérieur ou égal à *base*. **wcstoll** est une version à caractères larges de **strtoll**; son *strSource* argument est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -117,17 +107,17 @@ Le **strtoll** fonction convertit *strSource* à un **long** **long**. Les deux 
 |**_tcstoll**|**strtoll**|**strtoll**|**wcstoll**|
 |**_tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
 
-Le paramètres régionaux **LC_NUMERIC** catégorie détermine la reconnaissance du caractère de base *strSource*; pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les fonctions qui n’ont pas le **_l** suffixe utilisent les paramètres régionaux ; **_strtoll_l** et **_wcstoll_l** sont identiques aux fonctions correspondantes qui n’ont pas le suffixe, sauf qu’ils utilisent à la place les paramètres régionaux qui sont passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le paramètres régionaux **LC_NUMERIC** paramètre de catégorie détermine la reconnaissance du caractère de base dans *strSource*; pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les fonctions qui n’ont pas la **_l** suffixe utiliser les paramètres régionaux actifs ; **_strtoll_l** et **_wcstoll_l** sont identiques aux fonctions correspondantes qui n’ont pas le suffixe, sauf qu’ils utilisent à la place les paramètres régionaux qui sont passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* n’est pas **NULL**, un pointeur vers le caractère qui l’a arrêté l’analyse est stocké à l’emplacement qui est désigné par *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stocké à l’emplacement qui est désigné par *endptr*.
+Si *endptr* n’est pas **NULL**, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stocké à l’emplacement désigné par *endptr*.
 
-**strtoll** attend *strSource* pour pointer vers une chaîne sous la forme suivante :
+**strtoll** attend *strSource* pour pointer vers une chaîne au format suivant :
 
 > [*espace blanc*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*chiffres* &#124; *lettres*]  
 
-A *espace blanc* peut contenir les caractères espace et la tabulation, qui sont ignorés ; *chiffres* sont un ou plusieurs chiffres décimaux ; *lettres* sont une ou plusieurs des lettres 'a' 'z' via (ou un 'A' à 'Z'). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si *base* est comprise entre 2 et 36, il est utilisé comme base du nombre. Si *base* est 0, les premiers caractères de la chaîne qui pointe vers *strSource* servent à déterminer la base. Si le premier caractère est « 0 » et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* est 0 et le premier caractère analysé est « 0 », un entier octal est supposé et un caractère '8' ou '9' arrête l’analyse.
+Un *espace blanc* peut se composer d’espaces et tabulations, qui sont ignorés ; *chiffres* représente un ou plusieurs chiffres décimaux ; *lettres* sont un ou plusieurs des lettres « a » 'z' via (ou un « A » à « Z »). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* est 0, les premiers caractères de la chaîne désignée par *strSource* servent à déterminer la base. Si le premier caractère est « 0 » et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* est égal à 0 et le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrête l’analyse.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

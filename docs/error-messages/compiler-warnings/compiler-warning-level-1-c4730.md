@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveau 1) C4730 | Microsoft Docs
-ms.custom: ''
+title: Avertissement du compilateur (niveau 1) C4730
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4730
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d740e1574d4cc538a27471c07795b7c95dd17565
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487033"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Avertissement du compilateur (niveau 1) C4730
 
