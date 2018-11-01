@@ -1,10 +1,6 @@
 ---
-title: fgetpos | Microsoft Docs
-ms.custom: ''
+title: fgetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetpos
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fgetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b111a911083354c8d9478b2c914a0a5f7dfe7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397383"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658417"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -54,21 +44,21 @@ int fgetpos(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Flux cible.
 
-*bons de commande*<br/>
+*points de vente*<br/>
 Stockage de l’indicateur de position.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **fgetpos** retourne 0. En cas d’échec, elle retourne une valeur différente de zéro et définit **errno** à un des éléments suivants du manifeste de constantes (définies dans STDIO. (H) : **EBADF**, ce qui signifie que le flux de données spécifié n’est pas un pointeur de fichier valide ou n’est pas accessible, ou **EINVAL**, ce qui signifie que la *flux* valeur ou la valeur de *pos* est non valide, telle qu’if est un pointeur null. Si *flux* ou *pos* est un **NULL** pointeur, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+En cas de réussite, **fgetpos** retourne 0. En cas d’échec, elle retourne une valeur différente de zéro et définit **errno** sur une des opérations suivantes (définies dans STDIO des constantes manifestes. (H) : **EBADF**, ce qui signifie que le flux spécifié n’est pas un pointeur de fichier valide ou n’est pas accessible, ou **EINVAL**, ce qui signifie que le *flux* valeur ou la valeur de *pos* est non valide, par exemple si est un pointeur null. Si *flux* ou *pos* est un **NULL** pointeur, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **fgetpos** fonction obtient la valeur actuelle de la *flux* indicateur de position de fichier et le stocke dans l’objet désigné par l’argument *pos*. Le **fsetpos** fonction peut ensuite utiliser les informations stockées dans *pos* pour réinitialiser le *flux* pointeur d’argument à sa position en temps **fgetpos** a été appelée. Le *pos* valeur est stockée dans un format interne et est destinée uniquement par **fgetpos** et **fsetpos**.
+Le **fgetpos** fonction obtient la valeur actuelle de la *flux* indicateur de position de fichier et le stocke dans l’objet vers lequel pointe l’argument *pos*. Le **fsetpos** fonction peut utiliser ultérieurement les informations stockées dans *pos* pour réinitialiser le *flux* pointeur à sa position au moment de l’argument **fgetpos** a été appelée. Le *pos* valeur est stockée dans un format interne et est destinée uniquement par **fgetpos** et **fsetpos**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

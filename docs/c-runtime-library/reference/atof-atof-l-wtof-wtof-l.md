@@ -1,10 +1,6 @@
 ---
-title: atof, _atof_l, _wtof, _wtof_l | Microsoft Docs
-ms.custom: ''
+title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtof_l
 - atof
@@ -36,8 +32,6 @@ f1_keywords:
 - corecrt_wstdlib/_wtof
 - _wtof_l
 - corecrt_wstdlib/_wtof_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstof function
 - atof_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78fe14783200e1e145c39b9b274d9e7e3ddb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396808"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471173"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -96,9 +86,9 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne le **double** valeur produite par l’interprétation des caractères d’entrée en tant que nombre. La valeur de retour est 0.0 si l’entrée ne peut pas être convertie en valeur de ce type.
+Chaque fonction retourne le **double** valeur produite en interprétant les caractères d’entrée en tant que nombre. La valeur de retour est 0.0 si l’entrée ne peut pas être convertie en valeur de ce type.
 
-Dans tous les cas d’out-of-range, **errno** a la valeur **ERANGE**. Si le paramètre passé est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourne 0.
+Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent 0.
 
 ## <a name="remarks"></a>Notes
 
@@ -106,15 +96,15 @@ Ces fonctions convertissent une chaîne de caractères en valeur à virgule flot
 
 La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère Null ('\0' ou L'\0') terminant la chaîne.
 
-Le *str* argument **atof** et **_wtof** a la forme suivante :
+Le *str* l’argument de **atof** et **_wtof** a la forme suivante :
 
-[*espace blanc*] [*signe*] [*chiffres*] [__.__ *chiffres*] [{**e** &#124; **E** } [*signe*]*chiffres*]
+[*espace blanc*] [*connexion*] [*chiffres*] [__.__ *chiffres*] [{**e** &#124; **E** } [*connexion*]*chiffres*]
 
-A *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *signe* est plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant la virgule décimale, au moins un doit apparaître après celle-ci. Les chiffres décimaux peuvent être suivies d’un exposant, qui se compose d’une lettre d’introduction (**e**, ou **E**) et un entier décimal signé si vous le souhaitez.
+Un *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *connexion* est soit plus (+) ou moins (-) ; et *chiffres* représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant la virgule décimale, au moins un doit apparaître après celle-ci. Les chiffres décimaux peuvent être suivies d’un exposant, qui se compose d’une lettre d’introduction (**e**, ou **E**) et un entier décimal signé si vous le souhaitez.
 
-Les versions UCRT de ces fonctions ne prennent pas en charge la conversion de type Fortran (**d** ou **D**) lettres exposant. Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
+Les versions UCRT de ces fonctions ne prennent pas en charge la conversion de style Fortran (**d** ou **D**) lettres d’exposants. Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent le *paramètres régionaux* paramètre passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent le *paramètres régionaux* paramètre passés au lieu des paramètres régionaux actuels.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -123,7 +113,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_tstof**|**atof**|**atof**|**_wtof**|
 |**_ttof**|**atof**|**atof**|**_wtof**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine(s)|En-tête requis|
 |------------------|---------------------|
@@ -132,7 +122,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 
 ## <a name="example"></a>Exemple
 
-Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être converties en valeurs numériques à l’aide de la **atof** et **_atof_l** fonctions.
+Ce programme montre comment nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide de la **atof** et **_atof_l** fonctions.
 
 ```C
 // crt_atof.c

@@ -1,10 +1,6 @@
 ---
-title: _putw | Microsoft Docs
-ms.custom: ''
+title: _putw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putw
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs:
-- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5e33bc207fe83795c31f6c8b61d931985760e3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602681"
 ---
 # <a name="putw"></a>_putw
 
@@ -60,7 +50,7 @@ int _putw(
 *binint*<br/>
 Entier binaire à sortir.
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -71,9 +61,9 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-Le **_putw** fonction écrit une valeur binaire de type **int** à la position actuelle de *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux de données, ni le fait supposent l’alignement spéciaux. **_putw** est principalement utilisé pour la compatibilité avec les bibliothèques précédentes. Problèmes de portabilité peuvent se produire avec **_putw** , car la taille d’un **int** et le classement des octets dans un **int** diffèrent entre les systèmes.
+Le **_putw** fonction écrit une valeur binaire de type **int** à la position actuelle du *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux alignés ni ne présume aucun alignement spécial. **_putw** est principalement utilisé pour la compatibilité avec les bibliothèques précédentes. Problèmes de portabilité peuvent se produire avec **_putw** , car la taille d’un **int** et l’ordre des octets dans un **int** diffèrent entre les systèmes.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

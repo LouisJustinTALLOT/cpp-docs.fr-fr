@@ -1,10 +1,6 @@
 ---
-title: scanf, _scanf_l, wscanf, _wscanf_l | Microsoft Docs
-ms.custom: ''
+title: scanf, _scanf_l, wscanf, _wscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wscanf_l
 - scanf
@@ -29,8 +25,6 @@ f1_keywords:
 - _wscanf_l
 - scanf
 - _tscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tscanf_l function
 - _tscanf_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32d414685237e8d55e1c8acd5df74ea6922e222b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410692"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544766"
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
@@ -89,7 +79,7 @@ int _wscanf_l(
 *format*<br/>
 Format de la chaîne de contrôle.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 *locale*<br/>
@@ -99,20 +89,20 @@ Paramètres régionaux à utiliser.
 
 Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n'inclut pas les champs qui ont été lus mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné.
 
-Si *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et **errno** à **EINVAL**.
+Si *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et définissez **errno** à **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **scanf** fonction lit les données à partir du flux d’entrée standard **stdin** et écrit les données à l’emplacement donné par *argument*. Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le **scanf** fonction lit les données à partir du flux d’entrée standard **stdin** et écrit les données dans l’emplacement indiqué par *argument*. Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Lors de la lecture avec une chaîne de **scanf**, spécifiez toujours une largeur de la **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; sinon, mise en forme incorrecte entrée peut amener facilement un dépassement de mémoire tampon. Vous pouvez aussi envisager d’utiliser [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
+> Lors de la lecture une chaîne avec **scanf**, toujours spécifier une largeur pour les **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; sinon, une entrée mal formatée peut facilement provoquer un dépassement de mémoire tampon. Vous pouvez aussi envisager d’utiliser [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
 
-**wscanf** est une version à caractères larges de **scanf**; le *format* argument **wscanf** est une chaîne à caractères larges. **wscanf** et **scanf** se comportent de façon identique, si le flux est ouvert en mode ANSI. **scanf** non prise en charge d’entrée à partir d’un flux de données UNICODE.
+**wscanf** est une version à caractères larges de **scanf**; le *format* l’argument de **wscanf** est une chaîne de caractères larges. **wscanf** et **scanf** se comportent comme si le flux est ouvert en mode ANSI. **scanf** ne prend actuellement en charge d’entrée à partir d’un flux de données UNICODE.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -123,14 +113,14 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 
 Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

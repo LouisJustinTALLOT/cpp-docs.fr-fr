@@ -1,30 +1,20 @@
 ---
-title: multiplies, struct | Microsoft Docs
-ms.custom: ''
+title: multiplies (struct)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::multiplies
-dev_langs:
-- C++
 helpviewer_keywords:
 - multiplies class
 - multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cc0fdcc1ecfec18403904e75e0efbe3341137f02
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e9566f9685ef0591a08f8b10886d20784c2147a2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571455"
 ---
-# <a name="multiplies-struct"></a>multiplies, struct
+# <a name="multiplies-struct"></a>multiplies (struct)
 
 Objet de fonction prédéfini qui effectue l’opération de multiplication ( `operator*` binaire) sur ses arguments.
 

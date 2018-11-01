@@ -1,10 +1,6 @@
 ---
-title: puts, _putws | Microsoft Docs
-ms.custom: ''
+title: puts, _putws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putws
 - puts
@@ -25,8 +21,6 @@ f1_keywords:
 - _putts
 - _putws
 - puts
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _putts function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8a0b4f0c4924970905cb541d82450a807de1357
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404527"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667322"
 ---
 # <a name="puts-putws"></a>puts, _putws
 
@@ -75,11 +65,11 @@ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_d
 
 ## <a name="remarks"></a>Notes
 
-Le **place** fonction écritures *str* au flux de sortie standard **stdout**, en remplaçant la chaîne de terminer le caractère null ('\0') avec un caractère de saut de ligne ('\n') dans le flux de sortie.
+Le **place** fonction écritures *str* au flux de sortie standard **stdout**, en remplaçant la chaîne, le caractère null ('\0') avec un caractère de saut de ligne ('\n') de fin dans le flux de sortie.
 
-**_putws** est la version à caractères larges de **place**; les deux fonctions se comportent de façon identique si le flux est ouvert en mode ANSI. **place** ne prend actuellement en charge la sortie dans un flux de données UNICODE.
+**_putws** est la version à caractères larges de **place**; les deux fonctions se comportent comme si le flux est ouvert en mode ANSI. **place** ne prend actuellement en charge la sortie vers un flux UNICODE.
 
-**_putwch** écrit des caractères Unicode à l’aide de la valeur actuelle de la CONSOLE LOCALE.
+**_putwch** écrit des caractères Unicode en utilisant le paramètre actuel de la CONSOLE LOCALE.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -87,14 +77,14 @@ Le **place** fonction écritures *str* au flux de sortie standard **stdout**, en
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_putts**|**puts**|**puts**|**_putws**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 

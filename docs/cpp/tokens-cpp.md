@@ -1,28 +1,18 @@
 ---
-title: Jetons (C++) | Microsoft Docs
-ms.custom: ''
+title: Jetons (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - tokens [C++]
 - parsing, C++ tokens
 - translation units
 - white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 442084881b57d07658a6677d5a6fa3f612336762
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1606df56191ec00ffea543dedd3fd4eda98d01c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029687"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597299"
 ---
 # <a name="tokens-c"></a>Jetons (C++)
 

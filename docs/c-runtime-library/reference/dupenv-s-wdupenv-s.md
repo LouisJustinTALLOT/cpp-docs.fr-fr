@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s, _wdupenv_s | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s, _wdupenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s
 - _wdupenv_s
@@ -28,8 +24,6 @@ f1_keywords:
 - dupenv_s
 - _tdupenv_s
 - _wdupenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _dupenv_s function
 - _tdupenv_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a918b866b0b43fb0e6b31e2deb5d9861dabe9a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402112"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646497"
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
 
@@ -87,13 +77,13 @@ Nom de la variable d'environnement.
 
 Zéro en cas de réussite, code d'erreur en cas d'échec.
 
-Ces fonctions valident leurs paramètres ; Si *tampon* ou *varname* est **NULL**, le Gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** à **EINVAL** et retourner **EINVAL**.
+Ces fonctions valident leurs paramètres ; Si *tampon* ou *varname* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** à **EINVAL** et retourner **EINVAL**.
 
-Si ces fonctions ne peut pas allouer suffisamment de mémoire, elles affectent *tampon* à **NULL** et *numberOfElements* à 0 et retournent **ENOMEM**.
+Si ces fonctions ne peut pas allouer suffisamment de mémoire, elles définies *tampon* à **NULL** et *numberOfElements* à 0 et retournent **ENOMEM**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_dupenv_s** fonction recherche dans la liste des variables d’environnement *varname*. Si la variable est trouvée, **_dupenv_s** alloue une mémoire tampon et copie la valeur de la variable dans la mémoire tampon. Adresse et la longueur de la mémoire tampon sont retournées dans *tampon* et *numberOfElements*. En allouant la mémoire tampon elle-même, **_dupenv_s** offre une solution plus pratique [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+Le **_dupenv_s** fonction recherche dans la liste des variables d’environnement pour *varname*. Si la variable est trouvée, **_dupenv_s** alloue une mémoire tampon et copie la valeur de la variable dans la mémoire tampon. Adresse et la longueur de la mémoire tampon sont retournées dans *tampon* et *numberOfElements*. En allouant la mémoire tampon elle-même, **_dupenv_s** fournit une alternative plus pratique à [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > Il revient au programme appelant de libérer la mémoire en appelant [free](free.md).
@@ -102,11 +92,11 @@ Si la variable est introuvable, puis *tampon* a la valeur **NULL**, *numberOfEle
 
 Si vous n’êtes pas intéressé par la taille de la mémoire tampon, vous pouvez passer **NULL** pour *numberOfElements*.
 
-**_dupenv_s** n’est pas la casse dans le système d’exploitation Windows. **_dupenv_s** utilise la copie de l’environnement vers lequel pointé la variable globale **_environ** pour accéder à l’environnement. Consultez la section Notes dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour en savoir plus sur **_environ**.
+**_dupenv_s** n’est pas sensible à la casse dans le système d’exploitation Windows. **_dupenv_s** utilise la copie de l’environnement vers lequel pointé la variable globale **_environ** pour accéder à l’environnement. Consultez les notes dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour une présentation de **_environ**.
 
-La valeur de *tampon* est une copie de la valeur de la variable d’environnement ; modification n’a aucun effet sur l’environnement. Utilisez la fonction [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) pour modifier la valeur d’une variable d’environnement.
+La valeur dans *tampon* est une copie de la valeur de la variable d’environnement ; modification n’a aucun effet sur l’environnement. Utilisez la fonction [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) pour modifier la valeur d’une variable d’environnement.
 
-**_wdupenv_s** est une version à caractères larges de **_dupenv_s**; les arguments de **_wdupenv_s** sont des chaînes à caractères larges. Le **_wenviron** (variable globale) est une version à caractères larges de **_environ**. Consultez la section Notes dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour plus d’informations sur **_wenviron**.
+**_wdupenv_s** est une version à caractères larges de **_dupenv_s**; les arguments de **_wdupenv_s** sont des chaînes à caractères larges. Le **_wenviron** (variable globale) est une version à caractères larges de **_environ**. Consultez les notes dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour en savoir plus sur **_wenviron**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -114,7 +104,7 @@ La valeur de *tampon* est une copie de la valeur de la variable d’environnemen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s**|**_dupenv_s**|**_dupenv_s**|**_wdupenv_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

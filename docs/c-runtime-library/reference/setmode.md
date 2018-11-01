@@ -1,10 +1,6 @@
 ---
-title: _setmode | Microsoft Docs
-ms.custom: ''
+title: _setmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmode
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _setmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], console output
 - files [C++], modes
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59aed27ec4803cd1709635da44ef37d748342e29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617436"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -74,14 +64,14 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 ## <a name="remarks"></a>Notes
 
-Le **_setmode** fonction affecte *mode* le mode de traduction de fichier spécifié par *fd*. Passage **_O_TEXT** en tant que *mode* définit le texte (autrement dit, traduit) mode. Combinaisons chariot retour-ligne (CRLF) sont traduites en une seule ligne dans l’entrée de flux de caractères. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. Passage **_O_BINARY** définit binaire (non traduit) le mode, dans lequel ces traductions sont supprimées.
+Le **_setmode** fonction affecte *mode* le mode de traduction de fichier spécifié par *fd*. En passant **_O_TEXT** comme *mode* définit le texte (autrement dit, traduit) mode. Combinaisons de (CR-LF) flux de transport retour de ligne sont traduites en une seule ligne, caractère de saut en entrée. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. En passant **_O_BINARY** définit binaire (non traduit) le mode, dans lequel ces traductions sont supprimées.
 
-Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT**, ou **_O_WTEXT** pour activer le mode Unicode, comme illustré dans le deuxième exemple plus loin dans ce document. **_setmode** est généralement utilisé pour modifier le mode de traduction par défaut de **stdin** et **stdout**, mais vous pouvez l’utiliser sur n’importe quel fichier. Si vous appliquez **_setmode** au descripteur de fichier pour un flux de données, appelez **_setmode** avant d’effectuer toutes les opérations sur le flux d’entrée ou de sortie.
+Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT**, ou **_O_WTEXT** pour activer le mode Unicode, comme illustré dans le deuxième exemple plus loin dans ce document. **_setmode** est généralement utilisé pour modifier le mode de traduction par défaut **stdin** et **stdout**, mais vous pouvez l’utiliser sur n’importe quel fichier. Si vous appliquez **_setmode** au descripteur de fichier pour un flux de données, appelez **_setmode** avant d’effectuer des opérations d’entrée ou de sortie sur le flux de données.
 
 > [!CAUTION]
-> Si vous écrivez des données dans un flux de fichier explicitement vider le code à l’aide de [fflush](fflush.md) avant d’utiliser **_setmode** pour modifier le mode. Si vous ne videz pas le code, un comportement inattendu peut se produire. Si vous n'avez pas écrit de données dans le flux, vous n'avez pas à vider le code.
+> Si vous écrivez des données dans un flux de fichier, explicitement videz le code à l’aide de [fflush](fflush.md) avant d’utiliser **_setmode** pour modifier le mode. Si vous ne videz pas le code, un comportement inattendu peut se produire. Si vous n'avez pas écrit de données dans le flux, vous n'avez pas à vider le code.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

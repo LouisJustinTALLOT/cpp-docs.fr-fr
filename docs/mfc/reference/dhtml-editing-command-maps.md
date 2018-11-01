@@ -1,23 +1,13 @@
 ---
-title: Mappages de commande d’édition DHTML | Microsoft Docs
-ms.custom: ''
+title: Mappages de commande d'édition DHTML
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e31490f62c170230c41a2a2a26fcbe116d39d415
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6c03e8e4a7d84776c3657994c57a72a906046f37
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425065"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558455"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mappages de commande d'édition DHTML
 

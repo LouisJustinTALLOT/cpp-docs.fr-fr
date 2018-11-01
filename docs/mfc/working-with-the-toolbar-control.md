@@ -1,28 +1,18 @@
 ---
-title: Utilisation du contrôle de barre d’outils | Microsoft Docs
-ms.custom: ''
+title: Utilisation du contrôle ToolBar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - GetToolBarCtrl method [MFC]
 - toolbars [MFC], accessing common control
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2acc0274b4bdd3ad1f6696ccede9865762b5efc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 856f45f4b9c78f5bd7d1a2e712f3fe9acd8004f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431487"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652047"
 ---
 # <a name="working-with-the-toolbar-control"></a>Utilisation du contrôle ToolBar
 

@@ -1,27 +1,17 @@
 ---
-title: Erreur des LNK1282 des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK1282
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1282
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1282
 ms.assetid: 99c13f52-eb80-46ce-a5b9-4537583e32a9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d00c23eab3e21064076b9bd8663b0c3a593d997b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79bfdd9920cbd17af85705530e819316017b0db1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057093"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470536"
 ---
 # <a name="linker-tools-error-lnk1282"></a>Erreur des outils Éditeur de liens LNK1282
 

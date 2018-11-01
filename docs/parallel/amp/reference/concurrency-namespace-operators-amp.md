@@ -1,21 +1,13 @@
 ---
-title: Opérateurs d’espace de noms d’accès concurrentiel (AMP) | Microsoft Docs
-ms.custom: ''
+title: Opérateurs d’espace de noms d’accès concurrentiel (AMP)
 ms.date: 11/04/2016
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1e313dbda3dfc75f291310818d593b9a4daf90b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: cd40f771cbab5651b2f33f0ed2e84ea1412855bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162176"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598040"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Opérateurs d’espace de noms d’accès concurrentiel (AMP)
 

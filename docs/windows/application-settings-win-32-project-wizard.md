@@ -1,29 +1,18 @@
 ---
-title: Paramètres d’application, Assistant projet Win 32 | Microsoft Docs
-ms.custom: ''
+title: Paramètres de l'application, Assistant Projet Win 32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.win32.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - application settings [C++]
 - Win32 Project Wizard, application settings
 ms.assetid: d6b818f0-9b23-4793-a6c5-df1c8c594bad
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7342e8cfb95e8e443631563499a84fd7bd6579a1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b9d9e8c0919429a961b4ef47507270534afacf75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080700"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592671"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Paramètres de l'application, Assistant Projet Win 32
 

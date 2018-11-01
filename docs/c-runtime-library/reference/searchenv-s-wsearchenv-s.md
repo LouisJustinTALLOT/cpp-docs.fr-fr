@@ -1,10 +1,6 @@
 ---
-title: _searchenv_s, _wsearchenv_s | Microsoft Docs
-ms.custom: ''
+title: _searchenv_s, _wsearchenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsearchenv_s
 - _searchenv_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b14dee908cdf1cc0d564047035a72f501df130b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410913"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505675"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 
@@ -101,13 +91,13 @@ Environnement dans lequel effectuer la recherche.
 Mémoire tampon destinée à stocker le chemin d’accès complet.
 
 *numberOfElements*<br/>
-Taille de la *chemin d’accès* mémoire tampon.
+Taille de la *pathname* mémoire tampon.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
-Si *nom de fichier* est une chaîne vide, la valeur de retour est **ENOENT**.
+Si *filename* est une chaîne vide, la valeur de retour est **ENOENT**.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
@@ -121,13 +111,13 @@ Si l’une de ces conditions d’erreur se présente, le gestionnaire de paramè
 
 ## <a name="remarks"></a>Notes
 
-Le **_searchenv_s** routine recherche le fichier cible dans le domaine spécifié. Le *varname* variable peut être n’importe quel environnement ou une variable définie par l’utilisateur qui spécifie une liste de chemins d’accès de répertoire, tel que **chemin d’accès**, **LIB**, et **INCLUDE** . Étant donné que **_searchenv_s** respecte la casse, *varname* doit correspondre à la casse de la variable d’environnement. Si *varname* ne correspond pas au nom d’une variable d’environnement défini dans l’environnement du processus, la fonction retourne zéro et le *chemin d’accès* variable reste inchangée.
+Le **_searchenv_s** routine recherche le fichier cible dans le domaine spécifié. Le *varname* variable peut être n’importe quel environnement ou une variable définie par l’utilisateur qui spécifie une liste de chemins d’accès de répertoire, tel que **chemin d’accès**, **LIB**, et **INCLUDE** . Étant donné que **_searchenv_s** respecte la casse, *varname* doit correspondre à la casse de la variable d’environnement. Si *varname* ne correspond pas au nom d’une variable d’environnement défini dans l’environnement du processus, la fonction retourne zéro et le *pathname* variable reste inchangée.
 
-La routine recherche d’abord le fichier dans le répertoire de travail actif. Si elle ne le trouve pas, elle parcourt ensuite les répertoires spécifiés par la variable d’environnement. Si le fichier cible est dans un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans *chemin d’accès*. Si le *nom de fichier* fichier est introuvable, *chemin d’accès* contient une chaîne vide se terminant par null.
+La routine recherche d’abord le fichier dans le répertoire de travail actif. Si elle ne le trouve pas, elle parcourt ensuite les répertoires spécifiés par la variable d’environnement. Si le fichier cible est dans un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans *pathname*. Si le *filename* fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
 
-Le *chemin d’accès* mémoire tampon doit être au moins **_MAX_PATH** caractères pour prendre en compte la longueur totale du nom de chemin d’accès construit. Dans le cas contraire, **_searchenv_s** risque de saturer le *chemin d’accès* tampon, ce qui entraîne un comportement inattendu.
+Le *pathname* mémoire tampon doit être au moins **_MAX_PATH** caractères pour prendre en compte la longueur totale du nom de chemin d’accès construit. Sinon, **_searchenv_s** risque de saturer le *pathname* tampon, ce qui entraîne un comportement inattendu.
 
-**_wsearchenv_s** est une version à caractères larges de **_searchenv_s**; les arguments de **_wsearchenv_s** sont des chaînes à caractères larges. **_wsearchenv_s** et **_searchenv_s** comportent de façon identique.
+**_wsearchenv_s** est une version à caractères larges de **_searchenv_s**; les arguments de **_wsearchenv_s** sont des chaînes à caractères larges. **_wsearchenv_s** et **_searchenv_s** se comportent de façon identique dans le cas contraire.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -137,7 +127,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsearchenv_s**|**_searchenv_s**|**_searchenv_s**|**_wsearchenv_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

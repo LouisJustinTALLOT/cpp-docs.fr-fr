@@ -1,27 +1,17 @@
 ---
-title: 'Conteneurs : Notifications d’élément Client | Microsoft Docs'
-ms.custom: ''
+title: "Conteneurs : notifications d'élément client"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - notifications [MFC], container client item
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5db5170b6c946e4bfeda99a3275f045a07fc9beb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435218"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528893"
 ---
 # <a name="containers-client-item-notifications"></a>Conteneurs : notifications d'élément client
 
@@ -52,7 +42,7 @@ Le deuxième argument de cette fonction spécifie la manière dont l’élément
 
 Pour plus d’informations sur les États d’un élément client peut assumer, consultez [conteneurs : États d’élément Client](../mfc/containers-client-item-states.md).
 
-Le framework appelle `COleClientItem::OnGetItemPosition` lorsqu'un élément est activé pour la modification sur place. L'implémentation est requise pour les applications qui prennent en charge la modification sur place. L'Assistant Application MFC fournit une implémentation de base, qui assigne les coordonnées de l'élément à l'objet `CRect` passé comme argument à `OnGetItemPosition`.
+Le framework appelle `COleClientItem::OnGetItemPosition` lorsqu'un élément est activé pour la modification sur place. L'implémentation est requise pour les applications qui prennent en charge la modification sur place. L’Assistant Application MFC fournit une implémentation de base, qui assigne les coordonnées de l’élément à l’objet `CRect` passé comme argument à `OnGetItemPosition`.
 
 Si la position ou la taille d'un élément OLE change lors de la modification sur place, les informations du conteneur relatives aux rectangles de découpage et à la position de l'élément doivent être mises à jour et le serveur doit recevoir les informations concernant ces modifications. Le framework appelle `COleClientItem::OnChangeItemPosition` à cet effet. L'Assistant Application MFC fournit une substitution qui appelle la fonction de la classe de base. Vous devez modifier la fonction que l'Assistant Application écrit pour votre classe dérivée de `COleClientItem` afin qu'elle puisse mettre à jour les informations conservées par votre objet d'élément client.
 

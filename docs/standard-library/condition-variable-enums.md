@@ -1,17 +1,15 @@
 ---
-title: '&lt;condition_variable&gt;, énumérations | Microsoft Docs'
-ms.custom: ''
+title: '&lt;condition_variable&gt;, énumérations'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - condition_variable/std::cv_status
 ms.assetid: f261ad79-e25b-4afa-9f8a-909ce697e0d8
-ms.openlocfilehash: 72522903c837b33481c1614c8ecbce67821cb3f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7da337aa69ee769d471b9b99dcc0aad097910920
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841567"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548172"
 ---
 # <a name="ltconditionvariablegt-enums"></a>&lt;condition_variable&gt;, énumérations
 

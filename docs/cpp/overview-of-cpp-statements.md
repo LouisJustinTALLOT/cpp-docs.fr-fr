@@ -1,25 +1,15 @@
 ---
-title: Vue d’ensemble des instructions C++ | Microsoft Docs
-ms.custom: ''
+title: Vue d'ensemble des instructions C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - statements [C++]
 ms.assetid: e56996b2-b846-4b99-ac94-ac72fffc5ec7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8836f3c82ea21d2ef22ccd3439dff3644380678
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9493860087331ee2d8ff05a5c0bd59c7a46ad51a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030441"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676549"
 ---
 # <a name="overview-of-c-statements"></a>Vue d'ensemble des instructions C++
 

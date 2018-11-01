@@ -1,10 +1,6 @@
 ---
-title: _get_terminate | Microsoft Docs
-ms.custom: ''
+title: _get_terminate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_terminate
 apilocation:
@@ -24,27 +20,21 @@ f1_keywords:
 - get_terminate
 - _get_terminate
 - __get_terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - __get_terminate function
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82caa4c8516b9d6ccf813240668692bb54d16eda
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 438bd287738f121efb436857c54c5a68427d9fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450919"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484948"
 ---
 # <a name="getterminate"></a>_get_terminate
 
-Retourne la routine de terminaison à être appelé par **Terminer**.
+Retourne la routine d’arrêt doit être appelée par **Terminer**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,9 +44,9 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur désignant la fonction enregistrée par [set_terminate](set-terminate-crt.md). Si aucune fonction n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **NULL**.
+Retourne un pointeur désignant la fonction enregistrée par [set_terminate](set-terminate-crt.md). Si aucune fonction n’a été définie, la valeur de retournée peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **NULL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

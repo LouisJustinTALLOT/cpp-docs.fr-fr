@@ -1,27 +1,17 @@
 ---
-title: Erreur LNK1313 des outils Éditeur de liens | Documents Microsoft
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK1313
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1313
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705086"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604228"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Erreur des outils Éditeur de liens LNK1313
 
@@ -29,7 +19,7 @@ ms.locfileid: "34705086"
 
 ## <a name="remarks"></a>Notes
 
-La version actuelle de Visual C++ ne prend pas en charge la liaison de fichiers .obj de managé/natif mixte ou natif avec des fichiers .obj compilés avec **/CLR : pure**.
+La version actuelle de Visual C++ ne prend pas en charge la liaison de fichiers .obj de managées/natives natif ou mixte avec les fichiers .obj compilés avec **/CLR : pure**.
 
 Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 

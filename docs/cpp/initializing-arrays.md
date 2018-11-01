@@ -1,26 +1,16 @@
 ---
-title: Initialisation des tableaux | Microsoft Docs
-ms.custom: ''
+title: Initialisation des tableaux
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - initializing arrays [C++]
 - arrays [C++], initializing
 ms.assetid: 41efe5f0-15b5-4f49-9196-c4902f8fc705
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94f13ca235091c730f81eefb5c36f388bf3dee38
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e055e7759865fc151176097c6f0afd9ee237f4c1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447084"
 ---
 # <a name="initializing-arrays"></a>Initialisation des tableaux
 

@@ -1,28 +1,18 @@
 ---
-title: '&lt;string&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;string&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - string/std::<string>
 - <string>
-dev_langs:
-- C++
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d84f4707af33f44a930f7f67b7f751e2ead627c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954569"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517908"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -58,7 +48,7 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 |Opérateur|Description|
 |-|-|
 |[operator+](../standard-library/string-operators.md#op_add)|Concatène deux objets string.|
-|[operator!=](../standard-library/string-operators.md#op_neq)|Teste si l'objet string situé à gauche de l'opérateur n'est pas égal à l'objet string situé à droite.|
+|[!=, opérateur](../standard-library/string-operators.md#op_neq)|Teste si l'objet string situé à gauche de l'opérateur n'est pas égal à l'objet string situé à droite.|
 |[operator==](../standard-library/string-operators.md#op_eq_eq)|Teste si l'objet string situé à gauche de l'opérateur est égal à l'objet string situé à droite.|
 |[operator<](../standard-library/string-operators.md#op_lt)|Teste si l'objet string situé à gauche de l'opérateur est inférieur à l'objet string situé à droite.|
 |[operator<=](../standard-library/string-operators.md#op_lt_eq)|Teste si l'objet string situé à gauche de l'opérateur est inférieur ou égal à l'objet string situé à droite.|
