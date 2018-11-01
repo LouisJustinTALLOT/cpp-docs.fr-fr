@@ -1,18 +1,16 @@
 ---
-title: '&lt;system_error&gt;, enums | Microsoft Docs'
-ms.custom: ''
+title: '&lt;system_error&gt;, enums'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: 4b288d163f5388d2f021b85f29854924a3ed3424
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e9d63854e937160d8e3cc617a61b0b9c1c75c48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856057"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620049"
 ---
 # <a name="ltsystemerrorgt-enums"></a>&lt;system_error&gt;, enums
 

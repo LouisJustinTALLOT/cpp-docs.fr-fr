@@ -1,12 +1,6 @@
 ---
-title: Fonctions avec listes d’arguments variables (C++) | Microsoft Docs
-ms.custom: ''
+title: Répertorie les fonctions avec des arguments de Variable (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - arguments [C++], variable number of
 - variable argument lists
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e27d32ad117c7d202a9e6824ddbf7387647fd708
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637301"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Répertorie les fonctions avec des arguments de Variable (C++)
 
@@ -124,9 +114,9 @@ void ShowVar( char *szTypes, ... ) {
 
 L'exemple ci-dessus illustre les concepts importants suivants :
 
-1. Vous devez établir un marqueur de liste en tant que variable de type `va_list` avant d'accéder à tout argument variable. Dans l'exemple précédent, le marqueur est appelé `vl`.
+1. Vous devez établir un marqueur de liste en tant que variable de type `va_list` avant d’accéder à tout argument variable. Dans l'exemple précédent, le marqueur est appelé `vl`.
 
-1. L'accès aux arguments individuels s'effectue à l'aide de la macro `va_arg`. Vous devez indiquer à la macro `va_arg` le type d'argument à extraire afin qu'elle puisse transférer le nombre correct d'octets de la pile. Si vous spécifiez un type incorrect d'une taille différente de celle fournie par le programme appelant à `va_arg`, les résultats sont imprévisibles.
+1. L’accès aux arguments individuels s’effectue à l’aide de la macro `va_arg`. Vous devez indiquer à la macro `va_arg` le type d’argument à extraire afin qu’elle puisse transférer le nombre correct d’octets de la pile. Si vous spécifiez un type incorrect d'une taille différente de celle fournie par le programme appelant à `va_arg`, les résultats sont imprévisibles.
 
 1. Vous devez effectuer un cast explicite du résultat obtenu à l'aide de la macro `va_arg` vers le type souhaité.
 

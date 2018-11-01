@@ -1,29 +1,19 @@
 ---
-title: 'Comment : marshaler des chaînes à l’aide de PInvoke | Microsoft Docs'
+title: 'Comment : marshaler des chaînes à l’aide de PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: d917228b1972715c291d84625cc684fc9de5b998
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598118"
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>Comment : marshaler des chaînes à l’aide de PInvoke
 

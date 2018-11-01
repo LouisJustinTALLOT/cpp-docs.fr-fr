@@ -1,10 +1,6 @@
 ---
-title: _gcvt_s | Microsoft Docs
-ms.custom: ''
+title: _gcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a2bd12a63db064bca0c880484f99a2df9d210f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403766"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554959"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -87,7 +77,7 @@ Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre 
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*sizeInBytes*|*valeur*|*digits*|Retourner|Valeur de *tampon*|
+|*buffer*|*sizeInBytes*|*valeur*|*digits*|Retourner|Valeur dans *mémoire tampon*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|Non modifiée.|
 |Pas **NULL** (pointe vers une mémoire valide)|zéro|any|any|**EINVAL**|Non modifiée.|
@@ -95,17 +85,17 @@ Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre 
 
 **Problèmes de sécurité**
 
-**_gcvt_s** peut générer une violation d’accès si *tampon* ne pointe pas vers la mémoire valide et n’est pas **NULL**.
+**_gcvt_s** peut générer une violation d’accès si *tampon* ne pointe pas vers une mémoire valide et n’est pas **NULL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_gcvt_s** fonction convertit une virgule flottante *valeur* en une chaîne de caractères (qui inclut une virgule décimale et un octet de connexion possibles) et stocke la chaîne dans *tampon* . *mémoire tampon* doit être suffisamment grand pour contenir la valeur convertie plus un caractère null de fin est ajouté automatiquement. Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisant pour n’importe quel flottante valeur du point. Si une taille de mémoire tampon de *chiffres* + 1 est utilisé, la fonction ne remplace pas la fin de la mémoire tampon, par conséquent, veillez à fournir une mémoire tampon suffisante pour cette opération. **_gcvt_s** tente de se produire *chiffres* chiffres au format décimal. Si elle n’est pas le cas, il produit *chiffres* chiffres au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
+Le **_gcvt_s** fonction convertit un à virgule flottante *valeur* en une chaîne de caractères (qui inclut une virgule décimale et un octet de signe possible) et stocke la chaîne dans *tampon* . *mémoire tampon* doit être suffisamment grande pour contenir la valeur convertie, plus un caractère null de fin, qui est ajouté automatiquement. Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour n’importe quel flottante valeur de point. Si la taille de mémoire tampon *chiffres* + 1 est utilisé, la fonction ne remplace pas la fin de la mémoire tampon, par conséquent, veillez à fournir une mémoire tampon suffisante pour cette opération. **_gcvt_s** tente de produire *chiffres* chiffres au format décimal. Si elle ne peut pas, elle produit *chiffres* chiffres au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
 
 En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
