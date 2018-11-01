@@ -1,26 +1,22 @@
 ---
-title: '&lt;hash_map&gt;, opérateurs | Microsoft Docs'
-ms.custom: ''
+title: '&lt;hash_map&gt;, opérateurs'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
-dev_langs:
-- C++
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: bd140fed954c097fa73f179c92cbc64f3148e77c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ba84f476c712f64e7782f0ea476bbb65a35dc14a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559703"
 ---
 # <a name="lthashmapgt-operators"></a>&lt;hash_map&gt;, opérateurs
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
+|[!=, opérateur](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
 |[operator==](#op_eq_eq)|[operator== (multimap)](#op_eq_eq_mm)|
 
 ## <a name="op_neq"></a>  operator!=
