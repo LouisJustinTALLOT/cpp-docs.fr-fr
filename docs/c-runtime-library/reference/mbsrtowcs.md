@@ -1,10 +1,6 @@
 ---
-title: mbsrtowcs | Microsoft Docs
-ms.custom: ''
+title: mbsrtowcs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsrtowcs
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsrtowcs
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ccb5bda16238888905678ffb3b6de01b93555ad0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2bc0c8c9e2d871b6d1748c42dc02c627244dbf69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597143"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -69,7 +59,7 @@ Adresse où stocker la chaîne de caractères larges convertie.
 Pointeur indirect vers l'emplacement de la chaîne de caractères multioctets à convertir.
 
 *count*<br/>
-Le nombre maximal de caractères (pas des octets) à convertir et stocker dans *wcstr*.
+Le nombre maximal de caractères (non en octets) pour convertir et stocker dans *wcstr*.
 
 *mbstate*<br/>
 Un pointeur vers un **mbstate_t** objet d’état de conversion. Si cette valeur est un pointeur null, un objet d'état de conversion interne statique est utilisé. Étant donné que le texte interne **mbstate_t** objet n’est pas thread-safe, nous vous recommandons de toujours passer votre propre *mbstate* paramètre.
@@ -80,25 +70,25 @@ Retourne le nombre de caractères correctement convertis, non compris le caract�
 
 ## <a name="remarks"></a>Notes
 
-Le **mbsrtowcs** fonction convertit une chaîne de caractères multioctets indirectement pointée par *mbstr*, en caractères larges stockés dans la mémoire tampon vers laquelle pointée *wcstr*, par à l’aide de l’état de conversion contenu dans *mbstate*. La conversion se poursuit pour chaque caractère jusqu'à ce que soit un caractère null de fin multioctet est rencontré, une séquence multioctet qui ne correspond pas à un caractère valide dans les paramètres régionaux actuels est rencontrée, ou jusqu'à ce que *nombre* caractères ont été convertis. Si **mbsrtowcs** rencontre le caractère null multioctet ('\0') avant ou lorsque *nombre* se produit, il est converti en un caractère null de fin 16 bits et s’arrête.
+Le **mbsrtowcs** fonction convertit une chaîne de caractères multioctets indirectement pointée par *mbstr*, en caractères larges stockés dans la mémoire tampon vers laquelle pointée *wcstr*, par à l’aide de l’état de conversion contenu dans *mbstate*. La conversion se poursuit pour chaque caractère jusqu'à ce qu’un caractère null multioctet caractère est rencontré, une séquence multioctet qui ne correspond pas à un caractère valide dans les paramètres régionaux actuels est rencontrée, ou jusqu'à ce que *nombre* caractères ont été convertis. Si **mbsrtowcs** rencontre le caractère null multioctet ('\0') avant ou quand *nombre* se produit, il est converti en un caractère null de fin 16 bits et s’arrête.
 
-Par conséquent, la chaîne de caractères larges à *wcstr* est terminant par null uniquement si **mbsrtowcs** rencontre un caractère null multioctet pendant la conversion. Si les séquences pointées par *mbstr* et *wcstr* se chevauchent, le comportement de **mbsrtowcs** n’est pas défini. **mbsrtowcs** est affectée par la catégorie LC_TYPE des paramètres régionaux actuels.
+Par conséquent, la chaîne de caractères larges à *wcstr* est nul uniquement si **mbsrtowcs** rencontre un caractère null multioctet pendant la conversion. Si les séquences pointées par *mbstr* et *wcstr* se chevauchent, le comportement de **mbsrtowcs** n’est pas défini. **mbsrtowcs** est affectée par la catégorie LC_TYPE des paramètres régionaux actuels.
 
-Le **mbsrtowcs** diffère de la fonction [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) par sa capacité à redémarrer. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser **mbsrlen** au lieu de **mbslen**, si un appel ultérieur à **mbsrtowcs** est utilisé à la place de **mbstowcs**.
+Le **mbsrtowcs** diffère de la fonction [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) par sa capacité à redémarrer. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser **mbsrlen** au lieu de **mbslen**, si un appel ultérieur à **mbsrtowcs** est utilisé au lieu de **mbstowcs**.
 
 Si *wcstr* n’est pas un pointeur null, l’objet de pointeur pointé par *mbstr* reçoit un pointeur null si la conversion a été arrêtée, car un caractère null de fin a été atteint. Sinon, il est affecté de l'adresse qui se trouve juste après le dernier caractère multioctet converti, le cas échéant. Ceci permet à un appel de fonction ultérieur de redémarrer la conversion où cet appel s'est arrêté.
 
-Si le *wcstr* argument est un pointeur null, le *nombre* argument est ignoré et **mbsrtowcs** retourne la taille requise en caractères larges pour la chaîne de destination. Si *mbstate* est un pointeur null, la fonction utilise un interne statique de thread-safe **mbstate_t** objet d’état de conversion. Si la séquence de caractères *mbstr* n’a pas multioctets correspondant représentation sous forme de caractère, une valeur -1 est retournée et le **errno** a la valeur **EILSEQ**.
+Si le *wcstr* argument est un pointeur null, le *nombre* argument est ignoré et **mbsrtowcs** retourne la taille requise en caractères larges pour la chaîne de destination. Si *mbstate* est un pointeur null, la fonction utilise un interne statique de thread-safe **mbstate_t** objet d’état de conversion. Si la séquence de caractères *mbstr* n’a pas un multioctets correspondants représentation sous forme de caractère, une valeur -1 est retournée et le **errno** a la valeur **EILSEQ**.
 
-Si *mbstr* un pointeur null, le Gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne -1.
+Si *mbstr* un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne -1.
 
 En C++, cette fonction a une surcharge de modèle qui appelle l'équivalent plus récent et sécurisé de cette fonction. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Exceptions
 
-Le **mbsrtowcs** fonction est multithread-safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** tant que cette fonction s’exécute et le *mbstate* argument n’est pas un pointeur null.
+Le **mbsrtowcs** fonction est multithread-safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** tant que l’exécution de cette fonction et le *mbstate* argument n’est pas un pointeur null.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

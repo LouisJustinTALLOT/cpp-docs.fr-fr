@@ -1,27 +1,17 @@
 ---
-title: Référence (C++ AMP) | Microsoft Docs
-ms.custom: ''
+title: Référence (C++ AMP)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - amp/Concurrency::Reference (C++ AMP)
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, reference
 ms.assetid: 372a8aed-8a53-48c9-996f-9c3cf09c9fa8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d48ce4d0317ba8d66b609ca89e6cb3b43970e52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e6905adee6e6cad0c0c49488352f4a039aa27eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431435"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630055"
 ---
 # <a name="reference-c-amp"></a>Référence (C++ AMP)
 

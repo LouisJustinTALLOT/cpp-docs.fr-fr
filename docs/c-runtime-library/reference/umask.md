@@ -1,10 +1,6 @@
 ---
-title: _umask | Microsoft Docs
-ms.custom: ''
+title: _umask
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _umask
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3053bfb19cc81dff15d41d1b5bc6d405da619f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677160"
 ---
 # <a name="umask"></a>_umask
 
@@ -66,7 +56,7 @@ Paramètre d’autorisation par défaut.
 
 Le **_umask** fonction définit le masque d’autorisation de fichier du processus en cours pour le mode spécifié par *pmode*. Le masque d’autorisation de fichier modifie le paramètre d’autorisation de nouveaux fichiers créés par **_creat**, **_open**, ou **_sopen**. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.
 
-L’expression d’entier *pmode* contient une ou les deux constantes de manifeste suivantes, définies dans SYS\STAT. H :
+L’expression d’entier *pmode* contient moins le des constantes manifestes suivantes, définies dans SYS\STAT. H :
 
 |*pmode*||
 |-|-|
@@ -74,11 +64,11 @@ L’expression d’entier *pmode* contient une ou les deux constantes de manifes
 **_S_IREAD**|Lecture autorisée.
 **_S_IREAD** \| **_S_IWRITE**|Lecture et écriture autorisées.
 
-Lorsque les deux constantes sont données, elles sont jointes avec l’opérateur OR au niveau du bit ( **|** ). Si le *pmode* argument est **_S_IREAD**, la lecture n’est pas autorisée (le fichier est en écriture seule). Si le *pmode* argument est **_S_IWRITE**, l’écriture n’est pas autorisée (le fichier est en lecture seule). Par exemple, si le bit d’écriture est défini dans le masque, les nouveaux fichiers sont en lecture seule. Notez qu’avec les systèmes d’exploitation MS-DOS et Windows, tous les fichiers sont lisibles ; il est impossible d’accorder une autorisation en écriture seule. Par conséquent, si la lecture de type bit avec **_umask** n’a aucun effet sur les modes du fichier.
+Quand les deux constantes sont données, elles sont jointes avec l’opérateur OR au niveau du bit ( **|** ). Si le *pmode* argument est **_S_IREAD**, lecture n’est pas autorisée (le fichier est en écriture seule). Si le *pmode* argument est **_S_IWRITE**, écriture n’est pas autorisée (le fichier est en lecture seule). Par exemple, si le bit d’écriture est défini dans le masque, les nouveaux fichiers sont en lecture seule. Notez qu’avec les systèmes d’exploitation MS-DOS et Windows, tous les fichiers sont lisibles ; il est impossible d’accorder une autorisation en écriture seule. Par conséquent, si la bit de lecture avec **_umask** n’a aucun effet sur les modes du fichier.
 
-Si *pmode* n’est pas une combinaison de l’une des constantes de manifeste ou incorpore un autre jeu de constantes, la fonction ignore simplement les.
+Si *pmode* n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction les ignore simplement.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

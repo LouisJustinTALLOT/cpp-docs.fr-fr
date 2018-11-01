@@ -1,10 +1,6 @@
 ---
-title: isalpha, iswalpha, _isalpha_l, _iswalpha_l | Microsoft Docs
-ms.custom: ''
+title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -31,8 +27,6 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28d533a7865a49df7cc962e0f2cc392f5e56d95d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401992"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591748"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -88,11 +78,11 @@ Paramètres régionaux à utiliser à la place des paramètres régionaux actuel
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation spécifique d’un caractère alphabétique. **isalpha** retourne une valeur différente de zéro si *c* est inclus dans la plage A - Z ou a - z. **iswalpha** retourne une valeur différente de zéro pour les caractères larges pour lequel [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ou **iswlower** différent de zéro ; autrement dit, de l’échelle de n’importe quel caractère d’un jeu défini par l’implémentation pour auxquelles aucun des **iswcntrl**, **iswdigit**, **iswpunct**, ou **iswspace** est différente de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un caractère alphabétique. **isalpha** retourne une valeur différente de zéro si *c* se trouve dans les plages A - Z ou a - z. **iswalpha** retourne une valeur différente de zéro uniquement pour les caractères larges pour lequel [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ou **iswlower** est différent de zéro ; autrement dit, de l’échelle de n’importe quel caractère d’un jeu défini par l’implémentation pour lequel aucun des **iswcntrl**, **iswdigit**, **iswpunct**, ou **iswspace** est différent de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Les versions de ces fonctions qui ont le **_l** suffixe utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le **_l** suffixe utiliser les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **isalpha** et **_isalpha_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Lorsqu’une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, le fonctions de déclencher une assertion.
+Le comportement de **isalpha** et **_isalpha_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -101,7 +91,7 @@ Le comportement de **isalpha** et **_isalpha_l** n’est pas défini si *c* n’
 |**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
 |**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

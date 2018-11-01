@@ -1,10 +1,6 @@
 ---
-title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - vswprintf_s
 - vsprintf_s
 - _vstprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _vstprintf_s_l function
 - vsprintf_s_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f1ee1235b5fe6c3904c6dc201e7c8a183d95647
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ef1d99caddfcff78bc41c24f7c132c307958db2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416234"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616490"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 
@@ -118,19 +108,19 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**vsprintf_s** et **vswprintf_s** retourner le nombre de caractères écrits, non compris le caractère null de fin, ou une valeur négative si une erreur se produit. Si *tampon* ou *format* est un pointeur null, si le nombre est égal à zéro, ou si la chaîne de format contient des caractères de mise en forme non valides, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+**vsprintf_s** et **vswprintf_s** retourner le nombre de caractères écrits, sans le caractère null de fin, ou une valeur négative si une erreur de sortie se produit. Si *tampon* ou *format* est un pointeur null, si count est égal à zéro, ou si la chaîne de format contient des caractères de mise en forme non valides, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions prend un pointeur vers une liste d’arguments et puis met en forme et écrit les données données dans la mémoire vers laquelle pointée *tampon*.
+Chacune de ces fonctions prend un pointeur désignant une liste d’arguments et puis met en forme et écrit les données fournies à la mémoire vers laquelle pointée *tampon*.
 
 **vswprintf_s** conforme au Standard ISO C pour **vswprintf**, ce qui nécessite le deuxième paramètre, *nombre*, de type **size_t**.
 
 Ces fonctions se distinguent des versions non sécurisées uniquement par le fait que les versions sécurisées prennent en charge les paramètres positionnels. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -141,7 +131,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |**_vstprintf_s**|**vsprintf_s**|**vsprintf_s**|**vswprintf_s**|
 |**_vstprintf_s_l**|**_vsprintf_s_l**|**_vsprintf_s_l**|**_vswprintf_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

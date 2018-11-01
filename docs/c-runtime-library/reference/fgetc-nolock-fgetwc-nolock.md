@@ -1,10 +1,6 @@
 ---
-title: _fgetc_nolock, _fgetwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _fgetc_nolock, _fgetwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fgetc_nolock
 - _fgetwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _fgetc_nolock
 - _fgettc_nolock
 - fgetc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetc_nolock function
 - fgetwc_nolock function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aed066ec8d0aecb916bae357697d6fd707e88e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601719"
 ---
 # <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
 
@@ -69,7 +59,7 @@ wint_t _fgetwc_nolock(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -78,7 +68,7 @@ See[fgetc, fgetwc](fgetc-fgetwc.md).
 
 ## <a name="remarks"></a>Notes
 
-**_fgetc_nolock** et **_fgetwc_nolock** sont identiques aux **fgetc** et **fgetwc**, respectivement, à ceci près qu’ils ne sont pas protégés contre les interférences par autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+**_fgetc_nolock** et **_fgetwc_nolock** sont identiques aux **fgetc** et **fgetwc**, respectivement, à ceci près qu’elles ne sont pas protégées contre les interférences par autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -86,7 +76,7 @@ See[fgetc, fgetwc](fgetc-fgetwc.md).
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fgettc_nolock**|**_fgetc_nolock**|**_fgetc_nolock**|**_fgetwc_nolock**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

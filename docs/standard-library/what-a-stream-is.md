@@ -1,28 +1,18 @@
 ---
-title: Définition d’un flux | Microsoft Docs
-ms.custom: ''
+title: Définition d'un flux
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], iostream programming
 - data [C++], reading
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47f56a3d717c2dc9cebb3df30739954e5f6bf9e1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b8821861baed53880a00695204a4555994dccb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853737"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637084"
 ---
 # <a name="what-a-stream-is"></a>Définition d'un flux
 

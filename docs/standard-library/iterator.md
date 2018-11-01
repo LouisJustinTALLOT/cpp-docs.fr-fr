@@ -1,28 +1,18 @@
 ---
-title: '&lt;iterator&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <iterator>
 - iterator/std::<iterator>
-dev_langs:
-- C++
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68d2ca3de8e6e3c05095580ce63a5bac253548c0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1582f6167d8aae3a9d5a318726cc7404c7e1ea62
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955450"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640360"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -76,7 +66,7 @@ Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ stan
 
 |Opérateur|Description|
 |-|-|
-|[operator!=](../standard-library/iterator-operators.md#op_neq)|Teste si l'objet itérateur situé à gauche de l'opérateur n'est pas égal à l'objet itérateur situé à droite.|
+|[!=, opérateur](../standard-library/iterator-operators.md#op_neq)|Teste si l'objet itérateur situé à gauche de l'opérateur n'est pas égal à l'objet itérateur situé à droite.|
 |[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Teste si l'objet itérateur situé à gauche de l'opérateur est égal à l'objet itérateur situé à droite.|
 |[operator<](../standard-library/iterator-operators.md#op_lt)|Teste si l'objet itérateur situé à gauche de l'opérateur est inférieur à l'objet itérateur situé à droite.|
 |[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Teste si l'objet itérateur situé à gauche de l'opérateur est inférieur ou égal à l'objet itérateur situé à droite.|

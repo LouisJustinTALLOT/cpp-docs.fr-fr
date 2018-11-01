@@ -1,28 +1,18 @@
 ---
-title: Pages de propriétés (MFC) | Microsoft Docs
-ms.custom: ''
+title: Pages de propriétés (MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6d72a6dbe8480e37751b760961f466db02c0c0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620907"
 ---
 # <a name="property-pages-mfc"></a>Pages de propriétés (MFC)
 
@@ -77,7 +67,7 @@ Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pou
 *ID*<br/>
 L’ID de ressource de la liste déroulante zone de contrôle associé à la propriété du contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
+*member*<br/>
 La variable de membre associée au contrôle de page de propriété spécifié par *id* et la propriété spécifiée par *pszPropName*.
 
 *pszPropName*<br/>
@@ -111,7 +101,7 @@ Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pou
 *ID*<br/>
 L’ID de ressource de la liste déroulante zone de contrôle associé à la propriété du contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
+*member*<br/>
 La variable de membre associée au contrôle de page de propriété spécifié par *id* et la propriété spécifiée par *pszPropName*.
 
 *pszPropName*<br/>
@@ -145,7 +135,7 @@ Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pou
 *ID*<br/>
 L’ID de ressource de la liste déroulante zone de contrôle associé à la propriété du contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
+*member*<br/>
 La variable de membre associée au contrôle de page de propriété spécifié par *id* et la propriété spécifiée par *pszPropName*.
 
 *pszPropName*<br/>
@@ -179,7 +169,7 @@ Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pou
 *ID*<br/>
 L’ID de ressource du contrôle de case à cocher associée à la propriété du contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
+*member*<br/>
 La variable de membre associée au contrôle de page de propriété spécifié par *id* et la propriété spécifiée par *pszPropName*.
 
 *pszPropName*<br/>
@@ -213,7 +203,7 @@ Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pou
 *ID*<br/>
 L’ID de ressource de la liste de zone de contrôle associé à la propriété du contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
+*member*<br/>
 La variable de membre associée au contrôle de page de propriété spécifié par *id* et la propriété spécifiée par *pszPropName*.
 
 *pszPropName*<br/>
@@ -247,7 +237,7 @@ Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pou
 *ID*<br/>
 L’ID de ressource de la liste de zone de contrôle associé à la propriété du contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
+*member*<br/>
 La variable de membre associée au contrôle de page de propriété spécifié par *id* et la propriété spécifiée par *pszPropName*.
 
 *pszPropName*<br/>
@@ -281,7 +271,7 @@ Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pou
 *ID*<br/>
 L’ID de ressource de la liste de zone de contrôle associé à la propriété du contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
+*member*<br/>
 La variable de membre associée au contrôle de page de propriété spécifié par *id* et la propriété spécifiée par *pszPropName*.
 
 *pszPropName*<br/>
@@ -338,7 +328,7 @@ Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pou
 *ID*<br/>
 L’ID de ressource de la case d’option bouton contrôle associé à la propriété du contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
+*member*<br/>
 La variable de membre associée au contrôle de page de propriété spécifié par *id* et la propriété spécifiée par *pszPropName*.
 
 *pszPropName*<br/>
@@ -414,7 +404,7 @@ Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pou
 *ID*<br/>
 L’ID de ressource du contrôle associé à la propriété du contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
+*member*<br/>
 La variable de membre associée au contrôle de page de propriété spécifié par *id* et la propriété spécifiée par *pszPropName*.
 
 *pszPropName*<br/>

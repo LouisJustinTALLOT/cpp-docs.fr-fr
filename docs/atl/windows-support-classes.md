@@ -1,28 +1,19 @@
 ---
-title: Windows prend en charge les Classes (ATL) | Microsoft Docs
-ms.custom: ''
+title: Classes de prise en charge de Windows (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.windows
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL, windows
 - windows [C++], ATL
 ms.assetid: 750b14d5-d787-4d2b-9728-ac199ccad489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9182241b1d33c63aae523cae0c2c9602466e4c2e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9a33136c63c5bdc32dfc882e8c53ab2f5c27eb46
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090423"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665411"
 ---
 # <a name="windows-support-classes"></a>Classes de prise en charge de Windows
 
@@ -65,6 +56,6 @@ Les classes suivantes fournissent la prise en charge pour windows :
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../atl/atl-class-overview.md)<br/>
-[Macros de mappage des messages](../atl/reference/message-map-macros-atl.md)<br/>
+[Macros de table des messages](../atl/reference/message-map-macros-atl.md)<br/>
 [Macros de classe de fenêtre](../atl/reference/window-class-macros.md)
 

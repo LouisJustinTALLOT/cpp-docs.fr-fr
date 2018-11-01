@@ -1,14 +1,8 @@
 ---
-title: Classes de fenêtre frame créées par l’Assistant Application | Microsoft Docs
-ms.custom: ''
+title: Classes de fenêtre frame créées par l'Assistant Application
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - CMainFrame
-dev_langs:
-- C++
 helpviewer_keywords:
 - application wizards [MFC], frame window classes created by
 - window classes [MFC]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aff98636c723de17056f4bef337b46f4a686ddec
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 581ceb25e675da6506d06bca3798fb22ca8fd389
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629253"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classes de fenêtre frame créées par l'Assistant Application
 
