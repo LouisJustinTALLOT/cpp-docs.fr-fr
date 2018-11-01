@@ -1,10 +1,6 @@
 ---
-title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l | Microsoft Docs
-ms.custom: ''
+title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsicoll_l
 - _stricoll_l
@@ -37,8 +33,6 @@ f1_keywords:
 - _tcsicoll
 - mbsicoll
 - stricoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - _ftcsicoll function
@@ -57,23 +51,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f90f6a25c6ecf6796ba3d4d94b6d2f5722eabf9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416370"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579667"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
 Compare les chaînes à partir des informations propres aux paramètres régionaux.
 
 > [!IMPORTANT]
-> **_mbsicoll** et **_mbsicoll_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicoll** et **_mbsicoll_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -117,24 +107,24 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne une valeur qui indique la relation de *string1* à *chaîne2*, comme suit.
+Chacune de ces fonctions retourne une valeur qui indique la relation de *string1* à *string2*, comme suit.
 
 |Valeur de retour|Relation de chaîne1 à chaîne2|
 |------------------|----------------------------------------|
-|< 0|*string1* moins *chaîne2*|
+|< 0|*string1* inférieure à *chaîne2*|
 |0|*string1* identique à *chaîne2*|
 |> 0|*string1* supérieur *chaîne2*|
 |**_NLSCMPERROR**|Une erreur s'est produite.|
 
-Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, inclure \<string.h > ou \<mbstring.h >. **_wcsicoll** peut échouer si *string1* ou *chaîne2* contient les codes de caractères larges en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **_wcsicoll** peuvent définir **errno** à **EINVAL**. Pour rechercher une erreur sur un appel à **_wcsicoll**, définissez **errno** à 0, puis vérifiez **errno** après avoir appelé **_wcsicoll**.
+Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, soit inclure \<string.h > ou \<mbstring.h >. **_wcsicoll** peut échouer si *string1* ou *string2* contient des codes à caractères larges en dehors du domaine de l’ordre de tri. Lorsqu’une erreur se produit, **_wcsicoll** peut définir **errno** à **EINVAL**. Pour rechercher une erreur dans un appel à **_wcsicoll**, affectez la valeur **errno** à 0, puis vérifiez **errno** après avoir appelé **_wcsicoll**.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions effectue une comparaison respectant la casse de *string1* et *chaîne2* en fonction de la page de codes en cours d’utilisation. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.
+Chacune de ces fonctions effectue une comparaison respectant la casse de *string1* et *string2* en fonction de la page de codes en cours d’utilisation. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.
 
-**_stricmp** diffère **_stricoll** dans la mesure où le **_stricmp** comparaison est affectée par **LC_CTYPE**, alors que le **_stricoll** comparaison correspond à la **LC_CTYPE** et **LC_COLLATE** catégories de paramètres régionaux. Pour plus d’informations sur la **LC_COLLATE** catégorie, consultez [setlocale](setlocale-wsetlocale.md) et [catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans le **_l** suffixe d’utiliser les paramètres régionaux ; les versions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_stricmp** diffère **_stricoll** car le **_stricmp** comparaison est affectée par **LC_CTYPE**, tandis que le **_stricoll** comparaison en fonction de la **LC_CTYPE** et **LC_COLLATE** catégories des paramètres régionaux. Pour plus d’informations sur la **LC_COLLATE** catégorie, consultez [setlocale](setlocale-wsetlocale.md) et [catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans le **_l** suffixe d’utiliser les paramètres régionaux actifs ; les versions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Toutes ces fonctions valident leurs paramètres. Si le paramètre *string1* ou *chaîne2* sont **NULL** pointeurs, le Gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et **errno** à **EINVAL**.
+Toutes ces fonctions valident leurs paramètres. Si *string1* ou *string2* sont **NULL** pointeurs, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et définissez **errno** à **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -142,7 +132,7 @@ Toutes ces fonctions valident leurs paramètres. Si le paramètre *string1* ou *
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsicoll**|**_stricoll**|**_mbsicoll**|**_wcsicoll**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

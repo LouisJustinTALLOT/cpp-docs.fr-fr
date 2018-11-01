@@ -1,12 +1,6 @@
 ---
-title: Expressions primaires | Microsoft Docs
-ms.custom: ''
+title: Expressions primaires
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -14,20 +8,16 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee1ca97004d6dddb1e98ada14f06305f782b674a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e7dcb8290c0130fa9376e48f065e82163a1ca5b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677576"
 ---
 # <a name="primary-expressions"></a>Expressions primaires
 
-Les expressions primaires sont des blocs de construction d'expressions plus complexes. Il s'agit de littéraux, de noms et de noms qualifiés par l'opérateur résolution-portée (`::`).  Une expression primaire peut prendre chacune des formes suivantes :
+Les expressions primaires sont des blocs de construction d'expressions plus complexes. Il s’agit de littéraux, de noms et de noms qualifiés par l’opérateur résolution-portée (`::`).  Une expression primaire peut prendre chacune des formes suivantes :
 
 ```
 literal
@@ -56,7 +46,7 @@ public:
 
 Consultez [ce pointeur](this-pointer.md) pour plus d’informations sur la modification du type de la **cela** pointeur.
 
-L'opérateur résolution-portée (`::`) suivi d'un nom constitue une expression primaire.  Ces noms doivent être des noms au niveau de la portée globale, pas des noms de membres.  Le type de cette expression est déterminé par la déclaration du nom. Il s'agit d'une l-value (autrement dit, il peut apparaître dans la partie gauche d'une expression opérateur d'assignation) si le nom de déclaration est une l-value. L’opérateur résolution-portée permet de faire référence à un nom global, même si ce nom est masqué dans la portée actuelle. Consultez [étendue](../cpp/scope-visual-cpp.md) pour obtenir un exemple montrant comment utiliser l’opérateur de résolution de portée.
+L’opérateur résolution-portée (`::`) suivi d’un nom constitue une expression primaire.  Ces noms doivent être des noms au niveau de la portée globale, pas des noms de membres.  Le type de cette expression est déterminé par la déclaration du nom. Il s'agit d'une l-value (autrement dit, il peut apparaître dans la partie gauche d'une expression opérateur d'assignation) si le nom de déclaration est une l-value. L’opérateur résolution-portée permet de faire référence à un nom global, même si ce nom est masqué dans la portée actuelle. Consultez [étendue](../cpp/scope-visual-cpp.md) pour obtenir un exemple montrant comment utiliser l’opérateur de résolution de portée.
 
 Une expression placée entre parenthèses est une expression principale dont le type et la valeur sont identiques à ceux de l'expression qui n'est pas entre parenthèses. Il s'agit d'une l-value si l'expression qui n'est pas entre parenthèses est une l-value.
 

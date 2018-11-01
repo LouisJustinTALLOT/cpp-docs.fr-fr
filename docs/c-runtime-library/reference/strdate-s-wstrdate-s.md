@@ -1,10 +1,6 @@
 ---
-title: _strdate_s, _wstrdate_s | Microsoft Docs
-ms.custom: ''
+title: _strdate_s, _wstrdate_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate_s
 - _wstrdate_s
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e4e9ff3783fc7a89e7af42ebf283209c034c0d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414309"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629006"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -89,7 +79,7 @@ Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un 
 
 ## <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*numberOfElements*|Retourner|Contenu de *tampon*|
+|*buffer*|*numberOfElements*|Retourner|Contenu de *mémoire tampon*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(indifférent)|**EINVAL**|Non modifiée|
 |Pas **NULL** (pointant vers la mémoire tampon valide)|0|**EINVAL**|Non modifiée|
@@ -100,15 +90,15 @@ Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un 
 
 En passant un non valide non **NULL** valeur pour la mémoire tampon entraîne une violation d’accès si le *numberOfElements* paramètre est supérieur à 9.
 
-Passer des valeurs pour la taille est supérieure à la taille réelle de la *tampon* entraîne des dépassements de mémoire tampon.
+Passer des valeurs de taille qui est supérieure à la taille réelle de la *tampon* entraîne de dépassement de mémoire tampon.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions fournissent des versions plus sécurisées de **_strdate** et **_wstrdate**. Le **_strdate_s** fonction copie la date système actuelle dans la mémoire tampon vers laquelle pointée *tampon*mise en forme **mm**/**jj** / **yy**, où **mm** comprend deux chiffres représentant le mois, **jj** comprend deux chiffres représentant le jour, et **AA**  est les deux derniers chiffres de l’année. Par exemple, la chaîne **12/05/99** représente le 5 décembre 1999. La chaîne doit comporter au moins 9 caractères.
+Ces fonctions fournissent des versions plus sécurisées de **_strdate** et **_wstrdate**. Le **_strdate_s** fonction copie la date système actuelle dans la mémoire tampon vers laquelle pointée *tampon*, mise en forme **mm**/**jj** / **yy**, où **mm** comprend deux chiffres représentant le mois, **jj** comprend deux chiffres représentant le jour, et **AA**  est les deux derniers chiffres de l’année. Par exemple, la chaîne **05/12/99** représente le 5 décembre 1999. La chaîne doit comporter au moins 9 caractères.
 
-**_wstrdate_s** est une version à caractères larges de **_strdate_s**; la valeur des arguments et de retour de **_wstrdate_s** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
+**_wstrdate_s** est une version à caractères larges de **_strdate_s**; l’argument et valeur de retour de **_wstrdate_s** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
 
-Si *tampon* est un **NULL** pointeur, ou si *numberOfElements* est inférieur à 9 caractères, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL** si la mémoire tampon est **NULL** ou si *numberOfElements*est inférieur ou égal à 0, ou ensemble **errno** à **ERANGE** si *numberOfElements* est inférieure à 9.
+Si *tampon* est un **NULL** pointeur, ou si *numberOfElements* est inférieure à 9 caractères, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL** si la mémoire tampon est **NULL** ou si *numberOfElements*est inférieur ou égal à 0, ou ensemble **errno** à **ERANGE** si *numberOfElements* est inférieure à 9.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -118,7 +108,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrdate_s**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

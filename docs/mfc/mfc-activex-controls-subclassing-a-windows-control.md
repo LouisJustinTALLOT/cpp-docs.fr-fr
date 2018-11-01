@@ -1,15 +1,9 @@
 ---
-title: 'Contrôles ActiveX MFC : Sous-classement d’un contrôle Windows | Microsoft Docs'
-ms.custom: ''
+title: "Contrôles ActiveX MFC : sous-classement d'un contrôle Windows"
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - precreatewindow
 - IsSubclassed
-dev_langs:
-- C++
 helpviewer_keywords:
 - OnDraw method, MFC ActiveX controls
 - subclassing
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 893d388975bf224a1444a233899ae3898d41865a
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 24284af7766f0fd968ca08724440509bc171fba6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576642"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Contrôles ActiveX MFC : sous-classement d'un contrôle Windows
 

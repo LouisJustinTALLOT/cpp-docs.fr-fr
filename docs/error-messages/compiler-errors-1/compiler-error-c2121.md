@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C2121 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C2121
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2121
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2121
 ms.assetid: e04f32da-3736-4df3-8a1c-d687afcecf5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e40451a70744b7918301cd6dfa837df1295cea8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc16a6212b99142be24560f39888ec0b59a87712
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042401"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621024"
 ---
 # <a name="compiler-error-c2121"></a>Erreur du compilateur C2121
 

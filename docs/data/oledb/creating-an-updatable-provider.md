@@ -1,28 +1,17 @@
 ---
-title: Création d’un fournisseur actualisable | Microsoft Docs
-ms.custom: ''
+title: Création d'un fournisseur actualisable
 ms.date: 08/16/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB providers, updatable
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: f6dd2467ab7e7e731fec8a2375453a00267df5b6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 39e0fffa10af560537a932d503946ec2469bef5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073592"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570584"
 ---
 # <a name="creating-an-updatable-provider"></a>Création d'un fournisseur actualisable
 

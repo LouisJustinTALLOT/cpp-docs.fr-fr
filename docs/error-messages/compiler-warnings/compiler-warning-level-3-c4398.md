@@ -1,31 +1,21 @@
 ---
-title: Compilateur avertissement (niveau 3) C4398 | Documents Microsoft
-ms.custom: ''
+title: Avertissement du compilateur (niveau 3) C4398
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4398
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c38ade6b75242fdd5144481e3415e914cb6773c5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4126a1267b41cdf9c0161c7e85a9057b2a301d77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578462"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>Avertissement du compilateur (niveau 3) C4398
 
-> '*variable*' : objet global par processus ne peut pas fonctionner correctement avec plusieurs appdomains ; utilisez __declspec(appdomain)
+> «*variable*' : objet global par processus ne peuvent ne pas fonctionne correctement avec plusieurs appdomains ; utilisez __declspec
 
 ## <a name="remarks"></a>Notes
 

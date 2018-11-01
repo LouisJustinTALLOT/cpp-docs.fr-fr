@@ -1,16 +1,10 @@
 ---
-title: -P (Prétraiter jusqu'à un fichier) | Microsoft Docs
-ms.custom: ''
+title: /P (Prétraiter jusqu'à un fichier)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GeneratePreprocessedFile
 - /p
 - VC.Project.VCCLWCECompilerTool.GeneratePreprocessedFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - /P compiler option [C++]
 - -P compiler option [C++]
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - output files, preprocessor
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4cbec53526fe90d1b4644b5b9fdd667d0fffcbe8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9b3d84d94ed75acd68011b895afbc4f190019673
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714504"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622232"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Prétraiter jusqu'à un fichier)
 
