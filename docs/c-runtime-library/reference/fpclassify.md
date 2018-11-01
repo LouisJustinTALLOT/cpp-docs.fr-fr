@@ -1,8 +1,6 @@
 ---
-title: fpclassify | Microsoft Docs
-ms.custom: ''
+title: fpclassify
 ms.date: 04/05/2018
-ms.topic: reference
 apiname:
 - fpclassify
 apilocation:
@@ -24,16 +22,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da55cb87804d178d5a305ed466aa498de4bc1ee5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626e356cf61415e4f8212a8a12d90a72fe4576bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613874"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -79,9 +73,9 @@ Valeur à virgule flottante à tester.
 
 ## <a name="remarks"></a>Notes
 
-En C, **fpclassify** est une macro ; en C++, **fpclassify** est une fonction surchargée à l’aide des types d’arguments de **float**, **double**, ou **long** **double**. Dans les deux cas, la valeur retournée dépend du type effectif de l’expression d’argument et non d’une représentation intermédiaire. Par exemple, un vecteur normal **double** ou **long** **double** valeur peut devenir un infini, denormal ou zéro valeur lorsque converti en un **float**.
+En C, **fpclassify** est une macro ; en C++, **fpclassify** est une fonction surchargée à l’aide des types d’arguments de **float**, **double**, ou **long** **double**. Dans les deux cas, la valeur retournée dépend du type effectif de l’expression d’argument et non d’une représentation intermédiaire. Par exemple, un élément normal **double** ou **long** **double** valeur permettre devenir un nombre infini, denormal ou égal à zéro valeur lorsque converti en un **float**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction/macro|En-tête requis (C)|En-tête requis (C++)|
 |---------------------|---------------------------|-------------------------------|

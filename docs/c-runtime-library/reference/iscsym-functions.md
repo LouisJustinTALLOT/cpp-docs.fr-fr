@@ -1,10 +1,6 @@
 ---
-title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l | Microsoft Docs
-ms.custom: ''
+title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswcsym_l
 - __iswcsym
@@ -50,8 +46,6 @@ f1_keywords:
 - ctype/__iswcsymf
 - ctype/__iswcsym_l
 - ctype/__iswcsymf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscsymf_l function
 - iswsym_l function
@@ -68,16 +62,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b1561e93fc19832607d304f3d087ab33b04040de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401920"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617855"
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -121,28 +111,28 @@ int _iswcsymf_l(
 ### <a name="parameters"></a>Paramètres
 
 *c*<br/>
-Entier à tester. *c* doit être comprise entre 0 et 255 pour la version à caractères étroits de la fonction.
+Entier à tester. *c* doit se trouver dans la plage 0-255 pour la version à caractères étroits de la fonction.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les deux **__iscsym** et **__iswcsym** retourner une valeur différente de zéro si *c* est une lettre, un trait de soulignement ou un chiffre. Les deux **__iscsymf** et **__iswcsymf** retourner une valeur différente de zéro si *c* est une lettre ou un trait de soulignement. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent le *paramètres régionaux* passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les deux **__iscsym** et **__iswcsym** retourner une valeur différente de zéro si *c* est une lettre, un trait de soulignement ou un chiffre. Les deux **__iscsymf** et **__iswcsymf** retourner une valeur différente de zéro si *c* est une lettre ou un trait de soulignement. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent le *paramètres régionaux* passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Notes
 
 Ces routines sont définies en tant que macros, sauf si la macro de préprocesseur _CTYPE_DISABLE_MACROS est définie. Quand vous utilisez les versions macro de ces routines, les arguments peuvent être évalués plusieurs fois. Soyez prudent quand vous utilisez des expressions qui ont des effets secondaires dans la liste d’arguments.
 
-Pour la compatibilité descendante, **iscsym** et **iscsymf** sont définies en tant que macros uniquement lorsque [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou est défini en tant que 0 ; Sinon, ils ne sont pas définis.
+Pour la compatibilité descendante, **iscsym** et **iscsymf** sont définies en tant que macros uniquement lorsque [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou est défini en tant que 0 ; Sinon, elles sont non définis.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C : \<ctype.h><br /><br /> C++ : \<cctype> ou \<ctype.h>|
 
-Le **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__ iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, et **_iswcsymf_l** sont des routines Section spécifique à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Le **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__ iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, et **_iswcsymf_l** sont des routines Spécifique à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

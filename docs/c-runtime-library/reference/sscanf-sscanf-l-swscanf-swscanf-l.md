@@ -1,10 +1,6 @@
 ---
-title: sscanf, _sscanf_l, swscanf, _swscanf_l | Microsoft Docs
-ms.custom: ''
+title: sscanf, _sscanf_l, swscanf, _swscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - swscanf
 - sscanf
@@ -29,8 +25,6 @@ f1_keywords:
 - _stscanf_l
 - sscanf
 - _swscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - swscanf function
 - _stscanf function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ac67b27564f694631977fd21c96922132b633e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661966"
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
@@ -94,9 +84,9 @@ int _swscanf_l(
 Données stockées
 
 *format*<br/>
-Chaîne de contrôle de format. Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Chaîne de contrôle de format. Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs
 
 *locale*<br/>
@@ -112,14 +102,14 @@ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_d
 
 ## <a name="remarks"></a>Notes
 
-Le **sscanf** fonction lit les données à partir de *tampon* à l’emplacement donné par chaque *argument*. Chaque *argument* doit être un pointeur vers une variable avec un type qui correspond à un spécificateur de type dans *format*. Le *format* contrôles argument des champs de l’interprétation de l’entrée et a la même forme et fonction que la *format* argument pour le **scanf** (fonction). Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le **sscanf** fonction lit les données à partir de *tampon* dans l’emplacement indiqué par chaque *argument*. Chaque *argument* doit être un pointeur vers une variable avec un type qui correspond à un spécificateur de type dans *format*. Le *format* contrôles d’argument des champs de l’interprétation de l’entrée et a les mêmes forme et fonction que le *format* argument pour le **scanf** (fonction). Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Lors de la lecture avec une chaîne de **sscanf**, spécifiez toujours une largeur de la **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; sinon , entrée mise en forme incorrecte peut amener facilement un dépassement de mémoire tampon.
+> Lors de la lecture une chaîne avec **sscanf**, toujours spécifier une largeur pour les **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; sinon , une entrée mal formatée peut facilement provoquer un dépassement de mémoire tampon.
 
-**swscanf** est une version à caractères larges de **sscanf**; les arguments de **swscanf** sont des chaînes à caractères larges. **sscanf** ne gère pas les caractères hexadécimaux multioctets. **swscanf** ne traite pas hexadécimal de pleine chasse Unicode ou des caractères de la « zone de compatibilité ». Dans le cas contraire, **swscanf** et **sscanf** se comportent de façon identique.
+**swscanf** est une version à caractères larges de **sscanf**; les arguments de **swscanf** sont des chaînes à caractères larges. **sscanf** ne gère pas les caractères hexadécimaux multioctets. **swscanf** ne gère pas hexadécimaux entiers Unicode ou caractères de « zone de compatibilité ». Sinon, **swscanf** et **sscanf** ont un comportement identique.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -128,7 +118,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_stscanf**|**sscanf**|**sscanf**|**swscanf**|
 |**_stscanf_l**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

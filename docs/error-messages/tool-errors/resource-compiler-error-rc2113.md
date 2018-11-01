@@ -1,27 +1,17 @@
 ---
-title: Erreur RC2113 du compilateur de ressources | Microsoft Docs
-ms.custom: ''
+title: 'Erreur RC2113 du compilateur de ressources '
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC2113
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC2113
 ms.assetid: cbf52e93-ab14-49b7-9ce8-fb55877602ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2eb23ae8e9274368abd2c754d94a19050ae3805c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 66f2fac2e5524b948db241d6032fb7b6acaaa6de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612196"
 ---
 # <a name="resource-compiler-error-rc2113"></a>Erreur RC2113 du compilateur de ressources 
 

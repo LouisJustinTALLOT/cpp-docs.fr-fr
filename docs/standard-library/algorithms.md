@@ -1,12 +1,6 @@
 ---
-title: Algorithmes | Microsoft Docs
-ms.custom: ''
+title: Algorithmes
 ms.date: 10/18/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0388a3c21fec2d902b74856e4a0ca596b4b3bcca
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063020"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648026"
 ---
 # <a name="algorithms"></a>Algorithmes
 
@@ -35,7 +25,7 @@ Les descriptions des fonctions de modèle d'algorithme emploient plusieurs expre
 
 - L’expression « dans la plage \[ *A*, *B*) » désigne une séquence de zéro ou plusieurs valeurs discrètes commençant par *A* sans inclure *B* . Une plage est valide uniquement si *B* est accessible à partir de *A ;* vous pouvez stocker *A* dans un objet *N* (*N*  =  *A*), incrémenter l’objet zéro ou plusieurs fois (++*N*), et que l’objet de comparaison égal à *B* après un nombre fini d’incréments (*N*   ==  *B*).
 
-- L’expression « chaque *N* dans la plage \[ *A*, *B*) » signifie que *N* commence par la valeur *un*et est incrémenté zéro ou plusieurs fois jusqu'à ce qu’elle est égale à la valeur *B*. Le cas N* == *B* n’est pas dans la plage.
+- L’expression « chaque *N* dans la plage \[ *A*, *B*) » signifie que *N* commence par la valeur *un*et est incrémenté zéro ou plusieurs fois jusqu'à ce qu’elle est égale à la valeur *B*. Le cas *N* == *B* n’est pas dans la plage.
 
 - La phrase « la valeur minimale de *N* dans la plage \[ *A*, *B*) telles que *X*» signifie que la condition *X* est déterminée pour chaque *N* dans la plage \[ *A*, *B*) jusqu'à ce que la condition *X*est remplie.
 

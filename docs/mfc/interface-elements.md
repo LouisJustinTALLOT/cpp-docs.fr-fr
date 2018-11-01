@@ -1,26 +1,16 @@
 ---
-title: Éléments de l’interface | Microsoft Docs
-ms.custom: ''
+title: Éléments de l'interface
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f8cb2a8f3ccb36f3fa1ed2bf3f81087691ce988
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 564f0baa34cfb0fe682c2a761fcf8c0d41cd6cb0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668687"
 ---
 # <a name="interface-elements"></a>Éléments de l'interface
 
@@ -64,7 +54,7 @@ Diviseurs de volet (également appelés curseurs ou séparateurs) sont représen
 
 ## <a name="containers"></a>Conteneurs
 
-Tous les volets redimensionnables, une fois ancrés entre eux, sont conservés dans des conteneurs. Les conteneurs sont représentés par le [cpanecontainer, classe](../mfc/reference/cpanecontainer-class.md). Chaque conteneur possède des pointeurs vers son volet gauche, volet droit, sous-conteneur gauche, sous-conteneur droit ainsi que vers le séparateur entre les parties gauche et droite. (*Gauche* et *droit* ne font pas référence aux côtés physiques mais identifient plutôt les branches d’une structure arborescente.) Ainsi, nous pouvons générer une arborescence de volets et de séparateurs et obtenir ainsi des dispositions complexes des volets qui peuvent être redimensionnés ensemble. La classe `CPaneContainer` gère l'arborescence des conteneurs ; elle gère également deux listes de volets et de curseurs qui résident dans cette arborescence. Les gestionnaires de conteneur de volet sont généralement incorporés dans les curseurs et les fenêtres mini-frame par défaut qui comportent plusieurs volets.
+Tous les volets redimensionnables, une fois ancrés entre eux, sont conservés dans des conteneurs. Les conteneurs sont représentés par le [cpanecontainer, classe](../mfc/reference/cpanecontainer-class.md). Chaque conteneur possède des pointeurs vers son volet gauche, volet droit, sous-conteneur gauche, sous-conteneur droit ainsi que vers le séparateur entre les parties gauche et droite. (*Gauche* et *droit* ne font pas référence aux côtés physiques mais identifient plutôt les branches d’une structure arborescente.) Ainsi, nous pouvons générer une arborescence de volets et de séparateurs et obtenir ainsi des dispositions complexes des volets qui peuvent être redimensionnés ensemble. La classe `CPaneContainer` gère l’arborescence des conteneurs ; elle gère également deux listes de volets et de curseurs qui résident dans cette arborescence. Les gestionnaires de conteneur de volet sont généralement incorporés dans les curseurs et les fenêtres mini-frame par défaut qui comportent plusieurs volets.
 
 ## <a name="auto-hide-control-bars"></a>Masquer automatiquement les barres de contrôle
 
