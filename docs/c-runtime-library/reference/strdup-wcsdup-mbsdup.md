@@ -1,10 +1,6 @@
 ---
-title: _strdup, _wcsdup, _mbsdup | Microsoft Docs
-ms.custom: ''
+title: _strdup, _wcsdup, _mbsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -30,8 +26,6 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413510"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461514"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Duplique les chaînes.
 
 > [!IMPORTANT]
-> **_mbsdup** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsdup** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -91,9 +81,9 @@ Chacune de ces fonctions retourne un pointeur vers l’emplacement de stockage d
 
 ## <a name="remarks"></a>Notes
 
-Le **_strdup** les appels de fonction [malloc](malloc.md) pour allouer l’espace de stockage pour une copie de *strSource* , puis les copie *strSource* à la l’espace alloué.
+Le **_strdup** appels de fonction [malloc](malloc.md) pour allouer de l’espace de stockage pour une copie de *strSource* et copie ensuite *strSource* à la espace alloué.
 
-**_wcsdup** et **_mbsdup** sont des versions à caractères larges et caractères multioctets de **_strdup**. Les arguments et la valeur de retour de **_wcsdup** sont des caractères larges chaînes ; ceux de **_mbsdup** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**_wcsdup** et **_mbsdup** sont des versions à caractères larges et à caractères multioctets de **_strdup**. Les arguments et la valeur de retour de **_wcsdup** sont des caractères larges chaînes ; ceux de **_mbsdup** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -101,11 +91,11 @@ Le **_strdup** les appels de fonction [malloc](malloc.md) pour allouer l’espac
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-Étant donné que **_strdup** appelle **malloc** pour allouer l’espace de stockage pour la copie de *strSource*, il est conseillé de toujours libérer cette mémoire en appelant le [libre](free.md) routine sur le pointeur retourné par l’appel à **_strdup**.
+Étant donné que **_strdup** appels **malloc** pour allouer de l’espace de stockage pour la copie de *strSource*, il est conseillé de toujours libérer cette mémoire en appelant le [gratuit](free.md) routine sur le pointeur retourné par l’appel à **_strdup**.
 
-Si **_DEBUG** et **_CRTDBG_MAP_ALLOC** sont définies, **_strdup** et **_wcsdup** sont remplacés par les appels à **_strdup_dbg**  et **_wcsdup_dbg** pour permettre le débogage des allocations de mémoire. Pour plus d’informations, consultez [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
+Si **_DEBUG** et **_CRTDBG_MAP_ALLOC** sont définis, **_strdup** et **_wcsdup** sont remplacés par les appels à **_strdup_dbg**  et **_wcsdup_dbg** pour permettre le débogage des allocations de mémoire. Pour plus d’informations, consultez [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: _calloc_dbg | Microsoft Docs
-ms.custom: ''
+title: _calloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _calloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2759c19fb88b820fc346b5cf35e97522b7e74cb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396769"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454390"
 ---
 # <a name="callocdbg"></a>_calloc_dbg
 
@@ -74,7 +64,7 @@ Pointeur vers le nom du fichier source qui a demandé l’opération d’allocat
 *linenumber*<br/>
 Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **NULL**.
 
-Le *nom de fichier* et *linenumber* paramètres sont disponibles uniquement quand **_calloc_dbg** a été appelée explicitement ou [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)constante du préprocesseur a été définie.
+Le *filename* et *linenumber* paramètres sont disponibles uniquement lorsque **_calloc_dbg** a été appelée explicitement ou [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)constante du préprocesseur a été définie.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -82,21 +72,21 @@ Opération réussie, cette fonction retourne un pointeur vers la partie utilisat
 
 ## <a name="remarks"></a>Notes
 
-**_calloc_dbg** est une version debug de la [calloc](calloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_calloc_dbg** est réduit à un appel à **calloc**. Les deux **calloc** et **_calloc_dbg** allouer *nombre* blocs de mémoire dans le tas de base, mais **_calloc_dbg** offre plusieurs de débogage fonctionnalités :
+**_calloc_dbg** est une version debug de la [calloc](calloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_calloc_dbg** est réduite à un appel à **calloc**. Les deux **calloc** et **_calloc_dbg** allouer *nombre* blocs de mémoire dans le tas de base, mais **_calloc_dbg** offre plusieurs débogage fonctionnalités :
 
 - Mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites
 
 - Paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques
 
-- *nom de fichier*/*linenumber* plus d’informations pour déterminer l’origine des demandes d’allocation.
+- *nom de fichier*/*linenumber* informations pour déterminer l’origine des demandes d’allocation.
 
 **_calloc_dbg** alloue chaque bloc de mémoire avec un peu plus d’espace que demandé *taille*. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. Quand le bloc est alloué, la partie utilisateur du bloc est renseignée avec la valeur 0xCD et chaque mémoire tampon de remplacement est renseignée avec la valeur 0xFD.
 
-**_calloc_dbg** définit **errno** à **ENOMEM** si une allocation de mémoire échoue ; **EINVAL** est renvoyée si la quantité de mémoire nécessaire (y compris la surcharge mentionnée précédemment) dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_calloc_dbg** définit **errno** à **ENOMEM** si une allocation de mémoire échoue ; **EINVAL** est retourné si la quantité de mémoire nécessaire (y compris la surcharge mentionnée précédemment) dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans une build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

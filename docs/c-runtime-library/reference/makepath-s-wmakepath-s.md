@@ -1,10 +1,6 @@
 ---
-title: _makepath_s, _wmakepath_s | Microsoft Docs
-ms.custom: ''
+title: _makepath_s, _wmakepath_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmakepath_s
 - _makepath_s
@@ -26,8 +22,6 @@ f1_keywords:
 - makepath_s
 - _makepath_s
 - wmakepath_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _makepath_s function
 - wmakepath_s function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a981e8758200e055693f24761238c98c3755311c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6914299dd7ede97c9004dcc95e01b1a35188f5c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404758"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471914"
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 
@@ -99,16 +89,16 @@ Taille, en mots, de la mémoire tampon.
 Taille, en octets, de la mémoire tampon.
 
 *Lecteur*<br/>
-Contient une lettre (A, B, etc.) correspondant au lecteur souhaité et un signe deux-points de fin facultatif. **_makepath_s** insère automatiquement le signe deux-points dans le chemin d’accès composite s’il est manquant. Si *lecteur* est **NULL** ou pointe vers une chaîne vide, aucune lettre de lecteur s’affiche dans la composition *chemin d’accès* chaîne.
+Contient une lettre (A, B, etc.) correspondant au lecteur souhaité et un signe deux-points de fin facultatif. **_makepath_s** insère automatiquement le signe deux-points dans le chemin d’accès composite s’il est manquant. Si *lecteur* est **NULL** ou pointe vers une chaîne vide, aucune lettre de lecteur s’affiche dans le service composite *chemin d’accès* chaîne.
 
 *dir*<br/>
-Contient le chemin d’accès des répertoires, sans l’indicateur de lecteur ou le nom de fichier réel. La barre oblique est facultative et une barre oblique (/) ou une barre oblique inverse (\\) ou les deux peuvent être utilisées dans un seul *dir* argument. Si aucune barre oblique finale (/ ou \\) n’est spécifiée, elle est insérée automatiquement. Si *dir* est **NULL** ou pointe vers une chaîne vide, aucun chemin d’accès du répertoire est inséré dans la composition *chemin d’accès* chaîne.
+Contient le chemin d’accès des répertoires, sans l’indicateur de lecteur ou le nom de fichier réel. La barre oblique de fin est facultative et une barre oblique (/) ou une barre oblique inverse (\\) ou les deux peuvent être utilisées dans un seul *dir* argument. Si aucune barre oblique finale (/ ou \\) n’est spécifiée, elle est insérée automatiquement. Si *dir* est **NULL** ou pointe vers une chaîne vide, aucun chemin d’accès du répertoire est inséré dans le service composite *chemin d’accès* chaîne.
 
 *fname*<br/>
-Contient le nom de fichier de base sans les extensions du nom de fichier. Si *fname* est **NULL** ou pointe vers une chaîne vide, aucun nom de fichier est inséré dans la composition *chemin d’accès* chaîne.
+Contient le nom de fichier de base sans les extensions du nom de fichier. Si *fname* est **NULL** ou pointe vers une chaîne vide, aucun nom de fichier est inséré dans le service composite *chemin d’accès* chaîne.
 
 *Ext*<br/>
-Contient l’extension de nom de fichier réelle, avec ou sans point initial (.). **_makepath_s** insère automatiquement le point si elle n’apparaît pas dans *ext*. Si *ext* est **NULL** ou pointe vers une chaîne vide, aucune extension n’est inséré dans la composition *chemin d’accès* chaîne.
+Contient l’extension de nom de fichier réelle, avec ou sans point initial (.). **_makepath_s** insère automatiquement la période si elle n’apparaît pas dans *ext*. Si *ext* est **NULL** ou pointe vers une chaîne vide, aucune extension est inséré dans le service composite *chemin d’accès* chaîne.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -125,7 +115,7 @@ Si une des conditions d’erreur ci-dessus se produit, ces fonctions appellent l
 
 ## <a name="remarks"></a>Notes
 
-Le **_makepath_s** fonction crée une chaîne de chemin d’accès composite à partir de chaque composant, en stockant le résultat dans *chemin d’accès*. Le *chemin d’accès* peut inclure une lettre de lecteur, chemin d’accès du répertoire, nom de fichier et extension de nom de fichier. **_wmakepath_s** est une version à caractères larges de **_makepath_s**; les arguments de **_wmakepath_s** sont des chaînes à caractères larges. **_wmakepath_s** et **_makepath_s** comportent de façon identique.
+Le **_makepath_s** fonction crée une chaîne de chemin d’accès composite à partir des composants individuels, en stockant le résultat dans *chemin d’accès*. Le *chemin d’accès* peut inclure une lettre de lecteur, chemin d’accès du répertoire, fichier, nom et extension de fichier. **_wmakepath_s** est une version à caractères larges de **_makepath_s**; les arguments de **_wmakepath_s** sont des chaînes à caractères larges. **_wmakepath_s** et **_makepath_s** se comportent de façon identique dans le cas contraire.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -133,15 +123,15 @@ Le **_makepath_s** fonction crée une chaîne de chemin d’accès composite à 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-Le *chemin d’accès* argument doit pointer vers une mémoire tampon vide suffisamment grande pour contenir le chemin d’accès complet. Composite *chemin d’accès* doit pas être supérieur à la **_MAX_PATH** constante, définie dans Stdlib.h.
+Le *chemin d’accès* argument doit pointer vers une mémoire tampon vide suffisamment grande pour contenir le chemin d’accès complet. Le service composite *chemin d’accès* doit pas être supérieure à la **_MAX_PATH** constante, définie dans Stdlib.h.
 
-Si le chemin d’accès est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). En outre, **errno** a la valeur **EINVAL**. **NULL** valeurs autorisées pour tous les autres paramètres.
+Si le chemin d’accès est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). En outre, **errno** a la valeur **EINVAL**. **NULL** valeurs sont autorisées pour tous les autres paramètres.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
