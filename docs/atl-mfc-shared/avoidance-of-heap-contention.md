@@ -1,25 +1,15 @@
 ---
-title: Éviter les conflits de tas | Microsoft Docs
-ms.custom: ''
+title: Éviter les conflits de tas
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4f01bdbbc14e09fe8f9823eed738556ee876376
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c28e5ba01cc2bb1e3cae19087a67cf97e6ac415f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536784"
 ---
 # <a name="avoidance-of-heap-contention"></a>Éviter les conflits de tas
 

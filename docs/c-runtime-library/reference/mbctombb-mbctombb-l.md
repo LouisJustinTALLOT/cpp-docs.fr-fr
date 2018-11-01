@@ -1,10 +1,6 @@
 ---
-title: _mbctombb, _mbctombb_l | Microsoft Docs
-ms.custom: ''
+title: _mbctombb, _mbctombb_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctombb_l
 - _mbctombb
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbctombb
 - mbctombb_l
 - mbctombb
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctombb function
 - mbctombb_l function
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: adb233b489b5f4c190a4015805b07ab36770a283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519832"
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 
@@ -74,17 +64,17 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **_mbctombb** et **_mbctombb_l** retourne le caractère sur un octet qui correspond à *c*; sinon, elle retourne *c* .
+En cas de réussite, **_mbctombb** et **_mbctombb_l** retourne le caractère d’un octet qui correspond à *c*; sinon, elle retourne *c* .
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbctombb** et **_mbctombb_l** fonctions convertissent un caractère multioctet fourni pour un caractère multioctet sur un octet correspondant. Caractères doivent correspondre à des caractères codés sur un octet dans la plage 0 x 20 – 0x7E ou 0xA1 - 0xDF à convertir.
+Le **_mbctombb** et **_mbctombb_l** fonctions convertissent un caractère multioctet donné en un caractère multioctet codés sur un octet correspondant. Caractères doivent correspondre à caractères codés sur un octet dans la plage 0 x 20-0x7E ou 0xA1 - 0xDF à convertir.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le **_l** suffixe utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, sauf qu’il utilise les paramètres régionaux transmis dans à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le **_l** suffixe utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, à ceci près qu’elle utilise les paramètres régionaux passés dans à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans les versions précédentes, **_mbctombb** a été appelé **zentohan**. Utilisez **_mbctombb** à la place.
+Dans les versions précédentes, **_mbctombb** a été appelée **zentohan**. Utilisez **_mbctombb** à la place.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

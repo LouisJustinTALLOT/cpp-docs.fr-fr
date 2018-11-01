@@ -1,10 +1,6 @@
 ---
-title: _isatty | Microsoft Docs
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545585"
 ---
 # <a name="isatty"></a>_isatty
 
@@ -58,15 +48,15 @@ Descripteur de fichier qui fait référence au périphérique à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_isatty** retourne une valeur différente de zéro si le descripteur est associé à un périphérique en mode caractère. Dans le cas contraire, **_isatty** retourne 0.
+**_isatty** retourne une valeur différente de zéro si le descripteur est associé à un périphérique de caractères. Sinon, **_isatty** retourne 0.
 
 ## <a name="remarks"></a>Notes
 
-Le **_isatty** fonction détermine si *fd* est associé à un périphérique en mode caractère (Terminal Server, console, imprimante ou port série).
+Le **_isatty** fonction détermine si *fd* est associé à un périphérique de caractères (terminal, console, imprimante ou port série).
 
-Cette fonction valide le *fd* paramètre. Si *fd* est un pointeur de fichier incorrect, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne 0 et définit **errno** à **EBADF**.
+Cette fonction valide le *fd* paramètre. Si *fd* est un pointeur de fichier incorrect, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne 0 et affecte **errno** à **EBADF**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

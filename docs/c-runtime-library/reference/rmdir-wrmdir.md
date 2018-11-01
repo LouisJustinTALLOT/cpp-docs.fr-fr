@@ -1,10 +1,6 @@
 ---
-title: _rmdir, _wrmdir | Microsoft Docs
-ms.custom: ''
+title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wrmdir
 - _rmdir
@@ -27,8 +23,6 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11e6521060932bd1273b6a3888332ac2c8b2bb7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406987"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511122"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 
@@ -67,12 +57,12 @@ int _wrmdir(
 
 ### <a name="parameters"></a>Paramètres
 
-*dirname*<br/>
+*nom_répertoire*<br/>
 Chemin du répertoire à supprimer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne 0 si le répertoire est bien supprimé. Une valeur de retour de -1 indique une erreur et **errno** est définie à une des valeurs suivantes :
+Chacune de ces fonctions retourne 0 si le répertoire est bien supprimé. Une valeur de retour de -1 indique une erreur et **errno** est défini sur l’une des valeurs suivantes :
 
 |Valeur de la variable errno|Condition|
 |-|-|
@@ -86,7 +76,7 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 Le **_rmdir** fonction supprime le répertoire spécifié par *dirname*. Le répertoire doit être vide et ne doit pas être le répertoire de travail actif ou le répertoire racine.
 
-**_wrmdir** est une version à caractères larges de **_rmdir**; le *dirname* argument **_wrmdir** est une chaîne à caractères larges. **_wrmdir** et **_rmdir** comportent de façon identique.
+**_wrmdir** est une version à caractères larges de **_rmdir**; le *dirname* l’argument de **_wrmdir** est une chaîne de caractères larges. **_wrmdir** et **_rmdir** se comportent de façon identique dans le cas contraire.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -94,7 +84,7 @@ Le **_rmdir** fonction supprime le répertoire spécifié par *dirname*. Le rép
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_trmdir**|**_rmdir**|**_rmdir**|**_wrmdir**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

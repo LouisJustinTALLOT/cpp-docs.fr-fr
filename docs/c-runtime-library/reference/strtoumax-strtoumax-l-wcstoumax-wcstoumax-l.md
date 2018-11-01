@@ -1,10 +1,6 @@
 ---
-title: strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l | Microsoft Docs
-ms.custom: ''
+title: strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcstoumax_l
 - _strtoumax_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _wcstoumax_l
 - _tcstoumax_l
 - strtoumax
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strtoumax_l function
 - conversion functions
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wcstoumax_l function
 - strtoumax function
 ms.assetid: 566769f9-495b-4508-b9c6-02217a578897
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0691e26387f70e80718d8af84ba9ff18ad7fd489
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9c8ca79ed68b23586d9fef979bc8d47b72ca846
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417802"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518467"
 ---
 # <a name="strtoumax-strtoumaxl-wcstoumax-wcstoumaxl"></a>strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 
@@ -97,7 +87,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**strtoumax** retourne la valeur convertie, le cas échéant, ou **UINTMAX_MAX** de dépassement de capacité. **strtoumax** retourne 0 si aucune conversion ne peut être effectuée. **wcstoumax** renvoie les valeurs comme **strtoumax**. Pour les deux fonctions, **errno** a la valeur **ERANGE** cas de dépassement de capacité positif ou négatif.
+**strtoumax** retourne la valeur convertie, le cas échéant, ou **UINTMAX_MAX** de dépassement de capacité. **strtoumax** retourne 0 si aucune conversion ne peut être effectuée. **wcstoumax** retourne des valeurs de façon analogue à **strtoumax**. Pour les deux fonctions, **errno** a la valeur **ERANGE** si dépassement de capacité positif ou négatif se produit.
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -105,11 +95,11 @@ Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno,
 
 Chacune de ces fonctions convertit la chaîne d’entrée *strSource* à un **uintmax_t** valeur entière.
 
-**strtoumax** arrête la lecture de la chaîne *strSource* au premier caractère qu’il ne peut pas identifier en tant que partie d’un nombre. Cela peut être le caractère null de fin, ou il peut être le premier caractère numérique qui est supérieur ou égal à *base*. Le **LC_NUMERIC** paramètre de catégorie de paramètres régionaux détermine la reconnaissance du caractère de base *strSource*. Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoumax** et **wcstoumax** utiliser les paramètres régionaux ; **_strtoumax_l** et **_wcstoumax_l** sont identiques, sauf qu’ils utilisent à la place les paramètres régionaux qui sont passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**strtoumax** arrête la lecture de la chaîne *strSource* au premier caractère qu’il ne peut pas identifier comme partie d’un nombre. Cela peut être le caractère null de fin, ou il peut être le premier caractère numérique qui est supérieur ou égal à *base*. Le **LC_NUMERIC** paramètre de catégorie de paramètres régionaux détermine la reconnaissance du caractère de base dans *strSource*. Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoumax** et **wcstoumax** utilisent le paramètres régionaux actifs ; **_strtoumax_l** et **_wcstoumax_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* n’est pas **NULL**, un pointeur vers le caractère qui l’a arrêté l’analyse est stocké à l’emplacement qui est désigné par *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stocké à l’emplacement qui est désigné par *endptr*.
+Si *endptr* n’est pas **NULL**, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stocké à l’emplacement désigné par *endptr*.
 
-La version à caractères larges de **strtoumax** est **wcstoumax**; sa *strSource* argument est une chaîne à caractères larges. Sinon, ces fonctions se comportent de façon identique.
+La version à caractères larges de **strtoumax** est **wcstoumax**; son *strSource* argument est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -118,13 +108,13 @@ La version à caractères larges de **strtoumax** est **wcstoumax**; sa *strSour
 |**_tcstoumax**|**strtoumax**|**strtoumax**|**wcstoumax**|
 |**_tcstoumax_l**|**strtoumax_l**|**_strtoumax_l**|**_wcstoumax_l**|
 
-**strtoumax** attend *strSource* pour pointer vers une chaîne sous la forme suivante :
+**strtoumax** attend *strSource* pour pointer vers une chaîne au format suivant :
 
 > [*espace blanc*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*chiffres* &#124; *lettres*]  
 
-A *espace blanc* peut contenir les caractères espace et la tabulation, qui sont ignorés. *chiffres* sont un ou plusieurs chiffres décimaux. *lettres* sont une ou plusieurs des lettres 'a' 'z' via (ou un 'A' à 'Z'). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si *base* est comprise entre 2 et 36, il est utilisé comme base du nombre. Si *base* est 0, les premiers caractères de la chaîne qui pointe vers *strSource* servent à déterminer la base. Si le premier caractère est « 0 » et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* est égal à 0 et le premier caractère analysé est « 0 », entier octal est supposé et un caractère '8' ou '9' s’arrête l’analyse. **strtoumax** permet un signe plus (**+**) ou signe moins (**-**) préfixe ; début signe indique que la valeur de retour est du complément à deux de la valeur absolue de la chaîne convertie.
+Un *espace blanc* peut se composer d’espaces et tabulations, qui sont ignorés. *chiffres* représente un ou plusieurs chiffres décimaux. *lettres* sont un ou plusieurs des lettres « a » 'z' via (ou un « A » à « Z »). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* est 0, les premiers caractères de la chaîne désignée par *strSource* servent à déterminer la base. Si le premier caractère est « 0 » et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* est égal à 0 et le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrêterait l’analyse. **strtoumax** permet un signe plus (**+**) ou signe moins (**-**) préfixe ; un préfixe signe indique que la valeur de retour est le complément à deux de la valeur absolue de la chaîne convertie.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: CList (classe) | Microsoft Docs
-ms.custom: ''
+title: CList (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CList
 - AFXTEMPL/CList
@@ -30,8 +26,6 @@ f1_keywords:
 - AFXTEMPL/CList::RemoveHead
 - AFXTEMPL/CList::RemoveTail
 - AFXTEMPL/CList::SetAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CList [MFC], CList
 - CList [MFC], AddHead
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7eedcd5a50db64b72fd654e46ad870c9428ea77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 10991745fb5ccdac145f4b1d589e7d59c6ed6f4e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513956"
 ---
 # <a name="clist-class"></a>CList (classe)
 
