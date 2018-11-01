@@ -1,27 +1,18 @@
 ---
-title: Contrôler les Classes de relation contenant-contenu (ATL) | Microsoft Docs
-ms.custom: ''
+title: Classes de relation contenant-contenu de contrôles (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.controls.containment
-dev_langs:
-- C++
 helpviewer_keywords:
 - control containment classes
 ms.assetid: e0812aee-c078-4ced-b967-247976552b9a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6c2fb505fd48aac41e49fcbe459fa0bc9c9a579f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 196171e27e9dd37efc80ca4045e9e44a65813d04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535250"
 ---
 # <a name="control-containment-classes"></a>Classes de relation contenant-contenu de contrôle
 
