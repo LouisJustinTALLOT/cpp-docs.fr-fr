@@ -1,27 +1,17 @@
 ---
-title: Prise en charge du format ANSI | Microsoft Docs
-ms.custom: ''
+title: Prise en charge du format ANSI
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - character sets [C++], ANSI
 - ANSI [MFC]
 - MFC [C++], ANSI support
 ms.assetid: f98440ad-90fc-42f5-bf74-975cd793c49c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f755ee59c7f0b6e4ae9897535cdc536537ba32f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b0a7f38decca349be86f29760ee7a96b2623feb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446504"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537408"
 ---
 # <a name="support-for-ansi"></a>Prise en charge du format ANSI
 
