@@ -1,16 +1,10 @@
 ---
-title: -Oi (générer des fonctions intrinsèques) | Microsoft Docs
-ms.custom: ''
+title: /Oi (Générer des fonctions intrinsèques)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions
 - /oi
 - VC.Project.VCCLWCECompilerTool.EnableIntrinsicFunctions
-dev_langs:
-- C++
 helpviewer_keywords:
 - Oi compiler option [C++]
 - intrinsic functions, generate
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 792d1e1bc0ea2f6044bc9ad145d30c1fda3e3648
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 067b8b11b716935c684a127632a8fadaf3d9a447
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423869"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646066"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Générer des fonctions intrinsèques)
 
@@ -57,7 +47,7 @@ Vous pouvez utiliser la [Za](../../build/reference/za-ze-disable-language-extens
 
 Vous utilisez également [intrinsèque](../../preprocessor/intrinsic.md) pour créer des fonctions intrinsèques ou [(fonction) (C/C++)](../../preprocessor/function-c-cpp.md) pour forcer explicitement un appel de fonction.
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 

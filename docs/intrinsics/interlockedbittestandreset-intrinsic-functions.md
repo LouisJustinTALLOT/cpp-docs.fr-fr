@@ -1,10 +1,6 @@
 ---
-title: _interlockedbittestandreset, fonctions intrinsèques | Microsoft Docs
-ms.custom: ''
+title: _interlockedbittestandreset, fonctions intrinsèques
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _interlockedbittestandreset_rel
 - _interlockedbittestandreset64
@@ -17,23 +13,17 @@ f1_keywords:
 - _interlockedbittestandreset64_cpp
 - _interlockedbittestandreset64_HLEAcquire
 - _interlockedbittestandreset
-dev_langs:
-- C++
 helpviewer_keywords:
 - lock_btr instruction
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6916b746aac8bbd4b1008289ec2eacd3afaa5571
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc85b1a1bb76575f63d7c43bead08a6e850d026f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447641"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605398"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset, fonctions intrinsèques
 
@@ -108,7 +98,7 @@ Valeur d'origine du bit à la position spécifiée par `b`.
 
 Sur les processeurs x86 et x64, ces fonctions intrinsèques utilisent le `lock btr` instruction, qui lit et définit la valeur zéro au bit spécifié dans une opération atomique.
 
-Sur les processeurs ARM, utilisez les intrinsèques avec les suffixes `_acq` et `_rel` pour les sémantiques Acquire et Release, par exemple au début et à la fin d'une section critique. Les fonctions intrinsèques ARM avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.
+Sur les processeurs ARM, utilisez les intrinsèques avec les suffixes `_acq` et `_rel` pour les sémantiques Acquire et Release, par exemple au début et à la fin d’une section critique. Les fonctions intrinsèques ARM avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.
 
 Sur les processeurs Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les intrinsèques ayant les suffixes `_HLEAcquire` et `_HLERelease` incluent une indication pour le processeur. Celle-ci permet d'accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces intrinsèques sont appelés pour des processeurs qui ne prennent pas en charge les instructions HLE, l'indication est ignorée.
 

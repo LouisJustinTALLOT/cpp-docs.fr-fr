@@ -1,31 +1,21 @@
 ---
-title: commentaire (C/C++) | Microsoft Docs
-ms.custom: ''
+title: commentaire (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
 - comment_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - annotations [C++]
 - comments [C++], compiled files
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa8cf2a8fd4ce0cd7d031e95392a207e0df971bf
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ec80e8cf177becdc25bdf49d6dfa9ad9c7794b88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070905"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612821"
 ---
 # <a name="comment-cc"></a>commentaire (C/C++)
 
@@ -83,7 +73,7 @@ Seuls les éléments suivants (*type commentaire*) options de l’éditeur de li
 
 Place un commentaire général dans le fichier objet. Le *commentstring* paramètre contienne le texte du commentaire. Cet enregistrement de commentaires est ignoré par l'Éditeur de liens.
 
-Le pragma ci-dessous indique à l'Éditeur de liens de rechercher la bibliothèque EMAPI.LIB en effectuant la liaison. L’Éditeur de liens commence par rechercher dans le répertoire de travail actuel, puis dans le chemin d’accès spécifié dans la variable d’environnement LIB.
+Le pragma ci-dessous indique à l'Éditeur de liens de rechercher la bibliothèque EMAPI.LIB en effectuant la liaison. L'Éditeur de liens commence par rechercher dans le répertoire de travail actuel, puis dans le chemin d'accès spécifié dans la variable d'environnement LIB.
 
 ```
 #pragma comment( lib, "emapi" )
