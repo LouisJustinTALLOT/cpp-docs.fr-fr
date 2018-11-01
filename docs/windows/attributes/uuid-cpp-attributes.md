@@ -1,28 +1,17 @@
 ---
-title: UUID (attributs C++) | Microsoft Docs
-ms.custom: ''
+title: uuid (attributs C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.uuid
-dev_langs:
-- C++
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3eddf1981aba8babcb87562ed546ce4086499fd7
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e7d90cc2d1081b52370bcc189ce7545edf34a425
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50071337"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631333"
 ---
 # <a name="uuid-c-attributes"></a>uuid (attributs C++)
 

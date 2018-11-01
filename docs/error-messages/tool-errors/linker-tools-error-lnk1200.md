@@ -1,27 +1,17 @@
 ---
-title: LNK1200 d’erreur des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK1200
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1200
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1200
 ms.assetid: 55771145-915e-4006-ac6c-ac702041eb2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 03ecd51142bf30230b6b177a36e007345e93bf2c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c99b25a83836f1ee0bc6ba622e42ea382c377172
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059314"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466831"
 ---
 # <a name="linker-tools-error-lnk1200"></a>Erreur des outils Éditeur de liens LNK1200
 

@@ -1,23 +1,13 @@
 ---
-title: Directive d’assembleur ARM | Microsoft Docs
-ms.custom: ''
+title: Directive d'assembleur ARM
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c37e010caa6c7cfb44ddaf2f7dd1e28bbb5c291
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592450"
 ---
 # <a name="arm-assembler-directives"></a>Directive d'assembleur ARM
 

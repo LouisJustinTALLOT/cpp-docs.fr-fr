@@ -1,25 +1,16 @@
 ---
-title: Avertissements du compilateur désactivés par défaut | Microsoft Docs
+title: Avertissements du compilateur désactivés par défaut
 ms.date: 05/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083189"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651371"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
 Le compilateur inclut des avertissements qui sont désactivés par défaut, car la plupart des développeurs ne souhaitent pas les voir. Dans certains cas, ils représentent un choix stylistique, sont des idiomes courants dans le code plus ancien ou tirer parti d’une extension Microsoft du langage. Dans d’autres cas, ils indiquent une zone où les programmeurs souvent des hypothèses incorrectes, ce qui peut entraîner un comportement inattendu ou non défini. Il se peut que certaines de ces avertissements peuvent être très bruyant dans les en-têtes de bibliothèque. Bibliothèques runtime C et les bibliothèques standards C++ sont destinés à n’émettre aucun avertissement uniquement au niveau d’avertissement [/W4](../build/reference/compiler-option-warning-level.md).

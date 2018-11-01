@@ -1,10 +1,6 @@
 ---
-title: operator== (&lt;sample container&gt;) | Microsoft Docs
-ms.custom: ''
+title: operator== (&lt;sample container&gt;)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - std.==
 - std::==
@@ -12,23 +8,17 @@ f1_keywords:
 - std.operator==
 - std::operator==
 - ==
-dev_langs:
-- C++
 helpviewer_keywords:
 - operator ==, containers
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 360c4f38b0c740d1c23b1fa9c0712eaf6657d495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c49c58bdc168385d421cf942735b7473de70925f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853246"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613497"
 ---
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 

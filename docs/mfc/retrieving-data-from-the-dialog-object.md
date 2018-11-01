@@ -1,12 +1,6 @@
 ---
-title: Récupération des données à partir de l’objet de la boîte de dialogue | Microsoft Docs
-ms.custom: ''
+title: Récupérer des données d'un objet Dialog
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [MFC], retrieving user data
 - dialog box data [MFC]
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3055468c04bba7c9cb999d0a642c0819524ff7e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 345a2894693eace5aa464ca3940c785b2da08784
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615125"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Récupérer des données d'un objet Dialog
 

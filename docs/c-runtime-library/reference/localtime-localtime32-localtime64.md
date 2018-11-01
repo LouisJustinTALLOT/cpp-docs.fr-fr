@@ -1,10 +1,6 @@
 ---
-title: localtime, _localtime32, _localtime64 | Microsoft Docs
-ms.custom: ''
+title: localtime, _localtime32, _localtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _localtime64
 - _localtime32
@@ -28,8 +24,6 @@ f1_keywords:
 - localtime32
 - localtime
 - _localtime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - localtime32 function
 - _localtime32 function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 778b2d214551c5848dd091e33dbbab1814544fb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d34a45ff20cb74d61a8eb189282bfdce4d8954ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405508"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629968"
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime, _localtime32, _localtime64
 
@@ -68,19 +58,19 @@ Pointeur désignant la valeur de temps stockée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur désignant le résultat de la structure, ou **NULL** si la date est transmise à la fonction est :
+Retourner un pointeur vers le résultat de la structure, ou **NULL** si la date est transmise à la fonction est :
 
 - Avant le 1er janvier 1970 à minuit
 
-- Après le 03:14:07, le 19 janvier 2038, UTC (à l’aide de **_time32** et **time32_t**).
+- Une fois à 03:14:07, le 19 janvier 2038, UTC (à l’aide de **_time32** et **time32_t**).
 
-- Après avoir 23:59:59, le 31 décembre 3000 UTC (à l’aide de **_time64** et **__time64_t**).
+- Après le 23:59:59 le 31 décembre 3000, UTC (à l’aide de **_time64** et **__time64_t**).
 
-**_localtime64**, qui utilise le **__time64_t** structure, permet des dates d’exprimer des et 23:59:59, le 31 décembre 3000, temps universel coordonné (UTC), tandis que **_localtime32** représente les dates et 23:59:59 18 janvier 2038, UTC.
+**_localtime64**, qui utilise le **__time64_t** structure, permet d’exprimer à 23:59:59 le 31 décembre 3000, temps universel coordonné (UTC), les dates alors que **_localtime32** représente les dates jusqu’à 23:59:59 le 18 janvier 2038, UTC.
 
-**LocalTime** est une fonction inline qui prend la valeur **_localtime64**, et **time_t** équivaut à **__time64_t**. Si vous avez besoin forcer le compilateur à interpréter **time_t** en tant que l’ancien 32 bits **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Cette action provoquerait **localtime** à évaluer à **_localtime32**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
+**LocalTime** est une fonction inline qui prend la valeur **_localtime64**, et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** l’ancien 32-bit **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Ainsi, **localtime** soit évaluée comme **_localtime32**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
-Les champs du type structure [tm](../../c-runtime-library/standard-types.md) stocker les valeurs suivantes, chacune d’elles étant un **int**:
+Les champs du type structure [tm](../../c-runtime-library/standard-types.md) stockent les valeurs suivantes, chacune d’elles étant un **int**:
 
 |Champ|Description|
 |-|-|
@@ -94,22 +84,22 @@ Les champs du type structure [tm](../../c-runtime-library/standard-types.md) sto
 |**tm_yday**|Jour de l’année (0 - 365 ; Le 1er janvier = 0).|
 |**tm_isdst**|Valeur positive si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; valeur négative si l’état de l’heure d’été est inconnu.|
 
-Si le **TZ** variable d’environnement est définie, la bibliothèque Runtime C suppose que les règles appropriées pour les États-Unis de calcul de l’heure d’été (DST).
+Si le **TZ** variable d’environnement est définie, la bibliothèque Runtime C suppose que les règles appropriées pour les États-Unis le calcul de l’heure (DST).
 
 ## <a name="remarks"></a>Notes
 
 Le **localtime** fonction convertit une heure stockée en tant qu’un [time_t](../../c-runtime-library/standard-types.md) valeur et stocke le résultat dans une structure de type [tm](../../c-runtime-library/standard-types.md). Le **long** valeur *sourceTime* représente les secondes écoulées depuis minuit (00 : 00:00), le 1er janvier 1970, UTC. Cette valeur est généralement obtenue à partir de la [temps](time-time32-time64.md) (fonction).
 
-Les versions 32 bits et 64 bits de [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md), et **localtime** tous utiliseront une seule **tm** structure par thread pour la conversion. Chaque appel à une de ces routines détruit le résultat de l’appel précédent.
+Les versions 32 bits et 64 bits de [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md), et **localtime** utilisent toutes un seul **tm** structure par thread pour la conversion. Chaque appel à une de ces routines détruit le résultat de l’appel précédent.
 
-**LocalTime** corrige le fuseau horaire local si l’utilisateur définit la variable d’environnement global **TZ**. Lorsque **TZ** est défini, les trois autres variables d’environnement (**_timezone**, **_daylight**, et **_tzname**) sont définies automatiquement ainsi. Si le **TZ** variable n’est pas définie, **localtime** tente d’utiliser les informations de fuseau horaire spécifiées dans l’application de Date/heure dans le panneau de configuration. Si ces informations ne peuvent pas être obtenues, PST8PDT (fuseau horaire Pacifique) est utilisé par défaut. Consultez [_tzset](tzset.md) pour obtenir une description de ces variables. **TZ** est une extension Microsoft et ne fait pas partie de la définition standard ANSI de **localtime**.
+**LocalTime** correction en fonction du fuseau horaire local si l’utilisateur définit tout d’abord la variable d’environnement global **TZ**. Lorsque **TZ** est définie, les trois autres variables d’environnement (**_timezone**, **_daylight**, et **_tzname**) sont également définies automatiquement. Si le **TZ** variable n’est pas définie, **localtime** tente d’utiliser les informations de fuseau horaire spécifiées dans l’application de Date/heure dans le panneau de configuration. Si ces informations ne peuvent pas être obtenues, PST8PDT (fuseau horaire Pacifique) est utilisé par défaut. Consultez [_tzset](tzset.md) pour obtenir une description de ces variables. **TZ** est une extension Microsoft et la fait pas partie de la définition de la norme ANSI de **localtime**.
 
 > [!NOTE]
 > L’environnement cible doit tenter de déterminer si l’heure d’été est en vigueur.
 
-Ces fonctions valident leurs paramètres. Si *sourceTime* est un pointeur null, ou si le *sourceTime* valeur est négative, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, les fonctions retournent **NULL** et **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *sourceTime* est un pointeur null, ou si le *sourceTime* valeur est négative, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, les fonctions retournent **NULL** et définissez **errno** à **EINVAL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|

@@ -1,10 +1,6 @@
 ---
-title: asctime, _wasctime | Microsoft Docs
-ms.custom: ''
+title: asctime, _wasctime
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wasctime
 - asctime
@@ -25,8 +21,6 @@ f1_keywords:
 - _tasctime
 - asctime
 - _wasctime
-dev_langs:
-- C++
 helpviewer_keywords:
 - asctime function
 - tasctime function
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b18edc9e61f7065fcac1fe6231012bd232ccc18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc2d7a50442d9000eaaebf7a06bf336b3317e4df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396194"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577897"
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 
-Convertir un **tm** heure de structure à une chaîne de caractères. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
+Convertir un **tm** structure en une chaîne de caractères de temps. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -69,13 +59,13 @@ Structure date/heure.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**asctime** retourne un pointeur vers le résultat de chaîne de caractères ; **_wasctime** retourne un pointeur vers le résultat de chaîne à caractères larges. Aucune valeur de retour d’erreur.
+**asctime** retourne un pointeur désignant le résultat de chaîne de caractères ; **_wasctime** retourne un pointeur vers le résultat de chaîne à caractères larges. Aucune valeur de retour d’erreur.
 
 ## <a name="remarks"></a>Notes
 
 Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
-Le **asctime** fonction convertit une heure stockée sous la forme d’une structure en une chaîne de caractères. Le *timeptr* valeur est généralement obtenue à partir d’un appel à **gmtime** ou **localtime**, qui retournent un pointeur vers un **tm** structure, défini dans le temps. H.
+Le **asctime** fonction convertit une heure stockée en tant que structure en une chaîne de caractères. Le *timeptr* valeur est généralement obtenue à partir d’un appel à **gmtime** ou **localtime**, qui retournent un pointeur vers un **tm** structure, défini dans le temps. H.
 
 |Membre de timeptr|Value|
 |--------------------|-----------|
@@ -83,19 +73,19 @@ Le **asctime** fonction convertit une heure stockée sous la forme d’une struc
 |**tm_isdst**|Positif si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; négatif si l’état de l’heure d’été est inconnu. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis.|
 |**tm_mday**|Jour du mois (1 à 31)|
 |**tm_min**|Minutes après l’heure (0 à 59)|
-|**tm_mon**|Mois (de 0 à 11 ; Janvier = 0)|
+|**tm_mon**|Mois (0-11 ; Janvier = 0)|
 |**tm_sec**|Secondes après la minute (0 à 59)|
 |**tm_wday**|Jour de la semaine (0-6 ; Dimanche = 0)|
-|**tm_yday**|Jour de l’année (0-365 ; Le 1er janvier = 0)|
+|**tm_yday**|Jour de l’année (0 à 365 ; Le 1er janvier = 0)|
 |**tm_year**|Année (année en cours moins 1900)|
 
 La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Pour plus d’informations sur la configuration de l’heure locale, consultez les fonctions [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md) et [localtime](localtime-localtime32-localtime64.md) et, pour plus d’informations sur la définition des variables globales et d’environnement des fuseaux horaires, consultez la fonction [_tzset](tzset.md).
 
-La chaîne résultante produite par **asctime** contient exactement 26 caractères et se présente sous la forme `Wed Jan 02 02:03:55 1980\n\0`. Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne et le caractère null occupent les deux dernières positions de la chaîne. **asctime** utilise un seul tampon alloué de manière statique pour contenir la chaîne de retournée. Chaque appel à cette fonction détruit le résultat de l’appel précédent.
+La chaîne résultante produite par **asctime** contient exactement 26 caractères et se présente sous la forme `Wed Jan 02 02:03:55 1980\n\0`. Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne et le caractère null occupent les deux dernières positions de la chaîne. **asctime** utilise une mémoire tampon unique, allouée de manière statique pour contenir la chaîne de retournée. Chaque appel à cette fonction détruit le résultat de l’appel précédent.
 
-**_wasctime** est une version à caractères larges de **asctime**. **_wasctime** et **asctime** comportent de façon identique.
+**_wasctime** est une version à caractères larges de **asctime**. **_wasctime** et **asctime** se comportent de façon identique dans le cas contraire.
 
-Ces fonctions valident leurs paramètres. Si *timeptr* est un pointeur null, ou s’il contient des valeurs d’out-of-range, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **NULL** et définit **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *timeptr* est un pointeur null, ou s’il contient les valeurs hors limites, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **NULL** et définit **errno** à **EINVAL**.
 
 ### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique
 
@@ -103,7 +93,7 @@ Ces fonctions valident leurs paramètres. Si *timeptr* est un pointeur null, ou 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime**|**asctime**|**asctime**|**_wasctime**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -112,7 +102,7 @@ Ces fonctions valident leurs paramètres. Si *timeptr* est un pointeur null, ou 
 
 ## <a name="example"></a>Exemple
 
-Ce programme place l’heure système dans l’entier long **aclock**, elle se traduit par la structure **newtime** et convertit sous forme de chaîne de sortie, à l’aide de la **asctime**(fonction).
+Ce programme place l’heure système dans l’entier long **aclock**, traduit en la structure **newtime** , puis la convertit sous forme de chaîne de sortie, à l’aide de la **asctime**(fonction).
 
 ```C
 // crt_asctime.c

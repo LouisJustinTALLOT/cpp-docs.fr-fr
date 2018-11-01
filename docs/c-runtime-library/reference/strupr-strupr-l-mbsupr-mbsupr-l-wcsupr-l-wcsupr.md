@@ -1,10 +1,6 @@
 ---
-title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr | Microsoft Docs
-ms.custom: ''
+title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsupr_l
 - _mbsupr
@@ -37,8 +33,6 @@ f1_keywords:
 - _strupr
 - mbsupr_l
 - _wcsupr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsupr_l function
 - mbsupr function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d34f0bd4e24fa70f37bb2191293cbc2a3e7ad9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415382"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603643"
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
 Convertit une chaîne en majuscules. Il existe des versions plus sécurisées de ces fonctions. Consultez [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsupr** et **_mbsupr_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr** et **_mbsupr_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -151,11 +141,11 @@ Retourne un pointeur vers la chaîne modifiée. Sachant que la modification est 
 
 ## <a name="remarks"></a>Notes
 
-Le **_strupr** fonction convertit, en place, chaque lettre minuscule *str* en majuscules. La conversion est déterminée par le **LC_CTYPE** paramètre de catégorie de paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur **LC_CTYPE**, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **_l** suffixe d’utiliser les paramètres régionaux ; les versions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le **_strupr** fonction convertit sur place, chaque lettre minuscule dans *str* en majuscules. La conversion est déterminée par le **LC_CTYPE** paramètre de catégorie de paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur **LC_CTYPE**, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **_l** suffixe d’utiliser les paramètres régionaux actifs ; les versions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-**_wcsupr** et **_mbsupr** sont des versions à caractères larges et caractères multioctets de **_strupr**. La valeur des arguments et de retour de **_wcsupr** sont des caractères larges chaînes ; ceux de **_mbsupr** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**_wcsupr** et **_mbsupr** sont des versions à caractères larges et à caractères multioctets de **_strupr**. L’argument et valeur de retour de **_wcsupr** sont des caractères larges chaînes ; ceux de **_mbsupr** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
-Si *str* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la chaîne d’origine et le jeu de **errno** à **EINVAL**.
+Si *str* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la chaîne d’origine et un ensemble **errno** à **EINVAL**.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -166,7 +156,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_tcsupr**|**_strupr**|**_mbsupr**|**_wcsupr**|
 |**_tcsupr_l**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

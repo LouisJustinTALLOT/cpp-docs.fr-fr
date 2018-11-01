@@ -1,17 +1,11 @@
 ---
-title: Exécuter LIB | Microsoft Docs
-ms.custom: ''
+title: Exécution de LIB
 ms.date: 09/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
-dev_langs:
-- C++
 helpviewer_keywords:
 - -MACHINE target platform option
 - command files, LIB
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656974"
 ---
 # <a name="running-lib"></a>Exécution de LIB
 
@@ -86,7 +76,7 @@ Lib, le **/LTCG** option spécifie que les entrées à partir de cl.exe incluent
 
 Dans le processus de génération, la sortie de LIB est envoyée au lien. LIEN a son propre distinct **/LTCG** option qui est utilisée pour effectuer différentes optimisations, y compris l’optimisation de la totalité du programme et l’instrumentation de l’optimisation guidée par profil (PGO). Pour plus d’informations sur l’option de liaison, consultez [/LTCG](ltcg-link-time-code-generation.md).
 
-> **/ MACHINE**
+> **/MACHINE**
 
 Spécifie la plateforme cible pour le programme. En règle générale, il est inutile de spécifier/machine. LIB déduit le type d’ordinateur à partir des fichiers .obj. Toutefois, dans certaines circonstances, LIB ne peut pas déterminer le type d’ordinateur et émet un message d’erreur. Si une telle erreur se produit, spécifiez/machine. En mode/Extract, cette option est pour la vérification uniquement. Utilisez `lib /?` à la ligne de commande pour voir les types de machines disponibles.
 
@@ -94,7 +84,7 @@ Spécifie la plateforme cible pour le programme. En règle générale, il est in
 
 Supprime l’affichage de la LIB copyright message et numéro de version et empêche la répercussion des fichiers de commandes.
 
-> **/ VERBOSE**
+> **/VERBOSE**
 
 Affiche des détails sur la progression de la session, y compris les noms des fichiers .obj en cours d’ajout. Les informations sont envoyées vers la sortie standard et peuvent être redirigées vers un fichier.
 

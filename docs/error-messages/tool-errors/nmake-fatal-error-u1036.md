@@ -1,27 +1,17 @@
 ---
-title: Erreur irrécupérable NMAKE U1036 | Microsoft Docs
-ms.custom: ''
+title: Erreur irrécupérable NMAKE U1036
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - U1036
-dev_langs:
-- C++
 helpviewer_keywords:
 - U1036
 ms.assetid: b1d03b6b-ce82-4bbb-9904-d392ba72b437
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa7f94f9f584ab66b83fdec0e6f9076feb6b5d12
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2d70974485c909ebd72de6996dd14193d506ed89
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048303"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588251"
 ---
 # <a name="nmake-fatal-error-u1036"></a>Erreur irrécupérable NMAKE U1036
 
