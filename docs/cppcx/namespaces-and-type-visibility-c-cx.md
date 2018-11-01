@@ -1,20 +1,13 @@
 ---
-title: Espaces de noms et la visibilité du Type (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Visibilité des espaces de noms et des types (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42457da3c85a73292b836c6da58b17f0341df1be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102770"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440519"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Visibilité des espaces de noms et des types (C++/CX)
 
@@ -41,13 +34,13 @@ Utilisez les modificateurs d'accès suivants pour contrôler la visibilité des 
 |private|Accessibilité par défaut. Même signification que dans le langage C++ standard.|Non|
 |protected|Même signification qu'en C++ standard, à la fois dans l'application ou le composant et dans les métadonnées.|Oui|
 |public|Même signification que dans le langage C++ standard.|Oui|
-|`public protected` - ou - `protected public`|Accessibilité protégée dans les métadonnées, publique dans l'application ou le composant.|Oui|
+|`public protected` ou `protected public`|Accessibilité protégée dans les métadonnées, publique dans l'application ou le composant.|Oui|
 |`protected private` ou `private protected`|Non visible dans les métadonnées ; accessibilité protégée dans l'application ou le composant.||
 |`internal` ou `private public`|Le membre est public dans l'application ou le composant, mais n'est pas visible dans les métadonnées.|Non|
 
 ## <a name="windows-runtime-namespaces"></a>Espaces de noms Windows Runtime
 
-L’API Windows se compose des types qui sont déclarés dans le Windows ::\* espaces de noms. Ces espaces de noms sont réservés à windows et aucun type ne peut y être ajouté. Dans l' **Explorateur d'objets**, vous pouvez consulter ces espaces de noms dans le fichier windows.winmd. Pour obtenir une documentation sur ces espaces de noms, consultez [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377).
+L’API Windows se compose des types qui sont déclarés dans le Windows ::\* espaces de noms. Ces espaces de noms sont réservés à windows et aucun type ne peut y être ajouté. Dans l' **Explorateur d'objets**, vous pouvez consulter ces espaces de noms dans le fichier windows.winmd. Pour obtenir la documentation relative à ces espaces de noms, consultez [Informations de référence sur les API Windows des applications Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377).
 
 ## <a name="ccx-namespaces"></a>espaces de noms (C++/CX)
 

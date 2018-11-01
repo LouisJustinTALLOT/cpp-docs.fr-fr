@@ -1,10 +1,6 @@
 ---
-title: pow, powf, powl | Microsoft Docs
-ms.custom: ''
+title: pow, powf, powl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - powl
 - pow
@@ -27,8 +23,6 @@ f1_keywords:
 - pow
 - _powl
 - powf
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - powl function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5daf7348198cb6f3ba0186eb4586b2486548f6f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452006"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Calcule *x* à la puissance de *y*.
+Calcule *x* élevé à la puissance de *y*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -90,15 +80,15 @@ Retourne la valeur de *x*<sup>*y*</sup>. Aucun message d’erreur n’est imprim
 
 ## <a name="remarks"></a>Notes
 
-**Pow** ne reconnaît pas les valeurs à virgule flottante intégral supérieures à 2<sup>64</sup> (par exemple, 1.0E100).
+**Pow** ne reconnaît pas les valeurs à virgule flottante intégrales supérieures à 2<sup>64</sup> (par exemple, 1.0E100).
 
-**Pow** possède une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
+**Pow** a une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ autorisant la surcharge, vous pouvez appeler les différentes surcharges de **pow**. Dans un programme C, **pow** toujours prend deux **double** les valeurs et retourne un **double** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler une des diverses surcharges de **pow**. Dans un programme C, **pow** accepte toujours deux **double** valeurs et retourne un **double** valeur.
 
-La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Pour éviter ce problème, effectué le premier paramètre de **double**, **float**, ou **long** **double**.
+La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Pour éviter ce problème, effectuez un cast le premier paramètre de **double**, **float**, ou **long** **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|
