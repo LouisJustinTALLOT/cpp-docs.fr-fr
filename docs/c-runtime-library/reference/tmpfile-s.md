@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s | Microsoft Docs
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412148"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488112"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -73,11 +63,11 @@ Si l’erreur de validation de paramètre ci-dessus se produit, le gestionnaire 
 
 Le **tmpfile_s** fonction crée un fichier temporaire et place un pointeur vers ce flux de données dans le *pFilePtr* argument. Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
 
-Si le fichier ne peut pas être ouvert, **tmpfile_s** écrit **NULL** à la *pFilePtr* paramètre. Ce fichier temporaire est automatiquement supprimé quand le fichier est fermé lorsque le programme se termine normalement, ou lorsque **_rmtmp** est appelée, en supposant que le répertoire de travail en cours ne change pas. Le fichier temporaire est ouvert dans **w + b** mode (lecture/écriture binaire).
+Si le fichier ne peut pas être ouvert, **tmpfile_s** écrit **NULL** à la *pFilePtr* paramètre. Ce fichier temporaire est automatiquement supprimé quand le fichier est fermé lorsque le programme se termine normalement ou lorsque **_rmtmp** est appelée, en supposant que le répertoire de travail actif ne change pas. Le fichier temporaire est ouvert dans **w + b** mode (lecture/écriture binaire).
 
-Échec peut se produire si vous essayez de plus de **TMP_MAX_S** (voir STDIO. H) appels avec **tmpfile_s**.
+Échec peut se produire si vous essayez de plus de **TMP_MAX_S** (voir STDIO. (H) appels avec **tmpfile_s**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

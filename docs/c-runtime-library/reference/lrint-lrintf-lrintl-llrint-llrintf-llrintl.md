@@ -1,11 +1,6 @@
 ---
-title: lrint, lrintf, lrintl, llrint, llrintf, llrintl | Microsoft Docs
-ms.custom: ''
+title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lrint
 - lrintl
@@ -39,8 +34,6 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -49,16 +42,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ace427267a45c87213f62276e1d7799f27db1cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1fc404182d9d2a5cd6870fcb2cd1ff3e5f4da55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401257"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500840"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -116,21 +105,21 @@ Valeur à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne la valeur intégrale arrondie du *x*.
+En cas de réussite, retourne la valeur intégrale arrondie de *x*.
 
 |Problème|Retourner|
 |-----------|------------|
-|*x* est en dehors de la plage du type de retour<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Déclenche **FE_INVALID** et renvoie zéro (0).|
+|*x* est en dehors de la plage du type de retour<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Déclenche **FE_INVALID** et retourne zéro (0).|
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lrint** et **llrint** acceptant **float** et **long**  **Double** types. Dans un programme C, **lrint** et **llrint** ont toujours une **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **lrint** et **llrint** acceptant **float** et **long**  **Double** types. Dans un programme C, **lrint** et **llrint** ont toujours un **double**.
 
-Si *x* ne représente pas l’équivalent à virgule flottante d’une valeur intégrale, ces fonctions de déclenchement **FE_INEXACT**.
+Si *x* ne représente pas l’équivalent à virgule flottante d’une valeur intégrale, ces fonctions déclenchent **FE_INEXACT**.
 
 **Section spécifique à Microsoft** : quand le résultat se situe hors de la plage du type de retour ou que le paramètre est une valeur NaN ou l’infini, la valeur de retour est définie par l’implémentation. Le compilateur Microsoft retourne zéro (0).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

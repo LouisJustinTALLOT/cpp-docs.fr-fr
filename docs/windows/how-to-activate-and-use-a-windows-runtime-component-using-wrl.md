@@ -1,24 +1,14 @@
 ---
-title: 'Comment : activer et utiliser un composant d’exécution de Windows à l’aide de WRL | Microsoft Docs'
-ms.custom: ''
+title: "Comment : activer et utiliser un composant Windows Runtime Component à l'aide de WRL"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ac5e03b7a9453b4b33c4a495842465b16a186543
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 908929767443b0fcbaa89ecbdf389fd63a469d00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219190"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497342"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Comment : activer et utiliser un composant Windows Runtime Component à l'aide de WRL
 
