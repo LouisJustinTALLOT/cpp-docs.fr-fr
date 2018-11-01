@@ -1,10 +1,6 @@
 ---
-title: _lseek, _lseeki64 | Microsoft Docs
-ms.custom: ''
+title: _lseek, _lseeki64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lseeki64
 - _lseek
@@ -25,8 +21,6 @@ f1_keywords:
 - _lseeki64
 - _lseek
 - lseeki64
-dev_langs:
-- C++
 helpviewer_keywords:
 - lseek function
 - _lseek function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb47214ac2de3c3e217bf41387ba206b94caf906
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19a312bcc3cdeea82bcebce6da95e26ef88992b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403376"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541685"
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 
@@ -84,7 +74,7 @@ Pour plus d’informations sur ces codes d’erreur et autres, consultez [_doser
 
 ## <a name="remarks"></a>Notes
 
-Le **_lseek** fonction déplace le pointeur de fichier associé *fd* vers un nouvel emplacement est *offset* octets à partir de *origine*. L’opération suivante sur le fichier se produit au nouvel emplacement. L’argument *origin* doit être une des constantes suivantes, qui sont définies dans Stdio.h.
+Le **_lseek** fonction déplace le pointeur de fichier associé *fd* vers un nouvel emplacement est *décalage* octets à partir de *origine*. L’opération suivante sur le fichier se produit au nouvel emplacement. L’argument *origin* doit être une des constantes suivantes, qui sont définies dans Stdio.h.
 
 |*origine* valeur||
 |-|-|
@@ -94,7 +84,7 @@ Le **_lseek** fonction déplace le pointeur de fichier associé *fd* vers un nou
 
 Vous pouvez utiliser **_lseek** pour repositionner le pointeur n’importe où dans un fichier ou au-delà de la fin du fichier.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

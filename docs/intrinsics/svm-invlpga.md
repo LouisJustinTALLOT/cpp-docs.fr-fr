@@ -1,28 +1,18 @@
 ---
-title: __svm_invlpga | Microsoft Docs
-ms.custom: ''
+title: __svm_invlpga
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_invlpga
-dev_langs:
-- C++
 helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fa5655911366b0adf21618ec7be7eeccdca9c5a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d356cf7426c558c8ac0312eff02c0cb9de9c859
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401904"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544298"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
@@ -45,7 +35,7 @@ void __svm_invlpga(void *Va, int ASID);
 
 ## <a name="remarks"></a>Notes
 
-Le `__svm_invlpga` fonction est équivalente à la `INVLPGA` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : programmation du système, « 24593, révision 3.11, de numéro de document sur le [corporation d’AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+La fonction `__svm_invlpga` est équivalente à l’instruction machine `INVLPGA` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : programmation du système, « 24593, révision 3.11, de numéro de document sur le [corporation d’AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
 
 ## <a name="requirements"></a>Configuration requise
 

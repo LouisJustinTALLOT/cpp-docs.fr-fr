@@ -1,10 +1,6 @@
 ---
-title: _mbbtombc, _mbbtombc_l | Microsoft Docs
-ms.custom: ''
+title: _mbbtombc, _mbbtombc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbbtombc_l
 - _mbbtombc
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbbtombc
 - mbbtombc_l
 - mbbtombc
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbbtombc_l function
 - mbbtombc function
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98053437d2e189c26b46b53ec34ef67740d62bce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401787"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547990"
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
 
@@ -74,17 +64,17 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **_mbbtombc** convertit correctement *c*, il retourne un caractère multioctet ; sinon, elle retourne *c*.
+Si **_mbbtombc** convertit correctement *c*, elle retourne un caractère multioctet ; sinon, elle retourne *c*.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbbtombc** fonction convertit un caractère multioctet octet donné en un caractère multioctet codés sur deux octets correspondant. Les caractères doivent être dans la plage 0 x 20 – 0x7E ou 0xA1 - 0xDF à convertir.
+Le **_mbbtombc** fonction convertit un caractère multioctet octet donné en un caractère multioctet sur deux octets correspondant. Les caractères doivent être dans la plage 0 x 20-0x7E ou 0xA1 - 0xDF à convertir.
 
-La valeur de sortie est affectée par la définition de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de cette fonction sont identiques, sauf que **_mbbtombc** utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux et **_mbbtombc_l** utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de cette fonction sont identiques, à ceci près que **_mbbtombc** utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux et **_mbbtombc_l** utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans les versions antérieures, **_mbbtombc** a été nommé **hantozen**. Pour le nouveau code, utilisez **_mbbtombc**.
+Dans les versions antérieures, **_mbbtombc** s’appelait **hantozen**. Pour le nouveau code, utilisez **_mbbtombc**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

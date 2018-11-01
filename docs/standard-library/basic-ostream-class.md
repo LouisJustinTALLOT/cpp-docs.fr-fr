@@ -1,10 +1,6 @@
 ---
-title: basic_ostream, classe | Microsoft Docs
-ms.custom: ''
+title: basic_ostream, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -14,8 +10,6 @@ f1_keywords:
 - ostream/std::basic_ostream::swap
 - ostream/std::basic_ostream::tellp
 - ostream/std::basic_ostream::write
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::basic_ostream [C++]
 - std::basic_ostream [C++], flush
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30e2b226524e1d4a62c9f8cc950f4dd30846861
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100974"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543635"
 ---
 # <a name="basicostream-class"></a>basic_ostream, classe
 
@@ -251,7 +241,7 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 Pointeur de fonction.
 
 *strbuf*<br/>
-Un pointeur vers un `stream_buf` objet.
+Pointeur vers un objet `stream_buf` .
 
 *Val*<br/>
 Élément à écrire dans le flux.

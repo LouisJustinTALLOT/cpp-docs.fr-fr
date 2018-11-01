@@ -1,12 +1,6 @@
 ---
-title: Technologie active et DLL | Microsoft Docs
-ms.custom: ''
+title: Technologie active et DLL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - in-process server DLLs
 - Automation [C++], DLLs
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - Active technology [C++]
 - MFC DLLs [C++], Active Technology
 ms.assetid: 3ed27f8d-164a-4562-ad61-9f2333404cc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: efa9a5cf17a4578fc7be9cbadc51605ee32c1650
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 270c64df9af792a73acf1ad408aca02e7fadc30f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535809"
 ---
 # <a name="active-technology-and-dlls"></a>Technologie active et DLL
 

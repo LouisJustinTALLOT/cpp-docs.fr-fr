@@ -1,11 +1,6 @@
 ---
-title: log1p, log1pf, log1pl2 | Microsoft Docs
-ms.custom: ''
+title: log1p, log1pf, log1pl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650fb8f7567b4f2f3b0b9032397c2b54a99013dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7984367aa4244a927bb9dabc5533a807d74ac1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402746"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524993"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -101,13 +92,13 @@ Le **errno** a la valeur ERANGE si *x* = -1. Le **errno** a la valeur **EDOM** s
 
 ## <a name="remarks"></a>Notes
 
-Le **log1p** les fonctions peuvent être plus précises que l’utilisation de `log(x + 1)` lorsque *x* est proche de 0.
+Le **log1p** fonctions peuvent être plus précises que l’utilisation de `log(x + 1)` lorsque *x* est proche de 0.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **log1p** accepte et retourne toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **log1p** accepte et retourne toujours un **double**.
 
-Si *x* est un nombre, cette fonction retourne le logarithme d’obtenir la factorielle (*x* - 1).
+Si *x* est un nombre naturel, cette fonction retourne le logarithme de la factorielle de (*x* - 1).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

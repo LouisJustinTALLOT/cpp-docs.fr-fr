@@ -1,10 +1,6 @@
 ---
-title: fsetpos | Microsoft Docs
-ms.custom: ''
+title: fsetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fsetpos
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fsetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c381cf478a97d47efe10c68096fffe3d9fd8efdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399307"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528230"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -54,23 +44,23 @@ int fsetpos(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
-*bons de commande*<br/>
+*points de vente*<br/>
 Stockage de l’indicateur de position.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **fsetpos** retourne 0. En cas d’échec, la fonction retourne une valeur différente de zéro et définit **errno** à un des éléments suivants du manifeste de constantes (définies dans ERRNO. (H) : **EBADF**, ce qui signifie que le fichier n’est pas accessible ou l’objet qui *flux* pointe vers n’est pas une structure de fichier valide, ou **EINVAL**, ce qui signifie une valeur non valide pour *flux* ou *pos* a été passé. Si un paramètre non valide est passé, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+En cas de réussite, **fsetpos** retourne 0. En cas d’échec, la fonction retourne une valeur différente de zéro et définit **errno** sur une des opérations suivantes (définies dans ERRNO des constantes manifestes. (H) : **EBADF**, ce qui signifie que le fichier n’est pas accessible ou l’objet qui *flux* n’est pas une structure de fichier valide ; ou **EINVAL**, ce qui signifie une valeur non valide pour *flux* ou *pos* a été passé. Si un paramètre non valide est passé, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **fsetpos** fonction définit l’indicateur de position de fichier pour *flux* à la valeur de *pos*, qui est obtenu dans un appel antérieur à **fgetpos**contre *flux*. La fonction efface l’indicateur de fin de fichier et annule les effets de [ungetc](ungetc-ungetwc.md) sur *flux*. Après avoir appelé **fsetpos**, l’opération suivante sur *flux* peut être entrée ou sortie.
+Le **fsetpos** fonction définit l’indicateur de position de fichier pour *flux* à la valeur de *pos*, qui est obtenue dans un appel antérieur à **fgetpos**contre *flux*. La fonction efface l’indicateur de fin de fichier et annule les effets de [ungetc](ungetc-ungetwc.md) sur *flux*. Après avoir appelé **fsetpos**, l’opération suivante sur *flux* peut être entrée ou sortie.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
