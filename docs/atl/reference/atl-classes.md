@@ -1,26 +1,16 @@
 ---
 title: ATL classes et structs | Microsoft Docs
-ms.custom: ''
 ms.date: 05/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94d69debb4bde61fc76917c70d95bcc6314c7208
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 937edb799729005619325cda15f5a720264e9bfc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044533"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512539"
 ---
 # <a name="atl-classes-and-structs"></a>ATL, classes et structs
 
@@ -71,7 +61,7 @@ La bibliothèque ATL (Active Template) inclut les classes et structs suivantes. 
 |[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)|Cette classe implémente une boîte de dialogue (modale ou non modale) qui héberge des contrôles ActiveX.|atlwin.h|
 |[Objet CAxWindow](../../atl/reference/caxwindow-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX.|atlwin.h|
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX et prend également en charge pour l’hébergement de contrôles ActiveX sous licence.|atlwin.h|
-|[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Cette classe implémente l'interface `IBindStatusCallback`.|atlctl.h|
+|[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Cette classe implémente l'interface `IBindStatusCallback` .|atlctl.h|
 |[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Cette classe implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour un objet agrégé.|atlcom.h|
 |[CComAllocator](../../atl/reference/ccomallocator-class.md)|Cette classe fournit des méthodes pour la gestion de la mémoire à l’aide des routines de mémoire COM.|atlbase.h|
 |[CComApartment](../../atl/reference/ccomapartment-class.md)|Cette classe prend en charge la gestion d’un cloisonnement dans un module EXE mis en pool de thread.|atlbase.h|

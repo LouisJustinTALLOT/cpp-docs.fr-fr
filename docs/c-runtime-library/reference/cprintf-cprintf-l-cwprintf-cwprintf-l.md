@@ -1,10 +1,6 @@
 ---
-title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_l
 - _cprintf_l
@@ -34,8 +30,6 @@ f1_keywords:
 - cprintf_l
 - _cprintf_l
 - _cwprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cprintf_l function
 - _cwprintf_l function
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57eaced46b786352b794e68a1a11423ba13b0948
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400871"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534041"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
@@ -105,13 +95,13 @@ Nombre de caractères affichés.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions, mettre en forme et imprimer une série de caractères et les valeurs directement dans la console, à l’aide de la **_putch** (fonction) (**_putwch** pour **_cwprintf**) et les caractères de sortie . Chaque argument dans *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le *format* argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Contrairement à la **fprintf**, **printf**, et **sprintf** des fonctions, ni **_cprintf** ni **_cwprintf**convertit les caractères de saut de ligne en combinaisons de flux de retour de ligne (CRLF) chariot sortie.
+Ces fonctions mettre en forme et affichent toute une série de caractères et les valeurs directement dans la console, à l’aide de la **_putch** (fonction) (**_putwch** pour **_cwprintf**) à des caractères de sortie . Chaque argument dans *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le *format* argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Contrairement à la **fprintf**, **printf**, et **sprintf** fonctions ni **_cprintf** ni **_cwprintf**convertit les caractères de saut de ligne en combinaisons retour-saut de ligne (CR-LF) de transport lors de sortie.
 
-La différence est que **_cwprintf** affiche les caractères Unicode utilisés dans Windows. Contrairement aux **_cprintf**, **_cwprintf** utilise les paramètres régionaux de console en cours.
+Une différence importante est que **_cwprintf** affiche les caractères Unicode dans Windows. Contrairement aux **_cprintf**, **_cwprintf** utilise les paramètres régionaux de console en cours.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
-**_cprintf** valide le *format* paramètre. Si *format* est un pointeur null, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et définit **errno** à **EINVAL**.
+**_cprintf** valide le *format* paramètre. Si *format* est un pointeur null, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et affecte **errno** à **EINVAL**.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
@@ -123,7 +113,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_tcprintf**|**_cprintf**|**_cprintf**|**_cwprintf**|
 |**_tcprintf_l**|**_cprintf_l**|**_cprintf_l**|**_cwprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
