@@ -1,11 +1,6 @@
 ---
-title: fma, fmaf, fmal | Microsoft Docs
-ms.custom: ''
+title: fma, fmaf, fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401475"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529946"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -106,10 +95,10 @@ Sinon, peut retourner l’une des valeurs suivantes :
 
 |Problème|Retourner|
 |-----------|------------|
-|*x* = infini, *y* = 0 ou<br /><br /> *x* = 0, *y* = infini|NaN|
-|*x* ou *y* = ± exacte infini, *z* = infini avec le signe opposé|NaN|
+|*x* = INFINITY, *y* = 0 ou<br /><br /> *x* = 0, *y* = l’infini|NaN|
+|*x* ou *y* = exacte + infini, *z* = infini avec le signe opposé|NaN|
 |*x* ou *y* = NaN|NaN|
-|non (*x* = 0, *y*= indéterminée) et *z* = NaN<br /><br /> non (*x*= indéfini *y*= 0) et *z* = NaN|NaN|
+|pas (*x* = 0, *y*= indéfini) et *z* = NaN<br /><br /> pas (*x*= indéfini, *y*= 0) et *z* = NaN|NaN|
 |Erreur de plage avec dépassement|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
 |Erreur de plage avec soupassement|valeur correcte, après arrondi.|
 
@@ -117,11 +106,11 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **fma** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **fma** accepte et retourne toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **fma** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **fma** accepte et retourne toujours un **double**.
 
 Cette fonction calcule la valeur avec une précision infinie, puis arrondit le résultat final.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
