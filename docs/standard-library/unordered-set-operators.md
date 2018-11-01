@@ -1,26 +1,22 @@
 ---
-title: '&lt;unordered_set&gt;, opérateurs | Microsoft Docs'
-ms.custom: ''
+title: '&lt;unordered_set&gt;, opérateurs'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
-dev_langs:
-- C++
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-ms.openlocfilehash: af86ef68d734d72169a8bc8b506206cc72d3af4b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 501a65c8725631463e9c2a6b7b11e0c6300b6664
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709538"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495015"
 ---
 # <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt;, opérateurs
 
 |||||
 |-|-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_unordered_multiset)|[operator==](#op_eq_eq_unordered_multiset)|
+|[!=, opérateur](#op_neq)|[operator==](#op_eq_eq)|[!=, opérateur](#op_neq_unordered_multiset)|[operator==](#op_eq_eq_unordered_multiset)|
 
 ## <a name="op_neq"></a>  operator!=
 

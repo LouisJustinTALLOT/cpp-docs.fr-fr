@@ -1,10 +1,6 @@
 ---
-title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft Docs
-ms.custom: ''
+title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_l
 - _strlwr
@@ -35,8 +31,6 @@ f1_keywords:
 - strlwr_l
 - _tcslwr
 - mbslwr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcslwr function
 - _strlwr function
@@ -61,23 +55,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3468795c1f99bd6e79f9b10aae2a220a1876f4c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505688"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
 Convertit une chaîne en minuscules. Il existe des versions plus sécurisées de ces fonctions. Consultez [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbslwr** et **_mbslwr_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr** et **_mbslwr_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -146,11 +136,11 @@ Chacune de ces fonctions retourne un pointeur désignant la chaîne convertie. S
 
 ## <a name="remarks"></a>Notes
 
-Le **_strlwr** fonction convertit toutes les lettres majuscules dans *str* en minuscules comme déterminé par le **LC_CTYPE** paramètre de catégorie de paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur **LC_CTYPE**, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **_l** suffixe utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux ; les versions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent le paramètres régionaux passés au à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le **_strlwr** fonction convertit toutes les lettres majuscules dans *str* en minuscules comme déterminé par le **LC_CTYPE** paramètre de catégorie de paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur **LC_CTYPE**, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **_l** suffixe utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux ; les versions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés dans à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le **_wcslwr** et **_mbslwr** fonctions sont des versions à caractères larges et à caractères multioctets de **_strlwr**. La valeur des arguments et de retour de **_wcslwr** sont des caractères larges chaînes ; ceux de **_mbslwr** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+Le **_wcslwr** et **_mbslwr** fonctions sont des versions de caractères larges et des caractères multioctets de **_strlwr**. L’argument et valeur de retour de **_wcslwr** sont des caractères larges chaînes ; ceux de **_mbslwr** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
-Si *str* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la chaîne d’origine et le jeu de **errno** à **EINVAL**.
+Si *str* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la chaîne d’origine et un ensemble **errno** à **EINVAL**.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -161,7 +151,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_tcslwr**|**_strlwr**|**_mbslwr**|**_wcslwr**|
 |**_tcslwr_l**|**_strlwr_l**|**_mbslwr_l**|**_wcslwr_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

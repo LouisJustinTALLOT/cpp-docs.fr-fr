@@ -1,27 +1,17 @@
 ---
-title: Runtime d’accès concurrentiel | Microsoft Docs
-ms.custom: ''
+title: Concurrency Runtime
 ms.date: 07/20/2018
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac7999919daa7dc028bd8e12e7d98b737afc4e36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495951"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
@@ -108,10 +98,10 @@ Pour la documentation de référence, consultez [référence](../../parallel/con
 
 |||
 |-|-|
-|[Modèles de programmation asynchrone et conseils dans Hilo (applications du Windows Store en C++ et XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Découvrez comment nous avons utilisé le Runtime d’accès concurrentiel pour implémenter des opérations asynchrones dans Hilo, une application Windows Runtime en C++ et XAML.|
-|[Exemples de code pour le Runtime d’accès concurrentiel et la bibliothèque de modèles parallèles dans Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Donne des exemples d'applications et d'utilitaires qui montrent le runtime d'accès concurrentiel.|
-|[Programmation parallèle en Code natif blog](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fournit des articles de blog détaillés supplémentaires sur la programmation parallèle dans le runtime d'accès concurrentiel.|
-|[Informatique parallèle en C++ et le Code natif de forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Vous permet de participer à des discussions de la communauté sur le runtime d'accès concurrentiel.|
+|[Modèles de programmation asynchrones et conseils dans Hilo (applications du Windows Store utilisant C++ et XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Découvrez comment nous avons utilisé le Runtime d’accès concurrentiel pour implémenter des opérations asynchrones dans Hilo, une application Windows Runtime en C++ et XAML.|
+|[Exemples de code pour le runtime d’accès concurrentiel et bibliothèque de modèles parallèles dans Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Donne des exemples d'applications et d'utilitaires qui montrent le runtime d'accès concurrentiel.|
+|[Blog Programmation parallèle en code natif](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fournit des articles de blog détaillés supplémentaires sur la programmation parallèle dans le runtime d'accès concurrentiel.|
+|[Forum Informatique parallèle en C++ et en code natif](http://go.microsoft.com/fwlink/p/?linkid=183874)|Vous permet de participer à des discussions de la communauté sur le runtime d'accès concurrentiel.|
 |[Programmation parallèle](/dotnet/standard/parallel-programming/index)|Vous enseigne sur le modèle de programmation parallèle qui est disponible dans le .NET Framework.|
 
 ## <a name="see-also"></a>Voir aussi

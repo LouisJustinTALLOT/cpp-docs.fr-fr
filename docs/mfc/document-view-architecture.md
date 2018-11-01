@@ -1,12 +1,6 @@
 ---
-title: L’Architecture document / vue | Microsoft Docs
-ms.custom: ''
+title: Architecture document / vue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42c56ddea19266251bb12c06f6423c278f14bd71
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404551"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509277"
 ---
 # <a name="documentview-architecture"></a>Architecture document/vue
 
@@ -94,7 +84,7 @@ Documents, leurs vues associées et les fenêtres frames les vues qui sont cré�
 ## <a name="see-also"></a>Voir aussi
 
 [Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
-[Fenêtres](../mfc/windows.md)<br/>
+[Windows](../mfc/windows.md)<br/>
 [Fenêtres frame](../mfc/frame-windows.md)<br/>
 [Modèles de document et le processus de création de Document/Vue](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Création d’un document/vue](../mfc/document-view-creation.md)<br/>
