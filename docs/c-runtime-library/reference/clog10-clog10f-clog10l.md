@@ -1,11 +1,6 @@
 ---
-title: clog10, clog10f, clog10l | Microsoft Docs
-ms.custom: ''
+title: clog10, clog10f, clog10l
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - clog10
 - clog10f
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/clog10
 - complex/clog10f
 - complex/clog10l
-dev_langs:
-- C++
 helpviewer_keywords:
 - clog10 function
 - clog10f function
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81b082aff192a866ec46d22120806e6ba89379d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394679"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506910"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10, clog10f, clog10l
 
@@ -84,9 +73,9 @@ Les valeurs de retour possibles sont :
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **clog10** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **clog10** accepte et retourne toujours un **_Dcomplex** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **clog10** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **clog10** accepte et retourne toujours un **_Dcomplex** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

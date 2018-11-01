@@ -1,10 +1,6 @@
 ---
-title: _strdup_dbg, _wcsdup_dbg | Microsoft Docs
-ms.custom: ''
+title: _strdup_dbg, _wcsdup_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup_dbg
 - _wcsdup_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - strdup_dbg
 - _strdup_dbg
 - wcsdup_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsdup_dbg function
 - stdup_dbg function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451378"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531155"
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
-Les versions de [_strdup et _wcsdup](strdup-wcsdup-mbsdup.md) qui utilisent la version debug de **malloc**.
+Versions de [_strdup et _wcsdup](strdup-wcsdup-mbsdup.md) qui utilisent la version debug de **malloc**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,9 +79,9 @@ Chacune de ces fonctions retourne un pointeur vers l’emplacement de stockage d
 
 ## <a name="remarks"></a>Notes
 
-Le **_strdup_dbg** et **_wcsdup_dbg** fonctions sont identiques aux **_strdup** et **_wcsdup** , sauf que, lorsque **_ DÉBOGUER** est défini, ces fonctions utilisent la version debug de **malloc**, **_malloc_dbg**, allocation de mémoire pour la chaîne dupliquée. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
+Le **_strdup_dbg** et **_wcsdup_dbg** fonctions sont identiques aux **_strdup** et **_wcsdup** , à ceci près que, lorsque **_ DÉBOGUER** est défini, ces fonctions utilisent la version debug de **malloc**, **_malloc_dbg**pour allouer la mémoire pour la chaîne dupliquée. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
 
-Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur **_CRTDBG_MAP_ALLOC**. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_strdup** et **_wcsdup** sont remappés à **_strdup_dbg** et **_ wcsdup_dbg**, respectivement, avec la *blockType* la valeur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations sur les types de bloc, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur **_CRTDBG_MAP_ALLOC**. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_strdup** et **_wcsdup** sont remappés à **_strdup_dbg** et **_ wcsdup_dbg**, respectivement, avec le *blockType* définie sur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions explicitement, sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations sur les types de bloc, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -99,7 +89,7 @@ Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de mani�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup_dbg**|**_strdup_dbg**|**_mbsdup**|**_wcsdup_dbg**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

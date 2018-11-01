@@ -1,26 +1,16 @@
 ---
-title: Indirection sur les Types de tableau | Microsoft Docs
-ms.custom: ''
+title: Indirection sur les types tableau
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [C++], indirection on type
 - indirection operator [C++], array types
 ms.assetid: 4adc3840-68d1-4602-9db2-8809d4388279
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 683cd7835e669ff71c8e4566e0600b1775e42c6d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c361616a26a76ba279b4c6a698c0d35a55480bc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086159"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551019"
 ---
 # <a name="indirection-on-array-types"></a>Indirection sur les types tableau
 
