@@ -1,10 +1,6 @@
 ---
-title: _getch_nolock, _getwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _getch_nolock, _getwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getwch_nolock
 - _getch_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _getwch_nolock
 - _gettch_nolock
 - gettch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - _getwch_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e742dab8f77a4f66b77c7c9fdc4b45b5ace06be0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514294"
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
 
@@ -71,7 +61,7 @@ Retourne le caractère lu. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-**_getch_nolock** et **_getwch_nolock** sont identiques aux **_getch** et **_getchw** , sauf qu’elles pas protégée contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+**_getch_nolock** et **_getwch_nolock** sont identiques aux **_getch** et **_getchw** , à ceci près qu’elles ne pas protégées contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -79,7 +69,7 @@ Retourne le caractère lu. Aucun retour d'erreur.
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettch_nolock**|**_getch_nolock**|**_getch_nolock**|**_getwch_nolock**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

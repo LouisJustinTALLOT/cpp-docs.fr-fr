@@ -1,12 +1,6 @@
 ---
-title: Opérations CString relatives aux chaînes de Style C | Microsoft Docs
-ms.custom: ''
+title: Opérations CString relatives aux chaînes de style C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CString objects, basic operations
 - MFC [C++], string handling class
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 765cb6ccf24415c174761c57268dc79e1fc6845b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f68f021d16de7ad701ce20c3be59ed6958aa6893
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062559"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528399"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Opérations CString relatives aux chaînes de style C
 

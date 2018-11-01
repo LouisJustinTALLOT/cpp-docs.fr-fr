@@ -1,11 +1,6 @@
 ---
-title: feclearexcept1 | Microsoft Docs
-ms.custom: ''
+title: feclearexcept1
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feclearexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
-ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
+ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070075"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551110"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -59,11 +48,11 @@ Indicateurs d’état d’exception à effacer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne zéro si *, sauf* est égal à zéro, ou si toutes les exceptions spécifiées ont été effacées avec succès. Sinon, retourne une valeur différente de zéro.
+Retourne zéro si *, sauf* est égal à zéro, ou si toutes les exceptions spécifiées ont été correctement effacées. Sinon, retourne une valeur différente de zéro.
 
 ## <a name="remarks"></a>Notes
 
-Le **feclearexcept** fonction tente d’effacer flottante point d’indicateurs d’état exception spécifiées par *, sauf*. La fonction prend en charge les macros d’exception suivantes, définies dans fenv.h :
+Le **feclearexcept** fonction tente d’effacer flottante point d’indicateurs d’état d’exception spécifiés par *, sauf*. La fonction prend en charge les macros d’exception suivantes, définies dans fenv.h :
 
 |Macros d’exception|Description|
 |---------------------|-----------------|
@@ -74,7 +63,7 @@ Le **feclearexcept** fonction tente d’effacer flottante point d’indicateurs 
 |FE_UNDERFLOW|Le résultat d’une opération à virgule flottante précédente était trop petit pour être représenté avec une précision complète ; une valeur dénormalisée a été créée.|
 |FE_ALL_EXCEPT|Opération OR au niveau du bit de toutes les exceptions de virgule flottante prises en charge.|
 
-Le *, sauf* argument peut être zéro ou l’OR au niveau du bit d’un ou plusieurs des macros d’exception prise en charge. Le résultat de toute autre valeur d’argument est indéfini.
+Le *, sauf* argument peut être égal à zéro, ou l’opération OR au niveau du bit d’un ou plusieurs des macros d’exception prises en charge. Le résultat de toute autre valeur d’argument est indéfini.
 
 ## <a name="requirements"></a>Configuration requise
 

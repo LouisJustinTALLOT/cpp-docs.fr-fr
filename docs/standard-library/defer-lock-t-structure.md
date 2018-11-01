@@ -1,25 +1,15 @@
 ---
-title: defer_lock_t, structure | Microsoft Docs
-ms.custom: ''
+title: defer_lock_t, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - mutex/std::defer_lock_t
-dev_langs:
-- C++
 ms.assetid: 4c4588eb-ca51-4949-b5d1-8539cc4577ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcf516c72d87b4d462d89e7dc6a58c351d4b37d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec48b7d7ab7325276682357c78037697cc475857
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840825"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553606"
 ---
 # <a name="deferlockt-structure"></a>defer_lock_t, structure
 
@@ -31,7 +21,7 @@ Représente un type qui définit un objet [defer_lock](../standard-library/mutex
 struct defer_lock_t;
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<mutex >
 

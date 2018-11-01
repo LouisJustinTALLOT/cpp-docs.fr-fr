@@ -1,27 +1,17 @@
 ---
-title: Avertissement LNK4022 des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Avertissement des outils Éditeur de liens LNK4022
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4022
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4022
 ms.assetid: 890f487e-db98-45dd-a226-c7ccead82b1e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 644e7a9ba26dab15e2bfa2a269f62c04f0510180
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1c9ccfe6ca201ae4deed69c7d01429c67cce4bda
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040997"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552475"
 ---
 # <a name="linker-tools-warning-lnk4022"></a>Avertissement des outils Éditeur de liens LNK4022
 
