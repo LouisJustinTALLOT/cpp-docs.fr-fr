@@ -1,25 +1,15 @@
 ---
-title: '#importer des attributs (C++) | Microsoft Docs'
-ms.custom: ''
+title: '#importer des attributs (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9c362ce6c85d1c090c6c9265f2093dd7c754792
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3cd1b259270ff8c76ac80ec66000f3c8177140fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624404"
 ---
 # <a name="import-attributes-c"></a>Attributs #import (C++)
 Fournit des liens vers les attributs utilisés avec la `#import` directive.
@@ -38,7 +28,7 @@ Les attributs suivants sont disponibles pour la `#import` directive.
 |[high_property_prefixes](../preprocessor/high-property-prefixes.md)|Spécifie d'autres préfixes pour trois méthodes de propriété.|
 |[implementation_only](../preprocessor/implementation-only.md)|Supprime la génération du fichier d'en-tête .tlh (fichier d'en-tête principal).|
 |[include()](../preprocessor/include-parens.md)|Désactive l'exclusion automatique.|
-|[inject_statement](../preprocessor/inject-statement.md)|Insère son argument en tant que texte source dans l’en-tête de bibliothèque de types.|
+|[inject_statement](../preprocessor/inject-statement.md)|Insère son argument en tant que texte source dans l'en-tête de bibliothèque de types.|
 |[named_guids](../preprocessor/named-guids.md)|Indique au compilateur pour définir et initialiser des variables GUID dans l’ancien style sous la forme `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, et `DIID_MyDispInterface`.|
 |[no_auto_exclude](../preprocessor/no-auto-exclude.md)|Désactive l'exclusion automatique.|
 |[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Modifie la façon dont le compilateur génère des fonctions wrapper pour les méthodes d'interface double.|

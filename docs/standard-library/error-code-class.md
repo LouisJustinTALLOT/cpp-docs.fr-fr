@@ -1,10 +1,6 @@
 ---
-title: error_code, classe | Microsoft Docs
-ms.custom: ''
+title: error_code, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - system_error/std::error_code
 - system_error/std::error_code::value_type
@@ -14,8 +10,6 @@ f1_keywords:
 - system_error/std::error_code::default_error_condition
 - system_error/std::error_code::message
 - system_error/std::error_code::operator bool
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::error_code
 - std::error_code::value_type
@@ -25,16 +19,12 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b454a86957911060e33c82e79832e107313e0300
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f4d0bc2c2922374d27bba3c0693e50f7930dbe67
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703597"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593282"
 ---
 # <a name="errorcode-class"></a>error_code, classe
 
@@ -77,7 +67,7 @@ Un objet de type `error_code` stocke une valeur de code d’erreur et un pointeu
 |Opérateur|Description|
 |-|-|
 |[operator==](#op_eq_eq)|Vérifie l’égalité d’objets `error_code`.|
-|[operator!=](#op_neq)|Vérifie l’inégalité d’objets `error_code`.|
+|[!=, opérateur](#op_neq)|Vérifie l’inégalité d’objets `error_code`.|
 |[operator<](#op_lt)|Vérifie si l’objet `error_code` est inférieur à l’objet `error_code` transmis pour la comparaison.|
 |[operator=](#op_eq)|Assigne une nouvelle valeur d’énumération à l’objet `error_code`.|
 |[operator bool](#op_bool)|Convertit une variable de type `error_code`.|

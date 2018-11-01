@@ -1,12 +1,6 @@
 ---
-title: Cast | Microsoft Docs
-ms.custom: ''
+title: Effectuer un cast
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -16,18 +10,14 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 472fc8f8f505b3c5c214fddd5b59436fb4e52e5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eb309319a4af6d604d8558552ce313ba1d0fb629
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090397"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560795"
 ---
-# <a name="casting"></a>Cast
+# <a name="casting"></a>Effectuer un cast
 
 Le langage C++ prévoit que si une classe est dérivée d'une classe de base contenant des fonctions virtuelles, un pointeur vers ce type de classe de base peut être utilisé pour appeler les implémentations des fonctions virtuelles résidant dans l'objet classe dérivé. Une classe contenant des fonctions virtuelles est parfois appelée une classe polymorphe.
 

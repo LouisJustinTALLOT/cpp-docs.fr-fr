@@ -1,29 +1,18 @@
 ---
-title: Affichage ou masquage de la barre d’outils Éditeur de boîte de dialogue (C++) | Microsoft Docs
-ms.custom: ''
+title: Affichage ou masquage de la barre d’outils Éditeur de boîte de dialogue (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], showing or hiding Dialog editor toolbar
 - toolbars [C++], showing
 - toolbars [C++], hiding
 - Dialog Editor [C++], showing or hiding toolbar
 ms.assetid: 93c255e1-90eb-48b6-8602-450acda75bed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 02deeeed3eecf717cff380e43317e5a75c1fddf7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e025f560a47f85d17b8c56a4db19f322069d33ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631086"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar-c"></a>Affichage ou masquage de la barre d’outils Éditeur de boîte de dialogue (C++)
 
@@ -54,7 +43,7 @@ Lorsque vous êtes dans le **boîte de dialogue** éditeur, vous pouvez afficher
 
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

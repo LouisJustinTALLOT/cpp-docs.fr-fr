@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDbgFlag | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDbgFlag
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDbgFlag
 apilocation:
@@ -32,8 +28,6 @@ f1_keywords:
 - _CRTDBG_CHECK_EVERY_1024_DF
 - _CrtSetDbgFlag
 - CRTDBG_REPORT_FLAG
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CRTDBG_CHECK_EVERY_16_DF macro
 - CRTDBG_CHECK_EVERY_16_DF macro
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413504d8941aab1585ff03d361f8081fef4529a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1113854f1b41081ddcf59444786109fb5eabc65d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621089"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -90,7 +80,7 @@ Retourne l’état précédent de **_crtDbgFlag**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_CrtSetDbgFlag** fonction permet à l’application contrôler la façon dont le Gestionnaire de tas de débogage effectue le suivi des allocations de mémoire en modifiant les champs de bits de le **_crtDbgFlag** indicateur. En définissant les bits (activation), l'application peut indiquer au gestionnaire de tas de débogage d'exécuter des opérations spécifiques de débogage, notamment la recherche de fuites de mémoire quand l'application s'arrête et la création de rapports si certaines sont détectées, la simulation de conditions de mémoire insuffisante en spécifiant que les blocs de mémoire libérés doivent rester dans la liste liée du tas, et la vérification de l'intégrité du tas en inspectant chaque bloc de mémoire lors de chaque demande d'allocation. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetDbgFlag** sont supprimés lors du prétraitement.
+Le **_CrtSetDbgFlag** (fonction) permet à l’application contrôler la façon dont le Gestionnaire de tas de débogage effectue le suivi des allocations de mémoire en modifiant les champs de bits de le **_crtDbgFlag** indicateur. En définissant les bits (activation), l'application peut indiquer au gestionnaire de tas de débogage d'exécuter des opérations spécifiques de débogage, notamment la recherche de fuites de mémoire quand l'application s'arrête et la création de rapports si certaines sont détectées, la simulation de conditions de mémoire insuffisante en spécifiant que les blocs de mémoire libérés doivent rester dans la liste liée du tas, et la vérification de l'intégrité du tas en inspectant chaque bloc de mémoire lors de chaque demande d'allocation. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetDbgFlag** sont supprimés lors du prétraitement.
 
 Le tableau suivant répertorie les champs de bits pour **_crtDbgFlag** et décrit leur comportement. Comme la définition des bits aboutit à une augmentation de la sortie des diagnostics et à une réduction de la vitesse d'exécution du programme, ces bits ne sont pas définis (désactivés) par défaut. Pour plus d’informations sur ces champs de bits, voir [Fonctions de création de rapports sur l’état du tas](/visualstudio/debugger/crt-debug-heap-details).
 
@@ -98,15 +88,15 @@ Le tableau suivant répertorie les champs de bits pour **_crtDbgFlag** et décri
 |---------------|-------------|-----------------|
 |**_CRTDBG_ALLOC_MEM_DF**|ON|ON : Permet les allocations de tas de débogage et l’utilisation des identificateurs de type de bloc de mémoire, tel que **_CLIENT_BLOCK**. OFF : ajoute les nouvelles allocations à la liste liée du tas, mais affecte au type de bloc la valeur **_IGNORE_BLOCK**.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
 |**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON : appelle [_CrtCheckMemory](crtcheckmemory.md) à chaque demande d’allocation et de désallocation. OFF : **_CrtCheckMemory** doit être appelé explicitement.<br /><br /> Les macros de contrôle de fréquence sur le tas n'ont aucun effet quand cet indicateur est défini.|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|ON : Inclut **_CRT_BLOCK** types dans l’état de détection et de la mémoire de fuite opérations sur les différences. OFF : la mémoire utilisée en interne par la bibliothèque Runtime est ignorée par ces opérations.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|ON : Inclut **_CRT_BLOCK** opérations sur les types dans l’état de détection et de la mémoire de fuite différences. OFF : la mémoire utilisée en interne par la bibliothèque Runtime est ignorée par ces opérations.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
 |**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON : conserve les blocs de mémoire libérés dans la liste liée du tas, leur assigne le type **_FREE_BLOCK** et les remplit avec la valeur d’octet 0xDD. OFF : ne conserve pas les blocs libérés dans la liste liée du tas.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
 |**_CRTDBG_LEAK_CHECK_DF**|OFF|ON : exécute la recherche automatique de fuites à la sortie du programme via un appel à [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) et génère un rapport d’erreurs si l’application n’a pas pu libérer toute la mémoire qu’elle avait allouée. OFF : n'exécute pas automatiquement la recherche de fuites à la sortie du programme.<br /><br /> Peuvent aussi être combinés avec n'importe quelle macro de contrôle de fréquence sur le tas.|
 
 **Macros de contrôle de fréquence sur le tas**
 
-Vous pouvez spécifier la fréquence à laquelle la bibliothèque Runtime C effectue la validation du tas de débogage (**_CrtCheckMemory**) en fonction du nombre d’appels à **malloc**, **realloc**, **libre**, et **_msize**.
+Vous pouvez spécifier la fréquence à laquelle la bibliothèque Runtime C effectue la validation du tas de débogage (**_CrtCheckMemory**) en fonction du nombre d’appels à **malloc**, **realloc**, **gratuit**, et **_msize**.
 
-**_CrtSetDbgFlag** inspecte ensuite les 16 bits supérieurs de la *newFlag* paramètre pour une valeur. La valeur spécifiée est le nombre de **malloc**, **realloc**, **libre**, et **_msize** appelle entre **_CrtCheckMemory**  appels. Quatre macros prédéfinies sont fournies à cet effet.
+**_CrtSetDbgFlag** inspecte ensuite les 16 bits supérieurs de la *newFlag* paramètre pour une valeur. La valeur spécifiée est le nombre de **malloc**, **realloc**, **gratuit**, et **_msize** appelle entre **_CrtCheckMemory**  appels. Quatre macros prédéfinies sont fournies à cet effet.
 
 |Macro|Nombre d'appels à malloc, realloc, free et _msize entre les appels à _CrtCheckMemory|
 |-----------|------------------------------------------------------------------------------------------|
@@ -115,9 +105,9 @@ Vous pouvez spécifier la fréquence à laquelle la bibliothèque Runtime C effe
 |_CRTDBG_CHECK_EVERY_1024_DF|1024|
 |_CRTDBG_CHECK_DEFAULT_DF|0 (par défaut, aucun contrôle du tas)|
 
-Par défaut, **_CrtCheckMemory** est appelée une fois toutes les 1 024 fois que vous appelez **malloc**, **realloc**, **libre**, et **_ msize**.
+Par défaut, **_CrtCheckMemory** est appelé une fois toutes les 1 024 fois que vous appelez **malloc**, **realloc**, **gratuit**, et **_ msize**.
 
-Par exemple, vous pouvez spécifier un contrôle du tas toutes les 16 **malloc**, **realloc**, **libre**, et **_msize** opérations avec le code suivant :
+Par exemple, vous pouvez spécifier un contrôle du tas toutes les 16 **malloc**, **realloc**, **gratuit**, et **_msize** opérations avec le code suivant :
 
 ```C
 #include <crtdbg.h>
@@ -136,21 +126,21 @@ int main( )
 }
 ```
 
-Les 16 bits supérieurs de la *newFlag* paramètre sont ignorés quand _CRTDBG_CHECK_ALWAYS_DF est spécifié. Dans ce cas, **_CrtCheckMemory** est appelée chaque fois que vous appelez **malloc**, **realloc**, **libre**, et **_msize**.
+Les 16 bits supérieurs de la *newFlag* paramètre sont ignorés quand _CRTDBG_CHECK_ALWAYS_DF est spécifié. Dans ce cas, **_CrtCheckMemory** est appelée chaque fois que vous appelez **malloc**, **realloc**, **gratuit**, et **_msize**.
 
 *newFlag* est le nouvel état à appliquer à la **_crtDbgFlag** et est une combinaison des valeurs pour chacun des champs de bits.
 
 ### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>Pour changer un ou plusieurs de ces champs de bits et créer un état pour l'indicateur
 
-1. Appelez **_CrtSetDbgFlag** avec *newFlag* égal à **_CRTDBG_REPORT_FLAG** obtenir actuel **_crtDbgFlag** d’état et de stocker le valeur retournée dans une variable temporaire.
+1. Appelez **_CrtSetDbgFlag** avec *newFlag* égal à **_CRTDBG_REPORT_FLAG** pour obtenir des cours **_crtDbgFlag** d’état et de stocker le valeur retournée dans une variable temporaire.
 
-1. Activez les bits par une opération de bits **ou** de la variable temporaire avec les masques de bits correspondants (représentés dans le code de l’application par des constantes manifestes).
+1. Activez les bits par une opération de bits **ou** de la variable temporaire avec les masques de bits correspondants (représentés dans le code d’application par des constantes manifestes).
 
 1. Désactivez les autres bits par une opération **AND** sur la variable avec une opération **NOT** au niveau du bit des masques de bits appropriés.
 
-1. Appelez **_CrtSetDbgFlag** avec *newFlag* égale à la valeur stockée dans la variable temporaire pour définir l’état de **_crtDbgFlag**.
+1. Appelez **_CrtSetDbgFlag** avec *newFlag* égale à la valeur stockée dans la variable temporaire pour définir le nouvel état pour **_crtDbgFlag**.
 
-Le code suivant montre comment simuler suffisamment de mémoire conditions en conservant dans la liste liée du tas de blocs de mémoire libérés et empêcher **_CrtCheckMemory** d’être appelé à chaque demande d’allocation :
+Le code suivant montre comment simuler l’insuffisance de mémoire conditions en conservant dans la liste liée du tas des blocs de mémoire libérés et empêcher **_CrtCheckMemory** d’être appelé à chaque demande d’allocation :
 
 ```C
 // Get the current state of the flag
@@ -171,11 +161,11 @@ _CrtSetDbgFlag( tmpFlag );
 
 Pour obtenir une vue d’ensemble de la gestion de la mémoire et du tas de débogage, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Pour désactiver un indicateur avec la **_CrtSetDbgFlag** (fonction), vous devez **AND** la variable avec l’opérateur de bits **pas** de masque de bits.
+Pour désactiver un indicateur avec la **_CrtSetDbgFlag** (fonction), vous devez **AND** la variable au niveau du bit **pas** du masque de bits.
 
 Si *newFlag* n’est pas une valeur valide, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne l’état précédent de **_crtDbgFlag**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

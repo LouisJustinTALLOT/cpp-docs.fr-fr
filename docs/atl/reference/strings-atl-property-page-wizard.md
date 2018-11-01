@@ -1,27 +1,17 @@
 ---
-title: Chaînes, Assistant Page de propriétés ATL | Microsoft Docs
-ms.custom: ''
+title: Chaînes, Assistant Page de propriétés ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6e63745a75b5aec644ae49931015e27b74eba91b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3fc15da8cddfc74434210106d7d4c21ad84a66ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446636"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Chaînes, Assistant Page de propriétés ATL
 

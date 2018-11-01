@@ -1,27 +1,17 @@
 ---
-title: Erreur Runtime C R6026 | Microsoft Docs
-ms.custom: ''
+title: Erreur Runtime C R6026
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - R6026
-dev_langs:
-- C++
 helpviewer_keywords:
 - R6026
 ms.assetid: 7ea751f8-fc20-46ab-99ef-84c95ca0b6b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e5b10075912ce4fde65699cf7b2d413c0bdd10f0
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 28e541b61b6381cd283578a0ce1909e5b39a4a53
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860795"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600991"
 ---
 # <a name="c-runtime-error-r6026"></a>Erreur Runtime C R6026
 

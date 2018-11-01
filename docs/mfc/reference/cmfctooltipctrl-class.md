@@ -1,10 +1,6 @@
 ---
-title: CMFCToolTipCtrl, classe | Microsoft Docs
-ms.custom: ''
+title: CMFCToolTipCtrl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolTipCtrl
 - AFXTOOLTIPCTRL/CMFCToolTipCtrl
@@ -21,8 +17,6 @@ f1_keywords:
 - AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetHotRibbonButton
 - AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetLocation
 - AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetParams
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], GetIconSize
 - CMFCToolTipCtrl [MFC], GetParams
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3a704f4c683e774057265604ecd69cd03dfb657
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e8ab9485cb2613e88ef136b3c470af9915bf7725
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564865"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl, classe
 
@@ -162,7 +152,7 @@ L'exemple suivant montre comment construire un objet `CMFCToolTipCtrl`, définir
 
 [CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtooltipctrl.h
 

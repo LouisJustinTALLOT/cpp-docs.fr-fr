@@ -1,10 +1,6 @@
 ---
-title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l | Microsoft Docs
-ms.custom: ''
+title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcpunct_l
 - _ismbcblank
@@ -42,8 +38,6 @@ f1_keywords:
 - ismbcgraph_l
 - ismbcspace
 - ismbcpunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcspace_l function
 - _ismbcprint_l function
@@ -62,23 +56,19 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da9231dcf64222aa075194f72892896972e2abf7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405495"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626211"
 ---
 # <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
 Détermine si le caractère est un caractère graphique, un caractère d’affichage, un caractère de ponctuation ou un espace.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -130,9 +120,9 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test, ou 0 dans le cas contraire. Si *c* < = 255 et qu’il existe un correspondant **_ismbb** routine (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), résultat est la valeur de retour correspondantes **_ismbb** routine.
+Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test, ou 0 dans le cas contraire. Si *c* < = 255 et qu’il existe un correspondant **_ismbb** routine (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le Il en résulte la valeur de retour correspondantes **_ismbb** routine.
 
-Les versions de ces fonctions sont identiques, sauf que celles qui ont le **_l** suffixe utilisent les paramètres régionaux qui sont passé pour leur comportement dépendant des paramètres régionaux, au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions sont identiques, sauf que celles qui ont le **_l** suffixe utilisent les paramètres régionaux sont passée pour leur comportement dépendant des paramètres régionaux, au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -140,11 +130,11 @@ Chacune de ces fonctions teste un caractère multioctet fourni pour un état don
 
 |Routine|Condition de test|Exemple de page de codes 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Graphique|Retourne zéro si et seulement si *c* est une représentation d’un octet de n’importe quel caractère imprimable ASCII ou katakana, à l’exception d’un espace de blanc ().|
-|**_ismbcprint**|Imprimable|Retourne zéro si et seulement si *c* est une représentation d’un octet de n’importe quel caractère imprimable ASCII ou katakana, y compris un blanc espace ().|
-|**_ismbcpunct**|Ponctuation|Retourne zéro si et seulement si *c* est une représentation d’un octet de n’importe quel caractère de ponctuation katakana ou ASCII.|
-|**_ismbcblank**|Espace ou tabulation horizontale|Retourne zéro si et seulement si *c* est un espace ou un caractère de tabulation horizontale : *c*= 0 x 20 ou *c*= 0 x 09.|
-|**_ismbcspace**|Espace blanc|Retourne zéro si et seulement si *c* est un caractère d’espace blanc : *c*= 0 x 20 ou 0 x 09 < =*c*< = 0x0D.|
+|**_ismbcgraph**|Graphique|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’un caractère imprimable ASCII ou katakana, à l’exception d’un espace blanc ().|
+|**_ismbcprint**|Imprimable|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’un caractère imprimable ASCII ou katakana, y compris un espace blanc ().|
+|**_ismbcpunct**|Ponctuation|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet de n’importe quel caractère de ponctuation ASCII ou katakana.|
+|**_ismbcblank**|Espace ou tabulation horizontale|Retourne une valeur différente de zéro si et seulement si *c* est un espace ou un caractère de tabulation horizontale : *c*= 0 x 20 ou *c*= 0 x 09.|
+|**_ismbcspace**|Espace blanc|Retourne une valeur différente de zéro si et seulement si *c* est un caractère d’espace blanc : *c*= 0 x 20 ou 0 x 09 < =*c*< = 0x0D.|
 
 ## <a name="requirements"></a>Spécifications
 

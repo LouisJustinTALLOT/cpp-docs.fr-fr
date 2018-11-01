@@ -1,30 +1,20 @@
 ---
-title: Recherche de nom dépendante d’un argument (Koenig) sur les fonctions | Microsoft Docs
-ms.custom: ''
+title: Recherche de nom qui dépend de l'argument (Koenig) sur les fonctions
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Koenig lookup
 - argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e71a1fd5a795fb95520ec8d7859e70460a9372c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d979b79c0f712ed35a42a44047dd1091010c72bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028816"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650673"
 ---
-# <a name="argument-dependent-name-koenig-lookup-on-functions"></a>Recherche de nom qui dépend de l’argument (Koenig) sur les fonctions
+# <a name="argument-dependent-name-koenig-lookup-on-functions"></a>Recherche de nom qui dépend de l'argument (Koenig) sur les fonctions
 
-Le compilateur peut utiliser la recherche de nom dépendante d’un argument pour rechercher la définition d’un appel de fonction non qualifié. La recherche de nom dépendante d'un argument est également appelée recherche Koenig. Le type de chaque argument dans un appel de fonction est défini dans une hiérarchie d’espaces de noms, de classes, de structures, d’unions ou de modèles. Lorsque vous spécifiez un [suffixés](../cpp/postfix-expressions.md) appel de fonction, le compilateur recherche la définition de fonction dans la hiérarchie associée à chaque type d’argument.
+Le compilateur peut utiliser la recherche de nom dépendante d'un argument pour rechercher la définition d'un appel de fonction non qualifié. La recherche de nom dépendante d'un argument est également appelée recherche Koenig. Le type de chaque argument dans un appel de fonction est défini dans une hiérarchie d'espaces de noms, de classes, de structures, d'unions ou de modèles. Lorsque vous spécifiez un [suffixés](../cpp/postfix-expressions.md) appel de fonction, le compilateur recherche la définition de fonction dans la hiérarchie associée à chaque type d’argument.
 
 ## <a name="example"></a>Exemple
 

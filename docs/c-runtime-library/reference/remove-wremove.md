@@ -1,10 +1,6 @@
 ---
-title: remove, _wremove | Microsoft Docs
-ms.custom: ''
+title: remove, _wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613967"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -69,13 +59,13 @@ Chemin du fichier à supprimer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne 0 si le fichier est bien supprimé. Sinon, elle retourne -1 et définit **errno** à **EACCES** pour indiquer que le chemin d’accès spécifie un fichier en lecture seule ou si le fichier est ouvert, ou la valeur **ENOENT** pour indiquer que le nom de fichier ou chemin d’accès est introuvable ou que le chemin d’accès spécifie un répertoire.
+Chacune de ces fonctions retourne 0 si le fichier est bien supprimé. Sinon, elle retourne -1 et définit **errno** à **EACCES** pour indiquer que le chemin d’accès spécifie un fichier en lecture seule ou que le fichier est ouvert, ou la valeur **ENOENT** pour indiquer que le nom de fichier ou chemin d’accès est introuvable ou que le chemin d’accès spécifie un répertoire.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **remove** supprime le fichier spécifié par *path.* **_wremove** est une version à caractères larges de **_Supprimer**; le *chemin d’accès* argument **_wremove** est une chaîne à caractères larges. **_wremove** et **_Supprimer** comportent de façon identique. Tous les descripteurs d’un fichier doivent être fermés avant de pouvoir être supprimés.
+La fonction **remove** supprime le fichier spécifié par *path.* **_wremove** est une version à caractères larges de **_Supprimer**; le *chemin d’accès* l’argument de **_wremove** est une chaîne de caractères larges. **_wremove** et **_Supprimer** se comportent de façon identique dans le cas contraire. Tous les descripteurs d’un fichier doivent être fermés avant de pouvoir être supprimés.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -83,7 +73,7 @@ La fonction **remove** supprime le fichier spécifié par *path.* **_wremove** e
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tremove**|**remove**|**remove**|**_wremove**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
