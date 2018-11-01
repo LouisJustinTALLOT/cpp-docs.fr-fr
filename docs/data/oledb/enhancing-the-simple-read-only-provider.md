@@ -1,29 +1,18 @@
 ---
-title: Amélioration du fournisseur Simple en lecture seule | Microsoft Docs
-ms.custom: ''
+title: Amélioration du fournisseur simple accessible en lecture seule
 ms.date: 10/26/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - read-only poviders [C++]
 - IRowsetLocate class
 - IRowsetLocate class, adding to OLE DB template providers
 - simple read-only poviders [C++]
 ms.assetid: cba0e09f-44c1-41c1-9456-332aa13dc158
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: f798eb6219fdbc6c54e4c80474491f84f25a8060
-ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
+ms.openlocfilehash: 4b06eb77851df0bf0bd0d3ef91a3ea960835ccba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216472"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462918"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Amélioration du fournisseur simple accessible en lecture seule
 

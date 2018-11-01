@@ -1,24 +1,13 @@
 ---
-title: Applications universelles Windows (C++) | Microsoft Docs
-ms.custom: ''
+title: Applications de plateforme Windows universelle (C++)
 ms.date: 03/30/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7ba556ee3803bb00f07032e0589209af2d32addf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e6e294b45e183e5e8baebcaad65cece846adb07e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481898"
 ---
 # <a name="universal-windows-apps-c"></a>Applications de plateforme Windows universelle (C++)
 
