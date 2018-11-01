@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveau 1) C4669 | Microsoft Docs
-ms.custom: ''
+title: Avertissement du compilateur (niveau 1) C4669
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4669
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4669
 ms.assetid: 97730679-e3dc-44d4-b2a8-aa65badc17f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f96bcf40b1fbc989daceabc810d019d1bb9aa98
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4d0b87c91649c5f2f6b5823fea82d2ce355d11a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060852"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518636"
 ---
 # <a name="compiler-warning-level-1-c4669"></a>Avertissement du compilateur (niveau 1) C4669
 

@@ -1,31 +1,21 @@
 ---
-title: Prise en charge d’IDispatch et IErrorInfo | Microsoft Docs
-ms.custom: ''
+title: Prise en charge d’IDispatch et IErrorInfo
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - IErrorInfo
 - IDispatch
-dev_langs:
-- C++
 helpviewer_keywords:
 - ISupportErrorInfoImpl method
 - IErrorInfo class suppor in ATL
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 7db2220f-319d-4ce9-9382-d340019f14f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d9c27dfe81c3bbd2978f418c8e942ac20190b30
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ea45f0bdd2363f4392baee049629c55259e45af0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502428"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Prise en charge d’IDispatch et IErrorInfo
 
