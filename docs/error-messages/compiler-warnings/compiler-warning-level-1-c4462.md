@@ -1,32 +1,23 @@
 ---
-title: Compilateur avertissement (niveau 1) C4462 | Documents Microsoft
+title: Avertissement du compilateur (niveau 1) C4462
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4462
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 105a78fe9f8a8d2b6442c9b403af0266de53d3b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 801a440f131e9428c7f217346a6fd26c72cc1374
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281399"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582323"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>Avertissement du compilateur (niveau 1) C4462
 
 > impossible de déterminer le GUID du type. Le programme risque d'échouer au moment de l'exécution.
 
-L'avertissement C4462 se produit dans une application ou un composant Windows Runtime lorsqu'un `TypedEventHandler` public a parmi l'un de ses paramètres de type une référence à une classe englobante.
+L’avertissement C4462 se produit dans une application ou un composant Windows Runtime lorsqu’un `TypedEventHandler` public a parmi l’un de ses paramètres de type une référence à une classe englobante.
 
 Cet avertissement est automatiquement promu en une erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma warning](../../preprocessor/warning.md). Par exemple, pour que C4462 un niveau 4 avertissement, ajoutez cette ligne à votre fichier de code source :
 
@@ -41,18 +32,18 @@ Cet exemple génère l’avertissement C4462 :
 ```cpp
 namespace N
 {
-       public ref struct EventArgs sealed {};
-       public ref struct R sealed
-       {
-              R() {}
-              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
-       };
+       public ref struct EventArgs sealed {};
+       public ref struct R sealed
+       {
+              R() {}
+              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
+       };
 }
 
 [Platform::MTAThread]
 int main()
 {
-     auto x = ref new N::R();
+     auto x = ref new N::R();
 }
 ```
 

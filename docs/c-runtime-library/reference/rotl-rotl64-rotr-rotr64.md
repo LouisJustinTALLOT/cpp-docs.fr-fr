@@ -1,10 +1,6 @@
 ---
-title: _rotl, _rotl64, _rotr, _rotr64 | Microsoft Docs
-ms.custom: ''
+title: _rotl, _rotl64, _rotr, _rotr64
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _rotr64
 - _rotl
@@ -32,8 +28,6 @@ f1_keywords:
 - _rotr
 - _rotl
 - rotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - rotl64 function
 - _rotl function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4ec4844c54bef09522191be62599ed79b97eb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406652"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567412"
 ---
 # <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
@@ -97,9 +87,9 @@ Valeur ayant fait l'objet d'une rotation. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **_rotl** et **_rotr** fonctions pivoter unsigned *valeur* par *MAJ* bits. **_rotl** fait pivoter la valeur gauche. **_rotr** fait pivoter à droite de la valeur. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
+Le **_rotl** et **_rotr** fonctions faire pivoter l’entier non signé *valeur* par *MAJ* bits. **_rotl** fait pivoter la valeur gauche. **_rotr** fait pivoter à droite de la valeur. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

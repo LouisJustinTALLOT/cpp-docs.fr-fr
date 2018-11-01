@@ -1,27 +1,17 @@
 ---
-title: logic_error, classe | Microsoft Docs
-ms.custom: ''
+title: logic_error, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdexcept/std::logic_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dc6d3e2ec67cc60e099016ac3d7cf4d213322ce2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56470040365f1b1aa0e311f43937d7ec33f7f148
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851994"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579944"
 ---
 # <a name="logicerror-class"></a>logic_error, classe
 
@@ -70,7 +60,7 @@ Caught: logic error
 Type: class std::logic_error
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<stdexcept>
 

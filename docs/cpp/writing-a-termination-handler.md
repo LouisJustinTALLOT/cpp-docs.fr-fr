@@ -1,12 +1,6 @@
 ---
-title: Écriture d’un gestionnaire de terminaisons | Microsoft Docs
-ms.custom: ''
+title: Écriture d'un gestionnaire des terminaisons
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - structured exception handling [C++], termination handlers
 - exceptions [C++], terminating
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 85241d9dde87e929b02328a6e7d0c75b5ce068ef
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f0b994075a8d59ce5d0955f10bf8c61d357d2db9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116228"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573392"
 ---
 # <a name="writing-a-termination-handler"></a>Écriture d'un gestionnaire des terminaisons
 

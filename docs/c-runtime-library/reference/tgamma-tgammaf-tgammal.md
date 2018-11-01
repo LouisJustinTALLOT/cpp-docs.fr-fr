@@ -1,11 +1,6 @@
 ---
-title: tgamma, tgammaf, tgammal | Microsoft Docs
-ms.custom: ''
+title: tgamma, tgammaf, tgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - tgamma
 - tgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/tgamma
 - math/tgammaf
 - math/tgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - tgamma function
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7861b297646f4a704134e0d874fad8c924a7ebc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cfe455b0e9e83cd5283d36fed33ca168bc97d0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409873"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570662"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -84,7 +73,7 @@ Valeur dont le gamma doit être trouvé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne la valeur gamma de *x*.
+En cas de réussite, retourne le gamma de *x*.
 
 Une erreur de plage peut se produire si la grandeur de *x* est trop grande ou trop petite pour le type de données. Une erreur de domaine ou d’une erreur de plage peut se produire si *x* < = 0.
 
@@ -104,11 +93,11 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **tgamma** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **tgamma** accepte et retourne toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **tgamma** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **tgamma** accepte et retourne toujours un **double**.
 
 Si x est un nombre naturel, cette fonction retourne la factorielle de (x-1).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

@@ -1,12 +1,6 @@
 ---
-title: 'Contrôles ActiveX MFC : Optimisation | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : optimisation'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], windowless
 - flicker-free ActiveX controls
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a583b0b70473698963841a3bd9c84c79472eb529
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: cc4d210abe0bca5ba8d3a442796173111f45f6e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204442"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588563"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Contrôles ActiveX MFC : optimisation
 

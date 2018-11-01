@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Microsoft Docs
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,20 +26,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602278"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
-Utilise des informations sur un lecteur de disque pour remplir un **_diskfree_t** structure.
+Utilise les informations sur un lecteur de disque pour remplir un **_diskfree_t** structure.
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -65,11 +55,11 @@ unsigned _getdiskfree(
 Lecteur de disque pour lequel vous voulez obtenir des informations.
 
 *DriveInfo*<br/>
-A **_diskfree_t** structure qui sera rempli avec les informations sur le lecteur.
+Un **_diskfree_t** structure qui sera remplie avec les informations sur le lecteur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si la fonction aboutit, la valeur de retour est égale à zéro. Si la fonction échoue, la valeur de retour est le code d'erreur. La valeur **errno** est définie pour toutes les erreurs qui sont retournées par le système d’exploitation. Pour plus d’informations sur les conditions d’erreur qui sont indiqués par **errno**, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
+Si la fonction aboutit, la valeur de retour est égale à zéro. Si la fonction échoue, la valeur de retour est le code d'erreur. La valeur **errno** est définie pour toutes les erreurs qui sont retournées par le système d’exploitation. Pour plus d’informations sur les conditions d’erreur sont indiqués par **errno**, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -84,9 +74,9 @@ struct _diskfree_t {
 };
 ```
 
-Cette fonction valide ses paramètres. Si le *driveinfo* pointeur est **NULL** ou *lecteur* spécifie un lecteur non valide, cette fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** et définit **errno** à **EINVAL**. Plage de lecteurs valide de 0 à 26. A *lecteur* la valeur 0 spécifie le lecteur actif ; par la suite, les nombres sont mappés aux lettres de l’alphabet anglais que 1 indique le lecteur A, 3 le lecteur C et ainsi de suite.
+Cette fonction valide ses paramètres. Si le *driveinfo* pointeur est **NULL** ou *lecteur* spécifie un lecteur non valide, cette fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** et définit **errno** à **EINVAL**. Plage de lecteurs valide de 0 à 26. Un *lecteur* la valeur 0 spécifie le lecteur actif ; par la suite, les nombres sont mappés aux lettres de l’alphabet anglais tel que 1 indique le lecteur A, 3 indique que le lecteur C et ainsi de suite.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

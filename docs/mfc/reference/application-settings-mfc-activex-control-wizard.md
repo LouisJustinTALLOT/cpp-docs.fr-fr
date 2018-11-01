@@ -1,27 +1,17 @@
 ---
-title: Paramètres d’application, Assistant contrôle ActiveX MFC | Microsoft Docs
-ms.custom: ''
+title: Paramètres de l’application, Assistant Contrôle ActiveX MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cfaebdabb9011fd76b18701c81c722671ff8fc3d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 17d8ad581640611a5b517edd15609aa8052ecae4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677134"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Paramètres de l’application, Assistant Contrôle ActiveX MFC
 
@@ -42,7 +32,7 @@ Utilisez cette page de l’Assistant Contrôle ActiveX MFC pour concevoir et ajo
 
    - Le fichier .vcxproj contient le code pour générer et configurer le fichier d’aide quand le projet est généré.
 
-   - Le fichier *Page_propriétés_nom_projet*.cpp inclut une [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) fonction dans le constructeur.
+   - Le fichier *page_propriétés_nom_projet*.cpp inclut une fonction [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) dans le constructeur.
 
    - Le fichier nom_projet.hpj est le fichier d’aide du projet utilisé par le compilateur d’aide pour créer le fichier d’aide du contrôle ActiveX. Le fichier .hpj est un fichier texte contenant les informations sur la création de votre fichier d’aide et les chemins des fichiers supplémentaires (par exemple les bitmaps) inclus dans le fichier d’aide.
 

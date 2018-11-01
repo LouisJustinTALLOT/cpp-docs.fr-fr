@@ -1,10 +1,6 @@
 ---
-title: memcpy_s, wmemcpy_s | Microsoft Docs
-ms.custom: ''
+title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12bf97e596a7cb4e3befa4c0633a8ef2df29a6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403792"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607153"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 
@@ -91,11 +81,11 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
 ## <a name="remarks"></a>Notes
 
-**memcpy_s** copies *nombre* octets à partir de *src* à *dest*; **wmemcpy_s** copies *nombre* caractères larges (sur deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy_s** n’est pas défini. Utilisez **memmove_s** pour gérer les régions qui se chevauche.
+**memcpy_s** copies *nombre* octets à partir de *src* à *dest*; **wmemcpy_s** copies *nombre* caractères larges (sur deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy_s** n’est pas défini. Utilisez **memmove_s** pour gérer les régions qui se chevauchent.
 
-Ces fonctions valident leurs paramètres. Si *nombre* est différente de zéro et *dest* ou *src* est un pointeur null, ou *destSize* est inférieure à *nombre*, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** ou **ERANGE** et **errno** à la valeur de retour.
+Ces fonctions valident leurs paramètres. Si *nombre* est différente de zéro et *dest* ou *src* est un pointeur null, ou *destSize* est inférieure à *nombre*, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** ou **ERANGE** et définissez **errno** à la valeur de retour.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

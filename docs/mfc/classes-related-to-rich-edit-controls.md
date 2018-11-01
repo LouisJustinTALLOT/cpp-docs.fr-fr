@@ -1,12 +1,6 @@
 ---
-title: Les classes liées aux contrôles RichEdit | Microsoft Docs
-ms.custom: ''
+title: Classes associées aux contrôles RichEdit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - rich edit controls [MFC], and CRichEditItem
 - CRichEditCtrl class [MFC], related classes
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], and CRichEditDoc
 - CRichEditView class [MFC], and CRichEditCtrl
 ms.assetid: 4b31c2cc-6ea1-4146-b7c5-b0b5b419f14d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ee7b6400dcd5c91d054b31153c21008d5302bd0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92134d0bd4d02bff7aeadd5e9ca7438c61de3bec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401262"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586158"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>Classes associées aux contrôles RichEdit
 

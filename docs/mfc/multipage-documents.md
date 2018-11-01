@@ -1,12 +1,6 @@
 ---
-title: Documents multipages | Microsoft Docs
-ms.custom: ''
+title: Documents multipages
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - pagination [MFC]
 - overriding [MFC], View class functions for printing
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7d1d7835d2c0521495984a7534fd6fcf07216fd1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c0363c1741b713ff24ec7ca7837f0f3c1b3eaf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587666"
 ---
 # <a name="multipage-documents"></a>Documents multipages
 

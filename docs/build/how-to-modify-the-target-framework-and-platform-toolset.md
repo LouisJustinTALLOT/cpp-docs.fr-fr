@@ -1,27 +1,18 @@
 ---
-title: 'Comment : modifier le Framework cible et un ensemble d’outils de plateforme | Microsoft Docs'
+title: "comment : modifier la version cible de .Net Framework et l'ensemble d'outils de la plateforme"
 ms.custom: conceptual
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.modifytargetframeworkandplatformtoolset
-dev_langs:
-- C++
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60fa9bd3d6db9d90e5d7f3bc94e7686e5cf9481e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7759cf13e95fab97ee5a7b77e22c690a69fde41a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523097"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>comment : modifier la version cible de .Net Framework et l'ensemble d'outils de la plateforme
 
@@ -35,7 +26,7 @@ Lorsque vous changez le Framework cible, remplacez également l'ensemble d'outil
 > [!NOTE]
 >  Pour modifier l'ensemble d'outils de la plateforme cible, la version associée de Visual Studio ou le Kit de développement logiciel (SDK) Windows Platform doit être installé sur votre ordinateur. Par exemple, pour cibler la plateforme Itanium avec l’ensemble d’outils de plateforme **Kit de développement logiciel (SDK) Windows 7.1** , vous devez avoir installé [Microsoft Windows SDK pour Windows 7 et .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) . Vous pouvez cependant utiliser une autre version compatible de Visual Studio pour effectuer votre travail de développement, à condition de cibler la version du .NET Framework et l’ensemble d’outils de plateforme corrects.
 
-Vous pouvez étendre davantage la plateforme cible en créant un ensemble d'outils de plateforme personnalisé. Pour plus d’informations, consultez [C++ multi-ciblage natif](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) sur le blog de Visual C++.
+Vous pouvez étendre davantage la plateforme cible en créant un ensemble d'outils de plateforme personnalisé. Pour plus d’informations, consultez [Multiciblage natif C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) sur le blog de Visual C++.
 
 ### <a name="to-change-the-target-framework"></a>Pour changer la version cible du .Net Framework
 
