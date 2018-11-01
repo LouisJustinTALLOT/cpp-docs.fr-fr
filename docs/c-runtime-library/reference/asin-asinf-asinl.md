@@ -1,10 +1,6 @@
 ---
-title: asin, asinf, asinl | Microsoft Docs
-ms.custom: ''
+title: asin, asinf, asinl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinf
 - asinl
@@ -26,8 +22,6 @@ f1_keywords:
 - asin
 - asinl
 - asinf
-dev_langs:
-- C++
 helpviewer_keywords:
 - asin function
 - asinl function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee65e4c8ce884ac42de35a23c81dbf5009dd1185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393275"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476045"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -70,21 +60,21 @@ Valeur dont l’arc sinus doit être calculé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **asin** fonction retourne l’arc sinus (la fonction sinus inverse) de *x* dans la plage - π/2 et π/2 radians.
+Le **asin** fonction retourne l’arc sinus (la fonction sinus inverse) de *x* dans la plage π/2 et π/2 radians.
 
-Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **asin** retourne un indéterminée.
+Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **asin** retourne un indéfini.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NON VALIDE**|**_DOMAIN**|
-|± **QNAN**, **IND**|aucun|**_DOMAIN**|
-|&#124;x&#124;>1|**NON VALIDE**|**_DOMAIN**|
+|± ∞|**NON VALIDE**|**_DOMAINE**|
+|+ **QNAN**, **IND**|none|**_DOMAINE**|
+|&#124;x&#124;>1|**NON VALIDE**|**_DOMAINE**|
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **asin** avec **float** et **long** **double** valeurs. Dans un programme C, **asin** accepte et retourne toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **asin** avec **float** et **long** **double** valeurs. Dans un programme C, **asin** accepte et retourne toujours un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
