@@ -1,20 +1,13 @@
 ---
-title: DLL (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: DLL (C++/CX)
 ms.date: 02/06/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac06336e5ba80406157285ebe660080aff6e319
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763631"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445706"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
@@ -24,7 +17,7 @@ Vous pouvez utiliser Visual Studio pour créer une DLL Win32 standard ou un comp
 
 Dans presque tous les cas, lorsque vous souhaitez créer une DLL pour les utiliser dans une application UWP, créez-la comme un composant Windows Runtime en utilisant le modèle de projet portant ce nom. Vous pouvez créer un projet de composant Windows Runtime pour les DLL qui ont des types Windows Runtime publics ou privés. Un composant Windows Runtime sont accessibles à partir d’applications qui sont écrits dans n’importe quel langage compatible avec Windows Runtime. Par défaut, les paramètres de compilateur pour un composant Windows Runtime projet utiliser les **/ZW** basculer. Un fichier .winmd doit avoir le même nom que l'espace de noms racine. Par exemple, une classe nommée A.B.C.MyClass peut être instanciée uniquement si elle est définie dans un fichier de métadonnées nommé A.winmd, A.B.winmd ou A.B.C.winmd. Il n'est pas requis que le nom de la DLL corresponde au nom du fichier .winmd.
 
-Pour plus d’informations, consultez [création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Pour plus d'informations, consultez [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 ### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>Pour référencer un composant de Windows Runtime tiers binaire dans votre projet
 

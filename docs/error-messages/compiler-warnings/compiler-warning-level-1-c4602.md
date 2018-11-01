@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveau 1) C4602 | Microsoft Docs
-ms.custom: ''
+title: Avertissement du compilateur (niveau 1) C4602
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4602
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4602
 ms.assetid: c1f0300f-e2a2-4c9e-a7c3-4c7318d10509
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3cae5810f94ed9c3feb22de145c7e12e1a7d813b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c719ae23ed3799debf2db9c8f2d82b3c49db3156
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033314"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430386"
 ---
 # <a name="compiler-warning-level-1-c4602"></a>Avertissement du compilateur (niveau 1) C4602
 

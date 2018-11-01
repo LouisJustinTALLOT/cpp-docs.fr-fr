@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveau 4) C4456 | Microsoft Docs
-ms.custom: ''
+title: Compilateur avertissement (niveau 4) C4456
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4456
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4456
 ms.assetid: 5ab39fc1-0e19-461b-842b-4da80560b044
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ab6939fe37260b906a43c4e2ff6683733348952
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 006628721598d838070412c895f64b9a8d3de4e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039892"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452583"
 ---
 # <a name="compiler-warning-level-4-c4456"></a>Compilateur avertissement (niveau 4) C4456
 

@@ -1,12 +1,6 @@
 ---
-title: Traitement des Messages de Notification de contrôle Tab | Microsoft Docs
-ms.custom: ''
+title: Traitement des messages de notification du contrôle Tab
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - notifications [MFC], tab controls
 - CTabCtrl class [MFC], processing notifications
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 258a3ee579eca0262dace6d1e69a3b5daf9024f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 75b19033a31d707fcc87c1b5c824acffca725c96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409036"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441966"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Traitement des messages de notification du contrôle Tab
 

@@ -1,26 +1,16 @@
 ---
-title: Définition d’une règle | Microsoft Docs
-ms.custom: ''
+title: Définition d'une règle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - NMAKE program, inference rules
 - defining inference rules
 ms.assetid: 071cd092-3f2e-4065-b0fb-36a9d393cfa8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8a5cb7a0285f7abf8bcf476141451eae1b10f85
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0e8356f57b85d503328bb282e2f9f785ac20fa4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705573"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431162"
 ---
 # <a name="defining-a-rule"></a>Définition d'une règle
 

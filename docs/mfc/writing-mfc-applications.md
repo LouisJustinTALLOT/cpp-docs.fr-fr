@@ -1,28 +1,18 @@
 ---
-title: Écriture d’Applications MFC | Microsoft Docs
-ms.custom: ''
+title: Écriture d'applications MFC
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Internet applications [MFC], MFC
 - MFC, Internet applications
 - application wizards [MFC], Internet applications
 - MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2bb5cfa0653f7072cc9e968a8db1d5d1a48e445
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09d337f2b2a137c997665b6fad4f2fef7235f723
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385753"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428533"
 ---
 # <a name="writing-mfc-applications"></a>Écriture d'applications MFC
 

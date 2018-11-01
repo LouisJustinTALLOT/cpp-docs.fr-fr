@@ -1,27 +1,17 @@
 ---
-title: '&lt;valarray&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;valarray&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <valarray>
-dev_langs:
-- C++
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954797"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447786"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -64,7 +54,7 @@ Une latitude inhabituelle est accordée à ces fonctions et classes de modèle a
 
 |Opérateur|Description|
 |-|-|
-|[operator!=](../standard-library/valarray-operators.md#op_neq)|Teste si les éléments correspondants de deux valarrays de taille égale sont inégaux ou si tous les éléments d'un valarray sont inégaux à une valeur spécifiée du type d'élément du valarray.|
+|[!=, opérateur](../standard-library/valarray-operators.md#op_neq)|Teste si les éléments correspondants de deux valarrays de taille égale sont inégaux ou si tous les éléments d'un valarray sont inégaux à une valeur spécifiée du type d'élément du valarray.|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|Obtient le reste de la division des éléments correspondants de deux valarrays de taille égale ou de la division d'un valarray par une valeur spécifiée du type d'élément du valarray ou de la division d'une valeur spécifiée par un valarray.|
 |[operator&](../standard-library/valarray-operators.md#op_amp)|Obtient le résultat de l'opération `AND` binaire entre des éléments correspondants de deux valarrays de taille égale ou entre un valarray et une valeur spécifiée du type d'élément.|
 |[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Obtient le résultat de l'opération `AND` logique entre des éléments correspondants de deux valarrays de taille égale ou entre un valarray et une valeur spécifiée du type d'élément du valarray.|

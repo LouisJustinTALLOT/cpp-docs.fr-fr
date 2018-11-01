@@ -1,10 +1,6 @@
 ---
-title: _InterlockedCompareExchangePointer, fonctions intrinsèques | Microsoft Docs
-ms.custom: ''
+title: _InterlockedCompareExchangePointer, fonctions intrinsèques
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -16,8 +12,6 @@ f1_keywords:
 - _InterlockedCompareExchangePointer_HLEAcquire
 - _InterlockedCompareExchangePointer_acq
 - _InterlockedCompareExchangePointer_nf
-dev_langs:
-- C++
 helpviewer_keywords:
 - InterlockedCompareExchangePointer_acq intrinsic
 - _InterlockedCompareExchangePointer_rel intrinsic
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7845b699fb5dd3f326780c18e6af9a4a3274e232
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b58af33e13609dcb9a51f7d2b3075427f538a2d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372147"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445030"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer, fonctions intrinsèques
 
@@ -118,7 +108,7 @@ La valeur de retour est la valeur initiale de la destination.
 
 Pour obtenir un exemple montrant comment utiliser `_InterlockedCompareExchangePointer`, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d'une section critique. Les fonctions intrinsèques ARM avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les fonctions intrinsèques ARM avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.
 
 Les fonctions intrinsèques avec un suffixe `_np` (pour « no prefetch », « pas de prérécupération ») empêchent l'insertion par le compilateur d'une possible opération de prérécupération.
 

@@ -1,25 +1,15 @@
 ---
-title: -WINMDKEYFILE (spécifier un fichier de clé) | Microsoft Docs
-ms.custom: ''
+title: /WINMDKEYFILE (spécifier un fichier de clé)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.WINMDKeyFile
-dev_langs:
-- C++
 ms.assetid: 65d88fdc-fff9-49ea-8cfc-b2f408741734
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d688db3039681fc684e6344e4a27ae7a64544757
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 076533278bb9b8ec2838cfb719bcb4df1784b258
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714441"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436788"
 ---
 # <a name="winmdkeyfile-specify-winmd-key-file"></a>/WINMDKEYFILE (spécifier un fichier de clé)
 

@@ -1,10 +1,6 @@
 ---
-title: fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwscanf_s
 - _fscanf_s_l
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftscanf_s_l
 - _ftscanf_s
 - fwscanf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - formatted data [C++], reading from streams
 - _ftscanf_s_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62bca0d0d53871e507ce47eb878fed663443bd40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9c1686d7e42e0e885a65e153ee4e1ff2be01f27
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405378"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454715"
 ---
 # <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -90,13 +80,13 @@ int _fwscanf_s_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 *format*<br/>
 Chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 *locale*<br/>
@@ -106,18 +96,18 @@ Paramètres régionaux à utiliser.
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. Si une erreur se produit, ou si la fin du flux de fichier est atteinte avant la première conversion, la valeur de retour est **EOF** pour **fscanf_s** et **fwscanf_s**.
 
-Ces fonctions valident leurs paramètres. Si *flux* est un pointeur de fichier non valide, ou *format* est un pointeur null, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *flux* est un pointeur de fichier non valide ou *format* est un pointeur null, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et définissez **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **fscanf_s** fonction lit les données à partir de la position actuelle de *flux* dans les emplacements qui sont fournis par *argument* (le cas échéant). Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. *format* contrôles l’interprétation de l’entrée des champs et a la même forme et fonction que la *format* argument pour **scanf_s**; consultez [champs de spécification de Format : les fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour obtenir une description de *format*.  **fwscanf_s** est une version à caractères larges de **fscanf_s**; l’argument de format **fwscanf_s** est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fscanf_s** non prise en charge d’entrée à partir d’un flux de données UNICODE.
+Le **fscanf_s** fonction lit les données à partir de la position actuelle du *flux* dans les emplacements fournis par *argument* (le cas échéant). Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. *format* contrôle l’interprétation de l’entrée champs et a la même forme et fonction que le *format* argument pour **scanf_s**; consultez [des champs de spécification de Format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour obtenir une description de *format*.  **fwscanf_s** est une version à caractères larges de **fscanf_s**; l’argument format pour **fwscanf_s** est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fscanf_s** ne prend actuellement en charge d’entrée à partir d’un flux de données UNICODE.
 
-La principale différence entre les fonctions plus sécurisées (qui ont le **_s** suffixe) et les autres versions est que les fonctions plus sécurisées requièrent la taille en caractères de chaque **c**, **C**, **s**, **S**, et **[** champ de type à passer en tant qu’argument qui suit immédiatement la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
+La principale différence entre les fonctions plus sécurisées (qui ont le **_s** suffixe) et les autres versions est que les fonctions plus sécurisées requièrent que la taille en caractères de chaque **c**, **C**, **s**, **S**, et **[** champ de type à passer en tant qu’argument immédiatement après la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
 > Le paramètre de taille est de type **non signé**, et non **size_t**.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux qui sont passés au lieu de paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -126,7 +116,7 @@ Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu
 |**_ftscanf_s**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
 |**_ftscanf_s_l**|**_fscanf_s_l**|**_fscanf_s_l**|**_fwscanf_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

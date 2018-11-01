@@ -1,10 +1,6 @@
 ---
-title: Cmfcpropertygridtooltipctrl, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcpropertygridtooltipctrl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridToolTipCtrl
 - AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl
@@ -15,8 +11,6 @@ f1_keywords:
 - AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Hide
 - AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::SetTextMargin
 - AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Track
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], CMFCPropertyGridToolTipCtrl
 - CMFCPropertyGridToolTipCtrl [MFC], Create
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea84af41178316085a903d2663ded74ee57c99a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7262416fa3555993ea237dd2f6b82b73ed9949c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389737"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429092"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Cmfcpropertygridtooltipctrl, classe
 
@@ -66,7 +56,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Désactive et masque le contrôle d’info-bulle.|
 |[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Retourne les coordonnées de la dernière position du contrôle d’info-bulle.|
 |[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Masque le contrôle d’info-bulle.|
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Définit l’espacement entre le texte d’info-bulle et la bordure de la fenêtre d’info-bulle.|
 |[CMFCPropertyGridToolTipCtrl::Track](#track)|Affiche le contrôle d’info-bulle.|
 

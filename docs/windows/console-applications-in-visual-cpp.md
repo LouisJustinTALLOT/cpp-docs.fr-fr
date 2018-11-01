@@ -1,24 +1,13 @@
 ---
-title: Console d’Applications dans Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Applications console dans Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 3071307f-af0d-489a-8e20-02acded7fc66
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f769f782c96f6a0143d98b2e2039ce915b2640f8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 20b203ffabd1403160141b27dab43b41a6c55db0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060362"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459135"
 ---
 # <a name="console-applications-in-visual-c"></a>Applications console dans Visual C++
 Une application console accepte l'entrée et envoie la sortie vers la console, également appelée invite de commandes. Vous pouvez créer des applications console pour effectuer un travail de base ou des tâches très sophistiquées. Vous pouvez également utiliser une application console comme démonstration de preuve de concept d’une fonctionnalité que vous souhaitez incorporer plus tard à une application de bureau Windows ou une application de plateforme Windows universelle. Les applications console peuvent communiquer avec d'autres applications de bureau au moyen de canaux ou d'autres mécanismes RPC.
