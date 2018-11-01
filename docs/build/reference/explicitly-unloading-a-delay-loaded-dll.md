@@ -1,28 +1,18 @@
 ---
-title: Déchargement explicite d’une DLL à chargement différé | Microsoft Docs
-ms.custom: ''
+title: Déchargement explicite d'une DLL à chargement différé
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - /DELAY:UNLOAD linker option
 - DELAY:UNLOAD linker option
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0ad52e8efde017ce7be6132594552e13584b38dc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a433c9987d665aeeb910edbadac692ba9c286e3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605385"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Déchargement explicite d'une DLL à chargement différé
 

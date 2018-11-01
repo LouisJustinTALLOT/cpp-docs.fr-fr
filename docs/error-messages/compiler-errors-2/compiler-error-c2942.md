@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C2942 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C2942
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2942
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2942
 ms.assetid: 13abf744-8fa1-450d-886d-e5717c04956e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 024557750def49151d835545eec62bfc6f4727e0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a594b9d1d8374caa972f6bfdafe5d691e634a9a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632568"
 ---
 # <a name="compiler-error-c2942"></a>Erreur du compilateur C2942
 

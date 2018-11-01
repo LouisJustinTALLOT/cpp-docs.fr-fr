@@ -1,27 +1,17 @@
 ---
-title: Où définir des Macros | Microsoft Docs
-ms.custom: ''
+title: Où définir des macros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - defining macros
 - macros, NMAKE
 - NMAKE program, defining macros
 ms.assetid: 0fc59ec5-5f58-4644-b7da-7b021f7001af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29a2899d7dba0b34c0ac3319c253c8056912d883
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 130863f8c5640a0c4915734732d93fc00d3d6479
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713815"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656246"
 ---
 # <a name="where-to-define-macros"></a>Où définir des macros
 

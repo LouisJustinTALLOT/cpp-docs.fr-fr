@@ -1,10 +1,6 @@
 ---
-title: _sopen_s, _wsopen_s | Microsoft Docs
-ms.custom: ''
+title: _sopen_s, _wsopen_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sopen_s
 - _wsopen_s
@@ -26,8 +22,6 @@ f1_keywords:
 - wsopen_s
 - _wsopen_s
 - sopen_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - sopen_s function
 - _wsopen_s function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c94219ff0b357e7627528d68938ec430fd8dc14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b26f8e15efe3e0a044de4c3b2d19f70510a91f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418482"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660360"
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 
@@ -90,13 +80,13 @@ Paramètre d'autorisation.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Une valeur de retour différente de zéro indique une erreur ; Dans ce cas **errno** est définie à une des valeurs suivantes.
+Une valeur de retour différente de zéro indique une erreur ; Dans ce cas **errno** est défini sur l’une des valeurs suivantes.
 
 |Valeur de la variable errno|Condition|
 |-|-|
 **EACCES**| Le chemin d'accès donné est un répertoire, ou le fichier est en lecture seule, mais une opération de type « ouvert en écriture » a été tentée.
-**EEXIST**| **_O_CREAT** et **_O_EXCL** indicateurs ont été spécifiées, mais *nom de fichier* existe déjà.
-**EINVAL**| Non valide *oflag*, *shflag*, ou *pmode* argument, ou *pfh* ou *nom de fichier* était un pointeur null.
+**EEXIST**| **_O_CREAT** et **_O_EXCL** indicateurs ont été spécifiées, mais *filename* existe déjà.
+**EINVAL**| Non valide *oflag*, *shflag*, ou *pmode* argument, ou *pfh* ou *filename* était un pointeur null.
 **EMFILE**|Plus aucun descripteur de fichier disponible.
 **ENOENT**|Fichier ou chemin d’accès introuvable.
 
@@ -104,11 +94,11 @@ Si un argument non valide est passé à la fonction, le gestionnaire de paramèt
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-En cas d’erreur, -1 est retournée via *pfh* (sauf si *pfh* est un pointeur null).
+En cas d’erreur, -1 est retournée via *pfh* (à moins que *pfh* est un pointeur null).
 
 ## <a name="remarks"></a>Notes
 
-Le **_sopen_s** fonction ouvre le fichier spécifié par *nom de fichier* et prépare le fichier partagé lors de la lecture ou l’écriture, comme défini par *oflag* et *shflag* . **_wsopen_s** est une version à caractères larges de **_sopen_s**; le *nom de fichier* argument **_wsopen_s** est une chaîne à caractères larges. **_wsopen_s** et **_sopen_s** comportent de façon identique.
+Le **_sopen_s** fonction ouvre le fichier spécifié par *filename* et prépare le fichier en lecture partagée ou d’écriture, comme défini par *oflag* et *shflag* . **_wsopen_s** est une version à caractères larges de **_sopen_s**; le *filename* l’argument de **_wsopen_s** est une chaîne de caractères larges. **_wsopen_s** et **_sopen_s** se comportent de façon identique dans le cas contraire.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -116,16 +106,16 @@ Le **_sopen_s** fonction ouvre le fichier spécifié par *nom de fichier* et pr�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-L’expression d’entier *oflag* est formé en combinant une ou plusieurs constantes manifestes, qui sont définies dans \<fcntl.h >. Quand plusieurs constantes forment l’argument *oflag*, elles sont combinées avec l’opérateur OR au niveau du bit ( **&#124;** ).
+L’expression d’entier *oflag* est constituée en combinant une ou plusieurs constantes manifestes, qui sont définies dans \<fcntl.h >. Quand deux ou plusieurs constantes forment l’argument *oflag*, elles sont combinées avec l’opérateur OR au niveau du bit ( **&#124;** ).
 
 |*oflag* constante|Comportement|
 |-|-|
 **_O_APPEND**|Déplace le pointeur de fichier à la fin du fichier avant chaque opération d'écriture.
 **_O_BINARY**|Ouvre le fichier en mode binaire (non traduit). (Pour obtenir une description du mode binaire, consultez [fopen](fopen-wfopen.md).)
-**_O_CREAT**|Crée un fichier et l'ouvre pour l'accès en écriture. N’a aucun effet si le fichier spécifié par *nom de fichier* existe. Le *pmode* argument est requis lorsque **_O_CREAT** est spécifié.
-**_O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|Crée un fichier temporaire et, dans la mesure du possible, n'effectue pas de vidage sur disque. Le *pmode* argument est requis lorsque **_O_CREAT** est spécifié.
-**_O_CREAT** &AMP;#124; **_O_TEMPORARY**|Crée un fichier temporaire ; le fichier est supprimé quand le dernier descripteur de fichier est fermé. Le *pmode* argument est requis lorsque **_O_CREAT** est spécifié.
-**_O_CREAT**&AMP;#124; ` _O_EXCL`|Retourne une valeur d’erreur si un fichier spécifié par *nom de fichier* existe. S’applique uniquement lorsque utilisé avec **_O_CREAT**.
+**_O_CREAT**|Crée un fichier et l'ouvre pour l'accès en écriture. N’a aucun effet si le fichier spécifié par *filename* existe. Le *pmode* argument est requis quand **_O_CREAT** est spécifié.
+**_O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|Crée un fichier temporaire et, dans la mesure du possible, n'effectue pas de vidage sur disque. Le *pmode* argument est requis quand **_O_CREAT** est spécifié.
+**_O_CREAT** &AMP;#124; **_O_TEMPORARY**|Crée un fichier temporaire ; le fichier est supprimé quand le dernier descripteur de fichier est fermé. Le *pmode* argument est requis quand **_O_CREAT** est spécifié.
+**_O_CREAT**&AMP;#124; ` _O_EXCL`|Retourne une valeur d’erreur si un fichier spécifié par *filename* existe. S’applique uniquement lorsque utilisé avec **_O_CREAT**.
 **_O_NOINHERIT**|Empêche la création d'un descripteur de fichier partagé.
 **_O_RANDOM**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque.
 **_O_RDONLY**|Ouvre un fichier pour l'accès en lecture uniquement. Ne peut pas être spécifié avec **_O_RDWR** ou **_O_WRONLY**.
@@ -138,13 +128,13 @@ L’expression d’entier *oflag* est formé en combinant une ou plusieurs const
 **_O_U8TEXT**|Ouvre un fichier en mode Unicode UTF-8.
 **_O_WTEXT**|Ouvre un fichier en mode Unicode.
 
-Pour spécifier le mode d’accès au fichier, vous devez spécifier soit **_O_RDONLY**, **_O_RDWR**, ou **_O_WRONLY**. Il n'y a aucune valeur par défaut pour le mode d'accès.
+Pour spécifier le mode d’accès de fichier, vous devez spécifier soit **_O_RDONLY**, **_O_RDWR**, ou **_O_WRONLY**. Il n'y a aucune valeur par défaut pour le mode d'accès.
 
-Quand un fichier est ouvert en mode Unicode à l’aide de **_O_WTEXT**, **_O_U8TEXT**, ou **_O_U16TEXT**entrée fonctions traduisent les données qui sont lues à partir du fichier en données UTF-16 stockées en tant que type **wchar_t**. Fonctions qui écrivent dans un fichier ouvert en mode Unicode attendent des mémoires tampons qui contiennent des données UTF-16 stockées comme type **wchar_t**. Si le fichier est encodé au format UTF-8, les données UTF-16 sont traduites en UTF-8 lors de leur écriture et le contenu du fichier encodé au format UTF-8 est traduit en UTF-16 lorsqu'il est lu. Toute tentative de lecture ou d'écriture d'une quantité impaire d'octets en mode Unicode provoque une erreur de validation de paramètre. Pour lire ou écrire des données stockées dans votre programme au format UTF-8, utilisez un mode de fichier binaire ou texte au lieu d'un mode Unicode. Vous êtes responsable de toute traduction d'encodage nécessaire.
+Quand un fichier est ouvert en mode Unicode à l’aide de **_O_WTEXT**, **_O_U8TEXT**, ou **_O_U16TEXT**, d’entrée fonctions traduisent les données lues à partir du fichier en données UTF-16 stockées en tant que type **wchar_t**. Fonctions qui écrivent dans un fichier ouvert en mode Unicode attendent des mémoires tampons qui contiennent des données UTF-16 stockées comme type **wchar_t**. Si le fichier est encodé au format UTF-8, les données UTF-16 sont traduites en UTF-8 lors de leur écriture et le contenu du fichier encodé au format UTF-8 est traduit en UTF-16 lorsqu'il est lu. Toute tentative de lecture ou d'écriture d'une quantité impaire d'octets en mode Unicode provoque une erreur de validation de paramètre. Pour lire ou écrire des données stockées dans votre programme au format UTF-8, utilisez un mode de fichier binaire ou texte au lieu d'un mode Unicode. Vous êtes responsable de toute traduction d'encodage nécessaire.
 
-Si **_sopen_s** est appelée avec **_O_WRONLY** | **_O_APPEND** (mode append) et **_O_WTEXT**, **_O_ U16TEXT**, ou **_O_U8TEXT**, il tente d’abord d’ouvrir le fichier pour lecture et écriture, lire la marque BOM, puis le rouvrir en écriture seule. Si l'ouverture du fichier pour l'accès en lecture et en écriture échoue, elle ouvre le fichier pour l'accès en écriture uniquement et utilise la valeur par défaut pour le paramètre de mode Unicode.
+Si **_sopen_s** est appelée avec **_O_WRONLY** | **_O_APPEND** (mode append) et **_O_WTEXT**, **_O_ U16TEXT**, ou **_O_U8TEXT**, il tente d’abord d’ouvrir le fichier pour lecture et écriture, lire la marque BOM, puis rouvrez-la pour un accès en écriture uniquement. Si l'ouverture du fichier pour l'accès en lecture et en écriture échoue, elle ouvre le fichier pour l'accès en écriture uniquement et utilise la valeur par défaut pour le paramètre de mode Unicode.
 
-L’argument *shflag* est une expression constante qui se compose d’une des constantes de manifeste suivantes, qui sont définies dans \<share.h >.
+L’argument *shflag* est une expression constante qui se compose d’une des constantes manifestes suivantes, qui sont définies dans \<share.h >.
 
 |*shflag* constante|Comportement|
 |-|-|
@@ -153,7 +143,7 @@ L’argument *shflag* est une expression constante qui se compose d’une des co
 **_SH_DENYRD**|Refuse l'accès en lecture à un fichier.
 **_SH_DENYNO**|Autorise l'accès en lecture et en écriture.
 
-Le *pmode* argument est toujours requis, contrairement à dans **_sopen**. Lorsque vous spécifiez **_O_CREAT**, si le fichier n’existe pas, *pmode* spécifie les paramètres d’autorisation du fichier, qui sont définis quand le nouveau fichier est fermé la première fois. Dans le cas contraire, *pmode* est ignoré. *pmode* est une expression d’entier qui contienne un ou les deux des constantes de manifeste **_S_IWRITE** et **_S_IREAD**, qui sont définies dans \<sys\stat.h >. Quand les deux constantes sont données, elles sont combinées avec l'opérateur OR au niveau du bit. La signification de *pmode* est comme suit.
+Le *pmode* argument est toujours requis, contrairement à dans **_sopen**. Lorsque vous spécifiez **_O_CREAT**, si le fichier n’existe pas, *pmode* spécifie les paramètres d’autorisation du fichier, qui sont définis quand le nouveau fichier est fermé pour la première fois. Sinon, *pmode* est ignoré. *pmode* est une expression d’entier qui contient tout ou partie des constantes manifestes **_S_IWRITE** et **_S_IREAD**, qui sont définies dans \<sys\stat.h >. Quand les deux constantes sont données, elles sont combinées avec l'opérateur OR au niveau du bit. La signification de *pmode* se présente comme suit.
 
 |*pmode*|Signification|
 |-|-|
@@ -161,11 +151,11 @@ Le *pmode* argument est toujours requis, contrairement à dans **_sopen**. Lorsq
 **_S_IWRITE**|Écriture autorisée. (En fait, autorise la lecture et l'écriture.)
 **_S_IREAD** &AMP;#124; **_S_IWRITE**|Lecture et écriture autorisées.
 
-Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Dans le système d'exploitation Windows, tous les fichiers sont lisibles ; il est impossible d'accorder une autorisation en écriture seule. Par conséquent, les modes **_S_IWRITE** et **_S_IREAD** | **_S_IWRITE** sont équivalents.
+Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Dans le système d'exploitation Windows, tous les fichiers sont lisibles ; il est impossible d'accorder une autorisation en écriture seule. Par conséquent, les modes **_S_IWRITE** et **_S_IREAD** | **_S_IWRITE** sont équivalentes.
 
-**_sopen_s** s’applique le masque d’autorisation de fichier actif à *pmode* avant que les autorisations sont définies. (Voir [_umask](umask.md).)
+**_sopen_s** applique le masque d’autorisation de fichier actuelle à *pmode* avant que les autorisations sont définies. (Voir [_umask](umask.md).)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

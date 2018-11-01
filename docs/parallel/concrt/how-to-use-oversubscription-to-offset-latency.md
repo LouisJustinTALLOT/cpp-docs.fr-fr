@@ -1,26 +1,16 @@
 ---
-title: 'Comment : utiliser le surabonnement pour compenser la latence | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : utiliser le surabonnement pour compenser la latence'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163567"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653074"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Comment : utiliser le surabonnement pour compenser la latence
 

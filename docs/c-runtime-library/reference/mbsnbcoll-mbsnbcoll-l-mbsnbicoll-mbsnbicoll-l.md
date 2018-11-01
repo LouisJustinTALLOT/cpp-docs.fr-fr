@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
@@ -32,8 +28,6 @@ f1_keywords:
 - _ftcsnicoll
 - _ftcsncoll
 - mbsnbcoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcoll_l function
 - mbsnbcoll_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19e17552a674d4931134eb9d7b436a0f858843d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c18faa3c93969a683b3ee3ef58dd02e1c1ae61f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405391"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665196"
 ---
 # <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
@@ -106,23 +96,23 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de retour indique la relation entre les sous-chaînes de *string1* et *chaîne2*.
+La valeur de retour indique la relation entre les sous-chaînes de *string1* et *string2*.
 
 |Valeur de retour|Description|
 |------------------|-----------------|
-|< 0|*string1* sous-chaîne moins *chaîne2* sous-chaîne.|
-|0|*string1* sous-chaîne identique à *chaîne2* sous-chaîne.|
-|> 0|*string1* sous-chaîne supérieur *chaîne2* sous-chaîne.|
+|< 0|*string1* sous-chaîne inférieure à *string2* sous-chaîne.|
+|0|*string1* sous-chaîne identique à *string2* sous-chaîne.|
+|> 0|*string1* sous-chaîne supérieur *string2* sous-chaîne.|
 
-Si *string1* ou *chaîne2* est **NULL** ou *nombre* est supérieur à **INT_MAX**, non valide Gestionnaire de paramètres est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et **errno** à **EINVAL**. Pour utiliser **_NLSCMPERROR**, incluez String.h ou Mbstring.h.
+Si *string1* ou *string2* est **NULL** ou *nombre* est supérieur à **INT_MAX**, le non valide Gestionnaire de paramètres est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et définissez **errno** à **EINVAL**. Pour utiliser **_NLSCMPERROR**, incluez String.h ou Mbstring.h.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions assemble au maximum, la première *nombre* octets *string1* et *chaîne2* et retourne une valeur qui indique la relation entre résultant les sous-chaînes de *string1* et *chaîne2*. Si le dernier octet de la sous-chaîne de *string1* ou *chaîne2* est un octet de tête, il n’est pas inclus dans la comparaison ; ces fonctions comparer uniquement des caractères dans les sous-chaînes terminées. **_mbsnbicoll** est une version de la casse de **_mbsnbcoll**. Comme [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) et [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** et **_mbsnbicoll** collate, les deux chaînes de caractères multioctets en fonction de la ordre lexicographique spécifié par le multioctets [page de codes](../../c-runtime-library/code-pages.md) en cours d’utilisation.
+Chacune de ces fonctions assemble, au maximum, la première *nombre* octets dans *string1* et *string2* et retourne une valeur qui indique la relation entre résultant les sous-chaînes de *string1* et *string2*. Si le dernier octet de la sous-chaîne de *string1* ou *string2* est un octet de tête, il n’est pas inclus dans la comparaison ; ces fonctions comparent uniquement des caractères complets dans les sous-chaînes. **_mbsnbicoll** est une version de non-respect de la casse de **_mbsnbcoll**. Comme [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) et [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** et **_mbsnbicoll** collate, les deux chaînes de caractères multioctets en fonction de la l’ordre lexicographique spécifié par le multioctets [page de codes](../../c-runtime-library/code-pages.md) en cours d’utilisation.
 
-Pour certaines pages de codes et les jeux de caractères correspondants, l’ordre des caractères dans le jeu de caractères peut différer de l’ordre lexicographique des caractères. Dans les paramètres régionaux « C », ce n’est pas le cas : l’ordre des caractères dans le jeu de caractères ASCII est le même que l’ordre lexicographique des caractères. Cependant, dans certaines pages de code européennes, par exemple, le caractère « a » (valeur 0x61) précède le caractère « ä » (valeur 0xE4) dans le jeu de caractères, alors que d’un point de vue lexicographique, le caractère « ä » précède le caractère « a ». Pour effectuer une comparaison lexicographique de chaînes en octets dans ce cas, utilisez **_mbsnbcoll** plutôt que **_mbsnbcmp**; pour vérifier uniquement l’égalité de chaînes, utilisez **_mbsnbcmp**.
+Pour certaines pages de codes et les jeux de caractères correspondants, l’ordre des caractères dans le jeu de caractères peut différer de l’ordre lexicographique des caractères. Dans les paramètres régionaux « C », ce n’est pas le cas : l’ordre des caractères dans le jeu de caractères ASCII est le même que l’ordre lexicographique des caractères. Cependant, dans certaines pages de code européennes, par exemple, le caractère « a » (valeur 0x61) précède le caractère « ä » (valeur 0xE4) dans le jeu de caractères, alors que d’un point de vue lexicographique, le caractère « ä » précède le caractère « a ». Pour effectuer une comparaison lexicographique de chaînes par octets dans ce cas, utilisez **_mbsnbcoll** plutôt que **_mbsnbcmp**; pour vérifier uniquement l’égalité des chaînes, utilisez **_mbsnbcmp**.
 
-Parce que le **coll** fonctions collate chaînes lexicographiquement pour la comparaison, tandis que le **cmp** fonctions simplement testent l’égalité de chaîne, le **coll** sont des fonctions beaucoup plus lent que correspondant **cmp** versions. Par conséquent, le **coll** fonctions doivent être utilisées uniquement lorsqu’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle cette différence présente un intérêt pour la comparaison.
+Étant donné que le **coll** fonctions assembler des chaînes lexicographiquement pour la comparaison, tandis que le **cmp** fonctions testent simplement l’égalité des chaînes, la **coll** sont des fonctions beaucoup plus lent que le correspondantes **cmp** versions. Par conséquent, le **coll** fonctions doivent être utilisées uniquement lorsqu’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et cette différence présente un intérêt pour la comparaison.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -135,7 +125,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |**_tcsnicoll**|[_strnicoll](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|**_mbsnbicoll**|[_wcsnicoll](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|
 |**_tcsnicoll_l**|[_strnicoll_l](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|**_mbsnbicoll_l**|[_wcsnicoll_l](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

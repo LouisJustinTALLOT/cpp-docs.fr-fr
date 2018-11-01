@@ -1,10 +1,6 @@
 ---
-title: _InterlockedExchangeAdd, fonctions intrinsèques | Microsoft Docs
-ms.custom: ''
+title: _InterlockedExchangeAdd, fonctions intrinsèques
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedExchangeAdd64_nf
 - _InterlockedExchangeAdd64_rel
@@ -31,8 +27,6 @@ f1_keywords:
 - _InterlockedExchangeAdd_HLEAcquire
 - _InterlockedExchangeAdd64_HLEAcquire
 - _InterlockedExchangeAdd
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedExchangeAdd8_nf intrinsic
 - InterlockedExchangeAdd64_acq intrinsic
@@ -61,16 +55,12 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ce2417af10ba5f76c1d4170e41e0c037b07419c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffdeec13f3f99e5ef3595cbfec4a66f2099cd1a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647172"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd, fonctions intrinsèques
 
@@ -186,7 +176,7 @@ La valeur de retour est la valeur initiale de la variable vers laquelle pointe l
 
 ## <a name="remarks"></a>Notes
 
-Il existe plusieurs variantes de `_InterlockedExchangeAdd` qui varient selon les types de données qu'elles impliquent et l'utilisation d'une sémantique acquire ou release spécifique au processeur.
+Il existe plusieurs variantes de `_InterlockedExchangeAdd` qui varient selon les types de données qu’elles impliquent et l’utilisation d’une sémantique acquire ou release spécifique au processeur.
 
 La fonction `_InterlockedExchangeAdd` opère sur les valeurs entières de 32 bits, `_InterlockedExchangeAdd8` sur les valeurs entières de 8 bits, `_InterlockedExchangeAdd16` sur les valeurs entières de 16 bits et `_InterlockedExchangeAdd64` sur les valeurs entières de 64 bits.
 
