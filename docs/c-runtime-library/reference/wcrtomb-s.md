@@ -1,10 +1,6 @@
 ---
-title: wcrtomb_s | Microsoft Docs
-ms.custom: ''
+title: wcrtomb_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcrtomb_s
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcrtomb_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb_s function
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a035010c2af49c0d12b4b7f1d6429c66ba9032cc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7fe7fba861eecec562928cf381973f62a4db60fb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522460"
 ---
 # <a name="wcrtombs"></a>wcrtomb_s
 
@@ -87,17 +77,17 @@ Retourne zéro ou un **errno** valeur si une erreur se produit.
 
 ## <a name="remarks"></a>Notes
 
-Le **wcrtomb_s** fonction convertit un caractère large, à compter de l’état de la conversion spécifiée contenue dans *mbstate*, à partir de la valeur contenue dans *wchar*, dans le adresse représentée par *mbchar*. Le *pReturnValue* valeur sera le nombre d’octets converties, mais pas plus de **MB_CUR_MAX** octets, ou une valeur -1 si une erreur s’est produite.
+Le **wcrtomb_s** fonction convertit un caractère large, à compter de l’état de conversion spécifié contenu dans *mbstate*, à partir de la valeur contenue dans *wchar*, dans le adresse représentée par *mbchar*. Le *pReturnValue* valeur sera le nombre d’octets convertis, mais pas plus de **MB_CUR_MAX** octets, ou -1 si une erreur s’est produite.
 
-Si *mbstate* est null, le texte interne **mbstate_t** état de la conversion est utilisé. Si le caractère figurant *wchar* n’a pas un caractère multioctet correspondant, la valeur de *pReturnValue* sera -1 et la fonction retournera le **errno** valeur de **EILSEQ**.
+Si *mbstate* a la valeur null, le texte interne **mbstate_t** état de la conversion est utilisé. Si le caractère contenu dans *wchar* n’a pas un caractère multioctet correspondant, la valeur de *pReturnValue* sera -1 et la fonction retournera le **errno** valeur de **EILSEQ**.
 
-Le **wcrtomb_s** diffère de la fonction [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) par sa capacité à redémarrer. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, utilisez une application **wcsrlen** plutôt que **wcslen**, si un appel ultérieur à **wcsrtombs_s** ont été utilisés au lieu de **wcstombs_s**.
+Le **wcrtomb_s** diffère de la fonction [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) par sa capacité à redémarrer. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application utiliserait **wcsrlen** plutôt que **wcslen**, si un appel ultérieur à **wcsrtombs_s** était utilisé au lieu de **wcstombs_s**.
 
 En C++, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument de taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Exceptions
 
-Le **wcrtomb_s** fonction est multithread-safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant l’exécution de cette fonction et la *mbstate* a la valeur null.
+Le **wcrtomb_s** fonction est multithread-safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant l’exécution de cette fonction et le *mbstate* a la valeur null.
 
 ## <a name="example"></a>Exemple
 
@@ -143,7 +133,7 @@ int main( void )
 The corresponding wide character "Q" was converted to a the "Q" multibyte character.
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
