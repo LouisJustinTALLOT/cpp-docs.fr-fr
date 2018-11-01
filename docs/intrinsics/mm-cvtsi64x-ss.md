@@ -1,28 +1,18 @@
 ---
-title: _mm_cvtsi64x_ss | Microsoft Docs
-ms.custom: ''
+title: _mm_cvtsi64x_ss
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _mm_cvtsi64x_ss
-dev_langs:
-- C++
 helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd0c5e0bab6142ec52fc0c8e8a1a292b46cc2460
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5fe798fdb6315be17653d85e438abf2308c1e8b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375547"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569375"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 
@@ -33,9 +23,9 @@ Génère le x64 étendu version du convertir en entier 64 bits en à valeur scal
 ## <a name="syntax"></a>Syntaxe
 
 ```
-__m128 _mm_cvtsi64x_ss( 
-   __m128 a, 
-   __int64 b 
+__m128 _mm_cvtsi64x_ss( 
+   __m128 a, 
+   __int64 b 
 );
 ```
 
