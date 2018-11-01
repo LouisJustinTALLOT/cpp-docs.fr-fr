@@ -1,14 +1,8 @@
 ---
-title: Création d’une icône ou une autre Image (Éditeur d’images pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Création d'une icône ou d'une autre image (Éditeur d'images pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - bitmaps [C++]
 - images [C++], creating
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - graphics [C++], creating
 - Image editor [C++], creating images
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 43ba8086481ea2a8dde20d06b1dc143b297138f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45a119114c26513788b2cdc134e4258e42cf896d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503282"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Création d'une icône ou d'une autre image (Éditeur d'images pour les icônes)
 
