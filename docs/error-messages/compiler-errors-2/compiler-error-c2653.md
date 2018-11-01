@@ -1,37 +1,27 @@
 ---
-title: Erreur du compilateur C2653 | Documents Microsoft
-ms.custom: ''
+title: Erreur du compilateur C2653
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2653
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8e1df7dd6337b1a3e363a5744181b12d94c879b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234965"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471147"
 ---
 # <a name="compiler-error-c2653"></a>Erreur du compilateur C2653
 
-> '*identificateur*' : n’est pas un nom de classe ou espace de noms
+> «*identificateur*' : n’est pas un nom de classe ou espace de noms
 
-La syntaxe du langage requiert un nom de classe, structure, union ou espace de noms ici.
+La syntaxe du langage nécessite un nom de classe, structure, union ou espace de noms ici.
 
-Cette erreur peut se produire lorsque vous utilisez un nom qui n’a pas été déclaré en tant que classe, structure, union ou espace de noms devant un opérateur de portée. Pour résoudre ce problème, déclarez le nom ou inclure l’en-tête qui déclare le nom avant de les utiliser.
+Cette erreur peut se produire lorsque vous utilisez un nom qui n’a pas été déclaré comme une classe, structure, union ou espace de noms devant un opérateur de portée. Pour résoudre ce problème, déclarez le nom ou incluez l’en-tête qui déclare le nom avant de les utiliser.
 
-C2653 est également possible si vous essayez de définir un *espace de noms composé*, un espace de noms qui contient un ou plusieurs noms d’espace de noms imbriqué à l’étendue. Compound, espace de noms définitions ne sont pas autorisées en C++ avant C ++ 17. Espaces de noms composés sont pris en charge depuis Visual Studio 2015 Update 3 lorsque vous spécifiez la [/std : c ++ dernière](../../build/reference/std-specify-language-standard-version.md) option du compilateur. À partir de Visual C++ 2017 version 15.5, le compilateur prend en charge les définitions de l’espace de noms composé lorsque le [/std : c ++ 17](../../build/reference/std-specify-language-standard-version.md) option est spécifiée.
+C2653 est également possible si vous essayez de définir un *espace de noms composé*, un espace de noms qui contient un ou plusieurs noms d’espace de noms étendue imbriquée. Composée d’espace de noms définitions ne sont pas autorisées en C++ avant C ++ 17. Espaces de noms composés sont pris en charge dans Visual Studio 2015 Update 3 lorsque vous spécifiez le [/std : c ++ dernière](../../build/reference/std-specify-language-standard-version.md) option du compilateur. À partir de Visual C++ 2017 version 15.5, le compilateur prend en charge les définitions d’espace de noms composés lorsque le [/std : c ++ 17](../../build/reference/std-specify-language-standard-version.md) option est spécifiée.
 
 ## <a name="examples"></a>Exemples
 
@@ -48,7 +38,7 @@ void xx::func1(int m) {}   // C2653, xx is not declared
 void yy::func1(int m) {}   // OK
 ```
 
-Dans le code qui n’est pas compilé pour C ++ 17 ou normes ultérieures, espaces de noms imbriqués doivent utiliser une déclaration d’espace de noms explicite à chaque niveau d’imbrication :
+Dans le code qui n’est pas compilé pour C ++ 17 ou ultérieure normes, espaces de noms imbriqués doivent utiliser une déclaration d’espace de noms explicite à chaque niveau d’imbrication :
 
 ```cpp
 // C2653b.cpp
