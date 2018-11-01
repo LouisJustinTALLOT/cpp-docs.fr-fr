@@ -1,10 +1,6 @@
 ---
-title: atexit | Microsoft Docs
-ms.custom: ''
+title: atexit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atexit
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - atexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66954348d5d812fac7eca0b231304267cc26157
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393132"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556639"
 ---
 # <a name="atexit"></a>atexit
 
@@ -52,7 +42,7 @@ int atexit(
 
 ### <a name="parameters"></a>Paramètres
 
-*Func*<br/>
+*func*<br/>
 Fonction à appeler.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -61,13 +51,13 @@ Fonction à appeler.
 
 ## <a name="remarks"></a>Notes
 
-Le **atexit** fonction reçoit l’adresse d’une fonction *func* à appeler lorsque le programme se termine normalement. Les appels successifs à **atexit** créer un Registre de fonctions qui sont exécutées par ordre dernier entré, premier sorti (LIFO). Les fonctions passé à **atexit** ne peut pas prendre de paramètres. **atexit** et **_onexit** utiliser le segment de mémoire pour conserver l’historique des fonctions. Le nombre de fonctions pouvant être enregistrées n’est donc limité que par la mémoire de tas.
+Le **atexit** l’adresse d’une fonction est passé à la fonction *func* à appeler lorsque le programme se termine normalement. Les appels successifs à **atexit** créent un registre des fonctions qui sont exécutées par ordre dernier entré, premier sorti (LIFO). Les fonctions transmises à **atexit** ne peut pas prendre de paramètres. **atexit** et **_onexit** utilisent le tas pour conserver le Registre des fonctions. Le nombre de fonctions pouvant être enregistrées n’est donc limité que par la mémoire de tas.
 
-Le code dans le **atexit** fonction ne doit pas contenir une dépendance sur n’importe quelle DLL qui peut avoir déjà été déchargé lorsque le **atexit** est appelée.
+Le code dans le **atexit** fonction ne doit pas contenir toute dépendance vis-à-vis d’une DLL qui peut avoir déjà été déchargée quand le **atexit** fonction est appelée.
 
-Pour générer une application compatible ANSI, utilisez la norme ANSI **atexit** (fonction) (au lieu de la même **_onexit** fonction).
+Pour générer une application compatible ANSI, utilisez la norme ANSI **atexit** (fonction) (au lieu du similaire **_onexit** fonction).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -75,7 +65,7 @@ Pour générer une application compatible ANSI, utilisez la norme ANSI **atexit*
 
 ## <a name="example"></a>Exemple
 
-Ce programme push quatre fonctions dans la pile de fonctions à exécuter lorsque **atexit** est appelée. Quand le programme s’arrête, ces programmes sont exécutés dans l’ordre « dernier entré, premier sorti ».
+Ce programme place quatre fonctions dans la pile de fonctions à exécuter lorsque **atexit** est appelée. Quand le programme s’arrête, ces programmes sont exécutés dans l’ordre « dernier entré, premier sorti ».
 
 ```C
 // crt_atexit.c

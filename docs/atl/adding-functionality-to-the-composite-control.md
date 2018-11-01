@@ -1,27 +1,17 @@
 ---
-title: Ajout de fonctionnalités au contrôle Composite | Microsoft Docs
-ms.custom: ''
+title: Ajout de fonctionnalités au contrôle Composite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handlers [C++], ActiveX controls
 - composite controls, handling events
 - ActiveX controls [C++], events
 ms.assetid: 98f85681-9564-480d-af38-03f9733fe58b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59ee8047e17efdebbae6ee58ec243057a477caff
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1f0759c9182ad2a7e572bacee7707963d9b6ae2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751131"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532661"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>Ajout de fonctionnalités au contrôle Composite
 

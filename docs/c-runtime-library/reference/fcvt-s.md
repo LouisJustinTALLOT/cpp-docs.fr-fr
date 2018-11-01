@@ -1,10 +1,6 @@
 ---
-title: _fcvt_s | Microsoft Docs
-ms.custom: ''
+title: _fcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt_s
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2897c199b1b7022de8d5735c4da5f02d7627a418
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404059"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536848"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -95,7 +85,7 @@ En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette f
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*sizeInBytes*|par défaut|count|dec|sign|Retourner|Valeur de *tampon*|
+|*buffer*|*sizeInBytes*|par défaut|count|dec|sign|Retourner|Valeur dans *mémoire tampon*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|Non modifiée.|
 |Pas **NULL** (pointe vers une mémoire valide)|<=0|any|any|any|any|**EINVAL**|Non modifiée.|
@@ -104,15 +94,15 @@ En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette f
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
-**_fcvt_s** peut générer une violation d’accès si *tampon* ne pointe pas vers la mémoire valide et n’est pas **NULL**.
+**_fcvt_s** peut générer une violation d’accès si *tampon* ne pointe pas vers une mémoire valide et n’est pas **NULL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_fcvt_s** fonction convertit un nombre à virgule flottante en une chaîne de caractères terminée par null. Le *valeur* paramètre est le nombre à virgule flottante à convertir. **_fcvt_s** stocke les chiffres de *valeur* sous forme de chaîne et ajoute un caractère null ('\0'). Le *nombre* paramètre spécifie le nombre de chiffres à stocker après la virgule décimale. Chiffres en trop sont arrondies à *nombre* place. S’il y a moins de *nombre* chiffres de précision, la chaîne est rempli de zéros.
+Le **_fcvt_s** fonction convertit un nombre à virgule flottante en une chaîne de caractères se terminant par null. Le *valeur* paramètre correspond au nombre à virgule flottante à convertir. **_fcvt_s** stocke les chiffres de *valeur* sous forme de chaîne et ajoute un caractère null ('\0'). Le *nombre* paramètre spécifie le nombre de chiffres à stocker après la virgule décimale. Chiffres en trop sont arrondis à *nombre* place. S’il existe moins de *nombre* chiffres de précision, la chaîne est remplie de zéros.
 
-Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de *valeur* peut être obtenu à partir de *dec* et *signe* après l’appel. Le *dec* paramètre pointe vers une valeur entière ; cette valeur d’entier donne la position de la virgule décimale en ce qui concerne le début de la chaîne. Une valeur entière ou zéro indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre *signe* pointe vers un entier indiquant le signe de *valeur*. L’entier est défini à 0 si *valeur* est un nombre positif et est définie sur un nombre différent de zéro si *valeur* est un nombre négatif.
+Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de *valeur* peut être obtenu à partir de *dec* et *connexion* après l’appel. Le *dec* paramètre pointe vers une valeur entière ; celle-ci indique la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou zéro indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre *connexion* pointe vers un entier indiquant le signe de *valeur*. L’entier est défini sur 0 si *valeur* est un nombre positif et est défini sur un nombre différent de zéro si *valeur* est un nombre négatif.
 
-Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisant pour n’importe quel flottante valeur du point.
+Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour n’importe quel flottante valeur de point.
 
 La différence entre **_ecvt_s** et **_fcvt_s** est dans l’interprétation de la *nombre* paramètre. **_ecvt_s** interprète *nombre* comme le nombre total de chiffres dans la chaîne de sortie, et **_fcvt_s** interprète *nombre* en tant que le nombre de chiffres après le virgule décimale.
 
@@ -120,7 +110,7 @@ En C++, l’utilisation de cette fonction est simplifiée par une surcharge de m
 
 La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|

@@ -1,27 +1,17 @@
 ---
-title: Erreur irrécupérable RC1019 du compilateur de ressources | Microsoft Docs
-ms.custom: ''
+title: 'Erreur irrécupérable RC1019 du compilateur de ressources '
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC1019
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC1019
 ms.assetid: 432fff44-04a9-4e13-91c6-870df6f0b4e4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a455daffba3957b9a4628ecab9e604994e4a4ce2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b9f83d9bcacce2e76a0e9deeeddfe21863688552
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027087"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556531"
 ---
 # <a name="resource-compiler-fatal-error-rc1019"></a>Erreur irrécupérable RC1019 du compilateur de ressources 
 

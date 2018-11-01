@@ -1,10 +1,6 @@
 ---
-title: atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft Docs
-ms.custom: ''
+title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -32,8 +28,6 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs:
-- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e1f8b60c25c57e3e2eb6a9a964fd80664e3aa4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393896"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541724"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Calcule l’arc tangente de **x** (**atan**, **atanf**, et **atanl**) ou de l’arc tangente de **y** / **x** (**atan2**, **atan2f**, et **atan2l**).
+Calcule l’arc tangente de **x** (**atan**, **atanf**, et **atanl**) ou l’arc tangente de **y** / **x** (**atan2**, **atan2f**, et **atan2l**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -86,23 +76,23 @@ N’importe quels nombres.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**ATAN** renvoie l’arc tangente de *x* dans la plage - π/2 et π/2 radians. **ATAN2** renvoie l’arc tangente de *y*/*x* dans la plage - π en radians la mesure π. Si *x* est 0, **atan** retourne 0. Si les deux paramètres de **atan2** sont 0, la fonction retourne 0. Tous les résultats sont en radians.
+**ATAN** renvoie l’arc tangente de *x* dans la plage π/2 et π/2 radians. **ATAN2** renvoie l’arc tangente de *y*/*x* dans la plage - π en radians la mesure π. Si *x* est 0, **atan** retourne 0. Si les deux paramètres de **atan2** sont 0, la fonction retourne 0. Tous les résultats sont en radians.
 
-**ATAN2** utilise les signes des deux paramètres afin de déterminer le secteur de la valeur de retour.
+**ATAN2** utilise les signes des deux paramètres pour déterminer le quadrant de la valeur de retour.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|aucun|**_DOMAIN**|
+|+ **QNAN**, **IND**|none|**_DOMAINE**|
 
 ## <a name="remarks"></a>Notes
 
-Le **atan** fonction calcule l’arc tangente (la fonction tangente inverse) de *x*. **ATAN2** calcule l’arc tangente de *y*/*x* (si *x* est égal à 0, **atan2** retourne π/2 si *y* est un nombre positif, - π/2 si *y* est négatif, ou 0 si *y* est 0.)
+Le **atan** fonction calcule l’arc tangente (fonction tangente inverse) de *x*. **ATAN2** calcule l’arc tangente de *y*/*x* (si *x* est égal à 0, **atan2** retourne π/2 si *y* est un nombre positif, - π/2 si *y* est négatif, ou 0 si *y* est 0.)
 
-**ATAN** possède une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
+**ATAN** a une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **atan** et **atan2** acceptant **float** ou **long** **double**  arguments. Dans un programme C, **atan** et **atan2** sont toujours **double** argument et retourner un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **atan** et **atan2** acceptant **float** ou **long** **double**  arguments. Dans un programme C, **atan** et **atan2** prennent toujours **double** arguments et retournent un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|

@@ -1,29 +1,19 @@
 ---
-title: Cautoptrlist, classe | Microsoft Docs
-ms.custom: ''
+title: Cautoptrlist, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAutoPtrList
 - ATLCOLL/ATL::CAutoPtrList
 - ATLCOLL/ATL::CAutoPtrList::CAutoPtrList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c33c3524d0fb6b39208e2cb7be57805a3ff043f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7e5c2db31100da8901deaae61527c65655faa7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046756"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551409"
 ---
 # <a name="cautoptrlist-class"></a>Cautoptrlist, classe
 
