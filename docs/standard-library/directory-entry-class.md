@@ -1,10 +1,6 @@
 ---
-title: directory_entry, classe | Microsoft Docs
-ms.custom: ''
+title: directory_entry, classe
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_entry
 - filesystem/std::experimental::filesystem::directory_entry::operator const std::experimental::filesystem::path &
@@ -21,11 +17,7 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_entry::operator&lt;=
 - filesystem/std::experimental::filesystem::directory_entry::operator&gt;
 - filesystem/std::experimental::filesystem::directory_entry::operator&gt;=
-dev_langs:
-- C++
 ms.assetid: 1827c67b-4137-4548-adb0-f955f7acaf08
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::experimental::filesystem::directory_entry
 - std::experimental::filesystem::directory_entry::operator const std::experimental::filesystem::path &
@@ -42,14 +34,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&lt;=
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46a031b727f5c592925aaa4d343fc1299f6d4cdf
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701517"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533820"
 ---
 # <a name="directoryentry-class"></a>directory_entry, classe
 
@@ -87,7 +77,7 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 
 |Opérateur|Description|
 |-|-|
-|[operator!=](#op_neq)|Remplace les éléments de la liste par une copie d'une autre liste.|
+|[!=, opérateur](#op_neq)|Remplace les éléments de la liste par une copie d'une autre liste.|
 |[operator=](#op_as)|Les opérateurs d’affectation de membre par défaut se comportent comme prévu.|
 |[operator==](#op_eq)|Retourne `mypath == right.mypath`.|
 |[operator<](#op_lt)|Retourne `mypath < right.mypath`.|
