@@ -1,10 +1,6 @@
 ---
-title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430301"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -92,7 +82,7 @@ Caractère à renvoyer (transmission push).
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les deux fonctions retournent le caractère *c* en cas de réussite. S’il existe une erreur, **_ungetch** retourne une valeur de **EOF** et **_ungetwch** retourne **WEOF**.
+Les deux fonctions retournent le caractère *c* en cas de réussite. Si une erreur se produit, **_ungetch** retourne une valeur de **EOF** et **_ungetwch** retourne **WEOF**.
 
 ## <a name="remarks"></a>Notes
 
@@ -107,7 +97,7 @@ Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles 
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

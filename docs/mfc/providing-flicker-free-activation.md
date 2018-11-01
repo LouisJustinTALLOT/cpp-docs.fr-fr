@@ -1,27 +1,17 @@
 ---
-title: En fournissant l’Activation sans scintillement | Microsoft Docs
-ms.custom: ''
+title: Mise à disposition de l'activation sans scintillement
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], flicker-free
 - flicker, MFC ActiveX controls
 - activation [MFC], flicker-free
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd9f780472b8256f6d8332ecbde08138d85c8ebd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d979a6f633926bed1ad59de86829b9ac27b0d0cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438140"
 ---
 # <a name="providing-flicker-free-activation"></a>Mise à disposition de l'activation sans scintillement
 

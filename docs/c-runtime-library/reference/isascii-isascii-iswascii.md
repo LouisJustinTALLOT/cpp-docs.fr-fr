@@ -1,10 +1,6 @@
 ---
-title: isascii, __isascii, iswascii | Microsoft Docs
-ms.custom: ''
+title: isascii, __isascii, iswascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswascii
 - __isascii
@@ -30,8 +26,6 @@ f1_keywords:
 - ctype/isascii
 - ctype/__isascii
 - corecrt_wctype/iswascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - __isascii function
 - _isascii function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bffc46bae24689558999d188f96e5b9f8d21c54e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402271"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433655"
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -75,13 +65,13 @@ Entier à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si **c** est une représentation spécifique d’un caractère ASCII. **__isascii** retourne une valeur différente de zéro si **c** est un caractère ASCII (dans la plage 0 x 00 – 0x7F). **iswascii** retourne une valeur différente de zéro si **c** est une représentation de caractères larges d’un caractère ASCII. Chacune de ces routines retourne 0 si **c** ne satisfait pas la condition de test.
+Chacune de ces routines retourne différente de zéro si **c** est une représentation particulière d’un caractère ASCII. **__isascii** retourne une valeur différente de zéro si **c** est un caractère ASCII (dans la plage 0 x 00 - 0x7F). **iswascii** retourne une valeur différente de zéro si **c** est une représentation de caractères larges d’un caractère ASCII. Chacune de ces routines retourne 0 si **c** ne satisfait pas la condition de test.
 
 ## <a name="remarks"></a>Notes
 
-Les deux **__isascii** et **iswascii** sont implémentés en tant que macros, sauf si la macro de préprocesseur _CTYPE_DISABLE_MACROS est définie.
+Les deux **__isascii** et **iswascii** sont implémentées en tant que macros, sauf si la macro de préprocesseur _CTYPE_DISABLE_MACROS est définie.
 
-Pour la compatibilité descendante, **isascii** est implémenté comme un uniquement si de macro [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou est défini sur 0 ; sinon, il n’est pas défini.
+Pour la compatibilité descendante, **isascii** est implémenté en tant que macro que si [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou est définie comme 0 ; sinon, il n’est pas défini.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -89,14 +79,14 @@ Pour la compatibilité descendante, **isascii** est implémenté comme un unique
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**isascii**, **__isascii**|C : \<ctype.h><br /><br /> C++ : \<cctype> ou \<ctype.h>|
 |**iswascii**|C : \<wctype.h>, \<ctype.h> ou \<wchar.h><br /><br /> C++ : \<cwctype>, \<cctype>, \<wctype.h>, \<ctype.h> ou \<wchar.h>|
 
-Le **isascii**, **__isascii** et **iswascii** fonctions sont spécifiques de Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Le **isascii**, **__isascii** et **iswascii** fonctions sont propres à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

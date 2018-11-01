@@ -1,31 +1,21 @@
 ---
-title: Erreur du compilateur C2435 | Documents Microsoft
-ms.custom: ''
+title: Erreur du compilateur C2435
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2435
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2435
 ms.assetid: be6aa8f8-579b-42ea-bdd8-2d01393646ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ddf078420da8aba170bbd21a0db775f9246cea4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5cd7a83575da7ab2a30401406d0c2ccf6c1b603e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703640"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438531"
 ---
 # <a name="compiler-error-c2435"></a>Erreur du compilateur C2435
 
-> '*var*' : l’initialisation dynamique requiert un CRT managé, Impossible de compiler avec/clr : safe
+> «*var*' : l’initialisation dynamique requiert un CRT managé, Impossible de compiler avec/clr : safe
 
 ## <a name="remarks"></a>Notes
 

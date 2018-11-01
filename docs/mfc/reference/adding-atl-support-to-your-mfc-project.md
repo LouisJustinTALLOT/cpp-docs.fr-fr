@@ -1,28 +1,18 @@
 ---
-title: Ajout de prise en charge ATL à votre projet MFC | Microsoft Docs
-ms.custom: ''
+title: Ajout de la prise en charge ATL à votre projet MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.adding.atl.mfc
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bc0d21202478a02980dbc94dc866b769c3c71a9b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9f8861e3b6aa0fee95aa84b989cf1057ae0f76b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429732"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448595"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Ajout de la prise en charge ATL à votre projet MFC
 
@@ -55,6 +45,6 @@ Pour plus d’informations sur la façon dont l’ajout de prise en charge ATL m
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Ajout d’une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Ajout d’une variable membre](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Une fonction virtuelle de substitution](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestionnaire de messages MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
 [Parcours de la structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)

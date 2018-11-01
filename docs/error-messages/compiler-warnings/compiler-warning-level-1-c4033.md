@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveau 1) C4033 | Microsoft Docs
-ms.custom: ''
+title: Avertissement du compilateur (niveau 1) C4033
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4033
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4033
 ms.assetid: 189a9ec3-ff6d-49dd-b9b2-530b28bbb7c9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 35df279ef7611a62ced5cb6291bdf17331850f0c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bef57d99ec9057f8b008deabda00b8a422a9e509
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443562"
 ---
 # <a name="compiler-warning-level-1-c4033"></a>Avertissement du compilateur (niveau 1) C4033
 

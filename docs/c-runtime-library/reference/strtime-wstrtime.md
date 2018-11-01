@@ -1,10 +1,6 @@
 ---
-title: _strtime, _wstrtime | Microsoft Docs
-ms.custom: ''
+title: _strtime, _wstrtime
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime
 - _strtime
@@ -27,8 +23,6 @@ f1_keywords:
 - wstrtime
 - strtime
 - _tstrtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - strtime function
 - _strtime function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431118"
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -84,9 +74,9 @@ Retourne un pointeur vers la chaîne de caractères *timestr*.
 
 ## <a name="remarks"></a>Notes
 
-Le **_strtime** fonction copie l’heure locale actuelle dans la mémoire tampon vers laquelle pointée *timestr*. L’heure sous la forme **hh : mm :** où **hh** comprend deux chiffres représentant l’heure dans la notation de 24 heures, **mm** comprend deux chiffres représentant les minutes après l’heure et **ss** comprend deux chiffres représentant les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 heures La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
+Le **_strtime** fonction copie l’heure locale actuelle dans la mémoire tampon vers laquelle pointée *timestr*. L’heure sous la forme **hh : mm :** où **hh** comprend deux chiffres représentant l’heure en notation de 24 heures, **mm** comprend deux chiffres qui représentent les minutes l’heure et les **ss** comprend deux chiffres qui représentent les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 heures. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
 
-**_wstrtime** est une version à caractères larges de **_strtime**; la valeur des arguments et de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique. Si *timestr* est un **NULL** pointeur ou si *timestr* est correctement mise en forme, non valide Gestionnaire de paramètres est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exception est autorisée à se poursuivre, ces fonctions retournent un **NULL** et **errno** à **EINVAL** si *timestr* a été un **NULL** ou **errno** à **ERANGE** si *timestr* est incorrect.
+**_wstrtime** est une version à caractères larges de **_strtime**; l’argument et valeur de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique. Si *timestr* est un **NULL** pointeur ou si *timestr* est incorrect, le non valide Gestionnaire de paramètres est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exception est autorisée à se poursuivre, ces fonctions retournent un **NULL** et définissez **errno** à **EINVAL** si *timestr* a été un **NULL** ou définir **errno** à **ERANGE** si *timestr* est incorrect.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -96,7 +86,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: atanh, atanhf, atanhl | Microsoft Docs
-ms.custom: ''
+title: atanh, atanhf, atanhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atanhl
 - atanhf
@@ -26,23 +22,17 @@ f1_keywords:
 - atanhl
 - atanhf
 - atanh
-dev_langs:
-- C++
 helpviewer_keywords:
 - atanhf function
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90a24945a7d630fac909e097728ea4df61ae2b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435358"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -68,18 +58,18 @@ Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **atanh** fonctions retournent la tangente hyperbolique inverse (arc la tangente hyperbolique) de *x*. Si *x* est supérieur à 1 ou inférieure à -1, **errno** a la valeur **EDOM** et le résultat est une valeur NaN silencieuse. Si *x* est égal à 1 ou -1, un infini positif ou négatif est retourné, respectivement, et **errno** a la valeur **ERANGE**.
+Le **atanh** fonctions retournent la tangente hyperbolique inverse (arc la tangente hyperbolique) de *x*. Si *x* est supérieure à 1 ou inférieure à -1, **errno** a la valeur **EDOM** et le résultat est une valeur NaN silencieuse. Si *x* est égal à 1 ou -1, un infini positif ou négatif est retourné, respectivement, et **errno** a la valeur **ERANGE**.
 
-|Entrée|Exception SEH|**Matherr** (Exception)|
+|Entrée|Exception SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|aucun|aucun|
-|*X* ≥ 1 ; *x* ≤ -1|aucun|aucun|
+|± QNAN,IND|aucun|none|
+|*X* ≥ 1 ; *x* ≤ -1|none|none|
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **atanh** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **atanh** accepte et retourne toujours **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **atanh** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **atanh** accepte et retourne toujours **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

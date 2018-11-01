@@ -1,8 +1,6 @@
 ---
-title: '&lt;deque&gt;, opérateurs | Microsoft Docs'
-ms.custom: ''
+title: '&lt;deque&gt;, opérateurs'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - deque/std::operator!=
 - deque/std::operator&gt;
@@ -10,8 +8,6 @@ f1_keywords:
 - deque/std::operator&lt;
 - deque/std::operator&lt;=
 - deque/std::operator==
-dev_langs:
-- C++
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
 helpviewer_keywords:
 - std::operator!= (deque)
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: 5055d637e385754e0cd2c7cf46402bdf6d53b3a4
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 886edb75e63d34e3bab2dd223d2cdac00f6fd41a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314506"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437363"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[!=, opérateur](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  operator!=

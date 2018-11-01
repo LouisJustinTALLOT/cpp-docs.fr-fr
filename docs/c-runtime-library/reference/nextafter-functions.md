@@ -1,10 +1,6 @@
 ---
-title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl | Microsoft Docs
-ms.custom: ''
+title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nextafterf
 - _nextafterf
@@ -42,8 +38,6 @@ f1_keywords:
 - math/nexttoward
 - math/nexttowardf
 - math/nexttowardl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _nextafter function
 - nextafter function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c68d039ff1318ea082d409078a55c8d337a48de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403714"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444855"
 ---
 # <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -102,17 +92,17 @@ Valeur à virgule flottante d’arrivée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur à virgule flottante représentable suivante d’après le type de retour *x* dans la direction de *y*. Si *x* et *y* sont égales, la fonction retourne *y*, convertie en type de retour, aucune exception déclenchée. Si *x* n’est pas égal à *y*, et le résultat est une dénormalisée ou égal à zéro, le **FE_UNDERFLOW** et **FE_INEXACT** les États d’exception à virgule flottante sont définies, et le résultat correct est retourné. Si le paramètre *x* ou *y* est une valeur NAN, la valeur de retour est un des valeurs NaN d’entrée. Si *x* reste limité et le résultat est l’infini ou n’est pas représentable dans le type, un correctement signé infini ou NAN est retourné, le **FE_OVERFLOW** et **FE_INEXACT** les États d’exception à virgule flottante sont définies, et **errno** a la valeur **ERANGE**.
+Retourne la valeur à virgule flottante représentable suivante du type de retour après *x* dans la direction de *y*. Si *x* et *y* sont égales, la fonction retourne *y*, converti en type de retour, avec aucune exception ne soit déclenchée. Si *x* n’est pas égal à *y*, et le résultat est une valeur dénormalisée ou égale à zéro, le **FE_UNDERFLOW** et **FE_INEXACT** les États d’exception de virgule flottante sont définies, et le résultat correct est retourné. Si *x* ou *y* est une valeur NAN, la valeur de retour est un des NaN d’entrée. Si *x* est fixe et le résultat est infini ou n’est pas représentable dans le type, une valeur infinie correctement signée ou NAN est retourné, le **FE_OVERFLOW** et **FE_INEXACT** États d’exception de virgule flottante sont définis, et **errno** a la valeur **ERANGE**.
 
 ## <a name="remarks"></a>Notes
 
-Le **nextafter** et **nexttoward** familles de fonction sont équivalents, sauf le type de paramètre de *y*. Si *x* et *y* sont identiques, la valeur retournée est *y* converti au type de retour.
+Le **nextafter** et **nexttoward** familles de fonctions sont identiques, sauf le type de paramètre de *y*. Si *x* et *y* sont égaux, la valeur retournée est *y* converti au type de retour.
 
 C++ autorisant la surcharge, si vous incluez \<cmath > vous pouvez appeler des surcharges de **nextafter** et **nexttoward** qui retournent **float** et **long** **double** types. Dans un programme C, **nextafter** et **nexttoward** retournent toujours **double**.
 
-Le **_nextafter** et **_nextafterf** fonctions sont spécifiques de Microsoft. Le **_nextafterf** fonction est disponible uniquement lors de la compilation pour x64.
+Le **_nextafter** et **_nextafterf** fonctions sont propres à Microsoft. Le **_nextafterf** fonction est disponible uniquement lors de la compilation pour x64.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------------|-------------------------------|

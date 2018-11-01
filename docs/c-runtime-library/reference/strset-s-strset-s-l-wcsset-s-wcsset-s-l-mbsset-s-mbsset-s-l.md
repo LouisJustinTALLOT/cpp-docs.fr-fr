@@ -1,10 +1,6 @@
 ---
-title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l | Microsoft Docs
-ms.custom: ''
+title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsset_s
 - _wcsset_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _strset_s_l
 - _tcsset_s_l
 - _tcsset_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsset_s_l function
 - wcsset_s function
@@ -63,23 +57,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f632185a17bd02dfa837bae3605c51d27442772a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cb2e9a6ba4179f8e362749e01324fe7e38cf5eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452531"
 ---
 # <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
 Remplace les caractères d’une chaîne par un caractère. Ces versions de [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsset_s** et **_mbsset_s_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset_s** et **_mbsset_s_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -137,11 +127,11 @@ Paramètres régionaux à utiliser.
 
 Zéro en cas de réussite ; code d’erreur dans un autre cas.
 
-Ces fonctions valident leurs arguments. Si *str* est un pointeur null, ou la *numberOfElements* argument est inférieur ou égal à 0, ou le bloc passé n’est pas terminée par null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et **errno** à **EINVAL**.
+Ces fonctions valident leurs arguments. Si *str* est un pointeur null, ou la *numberOfElements* argument est inférieur ou égal à 0, ou le bloc transmis n’est pas nul, puis le Gestionnaire de paramètre non valide est appelé, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et définissez **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_strset_s** fonction définit tous les caractères de *str* à *c* (converti en **char**), sauf le caractère null de fin. **_wcsset_s** et **_mbsset_s** sont des versions à caractères larges et caractères multioctets de **_strset_s**. Les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
+Le **_strset_s** fonction définit tous les caractères de *str* à *c* (converti en **char**), sauf le caractère null de fin. **_wcsset_s** et **_mbsset_s** sont des versions à caractères larges et à caractères multioctets de **_strset_s**. Les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -154,7 +144,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |**_tcsset_s**|**_strset_s**|**_mbsset_s**|**_wcsset_s**|
 |**_tcsset_s_l**|**_strset_s_l**|**_mbsset_s_l**|**_wcsset_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

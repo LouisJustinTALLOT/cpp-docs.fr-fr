@@ -1,10 +1,6 @@
 ---
-title: mbrlen | Microsoft Docs
-ms.custom: ''
+title: mbrlen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbrlen
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbrlen
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77e5cb106a971bcaf02662bfd8459267a134173a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75ae134db0e74099a9b19f4820a44a197fdfda2e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404439"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438452"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -69,18 +59,18 @@ Une des valeurs suivantes :
 
 |||
 |-|-|
-0|La prochaine *nombre* ou un nombre d’octets terminer le caractère multioctet qui représente le caractère null large.
-1 pour *nombre*(inclus)|La prochaine *nombre* ou un nombre d’octets terminent un caractère multioctet valide. La valeur retournée est le nombre d'octets qui terminent le caractère multioctet.
+0|La prochaine *nombre* ou moins d’octets terminent le caractère multioctet qui représente le caractère null large.
+1 à *nombre*inclus,|La prochaine *nombre* ou moins d’octets terminent un caractère multioctet valide. La valeur retournée est le nombre d'octets qui terminent le caractère multioctet.
 (size_t)(-2)|La prochaine *nombre* octets suivants contribuent à un caractère multioctets incomplet mais potentiellement valide et que tous les *nombre* octets ont été traités.
-(size_t)(-1)|Une erreur d'encodage s'est produite. La prochaine *nombre* ou un nombre d’octets ne contribue pas à un caractère multioctet complet et valide. Dans ce cas, **errno** est défini à EILSEQ et l’état de conversion dans *mbstate* n’est pas spécifié.
+(size_t)(-1)|Une erreur d'encodage s'est produite. La prochaine *nombre* ou moins d’octets ne contribuent pas à un caractère multioctet complet et valid. Dans ce cas, **errno** est défini à EILSEQ et l’état de conversion dans *mbstate* n’est pas spécifié.
 
 ## <a name="remarks"></a>Notes
 
-Le **mbrlen** fonction examine au plus *nombre* octets à partir de l’octet pointé par *str* pour déterminer le nombre d’octets qui sont requis pour terminer la prochaine caractères multioctets, y compris les séquences de décalage. Elle est équivalente à l’appel de `mbrtowc(NULL, str, count, &mbstate)` où *mbstate* est soit un fourni par l’utilisateur **mbstate_t** objet ou un objet interne statique fourni par la bibliothèque.
+Le **mbrlen** fonction examine au plus *nombre* octets à partir de l’octet vers lequel pointe *str* pour déterminer le nombre d’octets qui sont requis pour terminer la prochaine caractère multioctet, y compris les séquences de décalage. Il est équivalent à l’appel `mbrtowc(NULL, str, count, &mbstate)` où *mbstate* est soit un fourni par l’utilisateur **mbstate_t** objet ou un objet interne statique fournie par la bibliothèque.
 
-Le **mbrlen** fonction enregistre et utilise l’état du décalage d’un caractère multioctet incomplet dans le *mbstate* paramètre. Cela donne **mbrlen** la capacité de redémarrer au milieu d’un caractère multioctet si besoin d’être, examinant au plus *nombre* octets. Si *mbstate* est un pointeur null, **mbrlen** utilise un statique interne **mbstate_t** objet pour stocker l’état du décalage. Étant donné que le texte interne **mbstate_t** objet n’est pas thread-safe, nous vous recommandons de toujours allouer et passer votre propre *mbstate* paramètre.
+Le **mbrlen** fonction enregistre et utilise l’état du décalage d’un caractère multioctet incomplet dans le *mbstate* paramètre. Cela donne **mbrlen** la capacité de redémarrer au milieu d’un caractère multioctet si besoin est, en examinant au plus *nombre* octets. Si *mbstate* est un pointeur null, **mbrlen** utilise un statique interne **mbstate_t** objet à stocker l’état du décalage. Étant donné que le texte interne **mbstate_t** objet n’est pas thread-safe, nous vous recommandons de toujours allouez et passez votre propre *mbstate* paramètre.
 
-Le **mbrlen** diffère de la fonction [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) par sa capacité à redémarrer. L’état du décalage est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser **wcsrlen** au lieu de **wcslen** si un appel ultérieur à **wcsrtombs** est utilisé à la place de **wcstombs**.
+Le **mbrlen** diffère de la fonction [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) par sa capacité à redémarrer. L’état du décalage est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser **wcsrlen** au lieu de **wcslen** si un appel ultérieur à **wcsrtombs** est utilisé au lieu de **wcstombs**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -88,7 +78,7 @@ Le **mbrlen** diffère de la fonction [_mbclen, mblen, _mblen_l](mbclen-mblen-mb
 |---------------------|------------------------------------|--------------------|-----------------------|
 |non applicable|non applicable|**mbrlen**|non applicable|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

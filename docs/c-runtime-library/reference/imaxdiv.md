@@ -1,10 +1,6 @@
 ---
-title: imaxdiv | Microsoft Docs
-ms.custom: ''
+title: imaxdiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxdiv
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxdiv
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db2a57e9b91672d39fbce5eaee061043604a0998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399694"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434456"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -67,7 +57,7 @@ Dénominateur.
 
 Le **imaxdiv** fonction divise *nombre* par *denom* et ce qui calcule le quotient et le reste. Le **imaxdiv_t** structure contient le quotient, **intmax_t** **quot**et le reste, **intmax_t** **rem**. Le signe du quotient est identique à celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

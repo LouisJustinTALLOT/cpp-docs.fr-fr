@@ -1,32 +1,22 @@
 ---
-title: Runtimeclassbaset, Structure | Microsoft Docs
-ms.custom: ''
+title: RuntimeClassBaseT, structure
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT structure
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9c46e89dc11f4c6fe216cfd61c3222a9c52d9e45
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 3dd55c322e7da3be3f888c4faa88172fd0c17672
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456847"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT, structure
 
@@ -85,7 +75,7 @@ __forceinline static HRESULT AsIID(
 *T*<br/>
 Un type qui implémente l’ID d’interface spécifié par le paramètre *riid*.
 
-*Implémente*<br/>
+*implements*<br/>
 Une variable du type spécifié par le paramètre de modèle *T*.
 
 *riid*<br/>
@@ -120,7 +110,7 @@ __forceinline static HRESULT GetImplementedIIDS(
 *T*<br/>
 Le type de la *implémente* paramètre.
 
-*Implémente*<br/>
+*implements*<br/>
 Pointeur vers le type spécifié par le paramètre *T*.
 
 *iidCount*<br/>
