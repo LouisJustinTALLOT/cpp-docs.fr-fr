@@ -1,12 +1,6 @@
 ---
-title: Assemblys de nom fort (signature d’Assembly) (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Assemblys de nom fort (signature d'assembly) (C++/CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - assemblies [C++]
 - signing assemblies
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 75b7df96b9366680b69d40dea866fb3067a507b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c23c3b70a2152fbceb771e085b73d7daf7aa3c2a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527554"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Assemblys de nom fort (signature d'assembly) (C++/CLI)
 
