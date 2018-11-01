@@ -1,10 +1,6 @@
 ---
-title: _CrtGetDumpClient | Microsoft Docs
-ms.custom: ''
+title: _CrtGetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetDumpClient
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f15e41c91867c7728a1d006b8038aa1ca18010a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394407"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550733"
 ---
 # <a name="crtgetdumpclient"></a>_CrtGetDumpClient
 
-Récupère la fonction définie par l’application en cours pour le vidage du **_CLIENT_BLOCK** tapez des blocs de mémoire (version debug uniquement).
+Récupère la fonction définie par l’application actuelle pour vider le **_CLIENT_BLOCK** type des blocs de mémoire (version debug uniquement).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,11 +45,11 @@ Retourne la routine de vidage actuelle.
 
 ## <a name="remarks"></a>Notes
 
-Le **_CrtGetDumpClient** fonction récupère la fonction de raccordement actuel pour faire un dump des objets stockés dans le **_CLIENT_BLOCK** blocs de mémoire pour la durée d’exécution C déboguer le processus de vidage de mémoire.
+Le **_CrtGetDumpClient** fonction récupère la fonction de raccordement actuelle pour vider les objets stockés dans le **_CLIENT_BLOCK** processus de vidage de mémoire de débogage de blocs de mémoire pour la durée d’exécution C.
 
 Pour plus d’informations sur l’utilisation d’autres fonctions d’exécution compatibles avec le raccordement et sur l’écriture de vos propres fonctions de raccordement définies par le client, consultez [Écriture de fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
