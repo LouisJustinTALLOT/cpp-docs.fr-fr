@@ -1,12 +1,6 @@
 ---
-title: Conception et création d’une vue d’enregistrement (accès de données MFC) | Microsoft Docs
-ms.custom: ''
+title: Conception et création d'une vue de l'enregistrement (Accès aux données MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - designing forms
 - record views, creating
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: c03b85538a795142f5085c93df3a60f4c60481ab
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b97ac5e61530742280dd8ee2183ec54229fb4441
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065848"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613445"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Conception et création d'une vue de l'enregistrement (Accès aux données MFC)
 

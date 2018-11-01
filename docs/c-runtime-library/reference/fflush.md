@@ -1,10 +1,6 @@
 ---
-title: fflush | Microsoft Docs
-ms.custom: ''
+title: fflush
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fflush
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fflush
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, flushing
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72f0812e713d0d474363dcc5f79cc11eddb46020
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d0e1b6f346481935b5b19736a8f9b41fede36e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401163"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527230"
 ---
 # <a name="fflush"></a>fflush
 
@@ -54,15 +44,15 @@ int fflush(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fflush** retourne 0 si la mémoire tampon a été vidée avec succès. La valeur 0 est également retournée si le flux spécifié n’a aucune mémoire tampon ou est ouvert en lecture seule. La valeur de retour **EOF** indique une erreur.
+**fflush** retourne 0 si la mémoire tampon a été vidée. La valeur 0 est également retournée si le flux spécifié n’a aucune mémoire tampon ou est ouvert en lecture seule. La valeur de retour **EOF** indique une erreur.
 
 > [!NOTE]
-> Si **fflush** retourne **EOF**, données ont peut-être été perdues en raison d’une erreur d’écriture. Lorsque vous configurez un gestionnaire d’erreurs critiques, il est plus sûr de désactiver la mise en mémoire tampon avec le **setvbuf** fonction ou utiliser des routines de bas niveau d’e/s comme **_open**, **_close**, et **_write** au lieu des fonctions de flux d’e/s.
+> Si **fflush** retourne **EOF**, données ont peut-être été perdues en raison d’une erreur d’écriture. Lorsque vous configurez un gestionnaire d’erreurs critiques, il est plus sûr de désactiver la mise en mémoire tampon avec la **setvbuf** fonction ou d’utiliser des routines de bas niveau d’e/s comme **_open**, **_close**, et **_write** au lieu des fonctions de flux d’e/s.
 
 ## <a name="remarks"></a>Notes
 
@@ -70,13 +60,13 @@ Le **fflush** fonction vide le flux *flux*. Si le flux a été ouvert en mode d�
 
 Si *flux* est **NULL**, le comportement est identique à un appel à **fflush** sur chaque flux ouvert. Tous les flux ouverts en mode d’écriture et tous les flux ouverts en mode de mise à jour où la dernière opération était une écriture sont vidés. L’appel n’a aucun effet sur les autres flux.
 
-Les mémoires tampons sont normalement gérées par le système d’exploitation, qui détermine à quel moment les données doivent être automatiquement écrites sur le disque : quand une mémoire tampon est saturée, quand un flux est fermé ou quand un programme se termine normalement sans fermer le flux. La fonctionnalité de validation sur disque de la bibliothèque runtime garantit que les données critiques sont écrites directement sur le disque plutôt que dans les mémoires tampons du système d’exploitation. Sans réécrire un programme existant, vous pouvez activer cette fonctionnalité en liant les fichiers objets du programme avec COMMODE.OBJ. Dans le fichier exécutable résultant, les appels à **_flushall** écrire le contenu de toutes les mémoires tampons sur le disque. Uniquement **_flushall** et **fflush** sont affectées par COMMODE.OBJ.
+Les mémoires tampons sont normalement gérées par le système d’exploitation, qui détermine à quel moment les données doivent être automatiquement écrites sur le disque : quand une mémoire tampon est saturée, quand un flux est fermé ou quand un programme se termine normalement sans fermer le flux. La fonctionnalité de validation sur disque de la bibliothèque runtime garantit que les données critiques sont écrites directement sur le disque plutôt que dans les mémoires tampons du système d’exploitation. Sans réécrire un programme existant, vous pouvez activer cette fonctionnalité en liant les fichiers objets du programme avec COMMODE.OBJ. Dans le fichier exécutable résultant, les appels à **_flushall** écrire le contenu de toutes les mémoires tampons sur le disque. Uniquement **_flushall** et **fflush** sont affectés par COMMODE.OBJ.
 
 Pour plus d’informations sur le contrôle de la fonctionnalité de validation sur disque, consultez [E/S de flux](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) et [_fdopen](fdopen-wfdopen.md).
 
-Cette fonction verrouille le thread appelant et est donc thread-safe. Pour une version sans verrouillage, voir **_fflush_nolock**.
+Cette fonction verrouille le thread appelant et est donc thread-safe. Pour obtenir une version sans verrouillage, consultez **_fflush_nolock**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

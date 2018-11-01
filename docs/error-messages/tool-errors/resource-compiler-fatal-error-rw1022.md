@@ -1,27 +1,17 @@
 ---
-title: Erreur irrécupérable RW1022 du compilateur de ressources | Microsoft Docs
-ms.custom: ''
+title: 'Erreur irrécupérable RW1022 du compilateur de ressources '
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RW1022
-dev_langs:
-- C++
 helpviewer_keywords:
 - RW1022
 ms.assetid: 6747c8a9-9c9b-4422-b414-0645d22092d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: caaefc045a31ca64aa9843927d550ef66285cb2e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8065745c85d0552687e77f4d901adce6d1b130c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099841"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617215"
 ---
 # <a name="resource-compiler-fatal-error-rw1022"></a>Erreur irrécupérable RW1022 du compilateur de ressources 
 

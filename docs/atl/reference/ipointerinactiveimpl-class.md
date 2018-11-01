@@ -1,33 +1,23 @@
 ---
-title: Ipointerinactiveimpl, classe | Microsoft Docs
-ms.custom: ''
+title: Ipointerinactiveimpl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IPointerInactiveImpl
 - ATLCTL/ATL::IPointerInactiveImpl
 - ATLCTL/ATL::IPointerInactiveImpl::GetActivationPolicy
 - ATLCTL/ATL::IPointerInactiveImpl::OnInactiveMouseMove
 - ATLCTL/ATL::IPointerInactiveImpl::OnInactiveSetCursor
-dev_langs:
-- C++
 helpviewer_keywords:
 - IPointerInactive ATL implementation
 - inactive objects
 - IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f44bcdedc718ce4d6459fea7f8581273e49caa10
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2c072dd158616b04d10e4aed091c7e26a3512ce1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097560"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487891"
 ---
 # <a name="ipointerinactiveimpl-class"></a>Ipointerinactiveimpl, classe
 

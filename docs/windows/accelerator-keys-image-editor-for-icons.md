@@ -1,30 +1,19 @@
 ---
-title: Touches accélérateur (Éditeur d’images C++ pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Touches accélérateur (Éditeur d’images C++ pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 062b860849d968e18657afb66b568a1bf6f2b6d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317743"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505103"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Touches accélérateur (Éditeur d’images C++ pour les icônes)
 
@@ -33,7 +22,7 @@ Voici les touches accélérateur pour les commandes de l’éditeur d’Image qu
 > [!NOTE]
 > Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-|Command|Touches|Description|
+|Commande|Touches|Description|
 |-------------|----------|-----------------|
 |Image.AirBrushTool|**Ctrl** + **A**|Dessine en utilisant un aérographe avec la taille sélectionnée et la couleur.|
 |Image.BrushTool|**CTRL** + **B**|Dessine à l’aide d’un pinceau avec la forme sélectionnée, la taille et la couleur.|

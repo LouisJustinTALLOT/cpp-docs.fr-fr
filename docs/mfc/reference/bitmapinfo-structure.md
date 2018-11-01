@@ -1,27 +1,17 @@
 ---
-title: Bitmapinfo, Structure | Microsoft Docs
-ms.custom: ''
+title: BITMAPINFO, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - BITMAPINFO
-dev_langs:
-- C++
 helpviewer_keywords:
 - BITMAPINFO structure [MFC]
 ms.assetid: a00caa49-e4df-419f-89a7-ab03c13a1b5b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9e114af97385241674cf9baa4f8d9883acdadef3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e0586d197bc2f18a06fd675bf365750c6d129ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405955"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542270"
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO, structure
 

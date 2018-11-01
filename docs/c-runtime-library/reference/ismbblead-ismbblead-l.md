@@ -1,10 +1,6 @@
 ---
-title: _ismbblead, _ismbblead_l | Microsoft Docs
-ms.custom: ''
+title: _ismbblead, _ismbblead_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbblead_l
 - _ismbblead
@@ -28,8 +24,6 @@ f1_keywords:
 - _ismbblead_l
 - ismbblead
 - _istlead
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbblead_l function
 - ismbblead function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2d85459f4addf0688acb5a82b0108ec6133b749
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400591"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452544"
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 
@@ -79,9 +69,9 @@ Retourne une valeur différente de zéro si l’entier *c* est le premier octet 
 
 ## <a name="remarks"></a>Notes
 
-Les caractères multioctets sont constitués d’un octet de tête suivi d’un octet de fin. Les octets de tête se distinguent en faisant partie d’une plage particulière pour un jeu de caractères donné. Par exemple, en octets de tête, uniquement de la page 932 code comprise entre 0 x 81-0x9F et 0xE0 - 0xFC.
+Les caractères multioctets sont constitués d’un octet de tête suivi d’un octet de fin. Les octets de tête se distinguent en faisant partie d’une plage particulière pour un jeu de caractères donné. Par exemple, en octets de tête, uniquement de la page 932 code compris entre 0 x 81-0x9F et 0xE0 - 0xFC.
 
-**_ismbblead** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. **_ismbblead_l** est identique, sauf qu’elle utilise les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbblead** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. **_ismbblead_l** est identique, sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -89,7 +79,7 @@ Les caractères multioctets sont constitués d’un octet de tête suivi d’un 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istlead**|Retourne toujours la valeur false|**_ismbblead**|Retourne toujours la valeur false|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

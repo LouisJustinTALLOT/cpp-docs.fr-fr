@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C2664 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C2664
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2664
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fad240fad8dea69670ef8204de64367b740225e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d9ebea5c955dcf89308654feec9866d4fdc924cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057819"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501359"
 ---
 # <a name="compiler-error-c2664"></a>Erreur du compilateur C2664
 
@@ -129,7 +119,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Le compilateur applique désormais les spécifications de la norme C++ pour l'application de `const`. Cet exemple génère l'erreur C2664 :
+Le compilateur applique désormais les exigences de la norme C++ pour l’application de `const`. Cet exemple génère l'erreur C2664 :
 
 ```
 // C2664d.cpp

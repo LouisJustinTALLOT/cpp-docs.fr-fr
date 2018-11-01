@@ -1,31 +1,21 @@
 ---
-title: Compilateur avertissement (niveau 1) C4399 | Documents Microsoft
-ms.custom: ''
+title: Avertissement du compilateur (niveau 1) C4399
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4399
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aedad6aed07a6056f74ad338037a7268c722627f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703718"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544064"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>Avertissement du compilateur (niveau 1) C4399
 
-> '*symbole*' : symbole par processus ne doit pas être marqué avec __declspec (dllimport) lors de la compilation avec/clr : pure
+> «*symbole*' : symbole par processus ne doit pas être marqué avec __declspec (dllimport) lors de la compilation avec/clr : pure
 
 ## <a name="remarks"></a>Notes
 

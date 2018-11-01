@@ -1,10 +1,6 @@
 ---
-title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l | Microsoft Docs
-ms.custom: ''
+title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscoll
 - _mbscoll
@@ -31,8 +27,6 @@ f1_keywords:
 - _mbscoll
 - _tcscoll
 - _ftcscoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - mbscoll function
@@ -49,23 +43,19 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451922"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625184"
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
 Compare des chaînes en utilisant les paramètres régionaux actifs ou une catégorie d’état de conversion LC_COLLATE spécifiée.
 
 > [!IMPORTANT]
-> **_mbscoll** et **_mbscoll_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscoll** et **_mbscoll_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -109,23 +99,23 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne une valeur qui indique la relation de *string1* à *chaîne2*, comme suit.
+Chacune de ces fonctions retourne une valeur qui indique la relation de *string1* à *string2*, comme suit.
 
 |Valeur de retour|Relation de chaîne1 à chaîne2|
 |------------------|----------------------------------------|
-|< 0|*string1* moins *chaîne2*|
+|< 0|*string1* inférieure à *chaîne2*|
 |0|*string1* identique à *chaîne2*|
 |> 0|*string1* supérieur *chaîne2*|
 
-Chacune de ces fonctions retourne **_NLSCMPERROR** en cas d’erreur. Pour utiliser **_NLSCMPERROR**, inclure une chaîne. H ou MBSTRING. H. **wcscoll** peut échouer si *string1* ou *chaîne2* est **NULL** ou contient des codes de caractères larges en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **wcscoll** peuvent définir **errno** à **EINVAL**. Pour rechercher une erreur sur un appel à **wcscoll**, définissez **errno** à 0, puis vérifiez **errno** après avoir appelé **wcscoll**.
+Chacune de ces fonctions retourne **_NLSCMPERROR** en cas d’erreur. Pour utiliser **_NLSCMPERROR**, inclure une chaîne. H ou MBSTRING. H. **wcscoll** peut échouer si *string1* ou *string2* est **NULL** ou contient des codes à caractères larges en dehors du domaine de l’ordre de tri. Lorsqu’une erreur se produit, **wcscoll** peut définir **errno** à **EINVAL**. Pour rechercher une erreur dans un appel à **wcscoll**, affectez la valeur **errno** à 0, puis vérifiez **errno** après avoir appelé **wcscoll**.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions effectue une comparaison respectant la casse de *string1* et *chaîne2* en fonction de la page de codes en cours d’utilisation. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.
+Chacune de ces fonctions effectue une comparaison respectant la casse de *string1* et *string2* en fonction de la page de codes en cours d’utilisation. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.
 
-Toutes ces fonctions valident leurs paramètres. Si le paramètre *string1* ou *chaîne2* est un pointeur null, ou si *nombre* est supérieur à **INT_MAX**, le Gestionnaire de paramètre non valide est appelé. , comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et **errno** à **EINVAL**.
+Toutes ces fonctions valident leurs paramètres. Si *string1* ou *string2* est un pointeur null, ou si *nombre* est supérieur à **INT_MAX**, le Gestionnaire de paramètre non valide est appelé , comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et définissez **errno** à **EINVAL**.
 
-La comparaison des deux chaînes est une opération dépendante des paramètres régionaux dans la mesure où les différents paramètres régionaux ont des règles de classement de caractères qui leur sont propres. Les versions de ces fonctions sans le **_l** suffixe utilisation aux paramètres régionaux du thread actuel pour ce comportement dépendant des paramètres régionaux ; les versions avec le **_l** suffixe sont identiques à la fonction correspondante sans le suffixe à ceci près qu’ils utilisent le paramètres régionaux passés en tant que paramètre à la place les paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La comparaison des deux chaînes est une opération dépendante des paramètres régionaux dans la mesure où les différents paramètres régionaux ont des règles de classement de caractères qui leur sont propres. Les versions de ces fonctions sans le **_l** suffixe utilisez paramètres régionaux du thread actif pour ce comportement dépendant des paramètres régionaux ; les versions avec le **_l** suffixe sont identiques à la fonction correspondante sans le suffixe à ceci près qu’ils utilisent les paramètres régionaux transmis comme paramètre à la place les paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -133,7 +123,7 @@ La comparaison des deux chaînes est une opération dépendante des paramètres 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscoll**|**strcoll**|**_mbscoll**|**wcscoll**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
