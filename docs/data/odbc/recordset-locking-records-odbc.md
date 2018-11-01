@@ -1,12 +1,6 @@
 ---
-title: 'Recordset : Verrouillage d’enregistrements (ODBC) | Microsoft Docs'
-ms.custom: ''
+title: "Recordset : verrouillage d'enregistrements (ODBC)"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - locks [C++], recordsets
 - optimistic locking
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 51c84014786b8c27def7a568b85da316079c2bc1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 08d7ca1db474a5735ccaabaa7d7d87b359730bb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438695"
 ---
 # <a name="recordset-locking-records-odbc"></a>Recordset : verrouillage d'enregistrements (ODBC)
 

@@ -1,12 +1,7 @@
 ---
-title: 'Comment : créer une Application partiellement approuvée (C++ / c++ / CLI) | Microsoft Docs'
+title: 'Comment : créer une Application partiellement approuvée (C++ / c++ / CLI)'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - partially trusted applications [C++]
 - mixed assemblies [C++], partially trusted applications
@@ -15,17 +10,12 @@ helpviewer_keywords:
 - interop [C++], partially trusted applications
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 8a009b7d70cebbf38f21cf33180acf80c2d2bb43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fb65c8ff3dc4c3b03fa319fd1e7a6eb95f11bef2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411365"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445966"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Comment : créer une application partiellement approuvée en supprimant la dépendance de la DLL de la bibliothèque CRT
 

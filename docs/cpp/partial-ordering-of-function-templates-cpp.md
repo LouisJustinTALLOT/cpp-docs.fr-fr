@@ -1,25 +1,15 @@
 ---
-title: Classement partiel des modèles de fonction (C++) | Microsoft Docs
-ms.custom: ''
+title: Tri partiel des modèles de fonction (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 048589ecab367a3762764b627de11d72160c4602
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 10b920e4d5f999c3a2c9649ceabb0369813cc401
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438855"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Tri partiel des modèles de fonction (C++)
 
