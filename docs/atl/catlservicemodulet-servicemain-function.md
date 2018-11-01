@@ -1,29 +1,19 @@
 ---
-title: CAtlServiceModuleT::ServiceMain, fonction | Microsoft Docs
-ms.custom: ''
+title: CAtlServiceModuleT::ServiceMain, fonction
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - ServiceMain
 - CServiceModule::ServiceMain
 - CServiceModule.ServiceMain
-dev_langs:
-- C++
 helpviewer_keywords:
 - ServiceMain method
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae357caad88e128fe9f3742887781d0096efe2c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3aad67d58ccd4d1d35572542d899c17e0f42902b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058586"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471212"
 ---
 # <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain, fonction
 

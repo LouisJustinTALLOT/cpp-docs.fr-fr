@@ -1,10 +1,6 @@
 ---
-title: _mkdir, _wmkdir | Microsoft Docs
-ms.custom: ''
+title: _mkdir, _wmkdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmkdir
 - _mkdir
@@ -27,8 +23,6 @@ f1_keywords:
 - _tmkdir
 - wmkdir
 - _wmkdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmkdir function
 - folders [C++], creating
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40641911af9c61285049a5943cdc8f5c21cba99b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402138"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496615"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -68,14 +58,14 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Paramètres
 
-*dirname*<br/>
+*nom_répertoire*<br/>
 Chemin du nouveau répertoire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne la valeur 0 si le répertoire a été créé. Sur une erreur, la fonction retourne -1 et les jeux de **errno** comme suit.
+Chacune de ces fonctions retourne la valeur 0 si le répertoire a été créé. Sur une erreur, la fonction retourne -1 et les jeux **errno** comme suit.
 
-**EEXIST** active n’a pas été créé, car *dirname* est le nom d’un appareil, un répertoire ou un fichier existant.
+**EEXIST** Directory n’a pas été créé, car *dirname* est le nom d’un fichier existant, un appareil ou un répertoire.
 
 **ENOENT** chemin d’accès est introuvable.
 
@@ -83,9 +73,9 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 ## <a name="remarks"></a>Notes
 
-Le **_mkdir** fonction crée un répertoire avec l’objet *dirname.* **_mkdir** pouvez créer qu’un seul répertoire par appel, de sorte que seul le dernier composant de *dirname* pouvez nommer un nouveau répertoire. **_mkdir** ne traduit pas les séparateurs de chemin d’accès. Dans Windows NT, la barre oblique inverse (\\) et la barre oblique (/) sont des délimiteurs de chemin valides dans les chaînes de caractères au sein des routines d’exécution.
+Le **_mkdir** fonction crée un répertoire avec la valeur *nom_répertoire.* **_mkdir** peut créer qu’un seul répertoire par appel, par conséquent, seul le dernier composant de *dirname* peut nommer un nouveau répertoire. **_mkdir** ne traduit pas les délimiteurs de chemin d’accès. Dans Windows NT, la barre oblique inverse (\\) et la barre oblique (/) sont des délimiteurs de chemin valides dans les chaînes de caractères au sein des routines d’exécution.
 
-**_wmkdir** est une version à caractères larges de **_mkdir**; le *dirname* argument **_wmkdir** est une chaîne à caractères larges. **_wmkdir** et **_mkdir** comportent de façon identique.
+**_wmkdir** est une version à caractères larges de **_mkdir**; le *dirname* l’argument de **_wmkdir** est une chaîne de caractères larges. **_wmkdir** et **_mkdir** se comportent de façon identique dans le cas contraire.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -93,7 +83,7 @@ Le **_mkdir** fonction crée un répertoire avec l’objet *dirname.* **_mkdir**
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmkdir**|**_mkdir**|**_mkdir**|**_wmkdir**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

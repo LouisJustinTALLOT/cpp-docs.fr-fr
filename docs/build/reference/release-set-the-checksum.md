@@ -1,31 +1,21 @@
 ---
-title: -RELEASE (définir le total de Checksum) | Microsoft Docs
-ms.custom: ''
+title: /RELEASE (Définir le total de Checksum)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /release
 - VC.Project.VCLinkerTool.SetChecksum
-dev_langs:
-- C++
 helpviewer_keywords:
 - -RELEASE linker option
 - /RELEASE linker option
 - checksum setting
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69439400ec58e2d41ef0359237b30ea09c5fd170
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6a45e6caa94054d4d485476786ecc5149545ed8e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710071"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478806"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE (Définir le total de Checksum)
 
