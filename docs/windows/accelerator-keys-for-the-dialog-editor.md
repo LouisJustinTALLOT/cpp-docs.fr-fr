@@ -1,28 +1,17 @@
 ---
-title: Touches d’accès rapide pour l’éditeur de boîtes de dialogue (C++) | Microsoft Docs
-ms.custom: ''
+title: Touches accélérateur pour l’éditeur de boîtes de dialogue (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], shortcut keys
 ms.assetid: 940270e9-a974-425b-a681-dfeaba0adf66
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6314d4333254957ea2d8116786128843dafef64a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4946dc940b6a3e70110ee35978187b5ec2d4d0df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313570"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483601"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor-c"></a>Touches accélérateur pour l’éditeur de boîtes de dialogue (C++)
 
@@ -31,7 +20,7 @@ Voici la valeur par défaut touches accélérateur pour les commandes de l’éd
 > [!NOTE]
 > Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-|Command|Touches|Description|
+|Commande|Touches|Description|
 |-------------|----------|-----------------|
 |Format.AlignBottoms|**CTRL** + **MAJ** + **flèche vers le bas**|Aligne les bords inférieurs des contrôles sélectionnés sur le contrôle dominant|
 |Format.AlignCenters|**MAJ** + **F9**|Aligne les centres verticaux des contrôles sélectionnés sur le contrôle dominant|

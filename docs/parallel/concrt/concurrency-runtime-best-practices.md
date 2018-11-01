@@ -1,28 +1,18 @@
 ---
-title: Recommandations du Runtime de concurrence | Microsoft Docs
-ms.custom: ''
+title: Meilleures pratiques sur le runtime d'accès concurrentiel
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - best practices [Concurrency Runtime]
 - Concurrency Runtime, practices to avoid
 - practices to avoid [Concurrency Runtime]
 - Concurrency Runtime, best practices
 ms.assetid: 7231d4be-d1e3-401d-8b66-94fd51b587c9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 55787ef1f1e3daeb8c85783958f000a2166e4e18
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3c68c095587c937aa1af81193839b71b0213023d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447984"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491284"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Meilleures pratiques sur le runtime d'accès concurrentiel
 

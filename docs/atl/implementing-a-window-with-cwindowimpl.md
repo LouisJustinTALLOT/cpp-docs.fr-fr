@@ -1,14 +1,8 @@
 ---
-title: Implémentation d’une fenêtre avec CWindowImpl | Microsoft Docs
-ms.custom: ''
+title: Implémentation d’une fenêtre avec CWindowImpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - CWindowImpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL, windows
 - windows [C++], subclassing
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2333c56586d20bc5ec114b8ea8a8811e72fcd755
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f9286598184cfb12c415de637fccc07011369fd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501957"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implémentation d’une fenêtre avec CWindowImpl
 

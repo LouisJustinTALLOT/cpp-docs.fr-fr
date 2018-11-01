@@ -1,12 +1,6 @@
 ---
-title: Modification de la fabrique de classe par défaut et le modèle d’agrégation | Microsoft Docs
-ms.custom: ''
+title: Modification de la fabrique de classe par défaut et le modèle d’agrégation
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComClassFactory class, making the default
 - aggregation [C++], using ATL
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - default class factory, ATL
 - defaults [C++], class factory
 ms.assetid: 6e040e95-0f38-4839-8a8b-c9800dd47e8c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 203aeae7dd2edb179ec3f9c1f56f989ffc09b35c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 34e838eea201f96acd7dcc647c4410fb244c8424
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485543"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Modification de la fabrique de classe par défaut et le modèle d’agrégation
 

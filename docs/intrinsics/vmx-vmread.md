@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmread | Microsoft Docs
-ms.custom: ''
+title: __vmx_vmread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmread
-dev_langs:
-- C++
 helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d9483dafd763112f31f5299a5e0e7e54c224459
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0a4528bed4426ce5b611e986a69f4b0b8c750548
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821021"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499097"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 
@@ -56,7 +46,7 @@ unsigned char __vmx_vmread(
 
 ## <a name="remarks"></a>Notes
 
-Le `__vmx_vmread` fonction est équivalente à la `VMREAD` instruction machine. La valeur de la `Field` paramètre est un index de champ encodé qui est décrite dans la documentation Intel. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) de site, puis consultez l’annexe C de ce document .
+La fonction `__vmx_vmread` est équivalente à l’instruction machine `VMREAD` . La valeur de la `Field` paramètre est un index de champ encodé qui est décrite dans la documentation Intel. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) de site, puis consultez l’annexe C de ce document .
 
 ## <a name="requirements"></a>Configuration requise
 

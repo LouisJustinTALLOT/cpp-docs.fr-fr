@@ -1,8 +1,6 @@
 ---
-title: Platform::Agile, classe | Microsoft Docs
-ms.custom: ''
+title: Platform::Agile, classe
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -11,21 +9,15 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3745ead4fec8466df3f164c415b21d98f68c0ef7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471199"
 ---
 # <a name="platformagile-class"></a>Platform::Agile, classe
 
@@ -162,11 +154,11 @@ Type spécifié par le paramètre de nom de type de modèle.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’adresse d’un handle vers un objet de type `T`.
+Adresse d’un handle vers un objet de type `T`.
 
 ### <a name="remarks"></a>Notes
 
-Cette opération libère la représentation actuelle d’un objet de type `T`, le cas échéant ; réinitialise les membres de données de l’objet Agile, acquiert le contexte du thread actuel ; et puis retourne l’adresse d’une variable handle-to-object qui peut représenter un objet non agile. Pour provoquer une instance de la classe Agile représenter un objet, utilisez l’opérateur d’assignation ([Agile::operator =](#operator-assign)) pour assigner l’objet à l’instance de la classe Agile.
+Cette opération libère la représentation actuelle d’un objet de type `T`, le cas échéant, réinitialise les membres de données de l’objet Agile, acquiert le contexte de thread actuel, puis retourne l’adresse d’une variable handle-to-object qui peut représenter un objet non agile. Pour provoquer une instance de la classe Agile représenter un objet, utilisez l’opérateur d’assignation ([Agile::operator =](#operator-assign)) pour assigner l’objet à l’instance de la classe Agile.
 
 ## <a name="getaddressofforinout"></a>  Agile::getaddressofforinout, méthode
 

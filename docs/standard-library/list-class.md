@@ -1,10 +1,6 @@
 ---
-title: list, classe | Microsoft Docs
-ms.custom: ''
+title: list, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - list/std::list
 - list/std::list::allocator_type
@@ -53,8 +49,6 @@ f1_keywords:
 - list/std::list::splice
 - list/std::list::swap
 - list/std::list::unique
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::list [C++]
 - std::list [C++], allocator_type
@@ -104,16 +98,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0f874cc6b9f00f72c4c4b6d15e4503b8b49fbf8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481911"
 ---
 # <a name="list-class"></a>list, classe
 
@@ -148,7 +138,7 @@ Incluez l’en-tête standard de bibliothèque standard C++ \<list> pour défini
 
 |Constructeur|Description|
 |-|-|
-|[list](#list)|Construit une liste de taille spécifique ou contenant des éléments de valeurs spécifiques, ou contenant un `allocator` spécifique ou comme copie d'une autre liste.|
+|[liste](#list)|Construit une liste de taille spécifique ou contenant des éléments de valeurs spécifiques, ou contenant un `allocator` spécifique ou comme copie d'une autre liste.|
 
 ### <a name="typedefs"></a>Typedef
 
