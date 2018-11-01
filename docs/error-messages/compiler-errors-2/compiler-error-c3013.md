@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C3013 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C3013
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3013
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3013
 ms.assetid: f896777d-27e6-4b6d-baab-1567317f3374
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b4b605cdf090dea66507696f8ac7e9a00dce11c0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 378d15263b00fdc408565fef1c04d7d1b30b30d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46049763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612067"
 ---
 # <a name="compiler-error-c3013"></a>Erreur du compilateur C3013
 

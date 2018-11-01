@@ -1,29 +1,19 @@
 ---
-title: abstract (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: abstract (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - abstract
 - abstract_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 78a5b42de6b0ac54d060bb6369566aa446863289
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: d2cb8e6d1d60d4469e325a4380701beda49a4355
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328192"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645677"
 ---
 # <a name="abstract--ccli-and-ccx"></a>abstract (C++ / c++ / CLI et c++ / CX)
 
@@ -112,4 +102,4 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

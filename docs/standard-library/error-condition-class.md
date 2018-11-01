@@ -1,10 +1,6 @@
 ---
-title: error_condition, classe | Microsoft Docs
-ms.custom: ''
+title: error_condition, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - system_error/std::error_condition
 - system_error/std::error_condition::value_type
@@ -13,8 +9,6 @@ f1_keywords:
 - system_error/std::error_condition::clear
 - system_error/std::error_condition::message
 - system_error/std::error_condition::operator bool
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::error_condition
 - std::error_condition::value_type
@@ -23,16 +17,12 @@ helpviewer_keywords:
 - std::error_condition::clear
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d93ebf1bdc679c27d79392bf75576f47e8844a27
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ccc2b41aa6c008fbda29c065ad63aa9f61b6680f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582336"
 ---
 # <a name="errorcondition-class"></a>error_condition, classe
 
@@ -74,7 +64,7 @@ Un objet de type `error_condition` stocke une valeur de code d’erreur et un po
 |Opérateur|Description|
 |-|-|
 |[operator==](#op_eq_eq)|Vérifie l’égalité d’objets `error_condition`.|
-|[operator!=](#op_neq)|Vérifie l’inégalité d’objets `error_condition`.|
+|[!=, opérateur](#op_neq)|Vérifie l’inégalité d’objets `error_condition`.|
 |[operator<](#op_lt)|Vérifie si l’objet `error_condition` est inférieur à l’objet `error_code` transmis pour la comparaison.|
 |[operator=](#op_eq)|Assigne une nouvelle valeur d’énumération à l’objet `error_condition`.|
 |[operator bool](#op_bool)|Convertit une variable de type `error_condition`.|

@@ -1,10 +1,6 @@
 ---
-title: fabs, fabsf, fabsl | Microsoft Docs
-ms.custom: ''
+title: fabs, fabsf, fabsl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fabsf
 - fabs
@@ -29,8 +25,6 @@ f1_keywords:
 - "math\fabs"
 - "math\fabsf"
 - "math\fabsl"
-dev_langs:
-- C++
 helpviewer_keywords:
 - absolute values
 - fabsf function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e97d8eef45c53c119fef663420ae70b4b4762e3e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395723"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623559"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -88,9 +78,9 @@ Le **fabs** fonctions retournent la valeur absolue de l’argument *x*. Aucun re
 
 ## <a name="remarks"></a>Notes
 
-C++ autorise la surcharge, vous pouvez appeler des surcharges de **fabs** si vous incluez le \<cmath > en-tête. Dans un programme C, **fabs** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **fabs** si vous incluez le \<cmath > en-tête. Dans un programme C, **fabs** accepte et retourne toujours un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C requis|En-tête C++ requis|
 |--------------|-----------------------|---------------------------|

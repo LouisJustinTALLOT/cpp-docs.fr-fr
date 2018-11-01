@@ -1,10 +1,6 @@
 ---
-title: accès concurrentiel Namespace | Microsoft Docs
-ms.custom: ''
+title: concurrency, espace de noms
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
 - agents/concurrency
@@ -21,21 +17,15 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d423d80606da9edcec2cb5f4da4d02e39213ba7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629851"
 ---
 # <a name="concurrency-namespace"></a>concurrency, espace de noms
 
@@ -55,8 +45,8 @@ namespace concurrency;
 |----------|-----------------|
 |`runtime_object_identity`|Chaque instance de message a une identité qui la suit quand elle est clonée et passée entre des composants de messagerie. Il ne peut pas s'agir de l'adresse de l'objet message.|
 |`task_status`|Type représentant l’état terminal d’une tâche. Les valeurs valides sont `completed` et `canceled`.|
-|`TaskProc`|Abstraction élémentaire d'une tâche, définie comme `void (__cdecl * TaskProc)(void *)`. Un `TaskProc` est appelé pour appeler le corps d'une tâche.|
-|`TaskProc_t`|Abstraction élémentaire d'une tâche, définie comme `void (__cdecl * TaskProc_t)(void *)`. Un `TaskProc` est appelé pour appeler le corps d'une tâche.|
+|`TaskProc`|Abstraction élémentaire d’une tâche, définie comme `void (__cdecl * TaskProc)(void *)`. Un `TaskProc` est appelé pour appeler le corps d’une tâche.|
+|`TaskProc_t`|Abstraction élémentaire d’une tâche, définie comme `void (__cdecl * TaskProc_t)(void *)`. Un `TaskProc` est appelé pour appeler le corps d’une tâche.|
 
 ### <a name="classes"></a>Classes
 
@@ -104,7 +94,7 @@ namespace concurrency;
 |[message, classe](message-class.md)|Enveloppe de message de base contenant la charge utile de données transmise entre les blocs de messagerie.|
 |[message_not_found, classe](message-not-found-class.md)|Cette classe décrit une exception levée quand un bloc de messagerie ne parvient pas à trouver un message demandé.|
 |[message_processor, classe](message-processor-class.md)|La classe `message_processor` est la classe de base abstraite pour le traitement des objets `message`. Aucune garantie n'existe sur l'ordre des messages.|
-|[missing_wait, classe](missing-wait-class.md)|Cette classe décrit une exception levée quand il existe des tâches encore planifiées sur un objet `task_group` ou `structured_task_group` au moment où le destructeur d'objet s'exécute. Cette exception n'est jamais levée si le destructeur est atteint en raison d'un déroulement de pile consécutif à une exception.|
+|[missing_wait, classe](missing-wait-class.md)|Cette classe décrit une exception levée quand il existe des tâches encore planifiées sur un objet `task_group` ou `structured_task_group` au moment où le destructeur d’objet s’exécute. Cette exception n'est jamais levée si le destructeur est atteint en raison d'un déroulement de pile consécutif à une exception.|
 |[multi_link_registry, classe](multi-link-registry-class.md)|L'objet `multi_link_registry` est un `network_link_registry` qui gère plusieurs blocs sources ou plusieurs blocs cibles.|
 |[multitype_join, classe](multitype-join-class.md)|Un bloc de messagerie `multitype_join` est un bloc de messagerie à sources multiples et à cible unique qui combine des messages de types différents en provenance de chacune de ses sources et qui offre un tuple des messages combinés à ses cibles.|
 |[nested_scheduler_missing_detach, classe](nested-scheduler-missing-detach-class.md)|Cette classe décrit une exception levée quand le runtime d'accès concurrentiel détecte que vous avez omis d'appeler la méthode `CurrentScheduler::Detach` sur un contexte joint à un deuxième planificateur à l'aide de la méthode `Attach` de l'objet `Scheduler`.|
@@ -127,11 +117,11 @@ namespace concurrency;
 |[source_block, classe](source-block-class.md)|La classe `source_block` est une classe de base abstraite pour les blocs sources uniquement. La classe fournit une fonctionnalité de gestion des liens de base ainsi que des vérifications d'erreurs courantes.|
 |[source_link_manager, classe](source-link-manager-class.md)|L'objet `source_link_manager` gère les liens réseau des blocs de messagerie avec les blocs `ISource`.|
 |[static_partitioner, classe](static-partitioner-class.md)|La classe `static_partitioner` représente un partitionnement statique de la plage itérée par `parallel_for`. Le partitionneur divise la plage en autant de segments que de travaux disponibles pour le planificateur sous-jacent.|
-|[structured_task_group, classe](structured-task-group-class.md)|La classe `structured_task_group` représente une collection très structurée de travail parallèle. Vous pouvez mettre en file d'attente des tâches parallèles individuelles dans un `structured_task_group` à l'aide d'objets `task_handle`, attendre qu'elles se terminent ou annuler le groupe de tâches avant la fin de leur exécution, ce qui annule toutes les tâches dont l'exécution n'a pas commencé.|
+|[structured_task_group, classe](structured-task-group-class.md)|La classe `structured_task_group` représente une collection très structurée de travail parallèle. Vous pouvez mettre en file d’attente des tâches parallèles individuelles dans un `structured_task_group` à l’aide d’objets `task_handle`, attendre qu’elles se terminent ou annuler le groupe de tâches avant la fin de leur exécution, ce qui annule toutes les tâches dont l’exécution n’a pas commencé.|
 |[target_block, classe](target-block-class.md)|La classe `target_block` est une classe de base abstraite qui fournit une fonctionnalité de gestion des liens de base et une vérification des erreurs pour les blocs cibles uniquement.|
-|[task (Concurrency Runtime), classe](task-class.md)|Classe `task` de la bibliothèque de modèles parallèles (PPL, Parallel Patterns Library). Un objet `task` représente le travail qui peut être exécuté de manière asynchrone et simultanément avec d'autres tâches et le travail parallèle produit par des algorithmes parallèles dans le runtime d'accès concurrentiel. Il génère un résultat de type `_ResultType` quand il s'exécute correctement. Les tâches de type `task<void>` ne génèrent aucun résultat. Une tâche peut être mise en attente et annulée indépendamment des autres tâches. Elle peut également être composée avec d'autres tâches à l'aide de continuations (`then`) et de modèles de jointure (`when_all`) et de choix (`when_any`).|
+|[task (Concurrency Runtime), classe](task-class.md)|Classe `task` de la bibliothèque de modèles parallèles (PPL, Parallel Patterns Library). Un objet `task` représente le travail qui peut être exécuté de manière asynchrone et simultanément avec d'autres tâches et le travail parallèle produit par des algorithmes parallèles dans le runtime d'accès concurrentiel. Il génère un résultat de type `_ResultType` quand il s'exécute correctement. Les tâches de type `task<void>` ne génèrent aucun résultat. Une tâche peut être mise en attente et annulée indépendamment des autres tâches. Elle peut également être composée avec d’autres tâches à l’aide de continuations (`then`) et de modèles de jointure (`when_all`) et de choix (`when_any`).|
 |[task_canceled, classe](task-canceled-class.md)|Cette classe décrit une exception levée par la couche de tâches PPL pour forcer l’annulation de la tâche actuelle. Elle est également levée par le `get()` méthode sur [tâche](task-class.md), pour une tâche annulée.|
-|[task_completion_event, classe](task-completion-event-class.md)|La classe `task_completion_event` vous permet de retarder l'exécution d'une tâche jusqu'à ce qu'une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe.|
+|[task_completion_event, classe](task-completion-event-class.md)|La classe `task_completion_event` vous permet de retarder l’exécution d’une tâche jusqu’à ce qu’une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe.|
 |[task_continuation_context, classe](task-continuation-context-class.md)|La classe `task_continuation_context` vous permet de spécifier où vous souhaitez qu'une continuation soit exécutée. Il est uniquement utile d’utiliser cette classe à partir d’une application UWP. Pour les applications non - Windows Runtime, le contexte d’exécution de la continuation tâche est déterminé par le runtime et non configurables.|
 |[task_group, classe](task-group-class.md)|La classe `task_group` représente une collection de travail parallèle qui peut être attendue ou annulée.|
 |[task_handle, classe](task-handle-class.md)|La classe `task_handle` représente un élément de travail parallèle individuel. Elle encapsule les instructions et les données requises pour exécuter un élément de travail.|
@@ -155,7 +145,7 @@ namespace concurrency;
 |[ITopologyExecutionResource, structure](itopologyexecutionresource-structure.md)|Interface avec une ressource d'exécution tel que défini par le Gestionnaire de ressources.|
 |[ITopologyNode, structure](itopologynode-structure.md)|Interface avec un nœud de topologie, comme défini par le gestionnaire des ressources. Un nœud contient une ou plusieurs ressources d'exécution.|
 |[IUMSCompletionList, structure](iumscompletionlist-structure.md)|Représente une liste de saisie semi-automatique UMS. Quand un thread UMS se bloque, le contexte de planification désigné du planificateur est distribué afin de déterminer les éléments à planifier sur la racine du processeur virtuel sous-jacent pendant que le thread d'origine est bloqué. Quand le thread d'origine se débloque, le système d'exploitation le met en attente dans la liste de saisie semi-automatique accessible via cette interface. Le planificateur peut interroger la liste de saisie semi-automatique à propos du contexte de planification désigné ou de tout autre emplacement qu'il recherche pour du travail.|
-|[IUMSScheduler, structure](iumsscheduler-structure.md)|Interface avec une abstraction d'un planificateur de tâches qui veut que le gestionnaire des ressources du runtime d'accès concurrentiel lui remette des threads UMS (User-Mode Scheduling). Le gestionnaire des ressources utilise cette interface pour communiquer avec les planificateurs de threads UMS. L'interface `IUMSScheduler` hérite de l'interface `IScheduler`.|
+|[IUMSScheduler, structure](iumsscheduler-structure.md)|Interface avec une abstraction d'un planificateur de tâches qui veut que le gestionnaire des ressources du runtime d'accès concurrentiel lui remette des threads UMS (User-Mode Scheduling). Le gestionnaire des ressources utilise cette interface pour communiquer avec les planificateurs de threads UMS. L'interface `IUMSScheduler` hérite de l'interface `IScheduler` .|
 |[IUMSThreadProxy, structure](iumsthreadproxy-structure.md)|Abstraction d'un thread d'exécution. Si vous voulez que votre planificateur reçoive des threads UMS (User-Mode Scheduling), affectez à l'élément de stratégie du planificateur `SchedulerKind` la valeur `UmsThreadDefault`, puis implémentez l'interface `IUMSScheduler`. Les threads UMS sont uniquement pris en charge sur les systèmes d'exploitation 64 bits avec Windows 7 et ses versions ultérieures.|
 |[IUMSUnblockNotification, structure](iumsunblocknotification-structure.md)|Représente une notification du gestionnaire des ressources qui indique qu'un proxy de thread qui s'est bloqué et qui a déclenché un retour vers le contexte de planification désigné du planificateur s'est débloqué et est prêt à être planifié. Cette interface n'est pas valide une fois que le contexte d'exécution associé du proxy de thread, retourné à partir de la méthode `GetContext`, est replanifié.|
 |[IVirtualProcessorRoot, structure](ivirtualprocessorroot-structure.md)|Abstraction d'un thread matériel sur laquelle un proxy de thread peut s'exécuter.|
@@ -187,13 +177,13 @@ namespace concurrency;
 |----------|-----------------|
 |[Alloc, fonction](concurrency-namespace-functions.md#alloc)|Alloue un bloc de mémoire de la taille spécifiée depuis le sous-allocateur de mise en cache du runtime d'accès concurrentiel.|
 |[asend, fonction](concurrency-namespace-functions.md#asend)|Surchargé. Opération d’envoi asynchrone qui planifie une tâche pour propager les données vers le bloc cible.|
-|[cancel_current_task, fonction](concurrency-namespace-functions.md#cancel_current_task)|Annule la tâche en cours d’exécution. Cette fonction peut être appelée à partir du corps d'une tâche pour annuler l'exécution de la tâche et la faire passer à l'état `canceled`.<br /><br /> L'appel de cette fonction en dehors du corps d'un objet `task` n'est pas pris en charge. Cela entraînerait un comportement non défini tel qu'un blocage dans votre application.|
-|[create_async, fonction](concurrency-namespace-functions.md#create_async)|Crée une construction asynchrone Windows Runtime basée sur un objet lambda ou de fonction fourni par l'utilisateur. Le type de retour de `create_async` est `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` ou `IAsyncOperationWithProgress<TResult, TProgress>^` selon la signature de l'objet lambda passée à la méthode.|
-|[create_task, fonction](concurrency-namespace-functions.md#create_task)|Surchargé. Crée une bibliothèque de modèles parallèles [tâche](task-class.md) objet. `create_task` peut être utilisé partout où vous auriez utilisé un constructeur de tâche. Il est fourni principalement pour des raisons pratiques, car il permet d'utiliser le mot clé `auto` pendant la création de tâches.|
+|[cancel_current_task, fonction](concurrency-namespace-functions.md#cancel_current_task)|Annule la tâche en cours d’exécution. Cette fonction peut être appelée à partir du corps d’une tâche pour annuler l’exécution de la tâche et la faire passer à l’état `canceled`.<br /><br /> L'appel de cette fonction en dehors du corps d'un objet `task` n'est pas pris en charge. Cela entraînerait un comportement non défini tel qu'un blocage dans votre application.|
+|[create_async, fonction](concurrency-namespace-functions.md#create_async)|Crée une construction asynchrone Windows Runtime basée sur un objet lambda ou de fonction fourni par l'utilisateur. Le type de retour de `create_async` est `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` ou `IAsyncOperationWithProgress<TResult, TProgress>^` selon la signature de l’objet lambda passée à la méthode.|
+|[create_task, fonction](concurrency-namespace-functions.md#create_task)|Surchargé. Crée une bibliothèque de modèles parallèles [tâche](task-class.md) objet. `create_task` peut être utilisé partout où vous auriez utilisé un constructeur de tâche. Il est fourni principalement pour des raisons pratiques, car il permet d’utiliser le mot clé `auto` pendant la création de tâches.|
 |[CreateResourceManager, fonction](concurrency-namespace-functions.md#createresourcemanager)|Retourne une interface qui représente l'instance singleton du gestionnaire des ressources du runtime d'accès concurrentiel. Le gestionnaire des ressources est responsable de l'affectation des ressources aux planificateurs qui veulent coopérer.|
 |[DisableTracing, fonction](concurrency-namespace-functions.md#disabletracing)|Désactive le traçage dans le runtime d'accès concurrentiel. Cette fonction est déconseillée car le suivi ETW est désinscrit par défaut.|
 |[EnableTracing, fonction](concurrency-namespace-functions.md#enabletracing)|Active le traçage dans le runtime d'accès concurrentiel. Cette fonction est déconseillée car le suivi ETW est à présent activé par défaut.|
-|[Free (fonction)](concurrency-namespace-functions.md#free)|Libère un bloc de mémoire précédemment alloué par la méthode `Alloc` au sous-allocateur de mise en cache du runtime d'accès concurrentiel.|
+|[Free (fonction)](concurrency-namespace-functions.md#free)|Libère un bloc de mémoire précédemment alloué par la méthode `Alloc` au sous-allocateur de mise en cache du runtime d’accès concurrentiel.|
 |[get_ambient_scheduler, fonction (Runtime d’accès concurrentiel)](concurrency-namespace-functions.md#get_ambient_scheduler)||
 |[GetExecutionContextId, fonction](concurrency-namespace-functions.md#getexecutioncontextid)|Retourne un identificateur unique qui peut être affecté à un contexte d'exécution qui implémente l'interface `IExecutionContext`.|
 |[GetOSVersion, fonction](concurrency-namespace-functions.md#getosversion)|Retourne la version du système d'exploitation.|
@@ -201,15 +191,15 @@ namespace concurrency;
 |[GetProcessorNodeCount, fonction](concurrency-namespace-functions.md#getprocessornodecount)|Retourne le nombre de nœuds NUMA ou de packages de processeurs sur le système sous-jacent.|
 |[GetSchedulerId, fonction](concurrency-namespace-functions.md#getschedulerid)|Retourne un identificateur unique qui peut être affecté à un planificateur qui implémente l'interface `IScheduler`.|
 |[interruption_point, fonction](concurrency-namespace-functions.md#interruption_point)|Crée un point d'interruption pour l'annulation. Si une annulation est en cours dans le contexte dans lequel cette fonction est appelée, une exception interne est levée et annule l'exécution du travail parallèle en cours. Si aucune annulation n'est en cours, la fonction ne fait rien.|
-|[is_current_task_group_canceling, fonction](concurrency-namespace-functions.md#is_current_task_group_canceling)|Retourne une indication qui détermine si le groupe de tâches qui s’exécute actuellement inline sur le contexte actuel est au beau milieu d’une annulation active (ou le sera bientôt). Notez que si aucun groupe de tâches ne s'exécute actuellement inline sur le contexte actuel, `false` est retourné.|
+|[is_current_task_group_canceling, fonction](concurrency-namespace-functions.md#is_current_task_group_canceling)|Retourne une indication qui détermine si le groupe de tâches qui s’exécute actuellement inline sur le contexte actuel est au beau milieu d’une annulation active (ou le sera bientôt). Notez que si aucun groupe de tâches ne s’exécute actuellement inline sur le contexte actuel, `false` est retourné.|
 |[make_choice, fonction](concurrency-namespace-functions.md#make_choice)|Surchargé. Construit un bloc de messagerie `choice` à partir d'un `Scheduler` ou `ScheduleGroup` facultatif et de deux sources d'entrée ou plus.|
 |[make_greedy_join, fonction](concurrency-namespace-functions.md#make_greedy_join)|Surchargé. Construit un bloc de messagerie `greedy multitype_join` à partir d'un `Scheduler` ou `ScheduleGroup` facultatif et de deux sources d'entrée ou plus.|
 |[make_join, fonction](concurrency-namespace-functions.md#make_join)|Surchargé. Construit un bloc de messagerie `non_greedy multitype_join` à partir d'un `Scheduler` ou `ScheduleGroup` facultatif et de deux sources d'entrée ou plus.|
 |[make_task, fonction](concurrency-namespace-functions.md#make_task)|Méthode de fabrique pour la création d'un objet `task_handle`.|
 |[parallel_buffered_sort, fonction](concurrency-namespace-functions.md#parallel_buffered_sort)|Surchargé. Réorganise les éléments d’une plage spécifiée dans un ordre non décroissant ou selon un critère de tri spécifié par un prédicat binaire, en parallèle. Cette fonction est sémantiquement similaire à `std::sort` en ce sens qu'il s'agit d'un tri sur place, par comparaison et instable, à l'exception près qu'elle a besoin d'un espace supplémentaire `O(n)` et qu'elle requiert une initialisation par défaut pour les éléments triés.|
 |[parallel_for (fonction)](concurrency-namespace-functions.md#parallel_for)|Surchargé. `parallel_for` effectue une itération sur une plage d'index et exécute une fonction fournie par l'utilisateur à chaque itération, en parallèle.|
-|[parallel_for_each, fonction](concurrency-namespace-functions.md#parallel_for_each)|Surchargé. `parallel_for_each` applique une fonction spécifiée à chaque élément dans une plage, en parallèle. Sémantiquement, elle équivaut à la fonction `for_each` dans l'espace de noms `std`, si ce n'est que l'itération des éléments est effectuée en parallèle et que l'ordre d'itération n'est pas spécifié. L'argument `_Func` doit prendre en charge un opérateur d'appel de fonction sous la forme de `operator()(T)` où le paramètre `T` est le type d'élément du conteneur en cours d'itération.|
-|[parallel_invoke, fonction](concurrency-namespace-functions.md#parallel_invoke)|Surchargé. Exécute les objets de fonction fournis comme paramètres en parallèle et se bloque jusqu'à la fin de leur exécution. Chaque objet de fonction peut être une expression lambda, un pointeur vers une fonction ou tout objet qui prend en charge l'opérateur d'appel de fonction avec la signature `void operator()()`.|
+|[parallel_for_each, fonction](concurrency-namespace-functions.md#parallel_for_each)|Surchargé. `parallel_for_each` applique une fonction spécifiée à chaque élément dans une plage, en parallèle. Sémantiquement, elle équivaut à la fonction `for_each` dans l'espace de noms `std`, si ce n'est que l'itération des éléments est effectuée en parallèle et que l'ordre d'itération n'est pas spécifié. L’argument `_Func` doit prendre en charge un opérateur d’appel de fonction sous la forme de `operator()(T)` où le paramètre `T` est le type d’élément du conteneur en cours d’itération.|
+|[parallel_invoke, fonction](concurrency-namespace-functions.md#parallel_invoke)|Surchargé. Exécute les objets de fonction fournis comme paramètres en parallèle et se bloque jusqu'à la fin de leur exécution. Chaque objet de fonction peut être une expression lambda, un pointeur vers une fonction ou tout objet qui prend en charge l’opérateur d’appel de fonction avec la signature `void operator()()`.|
 |[parallel_radixsort, fonction](concurrency-namespace-functions.md#parallel_radixsort)|Surchargé. Réorganise les éléments d'une plage spécifiée dans un ordre non décroissant à l'aide d'un algorithme de tri de base. Il s'agit d'une fonction de tri stable qui requiert une fonction de projection capable de projeter les éléments à trier dans des clés de type entiers non signés. L'initialisation par défaut est requise pour les éléments triés.|
 |[parallel_reduce, fonction](concurrency-namespace-functions.md#parallel_reduce)|Surchargé. Calcule la somme de tous les éléments d'une plage spécifiée en calculant des sommes partielles successives, ou calcule le résultat des résultats partiels successifs obtenus de la même façon en utilisant une opération binaire spécifiée autre que la somme, en parallèle. `parallel_reduce` est sémantiquement similaire à `std::accumulate`, à l'exception près qu'elle a besoin que l'opération binaire soit associative et qu'elle requiert une valeur d'identité au lieu d'une valeur initiale.|
 |[parallel_sort, fonction](concurrency-namespace-functions.md#parallel_sort)|Surchargé. Réorganise les éléments d'une plage spécifiée dans un ordre non décroissant ou selon un critère de tri spécifié par un prédicat binaire, en parallèle. Cette fonction est sémantiquement similaire à `std::sort` en ce sens qu'il s'agit d'un tri sur place, par comparaison et instable.|
@@ -232,7 +222,7 @@ namespace concurrency;
 
 |Nom|Description|
 |----------|-----------------|
-|[operator!=](concurrency-namespace-operators.md#operator_neq)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur n'est pas égal à l'objet `concurrent_vector` situé à droite.|
+|[!=, opérateur](concurrency-namespace-operators.md#operator_neq)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur n'est pas égal à l'objet `concurrent_vector` situé à droite.|
 |[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|Surchargé. Crée une tâche qui s’effectue correctement lorsque les deux tâches fournies comme arguments se déroulent correctement.|
 |[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|Surchargé. Crée une tâche qui s’effectue correctement quand l’une des tâches fournies en tant qu’arguments s’effectue correctement.|
 |[operator<](concurrency-namespace-operators.md#operator_lt)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est inférieur à l'objet `concurrent_vector` situé à droite.|

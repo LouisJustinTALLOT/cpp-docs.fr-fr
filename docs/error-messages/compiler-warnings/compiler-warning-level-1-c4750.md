@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveau 1) C4750 | Microsoft Docs
-ms.custom: ''
+title: Avertissement du compilateur (niveau 1) C4750
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4750
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c77c46daf30b6e0238345d9b2be3c6c5362c192
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e82640b26df5ceab030d0c3f0e716e0ed72102ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026619"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595733"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>Avertissement du compilateur (niveau 1) C4750
 

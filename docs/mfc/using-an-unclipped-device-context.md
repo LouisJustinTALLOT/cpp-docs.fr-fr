@@ -1,25 +1,15 @@
 ---
-title: Utilisation d’un contexte de périphérique non découpé | Microsoft Docs
-ms.custom: ''
+title: Utilisation d'un contexte de périphérique non découpé
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], unclipped device context
 ms.assetid: 9c020063-73da-4803-bf7b-2e1fd950c9ed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 479009865fe9fd226466059382456f403e90c18a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 222a3fb60d07176b1ba8e586e142865164bc215f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389588"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596509"
 ---
 # <a name="using-an-unclipped-device-context"></a>Utilisation d'un contexte de périphérique non découpé
 

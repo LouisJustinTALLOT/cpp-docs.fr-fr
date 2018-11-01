@@ -1,12 +1,6 @@
 ---
-title: Pilote ODBC requis pour les Dynasets | Microsoft Docs
-ms.custom: ''
+title: Pilote ODBC requis pour les feuilles de réponse dynamiques
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ODBC recordsets, dynasets
 - drivers, for dynasets
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - dynasets
 - ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: e59e14f9dbd69104e4ae79de5f6f57de24267706
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3ba333b8c5c90a4b9bb1aca94f57e5fc92aa2b47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647055"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Pilote ODBC requis pour les feuilles de réponse dynamiques
 

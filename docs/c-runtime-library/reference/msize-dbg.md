@@ -1,10 +1,6 @@
 ---
-title: _msize_dbg | Microsoft Docs
-ms.custom: ''
+title: _msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - _msize_dbg
 - msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451756"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629123"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -55,7 +45,7 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>Paramètres
 
-*UserData*<br/>
+*userData*<br/>
 Pointeur désignant le bloc de mémoire duquel déterminer la taille.
 
 *blockType*<br/>
@@ -67,13 +57,13 @@ Opération réussie, **_msize_dbg** retourne la taille (en octets) du bloc de m�
 
 ## <a name="remarks"></a>Notes
 
-**_msize_dbg** est une version debug de la _[msize](msize.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_msize_dbg** est réduit à un appel à **_msize**. Les deux **_msize** et **_msize_dbg** calculer la taille d’un bloc de mémoire dans le tas de base, mais **_msize_dbg** ajoute deux fonctionnalités de débogage : il inclut les mémoires tampons de chaque côté de l’utilisateur partie du bloc de mémoire dans la taille retournée et autorise les calculs de taille pour les types de bloc spécifique.
+**_msize_dbg** est une version debug de la _[msize](msize.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_msize_dbg** est réduite à un appel à **_msize**. Les deux **_msize** et **_msize_dbg** calculer la taille d’un bloc de mémoire dans le tas de base, mais **_msize_dbg** ajoute deux fonctionnalités de débogage : elle inclut les mémoires tampons de chaque côté de l’utilisateur partie du bloc de mémoire de la taille retournée et elle permet des calculs de taille pour les types de blocs spécifiques.
 
 Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de bloc d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans la build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 Cette fonction valide son paramètre. Si *memblock* est un pointeur null, **_msize** appelle un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction définit **errno** à **EINVAL** et retourne -1.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: bitor | Microsoft Docs
-ms.custom: ''
+title: bitor
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,21 +17,15 @@ f1_keywords:
 - bitor
 - std.bitor
 - std::bitor
-dev_langs:
-- C++
 helpviewer_keywords:
 - bitor function
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9796021fd59d47de1664139e584fc519a6ebfc68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4354a61592b0d301f42472de4db920755fe6fd09
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676289"
 ---
 # <a name="bitor"></a>bitor
 
@@ -79,6 +69,6 @@ int main( )
 3
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<iso646.h>
