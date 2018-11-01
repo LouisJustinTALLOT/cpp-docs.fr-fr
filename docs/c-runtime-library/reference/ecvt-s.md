@@ -1,10 +1,6 @@
 ---
-title: _ecvt_s | Microsoft Docs
-ms.custom: ''
+title: _ecvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ecvt_s
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - ecvt_s
 - _ecvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ecvt_s function
 - ecvt_s function
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 623d12bb515794a1d57b5a18e0e93e70d50a6812
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435579"
 ---
 # <a name="ecvts"></a>_ecvt_s
 
@@ -84,7 +74,7 @@ Nombre de chiffres stockés.
 *_Dec*<br/>
 Position de la virgule décimale stockée.
 
-*_Se connecter*<br/>
+*_Se*<br/>
 Signe du nombre converti.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -95,7 +85,7 @@ En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette f
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valeur de retour|Valeur de *tampon*|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valeur de retour|Valeur dans *mémoire tampon*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|Non modifiée.|
 |Pas **NULL** (pointe vers une mémoire valide)|<=0|any|any|any|any|**EINVAL**|Non modifiée.|
@@ -104,15 +94,15 @@ En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette f
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
-**_ecvt_s** peut générer une violation d’accès si *tampon* ne pointe pas vers la mémoire valide et n’est pas **NULL**.
+**_ecvt_s** peut générer une violation d’accès si *tampon* ne pointe pas vers une mémoire valide et n’est pas **NULL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_ecvt_s** fonction convertit un nombre à virgule flottante en une chaîne de caractères. Le *_Value* paramètre est le nombre à virgule flottante à convertir. Cette fonction stocke jusqu'à *nombre* chiffres de *_Value* sous forme de chaîne et ajoute un caractère null ('\0'). Si le nombre de chiffres dans *_Value* dépasse *_Count*, les chiffres de poids faible est arrondi. S’il y a moins de *nombre* chiffres, la chaîne est rempli de zéros.
+Le **_ecvt_s** fonction convertit un nombre à virgule flottante en une chaîne de caractères. Le *_Value* paramètre correspond au nombre à virgule flottante à convertir. Cette fonction stocke jusqu'à *nombre* chiffres de *_Value* sous forme de chaîne et ajoute un caractère null ('\0'). Si le nombre de chiffres dans *_Value* dépasse *_Count*, le chiffre de poids faible est arrondi. S’il existe moins de *nombre* chiffres, la chaîne est remplie de zéros.
 
-Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de *_Value* peut être obtenu à partir de *_Dec* et *_se connecter* après l’appel. Le *_Dec* paramètre pointe vers une valeur entière en donnant la position de la virgule décimale en ce qui concerne le début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le *_se connecter* paramètre pointe vers un entier qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.
+Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de *_Value* peut être obtenu à partir de *_Dec* et *_se* après l’appel. Le *_Dec* paramètre pointe vers une valeur entière indiquant la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le *_se* paramètre pointe vers un entier qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.
 
-Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisant pour n’importe quelle valeur à virgule flottante.
+Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour n’importe quelle valeur à virgule flottante.
 
 La différence entre **_ecvt_s** et **_fcvt_s** est dans l’interprétation de la *_Count* paramètre. **_ecvt_s** interprète *_Count* comme le nombre total de chiffres dans la chaîne de sortie, tandis que **_fcvt_s** interprète *_Count* en tant que le nombre de chiffres après la virgule décimale.
 
@@ -120,7 +110,7 @@ En C++, l’utilisation de cette fonction est simplifiée par une surcharge de m
 
 La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|

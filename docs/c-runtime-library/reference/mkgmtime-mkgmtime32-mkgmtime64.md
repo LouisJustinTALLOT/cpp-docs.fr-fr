@@ -1,10 +1,6 @@
 ---
-title: _mkgmtime, _mkgmtime32, _mkgmtime64 | Microsoft Docs
-ms.custom: ''
+title: _mkgmtime, _mkgmtime32, _mkgmtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mkgmtime32
 - _mkgmtime64
@@ -29,8 +25,6 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -42,20 +36,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcb587cf5504f661512ccf88cf4f15d0555e2f18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d96d79a45e05e4b371315c0612ed086f6ea2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405138"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452258"
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
-Convertit une heure UTC représentée par un **struct** **tm** à une heure UTC représentée par un **time_t** type.
+Convertit une heure UTC représentée par un **struct** **tm** en heure UTC représentée par un **time_t** type.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,7 +64,7 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>Paramètres
 
 *timeptr*<br/>
-Un pointeur vers l’heure UTC comme un **struct** **tm** à convertir.
+Un pointeur vers l’heure UTC en tant qu’un **struct** **tm** à convertir.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -82,11 +72,11 @@ Une quantité de type **__time32_t** ou **__time64_t** représentant le nombre d
 
 ## <a name="remarks"></a>Notes
 
-Le **_mkgmtime32** et **_mkgmtime64** fonctions convertissent une heure UTC à un **__time32_t** ou **__time64_t** type représentant l’heure dans HEURE UTC. Pour convertir une heure locale au format UTC, utilisez **mktime**, **_mktime32**, et **_mktime64** à la place.
+Le **_mkgmtime32** et **_mkgmtime64** fonctions convertissent une heure UTC en un **__time32_t** ou **__time64_t** type représentant l’heure dans HEURE UTC. Pour convertir une heure locale en heure UTC, utilisez **mktime**, **_mktime32**, et **_mktime64** à la place.
 
-**_mkgmtime** est une fonction inline qui prend la valeur **_mkgmtime64**, et **time_t** équivaut à **__time64_t**. Si vous avez besoin forcer le compilateur à interpréter **time_t** en tant que l’ancien 32 bits **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 (la plage maximale de 32 bits **time_t**), et il ne peut pas du tout sur les plateformes 64 bits.
+**_mkgmtime** est une fonction inline qui prend la valeur **_mkgmtime64**, et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** l’ancien 32-bit **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandée, car votre application peut échouer après le 18 janvier 2038 (la plage maximale de 32 bits **time_t**), et il n’est pas autorisée à tout sur les plateformes 64 bits.
 
-Le temps passée structure sera modifié, procédez comme suit dans la même façon lorsqu’elles sont modifiées avec le **_mktime** fonctions : le **tm_wday** et **tm_yday** champs sont définis nouveau valeurs basées sur les valeurs de **tm_mday** et **tm_year**. Lorsque vous spécifiez un **tm** heure de structure, définissez la **tm_isdst** au champ :
+La structure de temps passée sera modifiée comme suit, dans la même façon qu’elle est modifiée avec le **_mktime** fonctions : le **tm_wday** et **tm_yday** champs sont définis nouveau valeurs en fonction des valeurs de **tm_mday** et **tm_year**. Lorsque vous spécifiez un **tm** heure de structure, définissez la **tm_isdst** champ :
 
 - zéro (0) pour indiquer que l'heure d'hiver est active ;
 
@@ -94,9 +84,9 @@ Le temps passée structure sera modifié, procédez comme suit dans la même fa�
 
 - une valeur inférieure à zéro pour que le code de la bibliothèque Runtime C calcule si l'heure active est l'heure d'hiver ou l'heure d'été.
 
-La bibliothèque Runtime C utilise la variable d’environnement TZ pour déterminer l’heure d’été correcte. Si TZ n’est pas définie, le système d’exploitation est interrogé pour obtenir le comportement d’heure d’été régionale correct. **tm_isdst** est un champ obligatoire. Si ne pas définie, sa valeur n’est pas définie et la valeur de retour à partir de **mktime** est imprévisible.
+La bibliothèque Runtime C utilise la variable d’environnement TZ pour déterminer l’heure d’été correcte. Si TZ n’est pas définie, le système d’exploitation est interrogé pour obtenir le comportement d’heure d’été régionale correct. **tm_isdst** est un champ obligatoire. S’il est ne pas définie, sa valeur est indéfinie et la valeur de retour à partir de **mktime** est imprévisible.
 
-La plage de la **_mkgmtime32** fonction provient le 1er janvier 1970 à minuit UTC à 23:59:59 le 18 janvier 2038, UTC. La plage de **_mkgmtime64** est le 1er janvier 1970 à minuit UTC à 23:59:59 le 31 décembre 3000 UTC. Une valeur de retour de -1 entraîne une date hors limites. La plage de **_mkgmtime** dépend **_USE_32BIT_TIME_T** est défini. Si non définie (la valeur par défaut) la plage est celle de **_mkgmtime64**; sinon, la plage est limitée à la plage de 32 bits de **_mkgmtime32**.
+La plage de la **_mkgmtime32** fonction est à partir du 1er janvier 1970 à minuit UTC à 23:59:59 le 18 janvier 2038, UTC. La plage de **_mkgmtime64** se situe entre le 1er janvier 1970 à minuit UTC et 23:59:59 le 31 décembre 3000, UTC. Une valeur de retour de -1 entraîne une date hors limites. La plage de **_mkgmtime** varie selon que **_USE_32BIT_TIME_T** est défini. Si non définie (la valeur par défaut) la plage est celle de **_mkgmtime64**; sinon, la plage est limitée à la plage de 32 bits de **_mkgmtime32**.
 
 Notez que **gmtime** et **localtime** utilisent un seul tampon alloué de manière statique pour la conversion. Si vous fournissez cette mémoire tampon à **mkgmtime**, le contenu précédent est détruit.
 

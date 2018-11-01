@@ -1,32 +1,22 @@
 ---
-title: Vue d’ensemble de la bibliothèque C++ Standard │ Microsoft Docs
-ms.custom: ''
+title: Vue d'ensemble de la bibliothèque standard C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2795ab431930627160b0275866b573aff36bb97b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845318"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444991"
 ---
 # <a name="c-standard-library-overview"></a>Vue d'ensemble de la bibliothèque standard C++
 
-Toutes les entités de bibliothèque C++ sont déclarées ou définies dans un ou plusieurs en-têtes standard. Cette implémentation comprend deux en-têtes supplémentaires, \<hash_map > et \<hash_set >, qui ne sont pas requis par la norme C++. Pour obtenir la liste complète des en-têtes pris en charge par cette implémentation, consultez [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md).
+Toutes les entités de bibliothèque C++ sont déclarées ou définies dans un ou plusieurs en-têtes standard. Cette implémentation inclut deux en-têtes supplémentaires, \<hash_map > et \<hash_set >, qui ne sont pas requis par la norme C++. Pour obtenir la liste complète des en-têtes pris en charge par cette implémentation, consultez [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md).
 
 Une implémentation autonome de la bibliothèque C++ fournit uniquement un sous-ensemble de ces en-têtes :
 

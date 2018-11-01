@@ -1,30 +1,20 @@
 ---
-title: -ERRORREPORT (signaler les erreurs internes de l’éditeur de liens) | Microsoft Docs
-ms.custom: ''
+title: /ERRORREPORT (Signaler les erreurs internes de l'Éditeur de liens)
 ms.date: 12/28/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /ERRORREPORT
 - VC.Project.VCLinkerTool.ErrorReporting
-dev_langs:
-- C++
 helpviewer_keywords:
 - /ERRORREPORT linker option
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b4b19eed4b481ffa44688e15fb1567e73da1a8f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447238"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Signaler les erreurs internes de l'Éditeur de liens)
 

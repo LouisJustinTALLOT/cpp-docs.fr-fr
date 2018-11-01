@@ -1,10 +1,6 @@
 ---
-title: CSid, classe | Microsoft Docs
-ms.custom: ''
+title: CSid, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSid
 - ATLSECURITY/ATL::CSid
@@ -22,21 +18,15 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77e7cd29c38706078dbcb2cc9718827d8c8cc583
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022992"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465362"
 ---
 # <a name="csid-class"></a>CSid, classe
 

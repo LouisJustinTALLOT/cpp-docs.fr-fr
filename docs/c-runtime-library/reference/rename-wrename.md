@@ -1,10 +1,6 @@
 ---
-title: rename, _wrename | Microsoft Docs
-ms.custom: ''
+title: rename, _wrename
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rename
 - _wrename
@@ -25,8 +21,6 @@ f1_keywords:
 - _wrename
 - _trename
 - Rename
-dev_langs:
-- C++
 helpviewer_keywords:
 - trename function
 - directories [C++], renaming
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f02829b394649b86dfda9baad7c5792853fce746
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407471"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463984"
 ---
 # <a name="rename-wrename"></a>rename, _wrename
 
@@ -92,7 +82,7 @@ Pour connaître les autres valeurs de retour possibles, consultez [_doserrno, _e
 
 La fonction **rename** renomme le fichier ou le répertoire spécifié par *oldname* avec le nom fourni par *newname*. L’ancien nom doit être le chemin d’un fichier ou répertoire existant. Le nouveau nom doit être le nom d’un fichier ou répertoire existant. Vous pouvez utiliser **rename** pour déplacer un fichier d’un répertoire ou appareil vers un autre en indiquant un autre chemin dans l’argument *newname*. Cependant, vous ne pouvez pas utiliser **rename** pour déplacer un répertoire. Les répertoires peuvent être renommés, mais pas déplacés.
 
-**_wrename** est une version à caractères larges de **affiche_r**; les arguments de **_wrename** sont des chaînes à caractères larges. **_wrename** et **affiche_r** comportent de façon identique.
+**_wrename** est une version à caractères larges de **_rename**; les arguments de **_wrename** sont des chaînes à caractères larges. **_wrename** et **_rename** se comportent de façon identique dans le cas contraire.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -100,7 +90,7 @@ La fonction **rename** renomme le fichier ou le répertoire spécifié par *oldn
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_trename**|**rename**|**rename**|**_wrename**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

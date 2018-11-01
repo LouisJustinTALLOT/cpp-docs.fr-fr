@@ -1,8 +1,6 @@
 ---
-title: Fonctions d’espace de noms Concurrency::precise_math | Microsoft Docs
-ms.custom: ''
+title: Fonctions d’espace de noms Concurrency::precise_math
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
 - amp_math/Concurrency::precise_math::acosh
@@ -91,19 +89,13 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::tgamma
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
-dev_langs:
-- C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff74414926516e21fff2538674462de57f0f971f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469353"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::precise_math
 

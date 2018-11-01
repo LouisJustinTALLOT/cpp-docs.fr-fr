@@ -1,10 +1,6 @@
 ---
-title: error_category, classe | Microsoft Docs
-ms.custom: ''
+title: error_category, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - system_error/std::error_category
 - system_error/std::error_category::value_type
@@ -12,8 +8,6 @@ f1_keywords:
 - system_error/std::error_category::equivalent
 - system_error/std::error_category::message
 - system_error/std::error_category::name
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::error_category
 - std::error_category::value_type
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 55ff55b2026b741a2b7062d815fe43d6d19b078b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028227"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451959"
 ---
 # <a name="errorcategory-class"></a>error_category, classe
 
@@ -67,7 +57,7 @@ Deux objets prédéfinis implémentent `error_category` : [generic_category](..
 |Opérateur|Description|
 |-|-|
 |[operator==](#op_eq_eq)|Vérifie l’égalité d’objets `error_category`.|
-|[operator!=](#op_neq)|Vérifie l’inégalité d’objets `error_category`.|
+|[!=, opérateur](#op_neq)|Vérifie l’inégalité d’objets `error_category`.|
 |[operator<](#op_lt)|Vérifie si l’objet [error_category](../standard-library/error-category-class.md) est inférieur à l’objet `error_category` transmis pour la comparaison.|
 
 ## <a name="requirements"></a>Configuration requise
