@@ -1,28 +1,19 @@
 ---
-title: Classes de persistance (ATL) | Microsoft Docs
-ms.custom: ''
+title: Classes de persistance (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.persistence
-dev_langs:
-- C++
 helpviewer_keywords:
 - persistence classes
 - persistence, classes
 ms.assetid: a6a2b6b2-52bc-471c-b78a-de58363128bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46a42c92115ee60a0387e58b2acd5ce640e60eae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4376b04bfe59f7bb0c6e344dadb7a2f2a522fc3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534119"
 ---
 # <a name="persistence-classes"></a>Classes de persistance
 

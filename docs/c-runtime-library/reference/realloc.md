@@ -1,10 +1,6 @@
 ---
-title: realloc | Microsoft Docs
-ms.custom: ''
+title: realloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - realloc
 apilocation:
@@ -25,8 +21,6 @@ f1_keywords:
 - _nrealloc
 - realloc
 - _frealloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _brealloc function
 - realloc function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6452d14e0a8630c68d5e179fd94d531db1b667ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d61746365a8ded8d68072b1f398a18ba6ce7605
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544961"
 ---
 # <a name="realloc"></a>realloc
 
@@ -74,9 +64,9 @@ Nouvelle taille en octets.
 
 **realloc** retourne un **void** pointeur vers le bloc de mémoire réalloué (et éventuellement déplacé).
 
-S’il n’est pas suffisamment de mémoire pour étendre le bloc à la taille donnée, le bloc d’origine reste inchangé, et **NULL** est retourné.
+Si vous ne comporte pas suffisamment de mémoire disponible pour étendre le bloc à la taille donnée, le bloc d’origine reste inchangé, et **NULL** est retourné.
 
-Si *taille* est zéro, le bloc désigné par *memblock* est libérée ; la valeur de retour est **NULL**, et *memblock* pointe sur un blocs libérés.
+Si *taille* est zéro, le bloc désigné par *memblock* est libéré ; la valeur de retour est **NULL**, et *memblock* pointe vers un bloc libéré.
 
 La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour.
 
@@ -84,11 +74,11 @@ La valeur de retour pointe vers un espace de stockage qui est obligatoirement al
 
 Le **realloc** fonction modifie la taille d’un bloc de mémoire alloué. Le *memblock* argument pointe vers le début du bloc de mémoire. Si *memblock* est **NULL**, **realloc** se comporte de la même façon que **malloc** et alloue un nouveau bloc de *taille*octets. Si *memblock* n’est pas **NULL**, il doit être un pointeur retourné par un appel précédent à **calloc**, **malloc**, ou **realloc** .
 
-Le *taille* argument donne la nouvelle taille du bloc, en octets. Le contenu du bloc est inchangé tant que la plus courte des tailles nouvelle et ancienne n’est pas atteinte, même si le nouveau bloc peut se trouver à un autre emplacement. Étant donné que le nouveau bloc peut être dans un nouvel emplacement de mémoire, le pointeur retourné par **realloc** n’est pas garanti comme étant le pointeur passé le *memblock* argument. **realloc** ne pas zéro qui vient d’être la mémoire allouée dans le cas de croissance de la mémoire tampon.
+Le *taille* argument indique la nouvelle taille du bloc, en octets. Le contenu du bloc est inchangé tant que la plus courte des tailles nouvelle et ancienne n’est pas atteinte, même si le nouveau bloc peut se trouver à un autre emplacement. Étant donné que le nouveau bloc peut être dans un nouvel emplacement de mémoire, le pointeur retourné par **realloc** n’est pas garanti pour être le pointeur transmis via le *memblock* argument. **realloc** ne pas égale à zéro qui vient d’être alloué de la mémoire dans le cas de croissance de la mémoire tampon.
 
 **realloc** définit **errno** à **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**realloc** appelle **malloc** afin d’utiliser C++ [_set_new_mode](set-new-mode.md) fonction pour définir le nouveau mode de gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** consiste à appeler la routine du gestionnaire en tant que jeu par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine du gestionnaire sur les échecs d’allocation de mémoire. Vous pouvez substituer ce comportement par défaut afin que, lorsque **realloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine du Gestionnaire de la même façon que les **nouveau** opérateur est Lorsqu’il échoue pour la même raison. Pour remplacer la valeur par défaut, appelez
+**realloc** appels **malloc** pour pouvoir utiliser le C++ [_set_new_mode](set-new-mode.md) fonction permettant de définir le mode de nouveau gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** consiste à appeler la routine de nouveau gestionnaire telle que définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut afin que, lorsque **realloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouveau** opérateur Quand elle échoue pour la même raison. Pour remplacer la valeur par défaut, appelez
 
 ```C
 _set_new_mode(1);
@@ -98,9 +88,9 @@ au début de votre programme, ou créez un lien avec NEWMODE.OBJ (consultez [Opt
 
 Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **realloc** se résout en [_realloc_dbg](realloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**realloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales, et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**realloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

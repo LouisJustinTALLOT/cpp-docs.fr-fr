@@ -1,10 +1,6 @@
 ---
-title: _amsg_exit | Microsoft Docs
-ms.custom: ''
+title: _amsg_exit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _amsg_exit
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _amsg_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbb7f46bb4f3c942fd1c9e1a1d45c1ccf48739f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87cd08a6c60a1e29b8a8e15edbfdd69d338d875d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534024"
 ---
 # <a name="amsgexit"></a>_amsg_exit
 
@@ -56,7 +46,7 @@ Numéro d’identification d’un message d’erreur d’exécution défini par 
 
 Cette fonction émet le message d’erreur d’exécution vers **stderr** (pour les applications de console) ou affiche le message dans une boîte de message (pour les applications Windows). En mode débogage, vous pouvez choisir d’appeler le débogueur avant de quitter.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

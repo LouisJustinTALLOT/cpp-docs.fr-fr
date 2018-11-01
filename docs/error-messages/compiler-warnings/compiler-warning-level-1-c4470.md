@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveau 1) C4470 | Microsoft Docs
-ms.custom: ''
+title: Avertissement du compilateur (niveau 1) C4470
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4470
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4470
 ms.assetid: f52a3eaa-a235-4747-a47d-9ec4ad4cb0ea
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a660192b11e98bc34871e1f845c872fe27fb9ee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7fd4644ab39e350c0c0badb527875b427a2c6987
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531060"
 ---
 # <a name="compiler-warning-level-1-c4470"></a>Avertissement du compilateur (niveau 1) C4470
 
