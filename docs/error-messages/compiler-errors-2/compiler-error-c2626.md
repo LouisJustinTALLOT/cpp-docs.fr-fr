@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C2626 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C2626
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2626
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2626
 ms.assetid: 4c283ad0-251b-4571-bc18-468b9836746f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9929da1f0cf9ffd9c70048017fdef1d854c1fcc9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 434858991c23345e2a6c174c8f323000d42b9b6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074680"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565177"
 ---
 # <a name="compiler-error-c2626"></a>Erreur du compilateur C2626
 
