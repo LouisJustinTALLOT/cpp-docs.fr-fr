@@ -1,10 +1,6 @@
 ---
-title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -31,8 +27,6 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579589"
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -106,7 +96,7 @@ Nombre maximal de caractères à stocker.
 Chaîne de contrôle de format.
 
 *argument_list*<br/>
-Arguments facultatifs pour la chaîne de format.
+Arguments facultatifs à la chaîne de format.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
@@ -119,9 +109,9 @@ Le nombre de caractères écrits, ou -1 si une erreur s’est produite.
 
 ## <a name="remarks"></a>Notes
 
-Le **_sprintf_p** fonction formate et stocke une série de caractères et les valeurs de *tampon*. Chaque argument dans le *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le *format* argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini. La différence entre **_sprintf_p** et **sprintf_s** qui est **_sprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisé dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Le **_sprintf_p** fonction met en forme et stocke une série de caractères et de valeurs dans *tampon*. Chaque argument dans le *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le *format* argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini. La différence entre **_sprintf_p** et **sprintf_s** qui est **_sprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisé dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_swprintf_p** est une version à caractères larges de **_sprintf_p**; les arguments de pointeur de **_swprintf_p** sont des chaînes à caractères larges. La détection des erreurs dans l’encodage **_swprintf_p** peut différer de celle dans **_sprintf_p**. **_swprintf_p** et **fwprintf_p** se comportent de façon identique, sauf que **_swprintf_p** écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**, et **_swprintf_p** requiert le *nombre* paramètre pour spécifier le nombre maximal de caractères à écrire. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+**_swprintf_p** est une version à caractères larges de **_sprintf_p**; les arguments de pointeur à **_swprintf_p** sont des chaînes à caractères larges. Détection d’erreurs dans d’encodage **_swprintf_p** peut différer de celle dans **_sprintf_p**. **_swprintf_p** et **fwprintf_p** ont un comportement identique, sauf que **_swprintf_p** écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**, et **_swprintf_p** nécessite le *nombre* paramètre pour spécifier le nombre maximal de caractères à écrire. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 **_sprintf_p** retourne le nombre d’octets stockés dans *tampon*, sans compter le caractère null de fin. **_swprintf_p** retourne le nombre de caractères larges stockés dans *tampon*, sans compter le caractère large null de fin. Si *tampon* ou *format* est un pointeur null, ou si la chaîne de format contient des caractères de mise en forme non valides, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre ](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
@@ -132,7 +122,7 @@ Le **_sprintf_p** fonction formate et stocke une série de caractères et les va
 |**_stprintf_p**|**_sprintf_p**|**_sprintf_p**|**_swprintf_p**|
 |**_stprintf_p_l**|**_sprintf_p_l**|**_sprintf_p_l**|**_swprintf_p_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

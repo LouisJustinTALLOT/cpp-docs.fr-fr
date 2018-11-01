@@ -1,37 +1,27 @@
 ---
-title: Erreur du compilateur C2975 | Documents Microsoft
-ms.custom: ''
+title: Erreur du compilateur C2975
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2975
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53cb020dc0d456f10b7cfbae82a16b2ebe5fda6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609753"
 ---
 # <a name="compiler-error-c2975"></a>Erreur du compilateur C2975
 
-> '*argument*' : argument template non valide pour '*type*', expression constante de compilation attendue
+> «*argument*' : argument template non valide pour '*type*', expression de constante de compilation attendue
 
-L’argument de modèle ne correspond pas à la déclaration de modèle ; une expression constante doit apparaître entre crochets pointus. Les variables ne sont pas autorisées en tant qu’arguments réels du modèle. Vérifiez la définition du modèle pour trouver les types corrects.
+L’argument de modèle ne correspond pas à la déclaration de modèle ; une expression constante doit apparaître entre crochets pointus. Les variables ne sont pas autorisés comme arguments réels du modèle. Vérifiez la définition du modèle pour trouver les types corrects.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2975 s’et montre également l’utilisation correcte :
+L’exemple suivant génère le C2975 et illustre également l’utilisation correcte :
 
 ```cpp
 // C2975.cpp

@@ -1,12 +1,6 @@
 ---
-title: Exécution de NMAKE | Microsoft Docs
-ms.custom: ''
+title: Exécution de NMAKE
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdc9d89dbc0e77a8002cc34e5d010ee49d761da4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 81f38792893955b476dfc7eda91ed00603924a8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706691"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646210"
 ---
 # <a name="running-nmake"></a>Exécution de NMAKE
 

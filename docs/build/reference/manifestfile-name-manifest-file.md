@@ -1,29 +1,19 @@
 ---
-title: -MANIFESTFILE (nommer le fichier manifeste) | Microsoft Docs
-ms.custom: ''
+title: /MANIFESTFILE (Nommer le fichier manifeste)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ManifestFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - MANIFESTFILE linker option
 - -MANIFESTFILE linker option
 - /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7d3869b0cb656e7bde9a12fb028f84d1d4d09965
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9839665c3d74fd9d60afd21a825ffbdb752c7b00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706977"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656145"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (Nommer le fichier manifeste)
 

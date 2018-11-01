@@ -1,12 +1,6 @@
 ---
-title: (TLS) de stockage Local des threads | Microsoft Docs
-ms.custom: ''
+title: Stockage local des threads (TLS)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - multithreading [C++], Thread Local Storage
 - TLS [C++]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 02c699ec64fe03a1f892fc3c7e8bf9f6b9c05dfc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059842"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507586"
 ---
 # <a name="thread-local-storage-tls"></a>Stockage local des threads (TLS)
 

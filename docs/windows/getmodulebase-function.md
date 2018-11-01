@@ -1,26 +1,16 @@
 ---
-title: Getmodulebase, fonction | Microsoft Docs
-ms.custom: ''
+title: GetModuleBase, fonction
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
-dev_langs:
-- C++
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: afa76ad23c509689dd693bb0f3e13dbb7adb4d54
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 40289903eba2ce7ac35d4d0b208c3b609efb09f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50075448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650812"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase, fonction
 Récupère un [ModuleBase](../windows/modulebase-class.md) pointeur qui permet d’incrémenter et décrémenter le décompte de références un [RuntimeClass](../windows/runtimeclass-class.md) objet.

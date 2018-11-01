@@ -1,10 +1,6 @@
 ---
-title: _tzset | Microsoft Docs
-ms.custom: ''
+title: _tzset
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _tzset
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _tzset
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tzset function
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15464ac8be075d44a9a42223964239538508a683
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661758"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -55,9 +45,9 @@ void _tzset( void );
 
 ## <a name="remarks"></a>Notes
 
-Le **_tzset** fonction utilise le paramètre actuel de la variable d’environnement **TZ** pour affecter des valeurs à trois variables globales : **_daylight**, **_timezone** , et **_tzname**. Ces variables sont utilisées par le [_ftime](ftime-ftime32-ftime64.md) et [localtime](localtime-localtime32-localtime64.md) fonctions pour apporter des corrections à partir du temps universel coordonné (UTC) en heure locale et par le [temps](time-time32-time64.md) fonction calculer l’heure UTC à partir de l’heure système. Utilisez la syntaxe suivante pour définir le **TZ** variable d’environnement :
+Le **_tzset** fonction utilise le paramètre actuel de la variable d’environnement **TZ** pour affecter des valeurs à trois variables globales : **_daylight**, **_timezone** , et **_tzname**. Ces variables sont utilisées par le [_ftime](ftime-ftime32-ftime64.md) et [localtime](localtime-localtime32-localtime64.md) fonctions pour apporter des corrections à partir du temps universel coordonné (UTC) en heure locale et à la [temps](time-time32-time64.md) à fonction calculer l’heure UTC à partir de l’heure système. Utilisez la syntaxe suivante pour définir le **TZ** variable d’environnement :
 
-> **définir TZ =**_tzn_ \[ **+** &#124; **-**]*hh* \[ **:**_mm_\[**:**_ss_]] [*dzn*]
+> **Définissez TZ =**_tzn_ \[ **+** &#124; **-**]*hh* \[ **:**_mm_\[**:**_ss_]] [*dzn*]
 
 |Paramètre|Description|
 |-|-|
@@ -70,26 +60,26 @@ Le **_tzset** fonction utilise le paramètre actuel de la variable d’environne
 > [!NOTE]
 > Soyez attentif au calcul du signe de la différence d’heure. Comme la différence d’heure est le décalage de l’heure locale avec l’heure UTC (plutôt que l’inverse), son signe peut être l’opposé de ce que vous attendez de façon intuitive. Pour les fuseaux horaires en avance sur l’heure UTC, la différence de temps est négative ; pour ceux qui sont en retard sur l’heure UTC, la différence est positive.
 
-Par exemple, pour définir le **TZ** variable d’environnement pour qu’il corresponde au fuseau horaire actuel en Allemagne, entrez les informations suivantes sur la ligne de commande :
+Par exemple, pour définir le **TZ** variable d’environnement pour qu’elles correspondent au fuseau horaire actuel en Allemagne, entrez les informations suivantes sur la ligne de commande :
 
-> **définir TZ = TPS-1GDT**
+> **Définissez TZ = TPS-1GDT**
 
 Cette commande utilise GST pour indiquer l’heure standard allemande, suppose que l’heure UTC est en retard d’une heure sur l’Allemagne (ou autrement dit, que l’Allemagne est en avance d’une heure sur l’heure UTC) et suppose qu’Allemagne observe l’heure d’été.
 
-Si le **TZ** valeur n’est pas définie, **_tzset** tente d’utiliser les informations de fuseau horaire spécifiées par le système d’exploitation. Dans le système d’exploitation Windows, ces informations sont spécifiées dans l’application Date et heure du Panneau de configuration. Si **_tzset** ne peut pas obtenir cette information, elle utilise PST8PDT par défaut, ce qui signifie le fuseau horaire Pacifique.
+Si le **TZ** valeur n’est pas définie, **_tzset** tente d’utiliser les informations de fuseau horaire spécifiées par le système d’exploitation. Dans le système d’exploitation Windows, ces informations sont spécifiées dans l’application Date et heure du Panneau de configuration. Si **_tzset** ne peut pas obtenir ces informations, elle utilise PST8PDT par défaut, ce qui signifie le fuseau horaire Pacifique.
 
-Selon le **TZ** valeur variable d’environnement, les valeurs suivantes sont affectées aux variables globales **_daylight**, **_timezone**, et **_tzname** lorsque **_tzset** est appelée :
+Selon le **TZ** valeur de variable d’environnement, les valeurs suivantes sont affectées aux variables globales **_daylight**, **_timezone**, et **_tzname** lorsque **_tzset** est appelée :
 
 |Variable globale|Description|Valeur par défaut|
 |---------------------|-----------------|-------------------|
-|**_daylight**|Une valeur différente de zéro si le fuseau horaire de l’heure d’été est spécifié dans **TZ** configuration ; sinon, 0.|1|
+|**_daylight**|Une valeur différente de zéro si un fuseau horaire de l’heure d’été est spécifié dans **TZ** configuration ; sinon, 0.|1|
 |**_timezone**|Différence en secondes entre l’heure locale et l’heure UTC.|28 800 (28 800 secondes est égal à 8 heures)|
-|**_tzname**[0]|Valeur de chaîne de nom du fuseau horaire à partir de **TZ** variable d’environnement ; vide si **TZ** n’a pas été définie.|PST|
-|**_tzname**[1]|Valeur de chaîne de la zone de l’heure d’été ; vide si le fuseau horaire de l’enregistrement de l’heure d’été est omis de **TZ** variable d’environnement.|PDT|
+|**_tzname**[0]|Valeur de chaîne de nom de fuseau horaire à partir de **TZ** variable d’environnement ; vide si **TZ** n’a pas été définie.|PST|
+|**_tzname**[1]|Valeur de chaîne de la zone de l’heure ; vide si le fuseau horaire de l’enregistrement de l’heure d’été est omis du **TZ** variable d’environnement.|PDT|
 
-Les valeurs par défaut indiqués dans le tableau précédent pour **_daylight** et **_tzname** tableau correspondent à « PST8PDT ». Si le fuseau horaire DST est omis à partir de la **TZ** variable d’environnement, la valeur de **_daylight** est égal à 0 et la [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)et [localtime](localtime-localtime32-localtime64.md) fonctions retournent 0 pour les indicateurs DST.
+Les valeurs par défaut indiqués dans le tableau précédent pour **_daylight** et **_tzname** tableau correspondent à « PST8PDT ». Si le fuseau horaire DST est omis à partir de la **TZ** variable d’environnement, la valeur de **_daylight** est égal à 0 et le [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)et [localtime](localtime-localtime32-localtime64.md) fonctions retournent 0 pour les indicateurs DST.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
