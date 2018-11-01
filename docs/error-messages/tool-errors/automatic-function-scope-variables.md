@@ -1,28 +1,18 @@
 ---
-title: Variables automatiques (portée de fonction) | Microsoft Docs
-ms.custom: ''
+title: Variables automatiques (portée de fonction)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - automatic variables
 - variables, automatic
 - functions [C++], scope
 - scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2cabf633245cfdf1b688b498bb5ec81aa5e7c486
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8803a1367dca2faf2042e851449eeedb6978b9e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061394"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496094"
 ---
 # <a name="automatic-function-scope-variables"></a>Variables automatiques (portée de fonction)
 

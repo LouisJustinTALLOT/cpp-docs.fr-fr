@@ -1,28 +1,17 @@
 ---
-title: Enregistrement (accès de données MFC) | Microsoft Docs
-ms.custom: ''
+title: Enregistrement (Accès aux données MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - databases [C++], records
 - records [C++]
 - records [C++], database
 ms.assetid: d9888635-8121-452c-8cb9-a1c5bf268010
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 3ac01274773abf04bf6f817b0f70bcd527865a1b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 53da1766bdf717e7c8eae890dd646ef24d4a9f96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083475"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495977"
 ---
 # <a name="record-mfc-data-access"></a>Enregistrement (Accès aux données MFC)
 

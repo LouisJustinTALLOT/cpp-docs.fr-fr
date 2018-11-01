@@ -1,25 +1,15 @@
 ---
-title: Principes de base HTML | Microsoft Docs
-ms.custom: ''
+title: Éléments fondamentaux relatifs à HTML
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe2c743f04e8fc8dc67947b9bd9d5560dd35182
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: de79945b468689095f33feeb2153aca7d799d8ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50052692"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499630"
 ---
 # <a name="html-basics"></a>Éléments fondamentaux relatifs à HTML
 

@@ -1,12 +1,6 @@
 ---
-title: À l’aide d’un Windows forment le contrôle utilisateur dans la bibliothèque MFC | Microsoft Docs
-ms.custom: ''
+title: Utilisation d'un contrôle utilisateur Windows Form dans MFC
 ms.date: 1/08/2018
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - interoperability [C++], Windows Forms in MFC
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 4fef169cb0e2386c1629064ad7ea8a1a70a5c517
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d36932a3edc0129f0497cb8db4095283650c5c96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494157"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Utilisation d'un contrôle utilisateur Windows Form dans MFC
 

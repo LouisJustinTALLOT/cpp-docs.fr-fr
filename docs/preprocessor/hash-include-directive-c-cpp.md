@@ -1,29 +1,19 @@
 ---
-title: '#Include, Directive (C/C++) | Microsoft Docs'
-ms.custom: ''
+title: '#Include, Directive (C/C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '#include'
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor, directives
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fdf60755591dd37a541c02330554fa4fe9b92ca6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3cf595fd8f519706f43ad70c4cdddf0297c8149e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062481"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492532"
 ---
 # <a name="include-directive-cc"></a>#include, directive (C/C++)
 Indique au préprocesseur de traiter le contenu d'un fichier spécifique, comme s'il figurait dans le programme source à l'emplacement où figure la directive.

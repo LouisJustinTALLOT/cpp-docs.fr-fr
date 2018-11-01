@@ -1,10 +1,6 @@
 ---
-title: _execvp, _wexecvp | Microsoft Docs
-ms.custom: ''
+title: _execvp, _wexecvp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvp
 - _wexecvp
@@ -25,24 +21,18 @@ f1_keywords:
 - _execvp
 - wexecvp
 - _wexecvp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execvp function
 - _wexecvp function
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47154bd999b421c2170118236a899dcc4e2860
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505311"
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 
@@ -90,11 +80,11 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions charge et exécute un nouveau processus, en passant un tableau de pointeurs vers les arguments de ligne de commande et à l’aide de la **chemin d’accès** variable d’environnement pour rechercher le fichier à exécuter.
+Chacune de ces fonctions charge et exécute un nouveau processus, passant un tableau de pointeurs à des arguments de ligne de commande et à l’aide de la **chemin d’accès** variable d’environnement pour rechercher le fichier à exécuter.
 
 Le **_execvp** fonctions valident leurs paramètres. Si le *cmdname* est un pointeur null, ou *argv* est un pointeur null, pointeur vers un tableau vide, ou si le tableau contient une chaîne vide comme premier argument, ces fonctions appellent le Gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun processus lancé.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
