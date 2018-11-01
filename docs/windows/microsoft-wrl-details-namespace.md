@@ -1,24 +1,14 @@
 ---
-title: Microsoft::wrl::Details Namespace | Microsoft Docs
-ms.custom: ''
+title: Microsoft::WRL::Details, espace de noms
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 3f8f6849ec20956d10147a0e6ecb2fd023874807
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250391"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644377"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details, espace de noms
 
@@ -43,7 +33,7 @@ namespace Microsoft::WRL::Details;
 |[MakeAllocator, classe](../windows/makeallocator-class.md)|Alloue la mémoire pour une classe activable, avec ou sans prise en charge de la référence faible.|
 |[ModuleBase, classe](../windows/modulebase-class.md)|Représente la classe de base de la [Module](../windows/module-class.md) classes.|
 |[RemoveIUnknown, classe](../windows/removeiunknown-class.md)|Crée un type qui est équivalent à une `IUnknown`-type de base, a, mais non virtuelle `QueryInterface`, `AddRef`, et `Release` méthodes.|
-|[WeakReference (classe)](../windows/weakreference-class.md)|Représente un *référence faible* qui peut être utilisé avec le Windows Runtime ou le COM classique. Une référence faible représente un objet qui peut être accessible ou non.|
+|[WeakReference, classe](../windows/weakreference-class.md)|Représente un *référence faible* qui peut être utilisé avec le Windows Runtime ou le COM classique. Une référence faible représente un objet qui peut être accessible ou non.|
 
 ### <a name="structures"></a>Structures
 

@@ -1,27 +1,17 @@
 ---
-title: 'Comment : obtenir un pointeur vers un tableau d’octets | Microsoft Docs'
+title: "Comment : obtenir un pointeur vers un tableau d'octets"
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointers, to Byte array
 - Byte arrays
 ms.assetid: aea18073-3341-47f4-9f0e-04e03327037e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: c20449a5e02e7743999d02f6a03254976e58fcfb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ad17dd0049f83fd753af0f9d7a565f28c6681a59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638894"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>Comment : obtenir un pointeur vers un tableau d'octets
 

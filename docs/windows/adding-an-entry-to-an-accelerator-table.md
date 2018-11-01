@@ -1,27 +1,16 @@
 ---
-title: Ajout d’une entrée à une Table d’accélérateurs (C++) | Microsoft Docs
-ms.custom: ''
+title: Ajout d’une entrée à une Table d’accélérateurs (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], adding entries
 - New Accelerator command
 ms.assetid: 559c2415-8323-4339-9447-6966665f8288
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0e0017e0c4d5462ef985b70b44120ff20066f626
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 63ae7296d7571bb70f4ca7abe05f39591cc40ced
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626848"
 ---
 # <a name="adding-an-entry-to-an-accelerator-table-c"></a>Ajout d’une entrée à une Table d’accélérateurs (C++)
 

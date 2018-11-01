@@ -1,10 +1,6 @@
 ---
-title: _get_purecall_handler, _set_purecall_handler | Microsoft Docs
-ms.custom: ''
+title: _get_purecall_handler, _set_purecall_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_purecall_handler
 - _set_purecall_handler_m
@@ -29,8 +25,6 @@ f1_keywords:
 - stdlib/_set_purecall_handler
 - stdlib/_get_purecall_handler
 - _get_purecall_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_purecall_handler function
 - set_purecall_handler function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1dca104d04546786a361c63461e502f7aa8b6127
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400273"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646357"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -68,23 +58,23 @@ _purecall_handler __cdecl _set_purecall_handler(
 ### <a name="parameters"></a>Paramètres
 
 *function*<br/>
-Fonction à appeler quand une fonction virtuelle pure est appelée. A **_purecall_handler** fonction doit avoir un type de retour void.
+Fonction à appeler quand une fonction virtuelle pure est appelée. Un **_purecall_handler** fonction doit avoir un type de retour void.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Précédent **_purecall_handler**. Retourne **nullptr** s’il y a aucun gestionnaire précédent.
+Le précédent **_purecall_handler**. Retourne **nullptr** s’il n’y avait aucun gestionnaire précédent.
 
 ## <a name="remarks"></a>Notes
 
 Le **_get_purecall_handler** et **_set_purecall_handler** fonctions sont spécifiques à Microsoft et s’appliquent uniquement au code C++.
 
-Un appel à une fonction virtuelle pure est une erreur, car elle n’a pas d’implémentation. Par défaut, le compilateur génère du code pour appeler une fonction de gestionnaire d’erreurs quand une fonction virtuelle pure est appelée, ce qui met fin au programme. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonctions virtuelles pures, de façon à les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui possède le **_purecall_handler** signature, puis utilisez **_set_purecall_handler** afin de faciliter le gestionnaire en cours.
+Un appel à une fonction virtuelle pure est une erreur, car elle n’a pas d’implémentation. Par défaut, le compilateur génère du code pour appeler une fonction de gestionnaire d’erreurs quand une fonction virtuelle pure est appelée, ce qui met fin au programme. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonctions virtuelles pures, de façon à les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui a le **_purecall_handler** signature, puis utilisez **_set_purecall_handler** à faire le gestionnaire en cours.
 
-Étant donné qu’un seul **_purecall_handler** pour chaque processus, lorsque vous appelez **_set_purecall_handler** l’impact est immédiatement sur tous les threads. Le dernier appelant au niveau d'un thread est celui qui définit le gestionnaire.
+Étant donné qu’un seul **_purecall_handler** pour chaque processus, lorsque vous appelez **_set_purecall_handler** il immédiatement a un impact sur tous les threads. Le dernier appelant au niveau d'un thread est celui qui définit le gestionnaire.
 
-Pour restaurer le comportement par défaut, appelez **_set_purecall_handler** en utilisant un **nullptr** argument.
+Pour rétablir le comportement par défaut, appelez **_set_purecall_handler** en utilisant un **nullptr** argument.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

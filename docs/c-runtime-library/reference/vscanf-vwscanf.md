@@ -1,10 +1,6 @@
 ---
-title: vscanf, vwscanf | Microsoft Docs
-ms.custom: ''
+title: vscanf, vwscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vscanf
 - vwscanf
@@ -24,19 +20,13 @@ f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
-dev_langs:
-- C++
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 825d0d61fccc6d0f83ae8b11648a3c7a3a9c50a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ba72e0dc313617211f7b9608bcbd8919bbc62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414322"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625083"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
@@ -68,18 +58,18 @@ Liste d’arguments de variable.
 
 Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné.
 
-Si *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et **errno** à **EINVAL**.
+Si *format* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et définissez **errno** à **EINVAL**.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **vscanf** fonction lit les données à partir du flux d’entrée standard **stdin** et écrit les données dans les emplacements qui sont fournis par le *arglist* liste d’arguments. Chaque argument dans la liste doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le **vscanf** fonction lit les données à partir du flux d’entrée standard **stdin** et écrit les données dans les emplacements fournis par le *arglist* liste d’arguments. Chaque argument dans la liste doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Lorsque vous utilisez **vscanf** pour lire une chaîne, spécifiez toujours une largeur de la **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; Sinon, une entrée au format incorrect peut entraîner un dépassement de mémoire tampon. En guise d’alternative, vous pouvez utiliser [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) ou [fgets](fgets-fgetws.md).
+> Lorsque vous utilisez **vscanf** pour lire une chaîne, spécifiez toujours une largeur pour les **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; Sinon, entrée mal formatée peut provoquer un dépassement de mémoire tampon. En guise d’alternative, vous pouvez utiliser [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) ou [fgets](fgets-fgetws.md).
 
-**vwscanf** est une version à caractères larges de **vscanf**; le *format* argument **vwscanf** est une chaîne à caractères larges. **vwscanf** et **vscanf** se comportent de façon identique, si le flux est ouvert en mode ANSI. **vscanf** ne prend pas en charge d’entrée à partir d’un flux de données UNICODE.
+**vwscanf** est une version à caractères larges de **vscanf**; le *format* l’argument de **vwscanf** est une chaîne de caractères larges. **vwscanf** et **vscanf** se comportent comme si le flux est ouvert en mode ANSI. **vscanf** ne prend pas en charge d’entrée à partir d’un flux de données UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -89,14 +79,14 @@ Le **vscanf** fonction lit les données à partir du flux d’entrée standard *
 
 Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
