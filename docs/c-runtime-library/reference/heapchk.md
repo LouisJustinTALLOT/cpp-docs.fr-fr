@@ -1,10 +1,6 @@
 ---
-title: _heapchk | Microsoft Docs
-ms.custom: ''
+title: _heapchk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapchk
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapchk
 - heapchk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - consistency checking of heaps
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3fc500ee86bde40def0e1e2d3dd3edad3127daf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580620"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -55,7 +45,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_heapchk** renvoie un des constantes manifestes entières suivantes définies dans Malloc.h.
+**_heapchk** retourne une des constantes manifestes entières suivantes définies dans Malloc.h.
 
 |Valeur de retour|Condition|
 |-|-|
@@ -69,9 +59,9 @@ En outre, si une erreur se produit, **_heapchk** définit **errno** à **ENOSYS*
 
 ## <a name="remarks"></a>Notes
 
-Le **_heapchk** fonction permet de déboguer les problèmes liés au tas en vérifiant la cohérence minimale du segment de mémoire. Si le système d’exploitation ne prend pas en charge **_heapchk**(par exemple, Windows 98), la fonction retourne **_HEAPOK** et définit **errno** à **ENOSYS**.
+Le **_heapchk** fonction permet de déboguer les problèmes liés au tas en vérifiant la cohérence minimale du tas. Si le système d’exploitation ne prend pas en charge **_heapchk**(par exemple, Windows 98), la fonction retourne **_HEAPOK** et définit **errno** à **ENOSYS**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

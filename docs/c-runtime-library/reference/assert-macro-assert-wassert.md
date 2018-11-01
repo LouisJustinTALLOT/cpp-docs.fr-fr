@@ -1,10 +1,6 @@
 ---
-title: assert (macro), _assert, _wassert | Microsoft Docs
-ms.custom: ''
+title: assert (macro), _assert, _wassert
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - assert
 - _assert
@@ -27,23 +23,17 @@ f1_keywords:
 - _assert
 - _wassert
 - assert/_wassert
-dev_langs:
-- C++
 helpviewer_keywords:
 - aborting programs
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101935"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590955"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert (macro), _assert, _wassert
 
@@ -97,7 +87,7 @@ Pour plus d'informations sur le débogage CRT, consultez [Techniques de débogag
 
 Le **_assert** et **_wassert** fonctions sont des fonctions CRT internes. Elles aident à réduire la quantité de code nécessaire dans vos fichiers objet pour prendre en charge les assertions. Nous vous déconseillons d’appeler ces fonctions directement.
 
-Le **assert** macro est activée dans les versions release et debug des bibliothèques Runtime C lorsque **NDEBUG** n’est pas défini. Lorsque **NDEBUG** est défini, la macro est disponible mais n’évalue pas son argument et n’a aucun effet. Lorsqu’il est activé, le **assert** appels de macros **_wassert** pour son implémentation. D’autres macros d’assertion, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) et [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), sont également disponibles, mais elles évaluent seulement les expressions qui leur sont passées quand la macro [_DEBUG](../../c-runtime-library/debug.md) a été définie et quand elles sont dans du code lié à la version Debug des bibliothèques Runtime C.
+Le **assert** macro est activée dans les versions release et debug des bibliothèques Runtime C lorsque **NDEBUG** n’est pas défini. Lorsque **NDEBUG** est défini, la macro est disponible mais n’évalue pas son argument et n’a aucun effet. Lorsqu’il est activé, le **assert** appels de macros **_wassert** pour son implémentation. D’autres macros d’assertion, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) et [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), sont également disponibles, mais elles évaluent seulement les expressions qui leur sont passées lorsque la macro [_DEBUG](../../c-runtime-library/debug.md) a été définie et lorsqu’elles sont dans du code lié à la version Debug des bibliothèques Runtime C.
 
 ## <a name="requirements"></a>Configuration requise
 
