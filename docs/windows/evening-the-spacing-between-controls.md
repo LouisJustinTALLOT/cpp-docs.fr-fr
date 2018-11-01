@@ -1,28 +1,17 @@
 ---
-title: Répartition de l’espacement entre les contrôles | Microsoft Docs
-ms.custom: ''
+title: Répartition de l'espacement entre les contrôles
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], positioning
 - controls [C++], aligning
 - Space Evenly command
 ms.assetid: 97e80fb8-1db5-4e88-8ada-63540b5f2dab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7016a535eb420894d33cd46475ad8c1a75a10c59
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 766ff9a457687ba9a700fbaefc2194d62d48871d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495873"
 ---
 # <a name="evening-the-spacing-between-controls"></a>Répartition de l'espacement entre les contrôles
 

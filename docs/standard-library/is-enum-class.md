@@ -1,28 +1,18 @@
 ---
-title: is_enum, classe | Microsoft Docs
-ms.custom: ''
+title: is_enum, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_enum
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f9cddada58773102311027399a0b139b19568445
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 95b36d512f4fb6501f5ae00d8f0dd49520613558
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44099601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507651"
 ---
 # <a name="isenum-class"></a>is_enum, classe
 

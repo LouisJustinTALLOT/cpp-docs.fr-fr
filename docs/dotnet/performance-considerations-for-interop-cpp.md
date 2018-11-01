@@ -1,12 +1,6 @@
 ---
-title: Considérations sur les performances de l’interopérabilité (C++) | Microsoft Docs
-ms.custom: ''
+title: Considérations sur les performances de l'interopérabilité (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - /clr compiler option [C++], interop performance considerations
 - platform invoke [C++], interoperability
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ce27ac6e5194842ab0b9cf2237fbde1a1b636fba
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addf3fbc5f6261800ceebf6e8bb1abe1a64f245e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415991"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478206"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Considérations sur les performances de l'interopérabilité (C++)
 
