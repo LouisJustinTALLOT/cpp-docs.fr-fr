@@ -1,10 +1,6 @@
 ---
-title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snprintf_s
 - _snprintf_s_l
@@ -35,8 +31,6 @@ f1_keywords:
 - snwprintf_s
 - sntprintf_s
 - sntprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snprintf_s_l function
 - _snwprintf_s_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3744fc543cd5c478ffba01e3abca9b152145be6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5918ab1dd9b7108248e638f267ceb8757802231a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560028"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
@@ -122,7 +112,7 @@ int _snwprintf_s(
 Emplacement de stockage pour la sortie.
 
 *sizeOfBuffer*<br/>
-Taille de l’emplacement de stockage pour la sortie. Taille en **octets** pour **_snprintf_s** ou taille en **mots** pour **_snwprintf_s**.
+Taille de l’emplacement de stockage pour la sortie. Taille en **octets** pour **_snprintf_s** ou de taille dans **mots** pour **_snwprintf_s**.
 
 *count*<br/>
 Nombre maximal de caractères à stocker ou [_TRUNCATE](../../c-runtime-library/truncate.md).
@@ -130,7 +120,7 @@ Nombre maximal de caractères à stocker ou [_TRUNCATE](../../c-runtime-library/
 *format*<br/>
 Chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 *locale*<br/>
@@ -140,24 +130,24 @@ Paramètres régionaux à utiliser.
 
 **_snprintf_s** retourne le nombre de caractères stockés dans *tampon*, sans compter le caractère null de fin. **_snwprintf_s** retourne le nombre de caractères larges stockés dans *tampon*, sans compter le caractère large null de fin.
 
-Si le stockage nécessaire pour stocker les données et un caractère null de fin dépasse *sizeOfBuffer*, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution se poursuit après le Gestionnaire de paramètres non valides, ces fonctions définissent *tampon* vers une chaîne vide, définissez **errno** à **ERANGE**et retournent -1.
+Si le stockage requis pour stocker les données et un caractère null de fin dépasse *sizeOfBuffer*, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution se poursuit après le Gestionnaire de paramètre non valide, ces fonctions définissent *tampon* sur une chaîne vide, définissez **errno** à **ERANGE**et retournent -1.
 
-Si *tampon* ou *format* est un **NULL** pointeur, ou si *nombre* est inférieur ou égal à zéro, le Gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
+Si *tampon* ou *format* est un **NULL** pointeur, ou si *nombre* est inférieure ou égale à zéro, le Gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_snprintf_s** formats de fonction et les magasins *nombre* caractères au maximum dans *tampon* et ajoute un caractère null de fin. Chaque argument (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. La mise en forme est cohérent avec la **printf** famille de fonctions ; consultez [syntaxe de spécification de Format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le **_snprintf_s** formats de fonction et les magasins *nombre* caractères au maximum dans *tampon* et ajoute un caractère null de fin. Chaque argument (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. La mise en forme est cohérente avec la **printf** famille de fonctions ; consultez [syntaxe de spécification de Format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-Si *nombre* est [_TRUNCATE](../../c-runtime-library/truncate.md), puis **_snprintf_s** écritures autant de la chaîne en tenir dans *tampon* tout en laissant la place pour un termine la valeur null. Si la chaîne entière (avec le caractère null de fin) rentre dans *tampon*, puis **_snprintf_s** retourne le nombre de caractères écrits (sans compter le caractère null de fin) ; sinon, **_snprintf_s**  retourne -1 pour indiquer que la troncation s’est produite.
+Si *nombre* est [_TRUNCATE](../../c-runtime-library/truncate.md), puis **_snprintf_s** écrit autant de la chaîne en tiennent dans *tampon* tout en laissant de l’espace pour un Abandon de null. Si la chaîne entière (avec le caractère null de fin) tient *tampon*, puis **_snprintf_s** retourne le nombre de caractères écrits (sans compter le caractère null de fin) ; sinon, **_snprintf_s**  retourne -1 pour indiquer que la troncation s’est produite.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
 
-**_snwprintf_s** est une version à caractères larges de **_snprintf_s**; les arguments de pointeur de **_snwprintf_s** sont des chaînes à caractères larges. La détection des erreurs dans l’encodage **_snwprintf_s** peut différer de celle dans **_snprintf_s**. **_snwprintf_s**, comme **swprintf_s**, écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**.
+**_snwprintf_s** est une version à caractères larges de **_snprintf_s**; les arguments de pointeur à **_snwprintf_s** sont des chaînes à caractères larges. Détection d’erreurs dans d’encodage **_snwprintf_s** peut différer de celle dans **_snprintf_s**. **_snwprintf_s**, comme **swprintf_s**, écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -168,7 +158,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |**_sntprintf_s**|**_snprintf_s**|**_snprintf_s**|**_snwprintf_s**|
 |**_sntprintf_s_l**|**_snprintf_s_l**|**_snprintf_s_l**|**_snwprintf_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
