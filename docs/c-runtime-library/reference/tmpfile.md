@@ -1,10 +1,6 @@
 ---
-title: tmpfile | Microsoft Docs
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409067"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530323"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -58,11 +48,11 @@ En cas de réussite, **tmpfile** retourne un pointeur de flux de données. Sinon
 
 Le **tmpfile** fonction crée un fichier temporaire et retourne un pointeur vers ce flux de données. Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
 
-Si le fichier ne peut pas être ouvert, **tmpfile** retourne un **NULL** pointeur. Ce fichier temporaire est automatiquement supprimé quand le fichier est fermé lorsque le programme se termine normalement, ou lorsque **_rmtmp** est appelée, en supposant que le répertoire de travail en cours ne change pas. Le fichier temporaire est ouvert dans **w + b** mode (lecture/écriture binaire).
+Si le fichier ne peut pas être ouvert, **tmpfile** retourne un **NULL** pointeur. Ce fichier temporaire est automatiquement supprimé quand le fichier est fermé lorsque le programme se termine normalement ou lorsque **_rmtmp** est appelée, en supposant que le répertoire de travail actif ne change pas. Le fichier temporaire est ouvert dans **w + b** mode (lecture/écriture binaire).
 
-Échec peut se produire si vous essayez de plus de TMP_MAX (voir STDIO. H) appels avec **tmpfile**.
+Échec peut se produire si vous essayez de plus de TMP_MAX (voir STDIO. (H) appels avec **tmpfile**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

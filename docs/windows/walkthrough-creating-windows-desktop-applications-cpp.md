@@ -1,27 +1,17 @@
 ---
-title: 'Procédure pas à pas : Créer une application de bureau de Windows traditionnelle (C++) | Microsoft Docs'
+title: 'Procédure pas à pas : Créer une application de bureau de Windows traditionnelle (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528376"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procédure pas à pas : Créer une application de bureau de Windows traditionnelle (C++)
 
@@ -167,7 +157,7 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
 
    Pour plus d’informations sur les champs de la structure ci-dessus, consultez [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Inscrire le `WNDCLASSEX` avec Windows afin qu’il connaît votre fenêtre et comment lui envoyer des messages. Utilisez le [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) de fonction et passez la structure de classe de fenêtre comme argument. Le `_T` macro est utilisée, car nous utilisons le `TCHAR` type.
+1. Inscrire le `WNDCLASSEX` avec Windows afin qu’il connaît votre fenêtre et comment lui envoyer des messages. Utilisez la fonction [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) et passez la structure de classe de fenêtre comme argument. Le `_T` macro est utilisée, car nous utilisons le `TCHAR` type.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -181,7 +171,7 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
    }
    ```
 
-1. Vous pouvez maintenant créer une fenêtre. Utilisez le [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) (fonction).
+1. Vous pouvez maintenant créer une fenêtre. Utilisez la fonction [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) .
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -219,7 +209,7 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
    }
    ```
 
-   Cette fonction retourne un `HWND`, qui est un handle de fenêtre. Un handle est un peu comme un pointeur Windows utilise pour effectuer le suivi des fenêtres ouvertes. Pour plus d’informations, consultez [les Types de données Windows](/windows/desktop/WinProg/windows-data-types).
+   Cette fonction retourne un `HWND`, qui est un handle de fenêtre. Un handle est un peu comme un pointeur Windows utilise pour effectuer le suivi des fenêtres ouvertes. Pour plus d'informations, consultez [Types de données Windows](/windows/desktop/WinProg/windows-data-types).
 
 1. À ce stade, la fenêtre a été créée, mais nous avons besoin indiquer à Windows pour le rendre visible. C’est ce que fait ce code :
 
@@ -247,7 +237,7 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
    return (int) msg.wParam;
    ```
 
-   Pour plus d’informations sur les structures et fonctions dans la boucle de message, consultez [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), et [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Pour plus d’informations sur les structures et les fonctions dans la boucle de message, consultez [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    À ce stade, la fonction `WinMain` doit ressembler au code suivant.
 
@@ -342,7 +332,7 @@ Ensuite, vous allez apprendre à créer le code d’une application de bureau Wi
 
    Est un message important pour gérer la [WM_PAINT](/windows/desktop/gdi/wm-paint) message. L’application reçoit le `WM_PAINT` message lorsqu’il fait partie de sa fenêtre affichée doit être mis à jour. L’événement peut se produire lorsqu’un utilisateur déplace une fenêtre devant votre fenêtre, puis le déplace à nouveau, et que votre application ne sait pas lorsque ces événements se produisent. Windows seulement sait, il vous avertit avec `WM_PAINT`. Lorsque la fenêtre s’affiche tout d’abord, tout cela doit être mis à jour.
 
-   Pour gérer un `WM_PAINT` message, le premier appel [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), puis traitez toute la logique pour disposer le texte, boutons et autres contrôles dans la fenêtre, puis appelez [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Pour l’application, la logique entre l’appel de début et de l’appel de fin consiste à afficher la chaîne « Hello, bureau de Windows ! » dans la fenêtre. Dans le code suivant, notez que le [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) fonction est utilisée pour afficher la chaîne.
+   Pour traiter un message `WM_PAINT` , appelez d’abord [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), puis traitez toute la logique pour disposer le texte, les boutons et autres contrôles dans la fenêtre, puis appelez [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Pour l’application, la logique entre l’appel de début et de l’appel de fin consiste à afficher la chaîne « Hello, bureau de Windows ! » dans la fenêtre. Dans le code suivant, notez que la fonction [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) est utilisée pour afficher la chaîne.
 
    ```cpp
    PAINTSTRUCT ps;
