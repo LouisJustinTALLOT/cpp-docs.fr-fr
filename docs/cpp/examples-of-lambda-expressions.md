@@ -1,27 +1,17 @@
 ---
-title: Exemples d’Expressions Lambda | Microsoft Docs
-ms.custom: ''
+title: Exemples d'expressions lambda
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b25d2914285e6ddab9e727f484823d40c9910d3b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061823"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663951"
 ---
-# <a name="examples-of-lambda-expressions"></a>Exemples d’expressions lambda
+# <a name="examples-of-lambda-expressions"></a>Exemples d'expressions lambda
 
 Cet article explique comment utiliser des expressions lambda dans vos programmes. Pour une vue d’ensemble des expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md). Pour plus d’informations sur la structure d’une expression lambda, consultez [syntaxe d’Expression Lambda](../cpp/lambda-expression-syntax.md).
 
@@ -111,7 +101,7 @@ int main()
 
 ##  <a name="callingLambdaExpressions"></a> Appel d’Expressions Lambda
 
-Vous pouvez appeler une expression lambda immédiatement, comme indiqué dans l’extrait de code suivant. Le deuxième extrait montre comment passer une expression lambda en tant qu’argument des algorithmes de bibliothèque C++ Standard tel que `find_if`.
+Vous pouvez appeler une expression lambda immédiatement, comme indiqué dans l'extrait de code suivant. Le deuxième extrait montre comment passer une expression lambda en tant qu’argument des algorithmes de bibliothèque C++ Standard tel que `find_if`.
 
 ### <a name="example-1"></a>Exemple 1
 
@@ -231,7 +221,7 @@ Dans cet exemple, `[](int y) { return y * 2; }` est l'expression lambda imbriqu�
 
 ### <a name="example"></a>Exemple
 
-Nombreux langages de programmation prennent en charge le concept d’un *fonction d’ordre supérieur.* Une fonction d’ordre supérieur est une expression lambda qui prend une autre expression lambda comme argument ou qui retourne une expression lambda. Vous pouvez utiliser la [fonction](../standard-library/function-class.md) classe pour permettre à une expression lambda de C++ se comporte comme une fonction d’ordre supérieur. L'exemple suivant présente une expression lambda qui retourne un objet `function` et une expression lambda qui prend un objet `function` comme argument.
+Nombreux langages de programmation prennent en charge le concept d’un *fonction d’ordre supérieur.* Une fonction d'ordre supérieur est une expression lambda qui prend une autre expression lambda comme argument ou qui retourne une expression lambda. Vous pouvez utiliser la [fonction](../standard-library/function-class.md) classe pour permettre à une expression lambda de C++ se comporte comme une fonction d’ordre supérieur. L'exemple suivant présente une expression lambda qui retourne un objet `function` et une expression lambda qui prend un objet `function` comme argument.
 
 ### <a name="code"></a>Code
 
@@ -365,7 +355,7 @@ int main()
 
 ### <a name="remarks"></a>Notes
 
-La fonction `ApplyScale` utilise une expression lambda pour imprimer le produit de la valeur d'échelle et de chaque élément d'un objet `vector`. L’expression lambda capture implicitement **cela** afin qu’il puisse accéder le `_scale` membre.
+La fonction `ApplyScale` utilise une expression lambda pour imprimer le produit de la valeur d’échelle et de chaque élément d’un objet `vector`. L’expression lambda capture implicitement **cela** afin qu’il puisse accéder le `_scale` membre.
 
 [[Dans cet article](#top)]
 
@@ -437,7 +427,7 @@ Pour plus d’informations sur les modèles C++, consultez [modèles](../cpp/tem
 
 ### <a name="example"></a>Exemple
 
-Le corps d'une expression lambda suit les règles de la gestion structurée des exceptions (SEH) et la gestion des exceptions C++. Vous pouvez gérer une exception levée dans le corps d’une expression lambda ou différer la gestion des exceptions dans la portée englobante. L’exemple suivant utilise le **for_each** (fonction) et une expression lambda pour remplir un `vector` objet avec les valeurs d’une autre. Il utilise un **essayez**/**catch** bloc pour gérer les accès non valide pour le premier vecteur.
+Le corps d'une expression lambda suit les règles de la gestion structurée des exceptions (SEH) et la gestion des exceptions C++. Vous pouvez gérer une exception levée dans le corps d'une expression lambda ou différer la gestion des exceptions dans la portée englobante. L’exemple suivant utilise le **for_each** (fonction) et une expression lambda pour remplir un `vector` objet avec les valeurs d’une autre. Il utilise un **essayez**/**catch** bloc pour gérer les accès non valide pour le premier vecteur.
 
 ### <a name="code"></a>Code
 

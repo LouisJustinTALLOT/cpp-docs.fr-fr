@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8bda25bc1705183d1482355ae064f87c040daec4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083981"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068071"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
@@ -37,7 +37,6 @@ Pour éviter les erreurs d'exécution qui sont difficiles à détecter et diagno
 Nous vous recommandons également de ne jamais rédiger de code dépendant d'une disposition particulière pour un objet qui n'est pas une interface COM ou un objet POD. Si vous rédigez un tel code, vous devez vous assurer qu'il fonctionne après la mise à niveau. Pour plus d’informations, consultez [Portabilité aux limites ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
 En outre, les améliorations suivies de la conformité du compilateur peuvent parfois modifier la façon dont le compilateur comprend votre code source existant. Dans ce cas, vous pouvez être confronté à des erreurs nouvelles ou différentes pendant la génération, ou même à des différences de comportement dans le code qui auparavant était généré et paraissait s’exécuter correctement. Même s’il ne s’agit pas là de changements cassants tels que ceux présentés dans ce document, des changements du code source peuvent être nécessaires pour résoudre ces problèmes :
-
 
 - [Modifications avec rupture de la bibliothèque C Runtime (CRT)](#BK_CRT)
 
@@ -183,7 +182,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
     ```
 
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+        Old:  1208925819614629200000000    New:  1208925819614629174706176
     ```
 
    Les anciens algorithmes d'analyse prenaient en compte un maximum de 17 chiffres significatifs dans la chaîne d'entrée et ignoraient les chiffres restants. Cela est suffisant pour générer une approximation très proche de la valeur représentée par la chaîne et le résultat est généralement très proche du résultat correctement arrondi. La nouvelle implémentation prend en compte tous les chiffres présents et génère le résultat correctement arrondi pour toutes les entrées (jusqu'à 768 chiffres). En outre, ces fonctions respectent désormais le mode d'arrondi (contrôlable via fesetround).  Il s'agit potentiellement d'un comportement de rupture, car les fonctions peuvent générer des résultats différents. Les nouveaux résultats sont toujours plus exacts que les anciens.
@@ -652,7 +651,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
    Par exemple, votre code définit à la fois un opérateur **placement new** et un opérateur **placement delete** :
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
@@ -1705,7 +1704,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **Classes de base virtuelles privées et héritage indirect**
 
-   Les versions précédentes du compilateur autorisaient une classe dérivée à appeler des fonctions membres de ses classes de base *dérivées indirectement*`private virtual` . Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.
+   Les versions précédentes du compilateur autorisaient une classe dérivée à appeler des fonctions membres de ses classes de base `private virtual` *dérivées indirectement*. Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.
 
     ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -1743,7 +1742,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     }
     ```
 
-   ou
+   \- ou -
 
     ```cpp
     class base;  // as above
