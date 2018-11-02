@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a45d216f1d6ddcef704dba40ff97f6ed71f98240
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410640"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143690"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Télécharger, installer et configurer la charge de travail Linux
 
@@ -26,14 +26,14 @@ Vous pouvez utiliser l’IDE Visual Studio dans Windows pour créer, modifier et
 
 ## <a name="visual-studio-setup"></a>Installation Visual Studio
 
-1. Tapez « Visual Studio Installer » dans le menu de recherche de Windows. Recherchez-le dans les résultats **Applications**, puis double-cliquez dessus. Quand le programme d’installation s’ouvre, choisissez **Modifier**, puis cliquez sur l’onglet **Charges de travail**. Faites défiler vers le bas jusqu’à **Autres ensembles d’outils** et sélectionnez la charge de travail **Développement Linux en C++**.
+1. Tapez « Visual Studio Installer » dans la zone de recherche Windows : ![zone de recherche Windows](media/visual-studio-installer-search.png)
+2. Recherchez le programme d’installation dans les résultats situés sous **Applications**, puis double-cliquez dessus. Quand le programme d’installation s’ouvre, choisissez **Modifier**, puis cliquez sur l’onglet **Charges de travail**. Faites défiler vers le bas jusqu’à **Autres ensembles d’outils** et sélectionnez la charge de travail **Développement Linux en C++**.
 
    ![Charge de travail Visual C++ pour le développement sous Linux](media/linuxworkload.png)
 
-1. Si vous utilisez CMake ou que vous ciblez des plateformes incorporées ou IoT, accédez au volet **Détails de l’installation** à droite, sous **Développement Linux en C++**, développez **Composants facultatifs** et choisissez les composants dont vous avez besoin. 
+1. Si vous utilisez CMake ou que vous ciblez des plateformes incorporées ou IoT, accédez au volet **Détails de l’installation** à droite, sous **Développement Linux en C++**, développez **Composants facultatifs** et choisissez les composants dont vous avez besoin.
 
 1. Cliquez sur **Modifier** pour continuer l’installation.
-
 
 ## <a name="options-for-creating-a-linux-environment"></a>Options pour la création d’un environnement Linux
 
