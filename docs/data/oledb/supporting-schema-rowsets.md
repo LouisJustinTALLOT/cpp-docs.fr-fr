@@ -1,31 +1,20 @@
 ---
-title: Prise en charge des ensembles de lignes de schéma | Microsoft Docs
-ms.custom: ''
+title: Prise en charge des jeux de lignes du schéma
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 79c02a36e0c19b0702a81281e626c60e016def32
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 79eafef2f73d95c645eb12855c1918a39b76d26e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083279"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512526"
 ---
-# <a name="supporting-schema-rowsets"></a>Prise en charge des ensembles de lignes de schéma
+# <a name="supporting-schema-rowsets"></a>Prise en charge des jeux de lignes du schéma
 
 Ensembles de lignes de schéma permettent aux consommateurs d’obtenir des informations sur un magasin de données sans connaître sa structure sous-jacente, ou son schéma. Par exemple, un magasin de données peut avoir des tables organisées dans une hiérarchie définie par l’utilisateur, donc il n’y aurait aucun moyen d’être certain de connaître le schéma à l’exception en le lisant. (Un autre exemple, notez que les Assistants Visual C++ utilisent des ensembles de lignes de schéma pour générer des accesseurs pour le consommateur). Pour permettre au consommateur pour ce faire, objet de session du fournisseur expose des méthodes sur le [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) interface. Dans les applications Visual C++, vous utilisez le [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe pour implémenter `IDBSchemaRowset`.
 

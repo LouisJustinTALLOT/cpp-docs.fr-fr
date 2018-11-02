@@ -1,31 +1,20 @@
 ---
-title: Création d’un nouveau bouton de barre d’outils (C++) | Microsoft Docs
-ms.custom: ''
+title: Création d’un nouveau bouton de barre d’outils (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar
-dev_langs:
-- C++
 helpviewer_keywords:
 - Toolbar editor [C++], creating buttons
 - toolbar buttons [C++], button image
 - toolbar buttons [C++], creating
 - toolbar buttons (in Toolbar editor)
 ms.assetid: 46c120fe-4f2a-4887-a08f-bd1fea04b3f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8de12d1b421fd78fb9ed2a45cc14826541f72757
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fe3e960ea9d2cec36e1c0d1ee9edb30bcc354d4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441692"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512500"
 ---
 # <a name="creating-a-new-toolbar-button-c"></a>Création d’un nouveau bouton de barre d’outils (C++)
 

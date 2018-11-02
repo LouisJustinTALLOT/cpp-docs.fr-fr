@@ -1,27 +1,17 @@
 ---
-title: Erreur de génération PRJ0032 de projet | Microsoft Docs
-ms.custom: ''
+title: Erreur de génération de projet PRJ0032
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0032
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0032
 ms.assetid: bc6acbea-4041-4237-8b5a-f0434705d89f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 106b1c3f470bbdb134a5fd53ebaef65a4392fd4b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f1f292f3979c993a8fa8cb8ff44653ac7124b121
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053570"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499834"
 ---
 # <a name="project-build-error-prj0032"></a>Erreur de génération de projet PRJ0032
 

@@ -1,10 +1,6 @@
 ---
-title: Fonctions globales du Registre et de TypeLib | Microsoft Docs
-ms.custom: ''
+title: Fonctions globales du Registre et de TypeLib
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
 - afxpriv/ATL::AfxRegCreateKey
@@ -18,21 +14,15 @@ f1_keywords:
 - atlbase/ATL::AtlLoadTypeLib
 - atlbase/ATL::AtlUpdateRegistryFromResourceD
 - atlbase/ATL::RegistryDataExchange
-dev_langs:
-- C++
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af2780c8b7fb332cd739416e5051a57a8bc7f765
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 85af8504fffa980d495cef59729ff5fcb145e318
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486583"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Fonctions globales du Registre et de TypeLib
 

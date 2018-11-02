@@ -1,35 +1,25 @@
 ---
-title: Du compilateur (niveau 1) d’avertissement C4067 | Documents Microsoft
-ms.custom: ''
+title: Compilateur Warning (level 1) C4067
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4067
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541184"
 ---
-# <a name="compiler-warning-level-1-c4067"></a>Du compilateur (niveau 1) d’avertissement C4067
+# <a name="compiler-warning-level-1-c4067"></a>Compilateur Warning (level 1) C4067
 
-> jetons inattendus après la directive du préprocesseur - de saut de ligne attendu
+> jetons inattendus après la directive du préprocesseur - prévu un saut de ligne
 
 ## <a name="remarks"></a>Notes
 
-Le compilateur trouvés et ignorés des caractères supplémentaires après une directive de préprocesseur. Cela peut résulter des caractères inattendus, si une cause courante est un point-virgule perdu après la directive. Commentaires ne provoquent pas cet avertissement. Le **/Za** option du compilateur active cet avertissement pour les directives de préprocesseur plus que le paramètre par défaut.
+Le compilateur trouvé et ignoré des caractères supplémentaires après une directive de préprocesseur. Cela peut être dû de tous les caractères inattendus, même si une cause courante est un point-virgule isolée après la directive. Commentaires ne provoquent pas cet avertissement. Le **/Za** option du compilateur active cet avertissement pour les directives de préprocesseur plus que le paramètre par défaut.
 
 ## <a name="example"></a>Exemple
 

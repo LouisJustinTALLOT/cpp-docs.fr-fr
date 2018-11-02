@@ -1,28 +1,18 @@
 ---
-title: Informations de référence sur la bibliothèque C++ Standard | Microsoft Docs
-ms.custom: ''
+title: Référence de bibliothèque standard C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Standard Library, reference
 - C++ Standard Library
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27981084c79b5bf1347715df8945598c1e6683e4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b6886f87aefdf57706a1850595986b779c1f2357
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50071653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575949"
 ---
 # <a name="c-standard-library-reference"></a>Référence de bibliothèque standard C++
 

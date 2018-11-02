@@ -1,12 +1,6 @@
 ---
-title: Comparaison entre les fonctionnalités mixte, pure et vérifiable (C + c++ / CLI) | Documents Microsoft
-ms.custom: ''
+title: Comparaison entre les fonctionnalités mixte, pure et vérifiable (C++ / c++ / CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - safe assemblies [C++], vs. pure
 - mixed assemblies [C++], vs. pure
@@ -23,19 +17,14 @@ helpviewer_keywords:
 - safe assemblies [C++]
 - mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 8cb1b2ba71277415fd1ba5124f6120cc2f2c995d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 81fcf986ee68f5f8f64c8070bb992fa1cda1683b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704709"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482070"
 ---
-# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Comparaison entre les fonctionnalités mixte, pure et vérifiable (C + c++ / CLI)
+# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Comparaison entre les fonctionnalités mixte, pure et vérifiable (C++ / c++ / CLI)
 
 Cette rubrique compare les fonctionnalités des différents **/CLR** modes de compilation. Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -50,8 +39,8 @@ Cette rubrique compare les fonctionnalités des différents **/CLR** modes de co
 |MFC/ATL|Prise en charge|||[Les Applications de bureau MFC](../mfc/mfc-desktop-applications.md) &#124; [vue d’ensemble de la classe](../atl/atl-class-overview.md)|
 |Fonctions non managées|Prise en charge|||[Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)|
 |Données non managées|Prise en charge|deprecated||[Code pur et vérifiable (C++-CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|
-|Peut être appelé à partir de fonctions non managées|Prise en charge||||
-|Prend en charge l’appel de fonctions non managées|Prise en charge|deprecated|deprecated|[Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|
+|Pouvant être appelé à partir de fonctions non managées|Prise en charge||||
+|Prend en charge de l’appel de fonctions non managées|Prise en charge|deprecated|deprecated|[Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|
 |Prend en charge la réflexion|DLL uniquement|deprecated|deprecated|[Réflexion (C++-CLI)](../dotnet/reflection-cpp-cli.md)|
 
 ## <a name="see-also"></a>Voir aussi

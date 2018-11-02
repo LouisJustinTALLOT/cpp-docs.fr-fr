@@ -1,10 +1,6 @@
 ---
-title: _countof Macro | Microsoft Docs
-ms.custom: ''
+title: _countof Macro
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,22 +16,16 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs:
-- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30df64b045e2af6181d343a4eafb962d22eaa05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394741"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536134"
 ---
 # <a name="countof-macro"></a>_countof Macro
 
@@ -54,15 +44,15 @@ Nom d'un tableau.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le nombre d’éléments dans le tableau, exprimé comme une **size_t**.
+Le nombre d’éléments dans le tableau, exprimé sous la forme un **size_t**.
 
 ## <a name="remarks"></a>Notes
 
-**_countof** est implémenté comme une macro de préprocesseur type fonction. La version C++ a machines modèle supplémentaire pour détecter au moment de la compilation si un pointeur est passé au lieu d’un tableau déclaré statiquement.
+**_countof** est implémenté comme une macro de préprocesseur de type fonction. La version C++ a un mécanisme de modèle supplémentaire pour détecter au moment de la compilation si un pointeur est passé au lieu d’un tableau déclaré statiquement.
 
-Vérifiez que *tableau* est en réalité un tableau, et non un pointeur. En C, **_countof** génère des résultats erronés si *tableau* est un pointeur. En C++, **_countof** ne parvient pas à compiler si *tableau* est un pointeur.  Un tableau passé en tant que paramètre à une fonction *décline à un pointeur*, ce qui signifie que la fonction, vous ne pouvez pas utiliser **_countof** pour déterminer l’étendue du tableau.
+Vérifiez que *tableau* est en fait un tableau, et non un pointeur. En C, **_countof** produit des résultats erronés si *tableau* est un pointeur. En C++, **_countof** ne parvient pas à compiler si *tableau* est un pointeur.  Un tableau passé en tant que paramètre à une fonction *décline vers un autre pointeur*, ce qui signifie que dans la fonction, vous ne pouvez pas utiliser **_countof** pour déterminer l’étendue du tableau.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Macro|En-tête requis|
 |-----------|---------------------|
