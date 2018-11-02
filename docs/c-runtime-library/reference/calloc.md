@@ -1,10 +1,6 @@
 ---
-title: calloc | Microsoft Docs
-ms.custom: ''
+title: calloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - calloc
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - calloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6986e1caec25cd544919039f690544af429524af
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59aa535136cf32ea5dd68b8917ec969eee41e2ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394884"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666971"
 ---
 # <a name="calloc"></a>calloc
 
@@ -70,7 +60,7 @@ Le **calloc** fonction alloue de l’espace de stockage pour un tableau de *nomb
 
 **calloc** définit **errno** à **ENOMEM** si une allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**calloc** appelle **malloc** à utiliser C++ [_set_new_mode](set-new-mode.md) fonction pour définir le nouveau mode de gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** consiste à appeler la routine du gestionnaire en tant que jeu par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine du gestionnaire sur les échecs d’allocation de mémoire. Vous pouvez substituer ce comportement par défaut afin que, lorsque **calloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine du Gestionnaire de la même façon que les **nouveau** opérateur est Lorsqu’il échoue pour la même raison. Pour remplacer la valeur par défaut, appelez
+**calloc** appels **malloc** à utiliser le C++ [_set_new_mode](set-new-mode.md) fonction permettant de définir le mode de nouveau gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** consiste à appeler la routine de nouveau gestionnaire telle que définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut afin que, lorsque **calloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouveau** opérateur Quand elle échoue pour la même raison. Pour remplacer la valeur par défaut, appelez
 
 ```C
 _set_new_mode(1);
@@ -80,7 +70,7 @@ au début de votre programme, ou créez un lien avec NEWMODE.OBJ (consultez [Opt
 
 Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **calloc** se résout en [_calloc_dbg](calloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**calloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales, et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**calloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Spécifications
 

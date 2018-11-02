@@ -1,10 +1,6 @@
 ---
-title: _msize | Microsoft Docs
-ms.custom: ''
+title: _msize
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - msize
 - _msize
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9e27751072891bcabc0b068cb5ca57b571d35d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477270"
 ---
 # <a name="msize"></a>_msize
 
@@ -60,11 +50,11 @@ Pointeur désignant le bloc de mémoire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_msize** retourne la taille (en octets) en tant qu’entier non signé.
+**_msize** retourne la taille (en octets) sous forme d’entier non signé.
 
 ## <a name="remarks"></a>Notes
 
-Le **_msize** fonction retourne la taille, en octets, du bloc de mémoire allouée par un appel à **calloc**, **malloc**, ou **realloc**.
+Le **_msize** fonction retourne la taille, en octets, du bloc de mémoire alloué par un appel à **calloc**, **malloc**, ou **realloc**.
 
 Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **_msize** se résout en [_msize_dbg](msize-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 

@@ -1,43 +1,33 @@
 ---
-title: Erreur du compilateur C2144 | Documents Microsoft
-ms.custom: ''
+title: Erreur du compilateur C2144
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2144
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60a6b0a6019ab6ddf1a403d2cbd4f6ef96b2a865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483328"
 ---
 # <a name="compiler-error-c2144"></a>Erreur du compilateur C2144
 
-> Erreur de syntaxe : '*type*'doit être précédée par'*jeton*'
+> Erreur de syntaxe : '*type*'doit être précédé par'*jeton*'
 
-Le compilateur attendu *jeton* et *type* à la place.
+Le compilateur attendu *jeton* et trouvé *type* à la place.
 
-Cette erreur peut résulter d’une accolade fermante manquante, une parenthèse fermante ou un point-virgule.
+Cette erreur peut résulter d’une accolade fermante manquante, une parenthèse droite ou un point-virgule.
 
 C2144 peut également se produire lorsque vous tentez de créer une macro à partir d’un mot clé CLR qui contient un caractère espace blanc.
 
-Vous pouvez également voir C2144 si vous tentez d’effectuer une transmission de type. Consultez [transfert de Type (C + c++ / CLI)](../../windows/type-forwarding-cpp-cli.md) pour plus d’informations.
+Vous pouvez également voir C2144 si vous essayez d’effectuer le transfert de type. Consultez [transfert de Type (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md) pour plus d’informations.
 
 ## <a name="examples"></a>Exemples
 
-L’exemple suivant génère le C2144 et illustre une méthode pour résoudre ce problème :
+L’exemple suivant génère C2144 et illustre une méthode permettant de résoudre le problème :
 
 ```cpp
 // C2144.cpp
@@ -50,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-L’exemple suivant génère le C2144 et illustre une méthode pour résoudre ce problème :
+L’exemple suivant génère C2144 et illustre une méthode permettant de résoudre le problème :
 
 ```cpp
 // C2144_2.cpp

@@ -1,10 +1,6 @@
 ---
-title: _expand | Microsoft Docs
-ms.custom: ''
+title: _expand
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _expand
 apilocation:
@@ -29,23 +25,17 @@ f1_keywords:
 - _nexpand
 - bexpand
 - _expand
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f709df131ded856881dc171c2e1549d3d5d378e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1606bedbb1264bddb7674c829fe456f506d6584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402349"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665658"
 ---
 # <a name="expand"></a>_expand
 
@@ -70,22 +60,22 @@ Nouvelle taille en octets.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_étendre site** retourne un pointeur void vers le bloc de mémoire réalloué. **_étendre site**, contrairement à **realloc**, ne peut pas déplacer un bloc pour modifier sa taille. Par conséquent, s’il existe suffisamment de mémoire disponible pour étendre le bloc sans le déplacer, le *memblock* paramètre **_étendre site** est identique à la valeur de retour.
+**_expand** retourne un pointeur void vers le bloc de mémoire réalloué. **_expand**, contrairement à **realloc**, ne peut pas déplacer un bloc pour modifier sa taille. Par conséquent, s’il existe suffisamment de mémoire disponible pour étendre le bloc sans le déplacer, le *memblock* paramètre **_expand** est identique à la valeur de retour.
 
-**_étendre site** retourne **NULL** si une erreur est détectée au cours de son fonctionnement. Par exemple, si **_étendre site** est utilisé pour réduire un bloc de mémoire, il peut détecter une altération dans le tas de petits blocs ou un pointeur de bloc non valide et retourner **NULL**.
+**_expand** retourne **NULL** quand une erreur est détectée au cours de son fonctionnement. Par exemple, si **_expand** est utilisé pour réduire un bloc de mémoire, il peut détecter une altération dans le tas de petits blocs ou un pointeur de bloc non valide et retourner **NULL**.
 
-Si mémoire disponible insuffisante pour étendre le bloc à la taille donnée sans le déplacer, la fonction retourne **NULL**. **_étendre site** ne retourne jamais un bloc de développé à une taille inférieure à demandée. En cas de défaillance, **errno** indiquant la nature de l’échec. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Mémoire disponible insuffisante pour étendre le bloc à la taille donnée sans le déplacer, la fonction retourne **NULL**. **_expand** ne retourne jamais un bloc étendu à une taille inférieure à demandée. En cas de défaillance, **errno** indique la nature de l’échec. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour vérifier la nouvelle taille de l’élément, utilisez **_msize**. Pour obtenir un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour.
 
 ## <a name="remarks"></a>Notes
 
-Le **_étendre site** fonction modifie la taille d’un bloc de mémoire précédemment alloué par la tentative de développer ou réduire le bloc sans déplacer son emplacement dans le tas. Le *memblock* paramètre pointe vers le début du bloc. Le *taille* paramètre indique la nouvelle taille du bloc, en octets. Le contenu du bloc est inchangé jusqu’à la plus courte des tailles nouvelle et ancienne. *memblock* ne doit pas être un bloc qui a été libéré.
+Le **_expand** fonction modifie la taille d’un bloc de mémoire précédemment alloué en essayant d’étendre ou réduire le bloc sans déplacer son emplacement dans le tas. Le *memblock* paramètre pointe vers le début du bloc. Le *taille* paramètre indique la nouvelle taille du bloc, en octets. Le contenu du bloc est inchangé jusqu’à la plus courte des tailles nouvelle et ancienne. *memblock* ne doit pas être un bloc qui a été libéré.
 
 > [!NOTE]
-> Sur les plateformes 64 bits, **_étendre site** peut vous engagez pas le bloc si la nouvelle taille est inférieure à la taille actuelle, en particulier si le bloc a été de taille inférieure à 16 Ko et par conséquent allouée dans le tas de Fragmentation faible, **_étendre site**  quitte le bloc inchangé et retourne *memblock*.
+> Sur les plateformes 64 bits, **_expand** peut ne pas réduire le bloc si la nouvelle taille est inférieure à la taille actuelle, en particulier, si le bloc était inférieur à 16 Ko et donc alloué dans Low Fragmentation Heap, **_expand**  laisse le bloc inchangé et retourne *memblock*.
 
-Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **_étendre site** se résout en [_expand_dbg](expand-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **_expand** se résout en [_expand_dbg](expand-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 Cette fonction valide ses paramètres. Si *memblock* est un pointeur null, cette fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**. Si *taille* est supérieur à **_HEAP_MAXREQ**, **errno** a la valeur **ENOMEM** et la fonction retourne **NULL**.
 

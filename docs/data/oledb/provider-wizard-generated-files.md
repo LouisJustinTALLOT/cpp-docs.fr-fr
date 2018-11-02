@@ -1,26 +1,15 @@
 ---
-title: Fichiers générés par l’Assistant fournisseur | Microsoft Docs
-ms.custom: ''
+title: Fichiers générés par l'Assistant Fournisseur
 ms.date: 10/18/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 40422ac7894523a28a2135b7f5005eb1f11d36c8
-ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
+ms.openlocfilehash: c93618ebe9d3140864c2c47867ea970777c208b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216368"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580932"
 ---
 # <a name="provider-wizard-generated-files"></a>Fichiers générés par l'Assistant Fournisseur
 

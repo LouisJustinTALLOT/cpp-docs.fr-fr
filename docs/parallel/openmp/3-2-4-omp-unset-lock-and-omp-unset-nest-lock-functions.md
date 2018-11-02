@@ -1,23 +1,13 @@
 ---
-title: 3.2.4 fonctions fonctions omp_unset_lock et omp_unset_nest_lock | Microsoft Docs
-ms.custom: ''
+title: 3.2.4 Fonctions omp_unset_lock and omp_unset_nest_lock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 5357e43e-a7c0-41d7-b529-3f7d15da8b11
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 426ac0a5ff974e486f70eed2965fdc27d5acc941
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b0764e3590f8edb3a3e783d9b5493a64be154401
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419104"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607864"
 ---
 # <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 Fonctions omp_unset_lock and omp_unset_nest_lock
 

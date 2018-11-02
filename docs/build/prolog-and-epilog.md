@@ -1,23 +1,13 @@
 ---
-title: Prologue et épilogue | Microsoft Docs
-ms.custom: ''
+title: Prologue et épilogue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c2a1a9b1891af1c5616e78932cf4a530a300786
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2b54737edd46a5e108a211ee032889885be2b1da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718872"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543115"
 ---
 # <a name="prolog-and-epilog"></a>Prologue et épilogue
 

@@ -1,27 +1,19 @@
 ---
-title: 'Comment : créer et utiliser des Instances CComPtr et CComQIPtr | Microsoft Docs'
+title: 'Comment : créer et utiliser des instances CComPtr et CComQIPtr'
 ms.custom: how-to
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 052f915f2626e7b9eeef6a762c52943083b955b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8065e0b8782c1c28d83aa6fc9690150793fe51ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518701"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Comment : créer et utiliser des instances CComPtr et CComQIPtr
 
-En programmation Windows classique, les bibliothèques sont souvent implémentées en tant qu'objets COM (Component Object Model), ou plus précisément, en tant que serveurs COM. De nombreux composants du système d'exploitation Windows sont implémentés en tant que serveurs COM, et de nombreux collaborateurs fournissent des bibliothèques sous cette forme. Pour plus d’informations sur les principes de base de COM, consultez [composant COM (Object Model)](/windows/desktop/com/component-object-model--com--portal).
+En programmation Windows classique, les bibliothèques sont souvent implémentées en tant qu'objets COM (Component Object Model), ou plus précisément, en tant que serveurs COM. De nombreux composants du système d'exploitation Windows sont implémentés en tant que serveurs COM, et de nombreux collaborateurs fournissent des bibliothèques sous cette forme. Pour plus d’informations sur les bases du modèle COM, consultez [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
 Lorsque vous instanciez un objet COM, enregistrez le pointeur d'interface dans un pointeur intelligent COM, qui effectue un décompte de références en utilisant des appels à `AddRef` et `Release` dans le destructeur. Si vous utilisez la bibliothèque ATL (Active Template Library) ou la bibliothèque MFC (Microsoft Foundation Class), utilisez le pointeur intelligent `CComPtr` . Si vous n'utilisez pas la bibliothèque ATL ou MFC, utilisez `_com_ptr_t`. Étant donné qu'aucun COM n'équivaut à `std::unique_ptr`, utilisez les pointeurs intelligents à la fois pour les scénarios à un seul propriétaire et ceux à plusieurs propriétaires. `CComPtr` et `ComQIPtr` prennent tous deux en charge les opérations de déplacement qui ont des références rvalue.
 

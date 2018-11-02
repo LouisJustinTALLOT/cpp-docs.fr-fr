@@ -1,15 +1,9 @@
 ---
-title: Espaces de noms (C++) | Microsoft Docs
-ms.custom: ''
+title: Espaces de noms (C++)
 ms.date: 08/30/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
 - using_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - namespaces [C++], C++
 - namespaces [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7992402d13535e2b57516e5a3481aad16256fe29
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 532fdcb5de179bd2fdeb25091ace7210d55a2658
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077202"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508847"
 ---
 # <a name="namespaces-c"></a>Espaces de noms (C++)
 
@@ -134,7 +124,7 @@ Cette erreur peut se produire quand les membres de l'espace de noms sont déclar
 
 ## <a name="the-global-namespace"></a>Espace de noms global
 
-Si un identificateur n'est pas déclaré dans un espace de noms explicite, il fait partie de l'espace de noms global implicite. En général, essayez d’éviter de faire des déclarations dans la portée globale, si possible, à l’exception du point d’entrée [fonction principale](../c-language/main-function-and-program-execution.md), qui doit se trouver dans l’espace de noms global. Pour qualifier explicitement un identificateur global, utilisez l'opérateur de résolution de portée sans nom, comme dans `::SomeFunction(x);`. Vous différenciez ainsi l'identificateur de tout élément portant le même nom dans un autre espace de noms et votre code devient également plus facile à comprendre.
+Si un identificateur n'est pas déclaré dans un espace de noms explicite, il fait partie de l'espace de noms global implicite. En général, essayez d’éviter de faire des déclarations dans la portée globale, si possible, à l’exception du point d’entrée [fonction principale](../c-language/main-function-and-program-execution.md), qui doit se trouver dans l’espace de noms global. Pour qualifier explicitement un identificateur global, utilisez l’opérateur de résolution de portée sans nom, comme dans `::SomeFunction(x);`. Vous différenciez ainsi l'identificateur de tout élément portant le même nom dans un autre espace de noms et votre code devient également plus facile à comprendre.
 
 ## <a name="the-std-namespace"></a>Espace de noms std
 

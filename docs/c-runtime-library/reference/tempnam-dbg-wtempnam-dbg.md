@@ -1,10 +1,6 @@
 ---
-title: _tempnam_dbg, _wtempnam_dbg | Microsoft Docs
-ms.custom: ''
+title: _tempnam_dbg, _wtempnam_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtempnam_dbg
 - _tempnam_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - tempnam_dbg
 - _tempnam_dbg
 - _wtempnam_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - file names [C++], creating temporary
 - tempnam_dbg function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e8509d9f4b8be5771abc7dfb3d4deacc9ae61494
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 804c8ad1f17c6ee1df563cafc69ee7aef494d1cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412047"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596454"
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
 
@@ -73,7 +63,7 @@ wchar_t *_wtempnam_dbg(
 ### <a name="parameters"></a>Paramètres
 
 *dir*<br/>
-Chemin d’accès utilisé dans le nom de fichier en l’absence de variable d’environnement TMP ou si TMP n’est pas un répertoire valide.
+Chemin d'accès utilisé dans le nom de fichier en l'absence de variable d'environnement TMP ou si TMP n'est pas un répertoire valide.
 
 *Préfixe*<br/>
 La chaîne qui sera ajouté aux noms retournés par **_tempnam**.
@@ -92,13 +82,13 @@ Numéro de ligne dans le fichier source où l’opération d’allocation a ét�
 Chaque fonction retourne un pointeur vers le nom généré ou **NULL** s’il existe un échec. Échec peut se produire s’il existe un nom de répertoire non valide spécifié dans la variable d’environnement TMP et dans le *dir* paramètre.
 
 > [!NOTE]
-> **libre** (ou **free_dbg**) doit être appelée pour les pointeurs alloués par **_tempnam_dbg** et **_wtempnam_dbg**.
+> **gratuit** (ou **free_dbg**) n’a besoin d’être appelée pour les pointeurs alloués par **_tempnam_dbg** et **_wtempnam_dbg**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_tempnam_dbg** et **_wtempnam_dbg** fonctions sont identiques aux **_tempnam** et **_wtempnam** , sauf que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc** et **_malloc_dbg**, allocation de mémoire si **NULL** est passé comme premier paramètre. Pour plus d’informations, consultez [_malloc_dbg](malloc-dbg.md).
+Le **_tempnam_dbg** et **_wtempnam_dbg** fonctions sont identiques aux **_tempnam** et **_wtempnam** , à ceci près que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc** et **_malloc_dbg**, pour allouer la mémoire si **NULL** est passé comme premier paramètre. Pour plus d’informations, consultez [_malloc_dbg](malloc-dbg.md).
 
-Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur **_CRTDBG_MAP_ALLOC**. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_tempnam** et **_wtempnam** sont remappés à **_tempnam_dbg** et **_ wtempnam_dbg**, respectivement, avec la *blockType* la valeur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur **_CRTDBG_MAP_ALLOC**. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_tempnam** et **_wtempnam** sont remappés à **_tempnam_dbg** et **_ wtempnam_dbg**, respectivement, avec le *blockType* définie sur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions explicitement, sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

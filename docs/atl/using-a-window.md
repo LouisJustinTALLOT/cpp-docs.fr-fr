@@ -1,27 +1,17 @@
 ---
-title: À l’aide d’une fenêtre (ATL) | Microsoft Docs
-ms.custom: ''
+title: À l’aide d’une fenêtre (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL, windows
 - CWindow class, about CWindow class
 - windows [C++], ATL
 ms.assetid: b3b9cc8e-4287-486b-b080-38852bc2943a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2337ee6cdee7be0b5e4fe05cbc85fd61c4b1b9a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7446196e9eec4b9d9236d4ab55afd9fcf859254b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568656"
 ---
 # <a name="using-a-window"></a>À l’aide d’une fenêtre
 

@@ -1,10 +1,6 @@
 ---
-title: fread | Microsoft Docs
-ms.custom: ''
+title: fread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fread
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 819ec0b494b6e800f858e2e5647164567531ab0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3516dc67047064b9293b1bb289888596736ed47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400926"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468833"
 ---
 # <a name="fread"></a>fread
 
@@ -67,22 +57,22 @@ Taille de l’élément en octets.
 *count*<br/>
 Nombre maximal d’éléments à lire.
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fread** retourne le nombre d’éléments complets réellement lu, ce qui peut être inférieur à *nombre* si une erreur se produit ou si la fin du fichier se trouve avant d’atteindre *nombre*. Utilisez le **feof** ou **ferror** afin de distinguer une erreur de lecture à partir d’une condition de fin de fichier. Si *taille* ou *nombre* est 0, **fread** retourne 0 et le contenu de la mémoire tampon est identiques. Si *flux* ou *tampon* est un pointeur null, **fread** appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne 0.
+**fread** retourne le nombre d’éléments complets réellement lus, qui peut être inférieur à *nombre* si une erreur se produit ou si la fin du fichier est rencontrée avant d’atteindre *nombre*. Utilisez le **feof** ou **ferror** fonction permettant de distinguer une erreur de lecture d’une condition de fin de fichier. Si *taille* ou *nombre* est 0, **fread** retourne 0 et le contenu de la mémoire tampon est identiques. Si *flux* ou *tampon* est un pointeur null, **fread** appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne 0.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **fread** fonction lit jusqu'à *nombre* des éléments de *taille* octets à partir de l’entrée *flux* et les stocke dans *mémoire tampon* . Le pointeur de fichier associé *flux* (le cas échéant) est augmentée par le nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, paires de sauts de ligne de chariot sont remplacées par les caractères de saut de ligne unique. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
+Le **fread** fonction lit jusqu'à *nombre* éléments de *taille* octets à partir de l’entrée *flux* et les stocke dans *mémoire tampon* . Le pointeur de fichier associé *flux* (le cas échéant) est augmenté le nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, paires de sauts de ligne de chariot sont remplacées par les caractères de saut de ligne unique. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
 
 Cette fonction verrouille les autres threads. Si vous avez besoin d’une version sans verrouillage, utilisez **_fread_nolock**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

@@ -1,28 +1,18 @@
 ---
-title: 'Comment : utiliser parallel_invoke pour exécuter des opérations parallèles | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : utiliser parallel_invoke pour exécuter des opérations parallèles'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 44d17bd45966c54a8a6c79afb0168a9407dd3e24
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373998"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473682"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Comment : utiliser parallel_invoke pour exécuter des opérations parallèles
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Comment : utiliser parallel_invoke pour exécuter des opérations parallèles
 
 Cet exemple montre comment utiliser le [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorithme pour améliorer les performances d’un programme qui effectue plusieurs opérations sur une source de données partagée. Car aucune opération de modifie la source, elles peuvent être exécutées en parallèle d’une manière simple.
 

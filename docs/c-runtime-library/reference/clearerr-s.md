@@ -1,10 +1,6 @@
 ---
-title: clearerr_s | Microsoft Docs
-ms.custom: ''
+title: clearerr_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - clearerr_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - clearerr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - error indicator for streams
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 140d984c470bd505f347aa43065b033339ed38a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450864"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665021"
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -54,7 +44,7 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur vers **fichier** structure
 
 ## <a name="return-value"></a>Valeur de retour
@@ -63,7 +53,7 @@ Zéro en cas de réussite ; **EINVAL** si *flux* est **NULL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **clearerr_s** fonction réinitialise l’indicateur d’erreur et l’indicateur de fin de fichier pour *flux*. Indicateurs d’erreur ne sont pas automatiquement supprimées ; une fois que l’indicateur d’erreur pour un flux de données spécifié est défini, les opérations sur ce flux de données continuent à retourner une valeur d’erreur jusqu'à ce que **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [rembobiner](rewind.md) est appelée.
+Le **clearerr_s** fonction réinitialise l’indicateur d’erreur et l’indicateur de fin de fichier pour *flux*. Indicateurs d’erreur ne sont pas effacés automatiquement ; une fois que l’indicateur d’erreur pour un flux de données spécifié est défini, les opérations sur ce flux continuent de retourner une valeur d’erreur jusqu'à ce que **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [rewind](rewind.md) est appelée.
 
 Si *flux* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
 

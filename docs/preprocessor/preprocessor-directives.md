@@ -1,26 +1,16 @@
 ---
-title: Directives de préprocesseur | Microsoft Docs
-ms.custom: ''
+title: Directives de préprocesseur
 ms.date: 06/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - directives, preprocessor
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2976feebf4a17465c2bf2010b4dc608550ce077
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9481e977f2afb3de27a74278893a217fde48044b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608024"
 ---
 # <a name="preprocessor-directives"></a>Directives de préprocesseur
 

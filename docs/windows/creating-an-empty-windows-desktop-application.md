@@ -1,27 +1,16 @@
 ---
-title: Création d’une Application de bureau Windows vide | Microsoft Docs
-ms.custom: ''
+title: Création d’une application de bureau Windows vide
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - projects [C++], creating
 - empty projects [C++]
 ms.assetid: e0f0e628-041d-4c50-b221-5807b9184000
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3dd9ab540f7abab45013bd2dee46076d5978d918
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0f14c31387cf416dfc22260ac955d70c96dbd3e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467984"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>Création d’une application de bureau Windows vide
 

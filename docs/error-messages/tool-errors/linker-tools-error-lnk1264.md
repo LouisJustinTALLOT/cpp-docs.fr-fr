@@ -1,27 +1,17 @@
 ---
-title: LNK1264 d’erreur des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK1264
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1264
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1264
 ms.assetid: 23b1aad7-d382-42c1-bae8-db68575c57a8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8232e83774dc53755b77ad9c8b3bbb2a0bcc6ae6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca17b6946b9e988507af2786825223e042356d0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102740"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505090"
 ---
 # <a name="linker-tools-error-lnk1264"></a>Erreur des outils Éditeur de liens LNK1264
 

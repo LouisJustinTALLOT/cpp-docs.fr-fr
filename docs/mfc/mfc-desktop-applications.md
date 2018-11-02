@@ -1,30 +1,20 @@
 ---
-title: Les Applications de bureau MFC | Microsoft Docs
-ms.custom: ''
+title: MFC, applications de bureau
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - MFC
 - mfc
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries, MFC
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3168057527eb1df6d87bd8f5aefe3403b7467bd9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9c72e9b4964aa76631b1b9d42bfbd158a2ae8fc8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604202"
 ---
 # <a name="mfc-desktop-applications"></a>MFC, applications de bureau
 
@@ -58,7 +48,7 @@ Répertorie les classes de la bibliothèque MFC en fonction de la catégorie.
 Contient des articles qui décrivent pas à pas diverses tâches associées aux fonctionnalités de la bibliothèque MFC.
 
 [Notes techniques](mfc-technical-notes.md)<br/>
-Fournit des liens vers des rubriques spécialisées, écrites par l’équipe de développement MFC, dédiées à la bibliothèque de classes.
+Fournit des liens vers des rubriques spécialisées, écrites par l'équipe de développement MFC, dédiées à la bibliothèque de classes.
 
 [Personnalisation pour MFC](customization-for-mfc.md)<br/>
 Fournit des conseils pour la personnalisation de votre application MFC.

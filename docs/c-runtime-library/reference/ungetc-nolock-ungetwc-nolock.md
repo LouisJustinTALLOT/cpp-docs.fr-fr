@@ -1,10 +1,6 @@
 ---
-title: _ungetc_nolock, _ungetwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetc_nolock, _ungetwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetwc_nolock
 - _ungetc_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - ungetc_nolock
 - _ungetc_nolock
 - _ungetwc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungettc_nolock function
 - _ungetwc_nolock function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14bd0f51ac01f2e335a5609a0140e30e83977433
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409288"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482860"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -71,12 +61,12 @@ wint_t _ungetwc_nolock(
 *c*<br/>
 Caractère à renvoyer (transmission push).
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si réussite, chacune de ces fonctions retourne l’argument de caractère *c*. Si *c* ne peut pas être déplacées ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et **_ungetc_nolock** retourne ** EOF`; **_ungetwc_nolock` retourne **WEOF**. Si *flux* est **NULL**, **EOF** ou **WEOF** est retourné et **errno** a la valeur  **EINVAL**.
+Si réussite, chacune de ces fonctions retourne l’argument de caractère *c*. Si *c* ne peut pas être déplacé ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et **_ungetc_nolock** retourne ** EOF`; **_ungetwc_nolock` retourne **WEOF**. Si *flux* est **NULL**, **EOF** ou **WEOF** est retourné et **errno** est défini sur  **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -90,7 +80,7 @@ Ces fonctions sont sans verrouillage versions de **ungetc** et **ungetwc**. Les 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettc_nolock**|**_ungetc_nolock**|**_ungetc_nolock**|**_ungetwc_nolock**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

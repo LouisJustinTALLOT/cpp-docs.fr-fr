@@ -1,29 +1,18 @@
 ---
-title: Affichage et ajout de contrôles ActiveX dans une boîte de dialogue (C++) | Microsoft Docs
-ms.custom: ''
+title: Affichage et ajout de contrôles ActiveX dans une boîte de dialogue (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.controls.activex
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [C++], adding ActiveX controls
 - ActiveX controls [C++], adding to dialog boxes
 ms.assetid: e1c2e3ae-e1b0-40d3-9766-623007073856
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1eccaaff3f89b6353bd38e316ad515edc59eb9ae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 947318fb9f628c1184398c039c9697128b09c869
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427405"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642505"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box-c"></a>Affichage et ajout de contrôles ActiveX dans une boîte de dialogue (C++)
 
@@ -55,7 +44,7 @@ Avec Visual Studio, vous pouvez insérer des contrôles ActiveX dans votre boît
 
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

@@ -1,36 +1,26 @@
 ---
-title: Prise en charge pour l’utilisation de wmain | Microsoft Docs
-ms.custom: ''
+title: Prise en charge de l'utilisation de wmain
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - wWinMain
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters [C++], wmain function
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bde65550b5c6561356fa5888b0985f6aee4702f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 06ec38abb97088f1364a4370efdebb67a04d9294
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583779"
 ---
 # <a name="support-for-using-wmain"></a>Prise en charge de l'utilisation de wmain
 
 Visual C++ prend en charge la définition d’un **wmain** (fonction) et en passant des arguments à caractère élargi à votre application Unicode. Vous déclarez des paramètres formels à **wmain**, à l’aide d’un format similaire à `main`. Vous pouvez ensuite passer des arguments à caractère élargi et éventuellement un pointeur d’environnement à caractère élargi au programme. Les paramètres `argv` et `envp` de la fonction **wmain** sont de type `wchar_t*`. Exemple :
 
 ```cpp
-wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
+wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ```
 
 > [!NOTE]

@@ -1,24 +1,17 @@
 ---
-title: Boxing (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Boxing (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e9ab84bf840f01fbb22ef3b2510056338d10c74
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: dd950e2463da7541ebad731e74275ce360a1c8a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491037"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 
-*Boxing* est l’encapsulation d’une variable de type valeur tel que [Windows::Foundation :: DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx), ou un type scalaire fondamental tel que `int`— dans une classe ref quand la variable est passée à une méthode qui accepte [ Platform::Object ^](../cppcx/platform-object-class.md) en tant que son type d’entrée.
+Le*boxing* est l’encapsulation d’une variable de type valeur, telle que [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)ou de type scalaire fondamental tel que `int`dans une classe ref quand la variable est passée à une méthode qui accepte [Platform::Object^](../cppcx/platform-object-class.md) comme son type d’entrée.
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Passer un type valeur à un paramètre Object^
 

@@ -1,28 +1,18 @@
 ---
-title: Test du contrôle ATL DHTML | Microsoft Docs
-ms.custom: ''
+title: Test du contrôle ATL DHTML
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - HTML controls, testing
 - testing controls
 - DHTML controls
 - DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea2301a85411cea8d5ffd6121f4fb4f45d3196eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: e808a21fe890db6e711bc66adf02b3e71f801dba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860847"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522523"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Test du contrôle ATL DHTML
 

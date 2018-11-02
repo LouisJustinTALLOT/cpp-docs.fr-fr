@@ -1,10 +1,6 @@
 ---
-title: strcat, wcscat, _mbscat | Microsoft Docs
-ms.custom: ''
+title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscat
 - wcscat
@@ -29,8 +25,6 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2daf6621cb2e72c38212227da20f6b847bb08e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413412"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546389"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 
 Ajoute une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [strcpy_s, wcscpy_s, _mbscpy_s](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -109,12 +99,12 @@ Chacune de ces fonctions retourne la chaîne de destination (*strDestination*). 
 
 ## <a name="remarks"></a>Notes
 
-Le **strcat** fonction ajoute *strSource* à *strDestination* et met fin à la chaîne obtenue par un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat** n’est pas défini si les chaînes source et de destination se chevauchent.
+Le **strcat** fonction ajoute *strSource* à *strDestination* et termine la chaîne obtenue par un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 > [!IMPORTANT]
-> Étant donné que **strcat** ne vérifie pas suffisamment d’espace *strDestination* avant d’ajouter *strSource*, il s’agit d’une cause potentielle de dépassements de mémoire tampon. Envisagez d’utiliser plutôt [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
+> Étant donné que **strcat** ne vérifie pas suffisamment d’espace *strDestination* avant d’ajouter *strSource*, il est une cause potentielle de dépassements de mémoire tampon. Envisagez d’utiliser plutôt [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
 
-**wcscat** et **_mbscat** sont des versions à caractères larges et caractères multioctets de **strcat**. Les arguments et la valeur de retour de **wcscat** sont des caractères larges chaînes ; ceux de **_mbscat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcscat** et **_mbscat** sont des versions à caractères larges et à caractères multioctets de **strcat**. Les arguments et la valeur de retour de **wcscat** sont des caractères larges chaînes ; ceux de **_mbscat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -124,7 +114,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat**|**strcat**|**_mbscat**|**wcscat**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
