@@ -1,10 +1,6 @@
 ---
-title: _ecvt | Microsoft Docs
-ms.custom: ''
+title: _ecvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ecvt
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _ecvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ecvt function
 - numbers, converting
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 36c9cb2e8cd9eb4dd67bb91e9e4dbd36d8d1fc8e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605724"
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -76,17 +66,17 @@ Signe du nombre converti.
 
 ## <a name="remarks"></a>Notes
 
-Le **_ecvt** fonction convertit un nombre à virgule flottante en une chaîne de caractères. Le *valeur* paramètre est le nombre à virgule flottante à convertir. Cette fonction stocke jusqu'à *nombre* chiffres de *valeur* sous forme de chaîne et ajoute un caractère null ('\0'). Si le nombre de chiffres dans *valeur* dépasse *nombre*, les chiffres de poids faible est arrondi. S’il y a moins de *nombre* chiffres, la chaîne est rempli de zéros.
+Le **_ecvt** fonction convertit un nombre à virgule flottante en une chaîne de caractères. Le *valeur* paramètre correspond au nombre à virgule flottante à convertir. Cette fonction stocke jusqu'à *nombre* chiffres de *valeur* sous forme de chaîne et ajoute un caractère null ('\0'). Si le nombre de chiffres dans *valeur* dépasse *nombre*, le chiffre de poids faible est arrondi. S’il existe moins de *nombre* chiffres, la chaîne est remplie de zéros.
 
-Le nombre total de chiffres retourné par **_ecvt** n’excédera pas **_CVTBUFSIZE**.
+Le nombre total de chiffres retournés par **_ecvt** n’excédera pas **_CVTBUFSIZE**.
 
-Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de *valeur* peut être obtenu à partir de *dec* et *signe* après l’appel. Le *dec* paramètre pointe vers une valeur entière en donnant la position de la virgule décimale en ce qui concerne le début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le *signe* paramètre pointe vers un entier qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.
+Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de *valeur* peut être obtenu à partir de *dec* et *connexion* après l’appel. Le *dec* paramètre pointe vers une valeur entière indiquant la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le *connexion* paramètre pointe vers un entier qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.
 
 La différence entre **_ecvt** et **_fcvt** est dans l’interprétation de la *nombre* paramètre. **_ecvt** interprète *nombre* comme le nombre total de chiffres dans la chaîne de sortie, tandis que **_fcvt** interprète *nombre* en tant que le nombre de chiffres après le virgule décimale.
 
 **_ecvt** et **_fcvt** utilisent un seul tampon alloué de manière statique pour la conversion. Chaque appel à une de ces routines détruit le résultat de l’appel précédent.
 
-Cette fonction valide ses paramètres. Si *dec* ou *signe* est **NULL**, ou *nombre* est 0, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **NULL** est retourné.
+Cette fonction valide ses paramètres. Si *dec* ou *connexion* est **NULL**, ou *nombre* est 0, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **NULL** est retourné.
 
 ## <a name="requirements"></a>Spécifications
 

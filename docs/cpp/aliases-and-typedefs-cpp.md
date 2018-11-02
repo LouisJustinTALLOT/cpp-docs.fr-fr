@@ -1,25 +1,15 @@
 ---
-title: Alias et typedefs (C++) | Microsoft Docs
-ms.custom: ''
+title: Alias et typedefs (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - typedef_cpp
-dev_langs:
-- C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0782642d23dc588efa57787603f7b3219f0ffd0f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9bb39a668605276a82117c1f0a8fe6dd2db20eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054595"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546248"
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias et typedefs (C++)
 
@@ -240,7 +230,7 @@ Pour utiliser **typedef** pour spécifier les types fondamentaux et dérivés da
 typedef char CHAR, *PSTR;
 ```
 
-L'exemple suivant fournit le type `DRAWF` pour une fonction qui ne retourne aucune valeur et qui accepte deux arguments int :
+L’exemple suivant fournit le type `DRAWF` pour une fonction qui ne retourne aucune valeur et qui accepte deux arguments int :
 
 ```cpp
 typedef void DRAWF( int, int );

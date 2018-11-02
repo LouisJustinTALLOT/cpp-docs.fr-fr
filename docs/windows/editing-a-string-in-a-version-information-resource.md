@@ -1,29 +1,18 @@
 ---
-title: Modification d’une chaîne dans une ressource d’informations de Version (C++) | Microsoft Docs
-ms.custom: ''
+title: Modification d’une chaîne dans une ressource d’informations de Version (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.version
-dev_langs:
-- C++
 helpviewer_keywords:
 - version information resources [C++]
 - resources [C++], editing version information
 ms.assetid: d3a7d4e4-7d31-47c2-902c-f50b8404ba4f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5a456c745a11fa4250ad731f00556b211ad21b8f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 75d41444d685b067b57aa78aee944ee005da5d3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061701"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476425"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>Modification d’une chaîne dans une ressource d’informations de Version (C++)
 

@@ -1,8 +1,6 @@
 ---
-title: '&lt;tuple&gt;, opérateurs | Microsoft Docs'
-ms.custom: ''
+title: '&lt;tuple&gt;, opérateurs'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - tuple/std::operator!=
 - tuple/std::operator>
@@ -10,21 +8,19 @@ f1_keywords:
 - tuple/std::operator<
 - tuple/std::operator<=
 - tuple/std::operator==
-dev_langs:
-- C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: 9990ecb01ea6de68713cedc49fbddadeb9ad7c30
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e60de54a78f3a206ef77776761c3419bf8a2f3b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726347"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677032"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[!=, opérateur](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  operator!=

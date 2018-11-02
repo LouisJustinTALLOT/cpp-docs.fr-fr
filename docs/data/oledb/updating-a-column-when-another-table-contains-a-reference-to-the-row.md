@@ -1,26 +1,15 @@
 ---
-title: Mettre à jour une colonne quand une autre table contient une référence à la ligne | Microsoft Docs
-ms.custom: ''
+title: Mettre à jour une colonne quand une autre table contient une référence à la ligne
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - rowsets, column updates
 ms.assetid: abb5db69-055d-431f-b12d-ad2940a661ba
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 7998897c80e392326213324804c1809656e051f3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2adca735558033aa9324f37b5a61385b5f48096c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50071821"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519887"
 ---
 # <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>Mise à jour d'une colonne quand une autre table contient une référence à la ligne
 

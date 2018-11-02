@@ -1,10 +1,6 @@
 ---
-title: CBookmark, classe | Microsoft Docs
-ms.custom: ''
+title: CBookmark, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL.CBookmark
 - ATL::CBookmark<nSize>
@@ -61,8 +57,6 @@ f1_keywords:
 - ATL::CBookmark<0>::operator=
 - CBookmark.operator=
 - ATL::CBookmark::operator=
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBookmark class
 - CBookmark class, constructor
@@ -73,17 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: aef24c5c55bc3a3250c483536d0a63f967608b20
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 669a0c8da54e8a2523df644c29bbb26051c024da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577452"
 ---
 # <a name="cbookmark-class"></a>CBookmark, classe
 
@@ -104,7 +93,7 @@ class CBookmark< 0 > : public CBookmarkBase
 *nSize*<br/>
 La taille de la mémoire tampon de signet en octets. Lorsque *nSize* est égal à zéro, la mémoire tampon de signet sera créée dynamiquement au moment de l’exécution.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
