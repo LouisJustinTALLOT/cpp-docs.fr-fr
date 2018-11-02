@@ -12,18 +12,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 186789a94186621d2ec0103cb24dfdc17b0420cc
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 71faf00e5acb980b9ab6f5cafa6a81bb360e7ea2
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410679"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143638"
 ---
 # <a name="create-a-new-linux-project"></a>Créer un projet Linux
 
 Tout d’abord, vérifiez que la **charge de travail de développement Linux** pour Visual Studio est installée. Pour plus d’informations, consultez [Télécharger, installer et configurer la charge de travail Linux](download-install-and-setup-the-linux-development-workload.md).
 
-Quand vous développez en C++ dans Visual Studio pour Linux, vous avez le choix de créer un projet Visual Studio ou un projet CMake. Cette rubrique décrit comment créer un projet Visual Studio. Pour plus d’informations sur les projets CMake, consultez [Configurer un projet CMake Linux](cmake-linux-project.md).
+Quand vous créez un projet C++ dans Visual Studio pour Linux, vous avez le choix entre créer un projet Visual Studio et créer un projet CMake. Cette rubrique décrit comment créer un projet Visual Studio. Pour plus d’informations sur la création de projets CMake et l’utilisation de projets existants, consultez [Configurer un projet CMake Linux](cmake-linux-project.md).
 
 Pour créer un projet Linux dans Visual Studio, effectuez les étapes suivantes :
 
