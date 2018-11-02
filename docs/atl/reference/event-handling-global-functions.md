@@ -1,28 +1,18 @@
 ---
-title: Fonctions globales de gestion d’événements | Microsoft Docs
-ms.custom: ''
+title: Fonctions globales de gestion des événements
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlWaitWithMessageLoop
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handling, global functions
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ef89aec3a0eaf53c6c97b3480008b7e9fd586e3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 02066f2e6cd215fdb68fcdb594307b646ee69cad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054889"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660393"
 ---
 # <a name="event-handling-global-functions"></a>Fonctions globales de gestion des événements
 
@@ -35,7 +25,7 @@ Cette fonction fournit un gestionnaire d’événements.
 |-|-|
 |[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Attend un objet soit signalé, en attendant la distribution des messages de fenêtre en fonction des besoins.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 

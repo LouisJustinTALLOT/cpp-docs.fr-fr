@@ -1,35 +1,25 @@
 ---
-title: /DEFAULTLIB (spécifier la bibliothèque par défaut) | Documents Microsoft
-ms.custom: ''
+title: /DEFAULTLIB (Spécifier la bibliothèque par défaut)
 ms.date: 05/29/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.DefaultLibraries
 - /defaultlib
-dev_langs:
-- C++
 helpviewer_keywords:
 - -DEFAULTLIB linker option
 - DEFAULTLIB linker option
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9afcaa0e229ec34ba91b4d60a7a4fa9acec2d7e3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 408507bf0683ea3434ab138fd5ca3a815a1c6a33
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494235"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Spécifier la bibliothèque par défaut)
 
-Spécifiez une bibliothèque par défaut à Explorer afin de résoudre les références externes.
+Spécifiez une bibliothèque par défaut à Explorer afin de résoudre des références externes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,7 +39,7 @@ Lorsqu’il est utilisé sans arguments, le [/NODEFAULTLIB (ignorer toutes les b
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
 

@@ -1,10 +1,6 @@
 ---
-title: vsscanf, vswscanf | Microsoft Docs
-ms.custom: ''
+title: vsscanf, vswscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vsscanf
 - vswscanf
@@ -24,22 +20,16 @@ f1_keywords:
 - _vstscanf
 - vsscanf
 - vswscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7267e308f8b75a0e040e3fe33d51a9bdeea3914f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415889"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478581"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 
@@ -81,12 +71,12 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-Le **vsscanf** fonction lit les données à partir de *tampon* dans les emplacements qui sont fournies par chaque argument dans le *arglist* liste d’arguments. Chaque argument dans la liste doit être un pointeur vers une variable qui a un type qui correspond à un spécificateur de type dans *format*. Le *format* contrôles argument des champs de l’interprétation de l’entrée et a la même forme et fonction que la *format* argument pour le **scanf** (fonction). Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le **vsscanf** fonction lit les données à partir de *tampon* dans les emplacements qui sont fournis par chaque argument dans le *arglist* liste d’arguments. Chaque argument dans la liste doit être un pointeur vers une variable qui a un type qui correspond à un spécificateur de type dans *format*. Le *format* contrôles d’argument des champs de l’interprétation de l’entrée et a les mêmes forme et fonction que le *format* argument pour le **scanf** (fonction). Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Lorsque vous utilisez **vsscanf** pour lire une chaîne, spécifiez toujours une largeur de la **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; Sinon, une entrée au format incorrect peut entraîner un dépassement de mémoire tampon.
+> Lorsque vous utilisez **vsscanf** pour lire une chaîne, spécifiez toujours une largeur pour les **%s** format (par exemple, **« % 32s »** au lieu de **« %s »**) ; Sinon, entrée mal formatée peut provoquer un dépassement de mémoire tampon.
 
-**vswscanf** est une version à caractères larges de **vsscanf**; les arguments de **vswscanf** sont des chaînes à caractères larges. **vsscanf** ne gère pas les caractères hexadécimaux multioctets. **vswscanf** ne traite pas hexadécimal de pleine chasse Unicode ou des caractères de la « zone de compatibilité ». Dans le cas contraire, **vswscanf** et **vsscanf** se comportent de façon identique.
+**vswscanf** est une version à caractères larges de **vsscanf**; les arguments de **vswscanf** sont des chaînes à caractères larges. **vsscanf** ne gère pas les caractères hexadécimaux multioctets. **vswscanf** ne gère pas hexadécimaux entiers Unicode ou caractères de « zone de compatibilité ». Sinon, **vswscanf** et **vsscanf** ont un comportement identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

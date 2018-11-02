@@ -1,29 +1,18 @@
 ---
-title: Désactivation des repères | Microsoft Docs
-ms.custom: ''
+title: Désactivation des repères
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - guides, disabling snapping
 - Dialog editor [C++], snap to guides
 - snap to guides (Dialog editor)
 - controls [C++], snap to guides/grid
 ms.assetid: 51efa07b-8684-474e-a0b4-191ec5d91d1a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 35c552a6bb384f87c358ba25a945a7f02cc30114
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a94e8c34be5291f32e9d657873c2cfb1640d491
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380800"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565891"
 ---
 # <a name="disabling-guides"></a>Désactivation des repères
 

@@ -1,23 +1,13 @@
 ---
-title: 2.6.6 construction ordered | Microsoft Docs
-ms.custom: ''
+title: 2.6.6 Construction ordered
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 5b3c1ba5-cfb8-4b05-865b-f446ae1c9f7c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b83c3dfc13b231a1314343a1dff496acf7a99b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe6ad4adf2a4fcccfefe3c3585d9c88c0a118931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412195"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615798"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 Construction ordered
 

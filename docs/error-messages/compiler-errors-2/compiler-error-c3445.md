@@ -1,35 +1,25 @@
 ---
-title: C3445 d’erreur du compilateur | Documents Microsoft
-ms.custom: ''
+title: Erreur du compilateur C3445
 ms.date: 04/10/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3445
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3445
 ms.assetid: 0d272bfc-136b-4025-a9ba-5e4eea5f8215
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c37f04b907183b883772fd144ae0179683f088f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eddeb5a56c953ca0864e29187fbe28c53bdee24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574211"
 ---
-# <a name="compiler-error-c3445"></a>C3445 d’erreur du compilateur
+# <a name="compiler-error-c3445"></a>Erreur du compilateur C3445
 
-> initialisation de liste copie de '*type*' ne peut pas utiliser un constructeur explicite
+> Copy-list-initialization de «*type*' ne peut pas utiliser un constructeur explicite
 
-Selon la norme ISO C ++ 17 standard, le compilateur est requis pour prendre en compte un constructeur explicite pour la résolution de surcharge dans l’initialisation de liste de copie, mais il doit déclencher une erreur si cette surcharge est choisie.
+Selon la norme ISO C ++ 17 standard, le compilateur est requis pour prendre en compte un constructeur explicite pour la résolution de surcharge dans copy-list-initialization, mais doit générer une erreur si cette surcharge est choisie.
 
-À partir de Visual Studio 2017, le compilateur recherche des erreurs liées à la création d’objets à l’aide d’une liste d’initialiseurs non trouvées par Visual Studio 2015. Ces erreurs peuvent entraîner se bloque ou un comportement indéfini lors de l’exécution.
+À partir de Visual Studio 2017, le compilateur recherche des erreurs liées à la création d’objets à l’aide d’une liste d’initialiseurs qui n’ont pas été trouvés par Visual Studio 2015. Ces erreurs risque d’incidents ou d’un comportement non défini lors de l’exécution.
 
 ## <a name="example"></a>Exemple
 
@@ -50,7 +40,7 @@ int main()
 }
 ```
 
-Pour corriger l’erreur, utilisez à la place une initialisation directe :
+Pour corriger cette erreur, utilisez à la place une initialisation directe :
 
 ```cpp
 // C3445b.cpp

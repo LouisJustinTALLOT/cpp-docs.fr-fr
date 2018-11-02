@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C3358 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C3358
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3358
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3358
 ms.assetid: 180b93df-e78f-441a-91fb-1594c681f7f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ecb4f4bcdf218d9a017939b7d57aa0452afe52a4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8d57bf7447ba0c05585d3c18cfaaf960ddc0f968
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026528"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514723"
 ---
 # <a name="compiler-error-c3358"></a>Erreur du compilateur C3358
 

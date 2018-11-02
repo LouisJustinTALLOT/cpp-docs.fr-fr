@@ -1,10 +1,6 @@
 ---
-title: unexpected (CRT) | Microsoft Docs
-ms.custom: ''
+title: unexpected (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - unexpected
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd8dc51c41ebf938f59493cbd62fac3e0a491601
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408105"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534018"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
-Appels **Terminer** ou une fonction que vous spécifiez à l’aide de **set_unexpected**.
+Appels **Terminer** ou fonction que vous spécifiez à l’aide de **set_unexpected**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,9 +39,9 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Notes
 
-Le **inattendue** routine n’est pas utilisée avec l’implémentation actuelle de gestion des exceptions C++. **inattendue** appelle **Terminer** par défaut. Vous pouvez modifier ce comportement par défaut en écrivant une fonction d’arrêt personnalisés appelant **set_unexpected** avec le nom de votre fonction comme argument. **inattendue** appelle la dernière fonction donnée comme argument à **set_unexpected**.
+Le **inattendue** routine n’est pas utilisée avec l’implémentation actuelle de gestion des exceptions C++. **inattendue** appels **Terminer** par défaut. Vous pouvez modifier ce comportement par défaut en écrivant une fonction d’arrêt personnalisée et en appelant **set_unexpected** avec le nom de votre fonction comme argument. **inattendue** appelle la dernière fonction donnée comme argument à **set_unexpected**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: _CrtReportBlockType | Microsoft Docs
-ms.custom: ''
+title: _CrtReportBlockType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtReportBlockType
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtReportBlockType function
 - BLOCK_SUBTYPE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59f8e919ee8a3ec9cc0822420ebbf6581480a13b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395563"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516061"
 ---
 # <a name="crtreportblocktype"></a>_CrtReportBlockType
 
@@ -62,15 +52,15 @@ Pointeur désignant un bloc de tas de débogage valide.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Lorsqu’il est passé d’un pointeur du tas de débogage valide, le **_CrtReportBlockType** fonction retourne le type de bloc et le sous-type sous la forme d’un **int**. Quand elle reçoit un pointeur non valide, elle retourne -1.
+Quand il est passé d’un pointeur de tas de débogage valide, le **_CrtReportBlockType** fonction retourne le type de bloc et le sous-type sous la forme d’un **int**. Quand elle reçoit un pointeur non valide, elle retourne -1.
 
 ## <a name="remarks"></a>Notes
 
-Pour extraire le type et le sous-type retourné par **_CrtReportBlockType**, utilisez les macros **_BLOCK_TYPE** et **_BLOCK_SUBTYPE** (à la fois défini dans Crtdbg.h) sur la valeur de retour.
+Pour extraire le type et le sous-type retournés par **_CrtReportBlockType**, utilisez les macros **_BLOCK_TYPE** et **_BLOCK_SUBTYPE** (tous deux définis dans Crtdbg.h) sur la valeur de retour.
 
 Pour plus d’informations sur les types de blocs d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

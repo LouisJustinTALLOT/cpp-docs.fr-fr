@@ -1,10 +1,6 @@
 ---
-title: _getdcwd, _wgetdcwd | Microsoft Docs
-ms.custom: ''
+title: _getdcwd, _wgetdcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdcwd
 - _wgetdcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - tgetdcwd
 - _wgetdcwd
 - _tgetdcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - wgetdcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45c03ed2c057781c082988ac15e838249db0f28a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689713"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677017"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -72,7 +62,7 @@ wchar_t *_wgetdcwd(
 ### <a name="parameters"></a>Paramètres
 
 *Lecteur*<br/>
-Entier non négatif qui spécifie le lecteur (0 = lecteur par défaut, 1 = A, 2 = B, etc.).
+Entier non négatif qui spécifie le lecteur (0 = lecteur par défaut, 1 = A, 2 = B, etc.).
 
 Si le lecteur spécifié n’est pas disponible, ou le type de lecteur (par exemple, amovible, fixe, CD-ROM, disque virtuel ou lecteur réseau) ne peut pas être déterminé, le gestionnaire de paramètre non valide, décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md), est appelé.
 
@@ -100,9 +90,9 @@ Le **_getdcwd** fonction obtient le chemin complet du répertoire de travail act
 
 Cette fonction est thread-safe même si elle dépend de **GetFullPathName**, qui n'est pas elle-même thread-safe. Toutefois, vous pouvez enfreindre la sécurité des threads si votre application multithread appelle cette fonction et [GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-La version de cette fonction qui a le **_nolock** suffixe se comporte comme cette fonction, à ceci près qu’il n’est pas thread-safe et n’est pas protégé contre les interférences par d’autres threads. Pour plus d’informations, consultez [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
+La version de cette fonction qui a le **_nolock** suffixe se comporte comme cette fonction, à ceci près qu’il n’est pas thread-safe et n’est pas protégé contre les interférences par d’autres threads. Pour plus d'informations, consultez [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Lorsque **_DEBUG** et **_CRTDBG_MAP_ALLOC** sont définis, les appels à **_getdcwd** et **_wgetdcwd** sont remplacés par les appels à **_getdcwd_dbg** et **_wgetdcwd_dbg** afin que vous puissiez déboguer les allocations de mémoire. Pour plus d’informations, consultez [_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
+Lorsque **_DEBUG** et **_CRTDBG_MAP_ALLOC** sont définis, les appels à **_getdcwd** et **_wgetdcwd** sont remplacés par les appels à **_getdcwd_dbg** et **_wgetdcwd_dbg** afin que vous puissiez déboguer les allocations de mémoire. Pour plus d’informations, consultez[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -110,7 +100,7 @@ Lorsque **_DEBUG** et **_CRTDBG_MAP_ALLOC** sont définis, les appels à **_getd
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tgetdcwd**|**_getdcwd**|**_getdcwd**|**_wgetdcwd**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,11 +1,6 @@
 ---
-title: casinh, casinhf, casinhl | Microsoft Docs
-ms.custom: ''
+title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casinh
 - casinhl
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 460c5cdd41d49b9448aa8d4b7fbd2454e8301e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393964"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580772"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
-Récupère le sinus hyperbolique inverse d’un nombre complexe, avec des coupes de branche en dehors de l’intervalle [-i, + i] sur l’axe imaginaire.
+Récupère le sinus hyperbolique inverse d’un nombre complexe, avec des coupures en dehors de l’intervalle [-i, + i] sur l’axe des imaginaires.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,13 +68,13 @@ Nombre complexe qui représente un angle, en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le sinus hyperbolique inverse de *z*, en radians. Le résultat est indépendant de l’axe réel, ainsi que dans l’intervalle [-iπ/2 + iπ/2] sur l’axe imaginaire.
+Le sinus hyperbolique inverse de *z*, en radians. Le résultat est détachée sur l’axe des réels et dans l’intervalle [-iπ/2 + iπ/2] sur l’axe des imaginaires.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **casinh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **casinh** accepte et retourne toujours un **_Dcomplex** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **casinh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **casinh** accepte et retourne toujours un **_Dcomplex** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

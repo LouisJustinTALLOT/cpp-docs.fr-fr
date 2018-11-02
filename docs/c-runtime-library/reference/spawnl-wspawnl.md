@@ -1,10 +1,6 @@
 ---
-title: _spawnl, _wspawnl | Microsoft Docs
-ms.custom: ''
+title: _spawnl, _wspawnl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnl
 - _spawnl
@@ -26,8 +22,6 @@ f1_keywords:
 - wspawnl
 - _wspawnl
 - _spawnl
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnl function
 - processes, creating
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dcd276e59edd78942f14211845c615d7e4f7eb6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410718"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518077"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -85,11 +75,11 @@ Mode d'exécution du processus appelant.
 Chemin d'accès du fichier à exécuter.
 
 *arg0*, *arg1*,... *argn*<br/>
-Liste des pointeurs vers les arguments. Le *arg0* est généralement un pointeur vers *cmdname*. Les arguments *arg1* via *argn* sont des pointeurs vers les chaînes de caractères formant la nouvelle liste d’arguments. Suivant *argn*, il doit y avoir un **NULL** pointeur pour marquer la fin de la liste d’arguments.
+Liste des pointeurs vers les arguments. Le *arg0* argument est généralement un pointeur vers *cmdname*. Les arguments *arg1* via *argn* sont des pointeurs vers les chaînes de caractères formant la nouvelle liste d’arguments. Suivant *argn*, il doit y avoir un **NULL** pointeur pour marquer la fin de la liste d’arguments.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de retour à partir d’une commande synchrone **_spawnl** ou **_wspawnl** (**_P_WAIT** spécifié pour *mode*) est l’état de sortie du nouveau processus. La valeur de retour à partir d’une commande asynchrone **_spawnl** ou **_wspawnl** (**_P_NOWAIT** ou **_P_NOWAITO** spécifié pour *mode* ) est le handle du processus. L'état de sortie est 0 si le processus s'est terminé normalement. Vous pouvez définir l’état de sortie une valeur différente de zéro si le processus engendré appelle spécifiquement la **quitter** routine avec un argument différent de zéro. Si le nouveau processus ne définissait pas explicitement un état de sortie positif, un état de sortie positif indique une sortie anormale avec arrêt ou interruption. Une valeur de retour de -1 indique une erreur (le nouveau processus n’est pas lancé). Dans ce cas, **errno** est définie à une des valeurs suivantes.
+La valeur de retour à partir d’une commande synchrone **_spawnl** ou **_wspawnl** (**_P_WAIT** spécifié pour *mode*) est l’état de la sortie du nouveau processus. La valeur de retour à partir d’une commande asynchrone **_spawnl** ou **_wspawnl** (**_P_NOWAIT** ou **_P_NOWAITO** spécifié pour *mode* ) est le handle de processus. L'état de sortie est 0 si le processus s'est terminé normalement. Vous pouvez définir l’état de sortie à une valeur différente de zéro si le processus engendré appelle spécifiquement la **quitter** routine avec un argument différent de zéro. Si le nouveau processus ne définissait pas explicitement un état de sortie positif, un état de sortie positif indique une sortie anormale avec arrêt ou interruption. Une valeur de retour de -1 indique une erreur (le nouveau processus n’est pas démarré). Dans ce cas, **errno** est défini sur l’une des valeurs suivantes.
 
 |||
 |-|-|
@@ -101,13 +91,13 @@ La valeur de retour à partir d’une commande synchrone **_spawnl** ou **_wspaw
 
 Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Ces fonctions valident leurs paramètres. Si le paramètre *cmdname* ou *arg0* est une chaîne vide ou un pointeur null, le Gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL**et retournent -1. Aucun nouveau processus généré.
+Ces fonctions valident leurs paramètres. Si *cmdname* ou *arg0* est une chaîne vide ou un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL**et retournent -1. Aucun nouveau processus généré.
 
 ## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions crée et exécute un nouveau processus, passant chaque argument de ligne de commande en tant que paramètre distinct.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

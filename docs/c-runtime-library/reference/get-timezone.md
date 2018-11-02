@@ -1,10 +1,6 @@
 ---
-title: _get_timezone | Microsoft Docs
-ms.custom: ''
+title: _get_timezone
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_timezone
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _get_timezone
 - get_timezone
-dev_langs:
-- C++
 helpviewer_keywords:
 - time zones
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 111cbff00d1f6119fbd806cc5fc3d14c28a7d7c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398274"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613913"
 ---
 # <a name="gettimezone"></a>_get_timezone
 
@@ -55,20 +45,20 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Paramètres
 
-*Secondes*<br/>
+*secondes*<br/>
 Différence en secondes entre l’heure UTC et l’heure locale.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de réussite ou une **errno** valeur si une erreur se produit.
+Zéro en cas de réussite ou un **errno** valeur si une erreur se produit.
 
 ## <a name="remarks"></a>Notes
 
-Le **_get_timezone** fonction récupère la différence en secondes entre l’heure UTC et l’heure locale en tant qu’entier. La valeur par défaut est de 28 800 secondes, pour l’heure du Pacifique (huit heures après l’heure UTC).
+Le **_get_timezone** fonction récupère la différence en secondes entre l’heure UTC et l’heure locale sous forme d’entier. La valeur par défaut est de 28 800 secondes, pour l’heure du Pacifique (huit heures après l’heure UTC).
 
 Si *secondes* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

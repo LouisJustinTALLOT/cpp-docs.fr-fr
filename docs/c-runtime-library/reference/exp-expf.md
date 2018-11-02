@@ -1,10 +1,6 @@
 ---
-title: EXP, expf, expl | Documents Microsoft
-ms.custom: ''
+title: EXP, expf, expl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - expf
 - expl
@@ -27,8 +23,6 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9569eee475a80fc5c08c2ec1d099cf627c7b5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596753"
 ---
 # <a name="exp-expf-expl"></a>EXP, expf, expl
 
@@ -78,12 +68,12 @@ La virgule flottante valeur Elever à la puissance la base du logarithme népér
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **exp** fonctions retournent la valeur exponentielle du paramètre à virgule flottante, *x*, en cas de réussite. Autrement dit, le résultat est *e*<sup>*x*</sup>, où *e* est la base du logarithme népérien. De dépassement de capacité, la fonction retourne INF (infini) et de dépassement de capacité négatif, **exp** retourne 0.
+Le **exp** fonctions retournent la valeur exponentielle du paramètre à virgule flottante, *x*, en cas de réussite. Autrement dit, le résultat est *e*<sup>*x*</sup>, où *e* est la base du logarithme népérien. De dépassement de capacité, la fonction retourne INF (infini) et sur le dépassement de capacité négatif, **exp** retourne 0.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± Valeur NaN silencieuse, indéterminé|Aucun|_DOMAIN|
-|Nombre infini de ±|INVALID|_DOMAIN|
+|+ Valeur NaN silencieuse, indéterminé|None|_DOMAIN|
+|+ Infini|INVALID|_DOMAIN|
 |x ≥ 7,097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7,083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
@@ -91,7 +81,7 @@ Le **exp** possède une implémentation qui utilise des Extensions Streaming SIM
 
 ## <a name="remarks"></a>Notes
 
-C++ autorise la surcharge, vous pouvez appeler des surcharges de **exp** qui prennent un **float** ou **long double** argument. Dans un programme C, **exp** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **exp** qui prennent un **float** ou **long double** argument. Dans un programme C, **exp** accepte et retourne toujours un **double**.
 
 ## <a name="requirements"></a>Spécifications
 

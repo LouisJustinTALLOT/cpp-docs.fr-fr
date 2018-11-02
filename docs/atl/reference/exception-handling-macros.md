@@ -1,30 +1,20 @@
 ---
-title: Macros d’exceptions | Microsoft Docs
-ms.custom: ''
+title: Macros de gestion des exceptions
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATLCATCH
 - atldef/ATL::_ATLCATCHALL
 - atldef/ATL::_ATLTRY
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception handling, macros
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2473a2a66792f1bfff18086030a8898a67339e10
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cf4b7ffb8c6b197dc1c4eea4b6c569e173bb188d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024279"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544402"
 ---
 # <a name="exception-handling-macros"></a>Macros de gestion des exceptions
 

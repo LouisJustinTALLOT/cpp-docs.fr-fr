@@ -1,27 +1,17 @@
 ---
-title: Les interfaces, Assistant contrôle ATL | Microsoft Docs
-ms.custom: ''
+title: Interfaces, Assistant contrôle ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.interfaces
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb248442a1d687b98e8e97c8846d07a50e484564
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5d3afda0f31cf4cc8d02af0363ba1b40414ec8b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717507"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528048"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Interfaces, Assistant contrôle ATL
 

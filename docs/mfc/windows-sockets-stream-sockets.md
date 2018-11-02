@@ -1,27 +1,17 @@
 ---
-title: 'Windows Sockets : Stream Sockets | Microsoft Docs'
-ms.custom: ''
+title: 'Windows Sockets : sockets flux'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87045d02238071170d776ff1675fb7283d1295bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 298428bd5e81d11eb62907dfbac39acda24524f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560223"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets : sockets flux
 

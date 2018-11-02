@@ -1,12 +1,7 @@
 ---
-title: Mots clés (C++) | Microsoft Docs
+title: Mots clés (C++)
 ms.custom: index-page
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 645a0edb053320499c3ecca1c9d2ffd639b15931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162449"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659309"
 ---
 # <a name="keywords-c"></a>Mots clés (C++)
 
@@ -85,7 +76,7 @@ Les mots clés sont des identificateurs réservés prédéfinis qui ont des sign
 
 En Microsoft C++, les identificateurs avec deux traits de soulignement à gauche sont réservés aux implémentations du compilateur. Par conséquent, la convention Microsoft est de faire précéder ses mots clés spécifiques de deux traits de soulignement. Ces mots ne peuvent pas être utilisés en tant que noms d'identificateurs.
 
-Les extensions Microsoft sont activées par défaut. Pour vous assurer que vos programmes sont entièrement portables, vous pouvez désactiver les extensions Microsoft en spécifiant le [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) option pendant la compilation. Lorsque vous effectuez cette opération, certains mots clés spécifiques à Microsoft sont désactivées.
+Les extensions Microsoft sont activées par défaut. Pour garantir la portabilité totale de vos programmes, vous pouvez désactiver les extensions Microsoft en spécifiant l'option  [/Za \(Désactiver les extensions de langage](../build/reference/za-ze-disable-language-extensions.md) pendant la compilation. Dans ce cas, certains mots clés spécifiques à Microsoft sont désactivés.
 
 Lorsque les extensions Microsoft sont activées, vous pouvez utiliser les mots clés Microsoft spécifiques dans vos programmes. Pour la compatibilité ANSI, ces mots clés sont précédés d'un trait de soulignement double. Pour la compatibilité descendante, un trait de soulignement simple versions d’un grand nombre des mots clés de soulignement double sont prises en charge. En outre, **__cdecl** est disponible avec sans trait de soulignement.
 

@@ -1,29 +1,19 @@
 ---
-title: -Yl (injecter une référence PCH pour une bibliothèque de débogage) | Microsoft Docs
-ms.custom: ''
+title: /Yl (Injecter une référence PCH pour une bibliothèque de débogage)
 ms.date: 01/29/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /yl
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Yl compiler option [C++]
 - Yl compiler option [C++]
 - /Yl compiler option [C++]
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c6828fb602c7c1c0aaa7732292604706ffd45230
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712372"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587032"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Injecter une référence PCH pour une bibliothèque de débogage)
 

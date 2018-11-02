@@ -1,10 +1,6 @@
 ---
-title: toascii, __toascii | Microsoft Docs
-ms.custom: ''
+title: toascii, __toascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __toascii
 apilocation:
@@ -25,24 +21,18 @@ f1_keywords:
 - toascii
 - ctype/toascii
 - ctype/__toascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - toascii function
 - string conversion, to ASCII characters
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead516a7e298e56d13d8f1a09a054057796ca64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578969"
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -68,17 +58,17 @@ Caractère à convertir.
 
 ## <a name="remarks"></a>Notes
 
-Le **__toascii** routine convertit le caractère donné en un caractère ASCII en tronquant pour les 7 bits de poids faible. Aucune autre transformation n’est appliquée.
+Le **__toascii** routine convertit le caractère donné en un caractère ASCII en le tronquant sur les 7 bits de poids faible. Aucune autre transformation n’est appliquée.
 
-Le **__toascii** routine est définie comme une macro, sauf si la macro de préprocesseur _CTYPE_DISABLE_MACROS est définie. Pour la compatibilité descendante, **toascii** est défini comme macro uniquement lorsque [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou est défini sur 0 ; sinon, il n’est pas défini.
+Le **__toascii** routine est définie comme une macro, sauf si la macro de préprocesseur _CTYPE_DISABLE_MACROS est définie. Pour la compatibilité descendante, **toascii** est défini comme macro uniquement lorsque [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou est définie comme 0 ; sinon, il n’est pas défini.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**ToAscii**, **__toascii**|C : \<ctype.h><br /><br /> C++ : \<cctype> ou \<ctype.h>|
 
-Le **toascii** (macro) est une extension de POSIX, et **__toascii** est une implémentation spécifique à Microsoft de l’extension POSIX. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Le **toascii** macro est une extension POSIX, et **__toascii** est une implémentation spécifique à Microsoft de l’extension POSIX. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

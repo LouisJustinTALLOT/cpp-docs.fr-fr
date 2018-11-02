@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C2425 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C2425
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2425
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2425
 ms.assetid: 0ce59404-9aff-4e01-aa8d-27d23e92eb30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30f0bf6fb90a08647c9547108c17040fbf4c09ba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fcbcf06df3330320bf014c132abc543e2e2e8087
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071356"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479018"
 ---
 # <a name="compiler-error-c2425"></a>Erreur du compilateur C2425
 

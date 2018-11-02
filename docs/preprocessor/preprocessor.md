@@ -1,25 +1,15 @@
 ---
-title: Préprocesseur | Microsoft Docs
-ms.custom: ''
+title: Préprocesseur
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 74cf3ff56f37375cd8f267e3541b78e2d76a18fa
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bd139dcbbbe519cc4c9750a657f8b47c5a5bcd18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530961"
 ---
 # <a name="preprocessor"></a>Préprocesseur
 Le préprocesseur est un processeur de texte qui manipule le texte d'un fichier source dans le cadre de la première phase de traduction. Le préprocesseur n'analyse pas le texte source, mais il le divise en jetons en vue de localiser les appels de macros. Bien que le compilateur appelle normalement le préprocesseur lors de sa première passe, le préprocesseur peut également être appelé séparément pour traiter du texte sans compilation.

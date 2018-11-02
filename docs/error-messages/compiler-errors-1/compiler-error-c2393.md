@@ -1,31 +1,21 @@
 ---
-title: Erreur du compilateur C2393 | Documents Microsoft
-ms.custom: ''
+title: Erreur du compilateur C2393
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2393
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 057537c8efcf6e827d9ac9aaf36c0eace6d24156
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 39ca693aed3f08e7b2df3d687f94d93384393f23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704028"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566853"
 ---
 # <a name="compiler-error-c2393"></a>Erreur du compilateur C2393
 
-> '*symbole*' : symbole par appdomain ne peut pas être alloué dans le segment '*segment*'
+> «*symbole*' : symbole par appdomain ne peut pas être alloué dans le segment '*segment*»
 
 ## <a name="remarks"></a>Notes
 

@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C3375 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C3375
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3375
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3375
 ms.assetid: f1df78c6-e6ca-48f3-8b29-4e1710002bf3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f63d7eb7ef4633f01b65337c9546af260ca50fb4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b3dfc17f9df495fe6907b816bace0dac1eff08cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044065"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545273"
 ---
 # <a name="compiler-error-c3375"></a>Erreur du compilateur C3375
 
