@@ -1,23 +1,13 @@
 ---
-title: Caractères significatifs sans liaison externe | Microsoft Docs
-ms.custom: ''
+title: Caractères significatifs sans liaison externe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 396cfb36-391a-4aa9-885d-20198d4dc2ec
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b903fed659f9ee428e2eb7fb3ed15208c797bb05
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8476bf692665ba4f045ec7b1807f4707e8f6aaf0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109227"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666945"
 ---
 # <a name="significant-characters-without-external-linkage"></a>Caractères significatifs sans liaison externe
 

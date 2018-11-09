@@ -1,23 +1,13 @@
 ---
-title: Durée de vie, portée, visibilité et liaison | Microsoft Docs
-ms.custom: ''
+title: Durée de vie, portée, visibilité et liaison
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: c7678bb8-9d79-40ed-b352-abab876f0b17
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3046e0c486280701fcc777f0b10db822ee720983
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8b08a225ae41609e3d11886ce8de19208fff154c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087173"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664761"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>Durée de vie, portée, visibilité et liaison
 

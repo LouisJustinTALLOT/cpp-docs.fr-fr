@@ -1,21 +1,13 @@
 ---
-title: Renommer | Microsoft Docs
-ms.custom: ''
+title: Renommer
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a00eed341e0fc1ca8573e2f66744ea04055f259
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b677d825675ebb0b60da8f43f778774e2e08695e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455508"
 ---
 # <a name="rename"></a>Renommer
 **Quoi :** vous permet de renommer des identificateurs pour des symboles de code, tels que des champs, variables locales, méthodes, espaces de noms, propriétés et types.

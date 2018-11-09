@@ -4,47 +4,53 @@ ms.date: 10/26/2018
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: b1bc7ca74ce114f9d901fc5771a376df973f54a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54dfdb347c621cf6f8645feb6d13742f32503f9f
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652333"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264617"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Stockage de chaînes dans le fournisseur OLE DB
 
-Dans MyProviderRS.h, le **Assistant fournisseur OLE DB ATL** crée un enregistrement d’utilisateur par défaut appelé `CWindowsFile`. Pour gérer les deux chaînes, vous devez soit modifier `CWindowsFile` ou ajoutez votre propre enregistrement utilisateur comme indiqué dans le code suivant :
+Dans *personnalisé*RS.h, le **Assistant fournisseur OLE DB ATL** crée un enregistrement d’utilisateur par défaut appelé `CWindowsFile`. Pour gérer les deux chaînes, modifier `CWindowsFile` comme indiqué dans le code suivant :
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
-class CAgentMan: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
-   DWORD dwBookmark;              // Add this
-   TCHAR szCommand[256];          // Add this
-   TCHAR szText[256];             // Add this
-   TCHAR szCommand2[256];         // Add this
-   TCHAR szText2[256];            // Add this
-  
 {
 public:
-BEGIN_PROVIDER_COLUMN_MAP()
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Command"), 1, 256, GUID_NULL, CAgentMan, szCommand)
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Text"), 2, 256, GUID_NULL, CAgentMan, szText) 
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Command2"), 3, 256, GUID_NULL, CAgentMan, szCommand2)
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Text2"),4, 256, GUID_NULL, CAgentMan, szText2)
+DWORD dwBookmark;
+static const int iSize = 256;    // Add this
+TCHAR szCommand[iSize];          // Add this
+TCHAR szText[iSize];             // Add this
+TCHAR szCommand2[iSize];         // Add this
+TCHAR szText2[iSize];            // Add this
+
+BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+   PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
+   PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
+   PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
+   PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
+   PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
+
+   PROVIDER_COLUMN_ENTRY_STR("Command", 6, szCommand)    // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Text", 7, szText)          // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Command2", 8, szCommand2)  // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Text2", 9, szText2)        // Add this
 END_PROVIDER_COLUMN_MAP()
-   bool operator==(const CAgentMan& am) // This is optional 
+
+   bool operator==(const CCustomWindowsFile& am) // This is optional
    {
-      return (lstrcmpi(cFileName, wf.cFileName) == 0);
+      return (lstrcmpi(cFileName, am.cFileName) == 0);
    }
 };
 ```
 
 Les membres de données `szCommand` et `szText` représentent les deux chaînes, avec `szCommand2` et `szText2` avec des colonnes supplémentaires si nécessaire. Le membre de données `dwBookmark` n’est pas nécessaire pour ce fournisseur simple en lecture seule, mais sera utilisé ultérieurement pour ajouter un `IRowsetLocate` interface ; consultez [amélioration de la Simple lecture seul fournisseur](../../data/oledb/enhancing-the-simple-read-only-provider.md). Le `==` opérateur compare des instances (l’implémentation de cet opérateur est facultatif).
 
-Dans ce cas, votre fournisseur doit être prêt à compiler et exécuter. Pour tester le fournisseur, vous avez besoin d’un consommateur avec la fonctionnalité de correspondance. [Implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md) montre comment créer un tel un consommateur de test. Exécutez le consommateur de test avec le fournisseur. Vérifiez que le consommateur de test récupère les chaînes appropriées à partir du fournisseur lorsque vous cliquez sur le **exécuter** situé dans le **consommateur de Test** boîte de dialogue.
-
-Lorsque vous avez testé avec succès votre fournisseur, vous souhaiterez peut-être améliorer son fonctionnement en implémentant des interfaces supplémentaires. Voici un exemple dans [amélioration le fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).
+Dans ce cas, vous pouvez ajouter les fonctionnalités de [lecture de chaînes dans le fournisseur OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
 ## <a name="see-also"></a>Voir aussi
 

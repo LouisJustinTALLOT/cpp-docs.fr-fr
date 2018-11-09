@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 4a0a0ea51cf6ac347cd79cb777f9cb6a51670063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584624"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264721"
 ---
 # <a name="provider-support-for-bookmarks"></a>Prise en charge des signets par le fournisseur
 
@@ -60,7 +60,7 @@ Vous devez également raccorder votre table à la `CRowsetImpl` classe. Ajoutez 
 
 Enfin, gérez le `IColumnsInfo::GetColumnsInfo` appeler. Les macros PROVIDER_COLUMN_ENTRY vous utiliseriez normalement pour ce faire. Toutefois, un consommateur souhaiterez peut-être utiliser des signets. Vous devez être en mesure de modifier les colonnes que le fournisseur retourne selon que le consommateur demande un signet.
 
-Pour gérer les `IColumnsInfo::GetColumnsInfo` appeler, supprimez le `PROVIDER_COLUMN` mapper dans le `CTextData` classe. La macro PROVIDER_COLUMN_MAP définit une fonction `GetColumnInfo`. Vous devez définir vos propres `GetColumnInfo` (fonction). La déclaration de fonction doit ressembler à ceci :
+Pour gérer les `IColumnsInfo::GetColumnsInfo` appeler, supprimez la table PROVIDER_COLUMN dans la `CTextData` classe. La macro PROVIDER_COLUMN_MAP définit une fonction `GetColumnInfo`. Définir les vôtres `GetColumnInfo` (fonction). La déclaration de fonction doit ressembler à ceci :
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-Ensuite, implémentez la `GetColumnInfo` fonction dans le fichier CustomRS.cpp comme suit :
+Ensuite, implémentez la `GetColumnInfo` fonctionner dans le *personnalisé*RS.cpp de fichiers comme suit :
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -119,7 +119,6 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols)
                         DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
-
    }
 
    // Next set the other columns up.
@@ -151,9 +150,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 
 `GetColumnInfo` premier vérifie si une propriété appelée `DBPROP_IRowsetLocate` est définie. OLE DB a des propriétés pour chacune des interfaces facultatives l’objet d’ensemble de lignes. Si le consommateur souhaite utiliser une de ces interfaces facultatives, il définit une propriété sur true. Le fournisseur peut ensuite vérifier cette propriété et prendre des mesures spéciales sur celui-ci.
 
-Dans votre implémentation, vous obtenez la propriété à l’aide du pointeur vers l’objet de commande. Le `pThis` pointeur représente la classe rowset ou commande. Étant donné que vous utilisez des modèles ici, vous devez passer ceci comme un `void` pointeur ou le code n’est pas compilé.
+Dans votre implémentation, vous obtenez la propriété à l’aide du pointeur vers l’objet de commande. Le `pThis` pointeur représente la classe rowset ou commande. Étant donné que vous utilisez des modèles ici, vous devez passer ceci comme un **void** pointeur ou le code ne se compile pas.
 
-Spécifiez un tableau statique pour contenir les informations de colonne. Si le consommateur ne souhaite pas que la colonne de signet, une entrée dans le tableau est gaspillée. Vous pouvez allouer dynamiquement de ce tableau, mais vous devez vous assurer d’éliminer correctement. Cet exemple définit et utilise les macros ADD_COLUMN_ENTRY et ADD_COLUMN_ENTRY_EX pour insérer les informations dans le tableau. Vous pouvez ajouter les macros dans le fichier CustomRS.H comme indiqué dans le code suivant :
+Spécifiez un tableau statique pour contenir les informations de colonne. Si le consommateur ne veut pas la colonne de signet, une entrée dans le tableau est gaspillée. Vous pouvez allouer dynamiquement de ce tableau, mais vous devez vous assurer d’éliminer correctement. Cet exemple définit et utilise les macros ADD_COLUMN_ENTRY et ADD_COLUMN_ENTRY_EX pour insérer les informations dans le tableau. Vous pouvez ajouter les macros pour la *personnalisé*RS. Fichier H comme indiqué dans le code suivant :
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -238,7 +237,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 
 Le **tandis que** boucle contient du code pour appeler le `Compare` méthode dans le `IRowsetLocate` interface. Le code que vous avez doit toujours passer, car vous comparez exactement les mêmes signets. En outre, stockez un signet dans une variable temporaire afin que vous pouvez l’utiliser après la **tandis que** boucle a fini d’appeler le `MoveToBookmark` fonction dans les modèles du consommateur. Le `MoveToBookmark` appels de fonction le `GetRowsAt` méthode dans `IRowsetLocate`.
 
-Vous devez également mettre à jour l’enregistrement d’utilisateur dans le consommateur. Ajouter une entrée dans la classe pour gérer un signet et une entrée dans le `COLUMN_MAP`:
+Vous devez également mettre à jour l’enregistrement d’utilisateur dans le consommateur. Ajouter une entrée dans la classe pour gérer un signet et une entrée dans COLUMN_MAP :
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////

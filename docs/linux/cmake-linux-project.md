@@ -1,26 +1,14 @@
 ---
-title: Configurer un projet CMake Linux dans Visual Studio | Microsoft Docs
+title: Configurer un projet CMake Linux dans Visual Studio
 description: Comment configurer un projet CMake Linux dans Visual Studio
-ms.custom: ''
 ms.date: 07/20/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: b7c28a8e67ef2731d26071262383e93d32be9583
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 32d69e28c0991adc6117b7f9496eeb1022943ef2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064106"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585040"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurer un projet CMake Linux
 
