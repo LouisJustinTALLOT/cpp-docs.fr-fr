@@ -1,29 +1,19 @@
 ---
-title: Allocation de mémoire | Microsoft Docs
-ms.custom: ''
+title: Allocation de mémoire
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.memory
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, routines
 - memory, managing
 - memory, allocation
 ms.assetid: b4470556-a128-4782-9943-2ccf7a7d9979
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d13f120fbbb655c644ef1520d011a45f92494ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e77548e9f85057f8e8a1c92e4a0aa904a58e14a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391924"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618775"
 ---
 # <a name="memory-allocation"></a>Allocation de mémoire
 

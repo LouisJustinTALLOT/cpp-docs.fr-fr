@@ -1,25 +1,13 @@
 ---
-title: Configurer un projet Linux C++ dans Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Configurer un projet Linux C++ dans Visual Studio
 ms.date: 09/18/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: b4ba6a2300bcdac46467debc544ed69294834f15
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410796"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622493"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 

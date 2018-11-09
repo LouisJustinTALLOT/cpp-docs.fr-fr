@@ -1,27 +1,17 @@
 ---
-title: Chaînes de langue | Microsoft Docs
-ms.custom: ''
+title: Language Strings
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bcb9d5dbadc0fbaa33a3c8df6f9193704514e0a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46083286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620283"
 ---
 # <a name="language-strings"></a>Language Strings
 
@@ -102,6 +92,6 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 ## <a name="see-also"></a>Voir aussi
 
 [Chaînes relatives aux noms des paramètres régionaux, aux langues et au pays/à la région](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Chaînes pays/région](../c-runtime-library/country-region-strings.md)<br/>
+[Country/Region Strings](../c-runtime-library/country-region-strings.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
 [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

@@ -1,19 +1,13 @@
 ---
-title: Mettre à niveau votre code vers le CRT universel | Microsoft Docs
-ms.custom: ''
+title: Mettre à niveau votre code vers le CRT universel
 ms.date: 03/31/2017
-ms.topic: conceptual
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f384810ba689953274c3b585bbee7a345b948de
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5e417df380ff2239b7c09ba32cc02b784e9343d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50058971"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668609"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Mettre à niveau votre code vers le CRT universel
 

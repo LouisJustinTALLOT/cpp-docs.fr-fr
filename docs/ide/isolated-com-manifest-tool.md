@@ -1,28 +1,18 @@
 ---
-title: Propriétés COM isolé de l’outil Manifeste (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Propriétés COM isolé de l’outil Manifeste (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.RegistrarScriptFile
 - VC.Project.VCManifestTool.ComponentFileName
 - VC.Project.VCManifestTool.TypeLibraryFile
 - VC.Project.VCManifestTool.ReplacementsFile
-dev_langs:
-- C++
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdb472ce082809a48dd3e42afd4481149eff3a28
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9eea3b2765bad6bd08cc9ee91a801e2b891511e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546516"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM isolé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de &lt;NomProjet&gt;
 
@@ -55,6 +45,6 @@ Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pa
 ## <a name="see-also"></a>Voir aussi
 
 [Applications isolées](/windows/desktop/SbsCs/isolated-applications)<br>
-[Manifeste d’application ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br>
+[ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Outil Manifeste, page de propriétés](../ide/manifest-tool-property-pages.md)<br>
 [Utilisation des propriétés de projet](../ide/working-with-project-properties.md)

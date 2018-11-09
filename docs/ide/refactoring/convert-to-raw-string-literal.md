@@ -1,21 +1,13 @@
 ---
-title: Convertir en littéral de chaîne brute | Microsoft Docs
-ms.custom: ''
+title: Convertir en littéral de chaîne brut
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75037ea542a5bd2160d9a89138b12f82867002a5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 508ab52dc1ca41a97dd8c24df5c5d45c379ea265
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509511"
 ---
 # <a name="convert-to-raw-string-literal"></a>Convertir en littéral de chaîne brut
 **Quoi :** vous permet de transformer une chaîne en littéral de chaîne brute C++.

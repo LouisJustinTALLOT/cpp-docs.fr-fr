@@ -1,15 +1,15 @@
 ---
 title: Conversion des données non prises en charge par le fournisseur
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB provider templates, unsupported data types
 ms.assetid: f495e50f-530a-4fab-ab54-e0c359785845
-ms.openlocfilehash: a53781f71a55dfb07dc996e5e25644d9337e4c63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44cdde2bad24d21adbc728c90ecd173717c02b04
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473436"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265189"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>Conversion des données non prises en charge par le fournisseur
 

@@ -1,29 +1,19 @@
 ---
-title: Éditeur de liens, propriétés (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: Éditeur de liens, propriétés (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 9187222d2ced21ece2f183655591c483abc8d500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db2fc37189ca05835888faed26b242abc0fe5fcb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333103"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580672"
 ---
 # <a name="linker-properties-linux-c"></a>Éditeur de liens, propriétés (Linux C++)
 
 ## <a name="general"></a>Général
 
-Propriété | Description | Options
+Property | Description | Options
 --- | ---| ---
 Fichier de sortie | L’option substitue le nom et l’emplacement par défaut du programme créé par l’éditeur de liens. (-o)
 Afficher la progression | Affiche les messages de progression de l’éditeur de liens.
@@ -42,7 +32,7 @@ Copier la sortie | Indique s’il faut copier le fichier de sortie de build du s
 
 ## <a name="input"></a>Entrée
 
-Propriété | Description | Options
+Property | Description | Options
 --- | ---| ---
 Bibliothèques par défaut spécifiques ignorées | Spécifie un ou plusieurs noms de bibliothèques par défaut à ignorer. (--exclude-libs lib,lib)
 Ignorer les bibliothèques par défaut | Ignore les bibliothèques par défaut et recherche uniquement les bibliothèques explicitement spécifiées.
@@ -52,14 +42,14 @@ Dépendances supplémentaires | Spécifie les éléments supplémentaires à ajo
 
 ## <a name="debugging"></a>Débogage
 
-Propriété | Description | Options
+Property | Description | Options
 --- | ---| ---
 Informations de symboles du débogueur | Informations de symboles du débogueur contenues dans le fichier de sortie. | **Inclure tout**<br>**Omettre les informations de symboles du débogueur uniquement**<br>**Omettre toutes les informations de symbole**<br>
 Nom de fichier de mappage | L’option Map indique à l’éditeur de liens de créer un fichier de mappage avec le nom spécifié par l’utilisateur. (-Map=)
 
 ## <a name="advanced"></a>Avancé
 
-Propriété | Description | Options
+Property | Description | Options
 --- | ---| ---
 Marquer les variables ReadOnly après le réadressage | Cette option marque les variables en lecture seule après le réadressage.
 Activer la liaison de fonction immédiate | Cette option marque l’objet pour une liaison de fonction immédiate.

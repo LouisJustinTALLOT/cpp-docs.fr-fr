@@ -1,26 +1,16 @@
 ---
-title: Spécificateurs de type C | Microsoft Docs
-ms.custom: ''
+title: Spécificateurs de type C
 ms.date: 01/29/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - type specifiers, C
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2bf6990180a7fe325b1ee3d4f4e497a433c183e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1191cf4d2912cda535547f465fe4bfbedebe8fa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628096"
 ---
 # <a name="c-type-specifiers"></a>Spécificateurs de type C
 

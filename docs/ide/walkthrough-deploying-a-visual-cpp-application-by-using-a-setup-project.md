@@ -1,25 +1,15 @@
 ---
-title: Déployer une application Visual C++ à l’aide d’un projet d’installation | Microsoft Docs
-ms.custom: ''
+title: Déployer une application Visual C++ à l'aide d'un projet d'installation
 ms.date: 09/17/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea46400f0c04b62a35a676e94b7a023620c13a50
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3dc607ea082e31ba73f34ce1ca8acd3ebc78292a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069644"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565592"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Procédure pas à pas : déploiement d'une application Visual C++ à l'aide d'un projet d'installation
 
