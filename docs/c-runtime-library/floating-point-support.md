@@ -1,29 +1,19 @@
 ---
-title: Prise en charge des fonctions mathématiques et à virgule flottante | Microsoft Docs
-ms.custom: ''
+title: Prise en charge des fonctions mathématiques et à virgule flottante
 ms.date: 04/06/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.math
-dev_langs:
-- C++
 helpviewer_keywords:
 - floating-point numbers, math routines
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ddf4a6ce7e2ad98841c20fcef5fd9639a5797852
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392547"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558234"
 ---
 # <a name="math-and-floating-point-support"></a>Prise en charge des fonctions mathématiques et à virgule flottante
 

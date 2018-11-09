@@ -1,25 +1,15 @@
 ---
-title: Préparation d’un ordinateur de test pour lancer un exécutable de débogage | Microsoft Docs
-ms.custom: ''
+title: Préparation d'un ordinateur de test pour lancer un exécutable de débogage
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 31369f6aad04a0bd7077e9718e0b85776ca39556
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509103"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Préparation d'un ordinateur de test pour lancer un exécutable de débogage
 
@@ -46,4 +36,4 @@ Après avoir installé les DLL Visual C++, vous pouvez exécuter un débogueur 
 [Déploiement dans Visual C++](../ide/deployment-in-visual-cpp.md)<br>
 [Options de ligne de commande de Windows Installer](/windows/desktop/Msi/command-line-options)<br>
 [Exemples de déploiement](../ide/deployment-examples.md)<br>
-[Débogage à distance](/visualstudio/debugger/remote-debugging.md)
+[Remote Debugging](/visualstudio/debugger/remote-debugging.md)

@@ -1,25 +1,19 @@
 ---
-title: Exemples Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Exemples Visual C++
 ms.date: 11/30/2017
 ms.technology:
 - cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee8e06636a7d02ac0f34940031d9f0cac3fbef6c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f4baf057f421ffbf604916e1077533057b1d1ccf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490387"
 ---
-# <a name="visual-c-samples"></a>Exemples Visual C++
+# <a name="visual-c-samples"></a>Exemples Visual C++
 
 Les exemples Visual C++ répertoriés ci-dessous illustrent différentes fonctionnalités issues de plusieurs technologies.
 

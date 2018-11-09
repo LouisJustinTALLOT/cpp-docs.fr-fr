@@ -1,26 +1,16 @@
 ---
-title: Exemple de fichier de projet | Microsoft Docs
-ms.custom: ''
+title: Exemple de fichier projet
 ms.date: 10/09/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 591802e04348ca08bded17504b3fb19fb9aa7213
-ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
+ms.openlocfilehash: cb1369515db91187d182cd6c6ea49b938ebdee77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072383"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459161"
 ---
 # <a name="project-files"></a>Fichiers projet
 
