@@ -1,27 +1,17 @@
 ---
-title: 'Procédure pas à pas : Test d’un projet (C++) | Microsoft Docs'
-ms.custom: ''
+title: "Procédure pas à pas : test d'un projet (C++)"
 ms.date: 09/14/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 56614dc0829834e77cfdf10d8d88ed44492237e3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070138"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437308"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Procédure pas à pas : test d'un projet (C++)
 

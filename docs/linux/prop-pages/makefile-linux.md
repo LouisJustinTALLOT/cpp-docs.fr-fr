@@ -1,23 +1,13 @@
 ---
 title: Général, propriétés (projet Makefile Linux C++) | Microsoft Docs
-ms.custom: ''
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524590"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Projet Makefile, propriétés (Linux C++)
 
@@ -25,7 +15,7 @@ Il s’agit d’une liste partielle des propriétés disponibles dans un projet 
 
 ## <a name="general"></a>Général
 
-Propriété | Description | Options
+Property | Description | Options
 --- | ---| ---
 Répertoire de sortie | Spécifie un chemin relatif vers le répertoire de fichiers de sortie ; peut inclure des variables d’environnement.
 Répertoire intermédiaire | Spécifie un chemin relatif vers le répertoire de fichiers intermédiaire ; peut inclure des variables d’environnement.
@@ -47,7 +37,7 @@ Consultez [Copier les sources, propriétés de projet (Linux C++)](copy-sources
 
 ### <a name="pre-build-event"></a>Événement prébuild
 
-Propriété | Description
+Property | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement prébuild à exécuter.
 Description | Spécifie une description de l’outil d’événement prébuild à afficher.
@@ -56,7 +46,7 @@ Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à
 
 ### <a name="post-build-event"></a>Événement post-build
 
-Propriété | Description
+Property | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement postbuild à exécuter.
 Description | Spécifie une description de l’outil d’événement post-build à afficher.
@@ -65,7 +55,7 @@ Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à
 
 ### <a name="remote-pre-build-event"></a>Événement prébuild distant
 
-Propriété | Description
+Property | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement prébuild à exécuter sur le système distant.
 Description | Spécifie une description de l’outil d’événement prébuild à afficher.
@@ -74,7 +64,7 @@ Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à
 
 ### <a name="remote-post-build-event"></a>Événement post-build distant
 
-Propriété | Description
+Property | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement post-build à exécuter sur le système distant.
 Description | Spécifie une description de l’outil d’événement post-build à afficher.
@@ -87,7 +77,7 @@ Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à
 
 Les propriétés IntelliSense peuvent être définies au niveau du projet ou du fichier pour fournir des indications au moteur IntelliSense. Elles n’impactent pas la compilation.
 
-Propriété | Description
+Property | Description
 --- | ---
 Chemin de recherche Include | Spécifie le chemin de recherche Include pour résoudre les fichiers Include.
 Fichiers Include forcés | Spécifie les fichiers Include forcés.
@@ -97,7 +87,7 @@ Options supplémentaires | Spécifie les commutateurs supplémentaires du compil
 
 ### <a name="build"></a>Générer
 
-Propriété | Description
+Property | Description
 --- | ---
 Ligne de commande Build | Spécifie la ligne de commande à exécuter pour la commande 'Build'.
 Ligne de commande Rebuild All | Spécifie la ligne de commande à exécuter pour la commande 'Rebuild All'.
@@ -105,7 +95,7 @@ Ligne de commande Clean | Spécifie la ligne de commande à exécuter pour la co
 
 ### <a name="remote-build"></a>Build distante
 
-Propriété | Description
+Property | Description
 --- | ---
 Ligne de commande Build | Spécifie la ligne de commande à exécuter pour la commande 'Build'. Cette commande est exécutée sur le système distant.
 Ligne de commande Rebuild All | Spécifie la ligne de commande à exécuter pour la commande 'Rebuild All'. Cette commande est exécutée sur le système distant.
