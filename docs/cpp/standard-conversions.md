@@ -1,27 +1,17 @@
 ---
-title: Conversions standard | Microsoft Docs
-ms.custom: ''
+title: Conversions standard
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575446"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 
@@ -221,7 +211,7 @@ Dans le second cas, un pointeur vers une classe peut être converti en pointeur 
 
 Le résultat de ce type de conversion est un pointeur vers le « sous-objet », la partie de l'objet qui est complètement décrite par la classe de base.
 
-Le code suivant définit deux classes, `A` et `B`, où `B` est dérivée de `A`. (Pour plus d’informations sur l’héritage, consultez [les Classes dérivées](../cpp/inheritance-cpp.md).) Il définit ensuite , un objet de type `bObject`, et deux pointeurs (`B` et `pB`) qui pointent vers l'objet.
+Le code suivant définit deux classes, `A` et `B`, où `B` est dérivée de `A`. (Pour plus d’informations sur l’héritage, consultez [les Classes dérivées](../cpp/inheritance-cpp.md).) Il définit ensuite `bObject`, un objet de type `B`, et deux pointeurs (`pA` et `pB`) qui pointent vers l'objet.
 
 ```cpp
 // C2039 expected
